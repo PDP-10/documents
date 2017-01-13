@@ -1,0 +1,1293 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="KEYWORDS" content="Early Computers at Stanford" />
+<meta name="robots" content="index,follow" />
+<link rel="shortcut icon" href="/favicon.ico" />
+    <title>Early Computers at Stanford - Stanford CSD History</title>
+    <style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/wiki/skins/monobook/main.css"; /*]]>*/</style>
+    <link rel="stylesheet" type="text/css" media="print" href="/wiki/skins/common/commonPrint.css" />
+    <!--[if lt IE 5.5000]><style type="text/css">@import "/wiki/skins/monobook/IE50Fixes.css";</style><![endif]-->
+    <!--[if IE 5.5000]><style type="text/css">@import "/wiki/skins/monobook/IE55Fixes.css";</style><![endif]-->
+    <!--[if gte IE 6]><style type="text/css">@import "/wiki/skins/monobook/IE60Fixes.css";</style><![endif]-->
+    <!--[if lt IE 7]><script type="text/javascript" src="/wiki/skins/common/IEFixes.js"></script>
+    <meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+    <script type="text/javascript" src="/wiki/index.php?title=-&amp;action=raw&amp;gen=js"></script>    <script type="text/javascript" src="/wiki/skins/common/wikibits.js"></script>
+    <style type="text/css">/*<![CDATA[*/
+@import "/wiki/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/wiki/index.php?title=-&action=raw&gen=css&maxage=18000";
+/*]]>*/</style>              </head>
+  <body                 class="ns-0">
+    <div id="globalWrapper">
+      <div id="column-content">
+	<div id="content">
+	  <a name="top" id="top"></a>
+	  	  <h1 class="firstHeading">Early Computers at Stanford</h1>
+	  <div id="bodyContent">
+	    <h3 id="siteSub">From Stanford CSD History</h3>
+	    <div id="contentSub"></div>
+	    	    	    <!-- start content -->
+	    <p>Created 15 August 1997, last updated February 16, 2016.
+</p><p>This is part of information collected for the
+Computer History <a href="http://InfoLab.stanford.edu/pub/voy/museum.html" class='external text' title="http://InfoLab.stanford.edu/pub/voy/museum.html" rel="nofollow">Exhibits</a>. <a href="/wiki/index.php/RecentHistoryDisplay" title="RecentHistoryDisplay"> Recent information</a>.
+</p><p>Please send corrections and updates to
+<a href="http://InfoLab.stanford.edu/people/gio.html" class='external text' title="http://InfoLab.stanford.edu/people/gio.html" rel="nofollow">Gio Wiederhold</a>,
+email &lt;gio@cs.stanford.edu&gt; and to John Sauter
+&lt;John_Sauter at systemeyescomputerstore.com&gt;.
+</p><p>The intent is to list all computers at Stanford up to about 1980, when
+personal computers became ubiquitous and uncountable.
+Some major, later equipment can be included.
+</p>
+<table id='toc' class='toc'><tr><td><div id='toctitle'><h2>Contents</h2></div>
+<ul>
+<li class='toclevel-1'><a href="#Electronics_Lab_.281953_to_1962.29"><span class="tocnumber">1</span> <span class="toctext">Electronics Lab (1953 to 1962)</span></a>
+<ul>
+<li class='toclevel-2'><a href="#IBM_CPC"><span class="tocnumber">1.1</span> <span class="toctext">IBM CPC</span></a></li>
+<li class='toclevel-2'><a href="#IBM_650"><span class="tocnumber">1.2</span> <span class="toctext">IBM 650</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="#Encina_Hall_.281961_to_about_1965.29"><span class="tocnumber">2</span> <span class="toctext">Encina Hall (1961 to about 1965)</span></a>
+<ul>
+<li class='toclevel-2'><a href="#Burroughs_Datatron_B220"><span class="tocnumber">2.1</span> <span class="toctext">Burroughs Datatron B220</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="#Pine_Hall_.281961_to_1989.29"><span class="tocnumber">3</span> <span class="toctext">Pine Hall (1961 to 1989)</span></a>
+<ul>
+<li class='toclevel-2'><a href="#Card_Handling"><span class="tocnumber">3.1</span> <span class="toctext">Card Handling</span></a></li>
+<li class='toclevel-2'><a href="#Pictures_of_early_data_processing_equipment"><span class="tocnumber">3.2</span> <span class="toctext">Pictures of early data processing equipment</span></a></li>
+<li class='toclevel-2'><a href="#IBM_7090"><span class="tocnumber">3.3</span> <span class="toctext">IBM 7090</span></a></li>
+<li class='toclevel-2'><a href="#Burroughs_B5000.2FB5500"><span class="tocnumber">3.4</span> <span class="toctext">Burroughs B5000/B5500</span></a></li>
+<li class='toclevel-2'><a href="#DEC_PDP-1"><span class="tocnumber">3.5</span> <span class="toctext">DEC PDP-1</span></a></li>
+<li class='toclevel-2'><a href="#HP_2116A"><span class="tocnumber">3.6</span> <span class="toctext">HP 2116A</span></a></li>
+<li class='toclevel-2'><a href="#IBM_System.2F360_model_67"><span class="tocnumber">3.7</span> <span class="toctext">IBM System/360 model 67</span></a></li>
+<li class='toclevel-2'><a href="#DECSYSTEM-20"><span class="tocnumber">3.8</span> <span class="toctext">DECSYSTEM-20</span></a></li>
+<li class='toclevel-2'><a href="#DECSYSTEM-20_2"><span class="tocnumber">3.9</span> <span class="toctext">DECSYSTEM-20</span></a></li>
+<li class='toclevel-2'><a href="#IBM_System.2F360_model_30"><span class="tocnumber">3.10</span> <span class="toctext">IBM System/360 model 30</span></a></li>
+<li class='toclevel-2'><a href="#DEC_PDP-10"><span class="tocnumber">3.11</span> <span class="toctext">DEC PDP-10</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="#Physics_Department_.281965_to_1977.29"><span class="tocnumber">4</span> <span class="toctext">Physics Department (1965 to 1977)</span></a>
+<ul>
+<li class='toclevel-2'><a href="#DEC_PDP-7"><span class="tocnumber">4.1</span> <span class="toctext">DEC PDP-7</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="#High_Energy_Physics_Lab_.28about_1964_to_about_1974.29"><span class="tocnumber">5</span> <span class="toctext">High Energy Physics Lab (about 1964 to about 1974)</span></a>
+<ul>
+<li class='toclevel-2'><a href="#IBM_7700"><span class="tocnumber">5.1</span> <span class="toctext">IBM 7700</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="#Stanford_Artificial_Intelligence_Lab_.281965_to_1979.29"><span class="tocnumber">6</span> <span class="toctext">Stanford Artificial Intelligence Lab (1965 to 1979)</span></a>
+<ul>
+<li class='toclevel-2'><a href="#DEC_PDP-6"><span class="tocnumber">6.1</span> <span class="toctext">DEC PDP-6</span></a></li>
+<li class='toclevel-2'><a href="#DEC_PDP-10_2"><span class="tocnumber">6.2</span> <span class="toctext">DEC PDP-10</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="#Margaret_Jacks_Hall_.281979_to_1983.29"><span class="tocnumber">7</span> <span class="toctext">Margaret Jacks Hall (1979 to 1983)</span></a>
+<ul>
+<li class='toclevel-2'><a href="#DEC_PDP-10_3"><span class="tocnumber">7.1</span> <span class="toctext">DEC PDP-10</span></a></li>
+<li class='toclevel-2'><a href="#DECSYSTEM-2050"><span class="tocnumber">7.2</span> <span class="toctext">DECSYSTEM-2050</span></a></li>
+<li class='toclevel-2'><a href="#DECSYSTEM-2060"><span class="tocnumber">7.3</span> <span class="toctext">DECSYSTEM-2060</span></a></li>
+<li class='toclevel-2'><a href="#Xerox_Alto"><span class="tocnumber">7.4</span> <span class="toctext">Xerox Alto</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="#Electrical_Engineering_.281983.29"><span class="tocnumber">8</span> <span class="toctext">Electrical Engineering (1983)</span></a>
+<ul>
+<li class='toclevel-2'><a href="#DECSYSTEM-2050_2"><span class="tocnumber">8.1</span> <span class="toctext">DECSYSTEM-2050</span></a></li>
+<li class='toclevel-2'><a href="#DECSYSTEM-2060_2"><span class="tocnumber">8.2</span> <span class="toctext">DECSYSTEM-2060</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="#Stanford_Linear_Accelerator_Center_.281965_to_1981.29"><span class="tocnumber">9</span> <span class="toctext">Stanford Linear Accelerator Center (1965 to 1981)</span></a>
+<ul>
+<li class='toclevel-2'><a href="#SDS_Sigma_5"><span class="tocnumber">9.1</span> <span class="toctext">SDS Sigma 5</span></a></li>
+<li class='toclevel-2'><a href="#IBM_System.2F360_model_50"><span class="tocnumber">9.2</span> <span class="toctext">IBM System/360 model 50</span></a></li>
+<li class='toclevel-2'><a href="#IBM_System.2F360_model_75"><span class="tocnumber">9.3</span> <span class="toctext">IBM System/360 model 75</span></a></li>
+<li class='toclevel-2'><a href="#IBM_System.2F360_model_91"><span class="tocnumber">9.4</span> <span class="toctext">IBM System/360 model 91</span></a></li>
+<li class='toclevel-2'><a href="#IBM_System.2F370_model_168"><span class="tocnumber">9.5</span> <span class="toctext">IBM System/370 model 168</span></a></li>
+<li class='toclevel-2'><a href="#DEC_VAX_systems"><span class="tocnumber">9.6</span> <span class="toctext">DEC VAX systems</span></a></li>
+<li class='toclevel-2'><a href="#IBM_3081"><span class="tocnumber">9.7</span> <span class="toctext">IBM 3081</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="#Stanford_Medical_School_.281964_to_about_1992.29"><span class="tocnumber">10</span> <span class="toctext">Stanford Medical School (1964 to about 1992)</span></a>
+<ul>
+<li class='toclevel-2'><a href="#DEC_LINC"><span class="tocnumber">10.1</span> <span class="toctext">DEC LINC</span></a></li>
+<li class='toclevel-2'><a href="#IBM_System.2F360_model_50_2"><span class="tocnumber">10.2</span> <span class="toctext">IBM System/360 model 50</span></a></li>
+<li class='toclevel-2'><a href="#IBM_1800"><span class="tocnumber">10.3</span> <span class="toctext">IBM 1800</span></a></li>
+<li class='toclevel-2'><a href="#DEC_PDP-10_4"><span class="tocnumber">10.4</span> <span class="toctext">DEC PDP-10</span></a></li>
+<li class='toclevel-2'><a href="#DECSYSTEM-2020"><span class="tocnumber">10.5</span> <span class="toctext">DECSYSTEM-2020</span></a></li>
+<li class='toclevel-2'><a href="#DECSYSTEM-2060.2F2065"><span class="tocnumber">10.6</span> <span class="toctext">DECSYSTEM-2060/2065</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="#Stanford_Hospital_.28about_1970.29"><span class="tocnumber">11</span> <span class="toctext">Stanford Hospital (about 1970)</span></a>
+<ul>
+<li class='toclevel-2'><a href="#IBM_System.2F360_model_40"><span class="tocnumber">11.1</span> <span class="toctext">IBM System/360 model 40</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="#Aero_and_Astro_.28about_1960_to_about_1980.29"><span class="tocnumber">12</span> <span class="toctext">Aero and Astro (about 1960 to about 1980)</span></a>
+<ul>
+<li class='toclevel-2'><a href="#IBM_1620"><span class="tocnumber">12.1</span> <span class="toctext">IBM 1620</span></a></li>
+<li class='toclevel-2'><a href="#SDS_Sigma_5_2"><span class="tocnumber">12.2</span> <span class="toctext">SDS Sigma 5</span></a></li>
+<li class='toclevel-2'><a href="#Hewlett-Packard_2116_and_2100"><span class="tocnumber">12.3</span> <span class="toctext">Hewlett-Packard 2116 and 2100</span></a></li>
+<li class='toclevel-2'><a href="#Hewlett-Packard_2115"><span class="tocnumber">12.4</span> <span class="toctext">Hewlett-Packard 2115</span></a></li>
+<li class='toclevel-2'><a href="#Adage_GT-30"><span class="tocnumber">12.5</span> <span class="toctext">Adage GT-30</span></a></li>
+<li class='toclevel-2'><a href="#Varian_620i"><span class="tocnumber">12.6</span> <span class="toctext">Varian 620i</span></a></li>
+<li class='toclevel-2'><a href="#Data_General_Nova"><span class="tocnumber">12.7</span> <span class="toctext">Data General Nova</span></a></li>
+<li class='toclevel-2'><a href="#Interdata"><span class="tocnumber">12.8</span> <span class="toctext">Interdata</span></a></li>
+<li class='toclevel-2'><a href="#DEC_PDP-11.2F70_and_VAX-11.2F780"><span class="tocnumber">12.9</span> <span class="toctext">DEC PDP-11/70 and VAX-11/780</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="#Stanford_Exploration_Project_.281976_to_1997.29"><span class="tocnumber">13</span> <span class="toctext">Stanford Exploration Project (1976 to 1997)</span></a>
+<ul>
+<li class='toclevel-2'><a href="#DEC_PDP-11.2F34"><span class="tocnumber">13.1</span> <span class="toctext">DEC PDP-11/34</span></a></li>
+<li class='toclevel-2'><a href="#Floating_Point_Systems_Array_Processor_AP.2F120B"><span class="tocnumber">13.2</span> <span class="toctext">Floating Point Systems Array Processor AP/120B</span></a></li>
+<li class='toclevel-2'><a href="#DEC_PDP-11.2F50_and_PDP-11.2F70"><span class="tocnumber">13.3</span> <span class="toctext">DEC PDP-11/50 and PDP-11/70</span></a></li>
+<li class='toclevel-2'><a href="#DEC_VAX-11.2F780"><span class="tocnumber">13.4</span> <span class="toctext">DEC VAX-11/780</span></a></li>
+<li class='toclevel-2'><a href="#Convex_C1"><span class="tocnumber">13.5</span> <span class="toctext">Convex C1</span></a></li>
+<li class='toclevel-2'><a href="#Thinking_Machines_CM-2"><span class="tocnumber">13.6</span> <span class="toctext">Thinking Machines CM-2</span></a></li>
+<li class='toclevel-2'><a href="#Thinking_Machinse_CM-5"><span class="tocnumber">13.7</span> <span class="toctext">Thinking Machinse CM-5</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="#Lawrence_Livermore_Laboratory_.281975_to_1988.29"><span class="tocnumber">14</span> <span class="toctext">Lawrence Livermore Laboratory (1975 to 1988)</span></a>
+<ul>
+<li class='toclevel-2'><a href="#S-1_Mark_I"><span class="tocnumber">14.1</span> <span class="toctext">S-1 Mark I</span></a></li>
+<li class='toclevel-2'><a href="#S-1_Mark_II"><span class="tocnumber">14.2</span> <span class="toctext">S-1 Mark II</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="#Center_for_Education_Research_at_Stanford_.281976_to_1989.29"><span class="tocnumber">15</span> <span class="toctext">Center for Education Research at Stanford (1976 to 1989)</span></a>
+<ul>
+<li class='toclevel-2'><a href="#DECSYSTEM-20_3"><span class="tocnumber">15.1</span> <span class="toctext">DECSYSTEM-20</span></a></li>
+<li class='toclevel-2'><a href="#System_Concepts_SC-30"><span class="tocnumber">15.2</span> <span class="toctext">System Concepts SC-30</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="#Graduate_School_of_Business_.281978.29"><span class="tocnumber">16</span> <span class="toctext">Graduate School of Business (1978)</span></a>
+<ul>
+<li class='toclevel-2'><a href="#DECSYSTEM-2040"><span class="tocnumber">16.1</span> <span class="toctext">DECSYSTEM-2040</span></a></li>
+<li class='toclevel-2'><a href="#DECSYSTEM-2050_3"><span class="tocnumber">16.2</span> <span class="toctext">DECSYSTEM-2050</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="#Center_for_the_Study_of_Language_and_Information_.28the_1980s.29"><span class="tocnumber">17</span> <span class="toctext">Center for the Study of Language and Information (the 1980s)</span></a>
+<ul>
+<li class='toclevel-2'><a href="#DECSYSTEM-20_4"><span class="tocnumber">17.1</span> <span class="toctext">DECSYSTEM-20</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="#References"><span class="tocnumber">18</span> <span class="toctext">References</span></a></li>
+</ul>
+</td></tr></table>
+<p><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=1" title="Early Computers at Stanford">edit</a>]</div><a name="Electronics_Lab_.281953_to_1962.29"></a><h2>Electronics Lab (1953 to 1962)</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=2" title="Early Computers at Stanford">edit</a>]</div><a name="IBM_CPC"></a><h3>IBM CPC</h3>
+<p>In March of 1953 an
+<a href="http://www.columbia.edu/acis/history/cpc.html" class='external text' title="http://www.columbia.edu/acis/history/cpc.html" rel="nofollow">IBM CPC</a>
+arrived at the Electronics Lab.
+The <a href="http://en.wikipedia.org/wiki/IBM_CPC" class='external text' title="http://en.wikipedia.org/wiki/IBM CPC" rel="nofollow">CPC</a>
+was composed of three IBM machines that had been made to work
+together: an <a href="http://en.wikipedia.org/wiki/IBM_604" class='external text' title="http://en.wikipedia.org/wiki/IBM 604" rel="nofollow">IBM 604</a>
+or 605 calculating punch, an accounting machine
+(one of the IBM 400-series) and an IBM 941 auxiliary storage unit
+which held 16 10-digit signed numbers.
+Though marketed by IBM, the CPC was actually a combination developed by Northrop 
+Aviation in 1948 for use in flight simulations and for other engineering 
+work.  It used mainly relays and some vacuum tubes.
+</p><p>Although it provided some storage, the IBM CPC was not a stored-program 
+computer in the modern sense.  The mechanical storage was similar to that of an 
+<a href="http://infolab.stanford.edu/pub/voy/museum/pictures/EAM/IMG_1705.jpg" class='external text' title="http://infolab.stanford.edu/pub/voy/museum/pictures/EAM/IMG 1705.jpg" rel="nofollow">IBM 602</a> machine. 
+The CPC was programmable at three levels:
+</p>
+<ol><li> The data paths between storage units in the accounting machine and the auxiliary storage units were determined by wiring.
+</li><li> The electronic calculator in the IBM 604 or 605 could be micro-programmed using a <a href="http://en.wikipedia.org/wiki/Plug-board" class='external text' title="http://en.wikipedia.org/wiki/Plug-board" rel="nofollow">plugboard</a> in that unit, and
+</li><li> The overall operation of the machine could be programmed using <a href="http://en.wikipedia.org/wiki/Punch_card#IBM_80_column_punch_card_format" class='external text' title="http://en.wikipedia.org/wiki/Punch card#IBM 80 column punch card format" rel="nofollow">80-column punch cards</a>, each of which could perform two operations between three pieces of addressed data and store the result in the location specified in the fourth address.  Cards were read at a rate of 100 cards per minute.
+</li></ol>
+<p>The <a href="http://infolab.stanford.edu/pub/voy/museum/pictures/display/1-2-IBM-CPC.htm" class='external text' title="http://infolab.stanford.edu/pub/voy/museum/pictures/display/1-2-IBM-CPC.htm" rel="nofollow">IBM CPC</a> was normally configured to do floating-point calculations.
+</p><p>Roger Moore remembers that this machine still existed at the Electronics Lab in 1961, when he was an undergraduate,
+though it was only used by students because the IBM 650 was much faster.
+</p><p>There was also an IBM CPC at 
+<a href="http://ecommons.library.cornell.edu/bitstream/1813/82/10/History_Computing_Cornell_Rudan.pdf" class='external text' title="http://ecommons.library.cornell.edu/bitstream/1813/82/10/History Computing Cornell Rudan.pdf" rel="nofollow">Cornell</a>.
+</p><p>In addition, Les Earnest used one from 1954 to 1956 in the Navy at the 
+Aeronautical Computer lab in suburban Philadelphia, PA.  It was from
+this experience that Les contributed much of the description above.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=3" title="Early Computers at Stanford">edit</a>]</div><a name="IBM_650"></a><h3>IBM 650</h3>
+<p>The first stored-program computer at the Electronics Lab was an
+<a href="http://www.columbia.edu/acis/history/650.html" class='external text' title="http://www.columbia.edu/acis/history/650.html" rel="nofollow">IBM 650</a>.
+It arrived in January of 1956 and was retired around 1962.
+This was a drum computer, meaning
+that the program and data resided on a rotating magnetic drum,
+rather than in random access memory
+(RAM) as used by later computers.  The drum held 2000 10-digit words.
+An add instruction required
+400 microseconds, and a multiply 10,000.
+</p><p>The <a href="http://www.piercefuller.com/library/ibm650prm.html" class='external text' title="http://www.piercefuller.com/library/ibm650prm.html" rel="nofollow">IBM 650</a>, 
+like the IBM 604, used vacuum tubes.
+Later versions of the 
+<a href="http://www.piercefuller.com/library/ibm650.html" class='external text' title="http://www.piercefuller.com/library/ibm650.html" rel="nofollow">IBM 650</a>,
+but not the machine at Stanford,
+had 60 words of core memory.
+They were intended to be used as an I/O buffer, but could also be used
+for instructions.
+</p><p>Here is a 
+<a href="http://eyeball.right-net.com/computerhistory/IBM650-IBM305.wmv" class='external text' title="http://eyeball.right-net.com/computerhistory/IBM650-IBM305.wmv" rel="nofollow">video</a>
+showing an 
+<a href="http://www.itleadership.org/content/advertisements-1950s" class='external text' title="http://www.itleadership.org/content/advertisements-1950s" rel="nofollow">IBM 650</a>
+in use.
+</p><p>The 
+<a href="http://csdl2.computer.org/persagen/DLPublication.jsp?pubtype=m&amp;acronym=an" class='external text' title="http://csdl2.computer.org/persagen/DLPublication.jsp?pubtype=m&amp;acronym=an" rel="nofollow">IEEE Annals of the History of Computing</a> has an article about the use of 
+Stanford's IBM 650 in 1959 for computer dating:
+<a href="http://doi.ieeecomputersociety.org/10.1109/MAHC.2007.13" class='external text' title="http://doi.ieeecomputersociety.org/10.1109/MAHC.2007.13" rel="nofollow">C. Stewart Gillmor, &ldquo;Stanford, the IBM 650, and the First Trials of Computer Date Matching,&rdquo; IEEE Annals of the History of Computing, vol. 29,  no. 1,  pp. 74-80,  Jan-Mar,  2007</a>.
+See also <a href="http://histsoc.stanford.edu/pdfST/ST26no2_3.pdf" class='external text' title="http://histsoc.stanford.edu/pdfST/ST26no2 3.pdf" rel="nofollow">Computers in Love: Date Matching at Stanford</a> from the 
+<a href="http://histsoc.stanford.edu/" class='external text' title="http://histsoc.stanford.edu/" rel="nofollow">Stanford Historical Society</a> 
+publication &ldquo;Sandstone &amp; Tile&rdquo;, Summer/Fall 2002.
+</p><p>Roger Moore remembers that the machine was moved to Encina Hall at some point.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=4" title="Early Computers at Stanford">edit</a>]</div><a name="Encina_Hall_.281961_to_about_1965.29"></a><h2>Encina Hall (1961 to about 1965)</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=5" title="Early Computers at Stanford">edit</a>]</div><a name="Burroughs_Datatron_B220"></a><h3>Burroughs Datatron B220</h3>
+<p>There was a
+<a href="http://bitsavers.trailing-edge.com/pdf/burroughs/B220/B220_DatatronRefMan.pdf" class='external text' title="http://bitsavers.trailing-edge.com/pdf/burroughs/B220/B220 DatatronRefMan.pdf" rel="nofollow">Burroughs Datatron B220</a>
+at 
+<a href="http://campus-map.stanford.edu/index.cfm?ID=06-010" class='external text' title="http://campus-map.stanford.edu/index.cfm?ID=06-010" rel="nofollow">Encina Hall</a>
+starting in June of 1960.
+This was a vacuum-tube computer with originally 8,000 44-bit words of core,
+each containing 10 decimal digits and a sign digit.
+<a href="http://en.wikipedia.org/wiki/Magnetic_core_memory" class='external text' title="http://en.wikipedia.org/wiki/Magnetic core memory" rel="nofollow">Core memory</a> was a new technology, 
+replacing drum memory with magnetic cores.
+This was called Random-Access Memory (RAM) because you could access any word
+of memory in the same time as any other word.
+</p><p>Because the sign was implemented as a digit instead of a single bit, a clever
+programmer could store extra information in the sign digits, since the add and subtract
+instructions used only the low-order bit of the sign digit.
+</p><p>Roger Moore remembers that this machine was upgraded from 8,000 to 10,000 words
+of core memory around 1960 or 1961.  Roger also remembers the magnificent console
+of the B220, which Ted Glaser designed.  It could be considered an ancestor
+of the touch-sensitive console.  Each bit was made visible by a small neon bulb.
+There was a push switch under the bulb which could be used to invert the state of
+the bit.  On the later Burroughs B5000, described below, the lamp and switch were
+integrated into a single unit.
+</p><p>The add instruction executed in 185 microseconds and multiply
+in about 2095.
+Roger Moore remembers that Case Institute developed an unapproved hardware 
+modification which reduced the time to transfer data from memory to the
+D register from eleven cycles to four,
+</p><p>The B220 was shared with the First National
+Bank of San Jose, which used it for overnight check processing.
+An article In Datamation 7(12) dated December 1961 includes remarks
+by Professor George Forsythe about Balgol use at Stanford.
+We have not been able to find this article on-line, but the 
+<a href="http://hopl.murdoch.edu.au/home.prx" class='external text' title="http://hopl.murdoch.edu.au/home.prx" rel="nofollow">History of Programming Languages</a>
+project has preserved an extract.  
+Click on "Extract <em>BALGOL</em>" on the 
+<a href="http://hopl.murdoch.edu.au/showlanguage.prx?exp=371&amp;language=BALGOL" class='external text' title="http://hopl.murdoch.edu.au/showlanguage.prx?exp=371&amp;language=BALGOL" rel="nofollow">BALGOL</a>
+page.
+</p><p>Bill McKeeman remembers taking CS135 Intro to Programming from 
+George Forsythe in Spring 1962, using the Burroughs B220.
+</p><p>John Sauter remembers seeing the computer
+in the mid-1960s, and Roger Moore saw it in the fall of 1963,
+but we do not have a date for its retirement.
+The computer was programmed in 
+BALGOL, the Burroughs dialect of Algol-58.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=6" title="Early Computers at Stanford">edit</a>]</div><a name="Pine_Hall_.281961_to_1989.29"></a><h2>Pine Hall (1961 to 1989)</h2>
+<p><a href="http://campus-map.stanford.edu/index.cfm?ID=14-170" class='external text' title="http://campus-map.stanford.edu/index.cfm?ID=14-170" rel="nofollow">Pine Hall</a>
+was Stanford's &ldquo;Computation Center&rdquo; in the 1960s.
+The December 1961 issue of Datamation Magazine has articles 
+describing the Stanford Computer
+Science Department as Pine Hall was opening.  We have not been able to
+find this issue of Datamation on-line, but the 
+<a href="http://hopl.murdoch.edu.au/home.prx" class='external text' title="http://hopl.murdoch.edu.au/home.prx" rel="nofollow">History of Programming Languages</a>
+project has preserved several of the articles.  From the 
+<a href="http://hopl.murdoch.edu.au/showlanguage.prx?exp=371&amp;language=SUBALGOL" class='external text' title="http://hopl.murdoch.edu.au/showlanguage.prx?exp=371&amp;language=SUBALGOL" rel="nofollow">SUBALGOL</a>
+page, click on &ldquo;Extract: <em>Balgol</em>&rdquo; and 
+&ldquo;Extract: <em>Cutting Edge Computing at Stanford</em>&rdquo;.
+</p><p>Roger Moore remembers a subfloor flood in Pine Hall before any computers were installed.
+The cause was a sump pump failure.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=7" title="Early Computers at Stanford">edit</a>]</div><a name="Card_Handling"></a><h3>Card Handling</h3>
+<p>The IBM 7090, the Burroughs B5000/B5500 and their successor, the IBM
+System/360 model 67, all described below, were batch-processing 
+mainframes which read jobs from 
+<a href="http://en.wikipedia.org/wiki/Punch_card#IBM_80_column_punch_card_format" class='external text' title="http://en.wikipedia.org/wiki/Punch card#IBM 80 column punch card format" rel="nofollow">80-column punch cards</a>.
+To facilitate the preparation of card
+decks, there were several keypunches in Pine Hall.  These keypunches
+were mostly 
+<a href="http://www.columbia.edu/acis/history/026.html" class='external text' title="http://www.columbia.edu/acis/history/026.html" rel="nofollow">IBM 026</a>s, 
+modified to include the additional characters used
+for Algol on the Burroughs B5000.  We have been unable to find
+a record of the modifications made to the keypunches, or the
+resulting character set, but such custom keypunches were
+<a href="http://www.cs.uiowa.edu/~jones/cards/codes.html" class='external text' title="http://www.cs.uiowa.edu/~jones/cards/codes.html" rel="nofollow">quite common</a> 
+at that time.  Here is a 
+<a href="http://eyeball.right-net.com/computerhistory/IBM026keypunch.wmv" class='external text' title="http://eyeball.right-net.com/computerhistory/IBM026keypunch.wmv" rel="nofollow">video</a>
+of an IBM 026 being demonstrated.
+</p><p>In addition to the keypunches there was some card-handling equipment
+known as &ldquo;Electronic Accounting Machines&rdquo;, or EAM in Pine Hall: an 
+<a href="http://en.wikipedia.org/wiki/IBM_557" class='external text' title="http://en.wikipedia.org/wiki/IBM 557" rel="nofollow">IBM 557 interpreter</a>,
+an <a href="http://www.columbia.edu/acis/history/sorter.html" class='external text' title="http://www.columbia.edu/acis/history/sorter.html" rel="nofollow">IBM 80-series card sorter</a>
+(probably an 
+<a href="http://ed-thelen.org/comp-hist/vs-ibm-083.html" class='external text' title="http://ed-thelen.org/comp-hist/vs-ibm-083.html" rel="nofollow">IBM 083</a>), an 
+<a href="http://infolab.stanford.edu/pub/voy/museum/pictures/EAM/IMG_1700.jpg" class='external text' title="http://infolab.stanford.edu/pub/voy/museum/pictures/EAM/IMG 1700.jpg" rel="nofollow">IBM 519</a>
+card reproducer and an 
+<a href="http://en.wikipedia.org/wiki/IBM_407" class='external text' title="http://en.wikipedia.org/wiki/IBM 407" rel="nofollow">IBM 407</a> printer with 
+a card reader.  The modified 
+<a href="http://www.piercefuller.com/library/10170.html" class='external text' title="http://www.piercefuller.com/library/10170.html" rel="nofollow">IBM 026</a>
+keypunches would print an image of each character at the top of the
+card, but the IBM 519 did not print, so it was customary to run a
+duplicated card deck through the IBM 557, which would print the first 60
+columns at the top of each card in its first pass, and optionally print
+the remainder of the columns lower on the card on a second pass.
+</p><p>The 
+<a href="http://www.piercefuller.com/library/ibm407.html" class='external text' title="http://www.piercefuller.com/library/ibm407.html" rel="nofollow">IBM 407</a>
+was used to print a program's source code on paper.
+John Sauter remembers that the 407 made a strange sound as it was printing: 
+it would print two lines in two cycles of the mechanism, and then take a third
+cycle in which it would not print.  There was a simple, but forbidden, modification
+which would cause the 
+<a href="http://www.columbia.edu/acis/history/407.html" class='external text' title="http://www.columbia.edu/acis/history/407.html" rel="nofollow">IBM 407</a>
+to print on every cycle, increasing its speed from
+100 lines per minute to 150.  Roger Moore remembers why:
+</p><p>In the past, IBM had extended the market life of a mature card machine by renting
+a reduced-speed machine.  This was accomplished by changing the pulley size
+on the main drive, and was done through the IBM 402.  IBM had already announced
+the 2/3-speed 407 when the engineers discovered that the machine didn't work when
+the main shaft was slowed down.  As the machine had already been announced,
+two extra relays were added which caused the IBM 407 model E8 to print two
+cards and then take a dummy cycle.  It did have a distinctive sound because
+of this.  The IBM 407 model E8 also had fewer co-selectors, pilot selectors
+and adders than the full model.  IBM would charge for service if the relays
+were &ldquo;damaged&rdquo;.  There was a gentleman's agreement with the
+IBM Customer Engineer that it was OK to remove one of the slow-down relays
+for a long job, provided it was re-installed before he noticed its absence.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=8" title="Early Computers at Stanford">edit</a>]</div><a name="Pictures_of_early_data_processing_equipment"></a><h3>Pictures of early data processing equipment</h3>
+<p>These pictures were taken in the Nixdorf Computer Museum in Paderborn, Germany.  
+Click on the link following a picture for a larger image.
+</p><p><img src="http://infolab.stanford.edu/pub/voy/museum/pictures/EAM/IMG_1671small.jpg" alt="IMG_1671small.jpg" />
+<a href="http://infolab.stanford.edu/pub/voy/museum/pictures/EAM/IMG_1671.jpg" class='external text' title="http://infolab.stanford.edu/pub/voy/museum/pictures/EAM/IMG 1671.jpg" rel="nofollow">typewriter</a>
+</p><p><img src="http://infolab.stanford.edu/pub/voy/museum/pictures/EAM/IMG_1677small.jpg" alt="IMG_1677small.jpg" />
+<a href="http://infolab.stanford.edu/pub/voy/museum/pictures/EAM/IMG_1677.jpg" class='external text' title="http://infolab.stanford.edu/pub/voy/museum/pictures/EAM/IMG 1677.jpg" rel="nofollow">tabulating machines</a>
+</p><p><img src="http://infolab.stanford.edu/pub/voy/museum/pictures/EAM/IMG_1678small.jpg" alt="IMG_1678small.jpg" />
+<a href="http://infolab.stanford.edu/pub/voy/museum/pictures/EAM/IMG_1678.jpg" class='external text' title="http://infolab.stanford.edu/pub/voy/museum/pictures/EAM/IMG 1678.jpg" rel="nofollow">early egonometric card punch</a>
+</p><p><img src="http://infolab.stanford.edu/pub/voy/museum/pictures/EAM/IMG_1700small.jpg" alt="IMG_1700small.jpg" />
+<a href="http://infolab.stanford.edu/pub/voy/museum/pictures/EAM/IMG_1700.jpg" class='external text' title="http://infolab.stanford.edu/pub/voy/museum/pictures/EAM/IMG 1700.jpg" rel="nofollow">IBM 519</a>
+</p><p><img src="http://infolab.stanford.edu/pub/voy/museum/pictures/EAM/IMG_1705small.jpg" alt="IMG_1705small.jpg" />
+<a href="http://infolab.stanford.edu/pub/voy/museum/pictures/EAM/IMG_1705.jpg" class='external text' title="http://infolab.stanford.edu/pub/voy/museum/pictures/EAM/IMG 1705.jpg" rel="nofollow">IBM 602 interior</a>
+</p><p><img src="http://infolab.stanford.edu/pub/voy/museum/pictures/EAM/IMG_1706small.jpg" alt="IMG_1706small.jpg" />
+<a href="http://infolab.stanford.edu/pub/voy/museum/pictures/EAM/IMG_1706.jpg" class='external text' title="http://infolab.stanford.edu/pub/voy/museum/pictures/EAM/IMG 1706.jpg" rel="nofollow">IBM 602</a>
+</p><p><img src="http://infolab.stanford.edu/pub/voy/museum/pictures/EAM/IMG_1764small.jpg" alt="IMG_1764small.jpg" />
+<a href="http://infolab.stanford.edu/pub/voy/museum/pictures/EAM/IMG_1764.jpg" class='external text' title="http://infolab.stanford.edu/pub/voy/museum/pictures/EAM/IMG 1764.jpg" rel="nofollow">desk calculator</a>
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=9" title="Early Computers at Stanford">edit</a>]</div><a name="IBM_7090"></a><h3>IBM 7090</h3>
+<p>The 
+<a href="http://www-03.ibm.com/ibm/history/exhibits/mainframe/mainframe_PP7090.html" class='external text' title="http://www-03.ibm.com/ibm/history/exhibits/mainframe/mainframe PP7090.html" rel="nofollow">IBM 7090</a>
+was a fully 
+<a href="http://www.computerhistory.org/semiconductor/timeline/1953-transistorized-computers-emerge.html" class='external text' title="http://www.computerhistory.org/semiconductor/timeline/1953-transistorized-computers-emerge.html" rel="nofollow">transistor-based</a>,
+room-size computer,
+with 32,768 36-bit words of core memory and a 2.18 microsecond cycle time.
+It performed an add instruction in 4.8 microseconds,
+and a multiply in typically 25 microseconds.
+</p><p>Visitors to Pine Hall could see the 
+<a href="http://www.piercefuller.com/library/ibm7090.html" class='external text' title="http://www.piercefuller.com/library/ibm7090.html" rel="nofollow">IBM 7090</a>
+through through a glass wall.
+Nearest the observer was the console, from which the operator could observe
+the machine's internal registers.
+At the back of the room was an
+<a href="http://www-03.ibm.com/ibm/history/exhibits/mainframe/mainframe_PP1401.html" class='external text' title="http://www-03.ibm.com/ibm/history/exhibits/mainframe/mainframe PP1401.html" rel="nofollow">IBM 1401</a>,
+which provided card-to-tape and tape-to-print and -card punch
+services for the IBM 7090, which was therefore able to read its input
+from and write its output to magnetic tape.
+The two machines shared two rows of IBM 729 IV
+<a href="http://www.research.ibm.com/journal/rd/474/bradshaw.html" class='external text' title="http://www.research.ibm.com/journal/rd/474/bradshaw.html" rel="nofollow">magnetic tape drives</a>.
+Here is a 
+<a href="http://eyeball.right-net.com/computerhistory/1401andperipheals.wmv" class='external text' title="http://eyeball.right-net.com/computerhistory/1401andperipheals.wmv" rel="nofollow">video</a>
+of a 
+<a href="http://www.ed-thelen.org/1401Project/1401RestorationPage.html" class='external text' title="http://www.ed-thelen.org/1401Project/1401RestorationPage.html" rel="nofollow">restored IBM 1401</a>
+in use.
+</p><p>The IBM 1401 was also used on its own to play music.  
+Its <a href="https://en.wikipedia.org/wiki/IBM_1403" class='external text' title="https://en.wikipedia.org/wiki/IBM 1403" rel="nofollow">IBM 1403</a> printer was quite loud, despite its acoustic cover.  
+A program for the IBM 1401 used cleverly-timed hammer strikes to play 
+<a href="http://q7.neurotica.com/Oldtech/Media/PunchCards.html" class='external text' title="http://q7.neurotica.com/Oldtech/Media/PunchCards.html" rel="nofollow">&ldquo;She'll be Comin' Round the Mountain&rdquo;</a>.
+Bill McKeeman remembers that when the repeated phrase &ldquo;when she comes&rdquo;
+was played, the 1403 ejected two pages of paper: &ldquo;whoosh whoosh&rdquo;.
+They could not run the program much because it used so much paper.
+</p><p>The IBM 7090 was installed in Pine Hall in late 1962 or early 1963,
+and retired in May of 1967.
+Roger Moore remembers that from late spring 1962 until its move to Pine Hall,
+the IBM 7090 resided at IBM San Jose, where Stanford personnel
+were able to use it for eight hours every week day.  In addition, the Subalgol project used
+it on weekends.  After its installation in Pine Hall it continued to be used by IBM San Jose.
+</p><p>In its later years the IBM 7090 acquired an
+<a href="http://www-03.ibm.com/ibm/history/exhibits/storage/storage_1301.html" class='external text' title="http://www-03.ibm.com/ibm/history/exhibits/storage/storage 1301.html" rel="nofollow">IBM 1301 disk</a>,
+which it shared with the nearby 
+<a href="http://en.wikipedia.org/wiki/PDP-1" class='external text' title="http://en.wikipedia.org/wiki/PDP-1" rel="nofollow">DEC PDP-1</a>, and a
+<a href="http://www.mirrorservice.org/sites/www.bitsavers.org/pdf/cdc/809x/60091500E_8090ref_Mar68.pdf" class='external text' title="http://www.mirrorservice.org/sites/www.bitsavers.org/pdf/cdc/809x/60091500E 8090ref Mar68.pdf" rel="nofollow">CDC 8090</a>
+was added to augment the IBM 1401.
+</p><p>A notable improvement in productivity was achieved when Stanford
+programmer Don Gold was able to make the IBM 1401 copy simultaneously from
+card reader to tape and from tape to printer and card punch.
+Previously, the IBM 1401 could copy in only one direction at a time.
+</p><p>The IBM 7090 provided general computer service to campus users,
+including the Artificial Intelligence project (Lisp and Chess).
+Classes were offered in programming the IBM 7090.
+The machine ran IBM's Fortran Monitor System, which automatically
+loaded the next job from magnetic tape when the previous one finished.
+</p><p>In addition to Fortran and the FAP assembler, the IBM 7090 was
+programmed in 
+<a href="http://hopl.murdoch.edu.au/showlanguage.prx?exp=7279&amp;language=SUBALGOL" class='external text' title="http://hopl.murdoch.edu.au/showlanguage.prx?exp=7279&amp;language=SUBALGOL" rel="nofollow">SUBAlgol</a>, 
+the Stanford dialect of Balgol,
+which was the Burroughs dialect of Algol-58.  Bill McKeeman remembers 
+that it was Stanford students Larry Breed and Roger Moore who reimplemented 
+Balgol for the IBM 7090, calling the resulting language SUBALGOL.  
+The students shared an office in Encina Hall,
+two floors above the basement installation of the Burroughs B220.
+Larry and Roger went on to work with Ken Iverson, implementing APL
+at IBM Research in Yorktown Heights.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=10" title="Early Computers at Stanford">edit</a>]</div><a name="Burroughs_B5000.2FB5500"></a><h3>Burroughs B5000/B5500</h3>
+<p>The 
+<a href="http://en.wikipedia.org/wiki/Burroughs_large_systems" class='external text' title="http://en.wikipedia.org/wiki/Burroughs large systems" rel="nofollow">Burroughs B5000</a>
+was another fully-transistorized, room-size computer, installed in the
+room to the right of the IBM 7090 from the point of view of the observer
+looking through the glass wall.
+</p><p>Bill McKeeman was a full-time employee of the Computation Center (Pine Hall) in 1963.
+He was sent to Pasadena with James Watt to learn how to use the B5000.
+They worked the night shift for two weeks at the Electrodata plant
+while Dave Dahm and Fred Gerbstadt were developing the Burroughs Algol compiler,
+which was a variant of Algol 60.  There was a second compiler for the B5000,
+called ESPOL, which was a stripped down version of Algol 60 used to write
+the Master Control Program (MCP).  We would call the MCP an operating system
+today.  The B5000 was transisterized but used no integrated circuits.
+So-called cordwood plug-in modules were connected by extensive backplane
+wire wrapping.
+</p><p>This machine was based on advanced computer concepts for its day,
+as contrasted with the IBM 7090, which stressed compatibility with 
+<a href="http://www-03.ibm.com/ibm/history/exhibits/markI/markI_intro.html" class='external text' title="http://www-03.ibm.com/ibm/history/exhibits/markI/markI intro.html" rel="nofollow">earlier IBM computers</a>.  
+It was installed before May of 1963,
+perhaps in 1962, and retired in 1968.
+It was upgraded to a Burroughs B5500, which ran at three times
+the speed of the B5000 and offered a second CPU.
+Due to software limitations, the second CPU could only execute in user-mode;
+an attempt to enter the operating system would
+cause it to signal the main CPU for attention.
+</p><p>The B5000 had 16,384 48-bit words of memory.
+It was programmed in Algol-60 with extensions for I/O and string processing.
+Late in its life the B5500 switched off its drum storage
+and used disks instead.
+</p><p>The Burroughs computer provided general computation service to the campus,
+including classes on Algol-60 and validation of Algol programs submitted
+for publication as algorithms.
+</p><p>John Ehrman remembers that until late 1966 there was 
+a dial-up link from SLAC for submitting and retrieving
+B5500 jobs.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=11" title="Early Computers at Stanford">edit</a>]</div><a name="DEC_PDP-1"></a><h3>DEC PDP-1</h3>
+<p>The <a href="http://infolab.stanford.edu/pub/voy/museum/pictures/display/3-3.htm" class='external text' title="http://infolab.stanford.edu/pub/voy/museum/pictures/display/3-3.htm" rel="nofollow">PDP-1</a>
+was to the left of the IBM 7090, but was not visible to observers, 
+lacking a glass wall.
+This was a much smaller-scale computer than the IBM 7090, used for research
+in computer-based learning, artificial intelligence, and games.
+A time-sharing system was developed for the PDP-1, formally named the Stanford
+Time Sharing System, though it also went by the names 
+<a href="http://bitsavers.trailing-edge.com/pdf/stanford/pdp1/AFIPS%2330_Spr67_THOR_P623-633.pdf" class='external text' title="http://bitsavers.trailing-edge.com/pdf/stanford/pdp1/AFIPS#30 Spr67 THOR P623-633.pdf" rel="nofollow">Thor</a>,
+Zeus and 
+<a href="http://bitsavers.trailing-edge.com/pdf/stanford/pdp1/ODIN_UsersMan_Oct64_with_Nov64update.pdf" class='external text' title="http://bitsavers.trailing-edge.com/pdf/stanford/pdp1/ODIN UsersMan Oct64 with Nov64update.pdf" rel="nofollow">Odin</a>.
+Time sharing allowed people at separate consoles to use the PDP-1 
+simultaneously, a great increase in productivity.
+</p><p>The PDP-1 arrived sometime before May of 1963.
+Early in its life it was upgraded from 4,096 18-bit words to 65,536.
+When the IBM 7090 acquired its IBM 1301 disk drive,
+the PDP-1 was interfaced to it through the 
+<a href="http://www.frobenius.com/7090.htm" class='external text' title="http://www.frobenius.com/7090.htm" rel="nofollow">IBM 7631</a> file control.
+The PDP-1 was also interfaced directly to the IBM 7090,
+and could submit jobs to it using the Bifrost software.
+This interface was also used to visualize IBM 7090 data in real time
+using the PDP-1's Type 30 CRT display.
+See <a href="http://ccrma.stanford.edu/guides/planetccrma/Some.html" class='external autonumber' title="http://ccrma.stanford.edu/guides/planetccrma/Some.html" rel="nofollow">[1]</a>
+for an example.
+When the PDP-1 was retired, probably in 1966 or 1967,
+its Type 30 display was moved to the DEC PDP-6
+at the Stanford Artificial Intelligence Lab.
+</p><p>Bill McKeeman and John Sauter remember that the most popular
+application on the PDP-1 was 
+<a href="https://en.wikipedia.org/wiki/Spacewar_%28video_game%29" class='external text' title="https://en.wikipedia.org/wiki/Spacewar (video game)" rel="nofollow">Spacewar</a>, 
+created by 
+<a href="https://en.wikipedia.org/wiki/Steve_Russell" class='external text' title="https://en.wikipedia.org/wiki/Steve Russell" rel="nofollow">Steve Russell</a>
+and others.
+</p><p>Programming the PDP-1 was generally done using paper tape.
+Bill McKeeman remembers that Steve Russell set out wastebaskets
+labeled Monday through Sunday, so you had a week to go back
+and find a discarded paper tape in case you made a mistake
+and needed to back up.
+</p><p>In support of its time-sharing mission the PDP-1 was equipped with a
+high-speed magnetic drum, which could write 4,096 words of memory onto a
+track in one revolution, and simultaneously read 4,096 words from a different
+track and write them into those same memory locations.  This was called
+&ldquo;<a href="http://www-formal.stanford.edu/jmc/history/timesharing/timesharing.html" class='external text' title="http://www-formal.stanford.edu/jmc/history/timesharing/timesharing.html" rel="nofollow">swapping</a>&rdquo;.
+</p><p>Bill McKeeman wrote a compiler for the PDP-1 called 
+<a href="http://hopl.info/showlanguage2.prx?exp=3905" class='external text' title="http://hopl.info/showlanguage2.prx?exp=3905" rel="nofollow">GOGOL</a>.
+He first wrote a PDP-1 assembler and emulator on the B5000, 
+then wrote the compiler
+on punch cards in PDP-1 assembly language.  
+When it was &ldquo;good enough&rdquo; he sent it
+to the PDP-1's paper tape punch through the IBM 7090
+and did the final debugging at the PDP-1's console.
+The compiler occupied most of the PDP-1's 4096 words of memory.
+When the compiled 
+<a href="http://www.cs.dartmouth.edu/~mckeeman/references/gogol/Gogol.html" class='external text' title="http://www.cs.dartmouth.edu/~mckeeman/references/gogol/Gogol.html" rel="nofollow">GOGOL</a>
+program ran it used the compiler
+code space for its data.  All error messages were on the
+drum and overlaid Gogol when needed, so compilation stopped
+with the first error message.  Bill's 
+<a href="https://en.wikipedia.org/wiki/Peephole_optimization" class='external text' title="https://en.wikipedia.org/wiki/Peephole optimization" rel="nofollow">Peephole Optimization</a>
+<a href="http://dl.acm.org/citation.cfm?id=365000" class='external text' title="http://dl.acm.org/citation.cfm?id=365000" rel="nofollow">paper</a> came from 
+<a href="https://saltworks.stanford.edu/assets/jy391jj5758.pdf" class='external text' title="https://saltworks.stanford.edu/assets/jy391jj5758.pdf" rel="nofollow">GOGOL</a>.
+Bill was the first student to enter Stanford's Computer Science 
+curriculum for the 
+<a href="http://www.cs.dartmouth.edu/~mckeeman/references/McKeemanPhD1966.pdf" class='external text' title="http://www.cs.dartmouth.edu/~mckeeman/references/McKeemanPhD1966.pdf" rel="nofollow">Ph.D.</a>
+</p><p>The PDP-1 also had twelve CRT displays built by Philco, affectionately
+called &ldquo;flickos&rdquo;.  These terminals, combined with the drum and
+the time-sharing software, made the Stanford PDP-1 the first 
+display-oriented
+time-sharing system anywhere in the world.  It was used for a number
+of years for computer-aided instruction by 
+<a href="http://www.stanford.edu/~psuppes/" class='external text' title="http://www.stanford.edu/~psuppes/" rel="nofollow">Professor Patrick Suppes</a> and his group.
+</p><p>At the beginning of his Computers and Education article on
+<a href="http://suppes-corpus.stanford.edu/article.html?id=54-1" class='external text' title="http://suppes-corpus.stanford.edu/article.html?id=54-1" rel="nofollow">Computer-based mathematics instruction</a>
+Professor Suppes describes the Stanford PDP-1.
+</p><p>John Sauter remembers a regrettable incident in which
+a failure in one of the displays caused a loud noise, severely frightening 
+the child who was seated at it.  John never learned how this traumatic
+experience affected the child's ability to deal with computers
+later in his life.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=12" title="Early Computers at Stanford">edit</a>]</div><a name="HP_2116A"></a><h3>HP 2116A</h3>
+<p>Bill McKeeman remembers that Hewlett Packard donated an 
+<a href="http://www.hp.com/hpinfo/abouthp/histnfacts/publications/measure/pdf/1967_01.pdf" class='external text' title="http://www.hp.com/hpinfo/abouthp/histnfacts/publications/measure/pdf/1967 01.pdf" rel="nofollow">HP 2116A</a> 
+to Stanford in 1966 and installed it in the keypunch room of Pine Hall.
+It was used for the computer architecture class
+and to convert data from paper tape input.
+Ed Feigenbaum was the Computation Center Director at the time.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=13" title="Early Computers at Stanford">edit</a>]</div><a name="IBM_System.2F360_model_67"></a><h3>IBM System/360 model 67</h3>
+<p>In May of 1967 an <a href="http://en.wikipedia.org/wiki/IBM_System/360-67" class='external text' title="http://en.wikipedia.org/wiki/IBM System/360-67" rel="nofollow">IBM System/360 model 67</a>
+replaced the IBM 7090, Burroughs B5500 and
+DEC PDP-1 in Pine Hall.
+There is some question about whether this machine was a model 65 or model 67,
+but John Sauter remembers seeing the lights of the
+&ldquo;<a href="http://en.wikipedia.org/wiki/Gerrit_Blaauw" class='external text' title="http://en.wikipedia.org/wiki/Gerrit Blaauw" rel="nofollow">Blaauw</a> Box&rdquo;,
+the dynamic address translation module that is the difference between the
+models.  Also, Glen Herrmannsfeldt and John Ehrman remember that it was 
+always described as a model 67.
+However, despite the dynamic relocation capability, the model 67 was run as
+a model 65 using IBM's 
+<a href="http://en.wikipedia.org/wiki/OS/360#OS.2FMFT" class='external text' title="http://en.wikipedia.org/wiki/OS/360#OS.2FMFT" rel="nofollow">OS/360 MFT</a> 
+operating system.
+</p><p>The original development of 
+<a href="http://www.slac.stanford.edu/spires/explain/manuals/ORVMAN.HTML" class='external text' title="http://www.slac.stanford.edu/spires/explain/manuals/ORVMAN.HTML" rel="nofollow">WYLBUR and ORVYL</a>
+were done on the model 67.  John Sauter remembers 
+a flyer featuring cartoon personages named Wylbur and Orvyl with the caption
+&ldquo;My brothers communicate&rdquo;.
+MILTEN was used to support remote users equipped with
+<a href="http://en.wikipedia.org/wiki/IBM_2741" class='external text' title="http://en.wikipedia.org/wiki/IBM 2741" rel="nofollow">IBM 2741</a> terminals.
+<a href="http://news-service.stanford.edu/news/2003/july9/mainframe-79.html" class='external text' title="http://news-service.stanford.edu/news/2003/july9/mainframe-79.html" rel="nofollow">SPIRES</a>
+was also originally written on the model 67.
+<a href="http://en.wikipedia.org/wiki/Niklaus_Wirth" class='external text' title="http://en.wikipedia.org/wiki/Niklaus Wirth" rel="nofollow">Nicklaus Wirth</a>
+developed 
+<a href="http://infolab.stanford.edu/TR/CS-TR-67-68.html" class='external text' title="http://infolab.stanford.edu/TR/CS-TR-67-68.html" rel="nofollow">PL360</a>
+and
+<a href="http://infolab.stanford.edu/TR/CS-TR-68-89.html" class='external text' title="http://infolab.stanford.edu/TR/CS-TR-68-89.html" rel="nofollow">Algol W</a>
+on the model 67; Algol W later evolved into Pascal.
+</p><p><a href="https://en.wikipedia.org/wiki/Jim_Horning" class='external text' title="https://en.wikipedia.org/wiki/Jim Horning" rel="nofollow">Jim Horning</a>, Dave Wortman 
+and Bill McKeeman bootstrapped the <a href="http://www.cs.toronto.edu/XPL/" class='external text' title="http://www.cs.toronto.edu/XPL/" rel="nofollow">XPL</a>
+self-compiling compiler on the model 67.
+</p><p>The IBM System/360 model 67 had 524,288 8-bit bytes of memory.  
+It could perform an add in 1.5 microseconds, a multiply in 6.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=14" title="Early Computers at Stanford">edit</a>]</div><a name="DECSYSTEM-20"></a><h3>DECSYSTEM-20</h3>
+<p>Mark Crispin and Rich Alderson remember a
+<a href="http://en.wikipedia.org/wiki/DECSYSTEM-20" class='external text' title="http://en.wikipedia.org/wiki/DECSYSTEM-20" rel="nofollow">DECSYSTEM-20</a>,
+possibly named CONTEXT, at the computer center in the early 1980s.
+It was supposed to be used for editing and e-mail only.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=15" title="Early Computers at Stanford">edit</a>]</div><a name="DECSYSTEM-20_2"></a><h3>DECSYSTEM-20</h3>
+<p>Mark Crispin remembers that the SCORE DECSYSTEM-20 was originally installed 
+in Pine Hall in 1979 and moved to the Computer Science Department's then-new 
+digs in Margaret Jacks Hall in 1980.
+There is more information about the computers in Margaret Jacks Hall below.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=16" title="Early Computers at Stanford">edit</a>]</div><a name="IBM_System.2F360_model_30"></a><h3>IBM System/360 model 30</h3>
+<p>Mark also remembers an 
+<a href="http://www-03.ibm.com/ibm/history/exhibits/mainframe/mainframe_PP2030.html" class='external text' title="http://www-03.ibm.com/ibm/history/exhibits/mainframe/mainframe PP2030.html" rel="nofollow">IBM System/360 model 30</a>
+in Pine Hall at that time.
+It could perform an add in 29 microseconds, a multiply in 303.
+It was used for Remote Job Entry to the big IBM iron which was in another 
+building.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=17" title="Early Computers at Stanford">edit</a>]</div><a name="DEC_PDP-10"></a><h3>DEC PDP-10</h3>
+<p>Mark Crispin remembers that there was a PDP-10 at 
+the Institute for Mathematical Studies in the Social Sciences
+(IMSSS) in 1977,
+using a KI10 processor and running the Tenex operating system.
+At some point in the early 1980s, IMSSS acquired a second KI10 processor
+from Rutgers and became a dual KI10 system like SUMEX.
+Rich Alderson remembers this system still being in place in 1989.
+</p><p>Sil Sanders remembers that these machines were in Pine Hall, replacing
+the PDP-1.
+The first PDP-10 initially ran the TOPS-10 operating system provided by
+Digital Equipment Corporation.  
+Later a BBN pager was added and the machine ran the 
+<a href="http://tenex.opost.com/" class='external text' title="http://tenex.opost.com/" rel="nofollow">Tenex</a> operating system.
+When the second PDP-10 processor was added the BBN pager was upgraded and
+the Tenex operating system modified to support dual processors.
+</p><p>Most of that OS software work was done by Rainer Schultz.  
+During that period they also added a Speech Synthesis unit called the MISS 
+machine that Gerard Benbassat and Sil Sanders developed and built which was 
+used in a computer-based logic 
+course for undergraduates by <a href="http://www.stanford.edu/~psuppes/" class='external text' title="http://www.stanford.edu/~psuppes/" rel="nofollow">Patrick Suppes</a> and also with some language courses.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=18" title="Early Computers at Stanford">edit</a>]</div><a name="Physics_Department_.281965_to_1977.29"></a><h2>Physics Department (1965 to 1977)</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=19" title="Early Computers at Stanford">edit</a>]</div><a name="DEC_PDP-7"></a><h3>DEC PDP-7</h3>
+<p>In the 
+<a href="http://www.soemtron.org/downloads/decinfo/18bitservicelist1972.pdf" class='external text' title="http://www.soemtron.org/downloads/decinfo/18bitservicelist1972.pdf" rel="nofollow">18-bit service list records for Digital Equipment Corporation</a> there 
+is a listing for the first production PDP-7 computer, serial number 2, being shipped to 
+Stanford in April 1965. The service list and a record for that machine can 
+be found at <a href="http://www.pdp-7.org" class='external free' title="http://www.pdp-7.org" rel="nofollow">http://www.pdp-7.org</a>. In recent emails with Professor Harlan 
+Lefevre at University of Oregon, Mike Hatch learned the Stanford machine was 
+dismantled in 1977 and many of the parts were shipped to the University of 
+Oregon for inclusion in their machine.  For more details see 
+<a href="http://www.soemtron.org/pdp7no2systeminfo.html" class='external text' title="http://www.soemtron.org/pdp7no2systeminfo.html" rel="nofollow">this page</a>.
+</p><p>John Sauter remembers seeing a computer in the Physics Department in the fall of 1965
+that might have been a PDP-7.  Also, Professor Philip R. Bevington, Department
+of Physics, Stanford University, California is recorded as having attended 
+the DECUS annual meeting in September 1964 at Dayton Ohio.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=20" title="Early Computers at Stanford">edit</a>]</div><a name="High_Energy_Physics_Lab_.28about_1964_to_about_1974.29"></a><h2>High Energy Physics Lab (about 1964 to about 1974)</h2>
+<p>The building now known as the 
+<a href="http://campus-map.stanford.edu/index.cfm?ID=04-270" class='external text' title="http://campus-map.stanford.edu/index.cfm?ID=04-270" rel="nofollow">Hansen Experimental Physics Lab</a>
+was formerly known as the High Energy Physics Lab.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=21" title="Early Computers at Stanford">edit</a>]</div><a name="IBM_7700"></a><h3>IBM 7700</h3>
+<p>HEPL had an <a href="http://en.wikipedia.org/wiki/IBM_7700_Data_Acquisition_System" class='external text' title="http://en.wikipedia.org/wiki/IBM 7700 Data Acquisition System" rel="nofollow">IBM 7700 Data Acquisition System</a> 
+with 16,384 18-bit words of memory for data acquisition from experiments.  
+IBM seems to have only built two of these machines. 
+</p><p>Bill McKeeman remembers writing a compiler around 1965 to 1967 for 
+<a href="http://infolab.stanford.edu/pub/voy/museum/pictures/IBM.html" class='external text' title="http://infolab.stanford.edu/pub/voy/museum/pictures/IBM.html" rel="nofollow">this computer</a>.
+The language was rather simple, implemented on the B5000, producing card images 
+of assembly language which the users then hand-modified and ran through the 
+IBM 7700 assembler.  
+</p><p>One important outcome of HEPL was Professor Henry Kaplan's insight that a linear 
+accelerator could be used for creating highly focused energy for radiological 
+treatments. A brief 
+<a href="http://news.stanford.edu/news/2007/april18/med-accelerator-041807.html" class='external text' title="http://news.stanford.edu/news/2007/april18/med-accelerator-041807.html" rel="nofollow">history of the medical linear accelerator</a> 
+was published in 2007 on its 50th anniversary.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=22" title="Early Computers at Stanford">edit</a>]</div><a name="Stanford_Artificial_Intelligence_Lab_.281965_to_1979.29"></a><h2>Stanford Artificial Intelligence Lab (1965 to 1979)</h2>
+<p>The Stanford Artiticial Intelligence Lab was housed in the former 
+D.C. Power Laboratory beginning in 1965.
+See <a href="http://infolab.stanford.edu/pub/voy/museum/pictures/AIlab.html" class='external autonumber' title="http://infolab.stanford.edu/pub/voy/museum/pictures/AIlab.html" rel="nofollow">[2]</a>
+and <a href="http://en.wikipedia.org/wiki/Stanford_AI_Lab" class='external autonumber' title="http://en.wikipedia.org/wiki/Stanford AI Lab" rel="nofollow">[3]</a>
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=23" title="Early Computers at Stanford">edit</a>]</div><a name="DEC_PDP-6"></a><h3>DEC PDP-6</h3>
+<p>The first computer installed at the Stanford Artificial Intelligence Lab was
+a <a href="http://en.wikipedia.org/wiki/PDP-6" class='external text' title="http://en.wikipedia.org/wiki/PDP-6" rel="nofollow">DEC PDP-6</a>, delivered in
+<a href="http://www.stanford.edu/~learnest/sailaway.htm" class='external text' title="http://www.stanford.edu/~learnest/sailaway.htm" rel="nofollow">June of 1966</a>.
+It had 65,536 36-bit words of core memory and used 8
+<a href="http://en.wikipedia.org/wiki/DECtape" class='external text' title="http://en.wikipedia.org/wiki/DECtape" rel="nofollow">Dectape</a>
+drives for file storage.  Later a
+<a href="http://infolab.stanford.edu/pub/voy/museum/pictures/display/1-MD-MemDisk2.htm" class='external text' title="http://infolab.stanford.edu/pub/voy/museum/pictures/display/1-MD-MemDisk2.htm" rel="nofollow">high-speed Librascope disk</a>
+was added for swapping.  The Librascope could not be
+used for file storage because it was extremely temperature-sensitive.
+Les Earnest remembers that a one-degree change in room temperature was enough
+to make it start forgetting.  To make it even reliable enough for swapping
+required making two copies and checksumming, so it was eventually shut down.
+</p><p>This computer system was primarily used for
+artificial intelligence research, including the programming languages
+LISP and SAIL, and for chess and checkers.
+There were three versions of the 
+&ldquo;<a href="http://www.frc.ri.cmu.edu/~hpm/project.archive/Image.Archive/Stanford.AI.Lab.1970s/sail.bgb/Arm.1.jpg" class='external text' title="http://www.frc.ri.cmu.edu/~hpm/project.archive/Image.Archive/Stanford.AI.Lab.1970s/sail.bgb/Arm.1.jpg" rel="nofollow">robot arm</a>&rdquo;, 
+used for research into manipulation.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=24" title="Early Computers at Stanford">edit</a>]</div><a name="DEC_PDP-10_2"></a><h3>DEC PDP-10</h3>
+<p>In 1968 the PDP-6 was augmented by a
+<a href="http://en.wikipedia.org/wiki/PDP-10" class='external text' title="http://en.wikipedia.org/wiki/PDP-10" rel="nofollow">PDP-10</a> processor, the KA10,
+resulting in a dual-processor system.
+Memory was expanded from 65,536 to 196,608 36-bit words.
+</p><p>Later an
+<a href="http://www-03.ibm.com/ibm/history/exhibits/storage/storage_2314.html" class='external text' title="http://www-03.ibm.com/ibm/history/exhibits/storage/storage 2314.html" rel="nofollow">IBM 2314</a>
+disk array was added for additional data storage.
+The time-sharing operating system written at SAIL, known as
+<a href="http://en.wikipedia.org/wiki/WAITS" class='external text' title="http://en.wikipedia.org/wiki/WAITS" rel="nofollow">WAITS</a>,
+was based on the PDP-6 Monitor,
+provided by Digital Equipment Corporation (DEC)
+rather than the Stanford Time-Sharing System which had been written for
+the PDP-1.
+</p><p>See <a href="http://infolab.stanford.edu/pub/voy/museum/pictures/display/1-7.htm" class='external autonumber' title="http://infolab.stanford.edu/pub/voy/museum/pictures/display/1-7.htm" rel="nofollow">[4]</a>.
+</p><p>Les Earnest remembers that the first and second spelling
+checkers for text files were developed at SAIL around 1967 
+and 1971.  The first computer-controlled vending machine
+anywhere (called The Prancing Pony, from Tolkein's Lord of
+the Rings, a source of many place names at SAIL) was
+developed around 1972.
+</p><p>Beginning in 1971 the SAIL computer facility put bit-mapped
+displays on everyone's desk and was apparently the first
+facility to do this anywhere in the world.  Those displays
+could also show live television either from cameras in the lab
+or from broadcast TV.
+At about this time Les Earnest developed first social networking 
+program, Finger, and it included what amounted to a blog service,
+see <a href="http://news.cnet.com/2100-1025_3-6168685.html" class='external autonumber' title="http://news.cnet.com/2100-1025 3-6168685.html" rel="nofollow">[5]</a>.
+</p><p>Mark Crispin remembers that when he arrived in 1977
+there were two processors in the PDP-10 system:
+the KA10 described above and a KL10, the fastest
+processor in the PDP-10 line.  User jobs were run on the
+KL10 and the KA10 ran the XGP font compiler and user jobs
+(in &ldquo;spacewar mode&rdquo;, formerly the task of the PDP-6 processor).
+</p><p>Les Earnest remembers that the KL10 was a gift from DEC in return for the design concept, 
+since it was based on the Super Foonly computer designed by Dave Poole, 
+Phil Petit and Jack Holloway 
+and was re-engineered by DEC using SUDS, the Stanford University
+Drawing System, which was the first interactive electronic 
+<a href="http://en.wikipedia.org/wiki/Computer-aided_design" class='external text' title="http://en.wikipedia.org/wiki/Computer-aided design" rel="nofollow">CAD</a>
+system and was also developed by the Super Foonly project.
+</p><p>The PDP-6 had by then become a separate computer, though
+it booted from the PDP-10.  It operated the 
+<a href="http://www.doornbusch.net/CSIRAC/index.html" class='external text' title="http://www.doornbusch.net/CSIRAC/index.html" rel="nofollow">computer music</a>
+devices.  Rich Alderson remembers that it was retired in 1984.
+</p><p>Mark Crispin remembers having been told by Les Earnest that the
+KA10 was forcibly retired due to a combination of cooling failure
+and overtemperature sensor failure.  Mark purchased the remains
+as scrap metal from Stanford surplus property and kept some parts
+as souvenirs.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=25" title="Early Computers at Stanford">edit</a>]</div><a name="Margaret_Jacks_Hall_.281979_to_1983.29"></a><h2>Margaret Jacks Hall (1979 to 1983)</h2>
+<p>The <a href="http://ai.stanford.edu/" class='external text' title="http://ai.stanford.edu/" rel="nofollow">Stanford Artificial Intelligence project</a>
+moved to the basement of 
+<a href="http://campus-map.stanford.edu/index.cfm?ID=01-460" class='external text' title="http://campus-map.stanford.edu/index.cfm?ID=01-460" rel="nofollow">Margaret Jacks Hall</a> in
+<a href="http://news-service.stanford.edu/news/2006/april5/cstime-040506.html" class='external text' title="http://news-service.stanford.edu/news/2006/april5/cstime-040506.html" rel="nofollow">1979</a>.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=26" title="Early Computers at Stanford">edit</a>]</div><a name="DEC_PDP-10_3"></a><h3>DEC PDP-10</h3>
+<p>A DEC PDP-10 with a
+<a href="http://www.pgc.com/pgc/sail/KL10.s.1979.jpg" class='external text' title="http://www.pgc.com/pgc/sail/KL10.s.1979.jpg" rel="nofollow">KL10</a>
+processor and 524,288 36-bit words of memory was installed there.
+This was the SAIL KL10 from the Stanford Artificial Intelligence Lab.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=27" title="Early Computers at Stanford">edit</a>]</div><a name="DECSYSTEM-2050"></a><h3>DECSYSTEM-2050</h3>
+<p>Mark Crispin remembers that SCORE, a consortium of the Computer Science
+Department, two Electrical Engineering laboratories and Operations
+Research, purchased a
+<a href="http://www.columbia.edu/kermit/dec20.html" class='external text' title="http://www.columbia.edu/kermit/dec20.html" rel="nofollow">DECSYSTEM-2050</a>
+in 1979.  It was first installed in Pine Hall and then moved to
+Margaret Jacks Hall.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=28" title="Early Computers at Stanford">edit</a>]</div><a name="DECSYSTEM-2060"></a><h3>DECSYSTEM-2060</h3>
+<p>When the Computer Science Department sold its interest in the SCORE system to
+its partners in 1983, the DECSYSTEM-2050 moved to Electrical Engineering and
+was renamed SUSHI.  The Computer Science Department bought a new
+DECSYSTEM-2060 which had the first 
+4-<a href="http://computer-refuge.org/bitsavers/pdf/dec/disc/rp07/ER-ORP07-SV_RP07_ServiceMan_Oct80.pdf" class='external text' title="http://computer-refuge.org/bitsavers/pdf/dec/disc/rp07/ER-ORP07-SV RP07 ServiceMan Oct80.pdf" rel="nofollow">RP07</a>
+public file system.
+Its great size, 887,685,120 36-bit words, astonished DEC Field Service.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=29" title="Early Computers at Stanford">edit</a>]</div><a name="Xerox_Alto"></a><h3>Xerox Alto</h3>
+<p>In 1979 or 1980, 16 Xerox
+<a href="http://bitsavers.org/pdf/xerox/alto/KeepingAltoLandAlive_Dec80.pdf" class='external text' title="http://bitsavers.org/pdf/xerox/alto/KeepingAltoLandAlive Dec80.pdf" rel="nofollow">Alto</a>
+<a href="http://technobabble.com.au/technobabble/html/may/Xerox%20Workstation%20Collection.htm" class='external text' title="http://technobabble.com.au/technobabble/html/may/Xerox Workstation Collection.htm" rel="nofollow">workstations</a>
+were installed in Margaret Jacks Hall
+along with two servers. 
+Al Kossow remembers that the IFS file server was in the basement,
+and Les Earnest remembers that the Dover server was on the second floor,
+near the Computer Science Department's administrative offices.
+They featured a What-You-See-Is-What-You-Get (WYSIWYG) text editor, but the
+Smalltalk language was not provided.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=30" title="Early Computers at Stanford">edit</a>]</div><a name="Electrical_Engineering_.281983.29"></a><h2>Electrical Engineering (1983)</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=31" title="Early Computers at Stanford">edit</a>]</div><a name="DECSYSTEM-2050_2"></a><h3>DECSYSTEM-2050</h3>
+<p>When the Computer Science Department sold its interest in the SCORE system to
+its partners in 1983, the DECSYSTEM-2050 moved to 
+<a href="http://campus-map.stanford.edu/index.cfm?ID=04-030" class='external text' title="http://campus-map.stanford.edu/index.cfm?ID=04-030" rel="nofollow">Electrical Engineering</a>
+and was renamed SUSHI.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=32" title="Early Computers at Stanford">edit</a>]</div><a name="DECSYSTEM-2060_2"></a><h3>DECSYSTEM-2060</h3>
+<p>Rich Alderson remembers that there was also a DECSYSTEM-2060
+at Electrical Engineering called SIERRA.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=33" title="Early Computers at Stanford">edit</a>]</div><a name="Stanford_Linear_Accelerator_Center_.281965_to_1981.29"></a><h2>Stanford Linear Accelerator Center (1965 to 1981)</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=34" title="Early Computers at Stanford">edit</a>]</div><a name="SDS_Sigma_5"></a><h3>SDS Sigma 5</h3>
+<p>John Ehrman remembers that there was an 
+<a href="http://en.wikipedia.org/wiki/Xerox_Sigma_V" class='external text' title="http://en.wikipedia.org/wiki/Xerox Sigma V" rel="nofollow">SDS Sigma 5</a>
+in End Station A from at least 1965.
+It was used for data acquisition and control of the experimental
+equipment.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=35" title="Early Computers at Stanford">edit</a>]</div><a name="IBM_System.2F360_model_50"></a><h3>IBM System/360 model 50</h3>
+<p>SLAC ordered an IBM System/360 model 91 from IBM, and as a result received the
+slower but software-compatible
+<a href="http://www-03.ibm.com/ibm/history/exhibits/mainframe/mainframe_PP2050.html" class='external text' title="http://www-03.ibm.com/ibm/history/exhibits/mainframe/mainframe PP2050.html" rel="nofollow">System/360 model 50</a>
+in June of 1965.
+John Ehrman remembers that this machine was arranged by William Miller,
+who was later Provost of Stanford.
+The model 50 had 262,144 8-bit bytes of memory, and could perform an add in
+4 microseconds, a multiply in 16.
+John Ehrman remembers that it initially ran 
+<a href="http://domino.watson.ibm.com/tchjr/journalindex.nsf/0/ca6cc1b167ba769785256bfa00685a21?OpenDocument" class='external text' title="http://domino.watson.ibm.com/tchjr/journalindex.nsf/0/ca6cc1b167ba769785256bfa00685a21?OpenDocument" rel="nofollow">TOS/360</a>,
+then 
+<a href="http://en.wikipedia.org/wiki/OS/360_and_successors" class='external text' title="http://en.wikipedia.org/wiki/OS/360 and successors" rel="nofollow">OS/360 PCP</a> 
+and then 
+<a href="http://en.wikipedia.org/wiki/OS/360_and_successors#OS.2FMFT" class='external text' title="http://en.wikipedia.org/wiki/OS/360 and successors#OS.2FMFT" rel="nofollow">OS/360 MFT</a>.
+The initial configuration used 
+<a href="http://en.wikipedia.org/wiki/Early_IBM_disk_storage#IBM_2311" class='external text' title="http://en.wikipedia.org/wiki/Early IBM disk storage#IBM 2311" rel="nofollow">IBM 2311</a>
+disks, later upgraded to 
+<a href="http://en.wikipedia.org/wiki/Early_IBM_disk_storage#IBM_2314.2F2319" class='external text' title="http://en.wikipedia.org/wiki/Early IBM disk storage#IBM 2314.2F2319" rel="nofollow">IBM 2314</a>
+disks.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=36" title="Early Computers at Stanford">edit</a>]</div><a name="IBM_System.2F360_model_75"></a><h3>IBM System/360 model 75</h3>
+<p>The model 50 was replaced by the
+<a href="http://www-03.ibm.com/ibm/history/exhibits/mainframe/mainframe_PP2075.html" class='external text' title="http://www-03.ibm.com/ibm/history/exhibits/mainframe/mainframe PP2075.html" rel="nofollow">model 75</a>
+with 1,048,576 8-bit bytes of memory in 1967.
+This machine could do an add in 0.75 microseconds and a multiply in 3.
+John Ehrman remembers that this machine ran 
+<a href="http://en.wikipedia.org/wiki/OS/360#OS.2FMVT" class='external text' title="http://en.wikipedia.org/wiki/OS/360#OS.2FMVT" rel="nofollow">OS/360 MVT</a>.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=37" title="Early Computers at Stanford">edit</a>]</div><a name="IBM_System.2F360_model_91"></a><h3>IBM System/360 model 91</h3>
+<p>The 
+<a href="http://www-03.ibm.com/ibm/history/exhibits/mainframe/mainframe_PP2091.html" class='external text' title="http://www-03.ibm.com/ibm/history/exhibits/mainframe/mainframe PP2091.html" rel="nofollow">model 91</a>
+arrived in 1968 and was retired August 21, 1981.
+It had 2,097,152 8-bit bytes of memory and could do an add in 0.2 microseconds,
+a multiply in 0.4.
+It was programmed primarily in Fortran.
+Ted Johnston remembers that this was the first machine at SLAC to run
+<a href="http://datacenter.cit.nih.gov/interface/interface206/if206-01.htm" class='external text' title="http://datacenter.cit.nih.gov/interface/interface206/if206-01.htm" rel="nofollow">WYLBUR</a>,
+around late 1969 or 1970, replacing
+Conversational Remote Batch Entry (CRBE), an IBM program.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=38" title="Early Computers at Stanford">edit</a>]</div><a name="IBM_System.2F370_model_168"></a><h3>IBM System/370 model 168</h3>
+<p>In 
+<a href="http://www.slac.stanford.edu/cgi-wrap/getdoc/slac-pub-2782.pdf" class='external text' title="http://www.slac.stanford.edu/cgi-wrap/getdoc/slac-pub-2782.pdf" rel="nofollow">late 1973 and early 1974</a>,
+SLAC installed two
+<a href="http://www-03.ibm.com/ibm/history/exhibits/mainframe/mainframe_PP3168.html" class='external text' title="http://www-03.ibm.com/ibm/history/exhibits/mainframe/mainframe PP3168.html" rel="nofollow">IBM System/370 model 168</a>s.
+Glen Herrmannsfeldt remembers that these computers each had 3,145,278 8-bit 
+bytes of memory.  
+Ted Johnston remembers one of them being upgraded to 5,242,880 and 
+the other to 8,388,608 8-bit bytes by 1979.
+They were shut down in 1981 and 1982, their duties assumed by the IBM 3081.
+</p><p>John Ehrman remembers that these machines were arranged in a 
+&ldquo;Triplex&rdquo; system under 
+<a href="http://en.wikipedia.org/wiki/JES3" class='external text' title="http://en.wikipedia.org/wiki/JES3" rel="nofollow">ASP</a>
+with the model 91.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=39" title="Early Computers at Stanford">edit</a>]</div><a name="DEC_VAX_systems"></a><h3>DEC VAX systems</h3>
+<p>John Ehrman remembers that 
+<a href="http://en.wikipedia.org/wiki/VAX" class='external text' title="http://en.wikipedia.org/wiki/VAX" rel="nofollow">VAX</a>
+systems proliferated in some of the
+major research groups in the mid-1970s.
+</p><p>In the 1990s, China's Institute of High Energy Physics
+established a 9600 bits per second data connection between
+their VAX computers and the VAX computers at SLAC.
+This later grew into China's first Internet connection.
+For details, see 
+<a href="http://www.computerworld.com.au/article/128099/china_celebrates_10_years_being_connected_internet" class='external text' title="http://www.computerworld.com.au/article/128099/china celebrates 10 years being connected internet" rel="nofollow">this story in ComputerWorld</a>.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=40" title="Early Computers at Stanford">edit</a>]</div><a name="IBM_3081"></a><h3>IBM 3081</h3>
+<p>Ted Johnston remembers that when the model 91 was shut down in 1981
+it was replaced by an 
+<a href="http://www-03.ibm.com/ibm/history/exhibits/mainframe/mainframe_PP3081.html" class='external text' title="http://www-03.ibm.com/ibm/history/exhibits/mainframe/mainframe PP3081.html" rel="nofollow">IBM 3081</a>
+with 16,777,216 8-bit bytes of memory.
+Over a period of two years the IBM 3081 replaced all of the prior
+mainframes.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=41" title="Early Computers at Stanford">edit</a>]</div><a name="Stanford_Medical_School_.281964_to_about_1992.29"></a><h2>Stanford Medical School (1964 to about 1992)</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=42" title="Early Computers at Stanford">edit</a>]</div><a name="DEC_LINC"></a><h3>DEC LINC</h3>
+<p>In the south wing of the basement of the
+<a href="http://campus-map.stanford.edu/index.cfm?ID=07-560" class='external text' title="http://campus-map.stanford.edu/index.cfm?ID=07-560" rel="nofollow">Stanford Medical School</a>, 
+the Genetics Lab had a 
+DEC/<a href="http://history.nih.gov/exhibits/linc/index.html" class='external text' title="http://history.nih.gov/exhibits/linc/index.html" rel="nofollow">NIH</a>
+<a href="http://www.smecc.org/linc_computer.htm" class='external text' title="http://www.smecc.org/linc computer.htm" rel="nofollow">LINC</a> computer with
+4,096 12-bit words in 1964.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=43" title="Early Computers at Stanford">edit</a>]</div><a name="IBM_System.2F360_model_50_2"></a><h3>IBM System/360 model 50</h3>
+<p>From December of 1965 until 1973 an IBM System/360 model 50
+was the principal computer of
+<a href="http://infolab.stanford.edu/pub/voy/museum/pictures/ACME.html" class='external text' title="http://infolab.stanford.edu/pub/voy/museum/pictures/ACME.html" rel="nofollow">ACME</a>.
+It had 131,072 8-bit bytes of memory plus an extension that provided 1,048,576
+(later 2,097,152) additional bytes of lower-speed memory.  This system 
+had an
+<a href="http://www.columbia.edu/acis/history/datacell.html" class='external text' title="http://www.columbia.edu/acis/history/datacell.html" rel="nofollow">IBM 2321</a>
+data cell drive, holding tape strips, giving the huge capacity 
+(for the time) of 
+<a href="http://www-03.ibm.com/ibm/history/exhibits/storage/storage_2321.html" class='external text' title="http://www-03.ibm.com/ibm/history/exhibits/storage/storage 2321.html" rel="nofollow">about 400,000,000 8-bit bytes</a>.  
+This device was famous for its 
+<a href="http://www.civeng.carleton.ca/ECL/reports/ECL186/ecl186a.htm" class='external text' title="http://www.civeng.carleton.ca/ECL/reports/ECL186/ecl186a.htm" rel="nofollow">unreliability</a>.
+</p><p>The model 50
+also had four <a href="http://www.columbia.edu/acis/history/2311.html" class='external text' title="http://www.columbia.edu/acis/history/2311.html" rel="nofollow">IBM 2311</a>
+disk drives, at about 7,250,000 8-bit bytes each, later replaced by an 8-drive 
+<a href="http://www-03.ibm.com/ibm/history/exhibits/storage/storage_2314.html" class='external text' title="http://www-03.ibm.com/ibm/history/exhibits/storage/storage 2314.html" rel="nofollow">IBM 2314</a>, 
+with 29,176,000 8-bit bytes per drive.
+</p><p>The computer was programmed in a subset of PL/I and offered
+timesharing.  See also <a href="http://infolab.stanford.edu/pub/voy/museum/pictures/IBM.html" class='external autonumber' title="http://infolab.stanford.edu/pub/voy/museum/pictures/IBM.html" rel="nofollow">[6]</a>
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=44" title="Early Computers at Stanford">edit</a>]</div><a name="IBM_1800"></a><h3>IBM 1800</h3>
+<p>From approximately May of 1966 until the 1970s the
+<a href="http://en.wikipedia.org/wiki/IBM_1800" class='external text' title="http://en.wikipedia.org/wiki/IBM 1800" rel="nofollow">IBM 1800</a> acted as a
+real-time sub-processor for the ACME system.
+It had 16,384 16-bit words of memory and was programmed in PL/I.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=45" title="Early Computers at Stanford">edit</a>]</div><a name="DEC_PDP-10_4"></a><h3>DEC PDP-10</h3>
+<p>From some time in the 1970s until around 1992 there was the SUMEX timeshared
+computer service in the Medical School. 
+It was supported by NIH and NLM and provided
+services to medical researchers throughout the United States, 
+focusing on AU applications.
+The principal investigator was Prof. Joshua Lederberg 
+and the manger was Tom Rindfleisch.
+Prof. Feigenbaum, Bruce Buchanan, and other researchers from the 
+Computer Science Department were
+involved as well.  It was used by Ted Shortliffe and others to develop the 
+Mycin advice giving systems, 
+the prototype for future experts system technologies.  
+Ted Shortliffe later joined the Stanford faculty 
+and started the Medical Information Science group at Stanford.
+</p><p>Its equipment was primarly a PDP-10.
+Mark Crispin remembers this PDP-10 having two
+<a href="http://research.microsoft.com/~GBell/Digital/timeline/1972-3.htm" class='external text' title="http://research.microsoft.com/~GBell/Digital/timeline/1972-3.htm" rel="nofollow">KI10</a>
+processors in 1977.
+It was programmed in InterLisp and used for the Stanford SUMEX-AIM National
+timeshared service.  It ran the Tenex operating system.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=46" title="Early Computers at Stanford">edit</a>]</div><a name="DECSYSTEM-2020"></a><h3>DECSYSTEM-2020</h3>
+<p>In about 1979 SUMEX acquired a
+<a href="http://research.microsoft.com/~gbell/Digital/timeline/1978-2.htm" class='external text' title="http://research.microsoft.com/~gbell/Digital/timeline/1978-2.htm" rel="nofollow">DECSYSTEM-2020</a>
+called Tiny.  Mark Crispin acquired that machine when it retired.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=47" title="Early Computers at Stanford">edit</a>]</div><a name="DECSYSTEM-2060.2F2065"></a><h3>DECSYSTEM-2060/2065</h3>
+<p>At some point in the early 1980s, SUMEX replaced its dual KI10 Tenex
+system with a DECSYSTEM-2060.  By 1989 the 2060 had been upgraded to a
+<a href="http://www.corestore.org/DEC2065.htm" class='external text' title="http://www.corestore.org/DEC2065.htm" rel="nofollow">2065</a>.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=48" title="Early Computers at Stanford">edit</a>]</div><a name="Stanford_Hospital_.28about_1970.29"></a><h2>Stanford Hospital (about 1970)</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=49" title="Early Computers at Stanford">edit</a>]</div><a name="IBM_System.2F360_model_40"></a><h3>IBM System/360 model 40</h3>
+<p>An
+<a href="http://www-03.ibm.com/ibm/history/exhibits/mainframe/mainframe_PP2040.html" class='external text' title="http://www-03.ibm.com/ibm/history/exhibits/mainframe/mainframe PP2040.html" rel="nofollow">IBM System/360 model 40</a>
+was used at Stanford Hospital starting
+about 1970.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=50" title="Early Computers at Stanford">edit</a>]</div><a name="Aero_and_Astro_.28about_1960_to_about_1980.29"></a><h2>Aero and Astro (about 1960 to about 1980)</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=51" title="Early Computers at Stanford">edit</a>]</div><a name="IBM_1620"></a><h3>IBM 1620</h3>
+<p>Some time in the 1960s there was an
+<a href="http://www-03.ibm.com/ibm/history/exhibits/mainframe/mainframe_PP1620.html" class='external text' title="http://www-03.ibm.com/ibm/history/exhibits/mainframe/mainframe PP1620.html" rel="nofollow">IBM 1620</a>
+in 
+<a href="http://campus-map.stanford.edu/index.cfm?ID=04-540" class='external text' title="http://campus-map.stanford.edu/index.cfm?ID=04-540" rel="nofollow">Durand</a>
+with 20,000 4-bit digits of memory.
+It was used by <a href="http://en.wikipedia.org/wiki/Bernard_Widrow" class='external text' title="http://en.wikipedia.org/wiki/Bernard Widrow" rel="nofollow">Bernard Widrow</a>
+and <a href="http://en.wikipedia.org/wiki/Marcian_Hoff" class='external text' title="http://en.wikipedia.org/wiki/Marcian Hoff" rel="nofollow">Ted Hoff</a> for development of the
+<a href="http://en.wikipedia.org/wiki/Least_mean_squares_filter" class='external text' title="http://en.wikipedia.org/wiki/Least mean squares filter" rel="nofollow">Least Mean Squares algorithms</a>.
+Mike Gabrielson remembers that this machine was no longer in use by 1974 or earlier,
+but Kok Chen remembers that it was still present until about 1980.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=52" title="Early Computers at Stanford">edit</a>]</div><a name="SDS_Sigma_5_2"></a><h3>SDS Sigma 5</h3>
+<p>In about 1967 there was an 
+<a href="http://en.wikipedia.org/wiki/Xerox_Sigma_V" class='external text' title="http://en.wikipedia.org/wiki/Xerox Sigma V" rel="nofollow">SDS Sigma 5</a>
+in the main computer room in the basement.  Kok Chen remembers that it belonged to the
+<a href="http://www-star.stanford.edu/rsg/index.php" class='external text' title="http://www-star.stanford.edu/rsg/index.php" rel="nofollow">Radio Science Group</a> (now STARLabs) 
+and run by the Stanford Center for Radar Astronomy (SCRA)].  This machine was replaced around 1978 by a 
+<a href="http://en.wikipedia.org/wiki/Data_General_Eclipse" class='external text' title="http://en.wikipedia.org/wiki/Data General Eclipse" rel="nofollow">Data General Eclipse</a>.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=53" title="Early Computers at Stanford">edit</a>]</div><a name="Hewlett-Packard_2116_and_2100"></a><h3>Hewlett-Packard 2116 and 2100</h3>
+<p>In a side room off the Sigma 5 room was Professor Bernard Widrow's lab, which
+housed an <a href="http://en.wikipedia.org/wiki/HP_2100" class='external text' title="http://en.wikipedia.org/wiki/HP 2100" rel="nofollow">HP 2116</a>.  Kok Chen remembers
+that it was used to teach a computer lab that involved real-time data I/O.
+Mike Gabrielson remembers that this machine was eventually upgraded to an HP 2100.
+</p><p>The Durand building is locked after hours, so to access the HP 2116 students used
+a key entry door at the side of Durand that faces the 
+<a href="http://campus-map.stanford.edu/index.cfm?ID=04-490" class='external text' title="http://campus-map.stanford.edu/index.cfm?ID=04-490" rel="nofollow">McCullough building</a>.
+There is a small glass-walled room that the students passed to get to the keyed
+door.  In that glass-enclosed room stood two 
+<a href="http://en.wikipedia.org/wiki/IBM_2741" class='external text' title="http://en.wikipedia.org/wiki/IBM 2741" rel="nofollow">IBM 2741 terminals</a>.  Mike Gabrielson
+remembers accessing the 
+<a href="http://en.wikipedia.org/wiki/IBM_System/360_Model_67" class='external text' title="http://en.wikipedia.org/wiki/IBM System/360 Model 67" rel="nofollow">IBM System/360 model 67</a> in 
+<a href="http://campus-map.stanford.edu/index.cfm?ID=14-170" class='external text' title="http://campus-map.stanford.edu/index.cfm?ID=14-170" rel="nofollow">Pine Hall</a> from these terminals,
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=54" title="Early Computers at Stanford">edit</a>]</div><a name="Hewlett-Packard_2115"></a><h3>Hewlett-Packard 2115</h3>
+<p>When Professor Allan M. Petersen (Kok Chen's advisor) contracted with the National
+Science Foundation to develop unmanned satellite-based weather stations for
+Antarctica, an additional new HP 2115 was placed in the Sigma 5 room.
+Kok Chen remembers that this machine was connected by full-duplex 
+<a href="http://en.wikipedia.org/wiki/Bell_202_modem" class='external text' title="http://en.wikipedia.org/wiki/Bell 202 modem" rel="nofollow">Bell 202 modems</a> on dedicated 4-wire 
+land lines to the <a href="http://www.jamesburgdish.org/" class='external text' title="http://www.jamesburgdish.org/" rel="nofollow">Jamesburg satellite dishes</a> in
+Carmel Valley, making it possible to control the Antarctic stations from the
+Durand basement.
+</p><p>Later, the project evolved into the 
+<a href="http://amrc.ssec.wisc.edu/aws.html" class='external text' title="http://amrc.ssec.wisc.edu/aws.html" rel="nofollow">Automated Weather Station (AWS)</a> study which used
+the Nimbus polar orbiters instead of the Comsat geostationary satellites.
+AWS data came on 9-track tapes from Alaska instead of
+directly from Jamesburg, but Kok Chen continued to use the HP 2115 to process the data.
+After demonstrating its feasibility, the project was handed over to real weather types
+in the 
+<a href="http://www.wisc.edu/" class='external text' title="http://www.wisc.edu/" rel="nofollow">University of Wisconsin</a>.  Kok Chen tells us that there are
+still dozens of AWS
+stations in use, including a couple in Greenland.
+</p><p>When Kok Chen was doing speech research he used the HP 2115 for its analog-to-digital and 
+digital-to-analog interfaces, the Sigma 5 for number crunching, and the Adage to display
+the tracking poles and zeros of the human vocal tract.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=55" title="Early Computers at Stanford">edit</a>]</div><a name="Adage_GT-30"></a><h3>Adage GT-30</h3>
+<p>Mike Gabrielson remembers an Adage GT-30 that was originally acquired by the Industrial
+Engineering department and lived in one of their rooms in the 
+<a href="http://campus-map.stanford.edu/index.cfm?ID=02-610" class='external text' title="http://campus-map.stanford.edu/index.cfm?ID=02-610" rel="nofollow">610 building</a>.
+Around 1974 or 1975 it was moved to Durand 016C.  It was originally in the same room
+as the HP 2116 and the Sigma 5, but was eventually walled off into its own room.
+</p><p>The Adage was used for only two final &ldquo;official&rdquo; projects: 
+a brief Industrial Engineering
+research effort into traffic routing mapping funded by Urban Mass Transit Administration
+and as the student machine for IE 341 &ldquo;Interactive Computer Graphics&rdquo; in Winter 1975/76,
+for which Mike was the teaching assistant.  Not long after that it was scrapped, and was
+last seen stored in the water quality labs: the 
+<a href="http://campus-map.stanford.edu/index.cfm?ID=02-524" class='external text' title="http://campus-map.stanford.edu/index.cfm?ID=02-524" rel="nofollow">524</a> or 
+<a href="http://campus-map.stanford.edu/index.cfm?ID=02-540" class='external text' title="http://campus-map.stanford.edu/index.cfm?ID=02-540" rel="nofollow">540</a> building.
+</p><p>See <a href="http://www.virhistory.com/ncsu/ncsu_lab.htm" class='external autonumber' title="http://www.virhistory.com/ncsu/ncsu lab.htm" rel="nofollow">[7]</a>.
+</p><p>Mike Gabrielson remembers that Kok Chen modified the Adage to boot from a custom ROM board
+instead of from punched paper tape.  The Adage was easy to crash with bad programming,
+so Kok Chen's modification made it possible to instantly reboot Stanford's Adage, while
+all the other Adages in the world has to chug through three feet or so of tape every time
+they restarted.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=56" title="Early Computers at Stanford">edit</a>]</div><a name="Varian_620i"></a><h3>Varian 620i</h3>
+<p>While Mike Gabrielson was using the Adage, the Industrial Engineering department was offered a 
+<a href="http://computer-refuge.org/bitsavers/pdf/varian/620i/620iOct1967.pdf" class='external text' title="http://computer-refuge.org/bitsavers/pdf/varian/620i/620iOct1967.pdf" rel="nofollow">Varian 620i</a>, perhaps 
+from Southern Pacific, and in turn offered it to Mike's group.
+The machine arrived with a gigantic OCR peripheral that Mike estimates to have been
+about 250 cubic feet of electronics.  He recalls that Kok Chen pointed out some of the
+more rare and expensive components such as 
+<a href="http://en.wikipedia.org/wiki/Photomultiplier" class='external text' title="http://en.wikipedia.org/wiki/Photomultiplier" rel="nofollow">photomultiplier tubes</a>, which were extracted
+but just ended up stored away in a closet in the IE building.  All the rest was soon
+scrapped.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=57" title="Early Computers at Stanford">edit</a>]</div><a name="Data_General_Nova"></a><h3>Data General Nova</h3>
+<p>Some time in the 1970s there was a
+<a href="http://en.wikipedia.org/wiki/Data_General_Nova" class='external text' title="http://en.wikipedia.org/wiki/Data General Nova" rel="nofollow">Data General Nova</a>
+in the Durand basement.  It was located next door to Durand 061C.
+</p><p>Mike Gabrielson remembers that he would find a surprising number of small computers
+hidden around campus that had been acquired for research projects, but the projects
+had ended and the machines were completely idle.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=58" title="Early Computers at Stanford">edit</a>]</div><a name="Interdata"></a><h3>Interdata</h3>
+<p>Mike Gabrielson remembers that John Gill started out with a pair of Interdata
+computers that were kept on the second floor of Durand, but when he discovered
+<a href="http://en.wikipedia.org/wiki/Unix" class='external text' title="http://en.wikipedia.org/wiki/Unix" rel="nofollow">Unix</a> he replaced them with the DEC hardware described below.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=59" title="Early Computers at Stanford">edit</a>]</div><a name="DEC_PDP-11.2F70_and_VAX-11.2F780"></a><h3>DEC PDP-11/70 and VAX-11/780</h3>
+<p>Mike Gabrielson and Kok Chen remember Professor John Gill's DEC 
+<a href="http://en.wikipedia.org/wiki/PDP-11/70" class='external text' title="http://en.wikipedia.org/wiki/PDP-11/70" rel="nofollow">PDP-11/70</a> at the other 
+end of the Durand basement hall from the Sigma 5.  
+Later a 
+<a href="http://en.wikipedia.org/wiki/VAX-11/780" class='external text' title="http://en.wikipedia.org/wiki/VAX-11/780" rel="nofollow">VAX-11/780</a> either joined the PDP-11/70 or
+replaced it.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=60" title="Early Computers at Stanford">edit</a>]</div><a name="Stanford_Exploration_Project_.281976_to_1997.29"></a><h2>Stanford Exploration Project (1976 to 1997)</h2>
+<p>The <a href="http://sepwww.stanford.edu/doku.php" class='external text' title="http://sepwww.stanford.edu/doku.php" rel="nofollow">Stanford Exploration Project</a> was founded by
+<a href="http://sepwww.stanford.edu/data/media/public/sep/jon/" class='external text' title="http://sepwww.stanford.edu/data/media/public/sep/jon/" rel="nofollow">Professor Jon Claerbout</a> 
+in the <a href="https://pangea.stanford.edu/departments/geophysics/about" class='external text' title="https://pangea.stanford.edu/departments/geophysics/about" rel="nofollow">Geophysics Department</a>.
+It was located in the <a href="https://pangea.stanford.edu/about/maps-directions" class='external text' title="https://pangea.stanford.edu/about/maps-directions" rel="nofollow">Earth Science Mitchell Building</a>, 
+<a href="http://campus-map.stanford.edu/?id=04-560&amp;lat=37.4264170549&amp;lng=-122.172654692&amp;zoom=17&amp;srch=mitchell" class='external text' title="http://campus-map.stanford.edu/?id=04-560&amp;lat=37.4264170549&amp;lng=-122.172654692&amp;zoom=17&amp;srch=mitchell" rel="nofollow">4th floor, room  467.</a>
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=61" title="Early Computers at Stanford">edit</a>]</div><a name="DEC_PDP-11.2F34"></a><h3>DEC PDP-11/34</h3>
+<p>Professor Jon Claerbout remembers the <a href="http://www.hampage.hu/pdp-11/1134.html" class='external text' title="http://www.hampage.hu/pdp-11/1134.html" rel="nofollow">PDP-11/34</a>, which arrived in 1976.
+It had the first <a href="http://cm.bell-labs.com/cm/cs/who/dmr/hist.html" class='external text' title="http://cm.bell-labs.com/cm/cs/who/dmr/hist.html" rel="nofollow">AT&amp;T UNIX</a> license on campus.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=62" title="Early Computers at Stanford">edit</a>]</div><a name="Floating_Point_Systems_Array_Processor_AP.2F120B"></a><h3>Floating Point Systems Array Processor AP/120B</h3>
+<p>The <a href="http://www.springerreference.com/docs/html/chapterdbid/311493.html" class='external text' title="http://www.springerreference.com/docs/html/chapterdbid/311493.html" rel="nofollow">Floating Point Systems Array Processor AP/120B</a>
+was added in 1977.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=63" title="Early Computers at Stanford">edit</a>]</div><a name="DEC_PDP-11.2F50_and_PDP-11.2F70"></a><h3>DEC PDP-11/50 and PDP-11/70</h3>
+<p>The <a href="http://www.hampage.hu/pdp-11/1145.html" class='external text' title="http://www.hampage.hu/pdp-11/1145.html" rel="nofollow">PDP-11/50</a> and <a href="http://www.hampage.hu/pdp-11/1170.html" class='external text' title="http://www.hampage.hu/pdp-11/1170.html" rel="nofollow">PDP-11/70</a> were higher speed implementations of the <a href="http://www.hampage.hu/pdp-11/main.html" class='external text' title="http://www.hampage.hu/pdp-11/main.html" rel="nofollow">PDP-11</a>.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=64" title="Early Computers at Stanford">edit</a>]</div><a name="DEC_VAX-11.2F780"></a><h3>DEC VAX-11/780</h3>
+<p>A <a href="http://www.old-computers.com/history/detail.asp?n=20&amp;t=3" class='external text' title="http://www.old-computers.com/history/detail.asp?n=20&amp;t=3" rel="nofollow">VAX-11/780</a> arrived in 1978.  
+It ran <a href="http://oreilly.com/catalog/opensources/book/kirkmck.html" class='external text' title="http://oreilly.com/catalog/opensources/book/kirkmck.html" rel="nofollow">Berkeley UNIX</a>.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=65" title="Early Computers at Stanford">edit</a>]</div><a name="Convex_C1"></a><h3>Convex C1</h3>
+<p>In 1985 the project acquired a 
+<a href="http://www.new-npac.org/projects/cdroms/cewes-1999-06-vol1/nhse/hpccsurvey/orgs/convex/convex.html" class='external text' title="http://www.new-npac.org/projects/cdroms/cewes-1999-06-vol1/nhse/hpccsurvey/orgs/convex/convex.html" rel="nofollow">Convex C1</a>, 
+one of the first, if not the first, to be 
+<a href="https://picasaweb.google.com/lh/photo/FzzvlQP3doCEq-P8WoxUOtMTjNZETYmyPJy0liipFm0?feat=directlink" class='external text' title="https://picasaweb.google.com/lh/photo/FzzvlQP3doCEq-P8WoxUOtMTjNZETYmyPJy0liipFm0?feat=directlink" rel="nofollow">sold</a>.
+Jon Claerbout remembers having several 
+<a href="http://www.cs.columbia.edu/~sedwards/classes/2012/3827-spring/advanced-arch-2011.pdf" class='external text' title="http://www.cs.columbia.edu/~sedwards/classes/2012/3827-spring/advanced-arch-2011.pdf" rel="nofollow">benchmarking</a> 
+jobs that the project compared to their VAX-11/780.  
+The C-1 was 12-15 times faster.  Were they ever happy!   But a little later Jon heard that Cal Tech Chemistry Dept got a C-1 at a steeply discounted price so he wasn't so happy any more.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=66" title="Early Computers at Stanford">edit</a>]</div><a name="Thinking_Machines_CM-2"></a><h3>Thinking Machines CM-2</h3>
+<p><a href="https://pangea.stanford.edu/people/faculty/biondo-biondi" class='external text' title="https://pangea.stanford.edu/people/faculty/biondo-biondi" rel="nofollow">Biondo Biondi</a> remembers a 
+<a href="https://en.wikipedia.org/wiki/Thinking_Machines_Corporation" class='external text' title="https://en.wikipedia.org/wiki/Thinking Machines Corporation" rel="nofollow">Thinking Machines</a> 
+<a href="http://www.svisions.com/sv/cm-dv.html" class='external text' title="http://www.svisions.com/sv/cm-dv.html" rel="nofollow">CM-2</a> with 
+<a href="http://people.csail.mit.edu/bradley/cm5docs/nov06/ConnectionMachineModelCM-2TechnicalSummary.pdf" class='external text' title="http://people.csail.mit.edu/bradley/cm5docs/nov06/ConnectionMachineModelCM-2TechnicalSummary.pdf" rel="nofollow">8,192 1-bit processors</a>
+on loan from Thinking Machines around 1991.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=67" title="Early Computers at Stanford">edit</a>]</div><a name="Thinking_Machinse_CM-5"></a><h3>Thinking Machinse CM-5</h3>
+<p>Around 1992 the Stanford Exploration Project bought a 
+<a href="https://en.wikipedia.org/wiki/Connection_Machine" class='external text' title="https://en.wikipedia.org/wiki/Connection Machine" rel="nofollow">Thinking Machines CM-5</a> with 32 nodes and
+probably 1,073,741,824 8-bit bytes of memory.  Biondo Biondi remembers that this computer was operated
+until around 1997.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=68" title="Early Computers at Stanford">edit</a>]</div><a name="Lawrence_Livermore_Laboratory_.281975_to_1988.29"></a><h2>Lawrence Livermore Laboratory (1975 to 1988)</h2>
+<p>Several Stanford <a href="http://infolab.stanford.edu/pub/voy/museum/pictures/S-1/list.html" class='external text' title="http://infolab.stanford.edu/pub/voy/museum/pictures/S-1/list.html" rel="nofollow">students and faculty</a> 
+participated in the <a href="/wiki/index.php/S-1_project" title="S-1 project">S-1 project</a>.
+Two machines were built under a Navy contract.
+Both became operational, but did not have a long productive life. 
+However the design methods and software employed led to several major ventures.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=69" title="Early Computers at Stanford">edit</a>]</div><a name="S-1_Mark_I"></a><h3> S-1 Mark I </h3>
+<p>The S-1 Mark I has been donated by LLNL to the Computer History Museum (CHM) in Mountain View, but is slated to be displayed at Stanford University.  See 
+<a href="http://infolab.stanford.edu/pub/voy/museum/pictures/S-1/CHM.html" class='external text' title="http://infolab.stanford.edu/pub/voy/museum/pictures/S-1/CHM.html" rel="nofollow">Pictures of the S-1 Mark I</a>
+in the CHM warehouse in Mountain View.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=70" title="Early Computers at Stanford">edit</a>]</div><a name="S-1_Mark_II"></a><h3> S-1 Mark II </h3>
+<p>The S-1 Mark II has been donated by LLNL to the Fannie and John Hertz Foundation, and is currently in storage.  
+We have only a few <a href="http://infolab.stanford.edu/pub/voy/museum/pictures/S-1/LLNL.html" class='external text' title="http://infolab.stanford.edu/pub/voy/museum/pictures/S-1/LLNL.html" rel="nofollow">Pictures of the S-1 Mark II</a> at LLNL.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=71" title="Early Computers at Stanford">edit</a>]</div><a name="Center_for_Education_Research_at_Stanford_.281976_to_1989.29"></a><h2>Center for Education Research at Stanford (1976 to 1989)</h2>
+<p>The computers used by the Low-Overhead Time Sharing project
+(<a href="http://infolab.stanford.edu/pub/voy/museum/pictures/display/1-5.htm" class='external text' title="http://infolab.stanford.edu/pub/voy/museum/pictures/display/1-5.htm" rel="nofollow">LOTS</a>)
+were located in an old TV studio at the 
+<a href="http://campus-map.stanford.edu/index.cfm?ID=02-020" class='external text' title="http://campus-map.stanford.edu/index.cfm?ID=02-020" rel="nofollow">Center for Educatonal Research at Stanford</a>
+(CERAS).
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=72" title="Early Computers at Stanford">edit</a>]</div><a name="DECSYSTEM-20_3"></a><h3>DECSYSTEM-20</h3>
+<p>LOTS started with a
+<a href="http://en.wikipedia.org/wiki/DECSYSTEM-20" class='external text' title="http://en.wikipedia.org/wiki/DECSYSTEM-20" rel="nofollow">DECSYSTEM-2040</a>
+with 524,288 36-bit words of memory in 1976.  It ran the TOPS-20 operating
+system.  Mark Crispin remembers that by the late 1970s the
+DECSYSTEM-2040 had become a DECSYSTEM-2050, and a second
+DECSYSTEM-20 computer had arrived.
+Patrick Scheible remembers the second DECSYSTEM-20 as LESS, meaning
+&ldquo;<a href="http://buffy.sighup.org.uk/hfiles/acpu.html" class='external text' title="http://buffy.sighup.org.uk/hfiles/acpu.html" rel="nofollow">LOTS</a>' Even Slower Sister&rdquo;
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=73" title="Early Computers at Stanford">edit</a>]</div><a name="System_Concepts_SC-30"></a><h3>System Concepts SC-30</h3>
+<p>Rich Alderson remembers that the last PDP-10-type system at Stanford
+was the System Concepts SC-30 at LOTS.  It was acquired in 1986.
+</p><p>By 1989 LOTS had three DECSYSTEM-2065s named Lear, Othello and Hamlet,
+the SC-30 named Macbeth, and other computers.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=74" title="Early Computers at Stanford">edit</a>]</div><a name="Graduate_School_of_Business_.281978.29"></a><h2>Graduate School of Business (1978)</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=75" title="Early Computers at Stanford">edit</a>]</div><a name="DECSYSTEM-2040"></a><h3>DECSYSTEM-2040</h3>
+<p>Mark Crispin remembers that the 
+<a href="http://campus-map.stanford.edu/index.cfm?ID=08-350" class='external text' title="http://campus-map.stanford.edu/index.cfm?ID=08-350" rel="nofollow">Graduate School of Business</a>
+acquired a DECSYSTEM-2040 by 1978.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=76" title="Early Computers at Stanford">edit</a>]</div><a name="DECSYSTEM-2050_3"></a><h3>DECSYSTEM-2050</h3>
+<p>Mark Crispin remembers the DECSYSTEM-2040 being upgraded to a
+DECSYSTEM-2050, and a second machine was acquired later.
+Rich Alderson remembers that these two computers were named HOW and WHY.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=77" title="Early Computers at Stanford">edit</a>]</div><a name="Center_for_the_Study_of_Language_and_Information_.28the_1980s.29"></a><h2>Center for the Study of Language and Information (the 1980s)</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=78" title="Early Computers at Stanford">edit</a>]</div><a name="DECSYSTEM-20_4"></a><h3>DECSYSTEM-20</h3>
+<p>Rich Alderson remembers that there was a DECSYSTEM-20 at
+<a href="http://campus-map.stanford.edu/index.cfm?ID=14-070" class='external text' title="http://campus-map.stanford.edu/index.cfm?ID=14-070" rel="nofollow">Center for the Study of Language and Information</a>
+(CSLI) in the 1980s.
+It may have been the former CONTEXT machine from the computer center.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit&amp;section=79" title="Early Computers at Stanford">edit</a>]</div><a name="References"></a><h2> References </h2>
+<p>This page was first created on 15 August 1997 by Gio Wiederhold,
+<a href="mailto:gio@cs.stanford.edu" class='external text' title="mailto:gio@cs.stanford.edu" rel="nofollow">email: gio@cs.stanford.edu</a>.
+</p><p>Base material was collected by
+<a href="http://InfoLab.stanford.edu/people/voy.html" class='external text' title="http://InfoLab.stanford.edu/people/voy.html" rel="nofollow">Voy Wiederhold</a>,
+coordinator,
+<a href="mailto:voy@db.stanford.edu" class='external text' title="mailto:voy@db.stanford.edu" rel="nofollow">email: voy@db.stanford.edu</a>,
+using Stanford Daily and Library sources.
+Additional material was provided by Gio Wiederhold, John Sauter (1963-1968),
+Mark Crispin (from 1977), Rich Alderson (1980s),
+Patrick Scheible, Glen Herrmannsfeldt,
+John Ehrman (SLAC), Ted Johnston (SLAC from 1969),
+<a href="http://www.stanford.edu/~learnest/" class='external text' title="http://www.stanford.edu/~learnest/" rel="nofollow">Les Earnest</a>,
+Al Kossow, Roger Moore (early 1960s),
+Mike Gabrielson (Durand), Kok Chen (Durand),
+Sil Sanders (IMSSS 1969-1980) and
+Bill McKeeman
+from personal recollections.
+</p><p><a href="http://special.lib.umn.edu/cbi/oh/pdf.phtml?id=311" class='external text' title="http://special.lib.umn.edu/cbi/oh/pdf.phtml?id=311" rel="nofollow">John Herriot</a> gave an &ldquo;oral history&rdquo; 
+interview to Pamela McCorduck on May 22, 1979, which includes some references to early computers at Stanford.
+</p><p>Mike Hatch offered information about PDP-7 serial number 2.  He is seeking additional information about this machine for his <a href="http://www.pdp-7.org" class='external text' title="http://www.pdp-7.org" rel="nofollow">PDP-7 web site</a>.  Mike was a PDP-7 operator and 
+service engineer in the UK for the then MOD.
+</p><p>Some background material on early computers was provided by Jacinda Frost's 
+<a href="http://onlineitdegree.net/" class='external text' title="http://onlineitdegree.net/" rel="nofollow">50 Years of Information Technology</a>.  
+Jacinda provides a well-rounded reference for anyone interested in the past, present or future of Technology.
+</p><p><a href="http://alumni.stanford.edu/get/page/magazine/article/?article_id=53338" class='external text' title="http://alumni.stanford.edu/get/page/magazine/article/?article id=53338" rel="nofollow">Bill Pitts</a> contributed some of his early memories of computer gaming, the computers in Pine Hall and the AI Project in the DC Power Lab to the May/June 2012 issue of <a href="http://alumni.stanford.edu/get/page/magazine/home" class='external text' title="http://alumni.stanford.edu/get/page/magazine/home" rel="nofollow">Stanford Magazine</a>.  The article name is <a href="http://alumni.stanford.edu/get/page/magazine/article/?article_id=53336" class='external text' title="http://alumni.stanford.edu/get/page/magazine/article/?article id=53336" rel="nofollow">Game Changers</a>.
+</p><p>Jon Claerbout and Biondo Biondi contributed the information about the Stanford Exploration Project.
+</p><p>John Sauter and Gio Wiederhold will update this wiki page as we obtain 
+more information on early Computers at Stanford University.
+</p>
+<!-- Saved in parser cache with key mediawiki_forum:pcache:idhash:1304-0!1!0!0!!en!2 and timestamp 20170113122150 -->
+<div class="printfooter">
+Retrieved from "<a href="http://forum.stanford.edu/wiki/index.php/Early_Computers_at_Stanford">http://forum.stanford.edu/wiki/index.php/Early_Computers_at_Stanford</a>"</div>
+	    	    <!-- end content -->
+	    <div class="visualClear"></div>
+	  </div>
+	</div>
+      </div>
+      <div id="column-one">
+	<div id="p-cactions" class="portlet">
+	  <h5>Views</h5>
+	  <ul>
+	    <li id="ca-nstab-main"
+	       class="selected"	       ><a href="/wiki/index.php/Early_Computers_at_Stanford">Article</a></li><li id="ca-talk"
+	       class="new"	       ><a href="/wiki/index.php?title=Talk:Early_Computers_at_Stanford&amp;action=edit">Discussion</a></li><li id="ca-edit"
+	       	       ><a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=edit">Edit</a></li><li id="ca-history"
+	       	       ><a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;action=history">History</a></li>	  </ul>
+	</div>
+	<div class="portlet" id="p-personal">
+	  <h5>Personal tools</h5>
+	  <div class="pBody">
+	    <ul>
+	    <li id="pt-login"><a href="/wiki/index.php?title=Special:Userlogin&amp;returnto=Early_Computers_at_Stanford">Create an account or log in</a></li>	    </ul>
+	  </div>
+	</div>
+	<div class="portlet" id="p-logo">
+	  <a style="background-image: url(/wiki/skins/common/images/CS.png);"
+	    href="/wiki/index.php/Main_Page"
+	    title="Main Page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class='portlet' id='p-navigation'>
+	  <h5>Navigation</h5>
+	  <div class='pBody'>
+	    <ul>
+	    	      <li id="n-mainpage"><a href="/wiki/index.php/Main_Page">Main Page</a></li>
+	     	      <li id="n-portal"><a href="/wiki/index.php/Stanford_CSD_History:Community_Portal">Community portal</a></li>
+	     	      <li id="n-currentevents"><a href="/wiki/index.php/Current_events">Current events</a></li>
+	     	      <li id="n-recentchanges"><a href="/wiki/index.php/Special:Recentchanges">Recent changes</a></li>
+	     	      <li id="n-randompage"><a href="/wiki/index.php/Special:Random">Random page</a></li>
+	     	      <li id="n-help"><a href="/wiki/index.php/Help:Contents">Help</a></li>
+	     	      <li id="n-sitesupport"><a href="/wiki/index.php/Stanford_CSD_History:Site_support">Donations</a></li>
+	     	    </ul>
+	  </div>
+	</div>
+		<div id="p-search" class="portlet">
+	  <h5><label for="searchInput">Search</label></h5>
+	  <div class="pBody">
+	    <form name="searchform" action="/wiki/index.php/Special:Search" id="searchform">
+	      <input id="searchInput" name="search" type="text"
+	        accesskey="f" value="" />
+	      <input type='submit' name="go" class="searchButton" id="searchGoButton"
+	        value="Go"
+	        />&nbsp;<input type='submit' name="fulltext"
+	        class="searchButton"
+	        value="Search" />
+	    </form>
+	  </div>
+	</div>
+	<div class="portlet" id="p-tb">
+	  <h5>Toolbox</h5>
+	  <div class="pBody">
+	    <ul>
+		  		  <li id="t-whatlinkshere"><a href="/wiki/index.php/Special:Whatlinkshere/Early_Computers_at_Stanford">What links here</a></li>
+		  		  <li id="t-recentchangeslinked"><a href="/wiki/index.php/Special:Recentchangeslinked/Early_Computers_at_Stanford">Related changes</a></li>
+		                	      	      	      	      	      	      	      	      	      <li id="t-specialpages"><a href="/wiki/index.php/Special:Specialpages">Special pages</a></li>	      	      	      <li id="t-print"><a href="/wiki/index.php?title=Early_Computers_at_Stanford&amp;printable=yes">Printable version</a></li>
+	      	    </ul>
+	  </div>
+	</div>
+	      </div><!-- end of the left (by default at least) column -->
+      <div class="visualClear"></div>
+      <div id="footer">
+    <div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="/wiki/skins/common/images/poweredby_mediawiki_88x31.png" alt="MediaWiki" /></a></div>		<ul id="f-list">
+	  <li id="f-lastmod"> This page was last modified 22:39, 16 February 2016.</li>	  <li id="f-viewcount">This page has been accessed 806,992 times.</li>	  	  	  	  <li id="f-about"><a href="/wiki/index.php/Stanford_CSD_History:About" title="Stanford CSD History:About">About Stanford CSD History</a></li>	  <li id="f-disclaimer"><a href="/wiki/index.php/Stanford_CSD_History:General_disclaimer" title="Stanford CSD History:General disclaimer">Disclaimers</a></li>	  	</ul>
+      </div>
+    </div>
+    <!-- Served by forum.stanford.edu in 0.02 secs. -->  </body>
+</html>
