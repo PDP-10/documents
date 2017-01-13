@@ -1,0 +1,1907 @@
+-*-text-*-
+Slightly updated (CPR) 4:18pm  Thursday, 26 June 1980
+Major editing (JAF) winter 1982.
+
+(note that this is all just a comment now. JAF 11/22/81)
+
+File: Languages, Node: Top, Up: (DIR)
+
+This file describes the languages that have implementations that can
+run on a DECSYSTEM-20 (also referred to herein as "Twenex", which is
+jargon ["TENEX on the Twenty", or "Twenty TENEX"]).  The menu lists
+the languages.  If a language has only one dialect, then the node for
+that language will give general information about it and then provide
+a menu of specific information (how to use the compiler, how to use
+the debugger if any, etc.) and possibly pointers to more information.
+If a language has more than one dialect, then its node has a menu that
+lists the dialects.
+
+Several points of information are given about each language: where it
+comes from (i.e., who mostly produced it, or who last maintained it),
+how to invoke it (what command string to give to the Exec), what
+system it is oriented towards (either the -10 or the -20, or a few
+other odd operating systems), what file extension is considered the
+'default' for that language (i.e., if you use it, you're more likely to
+have the right things happen by default), and a general 'title page'
+description of the language.
+
+One point of jargon: when a language, or the programs it produces, is
+said to 'run native', this means that it is TOPS-20 oriented and thus
+uses only the TOPS-20 monitor calls; otherwise, it is TOPS-10 oriented
+and has to run under PA1050, the "compatibility package" (which tries
+to fool programs into thinking they're running under a TOPS-10
+monitor).  (Programs that were written for Tenex also run native, but
+there may be slight inconsistencies of style.  Programs that were
+written under ITS at MIT have mostly been converted to run native on
+TOPS-20.
+
+When DEC manuals have been cited as reference material, it should be
+understood that there may be newer versions or updates to the cited
+version.
+
+The ensuing language summaries were written, except where otherwise
+indicated, by Frank da Cruz and Chris Ryland of the Columbia
+University Center for Computing Activities (Chris is now at MIT), who
+should be held responsible for any omissions or misrepresentations,
+and all opinions, therein, and who invite your comments.  Please note
+that this file is under constant development.  If you have additions
+or corrections, please send them to:
+
+  Frank da Cruz
+  Columbia University Computer Center
+  New York, NY 10027
+
+or
+
+  Chris Ryland
+  MIT, room 38-374
+  Cambridge, MA 02139
+
+Or, if you're on the Arpanet, to g.daCruz@SU-SCORE and CPR@MIT-AI.
+
+This file contains many INFO pointers at files which may live on
+different directories on different sites.  Your site will have to
+update these pointers to point at the right places.  The pointers in
+the file assume a logical device name for each language, which is the
+same (in most cases) as the default filename extension (file type) of
+the language, e.g. SIM: for Simula.  All of the file pointers that
+don't refer to DOC: or HLP: refer to these logical names.
+
+File: Languages, Node: Top, Up: (Dir)
+
+        This section describes the programming languages we support here
+at MIT-EECS. These nodes are in the process of being revised, so please
+forgive us if some of this is untrue. Bugs can be sent to <JAF>, also
+if your interested in writing about your favorite language, or if you
+have some neat routines you'd like included in a library, send mail
+to <jaf>.
+
+* Menu: The following languages exist on DEC-20's:
+
+* Assemblers::  Several assembly-language processors.
+* Algol-60::    ALGOrithmic Language-1960.
+* Algol-68::    ALGOrithmic Language-1968.
+* Simula::      SIMULAtion Language.
+* Fortran::     FORmula TRANslation language.
+* Sail::        Stanford Artificial Intelligence Labs language.
+* Mainsail::    MAchine INdependent Sail
+* Pascal::      Named after Blaise, a modern, fully-typed language,
+                 with additions for systems programming on the -20.
+* Lisp::        List-Processing Language: 2 implementations for the -20.
+* Bliss::       Several versions of DEC's "implementation language".
+* PPL::         Polymorphic Programming Language, a pedagogic,
+                 extensible language.
+* ECL::         Harvard's extensible programming system (EClectic
+                 Language).
+* C::           Bell Lab's portable, high-level "implementation language".
+* BCPL::        A relative of C from BBN.
+* CPL::         A "toy" PL/I from DEC.
+* PL/I::        The real PL/I, also from DEC.
+* Basic::       Beginner's All-purpose Symbolic Instruction Code.
+* APLSF::       A Programming Language with Shared Files.
+* Snobol::      StriNg-Oriented symBOlic Language.
+* Cobol::       COmmon Business-Oriented Language.
+* PCL::         Programmable Command Language for TOPS-20.
+
+* Utilities::   Language-related utilities.
+
+File: Languages, Node: Assemblers, Up: Top, Next: Algol-60
+
+An assembler allows you to write programs consisting of actual machine
+instructions.  This is thought to be desirable for at least two
+reasons:  1. only in assembly language can you write a program that
+can take advantage of all the features of the  machine, and 2. you
+have maximum control over every aspect of the operation of your program,
+including storage allocation, efficiency, etc.
+
+In order to use an assembler, you must first be familiar with the
+machine's instruction set.  The definitive source for this information
+is the:
+
+    DECsystem-10/DECSYSTEM-20 Hardware Reference Manual, Volume I:
+    Central Processor, EK-10/20-HR-001 (1978).
+
+You will notice that this manual actually describes three different
+machines: the KA10, the KI10, and the KL10.  You should be aware that
+DEC-20's are KL10's, except for 2020's which are KS-10's.  There is
+also a PDP-10 Reference card (DEC-10-XSRCA-B-D) which is out of date
+(a new one is expected some day), and an article that traces the
+development of the PDP-6/PDP-10 36-bit family of computers:
+
+    Bell, et al., "The Evolution of the DECsystem-10", CACM (Jan 1978)
+
+also found in
+
+    Bell, et al., "Computer Engineering", Digital Press (1978).
+
+Another thing that assembly-language programmers need to know about is
+monitor calls.  There are many things that you cannot do even in
+assembly language on a time-shared machine, such as issue i/o
+instructions; only the monitor can do these things.  You can ask the
+monitor to perform services for you by issuing a monitor call (a
+DEC-20 monitor call is called a 'JSYS' (Jump to SYStem)).  Information
+about DEC-20 monitor calls is to be found in the following DEC
+manuals:
+
+1. Monitor Calls User's Guide, DEC-20-OMUGA-A-D (1976).
+   This is a rather informal introduction to DEC-20 monitor calls,
+   with detailed information about some of the most common ones.
+
+2. TOPS-20 Monitor Calls Reference Manual, AA-4166D-TM (1980).
+   The definitive source for information about DEC-20 monitor calls
+   (Release 4 of TOPS-20).
+
+In addition, an excellent introduction to assembly language
+programming will soon be available (and is in circulation at some
+sites in draft form):
+
+   Gorin, Ralph E., "Introduction to DECsystem-20 Assembly
+     Language Programming", Stanford University Computer
+     Science Department, 1980.  Soon to be published by
+     Digital Press.
+
+There are several assemblers suitable for use on the DEC-20.
+
+* Menu:         They include:
+
+* Macro::       The standard DEC assembler
+* Midas::       MIT's alternative for Macro
+* Fail::        A very fast one-pass assembler from Stanford
+
+Only Macro is supported by DEC, but the other two have certain
+distinct advantages.
+
+In addition, the following general information is available on line:
+
+* Instruction set:      (MAC:ASM.DOC)*
+   A document put together at Columbia in June 1979 that combines
+   portions of various DEC manuals and other materials in an attempt
+   to provide a single reference on opcodes, jsys's, macro, style,
+   etc.  Somewhat superfluous with the appearance of Ralph Gorin's
+   book.  The chapters (OPCODE, JSYS, MACRO, etc), are also available
+   seperately with their own tables of contents and indexes.
+
+File: Languages, Node: Macro, Up: Assemblers, Next: Midas
+
+Macro: Assembler
+
+ > Comes from: DEC
+ > Invoke via: 'Macro' or load-class command.  Extension: .MAC
+ > System orientation: -20
+ > Description: Free-format, statement-oriented, 2-pass assembler with
+macro processor.  Capable of searching external 'universal' files at
+assembly time.  Fully supported by DEC.  Most system programs,
+including the monitor and the Exec, are written in Macro.
+ > Debugging: DDT interactive symbolic debugger.
+ > References:
+1. Macro Assember Reference Manual, DEC, AA-4159C-TM (1978).
+    You won't learn how to program in Macro from this manual;
+    it is strictly for reference.
+2. Macro Assembler User's Guide, DEC (forthcoming).
+3. DECsystem-10 Assembly Language Handbook, DEC, DEC-10-NRZB-D (1972).
+    This is out of print, and strictly -10ish, but it is of a better
+    instructional nature than any of the currently available DEC manuals.
+    It also includes a DDT manual.
+4. Singer, "Introduction to DECsystem-10 Assembler Language",
+    John Wiley & Sons (1978).  Strictly for the -10, but it's a textbook.
+    Also covers Teco and DDT.  Ignore the description of TOPS-10 monitor
+    calls.  TOPS-20 monitor calls are described in the references cited
+    under the general topic 'assemblers' (up).
+5. Gorin, Ralph E., "Introduction to DECsystem-20 Assembly Language
+    Programming", Stanford University Computer Science Department
+    (1980). Soon to be published by Digital Press.  The only introductory
+    textbook especially for TOPS-20, and the best one we're likely to see.
+    Discusses opcodes, MACRO, JSYS's, and programming techniques.
+
+* Menu: On-line information:
+
+* Help:         (HLP:MACRO.HLP)*
+* Manual:       (MAC:MACRO.DOC)*
+* Hints:        (MAC:HINTS.TXT)*
+* Debugging:    (HLP:DDT.HLP)*
+* DDT Manual:   (MAC:DDT.DOC)*
+
+File: Languages, Node: Midas, Up: Assemblers, Next: Fail
+
+Midas: Assembler
+
+ > Comes from: MIT, distributed with EMACS.
+ > Invoke via: 'midas'. Extension: .MID
+ > System orientation: ITS (MIT's Incompatible Timesharing System) and TOPS-20.
+ > Description: Midas is a 2-pass assembler several times as fast as
+Macro.  In addition, it has better error messages, and more powerful
+macro facilities.  Most software that comes from MIT that is not
+written in Teco or Lisp is written in Midas, for instance Teco itself.
+If you want to use TOPS-20 monitor symbols, you must use the statement
+".insrt sys:twxbts.mid".  Midas can produces executable code directly,
+allowing you to bypass LINK, if you include the .DECSAV directive.
+This is a great performance win for assembly language students.
+
+ > Debugging: DDT interactive symbolic debugger.
+
+* Menu:         Online information:
+
+* Help:         (HLP:MIDAS.HLP)*
+* Debugger:     (HLP:DDT.HLP)*
+* DDT Manual:   (MAC:DDT.DOC)*
+* Manual:       (INFO:MIDAS)Top
+                This is the INFO-structured manual.
+
+File: Languages, Node: Fail, Up: Assemblers
+
+Fail: Assembler
+
+ > Comes from: Stanford Artificial Intelligence Laboratory (SAIL),
+     but is usually distributed with MM or other programs that are
+     written in Fail.
+ > Invoke via: 'Fail', or load-class command.  Extension: .FAI
+ > System orientation: -20
+ > Description: Fast, one-pass, block-structured assembler written by
+Ralph Gorin at Stanford.  DEC-20 monitor calls are built in, but
+symbols have to obtained by searching monsym (.FUN, not .UNV).
+Extremely close to Macro (except block structure, which need not be
+used, and small syntactic differences) but about 5 times faster.
+Programs can be written such that they will assemble under either
+Macro or Fail; MM is a good example.
+ > Debugging: DDT (but if you use block structure, watch out!)
+ > Reference:
+Wright & Gorin, "Fail", SAIL Operating Note 75B (Jan 1977).
+
+No online documentation, but command string is like Macro's.
+It understands full -20 file names, but doesn't do recognition on
+them.
+
+File: Languages, Node: Algol-60, Up: Top, Previous: Assemblers, Next: Algol-68
+
+Algol-60 (ALGOrithmic Language 1960): compiler
+
+ > Comes from: DEC
+ > Invoke via: 'Algol' or load-class command.  Extension: .ALG
+ > System orientation: strictly -10.  DEC has no plans to 20ize.
+ > Description:
+ Block structured, recursive, statement-oriented language best suited
+for clear, structured exposition of algorithms.  Various data types
+are available.  This is the original common language of computer
+scientists and is the basis of many other languages, such as Sail,
+Simula, Pascal, Bliss, etc.  Can be linked with external routines in
+Algol, Fortran, and Macro.  DEC still distributes Algol-60, but no
+longer develops it.  There are no plans to make it 20ish.
+ > Debugging: ALGDDT, an interactive source-level debugger.
+ > References (only a few of many):
+1. DECSYSTEM-10/20 Algol Programmer's Guide, AA-0196C-TK (1977).
+2. Backus et al., "Revised Report on the Algorithmic Language ALGOL-60",
+    CACM vol.6, no.1 (1963).
+3. Dijkstra, "A Primer of Algol-60 Programming", Academic Press, 1962.
+4. "Collected Algorithms for CACM and ACM TOMS (1966 ff.).
+5. "Modified Report on the Algorithmic Language Algol 1960",
+     Computer Journal, v.19, Nov 1976.
+
+* Menu: On-line information about Algol-60
+
+* Help:         (HLP:ALGOL.HLP)*
+* Debugger:     (HLP:ALGDDT.HLP)*
+
+File: Languages, Node: Algol-68, Up: Top, Previous: Algol-60, Next: Simula
+
+Algol-68 (Algorithmic Language 1968): compiler
+ > Comes from: University of Essex, U.K.
+ > Invoke via: A68.  Extension: .A68.  Logical name: A68:.
+ > System orientation: TOPS-20 (native) (but since it produces .REL
+files that must be LINKed, TOPS-10 conventions should still be
+observed in naming your Algol-68 programs).
+ > Description:
+ A very powerful language which includes extensible language facilities
+and employs a new grammatical method of language definition.
+Developed under IFIP auspices by Working Group 2.1 (Algol).  Not a
+compatible extension of Algol-60 although it retains the atmosphere of
+the earlier language.  Algol-68 was originally defined in 1968; it has
+recently been revised by WG 2.1 in light of implementation experience.
+Versions exists for IBM 360/370 as well as PDP-10, PDP-11, and other
+computers.
+
+ > References:
+1. Van Wijngaarden et al., "Revised Report on the Algorithmic Language
+    Algol 68", ACM Sigplan Notices, v.12 (May 1977), or in hardcover
+    (Springer Verlag).
+2. Bourne, S.R., "ALGOL68C Reference Manual", University of Cambridge
+    Computer Laboratory (refers specifically to our version).
+3. Tanenbaum, "A Tutorial on Algol-68", ACM Computing Surveys, v.8
+    (June 1976).
+4. Lindsey & van der Meulen, "Informal Introduction to Algol-68",
+    Revised edition, North-Holland Publ. Co. (1977).
+
+* Menu:         See also:
+
+* Help:         (HLP:A68.HLP)*
+* Users Guide:  (A68:A68.MAN)*
+* Bugs:         (A68:A68.DOC)*
+* i/o system:   (A68:CHAPT8.MAN)*
+* Formatting:   (A68:PSF.MAN)*
+* Updates:      (A68:UPDATE.MAN)*
+
+File: Languages, Node: Simula, Up: Top, Previous: Algol-68, Next:  Fortran
+
+Simula-67 (Simulation Language 1967), compiler.
+
+ > Comes from: Norwegian and Swedish governments
+ > Invoke via: 'simula' or load-class command.  Extension: .SIM
+ > System orientation: TOPS-10 (a native version is on the way)
+ > Description:
+ A powerful general-purpose language that contains Algol-60 as a
+subset.  Simula has built-in capabilities for list-processing,
+text-handling, abstract data types, quasi-parallel processing
+(coroutines), formatted i/o, limited extensibility, and discrete event
+simulation.  Distinct from its predecessor, known as Simula-I, which
+was primarily a simulation language.  Implemented on most large
+computers, including IBM 360/370.  Simula is one of the languages that
+fulfills the role on the DEC-20 that PL/I plays on IBM systems, but
+Simula differs from PL/I in that it is fully defined (i.e. there is no
+risk that the language specification does not say what will happen
+when a certain construct is used).  Simula programs are fully portable
+except where the machines involved have differing character codes, in
+which case conversion programs are supplied.  A codasyl-type database
+management system, SIMDBM, is available.
+
+Unfortunately, Simula combines its abstract data types with strong
+(compile-time) type checking, which eliminates most of the potential
+advantage of abstract data types.
+
+ > Debugging: SIMDDT, interactive source-level bebugger.
+ > References:
+1. Dahl et al., "Common Base Language", Norwegian Computing Center,
+    Oslo.
+2. Birwistle et al., "Simula begin", Auerbach, Phila (1973).
+3. "Simula Newsletter", Norwegian Computer Center.
+4. "DECsystem-10/20 Simula Gazette", Swedish Nat'l Defense Research
+    Institute, Stockholm.
+5. A list of Simula reports & papers appears in ACM SIGPLAN Notices,
+    vol 15 #5, May 1980, pp 12-18.
+
+* Menu:         See also:
+
+* help:         (HLP:SIMULA.HLP)*
+   General help about Simula.
+* compile:      (SIM:SIMCOM.HLP)*
+   How to use the Simula compiler.
+* debug:        (SIM:SIMDDT.HLP)*
+   How to use the Simula debugger.
+* directory:    (SIM:SIMDIR.HLP)*
+   How to use the Simula module maintenance facility.
+* editor:       (SIM:SIMED.HLP)*
+   How to use the source-file formatter and implementation
+   conversion program.
+* runtime:      (SIM:SIMRTS.HLP)*
+   Information about the runtime system, especially file access.
+* general:      (SIM:SIMULA.HLP)*
+   General info about Simula, known bugs, etc.
+* man1:         (SIM:SIMLH1.MAN)*
+   Part I of the language handbook: the language definition.
+* man2:         (SIM:SIMLH2.MAN)*
+   Part II of the language handbook: TOPS-10 dependencies.
+* man3:         (SIM:SIMLH3.MAN)*
+   Part III of the language handbook: The Simula library.
+
+File: Languages, Node: Fortran, Up: Top, Previous: Simula, Next: Sail
+
+Fortran is the common language of engineers and many scientists;  it
+is best suited for numerical applications, and it can be found on
+almost every computer. However, it is also a very early language and
+lacks most of the features which are thought to be essential to a
+modern programming language (the 'do while' and 'if-then-else'
+constructions, statement bracketing, scoping of variables, a standard
+way of dealing with character-string data, adequate means of error
+recovery, etc.), and therefore a great deal of discipline is required
+to write clear, readable, correct, transportable programs.
+
+ > References:
+1. American National Standard, FORTRAN, ANS X3.9-1966.
+2. American National Standard Basic FORTRAN, ANS X3.10-1966.
+3. "Clarification of FORTRAN Standards -- Second Report", CACM v.14
+    (Oct 1971).
+
+By the way, there is a new ANSI standard for Fortran called
+Fortran-77, which corrects a couple of the most outstanding
+deficiencies (noted above) of Fortran-IV.  It replaces the 1966
+standard.  See:
+
+1. American National Standard, FORTRAN, ANS X3.9-1978.
+2. Brainerd, "Fortran 77", CACM v.21 (Oct 78).
+
+We don't expect to see Fortran-77 on the DEC-20 for several years
+(except for SITGO, see below).
+
+The following dialects of Fortran-IV exist (on the DEC-20):
+
+* Menu:
+
+* Fortran-20::  Fortran-20:
+                The principle Fortran compiler for the DEC-20.
+                Capable of producing well-optimized code.
+
+* Sitgo::       This is a fast compile-and-go
+                system mainly useful for instruction and
+                program development.  Includes Fortran-77 features.
+
+* Ratfor::      "Rational Fortran".  This is a preprocessor
+                that allows structured programming, string
+                manipulation, etc., in Fortran programs.
+
+File: Languages, Node: Fortran-20, Up: Fortran, Next: Sitgo
+
+Fortran-20 (Fortran for the -20): compiler
+
+ > Comes from: DEC
+ > Invoke via: 'fortran' or load-class command.  Extension: .FOR
+ > System orientation: -10, but upgrade to -20 will happen some day.
+ > Description:  Full ANSI 1966 standard Fortran IV with useful
+extensions.  Global optimization as an integral (but optional) part of
+the system.  Has a large library of built-in functions, and allows
+access to various packages, such as the IMSL scientific subroutine
+library and DBMS, and to external routines in Fortran, assembly
+language, and Cobol.  Also, Fortran routines can be called from other
+languages such as Algol and Sail.
+ > Debugging: FORDDT, an interactive source-level debugger.
+ > Reference:
+FORTRAN Reference Manual, DEC, AA-4158B-TM (1977)
+
+* Menu:         On-line information:
+
+* Help:         (HLP:FORTRA.HLP)*
+* Debugger:     (HLP:FORDDT.HLP)*
+* Hints:        (FOR:HINTS.TXT)*
+* Document:     (DOC:FORTRAN.DOC)*
+   This contains details of how to use Fortran on the DEC-20,
+   and comparison of DEC-20 Fortran with IBM Fortran and
+   standard Fortran.
+
+File: Languages, Node: Sitgo, Up: Fortran, Next: Ratfor, Previous: Fortran-20
+
+Sitgo (Stevens Institute of Technology 'go'): compiler/loader
+
+ > Comes from: DEC via Stevens Institute of Technology, Hoboken, NJ.
+ > Invoke via: 'Sitgo' or load-class command, Extension: .STG
+ > System orientation: Strictly -10
+ > Description:
+A very fast fortran compiler designed especially for people learning
+Fortran.  It has very good compile-time diagnostics.  Includes most of
+the Fortran-77 features.  Can be run interactively, or it can manage
+its own batch stream.  Requires modifications to PA1050.  Since it
+does no optimization and bypasses LINK, it can be a big performance
+win on systems with big introductory Fortran courses.
+
+* Menu:
+
+* Help:         (HLP:SITGO.HLP)*
+* Manual:       (DOC:SITGO-USERS-GUIDE.DOC)*
+
+File: Languages, Node: Ratfor, Previous: Sitgo, Up: Fortran
+
+Ratfor (Rational Fortran): Preprocessor
+
+ > Comes from: Bell Labs via BBN
+There are many other versions, but this is the one we happen to have.
+ > Invoke via: 'ratfor'. Extension: .RAT
+ > System orientation: TOPS-20 (but see below)
+ > Description:
+
+Developed at Bell Laboratories by Kernighan and Plauger.  A
+preprocessor for Fortran which gives it modern control structures,
+string data, text substitution, etc., without leaving the language
+entirely.  The flavor of Ratfor is like C, and the language is
+becoming very popular because it meets minimal requirements for
+structuredness and utility, and it generates a Fortran source program,
+which can be compiled on almost any computer.  Since Ratfor itself is
+written in Ratfor, the compiler can be moved to new computers very
+easily.  The compiler runs native; you can give it TOPS-20
+file specifications for input and output, but it produces a Fortran
+program, and Fortran currently runs under compatibility.  However, a
+number of routines can be found in RAT: that allow TOPS-20 i/o from
+Ratfor and hence from Fortran.  The compiler and other sources are on
+line in RAT:; users are invited to make fixes and improvements.  No
+comprehensive document about this version exists; users are invited to
+write one.
+
+ > Debugging: ForDDT interactive Fortran source-level debugger.
+ > References:
+
+Kernighan & Plauger, "Software Tools", Prentice-Hall (1976).
+
+* Menu:         See also
+
+* help:         (HLP:RATFOR.HLP)Top
+* history:      (RAT:RATFOR.INFO)*
+   This is a mail file; use Rmail or MM to read it.  Contains valuable
+   information about how Ratfor was developed at BBN and how the BBN
+   version differs from K & P's.
+* cucca:        (RAT:CUCCA-RATFOR-NOTES.TXT)*
+
+File: Languages, Node: Sail, Up: Top, Previous: Fortran, Next: Mainsail
+
+
+Sail stands for Stanford Artificial Intelligence Language. Sail is based
+on Algol but also has fairly extensive list processing capability. Sail
+allows one to include inline assembly code, and call most jyses directly.
+Sail's i/o handling is awesome, but a bit tricky at first. Overall, sail
+is a good language to hack in, but probably shouldn't be tackled by
+someone unfamiliar with block structured languages.
+
+* Menu: On-line information about Sail:
+
+* Help:         (HLP:SAIL.HLP)*
+                The directions for compiling sail programs.
+
+* Debugger:     (HLP:BAIL.HLP)*
+                The directions for bail, the sail debugger.
+
+* Libraries:    (SAIL-LIBS)*
+                The many varied and useful Sail library routines.
+
+* Manual:       (SAI:SAIL.MAN)*
+                The 1976 version of the sail manual.
+
+* New Stuff:    (SAI:SAIL.DOC)*
+                Updates for the 1976 version of the sail manual.
+
+* Source::      Where sail comes from, and a more technical description.
+
+* Hints:        (SAI:HINTS.TXT)*
+                Valuable tips from Sail users.  You can append
+                your own tidbits to this file.
+
+* Tutorial:     (DOC:SAIL-BEGINNERS-GUIDE.DOC)*
+                It's quite long, but if you want to teach yourself Sail
+                it beats the reference manual, especially if you come from
+                a Fortran background.
+
+
+File: Languages, Node: Source, Up: Sail, Next: Manual
+
+Sail (Stanford Artificial Intelligence Labs language): compiler
+
+ > Comes from: Stanford Artificial Intelligence Laboratory.
+   Distributed by:
+Charles Hedrick (Hedrick@RUTGERS)
+Director,
+Laboratory for Computer Science Research
+Hill Center, Busch Campus
+Rutgers University
+New Brunswick, NJ  08903
+ > Invoke via: 'sail' or load-class command. Extension: .SAI
+ > System orientation: Mostly Tenex, some -20 (but no -10!).
+ > Description:
+
+A superset of Algol-60.  Additional features include dynamic strings,
+records, additional control structures, in-line assembly code,
+built-in access to monitor calls (JSYS's), a complete set of
+compile-time arithmetic and logic as well as a macro processor,
+conditional compilation and compile-time i/o, sets and lists,
+interrupt facilities, plus just about every other feature that could
+be imagined.  Also included is another language called LEAP, which
+allows manipulation of associative data structures.  Sail can be
+linked with external routines in Sail, Fortran, and assembly language.
+Sail is not entirely free of idiosyncrasies and bugs - it was written
+by many different people over a long period.  But it is quite usable.
+Sail only runs on DEC-10's and -20's, but a machine-independent Sail
+(Mainsail) is available; it's not the same language, but it's very
+close in spirit.
+ > Debugging: Bail, a source-level interactive debugger.
+ > References:
+
+Shapiro, Marvin,  "A Beginner's Guide to Sail",
+ Division of Computer Research and Technology,
+ National Institutes of Health, Bethesda MD 20014 (July 1976).
+ Also on line as DOC:SAIL-BEGINNERS-GUIDE.DOC.
+
+Reiser, "SAIL", Stanford Artificial Intelligence Laboratory Memo
+ AIM-289, Computer Science Department Report No. STAN-CS-76-574.
+ This reference manual is indispensible for Sail users.
+
+Smith, "Sail Tutorial", Sail Memo AIM-290,
+ C.S. Dept Report STAN-CS-76-575.
+
+Feldman, "An Algol-Based Associative Language", CACM Aug 1969.
+ (This is about Leap).
+
+
+File: Languages, Node: Mainsail, Up: Top, Previous: Sail, Next: Pascal
+
+Mainsail (MAchine-INdependent Sail): Compiler
+
+ > Comes from: Stanford University Medical Center
+ The contact is:
+Clark R. Wilcox (Wilcox@SUMEX-AIM)
+SUMEX Computer Project
+Department of Genetics, Room TB105
+Stanford University Medical Center
+Stanford CA 94305
+
+The Mainsail project is about to go commercial, as XIDAK Inc.  (Cheap
+for educational institutions).
+
+ > Invoke via: 'mainsail'. Extension: .MSA (or null).
+ > System orientation: TENEX
+ > Description:
+ Under development at SUMEX by Clark R. Wilcox et al., this language
+may well be the long-awaited native-mode general-purpose programming
+language for the DEC-20.  It is a generalization of Sail, designed
+from scratch with portability and consistency as principle criteria.
+It is a serious effort, fully supported by the Biotechnology Resources
+Program of the National Institutes of Health.  All the power of Sail
+is there, but the hacks are gone and many of Sail's features have been
+extended, especially strings and records.  In addition, certain
+concepts have been adapted from other languages, such as the modules
+of Simula.  A wide variety of data types and control structures are
+supported.  Mainsail programs cannot be linked with programs written
+in other languages, but it is possible to write in-line assembler code
+or assembly-language modules.  In fact, Mainsail cannot be used with
+LINK; Mainsail provides its own combined dynamic linker and operating
+environment.  Since Mainsail programs are intended to look the same on
+any machine, some special features of TOPS-20 like filename
+recognition are not available.  Versions currently exist for TENEX
+(and therefore with very slight modification for TOPS-20), TOPS-10,
+UNIX, RSX-11M, and RT-11.  There are also versions under development
+(perhaps completed by the time you read this) for the VAX, MC68000,
+and IBM 370/30xx/43xx CMS.
+
+ > Debugging: An interactive source-level debugger is expected.
+ > References:
+
+1. Wilcox et al., "Mainsail Language Manual", Stanford University
+    Medical Center (also available on line, see menu).
+2. Wilcox, "The Mainsail Project: Developing Tools for Software
+    Portability", Proc. 1st Annual Symposium on Computer Application
+    in Medical Care, Washington DC (Oct 77).
+3. Wilcox (in Lederberg & Feigenbaum, [?]), "Comparison of Mainsail
+    and Pascal".
+
+* Menu:
+
+* Help:         (HLP:MAINSAIL.HLP)*
+* Hints:        (MSA:HINTS.TXT)*
+* PDP-10:       (MSA:PDP10.DOC)*
+* Manual:       (MSA:MAINSAIL.MANUAL)*
+
+
+File: Languages, Node: Pascal, Up: Top, Previous: Mainsail, Next: Lisp
+
+Pascal: Compiler
+
+ > Comes from: Rutgers University.  Converted from Hamburg DECsystem-10
+version by Charles Hedrick, and given systems programming orientation
+in the doing.
+ > Invoke via: 'pascal' or load-class command, Extension: .PAS
+ > System orientation: TOPS-20.  The compiler command string is in
+TOPS-10 format to allow it to be hooked into the load-class
+commands.  Otherwise, the compiler runs native on the -20, as do
+the programs it generates.
+ > Description:
+ Loosely based on Algol-60; includes a variety of data-structuring
+facilities (records, sets, lists).  Intended as both a convenient
+basis to teach programming and as an efficient tool to write large
+programs; emphasis is on keeping the number of fundamental concepts
+reasonably small.  Pascal-20 was developed for use as a systems
+programming language, and includes a JSYS interface and the ability to
+write external Pascal and assembly language procedures, but is
+otherwise very close to the original language definition.  Active
+development of Pascal-20 continues; current projects are to make it
+closer to UCSD Pascal, to add a preprocessor, and to make a compatible
+compile-and-go version (an incompatible compile-and-go version has
+been done at Stanford, called PASSGO, but it's not quite ready for
+widespread distribution).
+
+ > Debugging: PASDDT, interactive source-level debugger.
+ > References:
+1. Jensen & Wirth, "Pascal User Manual and Report", 2nd Ed.,
+    Springer-Verlag (1974).
+2. Wirth, "The Programming Language Pascal", Acta Informatica 1 (1971).
+3. Wirth, "Systematic Programming: An Introduction", Prentice-Hall (1973).
+4. Conway, Gries, & Zimmerman, "A Primer on Pascal", Winthrop (1976).
+5. Mickel (editor), "PASCAL Newsletter", Computer Center, University
+    of Minnesota.
+
+* Menu:
+
+* Help:         (HLP:PASCAL.HLP)
+* Pas-Critique::
+   An objective evaluation of Pascal-20 by its author.
+* Manual:       (PAS:PASCAL.DOC)*
+   This document describes only the system-dependent aspects of Pascal-20.
+   It is not a language manual; for this see reference 1.
+* Full-Manual:  (DOC:PASCAL-FULL-MANUAL.DOC)*
+   This is a complete guide to the extensions that are built into
+   the on-line Pascal implementation.  It is not a language manual.
+
+File: Languages, Node: Pas-Critique, Up: Pascal
+
+The following words were written by Charles L. Hedrick at Rutgers:
+
+[PASCAL] is based on the PASREL compiler from the University of
+Hamburg, which was submitted to DECUS about two years ago.  Since then
+Hamburg has submitted an updated version, the most useful pieces of
+which we have also used.  (In general there seem to have been more
+bugs in the updates than in the original implementation.)  I have made
+the following sorts of changes to their system:
+
+- The TOPS-20 I/O system is completely new.
+
+- The runtime structure has been changed to allocate core
+automatically as needed.
+
+- The compiler has had many bug fixes made.
+
+- The compiler has been modified in a number of minor ways to be
+closer to a full implementation of the PASCAL language.
+
+- Certain added I/O and runtime procedures required modification of
+the compiler in order to be compiled properly.
+
+
+The goals of these changes were as follows:
+
+- To give the user access to all the facilities of the underlying
+operating system if he desires, supplying reasonable defaults when he
+does not.
+
+- To make use of the system "smoother" (e.g. provide output for CREF,
+fix problems that caused every program to begin by typing "*" and to
+always create a file called OUTPUT).
+
+
+The "non-goals" (to use DEC's terminology) were
+
+- To make an optimizing compiler (not practical in the time available,
+and maybe not even desirable for installations using this for
+students).
+
+- To extend the PASCAL language (as distinguished from adding new I/O
+procedures).  While there are serious limitations to PASCAL, solving
+them would make it a "bigger", more complex language, thus possibly
+reducing its attractiveness for teaching purposes.  Anyway, there are
+other languages available that have all the features that would be
+added (e.g. SAIL).  However I have not removed the extensions present
+in the original PASREL compiler.
+
+I consider that [PASCAL] has the following major strengths [in the
+DECSYSTEM-20 environment]:
+
+- Its syntax is based on Algol.  This is the major source of its
+reputed "cleanness".  (I cannot understand why PASCAL is taking the
+world by fire and Algol never got anywhere.)
+
+- It has very good data structuring facilities.  The record structures
+are very general and easy to use.  Packed records make it possible to
+define the various wierd argument blocks used by UUO's and JSYS's.
+
+- This implementation gives very good access to the functions of the
+operating system.  It is possible to do odd kinds of I/O, and to
+insert UUO's and JSYS's into the program without needing to set up
+arguments using assembly language.
+
+
+These advantages make it useful for teaching and system programming.
+However when one attempts to use it for general applications
+programming, the following problems in the design of the language show
+up.
+
+- It is not possible to write procedures that take arrays of arbitrary
+size as arguments.  E.g. one can write a procedure to invert 5 by 5
+matrices, but not to invert arbitrary size matrices.
+
+- There is no double precision arithmetic.
+
+- There are no character strings.  Instead one has only arrays of
+characters.  Thus one is constantly writing loops that deal with each
+character in the array.  None of the usual string operations are
+available (or even definable, because of the limitation on variable
+length arrays).  This implementation allows you to treat a character
+array as a file, which makes some operations a bit easier.  But
+character handling is dramatically clumsier than SAIL, or even DEC
+Algol.
+
+- Records are not garbage collected nor is their any way to return
+records to the heap.
+
+
+The first two problems mean that the language cannot be considered for
+serious numerical work.  The lack of character strings means that it
+takes considerable ingenuity to write interactive programs that
+conduct dialogs with the user.  The fact that records cannot be
+returned means that non-trivial use of pointers requires the user to
+supply his own memory management.  Because of strong typechecking, it
+is not possible for the user to write a good memory management system.
+The best one can do without abusing the language is to keep separate
+free lists for each record type.
+
+I think most users would find SAIL a better choice for general
+applications programming.  PASCAL would be better only in the
+following rather special circumstances:
+
+- Records and pointers are very important to the application.  Packed
+records and strong type checking make PASCAL an excellent choice in
+this case.  (This implementation checks for attempts to follow NIL or
+0 pointers, and it is possible to force all uninitialized variables to
+be 0.)  SAIL's record syntax is somewhat clumsy, and it does not
+provide a clean way to have records with components smaller than a
+word.  However macros can be used to solve these problems in SAIL if
+necessary.
+
+- The program contains many JSYS's.  In SAIL one would have to use the
+facility for inserting assembly language in line.  In PASCAL monitor
+calls can be done very nicely in a high level way, using the data
+structures built into the language.
+
+- The program is intended to be transportable.  In this case one should
+consider Simula as an alternative, however, as there are a number of
+other Simula implementations.  Simula is not my first choice because
+the programs that have been done locally using it seem to be big and
+slow.  (I.e. when translated into SAIL they get smaller and and
+faster.)
+
+There are, of course, a number of languages other than SAIL which
+would be suggested by my various colleagues.  (The most interesting of
+these seems to be ECL, which combines a good interactive environment,
+such as Lisp and APL provide, with the advantages of a syntax and
+semantics of roughly the same power as Algol 68.)
+
+- Charles L. Hedrick, Rutgers University, October 1978
+
+File: Languages, Node: Lisp, Up: Top, Previous: Pascal, Next: Bliss
+
+Lisp - various Lisp implementations for the -20
+
+Columbia has tried various implementations of LISP - Rutgers/UCI
+(originally Stanford) 1.6 Lisp, InterLisp, and UCI Tenex/Tops20 Lisp
+(called ILisp), and has settled - for now at least - on MIT MacLisp
+because of the current choices, it's the easiest on the system
+(Interlisp practically needs a dedicated machine), and it's most at
+home in the TOPS-20 environment.  There is also a totally new LISP
+system under development at Rutgers which we'll be watching.
+
+If you don't know much about Lisp, you should look at the Lisp Culture
+section, as selectable in the Menu below.  Also see the Lisp Tutor
+section, and the tutorial referenced below.
+
+* Menu:         the Lisps we have on the -20
+
+* Lisp Culture:: Some ramblings about Lisp
+* Lisp Tutor::  A Lisp CAI (Computer Assisted Instruction) system
+* MacLisp::     MIT project MAC LISP.
+* RUCI Lisp::   Rutgers/UCI/Stanford Lisp 1.6
+* Interlisp::   BBN/XEROX PARC Interlisp
+* ILisp::       IMSSS' UCI Tenex/Tops20 Lisp
+
+
+File: Languages, Node: Lisp Culture, Up: Lisp, Next: Lisp Tutor
+
+Some Cultural Information about Lisp
+
+Lisp is a language that has probably generated most of the important
+seminal ideas in language theory and practice (Algol fans' opinions
+notwithstanding), and which has carried most of the burden of
+symbol-manipulation tasks in the computer science community for many
+years.  It has been a particularly important tool in the development
+of artificial intelligence and related disciplines, and still lives on
+strong in many of these circles.  It is a language that can't be beat
+for simplicity and power in its intended application of symbol
+manipulation (which encompasses tasks such as natural language
+understanding, goal-oriented programming, theorem-proving, etc.), and
+it is even a decent programming language in its own right in other
+areas (it is used as a systems programming language at some notorious
+places, most notable the M.I.T. Artificial Intelligence Labs).  Its
+simultaneous simplicity and power make it an attractive language for
+many tasks.
+
+Honeywell now sells an EMACS written in Maclisp, for their Multics
+system.  The author said that using Lisp resulted in code that was
+more concise, faster, and smaller in core than he would have got using
+PL/1, the standard Multics system programming language.  With luck,
+there may be an EMACS written in Lisp for DEC systems to replace the
+current one.
+
+Lisp is also the only truly extensible language.  Because a Lisp
+interpreter is available when the compiler is used, the user can
+define syntactic extensions which run arbitrary Lisp programs to
+compute the code they expand into.  It is easy to define new control
+constructs.
+
+This is not to say that it couldn't be better; it has many rough edges
+that have been smoothed in later attempts at sophisticated
+programming languages, but it still has a good deal of popularity in
+many computer science circles.
+
+Lisp was first conceived and developed by John McCarthy of (then)
+M.I.T., who's now at Stanford (and has been for many years).  McCarthy
+first defined a 'pure' Lisp which was theoretically very interesting,
+but not very practical.  He, and several other people elsewhere, added
+standard-programming-language features to it, and the result was
+several versions of impure Lisp, which have diverged even further
+since then.  Still, the basic concepts are the same, and
+implementations have a surprising closeness, differing mostly in the
+'sugar' added later to sweeten the particular programming environment.
+There is a very good article on the history of Lisp, by McCarthy, in
+the History of Programming Languages Conference Proceedings (Sigplan
+Notices, Volume 13, Number 8, August 1978).  McCarthy, it should be
+mentioned, is often considered one of the fathers of the time-sharing
+concept, as he was the key figure on the development of CTSS at
+M.I.T., back in the one-programmer-at-a-time-on-the-computer days.
+
+To throw in a little controversy, I would venture to say that any
+computer scientist that doesn't know and appreciate Lisp is missing
+quite a bit, due to its singular importance in the development of this
+science.
+
+For more reading, there are several good places to look: Pat Winston,
+the director of the Artificial Intelligence Labs at M.I.T., and a
+very good teacher, has just written a introduction to the field of
+artificial intelligence which includes a Lisp primer ("Artificial
+Intelligence," Addison-Wesley; 1977).  He has also written, with
+Berthold Horn, a complete text ("Lisp," Addison-Wesley; 1977).
+The old standby, somewhat babyish, but certainly a good beginner's
+book, is the Weissman "Lisp 1.5 Primer" (Dickenson Publishing Co.; 1967).
+There's also a fairly new book, called "Let's Talk Lisp", written by
+Laurent Siklossy (Prentice-Hall; 1976); I don't know if it's that good,
+but Winston recommends it.
+
+For a very tasteful overview of how one segment of the computer
+science community 'lives in' Interlisp, see the article "Programming
+in the Interactive Environment: the LISP Experience", by E. Sandewall,
+ACM Computing Surveys, Volume 10, Number 1 (March 1978).
+
+Lisp has many spiritual children; some of the most prominent are
+Planner, a goal-oriented programming language developed at M.I.T.;
+Conniver, an alternative to Planner (there were a couple of papers
+written of the sort "why Conniving is better than Planning"); QLisp,
+an attempt at modernizing Lisp; QA4, a theorem-proving-oriented
+language; POPL, a British language that emphasized a more ordinary
+syntax; ECL, an extensible language developed at Harvard that owes
+much to Lisp and has a kinship to Algol-68; MDL (or Muddle), a
+considerably unusual dialect of Lisp developed at M.I.T. for use as a
+modelling language; and many more which I probably don't know about.
+(Of course, this paragraph does great injustice by trying to summarize
+many man-years of intellectual striving in a single phrase.)
+
+One reason that Lisp and her offspring have fared so well, and are so
+important for research is that implementations have two big advantages
+over other languages: (a) the programs themselves are just Lisp (or
+language X) data structures, and are thus manipulable in wonderful
+ways, and, as a consequence, (b) these implementations are usually
+completely self-contained and full environments (as the Sandewall
+article mentioned above points out).  This means that one can live
+totally in the world of the language, editing, compiling, running,
+debugging, all at the language level.  Further, since most of these
+systems are thus self-extensible, customization for personal tastes is
+quite common, and encouraged; contrast this to the usual situation of
+a language that is frozen forever (usually in its wrongness).
+
+File: Languages, Node: Lisp Tutor, Up: Lisp, Previous: Lisp Culture,
+      Next: MacLisp
+
+Lisp Tutor: Lisp teaching system
+
+ > Comes from: IMSSS (Stanford Center for Mathematical Studies in the
+   Social Sciences)
+ > Invoke via: 'lsp:lspcai'.
+ > System orientation: Tenex/Twenex
+ > Description: Attempts to be a self-teaching system for Lisp, given
+some programming background; does a fairly good, if straightforward,
+job.  It tries to keep a history for each student, and has a fair
+amount of features designed to help teachers track students' progress
+(which we don't use, naturally, but at least it knows where you last
+left off).  The system-specific parts refer to ILisp.
+
+* Menu:
+
+* LspCAI Reference: (LSP:LSPCAI.DOC)*
+                Very IMSSS-specific, but tells about the system.
+                (Somewhat garbled, meant for hardcopy output.)
+
+File: Languages, Node: MacLisp, Up: Lisp, Next: RUCI Lisp,
+      Previous: Lisp Tutor
+
+ > Comes from: MIT, distributed by:
+John L. White (JONL@MIT-MC)
+MIT AI Lab
+545 Technology Square
+Cambridge MA 02139
+ > Invoke via: 'lisp', extension: .LSP, logical name: LSP:.
+ > System orientation: TOPS-20.
+ > Description: MacLisp features a compiler, file i/o, throws and
+catches (with tags), arbitrary precision integer arithmetic (including
+gcd function), arrays, macros, hunks, but lacks double precision
+floating point arithmetic and complex numbers.
+Well integrated with EMACS (LEDIT).  There are also TENEX and TOPS-10
+versions, and it.  An extended version of MacLisp, Lisp Machine Lisp,
+runs on the LISP machines at MIT.  In fact, the entire Lisp Machine
+system is written in Lisp Machine Lisp.  A machine independent version
+of Lisp (called NIL) is under development.
+ > References:
+1. Winston & Horn, (title unknown), Addison-Wesley (forthcoming).
+
+2. Touretzky, "A Summary of MacLisp Functions and Flags",
+    Carnegie-Mellon University (Aug 1979).
+
+* Menu:                 Online documentation:
+
+* Hints:                (DOC:LISP-HINTS.DOC)*
+                          Helpful Hints - How to run functions.
+* Manual:               (LSP:LISP.DOC)*
+                          Detailed documentation (incomplete).
+* Functions:            (LSP:QIOORD.DOC)*
+                          Names of functions and features.
+* News:                 (LSP:LISP.NEWS)*
+                          Cryptic messages about newer features.
+* Note:                 (LSP:THIS.NOTE)*
+                          Introductory letter to the latest version
+
+File: Languages, Node: RUCI Lisp, Up: Lisp, Next: Interlisp,
+      Previous: MacLisp
+
+Rutgers/UCI Lisp: Interpreter
+
+ > Comes from: Rutgers (from UCI (from Stanford))
+ > Invoke via: [not at Columbia any more],  Extension: .LSP
+ > System orientation: -10 (see ILisp node for -20 version)
+ > Description: see the Lisp Culture node (previous) for some flavor
+of the language.  This is a later version of the original Stanford
+Lisp 1.6, which was enhanced at U.C., Irvine, and even more enhanced
+at Rutgers.  These improvements have left this version of Lisp with a
+good deal of Interlisp flavor.  The advantages of this implementation
+are its smallness, and consequent speed.  One unfortunate property of
+using this Lisp is that you have to drag through three separate
+manuals to get all the details, although the first manual (the
+Stanford A.I. Labs Memo) contains nearly all you have to know to get
+started.
+ > Debugging: built in to the language
+ > References: see node Lisp Culture (previous node)
+
+* Menu:
+
+* Basic Manual: (LSP:SAILSP.MAN)*
+                This contains the basic language information.
+* UCI Version:  (LSP:UCILSP.MAN)*
+                Describes a few enhancements, and the new editor.
+* Rutgers Version: (LSP:RUTLSP.MAN)*
+                The Rutgers enhanced Lisp.
+
+File: Languages, Node: Interlisp, Up: Lisp, Previous: RUCI Lisp, Next: ILisp
+
+Interlisp: Interpreter
+
+ > Comes from: Bolt, Beranek and Newman (BBN) and XEROX Palo Alto
+Research Center (PARC)
+ > Invoke via: [not at Columbia], no real default extension
+ > System orientation: -20 (really, Tenex, but it's close enough)
+ > Description: See the Lisp Culture node for a flavor of the
+language.  This implementation of Lisp is by far the biggest and (some
+claim) the best around; it really has everything, including the
+kitchen sink.  Unfortunately, we have to recommend against using it,
+as it's just too large for our poor system.  Its manual is
+phenomenally good (and large).  Interlisp now has working
+implementations on IBM 360/370 systems, Burroughs B6700's, and CDC
+3300's (I'm not sure about this last one); the reason it's called
+Interlisp is that it was designed to be portable to various machines.
+ > Debugging: an integral part of the implementation
+ > References:
+  See the Lisp Culture Node, two Previous nodes.
+
+  "Interlisp Reference Manual", Warren Teitelman, XEROX Palo Alto
+Research Center, October 1974.  (Cost: about $30 from XEROX PARC)
+
+There is no on-line documentation.
+
+File: Languages, Node: ILisp, Up: Lisp, Previous: Interlisp
+
+ILisp: interpreter
+
+ > Comes from: Rutgers (from IMSSS (from UCI (from Stanford A.I. Labs)))
+ > Invoke via: [not at Columbia], extension: .LSP, logical name: LSP:.
+ > System orientation: -20 (really, Tenex)
+ > Description:  See the Lisp Culture node for language flavor.  ILisp
+is a version of UCI Lisp (which is a version of Stanford Lisp 1.6),
+adapted for the Tenex (and thus, nearly fully, the TOPS-20)
+environment by the Stanford IMSSS (Institute for Mathematical Studies
+in the Social Sciences) group.  ILisp lacks the additional features of
+Rutgers/UCI Lisp (see RUCI Lisp node), and purportedly has a buggy
+compiler, but we recommend its use over RUCI Lisp due to ILisp's
+Tenex/Twenex orientation.  Unfortunately, like RUCI Lisp, there are
+three manuals that you need for total system use, unless you already
+know Lisp, in which case you can skip the basic Stanford 1.6 Lisp
+manual (these manuals are listed below).
+ > Debugging: built in to the system
+
+* Menu:
+
+* Basic Manual: (LSP:SAILSP.MAN)*
+                This is the Stanford 1.6 Lisp manual, which contains
+                basic language information.
+* UCI Version:  (LSP:UCILSP.MAN)*
+                The UCI version of Stanford 1.6 Lisp.
+* ILisp:        (LSP:TNXLSP.DOC)*
+                Describes the new features of ILisp vs. UCI Lisp.
+
+File: Languages, Node: Bliss, Up: Top, Previous: Lisp, Next: PPL
+
+Bliss: compiler
+
+A recursive, block-structured, expression-oriented language which DEC
+uses for writing its compilers (Basic+2 and Fortran, for instance).
+There are no data types in Bliss, only words, and there is no built-in
+i/o or monitor interface, but packages exist for these things as well
+as for string manipulation, etc.  Versions for the -10 and the -11
+exist, but they all run on the -10 (or the -20, of course), and
+produce code for the appropriate machine.  Currently the versions for
+the -10 and the -11 are Bliss-10 and Bliss-11, respectively, but there
+is now a Common Bliss language, from which offshoot the various Bliss
+compilers for the -10/-20, -11 and VAX (Bliss-36, Bliss-16, and
+Bliss-32).  The newer compiler has just been announced commercially.
+
+* Menu:         The following versions of Bliss are available:
+
+* Bliss-10::
+* Bliss-11::
+* Common Bliss::
+
+File: Languages, Node: Bliss-10, Up: Bliss, Next: Bliss-11
+
+Bliss-10 (Bliss for the -10): Compiler
+
+ > Comes from: CMU via DEC
+ > Invoke via: 'blis10'.  Extension: .BLI or .B10
+ > System orientation: -10.
+ > Description: Generates code for -10's and -20's.
+ > Debugging: Six12 in conjunction with DDT
+ > References:
+1. Bliss-10 Programmer's Reference Manual, DEC-10-LBRMA-A-D (1974)
+2. Wulf, "Bliss: A Language for Systems Programming", CACM (Dec 1971)
+
+* Menu:         Online information:
+
+* Help:         (HLP:BLISS.HLP)*
+* Six12 Manual: (BLI:SIX12.MAN)*
+
+File: Languages, Node: Bliss-11, Up: Bliss, Next: Common Bliss,
+ Previous: Bliss-10
+
+Bliss-11: Compiler
+
+ > Comes from: Carnegie-Mellon University
+ > Invoke via: 'blis11'
+ > System orientation: -10
+ > Description:  Generates Macro-11 code for the PDP-11, which in turn
+can be assembled on the -20 by MACN11 or MACY11 and linked on the -20
+using Link11.  See the language utilities node for more information
+about MACx11, Link11, and a package of RSX macros (*Note Utilities: Utilities.)
+ > Debugging: Six12 (but for the -11) in conjunction with ODT on the -11.
+ > References:
+1. "Bliss-11 Programmer's Manual" (1974) available from CMU or DECUS.
+
+File: Languages, Node: Common Bliss, Up: Bliss, Previous: Bliss-11,
+
+Common Bliss: Compiler
+
+ > Comes from: DEC
+ > Invoke via: 'bliss' [but not yet at Columbia], extension: .BLI
+ > System orientation: -20
+ > Description:
+ DEC's corporate "system implementation language", intended mainly for
+writing compilers, editors, and other programs that could conceivably
+run on more than one of {PDP-10,DEC-20,VAX,PDP-11}.  Great care has
+gone into designing the language to be both highly optimized and
+transportable.  Common Bliss actually refers to the union of
+{Bliss-16,Bliss-32,Bliss-36}, which are the specific compilers that
+generate code for PDP-11's, VAXes, and PDP-10's/DEC-20's,
+respectively.  Bliss-16, by the way, only runs on PDP-10's and
+DEC-20's, and may never be available commercially.  It is highly
+doubtful that any flavor of Bliss will ever be available on any
+non-DEC machine.  Bliss-36 has just been proclaimed available to
+customers by DEC (April 1980), but it's still not clear what the
+pricing will be.
+ > References:
+1. Bliss Language Guide, DEC AA-H275A-RK (1978).
+2. Bliss Pocket Guide, DEC AV-H289A-TE (1978).
+3. DEC also has some kind of Bliss Primer or Reader.
+
+
+
+File: Languages, Node: PPL, Up: Top, Previous: Bliss, Next: ECL
+
+PPL: interpreter
+
+ > Comes from: Harvard via XEROX PARC
+ > Invoke via: 'ppl', Extension: .PPL
+ > System orientation: -20 (actually, Tenex), does its own irritating
+TTY-style editing.
+ > Description:
+ A language developed at Harvard for research in extensible languages,
+which turned into a pedagogic tool.  It was used to teach programming
+systems to non-science majors, and was quite successful in this task.
+Its flavor is APL-ish, if you know APL; if not, then it's an
+interpretive, highly interactive language, with a great deal of power,
+allowing you to define new data types and operators, as well as
+performing in more mundane ways (e.g. like Basic).  PPL is now in use
+at several universities, most of whom run it under UNIX, and is the
+subject of at least two books on introductory programming (one of
+which, quite good, is about to appear later this year; see reference
+2, below).
+ > Debugging: an integral part of the system
+ > References:
+   1. "PPL User's Manual", by Ed Taft and Tim Standish, Technical Report
+15-67, Center for Research in Computing Technology, Harvard
+University, August 1976.  Note that TOPS-20 PPL uses the "old editor"!
+   2. "A First Course in The Art and Science of Computing", by Mark
+Tuttle, Charles Prenner and Thomas Standish, to be published by
+Addison-Wesley, 1978.
+
+* Menu:         On-line documentation
+
+* Help:         (HLP:PPL.HLP)*  A brief help file.
+
+Note from RMS:
+
+My first system programming experience was helping a little in
+implementing PPL.  As far as I can see, any advantage it has over
+other languages for pedagogy lie in its interactive
+line-number-within-function editor, which somewhat resembles the APL
+editor.  This is easier than using a standard printing terminal text
+editor, and more so for students.  However, any display editor (such
+as EMACS) ought to even things out for other languages.
+
+Aside from that, PPL does have the advantage of not having strong
+typing, so that the user is not burdened with data type declarations
+for variables.  This makes less to worry about when writing a simple
+program.  However, Lisp has the same advantage.
+
+File: Lanaguages, Node: ECL, Up: Top, Previous: PPL, Next: C
+
+ECL: complete programming system
+
+ > Comes from: Harvard
+ > Invoke via: 'ecl:ecl', Extension: .ECL (.BIN for compiled modules)
+ > System orientation: -10, a little -20 (Tenex, actually)
+ > Description (taken from the manual): "The ECL programming system
+has been designed as a tool for general applications programming.  Its
+emphasis is on providing a powerful linguistic medium and convenient
+programming environment for the production of software spanning a
+large range of applications areas.  In providing such an environment,
+three goals were considered primary: (a) to allow problem-oriented
+description of algorithms, data and control over a wide range of
+applications areas; (b) to facilitate program construction and
+debugging; and (c) to facilitate smooth progression between initial
+program construction and the realization of a well-tuned final product.
+ECL consists of a programming language, called EL1, and a system
+built around this language to realize these goals.  The system allows
+on-line interactive construction, testing, and running of programs.
+It includes a language-oriented editor, an interpreter, and a fully
+compatible compiler.  Utilities include a debugging package, a
+source-level frequency profile package, and a source program
+formatter..."
+ > Debugging: an integral part of the system.
+ > References:
+   1. "ECL Programmer's Manual", TR 23-74, Center for Research in
+       Computing Technology, Harvard University, December 1974.
+   2. Wegbreit, "The ECL Programming System", Proc. AFIPS 1971
+       FJCC, vol.39.
+   3. Wegbreit, "The Treatment of Data Types in EL1", CACM (May 74).
+   4. ("The Computer Journal" article by Wegbreit, about closure in
+       ECL).
+
+There is no on-line documentation.
+
+Note from RMS:
+
+I was connected with ECL for a while too.  If you imagine Lisp, with
+user-defined record and array data types which can be defined at run
+time, given an Algolish syntax, you get the idea.
+
+ECL has the right basic idea for how to do data type definitions,
+because data types are objects in their own right which can be created
+and manipulated at run time.  So a program has a chance of working on
+data types which did not exist when the program was written (because
+they are part of another program which is also loaded).  This is
+essential for writing debuggers, interpreters, etc. in the language
+itself.  Unfortunately, ECL fails to make it completely possible to
+omit type checking entirely when that is desired, and this must be
+programmed around.  It would be easy to fix this.
+
+The Algol-style front end is a bad idea to begin with.  If you can't
+adapt to winning Lisp syntax, most Lisp systems come with simple
+optional Algol-style syntax front ends which do the same thing that
+ECL does, and they can be extended by the user.  ECL's syntax cannot
+be.
+
+File: Languages, Node: C, Up: Top, Previous: ECL, Next: BCPL
+
+C: Compiler
+
+ > Comes from: The C Language was invented at Bell Laboratories.
+The Portable C compiler was written by Alan Snyder at M.I.T.
+Portable C was implemented for the -20 by Norman Kincl and Chris
+Ryland at Columbia University.  Contact Eliot B. Moss at MIT Lab for
+Computer Science (545 Tech Square, Cambridge, MA 02139) for
+information on obtaining MIT's version of C.
+ > Invoke via: 'c:cc'. Extension: .C
+ > System orientation: -20
+ > Description:
+"C is a general-purpose programming language which features economy of
+expression, modern control flow and data structures, and a rich set of
+operators.  C is not a 'very high level' language, nor a 'big' one,
+and is not specialized to any particular area of application.  But its
+absence of restrictions and its generality make it more convenient and
+effective for many tasks than supposedly more powerful languages."(1)
+C was designed to be machine-independent, but Columbia's version
+includes a Jsys interface to allow it to take full advantage of the
+TOPS-20 environment.  The C compiler currently generates a Macro-20
+(q.v.)  source program that can be compiled in the normal way.  Work
+on the runtime support is still in progress.
+ > References:
+
+1. Kernighan & Ritchie, "The C Programming Language", Prentice-Hall (1978).
+
+2. Snyder, "A Portable Compiler for the Language C", M.I.T. Project MAC
+    (May 1975).
+
+* Menu:         Online information:
+
+* Help:         (HLP:C.HLP)Top
+
+File: Languages, Node: BCPL, Up: Top, Previous: C, Next: CPL
+
+BCPL (BBN Combined Programming Language): compiler
+
+ > Comes from: BBN (Bolt, Baranek, & Newman)
+ > Invoke via: 'bcpl'. Extension: .BCP
+ > System orientation: Tenex (and therefore almost entirely -20)
+ > Description:  A simple recursive programming language designed for
+compiler writing and system programming; readable, easy to learn, and
+efficient. It is made self-consistent and easy to define accurately by
+an underlying structure based on a simple idealized object machine.
+The treatment of data types is unusual and allows the power and
+convenience of a language with dynamically varying types and yet the
+efficiency of Fortran.  BCPL is itself written in BCPL and has been
+transferred successfully to other machines, including IBM 360's and
+370's,  the PDP-11, Univac 1100 series, Honeywell 6180, and many more.
+Has the flavor of (and shares common ancestry with) C.  Includes a
+Jsys interface; can be linked with external modules in BCPL or
+assembler.
+ > Debugging: BDDT interactive source-level debugger.
+ > References:
+1. BCPL Manual, BBN (1974).
+2. Richards, "BCPL: A Tool for Compiler Writing and Structured
+     Programming", AFIPS (1969 SJCC, v.34).
+
+* Menu:         Online information:
+
+* Help:         (HLP:BCPL.HLP)*
+* Concordance:  (BCP:CONC.DOC)*
+   Makes a concordance of a BCPL program.
+
+No online language manual.
+Various interesting items under logical name bcp:.
+
+File: Languages, Node: CPL, Up: Top, Previous: BCPL, Next: PL/I
+
+CPL (Conversational Programming Language): Interactive Interpreter
+
+ > Comes from: DEC
+ > Invoke via: 'cpl'. Extension: .CPL
+ > System orientation: -10, partially 20-ized.
+ > Description:
+
+A subset of standard ANSI PL/I with some extensions.  Totally
+interactive, with built-in syntax-checking editor, immediate-mode or
+deferred execution of statements, etc., but with several deficiencies
+which make it impractical as a "serious" language: there is no
+matching compiler, hence no way to link CPL programs with external
+modules or to run CPL programs efficiently;  there is no random-access
+(or keyed or binary) i/o; PL/I structures are missing; the CPL editor
+will not let you format your programs - all statements are
+left-justified (but you can use EMACS's PL/I formatter after the
+fact).  There are a few missing minor features, too: complex and
+decimal datatypes, label and file variables, various ON-conditions,
+etc., but even with its faults it's a good instructional language, and
+a useful facility for PL/I program development.  CPL was written and
+documented by a single person (John Xenakis) but DEC has no plans for
+further work on it.
+ > Debugging: built in (immediate mode statements, etc.)
+ > Reference:
+DECSYSTEM10/20 Conversation Programming Language User's Manual,
+ DEC-10-LCPLA-A-D.
+
+* Menu:         Online information:
+
+* Help:         (HLP:CPL.HLP)*  A brief help file.
+* Summary:      (DOC:CPL.DOC)*
+   The summary of language elements, from the manual (ch. 32).
+
+File: Languages, Node: PL/I, Up: Top, Previous: CPL, Next: Basic
+
+Programming Language I - Compiler.
+
+ > Comes from: DEC
+ > Invoke via: [we don't have it]
+ > System orientation: unknown
+ > Description:
+DEC is still keeping this under wraps, but they will announce a
+fullblown PL/I sometime in the near future.  It is being done by the
+same person that did CPL.
+
+File: Languages, Node: Basic, Up: Top, Previous: PL/I, Next: APLSF
+
+Basic (Beginner's All-Purpose Symbolic Instruction Code) was invented
+at Dartmouth by John Kemeny to popularize interactive computing.  Its
+major features are supposed to be simplicity and interactiveness; a
+beginner can write a Basic program with just a manual and very little
+prior knowledge.   However, Basic lacks certain essential language
+features: scoping of variables, statement bracketing, and usually the
+ability to load external procedures.  The PDP-11 RSTS system has a
+better basic than you can get for the -20.
+
+The Basic Language definition can be found in:
+American National Standard, BSR X3.60, Programming Language Minimal
+BASIC (draft standard) available from CBEMA.
+
+Another draft standard for extended Basic is in preparation.
+
+There are dozens of books about Basic, mostly introduction to computing
+using Basic.  Among them:
+
+1. Bennett, "Scientific and Engineering Problem-Solving with the
+    Computer", Prentice-Hall (1976).
+2. Gross [fill in]
+
+
+* Menu:         There are two versions of Basic on the -20:
+
+* Basic-20::    Simple but not interactive.
+* Basic+2::     Not simple, not very interactive either.
+
+(Basic+2)-(Basic-20)=22?
+
+Basic is very popular for pedagogy and on microcomputers.  It's
+peculiar that so many people believe that Basic is somehow simple or
+good for beginners.
+
+The reason for this is probably that Basic's line-number editor was
+better than punched cards, for beginners.  The language which you
+edit, however, is terrible.  Even Fortran is better, on the whole.
+
+File: Languages, Node: Basic-20, Up: Basic, Next: Basic+2
+
+Basic-20: Non-interactive interpreter.
+
+ > Comes from: DEC via Stanford LOTS (Low Overhead Timesharing System).
+ > Invoke via: [fill this in when we decide what to do with it...]
+ > System orientation: -20.  Extension: .BAS
+ > Description:
+This is just a TOPS-20ized version of DEC's Basic-10.  LOTS found
+that they had to replace Basic+2 with this much more modest version
+of Basic just so their system wouldn't grind to a halt.  The major
+drawback of Basic-20 is that there are no immediate-mode statements,
+and therefore no convenient way to debug programs.  More about
+Basic-20 if we ever install it.
+ > References:
+1. BASIC User's Guide, DEC-20-LBMAA-A-D
+
+* Menu:         Online information:
+
+[to be filled in...]
+
+File: Languages, Node: Basic+2, Up: Basic, Previous: Basic-20
+
+Basic-Plus-2: Semi-interactive interpreter and compiler
+
+ > Comes from: DEC
+ > Invoke via: 'basic'.  Extension: .B20
+ > System orientation: -20
+ > Description:  This monstrosity is the product of DEC's attempt to
+capitalize on the micro-computer-spawned Basic frenzy, and suffers
+mainly from trying to incorporate every feature that's ever been put
+into every version of Basic that ever existed, and then adding a lot
+more besides.  The result is one of the worst core hogs on our system,
+and a language that's unwieldy, cumbersome, inconsistent, and full of
+bugs.  Furthermore, it lacks a feature that all Basics should have:
+the ability to interrupt your program during execution, issue
+immediate-mode statements and/or modify your program, and resume
+execution - the primary debugging feature of Basic.  It also lacks an
+adequate resequencer - there is no way to change the order of
+statements.  Furthermore, although a compiler (and a linker!) are
+built into the Basic system, there is no way to link a program with
+external modules in Basic or any other language.  Those who need a
+simple, totally interactive language on the DEC-20 should consider
+something other than Basic, perhaps PPL.  Those who are attracted to
+Basic-Plus-2 for its "power" should consider using some other
+language, such as Snobol (for string manipulation), Sail (for almost
+anything if you are willing to put up with its idiosyncracies);
+Lisp for a clean, powerful and extensible system programming language
+which can implement extensible programs, Pascal, Algol, or C for
+clear, structured implementation of algorithms which do not need to be
+extensible , APLSF for matrix manipulation (and much more), even
+Fortran for scientific or statistical applications (because it's
+well-defined, widely known, and quite efficient in production
+environments).
+ > References:
+
+1. Basic-Plus-2 Language Manual, DEC AA-0153A-TK (1977).
+    This manual is for PDP-11's and DEC-20's.  It describes
+    DEC's corporate standard Basic-Plus-2.
+2. Basic-Plus-2 User's Guide, DEC AA-0152A-TM (1978).
+    TOPS-20 system-dependent aspects of Basic+2.
+2. TOPS-20 BASIC-PLUS-2 Language Manual, AA-H654A-TM (1979).
+    This one actually supersedes the other two; in version 2 of B+2,
+    DEC dropped the "corporate standard" machine-independent business,
+    tacitly acknowledging the failure of the project.
+
+* Menu:         Online information:
+
+* Help:         (HLP:BASIC.HLP)*
+* Conversion:   (BAS:CONVRT.MEM)*
+   How to convert a RSTS Basic-Plus program to Basic-Plus-2/20.
+
+In addition, there's usually some news in a file called
+BAS:BASxxx.DOC, where xxx is the latest version number.
+
+File: Languages, Node: APLSF, Up: Top, Previous: Basic, Next: Snobol
+
+APLSF (A Programming Language (with Shared Files)): interactive interpreter
+
+ > Comes from: CMU via DEC
+ > Invoke via: 'aplsf'.  Extension: .APL
+ > System orientation: -10
+ > Description:
+ A world in itself.  A powerful, concise, interactive programming
+system that, alas, prefers to be used on terminals with special
+character sets.  Especially noted for its vector and matrix
+manipulation capabilities.  Invented by K.E. Iverson at IBM, written
+for the -10 at CMU (where the 'shared file' capability was added -
+this just means that APLSF can read/write files that are accessible to
+other processors), and adopted, marketed, and supported by DEC.
+Extensive proprietary libraries are available.
+See LIB1:NEWS for more information (i.e. type ')LOAD LIB1:NEWS',
+and then type 'DESCRIBE').
+ > References:
+1. APLSF Programmer's Reference Manual, DEC-20-LASFA-A-D (1977).
+2. Iverson, "A Programming Language", Wiley (1962).
+3. Polivka et al., "APL: the Language and Its Usage", Prentice-Hall (1975).
+4. APL Quote-Quad, ACM STAPL/SIGPLAN (a periodical).
+
+* Menu:         Online information:
+
+* Help:         (HLP:APLSF.HLP)*
+* TTY:          (HLP:APL-TTY.HLP)*
+   How to use APL on a TTY (i.e. a non-APL terminal)
+* Commands:     (DOC:APLSF.DOC)*
+   A list of APLSF system commands
+
+In addition, voluminous documentation is built in to the APLSF system
+itself.
+
+File: Languages, Node: Snobol, Up: Top, Previous: APLSF, Next: Cobol
+
+Snobol (StriNg-Oriented symBOlic Language): Non-interactive interpreter
+
+ > Comes from: Stevens Institute of Technology (Sitbol)
+ > Invoke via: 'snobol' or load-class command.  Extension: .SNO
+ > System orientation: -10
+ > Description:
+ A truly magic language for string manipulation invented by Griswold,
+Poage, and Polonsky at Bell Laboratories, and written for the -10 at
+Stevens.  Includes powerful pattern-matching facilities, dynamic
+creation of variables (and even code!), and many features to be found
+nowhere else.  Suffers from the lack of any control mechanism other
+than goto and function invocation.  Superhuman discipline is required
+to write readable code.  If you actually want to create code at run
+time, it's simpler in Lisp.
+
+There are other implementations of SNOBOL for the -20, including FASBOL
+(which is compiled and is alleged to be very fast).
+
+ > SNODDT interactive source-level debugger.
+ > References:
+1. Griswold et al., "The Snobol4 Programming Language", 2nd ed.,
+    Prentice-Hall (1971).  The standard language manual.
+2. Gimpel, "Sitbol Version 4B", Stevens Inst. Tech. S4D30B (1976).
+    Describes Sitbol, our version of Snobol.
+3. Griswold & Griswold, "A Snobol4 Primer", Prentice-Hall (1974).
+    An introduction to Snobol at a relatively simple level.
+4. Gimpel, "Algorithms in Snobol4", Wiley (1976).
+    A collection of Snobol programs and algorithms, with some
+    attention to programming style.  Includes a large bibliography.
+5. Griswold, "SNOBOL4 -- Structure and Implementation", Bell Labs,
+    presented at SHARE XXXVII, NYC (Aug 1971).
+6. Griswold & Hanson, "An Alternative to the Use of Patterns in String
+    Processing", ACM TOPLAS v2 (April 1980).
+
+* Menu:         Online information:
+
+* Help:                 (HLP:SNOBOL.HLP)*
+* Manual:               (DOC:SNOBOL5.MANUAL)*
+* Debugger:             (HLP:SNODDT.HLP)*
+* Version 5:            (DOC:SNO5.DOC)*
+
+File: Languages, Node: Cobol, Up: Top, Next: PCL, Previous: Snobol
+
+COmmon Business Oriented Language.  Probably 90% of all computer
+programs are written in this language.  As the name implies, those
+programs are the ones used in business - accounts payable, general
+ledger, etc (whatever all that is!).  The language was designed to
+read like English, so that the boss could look over the "coder's"
+shoulder.  Cobol has no place in an academic environment, and is not
+available on Columbia's DEC-20.  If you want to use Cobol, you'll have
+to elsewhere; if you want to learn Cobol, go to a trade school.
+
+File: Languages, Node: PCL, Up: Top, Previous: Cobol
+
+PCL - Programmable Command Language for TOPS-20 (compiler).
+
+ > Comes from: Carnegie-Mellon University Computation Center
+   Distributor:
+     J. Ray Scott
+     CMU Computation Center
+     Schenley Park
+     Pittsburgh PA 15213
+ > Invoke via: <Jsol>Exec
+ > System orientation: -20
+ > Description:
+ PCL is a compiled language for writing custom TOPS-20 Exec commands.
+It is block structured, has various data types and all the normal
+control structures, and when completed (it is in the early stages of
+development at the time of this writing), it will give to TOPS-20
+users the long awaited ability to write programs of Exec commands
+(comparable in power to CMS Execs, TOPS-10 MIC, Wylbur Execfiles,
+etc).  Procedures that you write in PCL become part of your Exec.
+PCL is expected to be supported by DEC in release 5 of TOPS-20.
+
+There is a library of local PCL hacks in <Uc.Common.PCL>.  Enjoy!
+
+
+File: Languages, Node: Utilities, Up: Top
+
+Language Utilities.  These include debuggers, linking loaders,
+cross-referencers, cross assemblers and linkers, symbol-table dumpers,
+etc, that don't apply to any particular language on the -20.
+
+* Menu:
+
+* DDT::                 Dynamic Debugging Tool
+* Linkers::             Linking loaders.
+* ATSIGN: (ATSIGN).     The ATSIGN program makes cross-reference
+                        listings from source files.
+* SRCCOM: (SRCCOM).     SRCCOM is a fast program for comparing
+                        and merging source files.
+* CREF::                Produces cross-reference listings.
+* Misc::                Miscellaneous utilities.
+* PDP-11::              Utilities for the PDP-11.
+
+File: Languages, Node: Linkers, Up: Utilities, Next: CREF
+
+Linking loaders are programs that produce from a .REL file (the
+relocatable binary output from a compiler) an executable program in
+memory by resolving external references, calling in external modules
+and combining them with your program and fixing up references among
+the modules.  The final result is left in memory, ready to run.  If
+you want a copy to be saved on disk, you must save it yourself using
+the 'save' or 'csave' command of the Exec.  Executable programs are
+kept on the disk with the extension .EXE.
+
+* Menu:         There are 2 loaders available:
+
+* Link::        This is the standard DEC-20 product.
+* Loader::      This is the old DEC-10 loader, which is much
+                 smaller and faster, and sometimes suffices.
+
+File: Languages, Node: DDT, Up: Utilities, Next: Misc
+
+DDT is actually a family of programs that do interactive source-level
+debugging of executable programs, most suitably those originally
+written in assembly language.  DDT is word-oriented; it displays the
+contents of each word as a KL-10 instruction, with the various fields
+filled in from the program's symbol table (which is usually loaded
+with the program).  The display format can be changed for data words
+to octal, decimal, ascii, sixbit, etc.  Breakpoints can be inserted and
+deleted, programs can be single-stepped, arbitrary locations can be
+examined and/or modified, searches can be performed, patches can be
+inserted, etc.
+
+Many high-level languages have their own DDT's (ALGDDT, FORDDT, etc)
+which are described elsewhere, but DDT itself is the tool of last
+resort, and can be used to debug any executable program, providing you
+can understand its internal representation.
+
+DDT is available through the 'DDT', 'SDDT', and 'Debug' Exec commands.
+The appropriate version of DDT is loaded 'above' your program (but in
+the same fork), at address 764000.  If you're programming in assembly
+language, you must remember to leave room for DDT at 764000-777777.
+
+There is no single definitive source for information about DDT, but a
+DDT manual is forthcoming from DEC.  In the meantime, there is a brief
+description in the DECSYSTEM-20 User's Guide (versions 3A and
+earlier), and a more thorough (but dated) description in the
+DECsystem-10 Utilities Manual.
+
+There are various versions of DDT that are appropriate under different
+circumstances:
+
+UDDT (the default) works as described above.
+
+SDDT is like UDDT, except it knows all the MONSYM symbols, and can be
+ used "standalone", e.g. to write a program on the fly to try out some
+ JSYS feature.
+
+IDDT (invisible DDT) is like UDDT, except it sits in its own fork and
+ therefore cannot interfere with your program inadvertently.  It
+ must be requested explicitly.  IDDT is also handy for debugging
+ programs that run in multiple forks, or that use UDDT's addresses.
+
+FILDDT (file DDT) works like DDT, but on arbitrary files which could
+ be dumps, binary data files, etc.
+
+* Menu:         For further information, see
+
+* Help:         (HLP:DDT.HLP)top
+   which contains pointers to further information.
+
+File: Languages, Node: Link, Up: Linkers, Next: Loader
+
+LINK
+
+This is the standard DEC-20 linking loader.  It is a huge program,
+mostly -10 oriented (in its present state, it only understands TOPS-10
+filenames).  It has far more power than most people will ever need,
+but all programs compiled on the DEC-20 can be linked with it (except
+for those languages that do their own linking, like Basic-Plus-2,
+Mainsail, or those that are strictly interpretive and need no linking,
+like APL).
+
+References:
+1. DECSYSTEM-20 LINK Reference Manual, AA-4183B-TM.
+
+* Menu:
+
+* Help:         (HLP:LINK.HLP)
+
+File: Languages, Node: Loader, Up: Linkers, Previous: Link
+
+LOADER.  This is the old TOPS-10 linking loader; it has been replaced
+even on DECsystem-10's by LINK.  However, it still works under some
+circumstances and it's a lot smaller and more efficient than LINK and
+should be used whenever possible, e.g. with Sail.  The command string
+is in the following format:
+
+odev:filnam.ext<idev:filnam.ext,idev:filnam.ext,...ESC
+
+Switches may also be included.  Each time CR is typed, loading is
+performed for all files listed on that line.  When loading is
+completed for that line, LOADER prints an asterisk requesting
+additional instructions.  When ESC, the /G switch, or ^Z is typed, all
+remaining loading operations, library searches, and output operations
+are completed, and the program terminates.  Some useful switches:
+
+/D Load DDT.
+/T Load with DDT, and start DDT when done.
+/E begin execution after loading.
+/G Exit after loading.
+/S Load with local symbols.
+/W Load without local symbols (default).
+
+References:
+1. DECsystem-10 Assembly Language Handbook, 2nd Ed., DEC-10-NRZB-D.
+
+File: Languages, Node: CREF, Up: Utilities, Previous: Linkers, Next: Misc
+
+CREF produces cross-reference listings from special (.CRF) files that
+are generated by compilers when cross-referencing is requested.  CREF
+is invoked by typing 'Cref' to the Exec; you must first have used a
+load-class command with the /CREF switch.  If you have used a compiler
+that is not supported by load-class commands, you must have requested
+cross-referencing first; then you type 'r cref' to the Exec (to
+request the Cref program; 'cref' is an Exec command) and then supply a
+standard TOPS-10 command string.  Not all languages produce Cref
+input; some have their own cross-referencing facililty.  See the
+appropriate language manual for details.
+
+File: Languages, Node: Misc, Up: Utilities, Previous: CREF, Next: PDP-11
+
+Miscellaneous language utilities.
+
+* Menu:
+
+* Glob::        Produces listings of global symbols.
+* Grump::       Produces symbolic dumps of .REL files.
+* Maklib::      Produces load-module libraries fro .REL files.
+
+File: Languages, Node: Glob, Up: Misc, Next: Grump
+
+The GLOB program reads multiple binary program files and produces
+an alphabetical cross-referenced list of all the global symbols
+(symbols accessible to other programs) encountered.  This program also
+searches files in library search mode, checking for globals, if the
+program file was loaded in library search mode.
+
+GLOB is strictly a TOPS-10 program.
+
+Command format (in response to "*" prompt):
+
+odev:file.ext[p,p]=indev:file.ext[p,p],...,indev:file.ext[p,p]
+
+where [p,p] is a TOPS-10 project-programmer number, and the command
+string is terminated by ESC.  If the output device is omitted, DSK is
+assumed.  If the entire output filespec is omitted, TTY is used.  If
+any PPN's are omitted, DSK is used.
+
+Switches:
+
+/A      Output all global symbols.
+/E      List only multiply defined globals.
+/F      List nonrelocatable symbols only.
+/H      Help.
+/L      Library search mode.
+/M      Turn off library search mode.
+/N      List only symbols that are never referenced.
+/P      List all routines that define a symbol to have the same value.
+/Q      Suppress listing of subsequent definers resulting from /P.
+/R      List only relocatables.
+/S      List symbols with non-conflicting values that are multiply defined.
+/X      Don't print listing header.
+
+Symbols are flagged in the listing as follows:
+
+M       Multiply defined.
+N       Never referred to (i.e. never declared external).
+S       Multiply specified with no conflict.
+U       Undefined.
+
+File: Languages, Node: Grump, Up: Misc, Previous: Glob, Next: Maklib
+
+Prints an alphabetic dump of (symbol, octal value) the symbol table of
+a .REL file.  Various options are available (there is a built-in help
+message).  Useful for producing symbol definition files for languages
+that have this feature (e.g. Sail).  Seems to be TOPS-10 oriented.
+
+File: Languages, Node: Maklib, Up: Misc, Previous: Grump
+
+Manipulates relocatable binary files (.REL files), which are single
+programs or a collection of programs or routines (libraries).  The
+relocatable binary file is the machine-readable output from a source
+language translator such as the Fortran compiler or the Macro
+assembler.  Allows examination of individual modules and libraries and
+modification of modules, deletion of unnecessary symbols, and adding
+an index that can be used by link to speed up library searches.
+Typically used for building a library from a set of separately
+compiled routines.  Strictly a TOPS-10 program.
+
+Manual:  MAKLIB Program Functional Specification, DEC-20-UMKLA-A-D.
+ More recently, there's a MAKLIB chapter in the TOPS-20 Utilities
+ Manual, AA-D850A-TM.
+
+* Menu:         See also,
+
+* Help:         (HLP:MAKLIB.HLP)*       commands, switches, etc.
+* Sail:         (SAI:HOW-TO-MAKE-A-LIBRARY.HLP)*
+
+File: Languages, Node: PDP-11, Up: Utilities, Previous: Symbols
+
+Here we should mention MAC{X,Y}-11, LINKX11 or whatever it's called,
+Bliss-11 (and -16), etc.
+
+Another cross-assembler PALX-11 is available from MIT.
+
