@@ -1,0 +1,22 @@
+This directory contains general information related to PDP-10s.
+
+compus.txt	Trevor paper on PDP-10s at CompuServe
+
+extadr.txt	Spec for PDP-10 extended addressing.
+
+klpag.spc	Spec for TOPS-20 paging.  I don't know if this is the final
+		rev, if you know please tell me.
+
+massbus.txt	RH20 Massbus pinout and RP06 drive regs
+
+paging.its	Description of ITS paging system
+
+paper.smp	Flemming/Wilson paper on TOPS-10 symmetric multiprocessing
+
+paper.t20	Murphy paper on TOPS-20
+
+pclsr.mem	Bawden paper on PCLSRing in ITS
+
+smd.dec		Pinouts of both DEC (RMxx) and Fuji SMD connectors
+
+soul.txt	Dawson paper on KI10 shutdown at UT Austin
