@@ -1,0 +1,109 @@
+<HTML><HEAD><TITLE>READ20 manual</TITLE></HEAD><BODY>
+<PRE>
+NAME
+     read20 - read a tape produced by the TOPS-20 Dumper Program
+
+SYNOPSIS
+     read20 [-f tapefile] [-t]  [-x]  [-v]  [-c]  [-T]  [-g]  [-e
+     expression] [-S ssnums...] [-F filenums...] [<EM>string</EM>...]
+
+DESCRIPTION
+     <EM>Read20</EM> reads  tapes  produced  by  the  TOPS-20  backup  and
+     archival  program  <EM>DUMPER</EM>,  producing directory listings and
+     extracting files.  The -t option specifies a directory list-
+     ing,  and  the -x option specifies extraction.  Both actions
+     can be specified.
+
+     If no <EM>string</EM>, -<EM>e</EM>, -F, or -S option is given, every  file  on
+     the  tape  is  processed.  Otherwise, every file with a name
+     that either contains <EM>string</EM> ..., matches (as in  ed(1))  the
+     regular  expression <EM>expression</EM>, or is selected by the -S and
+     -F options will be processed.  The last two options are used
+     to  select files by saveset number and file number.  This is
+     useful when extracting from  an  archive  tape.   The  most-
+     recently  specified  saveset  number  is associated with the
+     specified file numbers.  The TOPS-20  filenames  are  lower-
+     cased  before  any matching.  Note that <EM>string</EM> is not a gen-
+     eralized pattern, but  is  just  a  simple  string  that  is
+     matched  against  all the characters in the filenames.  Spe-
+     cial characters (such as '&lt;' and '&gt;') must be quoted to  get
+     past the shell.
+
+     The UNIX filename of an extracted file is generated from the
+     TOPS-20 filename by stripping off the device name, translat-
+     ing the TOPS-20 directory syntax to a relative directory  in
+     UNIX format, and stripping off the generation number, unless
+     the -g flag is given.  Directories will be built  as  needed
+     with  protection 775, but any existing directory or its con-
+     tents will not be changed (unless an extracted file replaces
+     one of the same name).
+
+     The directory listing prints out for every file
+
+          -- a ``flags'' field which indicates  if  the  file  is
+          archived (A), offline (O), or invisible (I)
+          -- the size in TOPS-20 pages  (for  offline  files  the
+          size before archiving)
+          -- the number of bytes in the file
+          -- the <EM>bytesize</EM> (number of bits per byte) of the file
+          -- the octal TOPS-20 file protection
+          -- the time and date the file was last modified
+          -- the full pathname of the file.
+
+     If the -v flag is given, two additional fields  are  printed
+     at the left:
+     -- the saveset number
+     -- the file number
+
+     <EM>Read20</EM> only extracts text files and 8-bit  files.   In  text
+     files, unless the -c flag is given, carriage returns preced-
+     ing linefeeds are removed.  The file length  as  printed  by
+     the  `t' option is not adjusted to account for this.  <EM>Read20</EM>
+     decides whether or not a  file  is  text  by  examining  the
+     <EM>bytesize</EM>  of  the  file.  If the file has 7-bit bytes, it is
+     assumed to be a text file.  If it has  8-bit  bytes,  it  is
+     extracted  at  4  bytes/word,  including null bytes.  If the
+     file has any other <EM>bytesize</EM>,  requests  to  extract  it  are
+     ignored.
+
+     Occasionally, text files have a <EM>bytesize</EM> of 36 or 0  instead
+     of the proper <EM>bytesize</EM> of 7.  The -T flag forces these files
+     to be considered as text files.
+
+     Alternate tape devices or files may be specified with the -f
+     flag.   The  special  filename  `-'  signifies  the standard
+     input.
+
+     On non-Berkeley Unix systems, name collisions can occur when
+     the first 14 characters of extracted files are the same.  If
+     this is the case, use the -n  &lt;number&gt;  option.   This  will
+     cause  the  Unix  filenames to be numeric, starting with the
+     number following the -n.   The  mapping  from  the  original
+     TOPS-20 to the numeric Unix filenames is written to the file
+     `` <EM>Logfile</EM> '' in the current directory.
+
+FILES
+     /dev/rmt8 - default tapefile.
+
+AUTHOR
+     Jim Guyton, The Rand Corporation
+     Jay Lepreau, University of Utah
+
+BUGS
+     Files which span tape boundaries  are  handled  poorly.   To
+     extract such a file, extract each piece and then combine the
+     files under UNIX.
+
+     Directory descriptor blocks on the tape are not interpreted.
+
+     Offline files usually show up in directory listings  with  a
+     zero <EM>bytesize</EM>.
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

@@ -1,0 +1,94 @@
+Article 4401 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newshub.sdsu.edu!news-spur1.maxwell.syr.edu!news.maxwell.syr.edu!newsfeed.slurp.net!sakura.lunar-tokyo.net!dseagrav
+Newsgroups: alt.sys.pdp10
+From: Daniel Seagraves <dseagrav@sakura.lunar-tokyo.net>
+Subject: More DZ11 stuffs...  Rainbow is public access now. ^_^
+Message-ID: <Pine.LNX.4.21.0104101932340.4474-100000@sakura.lunar-tokyo.net>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+Lines: 13
+Date: Tue, 10 Apr 2001 19:40:35 -0500
+NNTP-Posting-Host: 209.251.101.202
+X-Trace: newsfeed.slurp.net 986949315 209.251.101.202 (Tue, 10 Apr 2001 19:35:15 CDT)
+NNTP-Posting-Date: Tue, 10 Apr 2001 19:35:15 CDT
+Xref: nntp1.ba.best.com alt.sys.pdp10:4401
+
+Rainbow Brite has the latest code now, and I created an account at 42,2
+for people to abuse.  Telnet to asuka.umtec.com, log in as ts10 (No
+password, just push enter), then do LOGIN 42,2 to play with it.
+The machine is still a P200, so it's still slow, but it should be usable.
+Unless everyone decides to DIR [10,7] or SYSTAT all at the same time. ^_^
+I'm nosing around to see if I can find a faster machine to stuff this on,
+but don't hold your breath.
+
+I still haven't solved the problem with multiple DZ11s, but I haven't
+really looked at it either.  It's probably some stupid typo, I'll hack at
+it tomorrow.
+
+
+
+
+Article 4662 of alt.sys.pdp10:
+From: "Hal Berenson" <Hal_Berenson@hotmail.com>
+References: <Pine.LNX.4.21.0104241024150.18540-100000@sakura.lunar-tokyo.net>
+Subject: Re: For those wanting to get logged in...
+Date: Wed, 25 Apr 2001 00:14:38 -0700
+Lines: 46
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Newsreader: Microsoft Outlook Express 5.50.4133.2400
+X-MimeOLE: Produced By Microsoft MimeOLE V5.50.4133.2400
+Message-ID: <ejHGEdVzAHA.273@cpmsnbbsa07>
+Newsgroups: alt.sys.pdp10
+NNTP-Posting-Host: ip63.c200.blk3.bel.nwlink.com 64.255.200.63
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!newsfeed.cwix.com!cpmsnbbsb04!cpmsnbbsa07
+Xref: nntp1.ba.best.com alt.sys.pdp10:4662
+
+Thank you.  I hadn't logged in to a -10 in at least a decade.
+
+I kept a tape with the sources for DBMS-10/20 V6 around until the day I left
+DEC (in '94).  Of course, I wish I still had them :-)
+
+Hal
+
+"Daniel Seagraves" <dseagrav@sakura.lunar-tokyo.net> wrote in message
+news:Pine.LNX.4.21.0104241024150.18540-100000@sakura.lunar-tokyo.net...
+> I keep forgetting to post the directions.
+>
+> Telnet to asuka.umtec.com, and Linux will answer you and ask for a
+> username.  Tell it "ts10".  When asked for a password, press Enter.
+>
+> You will get the message "DZclient v0.0" and be told your line number.
+> Lines above 6 currently do not work.  I don't know why yet.
+>
+> At this point, you either struck out (got line #7 or higher) or are
+> talking to TOPS-10.  Push enter and wait - You should get a dot prompt.
+> If you struck out, push control-backslash ( ^\ ) to tell dzclient to free
+> your line and let someone else use it.  If you just close your telnet
+> connection without doing this, you'll hang the line and make it
+> unavailable to anyone else.  (I'll fix this later.)
+>
+> If you got through to TOPS, you should be able to type "LOGIN 42,2" to get
+> logged in as NOBODY.  There is no password on this account.  If you want
+> your own account (I dunno why...) bug me and I'll make one if I have time.
+> I'm somewhat busy today.
+>
+> If it tells you you're already logged in, that means the previous person
+> forgot to log out - I haven't implemented carrier control on the DZ11
+> ports yet. ^_^
+>
+> If you're finished with what you're doing and want to quit, give the
+> command KJOB (K for short) to log out of TOPS-10, then control-backslash
+> to kill dzclient.  I have to reboot every few days so the ts10 debug log
+> doesn't fill the hard drive, but that'll generally be announced.
+>
+> Oh yes - The machine playing host (Asuka) is a Pentium 233 - It's old and
+> slow.  Please be patient.  When a lot of terminals are active (typing
+> something out) at the same time, it can get pretty pokey.
+>
+>
+>
+
+
+
+

@@ -1,0 +1,28 @@
+Subject: KL1269 needs a home....
+Date: Mon, 24 Jan 1994 19:09:32 +0200 (MET)
+From: Joe Dempster <DEMPSTER@ULLA.FORNAX.COM>
+To: tops-20
+Cc: rob.gingell, abt
+Message-Id: <759431372.190000.DEMPSTER@ULLA.FORNAX.COM>
+Mail-System-Version: <VAX-MM(284)+TOPSLIB(151)@ULLA.FORNAX.COM>
+
+36 bit hackers:
+
+Fornax is moving to smaller quarters (our KL maintenance business
+is winding down and we no longer need room to store 15 spare KLs
+and 35 RP06 disk drives....).
+
+We are the proud owners of a museum quality Model A KL (KL1269) and
+a custom designed 1MW static RAM memory box (designed and built by
+Brookhaven National Laboratory on Long Island).  KL1269 was built
+12-29-77, and I believe was either the second or third delivered
+outside of DEC.
+
+We swapped in a 2060 KL to replace this machine 3.5 years ago when
+we won the KL service contract at Brookhaven.
+
+This machine is offered free to any individual/organization willing
+to come to New Jersey this week to take it away.  If there are no
+takers, then we will unfortunately have to send it to the scrapper.
+
+/joe

@@ -1,0 +1,337 @@
+<HTML><HEAD><TITLE>PDP-10 opcodes</TITLE></HEAD><BODY BGCOLOR="#d8d8bf">
+<I>PDP-10 opcodes, numeric order</I><hr>
+<P>
+This page requires a browser that supports tables.  The tables are simple
+enough so that NCSA Mosaic for UNIX version 2.6 can handle them, but they
+are completely unreadable on text-based browsers, such as <b>lynx</b>.
+
+<h1>36-bit Instruction Format</h1>
+The original PDP-10 instruction format is very similar to RISC systems:<ul>
+<li>each instruction is one word long, the op-code is in a fixed location
+<li>effective address calculation is identical for all opcodes.
+</ul>
+<table border>
+ <tr><th>  0-8  <th> 9-12 <th> 13 <th> 14-17 <th> 18-35   </tr>
+ <tr><td> opcode <td> AC  <td> @  <td> index <td> addr/imm</tr>
+</table>
+<p>
+Although there are 512 possible values for the 9 bits of op-code, the number
+if distinct instructions is much smaller, since most instructions come in
+four flavors:<ul>
+<li>no suffix = data flows from memory to the specified accumulator
+<li>"I" = the effective address is 18 bits of immediate data, to AC
+<li>"M" = data flows from the specified accumulator to memory
+<li>"S" = self (read/modify/write to/from memory) or "B" = both
+</ul>
+<A NAME="Top">One way to get a grasp on the instruction set is to treat it as
+8 sets of 64 instructions, based on the first octal digit of the op-code.</A>
+<ul>
+<li><A HREF="#0">000-077: Unimplemented User Operations</A> - these trap to the user's
+	UUO routine or to the Monitor system-call routine
+<p>
+<li><A HREF="#1">100-177: Floating point and Byte manipulation</A> - the hardware to
+	implement these were "optional" on the low-end KA10, but every
+	PDP-10 ever sold had it.
+<p>
+<li><A HREF="#2">200-277: Fixed point</A> (36-bit integer) and subroutine calls
+<p>
+<li><A HREF="#3">300-377: Hop, skip and jump</A> - jump/skip if Equal, Not equal,
+	Greater, Greater or Equal, Less, Less or Equal, Always or never.
+	Half of these instructions will increment an AC or memory location
+	before acting on the result.
+<p>
+<li><A HREF="#4">400-477: Logical operations</A>.  AND, OR, NAND(ORCB), NOR(ANDCB), XOR,
+	one's complement, set to zeros, set to ones.
+<p>
+<li><A HREF="#5">500-577: Half-word operations</A>.  The other half can be left alone,
+	set to zero, set to ones, or extend the sign bit.
+<p>
+<li><A HREF="#6">600-677: Bit testing</A> - test 18 bits in left half, in right half,
+	test against memory, test against memory swapped.  The masked bits
+	set to zero, set to ones, complemented, or left alone.  The
+	instruction can skip if all the tested bits were zero, if any bit
+	was nonzero, always, or never.
+<p>
+<li><A HREF="#7">700-777: Input/Output</A> instructions all start with the digit 7.<ul>
+  <li><A HREF="#Internal">Internal device codes</A>
+  <li><A HREF="#External">External device codes</A> (PDP6, KA10, KI10)
+  <li><A HREF="#7_KL">Internal device opcodes for KL and KS</A>
+  <li><A HREF="#7_KS">Opcodes 700-777 on KS-2020</A>
+  </ul>
+</ul>
+	
+
+<h2><A NAME="0">Opcodes 000-077</A></h2>
+
+Monitor UUOs and Local UUOs<p>
+<table border>
+ <tr><th> 0__ <th>  0_0   <th>  0_1   <th>  0_2   <th>  0_3   <th>  0_4   <th>  0_5   <th>  0_6   <th>  0_7   
+ <tr><th> 00_ <td> 000000 <td> LUUO01 <td> LUUO02 <td> LUUO03 <td> LUUO04 <td> LUUO05 <td> LUUO06 <td> LUUO07 
+ <tr><th> 01_ <td> LUUO10 <td> LUUO11 <td> LUUO12 <td> LUUO13 <td> LUUO14 <td> LUUO15 <td> LUUO16 <td> LUUO17 
+ <tr><th> 02_ <td> LUUO20 <td> LUUO21 <td> LUUO22 <td> LUUO23 <td> LUUO24 <td> LUUO25 <td> LUUO26 <td> LUUO27 
+ <tr><th> 03_ <td> LUUO30 <td> LUUO31 <td> LUUO32 <td> LUUO33 <td> LUUO34 <td> LUUO35 <td> LUUO36 <td> LUUO37 
+ <tr><th> 04_ <td> CALL   <td> INITI  <td> MUUO42 <td> MUUO43 <td> MUUO44 <td> MUUO45 <td> MUUO46 <td> CALLI  
+ <tr><th> 05_ <td> OPEN   <td> TTCALL <td> MUUO52 <td> MUUO53 <td> MUUO54 <td> RENAME <td> IN     <td> OUT    
+ <tr><th> 06_ <td> SETSTS <td> STATO  <td> STATUS <td> GETSTS <td> INBUF  <td> OUTBUF <td> INPUT  <td> OUTPUT 
+ <tr><th> 07_ <td> CLOSE  <td> RELEAS <td> MTAPE  <td> UGETF  <td> USETI  <td> USETO  <td> LOOKUP <td> ENTER 
+</table>.
+
+<h2><A NAME="1">Opcodes 100-177</A></h2>
+
+Floating Point, Byte Manipulation, Other<p>
+<table border>
+ <tr><th> 1__ <th>  1_0   <th>  1_1   <th>  1_2   <th>  1_3   <th>  1_4   <th>  1_5   <th>  1_6   <th>  1_7  
+ <tr><th> 10_ <td> UJEN   <td> (101)  <td> GFAD   <td> GFSB   <td> JSYS   <td> ADJSP  <td> GFMP   <td> GFDV  
+ <tr><th> 11_ <td> DFAD   <td> DFSB   <td> DFMP   <td> DFDV   <td> DADD   <td> DSUB   <td> DMUL   <td> DDIV  
+ <tr><th> 12_ <td> DMOVE  <td> DMOVN  <td> FIX    <td> EXTEND <td> DMOVEM <td> DMOVNM <td> FIXR   <td> FLTR  
+ <tr><th> 13_ <td> UFA    <td> DFN    <td> FSC    <td> IBP    <td> ILDB   <td> LDB    <td> IDPB   <td> DPB   
+ <tr><th> 14_ <td> FAD    <td> FADL   <td> FADM   <td> FADB   <td> FADR   <td> FADRL  <td> FADRM  <td> FADRB 
+ <tr><th> 15_ <td> FSB    <td> FSBL   <td> FSBM   <td> FSBB   <td> FSBR   <td> FSBRL  <td> FSBRM  <td> FSBRB 
+ <tr><th> 16_ <td> FMP    <td> FMPL   <td> FMPM   <td> FMPB   <td> FMPR   <td> FMPRL  <td> FMPRM  <td> FMPRB 
+ <tr><th> 17_ <td> FDV    <td> FDVL   <td> FDVM   <td> FDVB   <td> FDVR   <td> FDVRL  <td> FDVRM  <td> FDVRB
+</table>.
+
+<h2><A NAME="2">Opcodes 200-277</A></h2>
+
+Integer Arithmetic, Jump To Subroutine<p>
+<table border>
+ <tr><th> 2__ <th>  2_0   <th>  2_1   <th>  2_2   <th>  2_3   <th>  2_4   <th>  2_5   <th>  2_6   <th>  2_7  
+ <tr><th> 20_ <td> MOVE   <td> MOVEI  <td> MOVEM  <td> MOVES  <td> MOVS   <td> MOVSI  <td> MOVSM  <td> MOVSS 
+ <tr><th> 21_ <td> MOVN   <td> MOVNI  <td> MOVNM  <td> MOVNS  <td> MOVM   <td> MOVMI  <td> MOVMM  <td> MOVMS 
+ <tr><th> 22_ <td> IMUL   <td> IMULI  <td> IMULM  <td> IMULB  <td> MUL    <td> MULI   <td> MULM   <td> MULB  
+ <tr><th> 23_ <td> IDIV   <td> IDIVI  <td> IDIVM  <td> IDIVB  <td> DIV    <td> DIVI   <td> DIVM   <td> DIVB  
+ <tr><th> 24_ <td> ASH    <td> ROT    <td> LSH    <td> JFFO   <td> ASHC   <td> ROTC   <td> LSHC   <td> (247) 
+ <tr><th> 25_ <td> EXCH   <td> BLT    <td> AOBJP  <td> AOBJN  <td> JRST   <td> JFCL   <td> XCT    <td> MAP   
+ <tr><th> 26_ <td> PUSHJ  <td> PUSH   <td> POP    <td> POPJ   <td> JSR    <td> JSP    <td> JSA    <td> JRA   
+ <tr><th> 27_ <td> ADD    <td> ADDI   <td> ADDM   <td> ADDB   <td> SUB    <td> SUBI   <td> SUBM   <td> SUBB 
+</table>.
+
+<h2><A NAME="3">Opcodes 300-377</A></h2>
+
+Hop, Skip, and Jump (codes 3_0 do not skip or jump)<p>
+<table border>
+ <tr><th> 3__ <th>  3_0   <th>  3_1   <th>  3_2   <th>  3_3   <th>  3_4   <th>  3_5   <th>  3_6   <th>  3_7  
+ <tr><th> 30_ <td> CAI    <td> CAIL   <td> CAIE   <td> CAILE  <td> CAIA   <td> CAIGE  <td> CAIN   <td> CAIG  
+ <tr><th> 31_ <td> CAM    <td> CAML   <td> CAME   <td> CAMLE  <td> CAMA   <td> CAMGE  <td> CAMN   <td> CAMG  
+ <tr><th> 32_ <td> JUMP   <td> JUMPL  <td> JUMPE  <td> JUMPLE <td> JUMPA  <td> JUMPGE <td> JUMPN  <td> JUMPG 
+ <tr><th> 33_ <td> SKIP   <td> SKIPL  <td> SKIPE  <td> SKIPLE <td> SKIPA  <td> SKIPGE <td> SKIPN  <td> SKIPG 
+ <tr><th> 34_ <td> AOJ    <td> AOJL   <td> AOJE   <td> AOJLE  <td> AOJA   <td> AOJGE  <td> AOJN   <td> AOJG  
+ <tr><th> 35_ <td> AOS    <td> AOSL   <td> AOSE   <td> AOSLE  <td> AOSA   <td> AOSGE  <td> AOSN   <td> AOSG  
+ <tr><th> 36_ <td> SOJ    <td> SOJL   <td> SOJE   <td> SOJLE  <td> SOJA   <td> SOJGE  <td> SOJN   <td> SOJG  
+ <tr><th> 37_ <td> SOS    <td> SOSL   <td> SOSE   <td> SOSLE  <td> SOSA   <td> SOSGE  <td> SOSN   <td> SOSG 
+</table>.
+
+<h2><A NAME="4">Opcodes 400-477</A></h2>
+
+Two-argument Logical Operations<p>
+<table border>
+ <tr><th> 4__ <th>  4_0   <th>  4_1   <th>  4_2   <th>  4_3   <th>  4_4   <th>  4_5   <th>  4_6   <th>  4_7  
+ <tr><th> 40_ <td> SETZ   <td> SETZI  <td> SETZM  <td> SETZB  <td> AND    <td> ANDI   <td> ANDM   <td> ANDB  
+ <tr><th> 41_ <td> ANDCA  <td> ANDCAI <td> ANDCAM <td> ANDCAB <td> SETM   <td> XMOVEI <td> SETMM  <td> SETMB 
+ <tr><th> 42_ <td> ANDCM  <td> ANDCMI <td> ANDCMM <td> ANDCMB <td> SETA   <td> SETAI  <td> SETAM  <td> SETAB 
+ <tr><th> 43_ <td> XOR    <td> XORI   <td> XORM   <td> XORB   <td> OR     <td> ORI    <td> ORM    <td> ORB   
+ <tr><th> 44_ <td> ANDCB  <td> ANDCBI <td> ANDCBM <td> ANDCBB <td> EQV    <td> EQVI   <td> EQVM   <td> EQVB  
+ <tr><th> 45_ <td> SETCA  <td> SETCAI <td> SETCAM <td> SETCAB <td> ORCA   <td> ORCAI  <td> ORCAM  <td> ORCAB 
+ <tr><th> 46_ <td> SETCM  <td> SETCMI <td> SETCMM <td> SETCMB <td> ORCM   <td> ORCMI  <td> ORCMM  <td> ORCMB 
+ <tr><th> 47_ <td> ORCB   <td> ORCBI  <td> ORCBM  <td> ORCBB  <td> SETO   <td> SETOI  <td> SETOM  <td> SETOB
+</table>.
+
+<h2><A NAME="5">Opcodes 500-577</A></h2>
+
+Half Word {Left,Right} to {Left,Right} with {nochange,Zero,Ones,Extend},
+{ac,Immediate,Memory,Self}<p>
+<table border>
+ <tr><th> 5__ <th>  5_0   <th>  5_1   <th>  5_2   <th>  5_3   <th>  5_4   <th>  5_5   <th>  5_6   <th>  5_7  
+ <tr><th> 50_ <td> HLL    <td> XHLLI  <td> HLLM   <td> HLLS   <td> HRL    <td> HRLI   <td> HRLM   <td> HRLS  
+ <tr><th> 51_ <td> HLLZ   <td> HLLZI  <td> HLLZM  <td> HLLZS  <td> HRLZ   <td> HRLZI  <td> HRLZM  <td> HRLZS 
+ <tr><th> 52_ <td> HLLO   <td> HLLOI  <td> HLLOM  <td> HLLOS  <td> HRLO   <td> HRLOI  <td> HRLOM  <td> HRLOS 
+ <tr><th> 53_ <td> HLLE   <td> HLLEI  <td> HLLEM  <td> HLLES  <td> HRLE   <td> HRLEI  <td> HRLEM  <td> HRLES 
+ <tr><th> 54_ <td> HRR    <td> HRRI   <td> HRRM   <td> HRRS   <td> HLR    <td> HLRI   <td> HLRM   <td> HLRS  
+ <tr><th> 55_ <td> HRRZ   <td> HRRZI  <td> HRRZM  <td> HRRZS  <td> HLRZ   <td> HLRZI  <td> HLRZM  <td> HLRZS 
+ <tr><th> 56_ <td> HRRO   <td> HRROI  <td> HRROM  <td> HRROS  <td> HLRO   <td> HLROI  <td> HLROM  <td> HLROS 
+ <tr><th> 57_ <td> HRRE   <td> HRREI  <td> HRREM  <td> HRRES  <td> HLRE   <td> HLREI  <td> HLREM  <td> HLRES
+</table>.
+
+<h2><A NAME="6">Opcodes 600-677</A></h2>
+
+Test bits, {Right,Left,Direct,Swapped} with {Nochange,Zero,Complement,One}
+and skip if the masked bits were {noskip,Equal,Nonzero,Always}<p>
+<table border>
+ <tr><th> 6__ <th>  6_0   <th>  6_1   <th>  6_2   <th>  6_3   <th>  6_4   <th>  6_5   <th>  6_6   <th>  6_7  
+ <tr><th> 60_ <td> TRN    <td> TLN    <td> TRNE   <td> TLNE   <td> TRNA   <td> TLNA   <td> TRNN   <td> TLNN  
+ <tr><th> 61_ <td> TDN    <td> TSN    <td> TDNE   <td> TSNE   <td> TDNA   <td> TSNA   <td> TDNN   <td> TSNN  
+ <tr><th> 62_ <td> TRZ    <td> TLZ    <td> TRZE   <td> TLZE   <td> TRZA   <td> TLZA   <td> TRZN   <td> TLZN  
+ <tr><th> 63_ <td> TDZ    <td> TSZ    <td> TDZE   <td> TSZE   <td> TDZA   <td> TSZA   <td> TDZN   <td> TSZN  
+ <tr><th> 64_ <td> TRC    <td> TLC    <td> TRCE   <td> TLCE   <td> TRCA   <td> TLCA   <td> TRCN   <td> TLCN  
+ <tr><th> 65_ <td> TDC    <td> TSC    <td> TDCE   <td> TSCE   <td> TDCA   <td> TSCA   <td> TDCN   <td> TSCN  
+ <tr><th> 66_ <td> TRO    <td> TLO    <td> TROE   <td> TLOE   <td> TROA   <td> TLOA   <td> TRON   <td> TLON  
+ <tr><th> 67_ <td> TDO    <td> TSO    <td> TDOE   <td> TSOE   <td> TDOA   <td> TSOA   <td> TDON   <td> TSON 
+</table>.
+
+<h2><A NAME="7">Opcodes 700-777</A></h2>
+
+Bits 0-2 = "111", bits 3-9 = I/O device address, bits 10-12 = opcode<p>
+<table border>
+ <tr><th>  7__   <th>  op   <th> description
+ <tr><th> 700000 <td> BLKI  <td> Block Input, skip if I/O not finished  
+ <tr><th> 700040 <td> DATAI <td> Data Input, from device to memory      
+ <tr><th> 700100 <td> BLKO  <td> Block Output, skip if I/O not finished 
+ <tr><th> 700140 <td> DATAO <td> Data Output, from memory to device     
+ <tr><th> 700200 <td> CONO  <td> Conditions Out, 36 bits AC to device   
+ <tr><th> 700240 <td> CONI  <td> Conditions in, 36 bits device to AC    
+ <tr><th> 700300 <td> CONSZ <td> Conditions, Skip if Zero (test 18 bits)
+ <tr><th> 700340 <td> CONSO <td> Conditions, Skip if One  (test 18 bits)
+</table>.
+
+<H3><A NAME="Internal">Internal device codes</A></H3>
+<table border>
+ <tr><th> adr <th> dev <th> description              
+ <td> 000 <td> APR <td> Arithmetic Processor     
+ <td> 004 <td> PI  <td> Priority Interrupt system
+ <td> 010 <td> PAG <td> Pager                    
+ <td> 014 <td> CCA <td> Cache Controller         
+ <td> 020 <td> TIM <td> Timer                    
+ <td> 024 <td> MTR <td> Meter                    
+</table>.
+
+<H3><A NAME="External">External device codes (PDP6, KA10, KI10)</A></H3>
+
+<table border>
+ <tr><th> adr <th> dev  <th> description
+ <td> 014 <td> CCI  <td> Computer to Computer interface (pdp-8/pdp-9)
+ <td> 020 <td> CCI2 <td> Computer to Computer interface (pdp-8/pdp-9)
+ <td> 024 <td> ADC  <td> Analog/Digital Converter
+ <td> 030 <td> ADC2 <td> Analog/Digital Converter
+
+ <td> 100 <td> PTP  <td> Paper Tape Punch 
+ <td> 104 <td> PTR  <td> Paper Tape Reader
+ <td> 110 <td> CDP  <td> Card Punch
+ <td> 114 <td> CDR  <td> PDP-6 Card Reader
+ <td> 120 <td> TTY  <td> Console Teletype
+ <td> 124 <td> LPT  <td> Line Printer
+ <td> 130 <td> DIS  <td> Display
+ <td> 134 <td> DIS2 <td> Display
+ <td> 140 <td> PLT  <td> Plotter
+ <td> 144 <td> PLT2 <td> Plotter
+ <td> 150 <td> CR   <td> Card Reader
+ <td> 154 <td> CR2  <td> Card Reader
+ <td> 170 <td> DSK  <td> RC10 Small Disk
+ <td> 174 <td> DSK2 <td> RC10 Small Disk
+
+ <td> 240 <td> DLS  <td> DC10 Data Line Scanner
+ <td> 244 <td> DLS2 <td> DC10 Data Line Scanner
+ <td> 260 <td> MDF  <td> RA10 Mass Disk File
+ <td> 264 <td> MDF2 <td> RA10 Mass Disk File
+
+ <td> 320 <td> DTS  <td> DECtape, Status
+ <td> 324 <td> DTC  <td> DECtape, Control
+ <td> 330 <td> DTS2 <td> DECtape, Status
+ <td> 334 <td> DTC2 <td> DECtape, Control
+ <td> 340 <td> TMS  <td> Magnetic Tape, Status
+ <td> 344 <td> TMC  <td> Magnetic Tape, Control
+ <td> 350 <td> TMS2 <td> Magnetic Tape, Status
+ <td> 354 <td> TMC2 <td> Magnetic Tape, Control
+</table>.
+
+<h3><A NAME="7_KL">Internal device codes for KL and KS</A></h3>
+
+<table border>
+ <tr><th> opcode<th> KL-10     <th> KS2020<th> description
+ <tr><th> 70000 <td> BLKI  APR,<td> APRID <td> Read APR serial number, microcode version
+ <tr><th> 70004 <td> DATAI APR,<td> -     <td> Read address break conditions
+ <tr><th> 70010 <td> BLKO  APR,<td> -     <td> WRFIL Write Refill Table
+ <tr><th> 70014 <td> DATAO APR,<td> -     <td> Set Address Break
+ <tr><th> 70020 <td> CONO  APR,<td> WRAPR <td> Set APR interrupt enable flags
+ <tr><th> 70024 <td> CONI  APR,<td> RDAPR <td> Read APR flags
+ <tr><th> 70030 <td> CONSZ APR,<td> -     <td> Read APR flags, skip if all zero
+ <tr><th> 70034 <td> CONSO APR,<td> -     <td> Read APR flags, skip if any ones
+ <tr><th> 70040 <td> RDERA     <td> -     <td> BLKI  PI, Read Error Address
+ <tr><th> 70044 <td> (unused)  <td> -     <td> DATAI PI,
+ <tr><th> 70050 <td> SBDIAG    <td> -     <td> BLKO  PI, S Bus Diagnostic Function
+ <tr><th> 70060 <td> CONO  PI, <td> WRPI  <td> Priority Interrupt (enable/disable/clear)
+ <tr><th> 70064 <td> CONI  PI, <td> RDPI  <td> Read status of PI system
+ <tr><th> 70070 <td> CONSZ PI, <td> -     <td> Read PI status, skip if all zero
+ <tr><th> 70074 <td> CONSO PI, <td> -     <td> Read PI status, skip if any ones
+ <tr><th> 70100 <td> (unused)  <td> -     <td> BLKI PAG,
+ <tr><th> 70104 <td> DATAI PAG,<td> RDUBR <td> Read User Base Register
+ <tr><th> 70110 <td> CLRPT     <td> +     <td> BLKO PAG, Clear page table entry
+ <tr><th> 70110 <td> +         <td> CLRPT <td> Clear page table entry and invalidate entire cache
+ <tr><th> 70114 <td> DATAO PAG,<td> WRUBR <td> Write User Base Register (user mode page map)
+ <tr><th> 70120 <td> CONO  PAG,<td> WREBR <td> Write Exec Base Register (exec mode page map)
+ <tr><th> 70124 <td> CONI  PAG,<td> RDEBR <td> Read Exec Base Register
+ <tr><th> 70130 <td> (unused)  <td> -     <td> CONSZ PAG,
+ <tr><th> 70134 <td> (unused)  <td> -     <td> CONSO PAG,
+ <tr><th> 70140 <td> (unused)  <td> -     <td> BLKI  CCA,
+ <tr><th> 70144 <td> SWPIA     <td> -     <td> DATAI CCA, Sweep Cache Invalidate All pages
+ <tr><th> 70150 <td> SWPVA     <td> -     <td> BLKO  CCA, Sweep Cache Validate All pages
+ <tr><th> 70154 <td> SWPUA     <td> -     <td> DATAO CCA, Sweep Cache Unload All pages
+ <tr><th> 70160 <td> (unused)  <td> -     <td> CONO  CCA,
+ <tr><th> 70164 <td> SWPIO     <td> -     <td> CONI  CCA, Sweep Cache Invalidate One page
+ <tr><th> 70170 <td> SWPVO     <td> -     <td> CONSZ CCA, Sweep Cache Validate One page
+ <tr><th> 70174 <td> SWPUO     <td> -     <td> CONSO CCA, Sweep Cache Unload One page
+ <tr><th> 70200 <td> BLKI  TIM,<td> -     <td> Read Performance Analysis Count
+ <tr><th> 70200 <td> -         <td> RDSPB <td> Read SPT base address
+ <tr><th> 70204 <td> DATAI TIM,<td> -     <td> Read time base from EPT
+ <tr><th> 70204 <td> -         <td> RDCSB <td> Read CST base address
+ <tr><th> 70210 <td> BLKO  TIM,<td> -     <td> WRPAE Write Performance Analysis Enables
+ <tr><th> 70210 <td> -         <td> RDPUR <td> Read Process Use Register
+ <tr><th> 70214 <td> (unused)  <td> -     <td> DATAO TIM,
+ <tr><th> 70214 <td> -         <td> RDCSTM<td> Read CST Mask
+ <tr><th> 70220 <td> CONO  TIM,<td> -     <td> Write Timer Interval
+ <tr><th> 70220 <td> -         <td> RDTIM <td> Read Time Base
+ <tr><th> 70224 <td> CONI  TIM,<td> RDINT <td> Read Timer Interval
+ <tr><th> 70230 <td> (unused)  <td> -     <td> CONSZ TIM,
+ <tr><th> 70230 <td> -         <td> RDHSB <td> Read HSB base address
+ <tr><th> 70234 <td> (unused)  <td> -     <td> CONSO TIM,
+ <tr><th> 70240 <td> BLKI  MTR,<td> -     <td> RDMACT Read Memory Accounting
+ <tr><th> 70240 <td> -         <td> WRSPB <td> Write SPT base address
+ <tr><th> 70244 <td> DATAI MTR,<td> -     <td> RDEACT Read Execution Accounting
+ <tr><th> 70244 <td> -         <td> WRCSB <td> Write CST base address
+ <tr><th> 70250 <td> (unused)  <td> -     <td> BLKO  MTR,
+ <tr><th> 70250 <td> -         <td> WRPUR <td> Write Process Use Register
+ <tr><th> 70254 <td> (unused)  <td> -     <td> DATAO MTR,
+ <tr><th> 70254 <td> -         <td> WRCSTM<td> Write CST Mask
+ <tr><th> 70260 <td> CONO  MTR,<td> -     <td> Enable accounting meters and timers
+ <tr><th> 70260 <td> -         <td> WRTIM <td> Write Time Base
+ <tr><th> 70264 <td> CONI  MTR,<td> -     <td> Read meter status
+ <tr><th> 70264 <td> -         <td> WRINT <td> Write timer Interval
+ <tr><th> 70270 <td> (unused)  <td> -     <td> CONSZ MTR,
+ <tr><th> 70270 <td> -         <td> WRHSB <td> Write HSB base address
+ <tr><th> 70274 <td> (unused)  <td> -     <td> CONSO MTR,
+</table>.
+
+<h3><A NAME="7_KS">Opcodes 700-777</A> on KS-2020</h3>
+See previous table for opcodes that the KL and KS have in common.<p>
+<table border>
+ <tr><th> 7__ <th>  7_0   <th>  7_1   <th>  7_2   <th>  7_3   <th>  7_4   <th>  7_5   <th>  7_6   <th>  7_7  
+ <tr><th> 70_ <td> (700)  <td> (701)  <td> (702)  <td> (703)  <td> UMOVE  <td> UMOVEM <td> (706)  <td> (707) 
+ <tr><th> 71_ <td> TIOE   <td> TION   <td> RDIO   <td> WRIO   <td> BSIO   <td> BCIO   <td> (716)  <td> (717) 
+ <tr><th> 72_ <td> TIOEB  <td> TIONB  <td> RDIOB  <td> WRIOB  <td> BSIOB  <td> BCIOB  <td> (726)  <td> (727) 
+</table>.
+<p>
+Opcodes 704-727 have the same format as ordinary instructions: 9-bits opcode,
+4-bits AC field, 1+4+18 bits effective address.<p>
+<table border>
+ <tr><th> code <th> mnemonic <th> description
+ <tr><th> 704 <td> UMOVE <td> Same as PXCT 4,[MOVE A,E] (user mem to exec AC)
+ <tr><th> 705 <td> UMOVEM<td> Same as PXCT 4,[MOVEM A,E] (exec AC to user mem)
+ <tr><th> 710 <td> TIOE  <td> Test bits in I/O reg, skip if all zero
+ <tr><th> 711 <td> TION  <td> Test bits in I/O reg, skip if any nonzero
+ <tr><th> 712 <td> RDIO  <td> Read 16-bit data from I/O register
+ <tr><th> 713 <td> WRIO  <td> Write 16-bit data to I/O register
+ <tr><th> 714 <td> BSIO  <td> Set bit in I/O reg
+ <tr><th> 715 <td> BCIO  <td> Clear bit in I/O reg
+ <tr><th> 720 <td> TIOEB <td> Test bits in I/O reg byte, skip if all zero
+ <tr><th> 721 <td> TIONB <td> Test bits in I/O reg byte, skip if any nonzero
+ <tr><th> 722 <td> RDIOB <td> Read data from 8-bit I/O register
+ <tr><th> 723 <td> WRIOB <td> Write data to 8-bit I/O register
+ <tr><th> 724 <td> BSIOB <td> Set bit in 8-bit I/O reg
+ <tr><th> 725 <td> BCIOB <td> Clear bit in 8-bit I/O reg
+</table>.
+
+<P>Back to <A HREF="#Top">top of document</A>.
+<P><HR>
+Up to the index for <A HREF="">PDP-10 page</A>.<BR>
+<ADDRESS>
+Maintained by <A HREF="../u/joe/">Joe Smith</A> at <A HREF="mailto:js-cgi@inwap.com">js-cgi@inwap.com</A>
+</ADDRESS></BODY></HTML>

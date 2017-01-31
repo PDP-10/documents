@@ -1,0 +1,1760 @@
+                     -< TOPS-10/20 discussions held here >-
+================================================================================
+Note 286.2              History of DEC's 36-bit Machines                  2 of 3
+VINO::FLEMMING "Have XDELTA, will travel"            13 lines  27-DEC-1991 06:58
+                                -< TOPS-10 SMP >-
+--------------------------------------------------------------------------------
+The next note is the chapter that Allan Wilson - an old time 36 bitter now
+with Intergraph - and I wrote for the "book" Dan mentioned. There are 8 or
+10 figures referenced in the text. The folks producing the "book" said they
+would provide a graphic artist to do the pictures so they never existed in
+soft copy form. I of course couldn't conveniently post them here even if they
+did. For the most part, they just depicted various MP configurations so it
+doesn't take much imagination to figure out what they were about. The only
+possible exceptions to this are the figures depicting the flow of input and
+output but unless someone were insane enough to want to try to do this again,
+the general idea of how it worked should be more or less obvious from the
+text.
+
+JMF
+================================================================================
+Note 286.3              History of DEC's 36-bit Machines                  3 of 3
+VINO::FLEMMING "Have XDELTA, will travel"          1736 lines  27-DEC-1991 06:59
+--------------------------------------------------------------------------------
+ 
+ 
+ 
+                          TOPS-10 Symmetric Multiprocessing
+ 
+ 
+                        Allan B. Wilson and James M. Flemming
+			Copyright (c) 1989 - A. Wilson and J. Flemming
+			Copyright (c) 1991 - A. Wilson and J. Flemming
+      Permission for electronic forwarding and reposting hereby granted.
+     Rights to commercial and/or hardcopy publication reserved.  Contact
+            the author at VINO::FLEMMING (flemming@vino.dec.com).
+  [It is with sadness I note the passing away of JMF February 1995 -smw]
+
+                                        - 1 -
+ 
+ 
+ 
+ 
+          TOPS-10 SYMMETRIC MULTIPROCESSING -- SMP
+ 
+ 
+ 
+ 
+                                    INTRODUCTION
+ 
+          In the latter half of the 1970s,  Digital  Equipment  Corporation
+          began  marketing  two  operating systems for its 36-bit family of
+          computers.  TOPS-10 had evolved as the original internal product,
+          whose  initial  development  began during the mid-1960s.  TOPS-20
+          had its roots in an external product, TENEX, rights to which were
+          acquired  by  DEC  to  provide  the software foundation for a new
+          system series.
+ 
+          Although TENEX had run on KA-10 and KI-10 processors  at  several
+          research  and university sites, TOPS-20 was released as a product
+          only on the KL-10 processor.  Therefore TOPS-10 and TOPS-20 share
+          the same underlying hardware architecture of the KL-10, including
+          the same basic instruction set.  However,  because  the  software
+          architectures  of  the  two  systems  differ,  the mechanisms and
+          details of operating-system calls  are  different.   Furthermore,
+          each  system  has  unique  requirements  for  paging  and virtual
+          memory.   Both   common   and   system-specific   functions   are
+          implemented in cpu microcode.
+ 
+          DEC introduced  TOPS-20  to  increase  the  size  of  its  36-bit
+          customer  base  by  offering  a  powerful but easy-to-use product
+          which represented the  latest  in  operating  system  technology.
+          TOPS-20 was first released as part of a low-end system, the 2040,
+          which was sold with only 64K words of memory.  In contrast,  most
+          TOPS-10  users  already  had  very  large  systems  (many of them
+          multiprocessors) and, though TOPS-20  had  some  very  attractive
+          features,  there  was seldom justification for a TOPS-10 customer
+          to change to TOPS-20.   Regardless  of  personal  preference  for
+          TOPS-10  or  TOPS-20,  and there were many people strongly in one
+          camp or the other, the TOPS-10 user-base was large,  which  meant
+          significant  pressure  on DEC for an on-going commitment to TOPS-
+          10.  Better multiprocessing support was viewed favorably by  both
+          internal  and  external  TOPS-10  supporters:  it was interesting
+          technically but, most important,  would  help  sites  with  heavy
+          system  loads  until  the  planned  successor  to  the KL cpu was
+          available.
+ 
+          The  remainder  of  this  chapter  goes   into   historical   and
+          implementation  details  of  TOPS-10 multiprocessing, focusing on
+          the latest and most general version,  Symmetric  Multiprocessing,
+          or  SMP.   SMP  was  developed  as  the next logical extension of
+          TOPS-10, but at a time when TOPS-20 was being heavily  emphasized
+          by DEC's Large Computer Group ("LCG").  It's probably accurate to
+          state that if Jim Flemming  and  Tony  Wachs,  long-time  TOPS-10
+          developers  and  key  designers  and implementors of SMP, had not
+          been persistent with John Leng (LCG  Vice  President)  and  other
+          senior  LCG  managers,  SMP  development  would  never  have been
+          allowed to proceed.
+ 
+ 
+ 
+ 
+ 
+ 
+                                        - 2 -
+ 
+ 
+ 
+ 
+          TOPS-10 SYMMETRIC MULTIPROCESSING -- SMP
+ 
+ 
+ 
+ 
+                                   MULTIPROCESSING
+ 
+          Multiprocessing is a  computer  organization  in  which  multiple
+          central    processing    units   ("cpus")   are   interconnected.
+          Multiprocessing can be used to address several  different  system
+          objectives,  for  example, to provide higher system availability:
+          in case of a cpu failure, the other cpu(s) in the system continue
+          operating.
+ 
+          Multiprocessing is  also  used  to  achieve  increased  computing
+          power.   A  uniprocessor site could exchange its cpu for a newer,
+          faster model in the same family.  If none is available,  however,
+          the  site  could add another cpu of the same type as the existing
+          cpu,  and  still  ensure  hardware  and  software  compatibility.
+          Certainly  the  uniprocessor  site could acquire another complete
+          system, that is, one with its own cpu, memory,  and  peripherals.
+          This  would  offer  the  same  advantages  as  a  multiprocessing
+          configuration for commonality of hardware, spare parts, software,
+          and  training.   However,  there would be economic inefficiencies
+          resulting from  multiple  copies  of  the  operating  system  and
+          supporting   software,  and  additional  disk  storage  would  be
+          required.  Furthermore, multiple  independent  systems  are  more
+          difficult  to  administer.   The  user  community must be divided
+          among systems, so load  balancing  becomes  a  problem,  and  all
+          systems  must be kept current with software updates; a bug may be
+          fixed on one system, but missed on another.  File  system  backup
+          also  becomes  a bigger problem.  Additional support staff may be
+          required to deal with multiple independent systems.
+ 
+          There  are  two  basic  multiprocessing  organizations:   loosely
+          coupled and tightly coupled.  In a loosely coupled system, two or
+          more cpus are connected  by  means  of  communications  links  or
+          high-speed  buses,  or share a common file system through special
+          hardware, as represented by Digital's VAXclusters (Figure 1).
+ 
+          In a tightly coupled multiprocessing system (Figure 2), there  is
+          a single shared memory, only one copy of the operating system and
+          supporting software, and a single file system.
+ 
+          Multiprocessing software determines  the  degree  to  which  cpus
+          share   the   workload.   Newer  architectures  strive  for  high
+          parallelism, so that a single job or program can be worked on  by
+          multiple  processors to reduce its overall execution time.  Since
+          multiuser (timesharing) systems have multiple jobs  (programs  or
+          processes)  competing  for  computing  resources, the traditional
+          multiprocessing approach does not deal with parallelism within an
+          individual  job,  but  instead  simply  has  each  cpu  work on a
+          different job.  While this doesn't help a single job  run  faster
+          even  though  there  are  multiple cpus available (and in fact if
+          there is only one job to run, all cpus  except  one  stay  idle),
+          overall system throughput and availability are improved.
+ 
+ 
+ 
+ 
+ 
+                                        - 3 -
+ 
+ 
+ 
+ 
+          TOPS-10 SYMMETRIC MULTIPROCESSING -- SMP
+ 
+ 
+ 
+ 
+                            MASTER/SLAVE MULTIPROCESSING
+ 
+          All  TOPS-10  multiprocessing  is  tightly  coupled.   The  first
+          multiprocessing implementation for TOPS-10 used an approach known
+          as master/slave, and was offered for the first time in the  early
+          1970s  on  KA-10 and KI-10 processors, the 1055 and 1077 systems,
+          respectively.   When  the  KL-10  was  introduced,   master/slave
+          multiprocessing was also available in the 1088.
+ 
+          TOPS-10 multiprocessing was developed to  meet  customer  demand.
+          The KA-10 (the first PDP-10 processor, which followed the earlier
+          PDP-6) simply couldn't satisfy the computational  needs  of  some
+          TOPS-10  customers.  First, DEC's Peter Hurley worked with MIT to
+          create a master/slave system with a PDP-6 and a  KA-10;  MIT  had
+          just  added  the KA to their existing PDP-6 system, and wanted to
+          use the KA to provide  additional  computing  power.   Once  that
+          system  was running, Peter modified the code to allow KAs as both
+          master and slave, then set about  turning  it  into  an  official
+          product  to  satisfy commitments to the University of Pittsburgh.
+          The  resulting  product  was   very   successful,   because   the
+          master/slave  implementation  matched  the  university's workload
+          well -- a heavy interactive load, but  with  sufficient  compute-
+          bound  jobs  to keep the slave busy; the University of Pittsburgh
+          and  DEC  worked  closely  together   improving   multiprocessing
+          performance  (and  TOPS-10  in  general)  through  KI  and KL cpu
+          releases.
+ 
+          In TOPS-10 master/slave multiprocessing (Figure 3), there are two
+          cpus.   The  master  is  the  general-purpose  cpu:  it does both
+          computation and all system input/output ("i/o").  The  slave  has
+          no  i/o  devices  except  a  console  terminal  and  is therefore
+          dedicated to computation.
+ 
+          In the TOPS-10 master/slave organization, the slave does not take
+          orders from the master.  Both cpus execute the TOPS-10 scheduling
+          routine to find a job to run; there is code to prevent both  cpus
+          from  selecting  the  same job.  Jobs are processed by the master
+          just as in a uniprocessor configuration.  The slave is  the  same
+          for  user-mode computations and some non-i/o monitor calls.  When
+          the job the slave is running requires  i/o,  however,  the  slave
+          cannot  proceed.   It  marks  the  job  as  needing  the master's
+          attention, then enters the scheduler and selects another  job  to
+          run.   The master, in the meantime, is working on other jobs, and
+          when it schedules again, will find and run jobs marked  as  "run-
+          on-master"  by the slave.  Thus the slave is a slave by virtue of
+          the fact that it cannot perform all system duties  and  therefore
+          relies on the master for many services.
+ 
+          If there are compute-bound jobs to  work  on,  performance  of  a
+          master/slave  system can be good.  As long as jobs do few master-
+          only monitor  calls,  the  slave  can  stay  busy  running  them.
+          Availability  of  a  master/slave system should also be good.  If
+          the slave fails, only some cpu power is lost.   When  the  master
+ 
+ 
+ 
+                                        - 4 -
+ 
+ 
+ 
+ 
+          TOPS-10 SYMMETRIC MULTIPROCESSING -- SMP
+ 
+ 
+ 
+          fails, devices can be switched to the former slave, which is then
+          restarted as a conventional uniprocessor system; therefore system
+          services  are  interrupted  only  briefly.   In either case, work
+          continues to be processed,  and  corrective  maintenance  can  be
+          scheduled for a convenient time.
+ 
+ 
+                    THE PROBLEM WITH MASTER/SLAVE MULTIPROCESSING
+ 
+          Performance of i/o devices is limited by  mechanical  constraints
+          --  the  time  it  takes to move a disk head across the recording
+          surface ("seeking"), or waiting for  the  desired  data  to  come
+          under  the  head  once it's on cylinder ("latency"), for example.
+          Caching of disk data is a common technique to avoid some disk i/o
+          altogether;  read-ahead  for  sequential  input  is often done to
+          reduce disk i/o transfer setup as well as seek and latency times.
+          Nevertheless,  even  with  advances in peripheral performance and
+          software optimizations, i/o  speeds  remain  relatively  constant
+          while cpu speeds increase.  Therefore newer computer systems tend
+          to be more i/o bound.  For example, if a program does  i/o  every
+          10,000  instructions,  a  faster  cpu  will  execute  the  10,000
+          instructions more quickly and reach the i/o requests sooner  than
+          a  slower cpu.  Thus the faster cpu spends a larger percentage of
+          its time waiting  for  i/o,  and  therefore  the  definitions  of
+          compute-bound  and  i/o-bound  change  with  the  introduction of
+          faster  cpus.   This  means  that  job   mixes   well-suited   to
+          master/slave  processing  on  older cpus are not necessarily well
+          balanced on  later  cpu  models,  since  master/slave  efficiency
+          depends  on having adequate compute-bound jobs in the mix to work
+          on.   Therefore,  the  underlying   problem   with   master/slave
+          multiprocessing  is  its asymmetry with respect to i/o -- the mix
+          has to be just right, or the activities of the slave may actually
+          hurt  system  performance,  reducing throughput by the additional
+          overhead of memory contention, waiting for code interlocks within
+          the monitor, and extra context switching.  The performance factor
+          which  characterized  a  successful   master/slave   system   was
+          typically about 1.8 times a uniprocessor configuration, though as
+          described, the job mix, which is usually very dynamic, determined
+          actual performance.
+ 
+ 
+                           SYMMETRIC MULTIPROCESSING (SMP)
+ 
+          The 7.01 release of TOPS-10 eliminated master/slave  restrictions
+          by  reorganization  to  Symmetric Multiprocessing, extending full
+          functional capabilities to all cpus.  (SMP  officially  supported
+          only  two processors at initial release, but the SMP software was
+          designed and written to support up to six.)  Notice  (Figures  3,
+          4)   that  SMP  hardware  configurations  are  quite  similar  to
+          master/slave configurations except that with SMP i/o devices  can
+          be  connected  to  any cpu, and, with availability in mind, dual-
+          ported disks connected to two cpus may be desirable.   Memory  is
+          still shared between processors, and there is still a single copy
+          of the operating system.  In SMP, however, the entire monitor  is
+ 
+ 
+ 
+                                        - 5 -
+ 
+ 
+ 
+ 
+          TOPS-10 SYMMETRIC MULTIPROCESSING -- SMP
+ 
+ 
+ 
+          reentrant and all monitor calls can be executed on all cpus.
+ 
+ 
+                              SMP -- AN EXAMPLE:  ORNL
+ 
+          Oak Ridge National Laboratory ("ORNL") started using TOPS-10 on a
+          KA-10  in  1971.  The system was acquired for general timesharing
+          and linear accelerator data reduction  (but  not  real-time  data
+          acquisition).  To meet their growing computational workload, ORNL
+          acquired a KL-10 in 1977.  (The  KA-10  was  kept  for  the  data
+          reduction  work,  and  when  it  was  finally retired in 1985 the
+          service meter showed 128,000 hours -- 14.6 years!)
+ 
+          In  late  1977  ORNL  started  using  the  (now  CompuServe  Data
+          Technologies)  System 1022  database  system.   Because  of  user
+          enthusiasm for the package, system demand increased dramatically,
+          and  ORNL  acquired a second KL-10 processor in 1979.  They began
+          running SMP in 1980, the same year they acquired a  third  KL-10.
+          The ORNL system then became the largest TOPS-10 SMP configuration
+          documented, with  5  cpus;  the  fourth  and  fifth  KL-10s  were
+          acquired  in  1982  and  1984,  respectively.   The  ORNL  system
+          configuration diagram is shown in Figure 5.
+ 
+          At peak, there would be about 200 jobs logged in, of which  about
+          25  were  system jobs; system demand was such that local software
+          was written to queue users if all available login slots  were  in
+          use.   A  typical  day  would see around 5000 logins and logouts.
+          Fortran was the dominant language from the  beginning  (including
+          many  1022 database applications written in Fortran), followed by
+          Cobol.
+ 
+          The ORNL SMP installation continues to  be  very  successful  and
+          productive.
+ 
+ 
+                                     INTERLOCKS
+ 
+          When multiple cpus are executing the same  code,  interlocks  are
+          necessary  to  guarantee exclusive access to critical sections of
+          the code; a critical section  is  any  sequence  of  instructions
+          which  must  be executed atomically, that is, as an uninterrupted
+          unit.  A section of code is critical  only  if  global  data  are
+          being  changed, and could result in an inconsistency if more than
+          one processor try to change the same data simultaneously.  As  an
+          example,  assume  that the system maintains a linked-list of free
+          memory pages.  If two cpus each need to allocate a page of memory
+          both  will  consult  the  free-list  to  find  an available page.
+          Without an interlock, both cpus could determine  that  the  first
+          page  in  the  list  is  free  and  both  allocate  the  page for
+          themselves.   An  interlock  ensures  that  such   accesses   are
+          correctly coordinated.
+ 
+          The lowest level where atomic execution is  required  is  at  the
+          machine  instruction-set  level.   Certain instructions that read
+ 
+ 
+ 
+                                        - 6 -
+ 
+ 
+ 
+ 
+          TOPS-10 SYMMETRIC MULTIPROCESSING -- SMP
+ 
+ 
+ 
+          data from memory, modify the data, and write  the  modified  data
+          back   to   memory   must   be   uninterruptible,  that  is,  the
+          read/modify/write cycle must be atomic.  Given such instructions,
+          they  can  be  used  to  "lock" and "unlock" critical sections of
+          code.  The SMP lock/unlock  mechanism  is  an  implementation  of
+          semaphores, with appropriate queueing of requests when a resource
+          is busy.
+ 
+          Granularity of locking is important -- locking larger sections of
+          code means that other cpus will generally have a better chance to
+          collide for access  to  a  resource.   Therefore  the  smaller  a
+          section  of  code  that  is  locked,  the more likely that access
+          contention for the section is reduced and thus the better overall
+          system  performance.   In  SMP,  the  code  was  instrumented for
+          performance measurement to ensure proper locking granularity.
+ 
+ 
+                              SMP LOCKS:  A CLOSER LOOK
+ 
+          In a uniprocessor configuration, the processor's interrupt system
+          can  be  used  as a synchronization mechanism:  interrupts can be
+          turned off -- as a group or selectively -- to prevent routines at
+          other interrupt levels from modifying shared data.
+ 
+          Many of the synchronization mechanisms employed  in  uniprocessor
+          systems  simply require generalization to provide synchronization
+          in a multiprocessor system.  However, caution must  be  exercised
+          since  locks  which  are not a bottleneck in uniprocessor systems
+          may cause  serious  performance  problems  in  a  multiprocessing
+          environment (perhaps due to lock granularity).  A few examples of
+          locks that normally exist in a uniprocessor operating system  and
+          how  they  can  be  generalized for multiprocessing will serve to
+          illustrate SMP synchronization techniques.
+ 
+          Before describing these mechanisms, it is necessary to  introduce
+          a  type of lock not usually encountered in a uniprocessor system.
+          This lock is known as a "spin lock".  It is normally obtained and
+          held  only for a short time relative to a context switch (or when
+          a context switch is not possible).  A spin lock is implemented as
+          follows:
+ 
+          1.  Using a read/modify/write instruction, attempt  to  test-and-
+          set   a   memory   location   (the   lock)  associated  with  the
+          data/critical section to be accessed.
+ 
+          2.  If the test indicates that  the  set  succeeded,  proceed  to
+          access/modify the data associated with the lock.
+ 
+          3.  If the test indicates that the set failed, that is, the  lock
+          is already owned by another processor, then loop back and execute
+          the test-and-set until the set succeeds and the lock is obtained.
+ 
+          This lock is known as a spin lock because the  processor  "spins"
+          in a tight loop waiting to acquire the lock.
+ 
+ 
+ 
+                                        - 7 -
+ 
+ 
+ 
+ 
+          TOPS-10 SYMMETRIC MULTIPROCESSING -- SMP
+ 
+ 
+ 
+          Since the processor owning a lock should spend little time in the
+          critical section, a spin lock should not be too expensive in lost
+          time for a cpu that has to wait  for  the  lock.   Unfortunately,
+          however,  a  test-and-set  instruction  may  consume  significant
+          memory bandwidth since the read/modify/write operation locks  out
+          all other processors (including i/o channels) until it completes.
+          A useful variation of the "spin lock" mechanism is  therefore  to
+          first  simply  test the lock; if it is potentially available (not
+          currently set), then try to obtain it using the read/modify/write
+          test-and-set instruction.  Thus the loop becomes:
+ 
+          1.  Test the lock for availability
+ 
+          2.  If potentially available, try to obtain it  using  the  test-
+          and-set instruction
+ 
+          3.  If obtained, proceed.
+ 
+          4.  If not obtained,  loop  back  to  the  potential-availability
+          test.
+ 
+          This modification eliminates  the  read/modify/write  instruction
+          from  the  main loop and thus substantially reduces the demand on
+          memory bandwidth.
+ 
+          The most common, and usually  most  easily  recognized,  form  of
+          synchronization  that  must  occur  in  uniprocessor  systems  is
+          between process level and interrupt level  when  dealing  with  a
+          device  and  its  associated  data  structures.  This is normally
+          achieved by disabling interrupts from a device when dealing  with
+          device-specific  data at process level which could be modified at
+          interrupt level should a device interrupt  occur.   This  usually
+          takes the form of the following sequence of instructions:
+ 
+               disable interrupts from the device
+ 
+               ...
+ 
+               test and perhaps modify device data/state
+ 
+               ...
+ 
+               start i/o (if appropriate)
+ 
+               ...
+ 
+               ensure device data is in a consistent state
+ 
+               ...
+ 
+               enable interrupts from the device
+ 
+          In  a  multiprocessing  environment,  the   above   sequence   is
+          insufficient   because   the   device   must  be  prevented  from
+ 
+ 
+ 
+                                        - 8 -
+ 
+ 
+ 
+ 
+          TOPS-10 SYMMETRIC MULTIPROCESSING -- SMP
+ 
+ 
+ 
+          interrupting any processor.  This  can  be  achieved  within  the
+          above  instruction sequence by introducing a spin lock.  The lock
+          must be obtained  after  interrupts  are  disabled  and  released
+          before interrupts are reenabled; furthermore, the interrupt-level
+          processing code must also use the same spin lock before executing
+          interrupt-level  code  associated  with  the device.  In summary,
+          disabling interrupts will  keep  the  interrupt-level  code  from
+          being  executed on the current processor while the device data is
+          being modified, and the spin lock will keep  the  interrupt-level
+          code  from being executed on any other processor while the device
+          data is inconsistent.
+ 
+          The introduction of spin-lock synchronization in  this  situation
+          is simply a generalization of the synchronization that is already
+          necessary in a single processor system.  Thus, a  first  step  in
+          the  implementation  of  a  multiprocessor  system is to identify
+          those places where the  interrupt  system  is  used  to  disallow
+          conflicting  execution  of  code paths, and to augment these with
+          spin locks to prevent concurrent execution of the code  paths  by
+          multiple cpus.
+ 
+          Cpu scheduling is another area where spin locks can  be  applied.
+          Locking could be implemented implicitly rather than explicitly by
+          not allowing a processor to be rescheduled  while  in  privileged
+          mode, except as the direct result of a call to the cpu scheduler.
+          If it happens to be true that the operating system can reschedule
+          at  any  time,  the locks necessary to guarantee data consistency
+          will already exist and all that is required is that the locks  be
+          generalized  for multiprocessing.  However, as is often the case,
+          and was the case in TOPS-10, data consistency  on  a  single  cpu
+          system  was  maintained by not allowing the cpu to be rescheduled
+          at any arbitrary point when it was executing in privileged  mode,
+          but instead requiring an explicit call to the scheduler when data
+          structures were consistent and rescheduling was proper.
+ 
+          It  is  this  implicit  interlock  on  data  structures  and  the
+          difficulty in maintaining consistency during concurrent execution
+          by  multiple  processors  which  has  led  to  the   master/slave
+          approach;   the   implicit  interlock  is  maintained  by  simply
+          rescheduling the slave cpu whenever a job enters privileged mode.
+          This   maintains   the   single-threaded  execution  of  jobs  in
+          privileged mode.
+ 
+          Allowing multiple cpus concurrent execution  in  privileged  mode
+          requires   that   those  areas  where  data  is  inconsistent  be
+          identified  and  locked  to  bracket  those  critical   sections.
+          Fortunately, this turns out to be simpler than it might initially
+          appear.  Since a job cannot be  run  simultaneously  on  multiple
+          processors,  internal  process  data need only be consistent when
+          rescheduling, and  thus  individual  process  data  need  not  be
+          interlocked.  Also, much data is local to an individual processor
+          and so such per-processor data also require  no  interlock.   The
+          only  data which must be interlocked are true system-global data.
+          An excellent example of such  data  is  the  scheduler  database:
+ 
+ 
+ 
+                                        - 9 -
+ 
+ 
+ 
+ 
+          TOPS-10 SYMMETRIC MULTIPROCESSING -- SMP
+ 
+ 
+ 
+          scanning,  adding  jobs to, and removing jobs from the run-queues
+          must be single-threaded and is therefore protected in SMP by  the
+          scheduler spin lock.
+ 
+          Many other data structures fall into this  category  and  usually
+          include  system-wide  linked-list  manipulation, changing process
+          state with respect  to  the  scheduler  when  the  process  isn't
+          running, allocation of system-wide resources, etc.  Whether these
+          data structures are  protected  by  spin  locks  or  a  scheduler
+          semaphore is usually determined by the length of time required to
+          access the particular data structure and,  if  modifying  it,  to
+          leave it in a consistent state.  If the time is short compared to
+          the time required to do a context switch, a spin lock is probably
+          the  best mechanism.  If the time is longer but the likelihood of
+          collision on an interlock is low, a spin lock may  still  be  the
+          best choice.  Independent of the duration, if nothing can be done
+          without access to the  critical  section  (again,  the  scheduler
+          database  and  the  execution  of  an  interrupt routine are good
+          examples) a spin lock is required.  The best choice  can  usually
+          only   be  determined  by  performance  analysis,  so  good  lock
+          instrumentation is critical to achieving the best possible system
+          performance.
+ 
+          Mechanisms for managing  other  system  resources  which  usually
+          require  the  long-term  ownership  of  a lock, e.g., across i/o,
+          already exist in uniprocessor operating systems and usually don't
+          require modification for an SMP environment.  Such mechanisms are
+          implemented  by  trying  to  obtain  a  lock  and,  if  it's  not
+          available,  calling the scheduler rather than spinning.  Once the
+          lock is obtained data access proceeds normally.   When  done,  in
+          addition to relinquishing the lock, a check is made to see if any
+          jobs are waiting for it.  If so, the scheduler is  notified  that
+          it should run a particular job, or allow all jobs waiting for the
+          lock to run to compete for it.   As  mentioned,  these  types  of
+          locks  don't  usually  require modification for a multiprocessing
+          environment (although the scheduler interlock may come into  play
+          when  making these resources visible to the scheduler when such a
+          lock is relinquished), but it may be  advantageous  to  introduce
+          additional   locks  of  this  type  when  implementing  symmetric
+          multiprocessing.
+ 
+          This type of lock would be introduced into  the  system  where  a
+          spin  lock  would  be  acceptable  except  for  the fact that the
+          average waiting time to obtain the lock if it is not available is
+          potentially  long  compared  to the time required to do a context
+          switch.  Examples of these types of locks in TOPS-10 include  the
+          CB  resource  (owned  to  search the file system's in-memory file
+          cache -- no i/o is done while  owning  this  lock),  and  the  DC
+          resource  which  is used to search the physical disk-block cache.
+          Neither of these resource locks is necessary  in  a  uniprocessor
+          TOPS-10 system.
+ 
+          Finally, there are two additional locks in TOPS-10 that should be
+          mentioned.   The  first  is  the memory management lock, which is
+ 
+ 
+ 
+                                       - 10 -
+ 
+ 
+ 
+ 
+          TOPS-10 SYMMETRIC MULTIPROCESSING -- SMP
+ 
+ 
+ 
+          essentially a hybrid of the locks described above.   Its  purpose
+          is  to  interlock the data structures used for memory management.
+          The memory management data structures  are  accessed  in  process
+          context  for initial memory allocation, for memory expansion, and
+          for paging.  They are accessed in system-context by  the  swapper
+          (which  runs  in system-context rather than in process-context or
+          as a user-mode process), and, perhaps even  at  interrupt  level,
+          for physical memory fault recovery.
+ 
+          Since all of these accessors must see and leave  the  data  in  a
+          consistent  state,  and since the method of access depends on the
+          context of the access, the memory  management  lock  is  actually
+          dealt  with in three different ways.  If an attempt to obtain the
+          lock occurs in process context and the lock isn't available,  the
+          scheduler  is  called and the job is put into a memory-management
+          resource wait state.  If the swapper fails to obtain the lock, it
+          just tries again later.  Finally, if the error recovery code must
+          obtain the lock and it's not available, it spins waiting for  the
+          lock  to be released.  This means the memory management (MM) lock
+          is unlike  sharable-resource  locks  (which  are  only  owned  by
+          processes) and spin locks (which are only owned by processors) in
+          that the MM may at various times be owned either by a process  or
+          a processor.
+ 
+          The other unusual lock is a spin lock  which,  unlike  the  other
+          spin  locks  described  earlier,  is  held for however long it is
+          needed.  This is the lock associated with panic  situations  such
+          as   bugchecks,   memory   parity  errors,  etc.   This  lock  is
+          appropriately called the DIE lock even though the end result  may
+          not  be a reload if recovery is possible.  Its main purpose is to
+          guarantee that the hardware and software are frozen in a state as
+          close as possible to the state at the time of the fault so that a
+          dump will yield the maximum possible information.
+ 
+          As already mentioned, proper lock instrumentation is necessary to
+          understand  and  perhaps improve system performance.  In TOPS-10,
+          all spin locks have associated with them the current owner of the
+          lock.   This  is  useful for debugging both software and hardware
+          failures and can be useful in studying performance.  In addition,
+          many  locks  also  maintain  counts  on  how many times they were
+          obtained and how many times they "spun" waiting to be freed.
+ 
+          To study lock granularity, a user  mode  monitoring  program  was
+          developed   to   determine  the  propriety  of  lock  collisions.
+          Basically the program noted where a spinning cpu tried to  obtain
+          a  lock and what the cpu which owned the lock was actually doing.
+          This made it possible  to  determine  whether  the  spinning  cpu
+          really  needed  the  lock  in  question  before  proceeding.  For
+          example, if the cpu owning the scheduler  interlock  was  running
+          the scheduler, and the cpu spinning on the lock wanted to run the
+          scheduler, this was a proper collision.  If on  the  other  hand,
+          the  cpu owning the scheduler interlock was allocating disk space
+          by updating a bit-table, and the cpu spinning on the lock  wanted
+          to  run the scheduler, this was an improper collision which could
+ 
+ 
+ 
+                                       - 11 -
+ 
+ 
+ 
+ 
+          TOPS-10 SYMMETRIC MULTIPROCESSING -- SMP
+ 
+ 
+ 
+          be avoided by creating another lock for allocating from the  bit-
+          table.
+ 
+ 
+                                I'M OKAY, YOU'RE OKAY
+ 
+          In SMP, though all cpus are equal in that functionally  they  are
+          able  to  handle both computation and i/o, certain activities are
+          allocated to only a single cpu, known as  the  policy  cpu.   For
+          example,  the  policy  cpu maintains the system date and time-of-
+          day, and system up-time.  The cpu on which TOPS-10 is  originally
+          booted  automatically  becomes  the  policy cpu, and thus is also
+          referred to as the boot cpu.
+ 
+          All cpus within SMP are checked periodically, so if  a  cpu  goes
+          down,  clean-up  action  is  taken.  In TOPS-10, many events take
+          place at "clock ticks", which occur  at  the  main  system  power
+          frequency,  either 50 or 60 times per second.  One SMP clock-tick
+          event is cpu checking.  Each  cpu  has  a  "keep-alive"  counter,
+          which  it  reinitializes at each clock tick.  A non-boot cpu sets
+          its keep-alive counter to -N, while the boot cpu initializes  its
+          keep-alive  word  to -CPUN*N ("CPUN" is the number of cpus in the
+          configuration).
+ 
+          After reinitializing its own counter, a non-boot  cpu  increments
+          the  boot  cpu's  keep-alive counter; the boot cpu increments the
+          keep-alive counters of all other cpus.  If the resulting value of
+          a  keep-alive counter is still negative, the corresponding cpu is
+          considered okay; if the count reaches zero, however, it means the
+          corresponding   cpu  wasn't  able  to  reinitialize  its  counter
+          recently, and the cpu is declared dead.  After a cpu is  declared
+          dead,  its  keep-alive  word  continues  to be incremented and is
+          therefore positive.  A positive keep-alive  word  indicates  that
+          devices  connected only to that cpu are no longer accessible, and
+          programs set to run only on that cpu (by monitor call or  console
+          command) can no longer be run; these problems are reported to the
+          system operator and user as appropriate.
+ 
+          If the keep-alive counter incremented  to  zero  belongs  to  the
+          current  boot  cpu, the cpu which performed the increment to zero
+          assumes the role of boot cpu.  This is called  a  "role  switch",
+          and  is  accomplished by changing a few variables which determine
+          which cpu is currently the policy cpu.  These include the  SKPCPU
+          instruction,  which  skips  when executing on the policy cpu, the
+          location of the system console terminal ("CTY"), and the variable
+          which   contains  the  cpu  number  of  the  current  policy  cpu
+          ("BOOTCP").  The fact that a role switch has occurred is reported
+          to the operator.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                       - 12 -
+ 
+ 
+ 
+ 
+          TOPS-10 SYMMETRIC MULTIPROCESSING -- SMP
+ 
+ 
+ 
+ 
+                                     SCHEDULING
+ 
+          The TOPS-10 scheduler runs both periodically (at each clock tick)
+          and  when  the currently executing job is finished or temporarily
+          unable to continue (waiting for i/o completion, for example).  In
+          selecting   the   next  job  to  run,  single-cpu  TOPS-10  gives
+          designated special jobs and interactive jobs higher  priority  to
+          use  the  cpu than normal and compute-bound work.  Basically, the
+          attempt  is  made  to  assign  the  cpu  to  high  priority   and
+          interactive  jobs  when  they  want  to  run;  other jobs are run
+          round-robin in the background, that is, when there are no  higher
+          priority   jobs   needing   the   cpu.   Optionally,  the  system
+          administrator can partition background  jobs  into  classes,  and
+          allocate percentages of cpu time to individual classes.
+ 
+          If the scheduler selects the same job to  run  that  was  running
+          during the previous interval, the job can be resumed immediately.
+          Otherwise a  context  switch  is  necessary.   Context  switching
+          entails  saving  the  status  ("context") of the former job, then
+          setting up and starting the selected job.  Context switching  can
+          take from several microseconds to several milliseconds, depending
+          on hardware characteristics and the amount of context to save and
+          restore.
+ 
+          In SMP, multiple cpus execute the scheduling routine to find jobs
+          to  run,  which  typically  results  in the same job being run at
+          different times by different cpus throughout the  course  of  its
+          processing.  It is possible, however, to assign an individual job
+          to execute exclusively on a particular cpu.   This  is  known  as
+          "cpu  affinity",  and is useful for running user-mode diagnostics
+          on a suspect cpu, or servicing a real-time device connected to  a
+          particular cpu.
+ 
+          In general, the scheduling technique of multiple cpus working  on
+          a  single queue of jobs is efficient.  Queueing theory shows that
+          multiple servers working from a single queue give better response
+          than  multiple  servers  and  multiple queues, which would be the
+          case in a loosely coupled multiprocessing  organization  or  with
+          multiple  independent systems, where each cpu has its own copy of
+          the operating system and thus its  own  scheduler  and  scheduler
+          queue.  Due to its architecture, SMP offers automatic and dynamic
+          load balancing.
+ 
+          Scheduling in  a  multiprocessor  environment  offers  additional
+          opportunities  for  trying to optimize overall system performance
+          and throughput.  In SMP, the policy cpu  processes  the  workload
+          using normal single-cpu scheduling priorities.  Other cpus can do
+          the same, or schedule "asymmetrically", looking  for  other  work
+          first.   This  way, interactive jobs are serviced by a non-policy
+          cpu only when there is no designated high-priority or  background
+          work  to do.  This happens to be the default scheduling policy in
+          SMP as released and has the basic effect that one  cpu  works  on
+          interactive  jobs,  while  the others run compute-bound jobs.  If
+ 
+ 
+ 
+                                       - 13 -
+ 
+ 
+ 
+ 
+          TOPS-10 SYMMETRIC MULTIPROCESSING -- SMP
+ 
+ 
+ 
+          there are sufficient compute-bound jobs  in  the  mix,  the  non-
+          policy  cpus process them with little context switching overhead,
+          even if there is also a heavy interactive load.  The disadvantage
+          is  that  if the mix is predominantly interactive, the non-policy
+          cpus waste time looking for compute-bound work before they get to
+          the interactive jobs.
+ 
+          It is  possible  for  the  system  administrator  to  dynamically
+          specify  symmetric  or  asymmetric  scheduling to reflect current
+          operating demands.  Alternatively, it was considered to have  the
+          system alter scheduling itself, based on mix characteristics.
+ 
+          An important aspect of scheduling in a multiprocessor environment
+          is  inter-cpu  interference.  For example, if both cpus enter the
+          scheduling routine simultaneously they will compete for  accesses
+          to  instructions  and  data,  and, potentially even more harmful,
+          cause each other to wait for various interlocks (such as the  one
+          to  prevent  cpus  from  selecting  the  same job to run).  While
+          studies show that most scheduling is done as  a  result  of  jobs
+          blocking  for  i/o or other events, and not because of clock tick
+          interrupts, SMP skews the clocks on all cpus to ensure that their
+          clock interrupts occur at different times.  Each cpu has the same
+          frequency of timer interrupts, but none occur at the same time as
+          interrupts  on  other  cpus.   Therefore  SMP  prevents  periodic
+          simultaneous scheduling and attendant overhead.
+ 
+ 
+                                     QUEUED I/O
+ 
+          In TOPS-10 SMP the cpu running a job is called the executing cpu;
+          the cpu connected to devices used by the job is called the owning
+          cpu.  Because monitor calls can be executed by any cpu, unless  a
+          job  can't  continue  until  an  i/o  request  is  satisfied  the
+          executing cpu can continue  to  run  the  job  even  if  the  job
+          requests  i/o on devices connected to another cpu.  This is vital
+          to reduce context switching overhead;  otherwise,  the  executing
+          cpu  would  need  to  reschedule and context switch away from the
+          job, and the owning cpu would have to context switch to  the  job
+          to  process the monitor call and i/o, suffering the same overhead
+          as in a master/slave implementation when the slave encounters  an
+          i/o  request.   A  queued  i/o mechanism was created to eliminate
+          this problem.
+ 
+          If a job requests i/o  to  devices  on  the  executing  cpu,  the
+          request  is entered into that cpu's device i/o queue immediately.
+          If a job requires i/o on a different cpu, then the executing  cpu
+          makes  a  request of the owning cpu for action by making an entry
+          in a global i/o work queue.  At its next clock  tick  the  owning
+          cpu  will  scan  the  global  i/o queue and move i/o requests for
+          itself to its private queues for  normal  processing.   Once  the
+          global  i/o queue entry is made by the executing cpu, however, if
+          the  job  is  still  runnable,  i.e.,  there  are  still  buffers
+          available  for  the  job to fill or empty, the executing cpu will
+          complete the monitor call and resume the job.   Thus  no  context
+ 
+ 
+ 
+                                       - 14 -
+ 
+ 
+ 
+ 
+          TOPS-10 SYMMETRIC MULTIPROCESSING -- SMP
+ 
+ 
+ 
+          switch   is  necessary  and  maximum  advantage  is  provided  by
+          symmetrical i/o support.
+ 
+          Also implemented in SMP is i/o load balancing using  dual  ported
+          disks  (Figure  6).  Either a single cpu can be connected to both
+          ports of a disk, or two  cpus  can  each  access  a  port.   Load
+          balancing  is  therefore  dynamic  and  automatic  on dual-ported
+          disks, and yields higher availability and throughput.
+ 
+          Multiporting  disks  was  quite  attractive  during  initial  SMP
+          implementation  because  of  available technology; however, later
+          hardware offered some alternatives.  The KLIPA, officially  known
+          as the CI20, is a physical port driver interface to the CI -- the
+          70-Megabit per second Computer Interconnect bus which,  with  the
+          HSC  disk  controller,  is  the  hardware  basis for VAXclusters.
+          Having a KLIPA on each cpu is like having a disk  port  per  cpu.
+          Therefore,  queued  protocol  is unnecessary for disk accesses in
+          this configuration, and there is no 8-ms average latency  waiting
+          for a clock tick to start disk i/o on another cpu.
+ 
+          Magnetic tape i/o is queued under SMP,  and  dual-ported  magtape
+          support  across  cpus  is  provided.   Jobs accessing unit-record
+          equipment (e.g., card readers and  line  printers)  have  "device
+          affinity",  that  is,  any unit-record i/o must be done while the
+          job is running on the owning cpu; therefore  either  such  a  job
+          must  be  assigned to the owning cpu, or context switching to the
+          owning cpu is necessary for unit-record i/o.
+ 
+ 
+                                        CACHE
+ 
+          Cache memory is commonly used  in  computer  systems  to  provide
+          better  overall  system performance by improving effective memory
+          access times.  To understand some  of  the  complexities  of  SMP
+          implementation,  a  look  at  the  KL-10  cache implementation is
+          necessary.
+ 
+          The memory  controller  portion  of  the  KL-10  cpu  (Figure  7)
+          coordinates   memory  access  requests  from  the  cpu  and  from
+          peripheral devices such as disks and magnetic tapes connected via
+          internal  channels/controllers (RH20s).  The standard KL-10 cache
+          is a 2048 (36-bit) word semiconductor memory  that  serves  as  a
+          buffer  for primary memory.  Read references to primary memory by
+          the cpu result in the memory controller checking to  see  if  the
+          referenced  words are in the cache.  If so, the memory controller
+          supplies the cpu with the data  directly  from  the  cache;  this
+          results  in  higher  performance  because the much slower primary
+          memory need not be accessed.
+ 
+          If the requested data are not in the cache, the memory controller
+          gets  the data from primary memory, supplies them to the cpu, and
+          places them in the cache, where they will be found on  subsequent
+          references.   (Actually,  accesses  to  primary memory and cache-
+          fills are normally done in "quad-words", so that  the  referenced
+ 
+ 
+ 
+                                       - 15 -
+ 
+ 
+ 
+ 
+          TOPS-10 SYMMETRIC MULTIPROCESSING -- SMP
+ 
+ 
+ 
+          word  and  three  adjacent  words  are  fetched;  thus  speed  of
+          sequential accesses to instructions and data is improved by  pre-
+          loading cache locations.)
+ 
+          KL-10 memory write operations are done only in the cache, not  in
+          both  cache  and  primary  memory  as  in  a  write-through cache
+          organization.  The cpu has instructions  to  explicitly  validate
+          memory  with  updated  cache contents ("sweep the cache"); memory
+          validation is automatic if the  memory  controller  needs  in-use
+          cache  locations  for new data.  The memory controller also deals
+          with memory accesses by  the  internal  channels/controllers  and
+          will  supply  updated  data from the cache on "write-from-memory"
+          (output) transfers, and invalidate the data found in the cache on
+          input  operations  so  that a subsequent read will fetch the data
+          from primary memory.
+ 
+          Typical program characteristics and system  operation  result  in
+          using  data  in  the  cache  90%-95%  of the time, thus improving
+          effective memory  access  times  and  thereby  increasing  system
+          throughput.    Of   equal   importance   in   a   multiprocessing
+          configuration, 90%-95%  of  cpu  primary  memory  references  are
+          avoided,  reducing  contention for primary memory and eliminating
+          many memory interference problems.
+ 
+          While the KL-10 cache organization is efficient with  respect  to
+          primary  memory accesses and improved system performance, it does
+          cause two problems.  The first and most significant is that  when
+          a  cpu  runs  a  job or does anything which causes job data to be
+          modified in its cache, the cpu must sweep its cache  to  validate
+          primary   memory  before  another  cpu  can  run  the  same  job.
+          Otherwise, the new cpu could use "stale" data in  primary  memory
+          because  updated  values  would be in the other cpu's cache.  The
+          new cpu cannot recognize the data as stale, and thus would not be
+          working  with  the  job's  proper  context.   Such  operation  is
+          incorrect and can result in subtle bugs  that  are  difficult  to
+          track down.
+ 
+          The second problem is important in terms of availability.  It may
+          be the case that a cpu has modified data in its cache for several
+          different jobs before a sweep completes.  If the  cpu  suffers  a
+          failure  before  the  sweep  completes,  other system cpus cannot
+          select any of these jobs since they are unrunnable  with  respect
+          to  the  cache.   Therefore  these jobs are effectively lost, and
+          must be  manually  restarted  from  the  beginning  or  the  last
+          checkpoint.
+ 
+          Thus, because of the  KL-10  cache  implementation,  an  SMP  cpu
+          failure  may  cause  from  zero  to  several  jobs  to  be  lost.
+          Nevertheless, losing a few jobs is still preferable to losing  80
+          to  100  jobs,  as  would  be  the  case  if a loosely coupled or
+          completely independent system cpu failed.
+ 
+          A cache sweep serial number scheme  is  used  to  keep  track  of
+          primary  memory currency with respect to cache.  Every time a cpu
+ 
+ 
+ 
+                                       - 16 -
+ 
+ 
+ 
+ 
+          TOPS-10 SYMMETRIC MULTIPROCESSING -- SMP
+ 
+ 
+ 
+          completes a sweep of its cache, it  increments  its  cache  sweep
+          serial  number.   When  a  job  is  stopped  or requests i/o, the
+          current cpu and cache sweep serial numbers are saved.  The system
+          can  tell  if  a cache sweep has completed for a job by comparing
+          the current cache sweep serial number for the cpu with the  saved
+          value.   If  the current cache sweep serial number for the cpu is
+          greater than the saved value, at least one sweep  (and  a  single
+          one  is  sufficient)  has  completed.  Thus the system can safely
+          manipulate the job, knowing that its image in primary  memory  is
+          up-to-date.
+ 
+          If during a cpu's scheduling cycle, jobs are available to run but
+          cannot  be run because cache has not been swept for them yet, the
+          scheduling cpu keeps track of this "cache lost  time"  as  a  cpu
+          operational  statistic.   High cache lost time is bad, because it
+          means that a cpu is available to run jobs but has to remain  idle
+          since  jobs cannot be run with respect to the cache.  To minimize
+          cache lost time, a cpu can request that  another  cpu  sweep  its
+          cache,  thereby updating primary memory with cache data from jobs
+          the other cpu has processed.  Every  scheduling  cycle  each  cpu
+          honors any sweep requests from other cpus (one sweep suffices for
+          all requests).  To further reduce  cache  lost  time,  if  a  cpu
+          selects  a  job to run and is context-switching from another job,
+          it starts a cache  sweep  so  that  the  "old"  job  will  become
+          runnable  with  respect  to  cache  on  other cpus when the sweep
+          completes (in about 250 microseconds).
+ 
+          The KL-10 cache implementation does permit cache to be enabled or
+          disabled  for  each  page  in  memory.   This facility allows the
+          monitor to "uncache", i.e., selectively disable cache  for  pages
+          containing  certain  monitor  data  for  which  sweeps  would  be
+          impractical.  Terminal i/o buffers, per-cpu data (cpu cache sweep
+          serial number, cpu uptime, etc.), and lock databases are examples
+          of data stored in uncached pages.   Accesses  to  such  data  are
+          relatively  infrequent,  so  no large cpu speed or primary memory
+          access penalties are incurred.
+ 
+ 
+                              CACHE MANAGEMENT FOR I/O
+ 
+          To  overlap  computation  and  input/output,  TOPS-10  implements
+          producer/consumer  buffering  for  i/o;  Figure 8 shows the basic
+          buffer structure.  If a device is inactive when  a  user  program
+          makes  an input monitor call, the monitor starts reading into the
+          buffer ring at the buffer specified by the buffer control  block.
+          As  soon  as  at  least  one  buffer is full, the user program is
+          allowed to proceed.
+ 
+          The monitor continues reading into subsequent buffers,  following
+          the  ring structure, until it advances to a buffer which the user
+          program has yet to empty; at this point, the  monitor  marks  the
+          device  as  inactive.   Each  time  the user program does another
+          input, the buffer control block is simply advanced  to  the  next
+          buffer;  if  the  buffer  is  full,  control  returns to the user
+ 
+ 
+ 
+                                       - 17 -
+ 
+ 
+ 
+ 
+          TOPS-10 SYMMETRIC MULTIPROCESSING -- SMP
+ 
+ 
+ 
+          program for processing.
+ 
+          Similarly, on an output monitor call, if the device is  inactive,
+          the  monitor  starts  writing  from  the  buffer specified by the
+          buffer control block and control returns  to  the  user  program.
+          When an output interrupt occurs, the monitor advances to the next
+          buffer in the output ring  and,  if  the  user  has  filled  that
+          buffer,  the  monitor  continues  writing.   Each  time  the user
+          program does another output, the buffer control block  is  simply
+          advanced  to  the next buffer; if it is empty, control returns to
+          the user program to fill it.
+ 
+          Unless non-blocking i/o was specified, a user program is  blocked
+          on  input  only when the next buffer is empty, i.e., has not been
+          filled by the monitor  yet.   On  output,  the  user  program  is
+          blocked  only  if  the next buffer that the user would fill still
+          contains data, i.e., the monitor has not yet emptied it.  For  an
+          input  ring,  the monitor only makes the device inactive whenever
+          the entire ring has been filled.  For an output ring, the monitor
+          makes  the  device inactive when it advances to a buffer that the
+          user program has yet  to  fill.   The  coordination  between  the
+          monitor  and  the  user  program is accomplished by a bit in each
+          buffer itself.  This bit is called the "use-bit" and  is  set  by
+          the  monitor whenever a buffer is available to the emptier.  That
+          is, if the use-bit is on in an input  buffer,  it  contains  data
+          which  the  user program may process.  If the use-bit is on in an
+          output buffer, the buffer contains data which  the  monitor  must
+          write to the output device.
+ 
+          This basic scheme is simple and optimizes i/o throughput as  seen
+          by  both  the  device  and the user program.  However, it becomes
+          more complicated in an SMP environment where the caches  in  each
+          cpu  must  be  taken  into  account.   Basically,  there  are two
+          problems  which  must   be   addressed:    data   integrity   and
+          coordination  of the use-bits among cpus.  For example, if a user
+          program fills a buffer and does an output call on  one  cpu,  the
+          data  in  that  buffer  will  be in the cache of the cpu that the
+          program was running on.  The data will not necessarily be current
+          in  main  memory, and if the device which the data is destined to
+          is owned by another cpu, the write operation cannot be  initiated
+          until the cpu which the program is running on has swept its cache
+          (making the data visible in main memory to  all  cpus  and  their
+          attached  i/o devices).  Likewise, if the monitor filled an input
+          buffer or emptied an output buffer on a cpu and set  the  use-bit
+          appropriately, the use-bit would be in the cache of the cpu which
+          the operation was completed on and might not be current  in  main
+          memory.
+ 
+          Actually, the problem is even  more  serious.   If  the  cpu  the
+          program  is  running on examines the word containing the use-bit,
+          then there will be a valid  copy  of  that  word  in  its  cache.
+          Therefore,  even if the cpu which turns on the use-bit causes the
+          word containing the use-bit to be written  into  primary  memory,
+          the  cpu  that the program was running on would use the copy from
+ 
+ 
+ 
+                                       - 18 -
+ 
+ 
+ 
+ 
+          TOPS-10 SYMMETRIC MULTIPROCESSING -- SMP
+ 
+ 
+ 
+          its  cache  rather  than  refetching  the   word   from   memory.
+          Basically,  the  implication  of  these  two  aspects  of the i/o
+          subsystem is that for proper data integrity, the data must be  in
+          primary memory if the read or write operation will actually occur
+          on some cpu other than the one that the user program was  running
+          on  when  a buffer was filled.  Furthermore, the use-bits must be
+          visible from all cpus, i.e., they must  be  read/written  from/to
+          primary  memory and must not be valid only in an individual cpu's
+          cache.
+ 
+          As stated earlier, the KL-10's standard  cache  is  organized  in
+          four-word  chunks  (called  "cache  lines").  If the cache refill
+          algorithm (which is programmable) is specified correctly, when  a
+          word  is referenced, the other three words in the same cache line
+          are read from primary  memory  and  placed  in  the  cache.   For
+          example,  if a word were read from an address which ended in a 2,
+          adjacent word addresses ending in 0, 1, 2, and  3  would  all  be
+          read  from  primary  memory  and placed in the cache line.  Since
+          there are 2048  words  in  the  standard  cache  (512  lines),  a
+          reference  to a virtual address which is different from a virtual
+          address whose contents are already in the cache,  but  which  has
+          the same low-order nine bits, will cause the data in the cache to
+          be displaced; in addition, the cache-line contents  are   written
+          back  to  primary  memory before the cache-line is reused for the
+          new data if the cache-slot data is fresher than the corresponding
+          data  in  primary memory.  This can be viewed as a one-line cache
+          sweep.
+ 
+          There is a routine which implements this called OUCHE.   Whenever
+          a  use-bit  is  read  from  or written into a buffer, the monitor
+          calls OUCHE with the address of the word containing the  use-bit.
+          OUCHE then uses the low-order nine bits of the virtual address of
+          the buffer to form a different cached virtual  address  which  it
+          reads,  thus  forcing  the word containing the use-bit out of its
+          cache and, if necessary, updating primary memory.  Thus, the word
+          containing  the  use-bit  will  only  remain  valid,  and perhaps
+          modified, in the cache of the  cpu  making  the  reference  until
+          OUCHE is called.  OUCHE is the mechanism used in SMP to solve the
+          use-bit problem.
+ 
+          Solving the data integrity  problem  requires  another  approach.
+          Consider  a  user program filling an output buffer and then doing
+          an output monitor call to cause the monitor to write  the  buffer
+          to  the  device.  If the device is directly accessible by the cpu
+          where the user program is currently running, the output operation
+          can  begin  immediately  since  the  i/o channel on that cpu will
+          fetch its data from that cpu's cache.  However, if the device  is
+          on  a  different  cpu  from where the program is running, the i/o
+          request must be queued for processing on the cpu  that  owns  the
+          device.   The data in the user program's buffer is not visible to
+          the channel connected to the owning cpu unless the executing  cpu
+          first sweeps its cache.
+ 
+          The problem is even more complicated in  the  case  of  an  input
+ 
+ 
+ 
+                                       - 19 -
+ 
+ 
+ 
+ 
+          TOPS-10 SYMMETRIC MULTIPROCESSING -- SMP
+ 
+ 
+ 
+          operation.   Once  again,  if the monitor call to begin the input
+          operation and the actual i/o both occur on the same cpu, there is
+          no  problem  since  the i/o channel will write data read from the
+          device into primary memory and invalidate the cpu's cache if  the
+          cache  references an affected address.  If, however, the i/o must
+          be done on another cpu, when the input operation is complete, the
+          executing  cpu  must  sweep  its  cache  to  ensure that previous
+          references to the input buffer are invalidated so that data  read
+          from the device will be fetched from primary memory when the user
+          program accesses the buffer.
+ 
+          The cache-sweep serial number scheme described earlier is used to
+          guarantee that data is visible to the device on whatever cpu owns
+          the device on output, and is visible to the user program on input
+          regardless of the executing cpu.  Whenever a user program does an
+          output monitor call indicating it has filled  an  output  buffer,
+          that  buffer  is  said to have been swept when one complete cache
+          sweep has occurred on the executing cpu.  When an  output  buffer
+          has  been  swept,  it may be written to a device connected to any
+          cpu in the SMP system.  Likewise, when an input buffer  has  been
+          filled  by  some  cpu  in the SMP system, it is said to have been
+          swept when the  executing  cpu  has  done  a  cache  sweep  after
+          completion  of  the  input operation.  The basic algorithms which
+          maintain the number of buffers which are correct with respect  to
+          the  cache,  that  is, have been swept, for both input and output
+          are shown in Figure 9.
+ 
+ 
+                                 CACHE AND DEBUGGING
+ 
+          Debugging  can  be   very   challenging   in   a   multiprocessor
+          environment,  especially  when  cache-related  bugs are involved.
+          For example, one particular SMP bug which was very  difficult  to
+          track down would variously result in minor confusion, or complete
+          chaos.  A variable ("USRHCU") was being interrogated at interrupt
+          level  to  determine  how virtual-to-physical address translation
+          was to be done.  During some monitor source-code  edits,  several
+          new variables were added to the data structure containing USRHCU.
+          As a result of these changes, USRHCU happened to wind up  in  the
+          same  cache-line  as  the  process  program-counter ("USRPC", the
+          address of the next instruction to execute, which must  be  saved
+          when a process is suspended during a context switch).
+ 
+          Because of the standard KL-10 cache-fill  mechanism  wherein  the
+          referenced  word  plus  the words at the three adjacent addresses
+          are all loaded into the  appropriate  four-word  cache-line,  the
+          reference to USRHCU also caused an apparently valid copy of USRPC
+          to be loaded into the cache of the cpu making the interrupt level
+          access  to USRHCU.  Now, if the process was running on some other
+          cpu at the time of the reference, when that cpu context  switched
+          away  from  the  process,  it  would  properly  store the current
+          process program-counter ("PC") in USRPC.   However,  if  the  cpu
+          which  made the interrupt-level reference to USRHCU then selected
+          the process to run, the PC at which the process would be  resumed
+ 
+ 
+ 
+                                       - 20 -
+ 
+ 
+ 
+ 
+          TOPS-10 SYMMETRIC MULTIPROCESSING -- SMP
+ 
+ 
+ 
+          was  the  stale  copy of USRPC which was loaded into the cache by
+          the reference to USRHCU.  Thus, the process would be resumed with
+          all  of its proper context except the PC, which was set to an old
+          value.  The resulting behavior came to be  described  as  the  PC
+          running backward.
+ 
+          If the correct PC was actually a user-mode  PC,  the  result  was
+          usually  improper  results  from  the  user  process, or the user
+          process just crashed.  However, if the PC turned  out  to  be  an
+          exec-mode  PC,  nearly  anything  was  possible.  The fix for the
+          problem was simply redefining the data structures so  that  USRPC
+          and USRHCU could never fall in the same cache-line.
+ 
+ 
+                                    CPU DOORBELLS
+ 
+          Cpus in SMP communicate continually since a single  copy  of  the
+          operating  system  is  shared  among  all  cpus.   Accessing  and
+          modifying global values such  as  job  status  information  is  a
+          common  form of communication.  Reading another cpu's cache sweep
+          serial number is a typical example of one  cpu  needing  specific
+          information about another cpu.  However, there is no cpu hardware
+          such as a "doorbell" for one cpu  to  interrupt  another  cpu  or
+          otherwise   get   its   immediate   attention.   The  design  and
+          implementation of SMP  revealed  that  for  scheduling  or  cache
+          management  no  such doorbell was necessary.  In fact, a hardware
+          doorbell would only be useful during emergencies ("I'm dying"  or
+          "get out of my way").
+ 
+          Rather than implement a hardware doorbell,  a  software  doorbell
+          was  chosen  for  SMP.   The basic mechanism allows a cpu to ring
+          another cpu's doorbell, or the doorbells of all other cpus, on  a
+          "significant  event",  such  as cache sweep done (jobs can be run
+          with respect to cache), context switch from a runnable job (which
+          is  eligible  to be run by another cpu), i/o done (job can be run
+          because i/o request has been satisfied), and  queued-i/o  request
+          made (i/o to do for job run on another cpu).
+ 
+          A cpu has to  "listen"  for  a  doorbell;  a  doorbell  will  not
+          interrupt  or  otherwise disturb a cpu.  The only time a cpu pays
+          attention to doorbells is when it is idle, that is, when  it  has
+          scheduled,  found  nothing  to  do, and is running the "null job"
+          until something happens to make work available.
+ 
+          This software doorbell implementation is good in that  a  cpu  is
+          not  taken  away from useful work with interruptions.  A negative
+          aspect is that a cpu may look for work to do as the result  of  a
+          doorbell  yet  find nothing to do.  While looking for work to do,
+          it holds interlocks and increases memory contention, and  thereby
+          possibly interferes with other cpus that do have work to do.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                       - 21 -
+ 
+ 
+ 
+ 
+          TOPS-10 SYMMETRIC MULTIPROCESSING -- SMP
+ 
+ 
+ 
+ 
+                      HARDWARE FAILURES AND SYSTEM AVAILABILITY
+ 
+          Redundancy, or  duplication  of  critical  components,  increases
+          availability by providing additional units to handle a particular
+          function should one unit fail:  the failing unit can be  repaired
+          or   replaced   while  the  backup  units  assume  the  workload.
+          Therefore there may  be  some  performance  degradation,  but  no
+          service  outage.  The master/slave system provides cpu redundancy
+          but requires additional operator action for switching peripherals
+          and reloading the monitor after certain failures.
+ 
+          SMP provides better inherent availability than master/slave.   In
+          SMP,  all  devices can be duplicated and placed on multiple cpus.
+          Thus any  device  in  an  SMP  system  can  fail  ("single  point
+          failure") and the system can still provide all critical functions
+          and services.  With dual-ported disks, failure of a cpu, channel,
+          controller,  or  disk  port  will  not  prevent  the  system from
+          accessing  data  through  the  other  path.   Such  operation  is
+          automatic  and  the  operator  is  notified  of  the  failure  so
+          corrective maintenance can be scheduled.
+ 
+          Memory parity errors are rare, but are automatically tried up  to
+          three  times  per  word.   A  hard  error,  that  is,  an  access
+          unsuccessful on all retries, causes  the  associated  job  to  be
+          stopped  and an error message issued to the user if the access is
+          to a private page.  A hard error in  a  shared  page  causes  the
+          system to get a new copy from the disk area used for shared pages
+          and continue automatically.  Parity  errors  within  the  monitor
+          itself  are  also  handled.   If  the  situation warrants it, the
+          operating system moves itself into better memory.
+ 
+          There is also a TOPS-10 Ethernet interface, known  as  the  KLNI.
+          This  option  may  be  included  with  each  SMP  cpu  for higher
+          availability.  Ideally there would be one such  interface  active
+          per  cpu,  but  because  of the Ethernet specifications, only one
+          active interface per SMP system is allowed; the others  are  only
+          present  for  hot-standby  failover.   In  SMP, if the active one
+          fails, or the cpu that the active one is connected to goes  down,
+          the  system  automatically  switches  over  to  an alternate, and
+          notifies the operator.
+ 
+          Of course  the  operating  system  logs  all  system  errors  and
+          failures   so  that  the  system  administrator  and  maintenance
+          personnel have a history  of  system  operation  and  can  detect
+          trends.   Components  configured  into  and out of the system are
+          also logged.
+ 
+ 
+                                SMP DEVELOPMENT TIME
+ 
+          The original estimate for implementing SMP was  six  months,  and
+          the  basic  "SMP part" of the project was actually working on the
+          KI-10 in somewhat less than six months.   However,  other  issues
+ 
+ 
+ 
+                                       - 22 -
+ 
+ 
+ 
+ 
+          TOPS-10 SYMMETRIC MULTIPROCESSING -- SMP
+ 
+ 
+ 
+          stretched  the  overall time to release to about two years.  This
+          section summarizes some of those items and events.
+ 
+          Software development within DEC's Large Systems Group was  always
+          heavily  influenced  by  the  needs  of  its  existing customers.
+          Because the  user  base  was  made  up  of  both  commercial  and
+          university  sites  (those  that regularly had funds available for
+          computer equipment, as well as those that had to stay many  years
+          with   their  original  configurations),  software  compatibility
+          between old and new versions of  the  operating  system  and  the
+          support of new features and functions across the entire family of
+          processors were always  given  high  priority.   Because  of  the
+          special  requirements  of  SMP,  several important decisions were
+          necessary.
+ 
+          The first was getting management agreement that SMP did not  have
+          to  run  on  the  KA-10.  The development team wanted SMP to be a
+          virtual memory system and to use memory mapping to take  care  of
+          addressing  matters,  such as referring to data in CDBs (Cpu Data
+          Blocks); the KA-10 addressed a CDB  through  an  index  register.
+          Once  the  decision was made to support KIs and KLs only, a major
+          reorganization of the entire  cpu  database  and  system  address
+          space was undertaken.
+ 
+          A limitation in pre-SMP TOPS-10 was a maximum of  128  jobs.   It
+          didn't seem proper to have massive cpu power available in SMP and
+          not be able to exploit it fully.  Unfortunately, supporting  more
+          jobs would require more job-related data structures and therefore
+          would consume more of the  monitor's  address  space,  which  was
+          starting  to  get very crowded.  To solve these problems, changes
+          were made to the way TOPS-10 managed its address  space,  and  to
+          allow  many  data  structures which previously were always memory
+          resident to be swapped to disk.
+ 
+          For the system to be truly  symmetric,  all  devices  had  to  be
+          supported  on  every  cpu,  which  meant  redesigning  the device
+          databases and rewriting all device service routines to make  them
+          reentrant;  for  completeness,  real-time  support also had to be
+          provided for all SMP cpus.  As described earlier, queued protocol
+          was implemented for disks and tapes.  It was also implemented for
+          terminals and networks; this involved a total rewrite of  SCNSER,
+          the monitor module responsible for terminal support.
+ 
+          As described, cache support and debugging took  a  major  effort,
+          and,  though  not technically difficult, it turned out to be hard
+          to make dual-ported disks work  properly  across  cpus.   Getting
+          proper  locking  granularity  was not difficult, but was just one
+          more thing to work on.
+ 
+          Because SMP had to  support  many  cpus  and  data  channels,  an
+          initial  worry  was that memory bandwidth might not be sufficient
+          to satisfy demand.  The developers  were  prepared  to  implement
+          memory  bandwidth  scheduling, but fortunately that turned out to
+          be unnecessary.  However, memory overruns  and  related  problems
+ 
+ 
+ 
+                                       - 23 -
+ 
+ 
+ 
+ 
+          TOPS-10 SYMMETRIC MULTIPROCESSING -- SMP
+ 
+ 
+ 
+          were   troublesome   enough   to  require  the  availability-test
+          described in the section on locks.  With this change, no  further
+          memory bandwidth problems were observed.
+ 
+          SMP developers believed that all these tasks  were  necessary  to
+          provide    basic   SMP   functionality   and   meet   performance
+          requirements.  The tasks were completed and the developers  began
+          preparing to release the product, but then LCG management decided
+          that before shipment SMP had to be very maintainable and  provide
+          very  high  availability.   To  meet  these new goals, additional
+          development was undertaken.
+ 
+          All of the hardware error recovery algorithms were reexamined and
+          most   were   rewritten.   Full  and  completely  dynamic  system
+          reconfiguration under software control was implemented.   It  was
+          then  possible  to take essentially any system component down for
+          preventive or corrective  maintenance  without  interfering  with
+          timesharing  other  than  to  degrade system performance.  System
+          sleep was also implemented.  This allows the operator to have the
+          system  suspend  itself  and save complete system status to disk.
+          Then the operator can perform any special  reconfiguration  (such
+          as  memory  interleaving), and subsequently bring the system back
+          up where it left off.
+ 
+          DECnet was in its infancy during this time, but  TOPS-10  already
+          had    a    comprehensive    network    providing    task-to-task
+          communications, terminal concentration, and remote stations.   To
+          meet  the  new  availability  requirements,  network  support was
+          redone   to   provide    for    complex    topologies,    dynamic
+          reconfiguration, and down-line loading.  As an example of overall
+          system availability, there was no interruption in service  for  a
+          terminal  connected  to the front-end PDP-11 of a cpu that failed
+          as long as a network  link  existed  to  a  PDP-11  front-end  on
+          another cpu that was still running.
+ 
+          Finally, delays resulted from the normal process of releasing any
+          complex  hardware/software  combination,  such  as  designing and
+          manufacturing  ROMs  for  booting  front-ends   through   various
+          connections, diagnostics, documentation, testing, and performance
+          analysis.   Interestingly,  after  initial   dual-cpu   SMP   was
+          released,   it   took  another  year  to  formalize  the  version
+          supporting  additional  cpus,  but  the  process  didn't  involve
+          writing a single line of code -- just logistics.
+ 
+          To simplify SMP development with respect to cpu coordination, cpu
+          byte manipulation instructions were made read/modify/write.  This
+          was accommodated on the KL-10 by a microcode change; an  official
+          hardware engineering change was implemented for the KI-10.
+ 
+          Initial SMP development was actually carried out on the KI:   the
+          equipment  was  readily  available  and  the developers preferred
+          debugging on the KI.  Before SMP release, however,  the  decision
+          was made to restrict SMP support to the KL.  The KI was already a
+          relatively old product by that time, and extra resources would be
+ 
+ 
+ 
+                                       - 24 -
+ 
+ 
+ 
+ 
+          TOPS-10 SYMMETRIC MULTIPROCESSING -- SMP
+ 
+ 
+ 
+          required   to   continue  to  test  and  maintain  SMP  for  both
+          configurations.   Because  this  decision  came   late   in   SMP
+          development,  only  two  items were missing for comprehensive SMP
+          support on the KI.  The DL-10, a  memory  sharing  interface  for
+          front-end  PDP-11  processors,  worked  only  on  KI  CPU0.  More
+          important,  the  KI  never  acquired  Phase  IV  DECnet  support.
+          Initially   TOPS-10  developers  believed  DECnet  support  would
+          require KL-only extended addressing.  When it became  clear  that
+          DECnet  could be implemented on the KS (a compact and inexpensive
+          single-cpu-only TOPS-10/TOPS-20 system), retrofitting  DECnet  to
+          the KI would have been possible, but by then the TOPS-10 group no
+          longer had a KI for development and testing.
+ 
+          Contributing to the rapid pace of SMP development, and definitely
+          part  of TOPS-10 folklore, were the working hours of Jim Flemming
+          and Tony Wachs.  Though most of the staff  tended  to  keep  more
+          standard  business  hours,  ordinarily  Jim and Tony preferred to
+          start work around 2 a.m.  This allowed them dedicated  access  to
+          hardware  for  development  and  debugging, and largely kept them
+          from being bothered  by  typical  office  distractions.   Because
+          their  hours  did  overlap with the beginning of the conventional
+          workday, they were not completely isolated from other  personnel,
+          so communication was not impacted.
+ 
+ 
+                                ON-GOING DEVELOPMENT
+ 
+          Useful KL-10 hardware development did not  cease  after  SMP  was
+          released,  partly because development of the planned KL follow-on
+          processor was  cancelled  in  1983.   Existing  customers  needed
+          greater  KL performance while they evaluated eventual replacement
+          options for their TOPS-10 systems, so the MCA25 was introduced in
+          1984 to double the size of the KL-10 cache and paging memory.  It
+          also increases the size of a cache-line from four to eight words,
+          and  implements  a "keep me" bit in the page tables.  The keep-me
+          bit is a suggestion to the microcode that when the paging  memory
+          is  flushed,  certain  data  which  are  likely to be needed soon
+          should be kept around.  (The most interesting  problem  regarding
+          SMP  support for this option is what to do when some cpus have it
+          and some don't; in TOPS-10, the solution was to make the  keep-me
+          bit  part  of  the  per-cpu  database  and  simply  OR  it in for
+          appropriate pages.)
+ 
+          Certainly the introduction of a new product such  as  the  MCA25,
+          with SMP support, shows that SMP development didn't stop in 1980.
+          Furthermore, it demonstrates  that  if  the  basic  SMP  software
+          architecture  is  correct,  incremental  hardware  additions  can
+          enhance  SMP  system  performance  with  only  relatively   minor
+          software changes.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                       - 25 -
+ 
+ 
+ 
+ 
+          TOPS-10 SYMMETRIC MULTIPROCESSING -- SMP
+ 
+ 
+ 
+ 
+                          SMP'S RELATION TO OTHER PRODUCTS
+ 
+          SMP was not developed in response to multiprocessing competitors.
+          It was simply the best way to extend the utility of TOPS-10 while
+          waiting for a successor to the KL cpu  (though  no  such  product
+          ever materialized).  Neither was SMP implemented according to any
+          externally  published  specification  or  design;  it  just  grew
+          normally out of the existing TOPS-10 design and philosophy.
+ 
+          SMP did  have  an  important  influence  on  later  DEC  hardware
+          designs,  however:   in  new  products hardware, not software, is
+          responsible for cache coherency.  The design, implementation, and
+          debugging  problems  associated with cache in TOPS-10 SMP clearly
+          demonstrated the need for hardware to maintain  cache  coherency.
+          This  is  particularly  important with the increasing interest in
+          parallel  processing,  where  sharable,  writable  user  data  is
+          fundamental.
+ 
+          In spite of TOPS-10's success with SMP, TOPS-20 never gained such
+          capability.   It  should  not  be  technically  difficult because
+          TOPS-20 already has the basic mutual exclusion support needed for
+          SMP.   Also,  because  of  TOPS-20's "mapped" i/o, cache problems
+          should be nearly non-existent.  Finally, from the  standpoint  of
+          cpu   scheduling,  TOPS-20  SMP  should  present  relatively  few
+          problems.
+ 
+          TOPS-20 SMP was never seriously considered simply due to lack  of
+          suitable  shared  memory.   The  DECSYSTEM-20  had  only  private
+          internal memory.  A shared internal memory product, the MX20, was
+          planned  but  cancelled  (had it appeared, however, it would have
+          supported  only   two   cpus).    Furthermore,   in   the   final
+          specification  for  the  "Jupiter"  (planned  follow-on to the KL
+          cpu),  memory-sharing  capability  was  eliminated   for   higher
+          performance  and  lower  cost.   Therefore the anticipated future
+          hardware   platform   for   TOPS-20   precluded   tightly-coupled
+          multiprocessing support.
+ 
+          As far as  VAX  multiprocessing  is  concerned,  there  has  been
+          significant  contact  between  TOPS-10  SMP  and  VMS developers.
+          Principally Jim Flemming has been conveying TOPS-10 SMP ideas and
+          experience  to  other  groups.   Jim  has  also  been involved in
+          implementing an  SMP  version  of  UNIX  (a  trademark  of  AT&T)
+          System V for VAX computers.
+ 
+ 
+                                       SUMMARY
+ 
+          TOPS-10 is a very successful operating  system,  which  benefited
+          greatly from user input.  DECUS (Digital Equipment Computer Users
+          Society) meetings were always a valuable  source  of  suggestions
+          for  new features and enhancements, and from the early days TOPS-
+          10 developers were very accessible to users, thereby contributing
+          to  a  constant  exchange  of  ideas.  Both internal and external
+ 
+ 
+ 
+                                       - 26 -
+ 
+ 
+ 
+ 
+          TOPS-10 SYMMETRIC MULTIPROCESSING -- SMP
+ 
+ 
+ 
+          users always looked forward to new releases of  TOPS-10,  because
+          each  release brought more power and capability.  Initial support
+          for multiprocessing was provided in the early 1970s.
+ 
+          Tightly-coupled  multiprocessing  can  offer  configuration   and
+          processing   flexibility   over   a   conventional  uniprocessing
+          architecture.   TOPS-10  multiprocessing  moved  from  an   early
+          master/slave approach to Symmetric Multiprocessing, which is more
+          general and provides especially attractive benefits in  terms  of
+          system  performance  and  availability, and also has economic and
+          administrative advantages.  In an interesting  parallel,  initial
+          multiprocessing  support  in  VAX/VMS  was  also  a  master/slave
+          implementation.  VAX/VMS support  for  symmetric  multiprocessing
+          was not provided until version 5.
+ 
+          The first TOPS-10 SMP release was  in  1980,  and  represented  a
+          major  milestone  in  Digital's  36-bit  system history.  TOPS-10
+          continues to be a workhorse in sites around the world,  which  is
+          quite amazing considering it is already in its third decade.
+ 
+ 
+                                  ACKNOWLEDGEMENTS
+ 
+          Some of the material presented herein appeared in the June, 1980,
+          Datamation article "More Power to You", by Allan B. Wilson.  Tony
+          Wachs (one of the key designers and implementors of  TOPS-10  and
+          SMP)  and  Barbara  Huizenga  (a  member of the TOPS-10/SMP team)
+          reviewed several drafts of this chapter.  Duane  Winkler  of  Oak
+          Ridge  National  Laboratory  (operated  by Martin Marietta Energy
+          Systems, Inc.), Oak Ridge, TN, furnished the information  on  the
+          ORNL SMP system.  TOPS-10 and SMP represent the work of many more
+          contributors than can be given proper credit individually.
+ 
+ 
+                                     THE AUTHORS
+ 
+          Allan Wilson worked for Digital Equipment Corporation  for  eight
+          years,  and  held software development, technical consulting, and
+          marketing positions there; he participated in the development  of
+          SMP,  and  also  independently  developed TOPS-10 support for the
+          original DECSYSTEM-20-only hardware, thus  creating  the  product
+          later  released  as  the  DECsystem  1091.   He  currently  is an
+          Executive Vice President of Intergraph Corporation.
+ 
+          Jim Flemming  is  a  Consulting  Software  Engineer  for  Digital
+          Equipment  Corporation.   He  was one of the principal architects
+          and implementors of  TOPS-10  SMP.   A  recent  project  involved
+          implementation  of  an  SMP  version  of  System V  UNIX  for VAX
+          computers.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                       - 27 -
+ 
+ 
+ 
+----------------
+ 
+The End.

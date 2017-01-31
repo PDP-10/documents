@@ -1,0 +1,46 @@
+From: Klaus Zeuge
+To: js-cgi@inwap.com
+Subject: misc links and quotes
+
+At one time or other, the following links existed. I have not tested
+them at this time.
+
+
+1995:
+
+stale - http://www.pt.hk-r.se/~pi92mti/home/pub/jargon.original
+works - ftp://ftp.cs.uiowa.edu/pub/jones/pdp8/
+works - http://www.docs.uu.se/~pem/AlicesPDP10/AlicesPDP10.html
+works - http://www.lysator.liu.se/~cardell/scriptures.html
+works - http://www.inwap.com/pdp10/
+works - ftp://ftp.uu.net/doc/literary/obi/hakmem.order/
+stale - http://www.pt.hk-r.se/~di92th/texts.html
+requires login - ftp://ftp.biostat.washington.edu/pub/pdp-10/
+
+
+
+---
+
+(From "THE DECSYSTEM-20 AT COLUMBIA UNIVERSITY (1977-1988)" by Frank da
+Cruz and Christine Gianone, http://www.columbia.edu/kermit/dec20.html)
+
+"Meanwhile, as the computer industry struggles to turn PCs into
+ multiuser systems and to reinvent multiprocessing, security, and
+ other forgotten concepts, it might profitably pause to look back at
+ the past decades, when the expense and limitations of computing
+ equipment forced designers and coders to be... well, smarter."
+---
+
+Re: EXTEND, MOVSO
+
+Ralph Gorin is alleged to have commented on the pdp10 string 
+instructions during his time at XKL. The COBOL compiler is
+said to have relied heavily on these instructions.
+
+  None of these is fast.  None of these is thoroughly tested.  They
+  all require a lot of registers for setup.  They are uncharacteristic
+  of other PDP-10 instructions.
+
+---
+
+

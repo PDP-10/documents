@@ -1,0 +1,19 @@
+<html><head><title>Directory of pdp10/hbaker</title></head><body>
+
+<H2>Local copies if PDP-10 related documents</H2>
+<ul>
+  <li><a href="hakmem/hakmem.html">Hypertext HAKMEM (MIT AI Memo 239)</a>
+  <li><a href="pdp-10/pdp-10.html">Hypertext PDP-10 Assembly Language Info</a>
+</ul>
+
+<H2>The original documents</H2>
+
+These documents were copied to the INWAP site back when the server for
+ftp://ftp.netcom.com/pub/hb/hbaker/hakmem/hakmem.html was constantly overloaded.
+Another mirror of Henry Baker's files (circa 1997) can be found at
+<A HREF="http://linux.rice.edu/~rahul/hbaker/home.html">http://linux.rice.edu/~rahul/hbaker/home.html</A>
+and another subset at <A HREF="http://pdp10.nocrew.org/docs/instruction-set/">http://pdp10.nocrew.org/docs/instruction-set/</A>
+
+<H2>Index for this site</H2>
+<a href="../">Joe's PDP-10 list</A>
+</body></html>

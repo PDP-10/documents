@@ -1,0 +1,101 @@
+<HTML><HEAD><TITLE>PDP-10 ASCII</TITLE></HEAD><BODY BGCOLOR="#d8d8bf">
+<I>Sharing 36-bit data with 7 and 8-bit systemsx</I><hr>
+<PRE>
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: FTP: ASCII vs Binary vs Tenex (was Re: What is "ASCII"?)
+References: &lt;kenwest-2807961809220001@ts23-04.tor.istar.ca&gt; &lt;4th1i2$kpg@hecate.umd.edu&gt; &lt;4th8t5$ga7@nntp.ucs.ubc.ca&gt; &lt;BILLW.96Jul29175833@puli.cisco.com&gt;
+Sender: Joe Smith &lt;<A HREF="mailto:js-cgi@inwap.com">js-cgi@inwap.com</A>&gt;
+
+In article &lt;BILLW.96Jul29175833@puli.cisco.com&gt;,
+William  &lt;billw@puli.cisco.com&gt; wrote:
+| Note that "netascii" is actually an RFC-defined machine-independent
+| representation for text, and this is what the "ascii" command in FTP
+| refers to.
+</PRE>
+
+RFC-959 describes the FTP protocol, and refers to TELNET's NVT-ASCII.<br>
+RFC-854 describes the TELNET protocol.<br>
+RFC-683 describes how to deal with TENEX files with holes.<br>
+
+The PDP-10 systems (TOPS-10, TENEX, TOPS-20) store 36-bit data in
+128-word blocks or 512-word pages.  Transferring files to 8, 16, 32 or
+64-bit systems requires data conversion.
+
+<H1>FTP</H1>
+FTP uses three primary modes for exchanging data between dissimilar systems:
+<ol>
+<li>NET-ASCII - each line of text is terminated by a &lt;CR&gt;&lt;LF&gt; pair.
+   Bare &lt;CR&gt; characters are transmitted as &lt;CR&gt;&lt;NULL&gt;.  Data is sent
+   as 7-bit USASCII in 8-bit bytes.
+<p>
+   On PDP-10 systems, &lt;NULL&gt; characters are stripped out, and LSN
+   (Line Sequence Numbers) from editors like SOS are optionally removed.
+<p>
+<li>BINARY - the input file is a contiguous stream of bits.  Starting
+   with the most significant bit of the first word, data is transmitted
+   8 bits at a time.
+<p>
+   On PDP-10 systems, this can be done by reading the file a nybble at
+   a time with a 4-bit byte pointer and sending each pair of nybbles as
+   8 bits.
+<pre>
+   Byte 9*n+0 = bits 0-7 of the even numbered word (starting with word 0)
+   Byte 9*n+1 = bits 8-15 of the even word
+   Byte 9*n+2 = bits 16-23 of the even word
+   Byte 9*n+3 = bits 24-31 of the even word
+   Byte 9*n+4 = bits 32-35 of the even word &lt;&lt; 4 + bits 0-3 of odd word
+   Byte 9*n+5 = bits 4-11 of the odd numbered word
+   Byte 9*n+6 = bits 12-19 of the odd word
+   Byte 9*n+7 = bits 20-27 of the odd word
+   Byte 9*n+8 = bits 28-35 of the odd word (ending with word 0177 or 0777)
+</pre>
+<li>TENEX mode (Local Bytesize 8) - tells the TOPS10/TOPS20/TENEX system
+   to use a byte size of 8, 16 or 32 when reading/writing its file.
+   This uses only bits 0-31 of the 36-bit file; bits 32-35 are never
+   sent when reading and set to zero when writing the 36-bit file.
+</ol>
+FTP also defines a fourth mode for sending TENEX files a page at a time.
+This allows files with holes in them to be exchanged between 36-bit
+systems, but is not for exchanging data between dissimilar systems.
+
+<H1>1/2-inch tape and KERMIT</H1>
+
+In addition to those methods, two others are useful:
+<ol start=4>
+<li>ANSI-ASCII / KERMIT-36 - the 36-bit word is broken up into 5 bytes,
+   the first 4 use only 7 of the 8 bits, the last one uses all 8 bits
+   and has its MSB set only if bit 35 of the word is set.
+<pre>
+   Byte 5*n+0 = 0 &lt;&lt; 7 + bits 0-6 of word
+   Byte 5*n+1 = 0 &lt;&lt; 7 + bits 7-13 of word
+   Byte 5*n+2 = 0 &lt;&lt; 7 + bits 14-20 of word
+   Byte 5*n+3 = 0 &lt;&lt; 7 + bits 21-27 of word
+   Byte 5*n+4 = (bit 35 of word) &lt;&lt; 7 + bits 28-34 of word
+</pre>
+   Note that a 36-bit binary file can be transfered to an 8-bit system and
+   then back again without losing any bits.  PDP-10 text files are readable
+   asis when transfered to CP/M, MS-DOS, and anythine else that uses
+   &lt;CR&gt;&lt;LF&gt; as the line separator on disk.
+<p>
+   Later versions of TOPS-10 and TOPS-20 had tape controllers that used
+   microcode in the tape formatter to do this sort of bit shuffling.
+<p>
+<li>UNIX-ASCII - like ANSI-ASCII, except that &lt;NULL&gt; characters and &lt;CR&gt;
+   immediately before &lt;LF&gt; are discarded, and bit 35 is always ignored.
+<p>
+   This mode is something we used in-house to write to 1/2-inch tapes
+   in 'tar' format.  The idea was to create a tape that could be
+   used on our UNIX system with no postprocessing.  This meant that
+   file 36-bit file had to be read from disk twice: once to calculate the
+   byte count for the 'tar' header, and another pass to write the data.
+</ol>
+A method of storing 36-bit data as 6 bytes of 6 bits each on an 8-bit
+medium is less efficient than the methods above.  It was mainly used
+only for bootstrapping a PDP-6, KA or KI from paper tape.  In this
+application, simplicity of hardware was more important than efficiency.
+
+<P><HR>
+<A HREF="index.shtml#36to8">Back</A> to the index
+<ADDRESS>
+Maintained by <A HREF="../u/joe/">Joe Smith</A> at <A HREF="mailto:js-cgi@inwap.com">js-cgi@inwap.com</A>
+</ADDRESS></BODY></HTML>

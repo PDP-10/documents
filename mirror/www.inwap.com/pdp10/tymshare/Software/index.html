@@ -1,0 +1,183 @@
+<HTML><HEAD><TITLE>Tymshare Software</TITLE></HEAD><BODY BGCOLOR="#d8d8bf">
+<I><B>Tymshare</B> Software</I><hr>
+<H1>Software</H1>
+
+The TYMCOM-X Operating System was based on the TOPS-10 Monitor, version 5.02C.
+It had some TOPS-20 features added, such as memory-mapped disk I/O with
+all disk structures based on a 512-word page instead of a 128-word block.
+
+<P>Message from one of the developers:
+<pre>
+Date: Sun, 02 Dec 2001 14:13:52 -0800
+From: Vance Socci &lt;evs&gt;
+Subject: TYMCOM-X
+
+As long as you're in the mood to add things, here are some facts about
+Tymcom-X that don't appear anywhere else:
+
+Tymcom-X was based on 5.02C, not 5.04. Bill Weiher rewrote the file system
+to make it much more reliable. He also removed mountable structures because
+he wanted to make the system operator proof . . .
+
+We used SOS as the editor for most things while I was at Tymshare. That's
+because Bill Weiher wrote it while at Stanford, I believe.
+
+Other interesting facts about Tymcom-X:
+
+*) Was a completely virtual memory system (user level, no swappable monitor
+parts). User programs could provide their own working set handler or use the
+default built-in to the monitor.
+
+*) I reason to believe that Tymcom-X was the first pure VM operating system
+to swap working sets as opposed to re-paging the pages in after they were
+robbed for another job. TOPS-20 didn't page working sets in and out, mostly
+because they originally had a paging drum with fixed heads (no seeking).
+TOPS-10 swapped jobs in and out even after VMSER was written (by Jim
+Flemming, my mentor at DEC, unfortunately no longer with us). Paging for
+TOPS-10 happened after a job was swapped in, and went back and forth between
+memory and the job's currently allocated swap space. I eliminated the double
+overhead of nested memory managers (paging within swapping) when I designed
+the virtual memory system.
+
+The first versions of VAX-VMS did what other VM systems didn, the pure
+Denning and Coffman page replacement only style of VM. Later, they found out
+in practice what I suspected; its very inefficient to do lots of single page
+I/O in a storage system with physical head positioning. Later versions of
+VAX-VMS adopted a working set swapping scheme similar to mine.
+
+*) Tymcom-X had a simple built-in interlocking system called "clubs",
+intended to allow programs to implement their own more complex interlocking
+system.  The Magnum people didn't like it; they wanted a more complex
+locking system.  We resisted this because the Tymcom-X monitor had no paged
+areas, and memory in those days was very expensive, and there was in general
+bound to be multiple implementations of interlocking for each major
+application.  (I had to squelch a lot of conceptually good ideas because of
+practical reasons, which didn't make me very popular. I was the manager of
+the Tymcom-X OS group during most of the radical rewrites, from 1977 to
+1981).
+
+*) Tymcom-X had simultaneous update in the file system, implemented along
+with the first version of the VM rewrite came up. This change, and the
+memory mapped change, was motivated in part to allow multiple users to
+update two or more records that happened to reside in the same page in the
+file system.
+
+*) Tymcom-X had the most sophisticated process control mechanism existent at
+the time that I know of; I found later that it was far more powerful than
+Unix's, which only had enough features to implement the shell an no more.
+
+There was a capability system that allowed control of functions that you
+could perform on another process, such as read memory,
+write memory, cause software interrupts.  It was as powerful as TOPS-20's -
+and we had an invisible debugger (IDDT) that I implemented for application
+developers and to test the system.
+
+*) We also had an efficient way to jump between processes called "gate
+jumps"; you could jump in and out of various address spaces with no context
+switch at will.  This was a great help to Magnum, since we only had 256K
+words of address space.  DEC solved this limitation by implementing extended
+addressing, which would have been a very extensive project to implement for
+us at Tymshare. The gate jump (Allen Ginzburg's idea, the overall manager of
+Tymcom-X development during most of the time I was there) was a quick
+alternative to extended addressing. We had implemented most if not all of
+the features you'd want to integrate a large application such as Magnum in
+the process control system.
+
+The overall project was called "forking and gating", since you could fork
+off a process with the new process control stuff, and gate jump directly
+into it after you had loaded the part that you wanted.
+
+(The limitations here were that processes still had exclusive access to open
+file channels and such, so one process couldn't run a channel that another
+process had opened. We didn't see this as much of a limitation
+theoretically, since if you modularized your code properly such things would
+be local and not global. And shared memory pages allowed common memory space
+between all processes. But I guess it turned out practically to be a problem
+for things like Magnum that weren't organized into seperate sub-processes
+when originally written.
+
+*) Tymcom-X was a *pure* VM system, not a hybrid between the old style
+monolithic memory system and a VM system. There literally was no old style
+I/O; it was all simulated in a module written by Art Atkinson named SIMIO.
+This was a tall order, because it had to simulate both buffered mode and
+dump mode I/O with the file system. Pages not associated directly with
+files,
+
+*) We had an accounting system which had to be consistent so that the
+customers would be charged fairly. There was a hairy formula that converted
+all sorts of usage figures into one metric, the TRU. Virtual memory caused a
+quandary for this formula, since memory usage was one of the elements of
+TRUs, and the user could set their own working set.  The problem with this
+is that we wanted to be able to make best use of limited physical memory
+resources; this meant that if you ran the same program the same way
+successive times, you might get different amounts of physical pages each
+time, since the monitor wanted to give you more memory if it was available
+than your user working set defined. So we just invented a "monitor working
+set", which was the actual working set the system used. You got charged for
+the user working set only, but the monitor working set could be bigger or
+smaller than the user working set was. This way we got the best of both
+worlds, consistent TRUs and the ability to optimize system performance.
+
+*) Tymcom-X had a "quick disk check" mode of DSKCLN which 80% of the time
+was sufficient to bring a system up quickly after a crash. This is something
+that Microsoft still doesn't have.  Since we had a bitmap in the file system
+of pages that were mapped at the time of a crash, we could check only the
+files that were open for consistency rather than having to check each and
+every file.  Only bugs in the file system's allocation could force us to
+have to do a full DSKCLN. This was implemented by a very bright guy named
+Todd Corenson with a little help from me.
+
+*) Tymcom-X was the only PDP-10 operating system (and perhaps the only OS at
+the time) that could run a virtual copy of itself on a real copy, for user
+mode monitor debugging. Although we never implemented an actual simulated
+user address space along with the simulated exec address space, you could
+still execute simple programs from the simulated exec space due to the fact
+that Tymcom-X UUO calls were reentrant.  This allowed several developers to
+work on the monitor without taking any hardware stand alone.
+
+*) Tymcom-X was extremely reliable under heavy user loads.  More often than
+not the hardware was the reason for a crash. One system made it up to 1600+
+hours (two months) under a heavy user load before it had to be taken down
+due to a hardware failure. For the late '70s, this was extraordinary for
+PDP-10 systems, at least.
+
+*) We had a state-of-the-art microfiche system for design and maintenance
+studies to replace the usual piles of line printer listings usual at the
+time. Bill Weiher (WFW) wrote a custom text parsing language that parsed the
+monitor LST files and output files in a format to send to the microfiche
+vendor. It generated a microfiche coordinate cross reference file so that we
+could find the fiche coordinates of any label, instruction, macro, and so
+forth. This made it a lot easier to work on the monitor.
+
+*) The large size (for the time) of the file structures for some of our
+customer machines prompted the development of SNARL, which could perform an
+image dump of the filesystem that ran as fast as the STC tape drives could
+run. This reduced the time that our systems had to be down for backup, which
+was very important for the timesharing business.
+
+
+   - (Ernie) Vance Socci
+</pre>
+
+From Joe: I joined Tymshare in 1985, after most of the developers had left.
+We ran into a limitation on the maximum size of the file structure;
+23 units of 300 MB each (3350 logical units).
+
+<pre>
+  256Kw - 16Kw (approx size of the DSKCLN code) = 240 Kwords for bitmaps.
+  80 Kw for each of three bitmaps (old, new, error).
+  80 Kw * 36 bits/w = 3 million bits = 3 million pages in disk structure.
+  1 page = 512 words = 2304 octets.
+  3 million * 2304 = 6.9 gigabytes = 23 * 300 megabytes.
+</pre>
+
+After doing an ADDPACK for the 24th unit, DSKCLN ran out of memory, and
+we ended up doing an ASP restore to return DSKB to 23 units.  At that late
+stage of TYMCOM-X, it was decided that the limitation of 23 disk packs
+per system was acceptable.
+
+<P><HR>
+Up to the index for <A HREF="../">Tymshare</A>.<BR>
+<ADDRESS>
+Maintained by <A HREF="../../../u/joe/">Joe Smith</A> at <A HREF="mailto:js-cgi@inwap.com">js-cgi@inwap.com</A>
+</ADDRESS></BODY></HTML>

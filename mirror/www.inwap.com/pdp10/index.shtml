@@ -1,0 +1,348 @@
+<HTML><HEAD><TITLE>Joe Smith's PDP-10 page</TITLE></HEAD><BODY BGCOLOR="#d8d8bf">
+<I>PDP-10 index</I><hr>
+<P>
+This is the<font size=+2> <b>53,133rd</b> </font>access to this page.
+
+<A HREF="images/popj.jpg"><IMG SRC="images/popj.gif" align=right alt="POPJ P," WIDTH=80 HEIGHT=40></A>
+<H1>36 bits forever!</H1>
+<h2 align="center"><a href="#Tymnet">Tymshare / Tymnet pictures</a></h2>
+<br clear=all>
+<a href="tymshare/hardware/index.cgi"><img src="tymshare/hardware/xkl-murdock2.gif" align=right width=68 height=90></a>
+
+This is one of the two pages at Best.com that describe the history
+of 36-bit computing: www.inwap.com/pdp10 = www.best.com/~inwap/pdp10/.
+The other one, <A HREF="http://www.multicians.org">www.multicians.org</A>
+is <A HREF="http://www.multicians.org/thvv/tvv.html">Tom Van Vleck</A>'s
+history of Multics.  Both of these computers use 36-bit words with 18-bit
+addresses, but otherwise have very little in common.
+(Another set of web pages dedicated to 36-bit computers
+is at <A HREF="http://www.36bit.org/">www.36bit.org/</A> .)
+
+<p>This page was listed in the NCSA Mosaic What's New page for June 16, 1995.
+
+<H2>36 bit systems running today</H2>
+
+25-Nov-96: <A HREF="96license.txt">personal-use license</A> for TOPS-10 and TOPS-20.
+
+<p><table border align=center>
+  <tr> <th>Onwer</th> <th>CPU</th> <th>Operating System<br>Access Method</th> </tr>
+  <tr>	<td><a href="http://www.pdpplanet.com/">PDPplanet</a></td>
+	<td>DEC 2065</td>
+	<td>PDPplanet DECsystem-10 TOPS-10 v7.04
+	<br><a href="telnet://DEC-10.PDPplanet.com">telnet DEC-10.PDPplanet.com</a>
+	(DNS OK, does not respond to PING.)</td>
+  </tr>
+  <tr>	<td><a href="http://www.paulallen.com">Paul Allen</a></td>
+	<td>XKL TOAD-1</td>
+	<td>XKLeTen - Tops20 for the Wired World, TOPS-20 Monitor 7(102400)-1
+	<br><a href="telnet://xkleten.paulallen.com">telnet xkleten.paulallen.com</a>
+	(DNS OK, does not respond to PING.)</td>
+  </tr>
+</table>
+
+  <H3>Digital Equipment Corporation: KA, KI, KL, KS</H3>
+
+16-Jun-2007: ComputerWorld's ad favorites over the last 40 years includes
+<A HREF="http://www.computerworld.com/action/article.do?command=viewArticleBasic&articleId=9024559&pageNumber=6">
+one from 9-Nov-1981</A>: The <A HREF="http://computerworld.com.edgesuite.net/digital_mainframe_11981.jpg">
+Personal Mainfraime</A>.
+
+  <p>DEC equipment on the Net:
+  <ul>
+    <li>DEC-10.PDPplanet.COM is a 2065 accessible on the network, running TOPS-10. So there's now an example of DEC hardware on the net.
+
+Paul Allen's machine (xkleten.paulallen.com) is an XKL-1 (a.k.a. TOAD-1)
+
+There are a couple of other XKL-1 systems in addition to XKL and Paul Allen, but they aren't public access.
+
+There are several klh10-based TOPS-20 systems up 24/7: lingling.panda.com, bi5.bootstrap.org, kankan.twenex.org, tops.drkngs.com, tina.update.uu.se. There are some others which are intermittantly up.
+
+Two ITS systems are intermittantly up: its.svensson.org, md.spacy.boston.ma.us.
+
+
+    <p><A HREF="http://www.corestore.org/compute.htm">Corestore.org</A> has
+    <A HREF="http://www.corestore.org/dec10.htm">KL-10</A> and
+    <A HREF="http://www.corestore.org/dec20.htm">KS-2020</A> hardware,
+    and links to other hobbiest-owned hardware.
+
+  <H3>Compatible hardware</H3>
+  <ul>
+    <li><A HREF="telnet://toad.xkl.com/">toad.xkl.com</A> is running on a TOAD-1.
+	<pre>
+They are still running an NCSA web server on <A HREF="http://toad.xkl.com">toad.xkl.com</A>,
+but it now redirects to Apache on an x86 box.
+		XKL Systems TOAD, TOPS-20 Monitor 7(102605)-1
+		HTTP/1.0 200 Document follows
+		Date: Tue, 21 May 2002 %T GMT
+		Server: NCSA/1.4.1
+		Content-type: text/html
+		Last-modified: Thu, 11 Apr 2002 %T GMT
+		Location: http://cheshire.xkl.com</pre>
+    <li><A HREF="xkleten.txt">Publicly accessable PDP-10</A> set up by
+        Paul Allen (the other co-founder of Microsoft).
+    <li>Unknown number of SC40M systems running at Compuserve Classic at UUNET.
+    <li>No known instances FOONLY systems still running.
+  </ul>
+
+  <H3><A HREF="emulators/">PDP-10 emulators</A></H3>
+  Run TOPS-10 or TOPS-20 on a KS-2020 emulator on your own hardware!
+  <ul>
+    <li>Tim Stark's <A HREF="emulators/#ts10"><b>ts10</b></A>
+    <li>Bob Supnick's <A HREF="emulators/#simh"><b>simh</b></A>
+    <li>Daniel Seagrave's <A HREF="emulators/#dzclient"><b>dzclient</b></A>
+    <li>Telnet into <A HREF="usenet/asuka">asuka.umtec.com</A>, a Linux box
+    running <b>ts10</b> with <b>dzclient</b>.
+  </ul>
+
+<br clear=all>
+
+<H2>Developers, DECUS, People</H2>
+<A HREF="images/TWJMF.jpg"><IMG src="images/TWJMF.gif" align=right WIDTH=80 HEIGHT=57></A>
+<ul>
+<li>Report on the <A HREF="year30.html">30th Anniversary of 36 bits</A>.
+<li>Picture of <A HREF="images/TWJMF.jpg">Jim Flemming and Tony Wachs</A> in front of a KL
+  called "Chip" (at a DECUS in the early 80's).  This picture was relayed to Kimo B. Yap
+  <A HREF="mailto:kby@alumni.caltech.edu">kby@alumni.caltech.edu</A> by Barb Huizenga
+  and taken by Clive Dawson.
+<li>Andy Tannenbaum's list of <A HREF="http://www.wpi.edu/~trb/hacker70s.html">WPI hackers</A> of the '70s.
+<li>Picture of <A HREF="http://wmbr.mit.edu/images/tech-radio.jpg">Bob Clements</A> before PDP-10.
+<li><A HREF="http://www.paulallen.com/profile/_private/favorites_body2.html#websites">Paul Allen</A>, the other co-founder of Microsoft
+<li><A HREF="http://www.si.edu/resource/tours/comphist/gates.htm">Bill Gates</A> used
+   a PDP-10 in college.
+<li><A HREF="http://panda.com/mrc">Mark Crispin</A>, developer of MM and IMAP.
+</ul>
+<br clear=all>
+
+<hr>
+<h2><a name="Tymnet">My documents</a></h2>
+<IMG SRC="images/DecusBadges.gif" width=54 height=80 alt="DECUS badges" align=right></A>
+<ul>
+<li><A HREF="36th/">Pictures</A> from the <A HREF="36th/anniv.txt">36th Anniversary</A> dinner (16-Jun-2001)
+<li><A HREF="tymshare/">Tymshare</A><ul>
+   <li><A HREF="tymshare/#history">History</A>
+   <li><A HREF="tymshare/Reunion-2000/">Pictures: Reunion 1-Jul-2000</A>
+   <li><A HREF="tymshare/BubbRoad/">Pictures: Bubb Road</A>, 1980
+   <li><A HREF="tymshare/Fremont/">Pictures: Fremont Data Center</A>, 1997
+   <li><A HREF="tymshare/Hardware/">Hardware</A> (KI, KL, X-KL)
+   <li><A HREF="tymshare/Software/">Software</A> (TYMCOM-X)
+   </ul>
+<li>Analysis of the <A HREF="rim10b.html">RIM10B</A> bootstrap loader.
+<li>PDP-10 references in <A HREF="jargon.html">The Hacker's Dictionary</A>.
+<li>PDP-10 <A HREF="opcodes.html">op-codes</A> (in numeric order).
+<li><A NAME="36to8" HREF="36to8.html">36 bit to 8 bit conversion</A> for FTP, tapes.
+<li>Program to analyze possible 36-bit tapes: <A HREF="type36.c">type36.c</A>
+<li>List of <A HREF="models.txt">model numbers</A>, from 1040 to 2065.
+<li>Mark Crispin's list of <A HREF="cpus.txt">36-bit CPUs</A>.
+<li><A HREF="vt100test.txt">VT100 Torture Test</A> (test for terminal emulators).
+<li>List of <A HREF="ansicode.txt">ANSI ESCape sequences</A> as implemented on the 
+    <A HREF="http://www.cs.utk.edu/~shuford/terminal/dec.html">VT100</A> and LA34.
+<li>Scan of badges from <A HREF="images/DecusBadges.jpg">DECUS conventions</A>.
+</ul>
+<hr>
+
+<IMG src="images/dec10logo.gif" WIDTH=494 HEIGHT=94><br>
+<h2>Manufacturers</H2>
+<ul>
+<li><IMG src="images/logo22pt.gif" WIDTH=50 HEIGHT=17> DEC (Digital Equipment Corporation) cancelled the follow-on CPU 17-May-83.
+  <ul>
+  <A NAME="disks-1981" HREF="hardware/disks-1981.html#RP06"><IMG SRC="images/rp06.gif" WIDTH=61 HEIGHT=62 ALT="RP06" ALIGN=right></A>
+  <li>36-bit computers in <A NAME="timeline" HREF="timeline.html">Digital's Computing Timeline</A>
+  <li>DEC has a <A HREF="96license.txt">personal-use license</A> for TOPS-10 and TOPS-20.
+  <li><A HREF="hardware/disks-1981.html">Disk drives:</A> RM03, RP06, RP20
+  <li><A HREF="dec10-ad.html">Magazine ad for DECsystem-10</A>. <img src="images/new.gif" width=32 height=16 alt="New">
+  </ul>
+<li><A HREF="http://www.ulib.org/webRoot/Books/Saving_Bell_Books/Computer_Engineering/00000511.htm">The Evolution of the DECsystem-10 (Bell, Kotok, Hastings and Hill)</A> from Computer Engineering - Bell, Mudge, McNamara
+<li>Foonly is out of the business.  But their one-and-only F1 was used by
+    Information International Inc (III) to render the graphics used in the
+    movie "TRON".  The legacy of that movie lives on as "Toy Story" and the
+    TV show <b><i><a href="../Reboot.html">ReBoot</A></i></b>.
+<li>Tymshare made a 26KL system for the Augment project until McDonnell
+    Douglas took over Tymnet and cancelled the project in 1987.
+<li>The <A HREF="http://www.scgroup.com">SC Group</A> used to be known as Systems Concepts
+    and is still selling their <A HREF="http://www.scgroup.com/sc40.html">SC-40</A>.
+<li>Compuserve manufactured their own SC-25 systems for a while.  (The SC Group
+    licensed their design to Compuserve during the time when the SC-40 was
+    being designed.)
+<li>XKL renamed their <A HREF="td-1a.html">TD-1</A> to <A HREF="td-1b.html">TOAD-1</A>,
+    we have <A HREF="tymshare/#TOAD">2 CPUs</A> in production.
+<li><A HREF="http://www.setasi.com/RM06.html">RP06 replacement</A> by
+    <A HREF="http://www.setasi.com/">SETASI</A>.
+</ul>
+
+<A HREF="http://www.compustory.com"><IMG SRC="images/acm.gif" align=right WIDTH=150 HEIGHT=99></A>
+<h2>Museums</h2>
+<ul>
+<li><A HREF="http://www.brouhaha.com/~eric/retrocomputing/pdp-10/">Scott and Eric's retrocomputing</A>.
+<li><A HREF="http://www.cbi.umn.edu/resources/websites.html">List of Museums</A> at the Charles Babbage Institute
+<li><A HREF="http://www.computerhistory.org/">The Computer History Museum</A>
+<li><A HREF="http://www.compustory.com">American Computer Museum</A> in Bozeman, Montana
+<li><A HREF="http://swift.eng.ox.ac.uk/rjm/museum.html">Bob's Computer Museum</A>
+<li><A HREF="http://tenex.opost.com/kapix.html">Dan Murphy's TENEX (KA+BBN) pictures</A>
+<li><A HREF="http://research.microsoft.com/users/GBell/Bell_Smithsonian_Interview.htm">Interview of Gordon Bell</A> from summer of 1995.
+<li>Al Kossow's <A HREF="http://www.spies.com/~aek/retrocomp.html">Minicomputer Orphanage</A>
+</ul>
+
+<h2>Other documents</h2>
+
+<p><!-- script language=javascript src="http://ss.webring.com/navbar?f=j&y=systems_joe&u=10016142">
+</script><noscript --><center>
+<table width="75%" cellpadding=2 cellspacing=0>
+<tr valign=bottom><td>
+<table bgcolor=990066 border=0 width="75%"><tr><td>
+<table bgcolor=eeeeee cellpadding=6 cellspacing=0 border=0 width="100%"><tr><td align=center>
+<font face=arial size=-1>This site is a member of WebRing. 
+To browse visit</font><br><font face=arial size=-2>
+<a href="http://ss.webring.com/navbar?f=l&y=systems_joe&u=10016142">
+http://ss.webring.com/navbar?f=l&y=systems_joe&u=10016142
+</a></font></td></tr></table>
+</td></tr></table></td></tr></table></center><!-- /noscript -->
+
+<ul>
+<li>PDP-10/TOPS-10 heard as "<A HREF="http://www.benway.com/firesign/lexicon/D.html#DOCTOR%20MEMORY">Doctor Memory</A>"
+    in Firesign Theatre's "We're All Bozos on this Bus":<ul>
+      <li>The big computer that runs everything in the FUTURE
+          FAIR, described in the FT's BOZO play. The Doctor was also mentioned
+          in a poem on the "Dear Friends" album. He is based on an old SAILON
+          LISP program written for the PDP-10 running the TOPS-10 operating
+          system. AhClem repeatedly calls Dr. Memory "Mac" - which far
+          predates the current Apple computer line; but the MIT AI lab, where
+          the Doctor program originated, grew out of Project Mac (for Machine
+          Aided Cognition and/or Multiple Access Computer)
+      <li>Also known as ELIZA.
+    </ul>
+<li><A HREF="http://starfish.rcsri.org/rcs/DECsystem/DECsystems.html">DECsystem at RCS</A>.
+<li>Byte covers <A HREF="http://www.byte.com/documents/s=716/byt20010622s0005/greer.html">
+	DECWORLD 2001</A><A HREF="decworldgreer.html">.</A>
+<li><A HREF="tops10-evolution">TOPS-10 Evolution</A> - dates when features
+	were added to the TOPS-10 Monitor.
+<li><A HREF="http://www.columbia.edu/kermit/pdp10.html">PDP-10 Kermit</A> page
+	at Columbia.
+<li>DECSYSTEM-20 at <A HREF="http://www.columbia.edu/kermit/dec20.html">Columbia University</A>
+	was mentioned on <A HREF="http://slashdot.org/article.pl?sid=01/01/18/1249240&mode=thread">SlashDot</A>.
+<li>We're listed in YAHOO under <A HREF="http://www.yahoo.com/Computers/Hardware/Platforms/Digital/">http://www.yahoo.com/Computers/Hardware/Platforms/Digital/</A>.
+<li>Tim Shoppa's archive of <A HREF="http://pdp-10.trailing-edge.com">PDP-10 software</A>
+<li><A HREF="sail-shutdown.txt">TAKE ME, I'M YOURS</A> - The autobiography of SAIL
+<li>Text-based role-playing games: <A HREF="http://www.lysator.liu.se/adventure/Mainframe_adventures.html">ADVENT, ZORK, HAUNT</A>.
+<li><A HREF="uta-shutdown.txt">Soul of an Old Machine</A>
+<li><A HREF="rh20.txt">Tony in RH20 Land</A>, or <cite>"I Should
+	Have Listened When Mother Told Me There Was A Great Future In
+	Encyclopedia Sales"</cite>.
+<li><A HREF="mr-bill.txt">Mr. Bill's DEC-20</A>
+<li><A HREF="software-wars.txt">Software Wars</A>
+<li><A HREF="decwars.txt">DEC Wars</A> (a parody of Star Wars)
+<li>Harris S. Newman is working on re-implementing <A HREF="http://www.blkbox.com/~hsnewman/decwar.htm">DECWAR</A> (the multi-player game) in C.
+<li><A HREF="pdp-model.txt">PDP models</A>
+<li>The <A HREF="read20.1.html">man page for read20</A>, a UNIX program to read TOPS-20 DUMPER
+   tapes.  C sources in <A HREF="read20.tar">read20.tar</A>
+<li><A HREF="http://www.trailing-edge.com/www/dumper.zip">DUMPER</A> a
+    <A HREF="http://WWW.Decus.Org/libcatalog/document_html/vs0097_3.html">BLISS program</A> in the <A HREF="http://www.decus.org/decus/search/library-search.html">DECUS library</A>
+    for reading TOPS-10/BACKUP and TOPS-20/DUMPER tapes on VAX/VMS.  See also
+    <A HREF="http://www.trailing-edge.com/www/10backup.zip">10BACKUP</A>, written in MACRO-32 and VAX BASIC.
+<li>John Wilson's collection of programs to read PDP-10 tapes that were written by
+    <A HREF="ftp://ftp.dbit.com/pub/pdp10/tops10/decus/backup.tar">TOPS-10</A>,
+    <A HREF="ftp://ftp.dbit.com/pub/pdp10/tops20/read20/read20.tar">TOPS-20</A>
+    and <A HREF="ftp://ftp.dbit.com/pub/pdp10/its/itstar/">ITS</A>.
+<li>The pager used for <A HREF="http://www.dbit.com/pub/pdp10/info/paging.its">ITS</A>.
+<li>Megan Gentry's <A HREF="http://world.std.com/~mbg/#computers">computer interests</A>, including dual-KL TOPS-10/SMP
+<li>Big GIFs from <a HREF="ftp://ftp.biostat.washington.edu/pub/pdp-10/other/xkl">XKL's flyer</A>.
+<li>Rob Austein's <A HREF="http://www.hactrn.net/sra/alice/">Alice's PDP-10</a> (sung to
+	the tune of "Alice's Restaurant".) [<a href="alice-pdp10-1995.txt">local copy</a>]
+<li>Stuff at <a HREF="ftp://ftp.biostat.washington.edu/pub/pdp-10/">biostat.washington.edu</a>
+  <ul>
+  <li>Their alt.sys.pdp10
+    <a HREF="ftp://ftp.biostat.washington.edu/pub/pdp-10/alt.sys.pdp10">archive</a>
+  </ul>
+<li><A HREF="ftp://ftp.netcom.com/pub/hb/hbaker/home.html">Henry Baker's</A> documents
+	(copied to <A HREF="http://www.inwap.com/pdp10/hbaker">http://www.inwap.com/pdp10/hbaker/</A> because Netcon's FTP
+	server is constantly running up against the limit of simultaneous
+	anonymous users).<ul>
+  <li>The famous <A HREF="hbaker/hakmem/hakmem.html">HAKMEM</A>
+  file copied from ftp://ftp.netcom.com/pub/hb/hbaker/hakmem/hakmem.html
+  <li>MIT's info file on the <A HREF="hbaker/pdp-10/pdp-10.html">PDP-10 instruction set</A>
+	copied from ftp://ftp.netcom.com/pub/hb/hbaker/pdp-10/pdp-10.html
+</ul>
+<li>Sunsite's PDP-10
+<a HREF="ftp://sunsite.unc.edu/pub/academic/computer-science/history/pdp-10/docs">
+documentation archive</a>
+<li>The Online Book Initiative at <A HREF="ftp://ftp.std.com/obi/DEC/36-bit/">ftp://ftp.std.com/obi/DEC/36-bit/</A>
+had two papers so far.  [Archive offline, Jan 2001.]  Local copies are in <ul>
+  <li><A HREF="paper-smp.txt">paper.smp</A> - Symmetric Multi Processing
+	<br>Allan Wilson and Jim Flemming
+  <li><A HREF="http://www.opost.com/dlm/tenex/hbook.html">History of TOPS20</A>
+	(<A HREF="paper-t20.txt">paper-t20.txt</A>) and
+	<A HREF="http://www.opost.com/dlm/tenex/">three other TENEX papers</A>.
+	<br>Dan Murphy <A HREF="mailto:dlm@opost.com">dlm@opost.com</A>
+  </ul>
+<li>KA-10 with BBN Pager running Tenex: <A HREF="http://tenex.opost.com/kapix.html">Dan Murphy</A>, <A HREF="tymshare/BubbRoad/">Tymshare</A>.
+<li>Stuff found at John Wilson's site <A HREF="ftp://ftp.dbit.com/pub/pdp10/">ftp://ftp.dbit.com/pub/pdp10</A>
+   (site formerly known as <A HREF="ftp://tats.wizvax.net/pub/pdp10">ftp://tats.wizvax.net/pub/pdp10</A>)<ul>
+  <li>36-bit <A HREF="compuserve.txt">history of Compuserve</A>
+  <li>The ITS paper on <A HREF="pclsr.txt">PCLSRing</A>
+  </ul>
+<li><A HREF="http://www.medg.lcs.mit.edu/people/psz/LCS-75/computers.html">Pictures</A> of PDP-10s at MIT
+<li>TECO<ul>
+  <li><A HREF="ftp://sunsite.unc.edu/pub/academic/computer-science/history/pdp-11/teco/">ftp://sunsite.unc.edu/pub/academic/computer-science/history/pdp-11/teco/</A>
+  <li><A HREF="ftp://ftp.wimsey.com/pub/teco/usc-archive/">ftp://ftp.wimsey.com/pub/teco/usc-archive/</A>
+  <li><A HREF="ftp://usc.edu/pub/teco/">ftp://usc.edu/pub/teco/</A> [Archive offline, Jan 2001.]
+  <li><A HREF="ftp://ftp.dbit.com/pub/pdp10/tops10/teco124.mac">ftp://ftp.dbit.com/pub/pdp10/tops10/teco124.mac</A> Note: this is the <b>MACRO-10</b> sources, 240 Kb of 36-bit assembler code.
+  </ul>
+<li>A Web page dedicated to the <A HREF="http://www.winternet.com/~radams/adventure/">game of ADVENT</A>ure (which includes
+   a pointer to a nifty site that allows you to <A HREF="http://tjwww.stanford.edu/adventure.html">play ADVENT</A> on the Web.)
+<li>Sources to <A HREF="ftp://ftp.gmd.de/if-archive/games/source/">ADVENT</A>
+<li>Tom Knight's <A HREF="http://www.ai.mit.edu/people/tk/pdp6/pdp6.html">PDP-6 blueprints</A>.
+<li><A HREF="http://www.terrigal.net.au/~acms/z0104.htm">PDP-6</A> at the <A HREF="http://www.terrigal.net.au/~acms/">Australian Computer Museum</A>.
+<li><A HREF="ftp://publications.ai.mit.edu/ai-publications/0-499/AIM-161A.ps">AI Memo 161a</A> "ITS 1.5 Reference Manual".
+<li>Carl Friend's photo of a <A HREF="http://www.ultranet.com/~crfriend/museum/machines/KI-10.html">KI-10</A>
+<li><A HREF="ftp://aconit.org/pub/dec-10/MIG703.TXT">Monitor Installation Guide 7.03</A>
+<li><A HREF="http://firedrake.org/paddy/images/non-unix_os_history_0.3.10.pdf">Non-Unix OS History</A>
+    which has these details for TOPS-10:<br>
+    1964=PDP-6 Monitor and TOPS-10 1.4; 1966=1.9; 1967=2.18; 1968=3.27;
+    1969=4.50 and 4.72; 1970=5.01; 1971=5.02; 1972=5.06; 1974=5.07 and 6.01;
+    1975=5.07A (last OS for KA-10); 1975=6.02; 1977=6.03; 1978=6.03LIR;
+    1979=7.02; 1980=7.01; 1983=7.02; 1985=7.03; 1988=7.04
+    <br>Details for TOPS-20:<br>
+    1969=TENEX; 1976=TOPS-20 v1; 1977=v2; 1978=v3; 1980=v3A; 1981=v4; 1982=v5;
+    1985=v6; 1988=v7;
+<li>Old documents forwarded by Klaus Zeuge<ul>
+  <li><A HREF="lineage.txt">Lineage of PDP systems</A>
+  <li><A HREF="kl1269.txt">KL1269 needs a home....</A>
+  <li>The giveaway of the <A HREF="lysator-2020.txt">2020 at Lysator</A>
+  <li><A HREF="tops-history.txt">The History of TOPS, or Life in the Fast AC's</A>
+  <li><A HREF="misc-links.txt">misc-links</A>
+  <li><A HREF="emulators/klh10.txt">Ken Harrenstien's KLH10</A> emulator announcement
+  <li>Log of <A HREF="emulators/kx10-log.txt">Stu Grossman's KX10 emulator</A> in action
+  </ul>
+<li>Facebook: <a href="http://www.facebook.com/event.php?eid=176555469030799">Happy DEC-20 Day!</a>
+<li>Michael Thompson's <a href="https://sites.google.com/site/mthompsonorg/Home/pdp-10/ks10">DECSYSTEM-2020 KS10, S/N 4224</a>
+</ul>
+
+<h2>News and mailing lists</h2>
+	<ul>
+<li>Newsgroup: <a href="usenet/">selected articles</a> from <a HREF="news:alt.sys.pdp10">alt.sys.pdp10</a>
+<li>Newsgroup: <a href="http://neil.franklin.ch/Usenet/alt.sys.pdp10/">another archive</A>
+<li>Mailing list: <img src="images/mailto.gif" alt="@" align=middle>
+	</ul>
+
+<h2>Misc</h2>
+<pre>
+Date: Wed, 02 Aug 95 11:23:03 -0400
+From: dbj@MPGN.COM (David E. Brooks Jr)
+Organization: Tantalus Incorporated
+Subject: Interesting little tid-bit
+
+Hi,
+
+Just for kicks, I ran 'DECsystem-ten' through the internet
+anagram server (http://www.wordsmith.org/awad-cgibin/anagram) 
+and it came back with "Decent System".
+
+Very appropriate, I thought.
+
+-- Dave Brooks
+</pre>
+
+<P>Updated: Saturday, 06-Dec-2014 20:20:00 EST<HR>
+Up to the index for <A HREF="../">INWAP.COM</A>.<BR>
+<ADDRESS>
+Maintained by <A HREF="../u/joe/">Joe Smith</A>
+</ADDRESS></BODY></HTML>

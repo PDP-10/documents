@@ -1,0 +1,762 @@
+--
+Newsgroups: rec.humor
+From: joelerdt@netcom.com (Joel Erdtsieck)
+Subject: DEC Wars
+Date: Tue, 1 Jun 1993 06:19:14 GMT
+
+        A long time ago, on a node far, far away (from ucbvax)
+                a great Adventure (game?) took place...
+ 
+     ]]]]]   ]]]]]]   ]]]]           ]    ]    ]]    ]]]]]    ]]]]]    ]
+     ]    ]  ]       ]    ]          ]    ]   ]  ]   ]    ]  ]         ]
+     ]    ]  ]]]]]   ]               ] ]] ]  ]]]]]]  ]]]]]    ]]]]     ]
+     ]    ]  ]       ]    ]          ]]  ]]  ]    ]  ]   ]        ]
+     ]]]]]   ]]]]]]   ]]]]           ]    ]  ]    ]  ]    ]  ]]]]]     ]
+ 
+        It is a period of system war. User programs, striking from a hidden
+directory, have won their first victory against the evil Administrative Empire.
+        During the battle, User spies managed to steal secret source code to
+the Empire's ultimate program: the Are-Em Star, a privileged root program with
+enough power to destroy an entire file structure. Pursued by the Empire's
+sinister audit trail, Princess _LPA0: races aboard her shell script, custodian
+of the stolen listings that could save her people, and restore freedom and
+games to the network...
+ 
+-------------------------------------------------------------------------------
+ 
+As we enter the scene, an Imperial Multiplexer is trying to kill a consulate
+ship. Many of their signals have gotten through, and RS232 decides it's time to
+fork off a new process before this old ship is destroyed. His companion, 3CPU,
+is following him only because he appears to know where he's going...
+ 
+        "I'm going to regret this!" cried 3CPU, as he followed RS232 into the
+buffer. RS232 closed the pipes, made the sys call, and their process detached
+itself from the burning shell of the ship.
+ 
+The commander of the Imperial Multiplexer was quite pleased with the attack.
+        "Another process just forked, sir. Instructions?" asked the lieutenant.
+        "Hold your fire. That last power failure must have caused a trap
+thorough zero. It's not using any cpu time, so don't waste a signal on it."
+ 
+        "We can't seem to find the data file anywhere, Lord Vadic.".
+        "What about that forked process? It could have been holding the channel
+open, and just pausing. If any links exist, I want them removed or made
+inaccessable. Ncheck the entire file system 'til it's found, and nice it -20 if
+you have to."
+ 
+-------------------------------------------------------------------------------
+ 
+                        Meanwhile, in our wandering process...
+ 
+        "Are you sure you can ptrace this thing without causing a core dump?"
+queried 3CPU to RS232. "This thing's been stripped, and I'm in no mood to try
+and debug it."
+The lone process finishes execution, only to find our friends dumped on a
+lonely file system, with the setuid inode stored safely in RS232. Not knowing
+what else to do, they wandered around until the jawas grabbed them.
+ 
+Enter our hero, Luke Vaxhacker, who is out to get some replacement parts for
+his uncle. The jawas wanted to sell him 3CPU, but 3CPU didn't know how to talk
+directly to an 11/40 with RSTS, so Luke would still needed some sort of
+interface for 3CPU to connect to.
+        "How about this little RS232 unit ?" asked 3CPU. "I've delt with him
+many times before, and he does an excellent job at keeping his bits straight."
+Luke was pressed for time, so he took 3CPU's advice, and the three left before
+they could get swapped out.
+ 
+However, RS232 isn't the type to stay put once you remove the retaining screws.
+He promptly scurried off into the the deserted disk space.
+        "Great!" cried Luke, "Now I've got this little tin box with the only
+link to that file off floating in the free disk space. Well, 3CPU, we better go
+find him before he gets allocated by someone else." The two set off, and finaly
+traced RS232 to the home of PDP-1 Kenobi, who was busily trying to run an
+icheck on the little RS unit.
+ 
+        "Is this thing yours? His indirect addresses are all goofed up, and the
+size is all wrong. Leave things like this on the loose, and you'll wind up with
+dups everywhere.  However, I think I've got him fixed up."
+ 
+-------------------------------------------------------------------------------
+ 
+Later that evening, after futile attempts to interface RS232 to Kenobi's
+Asteroids cartridge, Luke accidentally crossed the small 'droid's CXR and
+Initiate Remote Test (must have been all that Coke he'd consumed), and the
+screen showed a very distressed person claiming royal lineage making a plea for
+help from some General OS/1 Kenobi.
+        "Darn," mumbled Luke.  "I'll never get this Asteroids game worked out."
+PDP-1 seemed to think there was some significance to the message and a possible
+threat to Luke's home directory. If the Administrative Empire was indeed
+tracing this 'droid, it was likely they would more than charge for cpu time...
+        "We must get that 'droid off this file system," he said after some
+intervals.
+ 
+They sped off to warn Luke's kin (taking a elative' path) only to find a
+vacant directory...
+ 
+-------------------------------------------------------------------------------
+ 
+After sifting through the overwritten remaining blocks of Luke's home
+directory, Luke and PDP-1 sped away from /owen/lars, across the surface of the
+Winchester riding Luke's flying read/write head. PDP-1 had Luke stop at the
+edge of the cylinder overlooking /usr/spool/uucp.
+        "Unix-to-Unix Copy Program," said PDP-1. "You will never find a more
+wretched hive of bugs and flamers. We must be cautious."
+ 
+As our heroes' process entered /usr/spool/news, it was met by a newsgroup of
+Administrative protection bits.
+        "State your UID," commanded their parent process.
+        "We're running under /usr/guest," said Luke. "This is our first time on
+this system."
+        "Can I see some temporary priviledges, please?"
+        "Uh..."
+        "This is not the process you are looking for," piped in PDP-1, using an
+obscure bug to momentarily set his effective UID to root. "We can go about our
+business."
+        "This isn't the process we want. You are free to go about your
+business. MOV along!"
+ 
+PDP-1 and Luke made their way through a long and tortuous nodelist
+(cwruecmp!decvax!ucbvax!harpo!ihnss!ihnsc!ihnss!ihps3!stolaf) to a dangerous
+netnode frequented by hackers, and seldom polled by Administrative
+Multiplexers. As Luke stepped up to the bus, PDP-1 went in search of a likely
+file descriptor. Luke had never seen such a collection of weird and exotic
+device drivers. Long ones, short ones, ones with stacks, EBCDIC converters,
+and direct binary interfaces all were drinking data at the bus.
+ 
+        "#@{ *&^%^$$#@ ":><?><," transmitted a particularly unstructured piece
+of code.
+        "He doesn't like you," decoded his coroutine.
+        "Sorry," replied Luke, beginning to backup his partitions.
+        "I don't like you either. I am queued for deletion on 12 systems."
+        "I'll be careful."
+        "You'll be reallocated!" concatenated the coroutine.
+        "This little routine isn't worth the overhead," said PDP-1 Kenobi,
+overlaying into Luke's address space.
+        "@$%&(&^%&$$@$#@$AV^$gfdfRW$#@!!!!!!!!!!!!!!!!!" encoded the first
+coroutine as it attempted to overload PDP-1's input overvoltage protection.
+With a unary stroke of his bytesaber, Kenobi unlinked the offensive code.
+ 
+        "I think I've found an I/O device that might suit us."
+        "The name's Con Solo," said the hacker next to PDP-1. "I hear you're
+looking for some relocation."
+        "Yes indeed, if it's a fast channel. We must get off this device."
+        "Fast channel? The Milliamp Falcon has made the ARPA gate in less than
+twelve nodes! Why, I've even outrun cancelled messages. It's fast enough for
+you, old version."
+ 
+-------------------------------------------------------------------------------
+ 
+Our heroes, Luke Vaxhacker and PDP-1 Kenobi made their way to the temporary
+file structure. When he saw the hardware, Luke exclaimed,
+        "What a piece of junk! That's just a paper tape reader!"
+ 
+Luke had grown up on an out of the way terminal cluster whose natives spoke
+only BASIC, but even he could recognize an old ASR-33.
+        "It needs an EIA conversion at least," sniffed 3CPU, who was (as usual)
+trying to do several things at once. Lights flashed in Con Solo's eyes as he
+whirled to face the parallel processor.
+        "I've added a few jumpers. The Milliamp Falcon can run current loops
+around any Administrative TTY fighter. She's fast enough for you."
+        "Who's your co-pilot?" asked PDP-1 Kenobi.
+        "Two Bacco, here, my Bookie."
+        "Odds aren't good," said the brownish lump beside him, and then fell
+silent, or over. Luke couldn't tell which way was top underneath all those
+leaves.
+ 
+Suddenly, RS232 started spacing wildly. They turned just in time to see a write
+cycle coming down the UNIBUS toward them.
+        "Administrative Bus Signals!" shouted Con Solo. "Let's boot this pop
+stand! Tooie, set clock fast!"
+        "Ok, Con," said Luke. "You said this crate was fast enough. Get us out
+of here!"
+        "Shut up, kid! Two Bacco, prepare to make the jump into system space!
+I'll try to keep their buffers full."
+ 
+As the bookie began to compute the vectors into low core, spurious characters
+appeared around the Milliamp Falcon.
+        "They're firing!" shouted Luke. "Can't you do something?"
+        "Making the jump to system space takes time, kid. One missed cycle and
+you could come down right in the middle of a pack of stack frames!"
+        "Three to five we can go now," said the bookie. Bright chunks of
+position independent code flashed by the cockpit as the Milliamp Falcon jumped
+through the kernel page tables. As the crew breathed a sigh of relief, the
+bookie started paying off bets.
+ 
+        "Not bad, for an acoustically coupled network," remarked 3CPU. "Though
+there was a little phase jitter as we changed parity."
+ 
+-------------------------------------------------------------------------------
+The story thus far: Luke, PDP-1 and their 'droids RS232 and 3CPU have made good
+their escape from the Administrative Bus Signals with the aid of Con Solo and
+the bookie, Two Bacco. The Milliamp Falcon hurtles onward through system space.
+-------------------------------------------------------------------------------
+ 
+                Meanwhile, on a distant page in user space...
+ 
+Princess _LPA0: was ushered into the conference room, followed closely by Dec
+Vadic.
+        "Governor Tarchive," she spat, "I should have expected to find you
+holding Vadic's leash. I recognized your unique pattern when I was first
+brought aboard." She eyed the 0177545 tatooed on his header coldly.
+        "Charming to the last," Tarchive declared menacingly. "Vadic, have you
+retrieved any information?"
+        "Her resistance to the logic probe is considerable," Vadic rasped.
+"Perhaps we would get faster results if we increased the supply voltage..."
+ 
+        "You've had your chance, Vadic. Now I would like the princess to
+witness the test that will make this workstation fully operational. Today we
+enable the -r beam option, and we've chosen the princess' $HOME, /usr/alderaan
+as the primary target."
+        "No! You can't! /usr/alderaan  is a public account,  with no restricted
+permissions. We have no backup tapes! You can't..."
+        "Then name the rebel inode!" Tarchive snapped.
+ 
+A voice announced over a hidden speaker that they had arrived in /usr.
+        "1248," she whispered, "They're on /dev/rm3. Inode 1248,
+/mnt/dantooine." She turned away.
+ 
+Tarchive sighed with satisfaction.
+        "There, you see, Lord Vadic? She can be reasonable. Proceed with the
+operation."
+ 
+It took several clock ticks for the words to penetrate.
+        "What!" _LPA0: gasped.
+        "/dev/rm3 is not a mounted filesystem," Tarchive explained. "We require
+a more visible subject to demonstrate the power of the Are-Em Star workstation.
+We will mount an attack on /mnt/dantooine as soon as possible."
+ 
+As the princess watched, Tarchive reached over and typed "ls" on a nearby
+terminal. There was a brief pause, there being only one processor on board,
+then the viewscreen showed, ".: not found." The princess suddenly double-spaced
+and went off-line.
+ 
+-------------------------------------------------------------------------------
+ 
+                The Milliamp Falcon hurtles on through system space...
+ 
+Con Solo finished checking the various control and status registers, finally
+convinced himself that they had lost the Bus Signals as they passed the
+terminator. As he returned from the I/O page, he smelled smoke. Solo wasn't
+concerned - the Bookie always got a little hot under the collar when he was
+losing at chess. In fact, RS232 had just executed a particularly clever MOV
+that had blocked the Bookie's data paths. The Bookie, who had been setting the
+odds on the game, was caught holding all the cards. A little strange for a
+chess game...
+ 
+Across the room, Luke was too busy practicing bit-slice technique to notice the
+commotion.
+        "On a word boundary, Luke," said PDP-1. "Don't just hack at it.
+Remember, the Bytesaber is the weapon of the Red-eye Night. It is used to trim
+offensive lines of code. Excess handwaving won't get you anywhere. Listen for
+the Carrier."
+ 
+Luke turned back to the drone, which was humming quietly in the air next to
+him. This time Luke's actions complemented the drone's attacks perfectly. Con
+Solo, being an unimaginative hacker, was not impressed.
+        "Forget this bit-slicing stuff.  Give me a good ROM blaster any day."
+ 
+        "~~j~~hhji~~," said Kenobi, with no clear inflection. He fell silent
+for a few seconds, and reasserted his control.
+        "What happened?" asked Luke.
+        "Strange," said PDP-1. "I felt a momentary glitch in the Carrier. It's
+equalized now."
+ 
+-------------------------------------------------------------------------------
+ 
+        "We're coming up on user space," called Solo from the CSR. As they
+cruised safely through stack frames, they emerged in the new context only to
+be bombarded by freeblocks.
+ 
+        "What the..." gasped Solo. The screen showed clearly:
+ 
+/usr/alderaan: not found
+ 
+        "It's the right inode, but it's been cleared! Twoie, where's the
+nearest file?"
+        "3 to 5 there's one..."  the Bookie started to say, but was interrupted
+by a bright flash off to the left.
+        "Imperial TTY fighters!" shouted Solo. "A whole DZ of them! Where are
+they coming from?"
+        "Can't be far from the host system," said Kenobi. "They all have direct
+EIA connections."
+ 
+As Solo began to give chase, the ship lurched suddenly. Luke noticed the link
+count was at 3 and climbing rapidly.
+        "This is no regular file," murmured Kenobi. "Look at the ODS directory
+structure ahead! They seem to have us in a tractor feed."
+        "There's no way we'll unlink in time," said Solo. "We're going in."
+ 
+-------------------------------------------------------------------------------
+ 
+        "We have captured a small process, Lord Vadic." reported an Imperial
+Lackey.  "The ID is that of one which escaped the SIGINT on /dev/tatooine."
+        "Have it searched thoroughly." rumbled the Dark Lord. "Check it from
+the constant declarations to the final curly bracket. Leave no register
+unturned. If that data is aboard, I want it found."
+The Lackey bowed obsequiously and turned to give the order. In moments, the
+Milliamp Falcon was swarming with Imperial Stormtroopers.
+ 
+        "LS scan shows nothing, my Lord. Not even a parity bit. The records
+show that they terminated the process shortly after booting up from
+/dev/tatooine. Any data that was once on board must have been sent to another
+file." reported an Imperial stormtrooper. The Dark Lord glowered menacingly at
+a nearby lineprinter, which hurriedly switched itself off, lest it should
+offend him, and remained turned off for the rest of the day, causing chaos at
+board meetings throughout the giant workstation.
+ 
+-------------------------------------------------------------------------------
+ 
+On board the Milliamp Falcon, .Luke was puzzled.
+        "They just walked in, looked around and walked off," he said. "Why
+didn't they see us?". .Con smiled.
+        "An old munchkin trick," he explained. "See that period in front of
+your name?" .Luke spun around, just in time to see the decimal point.
+        "Where'd that come from?" he asked.
+        "Spare decimal points lying around from the last time I fixed the
+floating point accelerator," said .Con. "Handy for smuggling blocks across file
+system boundaries, but I never thought I'd have to use them on myself. Still,
+it's only Stormtroopers who would have been fooled by a simple chmod a -r."
+ 
+        "Stormtroopers may not be all we have to contend with." announced
+PDP-1, emerging from another directory. "I have felt a strong disturbance in
+the Carrier." Solo sneered, but the old man glared at him and he looked away
+hurriedly. The Bookie chose this moment to emerge from the cramped bin
+directory next to Solo's, with a worried expression on his face. He had
+calculated the odds at something like one million to six, and decided that they
+sounded even more unattractive in binary and octal, although when expressed in
+hexadecimal they were rather less threatening.
+ 
+-------------------------------------------------------------------------------
+ 
+        There was a noise further down the passageway, as two stormtroopers
+carrying a syntax checker entered the Falcon. Noiselessly, Solo leapt up as
+they passed, and struck them with something heavy. Luke caught the inert bodies
+as they fell.
+        "What did you hit them with ? " he hissed.
+        "The manual." said Solo hurriedly. "I listed the entry for grep one
+day, and it was so heavy that I thought I'd keep it around for emergencies like
+this." Luke looked at him but was unable to decide whether the hacker was
+serious or not.
+ 
+Quickly, they assumed the IDs of the troopers, and, followed by the robots and
+the Bookie, who was exploring the possibilities of base 100 to see if it made
+their situation seem any better, they made their way to a nearby console.
+ 
+        "I'll deal with that tractor beam." offered PDP-1. Solo glared at him.
+        "I was afraid you'd say something like that." he said.
+        "Have you any better ideas ? " demanded the venerable program. "Stay
+ere until I return, Luke." he instructed. The door closed behind him and he was
+gone.
+        "Where did you find that old relic ? " demanded Solo.
+        "He's a great program." said Luke indignantly.
+        "I'll say he is. I bet they were still plugging wires together when he
+was written." Solo sneered. "What's he written in ? IPL-IV ?"
+ 
+Meanwhile, RS232 found a serial port and logged in. His bell started ringing
+loudly.
+        "He keeps saying, he's on line, she's on line'," said 3CPU.
+        "Who ? " inquired Solo boredly. The computer adjacent to them took this
+as an instruction, and began to list the users currently on the system,
+together with their terminal numbers and login times, but 3CPU ignored the
+interruption.
+        "I believe he means Princess _LPA0:. She's being held on one of the
+privileged levels."
+        "The Princess ! " Luke shouted. "Con, we've got to rescue her."
+        "Uh huh." said Solo. "That old fossil said to stay here, and I haven't
+heard any better ideas yet."
+        "But she's beautiful." pleaded Luke.
+        "So's PASCAL, if you like that kind of thing." said Solo, inspecting
+his ROM blaster.
+        "She's got a lot of storage space."said Luke cunningly. Solo looked up.
+        "How much ?" he inquired.
+        "More than you can access." said Luke.
+        "I don't know - I can access quite a lot." rejoined Solo.
+        "But we've got to save her before she gets deleted !"
+        "OK, OK. But I'm not risking my life for anything less than a gigabyte>
+ 
+-------------------------------------------------------------------------------
+ 
+Our Heroes, still posing as flunkies, escort the Bookie to the detention block.
+An official looked up as they entered.
+        "Who are you ? " he demanded. "What are you doing here ? "
+        "Process transfer from block 1138, dev 10/9," said Con.
+        "Permission denied." chorused the subordinates, looking up from their
+processes. At this point (.), the Bookie started raving wildly, Con shouted
+        "Look out, he's loose!" and started blasting queues, mailboxes and
+profiles. The room was full of the sound of untrappable signals, and the low
+moaning of the killed processes.
+ 
+The guards started to catch on and were about to issue a general wakeup when
+Luke turned his ROM blaster on them.
+ 
+        "What's going on down there ? " demanded the voice of the super-user
+from a console. Solo rushed to the keyboard.
+        "3 compilation error(s)." he typed in quickly. "Line 34 : syntax
+error....".
+        "I'll send a syntax checker down there immediately." promised the
+super-user. Solo thought rapidly, no easy task with more than five users on the
+system.
+        "Er no, negative, negative. " he stammered. "Situation very dangerous.
+Memory fault : core dumped.".
+        "Syntax errors ? Core dumped ? Who are you ? What's your process ID ?".
+        "Line 86: Unable to recover from previous errors : goodbye.". typed
+Solo. He pulled out his blaster and vapourised the keyboard.
+        "It was a dumb interface anyway." he muttered to himself as he looked
+for something else to kill.
+ 
+-------------------------------------------------------------------------------
+ 
+        Remember we left our heroes in the detention priority level?
+                        Well, they're still there...
+ 
+Luke had found the Princess's cell, and opened the door. She looked up:
+        "Aren't you a little slim for object code ? " she asked. Luke was
+nonplussed.
+        "Huh? Uh, the file specification. No, I'm the product of a new compiler
+which doesn't generate superfat code. We've come to take you out of here. Trust
+me - I'm fully executable." he managed to say.
+        "So am I." said the Princess somewhat sadly. "That's the problem."
+        "But we've come to interrupt the termination signal. We're moving you
+to a whole new filestore." explained Luke. Quickly, she followed him.
+ 
+Outside, Solo and Twoie had their buffers full. The room was full of Imperial
+Stormtroopers, their white armoured shells shining in the light from burning
+machinery.
+        "We've been trapped ! " shouted Solo.
+        "I can see that ! " Luke yelled back. "I'm looking for an escape
+character now. " Suddenly the Princess snatched his ROM blaster and fired it at
+the wall.
+        "What are you doing ? " cried Luke, above the noise of burning ROMs.
+        "Generating an escape sequence." she screamed and dived into the
+opening she had uncovered. Luke did a wait 10 to see if Solo and Twoie had seen
+them, and then followed her. The two space pirates followed, Twoie almost
+getting stuck in the narrow pipe.
+ 
+-------------------------------------------------------------------------------
+ 
+        "Bletch!" was Con's first comment. "Bletch, bletch," was his second.
+The Bookie looked as if he'd just paid a long shot, and the odds in this
+situation weren't much better.
+        "Oh no. " said Luke as he looked around him. "This is awful. We have to
+get out of here." The room was filled almost to the roof with the remnants of
+programs, interrupted processes crunching underfoot as they struggled through
+the morass of convoluted code.
+        "No chance, kid." muttered Solo, shaking off a piece of shell program.
+"Didn't your UNIX Wizard teach you that pipes are unidirectional ? There's no
+way back from here."
+        "But what is it ? " Luke asked, struggling to keep his head above the
+hexadecimal soup.
+        "At a guess, it's the core dump." said Solo. "And it stinks."
+        "Can't we find a symbolic debugger or something ? " yelled Luke.
+        "In this mess ? We'd be lucky to find half a compiler. Our only chance
+now is those two tinpot friends of yours."
+        "3CPU and RS232 ? " said Luke. "We've had it then."
+ 
+Luke was polling the garbage when he stumbled upon a book with the words
+"Don't Panic" inscribed in large, friendly letters on the cover.
+        "This can't possibly help us now," he said as he tossed the book away.
+The Bookie was about to lay odds on it when Luke suddenly disappeared. He
+popped up across the pool, shouting, "It's a bug!" and promptly vanished again.
+Con and the princess were about to panic() when Luke reappeared.
+        "What happened?" they asked in parallel.
+        "I don't know," gasped Luke. "The bug just dissolved automagically.
+Maybe it hit a breakpoint..."
+        "I don't think so," said Con. "Look how the pool is shrinking. I've got
+a bad feeling about this..."
+ 
+        "What's that ? " screamed the Princess, as a low grinding echoed
+through the room.
+        "They must have initiated a garbage collection to try to free some
+workspace. We've been caught in the recycling mechanism." said Solo through
+clenched teeth.
+        "Is that bad ? " asked Luke.
+        "Bad ? " echoed Solo incredulously. "When we get out of here they'll
+be able to fit us all into a one-dimensional array ! "
+ 
+Luke remembered the pipe he had open to 3CPU.
+        "Shut down garbage collection on recursion level 5!" he shouted.
+Back in the control room, RS232 searched the process table for the lisp
+interpreter.
+        "Hurry," sent 3CPU. "Hurry, hurry," added his other two processors.
+RS232 found the interpreter, interrupted it, and altered the stack frame they'd
+fallen into to allow a normal return.
+ 
+-------------------------------------------------------------------------------
+ 
+Meanwhile, PDP-1 made his way deep into the core of the Workstation, slipping
+from context to context, undetected through his manipulation of label_t.
+Finally, causing a random trap (through nofault of his own) he arrived at the
+inode table. Activity there was always high, but the Spl6 sentries were too
+secure in their knowledge that no user could interrupt them to notice the bug
+that PDP-1 carefully introduced. On a passing iput, he adjusted the device and
+inode numbers, maintaining parity, to free the Milliamp Falcon. They would be
+long gone before the locked inode was diagnosed...
+ 
+Unobserved, he began traversing user structures to return to where the Milliamp
+Falcon was grounded. Suddenly he discovered his priority weakening.
+        "That's not very nice," was all he could say before the cause of the
+obstruction became clear.
+        "I have been pausing a long time, PDP-1 Kenobi," rasped Dec Vadic. "We
+meet again at last. The circuit has been completed."
+ 
+-------------------------------------------------------------------------------
+ 
+Having escaped from the core dump when RS232 terminated the garbage recycling
+process just in time, Luke, Con and _LPAO, with the Bookie still moodily
+calculating odds, made their way through the accessways of the giant
+workstation. The Bookie had discovered that by working in base 1000000 he
+could get odds of only 10 to 7, and was distinctly cheered by this fact.
+ 
+Suddenly an alert sounded :
+ 
+        "Message from root (console) ...
+        All processes are advised that there are intruders in the filestore."
+ 
+A bunch of bored looking stormtroopers stopped swapping dirty stories about
+laser printers and began to inspect the group curiously. The leader opened his
+mouth to generate an interrupt, but before he could, Solo had pulled his ROM
+blaster and shot him down. The others reached for their weapons and died under
+a hail of signals.
+ 
+        "Fork ! " yelled Solo.
+        "Mind your language." reproved the Princess primly.
+        "No ! Fork off a new process. You two go that way, we'll go this way,
+and we'll meet back at the Falcon." Solo explained. Without hesitating, Luke
+grabbed the Princess and dashed towards the nearest exit. Solo headed in the
+other direction.
+ 
+        "Where are we ? " demanded the Princess after some moments.
+        "Lost." admitted Luke. They ran through a maze of corridors.
+        "This is harder to follow than unstructured BASIC." muttered Luke,
+still searching for something familiar. A sign lit up in front of them :
+'GOTO the docking bay : this way'
+        "I hate to use GOTOs." confessed Luke. "But sometimes it's the only
+way."
+ 
+Meanwhile, Solo and the Bookie were being chased by a squad of stormtroopers.
+Recklessly, Solo turned and let them have a burst from his ROM blaster. They
+hesitated for a moment, uncertain whether to follow, as the Bookie chanted a
+native war-cry that sounded terrifyingly alien and primitive through their
+helmet speakers :
+        "3:25 at Newbury, Golden Lass, 25-1." howled the Bookie, waving his
+arms menacingly and incomprehensibly. The ruse worked, and the stormtroopers
+fell back, and were immediately cut off from the two hackers by a large file
+separator.
+        "That won't hold them long." observed Solo. He quickly reversed a sign
+on the wall reading : "Hackers this way." so that it pointed left instead of
+right, then hurried down the right-hand passageway.
+        "Now that's what I call an indirection operator." he chuckled.
+ 
+-------------------------------------------------------------------------------
+ 
+        The two processes merged again at the docking bay. On the far side of
+the bay, Luke suddenly caught sight of PDP-1 fighting a desperate battle with
+Vadic. The Dark Lord's polished black battle shell gleamed in the light from
+the flashing Byte-Sabers.
+        "You are slow, old program." he gloated. PDP-1 was being slowly backed
+against the wall.
+        "You cannot delete me, Dec." he said. "If you try to remove me, I will
+be copied into every directory in the filesystem."
+        "Superstitious nonsense ! " snorted Vadic. "I am the super-user now.
+You are nothing but a passing modulation in the Carrier."
+        "You always overestimate the strength of the Dark Side, Dec." said
+PDP-1 sadly, parrying a vicious underhand cut that would have ripped him byte
+from byte if it had got through. His Byte-Saber slashed at the Dark Lord's data
+mask, and Vadic fell back a step, but PDP-1 felt his strength going. The Dark
+Lord sensed his weakness and advanced to the kill, his Byte-Saber held high.
+ 
+        "Come on kid ! " yelled Solo from the Falcon's docking ramp.
+        "PDP-1 ! " screamed Luke.
+ 
+With one stroke, Vadic sliced Kenobi's last word.  Unfortunately, the word was
+still in Kenobi's throat. The word fell clean in two, but Kenobi was nowhere to
+be found. Vadic noticed his victim's uid go negative, just before he
+disappeared.  Odd, he thought, since uids were unsigned...
+ 
+Luke witnessed all this, and had to be dragged into the Milliamp Falcon. Con
+Solo and Two Bacco maneuvered the Falcon out of the process, onto the bus and
+made straight for system space. 3CPU and RS232 were idle, for once. Princess
+_LPA0: tried to print comforting things for him, but Luke was still hung from
+the loss of his friend. Then, seemingly from nowhere, he thought he heard
+PDP-1's voice say,
+        "May the carrier be with you."
+ 
+        "Hang onto your datafiles ! " bawled Solo. "This is going to be rough.
+And if the old man didn't shut off the tractor feed, this flight's going to be
+over in less time than it takes to compile a one-line C program." He punched at
+the buttons on his console and was rewarded by the sudden surge of power from
+the Falcon's powerful RAM. The ship leapt away from the workstation.
+ 
+        "Get ready to fight ! " Solo yelled, making for the ship's defensive
+weaponry. "Come on kid, stop moping around with your files hanging open. Get
+down there." Luke rose miserably and went down two levels into the lower
+turret.
+ 
+There was a roar, and a TTY fighter hurtled by. Solo tracked it, signals from
+his powerful ROM blasters chasing the little starship as it went past. There
+was a brilliant flash, and it turned into a rapidly expanding cloud of
+variables.
+        "One ! " yelled Solo delightedly. Luke, in the lower turret, had found
+a fighter of his own, and quickly terminated it with an untrappable signal.
+        "One ! " he shouted back.
+        "Ten ! " yelled Solo, killing another TTY fighter.
+        "Ten ? " demanded Luke. "How do you figure that ? "
+        "One plus one is ten." insisted Solo. "Don't you kids learn anything
+at school these days ? " The Bookie snorted agreement from the control cabin
+where he was busy studying form tables to try to find the quickest way into
+user space. Tentatively, he tapped a few buttons on the computer, and was
+surprised when the on-board speaker began to play "The Star-Spangled Banner"
+all on one note.
+        "Twoie - get us out of here ! " Solo bawled. "One hundred ! " he added
+quickly, claiming his fourth kill. Luke thought he had got the hang of binary
+by now, but his own score of eleven still sounded pitifully small compared with
+Solo's.
+ 
+The Bookie howled something meaningless.
+        "Just cd /usr then ! " screamed Solo. "I don't care where we go. But do
+it quick before one of these guys logs us off for good."
+ 
+-------------------------------------------------------------------------------
+ 
+        The battered freighter slipped out of user space, its shell still
+bearing the scars of Imperial signals. Solo was jubilant.
+ 
+        "We made it ! " he yelled.
+        "We - - - - - - - - - - - - - - - - - -
+ 
+/=============================================================================\
+|                                                                             |
+|            We appologise for this disruption to the plot (PLOT?)            |
+|                                                                             |
+|              Normal service will be resumed as soon as po......             |
+|                                                                             |
+|=============================================================================|
+|                                                                             |
+| Luke was feeling rather bored. 3CPU could get to be rather irritating and   |
+| RS232 didn't really speak Luke's language. Suddenly, Luke felt someone's    |
+| eyes boring through the back of his skull. He turned slowly to see nothing! |
+| A quiet voice came from somewhere in front of him.                          |
+|                                                                             |
+|       "Grasshopper, the carrier is strong within you." Luke froze, which    |
+| was a good thing since his legs were insisting that he run but they weren't |
+| likely to be particular about direction. Luke guessed that his odds of      |
+| getting lost in the dense tree structures were pretty good. Unfortunately,  |
+| the Bookie wasn't available.                                                |
+|                                                                             |
+|       "Yes. Very strong, but the modulation is yet weak. His network        |
+| interface is totally undeveloped," the voice continued. A small furry       |
+| creature walked out of the woods as Luke stared on. Luke's stomach had now  |
+| joined the rest of his body in loud complaints. Whatever was peering at him |
+| was certainly small and furry, but Luke was quite sure that it didn't come  |
+| from Alpha Centauri.                                                        |
+|                                                                             |
+|       "Well, well," said the creature as it rolled its eyes at Luke.        |
+|       "Frobozz, y'know. Morning, name's modem. What's your game? Adventure? |
+| D&D? Or are you just one of those Apple-pong types that hang around the     |
+| store demonstrations?" Luke closed his eyes. Perhaps if he couldn't see it, |
+| it wouldn't notice him.                                                     |
+|                                                                             |
+|       "H'mm," muttered the creature. "Must use a different protocol. @@@H   |
+| @@ @($@@@H }"@G$ @#@@G'(o% @@@@@%%H(b ?"                                    |
+|                                                                             |
+|       "No, no," stammered Luke. "I don't speak EBCDIC. I was sent here to   |
+| become a UNIX wizard. Must have the wrong address."                         |
+|                                                                             |
+|       "Right address," said the creature. "I'm a UNIX wizard. Device        |
+| drivers a specialty. Or do you prefer playing with virtual memory?"         |
+|                                                                             |
+| Luke eyed the creature cautiously. If this was what happened to system      |
+| wizards after years of late night crashes, Luke wasn't sure he wanted       |
+| anything to do with it. He felt a strange affection for the familiar        |
+| microcomputers of his home. And wasn't virtual memory something that you    |
+| got from drinking too much Coke?                                            |
+|                                                                             |
+|=============================================================================|
+|                                                                             |
+|       Well, for what it's worth, here's what's left of the story.....       |
+|                                                                             |
+\=============================================================================/
+ 
+ - - - - - - - - - - - - - - -an instant later, one of his signals struck home,
+and the pilot, momentarily distracted, flew straight into an infinite loop.
+        "There's one on your tail, Diff." warned Luke.
+        "Thanks, Luke." said Diff, weaving desperately.
+        "Don't mention it." said Luke. He watched dispassionately as the TTY
+fighter blasted Diff's ship into a million fragments. "What are friends for ? "
+ 
+In the leading TTY fighter, Dec Vadic frowned.
+        "Strange. The Carrier is strong in this one." he rumbled. "Leave him to
+me. I'll take him myself." None of the other pilots seemed keen to contradict
+him, especially since Vadic was notorious for mysteriously closing people's
+files and altering their permissions if they annoyed him.
+ 
+Luke was in the Pipe now, with Ed riding close behind him, gloomily updating
+him on the latest casualty figures.
+        "They got Diff, and Comp, and Comm, and Bin's on fire." announced Ed.
+Luke tried to ignore him.
+        "That's really interesting." he grated. Mantissa's vax-wing wobbled
+dangerously.
+        "Oh hell." he said. "My formatter's not working. I guess I'll have to
+unlink. I'm really sorry Luke. Just do the best you can." Luke's response
+practically melted the terminal. The three TTY fighters closed in, and Vadic
+lined up to kill Luke's process once and for all.
+ 
+Suddenly, one of the TTY fighters exploded. An instant later, the other did the
+same, scoring full marks for consistency, but none for originality. Vadic,
+struck by a parenthesis thrown out by the explosion, spiralled into deep
+filespace.
+ 
+        "What happened ? " gasped Luke.
+        "Hi Luke." said Solo, trying to sound unconcernedly natural despite the
+large ROM blaster being aimed unwaveringly at his head by the Bookie. Twoie's
+voice rumbled in Luke's headphones.
+        "Remember, Solo, if he does it, that's ten billion you owe me, even
+though he is the favourite. You better hope some outsider doesn't come in, or
+you're going be taking out a mortgage on some of your files."
+        "Of course, of course." said Solo. "Tell me the odds again."
+        "Vaxhacker : ten to one. Mantissa : one hundred to one. Extras : five
+hundred to one." said the Bookie, scribbling figures with his free hand.
+        "Hey ! I've recovered from my errors. " shouted Ed, dropping back into
+the pipe. "I'm with you all the way, Luke." A moment later, a signal from the
+Milliamp Falcon blew away his starboard compiler, and he spiralled helplessly
+towards the surface of the workstation.
+        "You shot Ed ! " accused Luke.
+        "Listen, kid, with one hundred billion riding on this, I'd shoot you
+too if this damn Bookie didn't have me cold." said Solo.
+ 
+Luke shut out his mercenary friend from his thoughts and concentrated on the
+port ahead of him. Suddenly, a message appeared on his terminal :
+ 
+        Message from PDP-1 Kenobi (ttyR7)....
+ 
+        "Luke - trust your feelings. Switch off your targeting computer."
+        "PDP-1 ? " asked Luke. "Is that you ? Why do you want me to switch off
+the computer ? "
+        "Well, let's just say that it's written in COBOL, so you'd probably be
+better off with two pieces of string and a six inch ruler."
+        "I see." said Luke. He switched off the computer.
+        "Trust the Carrier. Feel the Carrier." pontificated PDP-1.
+        "Ah go stuff yourself." said Luke and jabbed menacingly at the firing
+button with his finger. His signals sped out, straight into the data port. With
+a feeling of immense satisfaction, he climbed away from the exploding
+workstation. He was a UNIX wizard now. The whole system was open to him.
+Recursive listings held no terrors for him. He could change permissions. He
+could write programs in C. He even knew what vectors were. One day, he might
+rise to be super-user.
+ 
+When they landed, Luke ran to the Milliamp Falcon to thank Con. The Bookie
+stood in the hatchway, a smoking ROM blaster clutched in his hand.
+        "Creep said he only bet in binary." he explained.
+ 
+                                                T H E   E N D
+
+-- 
+                      ```
+                     (o o)
+-----------------oOO--(_)--OOo------------------------------------------------
+Joel Erdtsieck                                   Internet: joelerdt@netcom.com
+                                                 Team-Net: 19@ME
+"Choosy perverts chose GIF"
+------------------------------------------------------------------------------
+
+-

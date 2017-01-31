@@ -1,0 +1,63 @@
+Date: Sun, 01 Apr 2001 00:13:22 +0200
+From: Klaus Zeuge
+Subject: A 2020 being given away in 1994
+
+This is the ad giving away the KS10 which at the time had the 
+name eLinor.Lysator.LiU.SE and was running TOPS-20.
+I don't remember which version of TOPS-20 but it was a later
+version not supported by DEC. eLinor could talk TCP/IP
+and DECnet.
+
+The text translates to
+
+"DECsystem2020 being given away (for free) to friend of TOPS20. 
+Only serious prospective 'buyers'" 
+
+rad		is ROW
+mottagare	is RECEIVER aka TO:
+sänt		is SENT AT
+markerad av	is MARKED BY
+fynda		is MAKE A REAL BARGAIN
+
+=============================================================================
+620837 1994-05-21  11:36  /1 rad/ Pell Pell Pell (Positronic Electronic
+Learning Lifeform)
+Mottagare: TOPS-20 erfarenhetsutbyte <174>
+Mottagare: Pryltorget, allmänt (diverse I/O av prylar och ting) <986>
+    Sänt:     1994-05-21 14:02
+    Sänt av Peter Johansson
+Markerad av 2 personer.
+Ärende: Fynda
+
+DECsystem2020 bortskänkes till TOPS20-vän. Endast seriösa spekulanter.
+(620837)
+Kommentar i text 991287
+=============================================================================
+
+
+The machine ended up at LUDD, see 
+<URL: http://www.ludd.luth.se/computers/info/DEC2020.html>:
+
+	DEC2020
+
+	---------------------------------------------------------------
+	For some reason, a couple of enthusiasts want to run a DEC2020.
+	Currently, it is running ITS (Incompatible Timesharing System).
+	and has got a RP06 disk and a TU45 tape station connected.
+	---------------------------------------------------------------
+
+	Last edited: 960120 at 16:53
+
+=============================================================================
+
+Asking Anders Magnusson <ragge@ludd.luth.se> 2001-03-31, it seems the
+machine is kept turned off but has a boot time of about an hour. The
+only real problem is a broken vacum sensor in the tape unit.
+
+	Regards,
+	Klaus Zeuge
+
+---
+
+
+

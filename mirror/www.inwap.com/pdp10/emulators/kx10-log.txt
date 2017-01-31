@@ -1,0 +1,125 @@
+Date: Sun, 01 Apr 2001 00:09:54 +0200
+From: Klaus Zeuge
+To: js-cgi@inwap.com
+Subject: kx10 console log from 1997
+
+Below you find a transcript from a kx10 emulators console output as an
+answer to the question why nobody runs TOPS-20 anymore. 
+
+2137431 1997-06-06  14:05  /104 rader/ pd
+Extra kopia: Mattias Rönnblom (T-34/85), /// <3565>
+    Mottaget: 1997-06-06 14:24
+Mottagare: TOPS-20 erfarenhetsutbyte <522>
+Extra kopia: /dev/null <11123>
+Markerad av 1 person.
+[rende: TOPS-20 lives!
+
+>Undra varför ingen kör TOPS-20 om det nu är så himla bra på alla
+>sätt och vis. ;)
+
+En del av oss gör faktiskt det...
+
+
+    kx10 version 0.93, Copyright (C) 1994, 1995 Stu Grossman
+    kx10 comes with ABSOLUTELY NO WARRANTY; for details look at COPYING.
+    This is free software, and you are welcome to redistribute it
+    under certain conditions; look at COPYING for details.
+    [Starting at 040000]
+    Net Config:
+     net le0
+     ip 193.10.66.72
+     ether 8:0:20:72:73:15
+    [kx10: Switching to Tops-10 paging]
+    [kx10: Switching to TOPS-20 paging]
+    
+    BOOT V10.0(201)
+    [BOOT: LOADING] [OK]
+    [kx10: Switching to Tops-10 paging]
+    [kx10: Switching to TOPS-20 paging]
+    
+    
+    [PS MOUNTED]
+    
+    System restarting, wait...
+    ENTER CURRENT DATE AND TIME: 6-JUN-97 1328
+    
+    YOU HAVE ENTERED FRIDAY, 6-JUNE-1997 1:28PM,
+     IS THIS CORRECT (Y,N) Y
+    WHY RELOAD? OPR
+    RUN CHECKD? N
+    
+    RUNNING DDMP
+    
+    
+    [LOADING INTERNET HOST NAMES] [OK]
+    
+    SYSJOB 7(78) STARTED AT  6-JUN-97 1328
+    RUN SYS:ORION
+    RUN SYS:QUASAR
+    RUN SYS:MOUNTR
+    RUN SYS:INFO
+    RUN SYSTEM:LOGGER
+    
+    JOB 0 \LOGIN OPERATOR XX OPERATOR
+    TER NO RAISE
+    ENABLE
+    RUN SYS:SENDER
+    \
+    
+    JOB 1 \LOGIN OPERATOR XX OPERATOR
+    TER NO RAISE
+    ENABLE
+    MOUNT STRUCTURE SS: /NOWAIT
+    ;SYSDPY E
+    ^ESET LOGIN ARPA
+    ^ESEND * SYSTEM IN OPERATION!^G
+    \
+    
+    % [LOGGER  6-JUN-97 13:28:55 ]: STARTED AT  6-JUN-97 13:28:36
+    [KNILDR: LOADING MICROCODE VERSION 1(172) INTO ETHERNET CHANNEL 0]
+    
+    
+    [INTERNET NETWORK 192.10.66.0 ON, OUTPUT ON  6-JUN-97 13:29:23]
+    SJ  1: @LOGIN OPERATOR OPERATOR
+    SJ  0: @LOGIN OPERATOR OPERATOR
+    SJ  0:  JOB 1 ON TTY27 6-JUN-97 13:29:28
+    SJ  0:  END OF LOGIN.CMD.1
+    SJ  0: @TER NO RAISE
+    SJ  1:  JOB 2 ON TTY30 6-JUN-97 13:29:32
+    SJ  1:  END OF LOGIN.CMD.1
+    SJ  1: @TER NO RAISE
+    SJ  1: @ENABLE
+    SJ  1: $MOUNT STRUCTURE SS: /NOWAIT
+    SJ  1: % NO OPERATOR ON DUTY
+    SJ  1: [MOUNT REQUEST SS QUEUED, REQUEST #1]
+    SJ  1: 
+    SJ  1: $;SYSDPY E
+    SJ  1: $^ESET LOGIN ARPA
+    SJ  1: $^ESEND * SYSTEM IN OPERATION!
+    
+    [From OPERATOR on node VERDI line 30 to all lines:   SYSTEM IN
+OPERATION!]
+    SJ  0: @ENABLE
+    SJ  0: $RUN SYS:SENDER
+    
+     Verdi, kx10, TOPS-20 Monitor 7(21017)-2
+    @log  \ XXX
+    @
+     Autologout
+    Killed Job 3, TTY 25,
+      at  6-Jun-97 13:40:27,  Used 0:00:02 in 0:05:20
+    
+     Verdi, kx10, TOPS-20 Monitor 7(21017)-2
+    @termINAL (FEATURE OR TYPE) vt100
+    @logiN (USER) pd (PASSWORD) 
+     Job 3 on TTY25 6-Jun-97 14:00:09
+    % No operator on duty
+    [Mount request SS queued, request #2]
+    
+     End of LOGIN.CMD.10
+    @
+    % [Logger  6-Jun-97 14:00:17 ]: Hourly checkpoint at  6-Jun-97
+14:00:17
+(2137431)
+
+

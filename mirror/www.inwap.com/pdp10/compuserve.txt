@@ -1,0 +1,230 @@
+File name:  compus.txt
+Date:  31-Aug-88 15:44 EDT
+From:  Sandy Trevor [70000,130]
+Subj:  PDP-10 History
+
+TO: Joe Dempster
+
+This may not be exactly what you had in mind, but it is a pretty accurate
+summary of how 10's have been used at CompuServe over the past 17 years.  I
+hope you can use it... anyway, please do keep me updated on your project. (If
+you want changes, or more material, just let me know).  Also, if you do decide
+you want to use this, I'd like a chance to edit it a bit before giving you a
+"final" version.  So please consider this a prelimary version...
+
+					--Sandy
+
+
+			  We Call Them 10's
+
+
+	- A Brief History of 36-bit Computing at CompuServe -
+
+			 Alexander B. Trevor
+			   August 31, 1988
+
+
+    CompuServe has one of the world's most powerful remaining thirty-six bit
+computing facilities, but got its first PDP-10 almost by accident.  While I
+was a graduate student at the University of Arizona's Analog Hybrid Computer
+Lab (AHCL) in 1969, I discussed with two other students the idea of starting a
+time-sharing company after completing our degrees.  We had all gotten to know
+a PDP-15 intimately at AHCL, so it was the obvious cpu of choice.  But my
+choices in late 1969 were the Army or Canada.  I chose the former, which put
+me behind a 360-40 in Saigon instead of a PDP-15 in Tucson.  Meanwhile, my two
+AHCL friends, Dr. John Goltz and Jeff Wilkins, went to Columbus, Ohio, where
+they intended to computerize insurance processing for Golden United Life
+Insurance with (of course) a PDP-15.  Before the 15 was delivered, however,
+DEC called up Dr. Goltz and told him that for only "a little more" he could
+have a KA-10.  The prospect of having all this power was irresistible.  Though
+he liked to distance himself from those of the sales persuasion, John
+skillfully sold the board of directors on the idea of spending the extra money
+to buy the PDP-10 and thereby gain the excess computer power to be able to
+launch into timesharing.
+
+    Of course, it was a terrible time to get into this business. GE, Tymshare,
+Cyphernetics, and First Data (to name just a few) were already well
+established.  The timesharing subsidiary of Golden United took the name
+"CompuServ Network, Incorporated" and started developing its first
+application, LIDIS (Life Insurance Data Information System).  They had a KA-10
+with all of 80K words of memory, two RP02 disk drives, and a few ASR-33
+teletypes.  The "C" series of TOPS-10 monitors that was available in 1970
+supported disks, but as little more than circular DECtapes.  Still, CompuServ
+made LIDIS work, and began attracting other clients.
+
+    From the beginning, CompuServ tried to improve upon the standard DEC
+offerings. A first step was to hire two of the engineers who installed the
+machine: Bill Spellman and Tom Shelton. Tom would look at the the lights of an
+ailing KA for a minute or two (KA's had MANY lights), then go in back and
+change one or two boards. Usually, he fixed the machine on the first try this
+way, notwithstanding having been hauled out of bed at 3 a.m.
+
+    A second step was to improve TOPS-10. At that time DEC included operating
+system sources with every machine. You needed them too: the early releases of
+TOPS-10 did not terminate a job if someone hung up without logging off. Thus,
+the next person calling in on that line found himself in the previous user's
+job, with access to all his files and privileges -- the infamous ghost port.
+Needless to say, customers got pretty upset when this occurred, so we fixed it
+quickly.
+
+    Some monitor hazards took longer to surface.  One morning, when the
+engineers looked at the KA, strange patterns were dancing across the console
+lights.  Spellman was about to shut down the machine, when Steve Wilhite
+grabbed him and told him it was "just a little program I wrote."  The next
+day, the LIGHTS UUO (CALLI -1) was disabled.
+
+    Another motivation for modifying the operating system came with the first
+release of the "D" series monitor -- the first one with a real file system,
+including the beloved MFD, UFD's, RIB's, and SAT's.  The first "D" monitor did
+not work for more than a hour at a time.  John Goltz stayed up for three days
+patching the "D" monitor well enough so that calls from our customers no
+longer included threats of bodily injury.
+
+    I seem to walk into things right after the fun. I went to Vietnam right
+after the great Tet Offensive of 1968. I joined CompuServe in 1971, right
+after the "D" monitor crisis. (It is still unclear to me which of these two
+events will turn out to be the most significant.)  In any case, when I joined
+CompuServe in late 1971, they had two KA-10's, each with four RP02's.
+
+    My first task was to write UNSPOL (DEC's spooling software was not yet
+available).  Our machines were getting bogged down with jobs running "GLOM" -
+a little routine that continually tried to assign the line printer.  We wrote
+most of our own utilities, either because we wanted features not yet available
+then from DEC, or because the DEC equivalents were not compatible with our
+monitor, which was rapidly diverging from standard TOPS-10. Or maybe we just
+liked to be different.  Early on John had written a new EXECUTE that used
+sixbit command files instead of the DEC standard ASCII (to save disk space).
+Of course, this required changing all CUSPS (Commonly Used System ProgramS)
+and compilers.  (Back then, programmers were cheaper than disks).
+
+   The monitor's command decoder was another area of great change.  We
+perceived GE as our prime competition, so many things were done to make former
+GE clients feel at home -- including the "OK" prompt, an imbedded line
+numbered editor in the monitor, and having Steve Wilhite write a Basic
+compiler in Macro-10 from scratch. At that point we didn't know that a
+compiler was too big a job for one programmer, and fortunately neither did
+Steve.  Emerging from the dark back room we called the "cave" only to grab a
+line printer listing or an occasional sandwich, he got it done in ten months,
+using an ASR-33 and our FILGE editor.  Everyone loved his Basic, but I'm not
+sure how many customers really switched from GE because of it.
+
+   During this period we learned to get the most out of the KA -- doing things
+such as using MOVEI A,N(A) for addition because address arithmetic was faster
+than the regular adder on the KA.
+
+   CompuServ's two KA-10's were each connected to 680i front-ends through
+DA-10 interfaces. The 680i was a PDP-8 that had been lobotomized to handle
+communications. UART chips were not yet in common use, so the 680i's had to
+handle asynchronous characters one bit at a time.  One disadvantage of this
+configuration was that communications ports were tied to a single host KA. For
+example, the remote lines from Dayton and Cleveland were connected to System
+1, while Columbus and Detroit were on System 2. So what did you do with a
+customer with offices in all four cities?  My second major assignment at
+CompuServ was to solve this problem.
+
+    Clearly, some kind of switch was needed so that a user coming in through
+either 680i could access either host. And what was Dr.  Goltz's choice for the
+switching computer?  Right, a PDP-15. It was an 18 bit machine (exactly half
+the PDP-10 word length), fast (1 MIP), and fortuitously, compatible with the
+DA-10. Now, this PDP-15 that I had to develop into an intelligent
+communications switch came with 8K of memory and an KSR-35. That was it -- no
+mass storage, not even a Dectape. Since I did not relish doing development on
+paper tape, I decided I had to use the 10 for development. Since there was no
+cross assembler for the PDP-15, I wrote macros for each of the PDP-15
+instructions and used Macro-10 to generate PDP-15 object code... a use that
+probably even exceeded the wildest fantasies of Macro-10's developers.
+
+    In 1973 CompuServ moved to a new custom building in Upper Arlington, Ohio,
+and upgraded the KA's to KI's. By July, 1974, we had seven KI's and were using
+them not only to support a thriving time sharing business, but also to heat
+our office buildings.  The RP02'S and RP03's were all retired in favor of
+"huge" 200mb Ampex and Memorex 3330 disks connected through Systems Concepts
+SA-10's.  John Goltz continued to develop his operating system (now called the
+"E" monitor), including a class scheduler.
+
+    But by 1976 a more pressing problem arose.  DEC had released the KL-10,
+but it seemed prone to overheating (ECL does generate a lot of heat). Dr.
+Goltz felt we needed a faster processor, but the KL was unsuitable.  We looked
+at Foonly's F1, but were uneasy about their ability to actually produce
+machines.  So, with two of our best engineers, Doug Chinnock and Wilson
+Mowbray, John Goltz set up an R&D center in Tucson, Arizona, to build a better
+36-bit computer.  In 18 months, they had several large boards, microcode that
+avoided all the DEC patents, but were still a good year from having a
+production machine.  Jeff Wilkins was running short on enthusiasm (and cash)
+for the project, and it looked like DEC had really solved the KL-10 heat
+problem with the DEC-System 20 configuration. Not only that, but the price of
+the 2050 was at least $100K lower than the 1090.  Internal memory and devices
+on RH-20's seemed not only more efficient, but saved us from having to add
+cache sweeps to our monitor. If we could run our operating system on this
+machine, it might make more sense than finishing the "JRG-1" processor.
+
+    After several trips to Marlborough, I got DEC to agree to sell us
+DECSYSTEM-20's with TOPS-10 licenses and DX-20's. The licenses eliminated any
+question about running any of the TOPS-10 utilities, and the DX-20's let us
+connect the orange KL-10's to our STC tape pool. Our first 2050 worked
+beautifully, so the JRG-1 project was terminated. Sadly, not long afterwards,
+Dr. Goltz left CompuServe.
+
+    We had been buying Ampex's ARM-10 memory for the KI's for years, so we
+asked them what they could do for the 20. Despite dire warnings from DEC
+engineers that the S-bus could not possibly support a physically external
+memory box, Jay Canel of Ampex came to CompuServe with the first ARM-20 box,
+plugged it in to our 2050, made one timing adjustment, then we watched it run
+for the next six months without a failure.
+
+    Our next 2050 enhancement was to design a channel interface.  Since the
+Massbus was patented, and DEC was not granting licenses, we built directly to
+the C and E busses. Our "MBX-20" let us connect 300 mb SMD disks to the 2050
+using a Telefile controller, instead of being limited to the 200 mb RP06 (all
+that DEC offered then).
+
+    By 1978 we had two computer centers - the one in Arlington full of KI's,
+and one in Dublin, Ohio, filling up with 2050's. We were not yet ready to
+abandon the KI's, but wanted some more horsepower out of them.  Wilson Mowbray
+designed a hardware cache memory for the KI which yielded a 30% improvement in
+KI speed. Later, Wilson designed a switching regulator power supply for the
+KL, which halved it's power consumption.  Roseann Giordano was so impressed
+that she sent some DEC engineers to look at it.  They liked it, but the KL was
+too near the end of its product life cycle for DEC to make any changes, even
+though we offered to give them the design.
+
+    By 1980 PC's were beginning to assume many of the tasks formerly done on
+timesharing systems. Many of our old timesharing competitors (Cyperhnetics,
+First Data, On-Line Systems) had been acquired or disappeared.  CompuServe
+(which had added the "e" by this time) was acquired itself in 1980 by H&R
+Block.  Block wisely let CompuServe continue with all its plans -- including
+rolling out a service for PC users modelled loosely after the European
+"videotex" services.  Developed almost clandestinely shortly before the Block
+acquisition, it was called "schlock timesharing" by the "professional"
+commercial timesharing sales force.  Initially released as "MicroNet" and
+later as "the CompuServe Information Service," it grew to be 50% of CompuServe
+revenues by 1987, while commercial timesharing evolved rapidly toward
+databases, email, and commercial videotex.
+
+    With Block providing financial backing, ComuServe entered the acquisition
+business itself.  It's first acquisition was Software House (the authors of
+1022 and 1032 DBMS systems.)  While solidifying our position in the 10 world
+with 1022, we also had taken a first step into the world of Vax with 1032.
+
+    There was some pressure from various quarters to "upgrade" our hardware to
+something more modern -- like Vaxes, for instance.  However, by 1986, KL's
+were less than $20,000; we had our own monitor and most systems software
+(except LINK-10 and BLISS-36); we were able to use current technology disk
+drives; and we had 100+ manyears of applications software in XF4 (our own
+ten-based extended Fortran) and Bliss-36 -- so how could we justify a change
+unless 36-bit cpu's became unavailable?  To be sure that didn't happen, we
+ordered a Systems Concepts SC-30 from Mike Levitt.  It arrived in late 1987 (a
+bit behind schedule), but came up and ran our operating system with no more
+than the expected number of microcode bugs.  (We used Tops-10 paging, which
+Systems Concepts had not fully tested before).  It worked well enough that we
+ordered a total of 10 SC-30's - four of which are up and running as of this
+writing; the remainder to be delivered next year. The venerable KI's (the last
+of the "lights mentality" machines) are being phased out to make room for the
+SC-30's... (and yes, a few Vax 8550's have snuck in too, for some new
+applications already written for Vax).  New interfaces are being designed for
+both the KL's and the SC-30's to support faster disks, optical storage, and
+new archival storage devices.  Applications development in Bliss-36 and XF4
+continues unabated.  At CompuServe, at least, 36-bit computing has a bright
+future.
+
+Last page !~

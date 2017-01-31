@@ -1,0 +1,190 @@
+Date: Thu, 21 Jan 99 11:12:55 CST
+From: Clive Dawson <clive.dawson@amd.com>
+To: js-cgi@inwap.com
+Subject: Greetings...
+
+Hi Joe,
+
+I was just enjoying your PDP-10 website after not visiting it in
+a while.
+
+I noticed that for some reason you don't have a copy of a story I
+wrote 15 years ago, "The Soul of an Old Machine".  I'm enclosing
+it below, and would be happy to contribute it to your collection.
+
+If the famous "book" project ever gets anywhere, this story was going
+to be used as the Epilogue.
+
+Cheers,
+
+Clive Dawson
+Austin, TX
+
+=========Cut here==========
+
+
+
+
+			THE SOUL OF AN OLD MACHINE
+
+			     Clive B. Dawson
+				
+				(C) 1984
+
+
+I started work for the University  Computation Center in 1975 as a  systems
+programmer for the  DEC-10, just  a couple of  months after  it arrived  on
+campus.  My previous experience  with a DEC-10 had  ended when I  graduated
+from Stevens Tech.  Since then, I had spent four rather painful years doing
+graduate work on a CDC 6600 system for which I had to learn how to keypunch
+again.  I welcomed  the arrival of  the 10  with the joy  of someone  being
+released from prison.  I  can't begin to  count the hours  I spent on  that
+system--well over 10,000 connect hours-- developing software for it, fixing
+bugs, and helping users.  In turn, it helped produce dissertations for both
+my wife and me, and  was an endless source of  fun and relaxation as  well.
+(It was also  responsible for  extending my  graduate school  career by  at
+least four years!)
+
+The KI processor had  served the campus  well for seven  and a half  years.
+Now the user population was drifting over  to the two new DEC-20's, and  it
+was only a  matter of  time before the  rising maintenance  costs could  no
+longer be justified.  A flurry  of last-minute rescue efforts followed  the
+announcement that  the  system would  have  to  be shut  down.   It  seemed
+incomprehensible that  a  perfectly  good machine  would  be  removed  from
+service given  the chronic  state  of saturation  common to  most  computer
+systems on most university  campuses.  The efforts  failed, and on  October
+31, 1982, the DECsystem-10 at the University of Texas at Austin was  turned
+off for the last time.
+
+The event did not pass without due  ceremony.  We held a farewell party  on
+that Halloween Sunday,  well attended by  current and ex  staff members  as
+well  as  a  few  users.   Many  brought  cameras  to  record  a  vanishing
+breed--they don't make  'em with lights  anymore.  In one  of the  stranger
+moments we cranked up the PTP: and had paper tape (might as well use it up)
+and scratch magtape  draped all over  the place.  The  laughing and  joking
+helped.  Many of us on the staff had built up an extremely close-knit group
+over the  years which  had slowly  drifted apart  as new  machines and  new
+responsibilites came  along.   This "wake"  had  a good  cathartic  effect,
+bringing us together at a  time when we needed  to share feelings that  had
+hit us harder than we might have cared to admit.
+
+I wondered about  the users--all  the faceless  people scattered  througout
+dozens of  small  offices and  terminal  rooms throughout  the  campus--the
+complete opposite of our  small, close-knit staff.   Were they feeling  the
+same emotions?  If so, who could each of them share with?
+
+At home very late that night, I felt the urge to dial up one last time.  As
+I went through  my normal  routine of checking  mail, the  Bboard, and  the
+various system  mailboxes, I  discovered something  completely  unexpected.
+During the last few hours users had  logged in and sent mail to the  bboard
+and to other  system mailboxes like  Operator.  The curious  thing is  that
+these people had no  way of knowing  that anybody would  ever be around  to
+read these messages.   They were, in  the best way  they knew how,  sharing
+their feelings  directly  with  the  machine.  Some  of  the  messages  are
+reproduced here as I found them, with only the senders' names altered.
+
+
+	. From: R. B.
+	. Subject: Dec10
+	. To:	 GRIPE
+	Farewell DEC10 and thank you!
+
+
+	. From: [4435,244]
+	. Subject: The death of a friend
+	. To: Bboard
+	Goodbye, DEC-10, you've been a great friend and co-worker.  I'm
+	going to miss you for a long time.  I feel worse than when they
+	killed Hal in 2001.
+
+
+	. From: B. J.
+	. Subject: November the 2 is too late
+	. To: Bboard
+	it feels like this is the end of an old friend.  who says
+	computers haven't got any personality?
+
+
+	. From: GVCE333
+	. Subject: Good-Bye old paint
+	. To: Bboard
+	The glue factory beckons...   Sigh!
+
+
+	. From: [1276,1]
+	. Subject: Good-bye, DEC-10
+	. To: Bboard
+		As a well-spent day bring happy sleep,
+	        so life well used brings happy death.
+		                Leonardo Da Vinci, 1452-1519
+	                        Notebooks [c. 1500]
+	 
+	DEC-10, you've been a good and faithful (for the most part)
+	servant and companion.  Farewell.
+
+
+	. From: BSAB553
+	. Subject: bye
+	. To:	 GRIPE
+	This is last "bye" to the DEC 10; too bad. I liked the DEC 10
+	better than the DEC 20. I find it hard to believe that this
+	system could not have been supported to some extent... So long
+	forever!
+
+
+	. From: LSDT141
+	. Subject: Bye
+	. To:	 OPERATOR
+	BYE BYE FAITHFUL FRIEND - THE DEC-10
+
+
+	. From: C
+	. Subject: Farewell
+	. To: Operator
+	
+		Do not go gentle into that good night,
+		Rage, rage against the dying of the light...
+
+
+The next day, one more message appeared on the DEC-20 Bboard:
+
+	Date:  1 Nov 1982 2133-CST
+	From: P.M.
+	Subject: the death of the dec-10
+	To: bboard
+
+	I was there till the bitter end.  First, the one or two
+	faithful logged on via the micom were detached and
+	automatically logged off.  As the only telephone hook-up, I
+	was privileged to be at his side a little longer.  I fondly
+	reread the last farewells of those who had cared enough to
+	write a bboard message.  Then I, too, was detached and logged
+	off.  But even then the DEC-10 lingered on.  Systat and help
+	functioned for several more minutes until the operator sent
+	the last message I or anyone will ever receive from the
+	DEC-10:
+	
+		Time sharing is over permanently! Good-bye.
+	
+	The stone has been rolled in front of the grave, my friends.
+        The DEC-10 is no more.
+
+
+			---------------------------------------
+
+
+About six months later  in St. Louis  I heard DEC announce  the end of  the
+36-bit systems.   I wondered  then how  many times  in the  next few  years
+the events told here would be repeated.
+
+Recently I had  occasion to visit  the machine  room where the  old KI  had
+stood.  On one side of the room was a shiny new VAX 11/780.  The other side
+of the room had boxes  of IBM PC's stacked  to the ceiling.  Someday  these
+machines would be old too.  But somehow I knew that they would never have a
+day for themselves like Halloween of 1982.  They don't make 'em with  souls
+anymore.
+
+			   ----------------
+
+
+

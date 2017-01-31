@@ -1,0 +1,326 @@
+Subject: TOPS-10 v7.03 Install Proceedure      3/11/01 7:46 PM
+
+The following is a *Rough Draft*, but it should be enought to get a system
+setup.
+
+                Zane
+
+Installation of TOPS-10 v7.03
+
+I'm guessing this might be of use to some people, and it can serve as a
+starting point to a better document.  I'm sure it's in need of corrections,
+as I've doubts as to wether or not the system is coming up right.
+
+The following procedure is mainly based on stuff Greg Satz, Parag Patel, and
+Timothy Stark have posted.  I'd figured out a lot of this, but this looks a
+lot better than what I'd done :^)
+
+Based on Mark Hittinger's comments about the RIB errors which I'd noticed in
+my first install, I've used 1990 as the year in the following and it seems
+to have not had any problem.  I believe others have done this giving the
+correct date without any problem though.
+
+STEP 1.
+First get the following tapes from http://pdp-10.trailing-edge.com
+> BB-X138B-BB   KS Bootable TOPS-10 v7.03 tape
+> BB-X140B-SB   TOPS-10 v7.03 Monitor sources
+> BB-X128B-SB   TOPS-10 v7.03 w/sources #1
+> BB-FP63A-SB   TOPS-10 v7.03 w/sources #2
+> BB-FP64A-SB   TOPS-10 v7.03 Tools w/sources
+> BB-X130B-SB   CUSP w/sources
+
+You can also get the sources for the ts10 emulator here.
+
+STEP 2.
+Apply the following patch and build the ts10 emulator.
+
+diff -c -r1.1 system.c
+*** pdp10/system.c      2001/02/27 14:17:06     1.1
+--- pdp10/system.c      2001/03/11 22:01:50
+***************
+*** 120,126 ****
+        }
+        text7[p] = 0;
+
+!       sprintf(text, "%012Lo ('%s' '%s')", data, text6, text7);
+
+        return text;
+  }
+--- 120,126 ----
+        }
+        text7[p] = 0;
+
+!       sprintf(text, "%012qo ('%s' '%s')", data, text6, text7);
+
+        return text;
+  }
+***************
+*** 348,355 ****
+  //    int   reqBoot = FE_P0_MONITOR_PREBOOT;
+  //    int   reqBoot = FE_P0_DIAGNOSTIC_PREBOOT;
+  //    int   reqBoot = FE_P0_BOOTCHECK2_PREBOOT;
+!       uint8 inBuffer[0777 * 5];
+!       int36 inBlock[0777];
+        int36 idHom = util_PackedASCII6("HOM");
+        int36 dAddr36;
+        int36 data36;
+--- 348,355 ----
+  //    int   reqBoot = FE_P0_MONITOR_PREBOOT;
+  //    int   reqBoot = FE_P0_DIAGNOSTIC_PREBOOT;
+  //    int   reqBoot = FE_P0_BOOTCHECK2_PREBOOT;
+!       uint8 inBuffer[01000 * 5];
+!       int36 inBlock[01000];
+        int36 idHom = util_PackedASCII6("HOM");
+        int36 dAddr36;
+        int36 data36;
+
+STEP 3.
+Startup the emulator.
+
+[healyzh@ts10 ts10]$ ./ks10 -f ks10.cfg
+Welcome to TS10 Emulator v0.7 (Alpha)
+Unit uba: had been created.
+Addr=776700 Mask=000077 IntBR=6 IntVec=254
+Addr=772440 Mask=000037 IntBR=6 IntVec=224
+Device RPA0: had been created.
+Device RPA1: had been created.
+Device MTA: had been created.
+Device MTA0: had been created.
+Device MTA1: had been created.
+Device MTB: had been created.
+Device MTB0: had been created.
+Device MTB1: had been created.
+Unit rha0 had been initialized.
+Unit rpa0 had been initialized.
+Unit rha1 had been initialized.
+Unit mta had been initialized.
+Unit mtb had been initialized.
+Unit 0 dType RP06
+Unit rpa0 had been attached with 'tops10_703.dsk' file.
+Unit 0 dType TU45
+Unit mta0 had been attached with 'tops10_703_ksbootable_bb-x138b-bb.tap'
+file.
+TS10> boot mta0:
+Booting MTA0...
+Now running...
+
+BOOTM V6(37)
+
+BTM>/tm02
+
+KS10     03-19-86
+Why reload: new
+Date: 11-mar-90
+Time: 11:00
+
+Startup option: destroy
+
+% WARNING:  All structures will be refreshed.  All disk files
+will be destroyed.  All information on currently spinning packs
+will be lost.  Do not proceed unless you are positive that you
+want to do this.
+
+Proceed? (Y or <CR>)y
+
+HOME blocks written on all units
+RPA0 first BAT block consistency error
+RPA0 second BAT block consistency error
+
+Both BAT blocks are bad.
+Do you want to initialize the BAT blocks on this unit?
+y
+
+Not normally done, are you sure?
+y
+Initializing BAT blocks
+
+Start system? (Y or <CR>)y
+
+Disk file structures:
+DSKB:RPA0(ONC403)
+
+To automatically log-in under [1,2] type "LOGIN"
+
+KS10     11:00:10
+
+. LOGIN
+
+.ASSIGN MTA0: TAPE:
+MTA000 assigned
+.GET TAPE:BACKUP
+Job setup
+
+.SAVE BACKUP
+BACKUP saved
+
+.RUN BACKUP
+
+/TAPE TAPE:
+/SUPERSEDE ALWAYS
+/INTERCHANGE
+/FILES
+/RESTORE SYS:=*.*
+! SYSTEM        EXE
+
+"Done
+
+/RESTORE DEC:=*.*
+! SMFILE        EXE
+ SMFILE HLP
+ SMFILE TXT
+ T10KL  ULD
+ KSBOOT EXE
+ BOOTM  RDI
+ T10KL  RAM
+
+"Done
+
+/EXIT
+
+[^E pressed]
+.TS10> attach mta0: cuspmar86binsrc_1of2_bb-x128b-sb.tap
+Unit 0 dType TU45
+Unit mta0 had been attached with 'cuspmar86binsrc_1of2_bb-x128b-sb.tap'
+file.
+TS10> continue
+Running now...
+
+.RUN BACKUP
+
+/TAPE TAPE:
+/INTERCHANGE
+/SUPERSEDE ALWAYS
+/PROTECTION 055
+/FILES
+/RESTORE DSKB:
+[a lot of filenames print out]
+
+$BKPEOT Reached EOT--mount new tape then type "GO"
+[^E Pressed]
+/TS10> attach mta0: cuspmar86binsrc_2of2_bb-fp63a-sb.tap
+Unit 0 dType TU45
+Unit mta0 had been attached with 'cuspmar86binsrc_2of2_bb-fp63a-sb.tap'
+file.
+TS10> continue
+Running now...
+GO
+[a lot more filenames print out]
+"Done
+
+[^E pressed]
+.TS10> attach mta0: cuspmar86binsrc_1of2_bb-x128b-sb.tap
+Unit 0 dType TU45
+Unit mta0 had been attached with 'cuspmar86binsrc_1of2_bb-x128b-sb.tap'
+file.
+TS10> continue
+
+.RUN BACKUP
+
+/TAPE TAPE:
+/INTERCHANGE
+/SUPERSEDE ALWAYS
+/PROTECTION 055
+/FILES
+/@dskb:[10,7,build]cusps.rst
+
+[You'll need to change to the second tape when it wants you to. When this
+ is done, make the disk bootable.]
+
+.RUN DEC:SMFILE
+
+DECSYSTEM 2020 DIAGNOSTICS FE-FILE PROGRAM
+VERSION 2.5, TOPS-10, KS10, CPU#=5000
+[FOR HELP TYPE "HELP"]
+SMFILE>WRITE SETUP DSKB:[1,5\5\4]
+SMFILE>WRITE RESET
+SMFILE>READ DEC:T10KL.ULD
+SMFILE>SERIAL 5000
+SMFILE>WRITE CRAM
+SMFILE>WRITE BOOT DEC:KSBOOT.EXE
+SMFILE>WRITE DONE
+SMFILE>EXIT
+
+EXIT
+
+.R CREDIR
+
+Create directory: ACT:
+
+[^E pressed]
+TS10> quit
+
+STEP 4.
+Now you should be ready to startup your system from disk.
+
+[healyzh@ts10 ts10]$ ./ks10 -f ks10.cfg
+Welcome to TS10 Emulator v0.7 (Alpha)
+Unit uba: had been created.
+Addr=776700 Mask=000077 IntBR=6 IntVec=254
+Addr=772440 Mask=000037 IntBR=6 IntVec=224
+Device RPA0: had been created.
+Device RPA1: had been created.
+Device MTA: had been created.
+Device MTA0: had been created.
+Device MTA1: had been created.
+Device MTB: had been created.
+Device MTB0: had been created.
+Device MTB1: had been created.
+Unit rha0 had been initialized.
+Unit rpa0 had been initialized.
+Unit rha1 had been initialized.
+Unit mta had been initialized.
+Unit mtb had been initialized.
+Unit 0 dType RP06
+Unit rpa0 had been attached with 'tops10_703.dsk' file.
+Unit 0 dType TU45
+Unit mta0 had been attached with 'tops10_703_ksbootable_bb-x138b-bb.tap'
+file.
+TS10> boot rpa0:
+Booting RPA0...
+[Reading first HOM block...]
+[Reading FE-FILE Page 0 at C 213 T 11 S 1]
+[Reading Monitor Pre-boot at C 213 T 13 S 13]
+Now running...
+BOOT V3(47)
+
+BOOT>
+[Loading from DSKB:SYSTEM.EXE[1,4]]
+
+KS10     03-19-86
+Why reload: sched
+Date: 11-mar-90
+Time: 19:36
+
+Startup option: go
+[Rebuilding the system search list from the HOMe blocks]
+
+[Rebuilding the active swapping list from the HOMe blocks]
+
+[Rebuilding the system dump list from the HOMe blocks]
+
+KS10     19:36:01 CTY system 5000
+Connected to Node (0) Line # 42
+.LOGIN 1,2
+.R OPSER
+[OPRPAF Processing auto command file]
+?OPRALF LOOKUP failure 0
+*
+[CCPWFD Waiting for file daemon to start]
+%%TTY STOMPER - Starting
+
+*^C
+
+.R LOGOUT
+
+[LGTOUL Other users logged-in under [1,2]]
+Job 2  User OPSER  [1,2]
+Logged-off CTY  at 19:36:42  on 11-Mar-90
+Runtime: 0:00:01, KCS:10, Connect time: 0:00:41
+Disk Reads:126, Writes:0, Blocks saved:0
+.LOGIN 1,2
+Job 2  KS10       CTY
+[LGNJSP Other jobs same PPN]
+[LGNLAS Last access to [1,2] succeeded on  4-Mar-86:17:48:53]
+19:36   11-Mar-90   Sunday
+
+.

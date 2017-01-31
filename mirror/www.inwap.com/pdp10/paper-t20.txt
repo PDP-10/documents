@@ -1,0 +1,2149 @@
+Note: As of October, 1995, the author's email address is:
+	Dan Murphy <dlm@dlm.mv.com>
+
+
+                     -< TOPS-10/20 discussions held here >-
+================================================================================
+Note 286.0              History of DEC's 36-bit Machines               3 replies
+FOGGYR::MURPHY "just playing the electric violin..." 23 lines  26-DEC-1991 15:15
+--------------------------------------------------------------------------------
+    Several years ago, a few old-time 36-bit afficianados had an idea:
+    let's write a book on the history of DEC's 36-bit machines -- the
+    users, engineers, operating systems, software, etc.  Interviews
+    were done and several chapters were written, but the book as a whole
+    never happened.  Passage of time, loss of (or lack of) publisher
+    interest, etc.
+
+    I wrote a chapter on the history of TOPS-20, and it has been sitting
+    around for a couple years in hopes that the book project might somehow
+    come back to life.  Since that seems rather unlikely, and since
+    everything about 36-bit machines continues to fade into oblivion,
+    I figured I might as well make this publicly available for whatever
+    remaining interest there might be.  This notes file seems to be
+    the one remaining place where those interested in 36-bit history
+    might have occasion to look.
+
+    I would invite authors of any of the other chapters to post them
+    also.
+
+    Please respect any copyright notices placed on the files.
+
+
+    dlm
+================================================================================
+Note 286.1              History of DEC's 36-bit Machines                  1 of 3
+FOGGYR::MURPHY "just playing the electric violin." 2112 lines  26-DEC-1991 15:22
+                    -< Origins and Development of TOPS-20 >-
+--------------------------------------------------------------------------------
+
+                         ORIGINS AND DEVELOPMENT OF TOPS-20
+
+                                    by Dan Murphy
+
+                           Copyright (c) 1989 - Dan Murphy
+                           Copyright (c) 1991 - Dan Murphy
+      Permission for electronic forwarding and reposting hereby granted.
+     Rights to commercial and/or hardcopy publication reserved.  Contact
+            the author at murphy@mv.mv.com.
+
+
+
+                                        CONTENTS
+
+             1       ORIGINS  . . . . . . . . . . . . . . . . . . . . . . 1
+             1.1       Paging Development In The 1960'S . . . . . . . . . 1
+             1.2       Early Interest In The PDP-6 And First 36-bit 
+                       Product Cancellation.  . . . . . . . . . . . . . . 2
+             1.3       A Detour And Learning Experience . . . . . . . . . 3
+             1.4       The 36-bit Machine Is Born Again.  . . . . . . . . 4
+             1.5       Paging Requirement Leads To New Operating System . 4
+             2       ORIGIN OF MAJOR FEATURES . . . . . . . . . . . . . . 5
+             2.1       Virtual Memory And Process Address Space . . . . . 6
+             2.1.1     Page Reference History Information . . . . . . . . 7
+             2.1.2     Shared Pages And File-to-Process Mapping . . . . . 7
+             2.1.3     Copy-on-write Pages  . . . . . . . . . . . . . . . 8
+             2.2       Design Lessons Learned . . . . . . . . . . . . . . 8
+             2.3       User-oriented Design Philosophy  . . . . . . . .  10
+             2.3.1     Computer Use By Non-experts  . . . . . . . . . .  10
+             2.3.2     Interactions Judged On Human-Human Basis . . . .  11
+             2.4       Escape Recognition, Noise Words, Help  . . . . .  11
+             2.4.1     A Brief Description Of Recognition And Help  . .  11
+             2.4.2     Question-mark Help . . . . . . . . . . . . . . .  13
+             2.4.3     Origin Of Recognition  . . . . . . . . . . . . .  14
+             2.4.4     Avoid Modes  . . . . . . . . . . . . . . . . . .  15
+             3       TENEX MOVES TO DEC . . . . . . . . . . . . . . . .  15
+             3.1       KI-TENEX . . . . . . . . . . . . . . . . . . . .  15
+             3.2       Paging Algorithm In Software . . . . . . . . . .  17
+             3.3       KL10 Processor In Development  . . . . . . . . .  17
+             3.4       IBM Makes Virtual Memory Legitimate  . . . . . .  18
+             3.5       DECSYSTEM-20 Is Born . . . . . . . . . . . . . .  18
+             3.6       TOPS-20 Development Begins . . . . . . . . . . .  19
+             3.7       TOPS-10 Compatibility And Coexistence  . . . . .  19
+             3.7.1     One Operating System Or Two For 36-bit Machines?  19
+             3.7.2     OS Call Interface  . . . . . . . . . . . . . . .  20
+             3.7.3     Command Language . . . . . . . . . . . . . . . .  21
+             3.7.4     Disk Structure Compatibility . . . . . . . . . .  21
+             3.8       The Name Game, Or, "What Are We Working On 
+                       Again?"  . . . . . . . . . . . . . . . . . . . .  22
+             3.9       The TOPS-20 Group  . . . . . . . . . . . . . . .  23
+             4       ARCHITECTURE ENHANCEMENTS IN THE DECSYSTEM-20  . .  23
+             4.1       Extended Addressing  . . . . . . . . . . . . . .  24
+             4.2       Paging Algorithm In Microcode  . . . . . . . . .  25
+             4.3       Software Enhancements  . . . . . . . . . . . . .  26
+             4.4       The COMND Service  . . . . . . . . . . . . . . .  26
+             4.5       Implemention Language  . . . . . . . . . . . . .  28
+             5       THE KL10 BECOMES A PRODUCT . . . . . . . . . . . .  29
+             5.1       DECSYSTEM-20 Announcement And First Ship . . . .  30
+             5.2       How The VAX Almost Had 36 Bits . . . . . . . . .  30
+             5.3       Other Effects Of VAX Development On TOPS-20  . .  31
+             6       TOPS-20 DURING ITS PRODUCT YEARS . . . . . . . . .  32
+             6.1       Dolphin And Minnow . . . . . . . . . . . . . . .  32
+             6.2       The "Going-out-of-Business" Strategy . . . . . .  33
+             6.3       Ambitious Plans For Jupiter  . . . . . . . . . .  34
+             7       CONCLUSION . . . . . . . . . . . . . . . . . . . .  35
+                                                                     Page 1
+
+
+                       ORIGINS AND DEVELOPMENT OF TOPS-20
+
+                                 by Dan Murphy
+
+                        Copyright (c) 1989 - Dan Murphy
+
+
+
+     1  ORIGINS
+
+          TOPS-20 was first announced as  a  DEC  product  and  shipped  in
+     January,  1976.  Development had started in 1973 based on TENEX[1], an
+     operating system for the PDP-10 then in use at a  number  of  research
+     installations  around  the country.  Many factors were involved in the
+     decision to start TOPS-20 development, but primarily, DEC wanted a new
+     virtual  memory  operating  system  for the KL10 processor then in the
+     early stages of development.  Although much was added and  changed  as
+     TENEX  became  TOPS-20  from  1973  to  1976, most of its architecture
+     remained as it was designed in 1969 at  Bolt  Beranek  &  Newman  Inc.
+     (BBN) in Cambridge.
+
+          Hence, to understand the factors which influenced the  design  of
+     TOPS-20, we have to look back to the late 1960s and the environment in
+     which TENEX was created.  Some of the ideas that went into TENEX,  and
+     the process which ultimately brought it into DEC, had roots going back
+     to the early 1960's.  In this section, we will trace these aspects  of
+     TOPS-20's history.
+
+          I was an undergraduate at MIT from 1961 to 1965.  After receiving
+     my  degree  in  1965,  I  went  to  work  for BBN doing various system
+     programming activities and, in particular, supporting the LISP  system
+     then  in  use  for AI research.  I was involved in the design of TENEX
+     and implemented a number of its kernel modules from 1968 to  1972  and
+     then came to DEC along with TENEX in 1973.
+
+          DEC bought TENEX in 1973, believing that it  represented  a  good
+     base  for a new, state-of-the-art commercial system.  However, as with
+     other "overnight sensations", this  was  just  the  final  step  in  a
+     flirtation  between  DEC and BBN that had gone on over many years.  In
+     1961, BBN was one of the first sites external to DEC  to  install  and
+     use  a PDP-1 (DEC's first computer), and did some early experiments in
+     timesharing   using   this   machine   and   some   locally   designed
+     modifications.   This  is  generally recognized as the first practical
+     timesharing system.  During the subsequent years, many discussion took
+     place between the two companies about the best way to design and build
+     computers.
+
+
+
+     1.1  Paging Development In The 1960'S
+
+          One such area of discussion was  paging  and  memory  management.
+     BBN  was  pursuing a number of AI research projects in LISP, and these
+     typically required a  large  amount  of  random  access  memory.   Few
+     computers of that day (and none that BBN could afford) had the size of
+                                                                     Page 2
+
+
+     memory that was required, so various alternative techniques  had  been
+     sought  to work around the limitation[2].  Paging and "virtual memory"
+     was one in which there was a great deal of interest.  There was a LISP
+     system  running  on  the PDP-1 at BBN, and I had converted it to use a
+     software paging system that I had developed earlier at MIT.
+
+          This system used a high speed drum  as  backing  store  for  main
+     memory,  and  divided  both  main  memory and the drum into fixed size
+     units (pages) that could be copied back and forth as  necessary.   The
+     LISP system itself used 18-bit pointers and was built as if there were
+     an 18-bit (262 kword) memory on the machine.  However,  with  software
+     paging,  each  reference  to  the  target of one of these pointers was
+     changed to a subroutine call (or in-line  sequence).   The  subroutine
+     would  take the high order few bits of the pointer as an index into an
+     array (the page table) which would contain the actual current location
+     of  the  page.   If the page were then in main memory, the page number
+     bits from the table would replace those which had  been  used  as  the
+     index  into  the  table, and the reference would be completed.  If the
+     desired page were not in main memory, a call would be made to a  "page
+     manager"  routine  to  rearrange  things  as  necessary.   That  meant
+     selecting a page in main memory to be moved (copied) back to the drum,
+     and  then  reading  into  this  page  the  desired page from the drum.
+     Finally, the table would be adjusted to reflect these changes, and the
+     reference sequence begun again.
+
+          In actual use, this system was fairly effective.   The  reference
+     patterns  of  the typical LISP programs that we were running were such
+     that the system was not dominated by waits for drum IO.  That is, most
+     pointer references were to pages then in main memory, and only a small
+     fraction were to pages which  had  to  be  read  in  from  the  disk*.
+     However,  the actual number of references was sufficiently high that a
+     great deal of time was  spent  in  the  software  address  translation
+     sequence,  and  we realized that, ultimately, this translation must be
+     done in hardware if a truly effective paged virtual memory system were
+     to be built.
+
+
+
+     1.2  Early  Interest  In  The   PDP-6   And   First   36-bit   Product
+          Cancellation.
+
+          The PDP-6 had been announced in  1964  and  was  immediately  the
+     machine  of  choice  for  LISP programming.  A single word holding two
+     addresses (a CAR and CDR in LISP terms) seemed designed especially for
+     LISP  (this  wasn't mere coincidence).  The big (for the time) address
+     space of 2^18 words offered the promise of fast,  efficient  execution
+     of  large  LISP  programs.   Although the basic instruction set didn't
+     include a CONS instruction (the LISP primitive that builds lists), one
+     early  PDP-6  had  a  special  modification  installed to provide that
+     operation.  This was the machine that was installed at the AI  Lab  of
+
+                   - - - - - - - - - - - - - - - - - - - - -
+     * - Several studies, some by us at BBN, had been done  to  investigate
+     memory   reference   behaviour  and  gather  statistics  from  various
+     programs[3].
+                                                                     Page 3
+
+
+     Stanford  University,  headed  by  one  of the inventors of LISP, John
+     McCarthy.
+
+          The group at BBN had every intention  of  acquiring  a  PDP-6  to
+     improve  our  LISP  capabilities,  but of course, we wanted it to have
+     hardware paging so that we could carry over the paging techniques from
+     our  PDP-1  LISP.   Several discussions were held between BBN and DEC,
+     including Win Hindle and Alan Kotok on the DEC side.  BBN was lobbying
+     for  paging to be included in a subsequent PDP-6 model, or possibly as
+     an add-on, but these discussion came to an end when DEC announced that
+     there  would be no further PDP-6 models -- that is, that DEC was going
+     out of the 36-bit business.  This (1966) was the first of several such
+     occasions.
+
+
+
+     1.3  A Detour And Learning Experience
+
+          Taking DEC at its word, BBN turned  its  attention  to  selecting
+     another machine, hopefully one with an expanding future, that we could
+     use to support our various research  projects.   The  result  of  this
+     selection  process was the purchase of an SDS-940.  SDS was Scientific
+     Data Systems in El Segundo, California, later acquired  by  Xerox  and
+     known  as  XDS.   The  SDS-940 was a 24-bit word machine with a modest
+     virtual address space, but it did have hardware  paging  capabilities.
+     Also,  SDS  was  touting  as  a  follow-on,  the  Sigma-7  then  under
+     development, which would be larger, faster, and do all the  things  we
+     could  ever  possibly  want.  If it did, we never found out because by
+     the time it came out, the DEC KA-10 had been announced  (or  at  least
+     leaked),  and  we  happily switched back to the architecture we really
+     wanted.
+
+          It was also a factor that the Sigma-7 suffered a bit of  schedule
+     slippage.   Yes,  this  actually happened despite firm assurances from
+     SDS that no such thing was possible.  SDS had even  published  several
+     ads  in  trade magazines touting their forthcoming system as "the best
+     timesharing system not yet  available".   Another  memorable  ad  read
+     "they  said  we  must  be crazy to publish a firm software development
+     schedule, but here it is." Apparently, "they" were right because  that
+     firm  schedule  went  the  way  of  most  "firm"  software development
+     schedules of the period.
+
+          The former ad also inspired someone at DEC to create a counter ad
+     for  TOPS-10  which  read "announcing the best timesharing system very
+     much available."
+
+          BBN did use the SDS-940 for a couple of years however, and we ran
+     on  it  an  operating  system  developed by a group at U.C.  Berkeley.
+     That was significant because a number  of  features  in  the  Berkeley
+     timesharing system were later modified and adopted into TENEX.
+                                                                     Page 4
+
+
+     1.4  The 36-bit Machine Is Born Again.
+
+          When BBN found out the DEC had secretly gone back into the 36-bit
+     business   (or   at  least  was  developing  a  new  machine  of  that
+     architecture), we once again lobbied for the inclusion of  a  hardware
+     paging system.  And once again, this was to no avail.  One advancement
+     in the KA-10 was the dual protection  and  relocation  registers  (the
+     PDP-6  had  only  a single pair).  This allowed programs to be divided
+     into two segments:  a reentrant, read-only portion, and  a  read-write
+     data area.  That, however, was as far as DEC was willing to go at that
+     time in advancing the state of the  art  of  operating  system  memory
+     managment support.
+
+          Another factor was DEC's firm intent to keep down  the  price  of
+     this new large machine.  DEC was doing well with small machines (PDP-5
+     and  PDP-8  in  particular),  but  the  PDP-6  had  suffered  numerous
+     engineering and reliability problems, was hard to sell, and, some say,
+     almost wrecked the company.  The KA-10 had a design constraint that  a
+     minimal machine could be configured and sold for under $100,000.  This
+     configuration was limited to 16 kwords  of  main  memory  and  had  no
+     solid-state  registers for the 16 accumulators (all AC references went
+     to main memory at considerable cost in speed).   To  support  this,  a
+     "tiny"  build of TOPS-10 was designed which would fit in 8 kwords, and
+     various utilities were similarly squeezed:  the 1K PIP, etc.   Whether
+     the  $99,999 entry price was a good marketing ploy is hard to say.  In
+     any case, none of that configuration were ever sold.
+
+          Then too, paging and  "virtual  memory"  were  still  rather  new
+     concepts  at  that  time.   Significant  commercial systems had yet to
+     adopt these techniques, and the idea of pretending to have more memory
+     that you really had was viewed very skeptically in many quarters.
+
+
+
+     1.5  Paging Requirement Leads To New Operating System
+
+          Undaunted by DEC's refusal to see the wisdom of our approach, BBN
+     nonetheless  planned  the  purchase  of  several  KA10's and set about
+     figuring out how to turn them into the system we  really  wanted.   In
+     addition  to  the  36-bit architecture we favored, the KA10 system had
+     retained much of the hardware modularity of  the  PDP-6  including  in
+     particular  the memory bus with independent memory units.  This led us
+     to conceive of the idea  of  putting  a  mapping  device  between  the
+     processor and the memories which would perform the address translation
+     as we wanted it done.
+
+          Another decision we had to make was whether or not to attempt  to
+     modify TOPS-10 to support demand paging.  The alternative was to build
+     a new system from scratch, an  ambitious  undertaking  even  in  those
+     days.  Obviously, we decided to build a new system -- the system which
+     was later named TENEX.  This decision was  justified  largely  on  the
+     grounds  that  major  surgery would be required to adopt TOPS-10 as we
+     desired, and even then we probably wouldn't be able to solve  all  the
+     problems.   In  retrospect,  this  view  was probably justified since,
+     although TOPS-10 development continued for nearly 20  years  after  we
+                                                                     Page 5
+
+
+     started  TENEX,  TOPS-10 was never modified to have all of the virtual
+     memory features of  TENEX/TOPS-20.   TOPS-10  did  ultimately  support
+     paging and virtual memory, but not the various other features.
+
+          Beyond that, there were a number of other features not related to
+     paging that we wanted in an operating system.  This further tilted the
+     decision toward implementation of a new system.  On the other hand, we
+     had  no  desire  or  ability  to  implement  new  versions of the many
+     language compilers and utilities then available under  TOPS-10,  so  a
+     method  of  running  these  images  "as is" was needed.  We decided it
+     would be possible to emulate the operating  system  calls  of  TOPS-10
+     with  a  separate  module  which  would  translate  the  requests into
+     equivalent native services.  This is described in more  detail  later.
+     The  plan  then, would be to implement a new system from the operating
+     system interface level down plus particular major systems such as LISP
+     that were key to our research work.
+
+          Virtual memory through paging was the fundamental need  that  led
+     to  the  decision  to build TENEX.  Had TOPS-10 or another system been
+     available which supported only that  requirement,  we  probably  would
+     have used it and not undertaken the construction of a new kernel.  The
+     other desires we had for our system would not have been sufficient  to
+     warrant  such  an effort, and of course, we did not foresee all of the
+     capabilities that it would eventually have.
+
+
+
+     2  ORIGIN OF MAJOR FEATURES
+
+          TENEX development was motivated largely by the needs  of  various
+     research  programs  at  BBN,  Artificial  Intelligence  in particular.
+     These needs were shared by a number of other  labs  supported  by  the
+     Advanced Research Projects Agency (ARPA) of the DOD, and in the period
+     from 1970 to 72, a number of them installed TENEX and made it the base
+     for  their research programs.  As noted before, a large virtual memory
+     was foremost among these needs because of the popularity and  size  of
+     the  LISP  programs  for speech recognition, image processing, natural
+     language processing, and other AI projects.
+
+          During this same period, the ARPA network was being developed and
+     came  on  line.  TENEX was one of the first systems to be connected to
+     the ARPANET and to have OS support for the network as a general system
+     capability.  This further increased its popularity.
+
+          Like most other software systems, TENEX was an amalgam  of  ideas
+     from  a  number  of  sources.   Most  of the features which came to be
+     prized in TOPS-20 had roots in other systems.  Some were taken largely
+     unchanged,  some were modified in ways that proved to be critical, and
+     others served merely as the germ of an idea hardly recognizable in the
+     final  system.   Among those that we can trace to one or more previous
+     systems are:  "escape recognition", virtual memory structure,  process
+     structure and its uses, and timesharing process scheduling techniques.
+                                                                     Page 6
+
+
+          Three system most directly affected the design of  TENEX  --  the
+     MULTICS  system  at  MIT,  the  DEC  TOPS-10  system, and the Berkeley
+     timesharing system for the SDS 940 computer.  MULTICS was  the  newest
+     and  most  "state of the art" system of that time, and it incorporated
+     the latest ideas in operating  system  structure.   In  fact,  it  was
+     popular  in  some  circles  to  say  that,  with the implementation of
+     MULTICS, "the operating system  problem  had  been  solved".   Several
+     members  of  the  MIT  faculty  and  staff  who  had worked on MULTICS
+     provided valuable review and comment on the emerging TENEX design.
+
+          Many of the paging concepts came from our own previous work,  the
+     PDP-1 LISP system in particular.  Other ideas had recently appeared in
+     the operating system literature, including the "working set" model  of
+     program  behaviour by Peter J.  Denning[4].  MULTICS had developed the
+     concept of segmentation and of file-process mapping,  that  is,  using
+     the  virtual  address  space  as  a "window" on data which permanently
+     resides in a file.
+
+          The Berkeley 940  system  had  a  multi-process  structure,  with
+     processes  that  were  relatively inexpensive to create.  That in turn
+     allowed such things as a system command language interpreter which ran
+     in  unprivileged mode and a debugger which did not share address space
+     with the program under test and therefore was  not  subject  to  being
+     destroyed by a runaway program.
+
+
+
+     2.1  Virtual Memory And Process Address Space
+
+          These two concepts, virtual memory and multiple  processes,  were
+     fundamental  to  the  design  of TENEX, and ultimately were key to the
+     power and flexibility of TOPS-20.  The two  abstractions  also  worked
+     well  together.   The  concept of a process included a virtual address
+     space of 262 kwords (18-bit addresses) -- the  maximum  then  possible
+     under  the  36-bit  instruction  set  design.  Extended addressing was
+     still many years away, and the possibility that more than  262k  might
+     ever be needed rarely occured to anyone.
+
+          We merely wanted the full virtual address space to  be  available
+     to  every  process, with no need for the program itself to be aware of
+     demand paging or to "go virtual".  We believed that  mechanisms  could
+     be  built  into  the paging hardware and operating system to track and
+     determine process working sets, and it would  do  as  good  a  job  at
+     managing  memory  efficiently  as  if  the program explicitly provided
+     information (which might be wrong).  It might happen, of course,  that
+     a particular program had too large a working set to run efficiently in
+     the available physical memory, but the system would still do the  best
+     it  could  and  the  program  would  make some progress at the cost of
+     considerable drum thrashing.  In  any  event,  the  implementation  of
+     virtual memory was to be transparent to user programs.
+                                                                     Page 7
+
+
+     2.1.1  Page Reference History Information -
+
+          To  support  transparent  demand-paged  virtual  memory,  we  had
+     learned  that  we  had  to  maintain  history  information  about  the
+     behaviour of programs and the use of pages.  This led  to  the  design
+     and  inclusion  of  the  "core  status  table"  in the hardware paging
+     interface.  Other tables (i.e.  page tables)  would  hold  information
+     that  provided  the  virtual-to-physical address translation; the core
+     status table was specified to hold information related to the  dynamic
+     use  and movement of pages.  For each physical page in use for paging,
+     the core status table would record:  (1)  a  time-stamp  of  the  last
+     reference,  and  (2)  an  identification  of  the  processes  that had
+     referenced the page.  The latter was included because we expected that
+     there  would often be many processes sharing use of a given page.  The
+     need for sharing was represented  in  several  other  aspects  of  the
+     paging design as well[5].
+
+
+
+     2.1.2  Shared Pages And File-to-Process Mapping -
+
+          The  perceived  need  for  sharing  pages  of  memory   and   the
+     segmentation  ideas  we  had  seen in Multics led to the design of the
+     file-to-process mapping capabilities.  In the  paging  hardware,  this
+     was  supported  by  two  types  of  page  table  entries, "shared" and
+     "indirect", in addition to the "private" type  that  would  contain  a
+     direct   virtual-to-physical  mapping.   These  allowed  the  physical
+     address of a shared page to be kept in one place even though the  page
+     was  used  in many places, including in the address space of processes
+     that were swapped out.   The  "indirect"  pointer  eventually  allowed
+     another  capability that we didn't initially foresee -- the ability to
+     make two or more process address  spaces  equivalent,  not  only  with
+     regard  to  the data contained therein, but with regard to the mapping
+     as well*.
+
+          In software, we wanted to achieve some of the benefits of Multics
+     "segmentation",  but  the  PDP-10 address space wasn't large enough to
+     use the Multics approach directly.  Consequently, we decided to extend
+     the  idea  of named memory down to the page level and to allow mapping
+     to be done on a page-by-page  basis.   The  result  of  this  was  the
+     fundamental  design  of the TENEX/TOPS-20 virtual memory architecture,
+     specifically:
+
+           *  A process address space  contains  no  real  storage,  it  is
+              merely a set of 512 windows (mappings) to storage.
+
+           *  The only real storage resides  in  files.   A  page  of  real
+              storage is identified by the combination of:  file name + VPN
+              (virtual page number).
+
+
+                  - - - - - - - - - - - - - - - - - - - - - -
+     * - This allows, for example, a Unix-type "fork" operation  to  create
+     the  child  address  space  very  cheaply  whether  or not it is later
+     replaced by an EXEC.
+                                                                     Page 8
+
+
+           *  A system call maps pages of real storage into process windows
+              and  unmaps  them.   The  same  page  may be mapped into many
+              processes (and into multiple windows of  the  same  process),
+              and all windows see and share the same physical storage.
+
+
+
+
+     2.1.3  Copy-on-write Pages -
+
+          We knew that most sharing would be of read-only data,  especially
+     of  program text and constant data, but that any program might contain
+     initialized variables which would eventually be written.  Beyond that,
+     almost  any  normally  read-only  data  might  be  modified under some
+     circumstances, e.g.  insertion of a break point for debugging.  In the
+     LISP  system,  vast  amounts  of  program  were  represented  as  LISP
+     structures, and these structures could be edited and modified  by  the
+     user.
+
+          Hence, it wasn't acceptable to enforce  read-only  references  on
+     the  bulk  of  this storage, nor would it be efficient to copy it each
+     time a process used or referenced it.  That would defeat much  of  the
+     sharing  objective.   The  solution we devised was the "copy-on-write"
+     page.  This meant that the page would remain shared so  long  as  only
+     read  or execute references were made to it, but if a process tried to
+     write it, a copy would be made and the process map adjusted to contain
+     the  copy.   This  would  happen  transparently  to the process.  True
+     read-only enforcement was available of course,  and  the  actual  file
+     contents   (e.g.    of   a   system   program  executable  file)  were
+     appropriately protected against modification, but the user  could  map
+     any  such pages copy-on-write, and a write reference would then merely
+     result in a modified copy being used.
+
+
+
+     2.2  Design Lessons Learned
+
+          Multics may be said to have contributed more than just the  ideas
+     for  virtual  memory  organization  and  other  specific capabilities.
+     During the design of TENEX, we invited some of the  Multics  designers
+     and  implementors  to  review our progress and decisions.  As is often
+     the case, we had fallen into the trap of trying to do too  much  in  a
+     number  of  areas  and  had  produced  some  designs  that  were quite
+     convoluted and complex.  Several people from Multics  beat  us  up  on
+     those  occasions,  saying  "this  is  too  complicated -- simplify it!
+     Throw this out!  Get rid of that!" We took much of  that  advice  (and
+     could  probably  have  taken  more),  and  I credit these reviews with
+     making the core capabilities significantly easier  to  understand  and
+     program, as well as to implement and debug.
+
+          This was one of the earliest occasions when  I  really  began  to
+     appreciate  the  fact  that  a  complex,  complicated  design for some
+     facility  in  a  software  or  hardware  product  is  usually  not  an
+     indication  of  great  skill and maturity on the part of the designer.
+     Rather, it is typically evidence of lack of maturity, lack of insight,
+                                                                     Page 9
+
+
+     lack  of  understanding of the costs of complexity, and failure to see
+     the problem in its larger context.
+
+          The time from when the first word of TENEX code  was  written  to
+     when  the system was up and serving regular users was about six months
+     -- remarkable even for that era.  The system was far from complete  at
+     that point, but BBN internal users were making effective use of it.
+
+          One of the things that contributed to such speedy development was
+     our  concern  for  debugging  support.   DDT was the standard symbolic
+     debugger on the PDP-10, and  it  had  been  evolved  from  predecessor
+     versions on the PDP-6, PDP-1, and TX-0 (an experimental machine at MIT
+     that preceded the PDP-1).  DDT had a lot of power for  its  time,  and
+     even  today  remains  the choice of some experienced users despite the
+     availability of screen- and window-oriented  debugging  systems.   DDT
+     ran  in  both  exec  (kernel) mode and user mode under TOPS-10, and we
+     supported both on TENEX as well.
+
+          In addition, we provided a way for DDT to run  under  timesharing
+     while  looking  at  the system code and data structures.  This allowed
+     several developers to be debugging system code at the  same  time,  at
+     least  to  a  limited  extent.   Even  breakpoints  could  be handled,
+     provided that no other  process  would  execute  the  code  while  the
+     breakpoint  was  in  place.   In  all  modes,  DDT had the full set of
+     symbols available to it, so we were able  to  debug  without  constant
+     referral to listings and typing of numeric values.
+
+          In user mode, DDT could be added to any program even if  it  were
+     already   running.    Previous  systems  required  that  debugging  be
+     anticipated by linking the debugger with the program.  In  TENEX,  DDT
+     was  merely mapped when needed at a high unused address in the address
+     space well out of the way of most programs.   An  even  more  powerful
+     version  of DDT, called IDDT (for invisible) ran in a separate process
+     from the program being debugged.  Thus, it was  impervious  to  memory
+     corruption  by  the program under test, and it could intercept any and
+     all illegal actions.  Unfortunately, this version of DDT diverged from
+     the mainstream DEC DDT, and IDDT was never brought up to date and made
+     the normal debugger, even under TOPS-20.  Nonetheless,  the  easy  and
+     extensive  use of DDT surely made development more effective, both for
+     user and system programmers.
+
+          Another area where TENEX, and later TOPS-20, excelled was in  the
+     user  interface, described in detail below.  A key reason that we were
+     able to extend the user interface so significantly is  that  the  code
+     which  implemented  it  ran  an  an  ordinary user program.  Hence, it
+     wasn't constrained by size or limited by functions which could not  be
+     performed  in kernel mode.  Beyond that, debugging it was much simpler
+     -- it didn't require stand-alone use of  the  machine  as  did  kernel
+     debugging.   All  of  this allowed a great deal of experimentation and
+     evolution based on tuning and feedback from real use and real users.
+                                                                    Page 10
+
+
+     2.3  User-oriented Design Philosophy
+
+          A piece of system design "philosophy"  had  emerged  at  BBN  and
+     among  some of the ARPA research sites that was to have a large impact
+     on the overall feel of TENEX and, ultimately, TOPS-20.  At  the  time,
+     we  called this "human engineering" -- we wanted the system to be easy
+     to learn and easy to use, and we wanted the system to take care of  as
+     many grungy details as possible so that the programmer or user did not
+     have to deal with them.  Beyond that, we were willing  to  spend  real
+     machine  cycles  and  real  (or  at least virtual) memory to make this
+     happen.
+
+          This philosophy led initially to the human interface features  of
+     the  EXEC,  including  "escape  recognition",  the  question-mark help
+     facility, optional subcommands, and "noise"  words.   Few  people  now
+     argue  against  the need to provide effective human interfaces, but at
+     that time there were many detractors who felt that it was a  waste  of
+     cycles  to  do  such  things  as  command recognition.  These kinds of
+     things, they said, would "slow the system down"  and  prevent  "useful
+     work" from getting done.  Other contemporary systems used short, often
+     one-letter, commands and command arguments, provided no on-line  help,
+     and  did not give any response to the user other than the "answer" (if
+     any) to the command that had been entered.
+
+
+
+     2.3.1  Computer Use By Non-experts -
+
+          Many such  systems  fell  into  the  "by  experts,  for  experts"
+     category.  That is, they were built by experts and intended to be used
+     by other experts.  An "expert"  would  obviously  not  need  frivolous
+     features like noise words or command recognition.  Experts would know,
+     not only all the commands, but all the legal  abbreviations  as  well.
+     Experts  may  have  read  the  manual  once, but would always remember
+     everything needed to interact with the system.  So went  the  implicit
+     assumptions  about  users -- either you were an expert, or you were an
+     inferior being not really entitled to use the Computer anyway.
+
+          The TENEX team took a different view.   It  was  clear  that  the
+     power  of computers was increasing every year and so one should expect
+     the computer to do more and  more  interesting  things.   Most  people
+     would  agree that a major purpose of computer automation is to relieve
+     people of boring, repetitive tasks; we believed that purpose  extended
+     to  computer  system  development  as  well,  and that it was wrong to
+     require a person to learn some new set  of  boring,  arcane  tasks  in
+     order  to  use the computer.  The machine should adapt to man, not man
+     to the machine.
+
+          The view was probably reinforced by the  artificial  intelligence
+     research  being  done in the environment where TENEX was designed.  In
+     such areas as speech recognition,  pattern  recognition,  and  natural
+     language comprehension, massive computation power was being applied to
+     make computers interact in ways that would be more human.  These  were
+     long-term  efforts,  but  we  wanted  our  computer systems to be more
+     human-oriented in the sort term as well.
+                                                                    Page 11
+
+
+          One of the ideas to come out of the  AI  research  was  that  the
+     computer  should "do what I mean", even if I didn't say it quite right
+     or  maybe  made  a  spelling  error.   Warren  Teitelman   implemented
+     extensive capabilities in LISP to correct errors automatically or with
+     minor user intervention, and this came to be called the DWIM  package.
+     With  this  kind of research effort going on, we were sensitive to the
+     restrictions and obtuseness of most existing systems.
+
+          Hence, we took (now  obvious)  decisions  like,  (1)  identifying
+     users by alphanumeric name rather than number; (2) allowing file names
+     to be long enough to represent meaningful (to the human)  information;
+     (3) typing or displaying positive confirmation of actions requested by
+     the user; (4) allowing for a range  of  individual  preferences  among
+     users in regard to style of command input and output.
+
+
+
+     2.3.2  Interactions Judged On Human-Human Basis -
+
+          We specifically looked for ways of interaction  that  would  seem
+     natural  when  judged in a human-to-human perspective.  On that basis,
+     many typical  computer  interface  behaviours  are  quite  unfriendly.
+     Terse,  cryptic, and/or abrupt responses; inflexible and obscure input
+     syntax; use of words for meanings that are counter-intuitive --  these
+     things  are  all  judged  as rude or worse if seen in a human-to-human
+     interaction.
+
+          This desire to make the computer do  the  grunge  work  motivated
+     design  in areas other as well.  Demand paging and virtual memory were
+     seen as ways to reduce the burden  and  difficulty  of  writing  large
+     programs.   With a large virtual memory, the programmer would not have
+     to be concerned with segmenting and overlaying his  program.   Rather,
+     he  could leave memory management to the system and concentrate on the
+     particulars of the task at  hand.   Other  features  such  as  process
+     structure,  system  utility  calls, and standardized file parsing were
+     intended to ease the job of system programming by providing  standard,
+     powerful functions to the programmer.
+
+
+
+     2.4  Escape Recognition, Noise Words, Help
+
+          One of the most favored features among  TOPS-20  users,  and  one
+     most  identified  with  TOPS-20 itself, is "escape recognition".  With
+     this, the user can often get the system to, in effect, type most of  a
+     command  or  symbolic  name.   The  feature  is  more easily used than
+     described;  nonetheless,  a  brief  description  follows  to  aid   in
+     understanding the development of it.
+
+
+
+     2.4.1  A Brief Description Of Recognition And Help -
+                                                                    Page 12
+
+
+          Typing the escape key says to the system, "if  you  know  what  I
+     mean  from  what I've typed up to this point, type whatever comes next
+     just as if I had typed it".   What  is  displayed  on  the  screen  or
+     typescript  looks  just  as  if  the user typed it, but of course, the
+     system types it much faster.  For example, if the user types  DIR  and
+     escape, the system will continue the line to make it read DIRECTORY.
+
+          TOPS-20 also accepts just the abbreviation DIR (without  escape),
+     and the expert user who wants to enter the command in abbreviated form
+     can do so without delay.  For the novice user,  typing  escape  serves
+     several purposes:
+
+           *  Confirms that the input entered up to that  point  is  legal.
+              Conversely, if the user had made an error, he finds out about
+              it immediately rather than after investing the additional and
+              ultimately wasted effort to type the rest of the command.
+
+           *  Confirms for the user that what the system now understands is
+              (or  isn't)  what  the  user means.  For example, if the user
+              types DEL, the system completes the word DELETE.  If the user
+              had   been  thinking  of  a  command  DELAY,  he  would  know
+              immediately that the system had not understood what he meant.
+
+           *  Typing escape also makes the system respond with any  "noise"
+              words  that  may be part of the command.  A noise word is not
+              syntactically or semantically necessary for the  command  but
+              serves  to  make it more readable for the user and to suggest
+              what follows.  Typing DIR  and  escape  actually  causes  the
+              display to show:
+
+
+              DIRECTORY (OF FILE)
+
+          This prompts the user that files are being  dealt  with  in  this
+     command, and that a file may be given as the next input.  In a command
+     with several parameters, this  kind  of  interaction  may  take  place
+     several   times.   It  has  been  clearly  shown  in  this  and  other
+     environments that frequent interaction and feedback such as this is of
+     great  benefit in giving the user confidence that he is going down the
+     right path and that  the  computer  is  not  waiting  to  spring  some
+     terrible  trap if he says something wrong.  While it may take somewhat
+     longer to enter a command this way than  if  it  were  entered  by  an
+     expert  using  the shortest abbreviations, that cost is small compared
+     to the penalty of entering a wrong command.  A wrong command means  at
+     least that the time spent typing the command line has been wasted.  If
+     it results in some erroneous action (as opposed to  no  action)  being
+     taken, the cost may be much greater.
+
+          This is a key underlying reason that  the  TOPS-20  interface  is
+     perceived  as  friendly:  it significantly reduces the number of large
+     negative feedback events which occur to the user, and instead provides
+     many  more  small  but positive (i.e.  successful) interactions.  This
+     positive reinforcement would be considered quite obvious if viewed  in
+     human-to-human  interaction  terms, but through most of the history of
+     computers, we have ignored the need of the  human  user  to  have  the
+                                                                    Page 13
+
+
+     computer be a positive and encouraging member of the dialog.
+
+          Typing escape is only  a  request.   If  your  input  so  far  is
+     ambiguous,  the  system merely signals (with a bell or beep) and waits
+     again for more input.  Also, the escape recognition is  available  for
+     symbolic  names  (e.g.   files)  as well as command verbs.  This means
+     that a user may use long, descriptive file names in order to help keep
+     track of what the files contain, yet not have to type these long names
+     on every reference.  For example, if my directory contains:
+
+             BIG_PROGRAM_FILE_SOURCE
+             VERY_LONG_MANUAL_TEXT
+
+          I need only type B or V to unambiguously identify  one  of  those
+     files.   Typing  extra  letters  before  the escape doesn't hurt, so I
+     don't have to  think  about  the  minimum  abbreviation;  I  can  type
+     VER<esc> and see if the system recognizes the file.
+
+
+
+     2.4.2  Question-mark Help -
+
+          Finally, if the user still isn't sure what input comes next in  a
+     command, he types question-mark, and the system will provide a list of
+     choices that are legal at that  point.   The  list  includes  specific
+     keywords  (e.g.   FILE,  DIRECTORY)  and  generic  descriptions  (e.g.
+     "input file") Most importantly, the  question-mark  request  does  not
+     destroy the previous command input.  After the list of alternatives is
+     displayed, the partial command is  redisplayed,  and  input  continues
+     from the point just before where the user typed question mark.
+
+          As a result of this feature:
+
+           *  Users never have to go grab a manual and search around trying
+              to  find  the  name  of a forgotten reserved word (command or
+              parameter).  This eliminates the "I  know  a  word,  can  you
+              guess it" aspect of many computer interfaces.
+
+           *  The user can often figure out from the choice  of  parameters
+              what  an  unfamiliar command or option will do.  This further
+              eliminates laborious searching of manuals.
+
+           *  Because the context of the current command is not  lost  when
+              help  is  requested,  the  user can go step-by-step through a
+              command, figuring out each field in turn.  In  systems  where
+              getting  help is a command itself, the user may have to write
+              down a long unfamiliar command on a piece of paper  in  order
+              to be able to enter it completely.
+
+
+          As menu-oriented interfaces have become  more  widely  used,  the
+     advantage  of  having  all  choices  visible  to  the  user has become
+     obvious.  The question-mark help feature can, in retrospect,  be  seen
+     as  a  "menu  on  demand" kind of approach, and it was one that worked
+     even on terminals too slow to support full menu-based interfaces.
+                                                                    Page 14
+
+
+     2.4.3  Origin Of Recognition -
+
+          The Berkeley Timesharing system for the SDS-940  had  an  earlier
+     form  of  recognition.  It didn't use escape however.  On that system,
+     recognition was automatic; whenever  the  user  had  typed  enough  to
+     unambigiously  identify  a  command or symbolic name, the system would
+     spring to life and type the rest of it.  This  made  for  the  minimum
+     keystrokes in the ideal case, but had one major, and ultimately fatal,
+     problem:  if the user typed too much in one field, i.e.  more than the
+     amount  necessary  for  the  system to recognize that field, the input
+     would go into the next field where it wasn't intended.   For  example,
+     the  system  would recognize COP as sufficient for COPY and supply the
+     "Y".  But if you typed the whole verb, you would get:
+
+             * COPY Y
+                  |
+                  |- typed by the computer
+
+          Then, you would at least have to erase the  extra  "Y".   If  you
+     didn't notice what happened and continued to type the remainder of the
+     command, what you had intended as:
+
+             * COPY OLDFIL NEWFIL
+
+         would come out as
+
+             * COPY Y OLDFIL NEWFIL
+
+          This would at least produce an error, and in  pathological  cases
+     could  do  major damage.  [In the foregoing example, note that the old
+     file name winds up in the new file parameter field.]
+
+          With experience, users would come to know the  abbreviations  for
+     the  reserved  words  and  so  would rarely fall into the trap of this
+     example.  However, this automatic recognition also worked on files  in
+     file  directories,  and  there,  the minimum abbreviation could change
+     from minute to minute as files were added and deleted.  Hence, even an
+     experienced  user  would  have to type carefully.  Interestingly, this
+     system favored slow typists who benefitted from  having  to  type  the
+     minimum  amount of input, but it was a source of maddening frustration
+     to fast typists who would often  outrun  the  system.   And  when  the
+     system  became  loaded  and  response decreased, it was a disaster for
+     everybody.
+
+          This experience convinced us that we didn't  want  to  perpetuate
+     automatic  recognition  in that form in TENEX.  We spent a lot of time
+     thinking about ways that the "overtyping"  problem  might  be  solved,
+     including  rules like "if there is extra input and it matches the last
+     keyword after the point of recognition, apply it to that",  etc.,  but
+     ultimately  could  find no method that didn't leave open a large class
+     of time-dependent errors.  We considered a mode which would enable  or
+     disable  automatic  recognition,  but  decided that would not make the
+     feature any more usable.
+                                                                    Page 15
+
+
+          Hence, we decided to make recognition  happen  only  on  explicit
+     request,  even  though  an  extra  keystroke  would  be  required.  We
+     selected the escape key for this purpose.
+
+
+
+     2.4.4  Avoid Modes -
+
+          In general, it became our objective to avoid modes.  We  believed
+     that  defining  "expert", "novice", etc.  modes would be to ignore the
+     fact that one person can be both novice and expert at the  same  time,
+     and  may  have  preferences that don't fit either definition.  Even an
+     experienced user is likely to be unfamiliar (and therefore a "novice")
+     with some parts of the system, some commands, etc., and would want the
+     additional prompting when working  in  those  areas.   Over  time,  we
+     observed  that  some  very  experienced  users  continue  to  use  the
+     prompting extensively because of the positive feedback it provides.
+
+
+
+     3  TENEX MOVES TO DEC
+
+          The circumstances under which  TENEX  moved  to  DEC  and  became
+     TOPS20  seem  in  retrospect  to  have included a number of fortuitous
+     events.  As noted above, by 1972, TENEX had achieved a certain  amount
+     of  popularity  among  researchers  on  the  ARPA Network.  The reborn
+     36-bit  machine,  newly  christened  the  DECsystem-10  was   enjoying
+     reasonable success in a number of other markets as well.  The prestige
+     of being the choice of leading edge researchers was worth  advertising
+     though,  so  DEC ran an ad in a number of trade publications headlined
+     "ARPA has a network of Supercomputers" and pointing out what  a  large
+     fraction  of  those  were  DECsystem-10s.  In fact, most of those were
+     running TENEX.  By April, 1972, there were seven sites in addition  to
+     BBN running TENEX.
+
+          BBN had a modest business building the outboard  paging  hardware
+     which,  with  the  technology  of  that  day,  required an entire tall
+     19-inch wide cabinet of logic.  DEC, meanwhile, had begun  work  on  a
+     successor machine to be known as the KI10 (the "I" at least suggesting
+     the integrated circuit technology that was to be used).  As  early  as
+     June  of  1970,  meetings  were  held  where  BBN  people attempted to
+     pursuade DEC to include paging hardware similar to the design  of  the
+     BBN pager.  Eventually, DEC decided to include paging in the KI10, but
+     it was based on a much simpler architecture.  DEC engineers  were  not
+     convinced  that  the  several  forms  of  pointers  (private,  shared,
+     indirect) and the core status table  would  be  worth  the  amount  of
+     hardware  required  to support them.  Nonetheless, they did choose the
+     same page size, 512 words, which at least left open the door  to  some
+     sort of later accomodation.
+
+
+
+     3.1  KI-TENEX
+
+          When the KI10 came out, DEC was disappointed (to say  the  least)
+                                                                    Page 16
+
+
+     by  the lack of interest among the research community which had helped
+     spark KA10 sales.  The problem was that  the  machine  would  not  run
+     TENEX.   It  was  almost twice as fast as the KA10, but the paging was
+     different from what TENEX required.  It was also quite evident that it
+     would  not  be  practical  to modify the structure of TENEX to use the
+     more limited KI10 paging.  As a further irony, the version of  TOPS-10
+     initially  shipped  with  the  KI10  used  the paging hardware only to
+     simulate the protection  and  relocation  hardware  of  the  KA10  and
+     realized no benefit from it.
+
+          During the summer  of  1972,  I  had  decided  to  look  for  new
+     opportunities  outside of BBN.  Not surprisingly, one company I talked
+     to was DEC.  In the course of those discussions, I was asked about the
+     possibility  of putting TENEX on the KI10.  This was not a desire that
+     was  widespread  within  DEC  in  general  or  within   DEC   software
+     engineering  in  particular,  but  it  was  of great interest to Allan
+     Titcomb who was the marketing  manager  covering  the  scientific  and
+     research markets.  Titcomb wanted very much to sell some KI10's to the
+     sites that were running TENEX.
+
+          The outcome of this was that I went to  work  for  DEC  --  as  a
+     contractor.   I  contracted  with  DEC  for  a  fixed-time (3 months),
+     fixed-price contract to make TENEX run on the KI10[6].   Clearly,  the
+     DEC  internal processes were not about to create a real project around
+     TENEX at this point, but a one-man 3-month contract must  have  seemed
+     an acceptably small risk.
+
+          I also received an offer to join DEC as a regular employee  after
+     the  contract  was  finished.   This  permanent  job was not initially
+     intended to have any continuing involvement with  TENEX  however.   In
+     fact, it was to work in the TOPS-10 group.
+
+          The contract with me for KI-TENEX was  negotiated  through  DEC's
+     software  engineering department, led at the time by Dave Stone whom I
+     knew previously.  During the latter part of the contract  discussions,
+     Dave  asked  someone else in to consult on the technical aspects of my
+     proposed method for dealing with the different paging hardware on  the
+     KI10.  This turned out to be Peter Hurley, then doing special software
+     engineering projects as part of the marketing group  headed  by  Allan
+     Titcomb,  and  it  marks  the  first  of Peter's long involvement with
+     TOPS-20.
+
+          So, as of the beginning of October, 1972, I took  my  leave  from
+     BBN  and  settled into an office on 3-5 (building 3, floor 5) in DEC's
+     original buildings  in  Maynard.   Being  at  the  time  still  rather
+     youthful  in  outlook,  the  idea  of  a 3-month, fixed-price, one-man
+     contract to port a base operating system  to  a  new  processor  in  a
+     family didn't strike me as particulary scary.
+
+          As part of my send-off from BBN, a couple of co-workers  who  had
+     previously  worked  at  DEC gave me some farewell presents that, I was
+     assured, would prove very useful at DEC:  a flyswatter and  a  can  of
+     bug  spray.   DEC's  facilities at the time lacked some of the aseptic
+     uniformity generally expected of hi-tech offices and labs.  Because of
+     their  age,  history,  and  proximity  to  a mill pond and stream, the
+                                                                    Page 17
+
+
+     buildings were well supplied with various insect life and spiders, and
+     my  friends  at  BBN wanted to be sure I knew what I was getting into.
+     Ultimately, I spent only a little over a year working in  the  Maynard
+     mill  buildings, but there were numerous occasions late in the evening
+     when the possibility of further concentration on code was  nil  and  I
+     found myself watching at length as a particularly skillful spider spun
+     a nearly perfect circular web among the posts of my partition.
+
+
+
+     3.2  Paging Algorithm In Software
+
+          The  technique  I  had  come  up  with  did  not  involve   major
+     alterations in the paging structure of TENEX in order to deal with the
+     simpler pager of the KI10.  Rather, the idea was to simulate  most  of
+     the  logic of the BBN pager in software and use a KI10 page table only
+     as   a   software   cache   or   translation   buffer   for    current
+     virtual-to-physical  page mappings.  Logically, this was much like the
+     design used in many later processors where the logic would be realized
+     in microcode and the storage in RAM.
+
+          Implementation of PDP-10 code to simulate the BBN pager was not a
+     large  or  difficult task and took probably less than half the time of
+     the project.  In addition to paging, it was necessary to write drivers
+     for  the  file and swapping devices then being shipped by DEC, neither
+     of which had been used at BBN.  Checkout of TENEX  on  the  KI10  did,
+     however,  encounter  one  new  and  rather  obscure logic error in the
+     paging hardware.
+
+          Well before the end of the three month contract period, TENEX was
+     running  well  enough  on the KI10 to support building new versions of
+     itself.  During this period, the system was up and running for several
+     hours  each  day  on  a machine in the basement of the mill, and a few
+     curious employees came around to try it.  One  such  person  was  Dave
+     Braithwaite, then in the -10 benchmark group, who brought over various
+     benchmarks and tests to try.
+
+          The contract nominally ended (successfully) when I  delivered  an
+     official  set  of  tapes  containing  the TENEX sources and a bootable
+     system  at  the  contractually  appointed  time.   This  was  somewhat
+     academic  at that point however, since it was not by any means the end
+     of TENEX related activity at DEC.
+
+
+
+     3.3  KL10 Processor In Development
+
+          During the time I was working on KI-TENEX, the KL10 processor was
+     under active development in hardware engineering.  The "L" in KL10 was
+     originally intended to mean "low cost", since the KI10  was  perceived
+     as  being  somewhat  expensive.   However,  technology  was  providing
+     opportunities to make a significant  jump  in  performance,  and  that
+     ultimately  was  to  be  the salient feature of the KL10.  The product
+     line managers were seeing opportunities to grow in the  high  end,  so
+     the stage was set to consider some major changes in capabilities.
+                                                                    Page 18
+
+
+          Around this same time, the "Super Foonly" project was in progress
+     in  the  AI  lab  at Stanford.  The Foonly designers were projecting a
+     factor of 10 speedup over the KA10, and DEC engineers were invited out
+     to  review  these  plans.   Certain ideas, such as the E-box and M-box
+     functional split, were instrumental in  the  ultimate  design  of  the
+     KL10.
+
+          Stanford wasn't the only other place where a PDP-10  architecture
+     machine  was  being  designed  and built.  The newly opened Xerox PARC
+     (Palo Alto Research Center) included a number of people from  BBN  and
+     other  sites  familiar  with  TENEX, and they were quite interested in
+     pursuing their work on that system.   Since  Xerox  was  then  in  the
+     computer  business,  PARC  couldn't  quite manage to just buy a PDP-10
+     from  DEC.   Consequently,  they  built   their   own.    It   was   a
+     single-processor  machine  compatible with the KA10 and BBN paging and
+     was designed and built in a relatively short time.  It ran TENEX for a
+     number of years.
+
+
+
+     3.4  IBM Makes Virtual Memory Legitimate
+
+          Quite possibly, the final fortuitous event involved  in  the  DEC
+     decision  to  take TENEX as the base for a DEC product happened not at
+     DEC but at IBM.  It was during this period in the latter part of  1972
+     that IBM announced "virtual memory" systems for the 360 family.  While
+     this was  not  entirely  unexpected,  it  provided  a  major  shot  of
+     "legitimacy"  for  the  concept  of  virtual memory in computer system
+     products.  I (and other TENEX proponents) had been actively  promoting
+     the  virtual  memory  capabilities  of  TENEX,  but  it  took  the IBM
+     announcement to prove that such capabilities could  be  a  significant
+     factor  in  large  systems  markets.   This is rather ironic since the
+     memory management architectures in TENEX/TOPS-20 and the  IBM  systems
+     are quite different.
+
+
+
+     3.5  DECSYSTEM-20 Is Born
+
+          Soon, discussions were being held around the idea that  the  KL10
+     would  be,  not  just  a new CPU for the existing DECsystem-10 but the
+     cornerstone of a new VM product family  including  both  hardware  and
+     software  architectures.   Hardware  architecture  departures  were to
+     include internal main memory (as opposed to external bus memory as  on
+     the  KA and KI), the Massbus interconnect for tapes and disks, and the
+     use of a PDP 11/40  as  a  system  console.   Software  would  take  a
+     comparable  step  with  the  capabilities  of  TENEX:  virtual memory,
+     process structure, easy-to-use command language.
+
+          Although I was part of only a few of those discussions,  I  still
+     look  back  with  amazement at the speed and confidence with which the
+     decision was made to  undertake  such  a  major  departure.   The  key
+     individuals  included  Allan  Titcomb  who  had initiated the KI-TENEX
+     project, Fred Wilhelm, the engineering manager of  the  KL10  project,
+     Bill  Kiesewetter,  the  marketing manager of the DECsystem-10 product
+                                                                    Page 19
+
+
+     line, and John Leng, the product line manager.  We didn't convene task
+     forces  or  study  committees or waffle on the idea for a year or two.
+     We met, considered the issues, and decided.
+
+          Thus, by the end of the three-month KI-TENEX contract,  I  had  a
+     second offer from DEC:  to join the KL10 group as project leader for a
+     new operating system for the KL10 based  on  TENEX.   By  the  time  I
+     started  work at DEC as an employee on January 2, 1973, one additional
+     engineer had been recruited to  form  the  nucleus  of  a  development
+     group:  Peter Hurley.  The two of us set up offices on the fifth floor
+     of Maynard mill building 5, in a group with  the  hardware  engineers,
+     the  product  line marketing and management people, and vice president
+     Win Hindle.
+
+
+
+     3.6  TOPS-20 Development Begins
+
+          There were a number of areas in  which  we  felt  that  work  was
+     necessary on TENEX to make it suitable for release as a product.  Some
+     of these were areas in which  TOPS-10  had  received  sigificant  work
+     during    the   preceding   years,   and   others   involved   general
+     maintainability, support of  hardware  reliability  and  service,  and
+     overall robustness.  TENEX did not, at the time, have such features as
+     batch operation or mountable disk structures.
+
+
+
+     3.7  TOPS-10 Compatibility And Coexistence
+
+          We  also  planned  to  significantly  increase  the  support  for
+     "TOPS-10  compatibility"  --  the system's ability to support existing
+     TOPS-10 programs and media.  This support  took  several  forms:   the
+     operating  system  service  call interface, the command language, disk
+     structure  formats,  and  other  external   interfaces.    TENEX   had
+     implemented  provisions  for  the OS call interface only, and that was
+     limited by the  lack  of  knowledge  at  BBN  about  the  details  and
+     undocumented  aspects  of the TOPS-10 calls.  Also, the call interface
+     compatibility was only as complete as needed to run the particular set
+     of TOPS-10 layered software that BBN needed at the time.
+
+
+
+     3.7.1  One Operating System Or Two For 36-bit Machines? -
+
+          One of the reasons for pursuing  TOPS-10  compatibility  features
+     was  the  possibility of re-converging on one operating system for all
+     36-bit machines.  That was, and continued to be, a controversial  idea
+     however,  and  the  destiny of these features is largely the result of
+     continuing indecision around how much effort  should  be  invested  in
+     tools to help users move from TOPS-10 to TOPS-20.
+
+          At times, it was clearly the intent that TOPS-20 would eventually
+     become  the  sole  36-bit  operating  system.  It appeared to have the
+     capabilities to support any desired level  of  TOPS-10  compatibility,
+                                                                    Page 20
+
+
+     and   it  offered  features  that  many  TOPS-10  customers  had  been
+     requesting but which  appeared  unlikely  ever  to  be  realizable  in
+     TOPS-10.   Most of the time, however, TOPS-10 (and enhancements to it)
+     appeared to be needed in the short term to maintain  some  portion  of
+     the 36-bit business, and so the product line as a whole was never able
+     to achieve sufficient  resolve  to  move  the  business  back  to  one
+     operating system.
+
+          In the early  life  of  the  -20,  the  product  line  made  some
+     overtures to -10 customers about migrating to the -20.  Migration aids
+     weren't in place, TOPS-20 didn't have all the needed capabilities, and
+     the -10 customers weren't about to accept the limits on configurations
+     that  applied  to  the  -20.   Hence,  the  customers  reacted   quite
+     negatively and scared the product line out of doing anything that even
+     suggested a migration strategy.
+
+          Ultimately, both operating systems continued to be developed  and
+     shipped  until  the corporation made the much bigger decision to offer
+     no new 36-bit hardware products and to wind down all  36-bit  software
+     development.   For  these  and  other  reasons,  replacing TOPS-10 was
+     mostly not a high priority during the life of the DECSYSTEM-20 and  so
+     capabilities  like  a  TOPS-10  command  language  were  not  seen  as
+     important.  Subsequent ups and downs of interest in  re-converging  on
+     one operating system are described further below.
+
+
+
+     3.7.2  OS Call Interface -
+
+          With the structure of TENEX, it had been  possible  to  implement
+     the  TOPS-10  call interface compability in a relatively modular form.
+     This piece of software was called PA1050, after the DEC  10/50  system
+     which  was the top of the -10 line at the time.  To be able to support
+     both the old (TOPS-10) and new (TENEX)  OS  call  interfaces,  we  had
+     decided  to use a native call mechanism completely different from that
+     used  by  TOPS-10.   TOPS-10  used  the  Monitor  UUOs,  a  group   of
+     instructions  which  transferred  control  to  the  kernal  through  a
+     transfer vector.  TENEX  took  a  previously  unassigned  opcode  (104
+     octal)  and  gave  it  the  mnemonic  JSYS  for  Jump to SYStem.  (The
+     Berekely 940 system had used a BRS, Branch to System.)
+
+          Within TENEX, execution of any of the TOPS-10 service calls  went
+     to  a  small  piece  of  kernel code that would invoke PA1050.  On the
+     first such call, it would map the PA1050 image into a high area of the
+     user  virtual memory and transfer control to it.  On subsequent calls,
+     it would merely effect the transfer.  Hence, only those processes that
+     actually made TOPS-10 calls would get the compatibility code, and each
+     such  process  had  its   own   incarnation.    The   virtual   memory
+     implementation of TENEX meant that code or data could be put anywhere,
+     and there was no penalty for sparse use of the address space.  At  the
+     time,  it  was  quite  safe  to  usurp  a range of high addresses in a
+     TOPS-10 program, since to  use  such  addresses  on  a  real  (non-VM)
+     TOPS-10  system  would  have required the full 256 Kwords of memory or
+     more to run.  Later on, as TOPS-10  programs  became  larger,  we  had
+     trouble  squeezing the program, PA1050, and DDT (which also was mapped
+                                                                    Page 21
+
+
+     into a high range of addresses) all together.
+
+          PA1050,  then,  was  simply  unprivileged  user-mode  code.    It
+     interpreted   the   arguments  of  the  TOPS-10  call  that  had  been
+     intercepted and performed the requested action, using JSYS calls where
+     necessary.   It  maintained  its  own database of TOPS-10 job state in
+     local process memory.
+
+
+
+     3.7.3  Command Language -
+
+          The idea of alternate command languages was one of the attractive
+     features of TENEX.  The TENEX command language (the "EXEC") was simply
+     a user-mode program that operated within a process and  performed  any
+     system  actions  via  defined JSYS calls.  Hence, a similar program to
+     realize any other desired user interface could be written and executed
+     in  the  same  manner by any user without impacting others on the same
+     system.  The marketing folks had visions of offering  interfaces  that
+     were  compatible  with  various  competing  systems  in  order to lure
+     customers away from those systems.  We also envisioned writing a  user
+     interface  that  would look like the TOPS-10 command language so as to
+     facilitate users moving over from TOPS-10.
+
+          Such a program was in fact  written  during  the  first  year  of
+     development  in  DEC  by  the third member of the new OS group, Arnold
+     Miller.  This interface worked well enough  to  support  execution  of
+     TOPS-10 batch files as well as most normal user activity.  However, it
+     was never shipped as part of TOPS-20, largely because users  who  came
+     to  TOPS-20  from TOPS-10 or any other system quickly began to use and
+     prefer  the  TOPS-20  command  language.   Even  for  users  who  were
+     reluctant  to  try  something different, the advantages of the TOPS-20
+     Exec were sufficiently apparent that few wanted to continue working in
+     their  old  environment.   Similarly,  no  other  interfaces  to mimic
+     competing systems were ever written.
+
+          Interest in the TOPS-10 Exec was revived  on  one  or  two  later
+     occasions  when  the possibility of migrating TOPS-10 users to TOPS-20
+     was considered, but such thoughts never lasted long enough  to  result
+     in a product.
+
+
+
+     3.7.4  Disk Structure Compatibility -
+
+          One other compatibility feature developed  during  early  TOPS-20
+     development  but  never  shipped was TOPS-10 disk structure I/O.  This
+     allowed a TOPS-10 disk structure to be mounted on a TOPS-20 system and
+     be  read  and  written  by  a program running in TOPS-10 compatibility
+     mode.  This was achieved by taking a large part  of  the  actual  file
+     system  code  from  TOPS-10  and encapsulating it with an interface to
+     PA1050 on one side and direct block-level IO  on  the  other.   Again,
+     this  proved  to be a feature that was used briefly, if at all, and so
+     never received much additional effort.  When the next version  of  the
+     TOPS-10  file  system  code  was released, it proved more difficult to
+                                                                    Page 22
+
+
+     encapsulate and run in this way, and the capability was abandoned even
+     for internal use.
+
+
+
+     3.8  The Name Game, Or, "What Are We Working On Again?"
+
+          It's time to discuss the history of names of the operating system
+     that  came  to  be  known as TOPS-20.  As part of undertaking this new
+     operating system development, DEC purchased the commercial  rights  to
+     TENEX  from BBN early in 1973.  However, with a major marketing thrust
+     anticipated for  the  new  KL10-based  system,  a  new  name  for  the
+     operating  system  would be necessary.  Also, the development group in
+     DEC intended  to  be  independent  of  the  group  at  BBN  which  was
+     continuing  to  develop new versions of TENEX for the KA10 ARPA users.
+     Within the first few months, various names were considered.   Finally,
+     the  KL10  engineering  manager,  Fred  Wilhelm, declared that the new
+     operating system would be called VIROS.  It  seemed  perfect  for  the
+     time:   it  suggested  "virtual", which was to be a key feature of the
+     new system, and it had a strong, virile  sound.   Unfortunately,  John
+     Leng (and others) tended to pronounce it as "virus" and so it probably
+     wouldn't have survived even if other factors hadn't pushed it aside.
+
+          Later on during that first year, it was  decided  to  change  the
+     name  to  confuse the competition.  This was part of a policy dictated
+     from "on high" to keep the marketplace from  knowing  too  much  about
+     unannounced  developments.   We  knew  that  preventing  all leaks was
+     impossible, so the idea was to  confuse  the  world  with  conflicting
+     information.   The  new  name chosen for the operating system then was
+     SNARK, from a Lewis Carol story about the hunting of the SNARK,  where
+     "they  pursued  it  with forks and hope".  (We had lots of both.) That
+     name almost had a short lifetime, since it was further  declared  that
+     internal  code  names  would  be  changed every six months to keep the
+     enemy guessing.  When time came for the first six  month  change,  the
+     group  resisted  the hassle of yet another purturbation but eventually
+     yielded and put forth KRANS (SNARK spelled backwards) as the new name.
+     Unfortunately,  it was soon discovered that this was a word that meant
+     "burial vault" in Swedish.  The  name  was  quickly  changed  back  to
+     SNARK,  and  even  our  management  then  declared  that we would have
+     nothing further to do with the semi-annual name change folly.
+
+          Hence, the name remained SNARK until it was time to announce  the
+     product.   The various interim names didn't vanish completely however;
+     they were all used for other internal purposes, mostly  as  names  for
+     disk   volumes  in  the  TOPS-20  group.   In  fact,  the  SNARK  pack
+     (pronounced with a Boston accent as "snak pack") remained the home  of
+     the  TOPS-20  sources  for  the  entire life of the system.  SNARK and
+     KRANS are currently nodes on the DEC internal network but are  not  in
+     the 36-bit engineering group.
+
+          As time for  product  announcement  approached,  very  high-level
+     consideration  was  being  given  to the product name.  Mere engineers
+     were not a party to this process, so we waited with  anticipation  for
+     the new and final system name to be handed down.  Would they stay with
+     SNARK (unlikely)?  Go back to  VIROS  ("V"  names  were  getting  more
+                                                                    Page 23
+
+
+     popular  all  the  time)?   Or come up with something new and dynamic.
+     The result was, to put it mildly, underwhelming.  Although TOPS-20  as
+     a name became just a fact of life over the years, we originally saw it
+     as about the least exciting, least imaginative name one could possibly
+     have  chosen for such a neat, new system.  It was just the same as the
+     old system, TOPS-10, except for  one  digit.   About  as  creative  as
+     "Wednesday  Night  at  the  Movies" for a new TV show of the same era.
+     But that was the story:  the new product would be  the  "DECSYSTEM-20"
+     (somebody  forgot  to  lower-case the "system" as in DECsystem-10) and
+     the operating system would be TOPS-20.
+
+          So, although the name TOPS-20 wasn't chosen until just before the
+     first  system  ship,  I  have  used  TOPS-20 to refer to the operating
+     system for the entire time it was under development at DEC,  that  is,
+     from January 1973 onward.
+
+
+
+     3.9  The TOPS-20 Group
+
+          The TOPS-20 group grew to four people during its first year.   In
+     addition   to  myself,  Peter  Hurley,  and  Arnold  Miller  mentioned
+     previously, Len Bosack joined the group within the first  few  months.
+     Tom  Hastings  was  also  involved, serving briefly as the supervisor.
+     Although it started as part of KL10  hardware  engineering,  this  new
+     group  made  the  transition  to  its  more  logical place in software
+     engineering after the first year.
+
+          Several others served as supervisor  of  the  group  between  its
+     formation  and  first ship.  On several occasions, the group hired its
+     new supervisor.  To save time, an  interview  would  be  set  up  with
+     several  members  of the group at once who would fire questions at the
+     hapless candidate.  If the candidate couldn't survive this, he clearly
+     wouldn't  last  in  the day-to-day functioning of the group.  Managers
+     weren't the only candidates who were given practical  scrutiny.   Judy
+     Hall,  the  fifth  member  hired into the group, and others who joined
+     during that period, were typically asked to bring samples of code they
+     had previously written when they came for interviews.
+
+
+
+     4  ARCHITECTURE ENHANCEMENTS IN THE DECSYSTEM-20
+
+          The DECSYSTEM-20 (and TOPS-20)  was  first  shipped  in  January,
+     1976,  just  three  years  after DEC internal development began.  This
+     was, of course, longer than we had anticipated.  Both the hardware and
+     the software schedules were extended, and a few other changes in plans
+     occurred.  As mentioned above, the KL10 had already departed  somewhat
+     from  its  original conception as a "low-cost" KI10 replacement by the
+     time TOPS-20 development started.  As TOPS-20  development  proceeded,
+     we provided a couple more "1-plusses" to the machine.
+                                                                    Page 24
+
+
+     4.1  Extended Addressing
+
+          One of these was extended addressing.  TOPS-20 didn't force  this
+     as  an  issue,  but it seemed to provide the opportunity to eventually
+     take advantage of it.  The possibility of extending the address  space
+     of  the  PDP-10 architecture was first suggested to me by Tom Hastings
+     during the 3-month period when I was working  on  KI-TENEX.   At  that
+     time, it seemed a pretty radical idea that 256 Kwords of address space
+     might not be enough for most applications, but the PDP-11 was  already
+     running  into  trouble  in  that regard and it seemed prudent to think
+     about it for the -10 while we were building this new processor.
+
+          There were two primary problems to be  solved  in  extending  the
+     address space of the PDP-10.  First, a way would be needed to generate
+     effective addresses of greater than 18 bits; second, a means would  be
+     needed  to  map  this  larger virtual address space.  For the hardware
+     designers, the second problem appeared more formidable.  They  planned
+     to   use  a  table-lookup  RAM  to  hold  virtual-to-physical  address
+     translations, and  a  larger  address  space  appeared  to  require  a
+     prohibitively large translation RAM.  The KI10 had used an associative
+     memory for this purpose, but the integrated circuits available in  the
+     technology  of  the  KL10  didn't  provide  a  way to make a practical
+     associative memory.
+
+          As it happened, the solution to this problem resulted from a  bit
+     of  synergy.  Alan Kotok had been looking for a way to make the paging
+     RAM smaller even than that which would appear to be required  for  the
+     basic  PDP-10  address space.  With 512 pages in each of user and exec
+     mode address spaces, 1024 entries would  be  necessary  for  a  direct
+     mapping  scheme.   Alan  was thinking about using the same 512 entries
+     for both user and exec by storing the user-mode bit in the  entry  and
+     comparing  it  on a lookup.  If the comparison failed, the entry would
+     be considered invalid and would be reloaded from  memory.   Thus,  the
+     same  entry  would  be used for a given user and exec mode address and
+     would work as well as a full-size table provided there  were  not  too
+     frequent references to the same user and exec addresses.
+
+          While this was going on, I realized that there was nothing unique
+     about  the user-mode bit in this scheme, and that it could be extended
+     to an arbitrarily large number of address  bits.   That  is,  a  given
+     number  of  bits for translation could be divided into two parts:  one
+     part to index into the RAM, and the other to be stored  and  compared.
+     For purposes of extended addressing, that meant we could have a number
+     of spaces each as large as the original 256 Kwords all mapped into the
+     same   translation   RAM.   The  smaller  the  RAM,  the  greater  the
+     possibility of conflict, but  that  could  be  somewhat  mitigated  by
+     "hashing"  the  address bits so that the different address spaces were
+     offset differently in the RAM.
+
+          As for modifications to the basic instruction set,  we  initially
+     decided on an extension of the address space from 18 to 23 bits.  This
+     number was chosen because it was  the  number  of  bits  available  by
+     combining the Y, I, and X fields (address, indirect, and index) of the
+     PDP-10 instruction.  We were fortunate in that the PDP-10  instruction
+     set  had  a  very  clean  and  consistent  design -- every instruction
+                                                                    Page 25
+
+
+     computed its operand address in the same way.  If this algorithm could
+     be modified to yield a larger address, the problem would be solved for
+     essentially all instructions.  The PC could easily be made as large as
+     necessary  in  hardware,  and  the  various  word  formats in which it
+     appeared generally had the additional 5 bits available.
+
+          All that notwithstanding, any modification to the instruction set
+     to  generate larger addresses would be incompatible with existing code
+     to some extent.  To  avoid  introducing  such  incompatibilities,  the
+     original  design had a special way of executing an instruction when an
+     extended  operand  address  was  desired.   An  instruction   executed
+     normally  would  generate  a  compatible  18-bit address, but the same
+     instruction executed as the operand of a "special execute" instruction
+     (SXCT)  could  generate  a  larger  address.   It  did  this  by using
+     additional bits of either an indirect word or index specified  in  the
+     instruction.
+
+          As it turned out, our initial extended addressing design was  too
+     conservative.   Before  the  first  DECSYSTEM-20  even shipped, we had
+     occasion  to  revisit  and  greatly  modify  the  design  of  extended
+     addressing in connection with the UNICORN project described later.
+
+
+
+     4.2  Paging Algorithm In Microcode
+
+          Another purturbation to the  KL10  design  was  in  the  area  of
+     paging.   Because  of the success of running TENEX on the KI10 using a
+     software simulation of the  TENEX  paging  design,  it  was  initially
+     assumed  that  the  same  could be done on the KL10.  However, we knew
+     that the software simulation was consuming some  amount  of  processor
+     time because the speedup of TENEX programs moving from the KA10 to the
+     KI10 was typically not  as  much  as  expected.   Some  studies  using
+     PC-sampling  techniques  revealed  that the paging simulation code was
+     often using over 30% of the  processor  under  a  typical  timesharing
+     load.
+
+          This brought up yet again the thorny issue of putting the complex
+     TENEX  paging  algorithms  into  hardware  --  the thing that had been
+     resisted for both the KA10 and KI10.  Devoting that much  hardware  to
+     paging  still  seemed  like  a bad idea to the hardware engineers, but
+     fortunately there was another possiblity  for  the  KL10:   microcode.
+     Just  as  the  KI-TENEX  implementation had shown that the page refill
+     algorithm could be executed in software with the result handed to  the
+     hardware, so could it be executed by microcode.  The basic instruction
+     set was to be implemented in microcode on the KL10 (the  first  PDP-10
+     architecture  processor  so designed), so, the thinking went, we could
+     add "just a little more microcode" for the paging algorithm.
+
+          Some changes were necessary to the hardware design of the KL10 as
+     it  existed  at  that  point  in  order  to allow the microcode to get
+     control when an attempted  address  translation  failed,  compute  the
+     translation and load it into the translation buffer, and continue with
+     the instruction then in progress.  That was taken care of with  little
+     additional hardware, and it seemed we had finally achieve full support
+                                                                    Page 26
+
+
+     of the paging architecture.  With a bit  of  myopia  typical  of  that
+     time,  we  figured  we  had solved all our paging performance problems
+     since anything done in microcode had to be incredibly  fast.   ("Micro
+     madness" as Len Bosack often called it.)
+
+          Thus the KL10 had both extended  addressing  and  TOPS-20  paging
+     capabilities  when  it  first shipped.  It is just possible that those
+     enhancements did extend the development schedule somewhat, although we
+     argued  at  the  time  each  of  these  was  being considered that the
+     additional work was insignificant in the  overall  picture.   I'm  not
+     quite  sure  how  we  finally  got  these things approved.  I recall a
+     rather angry Win Hindle practically throwing us out of his office  the
+     first  time we came in to tell him about adding extended addressing to
+     the machine.
+
+
+
+     4.3  Software Enhancements
+
+          While we were bothering the hardware group  with  changes  around
+     paging  and  extended  addressing, we were busy with quite a number of
+     software projects as well.  Typical of projects  to  make  the  system
+     more  robust  in  commercial  environments  was  the one to modify the
+     system's handling of disk writes and disk allocation tables.  In TENEX
+     and  TOPS-20,  essentially  all disk IO is initiated via paging.  File
+     pages are mapped, whether into user or exec address space, and read or
+     written  with  ordinary instructions.  In TENEX as it came to DEC, all
+     file pages were treated equally, including those in directories,  page
+     tables,  and  disk allocation tables.  This worked just fine providing
+     the  system  never  crashed.   If   the   system   were   taken   down
+     intentionally,  its  last act would be to write all modified pages out
+     to the disk and thus make the disk consistent.
+
+          If the system crashed however (as occasionally  did  happen),  it
+     could  easily be that an inconsistent set of pages had been written to
+     the disk.  A file directory might be pointing to a file for which  the
+     page  table  had  not been written, or pages might be in use for which
+     the allocation table had not been updated.  To take care of this,  the
+     practice  on  TENEX  had  been to run a disk consistency check program
+     called CHECKDSK.  In particular, this would mark the allocation  table
+     for any pages found in use so as to prevent multiple assignment.  This
+     had been satisfactory at first, but with the increase in the amount of
+     of file storage, it had begun to take an objectionably long time.  The
+     solution was to force writing of the allocation tables,  page  tables,
+     and  directories  at  certain  points  and  in  a  certain order using
+     techniques now well understood.  It's interesting to  note  that  Unix
+     had  similar  problems  in its early versions, and the same techniques
+     have had to be applied in more recent versions.
+
+
+
+     4.4  The COMND Service
+
+          Another interesting step was the development of the  COMND  JSYS.
+     This  system  call provides a set of services to implement the TOPS-20
+                                                                    Page 27
+
+
+     style of command interface (escape  recognition,  question-mark  help,
+     etc.  as discussed previously).  It was not, however, part of TENEX as
+     it came  from  BBN.   Rather,  those  interface  characteristics  were
+     individually  coded  in each program that supported them, and in fact,
+     only the EXEC supported them in  general.   Other  programs  typically
+     supported  only  recognition of file names, since that was provided by
+     the GTJFN system call.  Even basic command  line  editing  (rubout  to
+     delete  a  character,  control-U  to  erase  the  line,  etc.) was not
+     centralized and was provided more or less or not  at  all  by  various
+     programs.
+
+          The need for  centralized  command  line  editing  was  addressed
+     earlier  in  the TOPS-20 development by the addition of the TEXTI JSYS
+     (and related subsets RDTXT and RDLINE).  The increasing use  of  video
+     terminals  had  made  the  ad  hoc  provisions  of the various utility
+     programs particularly glaring.   With  TEXTI,  we  undertook  to  both
+     centralize  the  line  editing functions and to make them sensitive to
+     the type of terminal being used.  At that time,  taking  advantage  of
+     the  video  terminal's  ability to erase a character or line was still
+     impressive.  Some systems had been able to add at least a  minimum  of
+     video  terminal  line editing support because they only supported line
+     input, and the line buffering was  done  centrally.   TENEX  had  been
+     designed  with a maximum of terminal flexibility however and so had no
+     general way of editing input.  The TEXTI JSYS provided many options so
+     that  it  could  be  used as well by programs that wanted more or less
+     than line-at-a-time input.
+
+          Implementing  a  centralized  command  input  library  was   not,
+     however, an item that appeared on our schedules.  Within the last year
+     before the system shipped, we had identified and were working on a few
+     utility  programs that needed specific improvements.  One of these was
+     DUMPER (the disk-to-tape backup and restore utility),  and  it  had  a
+     particularly  bad  command  interface.   I  had  the task of improving
+     DUMPER's user interface to meet some minimal level  of  acceptability,
+     but  I  had  been  procrastinating  doing anything about it because it
+     would be a rather routine and boring task.  In  the  meantime,  I  had
+     started  thinking  about  how this style of command interface could be
+     centralized into a set of functions and tables.
+
+          Because of  the  highly  interactive  nature  of  the  interface,
+     partial  execution  of the program itself is necessary during input of
+     the command.  For example, if file name recognition is attempted,  the
+     defaults  and  any  other  pertinent context must be available so that
+     failure or success can be determined.  However, the program  must  not
+     take  any irrevocable action until the command is confirmed (typically
+     with a carriage return) so that the user can erase all or part  of  it
+     with  the  line editing keys.  Even the original TENEX Exec didn't get
+     this quite right.  The user could erase the entire command  line  with
+     control-U,  but could not delete backward more than the current field.
+     In other words, the Exec knew how to flush all state for  the  current
+     line  and  start  over,  and it knew how to delete characters from the
+     current field before it was completed, but it didn't know how to flush
+     part of the state and backup into a field already completed.
+                                                                    Page 28
+
+
+          My idea for solving the backup problem was not to backup  at  all
+     but rather save the command text and then rescan it from the beginning
+     with the unwanted  part  removed.   With  that  idea  and  a  list  of
+     functions  to handle the various kinds of fields that would occur in a
+     command line, I started writing a  library-type  facility  instead  of
+     just  point enhancements to DUMPER.  Of course, DUMPER was intended to
+     be, and did become, the first program to use new facility, but by  the
+     time  of  TOPS-20's  first release, these command parsing routines had
+     been integrated into the monitor as the COMND  JSYS.   Most  utilities
+     had  not  been  modified to use it however, and the Exec still had its
+     original  parsing  code.   Correcting  all  this  was  done  in  later
+     releases.
+
+          Ultimately, most of the TOPS20 development  done  for  the  first
+     release  went  toward  supporting  the  new hardware architectures and
+     devices.  A complete new mass storage IO structure was  necessary  for
+     the Massbus disks and tapes, and an equally large change was necessary
+     to handle communications IO through the PDP-11 front-end  rather  than
+     via direct line scanners.
+
+
+
+     4.5  Implemention Language
+
+          Almost all system code for the 36-bit architecture  machines  had
+     been  written  in  MACRO  since  the  first boot routine of the PDP-6.
+     Because of its regular  structure  and  powerful  set  of  operations,
+     36-bit  assembly  language was reasonably pleasant to write in, and so
+     less pressure existed for a higher level language than on  most  other
+     machines.   BLISS was gaining some adherents in some parts of DEC, but
+     its various  peculiarities  (e.g.   the  "dot"  notation  and  use  of
+     underscore  for  the  assignment  operator  in  the early -10 version)
+     generated major resistance elsewhere.  Hence,  new  TOPS-20  code  was
+     written in MACRO, as TENEX had been.
+
+          During the development of release 1  and  continuing  thereafter,
+     various  features were added to the MACRO programming conventions used
+     in TOPS-20.  These were mostly implemented by macros,  and  they  gave
+     certain  higher-level  language  capabilities  to MACRO.  The first of
+     these involved mechanisms for  representing  data  structures  in  one
+     place (i.e.  a "header" file) such that the representation would cause
+     appropriate code to be generated for references.  This started out  as
+     a  simple macro to select "left half" or "right half" of a 36-bit word
+     (instead of an explicit HLxx or HRxx).  Next came macros to select the
+     correct  bit test instruction (TLxx, TRxx, TDxx) for the mask at hand.
+     Eventually, the macros  were  capable  of  defining  and  representing
+     complex  multi-word  record-type  structures  with  fields  of various
+     sizes.
+
+          Secondly,  macros  were  used  to  provide   procedure-call   and
+     automatic  (stack)  storage  using named variables.  A procedure entry
+     point could be declared using symbolic names for the  parameters,  and
+     these  names would expand to the appropriate stack reference when used
+     in an instruction.  Similarly, local stack storage  could  be  defined
+     symbolically   and   local   registers   saved  automatically.   These
+                                                                    Page 29
+
+
+     conventions greatly reduced the occurrance of explicit stack PUSH  and
+     POP instructions and the bugs that often resulted from them.
+
+          Finally, macros were implemented to  provide  control  structures
+     without explicit use of labels.  Semantically, these resembled typical
+     language IF/THEN or IF/THEN/ELSE constructs, and arbitrary nesting was
+     permitted.   As  a  result, a typical page of TOPS-20 code using these
+     conventions often contained only one  label  --  the  procedure  entry
+     point.
+
+          All of this made for better  programming,  but  it  did  not,  of
+     course,  remove dependence on the PDP-10 instruction set.  Portability
+     was not an objective we thought to be concerned with  until  much  too
+     late.
+
+
+
+     5  THE KL10 BECOMES A PRODUCT
+
+          The consequences of the ambitious set of new  architectures  were
+     being felt by the hardware engineers as well as by us in software.  As
+     schedules pushed out, it wasn't too long before someone came  up  with
+     the idea of shipping just the KL10 as a processor upgrade for existing
+     DEC-10 systems.  Dropping in  new  processors  was,  after  all,  well
+     established,  and  it looked like a source of significant revenue well
+     before the full DECSYSTEM-20 would be ready.  As a result of this, the
+     "1080" project and product were born.
+
+          The 1080 was the KL10 processor with adapters to connect  to  the
+     KI10 external memories and IO bus.  Neither external memory nor the IO
+     bus were intended to be part of  the  new  architecture,  but  in  the
+     interest  of  generating  some  revenue from the rather expensive KL10
+     development, the adapters were expedited.  Since the 1080  was  to  be
+     sold  to  existing customers as upgrades to existing systems, it would
+     be delivered only with the existing  operating  system,  TOPS-10.   It
+     didn't take much work for TOPS-10 to run on the KL10; the machine even
+     had a mode  which  emulated  the  KI10  paging  rather  than  the  new
+     microcode-based  paging  designed  for  TOPS-20.   So,  after  all the
+     original excitement around  the  marriage  of  TOPS-20  and  the  KL10
+     processor,  it  was  TOPS-10 that shipped on the first KL10s that were
+     sold.
+
+          The first 1080 ship in  August,  1975  was  the  occasion  for  a
+     sizable celebration in front of the Marlboro plant.  The entire 36-bit
+     product line had moved to the Marlboro plant in early 1974,  and  this
+     meant that we had manufacturing as well as engineering, marketing, and
+     all other groups in  one  location.   Later  on,  this  self-contained
+     nature  of  the  36-bit line, along with the fact that we continued to
+     build an architecture more and more  out  of  the  mainstream  of  the
+     company,  led some to refer to the 10/20 product line as "The Marlboro
+     Computer Company".
+
+          For the 1080 ship, most  of  the  Marlboro  groups  gathered  for
+     speeches  in  front  of a large Digital truck bound for the first 1080
+     customer.  Actually the truck was empty at the time due to a few  last
+                                                                    Page 30
+
+
+     minute  snags,  but  substantively the product was ready and the party
+     commenced.
+
+
+
+     5.1  DECSYSTEM-20 Announcement And First Ship
+
+          Meanwhile, development continued on the  DEC-20.   With  the  new
+     architectures  and  the  speed of the CPU, the system would be a great
+     deal more cost effective than previous systems.  Because of this,  the
+     product  line  delayed  announcing  it  until  shortly  before  it was
+     actually ready to ship.  This all took place in January of 1976.   The
+     first  half  dozen  or so DEC-20 customers were carefully selected for
+     what would really be a field test of the new system.
+
+          For the first two or three years after the DEC-20 began shipping,
+     it  enjoyed  a  certain  amount  of favor in DEC.  Even at the time of
+     first ship however, there were clear signs that the mainstream of  DEC
+     products  would  be elsewhere -- the PDP-11 family was doing very well
+     and was making a lot of money for  the  corporation,  and  design  was
+     already  underway  for  the  machine that would later be known as VAX.
+     There was a  time  however,  when,  in  retrospect,  some  significant
+     history hung in the balance.
+
+
+
+     5.2  How The VAX Almost Had 36 Bits
+
+          By 1975, it had become clear that  the  PDP-11  architecture  had
+     topped  out.   In  particular,  the  address  space was too limited to
+     support many growing applications.  An effort was started to  build  a
+     new machine that would sell at the upper end of the PDP-11 price range
+     and beyond and would be the growth  path  for  -11  users.   This  new
+     machine,  code-named  the  UNICORN,  was  to  be  based  on the 36-bit
+     architecture since there was already a suite of software available for
+     it.   Several  of the most senior engineers in the PDP-11 groups began
+     coming to Marlboro to talk about building a small -10 -- small to  our
+     way of thinking, but large in comparison to the -11 line.
+
+          One upshot of this work was that the original design for extended
+     addressing  came under review.  With more ambitious goals for business
+     and performance, and a greater appreciation for the  pain  of  running
+     out  of address space, the PDP-11 engineers insisted that the extended
+     addressing design be enhanced to improve ultimate effectiveness.  They
+     convinced us that performance should not be compromised for reasons of
+     compatibility or conversion as had been contemplated in  the  original
+     design.
+
+          A  new  extended  addressing  design  emerged  which  was  a  big
+     improvement  in  the  long run.  It was, however, too late to be fully
+     implemented in the initial KL10 product.  The new design  incorporated
+     a  30-bit  address  rather  than  23.  It also eliminated the "special
+     execute" because that would have added an additional  cycle  to  every
+     extended  reference  and  impacted  the  performance of programs using
+     extended addressing  heavily.   Instead,  compatibility  was  provided
+                                                                    Page 31
+
+
+     based  on  use  of  the  address space.  The overall address space was
+     divided into "sections" of 256 Kwords each.  In section 0, dubbed  the
+     "KI  memorial  section",  code  would operate exactly as it had on the
+     KI10, i.e.  with no extended addressing possible.  If the PC  were  in
+     any   non-0   section  however,  a  different  algorithm  for  address
+     calculation  would   be   used   such   that   an   extended   address
+     (inter-section)  could  be  generated  at any time.  These differences
+     meant that code was not strictly compatible, but the overall style and
+     feel  was much the same.  In any given body of code, most instructions
+     would not need to be changed to run in the extended environment, so we
+     felt we still had provided a good path for migration of existing code.
+
+          Ironically, as you may have already realized, the UNICORN project
+     never  came to fruition.  Within a relatively short time, a conclusion
+     was reached that, even if a cheap 36-bit architecture machine could be
+     built,  it  would  not  be  "culturally  compatible"  with  the PDP-11
+     software and applications and so would not meet the need.  Instead,  a
+     core  group  was  formed  to  design  an  architecture  which would be
+     culturally  compatible  with  the  PDP-11  but  would  eliminate   the
+     limitations  of  the  PDP-11  address  space.  Eventually, the machine
+     built as a result of this effort was named VAX-11, for Virtual Address
+     eXtension of the 11.  As we know however, the designers did a lot more
+     than just extend the address space.  What is not widely known is that,
+     for a while at least, the VAX was planned to have 36 bits!
+
+
+
+     5.3  Other Effects Of VAX Development On TOPS-20
+
+          Extended addressing is not the only way in which VAX impacted the
+     first  release  of  the  -20.  By the time the -20 shipped, design was
+     already underway for VAX software as well as hardware.  In  an  effort
+     to  reduce  the  plethora  of  different  command  interfaces  in  DEC
+     products, a committee had  been  formed  to  specify  a  DEC  Standard
+     Command  Language,  or  DCL.   At  the  time,  existing system command
+     languages included TOPS-10, TOPS-20, and various PDP-11 systems:  RSX,
+     RSTS,  RT-11,  IAS,  and others.  As part of the emerging "one system"
+     strategy, this new command language standard was  intended  to  affect
+     existing  systems  wherever  possible  and  especially  to  guide  the
+     implementation of all new VAX software.
+
+          There were several controversial areas where the TOPS-20  example
+     was  finally  pursuasive  and  was used as the basis for the standard.
+     For example, the TOPS-20 ordering of COPY (COPY from to)  was  adopted
+     rather than the assignment style (COPY to=from) of TOPS-10 and others.
+     In one area however, TOPS-20 agreed to a change  in  response  to  the
+     consensus  of  the committee.  Up to that point, TOPS-20 had continued
+     with the TENEX practice of using semicolon as punctuation for the file
+     generation  number, e.g.  NAME.EXT;3 for generation 3.  Rather late in
+     the process, it was realized that  the  generation  didn't  require  a
+     punctuation  character  different from that for the extension and that
+     it would be more economical to use the same one, e.g.  NAME.EXT.3.  We
+     agreed  with  that, even though it meant changing some code very close
+     to the date for Release 1 of TOPS-20.  Nonetheless, we did  it  so  as
+     not  to have to face the problem of making an incompatible change in a
+                                                                    Page 32
+
+
+     subsequent release.
+
+          Unfortunately, the developers of the  VMS  software  had  already
+     begun using semicolon and resisted making the change.  Ultimately, the
+     change was never made, and VMS software shipped using semicolon.   The
+     standard  was amended to go back to semicolon, but TOPS-20 had already
+     shipped  using  period.   Thus,  one  small  opportunity  for   20/VAX
+     compatibility was missed despite our best efforts to achieve it.
+
+
+
+     6  TOPS-20 DURING ITS PRODUCT YEARS
+
+          Although the formal end  of  the  36-bit  product  family  wasn't
+     announced  until  1983, life in 36-bit land seemed precarious for many
+     years before that.  The KS10 had been built as a low-end  addition  to
+     the  family  and  shipped  as the "2020" within a year or so after the
+     introduction of the 20 line, but that would ultimately be the last new
+     processor to be introduced.  Several other were started however.
+
+
+
+     6.1  Dolphin And Minnow
+
+          One was known as Dolphin and was to be a  high-end  machine  with
+     performance  well  beyond  the  KL10.  However, it was undertaken as a
+     combined 36-bit/VAX development.  That is, most of the engineering was
+     intended  to  apply  equally  to a VAX or 36-bit processor, and only a
+     little bit of architecture-specific work was supposed to be needed  to
+     turn  out  each  machine.   This, along with the other complexities of
+     technology and performance  goals,  made  for  a  project  beyond  the
+     capabilities  then  available.   Costs  increased  and the project got
+     bogged down.  In early 1979,  the  36-bit  part  of  the  project  was
+     cancelled  and  only  the  VAX  part, then called VENUS, continued and
+     ultimately produced the VAX 8600.
+
+          Another project cancelled at around the  same  time  was  a  very
+     small  PDP-10  known  as  Minnow.   This project, operating in a small
+     backroom on the second floor  of  the  Marlboro  plant,  had  built  a
+     breadboard which was running well enough to demonstrate some exec mode
+     programs.  It consisted of three large PC boards:  a  processor  board
+     including  8  UARTS  for  comm  lines,  a  memory  board,  and  a disk
+     controller board.  These could sit on a desk top but  were  envisioned
+     as  residing  in  a  deskside  type  cabinet  with  one  fixed and one
+     removable disk.  Had this machine not been  cancelled,  I  believe  it
+     would  have  been  a  significant  entry  in  what  later  became  the
+     workstation market.  It was not a complete workstation, since  we  had
+     not  anticipated the value in having an integrated display system, but
+     it  would  have  been  a  "personal"  machine  and  a   product   with
+     cost/performance several years ahead of the market.
+
+          It succumbed in part to the corporate determination to adhere  to
+     the  VAX  one-architecture  strategy.  While the Minnow product seemed
+     attractive, it was decided that it would send  the  wrong  message  to
+     introduce a non-VAX machine in that price range.  Also, the Minnow had
+                                                                    Page 33
+
+
+     limited support in the 10/20 groups as well.  Many people  saw  36-bit
+     machines  as  living  only  in  computer rooms and surrounded with big
+     disks and tape drives, and couldn't figure out how a small one  in  an
+     office  could  possibly be useful.  This seemed to be part of a larger
+     conservatism that prevented or  discouraged  significant  attempts  to
+     sustain and expand the 36-bit business.
+
+
+
+     6.2  The "Going-out-of-Business" Strategy
+
+          Hence, by 1979, the 36-bit line had  been  essentially  cancelled
+     again  [see section 1.2].  However, the corporation wasn't quite ready
+     to declare this to the world.  VAXes  were  doing  well,  but  weren't
+     quite ready to take over all of the high-end business.  It was decided
+     in the wake of the Dolphin  cancellation  to  build  one  last  PDP-10
+     architecture  machine, to be called the "2080".  This project would be
+     separate from any VAX development.   It  would  be  simple,  low-cost,
+     predictable,  and  limited  to producing a cost-effective successor to
+     the KL10.  These limited objectives  led  to  a  going-out-of-business
+     mindset  among  the  36-bit groups.  Ambitious or long-term plans were
+     shelved, and projects were refocussed on short term deliverables.  The
+     only  official  purpose for building the 2080 was "support the current
+     customers", i.e.  don't try to grow the business.
+
+          One area affected by this was TOPS-10 and  the  prospects  for  a
+     one-system  strategy.   While  Dolphin  development was going on, some
+     effort was invested in considering what it would take to make  TOPS-20
+     fully  capable  of  supporting  all the 36-bit customers.  Performance
+     studies had been done to find areas in which TOPS-20  performance  was
+     less  than  TOPS-10.   Networking  and  multi-processing  issues  were
+     considered.   However,  with  the  cancellation  of  Dolphin  and  the
+     going-out-of-business  strategy, there was clearly no point in working
+     to move TOPS-10 customers to TOPS-20, so those  objectives  were  once
+     again  discarded.   Each  system  group continued with the development
+     that seemed pertinent,  in  many  cases  doing  essentially  duplicate
+     projects for hardware support.
+
+          Another probable casualty of limited horizons in 36-bit land  was
+     TOPS-20  SMP.   The  architecture  of  TOPS-20 was well suited for SMP
+     because the needs of that style  of  operation  were  considered  when
+     TENEX  was designed.  Not only would the system have readily supported
+     SMP timesharing, but the process structure  would  also  have  allowed
+     user  programs  to  easily  initiate parallel activity within a single
+     job.
+
+          The  TOPS-20  product  was  initially   not   SMP   because   the
+     DECSYSTEM-20   hardware  was  inherently  single-CPU.   With  external
+     memories, such as were used with TOPS-10 configurations, SMP could  be
+     supported.   Indeed,  TOPS-10  SMP  is  one of the most successful and
+     widely studied aspects of TOPS-10.  As a product decision however, the
+     DECSYSTEM-20  would  NOT  be  configured  with  external memory and so
+     TOPS-20 could not be run on a hardware configuration capable  of  SMP.
+     The   2020   was  also  single-CPU.   Dolphin  was  planned  to  be  a
+     multi-processor machine, and SMP was included in initial TOPS-20 plans
+                                                                    Page 34
+
+
+     at  the time, but the Dolphin cancellation eliminated that possibility
+     for a hardware platform.
+
+          Interestingly, TENEX was modified to support SMP, but not at  DEC
+     or  BBN.   A  two-processor  KI10  configuration  was assembled at the
+     Stanford University Medical  Center,  and  KI-TENEX  was  modified  to
+     operate  as a full SMP operating system by Rainer Schultz of Stanford.
+     This system was operational around 1977 and some discussions were held
+     with  DEC about adding the SMP modifications to TOPS-20.  Nothing ever
+     came of this however, since the defined -20 hardware product never did
+     include a possible SMP configuration.
+
+
+
+     6.3  Ambitious Plans For Jupiter
+
+          As the 2080  project  continued,  it  followed  the  long  36-bit
+     tradition  of  picking  up  a  few "1-plusses" here and there.  Before
+     long, it had developed some very ambitious performance projections due
+     in  large  part  to  planned use of pipelining techniques.  The PDP-10
+     instruction set, being relatively simple (although not as simple as  a
+     RISC  instruction  set)  seemed  to  lend  itself  to  a great deal of
+     pipelining, particularly if  compilers  could  generate  optimal  code
+     sequences.   It  began  to  look  as  if  the KL10 experience might be
+     repeated and give the 36-bit architecture a new lease on life.
+
+          Another change to the original plan was the inclusion of the  DEC
+     interconnect  strategy  then  emerging.   This called for mass storage
+     devices to be connected via the CI  and  HSC  controllers,  and  other
+     peripherals  to  be  connected via the ethernet.  About two years into
+     the project, the system was redefined to use these  new  interconnects
+     exclusively,   discarding  support  for  massbus,  Unibus,  and  other
+     existing interconnects.  The project  was  renamed  JUPITER,  the  LCG
+     product  line  was  reborn,  and  going-out-of-business  thoughts  had
+     largely vanished from the group.
+
+          Major software efforts were undertaken in connection  with  this.
+     Beyond  the basic hardware support, we came up with the concept of the
+     Common File System as the means for supporting systems  with  multiple
+     CPUs.   Comparable  work was going on in the VAX/VMS group and came to
+     be known as Clusters.  Ultimately, both VMS and TOPS-20  shipped  this
+     kind  of capability.  The implementations were different and reflected
+     the differences in the two systems.  VMS used a cluster  lock  manager
+     as the basic method for regulating simultaneous access to files, while
+     TOPS-20 imbedded the locking  in  the  basic  file  opening  primitive
+     routines.   The  TOPS-20  implementation also continued to use virtual
+     memory mapping as the  paradigm  for  referencing  files,  and  it  is
+     possibly  the only system ever to implement distributed shared virtual
+     memory access.
+
+          Once again, some ideas were generated around the  possibility  of
+     moving  to a one-operating-system strategy for 36-bit machines.  For a
+     brief period, a system somehow combining  all  the  goodness  of  both
+     TOPS-10  and TOPS-20 was envisioned.  This was being called TOPS-36 so
+     as not to make partisans of either TOPS-10 or TOPS-20  think  that  it
+                                                                    Page 35
+
+
+     was just the other one.  How this might have come out is impossible to
+     say, since no planning or design beyond  general  scenarios  was  ever
+     done.
+
+          Most of these  ambitious  plans  got  scaled  back  or  abandoned
+     because  it  wasn't  the  KL10  history  that was repeated by Jupiter;
+     rather it was more like the Dolphin history.  Whether the project  was
+     "1-plussed" too much or whether other avoidable mistakes were made can
+     never be known for sure.  However, after  having  received  one  major
+     extention  of  time  and additional infusion of development funds, the
+     project found that it was going to need a great  deal  more  of  both.
+     Further,  some  long-delayed  analysis  of  the performance of certain
+     common  36-bit  instructions  led  to  the  conclusion  that   overall
+     performance would not be up to expectations.  In fact, it would hardly
+     surpass the KL10 in some cases.  It would probably have been  possible
+     to  fix  those problems, but the project was already way over its head
+     and seemed mired in weekly schedule replans and indecisivness.
+
+
+
+     7  CONCLUSION
+
+          The early popularity of TENEX on the ARPANET was certainly a  key
+     to  its  later  acceptance,  transformation, and support as TOPS-20 by
+     DEC.  That popularity in turn seems to have been based not only on its
+     technical  features  but also on the fact that it was developed within
+     that community and was responsive to it.  When TOPS-20  became  a  DEC
+     product,  it  became  part  of  a  much  larger  market  and thus less
+     responsive to any particular segment of the market.
+
+          In addition to that, as interest in other computer  architectures
+     increased  in  the  late  seventies,  many  research sites came to the
+     conclusion that they did not want to be dependent on  any  one  vendor
+     for  either  hardware  or software and, instead, wanted "open" systems
+     which would be amenable to local modification and evolution.  This  of
+     course led to a rapid increase in the use and popularity of Unix.  The
+     fact that Unix was implemented in a reasonably portable  language  (at
+     least as compared with 36-bit MACRO) also encouraged its spread to new
+     chip architectures and beyond.  If I could have done  just  one  thing
+     differently  in  the history of TENEX and TOPS-20, it would be to have
+     coded it in a higher level language.  With that,  it's  probable  that
+     the  system, or at least large parts of it, would have spread to other
+     architectures  and  ultimately  survived  the  demise  of  the  36-bit
+     architecture.
+
+          Much of the success of TOPS-20 and other 36-bit software  is  the
+     result  of  qualities that came out of the interactive environments in
+     which it was built and used.  Over the  last  10  years,  the  driving
+     force  in  interactive  environments  has  been  moving computer power
+     closer to the user  via  personal  computers  and  workstations.   For
+     TOPS-20  to  have remained in the forefront of interactive development
+     and use, 36-bit hardware platforms would have had  to  be  built  that
+     were  small  and  cheap  enough to go into the office, or the software
+     would have had to be portable enough to move to other such platforms.
+                                                                    Page 36
+
+
+          Although this book is about  DEC's  36-bit  architecture,  it  is
+     clear  now that hardware CPU architectures are of declining importance
+     in shaping software.  For a long time, instruction  set  architectures
+     drove  the  creation  of  new  software.   A new architecture would be
+     introduced, and new software systems would be  written  for  it.   The
+     36-bit  architecture  was  large  in  comparison to most other systems
+     which permitted interactive use.  It was also lower in cost than  most
+     other  systems  of  that  size.   These  factors were important in the
+     creation of the kind of software for which the architecture is known.
+
+          Now,  new  architectures  are  coming   along   with   increasing
+     frequency,  but  they  are  simply  "slid in" under the software.  The
+     software systems are far too large to be rewritten each  time,  and  a
+     system  which cannot adapt to new architectures will eventually suffer
+     declining  interest  and  loss  of  competitive  hardware   platforms.
+     TOPS-20  didn't pass that test, although it did contribute a number of
+     ideas to the technology of interactive systems.  How far  these  ideas
+     ultimately spread is a story yet to be told.
+                                                                    Page 37
+
+
+                                   REFERENCES
+
+
+
+          1.  "TENEX, a Paged Time Sharing System for the PDP-10".   Daniel
+     G.  Bobrow, et al.  CACM, Vol 15 No 3, March 1972.
+
+          2.  "Structure of a LISP System Using Two-Level Storage".  Daniel
+     G.  Bobrow and Daniel L.  Murphy.  CACM, Vol 15 No 3, March 1967.
+
+          3.  "A Note on the Efficiency of a LISP Computation  in  a  Paged
+     Machine".   Daniel  G.  Bobrow and Daniel L.  Murphy.  CACM, Vol 11 No
+     8, August 1968.
+
+          4.  "The Working Set  Model  for  Program  Behavior".   Peter  J.
+     Denning.  CACM, Vol 11 No 5, May 1968.
+
+          5.  "Storage Organization and Management in  TENEX".   Daniel  L.
+     Murphy.  AFIPS Proceedings, 1972 FJCC.
+
+          6.  "Implementation of TENEX on the KI10".   Daniel  L.   Murphy.
+     TENEX Panel Session, NCC 1974.

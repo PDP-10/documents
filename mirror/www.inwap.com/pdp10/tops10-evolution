@@ -1,0 +1,30 @@
+From: budd at csa.bu.edu (Phil Budne)
+Newsgroups: alt.sys.pdp10
+Subject: stuff [was photos of TOPOS-10 teams]
+Date: 10 Oct 2000 06:33:33 GMT
+
+TOPS-10 Evolution
+
+1964-66	1.4-1.9	PDP-6 Support, DECtape only, 27 jobs (UFA, 1 bit per job)
+1967	2.18	KA support, disk support, shuffler
+1968	3.27	swapping, 36 jobs (using JFFO)
+1969	4.50	dual segments
+	4.72	CCL, 63 jobs
+1970	5.01	TOPS-10, Disk Service rewrite (Phase I)
+1971	5.02	MPB (batch), RTTRP (real time), Disk Service rewrite (phase II)
+1972	5.03	1055 multiprocessor (dual KA)
+	5.04	KI support
+1973	5.05	1077 support (dual KI)
+	5.06	SFDs (subdirectories)
+1974	5.07/6.01
+		KL support, VM, IPCF (interprocess communication)
+1975	6.02	1088 support (dual KL), class shced, RP04/6
+		ENQ/DEQ (resource locking), Galaxy I (spooling)
+1977/78	6.03/A	1091 (MOS memory, RH20), ANF (PDP-10 comm network)
+		FILDAE (file access daemon)
+1979	7.00	SMP (limited)
+1980/82	7.01/A	SMP (full), logical names, Galaxy 4.1
+1984	7.02	DECnet-10 Phase III
+
+
+

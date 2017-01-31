@@ -1,0 +1,504 @@
+Date: Tue, 20 Aug 1996 00:18:20 -0700 (PDT)
+From: Mark Crispin <mrc@Panda.COM>
+To: js-cgi@inwap.com
+Subject: PDP-10 web page
+
+
+Attached are a few files which you don't seem to have yet:
+
+	Software Wars -- written 19 years ago, hopefully the statute of
+			limitations has expired...
+	Tony in RH20 Land -- an absolute must!!!
+	PDP Summary -- all about various PDP's
+	Mr. Bill Show -- Saturday Night Live meets DEC field service...
+
+-- Mark --
+DoD #0105, R90/6 pilot  FAX: (206) 842-0758  ICBM: N 47.36'24" W 122.34'08"
+TOPS-20: A Great Improvement Over Its Successors
+
+==================================================================
+
+17-May-91 21:28:54-LCL,7439;000000000000
+Received: from hanna.cac.washington.edu by akbar.cac.washington.edu
+	(5.65/UW-NDC Revision: 2.21 ) id AA07956; Fri, 17 May 91 21:28:53 -0700
+Received: from life.ai.mit.edu by hanna.cac.washington.edu
+	(5.65/UW-NDC Revision: 2.21 ) id AA23333; Fri, 17 May 91 21:28:48 -0700
+Received: from Shiva.COM by life.ai.mit.edu (4.1/AI-4.10) id AA22260; Fri, 17 May 91 23:48:14 EDT
+Received: from Rosebud.Shiva.COM by Shiva.COM (1.34b) Fri, 17 May 91 23:50:53 EDT
+From: Phil Budne <phil@shiva.com>
+Received: by Rosebud.Shiva.COM (Spike-2.0) Fri, 17 May 91 23:48:17 EDT
+Date: Fri, 17 May 91 23:48:17 EDT
+Message-Id: <9105180348.AA12929@Rosebud.Shiva.COM>
+To: enders@plains.nodak.edu, pdp8-lovers@ai.mit.edu
+Subject: Re:  PDP9, Anyone seen one?
+
+> Up to 32k words of 18 bit memory (yes indeed, this was an 18 bit
+> machine!)
+
+As were the 1, 4, 7 and 15!
+
+When I worked at DEC on 36 bit software, I met a few '15 folks who
+seemed almost as sad as we were in the end!
+
+I think I saw '7 in DEC salvage once.  Bore a resemblance to a PDP-6
+(dull blue with metal trim).
+
+I'm enclosing Mark Crispin's excellent PDP summary, since it hasn't
+been re-posted in a while!
+
+================
+
+>From RS%AI.ai.mit.edu@mc.lcs.mit.edu Thu Jun  8 00:28:01 1989
+Date: Thu,  8 Jun 89 00:09:28 EDT
+From: "Robert E. Seastrom" <RS%AI.AI.MIT.EDU@MINTAKA.lcs.mit.edu>
+Subject:  What's a PDP-x ??
+To: pdp8-lovers@mc.lcs.mit.edu
+
+
+If you folks have already seen this, please disregard it.  If
+you haven't, keep it handy - it could come in handy some day.
+
+                      ---Rob
+
+PS: In case you didn't know (I didn't until 2 years ago), PDP
+stands for Programmed Data Processor...
+
+
+Date: Wednesday, 20 August 1986  03:42-EDT
+From: Mark Crispin <MRC%PANDA@SUMEX-AIM.ARPA>
+To:   TOPS-20@SU-SCORE.ARPA, Boken@RED.RUTGERS.EDU
+Re:   DEC's PDP's
+Postal-Address: 1802 Hackett Ave.; Mountain View, CA  94043-4431
+Phone: +1 (415) 968-1052
+
+     A number of people have requested my list of all the DEC PDP's,
+so I thought I'd bore you all with it.
+
+     The PDP-1 was an 18 bit machine.  It was DEC's first computer,
+and some of the first timesharing systems were designed for it.  It's
+also unique in being one's complement; all later DEC computers were
+two's complement.  Some machines, such as one of MIT's PDP-1s, were in
+operation until the late '70s.
+
+     The PDP-2 was a designation reserved for a 24 bit machine, but as
+far as I can tell it was never even designed and definitely none were
+ever built.
+
+     The PDP-3 was a 36 bit machine that was designed but never built
+by DEC.  However, Scientific Engineering Institute built one in 1960.
+
+     The PDP-4 was an 18 bit machine that was intended to be a
+cheaper, slower alternative to the PDP-1.  It was so slow that it
+didn't sell well, although it was interesting for its
+auto-incrementing memory registers.  It was not program-compatible
+with the PDP-1, but its instruction set was the basis of DEC's future
+18 bit computers.
+
+     The PDP-5 was a 12 bit machine designed to be a small laboratory
+system.  It used many of the ideas in the LINC (Laboratory Instruction
+Computer, designed by Lincoln Labs at MIT, some of which were built by
+DEC).
+
+     The PDP-6 was a 36 bit machine and the first machine to implement
+the most wonderful computer architecture known to man.  It was rather
+expensive and difficult to maintain, and not many were sold.  As a
+result, DEC cancelled 36 bit computers for what was to be the first of
+many times.
+
+     The PDP-7 was an 18 bit machine and the sucessor to the PDP-4.
+It was a major price/performance win over the PDP-4 and the first DEC
+computer to use wire-wrapping.
+
+     The PDP-8 was a 12 bit machine and the sucessor to the PDP-8.  It
+basically defined the term "minicomputer", and went through several
+incarnations.  The original PDP-8 was followed by the extremely slow
+PDP-8/S (as bad as the PDP-4 was to the PDP-1, but at least the /S was
+program-compatible).  DEC recouped with the PDP-8/I (using MSI
+integrated circuits) and the smaller PDP-8/L, and somewhat later came
+out with the "Omnibus 8" machines -- the PDP-8/E, the PDP-8/F (a
+half-sized version of the PDP-8/E), the PDP-8/M (an OEM version of the
+PDP-8/F), and the final machine, the single board PDP-8/A.  The
+PDP-8/A still exists after a fashion as a current DEC product.
+
+     The PDP-9 was an 18 bit machine and the sucessor to the PDP-7.
+It had a faster memory than the PDP-7 and was the first
+microprogrammed DEC computer.  Modulo a 300 wire(!) ECO required in
+the first machines, the PDP-9 was a reliable machine and some are
+still in operation today.  There was a short-lived PDP-9/L.
+
+     The PDP-10 was a 36 bit machine and the sucessor to the PDP-6.
+It is especially noted for its software, which represents the pinnacle
+of DEC software engineering and has never been equalled.  The first
+KA10, largely installed in universities, created a whole generation of
+timesharing hackers.  The follow-on KI10, with paging and using IC's
+instead of discrete components but otherwise unexciting, mostly was
+sold to commercial organizations.  The KL10 went through several
+incarnations and is today the most representative of this marvelous
+machine.  The KS10 was a small, low-speed (approximately KA10
+performance) processor which was DEC's last successful implementation
+of this architecture.
+
+     The PDP-11 was a 16-bit machine that went through more
+implementations and operating systems than can be counted.  Presently
+it superceded the less powerful PDP-8 as the representative
+minicomputer.  While the PDP-11 used octal, it was in its deep heart
+of hearts a hexidecimal machine, and the first indicator of the
+creeping IBMification of DEC that took full fruit in the VAX.  [I can
+hear the flames now...]  Rather than fight it the customers loved it;
+more PDP-11's have been sold than any other DEC computer (possibly
+more than all the others combined).
+
+     The PDP-12 was a 12 bit machine and the sucessor to the PDP-8.
+It combined a LINC and a PDP-8 type processor in the same box and
+basically was a new model of the LINC-8 which was the same thing.
+
+     No PDP-13 was ever designed or built.  Even DEC gets
+superstitious.
+
+     The PDP-14 was a 12 bit machine with a 1 bit register.  It was
+used as a process control engine in applications that were felt to be
+too rugged for a PDP-8, and basically replaced a set of relays.  Later
+DEC made PDP-8's suitable for this sort of thing, but it didn't stop
+them from the ultimate silliness of building a PDP-14 that used a
+PDP-8 as its console processor!
+
+     The PDP-15 was an 18 bit machine and the final one of this design
+built by DEC.  More PDP-15's were built and sold than any of the
+others, and it went through several incarnations including some which
+used a PDP-11 as a front end.  Apparently the cancellation of the
+PDP-15 came as a great surprise to the "Tiger Team" who worked on it,
+although considering its general ungainliness compared to comparable
+performance PDP-11's it wasn't surprising.  In many ways the PDP-15
+died for the same reason the PDP-10 did.
+
+     The PDP-16 was a "roll your own" 16 bit machine based on various
+"building blocks".  Every PDP-16 was essentially custom-designed by
+the customer.  It got a fair amount of attention when it was announced
+but evidentally didn't sell very well.
+
+     There was no PDP-17 or any other designator.  DEC apparently
+decided that "PDP" had a perjorative ring to it.
+
+
+
+
+
+22-May-91 04:19:30-LCL,17200;000000000000
+Received: from hanna.cac.washington.edu by akbar.cac.washington.edu
+	(5.65/UW-NDC Revision: 2.21 ) id AA08510; Wed, 22 May 91 04:19:29 -0700
+Received: from life.ai.mit.edu by hanna.cac.washington.edu
+	(5.65/UW-NDC Revision: 2.21 ) id AA02662; Wed, 22 May 91 04:19:24 -0700
+Received: from watsun.cc.columbia.edu by life.ai.mit.edu (4.1/AI-4.10) id AA00689; Wed, 22 May 91 07:02:50 EDT
+Received: by watsun.cc.columbia.edu (5.59/FCB)
+	id AA04188; Wed, 22 May 91 05:17:26 EDT
+Date: Wed, 22 May 91 5:17:25 EDT
+From: Charles Lasner <lasner@watsun.cc.columbia.edu>
+To: pdp8-lovers@ai.mit.edu
+Message-Id: <CMM.0.90.0.674903845.lasner@watsun.cc.columbia.edu>
+
+From: Charles Lasner
+Subj: Corrections and commentary on Mark Crispin's PDP list
+
+    I have found "grievous" errors in Mark Crispin's descriptions of
+PDP-xx computers from DEC, so herewith are some corrections:
+
+PDP-1, 2, 3
+
+    I have no fundamental problem with this description, however, I
+would note that there is a story circulating that the original
+machine was called PDP, *not* PDP-1.  The manual for the PDP was
+PDP-1, and they intended it to stop there.  PDP-2 and PDP-3 are
+therefore tentative or actual notation for more manuals.  I will not
+comment other than this mention of the PDP-2, 3 memorial golf course
+:-)
+
+PDP-4
+
+    I once saw one of these in the Mill with a baudot teletype (model
+28) hooked up to it; no further comment.
+
+PDP-5
+
+    The PDP-5 is nearly compatible with the PDP-8.  It has the
+program counter in location zero.  Storing value-1 in 0000 is the
+same as a jump to value.  This is how FOCAL, 1969 tests for running
+on the -5, since interrupts must be moved from 0001 to 0002.  All
+other references to 0000 are disallowed, as are certain operate
+instructions.  These restrictions seem arbitrary, and this was
+corrected in the PDP-8.  It's probably not unreasonable to modify
+this machine to be -8 compatible, although a little slow due to 8
+microsecond memory.  Extended memory is totally compatible, but EAE
+is not, it's more like a peripheral than a processor option.  The bus
+can't do 3-cycle data break, but the early 555 DecTape ran on it in
+1-cycle mode using the current Data Field as the break field (which
+in turns means no interrupts are allowed while the DMA is in
+progress!).  Other than that, through use of a physical bus convertor
+(don't have the number, but I mean a passive device that merely
+changes the connectors), the -5 likes -8 negative bus peripherals.
+An -8 expander box (804) was once hooked to a -5 containing the -8's
+plotter interface for a Calcomp plotter, etc.  Rumor has it that
+someone modified the CPU of a -5 to gain the few operations necessary
+to make it -8 compatible, and that an 8K version was running OS/8 on
+some undisclosed peripheral.  I wouldn't give too much creedence to
+the story because all of the early disk peripherals were 3-cycle
+except the aforementioned 555 DecTape (as opposed to TC01 et al which
+is three-cycle).
+
+    The PDP-5 is clearly the PDP-8's father.  It is not known if it
+used the PC in 0000 kludge as an economy measure, or just plain
+foolishness at the time, but clearly, had it been slightly upgraded
+to PDP-8 processor compatibility by DEC, it would have been supported
+more readily.  Many of the changes subsequently made to FOCAL, 1969,
+etc. depend on removing restrictive operations caused by supporting
+the -5 and the even more demented 8/s (see below).  These
+restrictions mean that you can't use combined operates such as CMA
+RAL because these two can't do it.  In the -5's case, it's almost
+excusable, but in the -8/s case it is not.
+
+PDP-6
+
+    The story I heard is that Alan Kotok virtually single-handedly
+got all of the few made to work by using other people's memory.  Most
+wound up in MIT at one time or another anyway.  The PDP-6 lacked
+certain features required by later -10 systems, but was always
+welcome to ITS.
+
+PDP-7
+
+    It is interesting to note that a small class of peripherals were
+introduced for either the -7/9 series or the -8.  I know of at least
+two: the AA01A for the -8, and the type 884 sychronous modem
+interface.  Each was delivered in two parts.  One part was bus
+specific, and the other was plugged into whichever first type you had
+installed appropriately.  I personally participated in modifying the
+D-A part of a AA01A to become an -8-only peripheral, because the
+trivial -8 interface was a waste of valuable black block racks, and
+the empty space on the AA01A was available to wrap on an -8-only
+interface complete with daisy-chain.  I also once used a PDP-15 with
+a negative bus converter which had the negative interface and 884
+assembly for a synchronous modem connection to an outside dedicated
+line.  It has been told to me that the TC58/59 class of tape
+controllers consists of a generic subsystem called TC50 internally,
+which is wrapped to a 7/9 bus or -8 bus specific portion to become
+the TC58 or TC59.  In this case, the two are wrapped together, not
+cabled together, and are thus more or less permanently attached.
+
+PDP-8 and PDP-12
+
+    Since the PDP-8 is the standard bearer of our group, we can't
+leave any stone unturned here.  First off, the obvious typo in that
+the -8 is the successor to the -5, not itself :=).  While the 8/s may
+be extremely slow, it is also *not* compatible with the -8.  Please
+note that OS/8 does *not* run on either the -5 or the 8/s.  This also
+applies to P?S/8, which it should be noted runs on the entire -8
+family from PDP-8 through DECmate III+, whereas OS/8 has different
+"family" members that each do part of this in an overlapping fashion.
+I am part of a group which desires to release OS/8 Version 5, to run
+on the entire family.  Note, when all concerned parties discuss the
+"family of 8" the 8/s and -5 are specifically omitted.  I have once
+discussed the feasibility of upgrading the 8/s, and the consensus was
+that it could be done, but it might run a bit slower, and in any case
+would require a rack of cards hanging out of it.  It is also
+noteworthy that the 8/s was originally a different project known as
+PDP-10!  It was to have 32K memory implemented as drum-style memory
+as in earlier computers, and the memory was what became the basis for
+the 32K -8 fixed disk peripheral called DF-32.  I guess they didn't
+pay close attention to the improvements in processor OPR instructions
+the -8 made over the -5, because the 8/s is *worse* than the -5 in
+terms of compatibility.  It is also a fully *serial* computer, not
+parallel.  It should also be noted that many DATA GENERAL Nova-type
+machines and microes were serial or at least not fully parallel.
+
+    Later models, the 8/i and 8/l did come out.  Early 8/i's had
+Red-handled modules like the -8, even though the cards were TTL and
+eventually became maroon (M modules).  There were even a few -8's
+with 8K in them ala the 8/i, because they had 8/i-type memory kludged
+into them!  The 8/i originally had a negative bus, for compatibility
+with the vast majority of existing peripherals made expressly for the
+-8.  The 8/l is essentially a stripped-down 8/i, and as such can have
+only 8 (or 12) K and a positive bus, whereas later 8/i's could have
+either bus.
+
+    The LINC-8 was an attempt to bring DEC some income from the MIT
+LINC project.  After early on realizing that an independent LINC
+peripheral would be difficult to pull off, the LINC-8 was born by
+making moderate modifications to the -8 CPU and memory interface, and
+adding a "captive" processor.  Many operations had to be simulated
+for complete pseudo-compatibility with the "real: LINC, which in turn
+was constructed of the same System Modules as the PDP-5.  The
+LINCtape peripheral is actually an -8 peripheral, whose major
+registers are the LINC processor's registers, which are "borrowed"
+because the LINC CPU is totally disabled while the -8 runs the tape
+peripheral.  In certain ways, the LINC-8 is a "cadillac"
+implementation of the -8, in that it has certain niceties such as GMT
+3 grasshopper fuses on all power busses, and many fans, etc.  Also,
+the lamp drivers for all front panel lamps are on actual small
+modules wrapped in, not one massive (and damage-prone) lamp driver
+panel.  The bulbs still are soldered in here though :-(
+
+    The PDP-12 is a positive bus-only 8/i with a built-in DMA
+multiplexor option eventually, as well as push-down stack hardware
+and priority interrupt (KF-12B) as late-production standard features.
+All of the LINC stuff is "real" including the dual console.  There
+are less actual lights than the LINC-8 because there is now only one
+set of registers for a dual-mode processor, not two complete
+processors with each's set of major registers displayed.  A standard
+option allows read/write of DECtape, whereas only user modifications
+could do this on the LINC-8 eventually.  The FPP-12 was born here,
+and included PDP-8 CPU lockout mode option, although this was reborn
+in the FPP-8/e,a for the Omnibus years later.  Clearly, the -12 was
+the one model that got the benefit of "proper" hardware engineering,
+whereas subsequent models seem to get ever shorter ends of the
+hardware "stick".  Curiously, a few modules come from the LINC-8
+project, because it was too much work to recreate the function in TTL
+rather than negative voltage logic, so they merely level converted
+and used a few R-series cards :-).  Some PDP-12 modules actually say
+they are specifics for the "LINC-8/i" which was apparently its
+original designation.
+
+    The PDP-12 is the only model where the number is also the word
+length :-).  Many DEC-ignorant computer types actually believe that
+the PDP-8 is an 8-bit machine!
+
+    Newer models of -8's are all for the Omnibus, which defines all
+processor and I/O signals on four DEC-feet or quad-width slot.
+Various incarnations are either wider or deeper, but all have the
+same bus.  The standard is the 8/e, which is always 20 slots
+(optionally 40) in the full-depth box, complete with bulky analog
+power supply.  The entry level is the 8/m, which was designated for
+OEMs, and didn't include the standard 8/e-type front panel with
+incandescant lamps.  The 8/f is an 8/m including an LED variant of
+the lamp panel, and this panel is an option for the 8/m as well.
+Thus, the 8/m with panel and 8/f differ only in color scheme and
+silk-screened name on the panel.  Both have a slightly balky
+switching supply which is much smaller than the 8/e supply, as well
+as much less power capability.  These machines are "bread-box" size,
+and only allow for 20 slots in the box.  
+
+    The newer breed of Omnibus boxes are all usually known
+collectively as 8/a, but they came in various flavors: a short-lived
+10-slot box with many restrictions, a 12-slot box with somewhat more
+versatility, and a 20-slot box with large power capability.
+
+    Theoretically, any of these systems could be expanded from
+virtually any model's box as an add-on to the base system, so
+standard options included upgrading a 40-slot to 80-slot, or making a
+20-slot 8/f grow to 40 or optionally 60 slots using the same external
+8/e-type box, etc.  The FPP-8/A was meant to go in the 8/a 12-slot
+box, which like all 8/a boxes is hex-wide internally, not quad.  The
+sixth foot is non-existent and the fifth foot has only a few signals
+optionally available later to various memory extension options beyond
+32K.  When sold this way as an add-on for a 40-slot 8/e, the entire
+option is known as FPP-8/e, including the BC-80C cable and 12-slot
+hex-wide box, as well as the two hex-wide FPP cards.  My own machine
+is a 40-slot 8/e, with a 20-slot 8/a box as an expander.
+
+    The 8/a series also sports an optional octal digit LED readout
+front panel, similar to an 11/34 in general appearance.
+
+    Most of the 8/a models use a single slot CPU, the KK8A, which has
+the bus pullups on it (at the *wrong* end electrically of the bus!)
+which disallows the bus terminator, and is thus limited to what fits
+in any one box, or at most 20 slots.  Some use the 8/e processor
+(KK8F) which requires a terminator card (M8320) in the furthest slot
+away from the CPU.  Some configurations reverse the apparent
+beginning and ending, but always obey this rule.  This allows at
+least 40 slots (8/e box or two 8/a boxes) or at most 80 slots (two
+8/e boxes).  It is possible to discover which CPU is present due to
+specific CPU-model-dependent quirks, but you can't tell more than
+that.  Some 8/a boxes are really 8/e machines with 8/a memory options
+and all else is from an 8/e!  8/a systems get numeric suffixes like
+-100, -400, -500, and -600 as well as model-option changes to make it
+something like -625, etc.  Since there is much "plug and play" here,
+it is not too useful to describe an 8/a system by model, but rather
+by specific components.
+
+    All -8 models are backwards compatible with earlier bus
+arrangements, and also there is a feeble attempt at forwards
+compatibility called the DW-8/E.  This partially allows some Omnibus
+stuff to work in the pre-Omnibus machines, but has many restrictions.
+A hacked-up version of the RK8E called RK8F is the only DMA option
+for the DW8E.  The Omnibus machines support the positive bus via the
+KA8E and KD8E(s).  The KA8E outputs a completely compatible positive
+transfer bus, and each KD8E outputs a compatible DMA interface.  The
+Omnibus does any priority multiplexing.  The Negative bus is in turn
+supported by thge DW08A option, so it is reasonable to fine a TC01 on
+an 8/a.  I have an 8/e with a TC01 and TU55 myself.  (This requires
+an ECO to the W103 cards to become W123.)
+
+PDP-9 and PDP-9/l
+
+    The 9/l had a pink color scheme, and was apparently a
+stripped-down -9.  The -9 was often sold with a -7 because there was
+some software that ran on both simultaneously.  Apparently, the -7
+became a dedicated controller for the DECtape drives relative to the
+-9, because the -7 had a feeble interface ala the TD8E on the 8/e,
+etc.  Later, the -9 got its own TC02 DECtape, thus relieving the -7
+requirement.
+
+    I don't understand Mark Crispin's description of the -9 as being
+microprogrammed.  Perhaps this is merely a misstatement of the fact
+that the operate instructions, like in the -8, can be *user*
+microprogrammed together such as:
+
+    SMA SZA CLA         /skip if the AC is either negative or zero,
+                        /and then clear the AC regardless.
+
+    The -9 is not materially different in architecture from the -8,
+so I can't imagine this meaning anything else.  I also understand
+that the 7/9/15 can microprogram more of these operations than the
+-8 can.  The -8 is restricted to groups which can combine
+sub-operations, whereas the 18-bit machines can combine almost
+anything at once!
+
+
+PDP-10
+
+    The PDP-10 spawned much software development, and eventually
+encouraged the use of BLISS.  It is noteworthy that much of the VAX
+software is lifted directly from TOPS-20 because of the close
+compatibility of the various (later) BLISS implementations.  However,
+purists will note that BLISS-10 is *not* BLISS-36, while BLISS-32
+just about is.  This was done on purpose to rip off the -10 stuff for
+the benefit of the VAX.  Perhaps this also means that some newer
+stuff can come back to the 36-bit world as well :-)
+
+PDP-11
+
+    Since the early days of the RISC discussion, it has become
+debatable whether the PDP-11 is more powerful than many designs, not
+just the -8.  I guess it all depends on how you measure the power.
+The PDP-11 certainly had more hardware engineering effort applied,
+but was the benefit worth the cost?  Measured this way, you could say
+the -11 is DEC's weakest machine.  Look at how well the PDP-8 has
+fared while being "negatively marketed" as compared to the -11!
+Also, LCG had to put controls on -11 marketing when salesmen were
+quoting -11 systems that were a) impossible to implement (or at least
+highly impractical), and b) were clearly short-changing a customer
+willing to shell out PDP-10-sized bucks for a computer.  DEC also
+made lots of money selling the 11-03, but I guess -11 freaks don't
+want to talk much about that :-)
+
+    Various academic works have pinpointed the weaknesses of the -11
+in terms of pure architectural considerations.  The user group
+largely consists of people who don't really know much about the -11,
+but rather are in love with its software, and make the fatal mistake
+of measuring the worth of a machine by how useful it is to them, not
+its intrinsic value.  This merely means that DEC threw a lot of money
+at the -11, not that it is a good design.  If RT-11 were known as
+RT-15 for the PDP-15 family, and DEC implemented an RT-11-like system
+for the -15 (which is totally feasible, considering what a -15 is,
+and what RT-11 is), how many of these people would be raving about
+how powerful the -15 is? :-)
+
+    As a side note, there seems to be much interest in an RT-11-like
+system for the VAX, presumably to be called RT-32.
+
+    As is alluded to in THE SOUL OF A NEW MACHINE, the PDP-11 was
+born over a weekend, appealing to the ego of certain individuals who
+could pull strings in DEC, to pull the plug on what was to be known
+as DATA GENERAL and the NOVA.  Considering the rocky road of the -11,
+it is curious that DEC never sued DATA GENERAL over the NOVA's very
+existence.
+
+cjl

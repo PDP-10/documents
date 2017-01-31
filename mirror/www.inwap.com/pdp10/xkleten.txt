@@ -1,0 +1,61 @@
+From: xkladmin@paulallen.com (XKLeTen Admin)
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11,comp.sys.dec
+Subject: XKL (PDP10) Site Announcement
+Date: Tue, 30 Dec 1997 02:55:47 GMT
+Organization: XKLeTen
+Message-ID: <34a85fd3.3481181@nntp.ix.netcom.com>
+Reply-To: xkladmin@paulallen.com
+
+Dear Fellow PDP-10 Enthusiast,
+
+Over the past 25 years, it's been challenging for all of us to find a place to
+run our PDP-10 software.  At the same time, there hasn't been a library of
+PDP-10 software that is well taken care of, and made easily available to the
+interested public.
+
+I would like to offer a solution.  I have invested in a TOAD-1 machine running
+the PDP-10 architecture, and would like to make its capabilities available.
+The TOAD is manufactured by XKL LLC, and is a completely new hardware
+implementation of Digital's 36-bit PDP-10 architecture, not an emulator
+running on another platform.  This machine I've purchased will be a repository
+for PDP10 public domain software, including the collection of the DEC-10 and
+DEC-20 DECUS tapes.
+
+By making access accounts available to an initial limited group, we hope to
+learn of any issue areas with our new program.  Through an account you can set
+up with us, you can access this library, and run programs you may not have
+seen for years.  You may also submit your own programs for storage, and for
+use by fellow advocates.  These programs may be submitted via FTP, email or
+9-track tapes.  Once you have an account established you could access XKLeTen
+via telnet.  Anyone may download the libraries of software through anonymous
+FTP from XKLeTen.paulallen.com.
+
+The machine, named XKLeTen, is configured as follows:
+	TOAD-1, 36-bit computing system
+	TOPS-20 system software
+	32 MW memory board
+	4 mm DDS tape drive
+	9 track tape drive
+ 	8 gigabyte disk
+
+I encourage any of you who are interested to contact us to set up an
+account.  To be considered for an account, please submit the
+following information to XKLadmin@paulallen.com:
+	Full name
+	Email address
+	Interest or purpose in this project (short summary)
+	Desired account name
+
+If you have any questions about XKLeTen, or how to execute the
+anonymous FTP, please contact us via the same email address.
+
+Bill Gates and I used PDP10s to develop much of Microsoft's early
+software.  I hope many of you take advantage of this new opportunity
+to keep alive some of your old memories.  
+
+
+Paul G. Allen
+
+---------------------------------------------------------------------
+
+Update: No new accounts have been created on that machine since 1998.

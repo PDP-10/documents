@@ -1,0 +1,220 @@
+Last updated: 30-Jun-2001           http://www.inwap.com/pdp10/models.txt
+
+From a catalog circa 1967:
+   The PDP-10 includes an extremely powerful processor with 15 index
+   registers, 16 accumulators, and 8,192 words of 36-bit core memory, a
+   300-character-per-second paper tape reader, a 50-character-per-second
+   paper tape punch, a console teleprinter, and a two-level priority
+   interrupt subsystem.  PDP-10/20 adds two DECtapes, PDP-10/30 includes
+   16,384 words of memory and additional I/O devices.  PDP-10/40 adds an
+   extended order code and a memory protection and relocation feature.  And
+   PDP-10/50 permits swapping between 32,768 words of memory and fast
+   access disk file via the multiplexer/selector channel, and includes
+   multiprogramming time-sharing software.
+
+1010    KA10, 8Kwords, papertape, only 2 PI channels, never built
+1020    KA10, 8Kwords, 2 DECtapes, never built
+1030	KA10, 16Kwords, 2 DECtapes and more I/O devices (none sold)
+1040	KA10, 16Kwords, DECtapes, single user, 2-seg memory protection
+1050	KA10, 32Kwords, disks, multi user, byte pointer and floating point
+1055	Dual processor (1050) system, master/slave configuration
+1060	KI10, single user (no disks)
+1070	KI10, multi user (with disks)
+1077	Dual processor 1070, master/slave or symmetrical multiprocessing
+1080    KL10-A(PA) running TOPS-10
+1088    Dual processor (1080) system, SMP
+1090    KL10-B(PA) or KL10-D(PV) running TOPS-10
+1090T   KL10-BC(PA) running TOPS-20 (ARPANET system only, a 1090 with floppies)
+1091    KL10-E/R(PV) with cache and DIB20 I/O bus adapter, running TOPS-10
+1095    KL10-E/R(PW) with big cache and DIB20 I/O bus adapter, running TOPS-10
+1099    Multi processor (1090) system, SMP, TRI-SMP, QUAD-SMP
+2040    KL10-C(PA) or KL10-E(PV) without cache running TOPS-20
+2050    KL10-C(PA) or KL10-E(PV) with cache running TOPS-20
+2060    KL10-E/R(PV), cache, MOS memory, runs TOPS-20 using extended addressing
+2065    KL10-E/R(PW), big cache, MOS memory,  TOPS-20 using extended addressing
+
+Non-KL features:
+
+  PDP-10 Features       PDP-6   1050    1070  2020    KC      TOAD-1
+====================    =====   ====    ====  ====    ====    ======
+Year announced          1964    1967    1972  1978    cancel  1994
+CPU type                166     KA      KI    KS      KC      XKL-1
+Clock speed nanoseconds Async   Async   110   50      Fast    30
+Extended sections       No page No page None  1       4096    4096
+G-floating              No FP   No DF   No    No?     Yes     Yes
+Words of Cache          --      --      --    512     Big     128K
+Disk interface          I/O     DH10    DH10  Unibus  CI      SCSI-2
+Peripherals             I/O     I/O     I/O   Unibus  NI      Ethernet
+Internal memory         No      No      No    256K    Yes     Yes
+Height of cabinets      Tall    Tall    Tall  Short   Jupiter 35"h
+Console Front-End       None    None    None  8080    11/40   builtin
+Bootstrap device        --      --      --    Magtape Floppy  ROM
+Runs TOPS-10 7.01       No      No      Yes   Yes     No      No
+Runs TOPS-10 7.02       No      No      No    Yes     No      No
+TOPS-10 7.03/7.04/7.05  No      No      No    Yes     Yes     CTY only
+Runs TOPS-20 rel 4      No      No      No    Yes     No      No
+Runs TOPS-20 rel 5      No      No      No    No      No      No
+Runs TOPS-20 rel 6      No      No      No    No      Yes     No
+Runs TOPS-20 rel 7      No      No      No    No      Yes     Yes
+
+KL features:
+
+Designation  PV   Boot    Cache  DTE  RH20  IO bus     Used in
+-----------  --  ------   -----  ---  ----  ------   ----------------------
+74 KL10-A    No  DECtape  Yes     1     0     Yes    1080 (uses RH10)
+74 KL10-B    No  DECtape  Yes     4     8     Yes    1090 Model-A
+76 KL10-C    No  Floppy   Option  4     8      No    2040 Model-A, 2050 Model-A
+77 KL10-BC   No  Floppy   Yes     4     8     Yes    1090T (ARPANET)
+78 KL10-D   Yes  DECtape  Yes     4     8     Yes    1090 Model-B
+81 KL10-E   Yes  Floppy   Option  4     8   Option   1091, 2060, 2050 Model-B
+84 KL10-E+   PW  Floppy   Bigger  4     8   Option   1095, 2065
+84 KL10-R  = same as KL10-E,  but in FCC approved cabinets.
+84 KL10-R+ = same as KL10-E+, but in FCC approved cabinets.
+
+  PDP-10 Features       1080    1090PA  1090PV  1091   2040PA  2040PV  2050PA  2050PV  2060   1065/2065
+====================    ====    ====    ====    ====   ====    =====   ====    ====    ====    ====
+Year announced          1974    1974    ?78?    1981   1976    ?78?    1976    ?78?    ?81?    ?84?    
+CPU type                KL-A    KL-B    KL-D    KL-E   KL-C    KL-D    KL-C    KL-D    KL-E    KL-R
+Model-B backplane ucode No      No      Yes     Yes    No      Yes     No      Yes     Yes     PW
+Clock speed nanoseconds 40      40      33      33     40      33      40      33      33      33
+Extended sections       None    None    32      32     None    32      None    32      32      32
+G-floating              No      No      Yes     Yes    No      Yes     No      Yes     Yes     Yes
+Words of Cache          2048    2048    2048    2048   0       0       2048    2048    2048    4096
+RH20 internal channels  No      Yes     Yes     Yes    Yes     Yes     Yes     Yes     Yes     Yes
+KA/KI I/O-bus           I/O     I/O     I/O     I/O    No IOB  No IOB  No IOB  No IOB  Option  Option
+Internal memory         No      No      No      Yes    Yes     Yes     Yes     Yes     Yes     Yes
+Height of cabinets      Tall    Tall    Tall    Short  Short   Short   Short   Short   Short   Short
+Console Front-End       11/40   11/40   11/40   11/40  11/40   11/40   11/40   11/40   11/40   11/40
+Bootstrap device        DECtape DECtape DECtape Floppy Floppy  Floppy  Floppy  Floppy  Floppy  Floppy
+Runs TOPS-10 7.01       Yes     Yes     Yes     Yes    No      No      No      No      Maybe   Maybe
+Runs TOPS-10 7.02       No      No      Yes     Yes    No      No      No      No      Maybe   Maybe
+Runs TOPS-10 7.03/7.04  No      No      Yes     Yes    No      No      No      No      Maybe   Yes
+Runs TOPS-20 rel 4      No      No      No      Maybe  Yes     Yes     Yes     Yes     Yes     Yes
+Runs TOPS-20 rel 5      No      No      No      Maybe  Yes     Yes     Yes     Yes     Yes     Yes
+Runs TOPS-20 rel 6      No      No      No      Maybe  No      No      No      No      Yes     Yes
+Runs TOPS-20 rel 7      No      No      No      Maybe  No      No      No      No      Yes     Yes
+
+"Model-A backplane" has 1280 words of 96 bit microcode.
+"Model-B backplane" has 2048 words of microcode.  The KL10-R has a
+"Model-C backplane" with 4096 words cache and double pager buffer (1024 instead
+of 512).  Existing 1091 and 2060 systems could be upgraded to 1095 and 2065 by
+installing the "Model-C" modifications.  The "FCC-KL" is a 1095 or 2065 installed
+in the cabinets that were designed for the "Jupiter" project.
+
+A 2040 is a 2050 without cache, a 2060 is a 2050-PV with MOS memory.  The only
+difference between a 2060 with an I/O bus and a 1091 is the color of the paint
+(orange versus blue).  A 1090 is a 1080 with internal data channels (RH-20
+versus RH-10).  1090, 2040, and 2050 come with either Model-A or Model-B
+backplanes.  Extended addressing and G-floating both require a Model-B
+backplane for the microcode (the 2020 uses KL paging but is limited to a single
+section).  The 1090T was created for ARPANET, it is a blue "PDP-20" (floppies
+instead of DECtapes).  7.02 and Rel 6 require extended addressing.  The KA has
+no paging hardware, therefore it cannot run 7-series monitors or TOPS-20.  (It
+can run TENEX using the BBN pager.)
+
+JCGreen comments on an article about early DEC-10 monitors:
+>>I finally found the list of monitor names I remembered:  From the _PDP-10
+>>Systems User's Guide_ (order number DEC-10-NGCA-D, copyright 1967), in the
+>>section on monitors, we find the following:
+>>    pg. 15: SINGLE-USER MONITORS
+>>
+>>    MONITOR 10/10   A single-user Monitor for an 8K paper tape system. Includes
+>>                   an I/O Controller, run-time selection of I/O devices, job-
+>>                   to-job transition, job save and restore features, and
+>>                   memory dumps.
+>
+>>    MONITOR 10/20   A single-user Monitor for an 8K DECtape system.  Includes
+>>                   the same versatile features as the 10/10.
+>
+>There never was an 8K system.  It was part of the pulling of
+>wool over Ken Olson's eyes.  The $99K configuration with:
+>
+>* 2 level priority interrupt
+>* no memory protection and relocation
+>* no fast registers
+>* no floating point instructions
+>* no byte instructions
+>* 8K memory
+>* paper tape & KSR/35 only I/O
+>* 5.5K FORTRAN compiler
+>
+>was never built.  So the 10/10 and 10/20 monitors weren't either.  Ken signed
+>off on the project when the Large Computer Engineering group gave him a
+>proposal saying this was NOT a PDP-6 style mainframe.  It was a single user
+>real-time system with minimum configuration of $99K and typical configuration
+>of $149K.
+>---
+>RP10 (controller for RP02) Project Engineer
+>21483 Old Mine Rd             (408)353-1870
+>Los Gatos CA 95030    JCGreen@ix.netcom.com
+
+John Everett and Bob Clements respond that the 10/10 was created, but never
+sold, and that the 10/30 was never built.
+
+Date: Sat, 30 Jun 2001 11:00:13 -0400
+From: "Alan H. Martin" <AMartin@ma.ultranet.com>
+
+Found it earlier this month.  The document refers to the PDP-10/10
+through PDP-10/50, which is obviously an earlier nomenclature than
+DECsystem-1040, but with obvious correspondence.
+
+A 1030 was a 1020 with 16K instead of 8K, and ``additional I/O devices''
+beyond the CTY and console PTR/PTP, and a pair of DECtapes.
+
+"
+				  The
+			    |d|i|g|i|t|a|l|
+			     Logic Handbook
+			 Flip Chip(TM) Modules
+			      1967 Edition
+....
+		       Part VI: Computer Catalog
+....
+				 PDP-10
+
+PDP-10 is an expandable, 36-bit computer system available in five
+configurations (PDP-10/10, 10/20, 10/30, 10/40, and 10/50) and offering
+optimum power and versatility in the medium price range.
+
+The PDP-10 includes an extremely powerful processor with 15 index
+registers, 16 accumulators, and 8,192 words of 36-bit core memory, a
+300-character-per-second paper tape reader, a 50-character-per-second
+paper tape punch, a console teleprinter, and a two-level priority
+interrupt subsystem.  PDP-10/20 adds two DECtapes, PDP-10/30 includes
+16,384 words of memory and additional I/O devices.  PDP-10/40 adds an
+extended order code and a memory protection and relocation feature.  And
+PDP-10/50 permits swapping between 32,768 words of memory and fast
+access desk file via the multiplexer/selector channel, and includes
+multiprogramming time-sharing software.
+
+The PDP-10 is designed for on-line and real-time applications such as
+physics and bio-medical research, process control, as a departmental
+computation facility, in simulation and aerospace, chemical
+instrumentation, display processing and as a science teaching tool.
+
+The software package includes real-time FORTRAN IV, a control monitor, a
+macro assembler, a context editor, a symbolic debugging program, an I/O
+controller, a peripheral interchange program, a desk calculator and
+library programs.  All software systems assure upward compatibility from
+the standard 8,192 words of memory through the multi-programming and
+swapping systems at both the symbolic and relocatable binary level.
+
+PDP-10 features a 1-microsecond cycle time, a 2.1-microsecond add time,
+I/O transfer rates up to 7,200,000 bits per second and a modular, proven
+software package that expands to make full use of all hardware
+configurations.  Memory can be expanded in 8,192 word increments to the
+maximum directly addressable 262,144 words.
+
+[Facing page: B/W photo of a KA10 with bucket-style operator's chair]
+"
+
+Note: the word ``disk'' is misspelled as ``desk'' in ``swapping between
+32,768 words of memory and fast access desk file via the multiplexer/
+selector channel'' in the handbook itself.
+
+They were wise enough not to list any Computer Catalog entries in the
+1-Apr-67 price list.  A -10 wasn't exactly an off-the-shelf item.
+
+
+
+Please send updates or corrections to Joe Smith <js-cgi@inwap.com>

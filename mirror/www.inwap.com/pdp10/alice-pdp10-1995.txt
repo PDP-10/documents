@@ -1,0 +1,318 @@
+r==> alice-commentary <==
+From: mnelson@stimpy.eecis.udel.edu (Mark Nelson)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Alice doesn't live here anymore
+Date: 18 Jan 1995 01:40:18 GMT
+Organization: University of Delaware, Newark
+Lines: 15
+Distribution: world
+Message-ID: <3fhri2$j4h@louie.udel.edu>
+References: <3fh5t4$ccm@nntpd.lkg.dec.com>
+NNTP-Posting-Host: stimpy-fddi.udel.edu
+
+In article <3fh5t4$ccm@nntpd.lkg.dec.com> dave@racer.enet.dec.com () writes:
+
+>;;; With thanks (and apologies) to Chris Stacy, Alan Wechsler, Noel
+>;;; Chiappa, Larry Allen, and of course Arlo Guthrie, and particularly
+>;;; to Ann Marie Finn who is a kind soul and not at all like the
+>;;; person portrayed herein.  --sra 3 May 85
+
+Wow, that brings back memories: I haven't seen this in a long time.
+sra is Rob Austein, who was my roommate at Wesleyan where we both
+were first exposed to TOPS-20, and who was working at MIT's LCS
+when he wrote "Alice's PDP-10".
+
+-- 
+                Ceci n'est pas une signature.
+Mark Nelson                                       mnelson@cis.udel.edu
+
+
+From mnelson@stimpy.eecis.udel.edu Thu Jan 26 18:00:45 PST 1995
+From: mnelson@stimpy.eecis.udel.edu (Mark Nelson)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Alice doesn't live here anymore
+Date: 24 Jan 1995 20:48:20 GMT
+Organization: University of Delaware, Newark
+Lines: 15
+Message-ID: <3g3p2k$7sc@louie.udel.edu>
+References: <3fh5t4$ccm@nntpd.lkg.dec.com> <aldersonD2M8Bz.KIJ@netcom.com>
+ <3fv78e$83s@tardis.tymnet.com>
+NNTP-Posting-Host: stimpy-fddi.udel.edu
+
+In article <3fv78e$83s@tardis.tymnet.com> jms@tardis.Tymnet.COM (Joe Smith) writes:
+>I heard the song performed at DECUS and captured it on a borrowed
+>microcassette.  Before returning the dictation recorder, I copied the audio
+>to video tape, and used a VT180 for the video.
+>
+>Could someone repost the history of this little ditty?  Thankx.
+>		-Joe
+
+You can check out the author's commentary on "Alice's PDP-10" at
+
+http://www.epilogue.com/~sra/alice/.
+
+-- 
+                Ceci n'est pas une signature.
+Mark Nelson                                       mnelson@cis.udel.edu
+
+
+
+==> intro.html <==
+<PLAINTEXT>
+I wrote "Alice" during my first year on the staff at MIT, but the
+villain of this piece dates from an earlier era.  Back during the late
+Mesozoic period of computer science (otherwise known as the early
+1980s), I was working part time as a systems programmer while doing my
+level best to flunk out of the small liberal arts school I was then
+attending.  We had one, count it, one DECSystem-20 which was used for
+everything from introductory computer science classes to the
+university payroll accounts.  Nowadays, when a few thousand dollars
+will buy a timesharing machine one can stow in a briefcase with room
+left for a bag lunch, it's hard to remember that in those days a
+-real- computer was one that took up only slightly less space than an
+18-wheel tractor trailer rig and cost rather more to feed.  Or that's
+how we felt about it at the time.  Then, in early 1983, Digital
+announced the cancellation of the Jupiter project and their intent to
+phase out the 36-bit product line.  But, they said, it's ok, all you
+DEC-10 and DEC-20 users can just migrate to VAX/VMS, the system of the
+future.  Gosh, thanks, DEC.  We don't mind throwing away all our
+programs and learning a user interface that was already obsolete by
+the time it first shipped.  That's another one of those feelings
+that's hard to remember these days, what with the way that weird
+PDP-11 operating system from Bell Labs has spread like kudzu within
+DEC itself, but even after I got to MIT, I still felt that VMS was The
+Enemy.  Hence "Alice."
+
+When Eric Raymond first asked for permission to include Alice in this
+anthology, I extracted from him a promise that it would appear
+verbatim.  I figured that Alice had become a piece of history, and
+that nobody, myself included, should muck with it.  A few days ago I
+saw Arlo Guthrie in concert for the first time since the year before I
+wrote "Alice's PDP-10," and damned if he isn't still changing the
+story here and there to suit the times.  So I've taken the liberty of
+cleaning up a few rough spots and inside jokes that no longer seem
+funny even to me.  A dead TOPS-20 RM03 pack awaits the first person to
+spot one of the changes.
+
+The only thing I've ever regretted about "Alice" was using Ann Finn's
+real name.  Ann and I shared an office during my first year at MIT.
+She was a good friend and was very patient with the obnoxious kid from
+the hinterlands away from the ARPANET.  When I originally wrote
+"Alice," it was intended for private consumption by the other people
+on our floor at the lab; I'd never really intended for it to travel
+quite as far as it did.  A few months after "Alice" escaped into the
+outside world, Ann and her fiance were in the process of leaving MIT,
+and Ann went for a job interview in the city that was to be their new
+home.  When she came back she told me that all had gone just fine
+until her prospective boss had taken her to the company lunchroom to
+introduce her to the people with whom she'd be working if she took the
+job.  "Ann Finn?  Ann -Marie- Finn?"  Ann's reponse: "I'm going to
+kill him."
+
+Well, it's been long enough since I wrote this thing that the statutes
+have run, but just in case, Arlo, if you're reading this, I've got
+another dead RM03 pack reserved for you if you want it....
+
+--sra, Thanksgiving Day, 1991
+
+==> glossary.html <==
+<PLAINTEXT>
+PDP-10: Mainframe computer having a word size of 36 bits.  Arguably
+the finest machine ever designed for assembly language programming.
+Discarded by its manufacturer, DEC, in favor of the VAX and VMS.
+
+Monitor: What's called the "operating system kernel" nowadays.  Named
+in the days when what we now call a "monitor" was called a "teletype."
+
+SUPDUP: Highly sophisticated network display protocol based on the
+ITS terminal driver, including the Intelligent Terminal Protocol.
+Implemented more features with less hassle than the current day TELNET
+protocol.  Ignored by most of the world because "it's too complicated."
+
+ITS: Incompatable Timesharing System.  One of the oldest timesharing
+operating systems in existance, originally implemented on the PDP-6.
+ITS is for assembly language hackers what a Lisp Machine is for Lisp
+hackers.
+
+LISP: General purpose programming language, used primarily in AI work.
+One of the two oldest surviving general purpose programming languages
+(the other is FORTRAN).
+
+MIT-OZ: One of the legendary MIT PDP-10s.  This one ran Twenex.  Named
+by the person who noticed the little PDP-11/40 inside the front panel
+of this dinosaur: "I am Oz the great and powerful (pay no attention to
+the PDP-11 behind the front panel)."
+
+Hackers: People who program computers because they're there and it's
+fun, and who really hate to be confused with the pinheaded vandals who
+are properly referred to as "crackers."  At MIT hackers don't just
+play with computers, they also play with electric trains, install
+working pay telephones on the roof of the Great Dome, and provide
+halftime entertainment at Harvard-Yale football games.
+
+LISPM (Lisp Machine): A workstation specially designed for running the
+Lisp programming language.
+
+PS (Public Structure): Primary filesystem on a Twenex machine.  At MIT
+all Twenex filesystems were built on DEC RP06 removable pack disk
+drives; a single filesystem could span multiple disk packs.  One RP06
+pack held about 76000 pages of 512 36-bit words each.
+
+CHECKD: Twenex filesystem scavenger, used to diagnose and repair
+broken filesystems and to locate filesystem pages which had gone AWOL.
+
+ACJ: Access Control Job.  Generic name for site-specific TOPS-20
+security program.  OZ's ACJ was particularly famous for implementing a
+somewhat eccentric security policy.
+
+MDDT (Monitor DDT): A version of the Twenex dialect of DDT which could
+examine and modify the running monitor.  ("In MDDT, no one can you
+scream -- but everybody can hear you say `whoops!'" --VAF@CMU-CS-C)
+
+ANONYMOUS: Username available to anybody at all who had network access
+and wanted to transfer some files to or from a Twenex machine.
+
+Chaosnet: High speed (for the era) local area networking protocol
+suite and hardware, developed as part of the Lisp Machine project and
+heavily used at MIT in the early 1980s.
+
+Twenex: MIT's hacked up version of DEC's TOPS-20 operating system,
+which was itself a hacked up version of BBN's TENEX.  At the time this
+story was written, all MIT Twenex machines ran on KL-10 processors.
+
+PS:<OPERATOR>LOST-PAGES.BIN.-1: Filename under which CHECKD would
+write out the addresses of any AWOL pages it might have found.
+
+SEND: Similar to electronic mail, but displayed directly on user's
+screen.  Did not require one to be running a special "talk" program.
+Implemented by the SEND and REPLY programs, with a history kept by the
+system and accessable with the WHAT program.  On ITS the WHAT program
+could also furnish useful information about bus schedules, menus at
+chinese resturants, and the importance of thinking before answering
+questions put to you by scruffy little men guarding bridges in Monty
+Python skits.
+
+Ann Marie Finn: Author's officemate, who really didn't deserve to be
+immortalized as a villain.  But she does drink a lot of coffee.
+
+SIXBIT: Short for "six bit ASCII."  The character set that everybody
+used back when even Big Blue made 36-bit machines.
+
+POPJ: PDP-10 machine instruction the right halfword of which is
+totally ignored and was thus occasionally used for data storage by
+hackers who were -really- bored.
+
+UNAME: User NAME.
+
+CD%DIR: Twenex filesystem directory attribute, indicating that the
+name of a particular directory was not also a Twenex username.  Also
+called the "FILES-ONLY" bit.
+
+CLU: Programming language developed by people on the other side of the
+fifth floor of building NE43.  CLU hackers and Lisp hackers generally
+regarded each other as hopelessly confused.
+
+JSYS: PDP-10 machine instruction used to implement Twenex monitor calls.
+
+ROLM DTI: Box used to interface a terminal to a ROLM data switch
+
+==> text.txt <==
+From: dave@racer.enet.dec.com ()
+Newsgroups: alt.sys.pdp10
+Subject: Alice doesn't live here anymore
+Date: 17 Jan 1995 19:30:44 GMT
+
+;;; With thanks (and apologies) to Chris Stacy, Alan Wechsler, Noel
+;;; Chiappa, Larry Allen, and of course Arlo Guthrie, and particularly
+;;; to Ann Marie Finn who is a kind soul and not at all like the
+;;; person portrayed herein.  --sra 3 May 85
+ 
+This song is called "Alice's PDP-10".  But Alice doesn't own a PDP-10,
+in fact Alice isn't even in the song.  It's just the name of the song.
+That's why I called this song "Alice's PDP-10".
+ 
+You see, it all started about two incompatible monitor versions ago,
+about two months ago on a Tuesday, when my friend and I SUPDUP'd over
+to MIT-OZ to pick up some hackers to go out for a Chinese dinner.  But
+AI hackers don't live on MIT-OZ, they live on various assorted lispms
+and such, and seeing as and how they never log in except via the file
+server, they hadn't gotten around to doing filesystem garbage
+collection for a long time.
+ 
+We got over there, saw 600 pages free, 10000 pages in use on a 5 pack
+PS:, and decided it would be a friendly gesture to run CHECKD for them
+and try to reclaim some of that lost space.  So we reloaded the system
+with the floppies and the switch registers and other implements of
+destruction, and answered "Y" to RUN CHECKD?
+ 
+But when we got the system up and tried to release all the lost pages
+there was a loud beeping and a big message flashed up on our screen
+saying:
+                      PERMISSION DENIED BY ACJ
+ 
+Well, we'd never heard of a version of ACJ that would let you go into
+MDDT from ANONYMOUS but not run CHECKD, and so, with tears in our
+eyes, we headed off over the Chaosnet looking for a filesystem with
+enough free pages to write out the LOST-PAGES.BIN file.  Didn't find
+one...
+ 
+Until we got to XX-11, and at the other end of XX-11 was another MIT
+Twenex, and in PS:<OPERATOR> on that MIT Twenex was another
+LOST-PAGES.BIN file.  And we decided that one big LOST-PAGES.BIN file
+was better than two little LOST-PAGES.BIN file, and rather than page
+that one in we thought we'd write ours out.  So that's what we did.
+ 
+Went back to OZ, found some hackers and went out for a Chinese dinner
+that couldn't be beat, and didn't get up until the next morning when
+we got a SEND from Ann Marie Finn.  She said, "Kid, we found your
+initials in SIXBIT in the right half of a POPJ at the end of a two
+megaword core dump full of garbage, just wanted to know if you had any
+information about it".  And I said, "Yes ma'am Ann Marie, I cannot tell
+a lie, I put that XUNAME into that halfword".
+ 
+After talking back and forth with Ann for about 45 messages we arrived
+at the truth of the matter and Ann said that we had to go rebuild the
+bittable and we also had to come down and talk to her in room
+NE43-501.  Now friends, there was only one of two things that Ann
+could of done with us down at room 501, and the first one was that she
+could have hired us on the spot for actually knowing enough about
+Twenex to screw it up that badly, which wasn't very likely and we
+didn't expect it, and the other was that she could have bawled us out
+and told us never to be seen hacking filesystems again, which was what
+we expected.  But when we got to room 501 we discovered that there was
+a third possibility that we hadn't even counted upon, and we was both
+immediately de-wheeled.  CD%DIR'ed.  And I said "Ann, I don't think I
+can rebuild the bittable with this here FILES-ONLY bit set."  And she
+said "XOFF, kid, get into this UDP packet" and that's what we did and
+rode up to the square bracket asciz slash scene of the crime slash
+close square bracket.
+ 
+Now friends, I want to tell you about the ninth floor of building NE43
+where this happened.  They got three KL10s, 24 LISPMs, and about 32
+VAXen running 4.2 unix.  But when we got to the square bracket asciz
+slash scene of the crime slash close square bracket there was five
+twenex hackers past and present, this being the biggest lossage yet by
+an RMS clone and everybody wanted to get in their suggestion for a new
+system daemon that would have kept it from ever having happened in the
+first place.  And they was using up all kinds of debugging equipment
+that they had lying around on V3A SWSKIT tapes.  They were doing DSs,
+MONRDs, and RSTRSHs, and they made 27000 pages of core dumps and photo
+files on an RP06 with comments and -READ-.-THIS- files to be used as
+evidence against us.
+ 
+After the ordeal, Ann took us back downstairs and left us with the CLU
+hackers.  She said "Kid, I'm gonna leave you with the CLU hackers.  I
+want your jsys manual and your ROLM DTI".  I said "Ann, I can
+understand your wanting my jsys manual so I won't remind the CLU
+hackers of grody things like operating systems, but what do you want
+my DTI for?" and she said "Kid, we don't want any VTS errors".  I said
+"Ann, did you think I was going to try to crash the system for
+littering?"  Ann said that she was making sure, and friends, Ann was,
+'cause she cleared all my left-hand privs bits so I couldn't logout.
+And she disabled the TREPLACE command so I couldn't crock in an
+XCT [0] instruction, cause an illegal instruction interrupt to MEXEC,
+and sneak into MDDT.  Yeah, Ann was making sure, and it was about four
+or five hours later that Chiappa (remember Chiappa?  This song's never
+even mentioned Chiappa) Chiappa came by and with a few gratuitous
+insults to the CLU hackers bailed us out of there, and we went out and
+had another Chinese dinner that couldn't be beat, and didn't get up

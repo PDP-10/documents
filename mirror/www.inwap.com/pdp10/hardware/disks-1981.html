@@ -1,0 +1,101 @@
+<HTML><HEAD><TITLE>Disks 1981: RM03, RP06, RP20 disk drives</TITLE></HEAD><BODY BGCOLOR="#d8d8bf">
+
+The KS-2020 used <A HREF=#RM03">RM03</A> or <A HREF="#RP06">RP06</A> disk
+drives.  Up to 8 disks, in any combination, on a single MASSBUS.
+
+<p>The KL-10 used <A HREF="#RP06">RP06</A> or <A HREF="#RP20">RP20</A> disk
+drives.  Up to 8 disks per MASSBUS.  (Each RP20 spindle counts as 2 disks.)
+
+<H1>Disks</H1>
+(From the 1981 edition of the "<b>DECsystem-10 Technical Summary</b>".)
+
+<p>The disk subsystems provide high performance and reliability.  Disk
+features include accurate server positioning, error correction, and offset
+positioning recovery.  Table 7-1 summarizes the capactities and speeds of the
+disk devices.
+
+<p>To support the performance and reliability features of the system's disk
+devices, the operating system's disk device drivers provide comprehensive
+error recovery algorithms (for example, ECC and offset recovery for disk) and
+log all device errors.
+
+<p>Disk controllers allow several drives to preforma simultaneous seek
+operations.  Since the controller is not busy during seek operations, data
+transfers on one drive can overlap seeks in progress on other drives.  If more
+than one drive is on the same controller, overlapped seeks will accelerate
+processing for the disks on that controller.  Overlapped seeks increase
+throughput by decreasing the effective access time.
+
+<P><table align=center>
+  <tr><th colspan=8><A NAME="Table_7-1">
+  	<font color=blue>Table 7-1</A><br>Disk Devices</font></th></tr>
+  <tr><th>Disk</th> <th>Type</th> <th>Capacity</th>
+	<th>Peak Transfer<br>Rate (Kbytes<br>per second)</th>
+	<th>Average Seek<br>Time (ms)</th>
+	<th>Average Rotational<br>Latency (ms)</th>
+	<th>Interface</th>
+	<th>Maximum<br>Drives per<br>controller</th></tr>
+  <tr><td>RM03</td> <td>Removable</td> <td align=right>67 Mb</td>
+	<td align=center>1200</td> <td align=center>30</td>
+	<td align=center>8.30</td> <td>MASBUSS</td> <td align=center>8</td></tr>
+  <tr><td>RP06</td> <td>Removable</td> <td align=right>176 Mb</td>
+	<td align=center>806</td> <td align=center>28</td>
+	<td align=center>8.33</td> <td>MASBUSS</td> <td align=center>8</td></tr>
+  <tr><td>RP20</td> <td>Non-removable</td> <td align=right>967 Mb</td>
+	<td align=center>1200</td> <td align=center>25</td>
+	<td align=center>8.33</td> <td>MASBUSS</td> <td align=center>4 *</td></tr>
+  <tr><td colspan=8>* Two spindles per drive. &nbsp; &nbsp;
+	K = 1,024; M = 1,000,000</td></tr>
+</table>
+
+<H1><A NAME="RM03">RM03 Disk Pack Subsystem (KS system only)</A></H1>
+<A HREF="../images/rm03.jpg">
+<IMG SRC="../images/rm03.gif" WIDTH=43 HEIGHT=62 ALT="RM03" ALIGN=right></A>
+
+The RM03 is a top-loading, free-standing disk drive housed in a dedicated
+cabinet.  Subsystems are expandable to eight disk drives or 536 Mb.
+The RM03 has a formatted capacity of 67 megabytes and an average access time
+of 38 milliseconds.  Its maximum transfer rate is 250,000 36-bit words per
+second.  The RM03 does 18-bit NPR data transfers over a UNIBUS and 36-bit NPR
+data transfers over the KS10 backplane bus.
+<br clear=all>
+<div align=right><A HREF="../images/rm03.jpg">Stand-alone RM03 disk.</A></div>
+
+<H1><A NAME="RP06">RP06 Disk Pack Subsystem (KS and KL systems)</A></H1>
+<A HREF="../images/rp06.jpg">
+<IMG SRC="../images/rp06.gif" WIDTH=61 HEIGHT=62 ALT="RP06" ALIGN=right></A>
+
+The RP06 is a large capacity disk drive.  [176,000,000 bytes; the equivalent
+of the IBM 3330-II disk drive.]  This disk offers both high performance and a
+low price per megabyte of storage.  It uses a removable disk pack and has a
+wide variety of large disk features.
+
+<p>RM03 and RP06 disk drives can be mised on the same RH11 controller on a
+KS10; however they can not be mised within the same logical file structure.
+<br clear=all>
+<div align=right><A HREF="../images/rp06.jpg">Two RP06 units in front of a KL-2060.</A></div>
+
+<H1><A NAME="RP20">RTP20 Disk Subsystem (KL systems only)</A></H1>
+<A HREF="../images/rp20.jpg">
+<IMG SRC="../images/rp20.gif" WIDTH=80 HEIGHT=39 ALT="RP20" ALIGN=right></A>
+
+The RTP20 is the highest capacity disk offered by DIGITAL.  The RTP20 consists
+of an RP20 disk drive and controller.  THe RP20 is a dual-spindle device with
+a formatted capacity of 967 megabytes.  Master Subystems are packages to
+include an RH20/DX20 Channel, RTP20 Controller, and RP20 Master Disk.  When
+additional capacity is required, the subsystem can be expanded to include up
+to three add-on drives (1200 megabytes unformatted).
+
+<p>Each RP20 data module has fifteen recording surfaces with two read/write
+heads per surface and a transfer rate of 1.2 megabytes per second with a 25 ms
+averate access time.  Each data module may transfer independently with the
+dual-port feature.
+<br clear=all>
+<div align=right><A HREF="../images/rp20.jpg">DX20 (MASSBUS to IBM bus&amp;tag conversion), RTP20 string controller,
+two RP20 disk units (two spindles each).</A></div>
+
+<P><HR>
+[<A HREF="../#disks-1981">back</A>]<BR>
+<ADDRESS>
+Maintained by <A HREF="../../u/joe/">Joe Smith</A> at <A HREF="mailto:js-cgi@inwap.com">js-cgi@inwap.com</A>
+</ADDRESS></BODY></HTML>

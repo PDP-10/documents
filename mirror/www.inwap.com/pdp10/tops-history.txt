@@ -1,0 +1,372 @@
+Subject: A History of TOPS
+From: stevens_j@eisner.decus.org (Jack H. Stevens)
+Newsgroups: alt.sys.pdp10
+Date: 13 Jan 95 15:10:41 -0500
+Organization: DECUServe
+
+The following is my write-up, slightly updated, of Peter Hurley's
+session at the Spring, 1984, DECUS Symposium in Cincinnati, Ohio,
+entitled:
+
+   "The History of TOPS, or Life in the Fast AC's"
+
+Peter Hurley was [as of 1984] the Manager of TOPS-10/20 Software
+Engineering, where he had spent the last 16 years.  He had, in fact,
+been working with DEC's 36-bit computers for two years before that.
+Peter's first programming job (which he got by strategically losing a
+squash match with his boss) was on a PDP-1 at MIT's Laboratory for
+Nuclear Science.  The next year they upgraded to a PDP-6, running
+version 1.6 of the monitor, with a TTY 33 as a line printer (at least
+until they tried to do a listing of the FORTRAN compiler on it).  Peter
+followed his boss to DEC, as the latter still needed someone to win
+against at squash.
+
+The PDP-6 first shipped in June of 1964.  It was followed by the KA-10
+in 1967, with about 1.5 the power of the PDP-6.  The KI-10, about 1.8
+times the KA-10, was released in 1972.  The KL-10, about 2.5 times the
+KI, was introduced in 1975 with TOPS-10.  In 1976, the first TOPS-20
+KL-10 was released.  In 1978, the 2060, 2020, and 1091 came out.
+
+The letters in the processor names did actually mean something.  The "K"
+stood for Komputer ("C" had already been used for something important,
+like Card reader); "A" was the first letter of the alphabet.  By the
+time they got to the KI, though, marketing had gotten involved, so "I"
+stood for Integrated circuits.  To help sell the idea of the KL to
+management, "L" stood for Low-cost system.  The "S" in KS probably stood
+for Small.
+
+The PDP-6 could be purchased with optional fast accumulators.  They took
+up an entire 19-inch rack (that's 16 words in one rack).  One megaword,
+therefore, would take up 98,958 cabinet feet of floor space (or
+approximately 18.7 miles).
+
+The development team of the PDP-6 included many memorable individuals.
+Gordon Bell designed the system architecture, then started to bail out
+the documentation group by writing half the hardware manual, then moved
+to the software group to try to help bail them out.  Alan Kotok, who was
+hired in 1961 as a PDP-4 FORTRAN compiler writer, turned into a PDP-6
+architect as assistant logic designer.  Russ Donne, a circuit designer,
+was pulled into the project late (just about every engineer at DEC was
+pulled into the project) and given three weeks to do the main PDP-6
+module layout and design.  One of the modules, the biggest one he had
+ever done, had 108 transistors (whatever they are).  Leo Gussell wrote
+the diagnostics for the -6, the basic diagnostics A through H, that are
+still [as of 1984] in use.  Harris Hyman was the author of Macro and a
+little absent minded.  One day he managed to lose all the sources to
+Macro.  Peter Sampson, who wrote FORTRAN II, put exactly one comment in
+it.  That comment, which commemorated the numerological identity of the
+octal equivalent of 1000 and the year of Johann Sebastian Bach's death,
+read "JSB RIP".  Tom Hastings, hired in 1961 as the first software
+engineer at DEC, had a few strange habits.  One of them was that when he
+was tired he would lay a listing on the floor and take a nap on it.  One
+could not be sure, coming across him in that state, whether he was still
+alive.  Dave Gross, brilliant but absent-minded, slept through all his
+DEC employment interviews except one.  He was hired in his last one of
+the day, with the documentation group, because it was not scheduled
+until 3 PM, and he had awakened by then.  Tom Eggers, DEC's first school
+dropout to become a programmer, developed DDT while still in school.
+DEC paid him $500 for it.  About once a week he would crawl into the
+office of Harlan Anderson, VP of Engineering, to sleep on the couch
+there.  Harlan would discover him the next morning and kick him out.  Ed
+Yourdin, later of structured programming fame, wrote Loader.  (Loader
+has still passed out of use; perhaps it was not sufficiently
+structured.)
+
+The PDP-6 project started in early 1963, as a 24-bit machine.  It grew
+to 36 bits for LISP, a design goal.  (The IBM 7090 also used 36 bits, so
+it was okay.)  The PDP-6 did improve on the 7090, in that it had an
+18-bit address rather than the 7090's 15.  The theory was that 256K
+words was clearly enough to last the entire life of the product.  After
+all, that much memory wouldn't even fit in a room.  The design engineers
+really didn't know how to call subroutines, so they designed in all the
+ways they could think of:  JSR, JSA, JSP, PUSHJ, and UUO (JFFO was added
+later).  They couldn't decide which Boolean instructions to have, so
+they did them all.  The reason that the bits were numbered from left to
+right was that IBM had done it that way (as Alan Kotok put it, "We
+hadn't invented 'Not Invented Here', yet."  NIH did arrive by the time
+the PDP-11 was developed, though).  The PDP-6, having only two or three
+thousand gates, didn't have any error recovery.  In fact, it didn't have
+any error checking.  Memory parity was an add-on box that sat between
+the memory and the CPU.
+
+Many of the sites that bought PDP-6's were involved with physics
+research. Others included artificial intelligence research organizations
+and timesharing utilities.  Apparently demonstrating DEC's masochistic
+tendencies, the first PDP-6 sold went about as far from Maynard as one
+could possibly go, to the University of Western Australia, in Perth.
+The second went to Brookhaven National Labs, in an air-conditioned
+trailer in which it was to spend its days, the intention being to drive
+it to experiments (in fact, it was never moved).  With this experience
+in shipping computers by truck, DEC started to ship all its products by
+truck.  Twelve-foot trucks.  DEC learned a lot more at a well-known
+bridge on Route 62 in Hudson, Massachusetts.  An eleven-foot bridge.
+(This is where DEC made its first drop shipment.)  The PDP-6 that made
+this unfortunate journey was already some months late for the University
+of Pennsylvania.  DEC, not having its own van at the time, had rented
+some space in a moving van filled with household goods.  The PDP-6 was
+in the back of the van, and it appears that the furniture successfully
+cushioned the impact of the computer.  They did have to shovel the
+remains out of the truck afterwards, however.  (The PDP-6 was able to be
+repaired in a couple of more months.)
+
+Two philosophies were applied to the design of the PDP-6.  The first was
+expressed by John McCarthy of MIT, who helped design it.  That was "to
+provide each user with the illusion of having his own large computer."
+The other was "gentleman's timesharing", which was the only way one
+could exist with no protection and with manual sharing of all the
+peripherals, core memory, system DECtape, etc.
+
+The early developers of the PDP-6 software used a cross assembler
+running on the PDP-4.  The -4 was in another building, which required a
+considerable trip to transfer software (via paper tape).  Tom Eggers
+debugged DDT before the hardware was working fully.  This required that
+the instructions that did not work be simulated by instructions that did
+work so that they could debug the ones that were not working (for
+example, left shift worked, but right shift didn't).
+
+The first successful timesharing test on the PDP-6 comprised two "JRST
+." (branch to current location) jobs.  The lights showed that the
+scheduler was, in fact, switching between the jobs.  Immediately
+following that demo they invented Control-C, because they had no way of
+stopping the test jobs.  Version numbers were also developed during this
+period, as Harris Hyman had a habit of labeling the DECtape of each new
+version of Macro as "Latest".  After six versions of "Latest" were
+accumulated, they started numbering them.
+
+PIP was invented by "Dit" Morse as a demonstration of device
+independence.  Its original name was ATLATL, which stood for "Anything,
+Lord, to Anything, Lord".  This was appropriate, as it took a certain
+amount of prayer to get anything to move between media.  In those days,
+when TTY's had back-arrows (instead of underscores) that key was used
+instead of the equals sign in PIP.  This, it was felt, was sufficiently
+obvious that anyone who, for example, tried to read from the line
+printer got a message like:  "You gnerd, device LPT: can't do input!"
+That message was changed the day after Ken Olsen tried out ATLATL.
+
+The first PDP-6 shipped with a 5K word monitor.  The user guide could
+comfortably fit on a page.  IJOB started up a job; one could get one's
+job number with PJOB.  GET, SAVE, and START took care of program
+control.  After Control-C was added, CONTINUE was, also.  (Control-C was
+chosen, incidentally, because Tom Hastings could reach it easily on the
+keyboard with one hand.)  The DECtape editor provided all the functions
+one could want:  Insert, Delete, Print line.  It was called EDITOR and
+was the precursor of LINED.
+
+Since there was no swapping, everything had to fit in memory.  Programs
+were shuffled to close up the unused space.  But because the BLT
+instruction was used, shuffling could only move programs toward lower
+addresses (5K monitor, remember?).  Thus, after one's compile had been
+running for twenty minutes, growing toward someone else's job, one might
+get an error message "Core available, but not for you", and could try to
+persuade the other person to kill his job or, more likely, would have to
+kill one's own job, type CORE 0 to cause shuffling, and start again.
+
+The demise of the PDP-6 came after 23 had been built.  (One of them,
+Lucky 7, never really worked correctly.)  Every engineer at DEC was
+working at getting them through manufacturing, and Ken Olsen was fearing
+for his company.  Several of the main players left DEC after the
+cancellation, but Alan Kotok, asked to head up a group to choose a
+smaller system to do next, ended up choosing something called the
+PDP-1010.  The PDP-1010 was a 36-bit machine (surprise!) which looked a
+lot like a PDP-6.  It came with 8K words of memory; a paper tape reader,
+paper tape punch, and a terminal as its only peripherals; and had
+optional fast AC's, optional floating point instructions, and optional
+byte instructions.  Oxford actually bought one of these (though they did
+have to buy more memory).
+
+The KA-10 set a system debug record.  From power on to running the
+operating system was eight days.  During that time, Bob Clements almost
+gave away the secret.  As part of the debugging, he had been running a
+music program from MIT and found that the pitch was too high.  In
+talking to the authors about a tuning algorithm that he thought was
+supposed to bring the pitch down, they asked, "What are you running this
+on?  You've got a fast machine there!"
+
+Dave Gross was still brilliant.  He was able, after everyone else had
+tried, to get the RIM (Read-In Memory) loader down from 18 instructions
+(which were keyed in on the PDP-6) to fewer than 16 (to fit in the
+accumulators).  Even after the KL was introduced, he was getting calls
+from people who told him that there was no way the code could work.
+Dave Gross was still absent minded, too.  DEC had given out Christmas
+turkeys.  The following April, someone who was helping him clean out the
+trunk of the car Dave was selling asked, "What's in this box labeled
+'Turkey'?"
+
+Pat White would bring her dog into work.  It would lie under the KA,
+where it was warm.  There were more programmers than terminals, so
+anyone who stepped away for a moment was likely to lose his.  Her
+solution was to tie the dog to the terminal.  No one was willing to take
+a terminal away from a German shepherd.
+
+In the spring of 1970, at the Joint Computer Conference in Atlantic
+City, the KA was displayed, at what was DEC's largest demo ever.  This
+system had 128K words (MA-10 memory, at 16K per 36-inch-wide cabinet),
+the brand-new RP02 disks, tape drives, line printer, an Evans and
+Southerland LDS-1 display, and 16 teletypes.  Everyone was there
+debugging the system the night before the show when it stopped dead.
+Alan Kotok, a master of the lights, immediately leapt to the console,
+determined that it was a memory parity error, then moved to each memory
+cabinet to read the lights on them.  At about the fifth one, he
+exclaimed, "Ah!  It's this one!  The one with the smoke pouring out of
+it!"  No one had noticed the smoke billowing out of the cabinet in the
+meantime.  (This was the show at which Sonny Monosson made his debut
+selling used computers.  He walked up and down the boardwalk wearing a
+sandwich board advertising a used KA-10).  At the end of each day they
+would play the national anthem on the KA and put it on the loudspeakers.
+
+The monitor started with version 1.  (The name TOPS-10 was chosen by
+marketing, but not until 1970).  Versions 1.4 to 1.9 shipped on the
+PDP-6.  27 jobs were supported, as each job got a bit in the mantissa of
+a floating point number.  To determine which job was next involved an
+unnormalized floating point add . . .  In version 3.27, for PDP-10's, in
+which swapping was added, capacity was provided for 35 jobs by using a
+JFFO (Jump if Find First One) instruction.  This kept it from running on
+PDP-6's, since they did not have that instruction.  Job capacity jumped
+to 63 in the next monitor and averaged a further doubling in each
+version after that, up to 512.
+
+Disks have been the source of some interesting moments.  The PDP-6 could
+support the Data Products disk.  That drive had about a dozen platters,
+each of which was provided with an independently-movable, hydraulically
+actuated arm.  When the heads got moving, with the hydraulic hoses
+moving in and out with the actuators, it looked like a spaghetti
+factory.  Dave Nixon of Oxford bought an IBM disk drive for his system.
+Not knowing how to program it as a disk drive, he made it emulate 40
+DECtape drives.
+
+The KA-10 came with the RD-10 Burroughs disk.  This was a single fixed
+platter, about three feet in diameter.  Unfortunately, some would work
+fine, and others would crash.  This was eventually traced to the way the
+disks were lined up on the loading dock.  The driveway to the dock
+sloped down.  As a result, the trucks would coast the last foot or two
+and bump the edge, shaking the building.  Those disks whose arms were
+perpendicular to the trucks would later crash, while those whose arms
+were parallel were fine.  The solution was (of course) to line all the
+drives up the right way.  The RD-10's were also very likely to crash if
+touched.  Kodak ended up installing a heavy pipe railing around theirs
+to keep people away.
+
+The "Giant Bryant" had six three-foot platters.  Its four-foot actuator
+arms were tied into units, unlike the Data Products, but it had two sets
+of them, one on each side of the disk.  It, too, was prone to crashing,
+especially with the assistance of one diagnostic writer who felt that
+they really ought to work in the worst case.  His diagnostic would start
+the heads on one side working madly, then would start the others up, out
+of synchronization.  Aside from causing the disk to crash, it would make
+the drive walk around the room.  Things got so bad that the first RAMP
+feature was added, in the hope of saving some data.  An electronic
+"sniffer" was installed to detect the debris of a head crash and retract
+the heads.  The platters made nice coffee tables, with their spiral
+grooves.
+
+The PDP-6 console was attractive but had small switches that were hard
+on the fingers of the programmers who had to key in the RIM loader.  It
+did have a prominent on-off switch, though.  Some researchers at MIT
+thought, one day, that it would be fun to use their new robot arm to
+emulate the toy whose arm emerges from its box to shut itself off.  The
+next day, DEC got a call to replace the switch.  It seemed that in
+turning itself off, there was a slight transient that caused the arm to
+tear the switch out of the panel.  Stanford had a robot arm, too.  It
+was hydraulically operated, and if a software bug caused two of the
+actuators to work against each other, would shake and then throw
+whatever it was holding across the room.  It was locked up after the
+head of the department walked into the room to see a block whiz past his
+ear.  Stanford also had a little robot car that was equipped with a TV
+camera and drove around outside the building.  There was a sign outside
+the building that read "Watch Out for Unmanned Vehicle".  It worked,
+too, until the monitor would crash.  Then someone had to be sent into
+the woods to find the car.
+
+The KA-10 had a nicer console with even more lights.  One of the lights,
+for interrupt level 7, tended to show how much work the scheduler was
+doing.  As the scheduler seemed to be running much of the time, trying
+to decide which job to run next, the condition was called "pink
+scheduler mode".  The KI-10 had an even fancier console (a lot of time
+was spent designing consoles) with easily replaceable lights and
+switches.  Unfortunately, the company that made those fancy lights and
+switches went out of business, and lights and switches became difficult
+to replace for a different reason.  The KL-10 did away with almost all
+the lights and switches, except for those on the PDP-11 console front
+end (this also did away with "pink scheduler mode", since one could no
+longer see the problem).  As the PDP-11 lights and switches were no
+longer useful to the -10 programmers (they didn't have enough bits) the
+whole thing was put behind a door, and the result was two lights (power
+and fault -- useless, as one knew that it was either running or not) and
+four switches (which also broke and were hard to find replacements for).
+Field service received a tech tip which told them how to use a paper
+clip to fix the switches.  The 2020 finally resolved the issue with one
+tri-state light (on, off, and blinking).
+
+TOPS-20 originated with Bolt Beranek Newman, in Cambridge,
+Massachusetts.  Before the PDP-6 was designed BBN had gotten into
+timesharing with a PDP-1 system equipped with a swapping drum.  Dan
+Murphy at BBN experimented with paging on that system, implemented
+entirely in software.  Each instruction had to be checked before it was
+executed to see if the address it pointed to was actually in memory, or
+if a page had to be brought in.  That made them decide that a hardware
+assist might be nice for performance.  When the PDP-6 came out, BBN
+started negotiating with DEC to install hardware paging, but when the -6
+was canceled, they moved to an SDS 940.  This was probably good in the
+long run, as the SDS machine laid the groundwork for TOPS-20 command
+recognition.
+
+In 1970, TENEX was introduced by BBN.  They had started their project,
+late in 1969, on a KA-10 with their own paging box and finished it
+within six months.  The first system went to SRI.  In 1972, TENEX came
+to DEC.  Dan Murphy was contracted to put TENEX on the KI, then joined
+the hardware engineering group while the KL was being developed.  The
+original intention was to create a new operating system for the new
+hardware.  It was to have been the only operating system for the KL, but
+it could never catch up to the performance of TOPS-10.
+
+A considerable amount of work was done to TENEX to make it into TOPS-20.
+For example, the disks were made to still be readable after a software
+crash.  The directory structure was redesigned.  The development group
+added such things as search lists, logical names, IPCF, enqueue/dequeue,
+KL support, wild cards, pseudo-teletypes, etc.  Having PTY's and the
+ability to assign TTY's allowed one to develop Trojan Horse jobs that
+could capture passwords of unsuspecting users.  Dave Braithwaite was at
+GM when he was asked how such a gaping security hole could have slipped
+through.  He explained that it had never been thought of and suggested
+that it was "sort of like designing a car where you have to pull the
+engine to replace the last spark plug."
+
+The name "TOPS-20" was the product of considerable evolution.  DEC did
+not want to use "TENEX" because it might have caused confusion within
+the ARPA community, so someone came up with "VIROS" (VIRtual Operating
+System).  That didn't last too long because the VP in charge of the
+project, John Leng, started pronouncing it "virus".  Management decided
+that the name would have to be changed in order to fool the rumor mill.
+The developers came up with "SNARK", from Lewis Carroll's "The Hunting
+of the Snark" (" . . .the hunting of the Snark, with forks and hope . .
+.").  Six months later, when it was time to change names again, the name
+was encrypted to "KRANS".  One memo with that name went out, which was
+seen by Ulf Fagerquist.  He pointed out that "krans" in Swedish means
+"funeral wreath".  Back to "SNARK".  Marketing showed its imagination by
+coming up with "TOPS-20".
+
+In 1976, DEC announced its first DECSYSTEM-20.  It came in two flavors,
+the 2040 and the 2050.  It was originally going to support the TU16 tape
+drive, but the developers could never get it to work right on their
+system.  About two months before the -20 was to be shipped, the Pertec
+TU45 was found.  This was determined to be much better than the TU16.
+After one was installed and while the driver was being written, John
+Leng and Ulf Fagerquist came by to see the results of their months of
+agonizing over the tape drive decision.  In demonstrating the autoload
+feature for them (with the drive door open), Peter Hurley neglected to
+make sure the tape had caught on the take-up reel.  As a result, a loop
+of tape shot three feet in the air out of the vacuum column and wound
+itself around the capstan.
+
+The DECSYSTEM-20 press conference was given by the totally unflappable
+(and not troubled by technical details) Dave Plummer.  He described the
+-20 as a multiprocessor system (after all, it had a PDP-11 in it).  At
+the end of the demo, while he was striking a relaxed pose against the
+air intakes of the CPU cabinet, the system died with an air flow fault.
+Dave never missed a beat as he described the reliability feature that
+shut the machine down before it could overheat and damage itself.
+
+In the days of the PDP-6 and KA-10, the sales force did not have an easy
+time.  But one salesman knew that a prospect was his if he fulfilled his
+"Three S" rule: Smart, Sophisticated . . .and Strange.  All those years
+of TOPS suggest a fourth "S":  Stubborn.

@@ -1,0 +1,139 @@
+Here is Mark Crispin's description on the different types of 36-bit CPUs.
+Some comments in "[...]" were added by Joe Smith.
+
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Emulator
+Date: Wed, 14 Jun 1995 13:44:25 -0700
+Organization: Networks & Distributed Computing
+
+On Wed, 14 Jun 1995, Paul Rubin wrote:
+> Is it common to run user code out of non-zero sections?
+
+Towards the end, yes, some user programs ran in non-zero sections, as did
+the TOPS-10 and TOPS-20 operating system.  XKL has even gotten GNU EMACS
+running on their machine.  GNU EMACS is so much better than PDP-10 EMACS,
+lacking only the ability to enter in TECO commands to the minibuffer.
+
+> Where does the section number live?
+
+The PC becomes a doubleword instead of mashing the PC and flags in a
+single words.  Most byte pointers become doublewords as well, although
+there are some single word pointers and complex rules to determine whether
+its a single word or double word pointer depending on certain bits in the
+first word.  OWGBPs are fun, and only documented in the TOPS-20 Monitor
+Calls manual even though they are implemented by the microcode.
+
+You may think you understand extended addressing, until you write your
+first program using it.  Then you find something new.  Yet, for all the
+complexity, it does make sense.
+
+> This stuff is complicated but the calculations only have to be
+> done when a table changes, something gets paged in or out, etc.
+
+Which means that you have to have an equivalent of the hardware page table
+to cache the virtual page -> physical page mapping, and also support the
+CLRPT instruction to sweep it.
+
+Oh and did I mention that the kernel and user processes had different page
+maps?  That there is no particular reason to believe that the kernel pages
+correspond to physical pages?  In TOPS-20, only about the first 100 or so
+pages do, after that, you're in the jungle.
+
+> It still looks like a big win to do the address translation
+> using the paging hardware of the underlying emulation machine.
+
+This comment makes no sense, no matter how many times that I've heard it.
+I can't think of a single modern CPU that has a hardware pager that is
+anything like that in a PDP-10.  For the most part, they all lack
+something, whether it be indirect pointers, an SPT, CSTs, storage
+addressed, separate "not in core" from "no access" traps, etc.
+
+> >So without PXCT you could run an old
+> >version of TOPS-10 (e.g. 6.02) if you're willing to have only 256K total
+> >words of space.  Forget about KA ITS or Tenex; they both had hardware
+> >pagers on their KAs that had a PXCT equivalent and that documentation is
+> >probably long vanished.
+>
+> Hmmm, even this may be somewhat interesting.
+
+These days, most people don't consider old non-paged KA operating systems
+to be interesting.
+
+> If emulating a KA eliminates all the hassles of virtual memory and still
+> allows running real programs, that's maybe a good place to start.
+
+What do you continue "real programs"?  A lot of stuff written since the
+mid-1970s does not run on a KA.  No TOPS-20 stuff will.
+
+> >This really makes no sense.  Only a couple of dozen PDP-6s were ever
+> >built.  Only a few hundred KAs, KIs, and KSs were ever built.  By far the
+> >overwhelming majority of PDP-10s were KLs or KL clones such as the SC30M.
+>
+> I don't understand this.  There were these 4 models you mention
+> (what about the Foonlys?) and ITS ran on all of them; surely the
+> model-dependent parts were things like device drivers that were
+> reasonably well isolated in the kernel?
+
+Foonlys basically emulated a KA10 with a BBN pager.  In other words, it
+was a Tenex engine.  ITS never ran on it.  I believe that the F4 may have
+been a KL or KS clone.  [The F3 was halfway between a KI and a KL.  -Joe]
+
+You won't find ITS sources to run on a PDP-6 or non-paged KA.  Such sources
+don't exist any more.  The first Systems Concepts pager was put on the ITS
+machines sometime in the late 1960s or early 1970s.
+
+As far as differences between the processors:
+
+PDP-6:	the start
+
+KA10:   added second relocation/protection register; which means hisegs (so no,
+	most TOPS-10 programs would not run on a PDP-6 without being edited to
+	all be in one segment).  Some minor new instructions (JFFO, etc.)
+	Third-party pagers: Systems Concepts for ITS, BBN for Tenex.
+
+KI10:	added double precision, new floating point, read-protected hisegs
+	(requiring use of PORTAL instruction at all entry points into the
+	hiseg). DEC pseudo-pager (more of a memory map than a pager IMHO).
+
+KL10:	added several instructions (ADJSP, ADJBP, EXTEND).  Major changes
+	in kernel-mode code, even using DEC paging.  Other paging
+	available through microcode changes.
+
+KS10:	new I/O system (modern memory-access I/O instead of old CONO,
+	CONI, DATAO, DATAI, BLKO, BLKI, although many operations happen
+	to have the same binary code).
+
+KL10L:	old I/O system (same as KL10).  Extended addressing (BIG change).
+	KA floating point obsoleted, along with old subroutine call
+	JSA/JRA.  Specific support for TOPS-20 paging.
+
+KC10:	(a.k.a. Jupiter) would have added 30-bit addressing (I think)
+	and a bunch of cute instructions such as one to push/pop multiple
+	ACs in a single step.  [Designed, but never built.  -Joe]
+
+SC30M:	essentially identical to KL10L.  [Ran SYSTEM.EXE with no mods.]
+
+XKL:	30-bit addressing.  Speculated: Yet Another I/O System.
+	[Only two I/O boards; XRH = 4-port SCSI board, XNI = 4-port ethernet
+	board.  XMG memory board holds 16 or 32 megawords. -Joe]
+
+> I'm told that the KL version of KLH10 is quite a lot larger
+> than the KS version, and that the KS ran the latest versions
+> of ITS, so it sounds like I'm mostly interested in the KS.
+
+On a KS, you can't run any version of TOPS-20 newer than 4.1 (officially, you
+can get 5.1 to run with a small bit of effort).  Otherwise, most modern
+software would run on a KS, which is why KLH started on the KS first.
+
+But!!  You still have to deal with that pager, even though the KS simplifies
+it quite a bit by not having extended addressing (thus only section 0
+effective addressing calculations, and no section table).
+
+-- Mark --
+
+DoD #0105, R90/6 pilot, FAX: (206) 685-4045  ICBM: N 47 39'35" W 122 18'39"
+Science does not emerge from voting, party politics, or public debate.
+
+
+

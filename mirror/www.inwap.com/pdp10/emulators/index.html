@@ -1,0 +1,123 @@
+<HTML><HEAD><TITLE>PDP-10 emulators</TITLE></HEAD><BODY BGCOLOR="#d8d8bf">
+<I>PDP-10 emulators</I><hr>
+<P>
+This is the<font size=+2> <b>10,678th</b> </font>access to this page.
+
+<P><B>Contents:</B>
+<ul>
+<li><A HREF="#ts10">TS10</A> from Timothy Stark (updated 1-May-2001)
+<li><A HREF="#simh">SIMH</A>
+<li><A HREF="#e10">E10</A>
+<li><A HREF="#dzclient">dzclient</A>
+</ul>
+
+<hr>
+<blockquote>
+	From: Rich Alderson<br>
+	Date: Tue, 8 Jul 1997 17:40:46 GMT
+
+	<p>Lemme see.  Ken Harrenstien (KLH), still at Oracle I think, wrote a
+	<A HREF="klh10.txt">KS-10 emulator</A> years ago; that's the one I've seen running on Macs
+	(including the PB145).  KLH later revised it to emulate a KL-10B, and
+	tried to sell it through Digital as an Alpha Migration Tool; I don't
+	know that anyone ever bought it from Digital.
+
+	<p>Then there's Stu Grossman, who wrote <A HREF="kx10-log.txt">kx10</A> while working at Stanford.
+	I saw an early version running on his office Sparcstation; I know he's
+	kept playing with it over the years.
+
+	<p>So that's three.  There are others (one written in PDP-10
+	assembler, to emulate upwards to a new implementation of the
+	architecture) of less use to the general populace.
+</blockquote>
+
+<H1><A NAME="ts10">TS10</A></H1>
+
+07-Mar-01: Tim Stark's PDP-10 emulator software available via CVS at
+<A HREF="http://www.sourceforge.net/projects/ts10">www.sourceforge.net/projects/ts10</A>
+and a members-only mailing list at
+<A HREF="http://groups.yahoo.com/group/ts10emu">groups.yahoo.com/group/ts10emu</A> .
+Download the <A HREF="ftp://aconit.org/pub/dec-10/MIG703.TXT">complete
+Monitor Installation Guide (MIG703)</A> or the short
+<A HREF="ts10-703-install.txt">installation instructions</A>.
+
+<pre>
+#!/bin/sh
+if [ -d ts10 ]; then
+  cvs '-d:pserver:anonymous@cvs.ts10.sourceforge.net:/cvsroot/ts10' update ts10
+else
+  echo "Hit ENTER when prompted for password"
+  cvs '-d:pserver:anonymous@cvs.ts10.sourceforge.net:/cvsroot/ts10' login
+  cvs '-d:pserver:anonymous@cvs.ts10.sourceforge.net:/cvsroot/ts10' co ts10
+fi
+</pre>
+Or <A HREF="ftp://ftp.trailing-edge.com/pub/ts10.tar.gz">ftp://ftp.trailing-edge.com/pub/ts10.tar.gz</A>
+
+<H1><A NAME="simh">SIMH</A></H1>
+Bob Supnik's <A HREF="http://www.tiac.net/users/mps/retro/">SIMH</A> emulator
+was updated 4-May-2001
+
+<H1><A NAME="e10">E10</A></H1>
+
+Daniel Seagraves has shelved his E10 emulator.
+
+<H1><A NAME="dzclient">DZCLIENT</A></H1>
+
+Daniel Seagraves added a DZ11 module for Tim Stark's <A
+HREF="#ts10">TS10</A> emulator that allows multiple users to telnet into
+the virtual PDP-10.
+
+<blockquote>
+	Date: Tue, 10 Apr 2001 16:08:06 -0500<br>
+	Subject: New DZ11 code...<br>
+
+	<p>ftp to sakura.lunar-tokyo.net, it's in pub/dz11_new.tgz.
+	This is a tarball you unpack over the current TS10 code to get
+	ts10 and dzclient.  They still communicate by shared memory, but
+	it's interrupt-driven, so dzclient is normally sleeping unless
+	it is signalled to do something.
+</blockquote>
+
+You can log into Daniel's Linux PC running ts10.
+
+<blockquote>
+	21-May-2001
+
+	<p>Telnet to asuka.umtec.com, and Linux will answer you and ask for a
+	username.  Tell it "ts10".  When asked for a password, press Enter.
+
+	<p>You will get the message "DZclient v0.0" and be told your
+	line number.  Lines above 6 currently do not work.  I don't know
+	why yet.
+
+	<p>At this point, you either struck out (got line #7 or higher)
+	or are talking to TOPS-10.  Push enter and wait - You should get
+	a dot prompt.  If you struck out, push control-backslash ( ^\ )
+	to tell dzclient to free your line and let someone else use it.
+	If you just close your telnet connection without doing this,
+	you'll hang the line and make it unavailable to anyone else.
+	(I'll fix this later.)
+
+	<p>If you got through to TOPS, you should be able to type "LOGIN
+	42,2" to get logged in as NOBODY.  There is no password on this
+	account.  If you want your own account (I dunno why...) bug me
+	and I'll make one if I have time.  I'm somewhat busy today.
+
+	<p>If it tells you you're already logged in, that means the
+	previous person forgot to log out - I haven't implemented
+	carrier control on the DZ11 ports yet. ^_^
+
+	<p>If you're finished with what you're doing and want to quit,
+	give the command KJOB (K for short) to log out of TOPS-10, then
+	control-backslash to kill dzclient.  I have to reboot every few
+	days so the ts10 debug log doesn't fill the hard drive, but
+	that'll generally be announced.
+
+	<p>Oh yes - The machine playing host (Asuka) is a Pentium 233 -
+	It's old and slow.  Please be patient.  When a lot of terminals
+	are active (typing something out) at the same time, it can get
+	pretty pokey.
+</blockquote>
+
+<p><hr>[<A HREF="../">back</A>]
+</BODY></HTML>
