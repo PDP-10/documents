@@ -1,0 +1,510 @@
+
+   1	TOPS-10 DEC Museum		Boston, MA		KA10
+   5	TOPS-10 ADP/Bucks County CC	Newtown, PA		KA10
+   6	TOPS-10 Harvard			Cambridge, MA		KA10
+  12	TOPS-10 Chase Brass & Copper	Montpelier, OH		KA10
+  21	TOPS-10 Edgcomb Steel of N.E.	Nashua, NH		KA10
+  26	TOPS-10 Citishare		New York, NY		KA10
+  27	TOPS-10 Fermilab		Batavia, IL		KA10
+  37	TOPS-10 U. of Bridgeport	Bridgeport, CT		KA10
+  39	CMU	CMU-D			Pittsburgh, PA		KA10
+  46	TOPS-10 Penn State Univ		?, Pa			KA10
+  47	TOPS-10 Rolls Royce Limited	Filton, Bristol		KA10
+  60	TOPS-10 Chalk River Nuc Lab	Ontario, Can.		KA10	CPU0
+  63	TOPS-10 Citishare		New York, NY		KA10
+  70	TOPS-10 Interprov Pipe		Edmonton, Albrt.	KA10	CPU0
+  73B	TOPS-10 Steacie Science Library Downsview, Ont		KA10
+  76	TOPS-10	OSU IRCC/CIS Comp. Lab	Columbus, OH		KA10
+  85?	TOPS-10 Cerritos Col		Norwalk, CA		KA10	CPU1
+  92	CMU	CMU-B			Pittsburgh, Pa		KA1050
+  ??	ITS	MIT-AI			Cambridge, MA		KA10
+  ??	ITS	MIT-DMS			Cambridge, MA		KA10
+  ??	ITS	MIT-ML			Cambridge, MA		KA10
+  ??	TOPS-10 BNL			Upton, NY		KA10	CPU0
+  ??	TOPS-10 BNL			Upton, NY		KA10	CPU1
+  ??	TOPS-10 UCLA			UCLA			KA10
+ 101	TOPS-10 Stevens Tech		Hoboken, NJ		KA10
+ 104	TOPS-10 Interprov Pipe		Edmonton, Albrt.	KA10	CPU1
+ 105	TOPS-10 Boces-LIRICS		Dix Hills, NY		KA10
+ 109	TOPS-10 Boces-NCODE		Westbury, NY		KA10
+ 121	TOPS-10 Information Internat.	Culver City, CA		KA10
+ 129	TOPS-10 Chalk River Nuc Lab	Ontario, Can.		KA10	CPU1
+ 134	TOPS-10 Western Electric	Princton, NJ		KA1050
+ 143	TOPS-10 Hatfield Polytechnic	Hatfld Herts,UK		KA10
+ 147	TOPS-10 Univ of York		York, UK		KA10
+ 149	TOPS-10 U of Oregon		Eugene, Or		KA10
+ 153	TOPS-10 Washoe County M.I.S.	Reno, Nevada		KA10
+ 161	TOPS-10 Colorado Sch. of Mines	Golden, CO		KA10
+ 166	TOPS-10 Pima Com. Col.		Tucson, Ariz.		KA10	CPU0
+ 170	TOPS-10 Flinders University	Bedford Park,SA		KA10
+ 172	TOPS-10 Pima Com. Col.		Tucson, Ariz.		KA10	CPU1
+ 175	TOPS-10 University of Turku	Turku, Finland		KA10
+ 214	TOPS-10 The Wiener Corp.	New Orleans, LA		KA10
+ 215	TOPS-10 Worcester Polytechnic	Worcester, MA		KA10
+ 218	TOPS-10 Nat. Bureau of Stand.	Washington, DC		KA10
+ 223	TOPS-10 University of Brussels	Brussels,France		KA10
+ 235	TOPS-10 Cerritos Col		Norwalk, Cal		KA10	CPU0
+ 259	TOPS-10 U. of Pennsylvania	Philadelphia		KA10
+ 263	TOPS-10 Baylor College of Med.	Houston, TX		KA10
+ 273	TOPS-10 Ont. I. of Studies Ed.	Toronto, Canada		KA10
+ 274	TOPS-10 Kansas Star		Kansas City,MO		KA10	CPU0
+ 514	TOPS-10 Development		DEC, Marlboro		KI10
+ 519	TOPS-10 U. of Mississippi	University, MS		KI10
+ 522	TOPS-10 Sw. Forest Prod		Stockholm, Swed		KI10
+ 526	TOPS-10 University of Illinois	Urbana, IL		KI10
+ 527	TOPS-10 Brit. Airways		Middlesex		KI10	CPU0
+ 531	TOPS-10 Christ. Sci. Ch.	Boston, MA		KI10	CPU1?
+ 537	TOPS-10 Burns & McDonnell	Kansas City, MO		KI1060
+ 538	TOPS-10 Le Sourne		Grenoble, Fr		KI10
+ 539	TOPS-10 MICOR/RAMADA		Phoenix, Ariz		KI10
+ 541	TOPS-10 Naval Research Lab.	Washington, DC		KI10
+ 544	TOPS-10 Datacall, Ltd.		Leeds, UK		KI1077	CPU0
+ 545	TOPS-10 E.I. DuPont		Wilmington, DE		KI10
+ 546	TOPS-10 Development		DEC, Marlboro		KI10
+ 549	TOPS-10 Copley Comp Ser		San Diego, Cal		KI10	CPU1
+ 551	TOPS-10 Abbott Laboratories	N Chicago, IL		KI10
+ 552	TOPS-10 DEC Australia		South Melbourne		KI10
+ 557	TOPS-10 Hughes Aircraft Co.	Culver City, CA		KI10
+ 561	TOPS-10 CallData Sys		Newton, Mass		KI1070
+ 562	TOPS-10 Telec do Parana		Curitiba,Brazil		KI10
+ 568	TOPS-10 CallData Systems, Inc.	Newton, MA		KI10
+ 570	TOPS-10 Copley Comp Ser		San Diego, Cal		KI10	CPU0
+ 571	TOPS-10 U. of Mississippi	University, MS		KI10
+ 572	TOPS-10 NIH			Bethesda, Md		KI10
+ 576	TOPS-10 Brigham Younng		Provo, Utah		KI10
+ 584	TOPS-10 N. Centre for Software	Bombay			KI10
+ 587	TOPS-10 Kiel Univ		Olhausenstr. Germany	1077	768K
+ 593	TOPS-10 CN Telecommunications	Toronto, Ont		KI10
+ 602	TOPS-10 Whessoe, Ltd.		Darlington, UK		KI10
+ 603	TOPS-10 MICOR/RAMADA		Phoenix, Ariz		KI10
+ 606	TOPS-10 U of California		Irvine, Cal		KI10
+ 609	TOPS-10 Cornell University	Ithaca, NY		KI10
+ 611	TOPS-10 Agricultural University Wageningen,Neth		KI10
+ 613	TOPS-10 U of Ark Med School	Little Rock, Ak		KI10
+ 616	TOPS-10 Grande Dixence		Sion,Switzer.		KI10
+ 631	TOPS-10 Societe Radio-Canada	Montreal,Canada		KI10
+ 633	TOPS-10 E.I. DuPont		Wilmington, DE		KI10
+ 640	TOPS-10 Unione Sovietica	Torino, Italy		KI10
+ 643	TOPS-10 Datacall, Ltd.		Leeds, UK		KI1077	CPU1
+ 650	TOPS-10 DataLine		Toronto			KI10
+ 654	TOPS-10 Western Electric Co.	Piscataway, NJ		KI10
+ 656	TOPS-10 AFAL-AAF/2		WPAFB, Ohio		KI10
+ 659	TOPS-10 DEC						KI10
+ 661	TOPS-10 Western Electric Co.	Piscataway, NJ		KI10
+ 669	TOPS-10 Princeton University	Princeton, NJ		KI10
+ 673	TOPS-10 NZ Dept of Health	Christchurch, New Zeal	KI10	512K
+ 676	TOPS-10 Kiel Univ		Olhausenstr. Germany	1077	768K
+ 678	TOPS-10 University of Essex	Essex, UK		KI10
+ 681	TOPS-10 Auckland Regional CC	Auckland, New Z		KI10
+ 683	TOPS-10 NRAO - VLA		Socorro, NM		KI10
+ 684	TOPS-10 Tucson Unified Sch Dis. Tucson, AZ		KI10
+ 686	TOPS-10 LNEC			Lisbon,Portugal		KI10
+ 687	TOPS-10 Institut fur Informatik Hamburg, FRG		KI10
+ 689	TOPS-10 U of New Orleans	New Orleans, La		KI1077
+ 690	TOPS-10 Univ of Texas		Austin, Texas		KI10
+ 694	TOPS-10 IRCAM			Paris, France		KI10
+ 695	TOPS-10 Univ of Leeds		Leeds, UK		KI10
+ 697	TOPS-10 Coord Manag Ser		Minn, Mn		KI10	CPU0
+ 700	TOPS-10 Air Res Labs		Melbourne, Aust		KI10
+ 702	TOPS-10 Atomic Energy of Can.	Pinawa, Canada		KI10
+ 707	TOPS-10 Scot Sp Hsn Assn	Edinburgh,Scot.		KI1070
+ 710	TOPS-10 U Simon Bolivar		Caracas, Ven		KI10	CPU0
+ 717	TOPS-10 Fritz-Haber		Berlin			KI10
+ 720	TOPS-10 Interprov Pipe		Edmonton, Albrt.	KI10
+ 723	TOPS-10 Aarhus Univ		Aarhus Denmark		KI10
+ 729	TOPS-10 Calgary Power		Calgary, Canada		KI10
+ 730	TOPS-10 Baylor Med. Col.	Houston, TX		KI10	576K
+ 736	TOPS-10 Brit. Airways		Middlesex		KI10	CPU1
+ 737	TOPS-10 U Simon Bolivar		Caracas, Ven		KI10	CPU1
+ 739	TOPS-10 Dept. Health		New Zealand		KI10
+ 740	TOPS-10 University of Illinois	Urbana, IL		KI10
+ 744	TOPS-10 Rider College		Lawrenceville		KI10
+ 755	TOPS-10 Christ. Sci. Ch.	Boston, MA		KI10	CPU0?
+ 763	TOPS-10 Defence ADP Training	Dorset, UK		KI10
+ 767	TOPS-10 Edinburgh RCC		Edinburgh,Scot.		KI10
+ 769	TOPS-10 UMIST			Manchester, UK		KI10
+ ???	TOPS-10 Kansas City Star	Kansas City,MO		KA10	CPU1
+ ???	TOPS-10 Rutgers			Physics			KI10
+1022	???????	1022 Database Dev???
+1025	TOPS-20 DEC H/W Eng		DEC, Marlboro		KL10
+1026	TOPS-10 Development		DEC, Marlboro		KL1099	SMP
+1029	TOPS-20 DEC H/W Eng		DEC, Marlboro		KL10
+1030	TOPS-20 Hard Dev		DEC, Marlboro		KL10
+1031	TOPS-20 Hard Dev		DEC, Marlboro		KL10
+1038	ITS	Macsyma Consort		MIT, Cambridge		KL10
+1040	TOPS-10 U of T Health C		Dallas, Texas		KL10B	CPU1
+1041	TOPS-10 Fokker VFW		The Netherlands		KL1080	512K
+1042	TOPS-10 Development		DEC, Marlboro		KL10	SMP
+1058	TOPS-10 Keydata Corp.		Waterton, Ma		KL10
+1059	TOPS-10 U of Louisville		Louisville, Ky		1090
+1063	TOPS-10 Schlumberger		Houston, TX		KL10
+1064	TOPS-10 Storage Technology Corp Louisville, CO		KL10
+1066	TOPS-10 U of Tennessee		Knoxville, Tn		KL10
+1071	TOPS-10 MICOR/RAMADA		Phoenix, Ariz		KL10
+1072	TOPS-10 Univ. of Oslo		Oslo, Norway		KL1090B CPU0
+1073	TOPS-10 Univ. of York		Heslinton, York		KL10	512K
+1075	WAITS	Stanford AI Laboratory	Stanford, CA		KL10
+1076	TOPS-10 Schlumberger Well Ser.	Houston, TX		KL10
+1079	TOPS-10 DEC ISSG		Maynard, Mass		KL10
+1080	TOPS-10 Dataline		Toronto, Ont.		KL10
+1080?	CMU	CMU-A			Pittsburgh, Pa		KL1080
+1081	TOPS-10 Storage Technology Corp Louisville, CO		KL10
+1082	TOPS-10 Old Dom Univ		Norfolk, Va		KL10	512K
+1083	TOPS-10 S. New Eng Tel		New Haven, Ct		KL1090	CPU0
+1084	TOPS-10 S. New Eng Tel		New Haven, Ct		KL1090	CPU1
+1090?	TOPS-10 U of Louisville		Louisville, Ky		KL10
+1095	TOPS-10 U California (LBL)	Berkeley, Cal		KL10A
+1096	TOPS-10 U. of New Hampshire	Durham, NH		KL10
+1097	TOPS-10 Univ of Roch.		Rochester, NY		KL10B
+1098	TOPS-10 ADP Net Ser		Waltham, Mass		KL10D
+1099	TOPS-10 Sycor, Inc.		Ann Arbor, MI		KL10
+1100	TOPS-10 U of T Twente		The Netherlands		KL10	640K
+1101	TOPS-10 Univ of N Wales		Gwynedd, UK		KL1090
+1110	TOPS-10 Sambo's Restaurants	Carpinteria, CA		KL10
+1111	TOPS-10 IUPUI Comp Ser		Indianapolis,IN		KL1090	512K
+1113	TOPS-10 Gallaudet Col		Washington, DC		KL10
+1114	TOPS-10 Texas St. Purc.		Austin, Texas		KL10B	CPU1?
+1115	TOPS-10 Dundee Univ		Dundee, Scotland	KL10	768K
+1118	TOPS-10 B.C. Telephone		Vancouver, Can.		KL10	768K
+1120	TOPS-10 U of Arizona		Tucson, Ariz		KL1090	CPU0?
+1122	TOPS-10 Digital ISWS		PK1/C2			KL1091
+1123	TOPS-10 Intel, Inc.		San Jose, Cal		KL1099A
+1125	TOPS-10 USC-ECL			Los Angeles,Cal		KL1090A
+1135	TOPS-10 Abbot Labs		North Chicago, Ill	1090	756K
+1137	TOPS-10 Fed. Jud. Cntr.		Washinton D.C.		KL10
+1189	TOPS-10 U of Queensland		Queensland, Aus		KL1099	1024K
+1190	TOPS-10 West. Mich. U.		Kalamazoo, Mch		KL1099
+1194	TOPS-10 Storage Technology Corp Louisville, CO		KL10
+1195	TOPS-10 Western Elec		Newark, NJ		KL10
+1197	TOPS-10 Thrift Drug Co		Pittsburg, Pa		KL10
+1198	TOPS-10 Thrift Drug Co		Pittsburg, Pa		KL10
+1199	TOPS-10 B.C. Telephone Company	Vancouver, BC		KL10
+1200	TOPS-10 Digital Eq. Corp.	Rungis, France		KL10
+1204	TOPS-10 Nalco Chemical		Chicago, Ill		KL10
+1205	TOPS-10 Catholic U		Washington, DC		KL10
+1207	TOPS-10 Syracuse U		Syracuse, NY		KL10
+1208	TOPS-10 UDCC			Newark, Del.		KL10	1536K
+1209	TOPS-10 Vanderbilt Univ.	Nashville, Tenn.	1099	2560K
+1210	TOPS-10 Vanderbilt Univ.	Nashville, Tenn.	1099
+1211	TOPS-10 DEC			PK1/B92			KL1090
+1212	TOPS-10 Hendrix Electronics	Manchester, NH		KL10
+1213	TOPS-10 Lederle Labs		Pearl River, NY		KL1099	SMPB
+1214	TOPS-10 Chicago Tribune		Chicago, IL		KL10
+1215	TOPS-10 Stockholm Dat C		Stockhlm,Sweden		KL10D	SMPA
+1219	TOPS-10 Cen for Int Rec		Honggerburg,Swt		KL10B	1024K
+1220	TOPS-10 Federal Univ		Salvador,Brazil		KL
+1225	TOPS-10 Canada Ctr Rem. Sensing Ottawa, Ont		1090	512K
+1226	TOPS-10 CH2M Hill		Corvallis, Or		KL1090
+1228	TOPS-10 John. & John.		Raritan, NJ		KL1099	CPU0
+1230	TOPS-10 O Ridge/U Carb		Oak Ridge, TN		KL10D
+1233	TOPS-10 Storage Technology Corp Louisville, CO		KL10
+1234	TOPS-10 Chicago Tribune		Chicago, Ill		KL10
+1235	TOPS-10 Western Mich U		Kalamazoo, MI		KL1099
+1236	TOPS-10 Middlesex Poly		Hendon, UK		KL1090	512K
+1238	TOPS-10 Intel, Inc.		San Jose, Cal		KL10	CPU0
+1244	TOPS-10 Schlumberger		Clamart, France		KL1099	CPU1
+1247	TOPS-10 Schlumberger		Clamart, France		KL1099	CPU0
+1248	TOPS-10 Max Plank Inst		Heidelburg, FRG		KL10
+1249	TOPS-10 Dr. Nehr Labs.		The Netherlands		KL10
+1251	TOPS-10 Chicago Trib		Chicago, Ill		KL10
+1252	TOPS-10 AMAX Coal Corp		Indianapolis,IN		KL10
+1253	TOPS-10 Atomic Energy of Canada Pinawa Manitoba		KL10	512K
+1256	TOPS-10 Science Applications	La Jolla, Ca		1090	1280K
+1259	TOPS-10 Rockwell, Intl.		Anaheim, Cal		KL10
+1263	TOPS-10 Continental Bnk		Chicago, Ill		KL1099	CPU0
+1265	TOPS-10 Wharton KL		Philidelphia,Pa		KL10
+1268	TOPS-10 John. & John.		Raritan, NJ		KL1099	CPU1
+1269	TOPS-10 Continental Bnk		Chicago, Ill		KL1099	CPU1
+1274	TOPS-10 Pfizer, Inc		Groton, Ct		KL10
+1277	TOPS-10 Agricultural U		The Netherlands		KL10
+1280	TOPS-10 ICI, Ltd.		The Heath, UK		KL1099	1536K
+1282	TOPS-10 Stevens Tech		Hoboken, NJ		1090	1024K
+1283	TOPS-10 Univ of NH		Durham, NH		KL1090
+1284	TOPS-10 CNA Insurance		Chicago, IL		KL10
+1285	TOPS-10 Reynolds & Rey.		Dayton, Ohio		KL10
+1287	TOPS-10 Raytheon		Wayland, Ma		KL1090
+1288	TOPS-10 Brandeis Univ		Waltham, Ma		KL10B	512K
+1291	TOPS-20 Compuerized Bus. Sys.	Moberly, MO		KL10B	768K
+1292	TOPS-10 British Air.		Middlesex, UK		KL1090
+1297	TOPS-10 Coord Manag Sys		Minn, Mn		KL10	CPU1
+1298	TOPS-10 U of Toronto		Toronto, Can		KL1090	512K
+1299	TOPS-10 U. West. Ontario	London, Ont		KL10D	1M
+1300	TOPS-10 Western Elec		Newark, NJ		KL10
+1301	TOPS-10 Societe Radio		Montreal, Que		KL10
+1302	TOPS-10 U of T Health C		Dallas, Texas		KL10B	CPU0
+1304	TOPS-10 Univ of Washington	Seattle, Wa		KL10	768K
+1309	TOPS-10 B. C. Tel Co		Vancouver, B.C.		KL10	SMPB
+1313	TOPS-10 Bonneville Pwr.		Vancouver, Wa		KL10B
+1315	TOPS-10 U. of Ariz.		Tucson, Az		KL1090	CPU0
+1316	TOPS-10 Cornell			Ithaca, NY		KL1099	CPU1
+1319	TOPS-10 Martin Marietta		Oak Ridge, Tenn		1099	4096K
+1319?	TOPS-10 Union Carbide		Oak Ridge, TN		KL10B
+1320	TOPS-10 Princeton PPL		Princeton, NJ		KL1080
+1321	TOPS-10 Abbot Labs.		Chicago, Ill		KL10
+1324	TOPS-10 Cornell			Ithaca, NY		KL1099	1M
+1334	TOPS-10 Univ of Essex		Colchester, England	1090	1M
+1334	TOPS-10 U of Essex		Wivenhoe Pk, UK		KL1090	1M
+1340	TOPS-10 Royal Air Estab		Farnborough, UK		KL10
+1341	TOPS-10 Appl. Logic.		Boston, Ma		KL10
+1345	TOPS-10 Univ of Oslo		Oslo, Norway		KL1099D CPU1
+1346	TOPS-10 Stockholm Dat C		Stockhlm,Sweden		KL10	CPUB
+1348	TOPS-10 CH2M Hill		Corvallis, Or		KL1090
+1351	TOPS-10 Kansas C Star		Kansas City,MO		KL10	CPU0
+1352	TOPS-10 Appl Logic Corp		Burlington, Ma		KL1090
+1355	TOPS-10 Tufts Univ		Medford, Ma		KL10	SMPB
+1356	TOPS-10 Thrift Drug Co		Pittsburg, Pa		KL10
+1358	TOPS-10 Rapidata		Fairfield, NJ		KL10
+1360	TOPS-10 Texas St. Purc.		Austin, Texas		KL1099D CPU0?
+1362	TOPS-10 ICI, Ltd.		The Heath, UK		KL1099	1536K
+1363	TOPS-10 Kansas C Star		Kansas City,MO		KL10	CPU1
+1364	TOPS-10 S. New Eng Tel		New Haven, Ct		KL1090	CPU0
+1365	TOPS-10 Dept. of Energy OSTI	Oak Ridge, Tenn		1090
+1366	TOPS-10 S. New Eng Tel		New Haven, Ct		KL1090	CPU1
+1366?	TOPS-10 Continental Bnk		Chicago, Ill		KL1099	CPU1
+1367	TOPS-10 Dept. of Energy OSTI	Oak Ridge, Tenn		1090
+1369	TOPS-10 Union Carbide		Oak Ridge, Tenn		KL10
+1373	TOPS-10 CNA Insurance		Chicago, IL		KL10
+1375	TOPS-10 Lederle Labs		Pearl River, NY		KL1099	SMPA
+1378	TOPS-10 NIH			Bethesda, Md		KL1099	1024K
+1381	TOPS-10 NIH			Bethesda, Md		KL1099	1024K
+1420	TOPS-10 Princeton PPL		Princeton, NJ		KL1090	512K
+1431	TOPS-10 LLL-MFE			??			??
+1449	TOPS-10 CH2M Hill		Corvallis, Or		KL1090
+1992	TOPS-10 British Air.		Middlesex, UK		KL1090
+2102	TOPS-20 Soft Dev		DEC, Marlboro		KL20
+2107	TOPS-20 LINKABIT		San Diego, CA		2060	2.5M
+2109	TOPS-20 Riley's Data Share	Calgary,Alberta		KL2040	256K
+2110	TOPS-20 Energy Ent.		Denver, Colo		KL2050
+2115	TOPS-20 DSI Transports		Houston, Tx		2060	1.5M
+2116	TOPS-20 Soft Dev		DEC, Marlboro		KL20
+2118	TOPS-20 Rabobank Nederland	Laan v Eikerstein, Neth KL10B	1.5M
+2126	TOPS-20 FHP			Santa Ana, CA		KL2040
+2136	TOPS-20 Soft Dev		DEC, Marlboro		KL20
+2137	TOPS-20 Soft Dev		DEC, Marlboro		KL20
+2139	TOPS-20 Eaton/AIL		Deer Park, NY		KL2040
+2144	TOPS-10 McDonnell Doug		Hunt. Beach,Cal		KL1091
+2148	TOPS-20 Stanford-LOTS		Stanford, CA		KL20
+2149	TOPS-20 CMU-C			Pittsburgh, Pa		KL2060
+2152	TOPS-20 MILL20			DEC, Maynard		KL20
+2158	TOPS-10 Fokker B. V.		The Netherlands		KL1091
+2158?	TOPS-10 E. I. Du Pont		Wimington, Del		KL10E
+2161	TOPS-20 Health Sci Cntr		Tucson, Ariz		KL2040
+2162	TOPS-20 World Vision		Monrovia, Cal		KL2050
+2163	TOPS-20 University of Chicago	Chicago, Ill		2060	2M
+2168	TOPS-20 TERADYNE, Inc.		Boston, Mass		KL2050
+2171	TOPS-20 Fleetwood Ent.		Riverside, Ca		KL2040
+2172	TOPS-20	Dundee Coll of Tech	Dundee, Scotland	KL2060 1.5M
+2174	TOPS-20 Franklin Rsrc		Philadelphia,PA		KL2050
+2176	TOPS-20 Assoc of American Rail	Chicago, Ill		2060	1024K
+2177	TOPS-20 Aust Broad Com		Sydney, Aust		KL2050
+2179	TOPS-20 Goodyear Aerospace	Arizona			2060	256K
+2190	TOPS-20 Trinity College		Dublin, Ireland		KL2040
+2192	TOPS-20 Fordham Univ		New York, NY		KL2050
+2193	TOPS-20 Fed Bus Dv Bank		Montreal Quebec		KL2050
+2197	TOPS-10 DEC ISWS		PK1/C43			1091	1024K
+2197?	TOPS-20 BAYER AG		Lerverkusen		2060
+2198	TOPS-20 Moneco Compu.		Montreal Quebec		KL2040
+2201	TOPS-20 GSB computing services	Chicago, Ill		2060	1536K21
+2202	TOPS-20 Helsinki U. of Tech	Finland			2060	1280K
+2208	TOPS-20 Am. Man. Sys		Arlington, Va		KL2060
+2217	TOPS-20 University Coll		Galway, Ireland		KL10	256K
+2228	TOPS-20 Dept of Ed.		Columbus, Ohio		KL2050
+2229	TOPS-10 Digital Eq. Australia	Sydney			KL10
+2230	TOPS-20 Equitable Life		Waterloo, Ont		KL20
+2232	TOPS-10 Vanderbilt Univ.	Nashville, Tenn.	2060
+2236	TOPS-20 Deakin University	Victoria, Australia	KL10E	512K
+2236?	TOPS-10 U of Queensland		Queensland, Aus		KL1099	1024K
+2240	TOPS-20 New Mexico Tech		Socorro, New Mexico	2060	768K
+2244	TOPS-20 Marketing		DEC, Marlboro		KL20
+2249	TOPS-10 Manu. Hanover Leasing	New York, NY		KL10
+2250	TOPS-20 Intersil-MIS		Stanford, CA		KL20
+2252	TOPS-20 Phelps Dodge		Suffern, NY		KL2050
+2254	TOPS-20 Stanford-GSB		Stanford, CA		KL20
+2255	TOPS-20 Def Res Est Atl		Dartmouth, NS, Can	2060	1M
+2263	TOPS-20 Diag. Eng.		DEC, Marlboro		KL20?
+2264	TOPS-10 US Railway Assn		Washington, DC		KL2060
+2267	TOPS-20 IPG Info Services	Minneapolis, MN		2060	512K
+2268	TOPS-20 MIT-XX			Cambridge, MA		2060
+2270	TOPS-20 Tymshare		Cupertino, Ca.		1090	1.5M
+2271	TOPS-10 Boeing			Seattle, WA		KL10
+2272	TOPS-20 Philips Ind.		Croyden, UK		KL2050
+2275	TOPS-20 Univ. of Utah		Salt Lake City, UT	2060	768K
+2279	TOPS-10 BNL-NNDC		Upton, NY		KL1091E
+2281	TOPS-20 Trent Polytech		Nottingham,UK		KL2050
+2288	TOPS-10 FOA3			Linkoping		KL1090
+2295	TOPS-20 Burr-Brown		Tucson, Ariz		KL2040
+2297	TOPS-10 Digital Equipment AB	Solna, Sweden?		KL10
+2301	TOPS-20 INFOGEM			PUTEAUX, FRANCE		2060	1024K
+2303	TOPS-10 Powell Duffryn		Basingstoke, UK		KL1091
+2308	TOPS-20 W. R. Grace		New York, NY		KL2060	1024K
+2314	TOPS-10 Rockwell Intl		Anaheim, Cal		KL1091
+2316	TOPS-20 W. R. Grace		New York, NY		KL2050	CPU0
+2324	TOPS-20 Norden Systems		Norwalk, Conn		KL2060
+2326	TOPS-20 CMU-?			Pittsburgh, Pa		KL2060	1.25M
+2327	TOPS-20 Amer Mgmt Sys		Arlington, Va		KL2060
+2328	TOPS-20 LINKABIT Co		San Diego, Cal		KL2060
+2331	TOPS-10 Cal Board of Ed		Calgary,Alberta		KL1091
+2332	TOPS-20 Stanford-LESS		Stanford, CA		KL20
+2335	TOPS-10 F.U.N.D.P.		Namur, Belgium		KL10
+2336	TOPS-10 Ilford, Ltd		Basildon, Essex		KL1091
+2337	TOPS-10 Hatfield Poly		Herts, UK		KL1091
+2339	TOPS-20 Philips			Jarfalla,Sweden		KL20
+2341	TOPS-20 The Trane Co.		La Crosse WI		2060	1024K
+2342	TOPS-20 Std. Oil of Indiana	Naupervilla, Ill.	2060	1M
+2347	TOPS-10 Pol of N London		London, UK		KL1091
+2351	TOPS-20 Stanford-SCORE		Stanford, CA		KL20	1M
+2353	TOPS-10 Sandia Labs		Albuquerque, NM		KL10
+2358	TOPS-10 E.I. du Pont		Wilmington, Del		KL10	1024K
+2364	TOPS-20 U of Saskatchewan	Saskatoon, Sask.	2060	1792K
+2368	TOPS-20 Uni Carbide Nuc		Oak Ridge, Tenn		KL2040
+2368?	TOPS-10 Boeing			Seattle, WA		KL10
+2374	TOPS-20 Erasmy Univ		Rotterdam, Netherlands	2060	1024K
+2385	TOPS-20 Teachers Col.		NewYork, NY		KL2060
+2386	TOPS-10 Frankfurt Univ		Frankfurr, Germany	KL10
+2387	TOPS-10 Burlington CC		Pemberton, NJ		KL1091
+2390	TOPS-10 Federal Univ		Belem, Brazil		KL10EA
+2392	TOPS-20 TelegraphHerald		Dubuque, Iowa		KL2050
+2393	TOPS-10 Harv. Business		Cambridge, MA		KL1091
+2394	TOPS-10 McNeil Phamaceutical	Spring House, Pa	1099	1024K
+2396	TOPS-10 Intel Corp.		Phoenix, Ariz		KL10
+2397	TOPS-10 Queensland I. of Tech.	Queensland, Australia	1091	768K
+2401	TOPS-10 ADP Network Services	Waltham, MA		KL10
+2402	TOPS-10 Ove Arup & Partnres	London, England		1091	512K
+2403	TOPS-10 Southwest Texas Univ	San Marcos, TX		1091
+2406	TOPS-10 Gillette, Co		Boston, Ma		KL1091
+2407	TOPS-10 James Cook Univ		Queensland, Australia	1091	512K
+2414	TOPS-20 W. R. Grace		Memphis, TN		KL2060
+2415	TOPS-20 Rabobank Nederland	Laan v Eikerstein, Neth KL10B	1.5M
+2418	TOPS-10 Citicorp Credit Ser.	New York, NY		KL10
+2419	TOPS-20 Norges Handelshysokle	Bergen, Norway		2060	768K
+2428	TOPS-10 Edinburgh RCC		Edinburgh,Scot.		1091
+2430	TOPS-20 Sansers Assoc		Nashua, NH		2060	2M
+2435	TOPS-20 Bankers Trust		New York, NY		2060	1.5M
+2437	TOPS-10 Col. School of Mines	Golden, Col.		1091	512K
+2439	TOPS-20 American Mang. Sys.	Arlington, Va		2060	1536L
+2439?	TOPS-10 Fokker VFW		The Netherlands		KL10	1024K
+2442	TOPS-20 U of T Health C		San Antonio, Tx		KL2060
+2451	TOPS-20 Philips Telec. Ind.	Hilversum, Netherlands	2060	2M
+2452	TOPS-10 Christ. Sci. Ch.	Boston, MA		KL10
+2458	TOPS-20 Nike, Inc		Beaverton, Or		2060	1.5M
+2460	TOPS-20 MIT-EECS		Stanford, CA		KL20
+2464	TOPS-10 US Arms Control		Washington, DC		KL2040
+2471	TOPS-10 Textronix		Beaverton, OR		KL2060
+2473	TOPS-20 Energy Ent.		Denver, Colo		KL2060
+2476	TOPS-10 Digital Eq. Corporation Marlboro, MA		KL10
+2479	TOPS-20 Worcester Polytec Inst	Worcester, Ma		2060	1024K
+2486	TOPS-10 Burns&McDonnell		Kansas City, MO		KL1091
+2491	TOPS-20 Computerized Bus SystemsMoberly Montana		2060	768
+2492	TOPS-10 CH2M Hill		Corvallis, Or		KL1091
+2493	TOPS-10 Fokker B. V.		The Netherlands		KL1091	1024K
+2494	TOPS-10 Boeing Aerospace	Seattle, WA		KL10
+2497	TOPS-10 ALCOA Tech Cent		Alcoa Center,Pa		KL1091
+2507?	TOPS-10 Univ of W A		Nedlands, W A		KL1091
+2511	TOPS-10 Institut Laue Langevin	Grenoble, France	1091	1M
+2512	TOPS-20 G. M. Info Sys		Warren, Mich		KL2060
+2517	TOPS-10 Max Planck Inst.	Heildelberg, FRG	2060	1536K
+2530	TOPS-20 DEC H/W Eng		Marlboro, Ma		KL10
+2540	TOPS-10 U of Oregon		Eugene, Or		KL1091
+2546	TOPS-20 Stanford-CONTEXT	Stanford, CA		KL20
+2551	TOPS-10 ATA Services		Washington, DC		KL10
+2558	TOPS-20 Clinical Res. Ctre	Harrow, Middlesex, UK	2060	512K
+2560	TOPS-20 Deakin University	Victoria Australia	KL10E	512K
+2725	TOPS-20 Univ of Turku		Truku, Finland		KL10B	768K
+2728	TOPS-10 Roehm GmbH		Darmstadt Germany	1091	512K
+2759	TOPS-20 Terradyne Inc		Boston, Ma		2060	1.25K?
+2759?	TOPS-20 Sherman Williams	Cleveland, Oh		2060	768K
+2759?	TOPS-20 Digital Equipment	Colorado Springs, CO	2060	1.5M
+2781	TOPS-20 Saginaw Steering Gear	Saginaw, Michgan	2060	768K
+2791	TOPS-20 Digital "EMILY"		Marlborough, Ma		2060
+2798	TOPS-20 Digital "ETHER"		Marlborough, Ma		2060
+2820	TOPS-20 Rabobank Nederland	Laan v Eikerstein, Neth KL10B	1.5M
+2822	TOPS-20 State of Ohio Adim Serv Columbus, Ohio		2060	1536K
+2834	TOPS-10 Argricultual University The Netherlands		KL10	768K
+2844	TOPS-20 Digital "ESTA"		Marlborough, Ma		2060
+2858	TOPS-10 Western Electric	Princeton, NJ		1091	256K
+2859	TOPS-20 Banker's Trust		New York NY		2060	1.5M
+2866	TOPS-20 Digital "CLOYD"		Marlborough, Ma		2060
+2871	TOPS-20 Digital "GIDNEY"	Marlborough, Ma		2060
+2873	TOPS-20 Stockholm Data Center	Stockholm, Sweden	KL10E	1024K
+2905	TOPS-20 Univ of Hawaii		Honolulu, HI		2065
+2906	TOPS-20 Digital "IBOX"		Marlborough, Ma		2060
+2908	TOPS-10 Southwest Texas Univ	San Marcos, TX		1091
+2931	10/20	Digital TSC		Valbonne, France	2065
+2933	TOPS-20 Digital "SAGE"		Marlborough, Ma		2060
+2936	TOPS-20 WSMR SIMTEL20		White Sands, NM		2065	4096K
+2942	10/20	Digital "CHIP"		Marlborough, Ma		1091
+2943	10/20	Digital "DALE"		Marlborough, Ma		2060
+2953	TOPS-20 Stanford U.		Stanford, Ca		2060	2048K
+2984	TOPS-20 Serman-Williams Co	Clevelenad Oh.		2060	3/4M
+2996	TOPS-20 Digital "RONCO"		Marlborough, Ma		2060
+3001	TOPS-20 Eastman Kodak Co	Rochester, NY		2060	1.5M
+3026	TOPS-20 Digital "SNAP"		Marlborough, Ma		2060
+3061	TOPS-20 Unversity of Lethbridge Lethbridge, AB Canada	1060	1280K
+3100	TOPS-10 Storage Technology Corp Louisville, CO		KL10
+3101	TOPS-10 Rapidata		Fairfield, NJ		KL1090
+3105	TOPS-10 ADP Net. Ser.		Waltham, Ma		KL10D
+3108	TOPS-10 U. of Ariz.		Tucson, Ariz		KL1090	CPU1
+3109	TOPS-10 Eastern Mich U		Ypsilanti, MI		KL10
+3112	TOPS-10 Fokker B. V.		The Netherlands		KL1091
+3113	TOPS-10 W. A. I. T.		S. Bentley, W A		KL10B
+3118	TOPS-10 Union Carbide		Oak Ridge, TN		KL10
+3120	TOPS-10 Textronix		Beaverton, OR		KL1090
+3121	TOPS-10 Intel, Inc.		San Jose, Cal		KL1099A CPU1
+3122	TOPS-10 Fort George Meade	Maryland		KL10
+3123	TOPS-10 Tufts Univ		Medford, Md		KL	SMPA
+3126	TOPS-10 TELEMED Corp		Hoffman Est,Ill		KL
+3160	10/20	Digital Ltd, Support	Basingstoke, Hamp, UK	KL2065
+3500	TOPS-10 Development/SIRUS	DEC, Marlboro		KL1095
+3536	TOPS-?? MCC			Texas
+4097	TOPS-20 Development		DEC, Marlboro		KS10
+4097?	TOPS-10 Univ of N Wales		Gwynedd, UK		KS10	512K
+4101	TOPS-10 Development		DEC, Marlboro		KS10
+4117	TOPS-20 LA2020			DEC, Culver City, CA	KS10
+4118	TOPS-20 BBN			Cambridge, MA		KS10
+4120	TOPS-20 Hawker Sidley		Toronto, Canada		KS10
+4130	TOPS-20 Keplinger Asoc.		Houston, TX		KS10
+4130?	TOPS-20 Sam Houston U		Huntsville, TX		KS10
+4138	TOPS-20 Bus. Inf. Sys.		New York, NY		KS10
+4145	TOPS-10 DEC CSSE		DEC Marlboro		KS10
+4149	TOPS-10 DEC ISSG		PK1/C43			KS10
+4156	TOPS-20 Comp Bus Sys		Moberly, Mo		KS10
+4160	TOPS-10 DEC AB			Solna, Scan.		KS10
+4163	TOPS-10 Fokker B. V.		The Netherlands		KS10
+4167	TOPS-10 W. A. I. T.		Bently, W. Aust		KS10
+4178	TOPS-10 CH2M Hill		Corvallis, Orig		KS10
+4190	TOPS-20?Software House		Cambridge, Mass		KS10
+4198	TOPS-10 Dig Comm Assoc		Norcross, GA		KS10
+4220	TOPS-20 Clake Inst of Psych.	Toronto, Ont		KS10	512K
+4228	TOPS-10 Abbot Labs.		Chicago, Ill		KS10
+4229	TOPS-20 Chemed Corp		Cincinnati, Ohio	KS10	512K
+4239	TOPS-20 ScotiaFund		Toronto			KS10
+4249	TOPS-10 Hatfield Poly		Herts, UK		KS10
+4273	TOPS-20 ScotiaFund		Toronto			KS10
+4275	TOPS-10 Colo Schl Mines		Golden, Colo		KS10
+4280	TOPS-10 Stockholm Dat C		Stockhlm,Sweden		KS10
+4286	TOPS-20 Stanford-TINY		Stanford, CA		KS20
+4319	TOPS-20 CE Data			Denmark			KS10	256K
+4325	TOPS-20 Ont Milk Mke Bd		Toronto, Ont		KS10
+4329	TOPS-10 Gillette		Boston			KS10
+4367	TOPS-20 Datability Soft		New York, NY		KS10
+4371	TOPS-20 County of Strathcona	Alberta			KS10	512K
+4386	TOPS-20 Howard & Co.		Kansas City, MO		KS10
+4459	TOPS-20 San Mateo Office of Edu	San Mateo, CA		KS10
+4566	TOPS-10 Stevens Tech		Hoboken, NJ		KS10	512K
+4627	ITS	MIT AI Lab		Cambridge, MA		KS10
+4607	TOPS-10 Univ of Dundee		Dundee, Scotland	KS10	512K
+4664	TOPS-20 Panda Programming	Bainbridge Island, WA	KS10
+
+????	TOPS-10 Lederle Labs		Pearl River, NY		KL1090D SMPA
+????	TOPS-10 Lederle Labs		Pearl River, NY		KL1090D SMPB
+????	TOPS-10 RCA			Princeton, NJ		KS10
+????	TOPS-10 U of Pittsburg		Pittsburg, Pa		KL1099
+????	TOPS-20 Ford Motor CO.		Dearborn, MI		2060	1.5M
+????	TOPS-20 Hughes Aircraft		El Segundo, Ca		2060	2M
+????	TOPS-20 Am. Math. Soc.		Providence, RI		20
+????	TOPS-20 BRS Inc			Beaverton, Or		KL2060	Ser#790
+????	TOPS-20 CIT			Pasadena, Cal		KL2040
+????	TOPS-20 Citishare		New York, NY		KL2060
+????	TOPS-20 DEC			Atlanta, Ga		KL2060
+????	TOPS-20 Irish Agr		Dublin, Ireland		KS10
+????	TOPS-20 Roberts&Dybdahl		Des Moines,Iowa		KL20?

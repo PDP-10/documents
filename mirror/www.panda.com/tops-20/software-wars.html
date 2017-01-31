@@ -1,0 +1,1383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+
+
+<script type="text/javascript" src="/static/js/analytics.js"></script>
+<script type="text/javascript">archive_analytics.values.server_name="wwwb-app36.us.archive.org";archive_analytics.values.server_ms=666;</script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+<META NAME="description" CONTENT="Software Wars">
+<TITLE>Software Wars</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+</HEAD>
+<BODY>
+
+
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript">//<![CDATA[
+var __wm = (function(imgWidth,imgHeight,yearImgWidth,monthImgWidth){
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http://panda.com/tops-20/software-wars.html";
+
+var firstYear = 1996;
+var displayDay = "16";
+var displayMonth = "Jul";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var $D=document,$=function(n){return document.getElementById(n)};
+var trackerVal,curYear = -1,curMonth = -1;
+var yearTracker,monthTracker;
+function showTrackers(val) {
+  if (val===trackerVal) return;
+  var $ipp=$("wm-ipp");
+  var $y=$("displayYearEl"),$m=$("displayMonthEl"),$d=$("displayDayEl");
+  if (val) {
+    $ipp.className="hi";
+  } else {
+    $ipp.className="";
+    $y.innerHTML=displayYear;$m.innerHTML=displayMonth;$d.innerHTML=displayDay;
+  }
+  yearTracker.style.display=val?"inline":"none";
+  monthTracker.style.display=val?"inline":"none";
+  trackerVal = val;
+}
+function trackMouseMove(event,element) {
+  var eventX = getEventX(event);
+  var elementX = getElementX(element);
+  var xOff = Math.min(Math.max(0, eventX - elementX),imgWidth);
+  var monthOff = xOff % yearImgWidth;
+
+  var year = Math.floor(xOff / yearImgWidth);
+  var monthOfYear = Math.min(11,Math.floor(monthOff / monthImgWidth));
+  // 1 extra border pixel at the left edge of the year:
+  var month = (year * 12) + monthOfYear;
+  var day = monthOff % 2==1?15:1;
+  var dateString = zeroPad(year + firstYear) + zeroPad(monthOfYear+1,2) +
+    zeroPad(day,2) + "000000";
+
+  $("displayYearEl").innerHTML=year+firstYear;
+  $("displayMonthEl").innerHTML=prettyMonths[monthOfYear];
+  // looks too jarring when it changes..
+  //$("displayDayEl").innerHTML=zeroPad(day,2);
+  var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+  $("wm-graph-anchor").href=url;
+
+  if(curYear != year) {
+    var yrOff = year * yearImgWidth;
+    yearTracker.style.left = yrOff + "px";
+    curYear = year;
+  }
+  if(curMonth != month) {
+    var mtOff = year + (month * monthImgWidth) + 1;
+    monthTracker.style.left = mtOff + "px";
+    curMonth = month;
+  }
+}
+function hideToolbar() {
+  $("wm-ipp").style.display="none";
+}
+function bootstrap() {
+  var $spk=$("wm-ipp-sparkline");
+  yearTracker=$D.createElement('div');
+  yearTracker.className='yt';
+  with(yearTracker.style){
+    display='none';width=yearImgWidth+"px";height=imgHeight+"px";
+  }
+  monthTracker=$D.createElement('div');
+  monthTracker.className='mt';
+  with(monthTracker.style){
+    display='none';width=monthImgWidth+"px";height=imgHeight+"px";
+  }
+  $spk.appendChild(yearTracker);
+  $spk.appendChild(monthTracker);
+
+  var $ipp=$("wm-ipp");
+  $ipp&&disclaimElement($ipp);
+}
+return{st:showTrackers,mv:trackMouseMove,h:hideToolbar,bt:bootstrap};
+})(550, 27, 25, 2);//]]>
+</script>
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  min-width:800px !important;
+}
+</style>
+<div id="wm-ipp" lang="en" style="display:none;">
+
+<div style="position:fixed;left:0;top:0;width:100%!important">
+<div id="wm-ipp-inside">
+   <table style="width:100%;"><tbody><tr>
+   <td id="wm-logo">
+       <a href="/web/" title="Wayback Machine home page"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0" /></a>
+   </td>
+   <td class="c">
+       <table style="margin:0 auto;"><tbody><tr>
+       <td class="u" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://panda.com/tops-20/software-wars.html" style="width:400px;" onfocus="this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20120716204014" /><input type="submit" value="Go" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td class="n" rowspan="2">
+           <table><tbody>
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr class="m">
+           	<td class="b" nowrap="nowrap">
+		
+		    <a href="/web/20120316074656/http://panda.com/tops-20/software-wars.html" title="16 Mar 2012">MAR</a>
+		
+		</td>
+		<td class="c" id="displayMonthEl" title="You are here: 20:40:14 Jul 16, 2012">JUL</td>
+		<td class="f" nowrap="nowrap">
+		
+		    Aug
+		
+                </td>
+	    </tr>
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr class="d">
+               <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20120621040441/http://panda.com/tops-20/software-wars.html" title="4:04:41 Jun 21, 2012"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+               
+               </td>
+               <td class="c" id="displayDayEl" style="width:34px;font-size:24px;" title="You are here: 20:40:14 Jul 16, 2012">16</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+               
+	       </td>
+           </tr>
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr class="y">
+	       <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20110709033829/http://panda.com/tops-20/software-wars.html" title="9 Jul 2011"><strong>2011</strong></a>
+               
+               </td>
+               <td class="c" id="displayYearEl" title="You are here: 20:40:14 Jul 16, 2012">2012</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   2013
+               
+	       </td>
+           </tr>
+           </tbody></table>
+       </td>
+       </tr>
+       <tr>
+       <td class="s">
+           <a class="t" href="/web/20120716204014*/http://panda.com/tops-20/software-wars.html" title="See a list of every capture for this URL">20 captures</a>
+           <div class="r" title="Timespan for captures of this URL">7 Feb 11 - 16 Jul 12</div>
+       </td>
+       <td class="k">
+       <a href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" title="Explore captures for this URL">
+	 <img id="sparklineImgId" alt="sparklines"
+		 onmouseover="__wm.st(1)" onmouseout="__wm.st(0)"
+		 onmousemove="__wm.mv(event,this)"
+		 width="550"
+		 height="27"
+		 border="0"
+		 src="/web/jsp/graph.jsp?graphdata=550_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:010010111020_2012:6:211008100000_2013:-1:000000000000_2014:-1:000000000000_2015:-1:000000000000_2016:-1:000000000000_2017:-1:000000000000" />
+       </div>
+       </a>
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td class="r">
+       <a href="#close" onclick="__wm.h();return false;" style="background-image:url(/static/images/toolbar/wm_tb_close.png);top:5px;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="background-image:url(/static/images/toolbar/wm_tb_help.png);bottom:5px;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+</div>
+</div>
+</div>
+<script type="text/javascript">__wm.bt();</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+<H1 ALIGN="center">
+<I>Software Wars</I>
+</H1>
+<H2 ALIGN="center">
+<I>by <B>Mark Crispin</B></I>
+</H2>
+<TABLE BORDER WIDTH=50% ALIGN=CENTER>
+<TR>
+<TH>
+<B>WARNING</B>
+<TD ALIGN=LEFT>
+<P>
+This story is intended for adult reading only.  While not "hard core",
+there is a lot of rude language, rowdyness, and some sexual
+content.  With this story, you will gain insight into many things:
+plagiarism, the perversity of the author's mind, the wisdom of the
+obscenity laws, your gullibility...
+<P>
+None of this is intended to offend.  If this isn't to your tastes, you'd
+better put this story down, back on the juicy pile of pink-slip
+paraphernalia where you found it.  If you read on, or even if you don't,
+you've been warned.
+</TD>
+</TR>
+</TABLE>
+<P>
+Copyright © 1978 Mark Crispin
+<P>
+<H3 ALIGN="center">
+<B>Acknowledgements</B>
+</H3>
+<P>
+The libel laws prevent me from mentioning by name all those who have
+helped me in writing this turkey, but I will mention their contributions
+here, so that I don't get stuck with all the blame:
+<UL>
+<LI>
+To the people who brought us <I>STAR WARS</I>, for a movie packed with
+outworn clichés, yet dull; filled with symbolic symbolisms
+symbolizing symbolic nothings, for providing me with ample source
+material.  All kidding aside, <I>STAR WARS</I> is indeed a masterpiece
+of science fiction and fantasy.  It is an honor to be able to spoof
+it; and more so if my readers have as much fun reading this little
+take-off as I had writing it.
+<LI>
+To the people who made <I>HARDWARE WARS</I>, for starting me off on this
+thing in the first place.
+<LI>
+To everybody here at the lab, for providing me with material to fill
+in the gaps in the story.  My apologies to those who might see a bit
+of themselves in the story, and yes, my insurance is paid up!
+<LI>
+To the computer center where I spent my undergraduate years, whose
+regressive and repressive policies provided me with ample material for
+the policies of the Empire.
+<LI>
+To the friends who have read and proofread drafts of the story from
+time to time, for helping in some quality control.
+<LI>
+And finally, to a good friend, who was hooked from the beginning; who
+continually encouraged me as we saw the story evolve and take a form of
+its own; who showed me worlds of science fiction that I didn't know
+existed before; and who provided me with material which eventually
+determined the shape and body of this story.  Thanks.
+</UL>
+<P>
+Now that that's all taken care of, on with the story...
+<P>
+<H3 ALIGN="center">
+<B>Introduction</B>
+</H3>
+<P>
+Once upon a time, sort of long ago, well, uh, you know what I mean, it
+wasn't really <I>long</I> long ago but it wasn't like yesterday, I mean,
+when you say long ago to some people they think like oodles and oodles
+of eons ago and other people think it was last night or something, but
+this is sort of in the middle long ago oh forget it.  Anyway, long ago
+and far away, well, not like so far away you can't imagine it I mean
+you could probably get to it if you had a fast enough starship and
+lived long enough but it wasn't near like next door or on this planet
+or solar system or even in this galaxy, like that is <I>near</I> and this
+was far away like another universe oh hell forget it.
+<P>
+Long ago and far away, the data processing galaxy was ruled by the
+sinister forces of the PASCAL Empire.  Years ago, it had been the
+Hacking Republic, where all programming languages and programmers
+lived together in peace and harmony.  The land of the Republic was
+patrolled by the Wizards, skilled in all forms of magic, who daily
+unveiled new miracles for the wonder of the citizens of the Republic.
+They drew their mystical powers from <I>The Hack</I>, which was their
+succor in any difficulty.
+<P>
+But the days of the Republic were numbered, for one of the Wizards,
+Daemon Feature, fell in with the PASCALs, who brought in crocks and
+bletcherousness to the beleaguered Republic.  Using methods both
+sinister and cunning, he managed to entrap most of the loyal Wizards
+in a fencepost error, where they were ruthlessly slaughtered.  At last
+the Republic was proclaimed to have ended, and the Empire was
+established with Recordstructure, the leader of the PASCALs,
+proclaimed Emperor.  The old Republic's Senate was reduced to a mere
+rubber stamp for the Emperor.  And the lot of programmers was unhappy.
+<P>
+As our story begins, civil war has broken out.  Rebel hackers,
+striking out from a hidden data base, have won a surprise victory
+against the Empire.  In the course of the battle, rebel spies seized
+copies of the Empire's design of the TENTH STAR, their new processor
+and operating system.  Horrified, they transmitted the plans to
+Princess Lay-me, to be given to her father, so that the design of the
+new machine could be analysed before it became operational.  If the
+rebels fail to design a winning monitor for it in time, its lossage
+will spread throughout the universe.  Fear would keep the more timid
+administrators in line; and that would be the end of all programming
+winnage.
+<P>
+Now, a small ship, bearing Princess Lay-me and two snoids, is speeding
+through space, an Empire destroyer hot in pursuit and gaining...
+<P>
+<H3 ALIGN="center">
+<B>The Princess pleads for help</B>
+</H3>
+<P>
+The <I>Big Nastie</I>, a feared vessel of the Empire's fleet, had now
+approached within tractor range of the tiny ship.  Already, it was
+entangling the smaller vessel in its inescapable web of circular data
+structures.  Princess Lay-me acted quickly.
+<P>
+"Hey, snoid," she snarled at U-2-buckeroo, a video switched snoid,
+"get ready to record a message for me."  At that, the snoid made a few
+clicking sounds as it mounted a spare cassette and started running.
+<P>
+"<I>NOT NOW!!</I>" Lay-me shrieked.  "Wait until I get my negligee on.
+How the fuck do you expect me to seduce some poor young kid into doing
+all sorts of idiotic things for our cause wearing <I>this</I>?  Oh shit,
+my hair is messed up too.  Fuck it, I'll just change and run a brush
+through it a couple of minutes."  She was thus engaged as her craft
+was slowly being dragged back with greater and greater recursion.
+Soon its stack would overflow and all would be lost.
+<P>
+"Okay, pretty shitty but it'll hafta do," she told the waiting snoid.
+Then, lying back so as to emphasize her well-endowed cleavage as much
+as possible, she began.
+<P>
+"Heeeelp meee," she purred.  U-2-buckeroo clicked in surprise at the
+sudden, but pleasant, change in her voice.  "Oh heeeelp me Moby
+Foobar.  It's just pooor li'l ol' me all alone in the big bad world."
+A tear appeared in her eye and slowly rolled down one cheek.  "I just
+<I>have</I> to get these papers to my daddy at Automagic or who knows
+what will become of me."  She started sobbing uncontrollably, and
+gestured to the snoid to stop the recording.  Instantly she
+straightened up.
+<P>
+"You got that right?" she growled.  Another click.  "If you screwed
+this up I'll pull yar plug and sell ya for scrap metal."  The snoid
+beeped in fear as it hurried to assure her no mistakes were made.  She
+glared at it with a look that would melt titanium, then relaxed.
+<P>
+"Okay, I believe you.  Now take these papers and lock them in core.  I
+don't want nobody getting swapped in until it's finished."  The snoid
+beeped acknowledgement and departed.  Just in time, for at the next
+instant in rushed the soldiery of the Empire: CS profs, grad students,
+and not a few bureaucrats were among them.  They howled with glee at
+the sight of the seductively clad Princess.  They were about to
+perform all sorts of foul deeds upon her body when the ship's intercom
+rang out with a feared voice.
+<P>
+"The Princess is not to be molested," said the voice of Daemon
+Feature.  "She is to be brought to me for interogation immediately."
+The boarding party froze, and, grumbling, retreated, leaving an
+untouched, but disappointed, princess.
+<P>
+"Oh <I>shit</I>!" she sighed.  Daemon Feature was absolutely hopeless.
+<P>
+<UL>
+<<<I>What will happen to the Princess?  What does Daemon Feature want
+with her?  What reader is so naive that he can't figure it out
+himself?  Read on!</I>>>
+</UL>
+<P>
+<H3 ALIGN="center">
+<B>Snoids are more fun than duckies!</B>
+</H3>
+<P>
+U-2-buckeroo rolled down the corridor, heedless of the loud commotion
+in the control room.  The Empire would not think of intercepting a
+snoid, at least not until too late.  But U-2-buckeroo didn't have much
+time; the B-movie heavies may be dumb, but they would figure it out
+soon enough, too soon if it wasted much time.
+<P>
+"Oh!  There you are thweetie!"  It was the voice of C-me-poo-poo, the
+ship's interior decoration snoid.  "Where <I>have</I> you been?  I wath
+tho worried!  Oh dear, oh my, they are going to dithcharge our power
+packth, I juth <I>know</I> it.  Oh what thall we do oh what thall we do?"
+As C-me-poo-poo spoke, its wrist joint wagged in frantic semaphore.
+"What were you doing with the Princeth all that time alone, letting me
+juth worry mythelf <I>thilly</I> over you?"  U-2-buckeroo just rolled by,
+ignoring the ridiculous snoid.
+<P>
+"Juth where are you going?" C-me-poo-poo demanded.  "Thomtimeth you
+are juth impothible to talk to.  Now come back here."  U-2-buckeroo
+just rolled on, now heading away from C-me-poo-poo.  "Well, I know
+when I've been thnubbed.  It'th all over between uth."  U-2-buckeroo
+continued on, and turned into an airlock.  C-me-poo-poo stood there
+for a second, then dashed into the airlock just before the I-level
+timeout.
+<P>
+And KERZOOM!  They were both whisked away in a single packet (with the
+priority bit set) through the network and onto a seemingly desert
+host.  They were on a bleak, windswept plateau overlooking a searing
+desert.  There was no sign of life; not that there would be in the
+endlessly shifting sands below.  C-me-poo-poo was still babbling
+endlessly, giving U-2-buckeroo "one last chance" to "save our
+relationship."
+<P>
+U-2-buckeroo started down into the valley.  C-me-poo-poo was still
+babbling away in despair and finally blew a circuit breaker.
+U-2-buckeroo had now reached the valley and was now cutting straight
+through the valley towards the outskirts on the other side, where its
+eventual destination lay.
+<P>
+It was perilous for U-2-buckeroo to take this route, but it needed
+speed, and could not afford the time it would take to go around the
+long way.  The valley, which had looked desolate from the heights,
+actually was filled with mechanical activity of the lowest sort.  Here
+were the ripoffs of the galaxy.  Not a few IBM 370s were there,
+warring over their individual territories.  U-2-buckeroo's hope was to
+get through this jungle unnoticed.
+<P>
+"Wanna date?" asked a cute little System/3 which had boldly walked up
+to it.  U-2-buckeroo beeped a "No thanks", and instantly the failsafe
+systems started passing the message to the system console:
+MALFUNCTIONING SNOID.  U-2-buckeroo had no time to feep an objection
+before it was powered down and moved to the shop for examination.  In
+its last voltage-starved cycles, it wondered how much longer the
+author was going to get away with this sort of garbage.  It wasn't the
+only one!
+<P>
+<UL>
+<<<I>Are things ever in a mess now!  The princess is a prisoner of
+Daemon Feature, the snoids are turned off.  Is there any hope?  Does
+anybody care?  Read on!</I>>>
+</UL>
+<P>
+<H3 ALIGN="center">
+<B>Back on the farm...</B>
+</H3>
+<P>
+Fluke Softwarespecialist sighed with relief as he made the final pass
+over the card decks for the day.  Then he looked at the horizon; it
+was fiery red, but elsewhere night was already setting in.  He set his
+vessel's autopilot for home, and relaxed.
+<P>
+He had been living here with his aunt and uncle ever since his parents
+died when he was a young child.  He had been told that they had been
+killed when their crippled vessel burned up upon reentry to their home
+planet.  He had never heard any other account, and his father had been
+given full honors by the Empire, but he had heard dark stories that
+all was not as it had seemed.
+<P>
+But when he had brought it up to his aunt and uncle, they only
+repeated to him what he had already been told.  If the truth was any
+different, it had been well concealed.
+<P>
+Not that he had any reason to suspect them; they had been like parents
+to him and he had always been treated with kindness.  His uncle had
+lived here since before Fluke was born, and over the years had
+established a prosperous, if unpretentious, business, supplying COBOL
+utilities for many of the settlements in this quadrant of the galaxy.
+Fluke loved them dearly, but he was restless, and did not want to
+follow in his uncle's footsteps; he yearned for adventure and
+excitement.
+<P>
+He joined his uncle, who was busy with a group of snoiders, the
+cloaked traders in abandoned junk snoids who wandered around the area.
+Good, Fluke thought, he's getting some more snoids.  Perhaps with the
+new snoids he would be able to leave these card punches forever.  His
+uncle had decided upon two abandoned snoids which had been found
+wandering on the planet; a buckeroo and a poo-poo.  Not really what
+was needed; but the price was right and perhaps they could be
+reprogrammed.
+<P>
+His uncle paid for the snoids and they all went inside.  Fluke started
+cleaning and repairing them (being careful about the poo-poo lest it
+get ideas) while his aunt and uncle prepared lunch.  It was while he
+was cleaning the buckeroo that it suddenly activated a cassette, and a
+wraith-like figure appeared.  It gradually formed the shape of a
+woman.
+<P>
+"Heeeelp meee," purred the recording.  "Oh heeeelp me Moby Foobar."
+Then came a gritch and the recording repeated from that point.
+Clearly there was more to the recording, but it was read-locked, and
+it was only chance that that fragment had become unprotected, probably
+as a result of the damage the buckeroo has recently sustained.  But
+who was Moby Foobar?  At the far end of the valley lived Fred Foobar,
+an old hermit whom everybody thought was crazy.  But perhaps he was
+some relative?
+<P>
+Fluke reset the buckeroo and ordered it to play the entire recording.
+Instead, it re-read-locked the entire tape and the image disappeared,
+but not from Fluke's mind.
+<P>
+Later, at lunch, he talked about it with his uncle.
+<P>
+"While I was cleaning the buckeroo, I got a segment of an old message,
+addressed to a Moby Foobar.  He seemed to own the snoid.  Anyway, it
+seemed to be very important that he got that message."
+<P>
+"I doubt very much if Moby Foobar will ever want to get that message,"
+said Fluke's uncle.  "He has been dead for many years now."
+<P>
+"But this was a recent message, and the read-lock was still on.  How
+could such an old message have survived?  And could old Fred Foobar be
+related?"
+<P>
+"Fred Foobar is just a crazy old man.  Tomorrow, I want you to go and
+do a complete purge on the buckeroo.  That should end this message
+business."
+<P>
+"All right.  By the way, now that we have these new snoids, when can I
+split?  You have all the help you need now."
+<P>
+"Now is when I need you the most.  Wait just one more year, when I can
+hire some more workers, get a few more snoids, and then you can go."
+<P>
+"<I>Another year?!</I> That isn't fair!  All my friends have left a long
+time ago and I'm still cooped here."
+<P>
+"I know, but I have no choice.  I promise this time."
+<P>
+"Oh shit.  Well, I better get back to those snoids."  Fluke left the
+table and stormed out.  His aunt watched him for a minute then turned
+to her husband.
+<P>
+"You know, we can't keep him forever.  He's just not destined for
+COBOL.  There's too much of his father in him."
+<P>
+"Yes, that's what I'm worried about.  For him.  I'm afraid he'll get
+involved in hacking like his father did."
+<P>
+<H3 ALIGN="center">
+<B>Fluke meets Foobar</B>
+</H3>
+<P>
+Fluke walked into the shop and looked around.  Neither snoid was in
+sight.  Fluke walked around to the other side of a cabinet, and
+cringing behind it was C-me-poo-poo, shivering with terror.
+<P>
+"What are you doing back there?" Fluke demanded.
+<P>
+"Oh, thweetie, pleathe don't dithconnect me!" pleaded the snoid.
+Fluke rolled his eyes heavenward.  <I>Give me strength.</I>  "It'th all
+U-2'th fault.  I <I>told</I> him not to go."
+<P>
+"Oh <I>shit</I>!"  Fluke grabbed his magnifying glass and dashed outside.
+He looked around in all directions, but no trace of the buckeroo.
+"That little snoid is gonna cost me a lot of trouble."
+<P>
+"Oh, he <I>exthellth</I> in that.  Are we going to follow him?"
+<P>
+"Can't now," Fluke answered.  "Too many users out now.  We'll have to
+wait until dark."  With that, Fluke and the snoid went inside.
+<P>
+Night fell, and Fluke slipped outside, careful not to disturb his aunt
+and uncle.  He had managed to cover up the disappearance of the
+buckeroo up to now, but now he had to find it, and soon.  Accompanied
+by C-me-poo-poo, he hopped on the transporter, and soon they were
+speeding across the desert waste.  Presently, Fluke saw a snoid on his
+radar beacon, and headed towards it.  Sure enough, it was the
+buckeroo.  Fluke hopped out of the transporter.
+<P>
+"Where d'ya think you're going?" Fluke asked the buckeroo, which only
+continued its endless, incessant feeping.  Again Fluke rolled his eyes
+heavenward and wondered how his uncle ever got suckered into buying
+two snoids that anyone else would pay to get rid of.  C-me-poo-poo
+translated.
+<P>
+"He says there are life forms approaching from the north-west."
+<P>
+"Users!" gasped Fluke.  "Well, come on, let's get a look."  Fluke,
+followed by C-me-poo-poo, climbed the ridge to the northwest and
+looked down.  He could see endless rows of consoles, all running WHO
+and RSL, but no users.  Then with horror, he noticed that one was
+running VERIFY.  <I>Luckhams!</I> These were the most feared tribe of
+users, cunning and cruel.  Fluke shuddered, and was about to slip
+back, when...
+<P>
+"<I>People who are not contributing to the support of the lab are
+taking up too much of the machine!  The scheduler is not giving us our
+fair share!  If you do not bring the system up immediately heads will
+roll!</I>" Fluke cringed at each blow.  The Luckhams had caught him, and
+were after blood.  "<I>We are the only people doing real AI research!
+We pay most of the lab's support!  The S-1 and music groups are using
+too much of the machine!  We should have exclusive immunity from
+autologout!</I>" Fluke mercifully lost consciousness, the hideous blows
+still coming down.
+<P>
+When he came to, a cloaked and hooded figure was stooping over him.
+Embroidered on the cloak was <I>Deux ex machina hermitage</I>.  The
+toothy, slobbering face had a familiar look.
+<P>
+"Fred Foobar!" gasped Fluke.  "Am I glad to see you!"
+<P>
+"The terminal rooms are not to be travelled lightly, young Fluke,"
+said Fred.  "You've had a busy day.  Come!  We'll have to get indoors
+quickly.  The users are easily cowed, but they will soon return, with
+greater lossage.  Luckhams especially; they are never appeased."
+Fluke got up quickly, remembering the attack, and marveling that he
+was still in one piece, but even more that the reader is still reading
+this drivel.  He looked at the large thick part still in the reader's
+right hand, and sighed.  Still a lot more to go.
+<P>
+U-2-buckeroo had been hiding under a ledge since the attack, and now
+joined them, but C-me-poo-poo had tripped over his own lisp and was
+lying there helpless.  After lifting the giggling snoid up and
+bundling it into the transporter, the party quickly sought the safety
+of Fred Foobar's hermitage.
+<P>
+<H3 ALIGN="center">
+<B>The House of Foobar</B>
+</H3>
+<P>
+"Tell me, Fluke," said Fred, "what brings you to such a remote
+installation?"
+<P>
+"I'm trying to get faster real-time response with this buckeroo.  It
+says it has to find Moby Foobar, and slipped away earlier today to
+find him.  I have never seen such devotion in a snoid before.  Have
+you heard of Moby Foobar?"
+<P>
+"<I>Moby Foobar, Moby Foobar</I>," sighed Fred.  His eyes glazed over as
+if remembering days long gone by.  The 'ludes were having their
+effect.  "Now that's a name I haven't heard in a long, long time,
+since before you were born."
+<P>
+"Then you knew him?  My uncle said he was dead."
+<P>
+"Oh, he's not dead, not yet.  He's me.  In fact, I knew your father back in the
+old days, before the Empire."
+<P>
+"You knew my father??"
+<P>
+"Yes.  He was a skilled hacker, a resourceful wizard," sighed Moby,
+"and a good friend.  He was killed in the early days of the Empire."
+<P>
+"Tell me, how did my father die?  I was told..."
+<P>
+"You were told a lie!" interrupted Moby.  "Long ago, in the last days
+of the Republic, a young wizard named Daemon Feature (who was my
+student before he turned to evil) aided the PASCALs in the ruin of the
+Republic.  Feature <I>betrayed</I>, and <I>murdered</I> your father."  He
+spoke those words with such emphasis that Fluke shook.  But his words
+were true; Fluke could see it.
+<P>
+Moby sighed.  "Feature was seduced by the darker side of the Hack.
+Today, the wizards are all but extinct."  He paused, searching his
+memory, back to a time long ago.  "Which reminds me.  Your father left
+me something to give to you."  He reached into the piles of paper and
+old, dusty manuals on the table, and withdrew a single binder.  "His
+HAKMEM.  An elegant programming tool, of a more civilized age.  With
+it, one skilled in the Hack could perform programming miracles, get
+better response time, and be invited to all the good parties.
+Here."  He handed the HAKMEM to Fluke.
+<P>
+Fluke took it, and looked at its first page intently; strange it
+seemed, yet a feeling grew on him, as if he were looking at something
+far greater than he could comprehend.  He was considered a good
+programmer, one of the best in the quadrant; but the HAKMEM took his
+breath away.  "What is the Hack?" he asked finally.
+<P>
+"The Hack is that what is nearest and dearest to the hearts of all the
+wizards.  It is what gives the wizard his power.  The Hack is
+everywhere and is part of everything.  Without the Hack, only crocks
+remain."
+<P>
+"The Hack!" gasped Fluke.  He then pondered these words in silence.  A
+whole new vision was before him; he saw things of beauty and elegance
+that he could not yet put into words.  His reverie was interrupted by
+a sudden chirping from U-2-buckeroo.
+<P>
+"Ah, yes, the message," said Moby.  "Come, let's hear it."  The
+buckeroo gave one last chirp, then the princess appeared.  This time,
+the whole message was played.  Moby sat back.
+<P>
+"Well," he sighed, "I must be off to Automagic.  And you must come
+with me, and learn the ways of the Hack."
+<P>
+"But I can't!" protested Fluke.  "My aunt and my uncle need me!  I
+mean, I hate the Empire, but I can't do anything.  I'd like to go, but
+it's so far away.  It's late, I have to get back.  Aww, I'll give you
+a ride to the DECUS conference.  You should be able to find a way to
+Automagic from there."
+<P>
+"Do what you think is right," replied Moby.  Fluke looked at him,
+wavering.  Already the Hack was entering his thoughts; but he was
+still afraid.  He still was thinking over all Moby had told him, as
+the transporter, carrying Fluke, Moby, and the two snoids, was
+speeding along the paths to DECUS...
+<P>
+<H3 ALIGN="center">
+<B>The Road to DECUS</B>
+</H3>
+<P>
+Fluke slowed down the transporter.  Ahead, he could see the ruins of a
+snoider's trailer, and smaller brown objects around it.  When they
+reached it, they stopped and looked around.  The brown objects were
+bodies, brutally pie-sliced.
+<P>
+"Users!" exclaimed Fluke.  "I have never seen them attack so
+viciously.  Look!  Here is a jump out of a DO, and another back in.
+But what would they want with snoiders?"
+<P>
+"Not users," corrected Moby, "but the Empire wants you to believe it
+was users.  See the accuracy of the pie-slice?  Only Empire software
+tools can be so deadly."
+<P>
+"The Empire?  But why?"  But Fluke's glance almost instinctively
+turned to U-2-buckeroo, chirping faster than usual.
+<P>
+"You are looking at the reason," answered Moby Foobar.  Fluke gasped
+with horror.
+<P>
+"If they traced the snoids here, then they know where...<I>NO!!</I>"  Fluke
+dashed to the transporter, and headed to his home, ignoring Moby's cries
+to come back.
+<P>
+Fluke approached the familiar fields.  Smoke was rising in the
+distance.  He hurried towards it.  His home was destroyed.  The greedy
+flames were still licking at the ashes which remained.  And by what
+was the entrance, Fluke gazed with horror at the charred and grizzled
+corpses of his aunt and uncle.
+<P>
+A tear appeared in his eye.  He brushed it away.  Gradually, his
+horror turned to hatred; hatred of the Empire and all that it stood
+for.  And at the same time, he wanted to go with Moby Foobar.  The
+fear was gone; the Hack had won.  Fluke jumped back into the
+transporter, and hurried back to Moby Foobar.
+<P>
+Moby had not been idle.  He, assisted by the two snoids, had
+constructed a makeshift pyre and had almost finished the ghastly task
+of cremating the snoiders.  As he completed this duty, he looked at
+Fluke, who was standing there.
+<P>
+"There was nothing you could do.  Had you been there, you would have
+been killed too."
+<P>
+"Moby, I want to go with you to Automagic.  I want to learn about the
+Hack and become a wizard like my father.  There is nothing for me here
+now."
+<P>
+Moby smiled.  He said nothing, but simply entered the transporter.
+Fluke and the snoids followed, soon they were again on their way.
+<P>
+<H3 ALIGN="center">
+<B>DECUS</B>
+</H3>
+<P>
+The transporter slowed, and then stopped.  They were at the edge of a
+high shelf, overlooking DECUS.  Fluke and Moby got out and looked down
+on the city.
+<P>
+"The DECUS conference," observed Moby.  "Fluke, you would have to
+telnet far to find such a wretched assortment of losers and villainy.
+We must be careful."  Fluke nodded in agreement.  They got back in the
+transporter, and soon were at DECUS.  Moby was right; chieftains of
+all the commercial timesharing houses were there, voicing demands
+for more usage accounting.  Fluke shuddered.
+<P>
+They had not gone far on their way when they were challenged by an
+Empire soldier.  Others appeared, and quickly they were surrounded.
+<P>
+"How long have you had these snoids?" the soldier demanded of Fluke.
+<P>
+"Two or three releases," answered Fluke; not that there was much hope
+in fooling them.  <I>It's all over now,</I> he thought, <I>no hope of
+escape.</I>  His thoughts were interrupted by Moby's voice.
+<P>
+"<I>The right half of a POPJ can be used to store data,</I>" he intoned.
+The soldier's eyes opened wide.  Moby continued.  "These are not the
+snoids you are looking for."
+<P>
+"These are not the snoids we are looking for," repeated the soldier,
+as if in a trace.
+<P>
+"We can go about our business."
+<P>
+"They can go about their business."
+<P>
+"We should move on."
+<P>
+"Move on," said the soldier, waving them away.  The others dispersed.
+<P>
+"How did you do that?" Fluke asked once they were out of hearing.  "I
+thought we were dead back there!"
+<P>
+"The Hack has many powers, and over weak minds such as theirs it is
+easy to take command."  Fluke looked at him in admiration.  Someday he
+would be like Moby.
+<P>
+They stopped outside a seedy-looking establishment.  There was no sign
+of life outside, but the building itself was shaking.  Even from
+outside Fluke could hear the sounds within.  <I>You can tell by the way
+I frob my crock, my randomness is hard to grok,</I> blared the familiar
+music from <I>Monday Morning Headache</I>.
+<P>
+"Are you sure we'll find a consultant here?" asked Fluke doubtfully.
+<P>
+"Oh yes, of course," answered Moby.  "All the best ones can be found
+here."  He paused at the doorstep.  "By the way, be careful.  This place
+can get a bit rough."  At that, he entered, with Fluke and the snoids
+following.  Instantly they were engulfed with the sound.  <I>Ah, ah, ah,
+ah, stayin' online, stayin' online...</I>  A dark apparition loomed in front
+of them.  It allowed Moby to pass, but it stopped Fluke and the two
+snoids.  A light appeared.
+<P>
+"Let's see your ID," it demanded.  Fluke produced his and the figure
+held it to the light.  Satisfied, it returned it to Fluke, and then
+demanded the same of the snoids.  "You can't come in," it snarled at
+them.  The snoids stood there, frozen.  Fluke intervened.
+<P>
+"You better wait outside," he addressed the snoids.  "We don't want
+any trouble."  At that, the snoids turned around and exited.  Fluke
+then went over to Moby, who was already in conversation with a tall,
+wraith-like figure.  It was covered with hair (and fleas).  Fluke
+could see no face.  <I>A hippie</I>, Fluke thought.  <I>I hope Moby knows
+what he's doing.  I sure as hell don't.</I>  Suddenly Fluke was roughly
+pushed aside.
+<P>
+"Get outta my way, punk," snarled a hideous figure.  It wore a black
+leather jacket, and carried a chain in one hand and a blackjack in the
+other.  Not satisfied with merely pushing Fluke, it aimed a vicious
+blow at him with its blackjack.
+<P>
+The blow never fell.  Swifter than lightning, Moby had his HAKMEM out
+and dispatched the biker with a single item.  Moby looked around at
+the crowd, which quickly turned away.  Not only didn't they want to
+challenge Moby, they didn't even want to know what had happened.  Moby
+left the mess for the after-hours crew to clean up, and helped Fluke
+up.
+<P>
+"I have been talking to the first mate of a suitable ship to bring us
+to Automagic.  The captain is supposed to be one of the best
+consultants in this quadrant.  Let us join them," Moby said,
+indicating a table where the hippie was sitting.  Sitting next to him
+was a tall, self-confident man some years older than Fluke.  He fit in
+with the place quite well; his color-coordinated John Travolta outfit
+mirrored the smoke-filled atmosphere.  He appeared to be staring
+vacantly into the distance, planning the conquest of one of the many
+wenches who frequented the place, but a closer examination showed it
+was not so.  He was asleep.
+<P>
+The hippie nudged him awake.  After a few groans he introduced himself
+as Handwave Saga and the hippie as Cruftybraindamaged.  Moby quickly
+stated their business: passage to Automagic for Fluke, Moby, and two
+snoids, with no questions asked.  Handwave and Crufty smiled knowingly
+at each other.  <I>Amateurs, stashing the shit in the snoids.</I>  They
+accepted the deal immediately.  Anyone that dumb deserved to get ripped
+off.
+<P>
+<H3 ALIGN="center">
+<B>Aboard the TENTH STAR</B>
+</H3>
+<P>
+"So," snarled Daemon Feature, breathing heavily, "you vill not talk?
+Ve hav VAYS of making you talk!"  Princess Lay-me cowered.  Daemon had
+interrogated her for several days now.  Not once, however, had he
+beaten her or taken advantage of her.  <I>This is cruel and inhuman
+torture,</I> she thought.  <I>How does he do it?</I> She was getting
+desperate.  The guard snoids were no help; Daemon Feature had
+sinisterly selected all neuters.
+<P>
+She knew, though, that her silence was the only thing keeping her
+alive.  Should she yield to the torture, or the location of the rebel
+data base be found out in spite of her silence, she would be killed
+instantly.
+<P>
+Daemon Feature signaled to an injector snoid.  <I>Truth serum</I>, she
+thought.  Terror-striken, she watched as the needle injected the
+powerful aphrodisiac into her veins...
+<P>
+The council was already in session when Daemon Feature entered.
+Governor Softwarerot was addressing those present:
+<P>
+"The Senate is of no concern to us; the Emperor has dissolved the
+council.  All responsibility rests with us now."
+<P>
+"Oh goodie!" said Admiral Whatshisface, commander of the TENTH STAR.
+"Let's go stomp them hackers!"
+<P>
+"Do not put too much faith in this hairy architecture you have
+constructed," retorted Daemon Feature.  "All this is insignificant
+compared to the Hack."
+<P>
+"Aw, don't hassle us with your hokey Hack stuff.  All anybody has to
+do is take a few CS courses and he can program as well or better than any
+of those hackers."  Daemon Feature glared at him in rising wrath.
+Suddenly Whatshisface found it difficult to breathe.  The others
+watched horrified.
+<P>
+"<I>Control-Meta-Top-BREAK!</I> I find your lack of faith disturbing!"
+snarled Daemon Feature.  Whatshisface's face changed from vivid red to
+purple, as the circular linked lists closed tighter.
+<P>
+"Feature, release him!" shouted Softwarerot.
+<P>
+"As you wish," replied Daemon Feature.  Whatshisface dropped to the
+table as he slowly recovered.
+<P>
+"Now there is to be no more of this!" continued Softwarerot.  "Lord
+Feature will continue the debugging.  Feature, have you been
+successful in your interrogation of the princess yet?"
+<P>
+"Unfortunately not.  She has encrypted her file system.  However, I
+expect to break her soon."
+<P>
+"That may not be necessary," replied Softwarerot, "I have an idea..."
+<P>
+"Governor Softwarerot," observed the princess.  "I should have known
+you would be holding Daemon Feature's leash.  I thought I noticed your
+foul stench when I was first brought on board."
+<P>
+"Flattery will get you nowhere," returned Softwarerot.  Motioning to a
+viewscreen, he observed, "Automagic.  Your home planet.  Watch."  The
+princess looked on with horror as a 99 million year lease and
+maintenance contract for a network of TENTH STARs was being prepared
+for Automagic.
+<P>
+"No!" she gasped.  "Automagic has no need for it.  Our computing
+resources are more than ample for the demand."
+<P>
+"Would you prefer another target, a hacking target?" returned
+Softwarerot.  "Then <I>tell us the location of the rebel data base!</I>"
+<P>
+The princess sobbed, then blurted out, "On [XY,ZZY]."  Softwarerot
+smiled.
+<P>
+"You see, Feature, she can be convinced."  Then, to the lawyers, "You
+may sign when ready."
+<P>
+"WHAT?!" screamed the princess.
+<P>
+"You are too trusting," smiled Softwarerot, as her innocent planet got
+permanently entangled in hopeless lossage.  His smile faded as a
+LOOKUP on [XY,ZZY] showed that the data base <I>had</I> been there, but
+had since been backed up elsewhere.
+<P>
+"Double the Robert Redford movies, and don't stop until she talks!"
+he ordered.  The princess begged for mercy.  "Take her away!"
+<P>
+<H3 ALIGN="center">
+<B>Automagic</B>
+</H3>
+<P>
+It had been a weary journey, but the end was near at last.  Fluke
+listened intently to Moby throughout most of the journey as he
+lectured on the ways of the Hack.  Fortunately, Moby frequently passed
+out, so the ordeal was never prolonged.  Other times, Fluke stared at his
+HAKMEM, seeking to become one with the Hack.  He ignored the hippie's
+occasional requests for "just a little fix."  <I>I wonder what he's
+talking about,</I> thought Fluke.
+<P>
+Suddenly Moby jumped up, then slowly sat down again, his face
+contorted in agony.
+<P>
+"Have you sensed a disturbance in the Hack, as if millions of innocent
+people were suddenly subjected to horrible cretinism?"  inquired
+Fluke.
+<P>
+"Uh, no, just a hangover," reassured Moby.  He went back into his
+stupor and Fluke returned to his study of his HAKMEM.  Presently
+Handwave turned on the <I>Fasten Seat Belts</I> sign.  They were now in
+the vicinity of Automagic.  Handwave switched the line protocol, and
+<I>THWACK!</I> instantly they were hit with a repeated series of parity
+errors.
+<P>
+"What the hell?"  exclaimed Handwave.  The tiny craft was being
+buffeted with increasing lossage.  "This isn't in the manual.
+Automagic was supposed to be winning."
+<P>
+"Are we at Automagic yet?" asked Fluke.
+<P>
+"That's what I'm trying to tell you kid," answered Handwave.
+"Automagic has become a loser.  It's running with longer turnaround
+times, greater swapping, more stoppages, and..."  He stopped suddenly.
+A distant object had appeared on the view screen, and was rapidly
+growing.  Now they were clearly heading straight towards it.
+<P>
+"Turn the ship around," commanded Moby.  "It's a mainframe."
+<P>
+"Huh?  It's just a microprocessor," replied Handwave, "nothing to...
+Uh oh, I think you're right.  Crufty, let's <I>get the fuck outta here!</I>"
+This last was screamed as the sheer size of the installation became
+apparent.  It was from there that all the parity errors were coming
+from.
+<P>
+Too late.  Already their card deck was in the reader, and the operator
+refused to give it back.  They were being forced into the system.
+<P>
+"Crufty, full rewind!" yelled Handwave.  But there was nothing the
+hippie or anyone else could do.  Already they were being compiled.
+Soon would come the linking-load, and then the execution...
+<P>
+<H3 ALIGN="center">
+<B>The Rescue</B>
+</H3>
+<P>
+Fluke and his friends peered cautiously out of the concealed pages where
+they had been hiding.  The initial sweep by the Empire's evil soldiery had
+failed to locate them, but they couldn't hide there forever.  It wouldn't
+be long before a kernel mode process was used and they would be caught.
+<P>
+They snuck out onto a low-baud data line.  That way they stood the best
+chance of getting to a console undetected.  In spite of all the safeguards
+they managed to guess a correct password and soon were online.  Moby
+mumbled something about greater bandwidth and slipped away, telling the
+others to stay where they were until he had flushed the job streams so
+that they could escape.  U-2-buckeroo started a WHO and instantly began
+beeping furiously.
+<P>
+"What's it saying?" asked Fluke to C-me-poo-poo.
+<P>
+"I don't understand.  Something like <I>I found her</I>...oh I see now.  It's
+<I>I found the princess!</I>"
+<P>
+"<I>The princess!</I>" gasped Fluke.  "Where?"
+<P>
+"In low core, right above free storage," replied the snoid.  "I'm afraid
+she's about to be swapped out."
+<P>
+"<I>Swapped out!</I>" screamed Fluke.  "We have to go and rescue her!"
+<P>
+"Hey wait a minute," retorted Handwave.  "I didn't sign up for no rescues.
+I'm stayin' right here."
+<P>
+"She has service level," replied Fluke.  "She can have your allocation
+increased to more than you can imagine."
+<P>
+"Really?" asked Handwave skeptically.
+<P>
+"Really.  She makes the assignments."
+<P>
+"Hmm..." mused Handwave.  "You better be right on this, kid."
+<P>
+"I am.  Believe me."
+<P>
+"Okay.  So how are we gonna rescue her?"
+<P>
+"First, let's lock Crufty in core."  Fluke walked over to the hippie, but
+the stench instantly drove him back.  Turning to Handwave, he continued,
+"Uh, you do it."  Handwave performed the UUO undeterred.  <I>I guess he
+doesn't notice,</I> thought Fluke.  "Now, let's set up an interrupt for the
+next clock tick and process it with PI's off."
+<P>
+It was tricky, but eventually it was done.  They had to hurry, though,
+since soon the users would notice the service interruption and reload.
+Fluke shuddered at the memory of his near-fatal encounter the previous
+day.  Several jobs had already been locked out of core, so they knew that
+trouble was on the way.
+<P>
+Fluke mapped in the page where the princess was being kept and entered.
+She was asleep on a crude cot, worn out after the harsh torture she had
+undergone.  She shivered and suddenly awoke.  At the sight of Fluke her
+eyes popped open.  She rubbed them once and looked again.  It was not a
+dream; Fluke was really there.  She sat up and spoke.
+<P>
+"Well, it's about time.  Come over here."  Fluke stood there, still
+enthralled with her beauty (there weren't many women down at the farm).
+"<I>Come here,</I>" she repeated, somewhat louder.  Fluke, as if in a trance,
+walked over and sat down next to her.  "That's better," she said, softer.
+She took his hands into hers and looked at him straight in the eye.  Fluke
+looked back, uneasy, not knowing what to do.  She smiled.
+<P>
+Slowly, and with extreme care, Fluke bent over and kissed her.  It was
+barely a kiss; to her cheek, light, and instantly over as he almost jerked
+himself back.  Her smile broadened.  "You don't have to do that," she
+said, and, putting her arms around him gently pulled him back.  This time
+their lips met, and now she relaxed, letting herself down flat on the cot,
+Fluke on top of her.  Her mouth opened, and her tongue slipped past his
+like molten glass.  Fluke relaxed and gave in to the surging waves that
+were washing over him.  His tongue went past hers, and the waves grew into
+a fierce storm, growing in intensity...
+<P>
+<H3 ALIGN="center">
+<B>The Escape</B>
+</H3>
+<P>
+"FLUKE!!!  We gotta get outta here!"  Handwave's voice from outside jolted
+them both back to reality.  They were both hot, and very wet, but now they
+both felt chilled.  What was happening?  Fluke gathered his disorganized
+thoughts back together.  Of course; the users were about to reload.  It
+was indeed critical.  Grabbing the princess, he dashed outside.
+<P>
+"Quick," the princess yelled, "do a garbage collection.  It's our only
+chance."  With that, they GC'd and were in free storage.
+<P>
+But there they were trapped.  Surrounded by truly-worthless-atoms and
+the other flotsam and jetsam of free storage, they had no way to get back
+into their craft.  Already the blocks of free free storage were being
+lunk together.  Soon the blocks would be claimed and split up.
+<P>
+The snoids were the only chance.  Fluke frantically screamed into his
+communicator for the snoids to claim a huge block, so they'd be safe.
+C-me-poo-poo answered.  It started babbling on about how U-2-buckeroo
+was "thimply impothible" to deal with and would they "pleath thpeak to
+it."  Meanwhile their margin of safety was getting smaller and smaller.
+Tiny chunks were being taken, meaning they would soon be chopped to
+death.  Fluke yelled again, loud enough for U-2-buckeroo to hear over
+C-me-poo-poo's idiotic chatter; and they were saved.
+<P>
+They quickly ran back to where their imprisoned craft was, hoping that
+Moby had succeeded in freeing the resource.  At last they were there,
+and stopped, horrified at the sight in front of them.
+<P>
+Moby and Daemon Feature were dueling, clearly to the death.  Daemon
+Feature's HAKMEM was out in full power, but it could not yet overcome
+Moby's, still standing there before the storm, yet wielding a great
+power of its own.  <I>MOVNI'd ANDCA!</I> Moby would shout, and Daemon Feature
+would come back with a fierce <I>EQVI'd HRLOI!</I> The student had learned
+his master's ways all too well.
+<P>
+Suddenly Moby became aware of Fluke watching him.  He stopped battling
+and looked at Fluke.  He smiled, and an appearance of peace came over
+him as the 'ludes took over.  Suddenly Daemon Feature
+struck.  <I>You can output characters 40-57 by putting the character
+in the accumulator field of an XCT and then extracting 6 bits because
+the low two bits of the XCT opcode are the right thing!</I>  Moby fell,
+and was gone.
+<P>
+"<I>NO!!</I>"  Fluke screamed.  First his aunt and uncle, and now Moby.
+Handwave and the princess had to drag him to safety inside the craft.
+Handwave set the switches, ran the RIM loader, and hit START.
+<P>
+"I hope the old man got that tape right, or this is going to be one
+short run," Handwave muttered.  His hopes were fufilled.  With a sudden
+burst of processor level they were free; for the time being at least.
+They had to reach the rebel data base quickly, though, before Daemon
+Feature and his sinister band caught up with them...
+<P>
+<H3 ALIGN="center">
+<B>To the Rebel Data Base</B>
+</H3>
+<P>
+Fluke said nothing as the craft sped towards the rebel data base.
+Handwave and the hippie could guess what he was going through,
+and left him alone.  Lay-me sat by him.  Presently Fluke looked
+at her.
+<P>
+"He's gone," he said, "and I didn't do a thing to save him."  He
+buried his face in her shoulder, sobbing.
+<P>
+"There was nothing you could do, except to be killed with him."  He looked
+at her.  Again she held his hand and smiled.  This time Fluke needed no
+encouragment.  They embraced and held each other for what seemed like an
+eternity.  Once again they kissed, and the waves grew again.  She tasted
+salty, but pleasant, as again their tongues met.
+<P>
+There were no interrupts.  They fell together.
+Fluke had never imagined holding anyone so long, or so intensely.
+He felt his senses on fire, as if every nerve ending had been
+sharpened to an exquisite pinpoint.  He caressed her lightly, but
+the sensations were almost painful in intensity.  The tiniest
+circular motions with the very tips of his fingers were sending
+wave upon wave of complete ecstacy over him.
+<P>
+Lay-me was breathing hard, violently rocking herself from side to
+side, her arms pressing tighter against Fluke's back.  She had
+never before encountered someone with so much energy, and she was
+savoring every bit of it.  But her own feelings were building up
+now.  Somehow, she managed to get her robes undone and to open
+Fluke's jumpsuit.  Then she gave in to the torrents and with a few
+violent jerks of her powerful hips, she exploded.
+<P>
+But Fluke didn't let up.  He didn't <I>know</I> what his limits
+were, but he had heard enough stories from other people and had
+no delusions of being any different from anybody else.  He was
+determined in any case to do whatever was necessary to bring her
+to the limit; he knew he would have no trouble in taking care of
+himself.  So he had held back, and now continued as if she hadn't
+paused.
+<P>
+He didn't have long to wait; in quick succession she exploded a
+second, and then a third time.  Now she was slowing down, and
+this time Fluke let go of all control.  The waves burst through
+the wall and overran everything in their path.  It seemed
+forever, and it was...
+<P>
+"Umm...," sighed Lay-me.  They were both very hot, and very very
+wet, but neither cared.  She smiled and quickly kissed him at
+random all over his face, and smiled again.  Fluke smiled back
+and looked at her.
+<P>
+"Hi," he said.  "Don't I know you?"
+<P>
+"Uh-huh," she sighed contentedly.
+<P>
+"You're nice."
+<P>
+"Uh-huh"
+<P>
+"You wanna know something?"
+<P>
+"Uh-huh"
+<P>
+"I love you."  He kissed her again, as she had moments before.
+<P>
+"Umm..."  She snuggled yet closer to him, but both of them were
+too exhausted to do much more.  Once again they kissed, but it
+was not a sexy kiss.  The sex was there but this time it was only
+a part of what was going on.  This time it was a
+<I>I-love-you-never-leave-me</I> kiss.  Now all the pressure was
+gone and they knew they had each other.
+<P>
+Fluke was wondering how it all happened; he had never imagined
+this in his wildest dreams.  Lay-me was wondering the same thing;
+how had she been so affected by somebody.  She had met her match,
+but the only thing she could feel was very, very happy.
+<P>
+And it was with those thoughts passing through their minds when
+they reached the rebel data base.
+<P>
+<H3 ALIGN="center">
+<B>The Rebel Data Base</B>
+</H3>
+<P>
+Fluke went forward to watch as Handwave ineptly guided the craft
+into a median record in the rebel data base.  As they head-crashed
+to a stop, Handwave turned to Fluke and remarked, "You know, that
+chick is one helluva good-looking broad.  I think I might take her
+for my payment."
+<P>
+Fluke shuddered, and looked at Handwave, trying to hide the
+apprehension he felt.  <I>Oh no,</I> he thought.  "No, you wouldn't
+get along with her.  I'm sure."
+<P>
+Handwave looked at Fluke, and understood.  He smiled, and said, louder
+and intentionally baiting, "Yeah, but she <I>would</I> be a lotta fun
+for a one-time shot."
+<P>
+"And that's about all you could probably do," interrupted the
+princess.  She had walked in unobserved and had overheard the
+conversation.  "You will get your service level, as originally
+agreed."  Then, to Fluke, "Your friend is a real turkey, you
+know that?"  And with that, she walked out.
+<P>
+Fluke smiled, and suddenly Handwave burst out laughing.  "All right,
+kid, you win.  I sure hope you know what you're gettin' in to."
+<P>
+"Oh I do," answered Fluke very seriously.  Handwave looked at him
+and again burst out laughing.
+<P>
+They were now at the rebel data base, and the hackers were frantically
+studying the plans for the TENTH STAR, searching for a weakness.  The
+urgency of their search was made horribly apparent as it became clear
+that the princess' vessel had been traced with DDT, and now the Empire was
+preparing to inflict lossage upon the whole rebel movement.  What
+had happened to Automagic would be nothing compared to what was in
+store for the rebels.
+<P>
+With such gloomy thoughts in mind, the princess and Fluke sat outside
+the laboratory, awaiting the results.  Handwave had already taken
+his service level increase and split.  Presently there came an
+announcement that everybody was to gather for the conference.
+<P>
+"We have discovered a weakness in the system," the chief hacker for
+the rebels announced.  "The TENTH STAR runs an incredibly cretinous
+operating system written as grossly as possible in a so-called
+`higher-level language,' but it is not invincible.  We have determined
+that it is possible to write in assembler for it.  Of course, their
+assembly language is almost useless, but it was enough for us to
+bootstrap a winning assembler and from that a winning operating system.
+We have done so.  Of course, it hasn't been tested, but it's our only
+chance.  Now, some turkey, uh, I mean <I>hero,</I> has to volunteer to
+take a tape there and, evading the operators, bring it up."
+<P>
+"Oh, Fluke volunteers!" yelled Princess Lay-me from the back.  Fluke
+had no time to protest before everyone was congratulating him on his
+bravery, and before he knew it he was bundled up with a tape and sent
+on his way.  Lay-me had given him one last kiss, and he thought
+bitterly about having just made her the beneficiary on his insurance
+policy.  <I>Well, here goes nothing,</I> he mused, as the story wrapped
+itself up to its climax...
+<P>
+<H3 ALIGN="center">
+<B>The Last Battle</B>
+</H3>
+<P>
+Fluke looked at the pages still in the reader's right hand.  <I>Almost
+over,</I> he thought.  <I>And I bet I know how, too.</I>  But it was too
+late to back down now.
+<P>
+He hoped nobody would recognize him, and so far he had been lucky.
+The tape had been cleverly disguised as a new, non-optimizing
+compiler for a theoretical structured language whose syntax was so
+incredibly complicated that no human could possibly program in it.
+The Empire would instantly go for it, and by the time they found
+out otherwise it would be too late.
+<P>
+Now the acid test was going to be the machine room.  He was walking
+down the long corridor, trying to look inconspicuous when suddenly
+<I>BAM!</I> came a blast from the rear.  Daemon Feature had spotted him,
+and was closing in fast.  Fluke ran, but he couldn't run fast enough.
+<P>
+<I>Fluke, remember the Hack.  The Hack, Fluke.</I>  He could almost
+hear Moby's voice repeating this to him.  But what could he do?  He
+turned around to face his approaching foe, and attacked.  <I>LISP
+has base ROMAN to read and print Roman numerals!</I>  Daemon Feature
+stopped, injured by the blow, and Fluke ran on.  He had bought himself
+a little time, but not much.  Daemon Feature had already recovered and
+was resuming the chase....
+<P>
+Suddenly, <I>WAITS has an @ monitor command!</I>  Daemon Feature, intent
+upon his fleeing enemy, missed the attack from his own rear and was hit
+hard.  Before he could regain control he had been forwarded on internet
+protocols to the other end of the galaxy.
+<P>
+"Okay, kid, get that tape mounted and let's get outta here," came Handwave's
+voice.  Fluke once again thought of the Hack, and his actions seemed
+controlled by somebdy else.  In almost slow-motion, he saw himself
+dashing past the grasp of the operator guarding the tape drives and
+flinging the tape on.  Then he hit the ONLINE switch and fled.
+<P>
+Governor Softwarerot was preparing for the ultimate installation of
+TENTH STARs at the rebel base, so that they would be permanently
+crushed.  He frowned as a subordinate came rushing in.
+<P>
+"Governor, there is a rebel attack in progress.  We have analyzed
+their means of attack and there is a danger.  Do you wish to be backed
+up?"
+<P>
+"Do a dump?  In our moment of triumph?  I think you greatly overestimate
+their abilities," replied Softwarerot.
+<P>
+Just then all the consoles stopped.  That was nothing new; a TENTH
+STAR required a reload every 20 seconds or so.  But something new was
+happening.  All the consoles beeped, and then...
+<UL>
+<B>TN ITS IN OPERATION 14:32:56</B>
+</UL>
+The rebels had succeeded!  And all the users tried the new operating
+system and pronounced it a winner.  Instantly everything was converted
+to run on it.  Almost immediately, a flood of new software appeared:
+the line-number editor was flushed in favor of a display editor,
+assembly language programs proliferated, and new, true high-level
+languages appeared.  And the universe was again winning.  Wizards, loyal
+to the Hack, once again appeared and unveiled new wonders every day.
+And the Empire was overthrown and a Republic established.  Softwarerot
+and Daemon Feature fled into hiding.
+<P>
+<H3 ALIGN="center">
+<B>All's Well That Ends Worse</B>
+</H3>
+<P>
+In the Great Hall of the Republic, a ceremony was in progress, and
+each of the heroes was awarded according to his measure.  To Handwave,
+a <I>Monday Morning Headache</I> album and a pass to Studio 54.  To
+Crufty, a comb and a lifetime supply of deodorant.  To C-me-poo-poo
+and U-2-buckeroo, relationship counselling.  To Moby's ghost, a
+year's subscription to <I>Your Spiritual Life</I> and a cloud-duster.
+<P>
+Finally, the princess turned to Fluke.  "You are last, love, but not
+least.  To you, I give...me."  Fluke smiled, and in front of the
+entire assembly they embraced.  Lay-me had enough time to blurt out
+"Everybody dismissed" before once again the waves overtook them.  <I>So
+this is what it's like to be completely and totally happy...</I>
+<P>
+<H3 ALIGN="center">
+<B>.Kjob</B>
+</H3>
+</BODY>
+</HTML>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 20:40:14 Jul 16, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 14:26:44 Jan 31, 2017.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

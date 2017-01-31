@@ -1,0 +1,70 @@
+                        Mr. Bill's DEC-20
+
+                          Mark Crispin
+
+Mr. Hands: Hi kids!  It's time for the Mr. Bill Show!
+
+Mr. Bill: Yay!
+
+H: Say Mr. Bill, I see you've bought a DECSYSTEM-20.
+
+B: Yes, I'm gonna run a service bureau and make a lot of money!
+
+H: Hey Mr. Bill, your DEC Software Specialist Sluggo is here to
+	install some patches.
+
+B: Ohh, he's gonna be mean to me!
+
+H: Come now, Mr. Bill.  Your SWS Sluggo is your FRIEND.  First,
+	he's going to map your directory.
+
+B: Ohhhhhh!
+
+H: Say Mr. Bill, your SWS Sluggo says your directory has some
+	errors in an FDB.  He's going to fix it for you.
+
+20: %DECSYSTEM-20 NOT RUNNING
+    *********************
+    * BUGHLT 'BADROT'
+    *********************
+
+B: Ohhhhhhh!
+
+H: Your SWS says your hardware's bad, since it happened just
+	while he was writing out your directory.  Fortunately,
+	your DEC Field Service Representative Sluggo just came in
+	to do PM.
+
+B: I don't think you're a friend Mr. Hands all you do is let
+	Sluggo be mean to me.
+
+H: Your FE says for you to take a CLOSE look at this power supply
+	fan.
+
+B: Ohhhhhhhhhhhhhhh!
+
+H: Your FE says your problem is dog hairs.
+
+B: Oh Spot's my friend don't throw him out the window we're on
+	the ninth floor...ohhhhhh!  Poor Spot!
+
+H: Now your FE is going to clean your disks.
+
+B: Ohhhhhhhh!
+
+H: He says that your disks had a lot of oxide on them and he had
+	to clean it ALL off.  It looks like your system hasn't
+	been properly maintained, Mr. Bill.  Your FE Sluggo has
+	no choice but to cancel your service contract and junk
+	your machine.
+
+B: Ohhhhh!  Let me have my machine back you are all being mean to
+	me.
+
+H: Come now, Mr. Bill.  Your DEC salesman Sluggo just came in to
+	sell you a VAX to replace your -20.
+
+B: OHHHHHHHHHHHHHHHHHHHHHHH!
+
+H: Well kids, that's all for now.  See ya next week, when Mr.
+	Bill goes to DECUS!

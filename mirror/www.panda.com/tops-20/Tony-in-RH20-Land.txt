@@ -1,0 +1,211 @@
+			  Tony in RH20 Land
+
+				- or -
+
+	       I Should Have Listened When Mother Told
+		    Me There Was A Great Future In
+			  Encyclopedia Sales
+
+				  by
+
+		     Anthony Wachs who once said,
+
+		 "Answer that, it may be the phone."
+
+
+			   Act 1 - Scene 1
+
+As the scene opens we see our hero poring over his brand new copy of
+the RH20 specification.  Even a quick perusal of same shows that there
+are some quirks in the design.  "Golly gee" he explains, "I wonder why
+they designed it like that?"  Among the more obvious problems which
+spring quickly to the eye are:
+
+1.  The channel control words look nothing like the channel control
+words he has known and loved for so long.  Where the DF10 wants
+-wrdcnt,,address-1 for a transfer of n words into address, the RH20
+want flags+wrdcnt,,address.  Where the DF10 wants 0,,address to
+indicate that its next IOWD is from address, when the RH20 sees a
+construct like that it will stop!  The RH20 wants to see 200000,,adr
+for a goto word - a construct that the DF10 will interpret as "read a
+whole bunch of words into adr+1".  It does appear that the RH20 was
+designed for a new operating system, one that doesn't have to support
+old-style hardware.
+
+2.  You get an error bit if you try to read or write other than an
+integral multiple of 200 words in one transfer.  Curiouser and
+curioser - it seems that the device was intended only to work with
+systems that transfer one page at a time.  Oh well, I can ignore that
+error bit.
+
+3.  You can't run the damn thing without turning on paging!  There are
+some wired-down locations that the RH20 wants to talk to, which are
+the same as the acs if paging isn't on, but strangely enough even
+though the address is the same as an ac it really isn't an ac - you
+really have to turn on paging and map the hardwired locations
+somewhere else.  I sure do wish they'd let the programming staff know
+when they are going to have a design review (or did they design this
+thing without a review?)
+
+4.  The attention CONI bit lights if some drive interrupts even though
+you aren't enabled for attention interrupts.  A minor problem, but I
+remember talking to the RH10 designers for a long time about this
+point, and we did conclude that it was lots easier to program if the
+bit would only come up when we were looking for attention interrupts.
+Sure wish they had talked to the RH10 people before designing this
+thing.
+
+5.  The CONI bits can lie!  The CONI can say there were no errors in
+the last transfer even though there were errors.  All isn't lost,
+however.  You can find out that the RH20 has been untruthful by
+checking somewhere else.  That's what we need, schizophrenic hardware!
+Oh well, with lots of work the existing code can be reworked to add
+support for this thing.
+
+Score: RH20 1; Good Guys 0
+
+
+			   Act 1 - Scene 2
+
+Some later point in time, after much cursing and rearranging, our hero
+has some code which he hopes will come close to working on the shiny
+new RH20 out on the machine room floor.  And so to debugging....
+Oops!  After typing in the date and time the monitor crashes with some
+strange pc.  After much fiddling around we discover that the interrupt
+vector location, very carefully set up at once-only time isn't there
+anymore.  Some judicious experimentation shows that a processor-clear
+zeros that word in the RH20 logic, and that the following interrupt
+will take its new-pc value from location 0.   Not even ac 0, but the
+shadow ac location 0 (remember that location which you can only get to
+by turning on paging?).
+
+Score: RH20 2; Good Guys 0
+
+
+			   Act 1 - Scene 3
+
+Work out the minor logic bugs, and the thing appears to work!  That
+wasn't so bad.  Type "GET SYS:DDT" at the monitor and the machine
+hangs.  Guess I spoke too soon.  Remember that error bit which would
+come on if I tried to read less than 200 words from the RH20?  Well,
+it isn't as clear cut as that - try to read 176 or 177 words from the
+RH20 and the damn thing hangs forever, never says that it finished.
+Trying the well loved approach of doing a CONO to clear busy and set
+done doesn't work.  What's that you say?  Master RESET of the
+processor will clear the problem?  Wonderful!!! Any other solutions?
+Yes, don't do it.  LCEG comes down with their scopes and other good
+stuff and analyzes the problem - yes, it certainly does hang the
+machine solid.  "We'll fix the problem when we re-layout that board.
+No retrofit ECO will be generated".  Program around it.
+
+Score: RH20 3; Good Guys 0
+
+
+			   Act 1 - Scene 4
+
+Well, now that our hero has programmed around that one things seem to
+be going well.  Son of a bitch, there it goes again!  Look look, the
+RH20 is bringing up an error bit, we're trying to clear it, and the
+bit won't clear.  How about that, doing a perfectly legal sequence of
+instructions to the RH20 causes an unclearable error.  Again the LCEG
+boys come down with their scopes, and after much trial and tribulation
+they manage to find the badness I'm doing to the RH20.  Again, "when
+we re-layout that board".  Solution - don't do it that way.
+
+Score: RH20 4; Good Guys 0
+
+
+			   Act 2 - Scene 1
+
+Here comes the hero, ready for a new round of indignities.  Sure
+enough, one pops up - another type of unclearable interrupt, this time
+an attention bit that comes around and won't go away.  Our hero
+already knows the solution to that one - do it some other way.
+
+Score: RH20 5; Good guys 0
+
+
+			   Act 2 - Scene 2
+
+The software has now been in the field for a while, all seems well.
+Our hero even has the nerve to take a well-earned vacation.  When he
+returns he finds out that there was a problem, discovered at sites in
+the field - the spec implies that the RH20 will always store a
+particular flavor of termination sequence, and that from this sequence
+it is easy to find out the last control-word which the RH20 executed.
+Well, that's almost true.  Except for the case where you have an
+ecc-correctable error in the middle of a transfer.  Then there arises
+the possibility of different stuff in the logout area.  Fix it, give a
+patch to the site, they seem to be happy.
+
+
+			   Act 2 - Scene 3
+			   (2 weeks later)
+
+Spoke too soon again, they have that same loop again!  After fiddling
+around for a while we see that the RH20 can store still another set of
+numbers in the logout area on ECC errors.  Oh well, back to the drawing
+board.  Possibly (but I wouldn't bet on it) all the various flavors of
+stuff in the logout area has been found and allowed for in the code.
+
+Score: RH20 6; Good Guys 0
+
+
+			   Act 3 - Scene 1
+
+The RH20 code has been running well for a while, and everyone is
+beginning to breathe easier.  The only RP04 on an RH10 on the software
+development KL is DSKN, the disk used for bootstrapping the monitor.
+Full of confidence our hero proceeds to change the monitor pack to an
+RH20.  It works just fine!  Then they fiddle around with the
+configuration, adding drives to one RH20 and subtracting drives from
+the other.  Son of a bitch, here we go again!  Not only won't the
+bootstrap read the monitor, but the RH20 is hung again.  This time it
+gets hung up so badly that the only way to clear it is to power down
+the processor.  Clever design isn't it?  After fiddling around with
+this one for a while it is discovered (thanks to LCEG and "don't do it
+that way") that trying to start data-transfer on a non-existent drive
+(because it saved code, that's why I did it) confuses the hell out of
+the RH20.
+
+Score: RH20 7; Good Guys 0
+
+
+			   Act 4 - Scene 1
+
+Our hero has by this time realized that this code is never going to
+work correctly and that the RH20 will always come up with some wierd
+method of doing something, so he is prepared when the code which looks
+at logout areas in order to do something clever stops working.  In a
+rather resigned manner he goes down to hardware engineering to
+complain.  The engineers have an out though.  They pull out a memo
+dated March 1975 which has buried in the middle of the third paragraph
+the sentence:
+
+	"Under these conditions the RH20 will ....."
+
+Sure enough, it did!  It is probably unreasonable of our hero to
+expect that the documentation he can get fails to mention the problem.
+
+Score: RH20 8; Good Guys 0
+
+
+			   Act 4 - Scene 2
+
+Someone read the documentation and decided that a good bit to test
+would be "channel error", which is described as a bit which, if on,
+says that the M-BOX blew it.  Suddenly, mag tapes on RH20's stop
+working.  Our hero heads down to hardware engineering, where they are
+overjoyed to see him and listen to his problem.  After a brief
+description of the problem they haul out the good old document which
+describes the device.  Way in the back, among the prints of the logic
+there is a table which describes what error bits come on under which
+circumstances.  Amazingly enough, the bit which is described as only
+indicating an M-BOX error is shown to come up under a bewildering
+array of possible errors, and some conditions which aren't really
+errors.  Oh shit, back to the drawing board!
+
+Score: RH20 9; Good Guys 0
+
+(And anyone who believes that this is the last of the problems also
+believes in virgins, fairies, and inside straights!)

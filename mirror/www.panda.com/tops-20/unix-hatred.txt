@@ -1,0 +1,65 @@
+UNIX offers several kinds hostilities:
+    denial of service (type "~/bin" for an example)
+    lack of compassion (type "?" into your favorite shell)
+    Byzantine failure (type "ld ~/.cshrc" for example)
+    corruption of language ("grep this file for...")
+
+.. but then, you knew this already.  So in a more humorous vein, 
+I present some tidbits from a local bboard.  Excuse me if you've 
+seen this before.
+
+    Note that the '%' prompt indicates that the command should be issued from 
+    the C shell, and the '$' prompt indicates the Bourne shell.
+
+- ------------------------------------------------------
+
+% "How poorly would you rate the UNIX (so-called) user interface?
+Unmatched ".
+
+% rm congressional-ethics
+rm: congressional-ethics nonexistent
+
+% ar m God
+ar: God does not exist
+
+% [Where is Jimmy Hoffa?
+Missing ].                                                                     
+
+% ^How did the sex change^ operation go?
+Modifier failed.
+
+% If I had a ( for every $ Congress spent, what would I have?  
+Too many ('s.
+
+% make love
+Make:  Don't know how to make love.  Stop.
+
+% sleep with me 
+bad character
+
+% got a light?
+No match.
+
+% man: why did you get a divorce?
+man:: Too many arguments.
+
+% ^What is saccharine?
+Bad substitute.
+
+% %blow
+%blow: No such job.
+
+% \(-
+(-: Command not found.
+
+% sh
+
+$ PATH=pretending! /usr/ucb/which sense
+no sense in pretending!
+
+$ drink <bottle; opener
+bottle: cannot open
+opener: not found
+
+$ mkdir matter; cat >matter
+matter: cannot create
