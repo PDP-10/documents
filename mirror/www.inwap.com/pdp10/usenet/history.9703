@@ -1,0 +1,3465 @@
+Article 2531 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!newspump.sol.net!news-peer.gsl.net!news.gsl.net!portc01.blue.aol.com!cliffs.rs.itd.umich.edu!newsxfer2.itd.umich.edu!uunet!in2.uu.net!204.191.160.4!van-bc!news.mindlink.net!nntp.portal.ca!news.bc.net!rover.ucs.ualberta.ca!news.ucalgary.ca!news.ucalgary.ca!not-for-mail
+From: wtgraham@acs.ucalgary.ca (William Tom Graham)
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10
+Subject: pdp-8 PAL8 assembler
+Date: 31 Dec 1996 22:40:24 -0700
+Organization: The University of Calgary
+Lines: 36
+Message-ID: <5actc8$18h0@acs5.acs.ucalgary.ca>
+References: <32BA9A97.41C6@s054.aone.net.au> <19961222154000.KAA19100@ladder01.news.aol.com> <59k038$mm8@kirin.wwa.com> <32C8D7F4.167E@s054.aone.net.au>
+NNTP-Posting-Host: wtgraham@acs5.acs.ucalgary.ca
+Xref: nntp1.best.com alt.sys.pdp8:1386 alt.sys.pdp10:2531
+
+In article <32C8D7F4.167E@s054.aone.net.au>,
+Mark & Suzanne  <gcs@s054.aone.net.au> wrote:
+
+>John Everett wrote:
+>> But wait...I thought PAL was the PDP-8 assembler.
+>
+>I believe PAL-8 was the assembler used on PDP-8.
+>
+>ps.     PAL-8 probably was Paper tape Assembler Linker for PDP-8 ?
+>Anyone know ?
+
+The pdp-8 had a few assemblers: PAL III, MACRO-8, PAL-D, PAL8, SABR,
+and PALTS-8 (the PAL-D version that ran under TSS/8).  According to
+DEC's "programming languages" (volume 2 of the pdp-8 handbook series):
+
+"PAL III (an acronym for Program Assembly Language, version III)"
+"The PAL-D Disk Assembler ..."
+"SABR (Symbolic Assembler for Binary Relocatable programs)"
+
+"PAL8 is an advanced symbolic assembler for the PDP-8 series
+ computers, designed to run under the PS/8 Operating System.
+ It is an 8K, two pass assembler (with an optional third pass
+ listing) which is generally compatible with PAL-III, MACRO-8,
+ and PAL-D."
+
+Would anyone be interested in seeing the FOCAL-8 chapter?
+I took the liberty of typing it in, and have it in softcopy.
+
+Also, does anyone have a spare copy of volume 1 of the pdp-8
+handbook series, "Introduction to Programming"?  It covered
+the pdp-8 machine architecture, instruction set and assembly
+language, as I recall.  I borrowed the computer lab's copy
+one weekend in 1978, and haven't seen one since.
+
+ - William T. Graham -
+
+
+
+Article 2535 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!newspump.sol.net!news-peer.gsl.net!news.gsl.net!news.bbnplanet.com!cpk-news-hub1.bbnplanet.com!news.sprintlink.net!news-peer.sprintlink.net!howland.erols.net!feeder.chicago.cic.net!news.uiowa.edu!news
+From: jones@pyrite.cs.uiowa.edu (Douglas W. Jones,201H MLH,3193350740,3193382879)
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10
+Subject: Re: pdp-8 PAL8 assembler
+Date: 2 Jan 1997 22:47:01 GMT
+Organization: The University of Iowa
+Lines: 19
+Message-ID: <5ahdt5$hko@flood.weeg.uiowa.edu>
+References: <5agtj9$1ee@paperboy.ids.net>
+NNTP-Posting-Host: pyrite.cs.uiowa.edu
+Xref: nntp1.best.com alt.sys.pdp8:1391 alt.sys.pdp10:2535
+
+From article <5agtj9$1ee@paperboy.ids.net>,
+by mike@kronos.egr-ri.ids.net (Mike Umbricht):
+> 
+> What are the similarities and differences bewteen PAL-8 and PAL-10?
+
+DEC did most of their early software development for the -8 on
+cross-assemblers, by the end of the 1960's, this was being done
+using a the PDP-10; PAL-8 was essentially compatable with the
+PDP-10 assembler being used -- once you expunged the PDP-10 symbols
+from the symbol table and defined the appropriate PDP-8 stuff.
+
+Of course, customers were doing plenty in versions of PAL or MACRO-8
+(I have paper-tapes of both), and there was plenty of interchange
+between the two worlds.  Once OS-8 was up and running, it became
+an effective development environment for PDP-8 code, particularly
+once TECO was ported to the -8.
+
+				Doug Jones
+				jones@cs.uiowa.edu
+
+
+Article 2538 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!newshub1.home.com!newshub2.home.com!news-xfer.netaxs.com!feed1.news.erols.com!worldnet.att.net!ix.netcom.com!news.webspan.net!usenet
+From: "k. danzig" <raghead@webspan.net>
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10
+Subject: Re: pdp-8 PAL8 assembler
+Date: Fri, 03 Jan 1997 14:47:46 -0800
+Organization: d.f.m. corp.
+Lines: 35
+Message-ID: <32CD8C92.41EB@webspan.net>
+References: <5agtj9$1ee@paperboy.ids.net> <5ahdt5$hko@flood.weeg.uiowa.edu>
+Reply-To: raghead@webspan.net
+NNTP-Posting-Host: pm3-04.lkd.nj.webspan.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 3.01Gold (Win16; I)
+Xref: nntp1.best.com alt.sys.pdp8:1396 alt.sys.pdp10:2538
+
+Douglas W. Jones,201H MLH,3193350740,3193382879 wrote:
+> 
+> From article <5agtj9$1ee@paperboy.ids.net>,
+> by mike@kronos.egr-ri.ids.net (Mike Umbricht):
+> >
+> > What are the similarities and differences bewteen PAL-8 and PAL-10?
+> 
+> DEC did most of their early software development for the -8 on
+> cross-assemblers, by the end of the 1960's, this was being done
+> using a the PDP-10; PAL-8 was essentially compatable with the
+> PDP-10 assembler being used -- once you expunged the PDP-10 symbols
+> from the symbol table and defined the appropriate PDP-8 stuff.
+> 
+
+I'm not sure what you mean, PAL-10 is how we slaves often wrote code
+until we had OS/8 running and PAL-8. The assembler we used under TOPS-10
+for the 10's was MACRO-10 if I remember correctly. We outputed paper
+tape that went right on the '33's. Many of the best PAL tricks I learned
+where from reading DEC's diags (also done in PAL-10).
+
+> Of course, customers were doing plenty in versions of PAL or MACRO-8
+> (I have paper-tapes of both), and there was plenty of interchange
+> between the two worlds.  Once OS-8 was up and running, it became
+> an effective development environment for PDP-8 code, particularly
+> once TECO was ported to the -8.
+
+I always did better before TECO as the CCL remembered my files between
+PAL and the editor and when we patched TECO in it wasn't the same. 
+
+I just realized that I have sitting a bootable RK05 with OS/8 on it
+under a pile of books. Anybody want to pay shipping?
+
+> 
+>                                 Doug Jones
+>                                 jones@cs.uiowa.edu
+
+
+Article 2539 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!dciteleport.com!usenet.logical.net!news.nap.net!news.wwa.com!news
+From: jeverett@wwa.com.defeat.uce.bots (John Everett)
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10
+Subject: Re: pdp-8 PAL8 assembler
+Date: 4 Jan 1997 17:37:40 GMT
+Organization: WorldWide Access (tm) - Chicagoland Internet Services (http://www.wwa.com)
+Lines: 40
+Message-ID: <5am4h4$dlk@kirin.wwa.com>
+References: <5agtj9$1ee@paperboy.ids.net> <5ahdt5$hko@flood.weeg.uiowa.edu>
+NNTP-Posting-Host: pool10-018.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.8 (x86 32bit)
+Xref: nntp1.best.com alt.sys.pdp8:1397 alt.sys.pdp10:2539
+
+In article <5ahdt5$hko@flood.weeg.uiowa.edu>, jones@pyrite.cs.uiowa.edu 
+says...
+>
+>From article <5agtj9$1ee@paperboy.ids.net>,
+>by mike@kronos.egr-ri.ids.net (Mike Umbricht):
+>> 
+>> What are the similarities and differences bewteen PAL-8 and PAL-10?
+>
+>DEC did most of their early software development for the -8 on
+>cross-assemblers, by the end of the 1960's, this was being done
+>using a the PDP-10; PAL-8 was essentially compatable with the
+>PDP-10 assembler being used -- once you expunged the PDP-10 symbols
+>from the symbol table and defined the appropriate PDP-8 stuff.
+
+This is almost correct. When Roger Pyle and I were writing the PDP-8 Disk 
+Monitor System (circa 1967), the only assembler available was the paper tape 
+based PAL-III. We prepared our source on the PDP-6 using TECO and punched a 
+source paper tape which we assembled on the -8. As part of the Disk Monitor 
+System project I took the guts of PAL-III and turned it into PAL-D, the first 
+disk based PDP-8 assembler. I then left that project to (along with Don 
+Witcraft) write TSS/8. We quickly realized we needed an assembler with more 
+symbol table space (and perhaps externals) and turned to Bob Bowering for 
+help. Bob was the author of MACRO for the -6 and -10. Based upon specs 
+provided by Don and me, Bob wrote PAL-X in a very short time. Note that Bob 
+had just created MACRO-10, which was at that time was saved as MACROX.SAV (I 
+think perhaps to distinguish it from PDP-6 MACRO), and commonly pronounced 
+"MACK-rocks".
+
+>Of course, customers were doing plenty in versions of PAL or MACRO-8
+>(I have paper-tapes of both), and there was plenty of interchange
+>between the two worlds.  Once OS-8 was up and running, it became
+>an effective development environment for PDP-8 code, particularly
+>once TECO was ported to the -8.
+
+By the time OS-8 appeared, I was in the PDP-10 Monitor Group and of 
+course denied any knowledge whatsoever of the PDP-8.
+
+-- 
+jeverett@wwa.com (John V. Everett)          http://www.wwa.com/~jeverett
+
+
+
+Article 2542 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!newshub1.home.com!newshub2.home.com!news-xfer.netaxs.com!feed1.news.erols.com!news.bbnplanet.com!cpk-news-hub1.bbnplanet.com!portc02.blue.aol.com!newstf02.news.aol.com!audrey01.news.aol.com!not-for-mail
+From: jmfbah@aol.com (JMFBAH)
+Newsgroups: alt.sys.pdp10
+Subject: Re: pdp-8 PAL8 assembler
+Date: 4 Jan 1997 12:47:46 GMT
+Organization: AOL http://www.aol.com
+Lines: 24
+Message-ID: <19970104124600.HAA16431@ladder01.news.aol.com>
+References: <32CD8C92.41EB@webspan.net>
+NNTP-Posting-Host: ladder01.news.aol.com
+X-Admin: news@aol.com
+
+"k. danzig" <raghead@webspan.net> wrote:
+
+<I'm not sure what you mean, PAL-10 is how we slaves often wrote code
+<until we had OS/8 running and PAL-8. The assembler we used under TOPS-10
+<for the 10's was MACRO-10 if I remember correctly. We outputed paper
+<tape that went right on the '33's. 
+
+No. I don't think you did use MACRO-10 for PDP-8 development.  When you
+guys (excuse me, people) submitted work to Tape Prep, we would type in the
+code sheets (using the -10 because it was hard to get stand alone time
+wrested from you developers on the -8s), then use the specified assembler
+to do test assemblies, do the _appropriate_ linking, and punch tapes if
+you wanted them.  There were also linkers (or actually, back then,
+loaders) that were run on the -10 but were specific to target CPU-type. 
+These produced *.SAV files which we could then even copy (in the case of
+-11s) to DECtape in PDP-11 format using FILEX. I don't remember if there
+was an equivalent for the PDP-8.  
+
+Tape Prep was essentially established to be the programmer's "sectretary".
+ Back then guys didn't type and taking typing lessons in school was a
+"girl thing".
+
+/BAH
+
+
+
+Article 2548 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!news.sgi.com!howland.erols.net!worldnet.att.net!uunet!in1.uu.net!198.4.164.94!gail.ripco.com!news.wwa.com!news
+From: jeverett@wwa.com.defeat.uce.bots (John Everett)
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10
+Subject: Re: pdp-8 PAL8 assembler
+Date: 7 Jan 1997 16:14:11 GMT
+Organization: WorldWide Access (tm) - Chicagoland Internet Services (http://www.wwa.com)
+Lines: 41
+Message-ID: <5atsoj$1qf@kirin.wwa.com>
+References: <5agtj9$1ee@paperboy.ids.net> <5ahdt5$hko@flood.weeg.uiowa.edu> <5am4h4$dlk@kirin.wwa.com> <francini-0701970105130001@news.ultranet.com>
+NNTP-Posting-Host: pool13-024.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.8 (x86 32bit)
+Xref: nntp1.best.com alt.sys.pdp8:1402 alt.sys.pdp10:2548
+
+In article <francini-0701970105130001@news.ultranet.com>, 
+francini@ultranet.com says...
+>
+>In article <5am4h4$dlk@kirin.wwa.com>, jeverett@wwa.com.defeat.uce.bots
+>(John Everett) wrote:
+>
+>> In article <5ahdt5$hko@flood.weeg.uiowa.edu>, jones@pyrite.cs.uiowa.edu 
+>> says...
+>
+>> [...]
+>> I then left that project to (along with Don 
+>> Witcraft) write TSS/8. 
+>
+>I don't suppose you might know of anyplace where I could lay my hands on a
+>copy of TSS/8, do you?  I've got a rather nice PDP-8/e emulator and would
+>love to be able to run a copy of the first ever computer O/S I ever saw...
+>
+
+You might try searching through dejanews, I seem to recall some postings 
+(primarily in a.s.pdp8) by people who had copies of TSS/8.
+ 
+>> By the time OS-8 appeared, I was in the PDP-10 Monitor Group and of 
+>> course denied any knowledge whatsoever of the PDP-8.
+>
+>I'm curious: was the "wall" between PDP-8 and PDP-10 people anywhere near
+>as high as the wall that later developed between PDP-11/VAXland and the
+>TOPS people?  Having experienced the latter in my 7+ years in 10-land, it
+>seemed to be pretty bad...
+
+If there was a wall it was between the PDP-10 monitor group and everyone 
+else. DEC's corporate culture at that time was pretty much a meritocracy, 
+with the -10 folks (at least in the Programming Department) being top dogs. 
+We were an arrogant lot and tended to look down our noses at people playing 
+with "those little systems". Since the PDP-5/8, PDP-4/7/9/15, and later the 
+PDP-11 never posed a threat to the -10's pre-eminent position in the DEC 
+hierarchy, the level of animosity never reached that which later existed 
+between the 36 and 32 bit worlds. 
+
+-- 
+jeverett@wwa.com (John V. Everett)          http://www.wwa.com/~jeverett
+
+
+
+Article 2549 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!news.sgi.com!howland.erols.net!newsxfer3.itd.umich.edu!feeder.chicago.cic.net!news.uiowa.edu!news
+From: jones@pyrite.cs.uiowa.edu (Douglas W. Jones,201H MLH,3193350740,3193382879)
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10
+Subject: Re: pdp-8 PAL8 assembler
+Date: 7 Jan 1997 16:41:42 GMT
+Organization: The University of Iowa
+Lines: 33
+Message-ID: <5atuc6$iqe@flood.weeg.uiowa.edu>
+References: <5atsoj$1qf@kirin.wwa.com>
+NNTP-Posting-Host: pyrite.cs.uiowa.edu
+Xref: nntp1.best.com alt.sys.pdp8:1403 alt.sys.pdp10:2549
+
+From article <5atsoj$1qf@kirin.wwa.com>,
+by jeverett@wwa.com.defeat.uce.bots (John Everett):
+> 
+> If there was a wall it was between the PDP-10 monitor group and everyone 
+> else. DEC's corporate culture at that time was pretty much a meritocracy, 
+> with the -10 folks (at least in the Programming Department) being top dogs. 
+
+I've been doing a survey of DEC's advertising, and it's interesting to note
+that most of the ads DEC ran between 1965 and 1970 were for the PDP-8; DEC
+started vigorously advertising the -8 in May 1965, and they continued that
+campaign through the 1960's.
+
+Starting around 1970, though, DEC's advertising shifted focus, with much of
+their high-visibility advertising in general circulation publications
+(for example, in Scientific American) shifting to the PDP-10.  With this
+shift came a change in advertising style:
+
+PDP-8 ads always had photos of the machine, frequently with teddy bears,
+roses or other "cuddly" props, and emphasized the personal connection
+between user and computer.  PDP-10 ads, on the other hand, were more likely
+to be print only, or print augmented with cartoon drawings -- after all,
+most PDP-10 users never saw the machine -- they saw a teletype and modem,
+and their use with the machine were through the medium of textual input and
+output.
+
+DEC made a big point about the PDP-10 being the dominant ARPAnet host, and
+they pushed it as a deparemental supercomputer, able to handle the entire
+computing load of an entire large university department.  The term
+supercomputer had no generally accepted definition in the early 1970's,
+and DEC used it quite heavily in their print advertising for the -10.
+
+				Doug Jones
+				jones@cs.uiowa.edu
+
+
+Article 2550 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!news.thenet.net!uunet!in1.uu.net!198.4.164.94!gail.ripco.com!news.wwa.com!news
+From: jeverett@wwa.com.defeat.uce.bots (John Everett)
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10
+Subject: Re: pdp-8 PAL8 assembler
+Date: 8 Jan 1997 16:52:32 GMT
+Organization: WorldWide Access (tm) - Chicagoland Internet Services (http://www.wwa.com)
+Lines: 25
+Message-ID: <5b0jcg$8fo@kirin.wwa.com>
+References: <5atsoj$1qf@kirin.wwa.com> <5atuc6$iqe@flood.weeg.uiowa.edu>
+NNTP-Posting-Host: pool10-012.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.8 (x86 32bit)
+Xref: nntp1.best.com alt.sys.pdp8:1407 alt.sys.pdp10:2550
+
+In article <5atuc6$iqe@flood.weeg.uiowa.edu>, jones@pyrite.cs.uiowa.edu 
+says...
+>
+>Starting around 1970, though, DEC's advertising shifted focus, with much of
+>their high-visibility advertising in general circulation publications
+>(for example, in Scientific American) shifting to the PDP-10.  With this
+>shift came a change in advertising style:
+>
+>PDP-8 ads always had photos of the machine, frequently with teddy bears,
+>roses or other "cuddly" props, and emphasized the personal connection
+>between user and computer.  PDP-10 ads, on the other hand, were more likely
+>to be print only, or print augmented with cartoon drawings
+
+During the mid-60s DEC made it a point to portray themselves as "all cuddly 
+and user friendly" computer company, I believe to seperate themselves from 
+IBM and the seven dwarves. The corporate teddy bear was always prominently 
+displayed in the DEC booth at trade shows. I wish I still had a copy of a 
+memo from Ken Olsen complaining about the appearance of the bear at a show in 
+1966 or '67. He made it very clear that in the future someone needed to take 
+responsibility for making sure the bear's fur was brushed and his bow crisply 
+pressed.
+
+-- 
+jeverett@wwa.com (John V. Everett)          http://www.wwa.com/~jeverett
+
+
+
+Article 2552 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10
+Path: nntp1.best.com!news1.best.com!news.thenet.net!uunet!in1.uu.net!205.252.116.190!feed1.news.erols.com!howland.erols.net!news.bbnplanet.com!cam-news-hub1.bbnplanet.com!news.tufts.edu!cam-news-feed5.bbnplanet.com!cass.ma02.bull.com!news.peritus.com!telgar!jcook
+From: jcook@telgar.westboro-ma.peritus.com (C. James Cook)
+Subject: Re: pdp-8 PAL8 assembler
+Message-ID: <1997Jan8.134956@telgar>
+Sender: jcook@telgar (C. James Cook)
+Organization: Peritus Software Services, Inc.
+X-Newsreader: xrn 7.04-beta-2
+References: <5agtj9$1ee@paperboy.ids.net> <5ahdt5$hko@flood.weeg.uiowa.edu> <5am4h4$dlk@kirin.wwa.com> <francini-0701970105130001@news.ultranet.com> <5atsoj$1qf@kirin.wwa.com>
+Date: Wed, 8 Jan 1997 18:49:56 GMT
+Lines: 34
+Xref: nntp1.best.com alt.sys.pdp8:1408 alt.sys.pdp10:2552
+
+In article <5atsoj$1qf@kirin.wwa.com>, jeverett@wwa.com.defeat.uce.bots (John Everett) writes:
+|> In article <francini-0701970105130001@news.ultranet.com>, 
+|> francini@ultranet.com says...
+|> >...
+|> >I'm curious: was the "wall" between PDP-8 and PDP-10 people anywhere near
+|> >as high as the wall that later developed between PDP-11/VAXland and the
+|> >TOPS people?  Having experienced the latter in my 7+ years in 10-land, it
+|> >seemed to be pretty bad...
+|> 
+|> If there was a wall it was between the PDP-10 monitor group and everyone 
+|> else. DEC's corporate culture at that time was pretty much a meritocracy, 
+|> with the -10 folks (at least in the Programming Department) being top dogs. 
+|> We were an arrogant lot and tended to look down our noses at people playing 
+|> with "those little systems". Since the PDP-5/8, PDP-4/7/9/15, and later the 
+|> PDP-11 never posed a threat to the -10's pre-eminent position in the DEC 
+|> hierarchy, the level of animosity never reached that which later existed 
+|> between the 36 and 32 bit worlds. 
+
+I remember a third-hand story...
+
+ACM speakers sometimes were hosted at DEC buildings.  At one talk in Tewksbury
+(home of Vax folks), someone from Maynard (home of the PDP-10/20 folks)
+wore a shirt reading "Nuke Tewksbury".  This was a takeoff on all the 
+"Nuke the baby gay whales" or "Nuke Jane Fonda" jokes of the time.  
+This was all taken in fun by those attending.
+
+Well, all but one. Vax's architect & VP, Gordon Bell, asked for details,
+which were cheerfully provided by the shirt-wearer.  Gordon then hauled
+a bunch of managers into his office. They came out white-faced, under the
+threat that heads would roll if it happened again.  DEC banned the shirt.
+The shirt salesman, another DEC employee, had to re-order more shirts to
+sell. They now sold like hotcakes.
+
+Urban myth?  I don't know.  But it makes for a good story.
+
+
+Article 2553 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!news.bbnplanet.com!su-news-hub1.bbnplanet.com!news1.digital.com!pa.dec.com!usenet
+From: "Carl J. Appellof" <cja@zso.dec.com>
+Newsgroups: alt.sys.pdp10
+Subject: Wall dividing 32 and 36 bit work
+Date: Wed, 08 Jan 1997 09:03:54 -0800
+Organization: Digital Equipment Corporation
+Lines: 22
+Message-ID: <32D3D37A.68DC@zso.dec.com>
+References: <5agtj9$1ee@paperboy.ids.net> <5ahdt5$hko@flood.weeg.uiowa.edu> <5am4h4$dlk@kirin.wwa.com> <francini-0701970105130001@news.ultranet.com> <5atsoj$1qf@kirin.wwa.com>
+NNTP-Posting-Host: chmist.zso.dec.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 3.0Gold (WinNT; I)
+
+> In article <francini-0701970105130001@news.ultranet.com>,
+> francini@ultranet.com says...
+
+> >I'm curious: was the "wall" between PDP-8 and PDP-10 people anywhere near
+> >as high as the wall that later developed between PDP-11/VAXland and the
+> >TOPS people?  Having experienced the latter in my 7+ years in 10-land, it
+> >seemed to be pretty bad...
+
+I worked in -10 land at the same time as you, John.  I would not have
+said there was a "wall" between the -10 and VAX software groups.  It was
+more like a state line.  I don't think the VAX folks paid much attention
+to us 36-bitters (pun intented) near the end.
+
+In hardware-land in Marlboro, the wall was more of a permeable membrane,
+with lots of the Jupiter guys being reassigned to the Venus (VAX 8600),
+then later the AquaVAX.  Neither of those machines really fit into the
+mainstream of VAX hardware, though.
+
+-- 
+Carl Appellof
+not speaking for
+Digital Equipment Corporation
+
+
+Article 2558 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!mr.net!newsfeeds.sol.net!newspump.sol.net!howland.erols.net!feed1.news.erols.com!cpk-news-hub1.bbnplanet.com!news.bbnplanet.com!su-news-hub1.bbnplanet.com!news1.digital.com!pa.dec.com!usenet
+From: "Carl J. Appellof" <cja@zso.dec.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Wall dividing 32 and 36 bit work
+Date: Fri, 10 Jan 1997 17:01:45 -0800
+Organization: Digital Equipment Corporation
+Lines: 19
+Message-ID: <32D6E679.127B@zso.dec.com>
+References: <5agtj9$1ee@paperboy.ids.net> <5ahdt5$hko@flood.weeg.uiowa.edu> <5am4h4$dlk@kirin.wwa.com> <francini-0701970105130001@news.ultranet.com> <5atsoj$1qf@kirin.wwa.com> <32D3D37A.68DC@zso.dec.com> <32d95281.181517237@news.sn.no> <5b5mvn$l7c@transfer.stratus.com>
+NNTP-Posting-Host: chmist.zso.dec.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 3.0Gold (WinNT; I)
+
+Tom Moser wrote:
+
+> > "AquaVAX"?
+> >
+> 
+> Aquarius?
+
+Of course, "Aquarius".  "Expensive Boat Anchor" might be more like it.
+A couple of them saw life as VAX 9000s in customer installations.
+
+I think the project was originally named "Aquarius" because the plans
+were for it to be liquid-cooled.  A follow-on air-cooled project called
+"Aridus" (as in "arid", or "dry") was in the works too.  Late in the
+project, they decided to drain the water out of the AquaVAX and sell it
+dry.  It sunk like a stone in the marketplace.
+-- 
+Carl Appellof
+not speaking for
+Digital Equipment Corporation
+
+
+Article 2559 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!nntp.coast.net!howland.erols.net!newsxfer3.itd.umich.edu!news.bbnplanet.com!su-news-hub1.bbnplanet.com!news1.digital.com!pa.dec.com!usenet
+From: "Carl J. Appellof" <cja@zso.dec.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Wall dividing 32 and 36 bit work
+Date: Fri, 10 Jan 1997 17:06:41 -0800
+Organization: Digital Equipment Corporation
+Lines: 20
+Message-ID: <32D6E7A1.39@zso.dec.com>
+References: <5agtj9$1ee@paperboy.ids.net> <5ahdt5$hko@flood.weeg.uiowa.edu> <5am4h4$dlk@kirin.wwa.com> <francini-0701970105130001@news.ultranet.com> <5atsoj$1qf@kirin.wwa.com> <32D3D37A.68DC@zso.dec.com> <werme.852831742@alingo.zk3.dec.com>
+NNTP-Posting-Host: chmist.zso.dec.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 3.0Gold (WinNT; I)
+
+Eric Werme wrote:
+> 
+
+> Indeed.  I worked on ANF-10, the TOPS-10, non-DECnet compliant network (it
+> was up and running before DECnet specs ever started).  I remember going to
+> a networking meeting at the Mill on day and in the round of introductions
+> said I worked on "TOPS-10 networks".  Several people in the room were
+> startled to hear that TOPS had networking!
+
+Funny thing happened a few years later (1985 or so).  Me and Bob Houk
+(ANF maintainer at the time) and a few other folks trooped up to
+Littleton to hear a talk on a brand new concept called "link state
+routing", which was going to drastically improve the DECnet Phase IV
+routing algorithms in preparation for the BIG networks in Phase V.  As
+soon as Bob heard a description of the algorithms from the network
+architect, he said "That's what ANF-10 has been using all along!"
+-- 
+Carl Appellof
+not speaking for
+Digital Equipment Corporation
+
+
+Article 2560 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!noos.hooked.net!www.nntp.primenet.com!nntp.primenet.com!nntp.coast.net!howland.erols.net!usc!usc!not-for-mail
+From: tli@skat.usc.edu (tli)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Wall dividing 32 and 36 bit work
+Date: 11 Jan 1997 00:39:43 -0800
+Organization: University of Southern California, Los Angeles, CA
+Lines: 20
+Sender: tli@skat.usc.edu
+Message-ID: <5b7jkf$1r7@skat.usc.edu>
+References: <5agtj9$1ee@paperboy.ids.net> <32D3D37A.68DC@zso.dec.com> <werme.852831742@alingo.zk3.dec.com> <32D6E7A1.39@zso.dec.com>
+NNTP-Posting-Host: skat.usc.edu
+
+    Funny thing happened a few years later (1985 or so).  Me and Bob Houk
+    (ANF maintainer at the time) and a few other folks trooped up to
+    Littleton to hear a talk on a brand new concept called "link state
+    routing", which was going to drastically improve the DECnet Phase IV
+    routing algorithms in preparation for the BIG networks in Phase V.  As
+    soon as Bob heard a description of the algorithms from the network
+    architect, he said "That's what ANF-10 has been using all along!"
+
+This isn't so surprising.  Both are an outgrowth of work at BBN for Arpanet
+routing.  You'll be pleased to know that that same protocol designed for
+Phase V is part of what's holding the Internet backbone together today.
+You may also be saddened to hear that it's the same protocol...  with no
+progress since then.  ;-(
+
+Tony
+
+
+
+-- 
+	     Good Happens -- just a whole lot less frequently
+
+
+Article 2563 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!ddsw1!news.mcs.net!hammer.uoregon.edu!arclight.uoregon.edu!news.bbnplanet.com!su-news-hub1.bbnplanet.com!news1.digital.com!pa.dec.com!nntpd.lkg.dec.com!alingo.zk3.dec.com!werme
+From: werme@alingo.zk3.dec.com (Eric Werme)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Wall dividing 32 and 36 bit work
+Date: 13 Jan 97 22:59:53 GMT
+Organization: Digital Equipment Corporation
+Lines: 30
+Message-ID: <werme.853196393@alingo.zk3.dec.com>
+References: <5agtj9$1ee@paperboy.ids.net> <32D3D37A.68DC@zso.dec.com> <werme.852831742@alingo.zk3.dec.com> <32D6E7A1.39@zso.dec.com> <5b7jkf$1r7@skat.usc.edu>
+Reply-To: werme@zk3.dec.com
+NNTP-Posting-Host: alingo.zk3.dec.com
+
+tli@skat.usc.edu (tli) writes:
+
+>  As
+>    soon as Bob heard a description of the algorithms from the network
+>    architect, he said "That's what ANF-10 has been using all along!"
+
+>This isn't so surprising.  Both are an outgrowth of work at BBN for Arpanet
+>routing.  You'll be pleased to know that that same protocol designed for
+>Phase V is part of what's holding the Internet backbone together today.
+>You may also be saddened to hear that it's the same protocol...  with no
+>progress since then.  ;-(
+
+Don't be too sure of that.  While I didn't design the ANF-10 protocols,
+I don't recall that the people who did had any ties to BB&N at all.  I
+left C-MU in 1974 where I did a lot of ARPAnet support (I think I installed
+the first FTP client on the ARPAnet in September 1972 before visiting my
+family in Germany.  There were no servers to try it against and when I
+got back found it didn't work.  Sigh.
+
+I was not real strong on the IMP-IMP protocol, and I've forgotten the
+details of the ANF-10 routing code so I may be mistaken.
+
+NCL, the ANF-10 transport protocol, was designed by scaling DDCMP (DECs
+link level protocol) up a level and doing some other straightforward
+stuff.  I did write specs for adding multi-path support (I don't remember
+if I implemented it) and hierarchical routing (which I definitely did not).
+
+-- 
+  <>    Eric (Ric) Werme   <>      This space under reconstruction       <>
+  <>  <werme@zk3.dec.com>  <>                                            <>
+
+
+Article 2565 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!noos.hooked.net!www.nntp.primenet.com!nntp.primenet.com!news-feed.inet.tele.dk!sn.no!news-stkh.gsl.net!news.gsl.net!news-peer.gsl.net!news.gsl.net!news.sprintlink.net!news-peer.sprintlink.net!howland.erols.net!worldnet.att.net!uunet!in1.uu.net!205.180.230.3!cygnus.com!usenet
+From: Stu Grossman <grossman@critters.cygnus.com>
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10
+Subject: Re: pdp-8 PAL8 assembler
+Date: 08 Jan 1997 22:55:31 -0800
+Organization: Cygnus Support
+Lines: 42
+Message-ID: <ynsp4bcp7g.fsf@critters.cygnus.com>
+References: <5agtj9$1ee@paperboy.ids.net> <5ahdt5$hko@flood.weeg.uiowa.edu>
+	<5am4h4$dlk@kirin.wwa.com>
+	<francini-0701970105130001@news.ultranet.com>
+	<5atsoj$1qf@kirin.wwa.com> <1997Jan8.134956@telgar>
+NNTP-Posting-Host: critters.cygnus.com
+X-Newsreader: Gnus v5.3/Emacs 19.34
+Xref: nntp1.best.com alt.sys.pdp8:1421 alt.sys.pdp10:2565
+
+> I remember a third-hand story...
+> 
+> ACM speakers sometimes were hosted at DEC buildings.  At one talk in Tewksbury
+> (home of Vax folks), someone from Maynard (home of the PDP-10/20 folks)
+> wore a shirt reading "Nuke Tewksbury".  This was a takeoff on all the 
+> "Nuke the baby gay whales" or "Nuke Jane Fonda" jokes of the time.  
+> This was all taken in fun by those attending.
+> 
+> Well, all but one. Vax's architect & VP, Gordon Bell, asked for details,
+> which were cheerfully provided by the shirt-wearer.  Gordon then hauled
+> a bunch of managers into his office. They came out white-faced, under the
+> threat that heads would roll if it happened again.  DEC banned the shirt.
+> The shirt salesman, another DEC employee, had to re-order more shirts to
+> sell. They now sold like hotcakes.
+> 
+> Urban myth?  I don't know.  But it makes for a good story.
+
+This is based on a true story, but the details are a quite different.  First,
+this occurred between sometime '81 and '84 (83ish time frame seems about
+right).  At that time the 10/20 folk were in Marlboro, not Maynard.  There was,
+let us say a certain amount of enmity between the Marlboro folk who did 10's
+and 20's and the Vax group which was in Spitbrook.  Tewksbury was close enough
+to Spitbrook, and sounded better when combined with nuke, hence the slogan
+`Nuke Tewksbury'.
+
+It's also possible that this sentiment might have had something to do with the
+fact that Tewksbury was where the DECnet architects were.  People in LCG were
+never totally happy with DECnet...
+
+So, if memory serves me, one fine day, there was a party at the Computer Museum
+comemmerating some event.  An aquisition of some sort, or getting some old
+computer running again.  I don't recall.  During those days, the museum was in
+MR2 (I think that's called MRO2 today) which was the building right next door
+to MR1, where LCG still reigned.  Smelling free food and liquor, an expedition
+from LCG was mounted to attend the party.  I believe that a person who we will
+call Mark H. was among the raiding party.  Apparantly, Gordon noticed his
+shirt, and asked for a closer look.  Gordon saw the offending words, and was
+apparantly not pleased.  I *think* what happened was that either the shirts
+were banned at company events, or some sort of a dress code for public events
+was instituted.  What is for certain is that the story grows in the telling...
+:-)
+				Stu
+
+
+Article 2564 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!nntp.coast.net!howland.erols.net!worldnet.att.net!ix.netcom.com!netcom.net.uk!dispatch.news.demon.net!demon!news.compulink.co.uk!cix.compulink.co.uk!usenet
+From: brider@cix.compulink.co.uk ("Chris Mitchell")
+Subject: Re: IFN FTDATE97,<...>
+Message-ID: <E3zsvM.9u@cix.compulink.co.uk>
+Organization: Compulink Information eXchange
+References: <5baumi$l8c@kirin.wwa.com>
+Date: Tue, 14 Jan 1997 09:54:57 GMT
+X-News-Software: Ameol
+Lines: 17
+
+Let's see, now.... The date was a count of the number of days since 1st 
+January 1964 except that each month was assumed to have 31 days, so one 
+year has 12*31 days = 372...
+Eleven years have 4092 days and 12 bits represent 4096 days, hence 5th 
+January 1975 was a bad hair day. Moving on, 33 years = 12276 days and 
+3*4096 =12288 which means that 13th January 1997 is, indeed the third 
+great overflowing! Gosh, doesn't time fly.
+
+I remember in the UK that the only system we couldn't fix in time was the 
+one at Farnborough which was used to bend and try to break the prototype 
+Concorde super-sonic passenger plane in a huge heat exchanger. They 
+bought the system with 4S72, or was it 4N50 and, even in those days, were 
+not entitled to upgrade to 5-series. And they wrote all their results to 
+Dectape which was a particular DATE75 problem area. A third party was 
+involved to sort them out but I never found out what the outcome was...
+
+Chris Mitchell
+
+
+Article 2574 of alt.sys.pdp10:
+Newsgroups: alt.folklore.computers,comp.text,alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11
+Path: nntp1.best.com!news1.best.com!newshub1.home.com!news.home.com!enews.sgi.com!arclight.uoregon.edu!news.maxwell.syr.edu!insync!uunet!in3.uu.net!uucp5.uu.net!world!dpbsmith
+From: dpbsmith@world.std.com (Daniel P. B. Smith)
+Subject: TJ-2, a very early word-processor-like program for the PDP-1
+Message-ID: <E4uMBv.8zz@world.std.com>
+Organization: The World Public Access UNIX, Brookline, MA
+Date: Fri, 31 Jan 1997 01:19:07 GMT
+Lines: 12
+Xref: nntp1.best.com alt.folklore.computers:80250 comp.text:2911 alt.sys.pdp8:1467 alt.sys.pdp10:2574 alt.sys.pdp11:2106
+
+I have posted a reproduction of the documentation for a VERY early
+word-processor-like program, which ran on a PDP-1 with 4K words (9K bytes)
+of RAM in 1963.  I think the program was written by Pete Samson, although
+no names appear in the documentation.  For your nostalgic pleasure:
+
+http://world.std.com/~dpbsmith/tj2.html
+
+Comments welcome.
+
+-- 
+Daniel P. B. Smith
+dpbsmith@world.std.com
+
+
+Article 2577 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!newshub1.home.com!news.home.com!enews.sgi.com!news.sgi.com!howland.erols.net!newsxfer.itd.umich.edu!news2.acs.oakland.edu!jobone!dailyplanet.srl.ford.com!eccws1.dearborn.ford.com!news.ford.com!swestin
+From: swestin@dsg145.nad.ford.com (Stephen Westin )
+Newsgroups: alt.folklore.computers,comp.text,alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11
+Subject: Re: TJ-2, a very early word-processor-like program for the PDP-1
+Date: 31 Jan 1997 13:46:21 GMT
+Organization: Ford Motor Company
+Lines: 34
+Distribution: inet
+Message-ID: <SWESTIN.97Jan31084621@dsg145.nad.ford.com>
+References: <E4uMBv.8zz@world.std.com> <RJM.97Jan31102524@europa.ox.ac.uk>
+NNTP-Posting-Host: dsg145.nad.ford.com
+In-reply-to: rjm@europa.ox.ac.uk's message of 31 Jan 1997 10:25:25 -0000
+Xref: nntp1.best.com alt.folklore.computers:80267 comp.text:2914 alt.sys.pdp8:1470 alt.sys.pdp10:2577 alt.sys.pdp11:2110
+
+In article <RJM.97Jan31102524@europa.ox.ac.uk> rjm@europa.ox.ac.uk (Bob Manners) writes:
+
+> >   I have posted a reproduction of the documentation for a VERY early
+> >   word-processor-like program, which ran on a PDP-1 with 4K words (9K bytes)
+> >   of RAM in 1963.  I think the program was written by Pete Samson, although
+> >   no names appear in the documentation.  
+> 
+> 4Kwords == 9Kb. I take it that the PDP-1 had an 18 bit word length then?
+
+You betcha. My impression of the PDP genealogy:
+
+PDP 1,4,7,9,15: 18-bit machines
+PDP 5,8,12:     12-bit
+PDP 6,10,20:    36-bit
+PDP 11:         16-bit
+PDP 2:          Never built
+PDP 3:          Designed, never built by DEC, but rumor has it a customer
+                bought DEC modules and assembled one. Don't know word length.
+PDP 13:         Never existed
+PDP 14:         Industrial automation controllers. Don't know word length
+PDP 16:         Not a machine, but a system of register-transfer modules
+                (memory, ALU, etc) from which a customer could build various
+                computer-like devices. I used them in a class at Michigan; I
+                believe DEC donated lots of 'em after they died in the market.
+                They came out just in time to be obsoleted by the increasing
+                level of integrated circuits of the time.
+
+-Stephen H. Westin
+swestin@ford.com
+The information and opinions in this message are mine, not Ford's.
+--
+-Stephen H. Westin
+swestin@ford.com
+The information and opinions in this message are mine, not Ford's.
+
+
+Article 2582 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!newshub1.home.com!news.home.com!enews.sgi.com!arclight.uoregon.edu!news.algonet.se!eru.mt.luth.se!newsfeed.luth.se!news.luth.se!erix.ericsson.se!erinews.ericsson.se!news.seinf.abb.se!news.mdh.se!columba.udac.uu.se!Zeke.Update.UU.SE!Zeke.Update.UU.SE!not-for-mail
+From: bqt@Zeke.Update.UU.SE (Johnny Billquist)
+Newsgroups: alt.folklore.computers,comp.text,alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11
+Subject: Re: TJ-2, a very early word-processor-like program for the PDP-1
+Date: 31 Jan 1997 18:50:49 +0100
+Organization: Update Computer Club
+Lines: 49
+Distribution: inet
+Message-ID: <5ctbdp$cjd$1@Zeke.Update.UU.SE>
+References: <E4uMBv.8zz@world.std.com> <RJM.97Jan31102524@europa.ox.ac.uk> <SWESTIN.97Jan31084621@dsg145.nad.ford.com>
+NNTP-Posting-Host: zeke.update.uu.se
+X-Newsreader: NN version 6.5.1 (NOV)
+Xref: nntp1.best.com alt.folklore.computers:80284 comp.text:2920 alt.sys.pdp8:1476 alt.sys.pdp10:2582 alt.sys.pdp11:2116
+
+In <SWESTIN.97Jan31084621@dsg145.nad.ford.com> swestin@dsg145.nad.ford.com (Stephen Westin ) writes:
+
+>In article <RJM.97Jan31102524@europa.ox.ac.uk> rjm@europa.ox.ac.uk (Bob Manners) writes:
+>
+>> >   I have posted a reproduction of the documentation for a VERY early
+>> >   word-processor-like program, which ran on a PDP-1 with 4K words (9K bytes)
+>> >   of RAM in 1963.  I think the program was written by Pete Samson, although
+>> >   no names appear in the documentation.  
+>> 
+>> 4Kwords == 9Kb. I take it that the PDP-1 had an 18 bit word length then?
+>
+>You betcha. My impression of the PDP genealogy:
+>
+>PDP 1,4,7,9,15: 18-bit machines
+>PDP 5,8,12:     12-bit
+>PDP 6,10,20:    36-bit
+
+*Sigh* There never was any such beast as the PDP-20.
+
+>PDP 11:         16-bit
+>PDP 2:          Never built
+
+True, but it was reserved for a 24-bitter according to MRC.
+
+>PDP 3:          Designed, never built by DEC, but rumor has it a customer
+>                bought DEC modules and assembled one. Don't know word length.
+
+36-bits. One was built in 1960, according to MRC.
+
+>PDP 13:         Never existed
+>PDP 14:         Industrial automation controllers. Don't know word length
+
+12-bit, but with a 1-bit accumulator.
+
+>PDP 16:         Not a machine, but a system of register-transfer modules
+>                (memory, ALU, etc) from which a customer could build various
+>                computer-like devices. I used them in a class at Michigan; I
+>                believe DEC donated lots of 'em after they died in the market.
+>                They came out just in time to be obsoleted by the increasing
+>                level of integrated circuits of the time.
+
+And it was a 16-bitter according to MRC.
+
+	Johnny
+-- 
+Johnny Billquist                  || "I'm on a bus
+                                  ||  on a psychedelic trip
+email: bqt@update.uu.se           ||  Reading murder books
+pdp is alive!                     ||  tryin' to stay hip" - B. Idol
+
+
+Article 2578 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!newshub1.home.com!news.home.com!enews.sgi.com!news.sgi.com!howland.erols.net!news.sprintlink.net!news-peer.sprintlink.net!uunet!in3.uu.net!128.255.40.11!news.uiowa.edu!news
+From: jones@pyrite.cs.uiowa.edu (Douglas W. Jones,201H MLH,3193350740,3193382879)
+Newsgroups: alt.folklore.computers,comp.text,alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11
+Subject: Re: TJ-2, a very early word-processor-like program for the PDP-1
+Date: 31 Jan 1997 15:09:02 GMT
+Organization: The University of Iowa
+Lines: 18
+Distribution: inet
+Message-ID: <5ct1ue$k2m@flood.weeg.uiowa.edu>
+References: <RJM.97Jan31102524@europa.ox.ac.uk>
+NNTP-Posting-Host: pyrite.cs.uiowa.edu
+Xref: nntp1.best.com alt.folklore.computers:80272 comp.text:2915 alt.sys.pdp8:1471 alt.sys.pdp10:2578 alt.sys.pdp11:2111
+
+From article <RJM.97Jan31102524@europa.ox.ac.uk>,
+by rjm@europa.ox.ac.uk (Bob Manners):
+
+> 4Kwords == 9Kb. I take it that the PDP-1 had an 18 bit word length then?
+
+Exactly.  The PDP-1, PDP-4, PDP-7, PDP-9 and PDP-15 were related in that
+regard.  The later 18 bit machines were not compatable with the PDP-1,
+though.
+
+DEC Press has come out with a wonderful book, Digital At Work, that includes
+photos and overviews of the specs for most of the PDP machines, as well as
+predecessors like the MIT TX0.
+
+You can find a short table of these attributes in the first part of the
+alt.sys.pdp8 FAQ.
+
+					Doug Jones
+					jones@cs.uiowa.edu
+
+
+Article 2579 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!su-news-hub1.bbnplanet.com!news.bbnplanet.com!cam-news-hub1.bbnplanet.com!howland.erols.net!rill.news.pipex.net!pipex!warwick!lyra.csx.cam.ac.uk!ard12
+From: ard12@eng.cam.ac.uk (A.R. Duell)
+Newsgroups: alt.folklore.computers,comp.text,alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11
+Subject: Re: TJ-2, a very early word-processor-like program for the PDP-1
+Date: 31 Jan 1997 15:32:12 GMT
+Organization: University of Cambridge, England
+Lines: 23
+Distribution: inet
+Message-ID: <5ct39s$j7b@lyra.csx.cam.ac.uk>
+References: <RJM.97Jan31102524@europa.ox.ac.uk> <5ct1ue$k2m@flood.weeg.uiowa.edu>
+NNTP-Posting-Host: club.eng.cam.ac.uk
+Xref: nntp1.best.com alt.folklore.computers:80274 comp.text:2916 alt.sys.pdp8:1472 alt.sys.pdp10:2579 alt.sys.pdp11:2112
+
+jones@pyrite.cs.uiowa.edu (Douglas W. Jones,201H MLH,3193350740,3193382879) writes:
+>DEC Press has come out with a wonderful book, Digital At Work, that includes
+>photos and overviews of the specs for most of the PDP machines, as well as
+>predecessors like the MIT TX0.
+
+Yes, that book is rather fun but there are a number of errors in it that
+may be confusing at first. I seem to recall that one of the pictures of a
+'PDP11 System' is actually a VAX 11/730 (or maybe the other way round),
+etc. My favourite error is the fact that a very nice picture of a PDP8 of
+some flavour has been printed left-right reversed, or at least, I think it
+has (unless there was an ASR-33 like teletype with the punch on the right,
+and a single DECtape drive that filled the _right_ hand half of the rack
+panel).
+
+None-the-less, there's a lot of good stuff in it, and it's certainly worth
+buying if you are interested in the old DEC machines.
+
+>					Doug Jones
+
+--
+-tony
+ard12@eng.cam.ac.uk
+The gates in my computer are AND,OR and NOT, not Bill
+
+
+Article 2581 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!newshub1.home.com!news.home.com!enews.sgi.com!news.sgi.com!su-news-hub1.bbnplanet.com!news.bbnplanet.com!cam-news-hub1.bbnplanet.com!uunet!in2.uu.net!128.255.40.11!news.uiowa.edu!news
+From: jones@pyrite.cs.uiowa.edu (Douglas W. Jones,201H MLH,3193350740,3193382879)
+Newsgroups: alt.folklore.computers,comp.text,alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11
+Subject: Digital at Work (Was: TJ-2, ... early word-processor ...)
+Date: 31 Jan 1997 16:48:02 GMT
+Organization: The University of Iowa
+Lines: 24
+Distribution: inet
+Message-ID: <5ct7o2$10u4@flood.weeg.uiowa.edu>
+References: <5ct39s$j7b@lyra.csx.cam.ac.uk>
+NNTP-Posting-Host: pyrite.cs.uiowa.edu
+Xref: nntp1.best.com alt.folklore.computers:80280 comp.text:2919 alt.sys.pdp8:1475 alt.sys.pdp10:2581 alt.sys.pdp11:2115
+
+From article <5ct39s$j7b@lyra.csx.cam.ac.uk>,
+by ard12@eng.cam.ac.uk (A.R. Duell):
+
+>>DEC Press has come out with a wonderful book, Digital At Work, ...
+> 
+> Yes, that book is rather fun but there are a number of errors in it that
+> may be confusing at first. I seem to recall that one of the pictures of a
+> 'PDP11 System' is actually a VAX 11/730 (or maybe the other way round),
+> etc. My favourite error is the fact that a very nice picture of a PDP8 of
+> some flavour has been printed left-right reversed, ...
+
+I hadn't noticed that one!  Page 50, lower left.  Not only is the tape
+reader-punch on the ASR 33 on the wrong side, and the TU 55 drives with
+their tape reels on the wrong side, but you can clearly read the unit
+number on the upper drive -- a backwards 4.
+
+I get the feeling that layout professionals really like people to face
+to the right in profile views, and that that photo is as likely to have
+been left-right reversed when it was originally run as an advertising
+photo back in the 1970's as it is to have been reversed in for the book.
+I've seen other left-right reversals in DEC ads from that era.
+
+				Doug Jones
+				jones@cs.uiowa.edu
+
+
+Article 2586 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!newshub1.home.com!news.home.com!enews.sgi.com!news.sgi.com!newsfeed.internetmci.com!kirin.wwa.com!not-for-mail
+From: jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett)
+Newsgroups: alt.folklore.computers,comp.text,alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11
+Subject: Re: TJ-2, a very early word-processor-like program for the PDP-1
+Date: 1 Feb 1997 17:11:07 GMT
+Organization: WorldWide Access (tm) - Midwestern Internet Services (www.wwa.com)
+Lines: 14
+Message-ID: <5cvtfc$22j$3@kirin.wwa.com>
+References: <E4uMBv.8zz@world.std.com> <RJM.97Jan31102524@europa.ox.ac.uk> <SWESTIN.97Jan31084621@dsg145.nad.ford.com> <5ctbdp$cjd$1@Zeke.Update.UU.SE> <01bc0fe8$97d6d740$0b4284a9@wardch>
+NNTP-Posting-Host: pool12-028.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.8 (x86 32bit)
+Xref: nntp1.best.com alt.folklore.computers:80328 comp.text:2924 alt.sys.pdp8:1485 alt.sys.pdp10:2586 alt.sys.pdp11:2121
+
+In article <01bc0fe8$97d6d740$0b4284a9@wardch>, ccw@mail.idt.com says...
+>
+>Along with the knowledge that the Data General Nova was decended from the
+>PDP-8
+>(Edson DeCastro worked on both) 
+
+Ain't revisionist history wonderful! Actually the Nova was descended (as 
+opposed to decended) from the PDP-X (or X-project) at DEC. This was DEC's 
+first attempt at a 16 bit machine, rejected by the operations committee. 
+Eventually a new design emerged as the PDP-11. 
+
+-- 
+jeverett@wwa.com (John V. Everett)          http://www.wwa.com/~jeverett
+
+
+
+Article 2596 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!noos.hooked.net!www.nntp.primenet.com!nntp.primenet.com!news.bbnplanet.com!su-news-hub1.bbnplanet.com!newsxfer3.itd.umich.edu!portc01.blue.aol.com!audrey01.news.aol.com!not-for-mail
+From: jmfbah@aol.com (JMFBAH)
+Newsgroups: alt.sys.pdp10
+Subject: Re: TJ-2, a very early word-processor-like program for the PDP-1
+Date: 3 Feb 1997 14:16:43 GMT
+Organization: AOL http://www.aol.com
+Lines: 8
+Message-ID: <19970203141600.JAA28526@ladder01.news.aol.com>
+References: <shendrix.854927050@escape>
+NNTP-Posting-Host: ladder01.news.aol.com
+X-Admin: news@aol.com
+
+You've been talking about a program called nroff.  Since I was the first
+group leader of the RUNOFF group at DEC, would you mind enlightening me? 
+We had a NRUNOF (sp?) for a while when the commands were being modified so
+that semi-colons could be a terminator character of a formatting command
+and the commands were shortened to 1-2 characters.
+
+/BAH
+
+
+
+Article 2601 of alt.sys.pdp10:
+Path: nntp2.ba.best.com!nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!hunter.premier.net!uunet!in2.uu.net!206.109.2.48!bonkers!not-for-mail
+From: peter@taronga.com (Peter da Silva)
+Newsgroups: alt.sys.pdp10
+Subject: Re: TJ-2, a very early word-processor-like program for the PDP-1
+Date: 3 Feb 1997 16:14:05 -0600
+Organization: none
+Lines: 28
+Message-ID: <5d5nvd$sqt@bonkers.taronga.com>
+References: <shendrix.854927050@escape> <19970203141600.JAA28526@ladder01.news.aol.com>
+NNTP-Posting-Host: localhost.taronga.com
+X-No-Archive: yes
+Xref: nntp2.ba.best.com alt.sys.pdp10:2601
+
+In article <19970203141600.JAA28526@ladder01.news.aol.com>,
+JMFBAH <jmfbah@aol.com> wrote:
+>You've been talking about a program called nroff.  Since I was the first
+>group leader of the RUNOFF group at DEC, would you mind enlightening me? 
+
+Early in the history of UNIX, back before Version 7 and the great UNIX
+explosion, there was a fairly simple text processor used for formatting
+the manual pages. It was inspired by "RUNOFF" and called "ROFF" (when you
+work on ASR33 teletypes, you like making command names short!).
+
+Joe Ossanna did an enhanced version of this program, with pretty sophisticated
+(for the time) macro facilities. It came in two versions: "nroff" (new roff)
+generated lineprinter output, and troff (typesetter roff) generated output
+for the Graphic Systems C/A/T phototypesetter. Later versions of troff and
+ditroff (device independent typesetter runoff <grin>) supported more devices.
+
+Later, the GNU folks did a from-scratch version of nroff/troff called groff
+and it's what most rational systems use for their UNIX manuals these days.
+It generates lineprinter and postscript output, mostly.
+
+The *roff family aren't near so sophisticated as TeX, but they're a heck of
+a lot easier to use... especially when it comes to debugging errors in your
+markup... TeX's error cascades are, well, pretty amazing.
+-- 
+
+              The Reverend Peter da Silva, ULC, COQO, BOFH.
+
+    Reality is the stuff that's still there when you turn the video off.
+
+
+Article 2612 of alt.sys.pdp10:
+Path: nntp2.ba.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!newsxfer3.itd.umich.edu!portc01.blue.aol.com!audrey01.news.aol.com!not-for-mail
+From: jmfbah@aol.com (JMFBAH)
+Newsgroups: alt.sys.pdp10
+Subject: Re: TJ-2, a very early word-processor-like program for the PDP-1
+Date: 5 Feb 1997 13:14:12 GMT
+Organization: AOL http://www.aol.com
+Lines: 60
+Message-ID: <19970205131400.IAA07892@ladder01.news.aol.com>
+References: <1997Feb4.152438.27876@indyvax.iupui.edu>
+NNTP-Posting-Host: ladder01.news.aol.com
+X-Admin: news@aol.com
+Xref: nntp2.ba.best.com alt.sys.pdp10:2612
+
+mwood@indyvax.iupui.edu (Mark H. Wood) wrote:
+
+>> In article <19970203141600.JAA28526@ladder01.news.aol.com>,
+<> JMFBAH <jmfbah@aol.com> wrote:
+>>You've been talking about a program called nroff.  Since I was the first
+>>group leader of the RUNOFF group at DEC, would you mind enlightening me?
+
+
+>Hey, kudos to you and all the RUNOFF group.
+<snip>
+Thank you.  Maybe it's time to document more of the ways we used to work
+when  Digital was DEC.   
+
+As the programming staffs grew, the work load at Tape Prep grew.  The jobs
+would come in, be assessed for length of time the job would take, and get
+put into a priority list.  It got so complex that nobody (writers,
+reproducers, nor programmers) were getting their jobs done on time.  So
+Tape Prep was reorganized into three groups: 1) the RUNOFF group which
+would handle all work that needed to be done in RUNOFF,  2) the
+quick-turnaround group which took in jobs that could be done in less than
+an hour or so, and 3) all the rest of the jobs.
+
+At that time, all documentation that was published and shipped by DEC was
+done on typewriters by a group of (about) 20 women.  None of that stuff
+was on-line.  A few exceptions were the -10 functional specs and (I think)
+the processor manual.  After getting broken in, I decided that everything
+should start to be done on-line. I began a campaign to convince writers to
+type their stuff on-line; there were some who preferred to write on paper
+but not many.  It took some convincing that a complete retyping of a
+chapter wasn't needed just because they added one text line; this was the
+case when the documents were done by typewriters.
+
+The RUNOFF group gradually transformed itself into a real typesetting
+group (long after I left).  RUNOFF was not very good at manipulating text
+for publishing but it was very useful.  For instance, double columns that
+were automatically left/right justified and space-filled were impossible
+to do, but we managed [smiling emoticon here].  I believe that the only
+job I ever turned down was submitted by a one of the five V.P.s (for the
+life of me I can't remember the name).  My boss was insistent that I do
+the job for fear that the VP would get unhappy.  I pointed out that he
+would be even more unhappy when we produced a sloppy job that took 20
+hours/month to do.  What he really wanted was a VISICALC piece of
+software.  This was in 1972; there was no such thing.  I turned down the
+job, explaining to him that it was more efficient for someone with good
+secretarial skills to do the job since the software didn't exist.
+
+I was always sorry that all those women (of the typing pool) were
+eventually put out of a job but I was not sorry to finally get that
+documentation into bits.  Interestingly enough, the person who made a
+transition to typing on-line from the pool was a woman who was considered
+to be backward; but she could type 120 w.p.m.  When she was being trained
+to work on a computer, the decision was being made that she wouldn't be
+able to learn RUNOFF.  The plan was that she would WYSIWYG the
+documentation into a file, and someone, like me, would insert RUNOFF
+commands to do the formatting.   That was unacceptable and I insisted that
+she be taught RUNOFF commands, monitor-level commands and everything in
+between.  She learned and she just loved it.
+
+/BAH
+
+
+
+Article 2613 of alt.sys.pdp10:
+Path: nntp2.ba.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!su-news-hub1.bbnplanet.com!news.bbnplanet.com!cam-news-hub1.bbnplanet.com!news.idt.net!newsfeed.internetmci.com!kirin.wwa.com!not-for-mail
+From: jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett)
+Newsgroups: alt.sys.pdp10
+Subject: Re: TJ-2, a very early word-processor-like program for the PDP-1
+Date: 5 Feb 1997 15:47:27 GMT
+Organization: WorldWide Access (tm) - Midwestern Internet Services (www.wwa.com)
+Lines: 26
+Message-ID: <5daa2f$lfc$1@kirin.wwa.com>
+References: <shendrix.854927050@escape> <5d5nvd$sqt@bonkers.taronga.com> <1997Feb4.152438.27876@indyvax.iupui.edu>
+NNTP-Posting-Host: pool20-019.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.8 (x86 32bit)
+Xref: nntp2.ba.best.com alt.sys.pdp10:2613
+
+In article <1997Feb4.152438.27876@indyvax.iupui.edu>, mwood@indyvax.iupui.edu 
+says...
+>
+>> In article <19970203141600.JAA28526@ladder01.news.aol.com>,
+>> JMFBAH <jmfbah@aol.com> wrote:
+>>>You've been talking about a program called nroff.  Since I was the first
+>>>group leader of the RUNOFF group at DEC, would you mind enlightening me? 
+>
+>Hey, kudos to you and all the RUNOFF group.
+
+I think you perhaps misunderstand, Barb (JMFBAH) was not responsible for the 
+creation of RUNOFF, but for its DEC-wide adoption as a documentation 
+standard.
+
+The story of RUNOFF's creation is another piece of DEC folklore. Some person 
+(who's name is lost to history) had created a "text-processing" program that 
+ran on the PDP-10. He wanted to sell it to DEC. He came to Maynard one Friday 
+and demonstrated it to a group of us -10 types. He was careful to remove the 
+program from System 2 before he departed, but left behind some documentation. 
+On Monday, Bob Clements showed us how he had spent his weekend. He had 
+written a program that basically conformed to the guy's documentation. Bob 
+called his weekend project RUNOFF.
+
+-- 
+jeverett@wwa.com (John V. Everett)          http://www.wwa.com/~jeverett
+
+
+
+Article 2617 of alt.sys.pdp10:
+Path: nntp2.ba.best.com!thvv.vip.best.com!user
+From: thvv@best.com (Tom Van Vleck)
+Newsgroups: alt.sys.pdp10
+Subject: Runoffs (was: TJ-2, a very early word-processor-like program for the PDP-1)
+Date: Thu, 06 Feb 1997 15:45:01 -0800
+Organization: Multicians
+Lines: 28
+Message-ID: <thvv-0602971545020001@thvv.vip.best.com>
+References: <shendrix.854927050@escape> <19970203141600.JAA28526@ladder01.news.aol.com> <5d5nvd$sqt@bonkers.taronga.com>
+NNTP-Posting-Host: thvv.vip.best.com
+X-url: http://www.best.com/~thvv/multics.html
+Xref: nntp2.ba.best.com alt.sys.pdp10:2617
+
+Peter da Silva wrote:
+>Early in the history of UNIX, back before Version 7 and the great UNIX
+>explosion, there was a fairly simple text processor used for formatting
+>the manual pages. It was inspired by "RUNOFF" and called "ROFF" (when you
+>work on ASR33 teletypes, you like making command names short!).
+
+Jerry Saltzer wrote the RUNOFF command for CTSS on the MIT 7094.
+I remember using it for documentation in 1965, so it was a public
+command by then.  Saltzer acknowledged inspiration from TJ-2 and
+expensive typewriter.
+
+I believe the R formatter of ITS came after RUNOFF.
+
+Doug McIlroy, Rudd Canaday, and Dennis Ritchie
+wrote a version of runoff for 645 Multics in BCPL, so that the Multics
+group could use its own system for documentation.  Both of these
+runoffs took input lines beginning with dot as command lines.
+
+Bob Morris and Dennis Ritchie moved the BCPL runoff to BTL's
+GE-635 and called it roff.  McIlroy then wrote a roff from scratch
+in BCPL, expanding and improving on runoff; Ken Thompson and Dennis
+Ritchie then wrote a machine-language version of roff for their new
+system, UNIX, about 1970, to justify the purchase of the PDP-11.
+
+DEC's RUNOFF command might have been inspired by CTSS's, since
+the DEC engineers who went to MIT in the 60s would have seen it.
+Or it might have been an independent invention, with a coincidence
+in names.
+
+
+Article 2620 of alt.sys.pdp10:
+Path: nntp2.ba.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!su-news-hub1.bbnplanet.com!news.bbnplanet.com!cam-news-hub1.bbnplanet.com!bloom-beacon.mit.edu!senator-bedfellow.mit.edu!usenet
+From: tk@ai.mit.edu (Tom Knight)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Runoffs (was: TJ-2, a very early word-processor-like program for the PDP-1)
+Date: 07 Feb 1997 17:43:12 GMT
+Organization: MIT Artificial Intelligence Laboratory
+Lines: 8
+Message-ID: <TK.97Feb7124312@watt.ai.mit.edu>
+References: <shendrix.854927050@escape> <19970203141600.JAA28526@ladder01.news.aol.com>
+	<5d5nvd$sqt@bonkers.taronga.com>
+	<thvv-0602971545020001@thvv.vip.best.com>
+NNTP-Posting-Host: watt.ai.mit.edu
+In-reply-to: thvv@best.com's message of Thu, 06 Feb 1997 15:45:01 -0800
+Xref: nntp2.ba.best.com alt.sys.pdp10:2620
+
+In article <thvv-0602971545020001@thvv.vip.best.com> thvv@best.com (Tom Van Vleck) writes:
+
+> I believe the R formatter of ITS came after RUNOFF.
+
+R was well after runoff -- done in the Dynamic Modelling Group (home
+of Zork) and well after the more popular TJ-6 formatter used for ITS
+documentation.
+
+
+
+Article 2623 of alt.sys.pdp10:
+Path: nntp2.ba.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!cpk-news-hub1.bbnplanet.com!news.bbnplanet.com!newsfeed.internetmci.com!news.wwa.com!not-for-mail
+From: jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Runoffs (was: TJ-2, a very early word-processor-like program for the PDP-1)
+Date: 8 Feb 1997 16:49:05 GMT
+Organization: WorldWide Access (tm) - Midwestern Internet Services (www.wwa.com)
+Lines: 50
+Message-ID: <5diaq1$6cn$2@kirin.wwa.com>
+References: <shendrix.854927050@escape> <19970203141600.JAA28526@ladder01.news.aol.com> <5d5nvd$sqt@bonkers.taronga.com> <thvv-0602971545020001@thvv.vip.best.com>
+NNTP-Posting-Host: pool12-020.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.8 (x86 32bit)
+Xref: nntp2.ba.best.com alt.sys.pdp10:2623
+
+In article <thvv-0602971545020001@thvv.vip.best.com>, thvv@best.com says...
+>
+>DEC's RUNOFF command might have been inspired by CTSS's, since
+>the DEC engineers who went to MIT in the 60s would have seen it.
+>Or it might have been an independent invention, with a coincidence
+>in names.
+
+The following is from Bob Clements, the author of DEC's PDP-10 RUNOFF. The 
+reason I'm posting (as opposed to Bob) is self-explanatory:
+
+"Hi, John,
+
+I haven't been posting lately due to getting ticked off at the resulting
+junk email.  Haven't had time to fix the environment to hide my address
+properly.  Feel free to post this if you omit the cleartext form
+of my email address.
+
+In article <5daa2f$lfc$1@kirin.wwa.com> you write:
+
+>The story of RUNOFF's creation is another piece of DEC folklore. Some person 
+>(who's name is lost to history) had created a "text-processing" program that 
+>ran on the PDP-10.
+ [...]
+>On Monday, Bob Clements showed us how he had spent his weekend. He had 
+>written a program that basically conformed to the guy's documentation. Bob 
+>called his weekend project RUNOFF.
+
+Well, this isn't how I remember it, and it gives me too much credit.
+
+I don't remember anyone coming to offer such a program to DEC, but it
+might have happened.
+
+The actual origin of RUNOFF on the -10 was indeed me, but I didn't
+write it from scratch or from specs.  I did a fairly direct translation
+of the source code for SDS-940 RUNOFF, which was written at UCB.
+I had to redo the I/O and system call stuff, of course, but the
+text formating logic was all straight out of the Berkley code.
+
+If you can find a copy of the source code of RUNOFF, you'll see big
+sections with registers named A, B and X (I think that's right), which
+were the main registers of the 940.  It didn't have general registers
+like the DEC machines.  That code was just plain copied.
+
+Today, I suppose you'd get in trouble for that.  In those days, it
+wasn't that big a deal.  Mea culpa."
+
+
+-- 
+jeverett@wwa.com (John V. Everett)          http://www.wwa.com/~jeverett
+
+
+
+Article 2608 of alt.sys.pdp10:
+Path: nntp2.ba.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!news.bbnplanet.com!su-news-hub1.bbnplanet.com!news1.digital.com!pa.dec.com!lead.zk3.dec.com!nntpd.lkg.dec.com!alingo.zk3.dec.com!werme
+From: werme@alingo.zk3.dec.com (Eric Werme)
+Newsgroups: alt.sys.pdp10
+Subject: Re: TJ-2, a very early word-processor-like program for the PDP-1
+Date: 4 Feb 97 14:35:40 GMT
+Organization: Digital Equipment Corporation
+Lines: 49
+Message-ID: <werme.855066940@alingo.zk3.dec.com>
+References: <shendrix.854927050@escape> <19970203141600.JAA28526@ladder01.news.aol.com>
+Reply-To: werme@zk3.dec.com
+NNTP-Posting-Host: alingo.zk3.dec.com
+Xref: nntp2.ba.best.com alt.sys.pdp10:2608
+
+jmfbah@aol.com (JMFBAH) writes:
+
+>You've been talking about a program called nroff.  Since I was the first
+>group leader of the RUNOFF group at DEC, would you mind enlightening me? 
+
+nroff is an old time Unix program that replaced roff, and older and, as far
+as I know, lost program.  (And probably no loss.)  troff is a nroff
+variant designed to talk to the Graphic Systems phototypesetter, but
+various paths exist to talk to PostScript an other current printing
+systems.
+
+Nroff files generally include macro libraries, typcically for man pages
+or one of two for documents.
+
+Random nroff sample:
+
+.IP "\fBgateway\fP \fIhost\fP
+True if the packet used \fIhost\fP as a gateway.  I.e., the ethernet
+source or destination address was \fIhost\fP but neither the IP source
+nor the IP destination was \fIhost\fP.  \fIHost\fP must be a name and
+must be found in both /etc/hosts and /etc/ethers.  (An equivalent
+expression is
+.in +.5i
+.nf
+\fBether host \fIehost \fBand not host \fIhost\fR
+.fi
+.in -.5i
+which can be used with either names or numbers for \fIhost / ehost\fP.)
+.IP "\fBdst net \fInet\fR"
+True if the IP destination address of the packet has a network
+number of \fInet\fP, which may be either an address or a name.
+
+Upper case commands are usually macros:
+
+.IP - Indent Paragraph
+.in - Indent (inches, points, etc)
+.nf - no fill
+.fi - fill
+
+Embedded commands can change fonts - \fB bold, \fI italics.  I forget
+what \fR and \fP are, but you get the idea.
+
+I assume PDP-10 RUNOFF and nroff have a common ancestor, but have never
+been curious to look into it.  The macro language in nroff has variables and
+string processing functions that let the clever author do some
+remarkable things.
+-- 
+  <>    Eric (Ric) Werme   <>      This space under reconstruction       <>
+  <>  <werme@zk3.dec.com>  <>                                            <>
+
+
+Article 2610 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: nntp2.ba.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!howland.erols.net!rill.news.pipex.net!pipex!uunet!in1.uu.net!uucp6.uu.net!world!bzs
+From: bzs@world.std.com (Barry Shein)
+Subject: Re: TJ-2, a very early word-processor-like program for the PDP-1
+In-Reply-To: werme@alingo.zk3.dec.com's message of 4 Feb 97 14:35:40 GMT
+Message-ID: <x5lo93n8ja.fsf@world.std.com>
+Sender: bzs@world.std.com
+Organization: The World @ Software Tool & Die 
+X-Newsreader: Gnus v5.1
+References: <shendrix.854927050@escape>
+	<19970203141600.JAA28526@ladder01.news.aol.com>
+	<werme.855066940@alingo.zk3.dec.com>
+Date: Wed, 5 Feb 1997 05:09:29 GMT
+Lines: 13
+Xref: nntp2.ba.best.com alt.sys.pdp10:2610
+
+
+There was R which ran under ITS and used similar dot commands as I
+remember, and I thought R started life on CTSS. Can't say that with
+any authority, just vague memories. The point being that there was
+some relationship between "R" and "RUNOFF", the letter R wasn't
+coincidental.
+
+
+-- 
+        -Barry Shein
+
+Software Tool & Die    | bzs@world.std.com          | http://www.std.com
+Purveyors to the Trade | Voice: 617-739-0202        | Login: 617-739-WRLD
+
+
+Article 2618 of alt.sys.pdp10:
+Path: nntp2.ba.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!howland.erols.net!cloudbreak.rs.itd.umich.edu!news2.acs.oakland.edu!newsfeed.concentric.net!news-master!news
+From: Paul Wexelblat <wex@concentric.net>
+Newsgroups: alt.folklore.computers,comp.text,alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11
+Subject: Re: Imlac PDS-5?
+Date: Thu, 06 Feb 1997 21:41:19 -0500
+Organization: None obvious
+Lines: 22
+Message-ID: <32FA964D.31E3@concentric.net>
+References: <5csjas$4qk@reader.seed.net.tw> <shendrix.854927050@escape> <5d8rb7$675@ss1.digex.net> <5dc7rc$qrr@skat.usc.edu>
+NNTP-Posting-Host: cnc038040.concentric.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 3.0-C (Macintosh; I; PPC)
+Xref: nntp2.ba.best.com alt.folklore.computers:80701 comp.text:2954 alt.sys.pdp8:1529 alt.sys.pdp10:2618 alt.sys.pdp11:2162
+
+tli wrote:
+> 
+> Doug Humphrey <doug@ss1.digex.net> wrote:
+>     Does anyone remember the Imlacs?  Fortran language only
+>     as far as I know, but I only goofed on them a little bit.
+>     Pretty early devices...
+> 
+> Yeah, but then again, I'm a Mudder.  Mudd had an Imlac running as late as
+> 1982.
+> 
+> Tony
+> --
+>              Good Happens -- just a whole lot less frequently
+
+Yeah, We had an Imlac <something or other> at BBN in the Early 70's. I
+don't remember much about it excepth that its assembly language was
+virtually identical to a DEC system (maybe even the PDP-1) but it had
+another processor in it that ran some graphics stuff (a "display list).
+It was sitting back near the MTIMP (The Mag Tape IMP - yes, back then
+there was a serious attempt to do realtime mag tape transfers over the
+ARPAnet; this was before TCP/IP, though :->   )
+	...wex
+
+
+Article 2621 of alt.sys.pdp10:
+Path: nntp2.ba.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!ix.netcom.com!netcomsv!uu3news.netcom.com!flying!frisbie
+From: frisbie@flying-disk.com (Alan Frisbie)
+Newsgroups: alt.folklore.computers,alt.sys.pdp8,alt.sys.pdp11,comp.text,alt.sys.pdp10
+Subject: Re: Imlac PDS-5?
+Message-ID: <1997Feb7.103733.1048@flying-disk.com>
+Date: 7 Feb 97 10:37:33 PDT
+References: <5csjas$4qk@reader.seed.net.tw> <shendrix.854927050@escape> <5d8rb7$675@ss1.digex.net>
+Organization: Flying Disk Systems, Inc.
+Lines: 13
+Xref: nntp2.ba.best.com alt.folklore.computers:80751 alt.sys.pdp8:1543 alt.sys.pdp11:2165 comp.text:2957 alt.sys.pdp10:2621
+
+In article <5d8rb7$675@ss1.digex.net>, 
+doug@ss1.digex.net (Doug Humphrey) writes:
+
+> Does anyone remember the Imlacs?
+
+Remember them?   I have an Imlac PDS-1 here in my office,
+along with the manuals and print sets.   The last time I
+turned it on, it still worked.
+
+--  Alan E. Frisbie               Frisbie@Flying-Disk.Com
+--  Flying Disk Systems, Inc.
+--  4759 Round Top Drive          (213) 256-2575 (voice)
+--  Los Angeles, CA 90065         (213) 258-3585 (FAX)
+
+
+Article 2626 of alt.sys.pdp10:
+Path: nntp2.ba.best.com!news1.best.com!newshub1.home.com!news.home.com!enews.sgi.com!news.sgi.com!howland.erols.net!newsxfer3.itd.umich.edu!cloudbreak.rs.itd.umich.edu!news2.acs.oakland.edu!newsfeed.concentric.net!news-master!news
+From: Paul Wexelblat <wex@concentric.net>
+Newsgroups: alt.folklore.computers,comp.text,alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11
+Subject: Re: TJ-2, a very early word-processor-like program for the PDP-1
+Date: Sat, 08 Feb 1997 21:49:41 -0500
+Organization: None obvious
+Lines: 25
+Message-ID: <32FD3B43.5A91@concentric.net>
+References: <5csjas$4qk@reader.seed.net.tw> <5de8lo$n2o@news.usf.edu>
+NNTP-Posting-Host: cnc038034.concentric.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 3.0-C (Macintosh; I; PPC)
+Xref: nntp2.ba.best.com alt.folklore.computers:80824 comp.text:2960 alt.sys.pdp8:1552 alt.sys.pdp10:2626 alt.sys.pdp11:2170
+
+Jay R. Ashworth wrote:
+> 
+> dski@cameonet.cameo.com.tw wrote:
+> : I've heard others compare WordStar to nroff, troff, et al, and I can't
+> : for the life of me figure out where this notion comes from.
+> 
+> The dot command formatting engine?
+
+<snip>
+
+I could guess, but I expect that it's not common knowledge that WortStar
+_was_
+written by a PDP-1 programmer. Wordsatr (as orifginally written for the
+Imasi (I think))
+predates RUNOFF (predicessor to nroff). 
+I don't know TJ-2, but I did write a text justification program for the
+PDP-1 that was
+implemented in Logo. (I also wrote some of Logo, that was written for
+the PDP-1 in Assembler
+- Midas (predicessor to MACRO) but that's a different story.
+
+Please address specific follows-up to alt.folklore.computers as I dont
+subscribe to all the
+crossposted groups mentioned.
+	...wex
+
+
+Article 2627 of alt.sys.pdp10:
+Path: nntp2.ba.best.com!news1.best.com!newshub1.home.com!news.home.com!newshub2.home.com!news.home.com!su-news-hub1.bbnplanet.com!cpk-news-hub1.bbnplanet.com!news.bbnplanet.com!feed1.news.erols.com!insync!uunet!in1.uu.net!128.255.40.11!news.uiowa.edu!news
+From: jones@pyrite.cs.uiowa.edu (Douglas W. Jones,201H MLH,3193350740,3193382879)
+Newsgroups: alt.folklore.computers,comp.text,alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11
+Subject: Re: TJ-2, a very early word-processor-like program for the PDP-1
+Date: 9 Feb 1997 03:49:34 GMT
+Organization: The University of Iowa
+Lines: 24
+Message-ID: <5djhge$s2g@flood.weeg.uiowa.edu>
+References: <32FD3B43.5A91@concentric.net>
+NNTP-Posting-Host: pyrite.cs.uiowa.edu
+Xref: nntp2.ba.best.com alt.folklore.computers:80827 comp.text:2961 alt.sys.pdp8:1554 alt.sys.pdp10:2627 alt.sys.pdp11:2171
+
+From article <32FD3B43.5A91@concentric.net>,
+by Paul Wexelblat <wex@concentric.net>:
+> 
+> I could guess, but I expect that it's not common knowledge that WortStar
+> _was_ written by a PDP-1 programmer. Wordsatr (as orifginally written for the
+> Imasi (I think)) predates RUNOFF (predicessor to nroff). 
+
+?????  RUNOFF (on MULTICS) dates from the late 1960's.  That begat RUNOFF
+on the Bell Labs GCOS system (I have the manuals for it that I got when
+I worked at Bell in 1973), and that begat NROFF and TROFF in around 1973.
+(The CAT Phototypesetter was still a hot new toy at Murray Hill when I
+was there).
+
+Nothing developed for the IMSAI predates any of this!!!!
+
+A far more interesting lineage is the one that links TJ-2 to HTML.  Anyone
+want to lay it out in full?  (Hint:  HTML grew in the context of SGML,
+which originally grew in the context of a type formatter on the IBM-360
+family, which was based on ideas developed at IBM Cambridge Labs, which
+had a connection with work done on CTSS at MIT -- the common ancestor
+from which RUNOFF grew, by the way -- which was, no doubt, inspired by
+TJ-2.)
+				Doug Jones
+				jones@cs.uiowa.edu
+
+
+Article 2602 of alt.sys.pdp10:
+Path: nntp2.ba.best.com!nntp1.best.com!news1.best.com!newshub1.home.com!news.home.com!enews.sgi.com!ix.netcom.com!news
+From: xeno357@ix.netcom.com (Max ben-Aaron)
+Newsgroups: alt.folklore.computers,comp.text,alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11
+Subject: Re: TJ-2, a very early word-processor-like program for the PDP-1
+Date: 3 Feb 1997 22:51:48 GMT
+Organization: Netcom
+Lines: 69
+Message-ID: <5d5q64$o22@sjx-ixn10.ix.netcom.com>
+References: <E4uMBv.8zz@world.std.com> <RJM.97Jan31102524@europa.ox.ac.uk> <SWESTIN.97Jan31084621@dsg145.nad.ford.com>
+NNTP-Posting-Host: bos-ma10-10.ix.netcom.com
+X-NETCOM-Date: Mon Feb 03  2:51:48 PM PST 1997
+Xref: nntp2.ba.best.com alt.folklore.computers:80467 comp.text:2936 alt.sys.pdp8:1502 alt.sys.pdp10:2602 alt.sys.pdp11:2139
+
+High their:
+
+In the late 60's & early 70's I worked for a company (Medidata, later
+Searle Medidata) which started life as a not-for-profit spin-off from
+Lincoln Lab. (as I have heard), called American Science Institute.  The
+chief engineer, Ed Rawson was a friend of Dec's Olsen and he managed to
+get hold of the modules used for the prototype PDP-2 which never
+reached the market.  ASI used them to build their own machine
+(designed, I believe, by Chuck Corderman) which they called "Casino"
+and was sometimes jocularly referred to as a PDP-2 1/2.  Casino was
+noteworthy for having, very early in trhe game, graphics capabilities.
+It also had some special terminals which had labels that cannot be
+repeated on this (family) newsgroup.
+
+Mb-A
+
+=================================================================
+
+In <SWESTIN.97Jan31084621@dsg145.nad.ford.com>
+swestin@dsg145.nad.ford.com (Stephen Westin ) writes: 
+>
+>In article <RJM.97Jan31102524@europa.ox.ac.uk> rjm@europa.ox.ac.uk
+(Bob Manners) writes:
+>
+>> >   I have posted a reproduction of the documentation for a VERY
+early
+>> >   word-processor-like program, which ran on a PDP-1 with 4K words
+(9K bytes)
+>> >   of RAM in 1963.  I think the program was written by Pete Samson,
+although
+>> >   no names appear in the documentation.  
+>> 
+>> 4Kwords == 9Kb. I take it that the PDP-1 had an 18 bit word length
+then?
+>
+>You betcha. My impression of the PDP genealogy:
+>
+>PDP 1,4,7,9,15: 18-bit machines
+>PDP 5,8,12:     12-bit
+>PDP 6,10,20:    36-bit
+>PDP 11:         16-bit
+>PDP 2:          Never built
+>PDP 3:          Designed, never built by DEC, but rumor has it a
+customer
+>                bought DEC modules and assembled one. Don't know word
+length.
+>PDP 13:         Never existed
+>PDP 14:         Industrial automation controllers. Don't know word
+length
+>PDP 16:         Not a machine, but a system of register-transfer
+modules
+>                (memory, ALU, etc) from which a customer could build
+various
+>                computer-like devices. I used them in a class at
+Michigan; I
+>                believe DEC donated lots of 'em after they died in the
+market.
+>                They came out just in time to be obsoleted by the
+increasing
+>                level of integrated circuits of the time.
+>
+>-Stephen H. Westin
+>swestin@ford.com
+>The information and opinions in this message are mine, not Ford's.
+>--
+>-Stephen H. Westin
+>swestin@ford.com
+>The information and opinions in this message are mine, not Ford's.
+
+
+
+Article 2604 of alt.sys.pdp10:
+Path: nntp2.ba.best.com!news1.best.com!news.thenet.net!news.kei.com!news.mathworks.com!howland.erols.net!cloudbreak.rs.itd.umich.edu!newsxfer3.itd.umich.edu!jobone!dailyplanet.srl.ford.com!eccws1.dearborn.ford.com!news.ford.com!swestin
+From: swestin@dsg145.nad.ford.com (Stephen Westin )
+Newsgroups: alt.folklore.computers,comp.text,alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11
+Subject: Re: TJ-2, a very early word-processor-like program for the PDP-1
+Date: 04 Feb 1997 13:37:32 GMT
+Organization: Ford Motor Company
+Lines: 23
+Message-ID: <SWESTIN.97Feb4083732@dsg145.nad.ford.com>
+References: <E4uMBv.8zz@world.std.com> <RJM.97Jan31102524@europa.ox.ac.uk>
+	<SWESTIN.97Jan31084621@dsg145.nad.ford.com>
+	<5ctbdp$cjd$1@Zeke.Update.UU.SE> <5d5qms$bfs@sjx-ixn7.ix.netcom.com>
+NNTP-Posting-Host: dsg145.nad.ford.com
+In-reply-to: xeno357@ix.netcom.com's message of 3 Feb 1997 23:00:44 GMT
+Xref: nntp2.ba.best.com alt.folklore.computers:80493 comp.text:2939 alt.sys.pdp8:1505 alt.sys.pdp10:2604 alt.sys.pdp11:2142
+
+In article <5d5qms$bfs@sjx-ixn7.ix.netcom.com> xeno357@ix.netcom.com (Max ben-Aaron) writes:
+
+<snip>
+
+> High their:
+> 
+> Was the PDP-14 "LINC", a commercial version of a control computer built
+> at MIT'S Lincoln Lab?
+
+Nope. The LINC-8 was a PDP-8 (I?) sharing a box (and, I think, memory)
+with a LINC. It was a commercial product from DEC, and worked because
+both the '8 and the LINC were 12-bit machines. The LINC had a bunch of
+analog I/O and was useful for monitoring and controlling lab
+experiments. The PDP-12 was the next generation of the LINC-8, and the
+LINCtape evolved into DECtape.
+
+I seem to recall that Cooley Lab at the University of Michigan wrote a
+simple operating system for the LINC-8 which went on to become OS/8.
+
+--
+-Stephen H. Westin
+swestin@ford.com
+The information and opinions in this message are mine, not Ford's.
+
+
+Article 2605 of alt.sys.pdp10:
+Path: nntp2.ba.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!feed1.news.erols.com!cpk-news-hub1.bbnplanet.com!news.bbnplanet.com!cam-news-hub1.bbnplanet.com!uunet!in1.uu.net!128.255.40.11!news.uiowa.edu!news
+From: jones@pyrite.cs.uiowa.edu (Douglas W. Jones,201H MLH,3193350740,3193382879)
+Newsgroups: alt.folklore.computers,comp.text,alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11
+Subject: Re: TJ-2, a very early word-processor-like program for the PDP-1
+Date: 4 Feb 1997 15:01:55 GMT
+Organization: The University of Iowa
+Lines: 25
+Message-ID: <5d7j13$k66@flood.weeg.uiowa.edu>
+References: <SWESTIN.97Feb4083732@dsg145.nad.ford.com>
+NNTP-Posting-Host: pyrite.cs.uiowa.edu
+Xref: nntp2.ba.best.com alt.folklore.computers:80496 comp.text:2940 alt.sys.pdp8:1506 alt.sys.pdp10:2605 alt.sys.pdp11:2143
+
+In article <5d5qms$bfs@sjx-ixn7.ix.netcom.com>
+xeno357@ix.netcom.com (Max ben-Aaron) writes:
+
+> Was the PDP-14 "LINC", a commercial version of a control computer built
+> at MIT'S Lincoln Lab?
+
+The first LINC was built in 1962 at Lincoln Labs using DEC logic modules.
+By the end of 1963, an additional 20 or so machines had been built by
+their end-users.  At first, users simply purchased parts from DEC, but
+then DEC began to sell the parts as a kit -- was this the first computer
+sold in kit form? -- and as I understand it, DEC even allowed some
+customers to assemble and test the machine at Maynard and then haul it
+home ready to run.
+
+In late 1964, DEC began to manufacutre and sell ready-to-run LINC
+systems, made to order.  All this happened before the 1965 introduction
+of the PDP-8 and well before the 1966 introduction of the LINC-8 (a machine
+that could run both the PDP-8 and LINC instruction sets.  Eventually,
+DEC built and sold 21 LINC systems, while customers built 29.  In
+addition, DEC sold 142 LINC-8 systems, and something like 3500 PDP-12
+systems were sold to follow up on that success.  Others also came out
+with LINC clones, for example, the Spear MicroLINC.
+
+				Doug Jones
+				jones@cs.uiowa.edu
+
+
+Article 2606 of alt.sys.pdp10:
+Path: nntp2.ba.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!news.maxwell.syr.edu!news.bbnplanet.com!cpk-news-hub1.bbnplanet.com!worldnet.att.net!newsadm
+From: david.razler@worldnet.att.net (David M. Razler)
+Newsgroups: alt.folklore.computers,comp.text,alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11
+Subject: Re: TJ-2, a very early word-processor-like program for the PDP-1
+Date: Tue, 04 Feb 1997 15:23:04 GMT
+Organization: AT&T WorldNet Services
+Lines: 26
+Message-ID: <32fa53c5.38320830@netnews.worldnet.att.net>
+References: <E4uMBv.8zz@world.std.com> <RJM.97Jan31102524@europa.ox.ac.uk> <SWESTIN.97Jan31084621@dsg145.nad.ford.com> <5ctbdp$cjd$1@Zeke.Update.UU.SE> <5d5qms$bfs@sjx-ixn7.ix.netcom.com> <SWESTIN.97Feb4083732@dsg145.nad.ford.com>
+Reply-To: david.razler@worldnet.att.net
+NNTP-Posting-Host: 207.116.105.92
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Newsreader: Forte Agent .99g/32.339
+Xref: nntp2.ba.best.com alt.folklore.computers:80497 comp.text:2941 alt.sys.pdp8:1507 alt.sys.pdp10:2606 alt.sys.pdp11:2144
+
+swestin@dsg145.nad.ford.com (Stephen Westin ) wrote:
+
+| In article <5d5qms$bfs@sjx-ixn7.ix.netcom.com> xeno357@ix.netcom.com (Max ben-Aaron) writes:
+| 
+| <snip>
+| 
+| > High their:
+| > 
+| > Was the PDP-14 "LINC", a commercial version of a control computer built
+| > at MIT'S Lincoln Lab?
+| 
+| Nope. The LINC-8 was a PDP-8 (I?) sharing a box (and, I think, memory)
+| with a LINC.
+
+ PDP-8.  the PDP-8/I-LINC machine was the PDP-12
+
+| It was a commercial product from DEC, and worked because
+| both the '8 and the LINC were 12-bit machines. The LINC had a bunch of
+| analog I/O and was useful for monitoring and controlling lab
+| experiments. The PDP-12 was the next generation of the LINC-8, and the
+| LINCtape evolved into DECtape.
+| 
+The PDP-14 was a semi-custom machine controller.
+
+David M. Razler
+david.razler@worldnet.att.net
+
+
+Article 2614 of alt.sys.pdp10:
+Newsgroups: comp.os.vms,alt.sys.pdp10
+Path: nntp2.ba.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!news.enteract.com!news-xfer.netaxs.com!news.bbnplanet.com!cam-news-hub1.bbnplanet.com!howland.erols.net!news.sprintlink.net!news-peer.sprintlink.net!uunet!in2.uu.net!uucp6.uu.net!world!weiner
+From: weiner@world.std.com (Sam Weiner)
+Subject: Re: A Microsoft Future? (was: VMS vs. WNT Clusters)
+Message-ID: <E55upp.DBt@world.std.com>
+Followup-To: alt.sys.pdp10
+Organization: The World Public Access UNIX, Brookline, MA
+References: <Pine.OSF.3.90.970122102009.11215C-100000@thunder> <5c53ph$nep@explorer.csc.com>
+Date: Thu, 6 Feb 1997 02:53:46 GMT
+Lines: 22
+Xref: nntp2.ba.best.com comp.os.vms:59593 alt.sys.pdp10:2614
+
+In article <5c53ph$nep@explorer.csc.com>,
+Robert Koehler <rkoehler@csc.com> wrote:
+>Eric Wyn Jones (01248-382407) (e.w.jones@bangor.ac.uk) wrote:
+>
+>
+>: While we are talking history (CDC ,Cyber etc !)
+>
+>: Can anybody confirm that the last release of TOPS-10 was 7.02 ?
+>
+>No, it was not.  After TOPS-10 was retired at about 7.x or so, DEC decided to
+>make another update in order to add Ethernet support.  I think they called
+>it 10.0
+
+Actually, the last TOPS-10 released by Digital was 7.04.  There were
+some updates which included enough changes some insiders considered
+the result 7.05.  I'm not sure when Ethernet support was added but it
+was probably 7.01 if not before.
+
+I don't know what XKL calls their version of TOPS-10.  The web page
+at toad.xkl.com doesn't say.
+
+Sam
+
+
+Article 2631 of alt.sys.pdp10:
+Path: nntp2.ba.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!cpk-news-hub1.bbnplanet.com!news.bbnplanet.com!worldnet.att.net!uunet!in3.uu.net!199.232.56.18!news.ultranet.com!francini
+From: francini@ultranet.com (John J. Francini)
+Newsgroups: alt.sys.pdp10
+Subject: Re: A Microsoft Future? (was: VMS vs. WNT Clusters)
+Date: Tue, 11 Feb 1997 00:26:04 -0500
+Organization: Appletree Systems
+Lines: 48
+Message-ID: <francini-ya02408000R1102970026040001@news.ultranet.com>
+References: <Pine.OSF.3.90.970122102009.11215C-100000@thunder> <5c53ph$nep@explorer.csc.com> <E55upp.DBt@world.std.com>
+NNTP-Posting-Host: d24.dial-1.nsh.nh.ultra.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 8bit
+X-Newsreader: Yet Another NewsWatcher 2.4.0
+Xref: nntp2.ba.best.com alt.sys.pdp10:2631
+
+In article <E55upp.DBt@world.std.com>, weiner@world.std.com (Sam Weiner) wrote:
+
+> In article <5c53ph$nep@explorer.csc.com>,
+> Robert Koehler <rkoehler@csc.com> wrote:
+> >Eric Wyn Jones (01248-382407) (e.w.jones@bangor.ac.uk) wrote:
+> >
+> >
+> >: While we are talking history (CDC ,Cyber etc !)
+> >
+> >: Can anybody confirm that the last release of TOPS-10 was 7.02 ?
+> >
+> >No, it was not.  After TOPS-10 was retired at about 7.x or so, DEC decided to
+> >make another update in order to add Ethernet support.  I think they called
+> >it 10.0
+> 
+> Actually, the last TOPS-10 released by Digital was 7.04.  There were
+> some updates which included enough changes some insiders considered
+> the result 7.05.  I'm not sure when Ethernet support was added but it
+> was probably 7.01 if not before.
+
+No, it wasn't until 7.03 that the Ethernet (the NI-20) and the KLIPA CI bus
+disk/clustering interconnect (CI-20) were supported.  I strongly remember
+being quite envious of the 7.03 ship party T-shirt, which had "CI told you
+NI knew we could do it!" on the back.  (I came into DEC10 Development just
+after 7.03 shipped.)  Now, some versions of in-house 7.02 likely had the
+KLINIA and KLIPA support in them, but as far as shipping versions went, the
+first one that went out the door that had the support was 7.03.
+
+> 
+> I don't know what XKL calls their version of TOPS-10.  The web page
+> at toad.xkl.com doesn't say.
+> 
+> Sam
+
+Dunno either; when I saw a rough version of TOPS-10 at the San Francisco
+DECUS in 95 it was 7.04 of some flavor.  It would be nice if XKL managed to
+get the final frozen sources, but I haven't a clue.
+
+John Francini
+
+-- 
+----
++------------------------------------------------------------------------------+
+| "I have come to the conclusion that one useless man is called a disgrace;    |
+|  that two or more are called a law firm; and that three or more become       |
+|  a Congress.  And by God I have had _this_ Congress!"                        |
+|                                                        -- John Adams         |
++------------------------------------------------------------------------------+
+
+
+Article 2630 of alt.sys.pdp10:
+Path: nntp2.ba.best.com!thvv.vip.best.com!user
+From: thvv@best.com (Tom Van Vleck)
+Newsgroups: alt.sys.pdp10
+Subject: Augment/NLS
+Date: Mon, 10 Feb 1997 23:38:47 -0800
+Organization: Multicians
+Lines: 10
+Message-ID: <thvv-1002972338480001@thvv.vip.best.com>
+NNTP-Posting-Host: thvv.vip.best.com
+Xref: nntp2.ba.best.com alt.sys.pdp10:2630
+
+Dr. Douglas Engelbart gave a talk today at JavaSoft about the activities
+of the Bootstrap Institute.  He was going to demonstrate their Open
+Hyertext system and explained that Augment/NLS had been written for a PDP-10 
+when he was working at Tymshare in the late 1970s, and that it had
+never been ported, so the Bootstrap Institute still runs a "DEC-20" system
+in Fremont, CA.  For the demo, Dr. Engelbart set up a Sparc SS-20 which
+was going to run his software under a PDP-10 simulator.  Alas, the demo
+never got off the ground; due to configuration problems, all we saw
+was Smalltalk error messages.  He said that the little Sparc pizza box
+outperformed the whole set of PDP-10 cabinets.
+
+
+Article 2635 of alt.sys.pdp10:
+Path: nntp2.ba.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!ix.netcom.com!netcomsv!uu3news.netcom.com!netcomsv!uu4news.netcom.com!void.agames.com!albaugh
+From: albaugh@agames.com (Mike Albaugh)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Runoffs (was: TJ-2, a very early word-processor-like program for the PDP-1)
+Date: 11 Feb 1997 17:09:41 GMT
+Organization: Atari Games Corporation
+Lines: 52
+Message-ID: <5dq94l$53q@void.agames.com>
+References: <shendrix.854927050@escape> <19970203141600.JAA28526@ladder01.news.aol.com> <5d5nvd$sqt@bonkers.taronga.com> <thvv-0602971545020001@thvv.vip.best.com> <5diaq1$6cn$2@kirin.wwa.com>
+NNTP-Posting-Host: java.agames.com
+X-Newsreader: TIN [version 1.2 PL2]
+Xref: nntp2.ba.best.com alt.sys.pdp10:2635
+
+John Everett (jeverett@wwa.DEFEAT.UCE.BOTS.com) wrote:
+
+: The following is from Bob Clements, the author of DEC's PDP-10 RUNOFF.
+
+: The actual origin of RUNOFF on the -10 was indeed me, but I didn't
+: write it from scratch or from specs.  I did a fairly direct translation
+: of the source code for SDS-940 RUNOFF, which was written at UCB.
+
+	Hmmm, I thought it looked familiar, but the "Runoff"-like
+thingy on the [SX]DS-9[34]0 :-) was, AFAIK, called "Autosecretary".
+I may even have a manual buried in those boxes of books in the attic.
+I never actually had an account on the '940, being an undergrad
+at the time, but I _did_ pull cable for its terminals and once even
+repair one of the boards in the terminal interface. For you young'uns,
+this was a rack of DEC "System Modules" (Preceded Flip Chips, and
+were also used on the PDP-6 we had) where each line interface (what
+we'd call a UART today) used two or three cards. I know the tranmitter
+and receiver were separate, I just don't recall whether there was
+also a separate "control" card. Perhaps I can stir some memories
+out there. These little wonders were so well designed that the
+later UARTs from Western Digital and General Instruments pretty
+much copied them verbatim (Perhaps they were designed to DEC spec),
+and I always get a little peeved when I run into a serial interface
+that is _less_ well designed but done later (8530, 8250, Rockwell VIA...)
+
+	Anyway, the odd thing I remember about Autosecretary was
+that it output a tape that had to be flipped over and fed to a
+Flexowriter. Apparently Friden and Teletype had differing ideas
+about where the sprocket holes should go :-)
+
+: If you can find a copy of the source code of RUNOFF, you'll see big
+: sections with registers named A, B and X (I think that's right),
+
+ Matches my recollection, although as I said before I did not get
+_that_ close to the machine. Amazing what a machine with 16K of
+24-bit words per process (about 64 or 128K total) could do. OTOH,
+the limited per-process space made "fork" the tool of choice
+for task decomposition, and I'm still living with _that_ headache
+today on my company-issue Unix machine, _years_ after per-process
+address space made single-address-space tasks possible...
+(I also blame them for making "delete" the default "interrupt"
+key. Made using the paper-tape reader a real thrill :-)
+
+: Today, I suppose you'd get in trouble for that.  In those days, it
+: wasn't that big a deal.  Mea culpa."
+
+	As I recall, Project Genie (the 930->940 conversion and
+software development) was ARPA-funded, and the source code was
+freely distributable.
+
+					Mike
+| albaugh@agames.com, speaking only for myself
+
+
+Article 2636 of alt.sys.pdp10:
+Path: nntp2.ba.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!howland.erols.net!worldnet.att.net!uunet!in3.uu.net!199.170.183.55!brighton.openmarket.com!decwrl!tribune.usask.ca!news.uregina.ca!usenet
+From: bayko@borealis.cs.uregina.ca (John  Bayko)
+Newsgroups: alt.folklore.computers,comp.text,alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11
+Subject: Re: TJ-2, a very early word-processor-like program for the PDP-1
+Date: 11 Feb 1997 20:07:03 GMT
+Organization: University of Regina, Dept. of Computer Science
+Lines: 70
+Message-ID: <5dqjh7$dkg@sue.cc.uregina.ca>
+References: <5ctbdp$cjd$1@Zeke.Update.UU.SE> <01bc0fe8$97d6d740$0b4284a9@wardch> <5cvtfc$22j$3@kirin.wwa.com> <E5EGEq.KD5@thinkage.on.ca>
+NNTP-Posting-Host: borealis.cs.uregina.ca
+Xref: nntp2.ba.best.com alt.folklore.computers:80949 comp.text:2968 alt.sys.pdp8:1571 alt.sys.pdp10:2636 alt.sys.pdp11:2186
+
+In article <E5EGEq.KD5@thinkage.on.ca>,
+    Alan Bowler <atbowler@thinkage.on.ca> wrote:
+>In article <5cvtfc$22j$3@kirin.wwa.com> jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) writes:
+>>In article <01bc0fe8$97d6d740$0b4284a9@wardch>, ccw@mail.idt.com says...
+>>>
+>>>Along with the knowledge that the Data General Nova was decended from the
+>>>PDP-8
+>>>(Edson DeCastro worked on both) 
+>>
+>>Ain't revisionist history wonderful! Actually the Nova was descended (as 
+>>opposed to decended) from the PDP-X (or X-project) at DEC. This was DEC's 
+>>first attempt at a 16 bit machine, rejected by the operations committee. 
+>>Eventually a new design emerged as the PDP-11. 
+>
+>It is not all that revisionist.  While the Nova was a 16 bit system,
+>it had a very pdp-8 flavour to it.  The fact that internal to DEC
+>there was a (rejected) intermediate design between the PDP-8 and the Nova
+>doesn't much change the fact that it is a "spiritual" decendant of the
+>PDP-8.
+
+    Here's what the Great Microprocessors List has to say about the
+various descendants of the PDP-8 - the complete descriptions are
+available in the list from my home page,or the CPU Info Center at:
+
+    http://infopad.eecs.berkeley.edu/CIC/
+
+Great Microprocessors of the Past and Present (V 9.2.2)
+[...]
+Section One: Before the Great Dark Cloud.
+[...]
+Part V: The 6809, extending the 680x (1977)
+
+    Like the 6502, the 6809 was based on the Motorola 6800 (1974), which
+was initially based on the design of the big endian DEC PDP-8, though
+the 6809 expanded the design significantly. [...]
+
+Section Two: Forgotten/Innovative Designs before the Great Dark Cloud
+[...]
+Part VI: Intersil 6100, old design in a new package
+
+    The IMS 6100 was a single chip design of the PDP-8 minicomputer
+(1965) from DEC (low cost successor to the PDP-5 (1963)).
+The old PDP-8 design was very strange, and if it hadn't been
+so popular, an awkward CPU like the 6100 would have never had a reason 
+to exist.
+[...]
+
+Part VII: NOVA, another popular adaptation
+
+    Like the PDP-8, the Data General Nova was also copied, not just in
+one, but two implementations - the Data General MN601 (MicroNova),
+and Fairchild 9440. However, the NOVA was a more mature design (by PDP-8
+designer Edson DeCastro, who came to Data General from DEC).
+[...]
+    Another CPU, the PACE, was based on the NOVA design, but featured
+16 bit addressing, more addressing modes, and a 10 level stack (like
+the 8008).
+    The 32 bit ECLIPSE (pre 1983) was Data General's successor to the 16
+bit Nova. [...]
+
+Part VIII: Signetics 2650, enhanced accumulator based (1978?)
+
+    Superficially similar to the PDP-8 (and IMS 6100), the Signetics
+2650 was based around a set of 8 bit registers with R0 used as an
+accumulator, [...]
+
+--
+John Bayko (Tau).
+bayko@cs.uregina.ca
+http://www.cs.uregina.ca/~bayko
+
+
+Article 2638 of alt.sys.pdp10:
+Path: nntp2.ba.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!news.mathworks.com!news.maxwell.syr.edu!news.bc.net!unixg.ubc.ca!aurora.cs.athabascau.ca!rwa
+From: rwa@cs.athabascau.ca (Ross Alexander)
+Newsgroups: alt.folklore.computers,comp.text,alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11
+Subject: Re: TJ-2, a very early word-processor-like program for the PDP-1
+Date: 12 Feb 1997 18:27:10 GMT
+Organization: Athabasca University
+Lines: 42
+Message-ID: <5dt21u$f2l@aurora.cs.athabascau.ca>
+References: <5ctbdp$cjd$1@Zeke.Update.UU.SE> <01bc0fe8$97d6d740$0b4284a9@wardch> <5cvtfc$22j$3@kirin.wwa.com> <E5EGEq.KD5@thinkage.on.ca> <5dqjh7$dkg@sue.cc.uregina.ca>
+NNTP-Posting-Host: aupair.cs.athabascau.ca
+X-Newsreader: NN version 6.5.0 #10 (NOV)
+Xref: nntp2.ba.best.com alt.folklore.computers:81013 comp.text:2970 alt.sys.pdp8:1576 alt.sys.pdp10:2638 alt.sys.pdp11:2194
+
+I've edited heavily since my comment is a brief one.
+
+bayko@borealis.cs.uregina.ca (John  Bayko) writes:
+>    Here's what the Great Microprocessors List has to say about the
+>various descendants of the PDP-8 - the complete descriptions are
+[...]
+>    Like the 6502, the 6809 was based on the Motorola 6800 (1974), which
+>was initially based on the design of the big endian DEC PDP-8, though
+>the 6809 expanded the design significantly. [...]
+
+It's not at all clear to me what the line of descent between a machine
+(6800) with
+
+	two accumulators (mostly orthogonal)
+	PC relative displacement branches
+	condition codes
+	8-bit organization
+	hardware stack
+	index register
+	vectored interrupts (admittedly primitive)
+
+and a earlier machine (pdp8) with
+
+	one accumulator and a totally non-orthogonal quotient register
+	page relative branches
+	no condition codes
+	12 bit organization
+	no stack
+	no index register (I don't count mem locs 0010 .. 0017 as index registers)
+	flat interrupts
+
+might be beyond that fact that they're both small 2s complement von
+Neumann machines.  I've hacked on both and they have totally different
+`feels'.
+
+In short, the 6800 doesn't seem to share a lineage with the pdp8.
+The intersil 6100, definitely.
+
+regards,
+Ross
+--
+Ross Alexander, ve6pdq  --  (403) 675 6311  --  rwa@cs.athabascau.ca
+
+
+Article 2639 of alt.sys.pdp10:
+Path: nntp2.ba.best.com!news1.best.com!news.apfel.de!fu-berlin.de!news.mathworks.com!news.kei.com!news.texas.net!uunet!in1.uu.net!128.255.40.11!news.uiowa.edu!news
+From: jones@pyrite.cs.uiowa.edu (Douglas W. Jones,201H MLH,3193350740,3193382879)
+Newsgroups: alt.folklore.computers,comp.text,alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11
+Subject: Re: TJ-2, a very early word-processor-like program for the PDP-1
+Date: 12 Feb 1997 20:12:00 GMT
+Organization: The University of Iowa
+Lines: 35
+Message-ID: <5dt86g$eua@flood.weeg.uiowa.edu>
+References: <5dt21u$f2l@aurora.cs.athabascau.ca>
+NNTP-Posting-Host: pyrite.cs.uiowa.edu
+Xref: nntp2.ba.best.com alt.folklore.computers:81020 comp.text:2971 alt.sys.pdp8:1580 alt.sys.pdp10:2639 alt.sys.pdp11:2195
+
+bayko@borealis.cs.uregina.ca (John  Bayko) writes:
+>    Here's what the Great Microprocessors List has to say about the
+>various descendants of the PDP-8 - the complete descriptions are
+
+>    Like the 6502, the 6809 was based on the Motorola 6800 (1974), which
+>was initially based on the design of the big endian DEC PDP-8, though
+>the 6809 expanded the design significantly. [...]
+
+No!  As near as I can tell, the 6800 had nothing to do with the PDP-8.
+Single accumulator machines were the rule, not the exception, from 1946
+when Berks, Goldstein and Von Neumann first proposed the fetch-execute
+cycle as we know it, and the late 1950's.  In the 1960's, virtually all
+of the significant minicomputers were single-accumulator machines, and
+strong shawows of that world-view held on in the first generation of
+microprocessors.  The only major micrpocessor today with strong vestiges
+of this worldview is, of course, the Intel family of 80x86 machines.
+
+Anyway, someone needs to get their hands on the documentation for
+Motorola's first 8-bit processor, the MDP-1000, released in 1968.  It
+wasn't a microprocessor, it was a minicomputer, made with TTL, I think,
+but I'll lay odds that the 6800 architecture draws on the experience of
+the MDP-1000 far more than it draws on the PDP-8.
+
+Also, John Bayko's list completely missed the HP 21XX series of
+minicomputers.  Both the HP 21XX and DG NOVA series can be described
+as 16 bit versions of the PDP-8, but in widening the word, the two
+teams came to different conclusions about what to do with the extra
+bits (HP used 2 accumulators, DG used 4, and so on).  DG was a DEC
+spinoff, while HP (or rather, an HP subsidiary) was a major OEM customer
+of DEC PDP-8 hardware in the mid 1960's -- so major that, according to
+an interview published by CHAC, HP seriously considered buying DEC
+before they decided to make their own machines.
+
+				Doug Jones
+				jones@cs.uiowa.edu
+
+
+Article 2646 of alt.sys.pdp10:
+Path: nntp2.ba.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!news.maxwell.syr.edu!cam-news-hub1.bbnplanet.com!cpk-news-hub1.bbnplanet.com!news.bbnplanet.com!europa.clark.net!news.clark.net!gagner
+From: gagner@clark.net ()
+Newsgroups: alt.folklore.computers,comp.text,alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11
+Subject: Re: TJ-2, a very early word-processor-like program for the PDP-1
+Date: 15 Feb 1997 00:38:27 GMT
+Organization: The Washington Law Group PC
+Lines: 55
+Message-ID: <5e30i3$52s@clarknet.clark.net>
+References: <32FD3B43.5A91@concentric.net> <5djhge$s2g@flood.weeg.uiowa.edu>
+NNTP-Posting-Host: 100-explorer.clark.net
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=ISO-8859-1
+Content-Transfer-Encoding: 8bit
+Xref: nntp2.ba.best.com alt.folklore.computers:81185 comp.text:2982 alt.sys.pdp8:1600 alt.sys.pdp10:2646 alt.sys.pdp11:2212
+
+In article <5djhge$s2g@flood.weeg.uiowa.edu>,
+Douglas W. Jones,201H MLH,3193350740,3193382879 <jones@pyrite.cs.uiowa.edu> wrote:
+>From article <32FD3B43.5A91@concentric.net>,
+>by Paul Wexelblat <wex@concentric.net>:
+>
+<snip>
+>(The CAT Phototypesetter was still a hot new toy at Murray Hill when I
+>was there).
+>
+I'm probably wrong on the 'who was first' here, but the Typeset-10
+group at DEC (Tim Stein and myself, and others) wrote a driver for
+the CAT pretty early after its introduction. It was a neat little
+typesetting machine, and we were glad to get one because it was
+the first 'real' typesetting machine we had in house. I recall the
+date as 1973-74 or so, but could be wrong. Others who worked on
+Typeset-10 included Dan Bricklin. Typeset-10 was roughly modeled
+after Typeset-8, which was a wildly popular newspaper production
+system. The -10 version (in MACRO-10) had a number of innovative
+features, including a neat hyphenation algorithm that used a cute
+hashing algorithm derived from the -10's ability to do infinite
+level indirection and clever bit operations. It ran circles around
+anything else that we knew of.
+
+The Typeset-10 language was, in fact, modeled after the way that
+MIDAS (the -10 assembler at MIT) handled macros. You could
+do integer arithmetic in it, using the algorithms from
+Peter Sampson's wonderful STRING language, which allowed for
+infinite precision. Also, if you wanted,
+you could ouput the results directly was word strings in english,
+or as roman numerals. 
+
+Originally, Typset-10 had been planned to use RUNOFF syntax, but
+it was clear that such a syntax was too cumbersome. Some vestiges
+remained, which was unfortunate or we would have invented TEX.
+
+>
+>A far more interesting lineage is the one that links TJ-2 to HTML.  Anyone
+>want to lay it out in full?  (Hint:  HTML grew in the context of SGML,
+>which originally grew in the context of a type formatter on the IBM-360
+>family, which was based on ideas developed at IBM Cambridge Labs, which
+>had a connection with work done on CTSS at MIT -- the common ancestor
+>from which RUNOFF grew, by the way -- which was, no doubt, inspired by
+>TJ-2.)
+
+I recall using RUNOFF or something very like it on the 7094
+CTSS system at MIT, which would have been in the mid/late sixties,
+and of course MIT-AI later had a much more powerful
+version for both the PDP-6 and later for the PDP-10. So I'd put
+the evolutionary chain as CTSS --> MULTICS/MIT-AI and lots of
+branches after that. None of which is to speak of Electric Typewriter,
+and the many other efforts that were going on at the same time,
+including a truly bizzare text processor in use on the Phoenix
+machine at MITRE, which Joe Morris probably remembers much better
+than I do.
+
+
+
+Article 2648 of alt.sys.pdp10:
+Path: nntp2.ba.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!cs.utexas.edu!venus.sun.com!news2me.EBay.Sun.COM!eastnews1.East.Sun.COM!walters.East.Sun.COM!usenet
+From: rdh@urq (Robert Houk - SMCC Bos Desktop Hardware)
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11
+Subject: Re: TJ-2, a very early word-processor-like program for the PDP-1
+Date: 16 Feb 1997 17:22:18 -0500
+Organization: Sun Microsystems Inc. -- SMCC ESSG/WGS
+Lines: 43
+Sender: rdh@urq
+Message-ID: <c3b914ojsrp.fsf@urq>
+References: <32FD3B43.5A91@concentric.net> <5djhge$s2g@flood.weeg.uiowa.edu>
+	<5e30i3$52s@clarknet.clark.net>
+Reply-To: rdh@UrQ.East.Sun.COM
+NNTP-Posting-Host: urq.east.sun.com
+In-reply-to: gagner@clark.net's message of 15 Feb 1997 00:38:27 GMT
+X-Newsreader: Gnus v5.1
+Xref: nntp2.ba.best.com alt.sys.pdp8:1613 alt.sys.pdp10:2648 alt.sys.pdp11:2215
+
+In article <5e30i3$52s@clarknet.clark.net> gagner@clark.net () writes:
+
+   >(The CAT Phototypesetter was still a hot new toy at Murray Hill when I
+   >was there).
+
+   I'm probably wrong on the 'who was first' here, but the Typeset-10
+   group at DEC (Tim Stein and myself, and others) wrote a driver for
+   the CAT pretty early after its introduction. It was a neat little
+   typesetting machine, and we were glad to get one because it was
+   the first 'real' typesetting machine we had in house. I recall the
+   date as 1973-74 or so, but could be wrong. Others who worked on
+
+Probably pretty accurate, as the CAT (wasn't it "CATT" or "C/A/T/T",
+or something like that?) was "well established" (and later nicknamed
+by me as the "grind grind stink stink" machine) by the end of 1975
+when I got there and inherited ITPS-10 (aka Typeset-10 in drag).
+
+   Typeset-10 included Dan Bricklin. Typeset-10 was roughly modeled
+   after Typeset-8, which was a wildly popular newspaper production
+   system. The -10 version (in MACRO-10) had a number of innovative
+   features, including a neat hyphenation algorithm that used a cute
+   hashing algorithm derived from the -10's ability to do infinite
+   level indirection and clever bit operations. It ran circles around
+   anything else that we knew of.
+
+As I very vaguely recall, I timed it at around 2000 lines/second on
+a KI-10, which I thought was pretty amazing, all things considered.
+
+   Originally, Typset-10 had been planned to use RUNOFF syntax, but
+   it was clear that such a syntax was too cumbersome. Some vestiges
+   remained, which was unfortunate or we would have invented TEX.
+
+I wrote a RUNOFF macro for it, and managed to hornswoggle a friend
+into completing Conklin's (?) abortive RUNOFF/TYPESET interface, so
+we could take standard RUNOFF input and "typeset it". People were
+pretty amazed to see hyphenated RUNOFF output come out on the line-
+printers, let-alone proportionally-spaced stuff on the Diablo!
+(Don't think we ever quite mastered footnotes, though...)
+
+Ah, the good ole days . . . I *still* don't like WYSIWSYG formatters
+like Word et al (although they do make tables a *lot* easier)
+
+					-RDH
+
+
+Article 2649 of alt.sys.pdp10:
+Path: nntp2.ba.best.com!news1.best.com!news.apfel.de!news.maxwell.syr.edu!cam-news-hub1.bbnplanet.com!news.bbnplanet.com!uunet!in2.uu.net!199.232.56.18!news.ultranet.com!d7
+From: jmfbahxx@ma.ultranet.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: TJ-2, a very early word-processor-like program for the PDP-1
+Date: Mon, 17 Feb 97 16:36:46 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 58
+Message-ID: <5e9sl4$2i5$1@decius.ultra.net>
+References: <32FD3B43.5A91@concentric.net> <5djhge$s2g@flood.weeg.uiowa.edu>
+	<5e30i3$52s@clarknet.clark.net> <c3b914ojsrp.fsf@urq>
+NNTP-Posting-Host: d7.dial-13.mbo.ma.ultra.net
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: nntp2.ba.best.com alt.sys.pdp10:2649
+
+In article <c3b914ojsrp.fsf@urq>,
+   rdh@urq (Robert Houk - SMCC Bos Desktop Hardware) wrote:
+>In article <5e30i3$52s@clarknet.clark.net> gagner@clark.net () writes:
+>
+>   >(The CAT Phototypesetter was still a hot new toy at Murray Hill 
+when I
+>   >was there).
+>
+>   I'm probably wrong on the 'who was first' here, but the Typeset-10
+>   group at DEC (Tim Stein and myself, and others) wrote a driver for
+>   the CAT pretty early after its introduction. It was a neat little
+>   typesetting machine, and we were glad to get one because it was
+>   the first 'real' typesetting machine we had in house. I recall the
+>   date as 1973-74 or so, but could be wrong. Others who worked on
+>
+>Probably pretty accurate, as the CAT (wasn't it "CATT" or "C/A/T/T",
+>or something like that?) was "well established" (and later nicknamed
+>by me as the "grind grind stink stink" machine) by the end of 1975
+>when I got there and inherited ITPS-10 (aka Typeset-10 in drag).
+>
+>   Typeset-10 included Dan Bricklin. Typeset-10 was roughly modeled
+>   after Typeset-8, which was a wildly popular newspaper production
+>   system. The -10 version (in MACRO-10) had a number of innovative
+>   features, including a neat hyphenation algorithm that used a cute
+>   hashing algorithm derived from the -10's ability to do infinite
+>   level indirection and clever bit operations. It ran circles around
+>   anything else that we knew of.
+>
+>As I very vaguely recall, I timed it at around 2000 lines/second on
+>a KI-10, which I thought was pretty amazing, all things considered.
+>
+>   Originally, Typset-10 had been planned to use RUNOFF syntax, but
+>   it was clear that such a syntax was too cumbersome. Some vestiges
+>   remained, which was unfortunate or we would have invented TEX.
+>
+>I wrote a RUNOFF macro for it, and managed to hornswoggle a friend
+>into completing Conklin's (?) abortive RUNOFF/TYPESET interface, so
+>we could take standard RUNOFF input and "typeset it". People were
+>pretty amazed to see hyphenated RUNOFF output come out on the line-
+>printers, let-alone proportionally-spaced stuff on the Diablo!
+>(Don't think we ever quite mastered footnotes, though...)
+>
+>Ah, the good ole days . . . I *still* don't like WYSIWSYG formatters
+>like Word et al (although they do make tables a *lot* easier).
+
+'ey Bob!
+
+I remember using that software to create great galleys.  I also remember 
+ using your terminal, GT-40?maybe?.  I seem to remember that it sounded 
+like a small airplane.  I would type in RUNOFF format, run the .RNO file 
+through some kind of pre-formatter and then (somehow) get it printed on 
+the machine that was on MRO-1.   It produced great copy; a great leap 
+forward from the Diablo.
+
+By the way, this is my first test of entering an item using this ISP.  
+(AOL became a swear when it started to tell me to get off the system!).
+
+/BAH
+
+
+Article 2650 of alt.sys.pdp10:
+Path: nntp2.ba.best.com!news1.best.com!news.apfel.de!news.maxwell.syr.edu!feed1.news.erols.com!howland.erols.net!agate!bh
+From: bh@anarres.CS.Berkeley.EDU (Brian Harvey)
+Newsgroups: alt.sys.pdp10
+Subject: Re: TJ-2, a very early word-processor-like program for the PDP-1
+Date: 17 Feb 1997 16:49:27 GMT
+Organization: University of California, Berkeley
+Lines: 7
+Message-ID: <5ea26n$1bk@agate.berkeley.edu>
+References: <32FD3B43.5A91@concentric.net> <5e30i3$52s@clarknet.clark.net> <c3b914ojsrp.fsf@urq> <5e9sl4$2i5$1@decius.ultra.net>
+NNTP-Posting-Host: anarres.cs.berkeley.edu
+Xref: nntp2.ba.best.com alt.sys.pdp10:2650
+
+People in this thread have been comparing RUNOFF and friends with TeX.
+You might be interested to know that the PDP-10 was the host for an early
+TeX precursor, the professional typesetting system that I worked on (along
+with Lowell Hawkinson and some others) at Composition Technology
+circa 1970, I believe the first program that handled high-quality
+typesetting of mathematical formulas from user input in math terms
+rather than exact positional terms.
+
+
+Article 2619 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.apfel.de!news.maxwell.syr.edu!feed1.news.erols.com!howland.erols.net!agate!bh
+From: bh@anarres.CS.Berkeley.EDU (Brian Harvey)
+Newsgroups: alt.sys.pdp10
+Subject: Re: TJ-2, a very early word-processor-like program for the PDP-1
+Date: 17 Feb 1997 16:49:27 GMT
+Organization: University of California, Berkeley
+Lines: 7
+Message-ID: <5ea26n$1bk@agate.berkeley.edu>
+References: <32FD3B43.5A91@concentric.net> <5e30i3$52s@clarknet.clark.net> <c3b914ojsrp.fsf@urq> <5e9sl4$2i5$1@decius.ultra.net>
+NNTP-Posting-Host: anarres.cs.berkeley.edu
+
+People in this thread have been comparing RUNOFF and friends with TeX.
+You might be interested to know that the PDP-10 was the host for an early
+TeX precursor, the professional typesetting system that I worked on (along
+with Lowell Hawkinson and some others) at Composition Technology
+circa 1970, I believe the first program that handled high-quality
+typesetting of mathematical formulas from user input in math terms
+rather than exact positional terms.
+
+
+Article 2623 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.apfel.de!news.maxwell.syr.edu!cpk-news-hub1.bbnplanet.com!cam-news-hub1.bbnplanet.com!news.bbnplanet.com!howland.erols.net!newsxfer.itd.umich.edu!uunet!in1.uu.net!199.172.62.14!world!mv!news.wizvax.net!wilson
+From: wilson@dbit.dbit.com (John Wilson)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Need RM03 packs...
+Date: 19 Feb 1997 03:29:45 GMT
+Organization: D Bit, Troy, NY
+Lines: 33
+Message-ID: <5eds39$5po$1@news.wizvax.net>
+References: <5edlph$gab@student.computer.org>
+NNTP-Posting-Host: dbit.dbit.com
+
+In article <5edlph$gab@student.computer.org>,
+Chris Zach <cz@alembic.crystel.com> wrote:
+>So does anyone have any RM03 
+>packs that I could pick up? Preferably clean...
+
+I *had* some, haven't seen them in a while...  I also found a place in MD
+that could clean + inspect them for something like $30-40 each, worth it
+if you don't want to trash your drive.
+
+>On a related note, I could use some filters for my RM02/03 drives. Does 
+>anyone still sell them, or is this going to be a limited resource...
+
+I feel sure DEC still sells them, I've got a slightly oldish DAS catalog
+in front of me that gives the part # as 29-22925-00 but doesn't have a
+listing for it except as part of the PM kit 4A-PM116-00, which costs $131
+but supposedly includes 2 of the filters and 10 prefilters (y'know, the
+things that the manual says to wash in warm soapy water but if you do they
+turn to dust and disappear).
+
+>Final question: Does anyone know if the RM80 supported 18bit access? They 
+>have some more space than a RM02, and do use less current....
+
+YES, and don't let anyone tell you otherwise.  You *must* add a jumper
+between pins E06E1 and E06C2 of the RM adapter backplane (that's the cage
+that slides out of the base), and then you'll need to reformat it, but
+MARK in the ITS salvager does that just fine (note that as distributed,
+the RM80 version of NSALV 260 needs a patch to work correctly, see
+ftp://ftp.dbit.com/pub/pdp10/its/build.info).  The KS10 that I ran under
+ITS at Fornax in '92/'93 had an RM80 system disk and worked great, and
+running on 115V with no air filters is a Good Thing.
+
+John Wilson
+D Bit
+
+
+Article 2630 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newshub1.home.com!news.home.com!enews.sgi.com!news.sgi.com!news.maxwell.syr.edu!news.bc.net!info.ucla.edu!news.ucdavis.edu!news.wwa.com!not-for-mail
+From: jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett)
+Newsgroups: alt.folklore.computers,comp.text,alt.sys.pdp10
+Subject: Re: TJ-2, a very early word-processor-like program for the PDP-1
+Date: 21 Feb 1997 18:17:16 GMT
+Organization: WorldWide Access (tm) - Midwestern Internet Services (www.wwa.com)
+Lines: 23
+Message-ID: <5ekorc$pr1$3@kirin.wwa.com>
+References: <5ctbdp$cjd$1@Zeke.Update.UU.SE> <33052C5D.7312BF22@swec.com> 
+        <1997Feb20.143227.27963@indyvax.iupui.edu> <5ej2j4$3q5@student.computer.org>
+NNTP-Posting-Host: pool18-019.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.8 (x86 32bit)
+Xref: nntp1.ba.best.com alt.folklore.computers:81355 comp.text:2998 alt.sys.pdp10:2630
+
+In article <5ej2j4$3q5@student.computer.org>, cz@alembic.crystel.com says...
+>
+>> The IBM 360/44 used core for all kinds of stuff that you might not expect,
+>> including registers.  Again real registers were an extra-cost option I 
+>believe.
+>> (It's also been many moons since I worked on one of these.)  But you 
+>couldn't
+>> load inner loops into the registers and jump to them like TECO reputedly 
+>did on
+>> the PDP-10.
+>
+>Of course, the untimate hell was the PDP-8/S. With a 1 bit accumulator (ok, 
+a 
+>flip flop) I think it sequenced the instructions and data through the flip 
+>flop one bit at a time. A true serial computer....
+
+And performance to match. As a charter member of the PDP-8 programming group 
+(when the "group" was Roger Pyle and me) I had to test everything I wrote for 
+PDP-8/S compatibility. Some of the most boring hours I've ever spent.
+
+-- 
+jeverett@wwa.com (John V. Everett)          http://www.wwa.com/~jeverett
+
+
+
+Article 2659 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!sdd.hp.com!bone.think.com!blanket.mitre.org!news.tufts.edu!www.nntp.primenet.com!nntp.primenet.com!europa.clark.net!cpk-news-hub1.bbnplanet.com!news.bbnplanet.com!worldnet.att.net!hunter.premier.net!uunet!in2.uu.net!204.71.28.14!cmgi.com!usenet
+From: "Aron K. Insinga" <ainsinga@infomation.com>
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: RIM10B bootstrap loader for the PDP-10
+Date: Tue, 04 Mar 1997 11:18:34 -0500
+Organization: InfoMation Publishing Corporation
+Lines: 11
+Message-ID: <331C4B5A.F9A@infomation.com>
+References: <5ctbdp$cjd$1@Zeke.Update.UU.SE> <331A2ABB.7E05D27@swec.com> <5ffgdt$n2v@ss1.digex.net> <331B6E04.6FCF255E@swec.com> <5fft1m$pf2@ss1.digex.net> <331B7CDC.F650253@swec.com>
+NNTP-Posting-Host: wd26.cmgi.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 3.01 (X11; I; SunOS 5.5.1 sun4u)
+Xref: nntp1.ba.best.com alt.folklore.computers:81970 alt.sys.pdp10:2659
+
+Related story (from memory, so caveat emptor): They were built in areas
+of plants (ML, MR) which didn't have a raised floor with air
+conditioning blown underneath, so they took clean air from above and
+blew it down through the machine.  If you did have such a raised floor,
+there was an ECO to reverse the fans to suck cold air up through the
+cabinets from underneath the floor.  This also required turning the
+backplane for some option upside down in its cabinet to prevent the hot
+components that were carefully placed on one edge of the board from
+heating up the rest of the board.
+
+- Aron Insinga
+
+
+Article 2652 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.apfel.de!news.maxwell.syr.edu!news.nacamar.de!uunet!in3.uu.net!128.255.40.11!news.uiowa.edu!news
+From: jones@pyrite.cs.uiowa.edu (Douglas W. Jones,201H MLH,3193350740,3193382879)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Cooling airflow (was: RIM10B bootstrap loader for the PDP-10)
+Date: 6 Mar 1997 21:54:27 GMT
+Organization: The University of Iowa
+Lines: 30
+Message-ID: <5fneej$ghu@flood.weeg.uiowa.edu>
+References: <SWESTIN.97Mar6085925@dsg145.nad.ford.com>
+NNTP-Posting-Host: pyrite.cs.uiowa.edu
+Xref: nntp1.ba.best.com alt.folklore.computers:81941 alt.sys.pdp10:2652
+
+In article <331E24F3.259D6085@swec.com> "Carl R. Friend"
+<carl.friend@swec.com> writes:
+ 
+>    "Top-down" airflow was very common in DEC machines, the argument
+> being that some of these systems will be used in dirty environments
+> like factory floors. I know that the PDP-12 I just got through
+> resurrecting features top-down cooling, as did a couple of the -10s
+> that I worked on early on in my career (they got converted to bottom-
+> up cooling).
+
+Quote from DEC's Small Computer Handbook, 1973, page 8-11:
+
+   ... in general, air enters standard cabinets through the top filter
+   and exits at the bottom ...
+
+This applies to the standard DEC H960 "basic cabinet", a 6 foot 19" (EIA
+standard mounting rails) relay rack with side skins, rear door and
+fan/filter assembly built into the top.  This cabinet was used for all
+kinds of DEC computer systems of that era, from the 12 bit PDP-8 on up
+into the 16-bit PDP-11, 18-bit PDP-15, and into the 36 bit world (although
+I think the PDP-10 CPU used a custom wide cabinet, with rows of H960
+cabinets for peripheral interfaces).
+
+The earlier CAB-1 through CAB-8 series of DEC cabinets used prior to 1968
+were built with a fan in the bottom.  I don't know which way the air flowed
+in these cabinets, but the original PDP-8, 1966, had bottom up flow with 
+the fans in the power supply assembly halfway up the cabinet and just
+below the CPU.
+				Doug Jones
+				jones@cs.uiowa.edu
+
+
+Article 2651 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.this.com!www.nntp.primenet.com!nntp.primenet.com!cs.utexas.edu!howland.erols.net!vixen.cso.uiuc.edu!sdd.hp.com!bone.think.com!blanket.mitre.org!news.mitre.org!mwunix!jcmorris
+From: jcmorris@mwunix.mitre.org (Joe Morris)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Cooling airflow (was: RIM10B bootstrap loader for the PDP-10)
+Date: 6 Mar 1997 22:24:12 GMT
+Organization: The MITRE Corporation
+Lines: 37
+Message-ID: <5fng6c$i7n@top.mitre.org>
+References: <5ctbdp$cjd$1@Zeke.Update.UU.SE> <331A2ABB.7E05D27@swec.com> 	<5ffgdt$n2v@ss1.digex.net> <331B6E04.6FCF255E@swec.com> 	<5fft1m$pf2@ss1.digex.net> <331B7CDC.F650253@swec.com> 	<331C4B5A.F9A@infomation.com> <331E24F3.259D6085@swec.com> <SWESTIN.97Mar6085925@dsg145.nad.ford.com>
+NNTP-Posting-Host: mwunix.mitre.org
+Xref: nntp1.ba.best.com alt.folklore.computers:81920 alt.sys.pdp10:2651
+
+swestin@dsg145.nad.ford.com (Stephen Westin ) writes:
+
+> "Carl R. Friend" <carl.friend@swec.com> writes:
+
+>>    "Top-down" airflow was very common in DEC machines, the argument
+>> being that some of these systems will be used in dirty environments
+>> like factory floors. I know that the PDP-12 I just got through
+>> resurrecting features top-down cooling, as did a couple of the -10s
+>> that I worked on early on in my career (they got converted to bottom-
+>> up cooling).
+
+>I've used a number of DEC machines with top-down cooling. I've also
+>used the Evans & Sutherland PS390, which originally had bottom-up
+>cooling. Within a few months, the filter on the bottom had clogged,
+>causing it to overheat. The workaround was to rip the filter out until
+>the field engineer could come out and flip the fans for top-down flow
+>so it would ingest less dust.
+
+OTOH, at a PPOE we had a brand-new KL10 that ate circuit cards at
+an alarming rate (all at DEC's expense) until the airflow was turned
+around to use the air coming up from the raised flooring.  DEC had
+been made aware that (like most computer rooms of the time) we used
+underfloor cooling exclusively, but still insisted on delivering
+and installing the machine with top-down airflow.
+
+DEC had some wonderful design concepts in the KL10, coupled with
+hideous physical implementations.  My biggest squawk about the
+machine (I wasn't responsible for the KL10, but was involved
+with the electrical power for the computer center) was that that
+the machine was dumping ~15A of current down the ground wire, and
+the DEC CE could not understand why I was upset.  (The KL10 used
+3-phase AC power; there was significant current in the *neutral*
+line because the loads were badly unbalanced, but that's at 
+least within Code specs.  Current in the *ground* wire isn't supposed
+to be present.)
+
+Joe Morris
+
+
+Article 2658 of alt.sys.pdp10:
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!newshub.sdsu.edu!newshub.csu.net!news.ironhorse.com!news.uoregon.edu!hammer.uoregon.edu!news-xfer.netaxs.com!cpk-news-hub1.bbnplanet.com!cam-news-hub1.bbnplanet.com!news.bbnplanet.com!howland.erols.net!ix.netcom.com!netcom6!alderson
+From: alderson@netcom6.netcom.com (Richard M. Alderson III)
+Subject: Re: RIM10B bootstrap loader for the PDP-10
+In-Reply-To: doug@ss1.digex.net's message of 3 Mar 1997 20:14:30 -0500
+Message-ID: <ALDERSON.97Mar5114908@netcom6.netcom.com>
+Sender: alderson@netcom6.netcom.com
+Reply-To: alderson@netcom.com
+Organization: NETCOM On-line services
+References: <5ctbdp$cjd$1@Zeke.Update.UU.SE> <331A2ABB.7E05D27@swec.com>
+	<5ffgdt$n2v@ss1.digex.net> <331B6E04.6FCF255E@swec.com>
+	<5fft1m$pf2@ss1.digex.net>
+Date: Wed, 5 Mar 1997 19:49:08 GMT
+Lines: 15
+Xref: nntp1.ba.best.com alt.folklore.computers:81967 alt.sys.pdp10:2658
+
+In article <5fft1m$pf2@ss1.digex.net> doug@ss1.digex.net (Doug Humphrey)
+writes:
+
+>By the by, does anyone here know who I should contact at Compuserve to talk
+>about all of the 10's that they are discarding?
+
+They discarded all the DEC equipment quite some time ago, I believe, retiring
+it in favour of Systems Concepts boxen.  There's only one guy in the entire
+company these days who knows anything at all about 36-bit computing; I imagine
+he's nervous...
+-- 
+Rich Alderson   You know the sort of thing that you can find in any dictionary
+                of a strange language, and which so excites the amateur philo-
+                logists, itching to derive one tongue from another that they
+                know better: a word that is nearly the same in form and meaning
+                as the corresponding word in English, or Latin, or Hebrew, or
+                what not.
+                                                --J. R. R. Tolkien,
+alderson@netcom.com                               _The Notion Club Papers_
+
+
+Article 2650 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!shell3.ba.best.com!not-for-mail
+From: inwap@shell3.ba.best.com (Smith and O'Halloran)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: RIM10B bootstrap loader for the PDP-10
+Date: 6 Mar 1997 11:23:58 -0800
+Organization: Chez INWAP (people, computers, cats)
+Lines: 23
+Message-ID: <5fn5ke$c6v@shell3.ba.best.com>
+References: <5ctbdp$cjd$1@Zeke.Update.UU.SE> <331708A1.41C6@s054.aone.net.au> <331A2ABB.7E05D27@swec.com> <5ffgdt$n2v@ss1.digex.net>
+NNTP-Posting-Host: shell3.ba.best.com
+Xref: nntp1.ba.best.com alt.folklore.computers:81910 alt.sys.pdp10:2650
+
+In article <5ffgdt$n2v@ss1.digex.net>,
+Doug Humphrey <doug@ss1.digex.net> wrote:
+>Yep - in the KA, the FM was able to turn on/off mainly because
+>there were KA machines out there which didn't have the FM option
+>(though, not too many of them) because back then this was damned 
+>expensive stuff.
+
+At the going-away party for Stanford's PDP-10s, someone had an old
+catalog of 36-bit systems.  It listed the 1010, 1020, 1030 and 1040
+models.  I asked about the KA's without FM and byte hardware, and he said
+that although DEC had such items in the catalog, none were ever sold.
+All customers opted for Fast Memory and byte-manipulation/floating-point
+hardware.
+
+I would like to know if there are any counterexamples; sites that admit
+to purchasing a KA without FM and FP.  (I do not believe there are any.)
+
+I would also like to know there are any of these ancient catalogs still
+around.  I want to get them scanned and posted to my website.
+	-Joe
+-- 
+INWAP.COM is Joe and Sally Smith, John and Chris O'Halloran and our cats
+See http://www.inwap.com/ for "ReBoot", PDP-10, and Clan MacLeod.
+
+
+Article 2667 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newshub.sdsu.edu!newshub.csu.net!www.nntp.primenet.com!nntp.primenet.com!europa.clark.net!worldnet.att.net!howland.erols.net!newsxfer3.itd.umich.edu!portc01.blue.aol.com!audrey01.news.aol.com!not-for-mail
+From: jimpy@aol.com (Jimpy)
+Newsgroups: alt.sys.pdp10
+Subject: Re: RIM10B bootstrap loader for the PDP-10
+Date: 7 Mar 1997 13:03:26 GMT
+Organization: AOL http://www.aol.com
+Lines: 8
+Message-ID: <19970307130300.IAA09156@ladder01.news.aol.com>
+References: <5fn5ke$c6v@shell3.ba.best.com>
+NNTP-Posting-Host: ladder01.news.aol.com
+X-Admin: news@aol.com
+
+I worked in manufactiring on the PDP-10. I can't remember if any machines
+went to customer sites without the FM option on the KA10, but I do
+remember that a few machines were shipped without the floating point
+option.
+
+
+Jimpy
+
+
+
+Article 2671 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!insync!news
+From: spring1@insync.net (spring1)
+Newsgroups: alt.sys.pdp10
+Subject: 10's Inside DEC
+Date: 12 Mar 1997 02:28:24 GMT
+Organization: Insync Internet Services
+Lines: 4
+Message-ID: <5g54c8$sqo@synthemesc.insync.net>
+NNTP-Posting-Host: dialup-164-75.insync.net
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.9 (Beta 3) (x86 32bit)
+
+Anyone here ever work at one of DEC's internal datacenters that used 10's?
+
+PK-1 was the biggest datacenter - full of them back in the late 70's & 80's.
+
+
+
+Article 2674 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!worldnet.att.net!howland.erols.net!portc02.blue.aol.com!newstf02.news.aol.com!newstf01.news.aol.com!audrey01.news.aol.com!not-for-mail
+From: jimpy@aol.com (Jimpy)
+Newsgroups: alt.sys.pdp10
+Subject: Re: 10's Inside DEC
+Date: 13 Mar 1997 01:44:59 GMT
+Organization: AOL http://www.aol.com
+Lines: 5
+Message-ID: <19970313014401.UAA03696@ladder01.news.aol.com>
+References: <5g54c8$sqo@synthemesc.insync.net>
+NNTP-Posting-Host: ladder01.news.aol.com
+X-Admin: news@aol.com
+
+I worked at the Westfield and Westminster data centers, latter transfered
+to Maynard, worked mainlt in the mill, but visited PK-1 quite often.
+
+
+Jimpy
+
+
+Article 2680 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!insync!news
+From: spring1@insync.net (spring1)
+Newsgroups: alt.sys.pdp10
+Subject: Re: 10's Inside DEC
+Date: 14 Mar 1997 02:07:50 GMT
+Organization: Insync Internet Services
+Lines: 20
+Message-ID: <5gabtm$l7c@synthemesc.insync.net>
+References: <5g54c8$sqo@synthemesc.insync.net> <19970313014401.UAA03696@ladder01.news.aol.com>
+NNTP-Posting-Host: dialup-164-78.insync.net
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.9 (Beta 3) (x86 32bit)
+
+I worked in PK3, and then PK1 when it became DEC's main corporate datacenter. 
+I wrote & supported many of the applications on the 10's 20's & RSTS machines.
+
+It was always impressive to go into the computer room.  There must have been a 
+half dozen 10's there, and a 2 or 3 20's, and a bunch of 11's.  The computer 
+room was the size of a football field (in fact I believe a football was tossed 
+around in there during some 3rd shifts...)  The whole place hummed from the 
+systems and dozens of disk drives.
+
+Lots of funny stories.  Like the time there was a water leak from the roof, 
+and someone covered some of the 10's with the plastic emergency covers - but 
+didn't turn them off...   Had some memory problems for a while after that.
+
+DEC had a number of other datacenters running 10's:  Westminster, Marlboro, 
+The Mill, Westfield, Colorado Springs, Gevena, Galway Ireland, Puerto Rico, 
+Nashua NH, Ayr Scotland, Phoenix, Reading England, Kaufbeuren Germany, 
+probably a few more I don't remember.   They were all connected very early on 
+(early 70's) with an imprssive network for the time.
+
+
+
+
+Article 2672 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.thenet.net!uunet!in1.uu.net!199.232.56.18!news.ultranet.com!d12
+From: jmfbahxx@ma.ultranet.com
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Old disk stories (Was--Doubtful Story I stand corrected)
+Date: Wed, 12 Mar 97 15:37:49 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 68
+Message-ID: <5g6e1n$lf$1@decius.ultra.net>
+References: <3314d52e.72198967@news.bright.net> <01bc2728$a1c8d580$7309cc96@eeestayl> <5fg8or$emo$1@Zeke.Update.UU.SE> <01bc29c3$50cff9e0$6f09cc96@default> <5g4c08$96b$1@Zeke.Update.UU.SE>
+NNTP-Posting-Host: d12.dial-15.mbo.ma.ultra.net
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.folklore.computers:82132 alt.sys.pdp10:2672
+
+In article <5g4c08$96b$1@Zeke.Update.UU.SE>,
+   bqt@Zeke.Update.UU.SE (Johnny Billquist) wrote:
+>In <01bc29c3$50cff9e0$6f09cc96@default> "Slarty Bartfast" 
+<eeestayl@livjm.ac.uk> writes:
+>
+>>Johnny Billquist <bqt@Zeke.Update.UU.SE> wrote in article
+>>> 4. What's your problem with 3-4 foot disks, or 3-phase motors? Both
+>>>    were the normal look in the '60s and '70s...
+>>> 
+>>> You are obviously a bit young for this... ;-)
+>>> 
+>>> (I know of someone who burned a VAX8600 by reversing two phases just
+>>>  a few years ago...)
+>>> 
+>>> However, the story could a just a legend anyway, but from a technical
+>>> point of view, there is nothing wrong with it.
+>>
+>>	Well i guess I have shown my age here, but it was a new one for me.
+>>I would love to here more about these *Monster* drives.
+>
+>Monster and monster... We have a couple of RP06 drives stored away here, 
+which use 3-phase motors for the drives. They are approximately 1x1x1 
+meter,
+>176 Mbyte. The core drive is a Memorex, but DEC added a Massbus interface 
+to
+>it, which is a box attached to the side of the main drive.
+>
+>I think the drive has something like 7 platters (just from memory, I'm not
+>looking at any from where I'm sitting), which means 14 surfaces. Of these,
+>the top and bottom surface isn't used, which leaves 12 usable surfaces.
+>The heads a pulled by a huge electronic magnet. There are some cute 
+stickers
+>inside the drive about removing wrist watches and rings before servicing.
+>Also, you have a locking pin, which you can insert through the magnet,
+>to avoid a head movement. The mass and speed of the heads are enough to
+>remove a finger from your hand.
+>
+>I think the average seek time is something like 25 ms.
+>
+>Then we have th RP07, which is about the same physical size, 506 Mbyte
+>capacity. This one don't have removeable packs, but is faster.
+>
+>Each arm has two heads to reduce head movement, and there is an amplifier
+>directly on the head to pick up the signal.
+>
+>It can pump data at about 2.2 Mbyte/second, seek is less than 20 ms,
+>and it's a pretty nice drive, I think. :-)
+>
+Oh, dear! I think I'm beginning to feel my age.  I _still_ don't consider 
+the RP01/2/4/6s to be monsters; and the RP07s are new young things [tongue 
+in cheek emoticon here].  I consider the monsters to be things like the 
+Bryant Drum; they _were_ hazardous to your health just by running (usually 
+after you).
+
+Another story is that JMF leaned against an RP04 (they were really good as 
+a door jamb to lean against when talking to somebody) and later discovered 
+that his credit cards weren't any good w.r.t. the magnetic strip.
+
+Also, when TW wrote the TOPS10 device driver for the RP07, I heard him 
+remark that he didn't see the need for this disk drive.  He figured that 
+the disk space provided by the RP07 was overkill and that noone needed so 
+much space.  I really heard him figure that, assuming no one ever deleted a 
+file on the RP07, it would take years to fill up that disk---three months 
+later, he verbally ate his words;  JMF and I made sure of that [grinning 
+emoticon here].
+
+
+/BAH
+
+
+Article 2678 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!cpk-news-hub1.bbnplanet.com!news.bbnplanet.com!news.sprintlink.net!news-peer.sprintlink.net!news-peer.gsl.net!news.gsl.net!portc01.blue.aol.com!audrey01.news.aol.com!not-for-mail
+From: jimpy@aol.com (Jimpy)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Old disk stories (Was--Doubtful Story I stand corrected)
+Date: 14 Mar 1997 00:17:45 GMT
+Organization: AOL http://www.aol.com
+Lines: 20
+Message-ID: <19970314001700.TAA01630@ladder01.news.aol.com>
+References: <5g6e1n$lf$1@decius.ultra.net>
+NNTP-Posting-Host: ladder01.news.aol.com
+X-Admin: news@aol.com
+
+The RP06 has 20 surfaces, 19 are Read/Write surfaces for data and one
+surface is a servo track used to position the heads over the desired
+track. 
+
+Yes, the RP06 has a 3 phase motor and it's phase sensitive. If the phases
+are not in the proper sequence the drive would never come on-line. Lots of
+fun when the customers electricians are doing some work or even the public
+utility decides to make some changes. The RD10(Bryant Drum) was also phase
+sensitive.
+
+The RP07 used a sealed Head-Disk Assembly (HDA), when it failed, and it
+failed very often the whole HDA was replaced at large prices to DEC.
+
+
+Don't foget the famous Bucode TU40 tape drives. You could write a tape and
+5 minutes latter you were lucky if you could read it back.
+
+Jimpy
+
+
+
+
+Article 2686 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!cpk-news-hub1.bbnplanet.com!news.bbnplanet.com!news.sprintlink.net!news-peer.sprintlink.net!news-pull.sprintlink.net!news.sprintlink.net!news-dc-9.sprintlink.net!news.ultranet.com!d24
+From: jmfbahxx@ma.ultranet.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: Old disk stories (Was--Doubtful Story I stand corrected)
+Date: Mon, 17 Mar 97 14:51:18 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 41
+Message-ID: <5gjh80$r9v$1@decius.ultra.net>
+References: <5g6e1n$lf$1@decius.ultra.net> <19970314001700.TAA01630@ladder01.news.aol.com> <332BE18B.88B@sacto.mp.usbr.gov>
+NNTP-Posting-Host: d24.dial-33.mbo.ma.ultra.net
+X-Newsreader: News Xpress Version 1.0 Beta #4
+
+In article <332BE18B.88B@sacto.mp.usbr.gov>,
+   "Henry W. Miller" <henrym@sacto.mp.usbr.gov> wrote:
+>Jimpy wrote:
+>> 
+>> The RP06 has 20 surfaces, 19 are Read/Write surfaces for data and one
+>> surface is a servo track used to position the heads over the desired
+>> track.
+>> 
+>> Yes, the RP06 has a 3 phase motor and it's phase sensitive. If the 
+phases
+>> are not in the proper sequence the drive would never come on-line. Lots 
+of
+>> fun when the customers electricians are doing some work or even the 
+public
+>> utility decides to make some changes. The RD10(Bryant Drum) was also 
+phase
+>> sensitive.
+>> 
+>> The RP07 used a sealed Head-Disk Assembly (HDA), when it failed, and it
+>> failed very often the whole HDA was replaced at large prices to DEC.
+>> 
+>
+>	At the USBR, we found that the RP07's had a MTBF of about 18 
+months. 
+>If one lasted 19 months, I started getting twitchy and planning for a
+>six hour downtime to replace and restore.  But, damn, they wre fast!
+>
+>> Don't foget the famous Bucode TU40 tape drives. You could write a tape 
+and
+>> 5 minutes latter you were lucky if you could read it back.
+>> 
+>
+>	How about TU45's and their "write-only" tapes?
+>
+Chuckle...I was wondering when somebody would remember those 
+pain-in-the-neck tapes...TW (who usually did the magtape device drivers in 
+TOPS10) always claimed that "god did not mean for there to be magtapes".  
+After using TU45s and dealing with maintenance/development of BACKUP, I had 
+to agree.  The ones I did like were the TU70s; those babies could hum!
+
+/BAH
+
+
+Article 2689 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.nacamar.de!news.maxwell.syr.edu!worldnet.att.net!newsfeed.internetmci.com!news.wwa.com!not-for-mail
+From: jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Old disk stories (Was--Doubtful Story I stand corrected)
+Date: 17 Mar 1997 21:40:13 GMT
+Organization: WorldWide Access (tm) - Midwestern Internet Services http://www.wwa.com
+Lines: 13
+Message-ID: <5gkdnt$aq1$1@kirin.wwa.com>
+References: <5g6e1n$lf$1@decius.ultra.net> <19970314001700.TAA01630@ladder01.news.aol.com> <332BE18B.88B@sacto.mp.usbr.gov> <5gjh80$r9v$1@decius.ultra.net>
+NNTP-Posting-Host: pool3-010.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.8 (x86 32bit)
+
+In article <5gjh80$r9v$1@decius.ultra.net>, jmfbahxx@ma.ultranet.com says...
+>
+>TW (who usually did the magtape device drivers in TOPS10)
+>
+>/BAH
+
+Barb:
+
+Okay, now I'm hurt.
+
+-- 
+jeverett@wwa.com (John V. Everett)          http://www.wwa.com/~jeverett
+
+
+
+Article 2691 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.nacamar.de!dispatch.news.demon.net!demon!rill.news.pipex.net!pipex!uunet!in1.uu.net!199.232.56.18!news.ultranet.com!d11
+From: jmfbahxx@ma.ultranet.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: Old disk stories (Was--Doubtful Story I stand corrected)
+Date: Tue, 18 Mar 97 14:56:13 GMT
+Organization: UltraNet Communications, Inc.
+Message-ID: <5gm5td$pd0$1@decius.ultra.net>
+References: <5g6e1n$lf$1@decius.ultra.net> <19970314001700.TAA01630@ladder01.news.aol.com> <332BE18B.88B@sacto.mp.usbr.gov> <5gjh80$r9v$1@decius.ultra.net> <5gkdnt$aq1$1@kirin.wwa.com>
+NNTP-Posting-Host: d11.dial-11.mbo.ma.ultra.net
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Lines: 22
+
+In article <5gkdnt$aq1$1@kirin.wwa.com>,
+   jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) wrote:
+>In article <5gjh80$r9v$1@decius.ultra.net>, jmfbahxx@ma.ultranet.com 
+says...
+>>
+>>TW (who usually did the magtape device drivers in TOPS10)
+>>
+
+>
+>Barb:
+>
+>Okay, now I'm hurt.
+>
+Oh, John.  Mea culpa, mea culpa.  I was remembering the Marlboro days when 
+I was part of that wonderful group on a day to day basis.  I humbly ask 
+your forgiveness for not remembering those wonderful Mill days when I only 
+tasted the flavor of the atmosphere 1/2 day a week (when I editted the 
+monitor).  I really should write about the day that you and Tom Hastings 
+had a discussion about a MONGEN edit with me in physically in the middle of 
+it all!  May I?
+
+/BAH
+
+
+Article 2698 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!ix.netcom.com!compuserve.com!news.production.compuserve.com!news
+From: David G Cressey <73230.1665@CompuServe.COM>
+Newsgroups: alt.sys.pdp10
+Subject: Other bootstraps.
+Date: 20 Mar 1997 21:04:27 GMT
+Organization: CRESSEY CONSULTING & SW
+Lines: 20
+Message-ID: <5gs8or$g1l$1@mhafn.production.compuserve.com>
+
+All this talk about the RIM10B reminds me of a bootstrap
+I had to write.  It had to fit in 16 words.   Not the 
+accumulators, but, I think,  locations 20 through 37.
+
+It had to load ITS  (well, actually a secondary loader
+that would load ITS)  from a disk.  Not only the pdp-10 code
+but also the channel program had to reside in the 16 words.
+That was tight!
+
+For those of you who may not recognize the reference,   ITS was
+the incompatible timesharing system,  which was built at the MIT
+AI lab to run their PDP-10s.  I worked at Dynamic Modelling, just
+down the hall from AI.
+
+Regards,
+    David Cressey <David_Cressey@compuserve.com>
+
+-- 
+|   Any opinions expressed in this message are mine alone.      |
+|    73230.1665@compuserve.com    |  Voice: 413-648-9523        |
+
+
+Article 2699 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!cpk-news-hub1.bbnplanet.com!cam-news-hub1.bbnplanet.com!news.bbnplanet.com!howland.erols.net!newsxfer3.itd.umich.edu!agate!bh
+From: bh@anarres.CS.Berkeley.EDU (Brian Harvey)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Other bootstraps.
+Date: 21 Mar 1997 01:26:14 GMT
+Organization: University of California, Berkeley
+Lines: 5
+Message-ID: <5gso3m$mm7@agate.berkeley.edu>
+References: <5gs8or$g1l$1@mhafn.production.compuserve.com>
+NNTP-Posting-Host: anarres.cs.berkeley.edu
+
+Much as I love RIM10B, I think the award for tightest-coded
+bootstrap of all time has to go to the IBM 7094.  Remember that?
+When you hit the "Load Cards" button on the console, the machine
+read three (3) words from a punch card, which then had to read
+in the rest of the card, and then a magtape.
+
+
+Article 2704 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsxfer3.itd.umich.edu!su-news-hub1.bbnplanet.com!cpk-news-hub1.bbnplanet.com!news.bbnplanet.com!news-peer.gsl.net!news.gsl.net!howland.erols.net!ix.netcom.com!news
+From: JCGreen@ix.netcom.com (John C Green Jr)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Old disk stories (Was--Doubtful Story I stand corrected)
+Date: Fri, 21 Mar 1997 20:37:10 GMT
+Organization: Netcom
+Lines: 42
+Message-ID: <5gurl4$og3@dfw-ixnews12.ix.netcom.com>
+References: <5g6e1n$lf$1@decius.ultra.net> <19970314001700.TAA01630@ladder01.news.aol.com> <332BE18B.88B@sacto.mp.usbr.gov> <5gjh80$r9v$1@decius.ultra.net> <33328CFE.56BB@sacto.mp.usbr.gov>
+NNTP-Posting-Host: sjx-ca24-17.ix.netcom.com
+X-NETCOM-Date: Fri Mar 21  2:39:00 PM CST 1997
+X-Newsreader: Forte Free Agent 1.0.82
+
+"Henry W. Miller" <henrym@sacto.mp.usbr.gov> wrote:
+
+>jmfbahxx@ma.ultranet.com wrote:
+>> 
+>> In article <332BE18B.88B@sacto.mp.usbr.gov>,
+>>    "Henry W. Miller" <henrym@sacto.mp.usbr.gov> wrote:
+>> >Jimpy wrote:
+>> >>
+>> >> [RP06 ancecote]
+>> >>
+>> >
+>> >[RP07 anecdote]
+>> >
+>> >>[TU40 anecdote]
+>> >>
+>> >
+>> >       How about TU45's and their "write-only" tapes?
+>> >
+>>[TU45 and TU70]
+
+>[SC SA-10]
+
+>	While we're on the subject of old disks, I remember a particularly
+>nasty head crash at my old college involving an RP01 or RP02.  I forget
+>which nowadays.  Anyway, if you've ever seen the movie "The Wrath of
+>Kahn", when the Enterprise finally gets a shot off at the bridge of the
+>Reliant?  That's how the top of the drive looked - there was glass and
+>aluminum shards all over the computer room, some of them embedded in the 
+>wall!  If some poor soul had been in the computer room at that time,
+>they would have been seriously injured, perhaps killed!
+
+Not likely an RP01.  DEC took delivery of eight.  No RP01s
+ever left the engineering development lab (5-0 and KA10 #1).
+The RP02s were working before any RP10 was installed in
+the software development lab (12-1 and KA10 #2).  DEC talked
+Memorex into taking the RP01s back even though they were
+painted in DEC colors.
+- - -
+RP10 (controller for RP02) Project Engineer
+21483 Old Mine Rd             (408)353-1870
+Los Gatos CA 95030    JCGreen@ix.netcom.com
+
+
+
+Article 2714 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsxfer3.itd.umich.edu!cpk-news-hub1.bbnplanet.com!news.bbnplanet.com!news.sprintlink.net!news-peer.sprintlink.net!news.ultranet.com!d2
+From: jmfbahxx@ma.ultranet.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: Old disk stories (Was--Doubtful Story I stand corrected)
+Date: Wed, 26 Mar 97 15:42:34 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 52
+Message-ID: <5hbbmo$j9r$1@decius.ultra.net>
+References: <5g6e1n$lf$1@decius.ultra.net> <19970314001700.TAA01630@ladder01.news.aol.com> <332BE18B.88B@sacto.mp.usbr.gov> <5gjh80$r9v$1@decius.ultra.net> <33328CFE.56BB@sacto.mp.usbr.gov> <5gurl4$og3@dfw-ixnews12.ix.netcom.com>
+NNTP-Posting-Host: d2.dial-16.mbo.ma.ultra.net
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:2714
+
+In article <5gurl4$og3@dfw-ixnews12.ix.netcom.com>,
+   JCGreen@ix.netcom.com (John C Green Jr) wrote:
+>"Henry W. Miller" <henrym@sacto.mp.usbr.gov> wrote:
+>
+>>jmfbahxx@ma.ultranet.com wrote:
+>>> 
+>>> In article <332BE18B.88B@sacto.mp.usbr.gov>,
+>>>    "Henry W. Miller" <henrym@sacto.mp.usbr.gov> wrote:
+>>> >Jimpy wrote:
+>>> >>
+>>> >> [RP06 ancecote]
+>>> >>
+>>> >
+>>> >[RP07 anecdote]
+>>> >
+>>> >>[TU40 anecdote]
+>>> >>
+>>> >
+>>> >       How about TU45's and their "write-only" tapes?
+>>> >
+>>>[TU45 and TU70]
+>
+>>[SC SA-10]
+>
+>>	While we're on the subject of old disks, I remember a particularly
+>>nasty head crash at my old college involving an RP01 or RP02.  I forget
+>>which nowadays.  Anyway, if you've ever seen the movie "The Wrath of
+>>Kahn", when the Enterprise finally gets a shot off at the bridge of the
+>>Reliant?  That's how the top of the drive looked - there was glass and
+>>aluminum shards all over the computer room, some of them embedded in the 
+>>wall!  If some poor soul had been in the computer room at that time,
+>>they would have been seriously injured, perhaps killed!
+>
+>Not likely an RP01.  DEC took delivery of eight.  No RP01s
+>ever left the engineering development lab (5-0 and KA10 #1).
+>The RP02s were working before any RP10 was installed in
+>the software development lab (12-1 and KA10 #2).  DEC talked
+>Memorex into taking the RP01s back even though they were
+>painted in DEC colors.
+>- - -
+>RP10 (controller for RP02) Project Engineer
+>21483 Old Mine Rd             (408)353-1870
+>Los Gatos CA 95030    JCGreen@ix.netcom.com
+>
+Ah, we have something in common!  I was the last developer to use System #2 
+before DEC got rid of it.  Just wanted to let you know how long that 
+particular piece of hardware lasted.   I used System #2 to develop the 
+USAGE accounting system.  Nobody else wanted to use a KA (KLs were in vogue 
+then) and it was a marvelous little system, hidden away in deep bowels of 
+MR1-2.
+
+/BAH
+
+
+Article 2717 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!miwok!HSNX.wco.com!news.wco.com!not-for-mail
+From: "Henry W. Miller" <henrym@sacto.mp.usbr.gov>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Old disk stories (Was--Doubtful Story I stand corrected)
+Date: Thu, 27 Mar 1997 00:54:20 -0800
+Organization: USBR
+Lines: 73
+Message-ID: <333A35BC.42D7@sacto.mp.usbr.gov>
+References: <5g6e1n$lf$1@decius.ultra.net> <19970314001700.TAA01630@ladder01.news.aol.com> <332BE18B.88B@sacto.mp.usbr.gov> <5gjh80$r9v$1@decius.ultra.net> <33328CFE.56BB@sacto.mp.usbr.gov> <5gurl4$og3@dfw-ixnews12.ix.netcom.com> <5hbbmo$j9r$1@decius.ultra.net>
+NNTP-Posting-Host: hmiller.mistic.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 3.01Gold (Win95; I)
+Xref: nntp1.ba.best.com alt.sys.pdp10:2717
+
+jmfbahxx@ma.ultranet.com wrote:
+> 
+> In article <5gurl4$og3@dfw-ixnews12.ix.netcom.com>,
+>    JCGreen@ix.netcom.com (John C Green Jr) wrote:
+> >"Henry W. Miller" <henrym@sacto.mp.usbr.gov> wrote:
+> >
+> >>jmfbahxx@ma.ultranet.com wrote:
+> >>>
+> >>> In article <332BE18B.88B@sacto.mp.usbr.gov>,
+> >>>    "Henry W. Miller" <henrym@sacto.mp.usbr.gov> wrote:
+> >>> >Jimpy wrote:
+> >>> >>
+> >>> >> [RP06 ancecote]
+> >>> >>
+> >>> >
+> >>> >[RP07 anecdote]
+> >>> >
+> >>> >>[TU40 anecdote]
+> >>> >>
+> >>> >
+> >>> >       How about TU45's and their "write-only" tapes?
+> >>> >
+> >>>[TU45 and TU70]
+> >
+> >>[SC SA-10]
+> >
+> >>      While we're on the subject of old disks, I remember a particularly
+> >>nasty head crash at my old college involving an RP01 or RP02.  I forget
+> >>which nowadays.  Anyway, if you've ever seen the movie "The Wrath of
+> >>Kahn", when the Enterprise finally gets a shot off at the bridge of the
+> >>Reliant?  That's how the top of the drive looked - there was glass and
+> >>aluminum shards all over the computer room, some of them embedded in the
+> >>wall!  If some poor soul had been in the computer room at that time,
+> >>they would have been seriously injured, perhaps killed!
+> >
+> >Not likely an RP01.  DEC took delivery of eight.  No RP01s
+> >ever left the engineering development lab (5-0 and KA10 #1).
+> >The RP02s were working before any RP10 was installed in
+> >the software development lab (12-1 and KA10 #2).  DEC talked
+> >Memorex into taking the RP01s back even though they were
+> >painted in DEC colors.
+> >- - -
+> >RP10 (controller for RP02) Project Engineer
+> >21483 Old Mine Rd             (408)353-1870
+> >Los Gatos CA 95030    JCGreen@ix.netcom.com
+> >
+> Ah, we have something in common!  I was the last developer to use System #2
+> before DEC got rid of it.  Just wanted to let you know how long that
+> particular piece of hardware lasted.   I used System #2 to develop the
+> USAGE accounting system.  Nobody else wanted to use a KA (KLs were in vogue
+> then) and it was a marvelous little system, hidden away in deep bowels of
+> MR1-2.
+> 
+> /BAH
+
+	Yes, they were great machines.  Does anyone here remember "System
+26", the KA-10 built from scrap at Bedford-U, not the KL system 1026. ?  
+(Or BEDFRD::, the DEC training facility at Bedford, MA)  If Dave Cressey 
+is hanging around, I'm sure that he does.  A guy named Del Lippert was
+in 
+charge of Ed Services at Bedford.  The BEDFRD:: node was also the only 
+system as I recall on the DEC internal network to buck the "Digital
+Standard 
+Node Naming Procedure".  I asked Cressey why that was, and it stated
+that
+it was "A Del-Lippert-ate act..."
+
+	System 26 was the Energizer Bunny of the PDP-10 world, it
+just kept running and running and running.  None of the cabinents
+were painted quite the same shade of blue, and even the black cabinents
+were finished different.
+
+-HWM
+
+
+Article 2719 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!cpk-news-hub1.bbnplanet.com!news.bbnplanet.com!worldnet.att.net!newsfeed.internetmci.com!compuserve.com!newsgate.compuserve.com!not-for-mail
+From: David Cressey <David_Cressey@compuserve.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Old disk stories (Was--Doubtful Story I stand corrected)
+Date: 27 Mar 1997 18:00:42 GMT
+Organization: CompuServe Incorporated
+Lines: 63
+Message-ID: <5hecka$4rd$1@arl-news-svc-4.compuserve.com>
+NNTP-Posting-Host: hd64-150.compuserve.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:2719
+
+"Henry W. Miller" <henrym@sacto.mp.usbr.gov> writes: 
+
+> 
+> 	Yes, they were great machines.  Does anyone here remember "System
+> 26", the KA-10 built from scrap at Bedford-U, not the KL system 1026. ?  
+> (Or BEDFRD::, the DEC training facility at Bedford, MA)  If Dave Cressey 
+> is hanging around, I'm sure that he does.  A guy named Del Lippert was
+> in 
+> charge of Ed Services at Bedford.  The BEDFRD:: node was also the only 
+> system as I recall on the DEC internal network to buck the "Digital
+> Standard 
+> Node Naming Procedure".  I asked Cressey why that was, and it stated
+> that
+> it was "A Del-Lippert-ate act..."
+> 
+> 	System 26 was the Energizer Bunny of the PDP-10 world, it
+> just kept running and running and running.  None of the cabinents
+> were painted quite the same shade of blue, and even the black cabinents
+> were finished different.
+> 
+> -HWM
+
+Hmmm...  Here's my recollection:  System 26 was reconstituted in the
+lab at Marlboro,  not Bedford U.  Before Ed Services concentrated its
+Boston area training in Bedford,  there was Maynard for minicomputers,
+and Marlboro for Tens and Twentys.  We had been using the services of 
+the KL in the fishbowl to support our courses,  but we were faced with
+too many cases where our students were descheduled from labs to make room
+for that KLs prime mission, which was to impress "real customers"  (as
+opposed to our students <g>).
+
+So a hardware instructor (later a supervisor)  started putting this thing
+together for us, that became "system-26".  26 from the processor serial
+ number. I don't remember if the original purpose was to support 
+software training
+or hardware training.  But eventually it became a software machine,  and
+we found that,  for some courses,  it did what we wanted better than
+the machine down the hall.
+ 
+I began managing it on an informal basis.  Big mistake.  Then I got
+sent on an 11-week assignment to teach assembler and monitor courses
+in South America  (in Spanish!).  when I got back,  my greeting from
+a colleague who will remain nameless  was:  "Did you enjoy your 
+vacation?  How come system 26 is is still running the old software?"
+I almost decked him.
+
+I could easily be wrong about this next one,  but I think that system 26 
+got left behind in Marlboro when we made the move to Bedford.  I may
+have suppressed that phase of my existence.  Or it may have been moved,
+but put in the hardware lab instead of the software lab.
+
+
+I don't remember making a  comment about a "Del-Lipperate Act",  but it
+sounds like me, all right.  They say the memory is the second thing to
+go.  I've forgotten what the first one is.
+
+Regards,
+    Dave Cressey  
+    Independent Consultant
+
+
+
+
+
+
+Article 2716 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!hunter.premier.net!feed1.news.erols.com!cpk-news-hub1.bbnplanet.com!news.bbnplanet.com!newsfeed.internetmci.com!paperboy.ids.net!kronos.egr-ri.ids.net!MIKE
+From: mike@kronos.egr-ri.ids.net (Mike Umbricht)
+Newsgroups: alt.folklore.computers,comp.text,alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11
+Subject: Re: TJ-2, a very early word-processor-like program for the PDP-1
+Date: 27 Mar 1997 00:15:30 GMT
+Organization: The Retro-Computing Society of RI
+Lines: 30
+Message-ID: <5hce72$226@paperboy.ids.net>
+References: <E4uMBv.8zz@world.std.com> <RJM.97Jan31102524@europa.ox.ac.uk> <SWESTIN.97Jan31084621@dsg145.nad.ford.com> <5d5q64$o22@sjx-ixn10.ix.netcom.com> <3338DEBA.621E@sacto.mp.usbr.gov>
+Reply-To: mike@kronos.egr-ri.ids.net
+NNTP-Posting-Host: kronos.egr-ri.ids.net
+Xref: nntp1.ba.best.com alt.folklore.computers:82751 comp.text:3088 alt.sys.pdp8:1687 alt.sys.pdp10:2716 alt.sys.pdp11:2293
+
+In article <3338DEBA.621E@sacto.mp.usbr.gov>, "Henry W. Miller" <henrym@sacto.mp.usbr.gov> writes:
+>Max ben-Aaron wrote:
+>> 
+>> Lincoln Lab. (as I have heard), called American Science Institute.  The
+>> chief engineer, Ed Rawson was a friend of Dec's Olsen and he managed to
+>> get hold of the modules used for the prototype PDP-2 which never
+>> reached the market.  ASI used them to build their own machine
+
+Are you sure this was the PDP-2, and not the PDP-3?
+
+According to _Computer Engineering_ by Bell, et al p. 141
+
+"The PDP-2 designation was saved for a possible 24-bit machine, but none was
+ever built.  DEC also never built a PDP-3, although one was designed on paper
+as a 36-bit machine.*"
+
+"*In 1960 a customer (Scientific Engineering Institute, Waltham, Massachusetts)
+built a PDP-3.  It was later dismantled and given to M.I.T.; as of 1974 it was
+up and running in Oregon."
+
+It sounds remarkably similar.
+
+>	Is there any publically available documentation about the PDP-2?  I've
+>heard a little about it over the years, but no real details.
+
+In any case, I would also be interested in knowing more about the 2, and the 3. 
+Anyone know where the above mentioned "PDP-3" wound up?  Or if there any
+existing design prints?
+
+-mike
+
+

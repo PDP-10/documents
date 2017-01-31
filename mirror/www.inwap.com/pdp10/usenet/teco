@@ -1,0 +1,879 @@
+Article 967 of alt.sys.pdp10:
+Path: news1.best.com!sdd.hp.com!gatech!news.sprintlink.net!sundog.tiac.net!mhk.tiac.net!user
+From: mhk@tiac.net (Mark Kaepplein)
+Newsgroups: alt.lang.teco,alt.sys.pdp10
+Subject: Re: Are TECO searches compiled ??
+Date: 28 Jul 1995 04:22:59 GMT
+Organization: sporadic
+Lines: 69
+Message-ID: <mhk-2807950019380001@mhk.tiac.net>
+References: <hbaker-2007950908150001@192.0.2.1> <3urkgj$p6g@clarknet.clark.net> <1491@larch.ukc.ac.uk> <werme.806853174@alingo.zk3.dec.com>
+NNTP-Posting-Host: mhk.tiac.net
+Xref: news1.best.com alt.lang.teco:200 alt.sys.pdp10:967
+
+In article <werme.806853174@alingo.zk3.dec.com>, werme@zk3.dec.com wrote:
+
+> R.D.Eager@ukc.ac.uk (rde) writes:
+> 
+> >I seem to remember that, on the KL-10 TECO I had, there was a place where
+> >actual code was generated and placed into the REGISTERS for fast execution.
+> 
+> >I don't know if that was for searches, though.
+> 
+> It was for buffer compression code.  The original BLISS macro processor was
+> written in TECO.  I could tell from the lights (KA) when it was getting
+> close to the end of the file.  Unfortunately, code running in registers
+> on a KL10 ran slower than code running from the cache.  Only on KA and KI
+> (I don't know about KS) did that produce a speedup.
+
+Yup. DEC and Stevens/Utexas teco compressed the text buffer every time
+you did a delete not up to the end. You see, teco needed to keep the
+text buffer contiguous. So every text insertion or deletion anywhere but
+the end required much shuffling around. I don't think deleted
+text memory was given up, btw.
+
+MIT text buffer handling was much more sophisticated. Every text buffer
+object had a "hole" (other q/array/string objects didn't). When a deletion
+or insertion took place, the hole was move to PT (. or point) and grown
+or shrunk appropriately. Since ITS teco ran on ITS, TENEX, and TOPS20,
+I believe also that page maps were manipulated to grow/shrink the hole
+or end of buffer for large changes. This scheme was far more efficient than
+the DEC/Stevens tecos, but every routine that affected text buffers had
+to know about the hole.
+
+Call me a packrat, but I came accross a listing of Stevens/Utexas teco.
+Here's the comment for the AC loop code to expand the text buffer:
+
+; The following is the code used to move characters up.
+;
+;LP:  MOVE  T1,<PT/5>(T)      ; Get a word
+;     ROT   T1,-1             ; Get rid of the extra bit
+;     ROTC  T1,-7*<# chars to insert>/5 ; Move chars down into T2
+;     MOVEM T2,<<PT/5>+<# chars to insert>/5>(T3)
+;     ROTC  T1,-<35-7*<# chars to insert>/5>
+;     SoJGE T3,LP             ; Loop for <<END/5>-<PT/5>> + 1 if
+;                             ;  REM(<<# to insert>+END>/5) > REM(PT/5)
+
+The compression code was smarter and more extensive. For small counts,
+it just did byte moves. For longer ones, it checked if source and or
+destination byte alignments were needed, and moved the best routine to
+the stack (where it runs faster on a KL).
+
+Trivia note: at LP+1, the 36th bit gets cleared. In Dec teco, this bit
+was set to indicate that this word (5 bytes) was a line sequence number
+beginning a new line. The previous word was null filled after the crlf.
+
+Re: compile on the fly code:
+I can think of a few examples:
+
+1. The BBN Blt terminal. BitBlt's were compiled on the fly (68000 code).
+2. The blt routine for the X implementation on the QVSS frame buffer
+    generated VAX code on the fly (written by Dave Carver)
+3. Interleaf Desktop Publishing software image manipulation routines
+     (ie, rotation, scale, skew) generated code on the fly for many
+     of the original architectures (ie 68000), but on RISC architectures
+     with seperate instruction cache's (ie most mips implementations),
+     you had to do a cache flush (so the instructions you created made
+     it out to memory and into the icache) first (big lose). Hence, most
+     architecture implementations use straight C code - well the appropriate
+     one for big/little endian and word size/alignment of the machine.
+     Even without compiling on the fly, its magic. Written by Bob Watkins.
+
+Mark Kaepplein (one time maintainer of TOPS-10 TECO)
+
+
+Article 1145 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!cs.utexas.edu!news.sprintlink.net!in2.uu.net!info-server.bbn.com!clements
+From: clements@bbn.com (Bob Clements)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10,alt.lang.teco
+Subject: Re: TECO on non DEC platforms
+Date: 25 Sep 1995 17:59:09 GMT
+Organization: Bolt Beranek and Newman (BBN)
+Lines: 32
+Message-ID: <446qld$oto@info-server.bbn.com>
+References: <43kpm6$nku@darkstar.bos.locus.com> <DF5JK0.JAE@bonkers.taronga.com> <Pine.NXT.3.92.950919164934.10817A-100000@Tomobiki-Cho.CAC.Washington.EDU>
+NNTP-Posting-Host: lion.bbn.com
+Xref: shellx.best.com alt.folklore.computers:36251 alt.sys.pdp10:1145 alt.lang.teco:294
+
+In article <Pine.NXT.3.92.950919164934.10817A-100000@Tomobiki-Cho.CAC.Washington.EDU> (a fine long Message-ID if ever there was one)
+Mark Crispin <mrc@CAC.Washington.EDU> writes:
+
+>TECO was always this way at MIT, from the first PDP-1
+>implementation that Dan Murphy wrote.  Nobody there ever thought that TECO
+>would be useful without a display.
+
+>Bob Clements generated the first Teletype TECO for the DEC PDP-6 monitor;
+>I don't know why.  Perhaps they didn't let him have a display monitor...
+
+Pretty much true.  I TOPS-6-ized the MIT TECO in my spare time while
+sitting around at SAIL during the installation of their PDP-6.  Mainly
+to have a better editor than EDLIN (or whatever) to use while I was there.
+I happened to have the TECO source with me at the time.  That would
+have been -- guessing -- August 1966?
+
+The only terminals available to me at the time were TTY-33s and TTY-35s.
+
+
+
+And on another point, someone recently spouted a silly rumor that
+a "JRST @." would hang a KA-10 and asked for an old-timer to refute it.
+I (project engineer for the KA-10) refute it, of course.  I posted to
+that effect a week or so ago, but posts from here weren't getting out
+for a while.
+
+
+>-- Mark --
+
+/Rcc
+
+Bob Clements, K1BC, clements@bbn.com, (w) +1 617 USE K1BC
+
+
+Article 2465 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!mindspring!news.bbnplanet.com!cpk-news-hub1.bbnplanet.com!newsfeed.internetmci.com!metro.atlanta.com!news.sprintlink.net!news-dc-10.sprintlink.net!news.sprintlink.net!news-pull.sprintlink.net!news.sprintlink.net!news-chi-13.sprintlink.net!dallasI5.dallas.net!news	
+From: Charles Richmond <richmond@plano.net>
+Newsgroups: alt.sys.pdp10,alt.sys.pdp11,alt.sys.pdp8
+Subject: TECO Manual from DECUS/TECO SIG?
+Date: Sat, 14 Dec 1996 16:44:36 -0600
+Organization: Canine Computer Center
+Lines: 46
+Message-ID: <32B32DD3.7227@plano.net>
+Reply-To: richmond@plano.net
+NNTP-Posting-Host: aux136.plano.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 3.0Gold (Macintosh; I; 68K)
+Xref: nntp1.best.com alt.sys.pdp10:2465 alt.sys.pdp11:1914 alt.sys.pdp8:1346
+
+Okay, I *know* that this is *not* the place to post, but I have asked
+this question
+on a TECO newsgroup and a DECUS newsgroup with *no* real success.
+
+Can any of the old-timers here tell me where I can get a TECO manual
+from the 'Net?
+Ten years or so when I was working at General Dynamics in San Diego, ago
+I had a
+9-track tape from a VAX that contained this manual. I made a printed
+copy, but I
+would like to have a magnetic copy also.
+
+The title page from my printed copy says:
+
+
+               			          Standard TECO
+
+
+            TEXT EDITOR AND CORRECTOR FOR THE PDP-11, PDP-10, AND PDP-8
+
+
+                     USER'S GUIDE AND LANGUAGE REFERENCE MANUAL
+
+
+
+                          Preliminary Edition - April 1979
+
+
+
+                                TECO-11 VERSION   34
+                                TECO-10 VERSION    1
+                                TECO-8  VERSION    7
+
+
+It says it is Copyright 1979 by the TECO SIG. Permission is given to
+copy the manual as
+long as it is *not* done for profit.
+
+TIA.
+
+
+-- 
++---------------------------------------------------------------------------+
+|     Charles and Francis Richmond             
+<richmond@plano.net>        |                          
++---------------------------------------------------------------------------+
+
+
+Article 2469 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!news.bbnplanet.com!su-news-hub1.bbnplanet.com!arclight.uoregon.edu!news.bc.net!unixg.ubc.ca!alph02.triumf.ca!shoppa
+From: shoppa@alph02.triumf.ca (Tim Shoppa)
+Newsgroups: alt.sys.pdp10,alt.sys.pdp11,alt.sys.pdp8,vmsnet.pdp-11,alt.lang.teco,comp.org.decus
+Subject: Re: TECO Manual from DECUS/TECO SIG?
+Date: 15 Dec 1996 16:22:14 GMT
+Organization: TRIUMF, Canada's National Meson Facility
+Lines: 24
+Message-ID: <5918jm$mhc@nntp.ucs.ubc.ca>
+References: <32B32DD3.7227@plano.net>
+NNTP-Posting-Host: alph02.triumf.ca
+Xref: nntp1.best.com alt.sys.pdp10:2469 alt.sys.pdp11:1919 alt.sys.pdp8:1348 vmsnet.pdp-11:4104 alt.lang.teco:551 comp.org.decus:1753
+
+In article <32B32DD3.7227@plano.net>,
+Charles Richmond  <richmond@plano.net> wrote:
+>Okay, I *know* that this is *not* the place to post, but I have asked
+>this question
+>on a TECO newsgroup and a DECUS newsgroup with *no* real success.
+>
+>Can any of the old-timers here tell me where I can get a TECO manual
+>from the 'Net?
+
+Versions of the TECO V40 manual are on Pete Siemsen's DECUS tape.
+(VS0099, I believe.)  For some bizarre reason, this tape is
+no longer available from DECUS (despite the fact that it is
+certainly one of the most useful tapes they ever produced!)
+
+Fortunately, the contents of the tape are available by anonymous
+ftp from several sources.  Try ftp://ftp.usc.edu/pub/teco/doc.tar.Z,
+or, for a non-tarred-and-compressed V40 manual, go to
+
+ftp://sunsite.unc.edu/pub/academic/computer-science/history/pdp-11
+/teco/doc/teco.doc
+
+(Yes, that's all supposed to be one line!)
+
+Tim. (shoppa@triumf.ca)
+
+
+Article 2475 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!noos.hooked.net!news.clark.net!news.netserv.com!fsc.fujitsu.com!ihnp4.ucsd.edu!agate!howland.erols.net!worldnet.att.net!ix.netcom.com!netcom.net.uk!dispatch.news.demon.net!demon!zetnet.co.uk!zetnet.co.uk!pete.fenelon
+From: pete.fenelon@zetnet.co.uk (Pete Fenelon)
+Newsgroups: alt.sys.pdp10,alt.sys.pdp11,alt.sys.pdp8
+Subject: Re: TECO Manual from DECUS/TECO SIG?
+Followup-To: alt.sys.pdp10,alt.sys.pdp11,alt.sys.pdp8
+Date: 15 Dec 1996 16:14:49 GMT
+Organization: Pete Fenelon
+Lines: 16
+Message-ID: <59185p$7kr@irk.zetnet.co.uk>
+References: <32B32DD3.7227@plano.net>
+NNTP-Posting-Host: man-077.dialup.zetnet.co.uk
+X-Newsreader: TIN [version 1.2 PL2]
+Xref: nntp1.best.com alt.sys.pdp10:2475 alt.sys.pdp11:1921 alt.sys.pdp8:1349
+
+Charles Richmond (richmond@plano.net) wrote:
+: Can any of the old-timers here tell me where I can get a TECO manual
+: from the 'Net?
+: Ten years or so when I was working at General Dynamics in San Diego, ago
+: I had a
+: 9-track tape from a VAX that contained this manual. I made a printed
+: copy, but I
+: would like to have a magnetic copy also.
+
+If it's out there it'll be on ftp.usc.edu:/pub/teco -- I have one I pulled
+from there some years ago.
+
+pete
+--
+Pete Fenelon, 39 Broadway, Fulford, York, YO1 4JP, UK Tel.: +44 1904 670334
+pete.fenelon@zetnet.co.uk "I could tell you, but only at consultancy rates"
+
+
+Article 66 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!newshub2.rdc1.sfba.home.com!news.home.com!feeder.via.net!news.he.net!cnn.nas.nasa.gov!news.hawaii.edu!not-for-mail
+From: Jim Thomas <thomas@atlas.cfht.hawaii.edu>
+Newsgroups: alt.sys.pdp10
+Subject: Re: TECO version 124
+Date: 28 Jun 2000 12:54:06 -1000
+Organization: Canada France Hawai`i Telescope
+Lines: 19
+Message-ID: <wwk8f9mn75.fsf@atlas.cfht.hawaii.edu>
+References: <wwhfaemz5k.fsf@atlas.cfht.hawaii.edu> <3959986B.71DAE848@dallas.net>
+NNTP-Posting-Host: atlas.cfht.hawaii.edu
+X-Trace: news.hawaii.edu 962232850 28252 128.171.80.135 (28 Jun 2000 22:54:10 GMT)
+X-Complaints-To: usenet@hawaii.edu
+NNTP-Posting-Date: 28 Jun 2000 22:54:10 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.6
+Xref: nntp1.ba.best.com alt.sys.pdp10:66
+
+>>>>> "Charles" == Charles Richmond <richmond@dallas.net> writes:
+
+    Charles> Jim Thomas wrote:
+    >>  Arrrgh.... I just discovered that the TECO sources at
+    >> 
+    >> ftp://ftp.dbit.com/pub/pdp10/tops10/teco124.mac
+    >> 
+    >> are corrupted - a bunch of Cisco e-mail in the middle of my search
+    >> routine :-( Anyone have a good copy?
+    >> 
+    Charles> You might try the one at:
+
+    Charles> 	<http://www.montagar.com/decus_swlib/96BVMSLT/PDP11/TECO124.MAC>
+
+Nope, that's another copy with the cisco e-mail in it.
+
+I got one from Phil, thanks, Phil!
+
+Nothead
+
+
+Article 95 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Subject: Re: TECO version 124
+References: <wwhfaemz5k.fsf@atlas.cfht.hawaii.edu> <wwk8f9mn75.fsf@atlas.cfht.hawaii.edu> <395B8B7B.37DD4B02@dallas.net> <wwhfacm3xq.fsf@atlas.cfht.hawaii.edu>
+Organization: D Bit, Troy, NY
+From: wilson@dbit.com (John Wilson)
+NNTP-Posting-Host: dbit.dbit.com
+X-Original-NNTP-Posting-Host: dbit.dbit.com
+Message-ID: <395e9685$1_1@news.wizvax.net>
+Date: 1 Jul 2000 21:10:29 -0400
+X-Trace: 1 Jul 2000 21:10:29 -0400, dbit.dbit.com
+Lines: 15
+XPident:  wilson
+X-Original-NNTP-Posting-Host: 199.181.141.3
+XPident: news
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!194.176.220.129!newsfeed.icl.net!newsfeed.wirehub.nl!diablo.netcom.net.uk!netcom.net.uk!newsfeed.wizvax.net!news.wizvax.net!dbit.com!wilson
+Xref: nntp1.ba.best.com alt.sys.pdp10:95
+
+In article <wwhfacm3xq.fsf@atlas.cfht.hawaii.edu>,
+Jim Thomas  <thomas@atlas.cfht.hawaii.edu> wrote:
+>    Charles> Can you contact the two WEB pages that have the *bad*
+>    Charles> teco124.mac (with the Cisco e-mail) and maybe get them to post
+>    Charles> the sources you got from Phil???  That way *everyone* could
+>    Charles> get a clean copy of the teco124.mac sources....
+>
+>Done :-)  Thanks for the suggestion.
+
+I've posted the correct teco124.mac on *.dbit.com -- thanks Jim!!
+Don't know where else that file had propagated to, I can't even remember
+where I got it (looks to be 6 years ago).
+
+John Wilson
+D Bit
+
+
+Article 61 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!tank.news.pipex.net!pipex!ams.uu.net!ffx.uu.net!spool1.news.uu.net!spool0.news.uu.net!reader0.news.uu.net!not-for-mail
+Message-ID: <3959BB7E.586501FF@trailing-edge.com>
+Date: Wed, 28 Jun 2000 08:46:54 -0400
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Organization: Trailing Edge Technology
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.0     DEC 3000 Model 300L)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: TECO version 124
+References: <wwhfaemz5k.fsf@atlas.cfht.hawaii.edu>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 55
+NNTP-Posting-Host: 63.73.218.130
+X-Trace: reader0.news.uu.net 962196415 7794 63.73.218.130
+Xref: nntp1.ba.best.com alt.sys.pdp10:61
+
+Jim Thomas wrote:
+> 
+> Arrrgh.... I just discovered that the TECO sources at
+> 
+>         ftp://ftp.dbit.com/pub/pdp10/tops10/teco124.mac
+> 
+> are corrupted - a bunch of Cisco e-mail in the middle of my search routine
+> :-(  Anyone have a good copy?
+
+It seems to be quite a branch off from your TECO evolutionary tree,
+but the sources to the TECO distributed on the TOPS-10 7.03 CUSP tape
+can be found at
+   
+http://pdp-10.trailing-edge.com/pdp-10/CUSPMAR86BINSRC_1OF2_BB-X128B-SB.html
+
+You'll probably want to pick up TECO.MAC, TECO.DOC, and TECO.ERR.
+
+At a different point in its evolution, you'll find a version of
+TOPS-10 TECO from 1980 or so at
+
+  http://pdp-10.trailing-edge.com/www/lib10/0474/
+
+and a version that's been very slightly patched for TOPS-20 at
+
+  http://pdp-10.trailing-edge.com/www/lib20/0139/
+
+The abstract from these DECUS distributions is below:
+
+ TECO-10                         Abstract
+
+
+ TECO-10 is a considerably extended version of TECO.  It is based on
+XTEC,
+ rather than DECsystem-10 TECO, so it is a compiler, not an interpreter.
+ It includes essentially all of the features of XTEC (although some have
+ been renamed for compatability with TECO-11 and TECO-8).  It includes
+ window support (written in TECO-10 so it can be customized easily!).
+ Terminals supported are VT52, VT61, VT100 (in VT52 mode), and VT05.
+ Any q-register can be made to function as the text buffer, and files
+ can be read or written to/from any q-register, so several files can
+ be edited at once.
+
+ Two screen-editing subsystems are available written in TECO-10.
+ These are VT and VTEDIT.  Both are included with TECO-10.
+
+ TECO-10 is mostly compatable with TECO-11, TECO-8 and TECO-VAX
+
+ TECO-10 will run on either the DECsystem-10 or the DECsystem-20
+ (under feature-test).
+
+-- 
+ Tim Shoppa                        Email: shoppa@trailing-edge.com
+ Trailing Edge Technology          WWW:   http://www.trailing-edge.com/
+ 7328 Bradley Blvd                 Voice: 301-767-5917
+ Bethesda, MD, USA 20817           Fax:   301-767-5927
+
+
+Article 63 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!207.172.3.37!feed1.news.rcn.net!rcn!207-172-102-223
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: TECO version 124
+Date: Wed, 28 Jun 00 10:09:50 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 66
+Message-ID: <8jct3b$rd3$3@bob.news.rcn.net>
+References: <wwhfaemz5k.fsf@atlas.cfht.hawaii.edu> <3959BB7E.586501FF@trailing-edge.com>
+X-Trace: 15LRJgCFxANUDX0blv7fRzNQZRVA3Z8ZB9cA0Go4C5Y=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 28 Jun 2000 13:03:39 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:63
+
+In article <3959BB7E.586501FF@trailing-edge.com>,
+   Tim Shoppa <shoppa@trailing-edge.com> wrote:
+>Jim Thomas wrote:
+>> 
+>> Arrrgh.... I just discovered that the TECO sources at
+>> 
+>>         ftp://ftp.dbit.com/pub/pdp10/tops10/teco124.mac
+>> 
+>> are corrupted - a bunch of Cisco e-mail in the middle of my search 
+routine
+>> :-(  Anyone have a good copy?
+>
+>It seems to be quite a branch off from your TECO evolutionary tree,
+>but the sources to the TECO distributed on the TOPS-10 7.03 CUSP tape
+>can be found at
+>   
+>http://pdp-10.trailing-edge.com/pdp-10/CUSPMAR86BINSRC_1OF2_BB-X128B-SB.ht
+ml
+>
+>You'll probably want to pick up TECO.MAC, TECO.DOC, and TECO.ERR.
+
+I think you have to have TECO.ERR to run the EXE.
+
+>
+>At a different point in its evolution, you'll find a version of
+>TOPS-10 TECO from 1980 or so at
+>
+>  http://pdp-10.trailing-edge.com/www/lib10/0474/
+>
+>and a version that's been very slightly patched for TOPS-20 at
+>
+>  http://pdp-10.trailing-edge.com/www/lib20/0139/
+>
+>The abstract from these DECUS distributions is below:
+>
+> TECO-10                         Abstract
+>
+>
+> TECO-10 is a considerably extended version of TECO.  It is based on
+>XTEC,
+> rather than DECsystem-10 TECO, so it is a compiler, not an interpreter.
+> It includes essentially all of the features of XTEC (although some have
+> been renamed for compatability with TECO-11 and TECO-8).  It includes
+> window support (written in TECO-10 so it can be customized easily!).
+> Terminals supported are VT52, VT61, VT100 (in VT52 mode), and VT05.
+> Any q-register can be made to function as the text buffer, and files
+> can be read or written to/from any q-register, so several files can
+> be edited at once.
+>
+> Two screen-editing subsystems are available written in TECO-10.
+> These are VT and VTEDIT.  Both are included with TECO-10.
+>
+> TECO-10 is mostly compatable with TECO-11, TECO-8 and TECO-VAX
+>
+> TECO-10 will run on either the DECsystem-10 or the DECsystem-20
+> (under feature-test).
+>
+
+And that explains why the one I tried wasn't TECO.  There was
+something strange about its behaviour but I couldn't describe
+it to the guy interested in hearing about bugs.  I'm so
+relieved.  I thought I was going nuts.
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 67 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!news.he.net!cnn.nas.nasa.gov!news.hawaii.edu!not-for-mail
+From: Jim Thomas <thomas@atlas.cfht.hawaii.edu>
+Newsgroups: alt.sys.pdp10
+Subject: Re: TECO version 124
+Date: 28 Jun 2000 13:18:57 -1000
+Organization: Canada France Hawai`i Telescope
+Lines: 36
+Message-ID: <wwhfadmm1q.fsf@atlas.cfht.hawaii.edu>
+References: <wwhfaemz5k.fsf@atlas.cfht.hawaii.edu> <3959BB7E.586501FF@trailing-edge.com>
+NNTP-Posting-Host: atlas.cfht.hawaii.edu
+X-Trace: news.hawaii.edu 962234338 1380 128.171.80.135 (28 Jun 2000 23:18:58 GMT)
+X-Complaints-To: usenet@hawaii.edu
+NNTP-Posting-Date: 28 Jun 2000 23:18:58 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.6
+Xref: nntp1.ba.best.com alt.sys.pdp10:67
+
+>>>>> "Tim" == Tim Shoppa <shoppa@trailing-edge.com> writes:
+
+    Tim> Jim Thomas wrote:
+    >>  Arrrgh.... I just discovered that the TECO sources at
+    >> 
+    >> ftp://ftp.dbit.com/pub/pdp10/tops10/teco124.mac
+    >> 
+    >> are corrupted - a bunch of Cisco e-mail in the middle of my search
+    >> routine :-( Anyone have a good copy?
+
+    Tim> It seems to be quite a branch off from your TECO evolutionary
+    Tim> tree,
+
+No kidding :-)  This was Texas-TECO formerly Stevens-TECO :-)  But it was a
+branch off the "true" TECO tree.  It came before the Stevens transplant to
+TECO200 which was a video TECO.  It WAS upwards compatible from "true" TECO.
+
+    Tim>  but the sources to the TECO distributed on the TOPS-10 7.03
+    Tim> CUSP tape can be found at
+   
+    Tim> ....
+
+    Tim> At a different point in its evolution, you'll find a version of
+    Tim> TOPS-10 TECO from 1980 or so at
+
+    Tim>   http://pdp-10.trailing-edge.com/www/lib10/0474/
+
+    Tim> ....
+
+    Tim>  TECO-10 is mostly compatable with TECO-11, TECO-8 and TECO-VAX
+
+And not with "true" TECO - ISTR it was a complete rewrite.  It did look
+like TECO-11, which was an advantage, but it did not look like TECO, which
+was a disadvantage.  (All IMHO - I used them all :-)
+
+Nothead
+
+
+Article 73 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!su-news-hub1.bbnplanet.com!nycmny1-snh1.gtei.net!cpk-news-hub1.bbnplanet.com!crtntx1-snh1.gtei.net!news.gtei.net!dfw-peer.news.verio.net!sea-feed.news.verio.net!news.verio.net!news.u.washington.edu!shimo-tomobiki.panda.com!MRC
+From: Mark Crispin <MRC@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: TECO version 124
+Date: Wed, 28 Jun 2000 19:04:59 -0700
+Organization: Networks & Distributed Computing
+Lines: 37
+Sender: mrc@shivams.cac.washington.edu
+Message-ID: <Pine.WNT.4.30.0006281853260.1456-100000@shimo-tomobiki.panda.com>
+References: <wwhfaemz5k.fsf@atlas.cfht.hawaii.edu> <3959BB7E.586501FF@trailing-edge.com>
+NNTP-Posting-Host: nntp4.u.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 962244310 63920 (None) 140.142.17.38
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: news
+In-Reply-To: <3959BB7E.586501FF@trailing-edge.com>
+Xref: nntp1.ba.best.com alt.sys.pdp10:73
+
+On Wed, 28 Jun 2000, Tim Shoppa wrote:
+>  TECO-10 is a considerably extended version of TECO.  It is based on
+> XTEC,
+>  rather than DECsystem-10 TECO, so it is a compiler, not an interpreter.
+
+XTEC!  Wow!  I'm glad to hear that!
+
+XTEC was originally written by Jack Krupansky at Stevens Tech.  Around
+1975, I took over the effort, and hacked on it for a couple of years.
+Among other things, I made sure that XTEC had all the features of the
+Stevens extensions to TECO (many of which I suggested, although I doubt
+that there's any credit given to me for having done so [*]).  I then
+submitted XTEC to DECUS.
+
+Although I think that I got XTEC running under WAITS, when I started
+working at SAIL in July 1977 I started using the standard WAITS E editor
+instead of XTEC.  Then, briefly in 1984, I used XTEC for a while at
+Systems Concepts before I got TOPS-20 running and could use EMACS.
+
+[*] By the way, I was also responsible for suggesting the better user
+interface in EMACS for entering file names, etc.  In the original EMACS,
+if you typed ^X^F, it would create a minibuffer with a bunch of TECO
+commands to read in the file, and leave the cursor at the correct point in
+the minibuffer for you to type in the file name.  I suggested that it
+should prompt you for the filename at the bottom of the screen.  These
+days, you hardly ever need to use a minibuffer to enter commands. I doubt
+that EMACS would have maintained its popularity over 25 years if it
+remained as oriented towards users dealing with TECO commands.
+
+-- Mark --
+
+* RCW 19.190 notice: This email address is located in Washington State. *
+* Unsolicited commercial email may be billed $500 per message.          *
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+
+
+Article 2081 of alt.sys.pdp10:
+Message-ID: <3A274C9C.28CC5805@ev1.net>
+Date: Thu, 30 Nov 2000 23:00:43 -0800
+From: Charles Richmond <richmond@ev1.net>
+Reply-To: richmond@ev1.net
+Organization: Cannine Computer Center
+X-Mailer: Mozilla 4.7C-CCK-MCD {C-UDP; EBM-APPLE} (Macintosh; I; PPC)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: Help! TECO problems
+References: <YbyV5.27109$IP1.827764@news1.giganews.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+NNTP-Posting-Host: taydal-207-55-144-238.ev1.net
+X-Trace: 30 Nov 2000 23:03:51 -0600, taydal-207-55-144-238.ev1.net
+Lines: 40
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc03.blue.aol.com!newsfeed.mesh.ad.jp!sjc1.nntp.concentric.net!newsfeed.concentric.net!newsfeed.nwlink.com!nntp2.savvis.net!newsa.ev1.net
+Xref: nntp1.ba.best.com alt.sys.pdp10:2081
+
+Timothy Stark wrote:
+> 
+>      [snip...]     [snip...]     [snip...]
+> 
+> I am looking for TECO manual for how to use it.
+> 
+You can get a postscript version of the TECO manual at:
+
+	<ftp://ftp.mindlink.net/pub/teco/cantrell-teco/tecomanual.ps.gz>
+
+or a plain ascii version of the manual at:
+
+	<ftp://ftp.usc.edu/pub/teco/doc.tar.Z>
+
+If you would like a .pdf version, email me...I converted the postscript
+version to .pdf and will send you a copy as an attachment.
+
+Here are some other TECO related links:
+
+ftp://sunsite.unc.edu/pub/academic/computer-science/history/pdp-11/teco/doc/teco.doc
+ftp://ftp.mindlink.net/pub/teco
+ftp://ftp.mindlink.net/pub/teco/usc-archive/
+ftp://ftp.usc.edu/pub/tecohttp://sunsite.unc.edu/pub/academic/computer-science/history/pdp-11/teco/
+
+ftp://sunsite.unc.edu/pub/academic/computer-science/history/pdp-11/teco/ 
+ftp://ftp.wimsey.com/pub/teco/usc-archive/ 
+ftp://usc.edu/pub/teco/ 
+ftp://ftp.dbit.com/pub/pdp10/tops10/teco124.mac
+   {Note: this is the MACRO-10 sources, 240 Kb of 36-bit assembler code.}
+
+http://wwwdeanza.fhda.edu/TECO/faq.html
+http://sunsite.unc.edu/pub/academic/computer-science/history/pdp-11/teco/
+ftp://sunsite.unc.edu/pub/academic/computer-science/history/pdp-11/teco/doc/teco.doc
+http://www.users.zetnet.co.uk/whd/teco
+ftp://ftp.mindspring.com/pub/teco
+
+-- 
++-------------------------------------------------------------+
+|     Charles and Francis Richmond     <richmond@plano.net>   |
++-------------------------------------------------------------+
+
+
+Article 2081 of alt.sys.pdp10:
+Message-ID: <3A274C9C.28CC5805@ev1.net>
+Date: Thu, 30 Nov 2000 23:00:43 -0800
+From: Charles Richmond <richmond@ev1.net>
+Reply-To: richmond@ev1.net
+Organization: Cannine Computer Center
+X-Mailer: Mozilla 4.7C-CCK-MCD {C-UDP; EBM-APPLE} (Macintosh; I; PPC)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: Help! TECO problems
+References: <YbyV5.27109$IP1.827764@news1.giganews.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+NNTP-Posting-Host: taydal-207-55-144-238.ev1.net
+X-Trace: 30 Nov 2000 23:03:51 -0600, taydal-207-55-144-238.ev1.net
+Lines: 40
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc03.blue.aol.com!newsfeed.mesh.ad.jp!sjc1.nntp.concentric.net!newsfeed.concentric.net!newsfeed.nwlink.com!nntp2.savvis.net!newsa.ev1.net
+Xref: nntp1.ba.best.com alt.sys.pdp10:2081
+
+Timothy Stark wrote:
+> 
+>      [snip...]     [snip...]     [snip...]
+> 
+> I am looking for TECO manual for how to use it.
+> 
+You can get a postscript version of the TECO manual at:
+
+	<ftp://ftp.mindlink.net/pub/teco/cantrell-teco/tecomanual.ps.gz>
+
+or a plain ascii version of the manual at:
+
+	<ftp://ftp.usc.edu/pub/teco/doc.tar.Z>
+
+If you would like a .pdf version, email me...I converted the postscript
+version to .pdf and will send you a copy as an attachment.
+
+Here are some other TECO related links:
+
+ftp://sunsite.unc.edu/pub/academic/computer-science/history/pdp-11/teco/doc/teco.doc
+ftp://ftp.mindlink.net/pub/teco
+ftp://ftp.mindlink.net/pub/teco/usc-archive/
+ftp://ftp.usc.edu/pub/tecohttp://sunsite.unc.edu/pub/academic/computer-science/history/pdp-11/teco/
+
+ftp://sunsite.unc.edu/pub/academic/computer-science/history/pdp-11/teco/ 
+ftp://ftp.wimsey.com/pub/teco/usc-archive/ 
+ftp://usc.edu/pub/teco/ 
+ftp://ftp.dbit.com/pub/pdp10/tops10/teco124.mac
+   {Note: this is the MACRO-10 sources, 240 Kb of 36-bit assembler code.}
+
+http://wwwdeanza.fhda.edu/TECO/faq.html
+http://sunsite.unc.edu/pub/academic/computer-science/history/pdp-11/teco/
+ftp://sunsite.unc.edu/pub/academic/computer-science/history/pdp-11/teco/doc/teco.doc
+http://www.users.zetnet.co.uk/whd/teco
+ftp://ftp.mindspring.com/pub/teco
+
+-- 
++-------------------------------------------------------------+
+|     Charles and Francis Richmond     <richmond@plano.net>   |
++-------------------------------------------------------------+
+
+
+Article 6288 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newshub.sdsu.edu!news-hog.berkeley.edu!ucberkeley!cyclone.bc.net!sjcppf01.usenetserver.com!e420r-sjo4.usenetserver.com!usenetserver.com!sjcpnn01.usenetserver.com.POSTED!not-for-mail
+From: "Zane H. Healy" <healyzh@shell1.aracnet.com>
+Subject: TECO Manual
+Newsgroups: alt.sys.pdp10
+Organization: Aracnet
+User-Agent: tin/1.4.4-20000803 ("Vet for the Insane") (UNIX) (Linux/2.2.19 (i686))
+Lines: 14
+Message-ID: <Jkyv7.37725$xi5.1942536@sjcpnn01.usenetserver.com>
+X-Complaints-To: abuse@usenetserver.com
+X-Abuse-Info: Please be sure to forward a copy of ALL headers
+X-Abuse-Info: Otherwise we will be unable to process your complaint properly.
+NNTP-Posting-Date: Sat, 06 Oct 2001 03:24:25 EDT
+Date: Sat, 06 Oct 2001 07:24:25 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:6288
+
+I figure I'm not the only one that's been wanting some TECO doc's.
+
+Thanks to someone on the CLASSICCMP mailing list pointing out that the TECO
+manual available at the Sunsite PDP-11 Archive is for the PDP-10, PDP-8,
+PDP-11, and VAX-11, I've now got it available on the PDP-10 Emulation
+webpage under Applications Documentation.  I've got an Adobe Acrobat copy
+for easy printing as well as the original text copy.
+
+http://www.aracnet.com/~healyzh/pdp10emu.html
+
+I've also got the TECO Pocket Guide for the PDP-8, PDP-10 and PDP-11.  I'll
+be scanning it in the next time I have my scanner hooked up.
+
+			Zane
+
+
+
+Article 6299 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!feed.textport.net!out.nntp.be!propagator-SanJose!news-in-sanjose!cyclone.bc.net!sjcppf01.usenetserver.com!e420r-sjo4.usenetserver.com!usenetserver.com!sjcpnn01.usenetserver.com.POSTED!not-for-mail
+From: "Zane H. Healy" <healyzh@shell1.aracnet.com>
+Subject: Re: TECO Manual
+Newsgroups: alt.sys.pdp10
+References: <Jkyv7.37725$xi5.1942536@sjcpnn01.usenetserver.com> <87ofnlugqe.fsf@prep.synonet.com> <3BBF242C.49883D18@trailing-edge.com>
+Organization: Aracnet
+User-Agent: tin/1.4.4-20000803 ("Vet for the Insane") (UNIX) (Linux/2.2.19 (i686))
+Lines: 12
+Message-ID: <CCMv7.60103$xi5.2757160@sjcpnn01.usenetserver.com>
+X-Complaints-To: abuse@usenetserver.com
+X-Abuse-Info: Please be sure to forward a copy of ALL headers
+X-Abuse-Info: Otherwise we will be unable to process your complaint properly.
+NNTP-Posting-Date: Sat, 06 Oct 2001 19:39:14 EDT
+Date: Sat, 06 Oct 2001 23:39:14 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:6299
+
+Tim Shoppa <shoppa@trailing-edge.com> wrote:
+> Didn't Megan Gentry once make the scans of the TECO pocket guide
+> available as *.JPG's?
+
+I know she made the following available, I don't know if she did any others.
+
+-r--r--r--   1 root  ftp  1904195 Dec  6  1998 gt40rc.tar.gz
+-r--r--r--   1 root  ftp  2366570 Dec  6  1998 pdp15rc.tar.gz
+-r--r--r--   1 root  ftp  1417136 Dec  6  1998 pdp8rc.tar.gz
+-r--r--r--   1 root  ftp  1095335 Dec  6  1998 wcsrc.tar.gz
+
+			Zane
+
+
+
+Article: 18157 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!logbridge.uoregon.edu!canoe.uoregon.edu!cyclone1.gnilink.net!spamfinder.gnilink.net!nwrddc02.gnilink.net.POSTED!53ab2750!not-for-mail
+Followup-To: yes
+Sender: cstacy@BONK
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Wanted: the SOUNDS of classic computing
+References: <ao6inb$hn2$1@newslocal.mitre.org> <20021012081012.541cdf13.steveo@eircom.net> <mq2aoa.3v1.ln@teabag.cbhnet> <2215FC28C531B3E4.6C008F4B96544FE0.8C75BB1D05E1C828@lp.airnews.net> <aoe567$nl5$1@bob.news.rcn.net> <D643A442E7F1B82B.5B41F31CAD603A5E.1784775107676E95@lp.airnews.net> <aoh77l$ipt$5@bob.news.rcn.net> <F8A6A96FA2E0304E.1D51FD0D55C58742.1B7BB2CD607A8FB0@lp.airnews.net> <aojhfp$a00$3@bob.news.rcn.net> <Pine.LNX.4.50.0210160938390.10726-100000@shiva0.cac.washington.edu> <e9fsqu0m7bm9qn2q6u6m94ul6s4q1dejfk@4ax.com>
+From: cstacy@dtpq.com (Christopher C. Stacy)
+Message-ID: <uu1jlbk7y.fsf@dtpq.com>
+Lines: 54
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.2
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Date: Thu, 17 Oct 2002 07:25:23 GMT
+NNTP-Posting-Host: 141.154.220.42
+X-Complaints-To: abuse@verizon.net
+X-Trace: nwrddc02.gnilink.net 1034839523 141.154.220.42 (Thu, 17 Oct 2002 03:25:23 EDT)
+NNTP-Posting-Date: Thu, 17 Oct 2002 03:25:23 EDT
+Xref: dfw-artgen alt.folklore.computers:101646 alt.sys.pdp10:18157
+
+>>>>> On Thu, 17 Oct 2002 04:47:34 GMT, Brian Inglis ("Brian") writes:
+
+ Brian> On Wed, 16 Oct 2002 09:39:21 -0700, Mark Crispin
+ Brian> <mrc@CAC.Washington.EDU> wrote:
+
+ >> On Wed, 16 Oct 2002 jmfbahciv@aol.com wrote:
+ >>> For a company who developed the sexiest, most useful
+ >>> debugger in the world, we sure failed when it came to higher
+ >>> level debuggers.
+ >> 
+ >> I do not believe that DEC developed DDT.
+
+ Brian> Summary of Jargon file entry at:
+ Brian> http://www.tuxedo.org/~esr/jargon/html/entry/DDT.html
+
+ Brian> Peter Samson, compiler of the original TMRC lexicon, reports
+ Brian> that he named `DDT' after a similar tool on the TX-0 computer,
+ Brian> the direct ancestor of the PDP-1 built at MIT's Lincoln Lab in
+ Brian> 1957.  The debugger on that ground-breaking machine (the first
+ Brian> transistorized computer) rejoiced in the name FLIT
+ Brian> (FLexowriter Interrogation Tape).
+
+ Brian> DDT was developed at MIT for the PDP-1 computer in 1961.
+ Brian> At that time DDT stood for "DEC Debugging Tape".  (The `tape'
+ Brian> referred to was, incidentally, not magnetic but paper.) 
+ Brian> Since media other than tape are now frequently used, the more
+ Brian> descriptive name "Dynamic Debugging Technique" has been adopted,
+ Brian> retaining the DDT abbreviation.
+
+ Brian> Under MIT's fabled ITS operating system, DDT (running under the
+ Brian> alias HACTRN, a six-letterism for `Hack Translator') was also used
+ Brian> as the shell or top level command language used to execute other
+ Brian> programs.
+
+It's should also be noted that the DDT on ITS (on the PDP-6, 
+and later, the PDP-10) was much more powerful than the version
+of DDT that was available on the DEC operating systems.
+
+It's the same story as TECO: invented at MIT on the PDP-1 and the PDP-6,
+ported to the PDP-10, and at some point fairly early on, a version made 
+its way to DEC.  It's the same small group of players from MIT and the
+same time-frame, by the way.  Serious development on the program(s)
+continues for years at Project MAC, meanwhile DEC stays forever with 
+the ancient version lacking most features.
+
+Most people remain unaware of the MIT version, which the MIT people
+think of as the "real" and normal version; MIT folks refer to the DEC 
+versions with some disdain as "DEC DDT" and "DEC TECO". 
+Meanwhile DEC wonders what is the noise about some weird version
+of DDT or TECO that they apparently have over at MIT.
+
+DEC also used their MACRO assembler, while MIT used a much fancier 
+and more efficient one called MIDAS.   (Unlike the above, I do not
+think these programs had a common ancestor, however.)
+
+

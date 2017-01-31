@@ -1,0 +1,200 @@
+From thad@thadlabs.com Thu Feb 15 02:56:28 PST 2001
+Article: 1072 of best.general
+Path: nntp1.ba.best.com!not-for-mail
+From: thad@thadlabs.com (Thad Floryan)
+Newsgroups: best.general
+Subject: Re: Web-savvy license plates
+Date: 14 Feb 2001 20:09:45 GMT
+Organization: ThadLABS; serving the computer industry for over a quarter-century
+Lines: 62
+Distribution: best
+Message-ID: <96eom9$9vp$1@nntp1.ba.best.com>
+References: <96ei85$2lq$1@nntp1.ba.best.com>
+    <96eif2$2v6$1@nntp1.ba.best.com>
+NNTP-Posting-Host: 66.1.129.158
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Trace: nntp1.ba.best.com 982181385 10233 66.1.129.158 (14 Feb 2001 20:09:45 GMT)
+X-Complaints-To: abuse@best.com
+NNTP-Posting-Date: 14 Feb 2001 20:09:45 GMT
+X-Newsreader: knews 1.0b.1
+Xref: nntp1.ba.best.com best.general:1072
+
+brian-usenet@enchanter.net (Brian Kendig) wrote:
+| All Pennsylvania license plates now have the state's web site address on
+| them.  Pennsylvania is sending new plates to everyone in the state and
+| making them return their old plates.
+| 
+| Seems like a great expense to me, but I guess Pennsylvania wants to look
+| modern...?
+
+Heh!  When I was last there (Pittsburgh) several years ago on a business
+trip, everything appeared o-l-d.  The Bookbinders restaurant was OK, though.
+
+Weird thing about their school system: nearly everyone I asked believed
+Gettysburg was in Virginia.
+
+|  \  /\   / ..__.     brian at enchanter net    You are in a maze of twisty
+|   \/  \__\   _/    http://www.enchanter.net/   little passages, all alike.
+
+Ah!  Another ZORK fan!  :-)
+
+Did you know that with the zmachine and the data file(s) from any C64, Amiga
+or PC floppy one can play ZORK and other InfoCOM games on even today's systems?
+
+Here's my "ZORK" directory on a Solaris box:
+
+    -r--r-----   1 thad    109568 Feb  5  1992 Enchanter.dat
+    -r--r-----   1 thad    129024 Feb 21  1992 Goddesses.dat
+    -r--r-----   1 thad    113333 Feb  5  1992 Hitchhiker.dat
+    drwxr-sr-x   2 thad      1024 Oct 19  1999 Infocom/
+    -r--r-----   1 thad    130048 Feb 21  1992 Lurking.dat
+    -r--r-----   1 thad    109056 Feb  5  1992 Sorcerer.dat
+    -r--r-----   1 thad    128481 Feb  5  1992 Spellbreaker.dat
+    -r--r-----   1 thad     83968 Feb  5  1992 Starcross.dat
+    -r--r-----   1 thad    226399 Feb 21  1992 XXX_Beyond-Zork.dat.Z
+    -r--r-----   1 thad    263511 Feb 21  1992 XXX_Zork-Zero.dat.Z
+    -r--r-----   1 thad     84877 Feb  5  1992 Zork-I.dat
+    -r--r-----   1 thad     90112 Feb  5  1992 Zork-II.dat
+    -r--r-----   1 thad     82944 Feb  5  1992 Zork-III.dat
+    -r--r-----   1 thad     22409 Feb 20  1992 Zork_BYTE_1280
+    -rw-r-----   1 thad     12458 Mar  8  1992 aark
+    drwxr-sr-x   2 thad       512 Oct 19  1999 decoder/
+    -rw-r-----   1 thad     12458 Mar 13  1992 garden
+    -rw-r-----   1 thad     12458 Mar 14  1992 orphanage
+    -rw-r-----   1 thad     12458 Mar  5  1992 save.cleveland
+    -rw-r-----   1 thad     12458 Mar  3  1992 saveme
+    drwxr-sr-x   2 thad       512 Oct 19  1999 vocabulary/
+    -rwxr-xr-x   1 thad     58556 Oct 19  1999 zmachine*
+
+$ ./zmachine Zork-I.dat 
+ZORK I: The Great Underground Empire
+Copyright (c) 1981, 1982, 1983 Infocom, Inc. All rights reserved.
+ZORK is a registered trademark of Infocom, Inc.
+Revision 88 / Serial number 840726
+
+West of House
+You are standing in an open field west of a white house, with a boarded front
+door.
+There is a small mailbox here.
+
+>q
+Your score is 0 (total of 350 points), in 0 moves.
+This gives you the rank of Beginner.
+Do you wish to leave the game? (Y is affirmative): >
+
+
+From inwap@best.com Thu Feb 15 02:56:33 PST 2001
+Article: 1079 of best.general
+Path: nntp1.ba.best.com!inwap
+From: inwap@best.com (Joe Smith)
+Newsgroups: best.general
+Subject: Re: Web-savvy license plates
+Date: 15 Feb 2001 10:51:15 GMT
+Organization: Chez Inwap
+Lines: 16
+Distribution: best
+Message-ID: <96gcb3$2cho$1@nntp1.ba.best.com>
+References: <96ei85$2lq$1@nntp1.ba.best.com> <96eif2$2v6$1@nntp1.ba.best.com> <96eom9$9vp$1@nntp1.ba.best.com>
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 982234275 78392 206.184.139.134 (15 Feb 2001 10:51:15 GMT)
+X-Complaints-To: abuse@best.com
+NNTP-Posting-Date: 15 Feb 2001 10:51:15 GMT
+Xref: nntp1.ba.best.com best.general:1079
+
+In article <96eom9$9vp$1@nntp1.ba.best.com>,
+Thad Floryan <thad@thadlabs.com> wrote:
+>|  \  /\   / ..__.     brian at enchanter net    You are in a maze of twisty
+>|   \/  \__\   _/    http://www.enchanter.net/   little passages, all alike.
+>
+>Ah!  Another ZORK fan!  :-)
+
+Hey!  These young whipper shappers have no sense of history!  Real men
+know that the above quote comes from ADVENT, the original Colossal Cave
+adventure.  ADVENT came out in 1972, ZORK didn't arrive until 1977.
+
+http://www.lysator.liu.se/adventure/Mainframe_adventures.html
+
+	-Joe
+--
+See http://www.inwap.com/ for PDP-10 and "ReBoot" pages.
+
+
+From richmond@ev1.net Sun Aug 24 01:19:38 PDT 2003
+Article: 21247 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!sjc-peer.news.verio.net!news.verio.net!pln-e!extra.newsguy.com!lotsanews.com!newsfeed.mathworks.com!wn13feed!wn11feed!wn14feed!worldnet.att.net!204.127.198.203!attbi_feed3!attbi.com!sccrnsc04.POSTED!not-for-mail
+Message-ID: <3F37475C.194569B@ev1.net>
+From: Charles Richmond <richmond@ev1.net>
+Reply-To: richmond@ev1.net
+Organization: Canine Computer Center
+X-Mailer: Mozilla 4.7C-CCK-MCD {C-UDP; EBM-APPLE} (Macintosh; I; PPC)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: comp.sys.dec,alt.sys.pdp10
+Subject: Re: Request for source code for adventure game Haunt on the DEC-10/20
+References: <3f36cae1@shknews01> <bh6u37$tv1$1@tabloid.uwaterloo.ca>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 53
+NNTP-Posting-Host: 12.241.15.59
+X-Complaints-To: abuse@comcast.net
+X-Trace: sccrnsc04 1060580376 12.241.15.59 (Mon, 11 Aug 2003 05:39:36 GMT)
+NNTP-Posting-Date: Mon, 11 Aug 2003 05:39:36 GMT
+Date: Mon, 11 Aug 2003 05:39:36 GMT
+Xref: dfw-artgen comp.sys.dec:30169 alt.sys.pdp10:21247
+
+David Evans wrote:
+> 
+> In article <3f36cae1@shknews01>, Jeroen Lodewijks <uunet@wondercool.com> wrote:
+> >Hi all,
+> >
+> >I am not sure if this the right group but I will give it a try anyway:
+> >
+> >Years ago I used to play a text adventure game on the DEC 20 called Haunt.
+> >It's a great game which provided many hours of fun.
+> >
+> >It is written in Ops4 and unique to the DEC 10/20
+> >
+> 
+>   Is this it?
+> 
+> @haunt
+> 
+>  This is HAUNT. Version 4.6
+>  See NEWS for news.
+>  Have you played before?[yes]
+> *
+> 
+> If so then it's at twenex.org.  I don't know whether they have the source
+> but have cross-posted this to alt.sys.pdp10 to see whether anybody there
+> knows anything.
+> 
+According to what I have found, HAUNT was written in the OPS4
+language by John Laird at Carnegie Mellon University around 1980-81.
+The original source is missing-in-action. There is a source for
+HAUNT in OPS5 (*not* OPS4) on the Interactive-Fiction Archive. It
+can be found here:
+
+	<http://www.funet.fi/pub/misc/if-archive/games/source/haunt.ops5.gz>
+
+
+Some information on this game can be found at:
+
+	< http://ai.eecs.umich.edu/people/laird/haunt.html>
+
+and
+
+	<http://www.lysator.liu.se/adventure/Mainframe_adventures.html#HAUNT>
+
+
+There are some OPS5 programming systems around the 'net...you can 
+find them by googling...ISTM you are going to need an OPS5 
+interpreter to run this source code...
+
+
+--
++----------------------------------------------------------------+
+|   Charles and Francis Richmond     richmond at plano dot net   |
++----------------------------------------------------------------+
+
+

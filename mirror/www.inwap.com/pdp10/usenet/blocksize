@@ -1,0 +1,143 @@
+Newsgroups: alt.sys.pdp10,alt.sys.pdp11,alt.folklore.computer
+Subject: Re: Ok, how many bytes make up a BLOCK in DEC-ese?
+References: <38851A6C.68784979@bellatlantic.net>
+Organization: Chez Inwap
+From: inwap@best.com (Joe Smith)
+Date: 19 Jan 2000 02:53:23 GMT
+
+In article <38851A6C.68784979@bellatlantic.net>,
+me  <s2521@bellatlantic.net> wrote:
+>Is it the same across all OS's (RT, RSX, TOPS) or does it depend on that
+>and/or the disk media?
+
+A block is either 512 8-bit bytes (RT, RSX, VMS) or 512 9-bit bytes (TOPS).
+
+For the 36-bit operating systems (TOPS-10, TOPS-20 and variants) a block is
+128 words.  That translates to:
+    32 128-bit quad words (from cache to/from main memory)
+    64 72-bit doublewords
+   128 36-bit words
+   256 18-bit halfwords
+   384 12-bit PDP-8 compatible bytes (SAIL at Stanford used 12 bits)
+   512  9-bit bytes   (control-shift-meta double cokebottle)
+   576  8-bit bytes   (4.5 bytes per word, 9 bytes per two words)
+   640  7-bit bytes   (regular text files)
+   768 SIXBIT bytes   (used by COBOL)
+  1152  4-bit nybbles (FTP "image" mode)
+
+The SA-10 (and other IBM-compatible disk controllers) would read a pair
+of 36-bit words from the PDP-10's memory and write nine 8-bit bytes to
+the disk.  The RH11 controller in the KS-2020 did I/O as 18-bit short
+words.  The RP04 and RP06 disks had to be 18-bit formatted for the PDP-10
+instead of the 16-bit format used by the PDP-11 and VAX.
+	-Joe
+--
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+From: Bill Westfield <billw@flipper.cisco.com>
+Newsgroups: alt.sys.pdp10,alt.sys.pdp11,alt.folklore.computer
+Subject: Re: Ok, how many bytes make up a BLOCK in DEC-ese?
+Date: 19 Jan 2000 00:54:21 -0800
+Organization: Ye 'Ol Disorganized NNTPCache groupie
+Message-ID: <54vh4qo30i.fsf@flipper.cisco.com>
+References: <38851A6C.68784979@bellatlantic.net>  	<38852723$0$209@nntp1.ba.best.com>
+
+>>       512  9-bit bytes   (control-shift-meta double cokebottle)
+
+The SAIL keyboards with the multitude of shift keys, and a separate bit
+for each one, generated 12 bit characters.
+
+Ctrl, Shift, Meta and Top, plus 8 bits for the key, I think.
+
+BillW
+-- 
+(remove spam food from return address)
+
+
+From: alderson@netcom2.netcom.com (Richard M. Alderson III)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Ok, how many bytes make up a BLOCK in DEC-ese?
+Date: 19 Jan 2000 20:04:27 GMT
+Organization: NETCOM On-line services
+Message-ID: <ALDERSON.00Jan19120427@netcom2.netcom.com>
+References: <38851A6C.68784979@bellatlantic.net> <38852723$0$209@nntp1.ba.best.com>
+	<Pine.LNX.4.10.10001190931421.2097-100000@bony.umtec.com>
+
+In article <Pine.LNX.4.10.10001190931421.2097-100000@bony.umtec.com>
+Daniel Seagraves <root@bony.umtec.com> writes:
+
+>On 19 Jan 2000, Joe Smith wrote:
+
+>>    512  9-bit bytes   (control-shift-meta double cokebottle)
+
+>What's cokebottle?
+
+From the Jargon File:
+
+    COKEBOTTLE n. Any very unusual character.  MIT people complain about
+       the "control-meta-cokebottle" commands at SAIL, and SAIL people
+       complain about the "altmode-altmode-cokebottle" commands at MIT.
+
+Both schools used experimental keyboards with additional graphics.  For an
+example of one, see the character-set appendix in Knuth's _The TeXbook_.
+
+Rich Alderson			Last LOTS Tops-20 Systems Programmer, 1984-1991
+				Current maintainer, MIT TECO EMACS (v. 170)
+				Customer Advocacy, XKL LLC, 1993-now
+last name @ XKL dot COM		Chief systems administrator, XKL LLC, 1998-now
+
+
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Ok, how many bytes make up a BLOCK in DEC-ese?
+Date: Wed, 19 Jan 2000 16:04:15 -0800
+Organization: Networks & Distributed Computing
+Message-ID: <Pine.NXT.4.30.0001191602390.16636-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <38851A6C.68784979@bellatlantic.net> <38852723$0$209@nntp1.ba.best.com> <Pine.LNX.4.10.10001190931421.2097-100000@bony.umtec.com> <ALDERSON.00Jan19120427@netcom2.netcom.com>
+
+On 19 Jan 2000, Richard M. Alderson III wrote:
+>     COKEBOTTLE n. Any very unusual character.  MIT people complain about
+>        the "control-meta-cokebottle" commands at SAIL, and SAIL people
+>        complain about the "altmode-altmode-cokebottle" commands at MIT.
+
+Brian Harvey added that one, and I never heard anyone other than him use
+it.  Not that there weren't other personal jargon items; most notable
+being QUUX (Guy Steele) and GAS (Geoff Goodfellow).
+
+-- Mark --
+
+* RCW 19.190 notice: This email address is located in Washington State.	*
+* Unsolicited commercial email may be billed $500 per message.		*
+Science does not emerge from voting, party politics, or public debate.
+
+
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!news.mindspring.net!firehose.mindspring.com!207.69.128.190!alderson
+From: alderson@netcom2.netcom.com (Richard M. Alderson III)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Ok, how many bytes make up a BLOCK in DEC-ese?
+Date: 19 Jan 2000 20:00:30 GMT
+Organization: NETCOM On-line services
+
+In article <38851A6C.68784979@bellatlantic.net> me <s2521@bellatlantic.net>
+writes:
+
+>Is it the same across all OS's (RT, RSX, TOPS) or does it depend on that
+>and/or the disk media?
+
+It differs by OS and media, as noted by others, but they're mostly Tops-10
+folks.  Tops-20 does not use the concept of "block" but rather of "page", which
+is defined as 512 *words* of 36 bits each.
+
+(NB:  The *disk drivers* may use blocks, but they are not available to user-
+level programs, nor even to the rest of the monitor.  On a SCSI disk, we format
+the disk into 2304-bit blocks (128 * 36 bits), four of which make up a page.)
+
+Rich Alderson			Last LOTS Tops-20 Systems Programmer, 1984-1991
+				Current maintainer, MIT TECO EMACS (v. 170)
+				Customer Advocacy, XKL LLC, 1993-now
+last name @ XKL dot COM		Chief systems administrator, XKL LLC, 1998-now
+
+
+

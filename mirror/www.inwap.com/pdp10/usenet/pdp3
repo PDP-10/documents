@@ -1,0 +1,285 @@
+From don_chiasson@earthling.net Thu Aug  3 16:19:31 PDT 2000
+Article: 345 of alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!newshub.sdsu.edu!news-spur1.maxwell.syr.edu!news.maxwell.syr.edu!newsfeed.skycache.com!Cidera!cyclone2.usenetserver.com!news-out.usenetserver.com!gestalt.direcpc.com.!sn-xit-02!supernews.com!sn-inject-01!corp.supernews.com!not-for-mail
+From: "Don Chiasson" <don_chiasson@earthling.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-3 info?
+Date: Wed, 2 Aug 2000 17:52:21 -0400
+Organization: Posted via Supernews, http://www.supernews.com
+Lines: 47
+Message-ID: <soh650d7dbm70@corp.supernews.com>
+References: <PAT.00Aug2144406@smithfield.transarc.ibm.com>
+X-Complaints-To: newsabuse@supernews.com
+X-Newsreader: Microsoft Outlook Express 4.71.1712.3
+X-MimeOLE: Produced By Microsoft MimeOLE V4.71.1712.3
+Xref: nntp1.ba.best.com alt.sys.pdp10:345
+
+
+Pat Barron wrote in message ...
+>I'm posting this here because the PDP-3 was also supposed
+to have been
+>a 36-bit machine, though I don't know how close it is in
+spirit to
+>the PDP-6 or PDP-10 ...
+>
+>The PDP FAQ notes that the PDP-3 was only a "paper" design,
+and that
+>DEC never built one - but that Scientific Engineering did
+build one
+>from the spec.  Which implies that a spec does exist - or
+at least,
+>did at one time.
+>
+>Is there any information about the proposed PDP-3
+architecture anywhere?
+>Was it much like the PDP-6 or PDP-10?
+
+>From  "Digital At Work" (1992), page 82, quoting Gordon Bell,
+"The PDP-2, a 36
+bit computer, was defined and one of our customers actually
+built one
+using Digital modules. We almost got an order for a PDP-3
+>from  the
+Air Force, but Harlan Anderson and I persuaded them to take
+two PDP-1s
+-- two 18 bit machines instead of one 36 bit machine."
+
+And from "Computer Engineering" by Bell et al (1978), page
+141, "DEC
+also never built a PDP-3, although one was designed on paper
+as a 36
+bit machine. [Footnote: In 1960, a customer (Scientific
+Engineering
+Institute, Waltham, Massachusette) built a PDP-3. It was
+later dismantled
+and given to MIT; as of 1974, it was up and running in
+Oregon.]"
+
+
+            Don
+
+
+
+
+
+
+From jms@tardis.tymnet.com Thu Nov 15 19:02:59 2001
+Return-Path: <jms@tardis.tymnet.com>
+Received: from tymix.Tymnet.COM by jomis.tymnet.com (SMI-8.6/SMI-SVR4)
+	id TAA06394; Thu, 15 Nov 2001 19:02:57 -0800
+Received: by tymix.Tymnet.COM (4.1/SMI-4.1)
+	id AA06596; Thu, 15 Nov 2001 19:02:51 PST
+Received: from tardis
+	by Tymnet.COM (in.smtpd); Thu, 15 Nov 2001 19:02:51 -0800 (PST)
+Received: (from jms@localhost)
+	by tardis.tymnet.com (8.9.3+Sun/8.9.1) id TAA07635
+	for inwap@jomis; Thu, 15 Nov 2001 19:02:50 -0800 (PST)
+Resent-Message-Id: <200111160302.TAA07635@tardis.tymnet.com>
+Received: from tymix.Tymnet.COM (tymix [131.146.2.1])
+	by tardis.tymnet.com (8.9.3+Sun/8.9.1) with SMTP id OAA11578
+	for <jms@tardis>; Wed, 14 Nov 2001 14:02:00 -0800 (PST)
+Received: by tymix.Tymnet.COM (4.1/SMI-4.1)
+	id AA22539; Wed, 14 Nov 2001 14:02:00 PST
+Received: from tomobiki-cho.cac.washington.edu
+	by Tymnet.COM (in.smtpd); Wed, 14 Nov 2001 14:01:59 -0800 (PST)
+Received: from eastmail1.East.Sun.COM ([129.148.1.240])
+	by patan.sun.com (8.9.3+Sun/8.9.3) with ESMTP id OAA04296;
+	Wed, 14 Nov 2001 14:58:36 -0700 (MST)
+Received: from labean.East.Sun.COM (labean.East.Sun.COM [129.148.75.8])
+	by eastmail1.East.Sun.COM (8.9.3+Sun/8.9.3/ENSMAIL,v2.1p1) with ESMTP id QAA22770;
+	Wed, 14 Nov 2001 16:58:53 -0500 (EST)
+Received: from livia (livia [129.148.75.89])
+	by labean.East.Sun.COM (8.9.3+Sun/8.9.1) with SMTP id QAA24893;
+	Wed, 14 Nov 2001 16:58:51 -0500 (EST)
+Message-Id: <200111142158.QAA24893@labean.East.Sun.COM>
+Date: Wed, 14 Nov 2001 16:58:51 -0500 (EST)
+From: Guy Steele - Sun Microsystems Labs <gls@labean.east.sun.com>
+Subject: Re: PDP-3 documentation?
+To: gls@labean.east.sun.com, eric@brouhaha.com
+Cc: its-lovers@mc.lcs.mit.edu, its-hackers@cosmic.com, tops-20@panda.com
+Mime-Version: 1.0
+Content-Type: TEXT/plain; charset=us-ascii
+Content-Md5: odq9Hr2e3jLJiNZMJ/gfEg==
+X-Mailer: dtmail 1.3.0 @(#)CDE Version 1.4.2 SunOS 5.8 sun4u sparc 
+Resent-From: jms@tardis.tymnet.com
+Resent-Date: Thu, 15 Nov 2001 19:02:50 -0800
+Resent-To: inwap@jomis.tymnet.com
+Status: RO
+Content-Length: 4465
+Lines: 90
+
+
+   Date: Tue, 13 Nov 2001 11:45:11 -0800 (PST)
+   Subject: Re: PDP-3 documentation?
+   From: "Eric Smith" <eric@brouhaha.com>
+   To: <gls@labean.East.Sun.COM>
+   Cc: <its-lovers@mc.lcs.mit.edu>, <its-hackers@cosmic.com>, 
+<tops-20@panda.com>, <@brouhaha.com>
+   
+   > This may be slightly off-topic, but can anyone tell me
+   > where to find information on the reputed "paper-only"
+   > design for the DEC PDP-3?  (Or the PDP-2, while I'm at it.)
+   
+   Al Kossow and I recently asked Gordon Bell, and he said that the PDP-2
+   wasn't actually designed.  For the PDP-3, they at least had a
+   preliminary spec, but I don't know whether they designed the circuitry.
+   It's essentially just a double-width PDP-1.
+   
+   Al Kossow has a .PDF file of the PDP-3 preliminary spec on his web site:
+   
+   http://www.spies.com/~aek/pdf/dec/pdp3/
+   
+Thank you, thank you, thank you.  This is what I have been searching for,
+for (literally) 25 years.
+
+I'll indulge myself by providing here a brief summary of what I discovered,
+since it may be of some interest to those who like the PDP-6 and PDP-10.
+
+Yes, the PDP-3 is in a strong sense a double-width PDP-1.  It has 36-bit
+words where the PDP-1 has 18-bit words.  The PDP-1 instruction format
+is 5-bit opcode, 1 indirect bit, 12-bit address; the PDP-3 instruction
+format is 6-bit opcode, 1 indirect bit (I), 2 bits unused, 9 bits of index
+register specifier (X), and 18 bits of base address (Y).
+
+(Actually, the preliminary spec says something along the lines of "addresses
+are 15 bits, but we could expand it to 18-bit addresses if we wanted".)
+
+An analysis of the opcodes shows that the instruction sets are almost
+identical; in fact, the sixth bit of PDP-3 opcode goes virtually unused,
+at least according to the preliminary specification.  (The one exception
+is that in the PDP-1, the "indirect bit" distinguishes right shifts from
+left shifts; in the PDP-3 the sixth opcode bit does that.)
+
+The PDP-3 omits the PDP-1 instructions xct, cal, jda, dzm, idx, isp, and law,
+and the jsp instructions behaves in a slightly different manner.  Four new
+instructions lir, dia, spx, and snx deal with the new index registers.
+The PDP-1 instructions dap (deposit into address part) and dip (deposit
+into instruction part) store into the low 12 bits and the high 6 bits of
+a memory word, respectively; on the PDP-3 they store into the low 18 bits
+and the high 18 bits.
+
+The first 512 locations of memory, except location 0, are also index
+registers.  Most arithmetic instructions operate on the (single) accumulator
+and a memory location.  The memory location is identified by (I,X,Y) just
+as on a PDP-6 or PDP-10; in particular, you can have any number of levels
+of indirection, and every indirection step can also be indexed.  Three
+instructions have an X field but treat the indicated index register more
+as an accumulator.  The lir instruction loads the immediate value Y into
+(the low 18 bits of) register X; spx and snx add the immediate value Y to
+(the low 18 bits of) register X, then skip if (the low half of) X is now
+positive or negative, respectively.
+
+There's also a place in the sequence break (interrupt) mechanism where
+the PC and another 18-bit register are stored together as a single word.
+
+So I don't want to commit the fallacy of "post hoc ergo propter hoc";
+I will content myself with observing that a number of beloved characteristics
+of the PDP-6 and PDP-10 also appeared in perhaps more primitive form in the
+PDP-3:
+
+	36-bit words
+	
+	operations on 18-bit halfwords
+	
+	using locations 1 through 2**N-1 as index registers
+	
+	indefinite indirection with indexing at each step
+
+In some sense, a PDP-6 can be made out of a PDP-3 by reducing the X field
+from 9 bits to 4 bits, sliding the I bit over, adding a matching 4-bit
+A field (that's the crucial step)---and then using the remaining 9-bit opcode
+field for a *completely* revamped instruction set!  (Oh, and changing the
+arithmetic from 1's-complement to 2's-complement.  Note that the PDP-3
+indexing mechanism uses 1's-complement addition.  The first DEC machine to
+feature a 2's-complement add instruction was the PDP-4, and the PDP-5 pretty
+much committed itself to 2's-complement arithmetic, if I am not mistaken.
+The ADD and TAD instructions lived on side by side in the -7, -9, and -15,
+and the LINC side of the PDP-12 had 1's-complement arithmetic; otherwise,
+all later DEC machines used 2's-complement arithmetic exclusively, I believe.)
+
+--Guy
+
+From gls@labean.east.sun.com  Thu Nov 15 11:46:29 2001
+Received: from tymix.Tymnet.COM (tymix [131.146.2.1])
+	by tardis.tymnet.com (8.9.3+Sun/8.9.1) with SMTP id LAA02232
+	for <jms@tardis>; Thu, 15 Nov 2001 11:46:28 -0800 (PST)
+Received: by tymix.Tymnet.COM (4.1/SMI-4.1)
+	id AA03243; Thu, 15 Nov 2001 11:46:27 PST
+Received: from tomobiki-cho.cac.washington.edu
+	by Tymnet.COM (in.smtpd); Thu, 15 Nov 2001 11:46:27 -0800 (PST)
+Received: from eastmail1.East.Sun.COM ([129.148.1.240])
+	by patan.sun.com (8.9.3+Sun/8.9.3) with ESMTP id MAA28130;
+	Thu, 15 Nov 2001 12:43:49 -0700 (MST)
+Received: from labean.East.Sun.COM (labean.East.Sun.COM [129.148.75.8])
+	by eastmail1.East.Sun.COM (8.9.3+Sun/8.9.3/ENSMAIL,v2.1p1) with ESMTP id OAA11329;
+	Thu, 15 Nov 2001 14:44:05 -0500 (EST)
+Received: from livia (livia [129.148.75.89])
+	by labean.East.Sun.COM (8.9.3+Sun/8.9.1) with SMTP id OAA26070;
+	Thu, 15 Nov 2001 14:44:05 -0500 (EST)
+Message-Id: <200111151944.OAA26070@labean.East.Sun.COM>
+Date: Thu, 15 Nov 2001 14:44:04 -0500 (EST)
+From: Guy Steele - Sun Microsystems Labs <gls@labean.east.sun.com>
+Subject: Re: PDP-3 documentation?
+To: dgc@spies.com
+Cc: Guy.Steele@East.Sun.COM, its-lovers@mc.lcs.mit.edu, its-hackers@cosmic.com,
+        tops-20@panda.com
+Mime-Version: 1.0
+Content-Type: TEXT/plain; charset=us-ascii
+Content-Md5: 1rBrYXYrcV6NhtGbW6Ou3Q==
+X-Mailer: dtmail 1.3.0 @(#)CDE Version 1.4.2 SunOS 5.8 sun4u sparc 
+Status: RO
+Content-Length: 2327
+Lines: 51
+
+
+   Date: Wed, 14 Nov 2001 21:24:08 -0800
+   From: Dave Conroy <dgc@spies.com>
+   To: gls@labean.East.Sun.COM
+   Subject: Re: PDP-3 documentation?
+   
+   The pdp-3 shifts also look like they take a shift
+   count from the low 6 bits, unlike the pdp-1, which had a big field
+   in the bottom of the shift instruction, and shifted by
+   the number of 1 bits in the field.
+   
+   dgc
+
+This is a good point, thank you.  I had forgotten that odd feature
+of the PDP-1 shift instructions.  However, the PDP-3 documentation
+fairly explicitly states that the shift count is taken from the
+low 15 bits, not the low 6 bits, which is consistent with its
+parsimonious design---it undoubtedly uses the 15-bit Index Adder
+as the shift counter.  The document also notes:
+
+  Shift or rotate instructions involving more than 33 [typo for 36?]
+  steps can be used for simulating time delays.
+
+Another difference is that the PDP-3, unlike the PDP-1, had no bit
+in the "skip group" instructions to invert the sense of the skip.
+
+Another tiny difference is that, in the operate instructions,
+the PDP-1 has a bit (lap) specifying that the PC (and Overflow bit)
+should be ORed into the AC and the PDP-3 lacks that bit.  But
+that's according to PDP-1 manuals of 1962 and 1963, and in those
+manuals, the documentation for the "lap" bit is out of sequence,
+as if it had been stuck into the documentation after the fact.
+
+The only way I can find to save the PC in the PDP-3 is with the
+jsp instruction.  On the PDP-1, jsp saves the PC (and Overflow)
+in the AC; on the PDP-1, jsp saves the PC in the Index Adder!
+Then the dia (Deposit Index Adder) instruction must be used to
+save that quanity in some memory location.  The Overflow bit can
+be saved (and cleared) by testing it with a skip instruction, szo.
+
+
+I have to say, by the way, that I feel as if I have encountered
+the Missing Link---it no longer feels like *quite* such a big leap
+from the PDP-1 (and PDP-4) to the PDP-6.  (Instead of ten miles, it's
+only eight---I don't mean to downplay the brilliance of inventing
+the H- instructions, the T- instructions, the jump/skip/compare series,
+the complete set of booleans, and so on---not to mention the stack
+instructions and AOBJN.  And the UUOs.)  But seeing the halfword
+architecture and the indefinite (I,Y,Y) indirection is fascinating.
+
+--Guy
+

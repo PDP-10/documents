@@ -1,0 +1,58 @@
+Article: 117504 of alt.folklore.computers
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!nntp1.roc.gblx.net!nntp.gblx.net!nntp.gblx.net!priapus.visi.com!news-out.visi.com!petbe.visi.com!newspeer.monmouth.com!news.monmouth.com!shell.monmouth.com!not-for-mail
+From: pechter@shell.monmouth.com (Bill/Carolyn Pechter)
+Newsgroups: alt.folklore.computers
+Subject: Re: Looking for a book on the development of the DEC VAX
+Date: 27 Mar 2003 13:16:26 -0500
+Organization: Lakewood MicroSystems
+Lines: 43
+Message-ID: <b5vf5q$8vg$1@shell.monmouth.com>
+References: <b5d96r$28bdcr$1@ID-175938.news.dfncis.de> <1048362508.541050@saucer.planet.gong> <b5si3p$2cacgf$1@ID-143435.news.dfncis.de> <b5utrq$h4e$2@bob.news.rcn.net>
+NNTP-Posting-Host: shell.monmouth.com
+Xref: dfw-artgen alt.folklore.computers:117504
+
+In article <b5utrq$h4e$2@bob.news.rcn.net>,  <jmfbahciv@aol.com> wrote:
+>In article <b5si3p$2cacgf$1@ID-143435.news.dfncis.de>,
+>   "Hans Vlems" <hvlems@iae.nl> wrote:
+>>
+>>"Rupert Pigott" <roo@dark-try-removing-this-boong.demon.co.uk> schreef in
+>>bericht news:1048362508.541050@saucer.planet.gong...
+
+>>The 11/785 was sold around 1985/1986 or so.
+>
+>That sounds late.  Are you sure?
+>
+><snip>
+>
+>/BAH
+
+Absolutely... although I think it started being announced and sold around
+'84.  I was installing the things in 84-85 timeframe IIRC.
+
+By 86 the 11/780 and 11/750 were dodos with the 8600/8650 out
+and the 11/785 replacing the 11/780 and most 11/780's getting upgraded
+in the field to 11/780-5's.
+
+The MicroVaxII's took the 11/750's place and the place of a lot of
+11/780's  -- since they were about .9 of an 11/780 and two of them took
+a lot less of the power and airconditioning in a room.
+
+The only reason 11/780's and 11/785's and 11/750's existed was in
+cluster formations -- since the MicroVaxII's didn't have a CI interface
+at the time.
+
+If DEC did one for QBUS there would have been only 86xx's and MicroVax
+systems left.  There was an amazing potential for $$$ when DEC decided
+not to OEM the MicrovaxII KA620 board to box builders like they
+did the PDP11.  That, REALLY REALLY was the beginning of the end for
+DEC.
+
+Bill
+-- 
++---------------------------------------------------------------------------+
+| Bill and/or Carolyn Pechter    |        pechter@shell.monmouth.com        |
+|   Bill Gates is a Persian cat and a monocle away from being a villain in  |
+|   a James Bond movie              -- Dennis Miller                        | 
++---------------------------------------------------------------------------+
+
+

@@ -1,0 +1,261 @@
+Article 2707 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!panix!newsmaster.cc.columbia.edu!watsun.cc.columbia.edu!fdc
+From: fdc@watsun.cc.columbia.edu (Frank da Cruz)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Good news! TOPS-20 v4.1 booted successfully
+Date: 20 Dec 2000 01:27:46 GMT
+Organization: Columbia University
+Lines: 88
+Message-ID: <91p1ui$qd7$1@newsmaster.cc.columbia.edu>
+References: <fsCZ5.55241$%j3.692480@news6.giganews.com> <853dfrpl0z.fsf@junk.nocrew.org> <91n7su$109j$1@nntp1.ba.best.com> <mdd3dfk87cd.fsf@panix2.panix.com>
+NNTP-Posting-Host: watsun.cc.columbia.edu
+X-Trace: newsmaster.cc.columbia.edu 977275666 27047 128.59.39.2 (20 Dec 2000 01:27:46 GMT)
+X-Complaints-To: postmaster@columbia.edu
+NNTP-Posting-Date: 20 Dec 2000 01:27:46 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2707
+
+In article <mdd3dfk87cd.fsf@panix2.panix.com>,
+Rich Alderson  <alderson+news@panix.com> wrote:
+: inwap@best.com (Joe Smith) writes:
+: > What command do I give to a Linux FTP client to get a verbose directory
+: > listing from TOPS20?  DIR, LIST and NLIST all return names only; no dates.
+: 
+: NONE of the above.
+: 
+: Verbose directory listings in the Tops-20 FTP server and client are
+: implemented via the STAT command, as follows:
+: 
+: 1.  The client issues "STAT *.*"
+: 2.  The server returns a list of all the files in the remote directory
+: 3.  The client CDRs down the list, issuing "STAT <name>.<typ>.<gen>" for each
+:     file on the list
+: 4.  The server returns verbose data for the file in question
+: 5.  The client formats the verbose data and outputs it to the user.
+: 
+: I don't know why it was done this way; it appears to be a holdover from TENEX
+: on the ARPANET.
+: 
+: Perhaps someone should smarten up the Unix ftp clients...
+: 
+Done:
+
+C-Kermit>ftp ? Hostname; or FTP command, one of the following:
+ account     chmod       help        open        rename      system
+ append      close       idle        options     reset       type
+ bye         delete      mget        put         rmdir       umask
+ cd          directory   mkdir       pwd         site        up
+ cdup        features    modtime     quote       size        user
+ check       get         mput        reget       status      vdirectory
+C-Kermit>help ftp vdirectory
+
+Syntax: FTP VDIRECTORY [ filespec ]
+  Asks the server to send a directory listing of the files that match
+  the given filespec, or if none is given, all the files in its current
+  directory.  VDIRECTORY is needed for getting verbose directory
+  listings from certain FTP servers, such as on TOPS-20.  Try it if
+  FTP DIRECTORY lists only filenames without details.
+
+C-Kermit>ftp cu20b.arpa  ; (not the real hostname)
+ Name (cu20b.arpa:fdc):
+331 User name ok. Password, please.
+ Password:
+230- User FDC, job 13, logged in at
+230- Tue, 19 Dec 2000 17:00:57 -0800 (PST).
+230
+Remote system type is TOPS20.
+Default transfer mode is TEXT ("ASCII")
+  C-Kermit>ftp dir
+  CU20B:<FDC>
+  CKERMIT.DIRECTORY.1
+  CKERMIT2.TXT.1
+  GNUEMACS.INIT.1
+  KERMIT.DIRECTORY.1
+  LOGIN.CMD.1
+  226 Transfer completed.
+C-Kermit>ftp vdir
+  CU20B:<FDC>CKERMIT.DIRECTORY.1;P20200;A,0,15-Jan-1999 13:41:26-PST,
+  15-Jan-1999 13:41:27-PST,14-Sep-1999 17:49:06-PDT,FDC,FDC
+  CU20B:<FDC>CKERMIT2.TXT.1;P775200;A,166,15-Jan-1999 13:43:17-PST,15-Jan-1999
+  13:43:17-PST,15-Jan-1999 14:35:06-PST,FDC,FDC
+  CU20B:<FDC>GNUEMACS.INIT.1;P775200;A,8,25-Jan-1997 10:46:54-PST,25-Jan-1997
+  10:46:54-PST,25-Jan-1997 10:49:34-PST,FDC,FDC
+  CU20B:<FDC>KERMIT.DIRECTORY.1;P20200;A,0,25-Jan-1997 10:45:59-PST,25-Jan-1997
+  10:45:59-PST,14-Sep-1999 17:49:07-PDT,FDC,FDC
+  CU20B:<FDC>LOGIN.CMD.1;P775200;A,1,25-Jan-1997 10:43:05-PST,25-Jan-1997
+  10:43:05-PST, 8-Sep-2000 16:15:37-PDT,FDC,FDC
+C-Kermit>
+
+Yes, C-Kermit now includes an FTP client:
+
+  http://www.columbia.edu/kermit/ck71.html
+
+The current test version (Alpha.01) pointed to by the URL above doesn't have
+the FTP VDIRECTORY command in it, but by working copy does, and so Alpha.02
+will have it.  I'll try to remember to post an announcement here.
+
+C-Kermit is available for UNIX (all kinds), VMS, and several other OS
+families.  The Windows version is called Kermit 95.  So far only the UNIX
+and Windows versions are getting FTP clients.
+
+(And no, it doesn't do TYPE TENEX -- does anybody care?)
+
+- Frank
+
+P.S. TOPS-20 users who try C-Kermit might notice a familiar look & feel.
+
+
+Article 2842 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!inwap
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.sys.pdp10
+Subject: Re: FTP TYPE TENEX?
+Date: 24 Dec 2000 11:06:27 GMT
+Organization: Chez Inwap
+Lines: 50
+Message-ID: <924lbj$1lsk$1@nntp1.ba.best.com>
+References: <91qtre$sil$1@newsmaster.cc.columbia.edu> <3A41232E.76EA5103@rustic-place.demon.co.uk> <3A412E8B.CCFE637@rustic-place.demon.co.uk>
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 977655987 55188 206.184.139.134 (24 Dec 2000 11:06:27 GMT)
+X-Complaints-To: abuse@best.com
+NNTP-Posting-Date: 24 Dec 2000 11:06:27 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2842
+
+In article <3A412E8B.CCFE637@rustic-place.demon.co.uk>,
+Malcolm MacArthur  <malcolmm@rustic-place.demon.co.uk> wrote:
+>Malcolm MacArthur wrote:
+>
+>  3.1.1.4.  LOCAL TYPE
+>
+>            The data is transferred in logical bytes of the size
+>            specified by the obligatory second parameter, Byte size.
+>            The value of Byte size must be a decimal integer; there is
+>            no default value.  The logical byte size is not necessarily
+>            the same as the transfer byte size.  If there is a
+>            difference in byte sizes, then the logical bytes should be
+>            packed contiguously, disregarding transfer byte boundaries
+>            and with any necessary padding at the end.
+>   [...]
+>   
+>            In another example, a pair of hosts with a 36-bit word size
+>            may send data to one another in words by using TYPE L 36.
+>            The data would be sent in the 8-bit transmission bytes
+>            packed so that 9 transmission bytes carried two host words.
+>
+>I knew I'd read it somewhere... Still not sure how TOPS-20 turned two
+>words into bytes (as with binary files on wsmr-simtel20). Perhaps it
+>stored 9 bytes in 2 words?
+
+I did some experimenting with TOPS-20 to Unix transfers.
+
+  For TEXT mode, use a 7-bit byte pointer to read or write the 36-bit file.
+
+  For IMAGE mode, use a 4-bit byte pointer and read two nybbles for
+every octet sent (or write two nybbles for every octet received).
+(The least significant 4 bits of the first word would be combined with
+the most significant 4 bits of the second word.)
+
+  For TENEX mode, use 8-bit byte pointer (which will skip over the least
+significant 4 bits of every word).
+
+  For PAGE mode, there was a separate negociation between the two
+TOPS-20 systems to skip pages in sparse files.
+
+If an 8-bit program (such as a CP/M binary) was stored on a TOPS-20
+system (such as SIMTEL20) and downloaded to an 8-bit platform in
+IMAGE mode instead of TENEX mode, the resulting file would be mangled.
+But the data could be recovered.  I remember seeing TENEX.COM, a program
+for CP/M that would read a mangled input file 9 bytes at at time and write
+8 bytes at a time (after discarding the 2 unwanted nybbles).
+	-Joe
+
+--
+See http://www.inwap.com/ for PDP-10 and "ReBoot" pages.
+
+
+Article 3659 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc03.blue.aol.com!uunet!dca.uu.net!ash.uu.net!spool1.news.uu.net!spool0.news.uu.net!reader0.news.uu.net!not-for-mail
+Message-ID: <3A9AA112.22376D99@trailing-edge.com>
+Date: Mon, 26 Feb 2001 18:31:46 -0400
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Organization: Trailing Edge Technology
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.2     AlphaServer 1200 5/533 4MB)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: 36-bit MIME types, PDP-10 FTP (was Re: File transfers  was Re: Barb, DSKB is not in catalog!)
+References: <3A85706B.B4A96DC3@nospam.nospam> <3A8AE84B.99DF2D93@digiweb.com> <96er8c$8n$1@newsmaster.cc.columbia.edu> <3A8C2842.98FAC4EE@nospam.nospam> <96hd0g$s7k$1@newsmaster.cc.columbia.edu> <3A8C1EAE.7EE8CEE0@trailing-edge.com> <FC5A93C905FC4FB0.46E8 <97e7sq$g4s@nnrp1.farm.idt.net>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 67
+NNTP-Posting-Host: 63.73.218.130
+X-Trace: reader0.news.uu.net 983230307 24490 63.73.218.130
+Xref: nntp1.ba.best.com alt.sys.pdp10:3659 alt.folklore.computers:16821
+
+Eric Chomko wrote:
+> 
+> In alt.folklore.computers John Savard <jsavard@ecn.ab.SBLOK.ca.nowhere> wrote:
+> : On 16 Feb 2001 21:44:20 GMT, Eric Chomko <chomko@IDT.NET> wrote, in
+> : part:
+> 
+> : >In alt.folklore.computers Jay Maynard <jmaynard@thebrain.conmicro.cx> wrote:
+> : >[...]
+> : >: How does a 36-bit-word binary file get stored in an 8-bit-byte-oriented
+> : >: world, anyway?
+> : >
+> : >The UNIVAC 1100 series used to break "bytes" up into nine bit chunks and simply
+> : >not used the high-order bit. This was the way ASCII characters were stored when
+> : >they were not in Fieldata, UNIVAC's own 6-bit character information code.
+> 
+> : Of course, that answers the opposite question: how to store a file
+> : made up of 8-bit bytes on a 36-bit machine.
+> 
+> : In the other direction, if I have a PDP-10 program binary, I had
+> : better not discard bits.
+> 
+> : One safe way to store it would simply be to divide the 36-bit word
+> : into six 6-bit characters, and store one of them in each byte. That,
+> : of course, is somewhat wasteful; only five bytes are really needed,
+> : and nine bytes will exactly store two words.
+> 
+> Nine nybbles (or is it nibbles?) to a word. Actually, since machines are not
+> nybble-addressable, I suspect, as someone else mentioned, using a double word
+> (72 bits) to store nine 8-bit bytes is the safest thing to do.
+
+Indeed, that is how it was often done in FTP clients/servers for
+PDP-10's.
+
+From some 1983 sources to FTP for TOPS-20:
+
+http://pdp-10.trailing-edge.com/pdp-10/BB-EV83B-BM/TCPIP-SOURCES/FTP4.MAC
+
+SUBTTL  NCP subroutine to shuffle bits from 8/32 bit wds to 36 bit wds
+
+PACK89: TXNN F,F.DSK            ; It is on disk isn't it?
+         RET                    ; No. Don't process it.
+
+        SETZM WINDW2            ; Yes. Clear the window page
+        MOVX A,<WINDW2,,WINDW2+1>
+        BLT A,WINDW2+777
+
+        MOVX A,<-1100,,0>       ; Number of 32 bit words in window
+        MOVX B,<-10,,0>         ; State counter
+        MOVX C,<-1000,,WINDW2>  ; Where 36 bit words go.
+
+PACK8L: AOBJP A,.+2             ; Count thru input
+          MOVE T2,WINDOW(A)     ; Get two 32 bit words
+        MOVE T1,WINDOW-1(A)
+        LSH T1,-4               ; Butt the two 32 bit groups together
+        LSHC T1,@IMOSHT(B)      ; Shift to get the correct 36 bits
+        MOVEM T1,0(C)           ; Store output word
+        AOBJN C,.+1             ; Count output
+        AOBJN B,PACK8N          ; Need to reset state counter?
+          MOVX B,<-10,,0>       ; Yes.
+          AOBJN A,.+1           ; And step an extra word.
+PACK8N: JUMPL A,PACK8L          ; Loop if more to do
+
+        MOVX B,<POINT 36,WINDW>]
+        MOVNI C,1000            ; Packed 36-bit bytes
+        RET
+
+Tim.
+
+

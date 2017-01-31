@@ -1,0 +1,224 @@
+Article 1094 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sdd.hp.com!usc!cs.utexas.edu!uunet!in2.uu.net!nwnews.wa.com!news1.halcyon.com!coho.halcyon.com!fbeast
+From: fbeast@coho.halcyon.com (R. Terry McCutchen)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Indirect Addressing
+Date: 19 Sep 1995 09:08:55 GMT
+Organization: Northwest Nexus, Inc. - Professional Internet Services
+Lines: 6
+Message-ID: <43m1b7$8ff@news1.halcyon.com>
+References: <438la2$85q@ixnews6.ix.netcom.com> <439u17$2dq@shell1.best.com> <43caka$m5h@gap.cco.caltech.edu>
+NNTP-Posting-Host: coho.halcyon.com
+X-Newsreader: TIN [version 1.2 PL2]
+
+As I racall all of the KA10s that also had relocation imposed a limit of 
+18 levels of Indirect. These would be any with serial numbers higher than 
+at least 75. I believe that the KI10 also had this limitation.
+
+						/s/ Terry
+
+
+
+Article 1152 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!tank.news.pipex.net!pipex!oleane!simtel!news.kei.com!newshost.marcam.com!uunet!in1.uu.net!taligent!kip-1.taligent.com!user
+From: tom_van_vleck@taligent.com (Tom Van Vleck)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10,alt.lang.teco
+Subject: Re: Hanging dinosaurs with user level code
+Date: Mon, 25 Sep 1995 21:02:40 -0700
+Organization: Multicians
+Lines: 8
+Message-ID: <tom_van_vleck-2509952102400001@kip-1.taligent.com>
+References: <TK.95Sep25202809@entropy.ai.mit.edu>
+NNTP-Posting-Host: kip-1.taligent.com
+Xref: shellx.best.com alt.folklore.computers:36323 alt.sys.pdp10:1152 alt.lang.teco:298
+
+Tom Knight wrote:
+>Originally on
+>the 7090, an XCT * in B core (user mode) would hang the system; on the
+>'94 they had advanced to the point where XCT@ * was required to bring
+>the system to its knees.
+
+Hi Tom...  Absolutely correct.  (Actually the FAP mnemmonic was XEC.)
+See http://www.best.com/~thvv/7094.html for the story of one such hang.
+
+
+Article 1176 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sdd.hp.com!gatech!howland.reston.ans.net!plug.news.pipex.net!pipex!tank.news.pipex.net!pipex!news.sprintlink.net!in1.uu.net!info-server.bbn.com!clements
+From: clements@bbn.com (Bob Clements)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: TECO on non DEC platforms
+Date: 29 Sep 1995 17:29:35 GMT
+Organization: Bolt Beranek and Newman (BBN)
+Lines: 30
+Message-ID: <44hadv$fcq@info-server.bbn.com>
+References: <Pine.NXT.3.92.950919164934.10817A-100000@Tomobiki-Cho.CAC.Washington.EDU> <446qld$oto@info-server.bbn.com> <NEWTNews.812322139.11203.vsocci@LOCALNAME>
+NNTP-Posting-Host: lion.bbn.com
+Xref: shellx.best.com alt.sys.pdp10:1176 alt.folklore.computers:36757
+
+In article <NEWTNews.812322139.11203.vsocci@LOCALNAME>
+ Vance Socci <vsocci@vip.best.com> writes:
+
+>It might interest PDP-10 fans everywhere to note that while the
+>microcode for the KL-10 was being debugged on the wirewrap #2
+>machine, I discovered that JRST @. indeed hung the system . . .
+
+
+Microcode!  Foo.  I thought we were talking about REAL computers
+that didn't need their brains spoon-fed to them every time you
+turned them on.
+
+
+
+>Its just hard to keep a good bug down. I have a theory that every
+>architecture has a canonical set of associated bugs.
+
+
+Well, neither the 166 nor the KA-10 nor the KI-10 had that bug,
+even during initial prototype debug.  So it was brand new on the KL.
+Maybe they loaded 7090-emulating microcode?  :-)
+
+(There _was_ that divide bug that hung the KI, though...)
+
+
+>/evs
+
+/Rcc
+
+Bob Clements, K1BC, clements@bbn.com, +1 617 USE K1BC
+
+
+Article 1184 of alt.sys.pdp10:
+Path: shellx.best.com!usenet
+From: Vance Socci <vsocci@vip.best.com>
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: TECO on non DEC platforms
+Date: Sat, 30 Sep 95 07:25:53 PDT
+Organization: Best Internet Communications
+Lines: 72
+Message-ID: <NEWTNews.812472165.7563.vsocci@LOCALNAME>
+References: <Pine.NXT.3.92.950919164934.10817A-100000@Tomobiki-Cho.CAC.Washington.EDU> <446qld$oto@info-server.bbn.com> <NEWTNews.812322139.11203.vsocci@LOCALNAME>  <44hadv$fcq@info-server.bbn.com>
+NNTP-Posting-Host: vsocci.vip.best.com
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Newsreader: NEWTNews & Chameleon -- TCP/IP for MS Windows from NetManage
+Xref: shellx.best.com alt.sys.pdp10:1184 alt.folklore.computers:36851
+
+
+In Article<44hadv$fcq@info-server.bbn.com>, <clements@bbn.com> writes:
+> 
+> In article <NEWTNews.812322139.11203.vsocci@LOCALNAME>
+>  Vance Socci <vsocci@vip.best.com> writes:
+> 
+> >It might interest PDP-10 fans everywhere to note that while the
+> >microcode for the KL-10 was being debugged on the wirewrap #2
+> >machine, I discovered that JRST @. indeed hung the system . . .
+> 
+> 
+> Microcode!  Foo.  I thought we were talking about REAL computers
+> that didn't need their brains spoon-fed to them every time you
+> turned them on.
+>
+I believe that under TENEX and TOPS-20, it was actually done with
+a fork . . .    ;-$
+ 
+> 
+> 
+> >Its just hard to keep a good bug down. I have a theory that every
+> >architecture has a canonical set of associated bugs.
+> 
+> 
+> Well, neither the 166 nor the KA-10 nor the KI-10 had that bug,
+> even during initial prototype debug.  So it was brand new on the KL.
+> Maybe they loaded 7090-emulating microcode?  :-)
+>
+See, that supports my theory; a canonical feature of microcoded instruction
+sets is an additional number of bugs in the macro-level instructions inherited
+from the kind of bugs you get from linearly coded algorithms (e.g. off-by-one
+bugs, infinite loops, etc.).  Case in point: the longest I ever spent chasing
+down a bug was 2-weeks trying to find what turned out to be a missing
+semi-colon I had accidentally left out in the F3 tape controller microcode. 
+
+Semicolons delimited micro words, and the micro-assembler would of course 
+allow the text for one micro-word to occupy more than one line. So, all the 
+fields for the two instructions got or-ed together, and somehow I didn't 
+notice the missing semicolon (must have been that my eye was still too tuned 
+to PDP-10 code where of course semi-colons are optional, sometimes too 
+optional!).
+
+So you could say that this type of syntax contained this canonical bug of 
+or-ing two microwords together, and the microcoded architecture of the F3 
+inherited that class of bug.
+
+Another example of bugs inherited from architectural features is found in 
+microcode engines that have timing fields in the instruction words. The 
+canonical bug of course is that the timing field is not long enough to cover 
+the settling time needed by the particular instruction.
+
+The infinite @ bug was caused by a missing check for PI system activity in
+the microcode that implemented indirection. Easier to do in microcode than 
+when you design the CPU entirely with wired logic, right? I'm sure though that 
+when you guys designed the initial machines you had to pay careful attention 
+to the potential bugs the architecture could generate and make sure they 
+weren't present.
+ 
+> (There _was_ that divide bug that hung the KI, though...)
+>
+Entertain us with the war story? Did the bug leave Building 5 with the KI, or 
+did you guys catch it in time?
+ 
+> 
+> >/evs
+> 
+> /Rcc
+> 
+> Bob Clements, K1BC, clements@bbn.com, +1 617 USE K1BC
+
+
+
+
+
+Article 1193 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!howland.reston.ans.net!news.sprintlink.net!in2.uu.net!info-server.bbn.com!clements
+From: clements@bbn.com (Bob Clements)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: TECO on non DEC platforms
+Date: 2 Oct 1995 13:50:43 GMT
+Organization: Bolt Beranek and Newman (BBN)
+Lines: 30
+Message-ID: <44oqnj$e5s@info-server.bbn.com>
+References: <NEWTNews.812322139.11203.vsocci@LOCALNAME> <44hadv$fcq@info-server.bbn.com> <NEWTNews.812472165.7563.vsocci@LOCALNAME>
+NNTP-Posting-Host: lion.bbn.com
+Xref: shellx.best.com alt.sys.pdp10:1193 alt.folklore.computers:37064
+
+I said:
+
+>> (There _was_ that divide bug that hung the KI, though...)
+
+And Vance said:
+
+>Entertain us with the war story? Did the bug leave Building 5 with the KI, or 
+>did you guys catch it in time?
+
+
+Gee, I don't remember the details.  I wasn't there at the time, and we
+never had any KI's here at BBN.
+
+It was one of those oddball case things, something like IDIV of SETZ
+over TRN or some such thing.  Hung the machine in a hardware loop.
+Happened in User Mode too, of course.  No way out but the reset
+button.
+
+And no, unfortunately, it was not found in initial testing.  There
+were machines in the field (I forget how many).  As soon as the word
+spread, of course, lots of machines were hung as people just had to
+try it themselves.  It caused a lot of fast trips by field service to
+install the mod.
+
+Sorry I can't remember the date.
+
+/Rcc
+
+
+Bob Clements, K1BC, clements@bbn.com  (w) +1 617 USE K1BC
+
+

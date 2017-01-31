@@ -1,0 +1,143 @@
+Article 4545 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!newsfeed.enteract.com!news.wwa.com!not-for-mail
+From: jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: What was TOPS-10 "GALAXY"?
+Date: 16 Dec 1998 15:51:52 GMT
+Organization: Everett Associates
+Lines: 59
+Message-ID: <758kuo$5t5$1@hirame.wwa.com>
+References: <36714809.131CAD23@trailing-edge.com>
+ <ALDERSON.98Dec11151046@netcom.netcom.com>
+ <750c32$anm$2@ligarius.ultra.net>
+ <ALDERSON.98Dec14125617@netcom.netcom.com>
+ <755l86$74m$1@ligarius.ultra.net> <755nd8$537$1@ligarius.ultra.net> <755spp$rq5$1@hirame.wwa.com> <7582pu$gnp$1@ligarius.ultra.net>
+NNTP-Posting-Host: poolx1-053.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.8 (x86 32bit)
+Xref: news3.best.com alt.sys.pdp10:4545 alt.folklore.computers:119935
+
+In article <7582pu$gnp$1@ligarius.ultra.net>, jmfbahciv@aol.com says...
+>
+>>Am I the last person remaining alive who remembers LEVELD.MEM?
+>>
+>And I never read it.  That's another thing that ended up in the
+>bit bin when Those That Thought They Knew Better dumped everything.
+>
+>What sort of conventions were discussed, John?
+
+Okay, here goes...from memory almost thirty years old.
+
+Pre Level-D (2.19, 3.27, 4S50, 4S72, etc.) there were no coding conventions 
+used in the Monitor sources. There were significant differences in the 
+appearance of the code in different modules. In fact I don't even think 
+there were consistant AC names between modules. Placement of tabs within 
+lines of instructions wasn't consistant either.
+
+As I recall, some of the "old" ac names used were things like PDP, DDB (or 
+DEV), TAC, TAC1, etc. A line of old code might look something like:
+
+TAG:	PUSHJ	PDP,	SUBR	;GO DO SOMETHING
+
+Or in another module like:
+
+TAG1:	PUSHJ PDP,SUBR1		;GO DO SOMETHING ELSE
+
+With the creation of the 5 series Monitor, there was a concerted effort to 
+create a consistant "look" across all modules. The agreed to conventions 
+were codified in a document produced by Tom Hastings called LEVELD.MEM. As I 
+recall, some of the conventions defined were:
+
+  Consistant AC names and definitions (F, P, T1-T4, etc.).
+
+  Instruction formatting (placement of tabs and spaces within the 
+instruction).
+
+  Indenting convention for skip and non-skip returns.
+
+  Commenting conventions; each line of code should have a comment, 
+subroutines should have a comment header which starts ";HERE TO...", etc.
+
+  Comment on a return instruction should start ";BACK TO"
+
+  Creation and use of common return macros (CPOPJ, CPOPJ1).
+
+The 5 series (Level-D) Monitor was a HUGE departure (and step forward) from 
+previous releases. It was the first release with FILSER (designed by Chris 
+White, Tom Hastings, and Tony Wachs; coded by TW) and the first release with 
+common AC usage (I believe Don Black was responsible for the grunt work of 
+pouring through the sources and making the changes). While I can't recall 
+today whether the first 5 series release was called 5.00 or 5.01, getting it 
+to work after all the significant changes was a monumental task.
+
+-- 
+jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) http://www.wwa.com/~jeverett
+             ^^^^^^^^^^^^^^^
+Things have gotten so bad I feel the need to disguise my email address.
+And I don't like this explanation because I just hate long signatures.
+
+
+
+Article 4550 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newsfeed.cwix.com!209.244.253.199!newsfeed.xcom.net!news.ultranet.com!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: What was TOPS-10 "GALAXY"?
+Date: Wed, 16 Dec 1998 18:22:12 -0500
+Organization: UltraNet Communications , an RCN Company http://www.ultranet.com/
+Lines: 40
+Message-ID: <367840A4.B9436C51@MA.UltraNet.Com>
+References: <36714809.131CAD23@trailing-edge.com> <755l86$74m$1@ligarius.ultra.net> <87iufcnz52.fsf@mongrel.kd6pag.ampr.org> <758c5f$thr$1@strato.ultra.net> <aXPd2.1733$4w2.7380124@news.itd.umich.edu>
+NNTP-Posting-Host: d39.dial-7.cmb.ma.ultra.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 17 Dec 1998 00:23:59 GMT
+X-Mailer: Mozilla 4.5 [en] (Win95; I)
+X-Accept-Language: en,en-US,en-GB,es
+Xref: news3.best.com alt.sys.pdp10:4550
+
+"Sarr J. Blumson" wrote:
+> 
+> In article <758c5f$thr$1@strato.ultra.net>,  <jmfbahciv@aol.com> wrote:
+> >
+> >TOPS-10 didn't use AC17 but the CUSPs did (most of them anyway).
+> >Now, assume that I've forgotten just about everything this morning,
+> >AC0 had problems (wasn't that where the monitor would store
+> >something if an instruction would get interrupted (like a BLT)?
+> >And then it seems to me that there was something about indexing
+> >and how AC0 couldn't be used for that.
+> 
+> AC0 couldn't be used for indexing because zero in the index field of an
+> instruction meant "no indexing".
+
+Though that didn't keep the stack pointer from being assigned to AC0 in
+Bliss-10:
+
+	SREG=0			; Stack pointer
+	FREG=1			; Frame pointer
+;	BREG=2			; Base [of stack] pointer
+				; (ended up being reallocated to memory,
+				; since no one used couroutines).
+	VREG=3			; Value return register
+
+Not only would the generated code from Bliss-10 not try and index off of the
+stack pointer, if you made it a non-zero register, it still wouldn't take
+advantage of it.
+
+Fortran-10 (written in Bliss-10) used non-standard register assignments.  The
+36 most common compiler flags (generate an object file, generate a listing
+file, ...) were kept in AC0.  It has been observed that this was a real win
+for debugging.  If someone stored through a NUL pointer, it would smash the
+compiler flags, and soon enough you'd get an:
+
+?IO to unassigned channel at user PC nnnnnn
+
+when the compiler hauled off and suddenly started printing a listing file.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+

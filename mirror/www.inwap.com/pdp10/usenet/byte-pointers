@@ -1,0 +1,63 @@
+Article 1034 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!spool.mu.edu!agate!newsxfer.itd.umich.edu!newsfeed.internetmci.com!news.uoregon.edu!xmission!nntp.micrognosis.com!news3.near.net!transfer.stratus.com!news.bu.edu!csa!budd
+From: budd@csa.bu.edu (Phil Budne)
+Newsgroups: alt.sys.pdp10
+Subject: extended byte pointers (was Re: A good system. . .)
+Followup-To: comp.os.linux.advocacy
+Date: 8 Sep 1995 19:36:10 GMT
+Organization: Computer Science Department, Boston University, Boston, MA, USA
+Lines: 48
+Message-ID: <42q5va$ef4@news.bu.edu>
+References: <42ggtb$aa2@hermes.louisville.edu> <42nmu6INN2v6@bowen.ugrad.cs.ubc.ca> <id.N_5N1.7V8@nmti.com> <CSTACY.95Sep8092210@world.spacy.boston.ma.us>
+NNTP-Posting-Host: csa.bu.edu
+
+In article <CSTACY.95Sep8092210@world.spacy.boston.ma.us>,
+Christopher C Stacy <cstacy@spacy.boston.ma.us> wrote:
+>Speaking of nice wide addresses, could someone post an explanation 
+>of how that new XKL thing works?  I mean since everyone has 18-bit BPs
+>and stuff in all their existing code.
+
+On an extended KL (or follow on) there are three byte ppointer formats;
+
+In section zero, or for a BP fetched from a non-zero section if bit 12
+of the BP is zero, the byte pointer is a "one-word local" (local to
+the section the byte pointer was fetched from).
+
+A BP in a non-zero section bit 12 set indicates the byte-pointer is a
+"two-word global" byte pointer;
+
+                      11 1 1 1111 112222222222333333
+         0 1 2345 678901 2 3 4567 890123456789012345
+        +--------+------+-+-+----+------------------+
+        |   P    |  S   |1|I|rsvd|available to user |
+        +-+-+----+------+-+-+----+------------------+
+	|0|I| X  |		Y		    |
+        +-+-+----+----------------------------------+
+
+The second word as shown above is an "extended format indirect word"
+(EFIW), but it can also be a section-zero style "instruction format
+indirect word" (IFIW).
+
+There is also a "one-word global" (OWG), added later which allows for
+only a limited number of byte sizes (6,7,8,9 and 18 bits) and no
+indirection or indexing;
+
+                    11111111112222222222333333
+         012345 678901234567890123456789012345
+        +------+------------------------------+
+        | P&S  |        30-bit addresss       |
+        +------+------------------------------+
+
+Where P&S are;
+	37-43	for 6 bit bytes (P=36,30,24,28,12,6,0)
+	44-48	for 8 bit bytes (P=36,28,20,12,4)
+	49-50	for 7 bit bytes (P=36,29,22,15,8,1)
+	55-59	for 9 bit bytes (P=36,37,18,9,0)
+	60-62	for 18 bit bytes (P=36,18,0)
+
+OWG's are also legal in section zero.
+
+As you can see, there is a lot of hair, but none of it is new.
+-phil
+
+

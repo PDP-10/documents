@@ -1,0 +1,144 @@
+Article 4742 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!inwap
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.sys.pdp10
+Subject: Re: typical memory and harddisk configuration
+Date: Sun, 6 May 2001 10:18:21 +0000 (UTC)
+Organization: Chez Inwap
+Lines: 56
+Message-ID: <9d38dd$15eb$1@nntp1.ba.best.com>
+References: <87snilysfi.fsf@frown.here> <988998093.994714@dns2.serv.net> <87g0ekz4lb.fsf@frown.here> <3AF46A42.D9486509@mail.bcpl.net>
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 989144301 38347 206.184.139.134 (6 May 2001 10:18:21 GMT)
+X-Complaints-To: abuse@best.com
+NNTP-Posting-Date: Sun, 6 May 2001 10:18:21 +0000 (UTC)
+Xref: nntp1.ba.best.com alt.sys.pdp10:4742
+
+In article <3AF46A42.D9486509@mail.bcpl.net>,
+Ken McMonigal  <kmcmonig@mail.bcpl.net> wrote:
+>Friedrich Dominicus wrote:
+>> 
+>> What were the memory and hardisk configurations options for a PDP-10
+>> at the beginnnng (1967-1970). How many users were to be served with
+>> it?
+>> 
+>> Regards
+>> Friedrich
+>
+>Perhaps I can supply one data point (one machine) & you can gather others
+>to determine ranges to get info you want.
+
+The KA at the Colorado School of Mines was similar to what Ken reported.
+This is from memory.
+
+>Configuration:
+>
+>KA processor
+>128K word core memory (MA-10 & MD-10)
+
+CSM had 192 K words of core (128 + 64).  The TOPS-10 Monitor took up
+about 92 K, leaving 100 K for user jobs.  Except for when accounting
+ran at night, CORMAX was 40 K (enough for 2 big jobs and some smaller
+ones in core at the same time).
+>storage devices -
+>
+>DF-10 memory channel (to RC-10 & RP-10)
+>RC-10 controller to RD-10 fixed head disk
+
+CSM did not have an RD; we had swap space on DSKA.
+
+>RP-10 disk pack controller (8 diskpacks)
+
+If I remember correctly, DSKA was a single RP02 and DSKB was two RP03s.
+
+>TD-10 Dectape controller (8 Dectape units)
+
+We had two: DTA0-DTA7 and DTB0-DTB7
+
+>terminals -
+>
+>DA-10 interface/ PDP-8
+>DC-10 dataline scanner
+
+We had a 680I emulating a DC68 for current-loop ASR33 teletypes
+
+>BA-10 printer controller / printer
+
+Our BA-10 also had a card reader, a card punch, and a Calcomp 3-pen plotter.
+
+Tape controller and tape drives (TU10 and TU20?, 7-track and 9-track).
+	-Joe
+--
+See http://www.inwap.com/ for PDP-10 and "ReBoot" pages.
+
+
+Article 4755 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!inwap
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.sys.pdp10
+Subject: Re: comm front ends, terminals (was Re: typical memory and harddisk configuration)
+Date: Tue, 8 May 2001 06:01:30 +0000 (UTC)
+Organization: Chez Inwap
+Lines: 52
+Message-ID: <9d823q$1r2o$1@nntp1.ba.best.com>
+References: <87snilysfi.fsf@frown.here> <3AF46A42.D9486509@mail.bcpl.net> <9d38dd$15eb$1@nntp1.ba.best.com> <qhwv7s95es.fsf_-_@ruckus.brouhaha.com>
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 989301690 60504 206.184.139.134 (8 May 2001 06:01:30 GMT)
+X-Complaints-To: abuse@best.com
+NNTP-Posting-Date: Tue, 8 May 2001 06:01:30 +0000 (UTC)
+Xref: nntp1.ba.best.com alt.sys.pdp10:4755
+
+In article <qhwv7s95es.fsf_-_@ruckus.brouhaha.com>,
+Eric Smith  <eric-no-spam-for-me@brouhaha.com> wrote:
+>inwap@best.com (Joe Smith) writes:
+>> We had a 680I emulating a DC68 for current-loop ASR33 teletypes
+>
+>I'm curious about this, since I've heard of both but don't know the
+>features or the differences between them.  Is the 680I the one that is
+>PDP-8/I based?  What's in a DC68?
+
+They're both PDP-8 based.  The 680I was manufactured by a third party
+company, the DC68 was nearly the same thing with DEC's badge on it
+
+>Did CSM have a lot of current-loop ASR33s?
+
+The KA-10 had current-loop almost exclusively driving ASR33s.
+  6 in top floor of the Green Center (Computing Center)
+  2 in Hill Hall (Math)
+  3 in Alderson Hall (Petroleum Engineering); 1 on each floor
+  3 in Meyer Hall (Physics); 1 on each floor
+  1 in Chauvenet Hall (Mining)
+  1 in Stratton Hall (Earth Sciences)
+  3 in Hill Hall (Metallurgy); 1 on each floor
+  some number in Guggenheim (Administration).
+
+I forget now how the high-speed graphics terminals (1 each of ARDS
+and Tektronix 4010) were connected to the KA.  They may have had
+current-loop to RS232 converters, running at 1200 baud.
+
+All the ASR33's got replaced with LA36 hardcopy terminals one year.
+(Wow, 300 baud!  Three times faster than than 110!!)
+
+The ADM3's arrived around 1977.  The "glass teletype" had the cursor
+fixed on the bottom line; like a teletype the text could only scroll up.
+
+> When I used their system
+>it seemed like most of the printing terminals were LA36 DECwriters; I'm
+>not sure if they were RS-232 or current loop.  I don't recall what VDTs
+>were there early on, but I remember when they started getting Visual 200s
+>(or Visual somethings).
+
+Some of the ADM3's were upgraded to ADM3A (direct cursor addressing and
+lower case).  New carrels were installed in the Computing Center with
+Visual-200 terminals.  The guy who ran the Green Center had a
+Concept-100 in the basement.  I had a VT100.  The departements were able
+to choose their own terminals.
+
+The terminals were connected to a terminal multiplexor from DCA,
+which allowed connecting to either CRUNCH (the KL-1091) or MUNCH
+(the KS-2020).
+	-Joe
+--
+See http://www.inwap.com/ for PDP-10 and "ReBoot" pages.
+
+

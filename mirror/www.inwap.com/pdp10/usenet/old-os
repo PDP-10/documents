@@ -1,0 +1,45 @@
+Article 3905 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!howland.erols.net!newsxfer.itd.umich.edu!uunet!in1.uu.net!bulb.garlic.com!not-for-mail
+From: Anne & Lynn Wheeler <lynn@garlic.com>
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: ** Old Vintage Operating Systems **
+Date: 25 Apr 1998 14:37:43 -0700
+Organization: South Valley Internet
+Lines: 28
+Message-ID: <u90otfuqg.fsf@garlic.com>
+References: <6gg7k$3e3@news-central.tiac.net>
+Reply-To: Anne & Lynn Wheeler <lynn@garlic.com>
+NNTP-Posting-Host: lynn-18.garlic.com
+X-Newsreader: Gnus v5.6.4/Emacs 19.34
+Xref: nntp1.ba.best.com alt.folklore.computers:102923 alt.sys.pdp10:3905
+
+
+my first experience was with monitor was 1401 MPIO (i believe stood
+for multiprogram input/output) ... it was card deck that booted into
+1401 and handled the unit record spooling for 709 ibsys (card->tape,
+tape->printer/punch); i.e. 709 ibsys ran fortan jobs tape<->tape.
+
+summer job i got as undergraduate (after taking a 2hr semester intro
+to programming class) was to recreate the 1401 MPIO monitor on 360/30
+... so the 2540/1403 unit record gear could be switched to the 30
+... and the 30 could be used for both 360 testing and still provide
+front-end functions for the 709.
+
+i designed and implemented my own interrupt handler, device drivers,
+i/o supervisor, multi-tasking supervisor, error recovery, operator
+interface, memory manager, etc. ,,, it had to support all of the 1401
+MPIO functions ... including being able to distinquish between
+bcd/ecbdic and column binary cards (i.e. had to seperately feed & read
+... since if not bcd ... would have to reread in column binary) ...
+was able to concurrently overlap card->tape and tape->print/punch
+using dynamic buffering of all available memory on the 30.
+
+i used a BPS loader to read monitor into 360/30 and take over all
+functions of the machine. when MPIO wasn't running ... 360/30 booted
+OS and was used for OS testing (and/or recompiling my program).
+
+--
+Anne & Lynn Wheeler   | lynn@garlic.com, finger for pgp key
+ http://www.garlic.com/~lynn/
+
+

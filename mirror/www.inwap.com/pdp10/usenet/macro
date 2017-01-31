@@ -1,0 +1,234 @@
+Article 4376 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news1.best.com!newsfeed.slip.net!209.191.0.18.MISMATCH!nntp-out.monmouth.com!newspeer.monmouth.com!news.ultranet.com!d17
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: What was the TOPS-10 DATE75 fix?
+Date: Wed, 11 Nov 98 13:32:41 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 46
+Message-ID: <72c4og$ic7$3@ligarius.ultra.net>
+References: <36444B15.2FBA1EA5@trailing-edge.com> <72890s$dft$1@nntpd.lkg.dec.com> <728quc$19k8$1@nntp1.u.washington.edu> <36485458.0@news.wizvax.net> <72aeru$h4e$1@nntp1.u.washington.edu> <72c3ud$ntb$2@nntpd.lkg.dec.com>
+NNTP-Posting-Host: d17.dial-16.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 11 Nov 1998 13:51:12 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: news3.best.com alt.sys.pdp10:4376 alt.folklore.computers:117513
+
+In article <72c3ud$ntb$2@nntpd.lkg.dec.com>,
+   carlini@krakar.enet.dec.com (Antonio Carlini) wrote:
+>
+>In article <72aeru$h4e$1@nntp1.u.washington.edu>, 
+dpeschel@u.washington.edu (D. Peschel) writes:
+>|>Hmph... it would be hard to find a more perfect example of "the right 
+answer
+>|>to the wrong question".  That answer doesn't shed any light on my 
+question,
+>|>which was whether the assembler recognized Control-D, or caret followed 
+by D,
+>|>as the decimal command.  (And showing these two characters in your 
+message
+>|>can't possibly illustrate how they would have been produced originally.)
+>
+>Never having used MACRO-10 I cannot say for certain, but the other DEC
+>assemblers that I've used require that input as two characters exactly as
+>you see it on the screen, i.e. caret and then D. The only time I've seen
+>any sort of exception to that was TECO where <ESC><ESC> (that's two
+>consecutive presses of the key marked ESCAPE or its equivalent) was echoed
+>as $$ and is commonly represented as $$ in both manuals and e-text.
+
+Sigh!  The proper name for the caret was up-arrow.  The manauls showed
+the ESCAPE key as a dollar sign within a circle (the encircling
+was all done by hand before the galleys were sent to the printers).  
+Likewise, a <cntrl-C> was presented as
+an up-arrow C with a circle drawn around it.  Representing keys
+that were hit simultaneously in our documentation was always a
+bug-a-boo and several artform techniques were tried over the
+years.  There were always some people who didn't get it.
+>
+>Hopefully that helps (and if it turns out to be the wrong 
+>answer for MACRO-10
+>at least it's the right answer for MACRO-32 ...)
+
+MACRO-10 took the character after the up-arrow argument to
+define the base of the number.  So, if I wanted to make
+sure that the person reading the code understood that a 
+number was to be decimal, I would write MOVEI T1,^D10
+There were times when it was important to view a number
+as decimal rather than octal (which was the default).
+
+/BAH
+
+
+Subtract a hundred and four for e-mail.
+
+
+Article 4336 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newshub.sdsu.edu!news-spur1.maxwell.syr.edu!news.maxwell.syr.edu!news.stealth.net!news-east.rr.com!news.rr.com!chnws02.mediaone.net!chnws06.ne.mediaone.net!24.91.0.34!typhoon.ne.mediaone.net.POSTED!not-for-mail
+From: "Mike Gilbert" <jng@sli.com>
+Newsgroups: alt.sys.pdp10
+References: <3A85706B.B4A96DC3@nospam.nospam> <3A8DA401.D850A6BB@unisys.com> <a5js8t0bvj7rmuo14cd65tcrj5q1dc7rpj@4ax.com> <qhzof9t0tb.fsf@ruckus.brouhaha.com> <97h7o6$7aepg$1@fido.engr.sgi.com> <3AC7323B.56472F09@MA.UltraNet.Com> <wwlmphn3tm.fsf_-_@saturn.cfht.hawaii.edu> <9ak57j$1vu$1@bob.news.rcn.net>
+Subject: Re: long symbols [was Re: 36-bit MIME types, PDP-10 FTP]
+Lines: 58
+X-Newsreader: Microsoft Outlook Express 5.50.4133.2400
+X-MimeOLE: Produced By Microsoft MimeOLE V5.50.4133.2400
+Message-ID: <dFJz6.16859$WZ4.3683345@typhoon.ne.mediaone.net>
+Date: Sat, 07 Apr 2001 19:13:13 GMT
+NNTP-Posting-Host: 66.31.114.241
+X-Complaints-To: abuse@mediaone.net
+X-Trace: typhoon.ne.mediaone.net 986670793 66.31.114.241 (Sat, 07 Apr 2001 15:13:13 EDT)
+NNTP-Posting-Date: Sat, 07 Apr 2001 15:13:13 EDT
+Organization: Road Runner
+Xref: nntp1.ba.best.com alt.sys.pdp10:4336
+
+Wow, Hacro and Klink, I haven't thought about those in *decades*.
+
+When Dave Nixon wrote Link, he defined all sorts of "new" .rel file block
+types, starting at 1000, which were intended to add support for long symbols
+and various other advanced features.  Dave documented them in the Link
+manual even though they weren't implemented; I answered several inquiries
+from compiler writers asking how to get the new block types to work...
+
+So I spent a lot of spare time implementing those new block types, and my
+co-conspirator Jim Thomas added some code to Macro to generate them.  But
+when I left DEC no real product was using them.  This was also about the
+time that Bob Houk and I added extended addressing support to Link and DDT,
+also as a midnight project.
+
+During a Link documentation review, I mentioned that none of these 1000+
+block types in the documentation were actually implemented.  The
+documentation person was horrified, as was product management.  I also got
+wind of the idea that long symbols should be ASCII to be compatible with
+that new upstart VAX product (the 1000+ block types used SIXBIT).
+
+There was some pressure building to remove the new block types from the
+documentation and maybe the code until such time as they were rethought and
+really implemented, but it was still there when I left DEC.  I haven't
+looked at recent sources so I have no idea what eventually happened.
+
+Mike Gilbert
+
+P.S. Hi to "T, Nothead:" and all you other old-timers.
+
+<jmfbahciv@aol.com> wrote in message news:9ak57j$1vu$1@bob.news.rcn.net...
+> In article <wwlmphn3tm.fsf_-_@saturn.cfht.hawaii.edu>,
+>    Jim Thomas wrote:
+> >>>>>> "Alan" == Alan H Martin <AMartin@MA.UltraNet.Com> writes:
+> >
+> > Alan> From a mail message of 29-Apr-83 from Fortran 77 to LINK:
+> >
+> > Alan> "
+> > Alan> Over the long term, the -20 languages and utilities will be moving
+> > Alan> toward support of the corporate 8-bit ASCII standard. Thus, when
+> LINK
+> > Alan> support for long symbols is implemented it should be done in a way
+
+> that
+> > Alan> will allow for future support of that standard.
+> >
+> >?  Mike Gilbert and I had long symbols in LINK
+> >(KLINK) and MACRO (HACRO) in
+> >1975.  I gather that got lost :-(
+>
+> David wouldn't have taken it out.  I suspect that Alan was a tad
+> confused.  Perhaps he was talking about Fortran generating those
+> long symbols.
+>
+> /BAH
+>
+> Subtract a hundred and four for e-mail.
+
+
+
+
+Article 4367 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!feed2.news.rcn.net!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: long symbols [was Re: 36-bit MIME types, PDP-10 FTP]
+Date: Sun, 08 Apr 2001 20:27:28 -0400
+Lines: 28
+Message-ID: <3AD101F0.E7288456@MA.UltraNet.Com>
+References: <3A85706B.B4A96DC3@nospam.nospam> <3A8DA401.D850A6BB@unisys.com> <a5js8t0bvj7rmuo14cd65tcrj5q1dc7rpj@4ax.com> <qhzof9t0tb.fsf@ruckus.brouhaha.com> <97h7o6$7aepg$1@fido.engr.sgi.com> <3AC7323B.56472F09@MA.UltraNet.Com> <wwlmphn3tm.fsf_-_@saturn.cfht.hawaii.edu> <9ak57j$1vu$1@bob.news.rcn.net> <dFJz6.16859$WZ4.3683345@typhoon.ne.mediaone.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: UmFuZG9tSVZYMyOb30+KS+QgcvqT1/NdFYGl7QthFQg5G1VnqOmAIeWyc5NOmc8S
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 9 Apr 2001 00:27:34 GMT
+X-Mailer:  Mozilla 4.76 [en] (Win95; U)
+X-Accept-Language:  en,en-US,en-GB,es
+Xref: nntp1.ba.best.com alt.sys.pdp10:4367
+
+Mike Gilbert wrote:
+
+> So I spent a lot of spare time implementing those new block types, and my
+> co-conspirator Jim Thomas added some code to Macro to generate them.  But
+> when I left DEC no real product was using them.  This was also about the
+> time that Bob Houk and I added extended addressing support to Link and DDT,
+> also as a midnight project.
+
+FORTRAN-20 V10 ultimately depended upon numerous 1000+ series (``new'')
+REL blocks in the LINK V5.1 V5.1 maintenance release.
+
+
+> During a Link documentation review, I mentioned that none of these 1000+
+> block types in the documentation were actually implemented.  The
+> documentation person was horrified, as was product management.  I also got
+> wind of the idea that long symbols should be ASCII to be compatible with
+> that new upstart VAX product (the 1000+ block types used SIXBIT).
+>
+> There was some pressure building to remove the new block types from the
+> documentation and maybe the code until such time as they were rethought and
+> really implemented, but it was still there when I left DEC.  I haven't
+> looked at recent sources so I have no idea what eventually happened.
+
+Nothing came of any ASCII symbol plans - but the SIXBIT REL blocks were
+used heavily by FORTRAN.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article: 19645 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!newsfeed!wn13feed!wn12feed!worldnet.att.net!204.127.198.203!attbi_feed3!attbi_feed4!attbi.com!sccrnsc03.POSTED!not-for-mail
+Message-ID: <3EAC0A36.5F0180C2@ev1.net>
+From: Charles Richmond <richmond@ev1.net>
+Reply-To: richmond@ev1.net
+Organization: Canine Computer Center
+X-Mailer: Mozilla 4.7C-CCK-MCD {C-UDP; EBM-APPLE} (Macintosh; I; PPC)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: patch the TOPS-20 monitor for idleness, running klh10
+References: <cs9adecktho.fsf@update.uu.se>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 19
+NNTP-Posting-Host: 12.241.15.59
+X-Complaints-To: abuse@attbi.com
+X-Trace: sccrnsc03 1051455138 12.241.15.59 (Sun, 27 Apr 2003 14:52:18 GMT)
+NNTP-Posting-Date: Sun, 27 Apr 2003 14:52:18 GMT
+Date: Sun, 27 Apr 2003 14:52:18 GMT
+Xref: dfw-artgen alt.sys.pdp10:19645
+
+Andreas Davour wrote:
+> 
+>        [snip...]        [snip...]       [snip...]
+> 
+> I don't know any PDP-10 assembler (how do I learn?) or how
+> to do much magic with DDT. I guess DDT magic is involved here.
+> 
+You can download some manuals from:
+
+	<http://www.spies.com/~aek/pdf/dec/pdp10/1973_AsmLangHandbook/>
+
+
+There are also published books on writing PDP-10 assembler language.
+
+
+--
++----------------------------------------------------------------+
+|   Charles and Francis Richmond     richmond at plano dot net   |
++----------------------------------------------------------------+
+
+

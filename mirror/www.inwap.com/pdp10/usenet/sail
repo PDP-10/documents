@@ -1,0 +1,631 @@
+Article 4634 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!arclight.uoregon.edu!logbridge.uoregon.edu!newsfeed.berkeley.edu!ucberkeley!agate.berkeley.edu!agate!abbenay.CS.Berkeley.EDU!not-for-mail
+From: bh@abbenay.cs.berkeley.edu (Brian Harvey)
+Newsgroups: alt.sys.pdp10
+Subject: Re: ITS security [Re: Bulletproofing Tops10]
+Date: 22 Apr 2001 16:50:19 -0700
+Organization: University of California, Berkeley, Computer Science Division
+Lines: 48
+Message-ID: <9bvqnr$clp$1@abbenay.CS.Berkeley.EDU>
+References: <z2Yz6.3296$Rj2.11602@NewsReader> <0VvE6.21685$vk1.29136@NewsReader> <9bv851$cff$1@abbenay.CS.Berkeley.EDU> <CyIE6.21863$vk1.33911@NewsReader>
+NNTP-Posting-Host: abbenay.cs.berkeley.edu
+X-Trace: agate.berkeley.edu 987983417 7971 128.32.45.203 (22 Apr 2001 23:50:17 GMT)
+X-Complaints-To: abuse@berkeley.edu
+NNTP-Posting-Date: 22 Apr 2001 23:50:17 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:4634
+
+"JD" <j.day777@btclick.com> writes:
+>Wasn't WAITS (the Stanford Tops10) a bit more into security?  Didn't
+>you have to get Les Earnest or someone like that to authorise an
+>account before you could use that system?  They had the brainwave to
+>change PPNs into 3 letter pairs (SIXBIT, right?) so you could be
+>[FOO,BH] instead of [123532,324234].
+>(other posters, I am sure that 123532 is not SIXBIT /FOO/ ... please
+>don't flame).
+
+For most of the time that I was at SAIL, there was a [NET,GUE] login for
+Network Guests, with no password.  I think files written in its directory
+were deleted on logout, but otherwise it could do anything a local user
+could do, until we started having malicious-user troubles.  Then Ralph Gorin
+changed the file permission categories from the standard user-project-other
+to user-known-guest, i.e., a category for everyone other than GUE and a
+separate category for GUE.  (Okay, I lied, it was never user-project-other.
+We used the "project" half of the PPN as a sort of cheap SFD feature before
+DEC invented SFDs, so the three categories were same PPN, same programmer,
+other.)  The standard file protection allowed guests read access and
+everyone else read-write access.
+
+I got a free ice cream sundae out of this because after changing the file
+protection categories Ralph said something along the lines of "Now we're safe
+from malicious guests" and I bet him I could find a dozen ways that guests
+could still break into other accounts.  The reason I won the bet is that WAITS
+was *not* very security-conscious; there was, for example, a UUO that put your
+program in "IOT-User" mode, in which it was allowed to do hardware I/O
+instructions.  The purpose was to allow the robotics people to hack together
+hardware they could run directly, without having to write monitor support,
+but you could use it to read passwords off the disk.  (That's right, they
+weren't encrypted.)
+
+We could, of course, disallow that one for guests, but we couldn't disallow
+the one that let you have the monitor as your upper segment, because the WHO
+program (sorta like systat) used it to gather its information.
+
+As for account authorization, all you had to do to create an account was log
+in under that PPN from a machine in the building.  (Which was unlocked most
+of the time, by the way.  But it was off of the main campus, so you had to
+make a special trip to be a malicious user in that way.  :-)  It's true that
+if we had no idea who you were, the account would eventually get turned off.
+But we were quite loose about letting random people wander in and start
+writing programs, many of which turned out to be useful.
+
+And you could set up your account with a remote-only password, so that if
+you were in the building you didn't need your password to log in.  We did
+require a password for remote login, though, except for GUE.  And I think
+I'm vaguely remembering that eventually GUE was turned off altogether.
+
+
+Article 4646 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!dispose.news.demon.net!demon!btnet-peer0!btnet-feed5!btnet!NewsPeer!Fusion!NewsReader.POSTED!not-for-mail
+Reply-To: "JD" <j.day777@btclick.com>
+From: "JD" <j.day777@btclick.com>
+Newsgroups: alt.sys.pdp10
+References: <z2Yz6.3296$Rj2.11602@NewsReader> <0VvE6.21685$vk1.29136@NewsReader> <9bv851$cff$1@abbenay.CS.Berkeley.EDU> <CyIE6.21863$vk1.33911@NewsReader> <9bvqnr$clp$1@abbenay.CS.Berkeley.EDU>
+Subject: Re: ITS security [Re: Bulletproofing Tops10]
+Lines: 37
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Newsreader: Microsoft Outlook Express 5.50.4133.2400
+X-MimeOLE: Produced By Microsoft MimeOLE V5.50.4133.2400
+Message-ID: <yw1F6.2157$vs4.24830@NewsReader>
+Date: Mon, 23 Apr 2001 22:50:55 +0100
+NNTP-Posting-Host: 213.123.161.231
+X-Trace: NewsReader 988062878 213.123.161.231 (Mon, 23 Apr 2001 22:54:38 BST)
+NNTP-Posting-Date: Mon, 23 Apr 2001 22:54:38 BST
+Xref: nntp1.ba.best.com alt.sys.pdp10:4646
+
+
+"Brian Harvey" <bh@abbenay.cs.berkeley.edu> wrote in message
+news:9bvqnr$clp$1@abbenay.CS.Berkeley.EDU...
+(regarding SAIL, the Stanford version of Tops10 that ran at the
+Stanford AI Lab)
+> As for account authorization, all you had to do to create an account
+was log
+> in under that PPN from a machine in the building.  (Which was
+unlocked most
+> of the time, by the way.  But it was off of the main campus, so you
+had to
+> make a special trip to be a malicious user in that way.  :-)  It's
+true that
+> if we had no idea who you were, the account would eventually get
+turned off.
+> But we were quite loose about letting random people wander in and
+start
+> writing programs, many of which turned out to be useful.
+
+That was an amazing building:  it looked like a flying saucer that had
+landed off Arastradero Road and never managed to take off again.  As I
+recall they had named many of the rooms after places in the Tolkein
+stories: "The Prancing Pony", etc.  The PDP10 was hooked up to a
+vending machine filled with tasty Chinese snacks (from The Little
+Restaurant in Menlo park, if I recall correctly), so you could charge
+food to your account, and also bet the machine "double or nothing".
+There was a lot at SAIL that was ahead of its time: multi-window
+screens, an interface to a TV camera and TV feeds, and one of the
+first Xerox laser printers which I recall being about the size of a
+small elephant.  You could also type some combination of characters
+and "map" your screen and keyboard onto someone else's, enabling a
+kind of collaborative working.
+
+Change sevens to noughts for e-mail.
+
+
+
+
+
+Article 4657 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!feeder.via.net!newsfeed.berkeley.edu!ucberkeley!agate.berkeley.edu!agate!abbenay.CS.Berkeley.EDU!not-for-mail
+From: bh@abbenay.cs.berkeley.edu (Brian Harvey)
+Newsgroups: alt.sys.pdp10
+Subject: WAITS (was: ITS security)
+Date: 23 Apr 2001 23:48:58 -0700
+Organization: University of California, Berkeley, Computer Science Division
+Lines: 99
+Message-ID: <9c37kq$dri$1@abbenay.CS.Berkeley.EDU>
+References: <z2Yz6.3296$Rj2.11602@NewsReader> <CyIE6.21863$vk1.33911@NewsReader> <9bvqnr$clp$1@abbenay.CS.Berkeley.EDU> <yw1F6.2157$vs4.24830@NewsReader>
+NNTP-Posting-Host: abbenay.cs.berkeley.edu
+X-Trace: agate.berkeley.edu 988094935 28709 128.32.45.203 (24 Apr 2001 06:48:55 GMT)
+X-Complaints-To: abuse@berkeley.edu
+NNTP-Posting-Date: 24 Apr 2001 06:48:55 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:4657
+
+cstacy says:
+>I would like to hear more things about WAITS in general.
+
+and "JD" <j.day777@btclick.com> writes:
+>That was an amazing building:  it looked like a flying saucer that had
+>landed off Arastradero Road and never managed to take off again.  As I
+>recall they had named many of the rooms after places in the Tolkein
+>stories: "The Prancing Pony", etc.  The PDP10 was hooked up to a
+>vending machine filled with tasty Chinese snacks (from The Little
+>Restaurant in Menlo park, if I recall correctly), so you could charge
+>food to your account, and also bet the machine "double or nothing".
+
+And if you were over 21 it would sell you beer.  (Most things in the machine
+could be bought with cash, but that one row couldn't; I think it was done by
+setting the price to something other than a multiple of 5 cents.)
+
+(Of course the over-21 thing didn't make the operation legal; we weren't
+licensed to sell anything, let alone beer.)
+
+Oh, and one out of 128 times you got your order free even without asking
+for double or nothing.  And one row of the machine just had coins in it,
+for use in the non-computerized vending machines.  I think that may have
+been the first ATM!
+
+>There was a lot at SAIL that was ahead of its time: multi-window
+>screens, an interface to a TV camera and TV feeds, and one of the
+>first Xerox laser printers which I recall being about the size of a
+>small elephant.  You could also type some combination of characters
+>and "map" your screen and keyboard onto someone else's, enabling a
+>kind of collaborative working.
+
+The huge one wasn't a laser printer; it was an XGP (Xerox Graphics Printer),
+originally designed as one side of a really expensive fax.  It was like a
+laser printer in that it was digitally driven photocopier, but instead of a
+laser it actually used a cathode ray tube that was scanned.  It was a huge
+CRT, of which they only used a little strip in the middle, to avoid
+curvature and parallax problems.  MIT-AI had one, too, and a couple of
+other places.  The resolution was 200 dots/inch; the difference between that
+and the early laser printer 300 dots/inch was very dramatic; all the XGP
+serif fonts looked pretty jagged.  I scanned in a sample of Baskerville font,
+my favorite, and spent a couple of months tweaking it.  The result was
+readable, and fairly nice-looking, but I'm sure John Baskerville was rolling
+in his grave.  (A few years ago I discovered that and some other XGP fonts
+on a diskette sold by some company that distributed free/shareware software
+for PCs.)
+
+The Data Disk video generator provided 32 channels of digital video; one was
+for the terminals not in use, and the other 31 were available for users.
+There were about twice that many terminal screens connected to the video
+switch, so only half could be used at a time.  (Less, in practice, because
+eventually the disk that held the images developed bad spots, so some
+channels were unreadable.  If you were really desperate you could ask for
+one of those normally-unused channels by typing ESC-!, or you could put
+yourself in a queue of people waiting for the good channels with ESC-CALL.)
+(ESC and CALL were two of the non-ASCII extra keys on the SAIL keyboards;
+the ASCII-ish code you thought I meant by ESC was labelled ALT on the
+keyboards, but generated 0175, not 033, which was not-equal in the SAIL
+character set.  :-)  The video switch could connect you to any of the Data
+Disk channels, or could OR several of them together, or could instead
+connect you to analog signals including the TV camera on the robot cart
+that drove around the parking lot as well as a couple of broadcast TV
+channels.  (There was an audio switch, too, so you could get the TV picture
+and sound together.  The monitors we used had high-persistence phosphor to
+reduce flicker, so watching TV was a little weird, like having ghosts.)
+A particularly nice feature was that you could ask to watch TV until your
+program finishes running, and then be switched back to your TTY display
+automatically.
+
+The keyboards that went with the monitors were entirely separate devices.
+You could be typing at one virtual terminal while watching a different one.
+So on the input end of things there was the mapping
+	keyboard N ---------- virtual TTY M
+and on the output end there were two mappings
+	screen N ----- Data Disk channel K ----- virtual TTY J
+and there were a slew of keyboard ESC commands to rearrange any of
+those mappings.  In retrospect I'm amazed we could remember them all,
+but it seemed easy at the time!  (Yes, you could ask to map your screen
+and/or your keyboard to someone else's TTY; that's another way in which
+I wouldn't exactly call WAITS security-minded.  You could also ask to
+Hide your TTY (ESC H); this disabled other people from using the ordinary
+ESC 42 M to map their keyboard/screen to TTY42, if that was yours and
+hidden, or ESC [ BH ] to map to whatever TTY is in use by programmer name
+BH (the right half of the PPN), if hidden.  But they could still type
+CONTROL-META-TOP-UNSHIFT-BREAK 42 M, or C-M-T-U-B [ BH ], to override
+the hiding.  For a while this "magic" escape character was known only to
+system hackers, but at one point an insurrection among the users led to
+it becoming public.)
+
+No, I didn't still remember the magic character; I'm reading the Monitor
+Command Manual as I type this.  :-)
+
+The monitor's display server let you partition the screen into "pieces of
+paper" and "pieces of glass," two styles of window, the first of which
+scrolled the text.  This was one of the earliest window systems, and since
+several of our graduate students went to work at Xerox PARC and then at
+Apple, it was a direct ancestor of the Mac windows interface that later
+took over the world.
+
+Well I could go on forever but I guess I shouldn't...  :-)
+
+
+Article 4655 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newshub.sdsu.edu!news-spur1.maxwell.syr.edu!news.maxwell.syr.edu!newsfeed.media.kyoto-u.ac.jp!newsfeed.mesh.ad.jp!sjc-peer.news.verio.net!sea-feed.news.verio.net!news.verio.net!news.u.washington.edu!140.142.17.34.MISMATCH!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: ITS security [Re: Bulletproofing Tops10]
+Date: Mon, 23 Apr 2001 19:54:19 -0700
+Organization: Networks & Distributed Computing
+Lines: 33
+Message-ID: <Pine.NXT.4.40.0104231942370.7638-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <z2Yz6.3296$Rj2.11602@NewsReader> <0VvE6.21685$vk1.29136@NewsReader>
+ <9bv851$cff$1@abbenay.CS.Berkeley.EDU> <CyIE6.21863$vk1.33911@NewsReader>
+ <9bvqnr$clp$1@abbenay.CS.Berkeley.EDU>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 988080862 9070 (None) 140.142.17.35
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: hgm
+To: Brian Harvey <bh@abbenay.cs.berkeley.edu>
+In-Reply-To: <9bvqnr$clp$1@abbenay.CS.Berkeley.EDU>
+Xref: nntp1.ba.best.com alt.sys.pdp10:4655
+
+On 22 Apr 2001, Brian Harvey wrote:
+> For most of the time that I was at SAIL, there was a [NET,GUE] login for
+> Network Guests, with no password.
+
+NET,GUE was turned off no later than the summer of '76.  So, it was
+already off by the time you came back from IRCAM.
+
+>  The reason I won the bet is that WAITS
+> was *not* very security-conscious; there was, for example, a UUO that put your
+> program in "IOT-User" mode, in which it was allowed to do hardware I/O
+> instructions.
+
+The camera was a great source of all ones, so it was easy with IOT user to
+instruct the camera to write into a single word...which happened to be the
+address of your privilege word.
+
+There were a few zillion other ways.  Some, but not all, were closed.
+
+One of the ones you guys got was the ability to start an unlogged-in
+phantom, which could do a LOGIN UUO, which in turn took the job's new
+privileges as one of its arguments.
+
+One of the ones you guys never got was the easy way to get someone else's
+password.  Open the victim's UFD as a file.  16 words of the JOBDAT held
+DDB pointers, indexed by I/O channel number.  The directory's password was
+stored in the DDB, so it was a simple matter to do a PEEK UUO to get it.
+
+-- Mark --
+
+http://staff.washington.edu/mrc
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+
+Article 4635 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!63.208.208.143!feed2.onemain.com!feed1.onemain.com!uunet!dca.uu.net!ash.uu.net!world!news
+From: Christopher Stacy <cstacy@spacy.Boston.MA.US>
+Subject: Re: ITS security [Re: Bulletproofing Tops10]
+Message-ID: <ud7a4ze62.fsf@spacy.Boston.MA.US>
+Sender: CStacy@BONK
+Date: Sun, 22 Apr 2001 23:51:33 GMT
+References: <z2Yz6.3296$Rj2.11602@NewsReader> <uwjE6.20966$vk1.25873@NewsReader> <uzod97rex.fsf_-_@spacy.Boston.MA.US> <0VvE6.21685$vk1.29136@NewsReader> <9bv851$cff$1@abbenay.CS.Berkeley.EDU> <CyIE6.21863$vk1.33911@NewsReader>
+NNTP-Posting-Host: ppp0b150.std.com
+Organization: The World @ Software Tool & Die
+X-Newsreader: Gnus v5.7/Emacs 20.7
+Lines: 30
+Xref: nntp1.ba.best.com alt.sys.pdp10:4635
+
+>>>>> On Sun, 22 Apr 2001 22:59:39 +0100, JD  ("JD") writes:
+ JD> I also thought you could fairly freely mix colon commands and DDT commands.
+
+Unless you were in "monitor mode" (supposed to be a little more like a
+conventional user interface such as TOPS-10), then, yes.  Many users
+would mix commands like :DELETE (a file) and ^F (list a directory).
+
+If you gave the command :MONMODE (or someone put that into your login
+init file for you), then DDT would prompt with a colon and expect
+colon commands like :LISTF.  The :DDTMOD command put you back into
+normal mode.  If you were in "monitor mode" and typed a rubout at the
+prompt, I think it would let you enter one control-character command.
+
+Logging in with the :LOGIN CSTACY command did not put you into monitor mode.
+Logging in with CSTACY$U was the same as :LOGIN, but put a zero value
+into the CLOBRF and MORWARN variables.  Note that either way, the
+default for DELWARN was to be verbose, CONFRM is on, and so on.
+
+ JD> Wasn't WAITS (the Stanford Tops10) a bit more into security?
+
+Well, WAITS of course started with TOPS-10 security.  Maybe some SAIL
+people (MRC? BH?) will be able to comment on how it was modified, but 
+it certainly had user accounts. I have heard that it was not too unusual
+for DEC customers to modify TOPS-10 policies about how PPNs worked.
+WAITS may have had some interesting things going on with that, though.
+I would like to hear more things about WAITS in general.
+
+ITS was an original system; it was not a version of TOPS-10 or
+anything else.  I don't know of any other general purpose
+timesharing systems besides ITS that eschewed security.
+
+
+Article 4637 of alt.sys.pdp10:
+Message-ID: <3AE40C9D.54B74A2E@Empire.Net>
+Date: Mon, 23 Apr 2001 07:06:05 -0400
+From: John Sauter <J_Sauter@Empire.Net>
+Organization: System Eyes Computer Store
+X-Mailer: Mozilla 4.73 [en]C-CCK-MCD NSCPCD47  (WinNT; U)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: ITS security [Re: Bulletproofing Tops10]
+References: <z2Yz6.3296$Rj2.11602@NewsReader> <uwjE6.20966$vk1.25873@NewsReader> <uzod97rex.fsf_-_@spacy.Boston.MA.US> <0VvE6.21685$vk1.29136@NewsReader> <9bv851$cff$1@abbenay.CS.Berkeley.EDU> <CyIE6.21863$vk1.33911@NewsReader>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+NNTP-Posting-Host: 198.144.141.143
+X-Trace: News.Destek.net 988023956 198.144.141.143 (23 Apr 2001 07:05:56 -0500)
+Lines: 9
+Path: nntp1.ba.best.com!news1.best.com!news2.best.com!news.maxwell.syr.edu!newsfeed.cwix.com!News.Destek.net
+Xref: nntp1.ba.best.com alt.sys.pdp10:4637
+
+JD wrote (excerpted):
+"They had the brainwave to change PPNs into 3 letter pairs (SIXBIT,
+right?) so you could be [FOO,BH] instead of [123532,324234]."
+
+One of the first changes I made to the PDP-6 monitor
+at SAIL was to change the PPN from octal to sixbit.
+I was [1,JBS].  I also made sure I was first on the
+backup tapes.
+    John Sauter (J_Sauter@Empire.NET)
+
+
+Article 4639 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news2.best.com!news.maxwell.syr.edu!feed2.news.rcn.net!feed1.news.rcn.net!rcn!207-172-245-236
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: ITS security [Re: Bulletproofing Tops10]
+Date: Mon, 23 Apr 01 08:54:15 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 18
+Message-ID: <9c137a$p4b$3@bob.news.rcn.net>
+References: <z2Yz6.3296$Rj2.11602@NewsReader> <uwjE6.20966$vk1.25873@NewsReader> <uzod97rex.fsf_-_@spacy.Boston.MA.US> <0VvE6.21685$vk1.29136@NewsReader> <9bv851$cff$1@abbenay.CS.Berkeley.EDU> <CyIE6.21863$vk1.33911@NewsReader> <3AE40C9D.54B74A2E@Empire.Net>
+X-Trace: UmFuZG9tSVannwO4FEN0P5rVuz+V5o/ST+ETVqQqZTVo2YOvUJht1L799OdllvSm
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 23 Apr 2001 11:21:14 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:4639
+
+In article <3AE40C9D.54B74A2E@Empire.Net>,
+   John Sauter <J_Sauter@Empire.Net> wrote:
+>JD wrote (excerpted):
+>"They had the brainwave to change PPNs into 3 letter pairs (SIXBIT,
+>right?) so you could be [FOO,BH] instead of [123532,324234]."
+>
+>One of the first changes I made to the PDP-6 monitor
+>at SAIL was to change the PPN from octal to sixbit.
+>I was [1,JBS].  I also made sure I was first on the
+>backup tapes.
+
+Wasn't that [being first on the backup\pukcab\failsa tapes]
+risky, John?  It was always the beginning of the tape
+that got chewed up.
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 4653 of alt.sys.pdp10:
+Message-ID: <3AE4DDE2.C31491AA@Empire.Net>
+Date: Mon, 23 Apr 2001 21:58:58 -0400
+From: John Sauter <J_Sauter@Empire.Net>
+Organization: System Eyes Computer Store
+X-Mailer: Mozilla 4.73 [en]C-CCK-MCD NSCPCD47  (WinNT; U)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: ITS security [Re: Bulletproofing Tops10]
+References: <z2Yz6.3296$Rj2.11602@NewsReader> <uwjE6.20966$vk1.25873@NewsReader> <uzod97rex.fsf_-_@spacy.Boston.MA.US> <0VvE6.21685$vk1.29136@NewsReader> <9bv851$cff$1@abbenay.CS.Berkeley.EDU> <CyIE6.21863$vk1.33911@NewsReader> <3AE40C9D.54B74A2E@Empire.Net> <9c137a$p4b$3@bob.news.rcn.net>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+NNTP-Posting-Host: 198.144.140.189
+X-Trace: News.Destek.net 988077527 198.144.140.189 (23 Apr 2001 21:58:47 -0500)
+Lines: 27
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!newsfeed.cwix.com!andromeda.5sc.net!mozart.jlc.net!News.Destek.net
+Xref: nntp1.ba.best.com alt.sys.pdp10:4653
+
+I figured if I was at the beginning of the tape,
+then if a random spot on the tape failed, my data
+was likeliest to be retrievable.  I was always afraid
+that Failsa would be unable to make it past
+a bad spot.
+    John Sauter (J_Sauter@Empire.Net)
+
+jmfbahciv@aol.com wrote:
+> 
+> In article <3AE40C9D.54B74A2E@Empire.Net>,
+>    John Sauter <J_Sauter@Empire.Net> wrote:
+> >JD wrote (excerpted):
+> >"They had the brainwave to change PPNs into 3 letter pairs (SIXBIT,
+> >right?) so you could be [FOO,BH] instead of [123532,324234]."
+> >
+> >One of the first changes I made to the PDP-6 monitor
+> >at SAIL was to change the PPN from octal to sixbit.
+> >I was [1,JBS].  I also made sure I was first on the
+> >backup tapes.
+> 
+> Wasn't that [being first on the backup\pukcab\failsa tapes]
+> risky, John?  It was always the beginning of the tape
+> that got chewed up.
+> 
+> /BAH
+> 
+> Subtract a hundred and four for e-mail.
+
+
+Article 4659 of alt.sys.pdp10:
+Message-ID: <3AE56098.D1A7BD0F@Empire.Net>
+Date: Tue, 24 Apr 2001 07:16:40 -0400
+From: John Sauter <J_Sauter@Empire.Net>
+Organization: System Eyes Computer Store
+X-Mailer: Mozilla 4.73 [en]C-CCK-MCD NSCPCD47  (WinNT; U)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: ITS security [Re: Bulletproofing Tops10]
+References: <z2Yz6.3296$Rj2.11602@NewsReader> <uwjE6.20966$vk1.25873@NewsReader> <uzod97rex.fsf_-_@spacy.Boston.MA.US> <0VvE6.21685$vk1.29136@NewsReader> <9bv851$cff$1@abbenay.CS.Berkeley.EDU> <CyIE6.21863$vk1.33911@NewsReader> <3AE40C9D.54B74A2E@Empire.Net> <9c137a$p4b$3@bob.news.rcn.net> <3AE4DDE2.C31491AA@Empire.Net> <9c3ktb$pkj$1@bob.news.rcn.net>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+NNTP-Posting-Host: 198.144.140.116
+X-Trace: News.Destek.net 988110988 198.144.140.116 (24 Apr 2001 07:16:28 -0500)
+Lines: 7
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!newsfeed.cwix.com!News.Destek.net
+Xref: nntp1.ba.best.com alt.sys.pdp10:4659
+
+My memory of those tape drives has faded somewhat,
+but I do recall that they consumed tapes.  At one point
+I wrote the monitor sources on paper tape so I
+would have a reliable backup.  I think I was trying
+to impress management with the need for a good
+backup device.
+    John Sauter (J_Sauter@Empire.Net)
+
+
+Article 4684 of alt.sys.pdp10:
+Message-ID: <3AEB5CE5.5F4D9C52@Empire.Net>
+Date: Sat, 28 Apr 2001 20:14:29 -0400
+From: John Sauter <J_Sauter@Empire.Net>
+Organization: System Eyes Computer Store
+X-Mailer: Mozilla 4.73 [en]C-CCK-MCD NSCPCD47  (WinNT; U)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: ITS security [Re: Bulletproofing Tops10]
+References: <z2Yz6.3296$Rj2.11602@NewsReader> <3AE56098.D1A7BD0F@Empire.Net> <9c68mg$30i$1@bob.news.rcn.net> <3AE75EC0.D6D1C0C4@Empire.Net> <9cf1sv$iao$1@abbenay.CS.Berkeley.EDU>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+NNTP-Posting-Host: 198.144.140.97
+X-Trace: News.Destek.net 988503268 198.144.140.97 (28 Apr 2001 20:14:28 -0500)
+Lines: 16
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!news.mv.net!News.Destek.net
+Xref: nntp1.ba.best.com alt.sys.pdp10:4684
+
+Thank you, Brian.  I guess the tape drive worked
+after all.
+    John Sauter (J_Sauter@Empire.Net)
+
+Brian Harvey wrote:
+> 
+> John Sauter <J_Sauter@Empire.Net> writes:
+> >However, as best I recall it didn't work.  I left in
+> >late 1968, so I don't know if SAIL ever had a reliable
+> >backup device.  Does anyone?
+> 
+> I don't remember having trouble reading the DART (backup) tapes when
+> I was there mid-70s.  And everything was backed up at least twice.
+> And not too long ago Martin Frost copied all those old tapes onto, I forget,
+> some currently-readable medium, so you can still retrieve all our old
+> love letters and flame wars if you're so inclined.
+
+
+Article 4652 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!news.voicenet.com!feed2.news.rcn.net!rcn!chnws02.mediaone.net!chnws06.ne.mediaone.net!24.128.8.70!typhoon.ne.mediaone.net.POSTED!not-for-mail
+Newsgroups: alt.sys.pdp10
+Subject: Re: ITS security [Re: Bulletproofing Tops10]
+References: <z2Yz6.3296$Rj2.11602@NewsReader> <uwjE6.20966$vk1.25873@NewsReader>
+     <uzod97rex.fsf_-_@spacy.Boston.MA.US> <0VvE6.21685$vk1.29136@NewsReader>
+     <9bv851$cff$1@abbenay.CS.Berkeley.EDU> <CyIE6.21863$vk1.33911@NewsReader> <3AE40C9D.54B74A2E@Empire.Net>
+From: Ric Werme <werme@mediaone.net>
+X-Newsreader: NN version 6.5.0 CURRENT #119
+Lines: 25
+Message-ID: <T_4F6.31969$%_1.9137617@typhoon.ne.mediaone.net>
+Date: Tue, 24 Apr 2001 01:51:47 GMT
+NNTP-Posting-Host: 24.91.12.32
+X-Complaints-To: abuse@mediaone.net
+X-Trace: typhoon.ne.mediaone.net 988077107 24.91.12.32 (Mon, 23 Apr 2001 21:51:47 EDT)
+NNTP-Posting-Date: Mon, 23 Apr 2001 21:51:47 EDT
+Organization: Road Runner
+Xref: nntp1.ba.best.com alt.sys.pdp10:4652
+
+John Sauter <J_Sauter@Empire.Net> writes:
+
+>JD wrote (excerpted):
+>"They had the brainwave to change PPNs into 3 letter pairs (SIXBIT,
+>right?) so you could be [FOO,BH] instead of [123532,324234]."
+
+>One of the first changes I made to the PDP-6 monitor
+>at SAIL was to change the PPN from octal to sixbit.
+>I was [1,JBS].
+
+At C-MU, computer accounts before the PDP-10 showed up were things
+like S600EW13 (S for science, 600 for course number "Computer
+Programming and Problem Solving I), EW for me, 13 because I was the
+13th EW to come along.  (Being born on Friday the 13th had nothing to
+do with it.)  The last character could be alphabetic, so the "man
+number" could have 26 * 26 * 10 * 36 permutations, or 243,360.  2^18 =
+262,144.
+
+So one of my first programming jobs was to teach TOPS-10 about  C-MU
+account numbers....
+
+	-Ric Werme
+--
+Ric Werme                            | werme@nospam.mediaone.net
+http://people.ne.mediaone.net/werme  |       ^^^^^^^ delete
+
+
+Article 4660 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!news-out.cwix.com!newsfeed.cwix.com!chnws02.mediaone.net!chnws06.ne.mediaone.net!24.128.8.70!typhoon.ne.mediaone.net.POSTED!not-for-mail
+Newsgroups: alt.sys.pdp10
+Subject: Re: ITS security [Re: Bulletproofing Tops10]
+References: <z2Yz6.3296$Rj2.11602@NewsReader> <uwjE6.20966$vk1.25873@NewsReader>
+     <uzod97rex.fsf_-_@spacy.Boston.MA.US> <0VvE6.21685$vk1.29136@NewsReader>
+     <9bv851$cff$1@abbenay.CS.Berkeley.EDU> <CyIE6.21863$vk1.33911@NewsReader>
+     <3AE40C9D.54B74A2E@Empire.Net> <T_4F6.31969$%_1.9137617@typhoon.ne.mediaone.net> <3AE4DE73.5DAC1DA0@Empire.Net>
+From: Ric Werme <werme@mediaone.net>
+X-Newsreader: NN version 6.5.0 CURRENT #119
+Lines: 39
+Message-ID: <7GoF6.33960$%_1.9690518@typhoon.ne.mediaone.net>
+Date: Wed, 25 Apr 2001 00:14:59 GMT
+NNTP-Posting-Host: 24.91.12.32
+X-Complaints-To: abuse@mediaone.net
+X-Trace: typhoon.ne.mediaone.net 988157699 24.91.12.32 (Tue, 24 Apr 2001 20:14:59 EDT)
+NNTP-Posting-Date: Tue, 24 Apr 2001 20:14:59 EDT
+Organization: Road Runner
+Xref: nntp1.ba.best.com alt.sys.pdp10:4660
+
+John Sauter <J_Sauter@Empire.Net> writes:
+
+>How did you end up mapping the account number into
+>36 bits?
+
+The A-Z places counts as 0-25, 0-9 count as 0-9, and 0-Z (A-9?) count
+as 0-35.
+
+The "project" part was easy: S600 = 18 * 1000 + 6 * 100 + 0 * 10 + 0 * 1,
+lots of room.  The "programmer"/"Man number" for EW13 went like:
+
+EW13 = (4 * 26 * 10 * 36) + (22 * 10 * 36) + (1 * 36) + 3  or the CPU friendly
+EW13 = ( 4 * 26 + 22) * 10 + 1) * 36) +  3  and the highest one is
+ZZ9Z = (25 * 26 + 25) * 10 + 9) * 36) + 35
+
+The A-Z places counts as 0-25, 0-9 count as 0-9, and 0-Z (A-9?) count
+as 0-35.
+
+>Ric Werme wrote:
+
+>> At C-MU, computer accounts before the PDP-10 showed up were things
+>> like S600EW13 (S for science, 600 for course number "Computer
+>> Programming and Problem Solving I), EW for me, 13 because I was the
+>> 13th EW to come along.  (Being born on Friday the 13th had nothing to
+>> do with it.)  The last character could be alphabetic, so the "man
+>> number" could have 26 * 26 * 10 * 36 permutations, or 243,360.  2^18 =
+>> 262,144.
+>> 
+>> So one of my first programming jobs was to teach TOPS-10 about  C-MU
+>> account numbers....
+>> 
+>>         -Ric Werme
+>> --
+>> Ric Werme                            | werme@nospam.mediaone.net
+>> http://people.ne.mediaone.net/werme  |       ^^^^^^^ delete
+
+--
+Ric Werme                            | werme@nospam.mediaone.net
+http://people.ne.mediaone.net/werme  |       ^^^^^^^ delete
+
+

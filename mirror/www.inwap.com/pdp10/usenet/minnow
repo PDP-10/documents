@@ -1,0 +1,42 @@
+Article 1662 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news2.best.com!news-hog.berkeley.edu!ucberkeley!130.54.14.37.MISMATCH!newsfeed.media.kyoto-u.ac.jp!newsfeed.mesh.ad.jp!sjc-peer.news.verio.net!sea-feed.news.verio.net!news.verio.net!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Looking for CUSP tape files for v6.03
+Date: Wed, 25 Oct 2000 15:39:53 -0700
+Organization: Networks & Distributed Computing
+Lines: 20
+Message-ID: <Pine.NXT.4.30.0010251536310.3366-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <8hoH5.62649$bI6.2262607@news1.giganews.com> <8smntu$3f1$11@bob.news.rcn.net> <gcKH5.24162$YX4.873045@news2.giganews.com> <aOPH5.24877$YX4.900806@news2.giganews.com> <8t7ks7$3u1$1@nntp1.ba.best.com>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 972513599 32774 (None) 140.142.17.37
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: dbi
+To: Joe Smith <inwap@best.com>
+In-Reply-To: <8t7ks7$3u1$1@nntp1.ba.best.com>
+Xref: nntp1.ba.best.com alt.sys.pdp10:1662
+
+On 25 Oct 2000, Joe Smith wrote:
+> But what about the Minnow?  The fabled PDP-10 on a desk (smaller and
+> cheaper than the KS)?  Was it functional enough to run TOPS-10 or
+> TOPS-20 before the plug got pulled on that project?
+
+My understanding is that the Minnow never got further than running EDDT,
+if that far.  It definitely never ran an operating system.
+
+I recall being told that the Minnow lived up to its name.  When the first
+board was given its initial solder, it dived into the solder pool!  If you
+like, I can try to dig up the exact quote; I think that it was Pete Hurley
+who said it during the 36-bit Trivia Bowl in 1986.
+
+Trivia question: what was the slowest machine ever to run TOPS-20?
+
+-- Mark --
+
+http://staff.washington.edu/mrc
+Science does not emerge from voting, party politics, or public debate.
+
+
+

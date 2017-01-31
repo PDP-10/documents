@@ -1,0 +1,30 @@
+Article 4401 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newshub.sdsu.edu!news-spur1.maxwell.syr.edu!news.maxwell.syr.edu!newsfeed.slurp.net!sakura.lunar-tokyo.net!dseagrav
+Newsgroups: alt.sys.pdp10
+From: Daniel Seagraves <dseagrav@sakura.lunar-tokyo.net>
+Subject: More DZ11 stuffs...  Rainbow is public access now. ^_^
+Message-ID: <Pine.LNX.4.21.0104101932340.4474-100000@sakura.lunar-tokyo.net>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+Lines: 13
+Date: Tue, 10 Apr 2001 19:40:35 -0500
+NNTP-Posting-Host: 209.251.101.202
+X-Trace: newsfeed.slurp.net 986949315 209.251.101.202 (Tue, 10 Apr 2001 19:35:15 CDT)
+NNTP-Posting-Date: Tue, 10 Apr 2001 19:35:15 CDT
+Xref: nntp1.ba.best.com alt.sys.pdp10:4401
+
+Rainbow Brite has the latest code now, and I created an account at 42,2
+for people to abuse.  Telnet to asuka.umtec.com, log in as ts10 (No
+password, just push enter), then do LOGIN 42,2 to play with it.
+The machine is still a P200, so it's still slow, but it should be usable.
+Unless everyone decides to DIR [10,7] or SYSTAT all at the same time. ^_^
+I'm nosing around to see if I can find a faster machine to stuff this on,
+but don't hold your breath.
+
+I still haven't solved the problem with multiple DZ11s, but I haven't
+really looked at it either.  It's probably some stupid typo, I'll hack at
+it tomorrow.
+
+
+
+

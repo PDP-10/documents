@@ -1,0 +1,1333 @@
+Article 4120 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!su-news-hub1.bbnplanet.com!cpk-news-hub1.bbnplanet.com!news.bbnplanet.com!europa.clark.net!206.55.3.15!news.clark.net!not-for-mail
+From: gagner@clark.net (Philip Gagner)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: Thu, 01 Oct 1998 02:52:02 GMT
+Organization: TWLG
+Lines: 58
+Message-ID: <3613e9a8.18494117@news.clark.net>
+References: <Pine.LNX.3.96.980928112124.10870D-100000@bony.umtec.com> <qhu31sc8nn.fsf@ruckus.brouhaha.com>
+Reply-To: gagner@clark.net
+NNTP-Posting-Host: gagner-ppp.clark.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Newsreader: Forte Agent 1.5/32.451
+Xref: news3.best.com alt.sys.pdp10:4120
+
+Eric Smith <eric-no-spam-for-me-please@brouhaha.com> wrote:
+
+>Daniel Seagraves <root@bony.umtec.com> writes:
+>> Anyone have a list of the KL10 Console Commands?
+>
+>The KL10 doesn't have any console in the traditional sense of the work.
+>It has a PDP-11/40 front end processor which is used for microcode load,
+>bootstrap, diagnostics, etc.  Once the system is running, the terminal
+>attached to the 11 acts as the CTY (console TTY) for the 10.
+>
+>The 11 runs the RSX-20F operating system, which IIRC is a derivative of
+>RSX-11D.  So in some sense the KL10 console commands are RSX-11
+>commands.
+
+Um, not really. RSX-20F was derived by "Bugsy" and the group from
+RSX-11D, as you say, with various drivers and other things from
+RSX-11M. People wanted to use RSX-11D because of its real time
+features, but the system calls of RSX-11M were much nicer, so we threw
+them in. But the command parser (cleverly named PARSER), was written
+from scratch and has no relation with RSX-11D or RSX-11M commands.
+This is something the RSX-11D group can be proud of.
+
+I know this to be true because Rollo Belanger and I wrote most of the
+KL-10 RSX-20F PARSER. It was generally a pretty bad job, in part
+because the "language grammar" was a compromise designed by a
+committee and kept changing and in part because Field Service had a
+lot of input into the console command language, and they had very
+fixed ideas about what it should be like, which weren't driven by any
+aesthetic sense, and any talk about language "design" or theory was
+quickly shot down. Marketing and management wanted to do whatever FS
+wanted, so long as the thing could be booted, they really didn't care
+what the console command langauge looked like. This, in my view at the
+time and in my view now, was an unfortunate mistake.
+
+Anyway, the command language ended up being pretty much a hack. There
+were some nice features (the way repeats worked always amused me--you
+could nest them and variables would be saved in a way that would alow
+recursive functions), but not very many. The PARSER program was not,
+in other words, derived in any way from the RSX command parser, and it
+really didn't have much in common with it (I vaguely recall that we
+copied how the file directory command output looked for PDP-11
+devices, and it could parse input in a way that could theoretically
+make MACRO-11 happy but it never did). The thing was compiled using a
+program MACY11 or MACDLX or some such name, which was a cross-compiler
+which ran on the -10, and then loaded onto a floppy or DECTAPE which
+booted the RSX20F system and the PARSER was in the joblist when it
+booted. The typical RSX-11D command parser simply wouldn't run on
+RSX20-F, as far as I know.
+
+>
+>> Screen captures would be useful too...
+>
+>If someone was actually still running a KL, and using a PC as the
+>console terminal (instead of the more commonly used DECwriter or CRT),
+>you might have a chance of getting screen captures.  Then again, if
+>someone was still running a KL, they probably wouldn't want to reboot
+>it for that purpose.
+
+
+
+Article 4121 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!nntprelay.mathworks.com!newsswitch.lcs.mit.edu!news.ultranet.com!d8
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: Thu, 01 Oct 98 09:17:13 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 70
+Message-ID: <6uvli1$o2j$1@strato.ultra.net>
+References: <Pine.LNX.3.96.980928112124.10870D-100000@bony.umtec.com> <qhu31sc8nn.fsf@ruckus.brouhaha.com> <3613e9a8.18494117@news.clark.net>
+NNTP-Posting-Host: d8.dial-14.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 1 Oct 1998 10:29:21 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: news3.best.com alt.sys.pdp10:4121
+
+In article <3613e9a8.18494117@news.clark.net>,
+   gagner@clark.net (Philip Gagner) wrote:
+>Eric Smith <eric-no-spam-for-me-please@brouhaha.com> wrote:
+>
+>>Daniel Seagraves <root@bony.umtec.com> writes:
+>>> Anyone have a list of the KL10 Console Commands?
+>>
+>>The KL10 doesn't have any console in the traditional sense of the work.
+>>It has a PDP-11/40 front end processor which is used for microcode load,
+>>bootstrap, diagnostics, etc.  Once the system is running, the terminal
+>>attached to the 11 acts as the CTY (console TTY) for the 10.
+>>
+>>The 11 runs the RSX-20F operating system, which IIRC is a derivative of
+>>RSX-11D.  So in some sense the KL10 console commands are RSX-11
+>>commands.
+>
+>Um, not really. RSX-20F was derived by "Bugsy" and the group from
+>RSX-11D, as you say, with various drivers and other things from
+>RSX-11M. People wanted to use RSX-11D because of its real time
+>features, but the system calls of RSX-11M were much nicer, so we threw
+>them in. But the command parser (cleverly named PARSER), was written
+>from scratch and has no relation with RSX-11D or RSX-11M commands.
+>This is something the RSX-11D group can be proud of.
+>
+>I know this to be true because Rollo Belanger and I wrote most of the
+>KL-10 RSX-20F PARSER. It was generally a pretty bad job, in part
+>because the "language grammar" was a compromise designed by a
+>committee and kept changing and in part because Field Service had a
+>lot of input into the console command language, and they had very
+>fixed ideas about what it should be like, which weren't driven by any
+>aesthetic sense, and any talk about language "design" or theory was
+>quickly shot down. Marketing and management wanted to do whatever FS
+>wanted, so long as the thing could be booted, they really didn't care
+>what the console command langauge looked like. This, in my view at the
+>time and in my view now, was an unfortunate mistake.
+>
+>Anyway, the command language ended up being pretty much a hack. There
+>were some nice features (the way repeats worked always amused me--you
+>could nest them and variables would be saved in a way that would alow
+>recursive functions), but not very many. The PARSER program was not,
+>in other words, derived in any way from the RSX command parser, and it
+>really didn't have much in common with it (I vaguely recall that we
+>copied how the file directory command output looked for PDP-11
+>devices, and it could parse input in a way that could theoretically
+>make MACRO-11 happy but it never did). The thing was compiled using a
+>program MACY11 or MACDLX or some such name, which was a cross-compiler
+>which ran on the -10, and then loaded onto a floppy or DECTAPE which
+>booted the RSX20F system and the PARSER was in the joblist when it
+>booted. The typical RSX-11D command parser simply wouldn't run on
+>RSX20-F, as far as I know.
+
+And wasn't there some funny stuff that had to be done since the -11
+side of the file system wasn't 16-bit?
+
+One of the projects that I had on my to-do list was to mechanize
+the build procedures for RSX20-F.  That never got done.  When the
+last developer left DEC, all the build information was lost.  When
+I pointed this out (I wanted Mike to train me to do a build before
+he left) to the management, the thinking was that we could always
+get Roland to show us just like he did when Mike was hired.
+
+Why is this guy even thinking of trying to simulate the -20F
+side of the KL?  It was a pain in the ass concept (sorry, Phil,
+I'm talking with a TOPS-10 monitor developement hat now :-))
+and one of the things the guys would have dearly loved to 
+trade for lights.
+
+/BAH
+
+Sigh! - Subtract a hundred and four for e-mail.
+
+
+Article 4123 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!su-news-hub1.bbnplanet.com!news.bbnplanet.com!newsfeed.concentric.net!news.mel.aone.net.au!newsfeed-in.aone.net.au!not-for-mail
+From: "Mark & Suzanne (gcs might work)" <SPAMOFFPLS@s054.aone.net.au>
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: Thu, 01 Oct 1998 21:49:44 +1000
+Organization: Garetech Computer Solutions P/L
+Lines: 17
+Message-ID: <36136C58.1CFB@s054.aone.net.au>
+References: <Pine.LNX.3.96.980928112124.10870D-100000@bony.umtec.com> <qhu31sc8nn.fsf@ruckus.brouhaha.com> <3613e9a8.18494117@news.clark.net> <6uvli1$o2j$1@strato.ultra.net>
+NNTP-Posting-Host: d59-2.cpe.sydney.aone.net.au
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: news.mel.aone.net.au 907242269 24616 203.12.187.59 (1 Oct 1998 11:44:29 GMT)
+NNTP-Posting-Date: 1 Oct 1998 11:44:29 GMT
+X-Mailer: Mozilla 3.0Gold (X11; I; OSF1 V4.0 alpha)
+Xref: news3.best.com alt.sys.pdp10:4123
+
+jmfbahciv@aol.com wrote:
+> 
+
+> And wasn't there some funny stuff that had to be done since the -11
+> side of the file system wasn't 16-bit?
+
+You mean it WAS 16bits. The boot RP04/6 was dual ported one to the RH20
+in the KL and the other to the RH10 on the PDP-11. The 11 had track 0
+formated in 16bit mode and so the drive spoke to the 11 it 16 bit words
+and when the PDP-10 final got its brain loaded it spoke to the drive
+in 18bit mode for the rest of the disk. You could get the PDP-11 to
+serv its 16bit mode filesystem back to the 10 via one of the DTE
+protocols. 
+
+
+	Cheers
+		mark :)
+
+
+Article 4124 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!newsxfer3.itd.umich.edu!news-peer.sprintlink.net!news-peer-east.sprintlink.net!news.sprintlink.net!newsfeed.xcom.net!news.ultranet.com!d8
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: Thu, 01 Oct 98 10:52:20 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 29
+Message-ID: <6uvr49$5tq$1@strato.ultra.net>
+References: <Pine.LNX.3.96.980928112124.10870D-100000@bony.umtec.com> <qhu31sc8nn.fsf@ruckus.brouhaha.com> <3613e9a8.18494117@news.clark.net> <6uvli1$o2j$1@strato.ultra.net> <36136C58.1CFB@s054.aone.net.au>
+NNTP-Posting-Host: d8.dial-14.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 1 Oct 1998 12:04:25 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: news3.best.com alt.sys.pdp10:4124
+
+In article <36136C58.1CFB@s054.aone.net.au>,
+   "Mark & Suzanne (gcs might work)" <SPAMOFFPLS@s054.aone.net.au> wrote:
+>jmfbahciv@aol.com wrote:
+>> 
+>
+>> And wasn't there some funny stuff that had to be done since the -11
+>> side of the file system wasn't 16-bit?
+>
+>You mean it WAS 16bits. The boot RP04/6 was dual ported one to the RH20
+>in the KL and the other to the RH10 on the PDP-11. The 11 had track 0
+>formated in 16bit mode and so the drive spoke to the 11 it 16 bit words
+>and when the PDP-10 final got its brain loaded it spoke to the drive
+>in 18bit mode for the rest of the disk. You could get the PDP-11 to
+>serv its 16bit mode filesystem back to the 10 via one of the DTE
+>protocols. 
+
+I don't think I ever understood DTE protocols.  I know that the
+-11 was 16-bit.  But the cables that went to our disks (the dual
+ports) were 18-bit...were they not?  And retrieving data from
+the disk from the -11 side took some munging.  I do know that 
+the -10 side of that dual ported disk would not have been content
+with only 16 bits of data on a fetch.
+
+But, then on the other hand, hardware was never my strength; I
+left that part of the business to the guys to finger out :-).
+
+/BAH
+
+Sigh! - Subtract a hundred and four for e-mail.
+
+
+Article 4127 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!news.maxwell.syr.edu!news.mel.connect.com.au!news.mel.aone.net.au!newsfeed-in.aone.net.au!not-for-mail
+From: "Mark & Suzanne (gcs might work)" <SPAMOFFPLS@s054.aone.net.au>
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: Fri, 02 Oct 1998 00:51:35 +1000
+Organization: Garetech Computer Solutions P/L
+Lines: 61
+Message-ID: <361396F7.FF6@s054.aone.net.au>
+References: <Pine.LNX.3.96.980928112124.10870D-100000@bony.umtec.com> <qhu31sc8nn.fsf@ruckus.brouhaha.com> <3613e9a8.18494117@news.clark.net> <6uvli1$o2j$1@strato.ultra.net> <36136C58.1CFB@s054.aone.net.au> <6uvr49$5tq$1@strato.ultra.net>
+NNTP-Posting-Host: d23-1.cpe.sydney.aone.net.au
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: news.mel.aone.net.au 907253181 23960 203.12.186.23 (1 Oct 1998 14:46:21 GMT)
+NNTP-Posting-Date: 1 Oct 1998 14:46:21 GMT
+X-Mailer: Mozilla 3.0Gold (X11; I; OSF1 V4.0 alpha)
+Xref: news3.best.com alt.sys.pdp10:4127
+
+jmfbahciv@aol.com wrote:
+> 
+> In article <36136C58.1CFB@s054.aone.net.au>,
+>    "Mark & Suzanne (gcs might work)" <SPAMOFFPLS@s054.aone.net.au> wrote:
+> >jmfbahciv@aol.com wrote:
+> >>
+> >
+> >> And wasn't there some funny stuff that had to be done since the -11
+> >> side of the file system wasn't 16-bit?
+> >
+> >You mean it WAS 16bits. The boot RP04/6 was dual ported one to the RH20
+> >in the KL and the other to the RH10 on the PDP-11. The 11 had track 0
+> >formated in 16bit mode and so the drive spoke to the 11 it 16 bit words
+> >and when the PDP-10 final got its brain loaded it spoke to the drive
+> >in 18bit mode for the rest of the disk. You could get the PDP-11 to
+> >serv its 16bit mode filesystem back to the 10 via one of the DTE
+> >protocols.
+> 
+> I don't think I ever understood DTE protocols.  I know that the
+That might make two of us?:) the DTE was just a physical interface
+with interupts and IO basically DMA from 11-mem to DTE to 10-mem
+or 10-mem to DTE to 11-mem the protocol(s) where schemes (protocols)
+developed to drive certian types of communications between
+TOPs and the various devices on the PDP-11 most basically the console
+then various other serial devices and don't forget the line printer
+which had its own protocol.
+
+> -11 was 16-bit.  But the cables that went to our disks (the dual
+> ports) were 18-bit...were they not?  And retrieving data from
+> the disk from the -11 side took some munging.  I do know that
+
+There was no munging the port to the 11 was clocked to read a 16 bit
+word from the serial data stream that came from the disk head
+and the 10 port was clocked to read 18 bits into the register
+
+The only time the 10 every munged data was when it had to deal with 
+rather odd things call 9 track tapes. It had no problem with the older
+7 bit drives where it could just stuff sixbit+parity onto the tape
+but 8bit+parity, it had to convert this. Two forms basically existed
+one which was really wastefull of tape which I think was core dump
+format (?) which was used by very simple boot programs and
+then some strange packing algorithm that you will find documented on
+the web for stuffing 36 bit words efficently on tape. This was all 
+accomplished by a piece of hardware in tape controller which I think was 
+a M8914 board aka bit fiddler ...
+
+
+> the -10 side of that dual ported disk would not have been content
+> with only 16 bits of data on a fetch.
+
+It  got just what it wanted 18 bit words
+
+> 
+> But, then on the other hand, hardware was never my strength; I
+> left that part of the business to the guys to finger out :-).
+
+If thats a typo I'm not sure, "finger" out that could have all sorts
+of conitations (sp?)
+
+	Cheers
+		Mark :)
+
+
+Article 4129 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!su-news-hub1.bbnplanet.com!news.bbnplanet.com!logbridge.uoregon.edu!mr.net!data.pa.vix.com!news1.digital.com!pa.dec.com!nntpd.lkg.dec.com!zk2nws.zko.dec.com!denton.zko.dec.com!amartin
+From: amartin@denton.zko.dec.com (Alan H. Martin)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: 1 Oct 1998 18:16:13 GMT
+Organization: DEC
+Lines: 26
+Message-ID: <6v0gtd$dpu@zk2nws.zko.dec.com>
+References: <36136C58.1CFB@s054.aone.net.au> <6uvr49$5tq$1@strato.ultra.net> <361396F7.FF6@s054.aone.net.au>
+NNTP-Posting-Host: denton.zko.dec.com
+Xref: news3.best.com alt.sys.pdp10:4129
+
+In article <361396F7.FF6@s054.aone.net.au> "Mark & Suzanne (gcs might work)" <SPAMOFFPLS@s054.aone.net.au> writes:
+>The only time the 10 every munged data was when it had to deal with rather
+>odd things call 9 track tapes. ...
+
+Not quite.  Transmitting data in 8-bit bytes for DECnet was done in software,
+because I can recall someone trying to speed things up in some pack/unpack
+algorithm.
+
+
+>... 8bit+parity, it had to convert this.  Two forms basically existed ... and
+>then some strange packing algorithm that you will find documented on the web
+>for stuffing 36 bit words efficently on tape.  This was all accomplished by a
+>piece of hardware in tape controller which I think was a M8914 board aka bit
+>fiddler ...
+
+Huh.
+
+Yep, here it is:
+
+M8914:
+	TM02 18-BIT FIDDLER,HEX (BFLR 1)
+
+BFLR1 is just a joke, not a real 2-5-4-2 code.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@ZKo.DEC.Com
+
+
+Article 4131 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+References: <Pine.LNX.3.96.980928112124.10870D-100000@bony.umtec.com> <6uvli1$o2j$1@strato.ultra.net> <36136C58.1CFB@s054.aone.net.au> <6uvr49$5tq$1@strato.ultra.net>
+Organization: D Bit, Troy, NY
+From: wilson@dbit.com (John Wilson)
+NNTP-Posting-Host: dbit.dbit.com
+Message-ID: <361426ab.0@news.wizvax.net>
+Date: 1 Oct 1998 21:04:43 -0500
+X-Trace: 1 Oct 1998 21:04:43 -0500, dbit.dbit.com
+Lines: 28
+Path: news3.best.com!news1.best.com!newshub.northeast.verio.net!newspeer.monmouth.com!newsfeed.wizvax.net!news.wizvax.net!dbit.com!wilson
+Xref: news3.best.com alt.sys.pdp10:4131
+
+In article <6uvr49$5tq$1@strato.ultra.net>,  <jmfbahciv@aol.com> wrote:
+>In article <36136C58.1CFB@s054.aone.net.au>,
+>   "Mark & Suzanne (gcs might work)" <SPAMOFFPLS@s054.aone.net.au> wrote:
+>>The 11 had track 0
+>>formated in 16bit mode and so the drive spoke to the 11 it 16 bit words
+>>and when the PDP-10 final got its brain loaded it spoke to the drive
+>>in 18bit mode for the rest of the disk.
+
+Yuck!!!  Why?  Just because the 11 drivers depend on 22 sector mode, or is
+there some reason I'm missing why you can't access the low 16 bits of each
+data word from the 11?  I would think it would just drop the high 2 bits of
+each word (on the 18-bit "data" half of the Massbus) when reading and let
+them float to zero when writing, or at worst it would read/write scrambled
+data (if I remember right even the A/B versions of the RH11 had all 18 bits,
+I think the M7294 mods in the RH11C are for something else).
+
+>I don't think I ever understood DTE protocols.  I know that the
+>-11 was 16-bit.  But the cables that went to our disks (the dual
+>ports) were 18-bit...were they not?  And retrieving data from
+>the disk from the -11 side took some munging.  I do know that 
+>the -10 side of that dual ported disk would not have been content
+>with only 16 bits of data on a fetch.
+
+The cables are indeed 18 bits wide for the data half, 16 for the control
+half so everybody should be happy.
+
+John Wilson
+D Bit
+
+
+Article 4130 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!newshub.northeast.verio.net!europa.clark.net!206.55.3.15!news.clark.net!not-for-mail
+From: gagner@clark.net (Philip Gagner)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: Fri, 02 Oct 1998 00:13:13 GMT
+Organization: TWLG
+Lines: 75
+Message-ID: <3615172c.19558816@news.clark.net>
+References: <Pine.LNX.3.96.980928112124.10870D-100000@bony.umtec.com> <qhu31sc8nn.fsf@ruckus.brouhaha.com> <3613e9a8.18494117@news.clark.net> <6uvli1$o2j$1@strato.ultra.net>
+Reply-To: gagner@clark.net
+NNTP-Posting-Host: gagner-ppp.clark.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Newsreader: Forte Agent 1.5/32.451
+Xref: news3.best.com alt.sys.pdp10:4130
+
+jmfbahciv@aol.com wrote:
+
+<snip>
+>>wanted, so long as the thing could be booted, they really didn't care
+>>what the console command langauge looked like. This, in my view at the
+>>time and in my view now, was an unfortunate mistake.
+>>
+<snip>
+>>which ran on the -10, and then loaded onto a floppy or DECTAPE which
+>>booted the RSX20F system and the PARSER was in the joblist when it
+>>booted. The typical RSX-11D command parser simply wouldn't run on
+>>RSX20-F, as far as I know.
+>
+>And wasn't there some funny stuff that had to be done since the -11
+>side of the file system wasn't 16-bit?
+Oh yes. I tried to repress the memory of this... it was an awful hack.
+Well, it was sort of 16-bit, that is, RSX20F could read files stored
+on the PDP-10 side, although it never worked well, through a routine
+which mapped headers and such, mediated by the DTE-20. 18 bits were
+tranmitted, and the 2 high order bits (as I recall) were discarded.
+But the basic file system used for floppies (8") and DECTapes was
+RSX-11 format, so it was sort of 16 bit too. Data intended for the -10
+were packed as PDP-10 halfwords, so you lost even more space, but this
+never mattered. And there was a special format for microcode loads,
+but I don't think we ever finished implementing this. At least it
+wasn't done when I left the project.
+>
+>One of the projects that I had on my to-do list was to mechanize
+>the build procedures for RSX20-F.  That never got done.  When the
+>last developer left DEC, all the build information was lost.  When
+>I pointed this out (I wanted Mike to train me to do a build before
+>he left) to the management, the thinking was that we could always
+>get Roland to show us just like he did when Mike was hired.
+
+Build procedure?? I never saw anyting like that, fer sure. Stuff was
+complied using MACY11 and written to DECtape, and then loaded and then
+dumped onto floppies (for floppy based machines). Nothing automated
+about it. Since MACY11 (or MACDLX sometimes) didn't know enough to
+write tape or floppy media, I'd think you'd need to machanize it on an
+RSX-11D system. Never occurred to us to try...
+>
+>Why is this guy even thinking of trying to simulate the -20F
+>side of the KL?  It was a pain in the ass concept (sorry, Phil,
+>I'm talking with a TOPS-10 monitor developement hat now :-))
+>and one of the things the guys would have dearly loved to 
+>trade for lights.
+>
+Oh, no need for apologies. We thought it was an awful hack at the
+time, and it proved to be so. Purity of concept certainly got short
+shrift. We actually put the lights in, you know. There were RSX20F
+commands which would display "lights" on the terminal. I was a big fan
+of the KA10 lights, which told you everything you ever wanted to know,
+so we put them in in the hope that someday someone would realize that
+a display terminal would make a better console than the LA30 (hard
+copy dot matrix) printers that FS and marketing wanted. You could even
+make a repeat macro that would update the "lights" as the machine ran.
+The problem here was that the DTE-20 would suck up interrupts at a
+ferocious rate when you did this, so the whole machine would run a
+little slower. But we figured that someday someone would want the
+feature.
+
+I can't think of ANY reason to simulate the horrible RSX20F interface,
+except maybe an exercise in masochism that exceeds all normal bounds
+and shouldn't be discussed in polite company. Certainly a front-end
+console "simulator" would be necessary, but given the limited number
+of things the DTE-20 could do from the -10 side, it would be better to
+have a clean interface and ignore the rest. If you're building a
+simulator, boot the sucker from simulated ROM and trap all DTE-20
+calls with a return of success and throw them away. You won't lose
+anything worth keeping.
+
+RSX20F -- Not DEC's finest hour...
+
+Phil Gagner
+
+
+
+Article 4135 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!feed1.news.rcn.net!rcn!news.ultranet.com!d8
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: Fri, 02 Oct 98 09:37:52 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 20
+Message-ID: <6v2b4u$mim$1@strato.ultra.net>
+References: <Pine.LNX.3.96.980928112124.10870D-100000@bony.umtec.com> <qhu31sc8nn.fsf@ruckus.brouhaha.com> <3613e9a8.18494117@news.clark.net> <6uvli1$o2j$1@strato.ultra.net> <36136C58.1CFB@s054.aone.net.au> <6uvr49$5tq$1@strato.ultra.net> <361396F7.FF6@s054.aone.net.au>
+NNTP-Posting-Host: d8.dial-14.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 2 Oct 1998 10:50:06 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: news3.best.com alt.sys.pdp10:4135
+
+In article <361396F7.FF6@s054.aone.net.au>,
+   "Mark & Suzanne (gcs might work)" <SPAMOFFPLS@s054.aone.net.au> wrote:
+>jmfbahciv@aol.com wrote:
+>> 
+>> In article <36136C58.1CFB@s054.aone.net.au>,
+>>    "Mark & Suzanne (gcs might work)" <SPAMOFFPLS@s054.aone.net.au> 
+wrote:
+
+>> But, then on the other hand, hardware was never my strength; I
+>> left that part of the business to the guys to finger out :-).
+>
+>If thats a typo I'm not sure, "finger" out that could have all sorts
+>of conitations (sp?)
+
+The spelling was on purpose.  The phrase is a TWism and, yes, it
+did have all those connotations :-).
+
+/BAH
+
+Sigh! - Subtract a hundred and four for e-mail.
+
+
+Article 4140 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!newshub.northeast.verio.net!europa.clark.net!206.55.3.15!news.clark.net!not-for-mail
+From: gagner@clark.net (Philip Gagner)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: Fri, 02 Oct 1998 17:03:35 GMT
+Organization: TWLG
+Lines: 55
+Message-ID: <3614e458.72091033@news.clark.net>
+References: <Pine.LNX.3.96.980928112124.10870D-100000@bony.umtec.com> <qhu31sc8nn.fsf@ruckus.brouhaha.com> <3613e9a8.18494117@news.clark.net> <6uvli1$o2j$1@strato.ultra.net> <Pine.LNX.3.96.981001074227.24061C-100000@bony.umtec.com> <6v2lkl$9at$8@strato.ultra.net>
+Reply-To: gagner@clark.net
+NNTP-Posting-Host: gagner-ppp.clark.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Newsreader: Forte Agent 1.5/32.451
+Xref: news3.best.com alt.sys.pdp10:4140
+
+jmfbahciv@aol.com wrote:
+
+<snip>
+>
+>Maybe somebody can talk about the pie in the sky that -20F was
+>supposed to make.  The only thing worse, IMO, that we produced
+>was the MCB.
+>
+>/BAH
+
+I don't think that RSX20F was ever supposed to be pie in the sky. The
+KL was a microcode machine, so that running diagnostics was going to
+be a problem. If the microcode hardware was flaky, then the machine
+would be a useless piece of iron (i.e. diagnostics wouldn't run). So
+the logical decision was to have a front end which had feelers into
+the hardware (via the DTE-20) and could load data, single clock the
+hardware, and thus do diagnostics. It was actually a very logical way
+of doing things. You had a simple known reliable machine (PDP-11/40
+initially) which could run the complex diagnostics required to get the
+complex hardware to a state where it could run its own diagnostics.
+
+Once you've decided to do this lights and switches don't seem that
+important, so the cost (which including maintenance is extremely high)
+can't be justified.
+
+Nobody in the KL group really cared that much about what the FE ran.
+DAS (Digital Advanced Systems) wanted it to run DN8x type software so
+that it would be a built-in network controller. Management wanted it
+to run vanilla RSX-11 software so that they wouldn't have to spend any
+money writing new software. Management won. SInce nobody wanted to put
+much money into the beast, there wasn't much memory available. The
+DTE-20 was viewed as a "real time" device, so RSX11D seemed like a
+good starting point. So hundreds of thousands of dollars were spent
+trying to shoehorn RSX11D into working with the DTE and with the
+dual-ported disk drives, and more hundreds of thousands of dollars
+were spent trying to write diagnostics that wouldn't crash RSX11D. On
+top of all this, the -10 group was undergoing the birthing of "clean"
+code, so that there were coding standards that people were supposed to
+follow, but the -11 group had different standards. Finally, the -11
+system programmer types kept changing the system calls (each for good
+reasons and each time to make them better) so that the documentation
+never matched the actual RSX20F system being used, and old code broke
+all the time.
+
+In the middle of this, we were trying to write the PARSER, which got
+pretty short shrift. LCG FS (who later came to hate it) had VERY
+definite ideas about how they wanted it done (among other things they
+wanted it to look more like TOPS-20).
+
+We had this idea in the back of our minds that eventually the whole
+blasted thing would be replaced by a network front end anyway, which
+of course never happened. So if there was a pie in the sky, that would
+have been it. I still think the DN8x software would have worked
+better.
+
+
+
+Article 4137 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!newshub.northeast.verio.net!newsfeed.xcom.net!news.ultranet.com!d14
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: Fri, 02 Oct 98 13:04:03 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 130
+Message-ID: <6v2n7j$9at$9@strato.ultra.net>
+References: <Pine.LNX.3.96.980928112124.10870D-100000@bony.umtec.com> <qhu31sc8nn.fsf@ruckus.brouhaha.com> <3613e9a8.18494117@news.clark.net> <6uvli1$o2j$1@strato.ultra.net> <3615172c.19558816@news.clark.net>
+NNTP-Posting-Host: d14.dial-16.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 2 Oct 1998 14:16:19 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: news3.best.com alt.sys.pdp10:4137
+
+In article <3615172c.19558816@news.clark.net>,
+   gagner@clark.net (Philip Gagner) wrote:
+>jmfbahciv@aol.com wrote:
+>
+><snip>
+>>>wanted, so long as the thing could be booted, they really didn't care
+>>>what the console command langauge looked like. This, in my view at the
+>>>time and in my view now, was an unfortunate mistake.
+>>>
+><snip>
+>>>which ran on the -10, and then loaded onto a floppy or DECTAPE which
+>>>booted the RSX20F system and the PARSER was in the joblist when it
+>>>booted. The typical RSX-11D command parser simply wouldn't run on
+>>>RSX20-F, as far as I know.
+>>
+>>And wasn't there some funny stuff that had to be done since the -11
+>>side of the file system wasn't 16-bit?
+
+>Oh yes. I tried to repress the memory of this... it was an awful hack.
+
+Sorry :-) but sometimes children need to know the whole truth :-).
+
+>Well, it was sort of 16-bit, that is, RSX20F could read files stored
+>on the PDP-10 side, although it never worked well, through a routine
+>which mapped headers and such, mediated by the DTE-20. 18 bits were
+>tranmitted, and the 2 high order bits (as I recall) were discarded.
+>But the basic file system used for floppies (8") and DECTapes was
+>RSX-11 format, so it was sort of 16 bit too. Data intended for the -10
+>were packed as PDP-10 halfwords, so you lost even more space, but this
+>never mattered. And there was a special format for microcode loads,
+>but I don't think we ever finished implementing this. At least it
+>wasn't done when I left the project.
+
+Well, let's talk about the data that had to be exchanged.  At a
+system startup, the date and time had to be given to the -10.
+The file spec had to be transferred.  The TTY had to look like
+a -10 terminal.  I still don't know how you kept it all separate.
+And the -10 had to keep telling the -11 that it was still running
+(remember all those KAFs?).
+
+>>
+>>One of the projects that I had on my to-do list was to mechanize
+>>the build procedures for RSX20-F.  That never got done.  When the
+>>last developer left DEC, all the build information was lost.  When
+>>I pointed this out (I wanted Mike to train me to do a build before
+>>he left) to the management, the thinking was that we could always
+>>get Roland to show us just like he did when Mike was hired.
+>
+>Build procedure?? I never saw anyting like that, fer sure. ...
+
+Yea, I know.  There never was one [wry emoticon here].
+
+> ... Stuff was
+>complied using MACY11 and written to DECtape, and then loaded and then
+>dumped onto floppies (for floppy based machines). Nothing automated
+>about it. Since MACY11 (or MACDLX sometimes) didn't know enough to
+>write tape or floppy media, I'd think you'd need to machanize it on an
+>RSX-11D system. Never occurred to us to try...
+
+That mechanization was one of my rules of shipping software.  The
+build of -20F had to be done on that PDP11/70.  Source control
+was a figment of the current developer's imagination with no pointers 
+to the latest edit.  Developers were terribly difficult critters
+when it came to source control.  That's why we had such elaborate
+procedures for the TOPS-10 monitor edits, build, and ships.  
+
+See, if we could build a piece of software from the ground up,
+then we were guaranteed that the field image sources were still 
+around.   Losing sources was a very, very real danger.  We had
+customers whose major gazillion dollar applications broke because
+of our software updates and couldn't fix anything because the 
+sources were just gone; the software worked so well bug fixes
+were non-existant.  We had a lot of those lonely pieces of
+software.  And -20F was one of the biggest.
+
+Oh, I could tell stories about these critters and their quirks :-).
+
+>>
+>>Why is this guy even thinking of trying to simulate the -20F
+>>side of the KL?  It was a pain in the ass concept (sorry, Phil,
+>>I'm talking with a TOPS-10 monitor developement hat now :-))
+>>and one of the things the guys would have dearly loved to 
+>>trade for lights.
+>>
+>Oh, no need for apologies. We thought it was an awful hack at the
+>time, and it proved to be so. Purity of concept certainly got short
+>shrift. We actually put the lights in, you know. There were RSX20F
+>commands which would display "lights" on the terminal. I was a big fan
+>of the KA10 lights, which told you everything you ever wanted to know,
+>so we put them in in the hope that someday someone would realize that
+>a display terminal would make a better console than the LA30 (hard
+>copy dot matrix) printers that FS and marketing wanted. You could even
+>make a repeat macro that would update the "lights" as the machine ran.
+>The problem here was that the DTE-20 would suck up interrupts at a
+>ferocious rate when you did this, so the whole machine would run a
+>little slower. But we figured that someday someone would want the
+>feature.
+
+I don't think I ever knew about the light simulator.  It certainly
+was true that a major hassle happened because TW insisted that 
+the front end terminal be attached to a VT06 when he was debugging.
+And when TW threatened strike, people provided the resources he
+needed.
+
+>
+>I can't think of ANY reason to simulate the horrible RSX20F interface,
+>except maybe an exercise in masochism that exceeds all normal bounds
+>and shouldn't be discussed in polite company. Certainly a front-end
+>console "simulator" would be necessary, but given the limited number
+>of things the DTE-20 could do from the -10 side, it would be better to
+>have a clean interface and ignore the rest. If you're building a
+>simulator, boot the sucker from simulated ROM and trap all DTE-20
+>calls with a return of success and throw them away. You won't lose
+>anything worth keeping.
+
+Well, now I guess I'm confused.  I thought the point of an emulator
+was to be able to use this hardware that I have on my desk and have
+it run TOPS-10 programs.  That way the executables
+that we shipped on tape could be run asis on this Intel system.
+
+>
+>RSX20F -- Not DEC's finest hour...
+
+Well, cheer up.  The MCB was worse :-).
+
+/BAH
+
+
+
+Sigh! - Subtract a hundred and four for e-mail.
+
+
+Article 4146 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!nntprelay.mathworks.com!news.shore.net!news.ultranet.com!d7
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: Sat, 03 Oct 98 10:54:33 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 101
+Message-ID: <6v5413$fbe$1@strato.ultra.net>
+References: <Pine.LNX.3.96.980928112124.10870D-100000@bony.umtec.com> <qhu31sc8nn.fsf@ruckus.brouhaha.com> <3613e9a8.18494117@news.clark.net> <6uvli1$o2j$1@strato.ultra.net> <Pine.LNX.3.96.981001074227.24061C-100000@bony.umtec.com> <6v2lkl$9at$8@strato.ultra.net> <3614e458.72091033@news.clark.net>
+NNTP-Posting-Host: d7.dial-17.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 3 Oct 1998 12:06:59 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: news3.best.com alt.sys.pdp10:4146
+
+In article <3614e458.72091033@news.clark.net>,
+   gagner@clark.net (Philip Gagner) wrote:
+>jmfbahciv@aol.com wrote:
+>
+><snip>
+>>
+>>Maybe somebody can talk about the pie in the sky that -20F was
+>>supposed to make.  The only thing worse, IMO, that we produced
+>>was the MCB.
+>>
+>>/BAH
+>
+>I don't think that RSX20F was ever supposed to be pie in the sky. The
+>KL was a microcode machine, so that running diagnostics was going to
+>be a problem. 
+
+Ah, I forgot about that. :-)  I think the "pie in the sky" thing
+came from a conversation trying to convince TW that the KL was
+a good thing.  He didn't debug on the thing for a long time.  If
+he could, he always worked on the KI or the KA.
+
+>If the microcode hardware was flaky, then the machine
+>would be a useless piece of iron (i.e. diagnostics wouldn't run). So
+>the logical decision was to have a front end which had feelers into
+>the hardware (via the DTE-20) and could load data, single clock the
+>hardware, and thus do diagnostics. It was actually a very logical way
+>of doing things. You had a simple known reliable machine (PDP-11/40
+>initially) which could run the complex diagnostics required to get the
+>complex hardware to a state where it could run its own diagnostics.
+>
+>Once you've decided to do this lights and switches don't seem that
+>important, so the cost (which including maintenance is extremely high)
+>can't be justified.
+
+Nobody asked TW or JMF.  I think TW was the most traumatized by
+the lights.
+
+>
+>Nobody in the KL group really cared that much about what the FE ran.
+>DAS (Digital Advanced Systems) wanted it to run DN8x type software so
+>that it would be a built-in network controller. Management wanted it
+>to run vanilla RSX-11 software so that they wouldn't have to spend any
+>money writing new software. Management won. ....
+
+What management?  I knew there were nuts by then but I never
+did have a good feel for the hardware side of the business.
+My impression (whenever I dealt with them) is that they were
+still in the Dark Ages when hardware didn't need an OS.
+I suppose I'm going russle a few hares here :-).
+
+
+> ... SInce nobody wanted to put
+>much money into the beast, there wasn't much memory available. The
+>DTE-20 was viewed as a "real time" device, so RSX11D seemed like a
+>good starting point. So hundreds of thousands of dollars were spent
+>trying to shoehorn RSX11D into working with the DTE and with the
+>dual-ported disk drives, and more hundreds of thousands of dollars
+>were spent trying to write diagnostics that wouldn't crash RSX11D. On
+>top of all this, the -10 group was undergoing the birthing of "clean"
+>code, so that there were coding standards that people were supposed to
+>follow, but the -11 group had different standards. Finally, the -11
+>system programmer types kept changing the system calls (each for good
+>reasons and each time to make them better) so that the documentation
+>never matched the actual RSX20F system being used, and old code broke
+>all the time.
+
+Shit!  How the hell did you ever get any work done with all that
+going on?  No wonder it was a mess.  Our technique was to train
+our supervisor to keep that crap away from us.  What did you do,
+Phil?
+
+
+>
+>In the middle of this, we were trying to write the PARSER, which got
+>pretty short shrift. LCG FS (who later came to hate it) had VERY
+>definite ideas about how they wanted it done (among other things they
+>wanted it to look more like TOPS-20).
+
+Well, we could talk about this aspect if you wish.  I never did
+quite figure out all the dynamics in this area.  I was just starting
+to get at it (when I got sick) by tackling the KLAD pack.  I started
+to get the awful sense that that whole aspect of our business was
+run by the techs checking out the machines who hadn't a clue about
+how to use the system as a user.
+
+>
+>We had this idea in the back of our minds that eventually the whole
+>blasted thing would be replaced by a network front end anyway, which
+>of course never happened. So if there was a pie in the sky, that would
+>have been it. I still think the DN8x software would have worked
+>better.
+
+Amen.  And if it didn't work, we at least had people who could
+fix it.  This was an aspect of shipping the software on our
+monitor tape.  We always had to hire somebody special to any -20F work
+and that was very nearly impossible to do even in the late 70s.
+
+/BAH
+
+
+Sigh! - Subtract a hundred and four for e-mail.
+
+
+Article 4148 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!news.maxwell.syr.edu!newsfeed.cwix.com!207.241.0.194!news.wwa.com!not-for-mail
+From: jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: 3 Oct 1998 15:04:24 GMT
+Organization: Everett Associates
+Lines: 20
+Message-ID: <6v5edo$lrf$1@hirame.wwa.com>
+References: <Pine.LNX.3.96.980928112124.10870D-100000@bony.umtec.com> <3613e9a8.18494117@news.clark.net> <6uvli1$o2j$1@strato.ultra.net> <3615172c.19558816@news.clark.net> <6v33qo$mr1$1@shell3.ba.best.com>
+NNTP-Posting-Host: poolf1-029.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.8 (x86 32bit)
+Xref: news3.best.com alt.sys.pdp10:4148
+
+In article <6v33qo$mr1$1@shell3.ba.best.com>, inwap@best.com says...
+>
+>Just about every peripheral that was not a disk, tape or network was on the
+>console front-end.  Lineprinter.  Card Reader and Card Punch.  Hardwired
+>TTYs.  (Excluding, for the moment, devices connected to a KA-compatible
+>I/O bus, such as the BA10 lineprinter and Calcomp plotter interface.)
+
+Okay, maybe I'm just losing my mind, but I was responsible for ALL of the 
+TOPS-10 "unit record" device service routines during the period in which the 
+KL was being introduced. I don't recall ever having to rewrite/modify CDPSRX, 
+CDRSRX, LPTSER, etc., because of any KL specific changes to their 
+interfaces/controllers. Seems to me they responded to the same CONOs/CONIs and 
+DATAOs/DATAIs they did on the KA and KI. Did TOPS-20 do things differently?
+
+-- 
+jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) http://www.wwa.com/~jeverett
+             ^^^^^^^^^^^^^^^
+Things have gotten so bad I feel the need to disguise my email address.
+And I don't like this explanation because I just hate long signatures.
+
+
+
+Article 4151 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Smith and O'Halloran)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: 3 Oct 1998 14:52:19 -0700
+Organization: Chez INWAP (people, computers, cats)
+Message-ID: <6v66aj$82e$1@shell3.ba.best.com>
+References: <Pine.LNX.3.96.980928112124.10870D-100000@bony.umtec.com> <3615172c.19558816@news.clark.net> <6v33qo$mr1$1@shell3.ba.best.com> <6v5edo$lrf$1@hirame.wwa.com>
+Lines: 39
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: 907451545 26099 inwap 206.184.139.134
+Xref: news3.best.com alt.sys.pdp10:4151
+
+In article <6v5edo$lrf$1@hirame.wwa.com>,
+John Everett <jeverett@wwa.DEFEAT.UCE.BOTS.com> wrote:
+>In article <6v33qo$mr1$1@shell3.ba.best.com>, inwap@best.com says...
+>>
+>>Just about every peripheral that was not a disk, tape or network was on the
+>>console front-end.  Lineprinter.  Card Reader and Card Punch.  Hardwired
+>>TTYs.  (Excluding, for the moment, devices connected to a KA-compatible
+>>I/O bus, such as the BA10 lineprinter and Calcomp plotter interface.)
+>
+>Okay, maybe I'm just losing my mind, but I was responsible for ALL of the 
+>TOPS-10 "unit record" device service routines during the period in which the 
+>KL was being introduced. I don't recall ever having to rewrite/modify CDPSRX, 
+>CDRSRX, LPTSER, etc., because of any KL specific changes to their 
+>interfaces/controllers. Seems to me they responded to the same CONOs/CONIs and 
+>DATAOs/DATAIs they did on the KA and KI. Did TOPS-20 do things differently?
+
+Remember, the KL was introduced in two waves.
+
+The KL-1080 was the same size and shape as a KI and had microcode loaded
+from DECtapes via KLDCP.  As I understand it, most of those first boxes
+came with the I/O-bus interface, so that the BA10 and other KA/KI peripherals
+could be attached.
+
+The second wave was the KL-1091.  In particular, the ones with MOS memory
+instead of core memory.  They had microcode loaded from floppy via RSX20F.
+Not as many of them had the I/O-bus interface, so they relied on the
+Console Front-End for unit record devices.  By the time we were running
+TOPS-10 7.03 started using extended addressing, the only visible difference
+between RSX20F for TOPS-10 and RSX20F for TOPS-20 was one byte in the
+"keep alive has failed" message.  When the -10 stopped, the -11 would send
+out on all the hardwired terminals
+   %%DECSYSTEM-10 NOT RUNNING
+or
+   %%DECSYSTEM-20 NOT RUNNING
+
+	-Joe
+-- 
+INWAP.COM is Joe and Sally Smith, John and Chris O'Halloran and our cats
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 4154 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: news3.best.com!news1.best.com!news.maxwell.syr.edu!btnet-peer!btnet!insnet.net!uunet!uunet!in2.uu.net!world!mbg
+From: mbg@world.std.com (Megan)
+Subject: Re: KL Console Commands
+Message-ID: <F0A2tI.I34@world.std.com>
+Date: Sun, 4 Oct 1998 01:00:54 GMT
+References: <Pine.LNX.3.96.980928112124.10870D-100000@bony.umtec.com> <3615172c.19558816@news.clark.net> <6v2n7j$9at$9@strato.ultra.net> <F08Eoo.377@world.std.com> <6v6c5m$1oq@i4got.pechter.org>
+Organization: The World Public Access UNIX, Brookline, MA
+Lines: 34
+Xref: news3.best.com alt.sys.pdp10:4154
+
+pechter@news.monmouth.com (Bill Pechter) writes:
+
+>The 8600/8650  did the same thing with the T11 and RL02
+>based front end on the Venus.  (Designed by the LCG folks, of course)
+>Anyway... I used to run adventure on the T11 under rt11 when
+>I worked on them for fun.
+
+I remember some late nights over in the Marlboro lab, working on
+some of the console code for the 8600... this was early on in
+the use of RT for the console, so we were still playing with
+using the XL handler... I was working on getting a venus-version
+of the XL driver working... I did, and sent mail back to my
+then project leader, using a modem connected to the serial
+port.
+
+Turns out that code was not used, but the conditionals live on
+in the XL driver code (unless they've been removed).
+
+There was a poster somewhere which read
+
+	"RT-11 turns venus on."
+
+					Megan Gentry
+					Former RT-11 Developer
+
++--------------------------------+-------------------------------------+
+| Megan Gentry, EMT/B, PP-ASEL   | Internet (work): gentry!zk3.dec.com |
+| Unix Support Engineering Group |          (home):  mbg!world.std.com |
+| Compaq Computer Corporation    | addresses need '@' in place of '!'  |
+| 110 Spitbrook Rd. ZK03-2/T43   | URL:     http://world.std.com/~mbg/ | 
+| Nashua, NH 03062               | "pdp-11 programmer - some assembler |
+| (603) 884 1055                 |  required." - mbg                   |
++--------------------------------+-------------------------------------+
+
+
+
+Article 4158 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!nntprelay.mathworks.com!portc04.blue.aol.com!audrey01.news.aol.com!not-for-mail
+From: madbeing@aol.com (MadBeing)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Lines: 17
+NNTP-Posting-Host: ladder01.news.aol.com
+X-Admin: news@aol.com
+Date: 4 Oct 1998 12:08:26 GMT
+Organization: AOL http://www.aol.com
+References: <6v7mi0$evr$1@strato.ultra.net>
+Message-ID: <19981004080826.18858.00003043@ng30.aol.com>
+Xref: news3.best.com alt.sys.pdp10:4158
+
+
+>I don't think you are losing your mind, John.  I also don't think that 
+>TOPS-20 had card readers, card punches, and I don't ever remember
+>a plotter.  Hell, the plotter on the -10 disappeared early on.
+>Joe is confused.
+
+TOPS20 definitely had card readers directly on the primary front end. At least
+SN's 2313 and 2447 did.  In fact, I found one of the early quasar glxlib bugs
+(the first rev of v4.0 tops20) in the card reader driver.
+
+Dan
+
+Dan Smith
+
+"Old Programmers never die,
+  They just jrst to a new address"
+
+
+
+Article 4167 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!feed1.news.rcn.net!rcn!europa.clark.net!206.55.3.15!news.clark.net!not-for-mail
+From: gagner@clark.net (Philip Gagner)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: Tue, 06 Oct 1998 03:54:47 GMT
+Organization: TWLG
+Lines: 35
+Message-ID: <361b9376.10820256@news.clark.net>
+References: <Pine.LNX.3.96.980928112124.10870D-100000@bony.umtec.com> <3613e9a8.18494117@news.clark.net> <6uvli1$o2j$1@strato.ultra.net> <3615172c.19558816@news.clark.net> <6v33qo$mr1$1@shell3.ba.best.com>
+Reply-To: gagner@clark.net
+NNTP-Posting-Host: gagner-ppp.clark.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Newsreader: Forte Agent 1.5/32.451
+Xref: news3.best.com alt.sys.pdp10:4167
+
+inwap@best.com (Smith and O'Halloran) wrote:
+
+>In article <3615172c.19558816@news.clark.net>,
+>Philip Gagner <gagner@clark.net> wrote:
+>>and shouldn't be discussed in polite company. Certainly a front-end
+>>console "simulator" would be necessary, but given the limited number
+>>of things the DTE-20 could do from the -10 side, it would be better to
+>>have a clean interface and ignore the rest. If you're building a
+>>simulator, boot the sucker from simulated ROM and trap all DTE-20
+>>calls with a return of success and throw them away. You won't lose
+>>anything worth keeping.
+>
+>Just about every peripheral that was not a disk, tape or network was on the
+>console front-end.  Lineprinter.  Card Reader and Card Punch.  Hardwired
+>TTYs.  (Excluding, for the moment, devices connected to a KA-compatible
+>I/O bus, such as the BA10 lineprinter and Calcomp plotter interface.)
+>
+Actually, in the early implementation, only one TTY was allowed. We
+wanted to put in support for more, but marketing didn't want us to
+because it might keep people from buying terminal controllers. The
+support for them was left in RSX, though, and eventually I think there
+were versions of it that supported multiple TTY's.
+
+Let's see now, you want to support these various devices through a
+front end, but you STILL don't need (1) RSX20F or (2) the PARSER in
+particular. If you want hardware completeness, you could check and
+whenever the -10 side makes a DTE-20 call, figure out what
+pseudo-device it is trying to access and just redirect the function.
+There weren't that many DTE functions, actually.
+
+Or declare that FE's on your simulated machine have to be "naked" and
+LPTs, card readers, etc. just get supported some other way (like the
+BA10, which actually would be far simpler to emulate).
+>	-Joe
+
+
+
+Article 4197 of alt.sys.pdp10:
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+References: <Pine.LNX.3.96.980928112124.10870D-100000@bony.umtec.com> <qhu31sc8nn.fsf@ruckus.brouhaha.com> <3613e9a8.18494117@news.clark.net> <6uvli1$o2j$1@strato.ultra.net> <3615172c.19558816@news.clark.net> <36149B71.237C@s054.aone.net.au> <361b6174.71109341@news.clark.net>
+X-Disclaimer: Everything I write is false.
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 08 Oct 1998 01:27:54 -0700
+Message-ID: <qhhfxf7911.fsf@ruckus.brouhaha.com>
+Lines: 14
+X-Newsreader: Gnus v5.5/Emacs 20.2
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 8 Oct 1998 01:32:49 -0800, ruckus.brouhaha.com
+Path: news3.best.com!news1.best.com!nntprelay.mathworks.com!news.sgi.com!news.spies.com!ruckus.brouhaha.com
+Xref: news3.best.com alt.sys.pdp10:4197
+
+gagner@clark.net (Philip Gagner) writes:
+> There is, actually. The -10 could read and write -11 memory, and the
+> -11 could read and write -10 memory pretty directly.
+
+The DTE20 hardware only provided the -11 with the capability of reading
+and writing -10 memory, but not vice versa.
+
+Obviously suitable front end software on the -11 could provide this
+functionality to the -10 if it was needed.
+
+Reference: chapter 1 of the DTE20 Unit Description, 3rd edition, available at
+	http://www.36bit.org/
+
+Eric
+
+
+Article 4205 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!su-news-hub1.bbnplanet.com!cpk-news-hub1.bbnplanet.com!news.bbnplanet.com!newsfeed.cwix.com!139.130.250.2!intgwpad.nntp.telstra.net!nsw.nntp.telstra.net!news.syd.connect.com.au!news.mel.connect.com.au!news.mel.aone.net.au!newsfeed-in.aone.net.au!not-for-mail
+From: "Mark & Suzanne (gcs might work)" <SPAMOFFPLS@s054.aone.net.au>
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: Thu, 08 Oct 1998 14:08:21 +1000
+Organization: Garetech Computer Solutions P/L
+Lines: 19
+Message-ID: <361C3AB5.41C6@s054.aone.net.au>
+References: <Pine.LNX.3.96.980928112124.10870D-100000@bony.umtec.com> <3613e9a8.18494117@news.clark.net> <6uvli1$o2j$1@strato.ultra.net> <3615172c.19558816@news.clark.net> <6v33qo$mr1$1@shell3.ba.best.com> <6v5edo$lrf$1@hirame.wwa.com> <361d6717.72552781@news.clark.net>
+NNTP-Posting-Host: d157-1.cpe.sydney.aone.net.au
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: news.mel.aone.net.au 907859956 24516 203.12.186.157 (8 Oct 1998 15:19:16 GMT)
+NNTP-Posting-Date: 8 Oct 1998 15:19:16 GMT
+X-Mailer: Mozilla 3.0Gold (X11; I; OSF1 V4.0 alpha)
+Xref: news3.best.com alt.sys.pdp10:4205
+
+Philip Gagner wrote:
+> 
+> but the answer is still no. That is, the FE-connected devices did not
+> (and logically could not) respond to CONO, CONI, DATAO, and DATAI.
+
+Thats my understanding each machine knows only about its interface to
+the DTE you need to be setting up control structures and telling
+your side of the DTE about them and so passing the data via the DTE to
+the 10 or 11 on the otherside its a PDP-10 IO instruction to the DTE
+that make its happen causing an interupt to the 11 (doorbell style).
+
+> What happened was that the pseudo-device trapped through the device
+> dispatch table into the front end driver (what was it called, FESER
+> doesn't sound right--DTESER?) and the front end driver pushed it onto
+
+DTESRV and various upper layers like TTYSRV CDRSRV LINEPR on the 10 side
+
+Cheers
+		Mark :)
+
+
+Article 4331 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!su-news-hub1.bbnplanet.com!news.gtei.net!cpk-news-hub1.bbnplanet.com!news.news.gtei.net!feed1.news.rcn.net!rcn!news.ultranet.com!d13
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: Sun, 25 Oct 98 11:59:03 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 77
+Message-ID: <70v4nt$dqb$1@strato.ultra.net>
+References: <qhu31sc8nn.fsf@ruckus.brouhaha.com> <3613e9a8.18494117@news.clark.net> <6uvli1$o2j$1@strato.ultra.net> <3615172c.19558816@news.clark.net> <36149B71.237C@s054.aone.net.au> <361b6174.71109341@news.clark.net> <6vfom2$326$1@ligarius.ultra.net> <361f769b.76525319@news.clark.net> <6vku3e$tba$1@ligarius.ultra.net> <361e29e6.61611468@news.clark.net> <707pq8$7al$4@strato.ultra.net> <3627e1cf.119660567@news.clark.net> <70ab55$qr9$3@ligarius.ultra.net> <362c4959.4453162@news.clark.net>
+NNTP-Posting-Host: d13.dial-22.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 25 Oct 1998 12:14:53 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: news3.best.com alt.sys.pdp10:4331
+
+In article <362c4959.4453162@news.clark.net>,
+   gagner@clark.net (Philip Gagner) wrote:
+>jmfbahciv@aol.com wrote:
+
+Sorry for the delay; my brain pooped out this week.
+
+>
+><snip>
+>>>
+>>>Patches were made into the job's address space, like they should be.
+>>>There wasn't any screwing around necessary, because the symbol table
+>>>didn't really live anywhere -- it was read by DDT and used to convert
+>>>symbolic addresses into numerical ones (the way DDT always works, even
+>>>when loaded in the job's address space). DDT knew that memory
+>>>references were ALWAYS to the job and never to DDT's address space
+>>>(why should they be?). So it was all clean and easy.
+>>
+>>Where did it get the symbol table of the program that the job
+>>was running?
+>
+>From the symbol table that the linker stuck onto the job's relocatable
+>job image (generally on disk, but you could of course use magnetic
+>tape or even paper tape--if an absolute image, then the symbol table
+>was after the core image, otherwise it was pointed to after the
+>relocatable image of that part of the memory map. The loader was smart
+>enough to know that it (generally) didn't have to load the job's
+>symbol table. That way jobs could be smaller, too.
+
+When one did a bincom (binary FILCOM), did it compare the symbol
+table, too?
+
+<snip>
+
+>>To get back to another post that you made:  You mentioned that you
+>>built -20F with MACDLX or MACY11.  That implies that you built the
+>>thing on the -10.  Do you know when (or why) that changed and the
+>>thing had to be built on the 11/70?  Or was I getting hoodwinked?
+>>It's safe to say because I've already done the appropriate 
+>>swearing :-).
+>
+>Um, not quite. RSX20F was built using RSX-11M, but the various parts
+>were assembled and loaded and tested using MACDLX (later MACY11, which
+>had to be changed to work). I wrote a special program that would write
+>a MACDLX image onto the -11's file system so that we wouldn't have to
+>reload the front end every time we wanted to check out a change to one
+>of the front end jobs (like the parser). You'd just load the image
+>onto the -11's disk, kill the old job and invoke the new one. For a
+>release build, somebody else had to do the build (nobody in her right
+>mind would trust me near a real PDP-11, especially if there was a wire
+>wrap gun nearby--there were these simple ways they could be improved,
+>see? and it always bugged me that... well, never mind...).
+
+Chuckle.  Ah!  So the way to your working heart was to waft a
+wire wrap gun in front of you :-).  I must admit that a wire
+wrap gun was not in my bag of tricks.  It probably should have
+occurred to me that an intriguing piece of hardware could be
+used as an incentive :-).
+
+
+>
+>As to why, working with PDP-11s was a royal pain anyway, and there
+>weren't very many of them around LCG. I'd rather work at a real
+>computer with all the right editing, file copying, backup, and
+>debugging tools. Then you could make the front end -11 run the code to
+>test it. Assuming your code wouldn't crash the front end, you could
+>even do this while other users were using the -10. Heck, you could do
+>it anyway... it didn't really matter to the other developers if the
+>front end crashed. 
+>
+
+Sometimes it mattered.  Especially if the operator decided that 
+a dead -11 implied a dead -10.
+
+/BAH
+
+
+Subtract a hundred and four for e-mail.
+
+
+Article 4444 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Smith and O'Halloran)
+Newsgroups: alt.sys.pdp10
+Subject: Re: DECTapes
+Date: 18 Nov 1998 16:10:33 -0800
+Organization: Chez INWAP (people, computers, cats)
+Message-ID: <72vnlp$6d5$1@shell3.ba.best.com>
+References: <Pine.LNX.3.96.981117093547.11078A-100000@bony.umtec.com> <36519d40.0@news.wizvax.net> <72saau$9em@nnrp3.farm.idt.net>
+Lines: 26
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 911434239 12754 inwap@206.184.139.134
+Xref: news3.best.com alt.sys.pdp10:4444
+
+In article <72saau$9em@nnrp3.farm.idt.net>, Chris Ward <ccw@idt.net> wrote:
+>
+>John Wilson wrote in message <36519d40.0@news.wizvax.net>...
+>>In article <Pine.LNX.3.96.981117093547.11078A-100000@bony.umtec.com>,
+>>Daniel Seagraves  <root@bony.umtec.com> wrote:
+>>>Anyone got a manual for the KL10 DECTape controller?
+>>
+>>Was there one?
+>
+>There was a KL-10 with Dectapes when I was at Stevens Tech.
+
+The Colorado School of Mines went straight from a KA to KL-1091.
+It was a low-boy cabinet, the same size and shape as a KL-2060 but
+painted blue instead of orange.  It had the optional I/O-bus adapter,
+which plugged in to the peripherals left behind from the KA.
+Including the KA's TD-10 DECtape control unit and four drives.
+
+So, the answer to Daniel's question is: There is no such thing as a KL10
+DECtape controller.  There was a KA10 DECtape controller and a PDP11 DECtape
+controller.  The former was available as an I/O device for a KL running
+TOPS-10, the latter was the boot device for KLDCP and RSX20F on the KL-1080
+and KL-1090.
+	-Joe
+-- 
+INWAP.COM is Joe and Sally Smith, John and Chris O'Halloran and our cats
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+

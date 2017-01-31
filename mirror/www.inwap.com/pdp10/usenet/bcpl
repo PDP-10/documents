@@ -1,0 +1,79 @@
+Article: 21433 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!sjc-peer.news.verio.net!news.verio.net!newsfeed.berkeley.edu!ucberkeley!newstransit.mitre.org!news.tufts.edu!elk.ncren.net!news.umass.edu!news-out.cwix.com!newsfeed.cwix.com!newsfeed.nyc.globix.net!newsfeed.sjc.globix.net!cyclone-sf.pbi.net!216.218.192.242!news.he.net!news.louisville.edu!not-for-mail
+From: "Calvin Miracle" <cbmira01@athena.louisville.edu>
+Newsgroups: alt.sys.pdp10
+Subject: Re: BCPL
+Date: Mon, 15 Sep 2003 11:04:42 -0400
+Organization: University of Louisville
+Lines: 29
+Message-ID: <bk4keg$p0u$1@news.louisville.edu>
+References: <3f60bac1$0$12650$afc38c87@news.easynet.co.uk>
+NNTP-Posting-Host: a55369.library.louisville.edu
+X-Trace: news.louisville.edu 1063638288 25630 136.165.113.172 (15 Sep 2003 15:04:48 GMT)
+X-Complaints-To: abuse@news.louisville.edu
+NNTP-Posting-Date: 15 Sep 2003 15:04:48 GMT
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Newsreader: Microsoft Outlook Express 6.00.2800.1158
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1165
+Xref: dfw-artgen alt.sys.pdp10:21433
+
+
+Hi Michael...
+
+Check out Ken Yap's links at
+http://www.geocities.com/SiliconValley/lab/9247/
+I think the kits that Ken has are very early and oriented toward MVS.
+
+Also, look at Martin Richards' links at http://www.cl.cam.ac.uk/users/mr/
+He has a much-updated BCPL compiler, ready-to-run under Linux..
+
+I've not seen a BCPL prepared just for TOPS-10, but I'll bet someone
+has done the bootstrap at some time or another..
+
+-- Calvin Miracle
+   University of Louisville
+
+"Michael Lawrie" <lawrie@riffraff.plig.net> wrote in message
+news:3f60bac1$0$12650$afc38c87@news.easynet.co.uk...
+> Heeeelp!
+>
+> Does anybody have a distribution tape for BCPL - Is it even released?
+> A friend with the TWONKY file system claims there to be a BCPL.EXE but
+> none of the libraries, so I can't nick it from him, which is a shame.
+>
+> Any ideas?
+>
+> Michael (aaaat) senika.com
+
+
+
+
+Article: 21440 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!news.airnews.net!cabal12.airnews.net!not-for-mail
+From: huw.davies@kerberos.davies.net.au
+Newsgroups: alt.sys.pdp10
+Subject: Re: BCPL
+Date: 19 Sep 2003 08:00:53 GMT
+Organization: Airnews.net! at Internet America
+Lines: 9
+Message-ID: <bked3l$d1@library2.airnews.net>
+References: <3f60bac1$0$12650$afc38c87@news.easynet.co.uk> <bk4keg$p0u$1@news.louisville.edu>
+Abuse-Reports-To: abuse at airmail.net to report improper postings
+NNTP-Proxy-Relay: library2.airnews.net
+NNTP-Posting-Time: Fri, 19 Sep 2003 03:00:54 -0500 (CDT)
+NNTP-Posting-Host: !Weu?1k-W&<Rmcc@W`H&E-<*0 (Encoded at Airnews!)
+User-Agent: tin/1.6.0-20030714 ("Vatersay") (UNIX) (Darwin/6.6 (Power Macintosh))
+Xref: dfw-artgen alt.sys.pdp10:21440
+
+Calvin Miracle <cbmira01@athena.louisville.edu> wrote:
+
+> I've not seen a BCPL prepared just for TOPS-10, but I'll bet someone
+> has done the bootstrap at some time or another..
+
+There was certainly BCPL for TOPS-10. I did some "interesting" systems
+programming in at one stage before moving on to BLISS-10 as my
+prefered language. (I'm already anticipating the comments about
+my lack of taste :-)
+
+

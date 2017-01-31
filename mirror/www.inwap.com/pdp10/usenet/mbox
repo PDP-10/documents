@@ -1,0 +1,41 @@
+From root  Sat Jan 10 14:47:00 1998
+Received: (from root@localhost)
+	by jomis.Tymnet.COM (8.8.5/8.8.5) id OAA11568
+	for inwap; Sat, 10 Jan 1998 14:47:00 -0800 (PST)
+Received: from proxy4.ba.best.com (root@proxy4.ba.best.com [206.184.139.15]) by shell3.ba.best.com (8.8.8/8.8.BEST) with ESMTP id OAA08008 for <inwap@shell3.ba.best.com>; Sat, 10 Jan 1998 14:35:37 -0800 (PST)
+Received: from geoworks.com (dynamic63.pm07.sf3d.best.com [209.24.235.191]) by proxy4.ba.best.com (8.8.8/8.8.BEST) with ESMTP id OAA21818 for <inwap@best.com>; Sat, 10 Jan 1998 14:33:38 -0800 (PST)
+Message-ID: <34B7F5B4.CEC07@geoworks.com>
+Date: Sat, 10 Jan 1998 14:27:00 -0800
+From: Matt Armstrong <mattdav+matt@geoworks.com>
+X-Mailer: Mozilla 4.03 [en] (Win95; I)
+MIME-Version: 1.0
+To: "Smith and O'Halloran" <inwap@best.com>
+Subject: Re: How to make my site "index bot friendly"
+References: <34B74DD9.6874D630@geoworks.com> <697qns$btu$1@shell3.ba.best.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-UIDL: aad7277b87fcd8f588c254a1c7e49ea8
+Status: RO
+
+Thanks for the tip!
+
+Did you develop the CGI for your cat picture page
+(http://www.inwap.com/inwap/cats/index.html), or is it something
+generally available?  It puts my cat page to shame.  :-)
+
+Smith and O'Halloran wrote:
+ 
+> In article <34B74DD9.6874D630@geoworks.com>,
+> Matt Armstrong  <mattdav+matt@geoworks.com> wrote:
+> >I suspect the bots aren't following the links
+> >because they do not contain text, but rather images.  e.g.
+> 
+> If you look at a lot of professional web sites, you will notice that
+> for every image link on the page, there is also a text link.  These
+> are often at the bottom of the page, with <FONT SIZE="-1">.
+> 
+> I recommend always having some clickable text for each clickable link.
+> http://www.inwap.com/inwap/index.html for example.
+>         -Joe
+
+

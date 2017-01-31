@@ -1,0 +1,46 @@
+Article: 110741 of alt.folklore.computers
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!c03.atl99!chi1.webusenet.com!news.webusenet.com!pd2nf1so.cg.shawcable.net!residential.shaw.ca!news2.calgary.shaw.ca.POSTED!not-for-mail
+X-Trace-PostClient-IP: 68.147.131.211
+From: Brian Inglis <Brian.Inglis@SystematicSw.ab.ca>
+Newsgroups: alt.folklore.computers
+Subject: Re: the word "mutex"
+Organization: Systematic Software
+Reply-To: Brian.Inglis@SystematicSw.ab.ca
+Message-ID: <lj0j3vs1ihaa3fqkni4gae4uhshobdid72@4ax.com>
+References: <3e39656d$0$207$9a6e19ea@news.newshosting.com>
+X-Newsreader: Forte Agent 1.92/32.572
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 22
+Date: Thu, 30 Jan 2003 20:10:59 GMT
+NNTP-Posting-Host: 24.71.223.147
+X-Complaints-To: abuse@shaw.ca
+X-Trace: news2.calgary.shaw.ca 1043957459 24.71.223.147 (Thu, 30 Jan 2003 13:10:59 MST)
+NNTP-Posting-Date: Thu, 30 Jan 2003 13:10:59 MST
+Xref: dfw-artgen alt.folklore.computers:110741
+
+On 30 Jan 2003 17:48:29 GMT, Anatoly Vorobey
+<mellon+usenet@pobox.com> wrote:
+
+>Hello,
+>
+>I tried to find some information on who invented the word
+>"mutex" and when it was first used, but failed miserably. Any
+>information or advice on where to look for such information
+>will be appreciated.
+
+Dijkstra used it as a mutual exclusion semaphore variable name in
+his 1965 paper Cooperating Sequential Processes
+http://www.cs.utexas.edu/users/EWD/ewd01xx/EWD123.PDF
+
+Thanks. Take care, Brian Inglis 	Calgary, Alberta, Canada
+-- 
+Brian.Inglis@CSi.com 	(Brian dot Inglis at SystematicSw dot ab dot ca)
+    fake address		use address above to reply
+abuse@aol.com tosspam@aol.com abuse@att.com abuse@earthlink.com 
+abuse@hotmail.com abuse@mci.com abuse@msn.com abuse@sprint.com 
+abuse@yahoo.com abuse@cadvision.com abuse@shaw.ca abuse@telus.com 
+abuse@ibsystems.com uce@ftc.gov				spam traps
+
+

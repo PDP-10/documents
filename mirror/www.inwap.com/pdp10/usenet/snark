@@ -1,0 +1,103 @@
+Article 6428 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newsfeed.cwix.com!chnws03.mediaone.net!24.128.1.101!cyclone.ne.mediaone.net!24.128.44.7!typhoon.ne.mediaone.net.POSTED!not-for-mail
+Newsgroups: alt.sys.pdp10
+Subject: Re: VIROS? And Primary Protocol.
+References:  <Pine.LNX.4.10.10002212009220.6379-100000@bony.umtec.com>
+From: Ric Werme <werme@nospam.mediaone.net>
+X-Newsreader: NN version 6.5.0 CURRENT #119
+Lines: 22
+Message-ID: <qOHs4.2210$W92.46188@typhoon.ne.mediaone.net>
+Date: Wed, 23 Feb 2000 02:42:30 GMT
+NNTP-Posting-Host: 24.218.4.112
+X-Complaints-To: abuse@mediaone.net
+X-Trace: typhoon.ne.mediaone.net 951273750 24.218.4.112 (Tue, 22 Feb 2000 21:42:30 EST)
+NNTP-Posting-Date: Tue, 22 Feb 2000 21:42:30 EST
+Organization: Road Runner
+Xref: news3.best.com alt.sys.pdp10:6428
+
+Daniel Seagraves <root@bony.umtec.com> writes:
+
+
+>Question, the DTE20 docs mention an operating system called VIROS.
+>What was that?  Another '10 OS?  Did it get canned or something?
+>I misread it as VIRUS the first time around. :P
+
+TENEX had to be renamed.  (Well, I don't know if it _had_ to be, but
+marketing secrecy essentially ruled here.)  VIROS was the original
+codename, I think.  The trade press got wind of it and the name was
+changed to SNARK.  ("They sought it with thimbles, they sought it with care;
+They pursued it with forks and hope;", see
+http://home.earthlink.net/~lfdean/carroll/snark/fit8.html.)  When SNARK
+escaped, we switched to KRANS (Snark spelled backward), but cooler heads
+managed to get it back to SNARK.
+
+Near the announcement time, there was a wonderful article in the trade
+press that managed to merge snippets of both VAX and SNARK.  It
+have referred to a 36 bit PDP-11 or something equally silly.
+--
+Ric Werme                            | werme@nospam.mediaone.net
+http://people.ne.mediaone.net/werme  |       ^^^^^^^ delete
+
+
+Article 6431 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!207-172-245-34
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: VIROS? And Primary Protocol.
+Date: Wed, 23 Feb 00 10:31:35 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 44
+Message-ID: <890ibf$2db$1@bob.news.rcn.net>
+References: <Pine.LNX.4.10.10002212009220.6379-100000@bony.umtec.com> <qOHs4.2210$W92.46188@typhoon.ne.mediaone.net>
+X-Trace: xkPaq6iFSikHymiioZOzIKb4NdpeRFaIfnGmZZa9+mA=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 23 Feb 2000 12:03:59 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: news3.best.com alt.sys.pdp10:6431
+
+In article <qOHs4.2210$W92.46188@typhoon.ne.mediaone.net>,
+   Ric Werme <werme@nospam.mediaone.net> wrote:
+>Daniel Seagraves <root@bony.umtec.com> writes:
+>
+>
+>>Question, the DTE20 docs mention an operating system called VIROS.
+>>What was that?  Another '10 OS?  Did it get canned or something?
+>>I misread it as VIRUS the first time around. :P
+>
+>TENEX had to be renamed.  (Well, I don't know if it _had_ to be, but
+>marketing secrecy essentially ruled here.)
+
+Well, it did keep them busy and out of the hair of the
+people who were doing the real work :-)...but only for a while.
+
+>  VIROS was the original
+>codename, I think.  The trade press got wind of it and the name was
+>changed to SNARK.  ("They sought it with thimbles, they sought it with 
+care;
+>They pursued it with forks and hope;", see
+>http://home.earthlink.net/~lfdean/carroll/snark/fit8.html.)  When SNARK
+>escaped, we switched to KRANS (Snark spelled backward), but cooler heads
+>managed to get it back to SNARK.
+
+I remember watching all this and being amazed at all the 
+programmer time that was spent on choosing names so that 
+"they" wouldn't find out what 341 was doing.  The new name
+would always leak out to a customer within a week of a
+glorious renaming vote.  The only way to keep the new name
+a secret (mind you, the project wasn't a secret) would have
+been to duct tape marketing's mouths.
+
+
+>
+>Near the announcement time, there was a wonderful article in the trade
+>press that managed to merge snippets of both VAX and SNARK.  It
+>have referred to a 36 bit PDP-11 or something equally silly.
+
+Maybe that's where Palmer got the idea that the DECsystem-1070
+was a 32-bit machine.
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+

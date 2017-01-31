@@ -1,0 +1,84 @@
+Article 5493 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!nntp2.deja.com!nnrp1.deja.com!not-for-mail
+From: hsnewman@my-deja.com
+Newsgroups: alt.sys.pdp10
+Subject: MIMIC
+Date: Thu, 22 Jul 1999 13:25:00 GMT
+Organization: Deja.com - Share what you know. Learn what you don't.
+Lines: 26
+Message-ID: <7n7631$r64$1@nnrp1.deja.com>
+NNTP-Posting-Host: 38.241.169.11
+X-Article-Creation-Date: Thu Jul 22 13:25:00 1999 GMT
+X-Http-User-Agent: Mozilla/4.5 [en] (Win95; U)
+X-Http-Proxy: proxy (MSProxy/1.0) for 10.22.19.2, 1.0 x42.deja.com:80 (Squid/1.1.22) for client 38.241.169.11
+X-MyDeja-Info: XMYDJUIDhsnewman
+Xref: news3.best.com alt.sys.pdp10:5493
+
+Quoting from Maxwell M. Burnet and Robert M. Supnik:
+(in their paper on Preserving Computing's Past: Restoration and
+Simulation)
+
+An RTL simulator attempts to mimic the major hardware blocks of the
+target system and to implement its actual logic equations.  The goal is
+absolute fidelity, the test of which is that no piece of software
+running on the simulator should behave differently than it would on the
+target hardware. In practice, such perfect mimicry is difficult to
+achieve, as it requires a painstaking re-creation of timing detail (for
+example, the actual acceleration curve of a DECtape storage system) and
+access to implementation documentation that has often vanished.
+Nonetheless, some simulators have achieved results very close to this
+goal: MIMIC, a DECsystem-10 simulator written at Applied Data Research,
+was able to run CPU- and device-specific
+diagnostics.  (As testimony to the vulnerability of computing's past,
+all machine-readable copies of the MIMIC sources appear to have been
+lost.)
+
+So here is the question:
+Does anyone have a copy of MIMIC software?
+-HN
+
+
+Sent via Deja.com http://www.deja.com/
+Share what you know. Learn what you don't.
+
+
+Article 5495 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!newsfeed.cwix.com!216.17.128.8!newsfeed.frii.net!uunet!ffx.uu.net!world!mbg
+From: mbg@world.std.com (Megan)
+Subject: Re: MIMIC
+Message-ID: <FFAuEM.AI1@world.std.com>
+Date: Fri, 23 Jul 1999 01:20:45 GMT
+References: <7n7631$r64$1@nnrp1.deja.com>
+Organization: The World Public Access UNIX, Brookline, MA
+Lines: 26
+Xref: news3.best.com alt.sys.pdp10:5495
+
+hsnewman@my-deja.com writes:
+
+>diagnostics.  (As testimony to the vulnerability of computing's past,
+>all machine-readable copies of the MIMIC sources appear to have been
+>lost.)
+
+>So here is the question:
+>Does anyone have a copy of MIMIC software?
+
+I believe MIMIC was partially written by Bob Supnik many years ago...
+It so happens that although I don't have the software, I have a number
+of MIMIC manuals, which I copied and sent to him since he no longer
+had them either...
+
+					Megan Gentry
+					Former RT-11 Developer
+
++--------------------------------+-------------------------------------+
+| Megan Gentry, EMT/B, PP-ASEL   | Internet (work): gentry!zk3.dec.com |
+| Unix Support Engineering Group |          (home):  mbg!world.std.com |
+| Compaq Computer Corporation    | addresses need '@' in place of '!'  |
+| 110 Spitbrook Rd. ZK03-2/T43   | URL:     http://world.std.com/~mbg/ | 
+| Nashua, NH 03062               | "pdp-11 programmer - some assembler |
+| (603) 884 1055                 |  required." - mbg                   |
++--------------------------------+-------------------------------------+
+
+
+

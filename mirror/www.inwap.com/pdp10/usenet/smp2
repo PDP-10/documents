@@ -1,0 +1,581 @@
+Article 7038 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!216-164-247-252
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10,alt.folklore.computers
+Subject: TOPS-10 SMP [Was Re: The computer jargon file]
+Date: Thu, 16 Mar 00 12:44:52 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 359
+Message-ID: <8aqqjs$mlb$1@bob.news.rcn.net>
+References: <AtP94.8925$7S.6211@news20.bellglobal.com>
+X-Trace: 2xvevuo1FydcWc+yHTvk3l3Ez7YGEIUYAgA3ECQ+4ho=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 16 Mar 2000 14:20:44 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: news3.best.com alt.sys.pdp8:4424 alt.sys.pdp10:7038 alt.folklore.computers:153000
+
+
+In article <8ao8r4$qns$3@bob.news.rcn.net>, jmfbahciv@aol.com wrote:
+>In article <38c4b9be$0$209@nntp1.ba.best.com>,
+>   inwap@best.com (Joe Smith) wrote:
+
+<snip>
+
+>>>Joe Smith?  Did you put the story in your collection?
+>>
+>>It might be in one of these two files:
+>>  http://www.inwap.com/pdp10/usenet/history
+>>  http://www.inwap.com/pdp10/usenet/stories
+>>
+>>I'm afraid that the stuff in /pdp10/usenet/ is not very well organized.
+>
+>'s OK.  I managed to find my copy.  I've done an edit so
+>I'd appreciate if you would substitute the new edit for the
+>old edit.  Not much changed...a few typos and the 1.8 to a 0.8.
+>I still haven't figured out names of people and whatever else
+>I marked with a question mark.
+>
+>I'll post it using my follow-up icon but I'm going to change
+>the title.  I've reread it and it's not written very well.
+>I don't have the energy to do a rewrite.
+>
+>My apologies to those who are reading it again; I'm feeling
+>better about reposting it because there's a new old fart on
+>the block who just started reading the newsgroup.
+
+
+[begin story]
+[Version 0.4]
+;Edit 0.4  Fix typos and change to 1 + 1 = 0.8
+
+Once upon a time there was a company affectionately
+called DEC that attracted and hired productive people.  
+Instead of tying their efforts down with rules and 
+paperwork, this company encouraged its people to think 
+and create.   It allowed people to do real work.  We 
+made fine stuff and we made money selling that stuff.   
+
+Symmetric Multi-Processing (SMP) was a tightly coupled 
+system architecture that allowed any CPU to do any task,
+as opposed to a master/slave architecture.  TOPS-10
+SMP had few exceptions, such as setting the time at 
+system startup.  To indicate that this was a new 
+software design, the major monitor version number 
+that implemented this architecture was incremented 
+from 6.xx to 7.xx.  We called this monitor, the piece of
+the operating system that was always resident in core,  7.01.
+
+Our customers first saw SMP as V7.01.  The fact that 
+they ever saw it is a testament of the high regard 
+that DEC had for two men, James M. Flemming (JMF) 
+and Antony Wachs (TW); a respect that was eliminated 
+in a company known as Digital.  This is the story
+of what happened, based on personal observation
+and what was told to me by JMF and TW.
+
+
+Sometime, during the 6.03 development cycle and the advent
+of the KL10 CPU, Jim noticed that the speed of service to
+users was not very good.  After we shipped 6.03, Jim did
+his usual "stare at the SYSDPY" displays and created a
+performance data base (I think with the help of CDO) for
+further performance analysis.  SYSDPY was a program
+that displayed static and variable system data on a video
+terminal; Chuck O'Toole did some of the formatting of
+SYSDPY and also wrote a FORTRAN program that
+analyzed the data ??is this correct, Chuck??
+
+What he found absolutely floored him.  When one added a
+second KL10 CPU, one did not get twice the service; his
+analyses showed that one only got 0.8 the expected 
+performance.  He made slides and gave a talk about this
+for DECUS stating that 1 KL + 1 KL = 0.8 KLs.  Now, if 
+there was anything that TOPS-10 developers couldn't stand, 
+it was degradation of performance.  JMF and TW worked 
+the 3:00-12:00 shift so they could have the PDP-10
+systems stand alone, and probably started to talk
+about improvements during those wee small hours of 
+the A.M. when not much else was going on.  Since
+I was working on the accounting project in another
+part of the building, I couldn't listen in on all of
+their brainstorming sessions.
+
+I remember JMF had to work really hard to convince
+TW that bit-diddling the master/slave implementation
+wouldn't give the performance improvements that JMF
+wanted.  He firmly believed that adding another CPU
+to a configuration should give the system a 100%
+increase of work, not 80%.  Hence, SMP was born.
+
+There was a flurry of activity.  The tasks that had
+to be done in order to implement SMP were written on
+the backs of unpunched IBM computer cards.  Keeping
+lists and marking changes in listings was the best
+use of cards in DEC's opinion.
+
+One of those tasks was to make each device driver 
+reentrant so that the code could be run at any time
+on any CPU; the data and the code had to be separated.
+The two men split up the work by negotiation.   
+One of those negotiations was deciding who would do 
+FILSER, the file service routines.  As a result of those 
+negotiations, Jim was obliged to do a lot of device drivers 
+just so Tony would do FILSER.  In those days, nobody 
+touched the disk service routines without great trepidation, 
+lots of magic incantations and the blessings of TW who,
+at the time, was considered the father of TOPS-10 due to
+his longevity in the group. Jim didn't want any part of the 
+file system work.  I don't remember how they decided who 
+would do SCNSER, the terminal I/O module, since
+neither one wanted any part of that piece of TOPS-10.
+I suspect that there was probably a wish for RCC (Bob
+Clements) to come back but, instead, we managed to 
+hire somebody.  This was an accomplishment since the 
+part of the PDP-10 development budget alloted to TOPS-10 
+was very, very small.
+
+I remember that Jim would use his weekend work time to 
+make device drivers such as DTASER, the DECtape device
+driver, reentrant.  Jim always  went into work Saturday and 
+Sunday mornings but he only did "fun stuff" on the weekends,
+his play time. 
+
+Those development days were lively with laughter,
+fights, ups and downs.  A big up was the day that
+the guys got the monitor to print its dot after TW
+ran his macroes over the sources; we used this major
+code adjustment time as an opportunity to get rid
+of all the feature test switches that had become
+a pain in the ass.  There were just some things  
+that we didn't want customers to be able to turn
+on and there were some things that we didn't want
+customers to turn off.  These feature test switches 
+were an archaic legacy of DEC's support commitments. 
+
+A big down was the day that the guys finally figured
+out the reason for a particular set of crashes was a
+race condition caused by the KL not having a write-thru 
+cache.  That was a time when the guys thought that 
+they wouldn't be able to ever implement SMP; if a solution
+wasn't found, we had to can the project.  Jim finally 
+got the idea of the spin-lock mechanism to solve that
+problem.  JMF and TW were told many years later that
+this could have been patented but the lawyers decided
+it wasn't worth the trouble since the sources had
+been shipped.  Back in those days, if the sources
+were shipped, the thinking was that the contents
+was public domain.  That thinking changed but I
+don't remember why (if I ever knew).
+
+The development cycle had reached the stage when Jim
+and Tony were ready to talk about the product at Spring 
+DECUS, 1978. ??I think this is the correct year but would
+like some verification??
+We did all the preparations for the talk.  I was the one
+who did all the overheads and, believe me, getting JMF
+to keep those slides readable was an effort.  We attended
+the party-line talks; these were the pre-DECUS meetings 
+where the product managers told us what we could talk
+about, and, more importantly, what we couldn't talk
+about.  It one wanted to go to DECUS, one had to attend  
+one of these party-line sessions.  We were to find out
+later that these sessions were not complete.
+
+Jim and Tony were very excited about telling the TOPS-10 
+customers about SMP.  In those days, the corporate climate 
+with respect to TOPS-10 was not good.  We felt like we were 
+being attacked from all sides so the anticipation of 
+presenting a really good idea to our customers was 
+important to them.
+
+Jim and Tony did their talk about SMP.  Then we went
+to the product panel session.  Jim and Tony sat together
+towards the front of the room.  I sat three chairs down
+from our manager, Chuck Turley; the chairs between Chuck 
+and me were vacant.
+
+The product manager, Dave ?????, gave the presentation.  
+One of his slides said that 6.04 was the last TOPS-10 
+monitor.  I can't begin to describe the impact that 
+that slide had on the audience.   After some questions, 
+one customer asked, "Is 6.04 the last TOPS-10 monitor?" 
+Dave said, "Yes."  The same customer then asked, "Is SMP 
+in 6.04?"  Dave said, "No."
+
+I asked Chuck if he knew that this was coming.  He nodded
+his head miserably.  I said, "Do you understand what 
+that implies?"   Again, he nodded his head.  I said,
+"Did Jim and Tony know about this?"  He shook his head.
+I said, "Why didn't you tell them?"  He said, miserably,
+"We didn't know how to tell them."
+
+The meeting broke up shortly after that.  I sought out
+Jim and Tony and we retired to a nook in the bar.  I
+didn't know how to comfort them; I was in shock myself.
+I must digress here for just a minute to mention that
+most of the customers left us alone in our misery.  I
+would like to thank them for that small gesture of
+understanding.  We didn't want to hobnob just then.
+
+[As a warning to the reader, I would like to make one
+thing clear before I continue.  TW was the only person
+in the whole world throughout all time that was allowed
+to call me Babs (he pronounced it Bobs); Jim never even 
+tried.  So, just because it's now in print, does not mean 
+that it will be permissable to call me that name.]
+
+At one point, Tony asked, "What are we going to do, Babs?"
+He had such a lost look on his face that I told him the
+truth.  I said, "Fuck'em."  You see, I was pissed; I 
+was livid; I was beyond expressing my anger and disgust
+with the way these guys had been treated by our management.
+How dare they not tell Jim and Tony what was being planned.
+How dare they let Jim and Tony go to DECUS and talk about
+SMP, giving the customers the idea of a hint of deceit
+and the impression of ineptness.  How dare they allow 
+Jim and Tony to embarrass themselves because of their
+[the managers'] cowardice?  I was furious.  And, 
+besides that, they were cancelling TOPS-10 which was a 
+revenue backbone of Digital Equipment Corporation.  
+So, back to the bar scene.
+
+I said, "Fuck'em."  Tony said, "Yea.  Yea.  YEA.  FUCK'EM".
+Then Jim said, "You know, TW, I always wanted to
+have a calling card that said, 'Have EDDT, will travel'.  
+One of my favorite TV shows was _Have Gun, Will Travel_
+and I always thought that the slogan 'Have EDDT, will
+travel' was sexy."
+
+Tony got a thoughtful look on his face and the guys
+started talking about a business where their expertise
+in debugging and developing TOPS-10 could be exchanged 
+for money.  We started planning then and there.  SMP 
+would be delayed for a while but the game plan was to 
+get a customer to allow us to use their hardware so 
+that further development could continue; we had our 
+eye on the ORNL site for that.  Since Jim and Tony 
+both had families, a source of income was required.  
+We figured that plenty of customers would want them 
+to solve their problems.  We figured that we
+wouldn't have to advertise; word-of-mouth would be 
+sufficient.  My part would be to take the phone calls,
+handle the scheduling, and be responsible for the 
+financial end of the business.  If anything else came
+up, I would handle that, too.  Picking up all the loose
+ends was already one of my functions at DEC.  On top of 
+that, I would keep my job with DEC and garner lists and 
+information about customers with problems.  Then 
+Tony said he had to go home (his beer limit was two).
+
+I do not know what was said in the early morning
+sessions that JMF and TW must have had.  That Friday, 
+JMF and TW agreed that we all go away and think about
+the proposal and talk with the wives.  A meeting with
+the wives was set for that next Sunday night at TW's 
+house.  It was agreed that, if even one person voted
+nay to the proposal, we wouldn't go ahead with it.
+
+Meanwhile, I had to figure out how I could answer my
+phone at home (my personal phone number was going to 
+be the customer contact) while I was working in Marlboro.
+I started to think about the financial aspects of running
+a business.  Neither Jim nor Tony knew the rudiments of
+business management.  Jim didn't know how not to spend
+money, and Tony didn't know how to spend money.  I
+quailed at the thought of having to argue business
+sense to either of these men.  I began to have my
+doubts about the success of this business venture.
+
+Then I thought about the impact of my saying nay on
+these two men.  I didn't want to hurt them; a vote
+of nay would crush them.  It was conceivable that I
+would lose their friendship.  It was guaranteed that
+I would get undercut at work.  I took the coward's 
+way out and decided to vote last.  If one of the
+wives said nay, I wouldn't have to vote.
+
+We had the Meeting With the Wives that Sunday night; 
+Jim and Tony gave it this title. After a lot of 
+discussion, it was time to vote.  The wives voted yea.  
+Tony and Jim voted yea.  Then they all looked at me and 
+I wanted to melt through the virtual hole in the floor.  
+With a sinking feeling, I voted nay.  Jim and Tony were
+shocked.  I gave them my reasons saying that I didn't
+think that we knew how to run a business.  After
+a little more discussion, TW ended the meeting saying
+there wasn't anymore to be said.  I went home.  Tomorrow
+was Monday, another work day.
+
+That next morning, JMF and TW got together to talk
+again.  I don't know what they said; I didn't really
+want to ever know what they said.  They did decide
+to go to their manager and told me so.  I said, "If
+I were you, I'd go to the top and not waste a damn
+second on middle management."  TW suggested the next
+level up.  I suggested they start with Ken.  JMF
+and TW comprimised and got an appointment with the
+head guy of LCG (I don't remember his name and
+would appreciate help with this one).
+
+Those were two very nervous people.  They didn't tell 
+anybody about the meeting (their normal habit would have
+been to tell at least the supervisor).  They spent their
+time drinking coffee (which didn't help nerves), walking
+around, and fussing.  These men never fussed.  Finally,
+the late morning meeting happened.
+
+They sat down with this guy and told him about the 
+"6.04 is the last TOPS-10 monitor" announcement.  
+The guy said, "Yea, so?"  Jim and Tony said, "What
+do you plan for us to work on after 6.04?".  Jim
+and Tony proceeded to tell him that they were 
+seriously thinking about leaving DEC.  
+
+Now, apparently, that thought hadn't crossed management's
+mind when planning this outrageous announcement.  I 
+can't explain the idiocy; there are times when people 
+just don't make sense to me and this was one of those
+times.  The managers (those directly above Jim and Tony) 
+who did think this thought, didn't say anything.  The 
+politics of getting rid of TOPS-10 were very thick and 
+tricky then.  So silence was the easiest and safest 
+course to take at that time; I understand this thinking.
+
+After that meeting, as TW would say, the fit hit the
+shan.  It was not a goal to lose Jim and Tony.  At
+that time, there were still people who were aware
+that the products these guys produced made money.  I
+do know that somebody pointed out that most of the
+budget for TOPS-10 involved Jim and Tony.  If
+they were going to be funded anyway, they might as
+well do something like SMP (they were not welcome 
+in the -20 group and they did not want to work on TOPS-20).  
+So, to keep these two men as employees, DEC turned the 
+TOPS-10 SMP project back on.
+
+From that time on, I did everything I could to smooth
+the efforts of the TOPS-10 monitor group in my spare
+time.  That work involved from being a sounding board
+at design sessions to getting cups of coffee for the 
+guys during intense debugging efforts.  It was an 
+interesting time; it was an exacting time; it was
+hell; it was heaven.  It was frustrating; it was 
+satisfying.   It was rarely boring; it was life.
+
+When Tony Wachs died, I cried for three days and three 
+nights.  Then, for three months after that, I cried 
+whenever Jim wasn't around because he didn't like to see 
+me cry.  When Jim Flemming died, I cried for two years 
+and a month.  These men were my best friends.  I still 
+miss them.
+
+[end of story]
+
+
+Subtract a hundred and four for e-mail.
+
+
+Article 7040 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!feeder.via.net!206.86.34.12.MISMATCH!nuq-peer.news.verio.net!news.verio.net!ord-read.news.verio.net.POSTED!not-for-mail
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10,alt.folklore.computers
+Subject: Re: TOPS-10 SMP [Was Re: The computer jargon file]
+From: jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett)
+Organization: Everett Associates
+X-Newsreader: WinVN 0.99.8 (x86 32bit)
+References: <AtP94.8925$7S.6211@news20.bellglobal.com> <8aqqjs$mlb$1@bob.news.rcn.net>
+MIME-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+Lines: 49
+Message-ID: <x28A4.472$ZE4.10796@ord-read.news.verio.net>
+Date: Thu, 16 Mar 2000 16:34:37 GMT
+NNTP-Posting-Host: 157.238.73.17
+X-Complaints-To: abuse@verio.net
+X-Trace: ord-read.news.verio.net 953224477 157.238.73.17 (Thu, 16 Mar 2000 16:34:37 GMT)
+NNTP-Posting-Date: Thu, 16 Mar 2000 16:34:37 GMT
+Xref: news3.best.com alt.sys.pdp8:4426 alt.sys.pdp10:7040 alt.folklore.computers:153011
+
+In article <8aqqjs$mlb$1@bob.news.rcn.net>, jmfbahciv@aol.com says lots and 
+lots of stuff about the political climate at DEC around the time of 
+6.04/7.01...
+>
+
+Barb, I really enjoyed your missive. As you know I was close to both TW and 
+JMF. I shared an office with Tony as early as 1966, and actually interviewed 
+Jim when he was looking to join DEC. Jim and I subsequently shared an office 
+soon after he came to Maynard.
+
+I left DEC (and the TOPS-10 Monitor group) an 1974 to take a job with First 
+Data; subsequently acquired by ADP. By 1978 (the era you discussed), ADP was 
+busy creating a product based upon the KS-10. We were a TOPS-10 shop and it 
+was abundantly clear that DEC placed no importance in supporting TOPS-10 on 
+the KS. Through my inside contacts (TW and JMF) I learned that although DEC 
+was promising ADP a KS version of TOPS-10, no one was actually working on it.
+
+Over the period when we (ADP) were negotiating and working closely with DEC to 
+get TOPS-10 implemented on the KS, TW and JMF were bringing SMP to fruition. 
+As our (ADP Network Services) entire business was based upon TOPS-10 (and as 
+the largest TOPS-10 shop then extant) we were VERY concerned about what we 
+perceived to be a lack of serious committment to TOPS-10.
+
+Think about it; here was DEC's largest single 36-bit customer negotiating to 
+buy over one hundred KS-10s; and DEC is clearly not committed to the operating 
+system upon which we totally dependent. Not very far-sighted thinking, was it?
+
+Seeing the handwriting on the wall, we proposed buying TOPS-10 in total from 
+DEC, a proposal they took seriously. We actually had a number of meetings on 
+the subject. High on the list of concerns was the disposition of personnel, TW 
+and JMF included. Had this gone to completion they might have just ended up 
+being employees of ADP.
+
+In the end, common sense prevailed at DEC and a re-committment was made to 
+TOPS-10; at least in the short term. We were never privy to DEC internal 
+thinking, we just found out that at some point TOPS-10 was off the table.
+
+It was probably during this period of corporate schizophrenia that the 
+infamous "6.04 is the end of the line" pronouncement was made. Had DEC stuck 
+to that policy ADP would probably have acquired the rights to TOPS-10 and 
+continued its development.
+
+I'm pretty certain that at some point over the intervening years I shared that 
+story with TW and JMF, but don't know if it ever received wide distribution. 
+I'd be curious to know if either of them ever shared it with BAH.
+
+-- 
+jeverett<AT>wwa<DOT>com (John Everett)    http://www.wwa.com/~jeverett
+
+
+
+Article 7134 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newsfeed.cwix.com!nuq-peer.news.verio.net!news.verio.net!ord-read.news.verio.net.POSTED!not-for-mail
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10,alt.folklore.computers
+Subject: Re: TOPS-10 and ADP (was Re: TOPS-10 SMP...)
+From: jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett)
+Organization: Everett Associates
+X-Newsreader: WinVN 0.99.8 (x86 32bit)
+References: <AtP94.8925$7S.6211@news20.bellglobal.com> <8aqqjs$mlb$1@bob.news.rcn.net> <x28A4.472$ZE4.10796@ord-read.news.verio.net> <ChdA4.2457$D7.60227@news.itd.umich.edu> <OzNA4.702$ZE4.14034@ord-read.news.verio.net> <8b2gad$brs$1@bob.news.rcn.net>
+MIME-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+Lines: 36
+Message-ID: <XJ6B4.766$ZE4.16114@ord-read.news.verio.net>
+Date: Sun, 19 Mar 2000 15:53:27 GMT
+NNTP-Posting-Host: 157.238.70.249
+X-Complaints-To: abuse@verio.net
+X-Trace: ord-read.news.verio.net 953481207 157.238.70.249 (Sun, 19 Mar 2000 15:53:27 GMT)
+NNTP-Posting-Date: Sun, 19 Mar 2000 15:53:27 GMT
+Xref: news3.best.com alt.sys.pdp8:4508 alt.sys.pdp10:7134 alt.folklore.computers:153237
+
+In article <8b2gad$brs$1@bob.news.rcn.net>, jmfbahciv@aol.com says...
+>
+>>C'mon Sarr, weren't you still around when we were 
+>>creating the SMP KS-10? That 
+>>project took YEARS. Of course in the end it didn't 
+>>produce much revenue.  :-)
+>>
+>How the hell did you do that?  I thought Lewine made sure that
+>SMP was precluded.
+
+Don't know how Don would have done that. All it took was a shared memory 
+interface, courtesy of those nice folks at Systems Concepts (Mike, Stu, and 
+company).
+
+>On a slightly more serious note....Would Jim and Tony have
+>been able to work for ADP?  My only exposure to them was
+>via First Data before ADP bought them...and they had weird
+>ideas of what a general purpose timesharing would do.  One
+>of the guys there was my chairman for the Usage Accounting
+>DECUS session.
+
+The weird idea was that we could use it to make money. It wasn't until I 
+joined First Data (soon acquired by ADP) that I learned how little DEC 
+understood about the commercial use of a PDP-10. DEC's TOPS-10 accounting 
+software was clearly designed for an academic environment because it was 
+woefully inadaquate for commercial use. Over the years I was with ADP it was 
+clear from my discussions with my old friends at DEC that they never really 
+understood the reasons for multiple billing algorithms.
+
+At ADP we were businessmen first and technologists second. Note that ADP 
+continues its unprecedented record of earnings per share growth (longest in 
+the history of the NYSE), while DEC no longer exists.
+
+-- 
+jeverett<AT>wwa<DOT>com (John Everett)    http://www.wwa.com/~jeverett
+
+
+
+Article 7091 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!207-172-97-40
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10,alt.folklore.computers
+Subject: Re: TOPS-10 SMP [Was Re: The computer jargon file]
+Date: Sat, 18 Mar 00 10:20:12 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 59
+Message-ID: <8avqt4$46d$2@bob.news.rcn.net>
+References: <AtP94.8925$7S.6211@news20.bellglobal.com> <8aqqjs$mlb$1@bob.news.rcn.net> <38D2902C.8E3AE54@cfht.hawaii.edu>
+X-Trace: AMhgycflDKIP2dmfWSgO2XS6f359BtiTqNKsYSNkKYw=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 18 Mar 2000 11:56:20 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: news3.best.com alt.sys.pdp8:4476 alt.sys.pdp10:7091 alt.folklore.computers:153166
+
+In article <38D2902C.8E3AE54@cfht.hawaii.edu>,
+   Jim Thomas <thomas@cfht.hawaii.edu> wrote:
+>jmfbahciv@aol.com wrote:
+>
+>>
+>> /BAH>My apologies to those who are reading it again; I'm feeling
+>> /BAH>better about reposting it because there's a new old fart on
+>> /BAH>the block who just started reading the newsgroup.
+>
+>Being the "old fart" in question and wanting to comment but not
+>having posted with Netscrape before, we'll see how this 
+>comes out .... :-)
+
+It appears to have bopped over here OK.  For those of you
+who may not remember the real name, may I introduce Nothead to
+you all.
+
+>
+>>
+>> /BAH>Sometime, during the 6.03 development cycle and the advent
+>> /BAH>of the KL10 CPU, Jim noticed that the speed of service to
+>> /BAH>users was not very good.  After we shipped 6.03, Jim did
+>> /BAH>his usual "stare at the SYSDPY" displays and created a
+>> /BAH>performance data base (I think with the help of CDO) for
+>> /BAH>further performance analysis.
+>>
+>
+>Hmmm, you mention 1978 - that sounds right for 7.01 but not for
+>the KL.  I worked at Marlboro in 1974 and 1975 and the 1025/1026
+>(I think those were the serial numbers) appeared while I was there.
+>I know this was the case 'cause I got to fix BASIC which, being a
+>good, old style program, made use of the extra bits in BLT pointers
+>which were being absconded with by the new segment stuff.
+
+One of the flavors of 6-level monitors supported KLs.  However,
+they ran master/slave and turned out to be, IIRC, slower than
+master/slave KI when comparing actually work getting done.
+
+>
+>>
+>> /BAH>What he found absolutely floored him.  When one added a
+>> /BAH>second KL10 CPU, one did not get twice the service; his
+>> /BAH>analyses showed that one only got 0.8 the expected
+>> /BAH>performance.Those development days were lively with laughter,
+>> /BAH>fights, ups and downs.  A big up was the day that
+>> /BAH>the guys got the monitor to print its dot after TW
+>> /BAH>ran his macroes over the sources;
+>
+>Another high point was the first time 1025 (the "boot CPU") was
+>powered down and 1026 kept running :-)
+
+Yea.  Looking back on it now, we quickly got used to reconfiguring
+systems on the fly for stand-alone, field service, etc.
+
+Just for clarification, 1025 wasn't the "other" CPU.  It was
+1042.  1025 was the hardware engineering CPU.
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+

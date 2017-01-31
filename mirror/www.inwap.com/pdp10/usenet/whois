@@ -1,0 +1,58 @@
+Article 51023 of best.general:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+Newsgroups: best.general
+Subject: Re: Domain searches
+References: <38cd5af1$0$225@nntp1.ba.best.com> <38cd8ff7$0$201@nntp1.ba.best.com> <38cda44f$0$220@nntp1.ba.best.com> <38cdb1c4$0$221@nntp1.ba.best.com>
+Distribution: best
+Organization: a user of Best Internet Communications, Inc.  www.best.com
+From: hardie@best.com (Ted Hardie)
+Date: 14 Mar 2000 17:34:32 GMT
+Lines: 41
+Message-ID: <38ce7828$0$208@nntp1.ba.best.com>
+NNTP-Posting-Host: shell8.ba.best.com
+X-Trace: nntp1.ba.best.com 953055272 208 hardie@206.184.139.139
+Xref: news3.best.com best.general:51023
+
+In article <38cdb1c4$0$221@nntp1.ba.best.com>,
+Thad Floryan <thad@thadlabs.com> wrote:
+>And you seemed to have missed the point of my comment "telenet to sri-nic and
+>run whois".  Note that "sri-nic" was the COMPLETE address -- this predates any
+>*.com, *.net, etc.   Back then the NIC was running on either a DECsystem-20
+>with TOPS-20, or on Tenex with a modified PDP-10 (I really forget which, it's
+>been almost 30 years now (since early/mid 1970s)).
+
+The SRI-NIC machine was a DEC 2065 running TOPS-20.  I worked at SRI in
+the Network Information Systems Center (which ran the SRI-NIC and
+DDN NIC) around that time and I became very impressed with TOPS-20.  
+I still consider it to have had one of the best low-level archiving systems
+ever.  
+
+If you are nostalgic to telnet in and use a whois server try connecting
+via telnet to port 43 of whois.networksolutions.com and using some of
+the old whois flags.  dump do(main) domain.tld will still show the old
+database entries, including the references to tacs and tips.
+>
+>The "old" 'Net was kinda small; I used to correspond with Richard Stallman
+>whose email address was "rms@mit-ai" and some of my email addresses back then
+>were:
+>
+>    sri-kl!thadlabs!thad
+>    thad@sri-kl
+>    {decwrl,mips,fernwood}!btr!thad
+>
+>Heck, I still have some of the old UUCP maps in which every addressable
+>computer was listed; they're not that large.  I even still have an email
+>that was sent to me from the Kremlin circa 1985 one day after the Moscow-
+>San Francisco Transport opened; the path (IIRC) was kremvax, then some site
+>in Finland, then SRI (in Menlo Park,CA), then my home computer -- the guy was
+>thanking me for something I posted about crypt in a net.micro newsgroup (IIRC).
+>
+>In any event, the original (circa 1970s and 1980s) "whois" had a complete
+>command front end (with command completion and extensive help) in which
+>searches like Malcolm requested were easy to do.
+>
+>Thad
+
+
+
+

@@ -1,0 +1,2360 @@
+Article 2460 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!feed2.news.rcn.net!rcn!europa.netcrusader.net!152.163.239.131!portc03.blue.aol.com!uunet!ffx.uu.net!spool1.news.uu.net!spool0.news.uu.net!reader0.news.uu.net!not-for-mail
+Message-ID: <3A351944.3D32C5B2@trailing-edge.com>
+Date: Mon, 11 Dec 2000 18:13:24 -0400
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Organization: Trailing Edge Technology
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.2     AlphaServer 1200 5/533 4MB)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: PDP-10 Software Archive progress report
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 41
+NNTP-Posting-Host: 63.73.218.130
+X-Trace: reader0.news.uu.net 976576404 6983 63.73.218.130
+Xref: nntp1.ba.best.com alt.sys.pdp10:2460 alt.folklore.computers:12596
+
+OK, time for a semi-regular progress report:
+
+* The PDP-10 Software Archive at
+
+     http://pdp-10.trailing-edge.com/
+
+  now contains 47 DEC software distribution tape images, roughly
+  1500 Megabytes uncompressed and spanning over 11000 individual
+  extracted files.  The extracted files have what I regard to be pretty
+  decent HTML indices for human browsing, indicating file size and
+  original date.
+
+* The TOPS-10 DECUS freeware library contains 260 entries, and the
+  TOPS-20 DECUS freeware library contains 187 entries.  The job
+  of matching abstracts from old DECUS abstracts books with the
+  files is *not* complete; it is mostly done for the TOPS-10 library,
+  but barely begun for the TOPS-20 libraries.
+
+* Connectivity to the archive increased substantially in the past
+  two months, as the connection to the outside world was fattened up
+  to a 384Kbit SDSL connection.
+
+And now for some questions:
+
+*  The archive has been much mentioned as of late in the alt.sys.pdp10
+   newsgroup, yet comments from many of the regular posters indicates
+   that they have either never connected to view the contents of the
+   archives or that they connected but couldn't find what they were
+   looking for.  Many of these comments are from folks who are very
+   technically savvy.  What's the problem?  Have you been unable to
+   connect?  Was the archive too disorganized?  How should the archives
+   or indexing be improved?  Please, criticize!
+
+*  Do you have any material for the archives?  If so, please E-mail
+   me (shoppa@trailing-edge.com) to figure out how it can be best
+   included.  I am specifically looking for DEC commercial software
+   that's covered by the 36-bit hobbyist license, including TOPS-10
+   and TOPS-20 binary and source distributions.  I'm also always on 
+   the lookout for 36-bit DECUS materials.
+
+Tim. (shoppa@trailing-edge.com)
+
+
+Article 2482 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newshub.sdsu.edu!news-spur1.maxwell.syr.edu!news.maxwell.syr.edu!news.algonet.se!newsfeed1.telenordia.se!algonet!newsfeed1.funet.fi!newsfeeds.funet.fi!news.cs.hut.fi!nntp.hut.fi!not-for-mail
+From: Erno Palonheimo <esp@vipunen.hut.fi>
+Newsgroups: alt.sys.pdp10
+Subject: TOPS-20 tape hunt: status report.
+Date: 12 Dec 2000 22:03:40 +0200
+Organization: Helsinki University of Technology, Finland
+Lines: 46
+Message-ID: <uthitopxv8j.fsf@vipunen.hut.fi>
+NNTP-Posting-Host: vipunen.hut.fi
+X-Trace: nntp.hut.fi 976651420 27236 130.233.249.7 (12 Dec 2000 20:03:40 GMT)
+X-Complaints-To: usenet@nntp.hut.fi
+NNTP-Posting-Date: 12 Dec 2000 20:03:40 GMT
+X-Newsreader: Gnus v5.3/Emacs 19.33
+Xref: nntp1.ba.best.com alt.sys.pdp10:2482
+
+
+So,
+
+I've done quite some archeology(sp?) today, and my fingers are black
+of dust now.  :-) Here's the tapes I've found so far.  Not much, but
+this stuff is from the person who ran the Dec-20 as his personal
+"workstation", and he told me that I can find much more if I ask the
+operators, which I'm about to do tomorrow.
+
+Original DEC tapes:
+
+AP-4178D-RM	TOPS-20 V3 SWSKIT
+BB-J710A-BM	TOPS-20 V4 TOOLS
+AP-C766A-RM	FRONT END SWS KIT		(10/18/77)
+BB-4171G-BM	TOPS-20 V4 2040 INSTALLATION TAPE
+BB-4172G-BM	TOPS-20 V4 2040 DISTRIBUTION TAPE
+
+Other tapes:
+
+handlabeled	FRONT END SWS KIT 15.12.78
+handlabeled	MONITOR SOURCES FOR TOPS-20 10-SEP-80
+handlabeled	SWSKIT 10-SEP-80
+
+I also found three tapes that are labeled to contain stuff from Decus
+meeting in Köln and one that is supposed to have some stuff from a
+Dec-20 that was used by University of Turku - wonder what that is...
+
+I also found _full_ TOPS-20 V5 sources as print-outs, but they aren't
+too much use as such.  But, as I said, I've been told that the
+original tapes _do_ exist.  And, as an additional bonus, I managed to
+persuade my boss to buy me a SCSI-attached 9-track magtape unit for
+doing the conversion work, hopefully this will arrive during
+January. :-) Hmm, this tape-conversion operation will be quite
+massive, considering the amount of 9-track tapes we have in storage,
+and the insane amount of DECtapes I've found in this building, and
+three boxes full of old paper tapes.  I've thought of setting up a DEC
+3000m600 to run VMS and connecting the CD-burner and 9-track tape
+drive to that.  I have some experience with VMS, but any help with it
+would be appreciated.  I know how to get it running etc, but I have no
+idea on which utilities are best suited for dumping the TOPS-20 format
+(DUMPER or something?) tapes.
+
+-- 
+Erno Palonheimo    | Pajupillintie 15 A 6 | UNIX System Administrator
+http://iki.fi/esp/ | 00420 Helsinki       | Helsinki University of Technology
+esp@cc.hut.fi      | +358 50 560 4765     | http://www.hut.fi/cc/
+
+
+Article 2533 of alt.sys.pdp10:
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.sys.pdp10
+Subject: Dundee College of Technology TOPS-20 User Guide available online
+X-Disclaimer: Everything I write is false.
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 14 Dec 2000 13:08:11 -0800
+Message-ID: <qhitomlnic.fsf@ruckus.brouhaha.com>
+Lines: 12
+X-Newsreader: Gnus v5.7/Emacs 20.7
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 14 Dec 2000 13:12:26 -0800, ruckus.brouhaha.com
+Path: nntp1.ba.best.com!news1.best.com!feeder.via.net!HSNX.atgi.net!news.kjsl.com!news.spies.com!ruckus.brouhaha.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:2533
+
+Thanks to Malcolm MacArthur, the Dundee College of Technology Computer
+Center's _Introduction to Using the DECSYSTEM-20_ (January 1983) is
+now available under "Third-Party Documents" at
+
+	http://www.36bit.org/dec/
+
+I've been making some slow progress on my backlog of documents to scan,
+but I'm currently having some trouble with Acrobat.  I expect to have
+a few more TOPS-10 and TOPS-20 manuals online shortly after the first of
+the year.
+
+Eric
+
+
+Article 2652 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!dispose.news.demon.net!demon!news.demon.co.uk!demon!rustic-place.demon.co.uk!not-for-mail
+From: Malcolm MacArthur <malcolmm@rustic-place.demon.co.uk>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Dundee College of Technology TOPS-20 User Guide available online
+Date: Mon, 18 Dec 2000 23:09:36 +0000
+Message-ID: <3A3E9930.682DB356@rustic-place.demon.co.uk>
+References: <qhitomlnic.fsf@ruckus.brouhaha.com>
+NNTP-Posting-Host: rustic-place.demon.co.uk
+X-NNTP-Posting-Host: rustic-place.demon.co.uk:212.228.197.95
+X-Trace: news.demon.co.uk 977180618 nnrp-04:2232 NO-IDENT rustic-place.demon.co.uk:212.228.197.95
+X-Complaints-To: abuse@demon.net
+X-Mailer: Mozilla 4.73 [en] (X11; I; Linux 2.2.15-4mdk i686)
+X-Accept-Language: en
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 27
+Xref: nntp1.ba.best.com alt.sys.pdp10:2652
+
+Eric Smith wrote:
+> 
+> Thanks to Malcolm MacArthur, the Dundee College of Technology Computer
+> Center's _Introduction to Using the DECSYSTEM-20_ (January 1983) is
+> now available under "Third-Party Documents" at
+> 
+>         http://www.36bit.org/dec/
+> 
+
+I've also found an Introduction To COBOL programming for the
+DECsystem-20
+book (you can't really call it a booklet, since it's 142 pages long... 
+would that be useful? It does have DEC-20 COBOL specific information.
+But
+if COBOL manuals are available it wouldn't be much use (unless I can OCR
+it and avoid typing in the whole lot, though it would be good
+practice... prolonged rodent usage has atrophied my typing skills...)
+
+-Malcolm
+
+> Eric
+
+--
+Malcolm MacArthur		malcolm@rustic-place.demon.co.uk
+Chaos reigns
+Reflect, repent and reboot
+Order will be restored.
+
+
+Article 2574 of alt.sys.pdp10:
+Sender: prep@k9.prep.synonet.com
+Newsgroups: alt.sys.pdp10
+Subject: Tapes...
+From: Paul Repacholi <prep@prep.synonet.com>
+Date: 16 Dec 2000 12:40:05 +0800
+Message-ID: <87ae9xasii.fsf@k9.prep.synonet.com>
+Lines: 21
+X-Newsreader: Gnus v5.7/Emacs 20.7
+NNTP-Posting-Host: 195.d02.pe.iqnet.net.au
+X-Trace: 16 Dec 2000 13:23:25 +0800, 195.d02.pe.iqnet.net.au
+Path: nntp1.ba.best.com!news1.best.com!newshub.sdsu.edu!news-spur1.maxwell.syr.edu!news.maxwell.syr.edu!newsfeeds.belnet.be!news.belnet.be!skynet.be!newsfeed.iinet.net.au!news.waia.asn.au!usenet.per.paradox.net.au!127.0.0.1!nobody
+Xref: nntp1.ba.best.com alt.sys.pdp10:2574
+
+
+Sitting on my lap:
+
+KLAD10  7.01 1/3 1981
+KLAD10  7.01 2/3 1981
+
+Have not found 3 yet, I realised there are 3 rows of tapes behind
+where I was looking. Plus, I made image copies of them in 93,
+and sould have VMS backup savesets of them as well. Just
+hope to hell I labeled them!
+
+Now I have to get a posse together to go in there again and
+get a tapedrive out to read them. 
+
+What was the line about encylopida sales....
+
+-- 
+Paul Repacholi                               1 Crescent Rd.,
++61 (08) 9257-1001                           Kalamunda.
+                                             West Australia 6076
+Raw, Cooked or Well-done, it's all half baked.
+
+
+Article 2640 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news-hog.berkeley.edu!ucberkeley!nntp.cs.ubc.ca!newsfeed.mesh.ad.jp!pln-w!extra.newsguy.com!lotsanews.com!uunet!ffx.uu.net!spool0.news.uu.net!reader3.news.uu.net!not-for-mail
+Message-ID: <3A3B0D5C.F2303AB@trailing-edge.com>
+Date: Sat, 16 Dec 2000 06:36:12 -0400
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Organization: Trailing Edge Technology
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.2     AlphaServer 1200 5/533 4MB)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: KLAD Sources now in PDP-10 archive
+Content-Type: multipart/mixed; boundary="------------5E48DA081A375A15BF653C6"
+Lines: 1249
+NNTP-Posting-Host: 63.73.218.130
+X-Trace: reader3.news.uu.net 976966575 5651 63.73.218.130
+Xref: nntp1.ba.best.com alt.sys.pdp10:2640
+
+This is a multi-part message in MIME format.
+
+--------------5E48DA081A375A15BF653C6
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+Thanks to Al Kossow and Eric Smith for getting me a (seemingly very
+fresh!) tape image, the KLAD diagnostics sources are now in the PDP-10
+Software Archive,
+
+  http://pdp-10.trailing-edge.com/
+
+At the top of the software list, you'll find hyperlinks to both the
+TPC tape image and the individual files.  This is a very significant
+addition, both in size (well over 100 Megabytes) and in emulator
+testing.
+
+A listing of the individual files available follows below.  Enjoy!
+
+Tim. (shoppa@trailing-edge.com)
+
+--------------5E48DA081A375A15BF653C6
+Content-Type: text/plain; charset=us-ascii; name="klad_sources.lst"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline; filename="klad_sources.lst"
+
+10BACKUP v2.4
+
+Restore of files '*.*' from all save sets
+
+
+Start of Save Set: Diagnostics -- binaries and documentation
+Volume 1 written by System: 
+Written on:        at: 13-DEC-2000 01:03 using:  200 BPI
+
+BB        .CMD           2 17-JAN-1989 20:37
+BBT       .CMD           1 13-JAN-1989 19:46
+BBX       .CMD           1 17-JAN-1989 20:37
+BT        .CMD           1 13-JAN-1989 19:46
+BUILDDIR  .MIC         107 13-JAN-1989 19:33
+CLRB35    .EXE          12 22-FEB-1989 21:12
+CNVFID    .MAC           5 13-JAN-1989 04:10
+CNVKMC    .MAC           5 13-JAN-1989 04:10
+CNVMIC    .MAC          41 13-JAN-1989 04:10
+CNVRT8    .MAC           6 13-JAN-1989 04:10
+CNVRTM    .MAC          24 13-JAN-1989 04:10
+CNVRTT    .MAC           3 13-JAN-1989 04:10
+CNVSAV    .MAC           8 13-JAN-1989 04:10
+CNVSUB    .MAC          15 13-JAN-1989 04:10
+CNVT11    .MAC           8 13-JAN-1989 04:10
+CNVTDX    .MAC           4 13-JAN-1989 04:10
+CONFG     .CCL           1 23-FEB-1989 18:49
+CONFG1    .CCL           1 23-FEB-1989 18:49
+CONFGR    .CCL           1 23-FEB-1989 18:49
+CONFIG    .MAC          87 13-JAN-1989 18:19
+CONVRT    .CCL           1 13-JAN-1989 04:09
+CONVRT    .CTL           1 13-JAN-1989 04:10
+CONVRT    .EXE          40 30-JAN-1989 20:18
+CONVRT    .HST           3 13-JAN-1989 04:09
+CONVRT    .INP           3 13-JAN-1989 04:09
+CONVRT    .SAV          32 13-JAN-1989 04:09
+CONVRT    .SEQ         587 13-JAN-1989 04:09
+CONVRT    .TXT          38 13-JAN-1989 04:09
+D20MON    .EXE          32 17-FEB-1995 01:37
+D20MON    .SAV          21  9-FEB-1989 14:08
+DAKAA     .CCL           1 13-DEC-1988 20:42
+DAKAA     .CMD           1 13-DEC-1988 20:42
+DAKAA     .CTL           1 13-DEC-1988 20:42
+DAKAA     .HST           1 13-DEC-1988 20:42
+DAKAA     .INP           1 13-DEC-1988 20:40
+DAKAA     .SAV          19 13-DEC-1988 20:42
+DAKAA     .SEQ        3770 13-DEC-1988 20:40
+DAKAA     .TXT           8 13-DEC-1988 20:42
+DAKAAM    .MAC          58 13-DEC-1988 20:42
+DAKAAT    .MAC           2 13-DEC-1988 20:42
+DAKAB     .CCL           1 13-DEC-1988 20:42
+DAKAB     .CMD           1 13-DEC-1988 20:42
+DAKAB     .CTL           1 13-DEC-1988 20:42
+DAKAB     .HST           1 13-DEC-1988 20:42
+DAKAB     .INP           1 13-DEC-1988 20:40
+DAKAB     .SAV          22 13-DEC-1988 20:42
+DAKAB     .SEQ        4320 13-DEC-1988 20:40
+DAKAB     .TXT           7 13-DEC-1988 20:42
+DAKABM    .MAC          87 13-DEC-1988 20:43
+DAKABT    .MAC           2 13-DEC-1988 20:42
+DAKAC     .CCL           1 13-DEC-1988 20:53
+DAKAC     .CMD           1 13-DEC-1988 20:53
+DAKAC     .CTL           1 13-DEC-1988 20:53
+DAKAC     .HST           1 13-DEC-1988 20:53
+DAKAC     .INP           1 13-DEC-1988 20:51
+DAKAC     .SAV          15 13-DEC-1988 20:53
+DAKAC     .SEQ        2824 13-DEC-1988 20:51
+DAKAC     .TXT           7 13-DEC-1988 20:53
+DAKACM    .MAC         135 13-DEC-1988 20:53
+DAKACT    .MAC           3 13-DEC-1988 20:53
+DAKAD     .CCL           1 13-DEC-1988 20:53
+DAKAD     .CMD           1 13-DEC-1988 20:53
+DAKAD     .CTL           1 13-DEC-1988 20:53
+DAKAD     .HST           1 13-DEC-1988 20:52
+DAKAD     .INP           1 13-DEC-1988 20:51
+DAKAD     .SAV          17 13-DEC-1988 20:52
+DAKAD     .SEQ        3167 13-DEC-1988 20:51
+DAKAD     .TXT           7 13-DEC-1988 20:52
+DAKADM    .MAC         106 13-DEC-1988 20:53
+DAKADT    .MAC           2 13-DEC-1988 20:53
+DAKAE     .CCL           1 13-DEC-1988 20:57
+DAKAE     .CMD           1 13-DEC-1988 20:57
+DAKAE     .CTL           2 13-DEC-1988 20:57
+DAKAE     .HST           2 13-DEC-1988 20:57
+DAKAE     .INP           3 13-DEC-1988 20:56
+DAKAE     .SAV          13 13-DEC-1988 20:57
+DAKAE     .SEQ        2259 13-DEC-1988 20:56
+DAKAE     .TXT           7 13-DEC-1988 20:57
+DAKAEM    .MAC         144 13-DEC-1988 20:57
+DAKAET    .MAC           3 13-DEC-1988 20:57
+DAKAF     .CCL           1 13-DEC-1988 20:57
+DAKAF     .CMD           1 13-DEC-1988 20:58
+DAKAF     .CTL           1 13-DEC-1988 20:58
+DAKAF     .HST           1 13-DEC-1988 20:57
+DAKAF     .INP           1 13-DEC-1988 20:56
+DAKAF     .SAV          17 13-DEC-1988 20:57
+DAKAF     .SEQ        2943 13-DEC-1988 20:56
+DAKAF     .TXT           7 13-DEC-1988 20:57
+DAKAFM    .MAC         176 13-DEC-1988 20:58
+DAKAFT    .MAC           3 13-DEC-1988 20:58
+DAKAG     .CCL           1 13-DEC-1988 21:04
+DAKAG     .CMD           1 13-DEC-1988 21:04
+DAKAG     .CTL           1 13-DEC-1988 21:04
+DAKAG     .HST           1 13-DEC-1988 21:04
+DAKAG     .INP           1 13-DEC-1988 21:04
+DAKAG     .SAV           8 13-DEC-1988 21:04
+DAKAG     .SEQ        1348 13-DEC-1988 21:04
+DAKAG     .TXT           7 13-DEC-1988 21:04
+DAKAGM    .MAC          67 13-DEC-1988 21:04
+DAKAGT    .MAC           3 13-DEC-1988 21:04
+DAKAH     .CCL           1 13-DEC-1988 21:04
+DAKAH     .CTL           1 13-DEC-1988 21:04
+DAKAH     .HST           2 13-DEC-1988 21:04
+DAKAH     .INP           1 13-DEC-1988 21:04
+DAKAH     .SAV          26 13-DEC-1988 21:04
+DAKAH     .SEQ         565 13-DEC-1988 21:04
+DAKAH     .TXT           7 13-DEC-1988 21:04
+DAKAHM    .MAC          65 13-DEC-1988 21:04
+DAKAHT    .MAC           3 13-DEC-1988 21:04
+DAKAI     .CCL           1 13-DEC-1988 21:09
+DAKAI     .CMD           1 13-DEC-1988 21:09
+DAKAI     .CTL           1 13-DEC-1988 21:09
+DAKAI     .HST           1 13-DEC-1988 21:09
+DAKAI     .INP           1 13-DEC-1988 21:07
+DAKAI     .SAV          38 13-DEC-1988 21:08
+DAKAI     .SEQ        3261 13-DEC-1988 21:07
+DAKAI     .TXT          14 13-DEC-1988 21:08
+DAKAIM    .MAC          83 13-DEC-1988 21:09
+DAKAIT    .MAC           5 13-DEC-1988 21:09
+DAKAJ     .CCL           1 13-DEC-1988 21:09
+DAKAJ     .CMD           1 13-DEC-1988 21:09
+DAKAJ     .CTL           1 13-DEC-1988 21:09
+DAKAJ     .HST           2 13-DEC-1988 21:09
+DAKAJ     .INP           1 13-DEC-1988 21:07
+DAKAJ     .SAV          26 13-DEC-1988 21:08
+DAKAJ     .SEQ        3686 13-DEC-1988 21:07
+DAKAJ     .TXT          14 13-DEC-1988 21:09
+DAKAJM    .MAC          80 13-DEC-1988 21:09
+DAKAJT    .MAC           5 13-DEC-1988 21:09
+DAKAK     .CCL           1 13-DEC-1988 21:33
+DAKAK     .CMD           1 13-DEC-1988 21:33
+DAKAK     .CTL           1 13-DEC-1988 21:33
+DAKAK     .HST           1 13-DEC-1988 21:33
+DAKAK     .INP           1 13-DEC-1988 21:32
+DAKAK     .SAV          48 13-DEC-1988 21:33
+DAKAK     .SEQ        5522 13-DEC-1988 21:32
+DAKAK     .TXT          14 13-DEC-1988 21:33
+DAKAKM    .MAC           9 13-DEC-1988 21:33
+DAKAKT    .MAC           4 13-DEC-1988 21:33
+DAKAL     .CCL           1 13-DEC-1988 21:34
+DAKAL     .CMD           1 13-DEC-1988 21:34
+DAKAL     .CTL           1 13-DEC-1988 21:34
+DAKAL     .HST           1 13-DEC-1988 21:34
+DAKAL     .INP           1 13-DEC-1988 21:33
+DAKAL     .SAV          52 13-DEC-1988 21:34
+DAKAL     .SEQ        6431 13-DEC-1988 21:33
+DAKAL     .TXT          14 13-DEC-1988 21:34
+DAKALM    .MAC          76 13-DEC-1988 21:34
+DAKALT    .MAC           4 13-DEC-1988 21:34
+DAKAM     .CCL           1 13-DEC-1988 21:50
+DAKAM     .CTL           2 13-DEC-1988 21:50
+DAKAM     .HST           2 13-DEC-1988 21:50
+DAKAM     .INP           1 13-DEC-1988 21:50
+DAKAM     .SAV          33 13-DEC-1988 21:50
+DAKAM     .SEQ        2114 13-DEC-1988 21:50
+DAKAM     .TXT          14 13-DEC-1988 21:50
+DAKAM1    .CMD           1 13-DEC-1988 21:50
+DAKAM2    .CMD           1 13-DEC-1988 21:50
+DAKAM3    .CMD           1 13-DEC-1988 21:50
+DAKAMM    .MAC         179 13-DEC-1988 21:50
+DAKAMT    .MAC           5 13-DEC-1988 21:50
+DAKBA     .CCL           1 13-DEC-1988 21:48
+DAKBA     .CTL           1 13-DEC-1988 21:48
+DAKBA     .HST           1 13-DEC-1988 21:48
+DAKBA     .INP           1 13-DEC-1988 21:47
+DAKBA     .SAV          29 13-DEC-1988 21:48
+DAKBA     .SEQ         766 13-DEC-1988 21:47
+DAKBA     .TXT          21 13-DEC-1988 21:48
+DAKBAM    .MAC          88 13-DEC-1988 21:48
+DAKBAT    .MAC           3 13-DEC-1988 21:48
+DAKBB     .CCL           1 29-DEC-1988 18:39
+DAKBB     .CTL           1 29-DEC-1988 18:39
+DAKBB     .HST           1 29-DEC-1988 18:39
+DAKBB     .INP           1 29-DEC-1988 18:39
+DAKBB     .SAV          32 29-DEC-1988 18:39
+DAKBB     .SEQ         823 29-DEC-1988 18:39
+DAKBB     .TXT          21 29-DEC-1988 18:39
+DAKBBM    .MAC         126 29-DEC-1988 18:39
+DAKBBT    .MAC           3 29-DEC-1988 18:39
+DAKBC     .CCL           1 29-DEC-1988 18:42
+DAKBC     .CTL           1 29-DEC-1988 18:42
+DAKBC     .HST           1 29-DEC-1988 18:42
+DAKBC     .INP           1 29-DEC-1988 18:42
+DAKBC     .SAV          31 29-DEC-1988 18:42
+DAKBC     .SEQ         794 29-DEC-1988 18:42
+DAKBC     .TXT          21 29-DEC-1988 18:42
+DAKBCM    .MAC         103 29-DEC-1988 18:42
+DAKBCT    .MAC           3 29-DEC-1988 18:42
+DAKBD     .CCL           1 29-DEC-1988 18:44
+DAKBD     .CTL           1 29-DEC-1988 18:44
+DAKBD     .HST           1 29-DEC-1988 18:44
+DAKBD     .INP           1 29-DEC-1988 18:44
+DAKBD     .SAV          16 29-DEC-1988 18:44
+DAKBD     .SEQ         400 29-DEC-1988 18:44
+DAKBD     .TXT          23 29-DEC-1988 18:44
+DAKBDM    .MAC          74 29-DEC-1988 18:44
+DAKBDT    .MAC           5 29-DEC-1988 18:44
+DAKCA     .CCL           1 29-DEC-1988 18:50
+DAKCA     .CMD           1 29-DEC-1988 18:50
+DAKCA     .CTL           1 29-DEC-1988 18:50
+DAKCA     .HST           1 29-DEC-1988 18:50
+DAKCA     .INP           1 29-DEC-1988 18:49
+DAKCA     .SAV          31 29-DEC-1988 18:50
+DAKCA     .SEQ        2201 29-DEC-1988 18:49
+DAKCA     .TXT          14 29-DEC-1988 18:50
+DAKCAM    .MAC         124 29-DEC-1988 18:50
+DAKCAT    .MAC           3 29-DEC-1988 18:50
+DAKCB     .CCL           1 29-DEC-1988 18:52
+DAKCB     .CMD           1 29-DEC-1988 18:52
+DAKCB     .CTL           1 29-DEC-1988 18:52
+DAKCB     .HST           1 29-DEC-1988 18:52
+DAKCB     .INP           1 29-DEC-1988 18:51
+DAKCB     .SAV          15 29-DEC-1988 18:52
+DAKCB     .SEQ        1607 29-DEC-1988 18:51
+DAKCB     .TXT          14 29-DEC-1988 18:52
+DAKCBM    .MAC          63 29-DEC-1988 18:52
+DAKCBT    .MAC           3 29-DEC-1988 18:52
+DAKDA     .CCL           1 29-DEC-1988 18:54
+DAKDA     .CTL           1 29-DEC-1988 18:54
+DAKDA     .HST           4 29-DEC-1988 18:54
+DAKDA     .INP           1 29-DEC-1988 18:54
+DAKDA     .SAV          51 29-DEC-1988 18:54
+DAKDA     .SEQ         594 29-DEC-1988 18:54
+DAKDA     .TXT          19 29-DEC-1988 18:54
+DAKDAM    .MAC          26 29-DEC-1988 18:54
+DAKDAS    .MAC          87 29-DEC-1988 18:54
+DAKDAT    .MAC           4 29-DEC-1988 18:54
+DAKDB     .CCL           1 29-DEC-1988 19:00
+DAKDB     .CTL           1 29-DEC-1988 19:00
+DAKDB     .HST           2 29-DEC-1988 19:00
+DAKDB     .INP           1 29-DEC-1988 18:59
+DAKDB     .SAV          50 29-DEC-1988 19:00
+DAKDB     .SEQ         602 29-DEC-1988 18:59
+DAKDB     .TXT          35 29-DEC-1988 19:00
+DAKDBM    .MAC          23 29-DEC-1988 19:00
+DAKDBS    .MAC          87 29-DEC-1988 19:00
+DAKDBT    .MAC           5 29-DEC-1988 19:00
+DBKAA     .CCL           1 29-JUL-1976 15:40
+DBKAA     .CTL           3  3-AUG-1976 13:42
+DBKAA     .HST           1 29-JUL-1976 00:00
+DBKAA     .INP           1  3-AUG-1976 13:34
+DBKAA     .SAV          19  3-AUG-1976 13:43
+DBKAA     .SEQ        3633  3-AUG-1976 13:47
+DBKAA     .TXT           8 28-JUL-1976 12:46
+DBKAAM    .MAC          58 30-APR-1976 16:56
+DBKAAT    .MAC           3 30-JUL-1976 14:40
+DBKAB     .CCL           1 29-JUL-1976 19:35
+DBKAB     .CTL           3  4-AUG-1976 14:20
+DBKAB     .HST           1 29-JUL-1976 04:00
+DBKAB     .INP           1  3-AUG-1976 17:36
+DBKAB     .SAV          22  4-AUG-1976 14:23
+DBKAB     .SEQ        4128  4-AUG-1976 14:30
+DBKAB     .TXT           7 28-JUL-1976 17:15
+DBKABM    .MAC          87 30-APR-1976 20:57
+DBKABT    .MAC           2 30-JUL-1976 16:15
+DBKAD     .CCL           1 27-MAY-1976 15:44
+DBKAD     .CTL           3  4-AUG-1976 17:25
+DBKAD     .HST           1 29-JUL-1976 04:00
+DBKAD     .INP           1  3-AUG-1976 13:52
+DBKAD     .SAV          17  4-AUG-1976 17:58
+DBKAD     .SEQ        2870  4-AUG-1976 18:03
+DBKAD     .TXT           7 28-JUL-1976 16:48
+DBKADM    .MAC         106 30-APR-1976 20:59
+DBKADT    .MAC           2 30-JUL-1976 16:23
+DBKAE     .CCL           1 27-MAY-1976 15:45
+DBKAE     .CTL           3  4-AUG-1976 19:01
+DBKAE     .HST           1 29-JUL-1976 04:00
+DBKAE     .INP           1  3-AUG-1976 13:52
+DBKAE     .SAV          13  4-AUG-1976 19:03
+DBKAE     .SEQ        2053  4-AUG-1976 19:08
+DBKAE     .TXT           7 28-JUL-1976 16:48
+DBKAEM    .MAC         143 30-APR-1976 20:59
+DBKAET    .MAC           3 30-JUL-1976 16:34
+DBKAF     .CCL           1 27-MAY-1976 15:45
+DBKAF     .CTL           3  4-AUG-1976 19:33
+DBKAF     .HST           1 29-JUL-1976 04:00
+DBKAF     .INP           1  3-AUG-1976 13:52
+DBKAF     .SAV          17  4-AUG-1976 19:42
+DBKAF     .SEQ        2677  4-AUG-1976 20:01
+DBKAF     .TXT           7 28-JUL-1976 16:49
+DBKAFM    .MAC         176 30-APR-1976 20:54
+DBKAFT    .MAC           3 30-JUL-1976 16:35
+DBKAG     .CCL           1 27-MAY-1976 15:46
+DBKAG     .CTL           3  5-AUG-1976 13:57
+DBKAG     .HST           1 29-JUL-1976 04:00
+DBKAG     .INP           1  3-AUG-1976 13:53
+DBKAG     .SAV           8  5-AUG-1976 13:58
+DBKAG     .SEQ        1279  5-AUG-1976 14:00
+DBKAG     .TXT           7 28-JUL-1976 16:49
+DBKAGM    .MAC          67 30-APR-1976 21:09
+DBKAGT    .MAC           3 30-JUL-1976 16:35
+DBKAH     .CCL           1 30-JAN-1989 20:08
+DBKAH     .CTL           2 30-JAN-1989 20:08
+DBKAH     .HST           3 30-JAN-1989 20:07
+DBKAH     .INP           3 30-JAN-1989 20:07
+DBKAH     .SAV          55 30-JAN-1989 20:07
+DBKAH     .SEQ        1016 30-JAN-1989 20:07
+DBKAH     .TXT           7 30-JAN-1989 20:07
+DBKAHM    .MAC          70 30-JAN-1989 20:08
+DBKAHT    .MAC           2 30-JAN-1989 20:08
+DBKAI     .CCL           1 27-MAY-1976 16:36
+DBKAI     .CTL           3  5-AUG-1976 14:57
+DBKAI     .HST           2 29-JUL-1976 04:00
+DBKAI     .INP           1  3-AUG-1976 13:56
+DBKAI     .SAV          38  5-AUG-1976 14:59
+DBKAI     .SEQ        3002  5-AUG-1976 15:01
+DBKAI     .TXT          14 28-JUL-1976 16:49
+DBKAIM    .MAC          83 27-MAY-1976 16:47
+DBKAIT    .MAC           5 30-JUL-1976 16:36
+DBKAJ     .CCL           1  5-AUG-1976 18:45
+DBKAJ     .CTL           3  5-AUG-1976 18:47
+DBKAJ     .HST           2 29-JUL-1976 04:00
+DBKAJ     .INP           1  3-AUG-1976 13:58
+DBKAJ     .SAV          26  5-AUG-1976 18:50
+DBKAJ     .TXT          14 28-JUL-1976 16:50
+DBKAJM    .MAC          80 28-MAY-1976 13:55
+DBKAJT    .MAC           5 30-JUL-1976 16:37
+DBKAK     .CCL           1  5-AUG-1976 18:48
+DBKAK     .CTL           3  5-AUG-1976 19:26
+DBKAK     .HST           1 29-JUL-1976 04:00
+DBKAK     .INP           1  3-AUG-1976 13:58
+DBKAK     .SAV          48  5-AUG-1976 19:29
+DBKAK     .SEQ        4794  5-AUG-1976 19:36
+DBKAK     .TXT          14 28-JUL-1976 17:31
+DBKAKM    .MAC           9 28-MAY-1976 14:08
+DBKAKT    .MAC           4 30-JUL-1976 16:37
+DBKAL     .CCL           1  6-AUG-1976 10:16
+DBKAL     .CTL           3  6-AUG-1976 10:30
+DBKAL     .HST           1 29-JUL-1976 00:00
+DBKAL     .INP           1  3-AUG-1976 09:59
+DBKAL     .SAV          52  6-AUG-1976 10:33
+DBKAL     .SEQ        2059  6-AUG-1976 10:44
+DBKAL     .TXT          14 28-JUL-1976 13:30
+DBKALM    .MAC          75 26-MAY-1976 16:25
+DBKALT    .MAC           4 30-JUL-1976 12:38
+DBKAM     .CCL           1  5-AUG-1976 20:24
+DBKAM     .CTL           3  5-AUG-1976 20:25
+DBKAM     .HST           2 29-JUL-1976 04:00
+DBKAM     .INP           1  3-AUG-1976 14:00
+DBKAM     .SAV          33  6-AUG-1976 13:52
+DBKAM     .SEQ        2142  6-AUG-1976 13:57
+DBKAM     .TXT          14 28-JUL-1976 17:31
+DBKAMT    .MAC           5 30-JUL-1976 16:38
+DBKBA     .CCL           1  6-AUG-1976 15:38
+DBKBA     .CTL           2  6-AUG-1976 15:39
+DBKBA     .HST           2 29-JUL-1976 04:00
+DBKBA     .INP           1  3-AUG-1976 14:04
+DBKBA     .SAV          29  6-AUG-1976 15:41
+DBKBA     .SEQ         765  6-AUG-1976 15:42
+DBKBA     .TXT          21 28-JUL-1976 17:46
+DBKBAM    .MAC          88 26-MAY-1976 20:46
+DBKBAT    .MAC           3 30-JUL-1976 16:45
+DBKBB     .CCL           1  6-AUG-1976 15:38
+DBKBB     .CTL           2  6-AUG-1976 19:44
+DBKBB     .HST           2 29-JUL-1976 04:00
+DBKBB     .INP           1  3-AUG-1976 14:06
+DBKBB     .SAV          32  6-AUG-1976 19:46
+DBKBBT    .MAC           3 30-JUL-1976 16:46
+DBKBC     .CCL           1  6-AUG-1976 20:23
+DBKBC     .CTL           2  6-AUG-1976 20:24
+DBKBC     .HST           2 29-JUL-1976 04:00
+DBKBC     .INP           1  3-AUG-1976 04:00
+DBKBC     .SAV          31  6-AUG-1976 20:25
+DBKBC     .TXT          21 28-JUL-1976 04:00
+DBKBCT    .MAC           3 30-JUL-1976 04:00
+DBKBD     .CCL           1  6-AUG-1976 20:23
+DBKBD     .CTL           2  6-AUG-1976 20:45
+DBKBD     .HST           2 29-JUL-1976 04:00
+DBKBD     .INP           1  3-AUG-1976 04:00
+DBKBD     .SAV          16  6-AUG-1976 20:45
+DBKBD     .SEQ         403  6-AUG-1976 20:46
+DBKBDM    .MAC          74  4-JUN-1976 04:00
+DBKBDT    .MAC           5 30-JUL-1976 04:00
+DBKCA     .CCL           1  9-AUG-1976 14:41
+DBKCA     .CTL           3  9-AUG-1976 14:43
+DBKCA     .HST           2 29-JUL-1976 04:00
+DBKCA     .INP           1  3-AUG-1976 14:11
+DBKCA     .SAV          31  9-AUG-1976 14:44
+DBKCA     .SEQ        1873  9-AUG-1976 14:49
+DBKCA     .TXT          14 28-JUL-1976 17:49
+DBKCAM    .MAC         124 26-MAY-1976 20:51
+DBKCAT    .MAC           3 30-JUL-1976 16:47
+DBKCC     .CCL           1  9-AUG-1976 14:42
+DBKCC     .CTL           3  9-AUG-1976 15:37
+DBKCC     .HST           2 29-JUL-1976 04:00
+DBKCC     .INP           1  3-AUG-1976 14:13
+DBKCC     .SAV          27  9-AUG-1976 15:38
+DBKCC     .SEQ        2716  9-AUG-1976 15:41
+DBKCC     .TXT          14 28-JUL-1976 17:49
+DBKCCM    .MAC          77 28-MAY-1976 15:08
+DBKCCT    .MAC          22 30-JUL-1976 16:47
+DBKCD     .CCL           1  9-AUG-1976 14:42
+DBKCD     .CTL           3  9-AUG-1976 16:33
+DBKCD     .HST           2 29-JUL-1976 04:00
+DBKCD     .INP           1  3-AUG-1976 14:15
+DBKCD     .SAV          49  9-AUG-1976 16:35
+DBKCD     .SEQ        4896  9-AUG-1976 16:42
+DBKCD     .TXT          14 28-JUL-1976 17:49
+DBKCDM    .MAC          16 26-MAY-1976 20:52
+DBKCDT    .MAC           5 30-JUL-1976 16:48
+DBKCE     .CCL           1  9-AUG-1976 14:42
+DBKCE     .CTL           3  9-AUG-1976 17:32
+DBKCE     .HST           2 29-JUL-1976 04:00
+DBKCE     .INP           1  3-AUG-1976 14:15
+DBKCE     .SAV          39  9-AUG-1976 17:34
+DBKCE     .SEQ        4302  9-AUG-1976 17:45
+DBKCE     .TXT          14 28-JUL-1976 17:50
+DBKCEM    .MAC          55 28-MAY-1976 15:21
+DBKCET    .MAC           6 30-JUL-1976 16:48
+DBKDA     .CCL           1  9-JUN-1976 15:12
+DBKDA     .CTL           1  9-JUN-1976 15:09
+DBKDA     .HST           1  9-JUN-1976 16:52
+DBKDA     .INP           1  9-JUN-1976 18:23
+DBKDA     .SAV          82  9-JUN-1976 18:38
+DBKDA     .SEQ        1376  9-JUN-1976 18:45
+DBKDA     .TXT          30  9-JUN-1976 16:44
+DBKDAM    .MAC          32  9-JUN-1976 17:18
+DBKDAT    .MAC           5  9-JUN-1976 16:57
+DBKDB     .CCL           1  9-JUN-1976 15:13
+DBKDB     .CTL           1  9-JUN-1976 15:12
+DBKDB     .HST           1  9-JUN-1976 16:53
+DBKDB     .INP           1  9-JUN-1976 18:26
+DBKDB     .SAV          77  9-JUN-1976 20:31
+DBKDB     .SEQ        1288  9-JUN-1976 20:35
+DBKDB     .TXT          28  9-JUN-1976 16:45
+DBKDBM    .MAC          26  9-JUN-1976 20:18
+DBKDBT    .MAC           6  9-JUN-1976 18:04
+DBKDC     .CCL           1  1-JUL-1976 20:25
+DBKDC     .CTL           1  1-JUL-1976 20:23
+DBKDC     .HST           1  1-JUL-1976 20:22
+DBKDC     .INP           1  1-JUL-1976 20:24
+DBKDC     .TXT          14  1-JUL-1976 20:20
+DBKDCT    .MAC           2  1-JUL-1976 20:25
+DCOPY     .BAK           2 18-JAN-1989 19:46
+DCOPY     .MIC           2 18-JAN-1989 20:18
+DECDOC    .EXE          28 23-FEB-1989 18:52
+DECDOC    .SAV          22 22-FEB-1989 20:48
+DECTAP    .MIC           1 23-FEB-1989 18:52
+DEFECT    .BAK          47 13-SEP-1985 13:49
+DEFECT    .MAC         234 19-DEC-1989 14:47
+DEFECT    .SCM           1 19-DEC-1989 16:14
+DEFECT-PRE.MAC          47 13-SEP-1985 13:49
+DEFINE    .MIC          59 17-JAN-1989 19:55
+DEFINS    .UNV          15 19-DEC-1989 15:07
+DEVLDR    .MAC          90 13-JAN-1989 04:02
+DFAS      .MAC           9  9-JUN-1976 17:37
+DFDV      .MAC           5  9-JUN-1976 17:38
+DFKAA     .CCL           1 13-JAN-1989 18:22
+DFKAA     .CTL           1 13-JAN-1989 18:22
+DFKAA     .HST           2 13-JAN-1989 18:22
+DFKAA     .INP           2 13-JAN-1989 18:21
+DFKAA     .SAV         144 26-MAR-1996 18:14
+DFKAA     .SEQ        5074 13-JAN-1989 18:21
+DFKAA     .TXT           7 13-JAN-1989 18:22
+DFKAA1    .MAC          58 13-JAN-1989 18:22
+DFKAA2    .MAC          86 13-JAN-1989 18:22
+DFKAA3    .MAC         135 13-JAN-1989 18:22
+DFKAA4    .MAC         103 13-JAN-1989 18:22
+DFKAA5    .MAC         142 13-JAN-1989 18:22
+DFKAA6    .MAC         175 13-JAN-1989 18:22
+DFKAA7    .MAC          66 13-JAN-1989 18:22
+DFKAA8    .MAC          66 13-JAN-1989 18:22
+DFKAAT    .MAC           3 13-JAN-1989 18:22
+DFKAC     .INP          12  8-DEC-1986 21:12
+DFKAD     .HST           2 13-JAN-1989 18:29
+DFKAD     .INP           3 13-JAN-1989 18:29
+DFKAD     .SAV          33 13-JAN-1989 18:29
+DFKAD     .SEQ         636 13-JAN-1989 18:29
+DFKAD     .TXT           8 13-JAN-1989 18:29
+DFKAD1    .MAC         105 13-JAN-1989 18:29
+DFKADT    .MAC           3 13-JAN-1989 18:29
+DFKBB     .CCL           1 13-JAN-1989 18:30
+DFKBB     .CTL           1 13-JAN-1989 18:30
+DFKBB     .HST           1 13-JAN-1989 18:30
+DFKBB     .INP           1 13-JAN-1989 18:30
+DFKBB     .SAV          11 13-JAN-1989 18:30
+DFKBB     .SEQ         313 13-JAN-1989 18:30
+DFKBB     .TXT          21 13-JAN-1989 18:30
+DFKBBM    .MAC          43 13-JAN-1989 18:30
+DFKBBT    .MAC           4 13-JAN-1989 18:30
+DFKCA     .CCL           1 13-JAN-1989 18:31
+DFKCA     .CTL           2 13-JAN-1989 18:31
+DFKCA     .HST           1 13-JAN-1989 18:31
+DFKCA     .INP           3 13-JAN-1989 18:30
+DFKCA     .SAV         166 13-JAN-1989 18:31
+DFKCA     .SEQ        3385 13-JAN-1989 18:31
+DFKCA     .TXT          14 13-JAN-1989 18:31
+DFKCA1    .MAC         103 13-JAN-1989 18:31
+DFKCA2    .MAC          52 13-JAN-1989 18:31
+DFKCA3    .MAC          77 13-JAN-1989 18:31
+DFKCA4    .MAC          15 13-JAN-1989 18:31
+DFKCA5    .MAC          57 13-JAN-1989 18:31
+DFKCAT    .MAC          27 13-JAN-1989 18:31
+DFKCB     .CCL           1 13-JAN-1989 18:30
+DFKCB     .CTL           1 13-JAN-1989 18:30
+DFKCB     .HST           1 13-JAN-1989 18:30
+DFKCB     .INP           3 13-JAN-1989 18:30
+DFKCB     .SAV          74 13-JAN-1989 18:30
+DFKCB     .SEQ        1359 13-JAN-1989 18:30
+DFKCB     .TXT          14 13-JAN-1989 18:30
+DFKCBM    .MAC         162 13-JAN-1989 18:30
+DFKCBT    .MAC          14 13-JAN-1989 18:30
+DFKCC     .CCL           1 13-JAN-1989 18:43
+DFKCC     .CTL           1 13-JAN-1989 18:43
+DFKCC     .HST           2 13-JAN-1989 18:43
+DFKCC     .INP           3 13-JAN-1989 18:43
+DFKCC     .SAV          49 13-JAN-1989 18:43
+DFKCC     .SEQ         770 13-JAN-1989 18:43
+DFKCC     .TXT          14 13-JAN-1989 18:43
+DFKCC1    .MAC          28 13-JAN-1989 18:43
+DFKCCM    .MAC         149 13-JAN-1989 18:43
+DFKCCT    .MAC         100 27-MAR-1996 22:57
+DFKDA     .CCL           1 13-JAN-1989 18:44
+DFKDA     .CTL           2 13-JAN-1989 18:44
+DFKDA     .HST           5 13-JAN-1989 18:44
+DFKDA     .INP           3 13-JAN-1989 18:43
+DFKDA     .SAV         114 13-JAN-1989 18:44
+DFKDA     .SEQ        1719 13-JAN-1989 18:43
+DFKDA     .TXT          33 13-JAN-1989 18:44
+DFKDA1    .MAC          34 13-JAN-1989 18:45
+DFKDA3    .MAC         637 14-FEB-1995 23:32
+DFKDAM    .MAC         102 13-JAN-1989 18:45
+DFKDAT    .MAC          12 13-JAN-1989 18:45
+DFKDAX    .CTL           2 13-JAN-1989 18:44
+DFKEA     .CCL           1 13-JAN-1989 18:44
+DFKEA     .CTL           2 13-JAN-1989 18:44
+DFKEA     .HST           3 13-JAN-1989 18:44
+DFKEA     .INP           3 13-JAN-1989 18:43
+DFKEA     .SAV          48 13-JAN-1989 18:44
+DFKEA     .SEQ         696 13-JAN-1989 18:44
+DFKEA     .TXT          13 13-JAN-1989 18:44
+DFKEAM    .MAC         136 13-JAN-1989 18:44
+DFKEAT    .MAC           5 13-JAN-1989 18:44
+DFKEB     .BLO           0  4-APR-1985 21:26
+DFKEB     .CCL           1 13-JAN-1989 18:44
+DFKEB     .CRF         302 18-NOV-1993 19:28
+DFKEB     .CTL           1 13-JAN-1989 18:44
+DFKEB     .INP           3 13-JAN-1989 18:44
+DFKEB     .SAV          28 18-NOV-1993 19:35
+DFKEB     .SEQ         360 13-JAN-1989 18:44
+DFKEBD    .TXT          12 13-JAN-1989 18:44
+DFKEBH    .HST           2 13-JAN-1989 18:44
+DFKEBM    .MAC          45 13-JAN-1989 18:45
+DFKEBT    .MAC           5 13-JAN-1989 18:45
+DFKEC     .CCL           1 13-JAN-1989 18:45
+DFKEC     .CTL           1 13-JAN-1989 18:45
+DFKEC     .HST           2 13-JAN-1989 18:45
+DFKEC     .INP           3 13-JAN-1989 18:44
+DFKEC     .SAV          32 13-JAN-1989 18:45
+DFKEC     .SEQ         459 13-JAN-1989 18:44
+DFKEC     .TXT          28 13-JAN-1989 18:45
+DFKECM    .MAC         122 13-JAN-1989 18:45
+DFKECT    .MAC           9 13-JAN-1989 18:45
+DFKED     .CCL           1 13-JAN-1989 19:00
+DFKED     .CTL           2 13-JAN-1989 19:00
+DFKED     .HST           2 13-JAN-1989 19:00
+DFKED     .INP           3 13-JAN-1989 18:59
+DFKED     .SAV          53 13-JAN-1989 19:00
+DFKED     .SEQ         751 13-JAN-1989 18:59
+DFKED     .TXT          12 13-JAN-1989 19:00
+DFKEDM    .MAC         163 13-JAN-1989 19:00
+DFKEDT    .MAC           9 13-JAN-1989 19:00
+DFMP      .MAC           5  9-JUN-1976 17:37
+DIAG      .INS           5 17-JAN-1989 20:39
+DIAG      .MIC           7  6-JAN-1989 20:02
+DIAMON    .CCL           1 13-JAN-1989 04:02
+DIAMON    .CTL           1 13-JAN-1989 04:02
+DIAMON    .EXE          36 13-JAN-1989 04:02
+DIAMON    .HST           5 13-JAN-1989 04:02
+DIAMON    .INP           3 13-JAN-1989 04:02
+DIAMON    .MAC         264 18-APR-1996 23:49
+DIAMON    .SAV          24 13-JAN-1989 14:32
+DIAMON    .SEQ         476 13-JAN-1989 04:02
+DIAMON    .TXT          25 13-JAN-1989 04:02
+DISKS     .MAC          41 13-JAN-1989 18:19
+DMP       .MIC           3 13-JAN-1989 03:05
+DSKAA     .CCL           1 31-JAN-1989 15:06
+DSKAA     .CMD           1 31-JAN-1989 15:06
+DSKAA     .CTL           1 31-JAN-1989 15:06
+DSKAA     .HST           1 31-JAN-1989 15:06
+DSKAA     .INP           3 31-JAN-1989 15:05
+DSKAA     .SAV          19 31-JAN-1989 15:05
+DSKAA     .SEQ        1522 31-JAN-1989 15:05
+DSKAA     .TXT           7 31-JAN-1989 15:06
+DSKAA1    .MAC          58 31-JAN-1989 15:06
+DSKAAT    .MAC           3 31-JAN-1989 15:06
+DSKAB     .CCL           1  2-FEB-1989 22:00
+DSKAB     .CMD           1  2-FEB-1989 22:00
+DSKAB     .CTL           1  2-FEB-1989 22:00
+DSKAB     .HST           1  2-FEB-1989 22:00
+DSKAB     .INP           3  2-FEB-1989 22:00
+DSKAB     .SAV          21  2-FEB-1989 22:00
+DSKAB     .SEQ        1698  2-FEB-1989 22:00
+DSKAB     .TXT           7  2-FEB-1989 22:00
+DSKAB1    .MAC          87  2-FEB-1989 22:00
+DSKABT    .MAC           3  2-FEB-1989 22:00
+DSKAC     .CCL           1  3-FEB-1989 04:12
+DSKAC     .CMD           1  3-FEB-1989 04:13
+DSKAC     .CTL           1  3-FEB-1989 04:12
+DSKAC     .HST           1  3-FEB-1989 04:12
+DSKAC     .INP           3  3-FEB-1989 04:12
+DSKAC     .SAV          15  3-FEB-1989 04:12
+DSKAC     .SEQ        1081  3-FEB-1989 04:12
+DSKAC     .TXT           7  3-FEB-1989 04:12
+DSKAC1    .MAC         136  3-FEB-1989 04:13
+DSKACT    .MAC           3  3-FEB-1989 04:13
+DSKAD     .CCL           1  8-FEB-1989 20:15
+DSKAD     .CMD           1  8-FEB-1989 20:15
+DSKAD     .CTL           1  8-FEB-1989 20:15
+DSKAD     .HST           1  8-FEB-1989 20:15
+DSKAD     .INP           3  8-FEB-1989 20:15
+DSKAD     .SAV          17  8-FEB-1989 20:15
+DSKAD     .SEQ        1171  8-FEB-1989 20:15
+DSKAD     .TXT           7  8-FEB-1989 20:15
+DSKAD1    .MAC         104  8-FEB-1989 20:15
+DSKADT    .MAC           3  8-FEB-1989 20:15
+DSKAE     .CCL           1  8-FEB-1989 20:17
+DSKAE     .CMD           1  8-FEB-1989 20:17
+DSKAE     .CTL           1  8-FEB-1989 20:17
+DSKAE     .HST           1  8-FEB-1989 20:17
+DSKAE     .INP           3  8-FEB-1989 20:16
+DSKAE     .SAV          13  8-FEB-1989 20:16
+DSKAE     .SEQ         833  8-FEB-1989 20:16
+DSKAE     .TXT           7  8-FEB-1989 20:17
+DSKAE1    .MAC         143  8-FEB-1989 20:17
+DSKAET    .MAC           3  8-FEB-1989 20:17
+DSKAF     .CCL           1  8-FEB-1989 20:18
+DSKAF     .CMD           1  8-FEB-1989 20:19
+DSKAF     .CTL           1  8-FEB-1989 20:18
+DSKAF     .HST           1  8-FEB-1989 20:18
+DSKAF     .INP           3  8-FEB-1989 20:18
+DSKAF     .SAV          16  8-FEB-1989 20:18
+DSKAF     .SEQ        1033  8-FEB-1989 20:18
+DSKAF     .TXT           7  8-FEB-1989 20:18
+DSKAF1    .MAC         176  8-FEB-1989 20:18
+DSKAFT    .MAC           3  8-FEB-1989 20:18
+DSKAG     .CCL           1  8-FEB-1989 20:44
+DSKAG     .CMD           1  8-FEB-1989 20:44
+DSKAG     .CTL           1  8-FEB-1989 20:44
+DSKAG     .HST           1  8-FEB-1989 20:44
+DSKAG     .INP           3  8-FEB-1989 20:44
+DSKAG     .SAV           8  8-FEB-1989 20:44
+DSKAG     .SEQ         470  8-FEB-1989 20:44
+DSKAG     .TXT           7  8-FEB-1989 20:44
+DSKAG1    .MAC          67  8-FEB-1989 20:44
+DSKAGT    .MAC           3  8-FEB-1989 20:44
+DSKAH     .CCL           1  8-FEB-1989 20:42
+DSKAH     .CTL           1  8-FEB-1989 20:42
+DSKAH     .HST           1  8-FEB-1989 20:42
+DSKAH     .INP           3  8-FEB-1989 20:42
+DSKAH     .SAV          33  8-FEB-1989 20:42
+DSKAH     .SEQ         818  8-FEB-1989 20:42
+DSKAH     .TXT           7  8-FEB-1989 20:42
+DSKAH1    .MAC          49  8-FEB-1989 20:42
+DSKAHT    .MAC           3  8-FEB-1989 20:42
+DSKAI     .CCL           1  8-FEB-1989 20:43
+DSKAI     .CMD           1  8-FEB-1989 20:43
+DSKAI     .CTL           1  8-FEB-1989 20:43
+DSKAI     .HST           1  8-FEB-1989 20:43
+DSKAI     .INP           3  8-FEB-1989 20:42
+DSKAI     .SAV          38  8-FEB-1989 20:42
+DSKAI     .SEQ        1887  8-FEB-1989 20:42
+DSKAI     .TXT          14  8-FEB-1989 20:43
+DSKAI1    .MAC          83  8-FEB-1989 20:43
+DSKAIT    .MAC           5  8-FEB-1989 20:43
+DSKAJ     .CCL           1  9-FEB-1989 13:23
+DSKAJ     .CMD           1  9-FEB-1989 13:23
+DSKAJ     .CTL           1  9-FEB-1989 13:23
+DSKAJ     .HST           1  9-FEB-1989 13:23
+DSKAJ     .INP           3  9-FEB-1989 13:23
+DSKAJ     .SAV          26  9-FEB-1989 13:23
+DSKAJ     .SEQ        1110  9-FEB-1989 13:23
+DSKAJ     .TXT          14  9-FEB-1989 13:23
+DSKAJ1    .MAC          80  9-FEB-1989 13:23
+DSKAJT    .MAC           5  9-FEB-1989 13:23
+DSKAK     .CCL           1  9-FEB-1989 13:24
+DSKAK     .CMD           1  9-FEB-1989 13:25
+DSKAK     .CTL           1  9-FEB-1989 13:24
+DSKAK     .HST           1  9-FEB-1989 13:24
+DSKAK     .INP           3  9-FEB-1989 13:23
+DSKAK     .SAV          48  9-FEB-1989 13:23
+DSKAK     .SEQ        2107  9-FEB-1989 13:23
+DSKAK     .TXT          14  9-FEB-1989 13:24
+DSKAK1    .MAC           8  9-FEB-1989 13:24
+DSKAKT    .MAC           4  9-FEB-1989 13:24
+DSKAL     .CCL           1  9-FEB-1989 13:25
+DSKAL     .CMD           1  9-FEB-1989 13:25
+DSKAL     .CTL           1  9-FEB-1989 13:25
+DSKAL     .HST           1  9-FEB-1989 13:25
+DSKAL     .INP           3  9-FEB-1989 13:24
+DSKAL     .SAV          52  9-FEB-1989 13:24
+DSKAL     .SEQ        1973  9-FEB-1989 13:24
+DSKAL     .TXT          14  9-FEB-1989 13:25
+DSKAL1    .MAC          75  9-FEB-1989 13:25
+DSKALT    .MAC           4  9-FEB-1989 13:25
+DSKAM     .CCL           1  9-FEB-1989 13:54
+DSKAM     .CMD           1  9-FEB-1989 13:54
+DSKAM     .CTL           2  9-FEB-1989 13:54
+DSKAM     .HST           1  9-FEB-1989 13:54
+DSKAM     .INP           3  9-FEB-1989 13:54
+DSKAM     .SAV          33  9-FEB-1989 13:54
+DSKAM     .SEQ        1118  9-FEB-1989 13:54
+DSKAM     .TXT          14  9-FEB-1989 13:54
+DSKAM1    .CMD           1  9-FEB-1989 13:54
+DSKAM1    .MAC         176  9-FEB-1989 13:54
+DSKAM2    .CMD           1  9-FEB-1989 13:54
+DSKAMT    .MAC           5  9-FEB-1989 13:54
+DSKBA     .CCL           1  9-FEB-1989 13:51
+DSKBA     .CTL           1  9-FEB-1989 13:51
+DSKBA     .HST           1  9-FEB-1989 13:51
+DSKBA     .INP           3  9-FEB-1989 13:50
+DSKBA     .SAV          98  9-FEB-1989 13:50
+DSKBA     .SEQ        2526  9-FEB-1989 13:50
+DSKBA     .TXT          24  9-FEB-1989 13:51
+DSKBA1    .MAC          87  9-FEB-1989 13:51
+DSKBA2    .MAC         125  9-FEB-1989 13:51
+DSKBA3    .MAC         102  9-FEB-1989 13:51
+DSKBA4    .MAC          72  9-FEB-1989 13:51
+DSKBAT    .MAC           6  9-FEB-1989 13:51
+DSKCA     .CCL           1  9-FEB-1989 13:45
+DSKCA     .CMD           1  9-FEB-1989 13:45
+DSKCA     .CTL           1  9-FEB-1989 13:45
+DSKCA     .HST           1  9-FEB-1989 13:45
+DSKCA     .INP           3  9-FEB-1989 13:45
+DSKCA     .SAV          26  9-FEB-1989 13:45
+DSKCA     .SEQ         811  9-FEB-1989 13:45
+DSKCA     .TXT          14  9-FEB-1989 13:45
+DSKCA1    .MAC         101  9-FEB-1989 13:45
+DSKCAT    .MAC          27  9-FEB-1989 13:45
+DSKCB     .CCL           1  9-FEB-1989 14:03
+DSKCB     .CMD           1  9-FEB-1989 14:03
+DSKCB     .CTL           1  9-FEB-1989 14:03
+DSKCB     .HST           1  9-FEB-1989 14:03
+DSKCB     .INP           3  9-FEB-1989 14:03
+DSKCB     .SAV          13  9-FEB-1989 14:03
+DSKCB     .SEQ         460  9-FEB-1989 14:03
+DSKCB     .TXT          14  9-FEB-1989 14:03
+DSKCB1    .MAC          52  9-FEB-1989 14:03
+DSKCBT    .MAC          27  9-FEB-1989 14:03
+DSKCC     .CCL           1  9-FEB-1989 14:00
+DSKCC     .CMD           1  9-FEB-1989 14:00
+DSKCC     .CTL           1  9-FEB-1989 14:00
+DSKCC     .HST           1  9-FEB-1989 14:00
+DSKCC     .INP           3  9-FEB-1989 14:00
+DSKCC     .SAV          27  9-FEB-1989 14:00
+DSKCC     .SEQ        1121  9-FEB-1989 14:00
+DSKCC     .TXT          14  9-FEB-1989 14:00
+DSKCC1    .MAC          76  9-FEB-1989 14:00
+DSKCCT    .MAC          27  9-FEB-1989 14:00
+DSKCD     .CCL           1  9-FEB-1989 14:08
+DSKCD     .CMD           1  9-FEB-1989 14:08
+DSKCD     .CTL           1  9-FEB-1989 14:08
+DSKCD     .HST           1  9-FEB-1989 14:08
+DSKCD     .INP           3  9-FEB-1989 14:07
+DSKCD     .SAV          49  9-FEB-1989 14:07
+DSKCD     .SEQ        1564  9-FEB-1989 14:07
+DSKCD     .TXT          14  9-FEB-1989 14:08
+DSKCD1    .MAC          16  9-FEB-1989 14:08
+DSKCDT    .MAC          27  9-FEB-1989 14:08
+DSKCE     .CCL           1  9-FEB-1989 14:03
+DSKCE     .CMD           1  9-FEB-1989 14:03
+DSKCE     .CTL           1  9-FEB-1989 14:03
+DSKCE     .HST           1  9-FEB-1989 14:03
+DSKCE     .INP           3  9-FEB-1989 14:03
+DSKCE     .SAV          39  9-FEB-1989 14:03
+DSKCE     .SEQ         989  9-FEB-1989 14:03
+DSKCE     .TXT          14  9-FEB-1989 14:03
+DSKCE1    .MAC          57  9-FEB-1989 14:03
+DSKCET    .MAC          27  9-FEB-1989 14:03
+DSKCF     .CCL           1  9-FEB-1989 14:16
+DSKCF     .CTL           1  9-FEB-1989 14:16
+DSKCF     .HST           2  9-FEB-1989 14:16
+DSKCF     .INP           3  9-FEB-1989 14:16
+DSKCF     .SAV          72  9-FEB-1989 14:16
+DSKCF     .SEQ        1334  9-FEB-1989 14:16
+DSKCF     .TXT          14  9-FEB-1989 14:16
+DSKCFM    .MAC         162  9-FEB-1989 14:16
+DSKCFT    .MAC          14  9-FEB-1989 14:16
+DSKCG     .CCL           1  9-FEB-1989 14:16
+DSKCG     .CTL           1  9-FEB-1989 14:16
+DSKCG     .HST           2  9-FEB-1989 14:16
+DSKCG     .INP           3  9-FEB-1989 14:16
+DSKCG     .SAV          48  9-FEB-1989 14:16
+DSKCG     .SEQ         761  9-FEB-1989 14:16
+DSKCG     .TXT          14  9-FEB-1989 14:16
+DSKCG1    .MAC          28  9-FEB-1989 14:16
+DSKCGM    .MAC         147  9-FEB-1989 14:16
+DSKCGT    .MAC          20  9-FEB-1989 14:16
+DSKDA     .CCL           1  9-FEB-1989 14:20
+DSKDA     .CTL           1  9-FEB-1989 14:20
+DSKDA     .HST           2  9-FEB-1989 14:20
+DSKDA     .INP           3  9-FEB-1989 14:20
+DSKDA     .SAV         110  9-FEB-1989 14:20
+DSKDA     .SEQ        1521  9-FEB-1989 14:20
+DSKDA     .TXT          30  9-FEB-1989 14:20
+DSKDA1    .MAC          42  9-FEB-1989 14:21
+DSKDA2    .MAC          38  9-FEB-1989 14:21
+DSKDA3    .MAC         171  9-FEB-1989 14:21
+DSKDAM    .MAC         121  9-FEB-1989 14:21
+DSKDAT    .MAC           8  9-FEB-1989 14:21
+DSKEA     .CCL           1  9-FEB-1989 14:23
+DSKEA     .CTL           1  9-FEB-1989 14:23
+DSKEA     .HST           1  9-FEB-1989 14:23
+DSKEA     .INP           3  9-FEB-1989 14:23
+DSKEA     .SAV          40  9-FEB-1989 14:23
+DSKEA     .SEQ         838  9-FEB-1989 14:23
+DSKEA     .TXT          11  9-FEB-1989 14:23
+DSKEAM    .MAC         147  9-FEB-1989 14:23
+DSKEAT    .MAC           9  9-FEB-1989 14:23
+DSKEB     .CTL           1 22-FEB-1989 17:18
+DSKEB     .INP           4 22-FEB-1989 17:18
+DSKEB     .SAV          29 22-FEB-1989 17:19
+DSKEB     .SEQ         465 22-FEB-1989 17:19
+DSKEBA    .CCL           1 22-FEB-1989 17:19
+DSKEBD    .TXT          14 22-FEB-1989 17:19
+DSKEBH    .HST           1 22-FEB-1989 17:19
+DSKEBM    .MAC          77 22-FEB-1989 17:19
+DSKEBT    .MAC           4 22-FEB-1989 17:19
+DSKEC     .CCL           1 22-FEB-1989 17:16
+DSKEC     .CTL           1 22-FEB-1989 17:16
+DSKEC     .HST           2 22-FEB-1989 17:16
+DSKEC     .INP           4 22-FEB-1989 17:16
+DSKEC     .SAV          25 22-FEB-1989 17:16
+DSKEC     .SEQ         318 22-FEB-1989 17:16
+DSKEC     .TXT          10 22-FEB-1989 17:16
+DSKECM    .MAC          68 22-FEB-1989 17:16
+DSKECT    .MAC           9 22-FEB-1989 17:16
+DSKFA     .CCL           1 22-FEB-1989 17:34
+DSKFA     .CTL           1 22-FEB-1989 17:34
+DSKFA     .HST           1 22-FEB-1989 17:33
+DSKFA     .INP           3 22-FEB-1989 17:33
+DSKFA     .SAV          14 22-FEB-1989 17:33
+DSKFA     .SEQ         517 22-FEB-1989 17:33
+DSKFA     .TXT          10 22-FEB-1989 17:33
+DSKFAM    .MAC          22 22-FEB-1989 17:34
+DSKFAS    .MAC           2 22-FEB-1989 17:34
+DSKFAT    .MAC           4 22-FEB-1989 17:34
+DSR       .EXE         332 23-FEB-1989 18:52
+END       .MAC           1 13-JAN-1989 18:19
+ERPARM    .MAC           2 16-JUN-1976 04:00
+ERRHAN    .MAC           9 16-JUN-1976 04:00
+FF        .              1 17-JAN-1989 20:41
+FIXED     .KLM          99 26-MAR-1996 18:07
+FIXED     .KSM          14 22-FEB-1989 20:58
+FLOAT     .MAC           2  9-JUN-1976 17:39
+GCOM      .MAC          19 22-FEB-1989 20:48
+GENRGS    .MAC          20  9-SEP-1985 13:49
+GENVAR    .MAC          21 13-JAN-1989 18:19
+GKBD      .MAC          43 22-FEB-1989 20:48
+GLXMAC    .MAC          96 22-FEB-1989 20:48
+GLXMAC    .UNV          30 22-FEB-1989 20:48
+GSCN      .CCL           1 22-FEB-1989 20:48
+GSCN      .MAC         104 22-FEB-1989 20:48
+IFIX      .MAC           2  9-JUN-1976 17:39
+KADTBT    .CCL           1 17-JAN-1989 02:41
+KASIM     .CCL           1 13-DEC-1988 20:57
+KASIM     .SAV          51 13-DEC-1988 20:57
+KFDTBT    .CCL           1 17-JAN-1989 02:41
+KI10A1    .MAC          43  9-JUN-1976 17:52
+KI10A2    .MAC          81  9-JUN-1976 17:56
+KIPNT     .MAC          36  9-JUN-1976 17:30
+KL10A1    .MAC           3 13-JAN-1989 18:45
+KL10A2    .MAC          43 13-JAN-1989 18:45
+KL10A3    .MAC          81 13-JAN-1989 18:45
+KLACP     .CCL           1 17-JAN-1989 02:41
+KLAD10    .CCL           1 13-JAN-1989 19:47
+KLAD10    .CTL           1 13-JAN-1989 19:47
+KLAD10    .HLP           8 13-JAN-1989 19:47
+KLAD10    .HST           2 13-JAN-1989 19:47
+KLAD10    .INP           3 13-JAN-1989 19:47
+KLAD10    .MAC          98 13-JAN-1989 19:47
+KLAD10    .SAV          16 13-JAN-1989 19:47
+KLAD10    .SEQ         354 13-JAN-1989 19:47
+KLAD10    .TXT           5 13-JAN-1989 19:47
+KLADBT    .CCL           1 13-JAN-1989 19:47
+KLCPU     .CMD           1 13-JAN-1989 19:46
+KLDBLD    .CMD           1 17-JAN-1989 02:42
+KLDDT     .CCL           1 13-JAN-1989 04:01
+KLDDT     .CTL           1 13-JAN-1989 04:01
+KLDDT     .HLP           7 13-JAN-1989 04:01
+KLDDT     .HST           2 13-JAN-1989 04:01
+KLDDT     .INP           3 13-JAN-1989 04:01
+KLDDT     .MAC         275 13-JAN-1989 04:01
+KLDDT     .SAV          27  9-FEB-1989 14:08
+KLDDT     .SEQ         564 13-JAN-1989 04:01
+KLDDT     .TXT           3 13-JAN-1989 04:01
+KLDTBT    .CCL           1 17-JAN-1989 02:41
+KLFCP     .CCL           1 17-JAN-1989 02:41
+KLLD      .CCL           1 13-JAN-1989 19:46
+KLPNT     .MAC          36 13-JAN-1989 18:45
+KLRPBT    .CCL           1 17-JAN-1989 02:42
+KLRPBT    .OBJ           8 17-JAN-1989 02:42
+KLRXBT    .CCL           1 17-JAN-1989 02:41
+KSSIM     .SAV          87  9-FEB-1989 14:08
+LIST      .DIAG         52 24-FEB-1989 14:34
+LOCAT     .MIC           1 17-JAN-1989 20:39
+M         .MAC          20  4-OCT-1988 22:28
+MACRO     .V51         112 15-JUN-1989 19:20
+MACSYM    .UNV          27 22-FEB-1989 20:48
+MACTEN    .UNV          30 22-FEB-1989 20:48
+MACY11    .EXE          56 30-JAN-1989 20:18
+MAGLDR    .MAC          86 13-JAN-1989 04:04
+MAGMON    .CCL           1 13-JAN-1989 04:04
+MAGMON    .CTL           1 13-JAN-1989 04:04
+MAGMON    .EXE          40 13-JAN-1989 04:04
+MAGMON    .HST           3 13-JAN-1989 04:04
+MAGMON    .INP           3 13-JAN-1989 04:04
+MAGMON    .MAC         259 18-APR-1996 23:56
+MAGMON    .SAV          23 15-JUN-1989 19:19
+MAGMON    .SEQ         459 13-JAN-1989 04:04
+MAGMON    .TXT          29 13-JAN-1989 04:04
+MAGTAP    .CCL           1 13-JAN-1989 04:05
+MAGTAP    .CTL           1 13-JAN-1989 04:05
+MAGTAP    .EXE          36 22-MAY-1978 20:54
+MAGTAP    .HLP          40 17-JUL-1979 20:11
+MAGTAP    .HST           3 13-JAN-1989 04:05
+MAGTAP    .INP           3 13-JAN-1989 04:05
+MAGTAP    .MAC         169 13-JAN-1989 04:05
+MAGTAP    .MTA           1 15-JUN-1989 19:19
+MAGTAP    .RDI          15 15-JUN-1989 19:19
+MAGTAP    .SAV          29 15-JUN-1989 19:19
+MAGTAP    .SEQ         519 13-JAN-1989 04:05
+MAGTAP    .TXT          42 13-JAN-1989 04:05
+MAINKL    .LPT         176 13-JAN-1989 14:33
+MAPSUP    .MAC          80 13-JAN-1989 18:19
+MATRIX    .BAK         106  7-JUN-1989 13:40
+MATRIX    .DIF           7 10-MAR-1989 00:46
+MATRIX    .MEM          34 14-JUN-1989 12:13
+MATRIX    .RNO         112 13-JUN-1989 19:20
+MATRIX    .RNO-          3  2-FEB-1989 16:43
+MATRIX-FUL.BAK          40  8-FEB-1989 16:20
+MATRIX-FUL.RNO          28  8-FEB-1989 16:21
+MBC       .FLI          17  7-MAR-1989 19:32
+MBC       .FLO          27  7-MAR-1989 19:32
+MBSUB     .TEC           3 23-FEB-1989 18:50
+MCDXD     .CMD           1  7-MAR-1989 16:16
+MCDXDM    .MAC          43  7-MAR-1989 16:16
+MCDXDT    .MAC           6  7-MAR-1989 16:16
+MCERR     .MAC          24  7-MAR-1989 16:39
+MCMSG     .CMD           1  7-MAR-1989 16:40
+MCMSG     .MAC           3  7-MAR-1989 16:39
+MCOD1M    .MAC          78  7-MAR-1989 16:39
+MCOD1T    .MAC           2  7-MAR-1989 16:39
+MCOD2M    .MAC          66  7-MAR-1989 16:39
+MCOD2T    .MAC           8  7-MAR-1989 16:39
+MCOD3M    .MAC          91  7-MAR-1989 16:40
+MCOD3T    .MAC           7  7-MAR-1989 16:40
+MCOD4M    .MAC         117  7-MAR-1989 16:40
+MCOD4T    .MAC          10  7-MAR-1989 16:40
+MCOD5M    .MAC         122  7-MAR-1989 16:40
+MCOD5T    .MAC          10  7-MAR-1989 16:40
+MCOD6M    .MAC          76  7-MAR-1989 16:40
+MCOD6T    .MAC          12  7-MAR-1989 16:40
+MCOD7M    .MAC          76  7-MAR-1989 16:40
+MCOD7T    .MAC          12  7-MAR-1989 16:40
+MCODE     .CMD           1  7-MAR-1989 16:40
+MCODE0    .LST         173  7-MAR-1989 16:39
+MCODE0    .MAC          78  7-MAR-1989 16:39
+MCODE1    .LST         276  7-MAR-1989 16:39
+MCODE2    .LST         282  7-MAR-1989 16:39
+MCODE3    .LST         353  7-MAR-1989 16:40
+MCODE4    .LST         456  7-MAR-1989 16:40
+MCODE5    .LST         419  7-MAR-1989 16:40
+MCODE6    .LST         379  7-MAR-1989 16:40
+MCODE7    .LST         381  7-MAR-1989 16:40
+MCRFX1    .TEC           1 17-JAN-1989 20:39
+MCRFX2    .TEC           1 17-JAN-1989 20:39
+MCRMAC    .TEC           1 17-JAN-1989 20:39
+MEMCON    .HLP           2 23-FEB-1989 18:49
+MF20      .FMT          81 23-FEB-1989 18:50
+MICRO     .EXE         124 17-JAN-1989 20:01
+MICRO     .MIC         103 17-JAN-1989 19:56
+MICRO     .OLD         124 17-JAN-1989 20:41
+MONSYM    .L36         123 13-JAN-1989 19:56
+MONSYM    .MAC        2403 21-JAN-1985 20:35
+MONSYM    .UNV         127 22-FEB-1989 20:48
+MORDOR    .FIL           8  7-DEC-1988 20:01
+MOS       .CTL          49 23-FEB-1989 18:50
+MOSDEF    .MAC          39 23-FEB-1989 18:50
+MOSTIM    .TEC           3 23-FEB-1989 18:50
+MSCRA     .CCL           1 22-FEB-1989 21:12
+MSCRA     .CTL           2 22-FEB-1989 21:12
+MSCRA     .EXE         116 22-FEB-1989 21:10
+MSCRA     .MSG          45 22-FEB-1989 21:10
+MSCRAD    .B36          61 22-FEB-1989 21:12
+MSCRAD    .BEG          27 22-FEB-1989 21:12
+MSCRAD    .END          34 22-FEB-1989 21:12
+MSCRAD    .XRF         106 22-FEB-1989 21:12
+MSCRAT    .B36         188 22-FEB-1989 21:12
+MSCRAT    .XRF         323 22-FEB-1989 21:11
+MSCSL     .CCL           1 22-FEB-1989 21:11
+MSCSL     .CTL           2 22-FEB-1989 21:11
+MSCSL     .EXE         160 22-FEB-1989 21:10
+MSCSL     .MSG         156 22-FEB-1989 21:10
+MSCSLD    .B36          65 22-FEB-1989 21:11
+MSCSLD    .BEG          19 22-FEB-1989 21:11
+MSCSLD    .END          46 22-FEB-1989 21:11
+MSCSLD    .XRF         119 22-FEB-1989 21:11
+MSCSLT    .B36         433 22-FEB-1989 21:11
+MSCSLT    .XRF         618 22-FEB-1989 21:10
+MSDPE     .CCL           1 22-FEB-1989 21:11
+MSDPE     .CTL           2 22-FEB-1989 21:11
+MSDPE     .EXE         228 22-FEB-1989 21:10
+MSDPE     .MSG          80 22-FEB-1989 21:10
+MSDPED    .B36          58 22-FEB-1989 21:11
+MSDPED    .BEG          15 22-FEB-1989 21:11
+MSDPED    .END          44 22-FEB-1989 21:11
+MSDPED    .XRF         109 22-FEB-1989 21:11
+MSDPET    .B36         679 22-FEB-1989 21:11
+MSDPET    .XRF         952 22-FEB-1989 21:10
+MSDPM     .CCL           1 22-FEB-1989 21:12
+MSDPM     .CTL           2 22-FEB-1989 21:12
+MSDPM     .EXE         152 22-FEB-1989 21:10
+MSDPM     .MSG          37 22-FEB-1989 21:10
+MSDPMD    .B36          52 22-FEB-1989 21:12
+MSDPMD    .BEG          15 22-FEB-1989 21:12
+MSDPMD    .END          37 22-FEB-1989 21:12
+MSDPMD    .XRF          93 22-FEB-1989 21:12
+MSDPMT    .B36         291 22-FEB-1989 21:12
+MSDPMT    .XRF         503 22-FEB-1989 21:11
+MSMMC     .CCL           1 22-FEB-1989 21:11
+MSMMC     .CTL           2 22-FEB-1989 21:11
+MSMMC     .EXE         252 22-FEB-1989 21:10
+MSMMC     .MSG         146 22-FEB-1989 21:10
+MSMMCD    .B36         139 22-FEB-1989 21:11
+MSMMCD    .BEG          24 22-FEB-1989 21:11
+MSMMCD    .END         115 22-FEB-1989 21:11
+MSMMCD    .XRF         272 22-FEB-1989 21:11
+MSMMCT    .B36         635 22-FEB-1989 21:11
+MSMMCT    .XRF         893 22-FEB-1989 21:10
+MSSTRC    .B36         244 22-FEB-1989 21:12
+MSSTRC    .CTL           1 22-FEB-1989 21:12
+MSSTRC    .XRF         345 22-FEB-1989 21:11
+MUUO      .MAC          29 19-JAN-1989 19:42
+NPAG      .MIC           9 13-JAN-1989 20:23
+NPAG2     .MIC          11 13-JAN-1989 20:23
+NPB       .MIC           9 17-JAN-1989 19:53
+NPB2      .MIC          11 17-JAN-1989 19:53
+PAG       .CCL           1 13-JAN-1989 20:23
+PAGB      .CCL           1 17-JAN-1989 19:53
+PAGDEF    .MIC          43 13-JAN-1989 20:23
+PAGH      .CCL           1 17-JAN-1989 20:39
+PAGING    .MAC          30 13-JAN-1989 20:23
+PAL10     .EXE          28 23-FEB-1989 18:52
+PARAM     .KLM          62 13-JAN-1989 20:02
+PARAM     .KSM          33 22-FEB-1989 20:58
+PARAM     .MAC          18 13-JAN-1989 04:10
+PBDEF     .MIC          59 17-JAN-1989 19:54
+PBING     .MAC          32 17-JAN-1989 19:54
+PIP       .EXE          48 23-FEB-1989 18:52
+PT0       .CCL           1 17-JAN-1989 20:37
+PT1       .CCL           1 17-JAN-1989 20:37
+PTBING    .MAC          42 17-JAN-1989 20:41
+PTBOTH    .CCL           1 17-JAN-1989 20:37
+PUNCH     .SAV          25 27-JAN-1989 03:16
+REG       .TXT           3 17-JAN-1989 19:54
+REGBIT    .R36          13 22-FEB-1989 21:12
+RELEASE   .DOC          41 19-NOV-1985 20:08
+RELEASE   .NOTE          3 19-AUG-1983 12:45
+REP0OF    .MAC           1 13-JAN-1989 03:19
+REP0ON    .MAC           1 13-JAN-1989 03:19
+RESTOR    .BAK           2 16-JAN-1989 21:17
+RESTOR    .MIC           2 16-JAN-1989 23:45
+S         .MAC           6  4-OCT-1988 22:26
+SCM       .MIC           3 11-SEP-1985 15:30
+SCOPE     .MAC          20  9-SEP-1985 14:37
+SDIAG     .MIC           7  6-FEB-1989 20:23
+SMBC2     .CCL           1 22-FEB-1989 20:40
+SMBC2     .CTL           2 22-FEB-1989 20:40
+SMBC2     .EXE         136 22-FEB-1989 20:39
+SMBC2     .HST           1 22-FEB-1989 20:40
+SMBC2     .INP           3 22-FEB-1989 20:39
+SMBC2     .SAV         125 22-FEB-1989 21:10
+SMBC2     .SEQ        5160 22-FEB-1989 20:39
+SMBC2     .TXT          11 22-FEB-1989 20:40
+SMBC2A    .MAC          58 22-FEB-1989 20:40
+SMBC2B    .MAC          86 22-FEB-1989 20:40
+SMBC2C    .MAC         135 22-FEB-1989 20:40
+SMBC2D    .MAC         103 22-FEB-1989 20:40
+SMBC2E    .MAC         142 22-FEB-1989 20:40
+SMBC2F    .MAC         175 22-FEB-1989 20:40
+SMBC2G    .MAC          66 22-FEB-1989 20:40
+SMBC2H    .MAC          48 22-FEB-1989 20:40
+SMBC2S    .MAC           1 22-FEB-1989 20:40
+SMBC2T    .MAC          19 22-FEB-1989 20:40
+SMDDT     .CCL           1 22-FEB-1989 20:42
+SMDDT     .CTL           1 22-FEB-1989 20:42
+SMDDT     .HLP           8 22-FEB-1989 20:42
+SMDDT     .HST           2 22-FEB-1989 20:42
+SMDDT     .INP           3 22-FEB-1989 20:42
+SMDDT     .MAC         282 22-FEB-1989 20:42
+SMDDT     .SAV          27 22-FEB-1989 20:56
+SMDDT     .SEQ         615 22-FEB-1989 20:42
+SMDDT     .TXT           3 22-FEB-1989 20:42
+SMFILE    .CCL           1 22-FEB-1989 20:48
+SMFILE    .CTL           2 22-FEB-1989 20:48
+SMFILE    .EXE         168 22-FEB-1989 20:47
+SMFILE    .HLP           2 22-FEB-1989 20:48
+SMFILE    .HST           2 22-FEB-1989 20:48
+SMFILE    .INP           3 22-FEB-1989 20:47
+SMFILE    .MAC        1167 19-APR-1996 00:08
+SMFILE    .SEQ        1307 22-FEB-1989 20:47
+SMFILE    .TXT          15 22-FEB-1989 20:48
+SMMAG     .CCL           1 22-FEB-1989 20:50
+SMMAG     .CTL           1 22-FEB-1989 20:50
+SMMAG     .EXE          36 22-FEB-1989 20:50
+SMMAG     .HST           2 22-FEB-1989 20:50
+SMMAG     .INP           3 22-FEB-1989 20:50
+SMMAG     .MAC         501 19-APR-1996 00:10
+SMMAG     .SAV          17 23-FEB-1989 18:47
+SMMAG     .SEQ         357 22-FEB-1989 20:50
+SMMAG     .TXT          23 22-FEB-1989 20:50
+SMMON     .CCL           1 22-FEB-1989 20:52
+SMMON     .CTL           1 22-FEB-1989 20:52
+SMMON     .EXE          36 22-FEB-1989 20:52
+SMMON     .HST           2 22-FEB-1989 20:52
+SMMON     .INP           3 22-FEB-1989 20:52
+SMMON     .MAC         733 19-APR-1996 00:12
+SMMON     .SAV          25 22-FEB-1989 20:52
+SMMON     .SEQ         527 22-FEB-1989 20:52
+SMMON     .TXT          23 22-FEB-1989 20:52
+SMMTPB    .CCL           1 22-FEB-1989 20:40
+SMMTPB    .MAC          30 22-FEB-1989 20:40
+SMPREB    .CCL           1 22-FEB-1989 20:48
+SMPREB    .MAC          26 22-FEB-1989 20:48
+SMTAPE    .MTA           1 23-FEB-1989 18:47
+SMTAPE    .RDI           4 23-FEB-1989 18:47
+SMTAPE    .SAV          27 23-FEB-1989 18:48
+SNOBOL    .EXE          92 30-JAN-1989 20:18
+SPCCPU    .KLM           7 13-JAN-1989 19:46
+SPCCPU    .KSM           4  8-FEB-1989 20:44
+STIRS     .INP           1 22-FEB-1989 21:12
+STIRS     .TXT          51 22-FEB-1989 21:11
+STIRSD    .R36           6 22-FEB-1989 21:12
+STOR      .KLM           1 13-JAN-1989 19:46
+STOR      .KSM           1 22-FEB-1989 20:01
+STOR      .MAC          10 13-JAN-1989 04:10
+SUBKL     .CCL           1 13-JAN-1989 19:46
+SUBKL     .CTL           1 13-JAN-1989 19:46
+SUBKL     .HST           1 13-JAN-1989 19:46
+SUBKL     .INP           3 13-JAN-1989 19:45
+SUBKL     .SAV          24 13-JAN-1989 19:45
+SUBKL     .SEQ         662 13-JAN-1989 19:46
+SUBKL     .TXT          75 13-JAN-1989 19:46
+SUBKLM    .MAC         670 19-APR-1996 00:15
+SUBKLS    .MAC           3 13-JAN-1989 19:46
+SUBKLT    .MAC           4 13-JAN-1989 19:46
+SUBRTM    .MAC         787 19-APR-1996 00:18
+SUBRTN    .CCL           1 13-JAN-1989 03:59
+SUBRTN    .CTL           2 13-JAN-1989 03:59
+SUBRTN    .HST           6 13-JAN-1989 03:59
+SUBRTN    .INP           3 13-JAN-1989 03:59
+SUBRTN    .MAC          91 13-JAN-1989 04:10
+SUBRTN    .SAV          28  9-FEB-1989 14:08
+SUBRTN    .SEQ        1184 13-JAN-1989 03:59
+SUBRTN    .TXT          77 13-JAN-1989 03:59
+SUBRTS    .MAC           3 13-JAN-1989 03:59
+SUBRTT    .MAC           4 13-JAN-1989 03:59
+SUBSM     .CCL           1 22-FEB-1989 20:58
+SUBSM     .CTL           1 22-FEB-1989 20:58
+SUBSM     .HST           2 22-FEB-1989 20:58
+SUBSM     .INP           3 22-FEB-1989 20:58
+SUBSM     .SAV          23 22-FEB-1989 20:58
+SUBSM     .SEQ         671 22-FEB-1989 20:58
+SUBSM     .TXT          69 22-FEB-1989 20:58
+SUBSMM    .MAC         655 19-APR-1996 00:20
+SUBSMS    .MAC           1 22-FEB-1989 20:58
+SUBSMT    .MAC           5 22-FEB-1989 20:58
+SUBUSM    .MAC         481 19-APR-1996 00:22
+SUBUSR    .CCL           1 13-JAN-1989 03:59
+SUBUSR    .SAV          18  9-FEB-1989 14:16
+SUBUSS    .MAC           1 13-JAN-1989 03:59
+SUBUST    .MAC           2 13-JAN-1989 03:59
+SWITCH    .HLP           1 17-JAN-1989 19:58
+SYSMAC    .DAG         100 27-JAN-1989 03:18
+SYSMAC    .DAH         100 27-JAN-1989 03:18
+SYSMAC    .SML         100 27-JAN-1989 03:18
+T         .             11 17-JAN-1989 02:10
+T         .MAC           7  4-OCT-1988 22:24
+T         .TEC          11 23-FEB-1989 18:50
+TECO      .OLD          40 17-JAN-1989 20:42
+TENWD     .TEC           4 23-FEB-1989 18:50
+TGHA      .CCL           1 13-JAN-1989 19:56
+TGHA      .DEF          15 13-JAN-1989 19:56
+TGHA      .DOC         151 13-JAN-1989 19:56
+TGHA      .EXE         160 13-JAN-1989 19:56
+TGHA      .HLP           1 13-JAN-1989 19:56
+TRACON    .CCL           1 27-JAN-1989 03:16
+TRACON    .HLP           5 27-JAN-1989 03:16
+TRACON    .HST           5 27-JAN-1989 03:17
+TTY       .SCM           1  9-MAY-1985 13:37
+UCODE     .CTL           2 17-JAN-1989 20:42
+UTIL1     .MAC          70 13-JAN-1989 18:19
+UUOERR    .KLM          11 13-JAN-1989 19:46
+UUOERR    .KSM          10  9-FEB-1989 14:08
+UUOSYM    .UNV          53 22-FEB-1989 20:48
+VER       .BAK           1  9-FEB-1989 14:25
+VER       .MIC           1  9-FEB-1989 14:26
+X         .MIC           2  3-FEB-1989 04:21
+
+End of Save Set: Diagnostics -- binaries and documentation
+Volume 1 written by System: 
+Written on:        at: 13-DEC-2000 01:03 using:  200 BPI
+
+
+*** Tape Mark ***
+
+
+*** Tape Mark ***
+
+Total of 1199 files in 1 save set
+
+--------------5E48DA081A375A15BF653C6--
+
+
+
+Article 2596 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntp.primenet.com!nntp.gblx.net!enews.sgi.com!paloalto-snf1.gtei.net!news.gtei.net!forum.apple.com!news.apple.com!haxrus.apple.com!user
+From: aek@spies.com (Al Kossow)
+Newsgroups: alt.sys.pdp10
+Subject: DECUS tapes
+Date: Sat, 16 Dec 2000 13:43:20 -0800
+Organization: Apple Computer, Inc.
+Lines: 44
+Message-ID: <aek-1612001343200001@haxrus.apple.com>
+NNTP-Posting-Host: haxrus.apple.com
+X-Trace: news.apple.com 977003001 15767 17.205.21.66 (16 Dec 2000 21:43:21 GMT)
+X-Complaints-To: usenet@news.apple.com
+NNTP-Posting-Date: 16 Dec 2000 21:43:21 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2596
+
+
+While looking for the origins of the Unix version of the
+dumper program, I discovered DECUS has removed all the useful
+content from their web site (dumper.c is on the 93A vax tape).
+
+One thing I did find was a summary for many of the 10 collections
+at http://decus.acornsw.com/vs0157/DECUSLIB/
+
+Tim, do you have copies of these? If not, they might be a good
+thing to try and locate.
+
+10-LIB-1     The DECsystem-10 Library Tape 1  Version: 1987/1988
+10-LIB-2     The DECsystem-10 Library Tape 2  Version: 1987/1988
+10-LIB-3     The DECsystem-10 Library Tape 3  Version: 1987/1988
+10-LIB-4     The DECsystem-10 Library Tape 4  Version: 1987/1988
+10-LIB-5     The DECsystem-10 Library Tape 5  Version: 1987/1988
+10-LIB-6     The DECsystem-10 Library Tape 6  Version: 1987/1988
+10-LIB-7     The DECsystem-10 Library Tape 7  Version: 1987/1988
+10-LIB-8     The DECsystem-10 Library Tape 8  Version: 1987/1988
+10-LIB-9     The DECsystem-10 Library Tape 9  Version: 1987/1988
+10-LIB-10    The DECsystem-10 Library Tape 10  Version: 1987/1988
+10-LIB-11    The DECsystem-10 Library Tape 11  Version: 1987/1988
+10-LIB-12    The DECsystem-10 Library Tape 12  Version: 1987/1988
+10-LIB-13    The DECsystem-10 Library Tape 13  Version: 1987/1988
+
+10-SP-4     Symposium Tape from the European DECsystem-10 SIG, 1982,
+10-SP-5     Symposium Tape from the European DECSYSTEM-10/20 SIG,
+            1983, Zurich  Version: December 1983
+10-SP-6     Symposium Tape from the DECsystem-10 SIG, Fall 1983, Las
+            Vegas  Version: Fall 1983
+10-SP-7     Symposium Tape from the DECsystem-10 SIG, Spring 1984,
+            Cincinnati  Version: Spring 1984
+10-SP-8     Symposium Tape from the TOPS-10 SIG, Fall 1984, Anaheim
+            Version: Fall 1984
+10-SP-9     Symposium Tape from the TOPS-10 SIG, Spring 1985, New
+            Orleans  Version: Spring 1985
+10-SP-10     AMAR-10: A Performance Analysis Tool  Version: V4.3,
+            February 1986
+10-SP-11     Symposium Tape from the TOPS-10 SIG, Fall 1985, Anaheim
+            Version: Fall 1985
+
+-- 
+The eBay Curse:
+"May you find everything you're looking for.."
+
+
+Article 2647 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntp.primenet.com!nntp.gblx.net!newsfeed.skycache.com!Cidera!typhoon.sonic.net!uunet!sac.uu.net!lax.uu.net!ffx.uu.net!spool0.news.uu.net!reader0.news.uu.net!not-for-mail
+Message-ID: <3A3BB466.7E6D0CD8@trailing-edge.com>
+Date: Sat, 16 Dec 2000 18:28:54 -0400
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Organization: Trailing Edge Technology
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.2     AlphaServer 1200 5/533 4MB)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: DECUS tapes
+References: <aek-1612001343200001@haxrus.apple.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 47
+NNTP-Posting-Host: 63.73.218.130
+X-Trace: reader0.news.uu.net 977009335 8250 63.73.218.130
+Xref: nntp1.ba.best.com alt.sys.pdp10:2647
+
+Al Kossow wrote:
+> 
+> While looking for the origins of the Unix version of the
+> dumper program, I discovered DECUS has removed all the useful
+> content from their web site (dumper.c is on the 93A vax tape).
+
+You can find all the good stuff at ftp.decus.org now.  I believe
+that VS0167 is the 93A tape.
+
+> Tim, do you have copies of these? If not, they might be a good
+> thing to try and locate.
+> 
+> 10-LIB-1     The DECsystem-10 Library Tape 1  Version: 1987/1988
+> 10-LIB-2     The DECsystem-10 Library Tape 2  Version: 1987/1988
+> 10-LIB-3     The DECsystem-10 Library Tape 3  Version: 1987/1988
+> 10-LIB-4     The DECsystem-10 Library Tape 4  Version: 1987/1988
+> 10-LIB-5     The DECsystem-10 Library Tape 5  Version: 1987/1988
+> 10-LIB-6     The DECsystem-10 Library Tape 6  Version: 1987/1988
+> 10-LIB-7     The DECsystem-10 Library Tape 7  Version: 1987/1988
+> 10-LIB-8     The DECsystem-10 Library Tape 8  Version: 1987/1988
+> 10-LIB-9     The DECsystem-10 Library Tape 9  Version: 1987/1988
+> 10-LIB-10    The DECsystem-10 Library Tape 10  Version: 1987/1988
+> 10-LIB-11    The DECsystem-10 Library Tape 11  Version: 1987/1988
+> 10-LIB-12    The DECsystem-10 Library Tape 12  Version: 1987/1988
+> 10-LIB-13    The DECsystem-10 Library Tape 13  Version: 1987/1988
+> 
+> 10-SP-4     Symposium Tape from the European DECsystem-10 SIG, 1982,
+> 10-SP-5     Symposium Tape from the European DECSYSTEM-10/20 SIG,
+>             1983, Zurich  Version: December 1983
+> 10-SP-6     Symposium Tape from the DECsystem-10 SIG, Fall 1983, Las
+>             Vegas  Version: Fall 1983
+> 10-SP-7     Symposium Tape from the DECsystem-10 SIG, Spring 1984,
+>             Cincinnati  Version: Spring 1984
+> 10-SP-8     Symposium Tape from the TOPS-10 SIG, Fall 1984, Anaheim
+>             Version: Fall 1984
+> 10-SP-9     Symposium Tape from the TOPS-10 SIG, Spring 1985, New
+>             Orleans  Version: Spring 1985
+> 10-SP-10     AMAR-10: A Performance Analysis Tool  Version: V4.3,
+>             February 1986
+> 10-SP-11     Symposium Tape from the TOPS-10 SIG, Fall 1985, Anaheim
+>             Version: Fall 1985
+
+I have the material from 10-LIB-1 through 10-LIB-13, but AFAIK I do
+not have the stuff from the 10-SP collections unless it is duplicated
+in the 10-LIB stuff.  (It often was...)
+
+Tim. (shoppa@trailing-edge.com)
+
+
+Article 2611 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntp.primenet.com!nntp.gblx.net!newsfeed.direct.ca!look.ca!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-20: MX> Prompt finally printed.
+Date: Sat, 16 Dec 2000 21:55:17 -0800
+Organization: Networks & Distributed Computing
+Lines: 55
+Message-ID: <Pine.NXT.4.32.0012162140550.12280-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <BeV_5.96311$IP1.3228362@news1.giganews.com>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 977032520 206878 (None) 140.142.17.39
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: lampin
+To: Timothy Stark <sword7@grace.speakeasy.org>
+In-Reply-To: <BeV_5.96311$IP1.3228362@news1.giganews.com>
+Xref: nntp1.ba.best.com alt.sys.pdp10:2611
+
+On Sun, 17 Dec 2000, Timothy Stark wrote:
+> Now I finally got a MX> prompt.  What is about "INTERRUPT AT 0" for?
+> Is it normal or another bug?  I did not press ^C to interrupt that.
+
+Excellent!  All is well!!
+
+INTERRUPT AT 0 basically means that the top-level process for the job got
+an error at PC 0.  Since the top-level process for the job at this point
+is totally empty with no initial PC and no memory, that's what would
+happen.  In other words, at this particular point, that's what is supposed
+to happen.
+
+MX> is the prompt for the mini-EXEC.  TOPS-20 has a miniature command
+decoder built into the kernel.  Unlike TOPS-10, where the entire command
+decoder is in the kernel, the TOPS-20 mini-EXEC only has a few commands
+and is only accessible by privileged users.
+
+Assuming that you have the installation tape mounted, here is what you do
+after a 143 start, filesystem create, and entering the mini-EXEC.  Note
+that <return> means the return key.
+
+1) Type "GMTA0:<return>".  "GET FILE MTA0:" is echoed followed by another
+   MX> prompt.
+
+2) Type "S<return>".  "START" is echoed.  You should now be in the TOPS-20
+   command decoder (EXEC).
+
+So now you know two mini-EXEC commands, G and S.  There are three or four
+others which we can discuss later (you don't need to know them for now).
+
+3) At the "@" prompt, type "ENABLE<return>".  You should now have a "$"
+   prompt.  You need to have your privileges enabled for the next step.
+
+4) Type "MTA0:<return>".  This should give you the "DLUSER>" prompt.
+
+5) Type "LOAD MTA0:<return>".  Wait for it to finish and give you another
+   "DLUSER>" prompt.
+
+6) Type "EXIT<return>".  You should be at the "$" prompt.
+
+7) Type "MTA0:<return>".  This should give you the "DUMPER>" prompt.
+
+8) Type "TAPE MTA0:<return>".  You should get another "DUMPER>" prompt
+
+9) Type "RESTORE<return>".  It should say something like "LOADING FILES
+   INTO PS:<SYSTEM>" (or some other directory).  If it does not say
+   "LOADING FILES", let me know what it does say.
+
+10) Repeat step 9 until you reach end of tape.
+
+-- Mark --
+
+http://staff.washington.edu/mrc
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+Article 2624 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntp.primenet.com!nntp.gblx.net!newsfeed.direct.ca!look.ca!cyclone-sjo1.usenetserver.com!news-out.usenetserver.com!cyclone-west.rr.com!news.rr.com!news-west.rr.com!nntp2.aus1.giganews.com!nntp3.aus1.giganews.com!news1.giganews.com.POSTED!not-for-mail
+From: Timothy Stark <sword7@grace.speakeasy.org>
+Subject: Re: KLAD contents?
+Newsgroups: alt.sys.pdp10
+References: <3A3CFE93.C23F9CF3@bartek.net>
+User-Agent: tin/1.4.2-20000205 ("Possession") (UNIX) (Linux/2.2.17 (i686))
+Lines: 26
+Message-ID: <Fl9%5.102411$IP1.3340304@news1.giganews.com>
+NNTP-Posting-Date: Sun, 17 Dec 2000 14:28:21 CST
+Organization: Giganews.Com - Premium News Outsourcing
+X-Trace: sv2-RU4Q8FnWxACUFvICZ40dZ3Aun9iGJgtoodQLaWU8bsnacnFCtb7wcyhYilkJkHLpaK6ZJh55UnpJ8kQ!ZS19oUrNwQzF7AX9vvvcxYxlDFU=
+X-Complaints-To: abuse@GigaNews.Com
+X-Abuse-Info: Please be sure to forward a copy of ALL headers
+X-Abuse-Info: Otherwise we will be unable to process your complaint properly
+Date: Sun, 17 Dec 2000 20:28:21 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2624
+
+Arthur Krewat <krewat@bartek.net> wrote:
+> 	Does anyone realize there are KS10 diagnostics in Tim
+> Shoppa's archive of KLAD?
+
+Yeah.  I recently had seen them on Tim's archive now.
+
+> 	There are "DA????.*" for KA, "DB????.*" for KI, "DF????.*"
+> for KL, and "DS????.*" for KS...
+
+Yeah. That is right.
+
+> 	It even includes the sources... again, did anyone realize
+> they were in the KLAD package?
+
+Yes, Also, *.SEQ, *.MAC, etc.
+
+I am trying figure how to run KLAD diagnostics at this time.
+
+-- Tim Stark
+
+-- 
+Timothy Stark	<><	Inet: sword7@speakeasy.org
+--------------------------------------------------------------------------
+"For God so loved the world, that he gave his only begotten Son, that 
+whosoever believeth in him should not perish, but have everlasting life.
+Amen." -- John 3:16 (King James Version Bible)
+
+
+Article 2631 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news-hog.berkeley.edu!ucberkeley!enews.sgi.com!pln-w!extra.newsguy.com!lotsanews.com!uunet!ffx.uu.net!spool1.news.uu.net!spool0.news.uu.net!reader1.news.uu.net!not-for-mail
+Message-ID: <3A3CEFEA.606A68D5@trailing-edge.com>
+Date: Sun, 17 Dec 2000 16:55:06 -0400
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Organization: Trailing Edge Technology
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.2     AlphaServer 1200 5/533 4MB)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Two new TOPS-20 related tapes in the archives
+Content-Type: multipart/mixed; boundary="------------22FDB8EA235B37DB273DB278"
+Lines: 311
+NNTP-Posting-Host: 63.73.218.130
+X-Trace: reader1.news.uu.net 977090107 12555 63.73.218.130
+Xref: nntp1.ba.best.com alt.sys.pdp10:2631
+
+This is a multi-part message in MIME format.
+
+--------------22FDB8EA235B37DB273DB278
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+In the "TOPS-20 layered product" section of the PDP-10 archive home page
+
+  http://pdp-10.trailing-edge.com/
+
+you will find links to two these new tape images and extracted text
+files:
+
+         TOPS-20 BLISS V4.2 (236) 16-Oct-1989, BB-J939F-BM
+
+         TOPS-20 TCP/IP-20 V4.0 28-JUN-1988, BB-EV83B-BM
+
+The tape listings are below.  Thanks to Al Kossow for getting these
+tape images to me.  Enjoy!
+
+Tim. (shoppa@trailing-edge.com)
+
+--------------22FDB8EA235B37DB273DB278
+Content-Type: text/plain; charset=us-ascii; name="bb-ev83b-bm.lis"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline; filename="bb-ev83b-bm.lis"
+
+
+DUMPER tape #1, 28-JUN-1988 15:30:59. Saveset "Documentation Files for TCP/IP-20 V4.0"
+
+
+PS:<DOCUMENTATION>5221BM.MEM.1                       344 21-NOV-1983 20:58:02
+PS:<DOCUMENTATION>ANUTIL.MAN.1                       384 13-JUN-1985 15:25:21
+PS:<DOCUMENTATION>TCPIP.BWR.1                         24 21-JUN-1988 14:22:48
+PS:<DOCUMENTATION>TCPIP.DOC.1                         24 31-MAY-1988 17:51:39
+PS:<DOCUMENTATION>TELNET.DOC.1                        72  5-MAR-1984 15:53:22
+PS:<DOCUMENTATION>TELNET.HLP.1                         8  5-MAR-1984 15:54:06
+
+DUMPER tape #1, 28-JUN-1988 15:31:05. Saveset "SYSTEM Files for TCP/IP-20 V4.0"
+
+
+PS:<NEW-SYSTEM>FTPSRT.EXE.1                          168 27-MAY-1988 16:13:43
+PS:<NEW-SYSTEM>HOSTS.TXT.1                          1792  8-FEB-1988 20:52:10
+PS:<NEW-SYSTEM>INTERNET.GATEWAYS.1                     8  7-MAR-1985 15:50:31
+PS:<NEW-SYSTEM>MAISER.EXE.1                          104 27-MAY-1988 16:29:29
+PS:<NEW-SYSTEM>TCPIP.BWR.1                            24 21-JUN-1988 14:22:48
+PS:<NEW-SYSTEM>TCPIP.DOC.1                            24 31-MAY-1988 17:51:39
+
+DUMPER tape #1, 28-JUN-1988 15:31:15. Saveset "Unsupported SUBSYS Utilities for TCP/IP-20 V4.0"
+
+
+PS:<UNSUPPORTED-SUBSYS-UTILITIES>DCRYPT.EXE.1        360 15-JAN-1987 19:22:57
+PS:<UNSUPPORTED-SUBSYS-UTILITIES>DCRYPT.HLP.1          8 15-JAN-1987 19:23:56
+PS:<UNSUPPORTED-SUBSYS-UTILITIES>FTP.EXE.1           176 27-MAY-1988 16:11:13
+PS:<UNSUPPORTED-SUBSYS-UTILITIES>FTSCTT.EXE.1         24 27-MAY-1988 16:13:54
+PS:<UNSUPPORTED-SUBSYS-UTILITIES>IPHOST.EXE.1        128  1-JUN-1988 18:50:11
+PS:<UNSUPPORTED-SUBSYS-UTILITIES>MMAILBOX.EXE.1
+                                                     112 27-MAY-1988 16:27:17
+PS:<UNSUPPORTED-SUBSYS-UTILITIES>MMAILR.EXE.1        280 27-MAY-1988 16:40:47
+PS:<UNSUPPORTED-SUBSYS-UTILITIES>SMTJFN.EXE.1         40 27-MAY-1988 16:29:53
+PS:<UNSUPPORTED-SUBSYS-UTILITIES>SMTPSV.EXE.1         16 11-MAR-1984 18:46:24
+PS:<UNSUPPORTED-SUBSYS-UTILITIES>TELNET.EXE.1        152 27-MAY-1988 16:51:33
+
+DUMPER tape #1, 28-JUN-1988 15:31:22. Saveset "Source Files for TCP/IP-20 V4.0"
+
+
+PS:<TCPIP-SOURCES>ANAUNV.UNV.1                       128  1-JUN-1988 20:31:06
+PS:<TCPIP-SOURCES>ANNBIG.MAC.1                         8  9-FEB-1988 16:48:13
+PS:<TCPIP-SOURCES>ANNDCN.MAC.1                         8  9-FEB-1988 16:48:16
+PS:<TCPIP-SOURCES>ANNMAX.MAC.1                         8  9-FEB-1988 16:48:18
+PS:<TCPIP-SOURCES>ANPBIG.MAC.1                        16  9-FEB-1988 16:48:21
+PS:<TCPIP-SOURCES>ANPDCN.MAC.1                        16  9-FEB-1988 16:48:24
+PS:<TCPIP-SOURCES>ANPMAX.MAC.1                        16  9-FEB-1988 16:48:27
+PS:<TCPIP-SOURCES>APPARP.CMD.1                        16  9-FEB-1988 16:48:30
+PS:<TCPIP-SOURCES>ARPA.CMD.1                           8 10-MAR-1988 03:50:50
+PS:<TCPIP-SOURCES>ASEMBL.CMD.1                        32  7-MAR-1988 14:14:11
+PS:<TCPIP-SOURCES>BLANKT.MAC.1                        16  2-OCT-1987 14:01:22
+PS:<TCPIP-SOURCES>FTP.CMD.1                            8  8-MAR-1988 19:49:49
+PS:<TCPIP-SOURCES>FTP.CTL.1                            8 22-FEB-1988 16:46:13
+PS:<TCPIP-SOURCES>FTP1.MAC.1                          64  2-JUN-1984 14:57:10
+PS:<TCPIP-SOURCES>FTP2S.MAC.1                        424 18-FEB-1983 17:36:17
+PS:<TCPIP-SOURCES>FTP2U.MAC.1                        472 25-FEB-1983 18:01:31
+PS:<TCPIP-SOURCES>FTP4.MAC.1                         176 23-FEB-1983 20:20:48
+PS:<TCPIP-SOURCES>FTPSRT.MAC.1                         8  2-MAR-1983 00:24:18
+PS:<TCPIP-SOURCES>FTSCTT.MAC.1                        32 10-JUN-1984 20:04:38
+PS:<TCPIP-SOURCES>HSTNAM.MAC.1                       168 30-DEC-1987 21:03:22
+PS:<TCPIP-SOURCES>IPHOST.CMD.1                         8  8-MAR-1988 19:23:27
+PS:<TCPIP-SOURCES>IPHOST.CTL.1                         8  9-NOV-1987 19:45:07
+PS:<TCPIP-SOURCES>IPHOST.HLP.1                         8 13-FEB-1985 21:47:07
+PS:<TCPIP-SOURCES>IPHOST.MAC.1                       320  6-MAY-1985 19:12:04
+PS:<TCPIP-SOURCES>LNKANI.CCL.1                         8  9-FEB-1988 22:04:39
+PS:<TCPIP-SOURCES>LNKARP.CCL.1                         8  6-MAY-1988 11:46:11
+PS:<TCPIP-SOURCES>LNKBIG.CCL.1                         8  1-JUN-1988 15:20:57
+PS:<TCPIP-SOURCES>LNKDCN.CCL.1                         8 26-MAY-1988 20:43:23
+PS:<TCPIP-SOURCES>LNKMAX.CCL.1                         8  1-JUN-1988 15:57:37
+PS:<TCPIP-SOURCES>MAISER.MAC.1                       184 27-DEC-1987 04:08:49
+PS:<TCPIP-SOURCES>MMAILR.CMD.1                         8 10-MAY-1988 14:11:01
+PS:<TCPIP-SOURCES>MMAILR.CTL.1                         8  4-MAR-1988 14:15:48
+PS:<TCPIP-SOURCES>MMAILR.MAC.1                       880 18-MAY-1988 17:44:07
+PS:<TCPIP-SOURCES>MMAILR-ARMAIL.MAC.1                 40  4-MAR-1988 00:23:56
+PS:<TCPIP-SOURCES>MMLBX.MAC.1                        128 27-DEC-1987 04:09:53
+PS:<TCPIP-SOURCES>NAMAN.MAC.1                          8 11-FEB-1988 16:42:24
+PS:<TCPIP-SOURCES>PARAN.MAC.1                          8 11-FEB-1988 21:53:34
+PS:<TCPIP-SOURCES>PARARP.MAC.1                         8 21-JAN-1988 01:16:59
+PS:<TCPIP-SOURCES>PARBIG.MAC.1                         8  1-JUN-1988 15:20:57
+PS:<TCPIP-SOURCES>PARDCN.MAC.1                         8 26-MAY-1988 20:43:23
+PS:<TCPIP-SOURCES>PARMAX.MAC.1                         8  1-JUN-1988 15:57:38
+PS:<TCPIP-SOURCES>RELAY.MAC.1                         48  4-DEC-1987 20:25:41
+PS:<TCPIP-SOURCES>SMTJFN.MAC.1                        32 13-FEB-1987 21:52:42
+PS:<TCPIP-SOURCES>SMTPSV.MAC.1                        16  5-MAR-1984 23:12:24
+PS:<TCPIP-SOURCES>SNDDEF.MAC.1                        16 12-FEB-1985 21:23:02
+PS:<TCPIP-SOURCES>SNDDEF.UNV.1                         8 27-MAY-1988 16:23:31
+PS:<TCPIP-SOURCES>SNDMSG.MAC.1                        48 30-MAR-1987 15:47:04
+PS:<TCPIP-SOURCES>T20-AN70.CTL.1                      40  1-JUN-1988 19:26:12
+PS:<TCPIP-SOURCES>T20AN.KEY.1                       8816  2-JUN-1988 13:35:27
+PS:<TCPIP-SOURCES>T20AN.REL.1                       8384  2-JUN-1988 13:37:59
+PS:<TCPIP-SOURCES>TCPFTP.MAC.1                         8  2-MAR-1983 00:23:49
+PS:<TCPIP-SOURCES>TCPSIM.MAC.1                        88 31-AUG-1982 23:51:32
+PS:<TCPIP-SOURCES>TELNET.CMD.1                         8  8-MAR-1988 19:23:58
+PS:<TCPIP-SOURCES>TELNET.CTL.1                         8 30-NOV-1987 19:28:50
+PS:<TCPIP-SOURCES>TELNET.MAC.1                       256 20-NOV-1987 19:18:18
+PS:<TCPIP-SOURCES>WAKEUP.MAC.1                        16  9-AUG-1985 00:08:16
+
+DUMPER tape #1, 28-JUN-1988 15:33:06. Saveset "TCP/IP Monitor Source Keys"
+
+
+PS:<TCP-KEYS>ANAUNV.KEY.1                            216  2-JUN-1988 13:34:45
+PS:<TCP-KEYS>ANNBIG.KEY.1                             88  2-JUN-1988 13:34:48
+PS:<TCP-KEYS>ANNDCN.KEY.1                             88  2-JUN-1988 13:34:49
+PS:<TCP-KEYS>ANNMAX.KEY.1                             88  2-JUN-1988 13:34:51
+PS:<TCP-KEYS>ANPBIG.KEY.1                             88  2-JUN-1988 13:34:53
+PS:<TCP-KEYS>ANPDCN.KEY.1                             88  2-JUN-1988 13:34:54
+PS:<TCP-KEYS>ANPMAX.KEY.1                             88  2-JUN-1988 13:34:55
+PS:<TCP-KEYS>IMPANX.KEY.1                            112  2-JUN-1988 13:34:57
+PS:<TCP-KEYS>IMPDV.KEY.1                             216  2-JUN-1988 13:34:59
+PS:<TCP-KEYS>IPCIDV.KEY.1                            120  2-JUN-1988 13:35:01
+PS:<TCP-KEYS>IPFREE.KEY.1                            112  2-JUN-1988 13:35:03
+PS:<TCP-KEYS>IPIPIP.KEY.1                            528  2-JUN-1988 13:35:05
+PS:<TCP-KEYS>IPNIDV.KEY.1                            344  2-JUN-1988 13:35:11
+PS:<TCP-KEYS>MNETDV.KEY.1                            200  2-JUN-1988 13:35:15
+PS:<TCP-KEYS>NAMAN.KEY.1                              88  2-JUN-1988 13:35:17
+PS:<TCP-KEYS>PARAN.KEY.1                              88  2-JUN-1988 13:35:19
+PS:<TCP-KEYS>PARARP.KEY.1                             88  2-JUN-1988 13:35:20
+PS:<TCP-KEYS>PARBIG.KEY.1                             88  2-JUN-1988 13:35:22
+PS:<TCP-KEYS>PARDCN.KEY.1                             88  2-JUN-1988 13:35:23
+PS:<TCP-KEYS>PARMAX.KEY.1                             88  2-JUN-1988 13:35:25
+PS:<TCP-KEYS>TCPBBN.KEY.1                            208  2-JUN-1988 13:36:35
+PS:<TCP-KEYS>TCPCRC.KEY.1                             88  2-JUN-1988 13:36:37
+PS:<TCP-KEYS>TCPJFN.KEY.1                            256  2-JUN-1988 13:36:39
+PS:<TCP-KEYS>TCPTCP.KEY.1                            680  2-JUN-1988 13:36:42
+PS:<TCP-KEYS>TVTSRV.KEY.1                            192  2-JUN-1988 13:36:48
+
+
+End of tape
+
+
+End of tape
+
+--------------22FDB8EA235B37DB273DB278
+Content-Type: text/plain; charset=us-ascii; name="bb-j939f-bm.lis"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline; filename="bb-j939f-bm.lis"
+
+
+DUMPER tape #1, 16-OCT-1989 15:03:37. Saveset ""BLISS V4.2 (236) Documentation files""
+
+
+PS:<DOCUMENTATION>BCREF.HLP.1                          8 14-DEC-1983 19:40:23
+PS:<DOCUMENTATION>BLISS.BWR.1                         16 24-SEP-1984 18:40:57
+PS:<DOCUMENTATION>BLISS.HLP.1                         40  2-AUG-1989 13:38:20
+PS:<DOCUMENTATION>BLISS.INS.1                          8 16-AUG-1989 15:02:22
+PS:<DOCUMENTATION>BLSDOC.KEY.1                       504 16-OCT-1989 14:30:36
+PS:<DOCUMENTATION>CPYRIT.TXT.1                         8 23-AUG-1989 19:25:17
+PS:<DOCUMENTATION>MONINT.DOC.1                        24 14-FEB-1984 16:22:46
+PS:<DOCUMENTATION>SIX12.HLP.1                          8  2-AUG-1989 13:38:24
+PS:<DOCUMENTATION>SIX12.MEM.1                        472  2-AUG-1989 13:38:24
+PS:<DOCUMENTATION>TUTIO.HLP.1                          8  2-AUG-1989 13:39:05
+
+DUMPER tape #1, 16-OCT-1989 15:03:43. Saveset ""BLISS V4.2 (236) System files""
+
+
+PS:<SYSTEM>BCREF.EXE.1                               320  7-AUG-1989 15:32:32
+PS:<SYSTEM>BLISS.EXE.1                              1576  5-OCT-1989 15:26:45
+PS:<SYSTEM>BLSSYS.KEY.1                             2224 16-OCT-1989 14:30:42
+PS:<SYSTEM>CPYRIT.TXT.1                                8 23-AUG-1989 19:25:17
+PS:<SYSTEM>DEB36.EXE.1                              2104  5-OCT-1989 13:48:21
+PS:<SYSTEM>MONINT.EXE.1                              192 13-SEP-1983 14:34:57
+
+DUMPER tape #1, 16-OCT-1989 15:04:06. Saveset ""BLISS V4.2 (236) Rel files""
+
+
+PS:<BLISS>ACPYRT.REL.1                                 8  5-OCT-1989 14:35:24
+PS:<BLISS>BIF36.REL.1                                 96  5-OCT-1989 14:40:25
+PS:<BLISS>BLISS.REL.1                               2784 24-AUG-1989 12:58:13
+PS:<BLISS>BLSREL.KEY.1                              4048 16-OCT-1989 14:31:03
+PS:<BLISS>CELCOM.REL.1                                 8  5-OCT-1989 14:41:32
+PS:<BLISS>CELPKG.REL.1                                 8  5-OCT-1989 14:41:37
+PS:<BLISS>CFLOAT.REL.1                                16  5-OCT-1989 14:33:29
+PS:<BLISS>CMDSCV.REL.1                               104  5-OCT-1989 14:41:45
+PS:<BLISS>CODBIF.REL.1                                40  5-OCT-1989 14:42:57
+PS:<BLISS>CODER.REL.1                                152  5-OCT-1989 14:43:41
+PS:<BLISS>CODUTL.REL.1                               112  5-OCT-1989 14:46:42
+PS:<BLISS>CPYRIT.TXT.1                                 8 23-AUG-1989 19:25:17
+PS:<BLISS>CRDATA.REL.1                                24  5-OCT-1989 14:49:34
+PS:<BLISS>CRFILE.REL.1                                16  5-OCT-1989 14:49:54
+PS:<BLISS>CRFLOW.REL.1                                32  5-OCT-1989 14:50:07
+PS:<BLISS>CRGATH.REL.1                                24  5-OCT-1989 14:50:46
+PS:<BLISS>CRLIST.REL.1                                32  5-OCT-1989 14:51:12
+PS:<BLISS>CROUT.REL.1                                 16  5-OCT-1989 14:51:37
+PS:<BLISS>CRSORT.REL.1                                16  5-OCT-1989 14:51:46
+PS:<BLISS>CRTABL.REL.1                                24  5-OCT-1989 14:51:56
+PS:<BLISS>DATTIM.REL.1                                 8  5-OCT-1989 14:52:27
+PS:<BLISS>DCLNKG.REL.1                                40  5-OCT-1989 14:52:33
+PS:<BLISS>DCPLIT.REL.1                                24  5-OCT-1989 14:53:12
+PS:<BLISS>DCROUT.REL.1                                24  5-OCT-1989 14:53:33
+PS:<BLISS>DCSWIT.REL.1                                56  5-OCT-1989 14:54:00
+PS:<BLISS>DEB36.REL.1                               3848 24-AUG-1989 12:59:06
+PS:<BLISS>DECLAR.REL.1                               136  5-OCT-1989 14:54:56
+PS:<BLISS>DLYFLO.REL.1                                24  5-OCT-1989 14:58:13
+PS:<BLISS>DLYMCH.REL.1                                32  5-OCT-1989 14:57:40
+PS:<BLISS>DLYNOD.REL.1                                56  5-OCT-1989 14:58:37
+PS:<BLISS>DLYUTL.REL.1                                32  5-OCT-1989 14:59:32
+PS:<BLISS>DRIVER.REL.1                                40  5-OCT-1989 15:00:07
+PS:<BLISS>DUMMY.REL.1                                  8  5-OCT-1989 15:00:37
+PS:<BLISS>ENTRY.REL.1                                  8  5-OCT-1989 15:00:43
+PS:<BLISS>ERRPRT.REL.1                                96  5-OCT-1989 15:00:50
+PS:<BLISS>FINAL.REL.1                                 24  5-OCT-1989 15:01:23
+PS:<BLISS>FINLST.REL.1                                16  5-OCT-1989 15:01:45
+PS:<BLISS>FINOPT.REL.1                                88  5-OCT-1989 15:01:56
+PS:<BLISS>FLOWAN.REL.1                               112  5-OCT-1989 15:03:16
+PS:<BLISS>FMTIO.REL.1                                 16  5-OCT-1989 15:05:44
+PS:<BLISS>GETSRC.REL.1                                16  5-OCT-1989 15:05:57
+PS:<BLISS>GLODEC.REL.1                                16  5-OCT-1989 15:06:11
+PS:<BLISS>HIIOV.REL.1                                 16  5-OCT-1989 15:06:21
+PS:<BLISS>KFOLD.REL.1                                120  5-OCT-1989 15:06:39
+PS:<BLISS>KOST.REL.1                                  24  5-OCT-1989 15:08:58
+PS:<BLISS>LEXAN.REL.1                                104  5-OCT-1989 15:09:28
+PS:<BLISS>LEXFUN.REL.1                                88  5-OCT-1989 15:11:12
+PS:<BLISS>LIBARY.REL.1                                32  5-OCT-1989 15:12:35
+PS:<BLISS>LIBINI.REL.1                                24  5-OCT-1989 15:13:07
+PS:<BLISS>LIBOUT.REL.1                                40  5-OCT-1989 15:13:28
+PS:<BLISS>LOIOV.REL.1                                 48  5-OCT-1989 15:14:03
+PS:<BLISS>LOWSEG.REL.1                                 8  5-OCT-1989 15:14:48
+PS:<BLISS>LSTPKG.REL.1                                16  5-OCT-1989 15:14:54
+PS:<BLISS>MEMMGT.REL.1                                16  5-OCT-1989 15:15:06
+PS:<BLISS>NOSWAP.REL.1                                16  5-OCT-1989 15:15:21
+PS:<BLISS>OF3.REL.1                                   64  5-OCT-1989 15:15:30
+PS:<BLISS>OPINFO.REL.1                                32  5-OCT-1989 15:15:59
+PS:<BLISS>OUTBIN.REL.1                                56  5-OCT-1989 15:16:43
+PS:<BLISS>OUTPUT.REL.1                                80  5-OCT-1989 15:17:34
+PS:<BLISS>PRESET.REL.1                                40  5-OCT-1989 15:18:35
+PS:<BLISS>PRFPKG.REL.1                                16  5-OCT-1989 15:19:08
+PS:<BLISS>SIX12.REL.1                                216  5-OCT-1989 14:35:29
+PS:<BLISS>STRENG.REL.1                                16  5-OCT-1989 15:19:24
+PS:<BLISS>SWAP.REL.1                                   8  5-OCT-1989 15:21:23
+PS:<BLISS>SYNTAX.REL.1                               128  5-OCT-1989 15:19:34
+PS:<BLISS>TABLES.REL.1                                32  5-OCT-1989 15:21:30
+PS:<BLISS>TNBIND.REL.1                                48  5-OCT-1989 15:22:05
+PS:<BLISS>TNCALL.REL.1                                24  5-OCT-1989 15:22:58
+PS:<BLISS>TNCHAR.REL.1                                 8  5-OCT-1989 15:23:23
+PS:<BLISS>TNLOW.REL.1                                  8  5-OCT-1989 15:23:28
+PS:<BLISS>TNMACH.REL.1                                 8  5-OCT-1989 15:23:35
+PS:<BLISS>TNTLA.REL.1                                 96  5-OCT-1989 15:23:39
+PS:<BLISS>TRY.REL.1                                   16  5-OCT-1989 15:25:06
+PS:<BLISS>VERSIO.REL.1                                 8  5-OCT-1989 14:35:23
+PS:<BLISS>VFMV.REL.1                                  16  5-OCT-1989 15:25:20
+
+DUMPER tape #1, 16-OCT-1989 15:04:54. Saveset ""BLISS V4.2 (236) Miscellaneous files""
+
+
+PS:<BLISS>B362LB.REL.1                               256 30-JUN-1989 16:10:53
+PS:<BLISS>B362PB.REL.1                               264 30-JUN-1989 16:10:57
+PS:<BLISS>BLISS.LNK.1                                  8 23-AUG-1989 15:21:04
+PS:<BLISS>BLSMSC.KEY.1                              4960 16-OCT-1989 14:31:40
+PS:<BLISS>BLSOTS.MAC.1                               216  9-NOV-1984 23:12:07
+PS:<BLISS>CPYRIT.TXT.1                                 8 23-AUG-1989 19:25:17
+PS:<BLISS>CVT10.DOC.1                                 96 17-APR-1981 15:13:58
+PS:<BLISS>CVT10.EXE.1                                496 14-JUN-1978 11:43:53
+PS:<BLISS>CVT10.HLP.1                                  8  5-APR-1978 14:26:59
+PS:<BLISS>CVT10.SNO.1                                112 24-MAY-1978 11:02:59
+PS:<BLISS>DEB36.LNK.1                                  8 23-AUG-1989 17:16:22
+PS:<BLISS>DMPREL.EXE.1                               296 30-AUG-1983 19:35:26
+PS:<BLISS>DMPREL.HLP.1                                16 16-JUN-1982 03:41:18
+PS:<BLISS>EZIO20.B36.1                                56  1-AUG-1978 19:18:47
+PS:<BLISS>EZIO20.REL.1                                 8 15-NOV-1984 19:17:36
+PS:<BLISS>FLDDB.R36.1                                  8  1-AUG-1978 18:40:52
+PS:<BLISS>MONSYM.L36.1                               248 15-NOV-1984 19:17:46
+PS:<BLISS>MONSYM.R36.1                               440 10-NOV-1984 04:13:13
+PS:<BLISS>PSI20.B36.1                                 24 15-SEP-1983 17:48:58
+PS:<BLISS>REG2LB.MAC.1                                 8  9-NOV-1984 23:17:16
+PS:<BLISS>REG2PB.MAC.1                                 8  9-NOV-1984 23:17:21
+PS:<BLISS>SIX12.B36.1                                624  9-NOV-1984 23:18:20
+PS:<BLISS>TENDEF.R36.1                                16  9-NOV-1984 23:18:48
+PS:<BLISS>TUTIO.R36.1                                 16 17-AUG-1979 00:05:12
+PS:<BLISS>UUOSYM.L36.1                               272 15-NOV-1984 19:18:12
+PS:<BLISS>UUOSYM.R36.1                               424 10-NOV-1984 07:03:07
+PS:<BLISS>XDUMP.EXE.1                                200  8-AUG-1989 17:57:32
+PS:<BLISS>XDUMP.REL.1                                 32  8-AUG-1989 17:26:17
+PS:<BLISS>XPORT.L36.1                                496  8-AUG-1989 17:14:33
+PS:<BLISS>XPORT.REQ.1                                368 26-AUG-1984 17:55:17
+PS:<BLISS>XPOT20.DBG.1                               296  8-AUG-1989 17:53:39
+PS:<BLISS>XPOT20.REL.1                               280  8-AUG-1989 17:52:21
+
+
+End of tape
+
+
+End of tape
+
+--------------22FDB8EA235B37DB273DB278--
+
+
+
+Article 2643 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news2.best.com!news.maxwell.syr.edu!feed2.news.rcn.net!feed1.news.rcn.net!rcn!207-172-245-168
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: Two new TOPS-20 related tapes in the archives
+Date: Mon, 18 Dec 00 10:05:34 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 14
+Message-ID: <91krff$ka3$3@autumn.news.rcn.net>
+References: <3A3CEFEA.606A68D5@trailing-edge.com>
+X-Trace: UmFuZG9tSVbh7Cq14C3d92vU2qk/hAh35K+vdtUXyY3NSroDuqcIs2+6B00IBAzb
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 18 Dec 2000 11:12:47 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:2643
+
+And those _look_ like BLISS-36 stuff, and not BLISS-10...
+although the presence of SIX12 is confusing me.  I don't
+remember putting that on the BLISS-36 package for the -10.
+
+I'll repeat again do not use BLISS-36 to build RMS-10 and
+whatever else we used BLISS-10 for (FORTRAN compiler was
+another BLIS10 built product).  
+
+BLISS-36 should only be used for the DECnet stuff, period.
+Damn, I wish Bell had just done hardware.
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 2673 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntp.primenet.com!nntp.gblx.net!europa.netcrusader.net!207.172.3.44!feed2.news.rcn.net!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Two new TOPS-20 related tapes in the archives
+Date: Tue, 19 Dec 2000 01:54:32 -0500
+Lines: 30
+Message-ID: <3A3F0628.4EAB6ABC@MA.UltraNet.Com>
+References: <3A3CEFEA.606A68D5@trailing-edge.com> <91krff$ka3$3@autumn.news.rcn.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: UmFuZG9tSVY/8RwMoNn2jhQNcqKdXslZleeiyDkxI1w+X7iVQ6TUt6+EEApm+hVf
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 19 Dec 2000 06:55:10 GMT
+X-Mailer:  Mozilla 4.75 [en] (Win95; U)
+X-Accept-Language:  en,en-US,en-GB,es
+Xref: nntp1.ba.best.com alt.sys.pdp10:2673
+
+jmfbahciv@aol.com wrote:
+> 
+> And those _look_ like BLISS-36 stuff, and not BLISS-10...
+> although the presence of SIX12 is confusing me.  I don't
+> remember putting that on the BLISS-36 package for the -10.
+
+SIX12.BLI for BLISS-10 is ~1779 lines long.
+SIX12.B36 for BLISS-36 is ~8436 lines long.
+
+When I got BLISS-36 field test tapes, they came from ZK (and they
+came with SIX12.B36).  I eventually configured SIX12.B36 to debug
+the BLISS-10 code in FORTRAN-[10/]20.
+
+
+> I'll repeat again do not use BLISS-36 to build RMS-10 and
+> whatever else we used BLISS-10 for (FORTRAN compiler was
+> another BLIS10 built product).
+> 
+> BLISS-36 should only be used for the DECnet stuff, period.
+
+RMS10.CTL shows RMS being built with BLISS-36
+
+http://pdp-10.trailing-edge.com/pdp-10/CUSPBINSRC_1OF2_BB-X128C-SB/RMS10.CTL
+
+
+Use whatever language the build procedures use.  (Ideally, use the
+build procedures themselves).
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 4408 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!feed.textport.net!newsfeed.mesh.ad.jp!uunet!osa.uu.net!dfw.uu.net!ash.uu.net!spool0.news.uu.net!reader1.news.uu.net!not-for-mail
+Message-ID: <3AD38439.348C0D0E@trailing-edge.com>
+Date: Tue, 10 Apr 2001 22:07:53 -0400
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Organization: Trailing Edge Technology
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.2     AlphaServer 1200 5/533 4MB)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Now testing PDF (was Re: 3622 pages of TOPS-10 7.04 docs)
+References: <3AD0CDAF.1BF0A6F7@trailing-edge.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 46
+NNTP-Posting-Host: 63.73.218.130
+X-Trace: reader1.news.uu.net 986954873 4474 63.73.218.130
+Xref: nntp1.ba.best.com alt.sys.pdp10:4408
+
+OK, folks, a first go at making PDF (Acrobat) docs available,
+still from the same set of 7.04 manuals.  The URL's below
+are not permanent, if everything seems to work well I will be making
+a more permanent home for browsable and PDF electronic docs, offering
+a choice of download formats (line printer, HTML, PDF) and some
+form of organization applied to the whole shebang.  A quick
+looksee shows that there are several hundred *.MEM files already in
+the archives that would be candidates for PDF conversions.
+
+A small note: the PDF docs take roughly half the disk space of the
+original line printer docs, as internal "deflate" PDF compression
+is used.  This also means that they download twice as fast!
+
+Any complaints, suggestions, compliments, etc., let me know!
+
+   TOPS-10 Operating Systems Command Manual
+   http://mudd.trailing-edge.com/pdp10/cmnd.pdf
+ 
+   TOPS-10 Crash Analysis Guide
+   http://mudd.trailing-edge.com/pdp10/cag.pdf
+ 
+   TOPS-10 Monitor Calls Manual Volume 1
+   http://mudd.trailing-edge.com/pdp10/mcv1.pdf
+ 
+   TOPS-10 Monitor Calls Manual Volume 2
+   http://mudd.trailing-edge.com/pdp10/mcv2.pdf
+ 
+   TOPS-10 Monitor Tables Description
+   http://mudd.trailing-edge.com/pdp10/montab.pdf
+ 
+   TOPS-10 Operator's Command Reference Manual
+   http://mudd.trailing-edge.com/pdp10/oclrm.pdf
+ 
+   TOPS-10 Operator's Guide
+   http://mudd.trailing-edge.com/pdp10/opgd.pdf
+ 
+   TOPS-10 Software Installation Guide
+   http://mudd.trailing-edge.com/pdp10/sig.pdf
+ 
+   TOPS-10 Stopcodes Specification
+   http://mudd.trailing-edge.com/pdp10/stopcd.pdf
+ 
+   TOPS-10 User Utilities Manual
+   http://mudd.trailing-edge.com/pdp10/util.pdf
+ 
+Tim.
+
+
+Article: 15317 of alt.sys.pdp10
+Path: sea-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!newsfeed.mathworks.com!wn3feed!wn4feed!worldnet.att.net!198.6.0.7!uunet!ash.uu.net!spool0900.news.uu.net!reader0901.news.uu.net!not-for-mail
+Message-ID: <3C4A7DF8.2AEC4BD7@trailing-edge.com>
+Date: Sun, 20 Jan 2002 08:21:12 -0400
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Organization: Trailing Edge Technology
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.2     AlphaServer 1200 5/533 4MB)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: PDP-10 Archive migration plan
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 76
+NNTP-Posting-Host: 63.73.218.130
+X-Trace: 1011532885 reader1.ash.ops.us.uu.net 29227 63.73.218.130
+Xref: dfw-artgen.news.verio.net alt.sys.pdp10:15317 alt.folklore.computers:79140
+
+As announced over a month ago, I am migrating the PDP-10 archive 
+
+  http://pdp-10.trailing-edge.com/
+
+from the large, heavy, power-hungry VMSCluster to a small,
+lightweight, and efficient linux PC.
+
+Ignore the relation to the VMS vs Unix vs PDP-10 thread that has
+been taking up so much space in this newsgroup.  The main reason
+for this migration is nothing more than power efficiency - I can
+keep a little PC (drawing less than 50 Watts) up for hours on a
+cheap UPS, while keeping the older cluster up for more than a few
+minutes on a big UPS is a hassle.
+
+Not only will the webserver and files reside on a different machine,
+but there will also be a number of other changes:
+
+1.  No longer will *.TPC (DECUS TPC-style, blocks are preceded by 16-
+ bit block length) tape archives be listed.  The archive of tape images
+ will be offered solely as as *.tap (emulator-style, blocks are
+ preceded *and* followed by their 32-bit block length) images.
+
+  Internally I will continue to use *.TPC tape archives for some
+ purposes.  But my impression is that the emulator community is
+ much better served by the *.tap style images.  If anyone disagrees
+ with me, speak up!
+
+2.  The compression method for tape images will change as well:
+ Instead of gzipped (*.tap.gz), they will now be compressed with
+ bzip2 and filenames will be of the form *.tap.bz2.  Bzip2 offers
+ significantly better compression (10-20%) on these images, and
+ it adds up when there are many thousands of megabytes of them.
+
+  More bzip2 informattion is available at
+
+   http://sources.redhat.com/bzip2/
+
+3.  The extracted files will now be prepared using the "backup10"
+ and "read20" programs, which I have been patching up over the
+ past month to the point that I am very happy with their capabilities.
+ My patched versions of these very useful tools will be made available
+ shortly.
+
+4.  The web pages that index into the archives will be more CSS
+ (style-sheet) oriented and less table-oriented.  I aim to make the
+ resulting pages easily viewed on both graphical *and* text-based
+ browsers.  At the same time, I will also be making use of
+ server-side includes to make web site maintenance easier for me.
+ (Read that as: if you point out an error on the home page, I hope
+ to be able to fix it more quickly than the couple of months it
+ now takes me to get around to it!)
+
+5.  A site search engine will allow searching of the extracted files
+ quickly and efficiently.
+
+6.  An index of scanned and line-printer documents will eventually
+ happen.
+
+Many of the above elements can be seen already at the "test site",
+
+ http://new-pdp-10.trailing-edge.com/
+
+but not all the above elements have yet been combined (for example,
+as of Sunday morning the test site still uses tables extensively.)
+
+The actual switchover will occur early in the morning of
+21-Jan-2002 EST.  The old archive will remain up and going even
+after the switchover at
+
+  http://old-pdp-10.trailing-edge.com/
+
+for at least a few weeks, as I perfect the redirects and rewrites
+of URL's.  Besides, if I shut the old cluster down at this time of
+year the basement would get too chilly :-).
+
+Tim. (shoppa@trailing-edge.com)
+
+
+
+Article: 15303 of alt.sys.pdp10
+Path: sea-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!newsfeed.mathworks.com!portc03.blue.aol.com!newsfeed.skycache.com.MISMATCH!newsfeed1.cidera.com!Cidera!peer1-sjc1.usenetserver.com!usenetserver.com!e420r-atl1.usenetserver.com.POSTED!not-for-mail
+From: "Zane H. Healy" <healyzh@shell1.aracnet.com>
+Subject: META S Manual online
+Newsgroups: alt.sys.pdp10
+Organization: Aracnet
+User-Agent: tin/1.4.4-20000803 ("Vet for the Insane") (UNIX) (Linux/2.2.19 (i686))
+Lines: 8
+Message-ID: <aZX18.1300$h31.327558@e420r-atl1.usenetserver.com>
+X-Complaints-To: abuse@usenetserver.com
+X-Abuse-Info: Please be sure to forward a copy of ALL headers
+X-Abuse-Info: Otherwise we will be unable to process your complaint properly.
+NNTP-Posting-Date: Fri, 18 Jan 2002 11:22:30 EST
+Date: Fri, 18 Jan 2002 16:22:30 GMT
+Xref: dfw-artgen.news.verio.net alt.sys.pdp10:15303
+
+Once again thanks to the efforts of Ronald Tatum there is a manual for 
+METAS online at the PDP-10 Emulation Webpage. 
+http://www.aracnet.com/~healyzh/pdp10emu.html
+
+While this manual looks to be for a IBM 360/44, the manual is there as META S
+was used in implementing ALGOL-W on the PDP-10. 
+
+			Zane
+
+
+

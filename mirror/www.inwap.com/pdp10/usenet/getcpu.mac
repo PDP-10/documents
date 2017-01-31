@@ -1,0 +1,119 @@
+Article: 17960 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news-peer.gip.net!news.gsl.net!gip.net!feedeast.aleron.net!aleron.net!nntp.flash.net!logbridge.uoregon.edu!news.u.washington.edu!140.142.17.34.MISMATCH!news.u.washington.edu!shiva0.cac.washington.edu!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: GETCPU.MAC
+Date: Sun, 29 Sep 2002 16:18:31 -0700
+Organization: Networks and Distributed Computing
+Lines: 100
+Message-ID: <Pine.LNX.4.50.0209291612170.30364-100000@shiva0.cac.washington.edu>
+NNTP-Posting-Host: shiva0.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 1033341514 30556 (None) 140.142.17.39
+X-Complaints-To: help@cac.washington.edu
+Content-Length: 314159 (believe this at your own risk)
+Xref: dfw-artgen alt.sys.pdp10:17960
+
+I've been trying to fill in some of the gaps in the knowledge of the
+following subroutine, specifically: Foonly F1, F3, F4, 26KL; Systems
+Concepts SC-20, SC-30, SC-40; and emulators other than klh10.
+
+It probably should also discriminate between model A and model B KLs.
+
+Note that the tests must be entirely user mode instructions.  No IOTs or
+UUOs.
+
+-- Mark --
+
+http://staff.washington.edu/mrc
+Science does not emerge from voting, party politics, or public debate.
+
+	TITLE GETCPU Get CPU type
+
+T1==:1
+T2==:2
+P==:17
+
+	; 1-10 for DEC (R.I.P.)
+$CP166==:1			; PDP-6
+$CPKA==:2			; KA10
+$CPKI==:3			; KI10
+$CPKL==:4			; KL10
+$CPKS==:5			; KS10
+	; 10-19 for Foonly (R.I.P.)
+$CPFO2==:11			; Foonly F2
+	; 20-29 for Systems Concepts
+	; 30-39 for XKL
+$CPXK1==:30			; XKL TOAD-1
+	; 40-49 for KLH10
+$CPKHL==:40			; KLH KN10-KL
+
+
+; Get CPU type
+;	PUSHJ P,GETCPU
+; T1/ CPU type code
+; This routine is designed to be easy to modify/extend at the cost of some
+; code size.
+
+GETCPU::PUSH P,T2
+	PUSHJ P,GETCP0
+	POP P,T2
+	POPJ P,
+
+GETCP0:	JFCL 17,.+1		; Clear flags
+	JRST .+1		; Change PC
+	JFCL 1,GTC166		; PDP-6 has PC Change flag
+	SETO T1,		; AOBJN of -1
+	AOBJN T1,.+1		; KA10 and Foonly F2 carries to left half
+	JUMPE T1,GETCP1
+	HRLOI T1,010700		; IBP of EA = -1
+	IBP T1
+	TLNE T1,17		; KA10 overflows
+	 JRST GTCKA
+	JRST GTCFO2		;;; assume Foonly F2
+
+; Here with T1/0, always
+GETCP1:	BLT T1,0		; T1 must not be 0
+	JUMPE T1,GTCKI
+	MOVSI T1,400000		; ADJBP of normalized pointer by SETZ
+	ADJBP T1,[430100,,0]
+	CAMN T1,[430100,,0]	; KL10 leaves unchanged pointer
+	 JRST GTCKL
+	MOVSI T1,450000		; IBP of OWGBP
+	IBP T1
+	CAMN T1,[450000,,0]	; KS10 doesn't do OWGBPs
+	 JRST GTCKS
+	MOVSI T1,400000		; SETZ divided by -1
+	SETO T2,
+	IDIVM T1,T2		; KLH-KL gets error and don't modify T2
+	AOJE T2,GTCKHL
+	JRST GTCXK1		;;; assume XKL-1
+
+GTC166:	MOVEI T1,$CP166
+	POPJ P,
+
+GTCKA:	MOVEI T1,$CPKA
+	POPJ P,
+
+GTCKI:	MOVEI T1,$CPKI
+	POPJ P,
+
+GTCKL:	MOVEI T1,$CPKL
+	POPJ P,
+
+GTCKS:	MOVEI T1,$CPKS
+	POPJ P,
+
+GTCFO2:	MOVEI T1,$CPFO2
+	POPJ P,
+
+GTCKHL:	MOVEI T1,$CPKHL
+	POPJ P,
+
+GTCXK1:	MOVEI T1,$CPXK1
+	POPJ P,
+
+	END
+
+

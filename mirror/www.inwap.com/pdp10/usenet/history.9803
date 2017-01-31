@@ -1,0 +1,3744 @@
+Article 3470 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!su-news-hub1.bbnplanet.com!news.bbnplanet.com!news2.chicago.iagnet.net!131.103.1.115!news1.chicago.iagnet.net!iagnet.net!news.indiana.edu!news.iupui.edu!woodshed!mwood
+From: mwood@woodshed.iupui.edu (Mark H. Wood)
+Newsgroups: alt.online-service.compuserve,alt.sys.pdp10
+Subject: Re: History of CompuServe
+Followup-To: alt.online-service.compuserve,alt.sys.pdp10
+Date: Sat, 1 Nov 1997 09:37:14 GMT
+Organization: La Petite Hackerie
+Lines: 32
+Message-ID: <EIyo22.Dq@woodshed.iupui.edu>
+References: <62v2ef$r23@snews3.zippo.com> <EIuMu5.36H@world.std.com>
+NNTP-Posting-Host: mhw.oit.iupui.edu
+X-Newsreader: TIN [UNIX 1.3 950515BETA PL0]
+Xref: nntp1.ba.best.com alt.online-service.compuserve:19556 alt.sys.pdp10:3470
+
+Sam Weiner (weiner@world.std.com) wrote:
+: [much snipped -smw]
+: 
+: For an inside story of how Compuserve got started and used -10s, see
+:   http://www.inwap.com/pdp10/compuserve.txt
+: 
+: There is no such thing as a DEC-20, just a KL (or KS) -10 (or clone
+: thereof) running TOPS-20.  Compuserve used a much modified TOPS-10
+: anyway.  TOPS-20 has usernames, TOPS-10 has PPN (Project, Programmer Number
+: in octal to fit in a word.  Think about it.)  No emacs though there was
+: FINE.  The network was their own doing.  Read the above and other good
+: stuff at inwap/pdp10 if you like 36 bits.
+
+Well, they *did* offer TECO, so you *could* have your own emacs. ;-)
+There was another editor of their own design called FILGE, but I
+thought it was awful and stuck with TECO, years ago when I worked
+(briefly) for a customer of theirs and used System 9.  (Wow, *this*
+brings back memories.  We had a 4'x7' CalComp flatbed plotter and the
+925 controller with built-in tape drive, and a remote tape gadget for
+sucking down data with which to feed it; one of those Bell 9600-Baud
+modems big as a suitcase; a motley collection of TI Silent 700
+portable thermal printing terminals and GE Terminets with the funky
+rubber type belt, and a single VDT (a Hazeltine 1200?); and a
+floor-standing drum lineprinter with its own room and air-conditioner;
+but no computer of our own, anywhere.  There was a digitizer too, big
+as a drafting table and built just like one, but I was never condemned
+to use it.  I seem to remember that we had our own node on the
+CompuServe network to drive all this gear -- one for the city, one for
+us.
+-- 
+Mark H. Wood   Speaking, as always, for himself   MWOOD@INDYVAX.IUPUI.EDU
+Our nation suffers from too little leadership, and far too much management.
+
+
+Article 3461 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!news-peer.sprintlink.net!news-pull.sprintlink.net!news-in-east.sprintlink.net!news.sprintlink.net!Sprint!199.232.56.18!news.ultranet.com!d12
+From: jmfbahxx@ma.ultranet.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: History of CompuServe
+Date: Sat, 01 Nov 97 13:46:59 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 33
+Message-ID: <63f9f9$9un$1@decius.ultra.net>
+References: <62v2ef$r23@snews3.zippo.com> <EIuMu5.36H@world.std.com> <639r61$jfr$1@decius.ultra.net> <3459DEDC.15FB@s054.aone.net.au>
+NNTP-Posting-Host: d12.dial-17.mbo.ma.ultra.net
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:3461
+
+In article <3459DEDC.15FB@s054.aone.net.au>,
+   Mark & Suzanne <g.c.s@s054.aone.net.au> wrote:
+>> >There is no such thing as a DEC-20, just a KL (or KS) -10 (or clone
+>> >thereof) running TOPS-20.  Compuserve used a much modified TOPS-10
+>> >anyway.  TOPS-20 has usernames, TOPS-10 has PPN (Project, Programmer
+>> >Number in octal to fit in a word.  Think about it.)  No emacs though 
+>> >there was FINE.  The network was their own doing.  Read the above and 
+>> >other good stuff at inwap/pdp10 if you like 36 bits.
+>> 
+>> Sam,  please get your history straight.  People called them DEC20s,
+>> probably short for DECsystem-20.  TOPS20 could also handle PPNs; it
+>> was part of our so-called migration strategy.
+>
+>Yes thats true, the usual mistake is that some will say KL20 , KL10 or 
+>PDP-10, PDP-20 or some such refering to the PDP-10 processor involved
+>which is wrong.
+>
+>However, it is quite resonable to refer to a DECsystem-10 as a DEC-10
+>and a DECSYSTEM-20 as a DEC-20
+>
+>Note that it's DECSYSTEM-20 not DECsystem-20
+
+Right.  Thanks for the correction.  I've never been able to remember UC vs 
+LC, dash or no dash, etc.  I was the one who did all the editing that 
+introduced the DECsystem-10 into DEC's documentation.  At the time, there
+was a lawsuit going on (I think it was with Singer) about the "spelling"
+of the DECsystem-10.  I can't remember how many times I changed the 
+spelling from DECSYSTEM-10 to DECsystem-10 to DECSYSTEM10 to DECsystem10
+and back again as the lawyers kept changing their minds.  So I have been 
+and  always will be cursed with the inability to spell these names 
+correctly [grinning emoticon here].
+
+/BAH
+
+
+Article 3476 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!su-news-hub1.bbnplanet.com!cpk-news-hub1.bbnplanet.com!news.bbnplanet.com!news-peer.sprintlink.net!news-pull.sprintlink.net!news-in-east.sprintlink.net!news.sprintlink.net!Sprint!199.232.56.18!news.ultranet.com!d4
+From: jmfbahxx@ma.ultranet.com
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: What's the meaning of PDP?
+Date: Sun, 02 Nov 97 12:28:41 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 22
+Message-ID: <63hp8o$mue$4@decius.ultra.net>
+References: <63aaic$90l@epervier.CC.UMontreal.CA> <tsw-3010971046080001@cypher.cagent.com> <63cgo2$sl4$1@decius.ultra.net> <345B4149.223932C2@stoneweb.com>
+NNTP-Posting-Host: d4.dial-13.mbo.ma.ultra.net
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.folklore.computers:93847 alt.sys.pdp10:3476
+
+In article <345B4149.223932C2@stoneweb.com>,
+   "Carl R. Friend" <carl.friend@stoneweb.com> wrote:
+>jmfbahxx@ma.ultranet.com wrote:
+>> 
+>> But the _only_ place PDP was lower case was on the book covers.  The
+>> text inside the book capitalized them.  The trademark was the
+>> capitalized form.
+>
+>   Most of the PDP-11s I've seen have the "PDP" portion in lower-
+>case on the front-panels (e.g. pdp11/20). I looked at all the ones
+>I have to make sure, and they're all lower case.
+>
+>  -10s were all upper case, as I believe most of the -8s. The rest
+>completely escape me.
+>
+
+Nope.  Not on the cover.  I'm looking at at book called "pdp10 reference 
+handbook", 2nd edition, 1971 of the "pdp10 handbook series".  I guess the 
+designers were trying to be cute by not capitalizing _any_ letter (note 
+that the title had no capitals).
+
+/BAH
+
+
+Article 3478 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!cam-news-hub1.bbnplanet.com!news.bbnplanet.com!news-feed1.tiac.net!news.ultranet.com!not-for-mail
+From: "Carl R. Friend" <carl.friend@stoneweb.com>
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: What's the meaning of PDP?
+Date: Sun, 02 Nov 1997 09:09:07 -0500
+Organization: as little as possible!
+Lines: 37
+Message-ID: <345C8983.51F97DDF@stoneweb.com>
+References: <63aaic$90l@epervier.CC.UMontreal.CA> <tsw-3010971046080001@cypher.cagent.com> <63cgo2$sl4$1@decius.ultra.net> <345B4149.223932C2@stoneweb.com> <63hp8o$mue$4@decius.ultra.net>
+NNTP-Posting-Host: zephyr.ultranet.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 2.0 (X11; I; Linux 2.0.29 i586)
+Xref: nntp1.ba.best.com alt.folklore.computers:93852 alt.sys.pdp10:3478
+
+jmfbahxx@ma.ultranet.com, in article nr.,
+<63hp8o$mue$4@decius.ultra.net> wrote:
+> 
+> In article <345B4149.223932C2@stoneweb.com>,
+>    "Carl R. Friend" <carl.friend@stoneweb.com> wrote:
+> >jmfbahxx@ma.ultranet.com wrote:
+> >>
+> >> But the _only_ place PDP was lower case was on the book covers.
+> >> The text inside the book capitalized them.  The trademark was
+> >> the capitalized form.
+
+> >  -10s were all upper case, as I believe most of the -8s. The rest
+> >completely escape me.
+> >
+> 
+> Nope.  Not on the cover. 
+
+  Sorry. I was thinking about the iron, and in any event I need to
+retract that last statement of mine lest bad information get out.
+
+   The logo on the KI-10's front panel was, indeed, 'pdp10' not
+"PDP10". Duh.
+
+   When did DEC make the transition from obvious acronym (PDP) to
+"trademark" (pdp) on the equipment (and doco)? A quick guess would
+seem to indicate around 1970/71 or so judging from the already extant
+-8 line which makes an upper-to-lower transition (between 8/I and 8/e,
+I believe). Not, of course, that this has one whit to do with -10s.
+
+-- 
+ ______________________________________________________________________
+|                                                |                     |
+| Carl Richard Friend (UNIX Sysadmin)            | West Boylston       |
+| Minicomputer Collector / Enthusiast            | Massachusetts, USA  |
+| mailto:carl.friend@stoneweb.com                |                     |
+| http://www.ultranet.com/~engelbrt/carl/museum  | ICBM: N42:22 W71:47 |
+|________________________________________________|_____________________|
+
+
+Article 3489 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Smith and O'Halloran)
+Newsgroups: alt.sys.pdp10
+Subject: Fate of the three follow-on 36-bit processors
+Date: 3 Nov 1997 11:13:47 -0800
+Organization: Chez INWAP (people, computers, cats)
+Lines: 41
+Message-ID: <63l7pb$pme$1@shell3.ba.best.com>
+References: <62v2ef$r23@snews3.zippo.com> <3459DEDC.15FB@s054.aone.net.au> <345A8517.185B5C15@stoneweb.com> <63h1i5$7f$1@shell3.ba.best.com>
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: 878584429 28912 inwap  206.184.139.132
+Xref: nntp1.ba.best.com alt.sys.pdp10:3489
+
+In article <63h1i5$7f$1@shell3.ba.best.com>,
+Smith and O'Halloran <inwap@best.com> wrote:
+>In article <345A8517.185B5C15@stoneweb.com>,
+>Carl R. Friend <carl.friend@stoneweb.com> wrote:
+>>   There were four (5 if you count Jupiter) incarnations of the -10
+>>processor: the KA-10, KI-10, KL-10, and KS-10 - in order of introduction.
+>
+>What about the "Minnow"?  There was supposely a project to implement KS-10
+>functionality on a desk-top machine.
+
+I got e-mail from Mark Crispin, who reminded me about the Dolphin.
+  Minnow = very small PDP-10, most likely the size of a Rainbow-100 or Pro-350.
+  Dolphin = approximately the same size as the 2020, better than VAX-780.
+  Jupiter = pie-in-the-sky project, was to be 6 times faster than 1091/2060.
+		-Joe
+
+From: Mark Crispon <e-mail-address.suppressed@nospam>
+Date: Sun, 2 Nov 1997 13:09:51 -0800 (PST)
+Subject: Minnow
+
+The Minnow project was cancelled before it was capable of running an OS.  The
+furthest they got was running EDDT; that means about 10% of the work to
+getting a real machine (having worked on both SC-30 and PDP-10 emulator, I can
+tell you that getting EDDT to work is easy).
+ 
+Pete Hurley (I think) told an interesting story about the Minnow.  The board
+was being sent to the solder bath to solder the ICs, and true to its name it
+dived into the solder!
+ 
+As far as I know, the Minnow's final resting place was as a wall decoration.
+ 
+I think, but I'm not sure, that Dolphin had gotten further along before it was
+cancelled.  Dolphin would have been a major disaster for DEC marketing; it
+would have competed with the VAX 780 at similar pricing but much better
+performance.  Jupiter was scaled much larger (as it turned out, too large for
+DEC's expertise) to avoid that problem.
+	-MRC
+
+-- 
+INWAP.COM is Joe and Sally Smith, John and Chris O'Halloran and our cats
+See http://www.inwap.com/ for "ReBoot", PDP-10, and Clan MacLeod.
+
+
+Article 3505 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!newsfeed.internetmci.com!206.214.99.1!ix.netcom.com!netcom20!alderson
+From: alderson@netcom20.netcom.com (Richard M. Alderson III)
+Subject: Re: OS for PDP10?
+In-Reply-To: Mark & Suzanne's message of Mon, 10 Nov 1997 00:02:43 +1100
+Message-ID: <ALDERSON.97Nov10110557@netcom20.netcom.com>
+Sender: alderson@netcom20.netcom.com
+Reply-To: alderson@netcom.com
+Organization: NETCOM On-line services
+References: <63tg4f$bd5$1@nntp4.u.washington.edu>
+	<ALDERSON.97Nov7102238@netcom20.netcom.com> <EJArr0.2qu@kozmix.ow.nl>
+	<3465B473.2781@s054.aone.net.au>
+Date: Mon, 10 Nov 1997 19:05:57 GMT
+Lines: 33
+Xref: nntp1.ba.best.com alt.sys.pdp10:3505
+
+In article <3465B473.2781@s054.aone.net.au> Mark & Suzanne
+<g.c.s@s054.aone.net.au> writes:
+
+>The most different and certainly historically interesting are the two you
+>mention ITS and SAIL. I'm sure ITS is not beyond the grave in terms of getting
+>a hold of (please) but what about SAIL would I be right to think that copies
+>of the SAIL system have departed this world to be only briefly be mentioned in
+>a few documents and nolonger available for love or money?
+
+Technically, of course, I should have written "WAITS" instead of "SAIL"--the
+official name of the operating system was the former.  There were at least four
+different things all called "SAIL" relating to the Stanford Artificial Intelli-
+gence Laboratory:  The Lab itself, the PDP-10 owned by the Lab and attached to
+the ARPANET (later Internet), for a while the OS on that -10, and an Algol 60
+derivative (with the "LEAP" data structures, whatever that may mean) where it
+stood for "Stanford Artificial Intelligence Language."
+
+WAITS has been relegated to a set of backup tapes written with the DART program
+(a SAIL-only utility), archived somewhere by the Computer Science department at
+Stanford.  Before being reminded about the hobbyist license for 36-bit OSes, I
+was concerned about the fact that WAITS started out as the PDP-10 Monitor
+version 3.27 (before it was renamed to "Tops-10" by DEC!), with the Tops-20
+PHYSIO adapted to WAITS instead of the Tops-10 stuff; I guess that if one could
+demonstrate an executed license, and the sources were available, one could see
+them, if Stanford would allow their copyrighted parts to be released...  (Same
+problems as at MIT, you know.)
+
+It's complex, isn't it? ;-)
+-- 
+Rich Alderson   You know the sort of thing that you can find in any dictionary
+                of a strange language, and which so excites the amateur philo-
+                logists, itching to derive one tongue from another that they
+                know better: a word that is nearly the same in form and meaning
+                as the corresponding word in English, or Latin, or Hebrew, or
+                what not.
+                                                --J. R. R. Tolkien,
+alderson@netcom.com                               _The Notion Club Papers_
+
+
+Article 3509 of alt.sys.pdp10:
+Sender: eric@houhah.brouhaha.com
+In-reply-to: wilson@dbit.com's message of 10 Nov 97 21:54:59 GMT
+Newsgroups: alt.sys.pdp10
+Subject: Re: OS for PDP10?
+References: <63tg4f$bd5$1@nntp4.u.washington.edu> <EJArr0.2qu@kozmix.ow.nl>
+	<3465B473.2781@s054.aone.net.au>
+	<ALDERSON.97Nov10110557@netcom20.netcom.com>
+	<346782b3.0@news.wizvax.net>
+To: wilson@dbit.com (John Wilson)
+Message-ID: <qhsot3q19z.fsf@houhah.brouhaha.com>
+From: eric@brouhaha.com (Eric Smith)
+Date: 11 Nov 1997 03:32:09 -0500
+Organization: Brouhaha Computer Mercenary Services
+Lines: 9
+X-Newsreader: Gnus v5.1
+NNTP-Posting-Host: houhah.brouhaha.com
+Path: nntp1.ba.best.com!news1.best.com!su-news-hub1.bbnplanet.com!news.bbnplanet.com!logbridge.uoregon.edu!enews.sgi.com!news.sgi.com!news.spies.com!houhah.brouhaha.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:3509
+
+John Wilson <wilson@dbit.com> wrote:
+> I thought anything created using DARPA funding *had* to be given away for
+> free unless there were security reasons not to, [...]  I thought this DARPA
+> rule was also why DEC was able to use TENEX as the basis of TOPS-20,
+
+According to "Origins and Development of TOPS-20" by Dan Murphy, DEC purchased
+the commercial rights to Tenex from BBN in 1973.
+
+	http://www.osf.org/~dlm/hbook.html
+-- 
+-----------------------------------------------------------------------------
+Don't blame me, I voted Libertarian.     http://www.lp.org/    (800) 682-1776
+-----------------------------------------------------------------------------
+
+
+Article 31733 of best.general:
+Path: nntp1.ba.best.com!nntp2.ba.best.com!not-for-mail
+From: thad@thadlabs.com (Thad Floryan)
+Newsgroups: best.general
+Subject: Re: Octal sucks
+Date: 14 Nov 1997 15:17:53 GMT
+Organization: ThadLABS; serving the computer industry for over a quarter-century
+Lines: 83
+Distribution: best
+Message-ID: <64hq31$ilr$2@nntp2.ba.best.com>
+References: <642f95$9tm$1@shell3.ba.best.com>
+    <64edsb$e3n$1@shell3.ba.best.com> <64egvh$mlu$1@shell3.ba.best.com>
+    <MPG.ed4e3a656ec8edb9896ab@nntp1.ba.best.com>
+    <64gthi$7e9$1@shell3.ba.best.com>
+NNTP-Posting-Host: thad.vip.best.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Trace: 879520673 19131 (none) 206.86.0.12
+X-Newsreader: knews 0.9.8
+Xref: nntp1.ba.best.com best.general:31733
+
+inwap@best.com (Smith and O'Halloran) wrote:
+| [...]
+| I played with a PDP-5 and PDP-8, but not an 18-bitter, and still use
+| TOPS-20.  http://www.inwap.com/pdp10/
+
+Cool! (re: still using TOPS-20).
+
+If you have a 9-track 1/2" tape drive and would like copies of nearly
+every game for TOPS-20 (incl. MIT's Zork, CMU's Haunt, Stanford's Fisk
+and Luigi, and, of course, adventure, vttrek, and about eleventy-seven
+others), let me know.
+
+Heck, I'll give you the tapes since I have nothing that can read them.
+
+BTW and FYI, I received an email query earlier today about TOPS-20 and
+my response is enclosed.  If you know the company name that Len Bosack
+and Sandy Lerner founded after they [founded and] left Cisco, I'd really
+appreciate knowing since I cannot find any reference to it; they built
+a desktop DEC-20 that ran TOPS-20.
+
+Thad
+
+Trivia follows (mostly for Joe but also for the [several] other PDP-10
+and TOPS-20 fans out there):
+
+Re:
+| > And let's not forget the PDP-10/DEC-20 (KA,KI,KS,KL processors) with
+| > its 36-bit word length
+| 
+| Ah... Now _there_ was a machine, though I don't recall a KS model.
+| How did that differ from the KI/KL?
+
+There were 4 (actually 5) models from DEC:
+
+1. the original PDP-6 with transistors.  Paging modification to this became
+   the KA PDP-10
+
+2. next generation used ICs, hence the "I" in "KI"
+
+3. the next and most advanced model was the KS in which the "S" stood for
+   Schottky.  This was actually the physically smallest model, all self-
+   contained in one cabinet about the size of a 17 cu ft refrigerator.
+   Disks were still external (RP06, RP07, RP20, etc.)
+
+4. the last model (due to cancelling the Jupiter) was the KL CPU in which
+   the "L" stood for its use of ECL logic.  The power supply in that sucker
+   had capacitors the size of pony kegs.  :-)
+
+   Architecturally the KS was more advanced than the KL, but the KL ran
+   like a bat out of hell.
+
+Other notes:
+
+A. there was a floating-point bug in the KS which never got fixed due to
+   hard-coded microcode not being (economically) changeable.
+
+B. three variants of this family:
+
+   1. Foonly (ex-Stanford) made several models (F-1, F-4, etc.) which were
+      incredible.  I saw the first one while visiting Stanford one day in
+      the LOTS facility, so I opened it up to see what was inside.  Cabinet
+      (just one!) was almost empty, yet this was 4x more powerful than the
+      DEC-2060s I had at the time.  I later used one F-4 on a contract for
+      the US Navy.
+
+      Foonly was based in Palo Alto.
+
+   2. Systems Concepts model SC-1.  Incredible piece of hardware and in
+      direct competition with Foonly.  Trouble was the company was run
+      totally by engineer-types and they never would solidify the design
+      and get it to market, so their funds eventually ran out.  They really
+      needed some MBA types in that company to sell the damned thing.
+
+      Systems Concepts was located in San Francisco.
+
+   3. Name escapes me, but it was up in Oregon and the company was formed
+      by Len Bosack and Sandy Lerner (yes, the 2 who started Cisco).  They
+      made a desktop DEC-20 (about PC-sized) that actually ran TOPS-20.
+      Never saw a commercial (and marketed) version of this one, though,
+      which is a shame as I would have bought one just to be able to run
+      the ORIGINAL versions of Zork, Haunt, dungeon, Fisk, etc. at home.  :-)
+
+Thad
+
+
+Article 3517 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!su-news-hub1.bbnplanet.com!su-news-feed1.bbnplanet.com!news.bbnplanet.com!news-master.cisco.com!not-for-mail
+From: William "Chops" Westfield <billw@ciscoSPMFD.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Octal doen't suck
+Date: 16 Nov 1997 02:34:09 -0800
+Organization: Cisco Systems, Inc.
+Lines: 18
+Message-ID: <54wwi9cela.fsf@puli.cisco.com>
+References: <642f95$9tm$1@shell3.ba.best.com>
+	<64gthi$7e9$1@shell3.ba.best.com> <64hq31$ilr$2@nntp2.ba.best.com>
+	<64jrng$1d9$1@shell3.ba.best.com> <64jtqn$epi$1@shell3.ba.best.com>
+	<01bcf248$f2ecbee0$257884a9@wardch>
+NNTP-Posting-Host: puli.cisco.com
+In-reply-to: "Chris Ward"'s message of 16 Nov 1997 04:33:34 GMT
+X-Newsreader: Gnus v5.1
+Xref: nntp1.ba.best.com alt.sys.pdp10:3517
+
+    The "High segments" could be constructed so that they were shareable
+    (with the .SHR extension).  This saved lots of expensive memory.  When
+    shared they were "pure code" and not writable.  Very good teaching
+    tool, and it taught me a lot.
+
+Um, they didn't have to be "not writable".  You could do zippy IPC
+stuff by writing (very carefully) to the shared area.  Greg Satz and I
+wrote an early split-screen "chat" program (for tops10) back in about
+1979.  I wrote some rutgers-pascal callable routines for IPC using the
+shared highseg, and Greg did everything else (in pascal.)
+
+The general concept was used a lot more often in tops20, where the paging
+scheme allowed individual memmory pages to be shared in this manner...
+
+BillW
+
+-- 
+(remove spam food from return address)
+
+
+Article 3514 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!su-news-hub1.bbnplanet.com!su-news-feed1.bbnplanet.com!news.bbnplanet.com!news-master.cisco.com!not-for-mail
+From: William "Chops" Westfield <billw@ciscoSPMFD.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Octal doen't suck
+Date: 15 Nov 1997 21:21:31 -0800
+Organization: Cisco Systems, Inc.
+Lines: 27
+Distribution: best
+Message-ID: <547ma9e7ms.fsf@puli.cisco.com>
+References: <642f95$9tm$1@shell3.ba.best.com>
+	<64gthi$7e9$1@shell3.ba.best.com> <64hq31$ilr$2@nntp2.ba.best.com>
+	<64jrng$1d9$1@shell3.ba.best.com> <64jtqn$epi$1@shell3.ba.best.com>
+NNTP-Posting-Host: puli.cisco.com
+In-reply-to: inwap@best.com's message of 15 Nov 1997 02:33:59 -0800
+X-Newsreader: Gnus v5.1
+Xref: nntp1.ba.best.com alt.sys.pdp10:3514
+
+    >   3. Name escapes me, but it was up in Oregon and the company was formed
+    >      by Len Bosack and Sandy Lerner (yes, the 2 who started Cisco).  They
+    >      made a desktop DEC-20 (about PC-sized) that actually ran TOPS-20.
+
+    XKL LLC
+    8420 154th Avenue NE
+    Redmond, WA 98052
+    Tel (425) 869-9050
+    http://www.xkl.com
+
+    This company is in business, and is selling TOAD-1 processors that run
+    TOPS-20.
+
+The interesting bit of trivia is that cisco was originally conceived to
+build a Dec20 clone (and the first product sold was the Massbus Ethernet
+Interface System for KL10s.)  As I heard the story (and I guess this is
+rumor, since it didn't come direct from Len or Sandy), the networking
+gear was sort of a fund-raiser that got out of hand...
+
+The early bits of the TOAD that I saw a year or two before it came out
+looked like the final product would be about the same size as a cisco-7000
+router - still desk sized to some extent, but more like those supersized
+PC server boxes than a single-user PC.
+
+BillW
+-- 
+(remove spam food from return address)
+
+
+Article 3535 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!su-news-hub1.bbnplanet.com!news.bbnplanet.com!news1.digital.com!pa.dec.com!nntpd.lkg.dec.com!not-for-mail
+From: Don Dossa <dossa@eng.pko.dec.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Curious about 10s.
+Date: Sun, 07 Dec 1997 21:03:25 -0500
+Organization: Digital Equipment Corporation
+Lines: 4
+Message-ID: <348B556D.167E@eng.pko.dec.com>
+References: <Pine.BSI.3.95.971201153814.18122B-100000@bsdserver.tek-star.net> <65vk8l$2cn@mtinsc04.worldnet.att.net> <34837B44.5AD8E95F@stoneweb.com> <34889994.8C0F6033@eng.pko.dec.com>
+NNTP-Posting-Host: hbar.eng.pko.dec.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 2.02 (X11; I; OSF1 V4.0 alpha)
+Xref: nntp1.ba.best.com alt.sys.pdp10:3535
+
+And I still have TOPS10 on a DECtape.  Remember back when it would
+still fit on one DECtape?  Remember DECtape?
+Don Dossa
+Former KL10 microcode engineer
+
+
+Article 3541 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!howland.erols.net!ais.net!newsfeed.concentric.net!global-news-master
+From: bogus <bogus@concentric.net>
+Newsgroups: alt.sys.pdp10
+Subject: TOPS on DECtape
+Date: Wed, 10 Dec 1997 23:07:38 -0500
+Organization: CADR (a b c d e f g)  is b
+Lines: 10
+Message-ID: <348F6701.17D80300@concentric.net>
+Reply-To: dev/nul@concentric.net
+NNTP-Posting-Host: ts002d13.box-ma.concentric.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii; x-mac-type="54455854"; x-mac-creator="4D4F5353"
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 4.01 (Macintosh; I; PPC)
+X-Priority: 3 (Normal)
+Xref: nntp1.ba.best.com alt.sys.pdp10:3541
+
+I believe that level D (before version numbers) was the last
+TOPS-10 to fit on a DECtape
+Level D would also swap on DECtape.
+    ...wex
+wex@concentric.net
+
+(Level D was also the last release to contain
+the error comment "you have been fucked by the shit-eating machine")
+ 
+
+
+
+Article 3547 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!howland.erols.net!newsfeed.internetmci.com!207.241.0.194!news.wwa.com!not-for-mail
+From: jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett)
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS on DECtape
+Date: 11 Dec 1997 16:28:04 GMT
+Organization: Everett Associates
+Lines: 38
+Message-ID: <66p4ak$l01$1@hirame.wwa.com>
+References: <348F6701.17D80300@concentric.net> <66olsi$1ft$1@shell3.ba.best.com>
+NNTP-Posting-Host: poolf3-026.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.8 (x86 32bit)
+Xref: nntp1.ba.best.com alt.sys.pdp10:3547
+
+In article <66olsi$1ft$1@shell3.ba.best.com>, inwap@best.com says...
+>
+>In article <348F6701.17D80300@concentric.net>,
+>bogus  <dev/nul@concentric.net> wrote:
+>>I believe that level D (before version numbers) ...
+>
+>Was 4S72 when things changed drastically?
+
+The version numbers I recall (strictly from fallible memory alone) are:
+1.91, 2.19, 3.27, 4S50, and 4S72; all pre-Level D. 
+
+Disk/file handling was changed significantly with the introduction of Level-D 
+disk service, released with the first 5 series monitor. In its first 
+incarnation the Level-D file service routine was one module called FILSER. It 
+was written by Tony Wachs from design work by Tony, Chris White, and Tom 
+Hastings. It was about this time monitor source editing conventions were also 
+introduced as documented in a memo called LEVELD.MEM, written by Tom 
+Hastings.
+
+As I recall, the first 5 series release still preserved the old, 
+non-standardized AC namings; eg. PDP, TAC, TEMP, etc. These were codified and 
+changed by Don Black for the same release that introduced the FILSER split 
+into FILIO, FILUUO, and FILINT (I think those were the names), and for which 
+I implemented extended RIBs. This was either 5.01 or 5.02, I'm leaning toward 
+5.01.
+
+So which drastic change were you referring to?
+
+
+
+
+
+-- 
+jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) http://www.wwa.com/~jeverett
+             ^^^^^^^^^^^^^^^
+Things have gotten so bad I feel the need to disguise my email address.
+And I don't like this explanation because I just hate long signatures.
+
+
+
+Article 3553 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!su-news-hub1.bbnplanet.com!cpk-news-hub1.bbnplanet.com!news.bbnplanet.com!newsfeed.internetmci.com!207.241.0.194!news.wwa.com!not-for-mail
+From: jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett)
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS on DECtape
+Date: 12 Dec 1997 15:56:34 GMT
+Organization: Everett Associates
+Lines: 41
+Message-ID: <66rmri$a7i$1@hirame.wwa.com>
+References: <348F6701.17D80300@concentric.net> <66olsi$1ft$1@shell3.ba.best.com> <66p4ak$l01$1@hirame.wwa.com> <66per0$r79$1@shell3.ba.best.com>
+NNTP-Posting-Host: poolf6-020.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.8 (x86 32bit)
+Xref: nntp1.ba.best.com alt.sys.pdp10:3553
+
+In article <66per0$r79$1@shell3.ba.best.com>, inwap@best.com says...
+>
+>In article <66p4ak$l01$1@hirame.wwa.com>,
+>John Everett <jeverett@wwa.DEFEAT.UCE.BOTS.com> wrote:
+>>So which drastic change were you referring to?
+>
+>The jump from level C to level D was one of them.  (I know about FAILCD,
+>a program that read level C FAILSAFE tapes and wrote onto a level D
+>disk structure, but never saw it in action.)
+>
+>The introduction of PPNs (and UFDs).  The introduction of SFDs.  First KI
+>implementation.  Second KI implementation (fully utilizing the page map and
+>not emulating tha KA's two-segment virtual address space).  True demand 
+paging
+>(where the whole EXE file was not read into core a program startup.)  First 
+KL
+>implementation.  First KS monitor.  Last KA monitor.  User mode access 
+control
+>lists (FILDAE).  That sort of stuff.
+
+Most of the above were evolutionary changes introduced over a period of 
+years. PPNs (project, programmer numbers) were already in place in the PDP-6 
+monitor in the mid-60s. SFDs (sub-file directories) appeared in an early 5 
+series release (I think) like 5.01 or 5.02. I don't recall the sequence of 
+memory management changes leading from the KA's shuffler to demand paging, 
+but I do recall implementing DAEMON enhancements to DCORE and DUMP required 
+to support demand paging. This was in 1973-74 or so. I believe this was for 
+the first KL implementation but I forget the version number. First KS monitor 
+was 1978. I know this one because I ported TOPS-10 to the KS. I almost got 
+caught in the great blizzard of '78; I stayed late in Marlboro after DEC had 
+sent everybody home so I could get stand-alone time on the development KS. I 
+barely made it home.
+
+So "that sort of stuff" actually appeared over a period of 10+ years.
+
+-- 
+jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) http://www.wwa.com/~jeverett
+             ^^^^^^^^^^^^^^^
+Things have gotten so bad I feel the need to disguise my email address.
+And I don't like this explanation because I just hate long signatures.
+
+
+
+Article 3552 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!su-news-hub1.bbnplanet.com!news.bbnplanet.com!news1.digital.com!pa.dec.com!nntpd.lkg.dec.com!alingo.zk3.dec.com!werme
+From: werme@alingo.zk3.dec.com (Eric Werme)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: Curious about 10s.
+Date: 11 Dec 97 22:50:48 GMT
+Organization: Digital Equipment Corporation
+Lines: 28
+Message-ID: <werme.881880648@alingo.zk3.dec.com>
+References: <Pine.BSI.3.95.971201153814.18122B-100000@bsdserver.tek-star.net> <34837B44.5AD8E95F@stoneweb.com> <34889994.8C0F6033@eng.pko.dec.com> <348B556D.167E@eng.pko.dec.com> <66gg3a$r8g$1@shell3.ba.best.com> <66npju$h4r@bgtnsc02.worldnet.att.net>
+Reply-To: werme@zk3.dec.com
+NNTP-Posting-Host: alingo.zk3.dec.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:3552 alt.folklore.computers:95576
+
+"Richard Kutta" <kuttmeye@worldnet.att.net> writes:
+
+>Yep!  You could get the operating system and the backup program (FAILSAFE)
+>on one.
+>After re-formatting the disk and going through  the Once-Only dialog (alias
+>Once-again)
+>you mounted your DecTape and restored the rest of the files, at least on
+>the KA's and KI's.
+>The OS got a bit too big to do this on the KL's!
+
+Heck, before CMU got RM10B drums, we had the monitor, editor, SAIL compiler,
+and linker on one tape.  Users would usually use two others, one to read
+from, one to write to.  With 5 drives, 2 users could use it pretty
+comfortably.
+
+TECO was neat - it often started without being read in from the tape.  It
+was the only program that could initialize its own data area, the LOSEG.
+Code lived in the HISEG, and the OS would try to keep that in core.
+
+That was in 1969, and the 4N50 monitor, even before it was renamed
+TOPS-10.
+
+Happy day after DEC-10 day!
+-- 
+-- 
+<>     Eric (Ric) Werme    <>    The above is unlikely to contain official  <>
+<>   <werme@zk3.dec.com>   <> claims or policies of Digital Equipment Corp. <>
+<> <werme@cyberportal.net> <>
+
+
+Article 3559 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!su-news-hub1.bbnplanet.com!cpk-news-hub1.bbnplanet.com!news.bbnplanet.com!newsfeed.internetmci.com!152.163.199.19!portc03.blue.aol.com!audrey01.news.aol.com!not-for-mail
+From: jmfbah@aol.com (JMFBAH)
+Newsgroups: alt.sys.pdp10
+Subject: Another KL10 has been killed
+Date: 14 Dec 1997 14:27:39 GMT
+Lines: 77
+Message-ID: <19971214142701.JAA16730@ladder01.news.aol.com>
+NNTP-Posting-Host: ladder01.news.aol.com
+X-Admin: news@aol.com
+Organization: AOL http://www.aol.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:3559
+
+Last week, Tim Litt called me to tell me that KL1026 (nee' GIDNEY) 
+was to be turned off and scrapped.  When Jim died, I had expressed 
+a desire to see a PDP-10 one last time, so Tim thought I would like
+to visit the -10 before it went away.  Needless to say, this news was
+upsetting.  I cried off and on until I went to see the -10 on 5-Dec-97.  
+And this is how I did it.
+
+Underneath my sweat shirt, I wore the first tee-shirt that the TOPS-10
+folks had produced.  Its front had the words "THE REPORTS OF MY
+DEATH HAVE BEEN GREATLY EXAGGERATED" and the back
+had a dipiction of a video terminal with the words (DEC system-10
+continued).  I fought long and hard to this put on the back; but that's
+another story.  In my carry-all, I placed the picture of Jim and Tony
+in front of CHIP that had been taken at a DECUS.
+
+Tim met me in the lobby of MRO-1 and walked me to the machine
+room.  As soon as I entered the room, the smells hit me.  I had
+never before realized that a -10 had a unique smell.  All kinds of
+memories started to manifest themselves.  I almost expected to
+see Jim and Tony debugging at the console.
+
+The system was orange (darn) and was down.  Apparently, the
+system pack had been munged, an RP06 was dead (one of two),
+the tape drives weren't working, and the floppy drives didn't seem
+to work.  Tim was trying to get the system into a state so that
+some of the information on the packs could be saved to media
+readable by other non-PDP-10 systems.  This was the second
+time that I had observed a PDP-10 not cooperating when it
+was scheduled to be torn apart System 40/2 was the other one;
+in System 40's case the KL and the KI systems both helped
+to prevent its demise (but that's yet another story).
+
+Tim finally got a monitor loaded from a KLAD pack but that pack
+was so old the microcodes for the tapes weren't in it.  He finally
+found a KLAD (after I had reassured him that I had KLADs built
+so that all hardware could be detected and found) that finally
+could see the tape controller.  But the tapes didn't work--lots
+of hard errors.  
+
+I went into the back room where lots of tapes and packs were
+kept.  There was a hit and miss of RE tapes.  I was surprised
+at my ability to figure out what the tapes were and what should
+be on them.  I had thought that I had forgotten all that stuff.
+
+For some reason, Tim wanted to boot the TOAD (yup, I got to
+meet one :-)) so I played with the -10 on the console for while.
+Just doing a directory of SYS: brought back knowledge.  I
+ran DDT and was surprised that I could do DDT commands 
+without a cheat sheet.  I tried to solve a conundrum that
+somebody had given me but failed.  I opened a file with
+TECO.  And, while I was doing all this playing, I occasionally
+petted the -10.
+
+Meanwhile, Tim had forgotten his password on the TOAD.  I
+watched him boot up TOPS-20 with the /DDT switch and 
+look at locations.  Remember all the times we used to watch
+Jim and Tony debug the monitor on Wednesday mornings?
+There was a taste of that in the air.
+
+Tim finally succeeded in getting a magtape drive to work on
+the TOAD and successfully read an REtape to disk and 
+save that info to another magtape.  Those TOADs have a 
+nice PDP-10 feel to them.  I do wish there were lights [wistful 
+emoticon here].
+
+By that time, the pain that this disease has bestowed upon me had 
+become too severe for me to stay any longer, so I left.   I don't know 
+if there was any kind of party like the one they had for KL2102.  I 
+didn't go to that party; I just watched the party from afar for a couple 
+of minutes.  (I said good-bye later to KL2102 when there was nobody 
+around.)
+
+This is the end of an era that should never be forgotten.  I'm just
+glad that Jim and Tony didn't have to see it.
+
+/BAH
+
+
+
+Article 3570 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!su-news-hub1.bbnplanet.com!cpk-news-hub1.bbnplanet.com!news.bbnplanet.com!newsfeed.internetmci.com!207.241.0.194!news.wwa.com!not-for-mail
+From: jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Curious about 10s.
+Date: 18 Dec 1997 15:25:20 GMT
+Organization: Everett Associates
+Lines: 30
+Message-ID: <67bf90$6uu$1@hirame.wwa.com>
+References: <Pine.BSI.3.95.971201153814.18122B-100000@bsdserver.tek-star.net>
+        <Pine.BSI.3.95.971211172423.26382C-100000@bsdserver.tek-star.net>
+        <66rve9$a0t$1@shell3.ba.best.com> <54zpm6ca8e.fsf@flipper.cisco.com>
+        <6742ce$a1b$1@shell3.ba.best.com> <ALDERSON.97Dec17105138@netcom16.netcom.com> <67b5p2$lbf$1@decius.ultra.net>
+NNTP-Posting-Host: poolf7-047.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.8 (x86 32bit)
+Xref: nntp1.ba.best.com alt.sys.pdp10:3570
+
+In article <67b5p2$lbf$1@decius.ultra.net>, jmfbahxx@ma.ultranet.com says...
+>
+>>It most emphatically is *not* the goal for the TOAD-1, which is a PDP-10 
+>but
+>>not fully compatible with the DEC systems:  Larger address space, 
+>different I/O
+>>model, modern peripherals, etc.
+>
+>What's more, this so-called goal is _not_ the philosophy of TOPS-10.
+>
+>Take a look at what was done when SAVs were changed to EXEs, when
+>the major level of the monitor changed (5.xx to 6.xx and 6.xx to 7.xx).
+>We spent time in the design to not break customer programs, but we
+>also were not going to spend a great deal of time/money trying to 
+>ensure that programs dependent on a 5-series monitor (and couldn't 
+>run under a 6-series monitor) would run under every subsequent release.
+>It would have been a distribution/support nightmare if we had tried.
+
+I think it's an interesting commentary on the backwards compatibility 
+philosophy of TOPS-10 development that DEC continued to rely for maintenence 
+releases on SOUP, a suite of programs for which the sources were lost in the 
+far mists of time. Because no maintenence could be done on CAM, FED, COMERG, 
+etc., we at least always made sure these CUSPs would run.
+
+-- 
+jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) http://www.wwa.com/~jeverett
+             ^^^^^^^^^^^^^^^
+Things have gotten so bad I feel the need to disguise my email address.
+And I don't like this explanation because I just hate long signatures.
+
+
+
+Article 3581 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!newsfeed.direct.ca!Supernews60!supernews.com!Supernews69!not-for-mail
+From: mikewol@accessone.com (Mike Wolinski)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Another KL10 has been killed
+Date: Sat, 20 Dec 1997 23:08:46 GMT
+Organization: All USENET -- http://www.Supernews.com
+Lines: 45
+Message-ID: <349c4b6c.150145017@news.accessone.com>
+References: <19971214142701.JAA16730@ladder01.news.aol.com>
+Reply-To: mikewol@bourgogne.com
+NNTP-Posting-Host: 28757@209.43.194.71
+X-Newsreader: Forte Free Agent 1.11/32.235
+Xref: nntp1.ba.best.com alt.sys.pdp10:3581
+
+On 14 Dec 1997 14:27:39 GMT, jmfbah@aol.com (JMFBAH) wrote:
+
+	All truly SAD day!!! I fixed KL1026 a bunch of times with
+Ernie Grella and the rest of in-house FS when I was part of the Wings
+(Corp. Product Support) group. I worked with Tony when I wrote the
+micro-code for the KLIPPER/NIA20/CI20. I never worked much with Jim
+but I haven't to this day ever met anybody who knew more about SMP on
+any system than Jim. I still have my orange version of the 'reports of
+my death' tee-shirt and I'll probably keep it forever!!! 
+
+  When I moved to DECwest in Seattle at the begining of the year I
+found a bunch of KL stuff when I packed. I completely forgot about my
+copy of 'Tony in RH20 land' which is autographed by him. I also found
+the data scope traces for the first CI and NI packets that were sent
+on the IO's group Jupiter system and a bunch of FS stuff. You talk
+about memories!!!!! I guess the next time I'm back east I'll have make
+it to the P and drink a toast to 36 bits, Tony, and Jim!!! 
+
+	-mike
+
+  formerly of,
+
+  Wings
+  Jupiter IO, micro-code for NI20/CI20 w/ Tom Arnold and Sean Keenan
+  KLIPPER NIA20/CI20 micro-code
+  KL micro-code
+
+   36 bits foverver!!!!!
+
+>Last week, Tim Litt called me to tell me that KL1026 (nee' GIDNEY) 
+>was to be turned off and scrapped.  When Jim died, I had expressed 
+>a desire to see a PDP-10 one last time, so Tim thought I would like
+>to visit the -10 before it went away.  Needless to say, this news was
+>upsetting.  I cried off and on until I went to see the -10 on 5-Dec-97.  
+>And this is how I did it.
+>
+>Underneath my sweat shirt, I wore the first tee-shirt that the TOPS-10
+>folks had produced.  Its front had the words "THE REPORTS OF MY
+>DEATH HAVE BEEN GREATLY EXAGGERATED" and the back
+>had a dipiction of a video terminal with the words (DEC system-10
+>continued).  I fought long and hard to this put on the back; but that's
+>another story.  In my carry-all, I placed the picture of Jim and Tony
+>in front of CHIP that had been taken at a DECUS.
+>
+
+
+
+Article 3582 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!news-peer-east.sprintlink.net!news-peer.sprintlink.net!news.sprintlink.net!Sprint!newsm.ibm.net!ibm.net!uunet!in5.uu.net!ozemail!news.mel.aone.net.au!newsfeed-in.aone.net.au!not-for-mail
+From: Mark & Suzanne <gcs@s054.aone.net.au>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Another KL10 has been killed
+Date: Sun, 21 Dec 1997 14:40:44 +1100
+Organization: Garetech Computer Solutions P/L
+Lines: 20
+Message-ID: <349C8FBC.15FB@s054.aone.net.au>
+References: <19971214142701.JAA16730@ladder01.news.aol.com> <349c4b6c.150145017@news.accessone.com>
+NNTP-Posting-Host: d29-2.cpe.sydney.aone.net.au
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 3.0Gold (X11; I; OSF1 V4.0 alpha)
+To: mikewol@bourgogne.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:3582
+
+Mike Wolinski wrote:
+> 
+> On 14 Dec 1997 14:27:39 GMT, jmfbah@aol.com (JMFBAH) wrote:
+> >Last week, Tim Litt called me to tell me that KL1026 (nee' GIDNEY)
+> >was to be turned off and scrapped.  When Jim died, I had expressed
+> >a desire to see a PDP-10 one last time, so Tim thought I would like
+> >to visit the -10 before it went away.  Needless to say, this news was
+> >upsetting.  I cried off and on until I went to see the -10 on 5-Dec-97.
+
+This note has not reached my news server so far. The real KL1026 
+was scrapped before 1993? 
+
+I thought that the real sn# 1026 as possed to the node called KL1026::
+was replaced with SN# 1042, as SN#1026 had problems and then was latter
+replaced with the DECSYSTEM-20 (Orange rather than the Blue DECsystem-10
+that 1042 and 1026 where) SN#2871 was GIDNEY:: nee KL1026::
+
+	I think that right
+
+		Mark :)
+
+
+Article 3585 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!news-peer-east.sprintlink.net!news-peer.sprintlink.net!news-pull.sprintlink.net!news-in-east.sprintlink.net!news.sprintlink.net!Sprint!199.232.56.18!news.ultranet.com!d8
+From: jmfbahxx@ma.ultranet.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: Another KL10 has been killed
+Date: Sun, 21 Dec 97 13:18:37 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 30
+Message-ID: <67j30s$af5$1@decius.ultra.net>
+References: <19971214142701.JAA16730@ladder01.news.aol.com> <349c4b6c.150145017@news.accessone.com> <349C8FBC.15FB@s054.aone.net.au>
+NNTP-Posting-Host: d8.dial-14.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 21 Dec 1997 12:45:16 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:3585
+
+In article <349C8FBC.15FB@s054.aone.net.au>,
+   Mark & Suzanne <gcs@s054.aone.net.au> wrote:
+>Mike Wolinski wrote:
+>> 
+>> On 14 Dec 1997 14:27:39 GMT, jmfbah@aol.com (JMFBAH) wrote:
+>> >Last week, Tim Litt called me to tell me that KL1026 (nee' GIDNEY)
+>> >was to be turned off and scrapped.  When Jim died, I had expressed
+>> >a desire to see a PDP-10 one last time, so Tim thought I would like
+>> >to visit the -10 before it went away.  Needless to say, this news was
+>> >upsetting.  I cried off and on until I went to see the -10 on 5-Dec-97.
+>
+>This note has not reached my news server so far. The real KL1026 
+>was scrapped before 1993? 
+>
+>I thought that the real sn# 1026 as possed to the node called KL1026::
+>was replaced with SN# 1042, as SN#1026 had problems and then was latter
+>replaced with the DECSYSTEM-20 (Orange rather than the Blue DECsystem-10
+>that 1042 and 1026 where) SN#2871 was GIDNEY:: nee KL1026::
+>
+>	I think that right
+>
+>		Mark :)
+
+I thought nee meant born.   The KL first christened as GIDNEY eventually
+was the only KL left, AFAIK.  Since the people tending the machine ran
+TOPS-10 on it, the node was called KL1026.  There's the software and then
+there's the hardware.  I tend to think of machines as hardware no matter
+what DECnet calls them :-).
+
+/BAH
+
+
+Article 3592 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!news-peer.sprintlink.net!news-pull.sprintlink.net!news-in-east.sprintlink.net!news.sprintlink.net!Sprint!199.232.56.18!news.ultranet.com!not-for-mail
+From: "Carl R. Friend" <carl.friend@stoneweb.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Another KL10 has been killed
+Date: Mon, 22 Dec 1997 21:37:58 -0500
+Organization: as little as possible!
+Lines: 27
+Message-ID: <349F2406.7ECA909C@stoneweb.com>
+References: <19971214142701.JAA16730@ladder01.news.aol.com> <349e99c3.4008454@news-s02.ny.us.ibm.net>
+NNTP-Posting-Host: zephyr.ultranet.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 23 Dec 1997 02:38:08 GMT
+X-Mailer: Mozilla 2.0 (X11; I; Linux 2.0.29 i586)
+Xref: nntp1.ba.best.com alt.sys.pdp10:3592
+
+Michael Ross, in article nr. <349e99c3.4008454@news-s02.ny.us.ibm.net>,
+wrote:
+> 
+> On 14 Dec 1997 14:27:39 GMT, jmfbah@aol.com (JMFBAH) wrote:
+> 
+> >Last week, Tim Litt called me to tell me that KL1026 (nee' GIDNEY)
+> >was to be turned off and scrapped.
+> 
+> I can't believe it. These things are so thin on the ground someone
+> MUST give it a home. I rescued the last operational KL in England from
+> the scrapmen, although I have since lost the I/O cabinet in an
+> accident. I also saved the last 2020 and the last pdp-15. If I lived
+> within a thousand miles of this one I'd rescue it as well.
+
+   You gave a PDP-15 a home? Wonderful! That, then, makes two I know
+survived (yours is one, the other is in the Smithsonian in the USA).
+I missed out on one once by less than a half-hour and still regret
+it.
+
+-- 
+ ______________________________________________________________________
+|                                                |                     |
+| Carl Richard Friend (UNIX Sysadmin)            | West Boylston       |
+| Minicomputer Collector / Enthusiast            | Massachusetts, USA  |
+| mailto:carl.friend@stoneweb.com                |                     |
+| http://www.ultranet.com/~engelbrt/carl/museum  | ICBM: N42:22 W71:47 |
+|________________________________________________|_____________________|
+
+
+Article 3600 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!netnews.com!ix.netcom.com!news
+From: JCGreen@ix.netcom.com (John C Green Jr)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: Curious about 10s.
+Date: Fri, 02 Jan 1998 03:42:31 GMT
+Organization: Netcom
+Lines: 44
+Message-ID: <68hnrr$mnm@sjx-ixn3.ix.netcom.com>
+References: <Pine.BSI.3.95.971201153814.18122B-100000@bsdserver.tek-star.net> <34837B44.5AD8E95F@stoneweb.com> <34889994.8C0F6033@eng.pko.dec.com> <348B556D.167E@eng.pko.dec.com> <66gg3a$r8g$1@shell3.ba.best.com> <Pine.BSI.3.95.971211172423.26382C-100000@ <ELH2xu.KAv@world.std.com>
+NNTP-Posting-Host: sjc-ca7-33.ix.netcom.com
+X-NETCOM-Date: Thu Jan 01  7:44:59 PM PST 1998
+X-Newsreader: Forte Free Agent 1.0.82
+Xref: nntp1.ba.best.com alt.sys.pdp10:3600 alt.folklore.computers:96394
+
+mbg@world.std.com (Megan) wrote:
+
+>Mark & Suzanne <gcs@s054.aone.net.au> writes:
+
+>>Maybe the PDP-6 would make an interesting Uni project the only trouble 
+>>is I think may not find any OS for it.
+
+>Or much in the way of documentation, either.  So unless someone
+>remembers and documents the differences between it and the KA,
+>then it will be more difficult... but then again, what software
+>would you run on it?  Someone got something squirreled away for
+>a rainy day?
+
+One difference was on PDP-6 400000,000000 / 2 = 0 instead of
+600000,000000.
+
+This was reported in 1969 on the KA10 as a FORTRAN bug.
+The FORTRAN compiler maintainer, not one of DEC's wizards,
+looked at the code, single stepped with DDT and submitted
+it as a DDT bug.  The DDT maintainer determined that the
+hardware was getting the wrong answer.  Alan Kotok verified
+it by using his KSR-35 to login to KA10 #2.  He checked the
+flowchart, saw the bug.  He couldn't believe Leo Gossell's
+diagnostics didn't check this edge case.
+
+Checking the sources he saw that Leo had checked this case.
+Unfortunately his simulation (not using the IDIV instruction
+under test) implemented the algorithm in the flowchart, which
+had the bug.
+
+Kotok thought the bug might have been in the PDP-6 also.  He
+returned to his KSR-35, switched his A-B box from KA10 to PDP-6
+and logged on.  Sure enough the PDP-6 had the bug too.
+
+An ECO was issued for the KA10.  Alan said, "The last thing
+you want to do to a PDP-6 is get a soldering iron near its
+wiring."  No ECO was issued for the PDP-6.
+
+Anyone have a program that depends on this PDP-6 bug? :-)
+- - -
+RP10 (controller for RP02) Project Engineer
+21483 Old Mine Rd             (408)353-1870
+Los Gatos CA 95030    JCGreen@ix.netcom.com
+
+
+
+Article 3603 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!howland.erols.net!news-peer.sprintlink.net!news-pull.sprintlink.net!news-in-east.sprintlink.net!news.sprintlink.net!Sprint!199.232.56.18!news.ultranet.com!d12
+From: jmfbahxx@ma.ultranet.com
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: Curious about 10s.
+Date: Fri, 02 Jan 98 15:40:15 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 55
+Message-ID: <68ivu3$f0r$2@decius.ultra.net>
+References: <Pine.BSI.3.95.971201153814.18122B-100000@bsdserver.tek-star.net> <34837B44.5AD8E95F@stoneweb.com> <34889994.8C0F6033@eng.pko.dec.com> <348B556D.167E@eng.pko.dec.com> <66gg3a$r8g$1@shell3.ba.best.com> <Pine.BSI.3.95.971211172423.26382C-100000@ <ELH2xu.KAv@world.std.com> <68hnrr$mnm@sjx-ixn3.ix.netcom.com>
+NNTP-Posting-Host: d12.dial-12.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 2 Jan 1998 15:08:51 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:3603 alt.folklore.computers:96402
+
+In article <68hnrr$mnm@sjx-ixn3.ix.netcom.com>,
+   JCGreen@ix.netcom.com (John C Green Jr) wrote:
+>mbg@world.std.com (Megan) wrote:
+>
+>>Mark & Suzanne <gcs@s054.aone.net.au> writes:
+>
+>>>Maybe the PDP-6 would make an interesting Uni project the only trouble 
+>>>is I think may not find any OS for it.
+>
+>>Or much in the way of documentation, either.  So unless someone
+>>remembers and documents the differences between it and the KA,
+>>then it will be more difficult... but then again, what software
+>>would you run on it?  Someone got something squirreled away for
+>>a rainy day?
+>
+>One difference was on PDP-6 400000,000000 / 2 = 0 instead of
+>600000,000000.
+>
+>This was reported in 1969 on the KA10 as a FORTRAN bug.
+>The FORTRAN compiler maintainer, not one of DEC's wizards,
+>looked at the code, single stepped with DDT and submitted
+>it as a DDT bug.  The DDT maintainer determined that the
+>hardware was getting the wrong answer.  Alan Kotok verified
+>it by using his KSR-35 to login to KA10 #2.  He checked the
+>flowchart, saw the bug.  He couldn't believe Leo Gossell's
+>diagnostics didn't check this edge case.
+>
+>Checking the sources he saw that Leo had checked this case.
+>Unfortunately his simulation (not using the IDIV instruction
+>under test) implemented the algorithm in the flowchart, which
+>had the bug.
+>
+>Kotok thought the bug might have been in the PDP-6 also.  He
+>returned to his KSR-35, switched his A-B box from KA10 to PDP-6
+>and logged on.  Sure enough the PDP-6 had the bug too.
+>
+>An ECO was issued for the KA10.  Alan said, "The last thing
+>you want to do to a PDP-6 is get a soldering iron near its
+>wiring."  No ECO was issued for the PDP-6.
+>
+>Anyone have a program that depends on this PDP-6 bug? :-)
+>- - -
+>RP10 (controller for RP02) Project Engineer
+>21483 Old Mine Rd             (408)353-1870
+>Los Gatos CA 95030    JCGreen@ix.netcom.com
+>
+
+I remember Jim Flemming doing a little research project (it
+must have been in the late 70s) that involved finding the
+results of 0/0.  Every processor (KA/KI/KL/KS) had a _different_
+result.  But I don't know any of details.  CDO?  Do you remember?
+I don't even remember what started the project.  I do remember
+Jim being tickled to death about it :-).
+
+/BAH
+
+
+Article 3611 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!howland.erols.net!ix.netcom.com!netcom17!alderson
+From: alderson@netcom17.netcom.com (Richard M. Alderson III)
+Subject: Re: Curious about 10s.
+In-Reply-To: JCGreen@ix.netcom.com's message of Mon, 05 Jan 1998 04:24:18 GMT
+Message-ID: <ALDERSON.98Jan5103926@netcom17.netcom.com>
+Sender: alderson@netcom17.netcom.com
+Reply-To: alderson@netcom.com
+Organization: NETCOM On-line services
+References: <Pine.BSI.3.95.971201153814.18122B-100000@bsdserver.tek-star.net>
+	<34837B44.5AD8E95F@stoneweb.com> <34889994.8C0F6033@eng.pko.dec.com>
+	<348B556D.167E@eng.pko.dec.com> <66gg3a$r8g$1@shell3.ba.best.com>
+	<Pine.BSI.3.95.971211172423.26382C-100000@ <ELH2xu.KAv@world.std.com>
+	<68hnrr$mnm@sjx-ixn3.ix.netcom.com> <68ivu3$f0r$2@decius.ultra.net>
+	<68pnef$kme@sjx-ixn6.ix.netcom.com>
+Date: Mon, 5 Jan 1998 18:39:26 GMT
+Lines: 14
+Xref: nntp1.ba.best.com alt.sys.pdp10:3611 alt.folklore.computers:96500
+
+In article <68pnef$kme@sjx-ixn6.ix.netcom.com> JCGreen@ix.netcom.com
+(John C Green Jr) writes:
+
+>I was only at DEC for 21 months from JUN1968 to FEB1970.
+>Then went on to Systems Concepts.
+
+Were you still with Mike and Stewart when they delivered an SC-30M to Stanford
+in 1986?  I didn't meet everyone at SC; mostly, I worked with Fred Wright, and
+occasionally Bertram or Pete Sampsen.
+-- 
+Rich Alderson   You know the sort of thing that you can find in any dictionary
+                of a strange language, and which so excites the amateur philo-
+                logists, itching to derive one tongue from another that they
+                know better: a word that is nearly the same in form and meaning
+                as the corresponding word in English, or Latin, or Hebrew, or
+                what not.
+                                                --J. R. R. Tolkien,
+alderson@netcom.com                               _The Notion Club Papers_
+
+
+Article 3613 of alt.sys.pdp10:
+From: NOSPAMabaddon@ibm.net (Michael Ross)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Another KL10 has been killed
+Date: Tue, 06 Jan 1998 16:52:42 GMT
+Message-ID: <34b26154.48480434@news-s02.ny.us.ibm.net>
+References: <19971214142701.JAA16730@ladder01.news.aol.com>
+X-Newsreader: Forte Agent 1.01/16.397
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+NNTP-Posting-Host: 139.92.16.126
+Organization: IBM.NET
+Lines: 13
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!newsm.ibm.net!ibm.net!news1.ibm.net!139.92.16.126
+Xref: nntp1.ba.best.com alt.sys.pdp10:3613
+
+On 14 Dec 1997 14:27:39 GMT, jmfbah@aol.com (JMFBAH) wrote:
+
+>Last week, Tim Litt called me to tell me that KL1026 (nee' GIDNEY) 
+>was to be turned off and scrapped.  
+
+I can't believe it. These things are so thin on the ground someone
+MUST give it a home. I rescued the last operational KL in England from
+the scrapmen, although I have since lost the I/O cabinet in an
+accident. I also saved the last 2020 and the last pdp-15. If I lived
+within a thousand miles of this one I'd rescue it as well.
+
+Mike
+
+
+
+Article 3614 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.sgi.com!nntprelay.mathworks.com!newsfeed.internetmci.com!199.0.154.56!ais.net!newsfeed.concentric.net!global-news-master
+From: bogus <bogus@concentric.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: PA1050 Error Messages on DEC20
+Date: Sat, 10 Jan 1998 01:06:41 -0500
+Organization: CADR (a b c d e f g)  is b
+Lines: 26
+Message-ID: <34B70FDD.A9D6599B@concentric.net>
+References: <68iin3$i2e@snews2.zippo.com>
+Reply-To: dev/nul@concentric.net
+NNTP-Posting-Host: ts001d07.box-ma.concentric.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii; x-mac-type="54455854"; x-mac-creator="4D4F5353"
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 4.01 (Macintosh; I; PPC)
+X-Priority: 3 (Normal)
+Xref: nntp1.ba.best.com alt.sys.pdp10:3614
+
+Actually, what DEC called PA1050 was correctly known as the
+compatibility package
+and was written for TENEX at BBN (by Wally Weiner (with only a little
+help from me))
+It went as part of the TENEX - Virtual Memory - Murphey package To DEC
+
+    ...wex
+I'm wex@concentric.net
+(Paul Wexelblat - PMW on the top of those TOPS-10 listings)
+
+Vasos Panagiotopoulos +1-917-287-8087 Bioengineer-Financier wrote:
+
+> What were those PA1050 error messages - the cross compiler between
+> DEC20 and DEC10?
+>
+>                                 - = -
+> Vasos-Peter John Panagiotopoulos II, Columbia'81+,
+> Bioengineer-Financier, NYC
+>    BachMozart ReaganQuayle EvrytanoKastorian
+> http://WWW.Dorsai.Org/~vjp2
+>                vjp2@{MCIMail.Com|CompuServe.Com|Dorsai.Org}
+>    ---{Nothing herein constitutes advice. Everything fully
+> disclaimed.}---
+
+  
+
+
+
+Article 3619 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!newsfeed.internetmci.com!199.0.154.56!ais.net!newsfeed.concentric.net!global-news-master
+From: Bogus <Bogus@nul.concentric.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: PA1050 Error Messages on DEC20
+Date: Mon, 12 Jan 1998 19:20:33 -0500
+Organization: Concentric Internet Services
+Lines: 23
+Message-ID: <34BAB34E.63E02FA1@nul.concentric.net>
+References: <68iin3$i2e@snews2.zippo.com> <34B70FDD.A9D6599B@concentric.net> <wtd8i0xnju.fsf@einstein.intervett.no> <34b7ac18.0@news.wizvax.net>
+Reply-To: bogus@nospam.concentric.net
+NNTP-Posting-Host: ts002d02.box-ma.concentric.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii; x-mac-type="54455854"; x-mac-creator="4D4F5353"
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 4.01 (Macintosh; I; PPC)
+X-Priority: 3 (Normal)
+Xref: nntp1.ba.best.com alt.sys.pdp10:3619
+
+John Wilson wrote:
+
+> In article <wtd8i0xnju.fsf@einstein.intervett.no>,
+> Bjorn Hell Larsen  <blarsen@intervett.no> wrote:
+> >Do you know where the name PA1050 came from? I was under the
+> >impression that "1050" was supposed to be the serial number of the
+> >system where PA1050 was created, but that is apparently not correct.
+>
+> I believe this is from back before the TOPS-10 name came about, there
+> were various flavors of monitor with names that look like like "the
+> 10/xx monitor", and 10/50 was the timesharing swapping one that later
+> became TOPS-10.
+>
+> John Wilson
+> D Bit
+
+   That may very well be correct, the Compatibility Package was
+originally
+written to go with Level B of the Monitor (Don't remember if "TOPS" was
+in use then)
+(Level B did fit on DECtape, though)
+    ...wex
+
+
+
+Article 3625 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!howland.erols.net!ix.netcom.com!netcom11!alderson
+From: alderson@netcom11.netcom.com (Richard M. Alderson III)
+Subject: Re: Dan Murphy
+In-Reply-To: jeverett@wwa.DEFEAT.UCE.BOTS.com's message of 16 Jan 1998 17:32:26 GMT
+Message-ID: <ALDERSON.98Jan16162400@netcom11.netcom.com>
+Sender: alderson@netcom11.netcom.com
+Reply-To: alderson@netcom.com
+Organization: NETCOM On-line services
+References: <69o5ja$dme$1@hirame.wwa.com>
+Date: Sat, 17 Jan 1998 00:24:00 GMT
+Lines: 18
+Xref: nntp1.ba.best.com alt.sys.pdp10:3625
+
+In article <69o5ja$dme$1@hirame.wwa.com> jeverett@wwa.DEFEAT.UCE.BOTS.com
+(John Everett) writes:
+
+>I've been watching a PBS series called "A Science Odyssey". One installment 
+>was on technology and during the segment on the development of computers I 
+>could swear there was a picture of a very young Dan Murphy sitting at a 
+>console? Anyone else see it?
+
+Well, I don't think I've ever met Dan Murphy, but my wife glared at me when I
+started shouting "That's a DEC-10!  That's a DEC-10!  Did you see the DECtapes?
+That's what those little rings were!"
+
+Then they came and gave me my shot, and I was all better again. ;->
+-- 
+Rich Alderson   You know the sort of thing that you can find in any dictionary
+                of a strange language, and which so excites the amateur philo-
+                logists, itching to derive one tongue from another that they
+                know better: a word that is nearly the same in form and meaning
+                as the corresponding word in English, or Latin, or Hebrew, or
+                what not.
+                                                --J. R. R. Tolkien,
+alderson@netcom.com                               _The Notion Club Papers_
+
+
+Article 3636 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!news.mv.net!not-for-mail
+From: dlm@opost.com (Dan Murphy)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Dan Murphy
+Date: 20 Jan 1998 20:19:16 -0500
+Organization: osf
+Lines: 29
+Message-ID: <m2d8hmoc8b.fsf@opost.com>
+References: <69o5ja$dme$1@hirame.wwa.com>
+NNTP-Posting-Host: 207.22.41.2
+In-reply-to: jeverett@wwa.DEFEAT.UCE.BOTS.com's message of 16 Jan 1998
+	17:32:26 GMT
+X-Newsreader: Gnus v5.1
+Xref: nntp1.ba.best.com alt.sys.pdp10:3636
+
+In article <69o5ja$dme$1@hirame.wwa.com> jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) writes:
+
+>    I've been watching a PBS series called "A Science Odyssey". One installment 
+>    was on technology and during the segment on the development of computers I 
+>    could swear there was a picture of a very young Dan Murphy sitting at a 
+>    console? Anyone else see it?
+
+    I've had two other reports, so it's probably true.
+    
+    The shot was taken in the early 70s when I was at BBN, i.e. before
+    moving to DEC.  It was in the computer room at BBN, where we had
+    two KA-10s as I recall.  I can't really remember what the context
+    was for the visit of the film crew, but in the following months, a
+    number of people told me they had seen me in a shot described very
+    much as this one, teletype, KA-10, and all.
+    
+    Channel 2/PBS must have liked the shot, since I had reports of it
+    turning up for several years thereafter.  However, nobody has
+    mentioned it for a *very* long time before now.  Apparently, the
+    PBS film file search must turn up that shot when somebody goes
+    looking for "man-working-at-computer (old)" or some such!  :-)
+    
+    The irony is, I have never seen it!  My TV watching is, shall we
+    say, minimal.  It may be too late now, but if there is a repeat,
+    maybe I can plan to tape it.
+    
+    
+    dlm
+    
+
+
+Article 3642 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!news-peer.sprintlink.net!news-backup-east.sprintlink.net!news-in-east.sprintlink.net!news.sprintlink.net!Sprint!199.232.56.18!news.ultranet.com!d2
+From: jmfbahxx@ma.ultranet.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: PA1050 Error Messages on DEC20
+Date: Wed, 21 Jan 98 13:42:17 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 28
+Message-ID: <6a4saj$40p$2@decius.ultra.net>
+References: <68iin3$i2e@snews2.zippo.com> <EMxnGA.4C@woodshed.iupui.edu> <6a17rm$q7c$1@shell3.ba.best.com> <6a25og$ca1$1@decius.ultra.net> <6a4c0s$1vt$1@shell3.ba.best.com>
+NNTP-Posting-Host: d2.dial-14.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 21 Jan 1998 13:13:55 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:3642
+
+In article <6a4c0s$1vt$1@shell3.ba.best.com>,
+   inwap@best.com (Smith and O'Halloran) wrote:
+>In article <6a25og$ca1$1@decius.ultra.net>,  <jmfbahxx@ma.ultranet.com> 
+wrote:
+>>>  PDP-10 Features       PDP-6   1050    1070  2020    KC      TOAD-1
+>>>====================    =====   ====    ====  ====    ====    ======
+>>>Year announced          1964    1967    1972  1978    cancel  1995
+>>
+>>Are you sure that it was 1972 that the 1070 was announced?  I went
+>>to my 25 year dinner last fall and one of the goodies handed out was
+>>the internal newletter.  It had a blurb about the 1070 announcement
+>>and that was in 1971.
+>
+>You're probably right.  I was going by what Digital put on their timeline.
+>(The timeline appears to have been written by a marketroid - it has some
+>factual errors in it.)  For 1971 it talks about the KA 10/40 and 10/50 but
+>the picture is obviously a KI.
+
+Well, I should probably say that what I heard in DEC as an employee may
+not be what the field saw.  There seemed to be strange discrepancies
+that I never really understood what with disclosures, announcements,
+etc.  I just took on the attitude that what I knew was proprietary
+since I never had any idea which subjects were OK to talk about.
+Some days an item was OK, then it would be not-OK, then it would be
+OK.  I just left all that up to the guys to figure out and followed
+their lead.
+
+/BAH
+
+
+Article 3641 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!newsswitch.lcs.mit.edu!news.ultranet.com!d2
+From: jmfbahxx@ma.ultranet.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: Dan Murphy
+Date: Wed, 21 Jan 98 13:35:08 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 39
+Message-ID: <6a4rt6$40p$1@decius.ultra.net>
+References: <69o5ja$dme$1@hirame.wwa.com> <m2d8hmoc8b.fsf@opost.com>
+NNTP-Posting-Host: d2.dial-14.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 21 Jan 1998 13:06:46 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:3641
+
+In article <m2d8hmoc8b.fsf@opost.com>, dlm@opost.com (Dan Murphy) wrote:
+>In article <69o5ja$dme$1@hirame.wwa.com> jeverett@wwa.DEFEAT.UCE.BOTS.com 
+(John Everett) writes:
+>
+>>    I've been watching a PBS series called "A Science Odyssey". One 
+installment 
+>>    was on technology and during the segment on the development of 
+computers I 
+>>    could swear there was a picture of a very young Dan Murphy sitting at 
+a 
+>>    console? Anyone else see it?
+>
+>    I've had two other reports, so it's probably true.
+>    
+>    The shot was taken in the early 70s when I was at BBN, i.e. before
+>    moving to DEC.  It was in the computer room at BBN, where we had
+>    two KA-10s as I recall.  I can't really remember what the context
+>    was for the visit of the film crew, but in the following months, a
+>    number of people told me they had seen me in a shot described very
+>    much as this one, teletype, KA-10, and all.
+>    
+>    Channel 2/PBS must have liked the shot, since I had reports of it
+>    turning up for several years thereafter.  However, nobody has
+>    mentioned it for a *very* long time before now.  Apparently, the
+>    PBS film file search must turn up that shot when somebody goes
+>    looking for "man-working-at-computer (old)" or some such!  :-)
+>    
+>    The irony is, I have never seen it!  My TV watching is, shall we
+>    say, minimal.  It may be too late now, but if there is a repeat,
+>    maybe I can plan to tape it.
+>    
+To give an idea of where on the video tapes the shot may be:  _A Science 
+Odyssey:  Bigger, Better, Faster_.  It's a two-hour show and, IIRC, the
+film of Dan and the KA-10 is in the last half-hour.  I didn't recognize
+the system to be a KA-10 but then the clip was so short that I had trouble
+figuring out if the person was you :-).  One of the first things to go is
+the eyes.
+
+/BAH
+
+
+Article 3653 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!cam-news-hub1.bbnplanet.com!su-news-feed1.bbnplanet.com!news.bbnplanet.com!news-master.cisco.com!not-for-mail
+From: William "Chops" Westfield <billw@ciscoSPMFD.com>
+Newsgroups: alt.sys.pdp10
+Subject: Compaq buys DEC...
+Date: 26 Jan 1998 16:49:58 -0800
+Organization: Cisco Systems, Inc.
+Lines: 32
+Message-ID: <5467n668qx.fsf@flipper.cisco.com>
+NNTP-Posting-Host: flipper.cisco.com
+X-Newsreader: Gnus v5.1
+Xref: nntp1.ba.best.com alt.sys.pdp10:3653
+
+I wonder what this does to the 36bit intellectual property "we" have
+been trying to get DEC to release to the public domain?
+> 
+> > > COMPAQ COMPUTER CORP. (CPQ) 31 3/4) CLOSED. Personal computer and serve=
+> > r maker has agreed to acquire Digital Equipment Corp. (DEC 45 7/16) in a =
+> > $9.6 billion cash and stock deal. Compaq will pay $30 a share cash and 0.=
+> > 945 Compaq shares for each Digital share, or roughly $60 a share, creatin=
+> > g the largest channel network computer company. Compaq is expected to iss=
+> > ue about 150 million shares of stock and $4.8 billion in cash to make the=
+> >  purchase happen and expects the acquisition to be accretive to earnings =
+> > within a year of the deal closing sometime in the 2Q. According to Eckhar=
+> > d Pfeiffer of Compaq, the combination of these two enterprises will achie=
+> > ve Compaq's goal of becoming one of the top three global information tech=
+> > nology companies and is expected to provide significant value to its shar=
+> > eholders by delivering high customer value through standard-based, partne=
+> > r-leveraged computing with market-segment focussed solutions. News of the=
+> >  deal has been received very positive so far in
+> > > overseas markets with shares of Digital shares rising by $10 in London,=
+> >  while shares of Compaq moving up by $1. Given that Compaq is paying $60 =
+> > a share, the stock of DEC should move closer to this acquisition level in=
+> >  the New York market, assuming there is not significant drop in the price=
+> >  of Compaq. As in other acquisition deals, the combination of company cul=
+> > tures will be just as important as the merger of products and services as=
+> >  the two structures come from different backgrounds which should give man=
+> > agement plenty of work in keeping together what made each company success=
+> > ful and not lose site of continuing to generate growth. Hence, near term,=
+> >  management may be taxed to the point where performance may suffer.
+> 
+ 
+BillW
+-- 
+(remove spam food from return address)
+
+
+Article 3657 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsxfer3.itd.umich.edu!news-out.internetmci.com!newsfeed.internetmci.com!18.24.4.11!newsswitch.lcs.mit.edu!news.ultranet.com!d12
+From: jmfbahxx@ma.ultranet.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: Compaq buys DEC...
+Date: Wed, 28 Jan 98 12:16:10 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 19
+Message-ID: <6an5v3$hrp$1@decius.ultra.net>
+References: <5467n668qx.fsf@flipper.cisco.com> <6am7fn$fin@bgtnsc01.worldnet.att.net>
+NNTP-Posting-Host: d12.dial-16.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 28 Jan 1998 11:48:51 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:3657
+
+In article <6am7fn$fin@bgtnsc01.worldnet.att.net>,
+   david.razler@worldnet.att.net (David M. Razler) wrote:
+>William "Chops" Westfield <billw@ciscoSPMFD.com> wrote:
+>
+>| I wonder what this does to the 36bit intellectual property "we" have
+>| been trying to get DEC to release to the public domain?
+>
+>This is the way the world ends
+>This is the way the world ends
+>This is the way the world ends
+>
+>Not with a bang, with a whimper
+
+And watching a slow death is incredibly painful.
+
+We (and I include our customers) did good.  Don't ever forget
+that.
+
+/BAH
+
+
+Article 3661 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!europa.clark.net!209.70.91.68!news.clark.net!kfl
+From: kfl@clark.net (Keith Lynch)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How Jerry Pournelle was kicked off the Arapanet
+Date: 30 Jan 1998 00:39:12 GMT
+Organization: Clark Internet Services, Inc.
+Lines: 69
+Message-ID: <6ar7fg$pnf@clarknet.clark.net>
+References: <wkwwg6hxwz.fsf@ifi.uio.no> <6a5sea$rhq$1@nntp.ucs.ubc.ca> <6a8fbj$50s@news-central.tiac.net> <6ad9ar$o3d$1@nntp.ucs.ubc.ca>
+NNTP-Posting-Host: deathfromabove.clark.net
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=ISO-8859-1
+Content-Transfer-Encoding: 8bit
+Xref: nntp1.ba.best.com alt.folklore.computers:98091 alt.sys.pdp10:3661
+
+In article <6ad9ar$o3d$1@nntp.ucs.ubc.ca>,
+Tim Shoppa <shoppa@alph02.triumf.ca> wrote:
+> Date: 19 January 1984 00:50 EST
+> From: Christopher C. Stacy <CSTACY @ MIT-MC>
+> Subject:  TACACS
+> To: REM @ MIT-MC, BANDY @ MIT-MC, DEVON @ MIT-MC, DIGEX @ MIT-MC,
+>     JURGEN @ MIT-MC, PINTO @ MIT-MC, POURNE @ MIT-MC, KFL @ MIT-MC,
+>     STEVEH @ MIT-MC, GUMBY @ MIT-MC, IAN @ SRI-NIC
+> cc: USER-ACCOUNTS @ MIT-MC
+
+Amazing where my old addresses turn up.  I wonder if spammers will
+harvest that one now.  And whether it still works.
+
+DIGEX was Doug Humphrey, who went on to found a company of that name
+seven years later, and who sold it for tens of millions of dollars
+last year.
+
+Amazingly, I've met all but two of the people mentioned in that To:
+line.  And exchanged e-mail with those two.  I still have current
+e-mail addresses for most.
+
+> To put it straight: in general, you are up a creek, and there really
+> isn't very much to be done about it. Feel free to ask me further
+> questions or whatever though.
+> Cheers, Chris
+
+Imminent death of the net, film at 11.  In the 70s and 80s it looked
+like the net was always on the verge of going away or becoming
+inacessable.  At least for unofficial users like me.
+
+Chris Stacy started as another guest user, but he was hired by MIT to
+keep the rest of us guest users in line.  He soon gained a reputation
+as "the incredible flushing man" for his eagerness to delete accounts.
+
+Tim Shoppa <shoppa@alph02.triumf.ca> wrote:
+> Of course, Jerry Pournelle also has the honor of being the only
+> person I know who was kicked off of the ARPAnet.
+
+Hardly.  It was trivially easy to get kicked off in those days.
+Most guest users eventually were.  However, I *still* have a guest
+account at MIT, even though I no longer need it.  So does Doug
+Humphrey, even though he needs it even less.
+
+The good side was that spamming was unimaginable.  There was *one*
+instance of a chain letter in the 80s, and only one of its recipients
+forwarded it to anyone else.  The original sender and the forwarder
+both permanently lost their accounts within an hour, and probably
+faced criminal charges.
+
+Note that Jerry Pournelle was kicked off simply for *mentioning* the
+net in a magazine article, and for not apologizing or promising never
+to do it again.
+
+The *last* person to be kicked off the net was the infamous Sanford
+Wallace, in October of last year.  To get kicked off, he had to send
+several BILLION spams, over and over to the same recipients, and
+refuse to honor any remove requests.  And then it took over a year.
+
+(In another decade, when net access will be more important than having
+a phone or a drivers license, I bet he'll regret it.)
+
+I think there's some middle ground.  It shouldn't be extremely easy
+to get someone kicked off the net.  But neither should it be almost
+impossible, if they're deliberately and repeatedly harassing tens of
+millions of people and refusing to stop.
+--
+Keith Lynch, kfl@clark.net
+http://www.clark.net/pub/kfl/
+I boycott all spammers.
+
+
+Article 3662 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!fci-se!fci!newsgate.tandem.com!su-news-feed1.bbnplanet.com!news.bbnplanet.com!news-master.cisco.com!not-for-mail
+From: William "Chops" Westfield <billw@ciscoSPMFD.com>
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How Jerry Pournelle was kicked off the Arapanet
+Date: 29 Jan 1998 18:29:26 -0800
+Organization: Cisco Systems, Inc.
+Lines: 16
+Message-ID: <54vhv2g0e1.fsf@flipper.cisco.com>
+References: <wkwwg6hxwz.fsf@ifi.uio.no> <6a5sea$rhq$1@nntp.ucs.ubc.ca>
+	<6a8fbj$50s@news-central.tiac.net> <6ad9ar$o3d$1@nntp.ucs.ubc.ca>
+	<6ar7fg$pnf@clarknet.clark.net>
+NNTP-Posting-Host: flipper.cisco.com
+In-reply-to: kfl@clark.net's message of 30 Jan 1998 00:39:12 GMT
+X-Newsreader: Gnus v5.1
+Xref: nntp1.ba.best.com alt.folklore.computers:98094 alt.sys.pdp10:3662
+
+    > Of course, Jerry Pournelle also has the honor of being the only
+    > person I know who was kicked off of the ARPAnet.
+
+Sounded to me like Jerry wasn't kicked off of arpanet, he was just kicked
+off of MIT's guest-accessable computers, and couldn't figure out the
+difference.  AFAIK, in those days it would have been real close to
+impossible to kick someone off "the arpanet", since access was mostly
+through entities with their own user-control.  No ISPs, no "pure" services
+that you could access without a host to roost on.  (Ie, once Jerry got
+kicked off MIT, there would have been nothing to stop him from getting
+guest accounts at stanford or simtel or wherever, except "word of email"
+(not such a small thing in those days, I guess.))
+
+BillW
+-- 
+(remove spam food from return address)
+
+
+Article 3670 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!news.mv.net!not-for-mail
+From: dlm@opost.com (Dan Murphy)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Compaq buys DEC...
+Date: 01 Feb 1998 18:34:59 -0500
+Organization: Outpost
+Lines: 78
+Message-ID: <m2n2ga5270.fsf@opost.com>
+References: <5467n668qx.fsf@flipper.cisco.com>
+	<6am7fn$fin@bgtnsc01.worldnet.att.net> <6an5v3$hrp$1@decius.ultra.net>
+	<6aovjh$11o@bgtnsc01.worldnet.att.net> <6asid0$4lm$1@decius.ultra.net>
+NNTP-Posting-Host: opost.com
+In-reply-to: jmfbahxx@ma.ultranet.com's message of Fri, 30 Jan 98 13:18:42 GMT
+X-Newsreader: Gnus v5.1
+Xref: nntp1.ba.best.com alt.sys.pdp10:3670
+
+In article <6asid0$4lm$1@decius.ultra.net> jmfbahxx@ma.ultranet.com writes:
+    
+>      I disagree that the problem was
+>    corporate greed.  If corporate greed had been the driving force,
+>    I would be typing on a desktop multi processing KL10 in my home
+>    running on 120V.  There was something else going on that I still
+>    don't understand.
+
+    Well, my take on it is that the "One Company, One Strategy, One
+    Message" directive of the mid '80s was the death knell of the
+    company.  Of course, it was part of the justification for killing
+    off the 36-bit line, but that's only a small part of the problem.
+    DEC could have prospered very well without 10/20 line, sentiments
+    of this group notwithstanding, but it would eventually need
+    something beside or beyond VAX/VMS, and nobody was allowed to say
+    or even think that, much less do anything to move in that
+    direction.
+
+    DEC grew and became successful originally because it was a hotbed
+    of ideas, a lot of them got tried, and some of them were very
+    good.  Product line managers had a lot of autonomy, and yeah, so
+    they competed with one another, but so what?  One or the other of
+    them would get the business, and so DEC got the business.
+    Somehow, by the mid-80's Ken Olsen developed delusions of
+    infallability or something, in marked contrast to the caution that
+    he was formerly well known for, and promulgated this One Egg, One
+    Basket strategy (as we all called it).  Of course, the company
+    didn't begin to decline immediately, but I would say that DEC's
+    peak was around 1987 -- only a few years after monotheism took
+    root.
+
+    The idea that DEC as a whole could only do one thing, or that
+    everything had to fit into some overarching strategy, remained a
+    totally ingrained part of the corporate culture up through the
+    time I left in 1992.  The result was that DEC stopped doing
+    aggressive new things or was years late doing them.  The corporate
+    culture was wedded to VAX and VMS as if they would live forever.
+    Even Alpha was initially, and through most of its design period,
+    intended as a faster hardware engine for VMS.
+
+    A piece of this shifting mindset that, I believe, led to DEC's
+    decline included that we had to stop being a "technology push"
+    company and start building what marketing said was needed.  Doing
+    things because they were neat and with the expectation that they
+    might create new markets and new business became politically
+    incorrect!  'Course, DEC never had marketing that was worth squat
+    anyhow, and the history of the past decade is that people make BIG
+    money by doing new things and creating new markets.  Even if you
+    look at the infamously marketing-oriented companies like Microsoft
+    and Compaq, you see that good marketing means selling the s**t out
+    of what you have, not inventing the products that are going to be
+    pivotal in 3 or 4 years.
+
+    It is interesting to compare HP and DEC.  HP, like DEC, had a
+    culture of having multiple product lines that pursue their
+    business with much autonomy and aggressiveness.  They kept the
+    company structed that way, however.  I think it was David Packard
+    who said, "you've got to eat your own lunch, or your competitors
+    will eat it for you."  In other words, you have to continually
+    bring out new products that beat your existing ones, or your
+    competitors will do it.  In the late 80's, DEC and HP were about
+    the same size, but, funny thing! HP has continued to grow it's
+    revenues by double-digit percentages each year, while DEC's
+    revenue has been flat for a decade.  HP now has over twice the
+    revenue of DEC, and their stock price has increased several fold.
+    DEC stock price (before the Compaq deal) was about 1/4 of what it
+    was in 1987.
+
+    I believe the fundamental reason that DEC topped out in 1987 is
+    that KO decided all of DEC had to fit in one box and march to one
+    tune.  Many good projects were killed off in that era -- projects
+    that would have given the company life after VAX but were killed
+    because nobody was allowed to imagine life after VAX until it was
+    too late.
+    
+    
+    dlm
+    
+
+
+Article 3667 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!newsswitch.lcs.mit.edu!news.ultranet.com!d4
+From: jmfbahxx@ma.ultranet.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: So, Mainframe is an Apple ][...
+Date: Sat, 31 Jan 98 11:58:03 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 21
+Message-ID: <6av222$2km$1@decius.ultra.net>
+References: <6aguq3$63l$1@flint.sentex.net> <6aqnj1$p21$1@shell3.ba.best.com> <6aqnqm$q7h$1@shell3.ba.best.com> <6asrkr$e0d$1@agate.berkeley.edu>
+NNTP-Posting-Host: d4.dial-13.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 31 Jan 1998 11:31:14 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:3667
+
+In article <6asrkr$e0d$1@agate.berkeley.edu>,
+   bh@anarres.CS.Berkeley.EDU (Brian Harvey) wrote:
+>>>  Whenever it was rebooted, the TOPS-10
+>>>operating system would ask for the date and time.
+>
+>Gee, when we rebooted the PDP-6 at the MIT AI lab, it would dial out
+>over its modem to the Multics machine next door and ask it what
+>time it was.
+
+That was a very small hardware project that somebody in the PDP-10
+area solved and tried to get the powers-that-be to offer the device
+to our customers.  IIR, it essentially was a battery-powered clock
+that would ship the date/time down to the -10.  It was around the
+time that the MX-10 (I can't remember the right cybercrud) was
+cancelled and noone was particularly interested in any new hardware 
+toys for the product line.  Later, the guy with the idea had moved
+on and there was nobody with any time to carry the project through
+the slings and arrows of release.
+
+/BAH
+
+
+
+Article 3668 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!europa.clark.net!209.70.91.68!news.clark.net!kfl
+From: kfl@clark.net (Keith Lynch)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How Jerry Pournelle was kicked off the Arapanet
+Date: 31 Jan 1998 16:23:36 GMT
+Organization: Clark Internet Services, Inc.
+Lines: 36
+Message-ID: <6avj68$ibi@clarknet.clark.net>
+References: <wkwwg6hxwz.fsf@ifi.uio.no> <54vhv2g0e1.fsf@flipper.cisco.com> <usoq55sqi.fsf@pilgrim.com> <34D2A65E.6A902260@ibm.net>
+NNTP-Posting-Host: deathfromabove.clark.net
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=ISO-8859-1
+Content-Transfer-Encoding: 8bit
+Xref: nntp1.ba.best.com alt.folklore.computers:98175 alt.sys.pdp10:3668
+
+Christopher Stacy wrote:
+> I usually read this newsgroup, but seem to have missed this thread.
+> However, someone mailed me an excerpt from one of the messages
+> attributed to Keith Lynch.  Just about everything in that message
+> was incorrect, including: the nature of my work at MIT, the ITS
+> tourist policy there, and why and how Jerry Pournelle lost his
+> network access.
+
+In article <34D2A65E.6A902260@ibm.net>, David Ness  <dness@ibm.net> wrote:
+> This is particularly interesting, but it would be even more so if
+> you would give us a pointer to some of the `real facts'.
+
+I agree.  I just reread my message, and I will stand by it.  Every word
+is accurate to the best of my recollection.  Did Chris actually read my
+message, or just someone's excerpt?
+
+I admit I could be wrong about what Chris Stacy was hired for.
+But not about that fact that he *did* police guest accounts with
+sufficient vigilance that he was often called "the incredible flushing
+man".  I am quite sure about the MIT guest policy, since I had a guest
+account on one or more ITS systems from the time they instituted
+passwords (1979?) to the time ITS was finally shut down (May 1990),
+and know lots of others who had them, many of whom lost them.  I am
+quite sure about the reasons why Jerry Pournelle was flushed, unless
+there were some hidden reasons not discussed in the messages that I
+read online at the time, and which were distributed at SF conventions
+by Hobbit (Al Walker) shortly afterwards, and which were just reposted
+here by Tim Shoppa on the 24th.
+
+I apologize for harping on this.  I know that it's boring to read
+defenses like this.  But I dislike being falsely accused of posting
+inaccurate information.
+--
+Keith Lynch, kfl@clark.net
+http://www.clark.net/pub/kfl/
+I boycott all spammers.
+
+
+Article 3675 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!newsswitch.lcs.mit.edu!news.ultranet.com!d15
+From: jmfbahxx@ma.ultranet.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: Compaq buys Digital...RIP DEC [Was Compaq buys DEC]
+Date: Wed, 04 Feb 98 13:33:54 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 42
+Message-ID: <6b9p6v$jbg$1@decius.ultra.net>
+References: <5467n668qx.fsf@flipper.cisco.com>
+	<6am7fn$fin@bgtnsc01.worldnet.att.net> <6an5v3$hrp$1@decius.ultra.net>
+	<6aovjh$11o@bgtnsc01.worldnet.att.net> <6asid0$4lm$1@decius.ultra.net> <m2n2ga5270.fsf@opost.com>
+NNTP-Posting-Host: d15.dial-13.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 4 Feb 1998 13:07:43 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:3675
+
+In article <m2n2ga5270.fsf@opost.com>, dlm@opost.com (Dan Murphy) wrote:
+>In article <6asid0$4lm$1@decius.ultra.net> jmfbahxx@ma.ultranet.com 
+writes:
+>    
+>>      I disagree that the problem was
+>>    corporate greed.  If corporate greed had been the driving force,
+>>    I would be typing on a desktop multi processing KL10 in my home
+>>    running on 120V.  There was something else going on that I still
+>>    don't understand.
+>
+>    Well, my take on it is that the "One Company, One Strategy, One
+>    Message" directive of the mid '80s was the death knell of the
+>    company.  Of course, it was part of the justification for killing
+>    off the 36-bit line, but that's only a small part of the problem.
+>    DEC could have prospered very well without 10/20 line, sentiments
+>    of this group notwithstanding, but it would eventually need
+>    something beside or beyond VAX/VMS, and nobody was allowed to say
+>    or even think that, much less do anything to move in that
+>    direction.
+>
+>    DEC grew and became successful originally because it was a hotbed
+>    of ideas, a lot of them got tried, and some of them were very
+>    good.  Product line managers had a lot of autonomy, and yeah, so
+>    they competed with one another, but so what?  One or the other of
+>    them would get the business, and so DEC got the business.
+<snip cogent analysis>
+
+The first odor of trouble that I detected was when the financial types
+insisted that the R&D budget be reduced to "industry standard".  This
+happened around the time, IIR, Dan started to take #546 stand-alone.
+The figures that I remember (and these could be very wrong) were that
+DEC was budgeting 10% and the standard was 4%.  
+
+Later, when the 36-bit world moved to Marlboro, I had an office in
+the area where the financial types worked.  I distinctly remember
+a conversation where the financial type commented that he knew
+where the company should be headed and would use the budget to
+take DEC there.  
+
+This may be one of the dangers of taking a company public.
+
+/BAH
+
+
+Article 3680 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!europa.clark.net!204.127.161.1!wnfeed!204.127.130.5!worldnet.att.net!newsadm
+From: david.razler@worldnet.att.net (David M. Razler)
+Newsgroups: alt.sys.pdp11,alt.sys.pdp10,alt.sys.pdp8
+Subject: Re: Q: What is this core stack?
+Date: Thu, 05 Feb 1998 23:34:27 GMT
+Organization: AT&T WorldNet Services
+Lines: 44
+Message-ID: <6bdiaj$n1t@bgtnsc02.worldnet.att.net>
+References: <6baaoo$18o6@wiscnews.wiscnet.net> <6bacts$v42$1@flood.weeg.uiowa.edu>
+Reply-To: david.razler@worldnet.att.net
+NNTP-Posting-Host: 12.68.21.145
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Newsreader: Forte Agent 1.5/32.452
+Xref: nntp1.ba.best.com alt.sys.pdp11:3443 alt.sys.pdp10:3680 alt.sys.pdp8:2342
+
+jones@pyrite.cs.uiowa.edu (Douglas W. Jones,201H MLH,3193350740,3193382879)
+wrote:
+
+| From article <6baaoo$18o6@wiscnews.wiscnet.net>,
+| by Milo Velimirovic <milov@uwlax.edu>:
+| >
+| > except there's no alignment notch in the gap between them. It has four boards
+| > approx 5.5" square excluding connector fingers with dual connectors and a
+| > stack of nine  core planes bolted between them. I count thirty-two wires per
+| > side of each of the core planes. Guessing it's a 1024 byte (with parity!)
+| > module. ...
+| 
+| I'll guess that it's memory for a PDP-7 or -9 family machine -- They also
+| made memory for the PDP-8/S -8/I and -8/L in something like this format, but
+| by 1970, they moved to a larger format.
+| 
+| The fact that it's a 1K module also suggests an old design!
+| 
+| I doubt the 9 bits were 8 plus parity.  Far more likely, it was for an 18
+| or possibly for a 36 bit machine.
+| 
+| 				Doug Jones
+| 				jones@cs.uiowa.edu
+Right number of bits,  but not for anything not built out of M modules. (PDP
+8/I and later,  it sounds most like like the core stack for a PDP-15.
+
+The PDP-1,4,5,6,7 core modules were packaged in big bulletproof metal cases,
+gold in color, diode modules sticking out of the top with T-bar handles to
+screw the units into massive sockets similar to the old DEC System Building
+Block module connectors. They weighed about five pounds each. 
+
+The PDP-8 modules were black metal boxes, and I *believe* the PDP-9 and early
+PDP-10 modules were also enclosed in steel, not naked.
+
+The later core modules, especially the PDP-15 mods, consisted of a pair of
+DEC-shaped souble-height modules covered with 1nXXX glass diodes, the core
+planes between them, with support, as described, provided by screws and
+spacers. All, to my knowledge, originally had connectors on braded pairs of
+wires coming off the top which led to G-series sense amp modules.
+
+						dmr
+
+David M. Razler
+david.razler@worldnet.att.net
+
+
+Article 3682 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!news-peer.sprintlink.net!news-backup-west.sprintlink.net!news-in-west.sprintlink.net!news.sprintlink.net!Sprint!128.84.247.147!news.graphics.cornell.edu!news
+From: westin*nospam@graphics.cornell.edu (Stephen H. Westin)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Compaq buys DEC...
+Date: 06 Feb 1998 15:29:38 -0500
+Organization: Program of Computer Graphics -- Cornell University
+Lines: 26
+Sender: westin@moo.graphics.cornell.edu
+Message-ID: <s01zxgqxxp.fsf@moo.graphics.cornell.edu>
+References: <5467n668qx.fsf@flipper.cisco.com> 	<6am7fn$fin@bgtnsc01.worldnet.att.net> <6an5v3$hrp$1@decius.ultra.net> 	<6aovjh$11o@bgtnsc01.worldnet.att.net> <6asid0$4lm$1@decius.ultra.net> <m2n2ga5270.fsf@opost.com>
+NNTP-Posting-Host: moo.graphics.cornell.edu
+X-Newsreader: Gnus v5.5/Emacs 19.34
+Xref: nntp1.ba.best.com alt.sys.pdp10:3682
+
+dlm@opost.com (Dan Murphy) writes:
+
+<snip>
+
+>     I believe the fundamental reason that DEC topped out in 1987 is
+>     that KO decided all of DEC had to fit in one box and march to one
+>     tune.  Many good projects were killed off in that era -- projects
+>     that would have given the company life after VAX but were killed
+>     because nobody was allowed to imagine life after VAX until it was
+>     too late.
+
+Well, there's two sides to this. Sometimes the best thing to do is to
+kill some projects. Honeywell comes to mind. At one point, they had 4
+36-bit operating systems: GCOS, Multics, CP-6, and a follow-on to
+GCOS. Rather than putting eggs in one basket, all four were allowed to
+continue, so none really had the resources to succeed.
+
+That said, I think a fundamental fact has still not been grasped by
+many managers: central management can't make anything happen. They can
+*stop* things from happening, and sometimes that's needed, but that
+power must be used carefully.
+
+-- 
+-Stephen H. Westin
+Any information or opinions in this message are mine: they do not
+represent the position of Cornell University or any of its sponsors.
+
+
+Article 3685 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!newsfeed.internetmci.com!209.6.107.173!tuco.xcom.net!news.ultranet.com!d8
+From: jmfbahxx@ma.ultranet.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: Compaq buys DEC...
+Date: Sat, 07 Feb 98 12:37:47 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 38
+Message-ID: <6bhj2j$n8u$1@decius.ultra.net>
+References: <5467n668qx.fsf@flipper.cisco.com> 	<6am7fn$fin@bgtnsc01.worldnet.att.net> <6an5v3$hrp$1@decius.ultra.net> 	<6aovjh$11o@bgtnsc01.worldnet.att.net> <6asid0$4lm$1@decius.ultra.net> <m2n2ga5270.fsf@opost.com> <s01zxgqxxp.fsf@moo.graphics.cornell.edu>
+NNTP-Posting-Host: d8.dial-14.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 7 Feb 1998 12:12:03 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:3685
+
+In article <s01zxgqxxp.fsf@moo.graphics.cornell.edu>,
+   westin*nospam@graphics.cornell.edu (Stephen H. Westin) wrote:
+>dlm@opost.com (Dan Murphy) writes:
+>
+><snip>
+>
+>>     I believe the fundamental reason that DEC topped out in 1987 is
+>>     that KO decided all of DEC had to fit in one box and march to one
+>>     tune.  Many good projects were killed off in that era -- projects
+>>     that would have given the company life after VAX but were killed
+>>     because nobody was allowed to imagine life after VAX until it was
+>>     too late.
+>
+>Well, there's two sides to this. Sometimes the best thing to do is to
+>kill some projects. Honeywell comes to mind. At one point, they had 4
+>36-bit operating systems: GCOS, Multics, CP-6, and a follow-on to
+>GCOS. Rather than putting eggs in one basket, all four were allowed to
+>continue, so none really had the resources to succeed.
+
+Whether there should be one, two or more OSs really depends on the
+the target customer.  There were fundamental differences between
+the OSs that DEC had and, depending on what one wanted to accomplish
+with the computes, the system user community, the system support
+personnel and the hardware would determine which OS was used.
+
+For instance, with TOPS-10 and TOPS-20, there were a lot of things
+that could be done with TOPS-10 that one couldn't do with TOPS-20
+and there were a lot of things that could be done with TOPS-20
+that couldn't be done easily with TOPS-10.  There was also a lot
+of commonality between the two.  
+
+The problem was, in my view, that the experts of operating systems
+were never asked for an objective evaluation.  There was a lot of
+religiousity subtlely supported by upper middle management (and
+perhaps some of the top management).
+
+<snip>
+/BAH
+
+
+Article 3688 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!cam-news-hub1.bbnplanet.com!news.bbnplanet.com!tuco.xcom.net!news.ultranet.com!d16
+From: jmfbahxx@ma.ultranet.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: One Basket (was: Compaq buys DEC...)
+Date: Wed, 11 Feb 98 14:12:49 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 62
+Message-ID: <6bsa60$db6$1@decius.ultra.net>
+References: <5467n668qx.fsf@flipper.cisco.com> 	<6am7fn$fin@bgtnsc01.worldnet.att.net> <6an5v3$hrp$1@decius.ultra.net> 	<6aovjh$11o@bgtnsc01.worldnet.att.net> <6asid0$4lm$1@decius.ultra.net> <m2n2ga5270.fsf@opost.com> <s01zxgqxxp.fsf@moo.graphics.cornell.edu> <6bhj2j$n8u$1@decius.ultra.net> <s0soprh1cs.fsf_-_@moo.graphics.cornell.edu>
+NNTP-Posting-Host: d16.dial-14.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 11 Feb 1998 13:47:44 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:3688
+
+In article <s0soprh1cs.fsf_-_@moo.graphics.cornell.edu>,
+   westin*nospam@graphics.cornell.edu (Stephen H. Westin) wrote:
+>jmfbahxx@ma.ultranet.com writes:
+>
+>> In article <s01zxgqxxp.fsf@moo.graphics.cornell.edu>,
+>>    westin*nospam@graphics.cornell.edu (Stephen H. Westin) wrote:
+>
+>> >Well, there's two sides to this. Sometimes the best thing to do is to
+>> >kill some projects. Honeywell comes to mind. At one point, they had 4
+>> >36-bit operating systems: GCOS, Multics, CP-6, and a follow-on to
+>> >GCOS. Rather than putting eggs in one basket, all four were allowed to
+>> >continue, so none really had the resources to succeed.
+>> 
+>> Whether there should be one, two or more OSs really depends on the
+>> the target customer.
+>
+>Unfortunately, it also depends on the resources of the company
+>developing and supporting the software. Splitting customers between
+>many OS's makes it harder to make each one successful, either
+>commercially or technically. There's never an infinite supply of time
+>and money, as I'm sure you know better than I.
+>
+>> There were fundamental differences between
+>> the OSs that DEC had and, depending on what one wanted to accomplish
+>> with the computes, the system user community, the system support
+>> personnel and the hardware would determine which OS was used.
+>> 
+>> For instance, with TOPS-10 and TOPS-20, there were a lot of things
+>> that could be done with TOPS-10 that one couldn't do with TOPS-20
+>> and there were a lot of things that could be done with TOPS-20
+>> that couldn't be done easily with TOPS-10.  There was also a lot
+>> of commonality between the two.
+>
+>From a management point of view, it might have been nice to merge
+>them; perhaps with the TOPS-10 compatibility environment in
+>TOPS-20. Then there wouldn't have to be two teams writing device
+>drivers, porting to new processors, etc.
+
+There usually weren't two teams although, because the styles
+the OSs were written in were different, there were essentially
+two budgeting efforts; but the second time around usually went 
+faster.  The strengths of TOPS10 (SMP, to be specific) couldn't 
+be done in TOPS20.  IIRC, Jim and Dan spent some time looking at 
+that but I don't know the details.  I don't know if it was hardware
+or software constraints or both.
+
+>
+>> The problem was, in my view, that the experts of operating systems
+>> were never asked for an objective evaluation.  There was a lot of
+>> religiousity subtlely supported by upper middle management (and
+>> perhaps some of the top management).
+>
+>Well, yes. That's a continuing gripe of technical people; that their
+>knowledge and wisdom is ignored by management. And U.S. management
+>generally doesn't think you make money by advancing technology. Sigh.
+>
+Then they need to be taught (are they people who used to
+be tech types?).  I'm thinking about that but I haven't
+figured out a solution ....yet :-).
+
+/BAH
+
+
+
+Article 3691 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!news-peer-east.sprintlink.net!news.sprintlink.net!Sprint!tuco.xcom.net!news.ultranet.com!d6
+From: jmfbahxx@ma.ultranet.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: Monitor names
+Date: Thu, 12 Feb 98 13:03:19 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 48
+Message-ID: <6buqg0$qui$1@decius.ultra.net>
+References: <ALDERSON.98Feb11114430@netcom16.netcom.com> <6buf1j$bev$1@shell3.ba.best.com>
+NNTP-Posting-Host: d6.dial-15.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 12 Feb 1998 12:38:24 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:3691
+
+In article <6buf1j$bev$1@shell3.ba.best.com>,
+   inwap@shell3.ba.best.com (Smith and O'Halloran) wrote:
+>In article <ALDERSON.98Feb11114430@netcom16.netcom.com>,
+>Richard M. Alderson III <alderson@netcom.com> wrote:
+>>I finally found the list of monitor names I remembered:  From the _PDP-10
+>>Systems User's Guide_ (order number DEC-10-NGCA-D, copyright 1967).
+>
+>Were you the one showing that document around when SU-SCORE was shut down?
+>I'm glad you posted that info.
+>
+>Paraphrasing:
+>
+>>    MONITOR 10/10   A single-user Monitor for an 8K paper tape system.
+>>    MONITOR 10/20   A single-user Monitor for an 8K DECtape system.
+>>    MONITOR 10/30   A single-user Monitor for 16K and larger systems.
+>>    MONITOR 10/40   Multiprogramming time-sharing system
+>>    MONITOR 10/50   Multiprogramming time-sharing system with swap disk
+>>
+>>(I think I've been told that 10/70 is the KI version of 10/50, and 10/90
+>>is the >KL version.  Right?)
+>
+>DECsystem-10/60  KI-10 based system with DECtapes.
+>DECsystem-10/70  KI-10 based system with disks.
+>DECsystem-10/80  KL-10 based system with external data channels (RH-10).
+>DECsystem-10/90  KL-10 based system with internal data channles (RH-20).
+>
+>10/55 Asymmetric (master/slave) multiprocessing with two KA-10s.
+>10/77 Symmetric multiprocessing with two KI-10s.
+
+This isn't right.  We never "supported" SMP KIs.  I suspect that a
+10/77 was Master/slave (don't use asymmetric) multiprocessing with two
+K-10s.
+
+Note:   Just because we didn't officially support something didn't 
+prevent customers from running it.
+
+>10/88 SMP using two to six KL-10s sharing external memory.
+
+The official support was finally (after Jim worked on it for 9
+months--that's a story that should probably be told) extended to
+only a tri-SMP system.
+
+>10/91 KL for TOPS-10 using the same cabinets as the 2040, 2050, 2060.
+>10/95 and 2065 had a bigger cache and enhancements to the pager.
+>	-Joe
+>
+
+/BAH
+
+
+Article 3692 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!newsfeed.internetmci.com!207.241.0.194!news.wwa.com!not-for-mail
+From: jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Monitor names
+Date: 12 Feb 1998 15:17:38 GMT
+Organization: Everett Associates
+Lines: 25
+Message-ID: <6bv3qi$git$1@hirame.wwa.com>
+References: <ALDERSON.98Feb11114430@netcom16.netcom.com> <6buf1j$bev$1@shell3.ba.best.com> <6buqg0$qui$1@decius.ultra.net>
+NNTP-Posting-Host: pool1-036.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.8 (x86 32bit)
+Xref: nntp1.ba.best.com alt.sys.pdp10:3692
+
+In article <6buqg0$qui$1@decius.ultra.net>, jmfbahxx@ma.ultranet.com says...
+>
+>>10/55 Asymmetric (master/slave) multiprocessing with two KA-10s.
+>>10/77 Symmetric multiprocessing with two KI-10s.
+>
+>This isn't right.  We never "supported" SMP KIs.  I suspect that a
+>10/77 was Master/slave (don't use asymmetric) multiprocessing with two
+>K-10s.
+
+And just to add another $.02 worth, both the 10/55 and 10/77 monitors were 
+actually implemented to support up to five processors in a master/slave 
+configuration. To set the record straight, PDP-10 multiprocessing was not 
+developed by DEC, but by MIT's Laboratory for Nuclear Studies (LNS), 
+primarily by Mike Church. We took Mike's code and integrated it into the 
+Monitor, but I can't remember which release. I implemented the scheduler 
+controls and associated commands and UUOs (SET RUN, SET CPU, etc.), and 
+remember debugging the code in the basement of Building 5, but for the life 
+of me can't recall the chronology.
+
+-- 
+jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) http://www.wwa.com/~jeverett
+             ^^^^^^^^^^^^^^^
+Things have gotten so bad I feel the need to disguise my email address.
+And I don't like this explanation because I just hate long signatures.
+
+
+
+Article 3695 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!cpk-news-hub1.bbnplanet.com!news.bbnplanet.com!howland.erols.net!news-out.communique.net!communique!news.ultranet.com!d7
+From: jmfbahxx@ma.ultranet.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: Monitor names
+Date: Fri, 13 Feb 98 12:52:47 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 47
+Message-ID: <6c1e8k$2p6$1@decius.ultra.net>
+References: <ALDERSON.98Feb11114430@netcom16.netcom.com> <6buf1j$bev$1@shell3.ba.best.com> <6buqg0$qui$1@decius.ultra.net> <6bv3qi$git$1@hirame.wwa.com>
+NNTP-Posting-Host: d7.dial-15.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 13 Feb 1998 12:28:04 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:3695
+
+In article <6bv3qi$git$1@hirame.wwa.com>,
+   jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) wrote:
+>In article <6buqg0$qui$1@decius.ultra.net>, jmfbahxx@ma.ultranet.com 
+says...
+>>
+>>>10/55 Asymmetric (master/slave) multiprocessing with two KA-10s.
+>>>10/77 Symmetric multiprocessing with two KI-10s.
+>>
+>>This isn't right.  We never "supported" SMP KIs.  I suspect that a
+>>10/77 was Master/slave (don't use asymmetric) multiprocessing with two
+>>KI-10s.
+>
+>And just to add another $.02 worth, both the 10/55 and 10/77 monitors were 
+>actually implemented to support up to five processors in a master/slave 
+>configuration. To set the record straight, PDP-10 multiprocessing was not 
+>developed by DEC, but by MIT's Laboratory for Nuclear Studies (LNS), 
+>primarily by Mike Church. We took Mike's code and integrated it into the 
+>Monitor, but I can't remember which release. I implemented the scheduler 
+>controls and associated commands and UUOs (SET RUN, SET CPU, etc.), and 
+>remember debugging the code in the basement of Building 5, but 
+>for the life of me can't recall the chronology.
+>
+Well, let me help you; I don't think I'll be able to remember the 
+number of the monitor Tape Prep was editing at the time but....
+
+When the dual system was in the basement of Building 5, I volunteered
+my group (the RUNOFF group) to do their work on that system which
+was sorely in need of a load test.  Now, that was in 1972.  While
+we were helping to load test, I got fired from Tape Prep and, as 
+part of my "cleaning up before I left" effort, I had to pull the
+group out of the load test mix; the group leader replacing me 
+didn't know how to test and didn't want to know.  That was the
+hardest part of leaving that job...not being able to participate
+in the monitor development.
+
+Now my next job was in System 40 Operations.  Eventually, they sent
+me to "monitor school" and the sources that I looked at were 5.06
+(I think).  And, now for the life of me, I can't remember the
+name of the module that handled the dual-CPU "device driver"; it
+was the ancestor of CPUSER or was it CPNSER?   Wasn't there a
+CP0SER and CP1SER?  Somebody's got to have the Customer Supported
+Tape contents somewhere.  Take a look at the first page of that
+module and it should give a date or some indicator.
+
+/BAH
+
+
+
+
+Article 3696 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!feed1.news.erols.com!newsfeed.internetmci.com!209.6.107.173!tuco.xcom.net!news.ultranet.com!d7
+From: jmfbahxx@ma.ultranet.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: Monitor names
+Date: Fri, 13 Feb 98 13:34:09 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 32
+Message-ID: <6c1gm4$45v$1@decius.ultra.net>
+References: <ALDERSON.98Feb11114430@netcom16.netcom.com> <6buf1j$bev$1@shell3.ba.best.com> <6buqg0$qui$1@decius.ultra.net> <6bv3qi$git$1@hirame.wwa.com> <6c1e8k$2p6$1@decius.ultra.net>
+NNTP-Posting-Host: d7.dial-15.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 13 Feb 1998 13:09:24 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:3696
+
+In article <6c1e8k$2p6$1@decius.ultra.net>, jmfbahxx@ma.ultranet.com wrote:
+>In article <6bv3qi$git$1@hirame.wwa.com>,
+>   jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) wrote:
+>>In article <6buqg0$qui$1@decius.ultra.net>, jmfbahxx@ma.ultranet.com 
+>says...
+>>>
+>>>>10/55 Asymmetric (master/slave) multiprocessing with two KA-10s.
+>>>>10/77 Symmetric multiprocessing with two KI-10s.
+>>>
+>>>This isn't right.  We never "supported" SMP KIs.  I suspect that a
+>>>10/77 was Master/slave (don't use asymmetric) multiprocessing with two
+>>>KI-10s.
+>>
+>>And just to add another $.02 worth, both the 10/55 and 10/77 monitors 
+were 
+>>actually implemented to support up to five processors in a master/slave 
+>>configuration. To set the record straight, PDP-10 multiprocessing was not 
+>>developed by DEC, but by MIT's Laboratory for Nuclear Studies (LNS), 
+>>primarily by Mike Church.
+<snip>
+
+I didn't know any of this!  Thanks.  I do remember people talking
+about Mike Church.  Did anybody ever run master/slave with more
+than two CPUs?  I don't remember anybody (that doesn't mean a thing
+though) and JMF did his analyses on M/S performance on only two.
+This conclusions that Jim reached based on these analyses were the
+impetus for JMF and TW to begin working on an SMP design.
+
+I think I have the slides that they used for their DECUS talks.  Is
+this stuff useful and should it be stored in bits somewhere safe?
+
+/BAH
+
+
+Article 3694 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!news-peer.sprintlink.net!news-peer-east.sprintlink.net!news.sprintlink.net!Sprint!tuco.xcom.net!news.ultranet.com!francini
+From: francini@ultranet.com (John Francini)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Monitor names
+Date: Fri, 13 Feb 1998 02:02:33 -0500
+Organization: Appletree Systems
+Lines: 108
+Message-ID: <francini-ya02408000R1302980202330001@news.nh.ultranet.com>
+References: <ALDERSON.98Feb11114430@netcom16.netcom.com> <6buf1j$bev$1@shell3.ba.best.com> <6buqg0$qui$1@decius.ultra.net>
+NNTP-Posting-Host: d17.dial-1.nsh.nh.ultra.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 8bit
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 13 Feb 1998 07:01:13 GMT
+X-Newsreader: Yet Another NewsWatcher 2.4.0
+Xref: nntp1.ba.best.com alt.sys.pdp10:3694
+
+In article <6buqg0$qui$1@decius.ultra.net>, jmfbahxx@ma.ultranet.com wrote:
+
+>In article <6buf1j$bev$1@shell3.ba.best.com>,
+>   inwap@shell3.ba.best.com (Smith and O'Halloran) wrote:
+>>In article <ALDERSON.98Feb11114430@netcom16.netcom.com>,
+>>Richard M. Alderson III <alderson@netcom.com> wrote:
+>>>I finally found the list of monitor names I remembered:  From the _PDP-10
+>>>Systems User's Guide_ (order number DEC-10-NGCA-D, copyright 1967).
+>>
+>>Were you the one showing that document around when SU-SCORE was shut down?
+>>I'm glad you posted that info.
+>>
+>>Paraphrasing:
+>>
+>>>    MONITOR 10/10   A single-user Monitor for an 8K paper tape system.
+>>>    MONITOR 10/20   A single-user Monitor for an 8K DECtape system.
+>>>    MONITOR 10/30   A single-user Monitor for 16K and larger systems.
+>>>    MONITOR 10/40   Multiprogramming time-sharing system
+>>>    MONITOR 10/50   Multiprogramming time-sharing system with swap disk
+>>>
+>>>(I think I've been told that 10/70 is the KI version of 10/50, and 10/90
+>>>is the >KL version.  Right?)
+>>
+>>DECsystem-10/60  KI-10 based system with DECtapes.
+>>DECsystem-10/70  KI-10 based system with disks.
+>>DECsystem-10/80  KL-10 based system with external data channels (RH-10).
+>>DECsystem-10/90  KL-10 based system with internal data channles (RH-20).
+>>
+>>10/55 Asymmetric (master/slave) multiprocessing with two KA-10s.
+>>10/77 Symmetric multiprocessing with two KI-10s.
+>
+>This isn't right.  We never "supported" SMP KIs.  I suspect that a
+>10/77 was Master/slave (don't use asymmetric) multiprocessing with two
+>K-10s.
+>
+>Note:   Just because we didn't officially support something didn't 
+>prevent customers from running it.
+>
+>>10/88 SMP using two to six KL-10s sharing external memory.
+>
+>The official support was finally (after Jim worked on it for 9
+>months--that's a story that should probably be told) extended to
+>only a tri-SMP system.
+>
+>>10/91 KL for TOPS-10 using the same cabinets as the 2040, 2050, 2060.
+>>10/95 and 2065 had a bigger cache and enhancements to the pager.
+>>       -Joe
+
+Just to add a bit more pedantry to the discussion:
+
+When the DECsystem-10 name came about, the slash disappeared in the model names.
+Bentley College (my alma mater) had a DECsystem-1070.
+
+Also, as BAH mentioned, the 1077 was AMP.  The SMP system was called the
+1099, I believe.  Of course that may have been the version that allowed
+1091 style systems to participate in SMP. (1091s came with internal memory
+channels, and therefore couldn't run SMP, which required external channels
+and shared external memory boxes.)
+
+Entertaining tidbit: towards the end, the third machine in the
+KL1026/KL1042/KL2476 tri-SMP development system was a 1091, with both
+internal _and_ external channels!  You could take it out of tri-SMP and run
+it standalone by just switching which channels were configured via RSX-20F
+commands.
+
+What was even more entertaining was that the system had access to the same
+CI-based disks (RA60 and RA81 models, which supported 18-bit sectors) that
+the rest of the gang did.  All the disks were connected to two HSC50
+controllers, one via the A path, the other via the B path.  If I remember
+correctly, 1026 and 1042 were connected to one HSC, and 2476 was connected
+to the other one.  In tri-SMP operation, you could load-balance the disks
+across the CPUs by having some disks forced to the A path and others forced
+to the B path.  (Forcing was done by making sure that only one of the
+A-path/B-path buttons was pressed in on the front panel.)
+
+If I remember correctly, the steps to take KL2476 standalone and mount a
+couple of the SMP system's disks there went like this:
+
+0. Make sure that any disks that were to STAY on 1026/1042 were forced to
+the A path.  The Monitor would notice that the path to 2476 had gone away
+and would transparently initiate a new virtual circuit to the other path.
+
+1. Tell OPR to go into CONFIG mode and remove CPU2.
+
+        Any disks that were only visible to the system via that CPU would
+        be automatically dismounted.  This included the RP06 that held KL2476's
+        RSX20F front-end file system, since that disk was dual-ported between
+        the PDP-11 and the -10.
+        The CPU would be removed.
+
+2. Put a pre-built KL2476 standalone system disk on kl2476's dual-ported RP06 
+   spindle, and boot.  The RSX20F on that disk was configured for a system with
+   internal channels only, and therefore set up the machine to ignore the
+   external channels, and the memory thereon.
+
+
+Anyone who remembers care to comment?
+
+j
+
+-- 
+----
++------------------------------------------------------------------------------+
+| "I have come to the conclusion that one useless man is called a disgrace;    |
+|  that two or more are called a law firm; and that three or more become       |
+|  a Congress.  And by God I have had _this_ Congress!"                        |
+|                                                        -- John Adams         |
++------------------------------------------------------------------------------+
+
+
+Article 3699 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsxfer3.itd.umich.edu!agate!bh
+From: bh@anarres.CS.Berkeley.EDU (Brian Harvey)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Where did SOS come from?
+Date: 14 Feb 1998 05:12:38 GMT
+Organization: University of California, Berkeley
+Lines: 15
+Message-ID: <6c3946$5eq$1@agate.berkeley.edu>
+References: <34e57aef.4920401@nntp.ix.netcom.com>
+NNTP-Posting-Host: anarres.cs.berkeley.edu
+Xref: nntp1.ba.best.com alt.sys.pdp10:3699
+
+joseph61.SPAM?NO!@ix.netcom.com.SERIOUSLY (Wonko the Sane) writes:
+>The question becomes.... What was Stopgap?  A more primitive
+>editor than SOS?
+
+Stopgap (and SOS) came from the Stanford AI Lab.  It was called
+that because it was a non-display-oriented editor thrown together
+quickly when the PDP-6 (I'm pretty sure this was before the -10)
+came into use.  They already knew (from experience on the PDP-1)
+that display editing was the way to go, but it took a while to
+get TVEDIT done.  [This is secondhand information, since all that
+happened before I came to Stanford, but I'm pretty sure about it.]
+
+The reason Stopgap lasted long enough to have a Son is that for
+many years, real display support at SAIL was limited to terminals
+in the building; people used SOS when editing from home.
+
+
+Article 3705 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!cam-news-hub1.bbnplanet.com!news.bbnplanet.com!tuco.xcom.net!news.ultranet.com!d11
+From: jmfbahxx@ma.ultranet.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: Monitor names
+Date: Sun, 15 Feb 98 13:11:47 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 44
+Message-ID: <6c6o4o$555$1@decius.ultra.net>
+References: <ALDERSON.98Feb11114430@netcom16.netcom.com> <6buf1j$bev$1@shell3.ba.best.com> <6buqg0$qui$1@decius.ultra.net> <6bv3qi$git$1@hirame.wwa.com> <6c1e8k$2p6$1@decius.ultra.net> <6c1li0$4ri$1@hirame.wwa.com>
+NNTP-Posting-Host: d11.dial-13.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 15 Feb 1998 12:47:20 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:3705
+
+In article <6c1li0$4ri$1@hirame.wwa.com>,
+   jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) wrote:
+>In article <6c1e8k$2p6$1@decius.ultra.net>, jmfbahxx@ma.ultranet.com 
+says...
+>>
+>>And, now for the life of me, I can't remember the
+>>name of the module that handled the dual-CPU "device driver"; it
+>>was the ancestor of CPUSER or was it CPNSER?   Wasn't there a
+>>CP0SER and CP1SER?
+>
+>Barb, I think you're referring to APRSER, or perhaps it was called APRSRX. 
+>Several of the original PDP-6 monitor modules when rewritten for the -10 
+>had an "X" appended to their name. The "APR" was for "arithmetic 
+>processor".
+>
+Yup.  That's the name [smiling emoticon here checking for gray hairs].
+Speaking of the "X" appended to the modules' names, that reminds me of
+a story.
+
+When TW (Tony Wachs) made the decision to leave DEC, I threw a going
+away party for him.  I figured out a lot of "gag" gifts for him.  One
+of my listing binders was the original DTASRX light blue cardboard
+binder and it still had the label on it (I kept everything :-)).
+
+CDO (Chuck O'Toole) volunteered to scrounge up an original copy 
+of DTASRX (TW wrote the device driver and it was always his baby)
+and assembled it to make a CREF listing.  He has a great story
+about the gnashes of teeth it required to do that because he had
+to use LOADER among other things.  Because of CDO's tenacity, I
+could build a package for TW's gift which consisted of a spoon,
+a cup (which Jim searched all of Marlboro and found in Alan
+Titcomb's office although I don't remember what was on the cup),
+a jar of Taster's Choice and the DTASRX listing.
+
+For those of you who didn't have the pleasure of seeing TW 
+working, he was always carrying a listing, a spoon, instant
+coffee and a cup with him wherever he went.
+
+After the party, when all but about six of us had left, TW
+and Pat White spent quite a while reading the listing, having
+great laughs, remembering "when this happened" and "Oh, I
+remember now, that was when...".   It was a great party.
+
+/BAH
+
+
+Article 3703 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!cam-news-hub1.bbnplanet.com!news.bbnplanet.com!tuco.xcom.net!news.ultranet.com!d11
+From: jmfbahxx@ma.ultranet.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: Monitor names
+Date: Sun, 15 Feb 98 12:53:16 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 37
+Message-ID: <6c6n22$s8f$1@decius.ultra.net>
+References: <ALDERSON.98Feb11114430@netcom16.netcom.com> <6buf1j$bev$1@shell3.ba.best.com> <6buqg0$qui$1@decius.ultra.net> <EoBFHp.nF@woodshed.iupui.edu>
+NNTP-Posting-Host: d11.dial-13.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 15 Feb 1998 12:28:50 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:3703
+
+In article <EoBFHp.nF@woodshed.iupui.edu>,
+   mwood@woodshed.iupui.edu (Mark H. Wood) wrote:
+>jmfbahxx@ma.ultranet.com wrote:
+>[deletia]
+>: Note:   Just because we didn't officially support something didn't 
+>: prevent customers from running it.
+>: 
+>: >10/88 SMP using two to six KL-10s sharing external memory.
+>: 
+>: The official support was finally (after Jim worked on it for 9
+>: months--that's a story that should probably be told) extended to
+>: only a tri-SMP system.
+>
+>I've been told that ORNL built the first tri-SMP system themselves.
+>True or false?
+
+They didn't do the software.  The only two people that I know who
+could tell the real story are Jim and Duane.  For instance, I don't
+remember when they went to three. 
+
+ORNL was the site that eventually ran 5 CPUs and (I think) 
+their JOBMAX was 500 of necessity.  One of the
+biggest problems, IIR, was memory.  Since DEC had cancelled development 
+of the MX20 (is that the name of the damn thing?), the multi-ported
+memory box, ORNL had to go to AMPEX to get the 8-ported memory 
+required for running the 5.  
+
+This story is one example of how a customer and the TOPS10 Monitor
+Development Group cooperated by exchanging needs and ideas to 
+produce some of the best software and system innovations.  This
+customer did not waste our time nattering about typos and minor
+irritations that could be communicated via SPR's FYI procedure.
+We considered these types to be "good" customers.  When they
+called or SPR'ed something as a problem, it was really a problem.
+
+/BAH
+
+
+
+Article 3707 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!ais.net!uunet!in2.uu.net!news1.digital.com!pa.dec.com!depot.mro.dec.com!sniff.shr.dec.com!chuck.enet.dec.com!otoole
+From: otoole@chuck.inet.dec.com (Chuck O'Toole)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Monitor names
+Date: 16 Feb 1998 15:43:27 GMT
+Organization: Digital Equipment Corporation, Shrewsbury MA.
+Lines: 108
+Sender: otoole@chuck.enet.dec.com (Chuck O'Toole)
+Distribution: world
+Message-ID: <6c9mqv$d6m$1@sniff.shr.dec.com>
+References: <ALDERSON.98Feb11114430@netcom16.netcom.com> <6buf1j$bev$1@shell3.ba.best.com> <6buqg0$qui$1@decius.ultra.net> <EoBFHp.nF@woodshed.iupui.edu> <6c6n22$s8f$1@decius.ultra.net>
+Reply-To: otoole@chuck.inet.dec.com (Chuck O'Toole, .e, not .i)
+NNTP-Posting-Host: chuck.shr.dec.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+X-Newsreader: mxrn 6.18-31
+Xref: nntp1.ba.best.com alt.sys.pdp10:3707
+
+
+In article <6c6n22$s8f$1@decius.ultra.net>, jmfbahxx@ma.ultranet.com writes:
+|>In article <EoBFHp.nF@woodshed.iupui.edu>,
+|>   mwood@woodshed.iupui.edu (Mark H. Wood) wrote:
+|>>jmfbahxx@ma.ultranet.com wrote:
+|>>[deletia]
+|>>: Note:   Just because we didn't officially support something didn't 
+|>>: prevent customers from running it.
+|>>: 
+|>>: >10/88 SMP using two to six KL-10s sharing external memory.
+|>>: 
+|>>: The official support was finally (after Jim worked on it for 9
+|>>: months--that's a story that should probably be told) extended to
+|>>: only a tri-SMP system.
+|>>
+|>>I've been told that ORNL built the first tri-SMP system themselves.
+|>>True or false?
+|>
+|>They didn't do the software.  The only two people that I know who
+|>could tell the real story are Jim and Duane.  For instance, I don't
+|>remember when they went to three. 
+|>
+|>ORNL was the site that eventually ran 5 CPUs and (I think) 
+|>their JOBMAX was 500 of necessity.  One of the
+|>biggest problems, IIR, was memory.  Since DEC had cancelled development 
+|>of the MX20 (is that the name of the damn thing?), the multi-ported
+|>memory box, ORNL had to go to AMPEX to get the 8-ported memory 
+|>required for running the 5.  
+|>
+|>This story is one example of how a customer and the TOPS10 Monitor
+|>Development Group cooperated by exchanging needs and ideas to 
+|>produce some of the best software and system innovations.  This
+|>customer did not waste our time nattering about typos and minor
+|>irritations that could be communicated via SPR's FYI procedure.
+|>We considered these types to be "good" customers.  When they
+|>called or SPR'ed something as a problem, it was really a problem.
+|>
+|>/BAH
+|>
+|>
+
+ORNL was the first customer installed Tri-SMP system.  But Jim and I
+built the first working one in the MRO lab.
+
+I was working on a little AD project, the idea being to closely couple
+a TOPS10 system with a TOPS20 system.  Fred Engel was working the TOPS20
+side.  About the same time, Jim and Duane were talking about going to more
+than 2 processors for ORNL.
+
+The master/slave monitors used CP1SER which really didn't work for more
+than two processors.  For SMP, I upgraded it to CPNSER and while it worked
+fine for 2 systems, it was really never tested with more.  The KL-10
+memory boxes really couldn't handle more than two without performance
+degradation (only 4 arbitrated ports and the processors needed 2 each for
+interleaved fetch).  Since our development machines were also the main
+user machines, they were unwilling to recable the memory boxes.
+
+Jim and I thought we could kill two birds if we took KL2136 (I think) and
+had Field Service install an external memory interface (forget the option
+number) and use two priority ports of the external memory boxes.  Since
+we could enable or disable the internal memory of the -20 with the console,
+this would give us a system for my debugging (TOPS10 on two, TOPS20 on the
+third), or for Tri-SMP debugging using only the shared external memory.
+
+My AD project got canned (and rightfully so!) but the lab setup was used
+to run Tri-SMP occasionally.  We would periodically boot the Tri SMP monitor
+and later remove the -20 system with System Sleep/Config.
+
+ORNL used AMPEX memory at that time and had more arbitrated ports available
+so they didn't have the potential memory starvation problems we had in the
+lab. Jim championed the Tri SMP project to marketing and they decided it
+had enough merit to sell.  I forget how much in funding we got to do a
+project that was already done and tested.  Duane, on the other hand, just
+couldn't stand by and be running a supported configuration, so he bought
+a 4th processor and eventually a 5th.
+
+In article <6bv3qi$git$1@hirame.wwa.com>, jeverett@wwa.DEFEAT.UCE.BOTS.com
+(John Everett) writes:
+|>And just to add another $.02 worth, both the 10/55 and 10/77 monitors were 
+|>actually implemented to support up to five processors in a master/slave 
+|>configuration. To set the record straight, PDP-10 multiprocessing was not 
+|>developed by DEC, but by MIT's Laboratory for Nuclear Studies (LNS), 
+|>primarily by Mike Church. We took Mike's code and integrated it into the 
+|>Monitor, but I can't remember which release. I implemented the scheduler 
+|>controls and associated commands and UUOs (SET RUN, SET CPU, etc.), and 
+|>remember debugging the code in the basement of Building 5, but for the life
+|>|>of me can't recall the chronology.
+
+John,
+
+I was with the Pitt Comp Sci Dept when our 1055 system arrived and so I'd
+put the time around early '72.  By summer '73 we had added a single KI 
+system and we planning to upgrade it to a dual as well.  By Fall '73, I
+was working at DEC.
+
+You may also be right about the original KA/KI monitors being able to handle
+5 processors but by the time I saw CP1SER, there were many 1 Master/1 Slave
+assumptions.  Like 0 is *always* the master (system sleep/reconfigure needed
+to have the "policy" CPU be elected and float since you could take CPU0
+offline for service).  Places were the code wanted to notify "the other" CPU
+needed to become "all other active" CPUS.  Stuff like that.
+--  
+
+Chuck
+-----
+Disclaimer:  The opinions expressed are my own and
+do not necessarily represent those of my employer,
+loved ones, or passing acquaintances.
+
+
+Article 3711 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Subject: Re: Questions of Legality.
+References: <Pine.LNX.3.96.980216175938.18996A-100000@orlon.ssi.net>
+Organization: D Bit, Troy, NY
+From: wilson@dbit.com (John Wilson)
+NNTP-Posting-Host: dbit.dbit.com
+Message-ID: <34e8e329.0@news.wizvax.net>
+Date: 17 Feb 98 01:08:57 GMT
+Lines: 37
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!newsfeed.internetmci.com!209.78.65.16!newsfeed.yosemite.net!newsfeed.wizvax.net!news.wizvax.net!dbit.com!wilson
+Xref: nntp1.ba.best.com alt.sys.pdp10:3711
+
+In article <Pine.LNX.3.96.980216175938.18996A-100000@orlon.ssi.net>,
+Daniel Seagraves  <dseagrav@orlon.ssi.net> wrote:
+>OK, I found some OLD PDP-10 stuff (KA-10 era.  Wonderful pictures!)
+>and it's all DEC stuff.  The question is, if I scan this and put it
+>online, how much trouble would I get in?
+
+DEC gave explicit permission for customers to copy obsolete software
+documentation in the front of their Jan '85 Software Documentation
+Directory.  I have the relevant passage in the README file in
+ftp://ftp.dbit.com/pub/pdp8/doc, which is full of scanned-in PDP-8
+software documentation.  The notice doesn't specifically say it's OK
+to store copies in a retrieval system etc. but it doesn't say it's
+not OK either, the directory has been growing for 2 years and DEC's
+lawyers haven't beaten my door down yet for what that's worth.
+Hopefully they'd ask me to remove the directory first if they had a
+problem anyway, and of course I would comply.
+
+It says "customers" may copy obsolete SW docs but not the world in
+general, I don't know how serious they are about that but of course it
+wouldn't hurt for people who've never bought anything from DEC to call
+DECdirect and order a printer ribbon or something just to make it official!
+
+That should cover software, since AFAIK the only PDP-10ish software doc
+that isn't out of print is the processor ref manual, fair enough since
+it isn't really a SW doc (just happens to be part of the T20 doc set)
+and anyway maybe it *is* out of print by now.  Hardware is another issue,
+I don't think they've ever given any kind of blanket permission to copy
+HW docs.  Practically speaking of course there's no way they're going to
+beat you up over it, even if they decided to come down on you my understanding
+is that for copyright infringement they'd have to prove damages to get
+anything more than making you stop copying it, and that would be pretty
+hard to prove (since they probably haven't sold a KA10 hardware doc in
+20 years, you can't really hurt their sales).  But it would still be
+nice to get official permission...
+
+John Wilson
+D Bit
+
+
+Article 3710 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!newsfeed.internetmci.com!206.214.99.1!ix.netcom.com!news
+From: JCGreen@ix.netcom.com (John C Green Jr)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Monitor names
+Date: Tue, 17 Feb 1998 00:46:51 GMT
+Organization: Netcom
+Lines: 39
+Message-ID: <6camvq$f4n@dfw-ixnews10.ix.netcom.com>
+References: <ALDERSON.98Feb11114430@netcom16.netcom.com>
+NNTP-Posting-Host: sjx-ca35-22.ix.netcom.com
+X-NETCOM-Date: Mon Feb 16  6:52:10 PM CST 1998
+X-Newsreader: Forte Free Agent 1.0.82
+Xref: nntp1.ba.best.com alt.sys.pdp10:3710
+
+alderson@netcom16.netcom.com (Richard M. Alderson III) wrote:
+
+>I finally found the list of monitor names I remembered:  From the _PDP-10
+>Systems User's Guide_ (order number DEC-10-NGCA-D, copyright 1967), in the
+>section on monitors, we find the following:
+
+>    pg. 15: SINGLE-USER MONITORS
+
+>    MONITOR 10/10   A single-user Monitor for an 8K paper tape system. Includes
+>		    an I/O Controller, run-time selection of I/O devices, job-
+>		    to-job transition, job save and restore features, and
+>		    memory dumps.
+
+>    MONITOR 10/20   A single-user Monitor for an 8K DECtape system.  Includes
+>		    the same versatile features as the 10/10.
+
+There never was an 8K system.  It was part of the pulling of
+wool over KO's eyes.  The $99K configuration with:
+
+* 2 level priority interrupt
+* no memory protection and relocation
+* no fast registers
+* no floating point instructions
+* no byte instructions
+* 8K memory
+* paper tape & KSR/35 only I/O
+* 5.5K FORTRAN compiler
+
+was never built.  So the 10/10 and 10/20 monitors
+weren't either.  Ken signed off on the project when the
+Large Computer Engineering group gave him a proposal saying
+this was NOT a PDP-6 style mainframe.  It was a single user
+real-time system with minimum configuration of $99K and
+typical configuration of $149K.
+- - -
+RP10 (controller for RP02) Project Engineer
+21483 Old Mine Rd             (408)353-1870
+Los Gatos CA 95030    JCGreen@ix.netcom.com
+
+
+
+Article 3713 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!cam-news-hub1.bbnplanet.com!news.bbnplanet.com!tuco.xcom.net!news.ultranet.com!d13
+From: jmfbahxx@ma.ultranet.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: Monitor names
+Date: Tue, 17 Feb 98 13:57:57 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 48
+Message-ID: <6cc3jv$lbe$1@decius.ultra.net>
+References: <ALDERSON.98Feb11114430@netcom16.netcom.com> <6bv3qi$git$1@hirame.wwa.com> <6c1e8k$2p6$1@decius.ultra.net> <6c1li0$4ri$1@hirame.wwa.com> <6c6760$l4j$1@shell3.ba.best.com> <34E96F53.1D74@cisco.com>
+NNTP-Posting-Host: d13.dial-17.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 17 Feb 1998 13:33:51 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:3713
+
+In article <34E96F53.1D74@cisco.com>,
+   "Henry W. Miller" <hmiller@cisco.com> wrote:
+>Smith and O'Halloran wrote:
+>> 
+>> In article <6c1li0$4ri$1@hirame.wwa.com>,
+>> John Everett <jeverett@wwa.DEFEAT.UCE.BOTS.com> wrote:
+>> >In article <6c1e8k$2p6$1@decius.ultra.net>, jmfbahxx@ma.ultranet.com 
+says...
+>> >>And, now for the life of me, I can't remember the
+>> >>name of the module that handled the dual-CPU "device driver"; it
+>> >>was the ancestor of CPUSER or was it CPNSER?
+>> >Barb, I think you're referring to APRSER, or perhaps it was called 
+APRSRX.
+>> 
+>> The "SMP Upgrade Tape" consisted of CPNSER.MAC and very little else.
+>> But you had to pay an extra license fee just to get that one module.
+>> 
+>> (At least that's the way I remember it.  I could be wrong.)
+>>         -Joe
+>
+>	Nope, you're right - that's the way it was.  Neeless to say,
+>the customer base was not too happy about this...
+
+I would like to talk about this.  Unbundling was done for a variety 
+of reasons (from my point of view--I'm not talking about those 
+strange marketing types).  We had several problems that we wanted
+to solve and were never happy with the solution called unbundling.
+We never did figure out a better way.  We did fight hard and long 
+against several unbundling efforts; the last one was the Phase III
+DECnet monitor sources of TOPS10.
+
+From what I recall, unbundling allowed us to:
+
+1.  Make extra money for software innovations.
+2.  Keep the problem reports limited to the customers who 
+actually used the software (some customers had a habit of writing
+many, many SPRs and this was a real serious, time-consuming problem
+to us).  This point should probably be expanded but I'll keep it
+short for the moment.
+3.  Another group figured out that unbundledness would help keep
+track of what the customers had.  In the old days, I _think_ that
+this information was communicated to Maynard via the salesmen, but
+I'm not sure about that.  
+
+4.  I'm sure there were more reasons given for unbundling but I
+can't recall them at the moment.
+
+/BAH
+
+
+Article 3714 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!cam-news-hub1.bbnplanet.com!news.bbnplanet.com!tuco.xcom.net!news.ultranet.com!d13
+From: jmfbahxx@ma.ultranet.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: Monitor names
+Date: Tue, 17 Feb 98 14:31:46 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 73
+Message-ID: <6cc5jc$lbe$2@decius.ultra.net>
+References: <ALDERSON.98Feb11114430@netcom16.netcom.com> <6buf1j$bev$1@shell3.ba.best.com> <6buqg0$qui$1@decius.ultra.net> <34E8DE6D.2196@cisco.com>
+NNTP-Posting-Host: d13.dial-17.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 17 Feb 1998 14:07:40 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:3714
+
+In article <34E8DE6D.2196@cisco.com>,
+   "Henry W. Miller" <hmiller@cisco.com> wrote:
+>jmfbahxx@ma.ultranet.com wrote:
+>> 
+>> In article <6buf1j$bev$1@shell3.ba.best.com>,
+>>    inwap@shell3.ba.best.com (Smith and O'Halloran) wrote:
+>> >In article <ALDERSON.98Feb11114430@netcom16.netcom.com>,
+>> >Richard M. Alderson III <alderson@netcom.com> wrote:
+>> >>I finally found the list of monitor names I remembered:  From the 
+_PDP-10
+>> >>Systems User's Guide_ (order number DEC-10-NGCA-D, copyright 1967).
+>> >
+>[SNIP] 
+>> >10/88 SMP using two to six KL-10s sharing external memory.
+>> 
+>> The official support was finally (after Jim worked on it for 9
+>> months--that's a story that should probably be told) extended to
+>> only a tri-SMP system.
+>> 
+>
+>	Tell it, tell it!!!
+<snip>
+
+When we did SMP, Jim and Tony were very careful to _not_ preclude
+more than two CPUs.  They wanted to have 1-8 CPUs supported from
+the beginning, but we had our rules about not supporting something
+that we couldn't test, debug, reproduce problems, etc.  Since Duane
+started talking about upgrading to 3 whilst Jim and Tony were 
+developing for only two, Jim tried to get the product line to agree to
+support for tri-SMP.  That idea was nixed in flames; they did not
+buy our argument that, if there was a tri-SMP dependent problem, we
+could debug it at ORNL.  
+
+So, what we did was very carefully keep all documentation from 
+saying two or dual or any limitation on the number of CPUs 
+supported.  (And that was a constant battle with documentation, 
+the product line people, and marketing.)  Instead of having a 
+number put in the docs, we insisted that the term "multi-" be 
+used.  The only place where two was mentioned was the beware 
+file (remember those?) and, I believe, there were only three
+instances where dual had to be changed to multi.
+
+So, the plan was that, after we shipped 7.01, the first SMP monitor,
+the only things that had to be done for supporting tri-SMP were:
+
+1.  Change the beware file from dual to multi; estimated manpower 
+5 seconds using a TECO macro.
+
+2.  Write an SPD; estimated manpower 1 week.
+
+3.  Resubmit the CPNSER tape to SDC with the changed beware file; no
+changes to the source; estimated time 1 month for Release Engineering's 
+complete process of submission.
+
+4. No documentation changes were required; estimated manpower was 0.
+
+So there we were; 7.01 had shipped; Duane had already added the 3rd
+CPU and Software Engineering had successfully argued that it should
+be supported.  Jim had the beware file modified and the files had
+been handed to Magee for the tape making process.   Then somebody
+got the great idea that we had to go through the project notebook
+cycle (whatever the hell they called it--I forget now) that a major
+release went through in order to get all the powers-that-wanna-be
+to agree that "this is good".
+
+It took Jim 9 months to push through the submission; and, when Jim
+pushed, things happened.   We could not believe what kind of release
+mess we (DEC) had created for ourselves.  It was our first awareness
+that this process was actually designed to hinder productivity.  Jim,
+Tony, and I had a bout of depression and I had my initial prescience 
+of the future of TOPS10.  I began to fight for our existence.  We lost.
+
+/BAH
+
+
+Article 3718 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!cpk-news-hub1.bbnplanet.com!su-news-feed1.bbnplanet.com!news.bbnplanet.com!news-master.cisco.com!not-for-mail
+From: "Henry W. Miller" <hmiller@cisco.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Monitor names
+Date: Tue, 17 Feb 1998 19:49:10 -0800
+Organization: Cisco Systems
+Lines: 79
+Message-ID: <34EA5A36.89@cisco.com>
+References: <ALDERSON.98Feb11114430@netcom16.netcom.com> <6bv3qi$git$1@hirame.wwa.com> <6c1e8k$2p6$1@decius.ultra.net> <6c1li0$4ri$1@hirame.wwa.com> <6c6760$l4j$1@shell3.ba.best.com> <34E96F53.1D74@cisco.com> <6cc3jv$lbe$1@decius.ultra.net>
+Reply-To: hmiller@cisco.com
+NNTP-Posting-Host: 171.68.88.162
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 3.01Gold (Win95; I)
+Xref: nntp1.ba.best.com alt.sys.pdp10:3718
+
+jmfbahxx@ma.ultranet.com wrote:
+> 
+> In article <34E96F53.1D74@cisco.com>,
+>    "Henry W. Miller" <hmiller@cisco.com> wrote:
+> >Smith and O'Halloran wrote:
+> >>
+[SNIP]
+>> >Barb, I think you're referring to APRSER, or perhaps it was called
+> APRSRX.
+> >>
+> >> The "SMP Upgrade Tape" consisted of CPNSER.MAC and very little else.
+> >> But you had to pay an extra license fee just to get that one module.
+> >>
+> >> (At least that's the way I remember it.  I could be wrong.)
+> >>         -Joe
+> >
+> >       Nope, you're right - that's the way it was.  Neeless to say,
+> >the customer base was not too happy about this...
+> 
+> I would like to talk about this.  Unbundling was done for a variety
+> of reasons (from my point of view--I'm not talking about those
+> strange marketing types).  We had several problems that we wanted
+> to solve and were never happy with the solution called unbundling.
+> We never did figure out a better way.  We did fight hard and long
+> against several unbundling efforts; the last one was the Phase III
+> DECnet monitor sources of TOPS10.
+> 
+> From what I recall, unbundling allowed us to:
+> 
+> 1.  Make extra money for software innovations.
+
+	Always a good thing - the money had to come from somewhere.
+Most of the profits from the 36 bit line were being used to fund the 
+fledgling 32 bit line.  This made a lot of 36 bit people unhappy.
+The 32 bit people seemed to think that it was due them.
+
+	But that's a flame war I'd rather not engage now...
+
+> 2.  Keep the problem reports limited to the customers who
+> actually used the software (some customers had a habit of writing
+> many, many SPRs and this was a real serious, time-consuming problem
+> to us).  This point should probably be expanded but I'll keep it
+> short for the moment.
+
+	Yes, and having been a field person, I could tell you stories...
+But merging two or more -10's into a multiprocessor system was a little 
+more involved than some joker deciding to rewrite Dave Nixon's sort 
+algorithims...  Running a multiprocessor system required a real
+competent customer, not someone who wanted "plug and play".
+
+	(Did everyone realize how much site prep it took to sell a
+10 or 20; we had to complete a very long Customer Support Plan before 
+Marlboro would commit to sell and ship a system).
+
+> 3.  Another group figured out that unbundledness would help keep
+> track of what the customers had.  In the old days, I _think_ that
+> this information was communicated to Maynard via the salesmen, but
+> I'm not sure about that.
+> 
+
+	Yes, it was, through the chain of command.  However, before
+the days of license management, it was easy to take the tape out to 
+the customer site and install something in a less than legal and DEC 
+management sanctioned manner...
+
+> 4.  I'm sure there were more reasons given for unbundling but I
+> can't recall them at the moment.
+> 
+
+	Probably the most basic reason: better account control.  (And
+the money was nice too...)
+
+> /BAH
+
+-HWM
+
+(I have to add more stuff here in lieu of a signature file since the 
+news server won't let me post because it says that I have more included 
+text than new text...)
+
+
+Article 3721 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!newsfeed.internetmci.com!209.6.107.173!tuco.xcom.net!news.ultranet.com!d3
+From: jmfbahxx@ma.ultranet.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: Monitor names
+Date: Wed, 18 Feb 98 14:14:15 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 96
+Message-ID: <6ceour$iup$3@decius.ultra.net>
+References: <ALDERSON.98Feb11114430@netcom16.netcom.com> <6bv3qi$git$1@hirame.wwa.com> <6c1e8k$2p6$1@decius.ultra.net> <6c1li0$4ri$1@hirame.wwa.com> <6c6760$l4j$1@shell3.ba.best.com> <34E96F53.1D74@cisco.com> <6cc3jv$lbe$1@decius.ultra.net> <34EA5A36.89@cisco.com>
+NNTP-Posting-Host: d3.dial-17.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 18 Feb 1998 13:50:19 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:3721
+
+In article <34EA5A36.89@cisco.com>,
+   "Henry W. Miller" <hmiller@cisco.com> wrote:
+>jmfbahxx@ma.ultranet.com wrote:
+<snip lead-in>
+
+>> I would like to talk about this.  Unbundling was done for a variety
+>> of reasons (from my point of view--I'm not talking about those
+>> strange marketing types).  We had several problems that we wanted
+>> to solve and were never happy with the solution called unbundling.
+>> We never did figure out a better way.  We did fight hard and long
+>> against several unbundling efforts; the last one was the Phase III
+>> DECnet monitor sources of TOPS10.
+>> 
+>> From what I recall, unbundling allowed us to:
+>> 
+>> 1.  Make extra money for software innovations.
+>
+>	Always a good thing - the money had to come from somewhere.
+>Most of the profits from the 36 bit line were being used to fund the 
+>fledgling 32 bit line.  This made a lot of 36 bit people unhappy.
+>The 32 bit people seemed to think that it was due them.
+>
+>	But that's a flame war I'd rather not engage now...
+
+I agree that a flame war is inappropriate but some of this discussion
+may generate painful memories.  I think it is important that we talk
+about this.   Do you have a suggestion of ground rules?
+
+A lot of this problem was based on the way we kept the books.  
+Up until (I think) the early 80s, there wasn't a track of how 
+much money the 36-bit business brought in.  IIR, it was sort 
+of lumped in with something else.
+
+>
+>> 2.  Keep the problem reports limited to the customers who
+>> actually used the software (some customers had a habit of writing
+>> many, many SPRs and this was a real serious, time-consuming problem
+>> to us).  This point should probably be expanded but I'll keep it
+>> short for the moment.
+>
+>	Yes, and having been a field person, I could tell you stories...
+>But merging two or more -10's into a multiprocessor system was a little 
+>more involved than some joker deciding to rewrite Dave Nixon's sort 
+>algorithims...  
+
+You have got to be kidding [uncomprehending emoticon here].  
+Somebody actually thought they could???....never mind...
+
+>Running a multiprocessor system required a real
+>competent customer, not someone who wanted "plug and play".
+>
+>	(Did everyone realize how much site prep it took to sell a
+>10 or 20; we had to complete a very long Customer Support Plan before 
+>Marlboro would commit to sell and ship a system).
+
+No.  Would you elaborate a bit?  I never had the opportunity to 
+talk with people from the field.  And I'm not sure that Jim and
+Tony did much either.  It certainly wasn't a part of our formal
+procedures.  The information flow from the field was quite 
+minimal, IMO, and most of the opportunities got mushed into those
+few days at DECUS.
+
+>
+>> 3.  Another group figured out that unbundledness would help keep
+>> track of what the customers had.  In the old days, I _think_ that
+>> this information was communicated to Maynard via the salesmen, but
+>> I'm not sure about that.
+>> 
+>
+>	Yes, it was, through the chain of command.  However, before
+>the days of license management, it was easy to take the tape out to 
+>the customer site and install something in a less than legal and DEC 
+>management sanctioned manner...
+
+This was also a strength with some dubious side-effects.  A good
+field person, with a few sleight-of-hands, was the cause of a lot
+of additional sales.  This was how our customers became an extended
+family and a part of why they liked PDP-10s.
+>
+>> 4.  I'm sure there were more reasons given for unbundling but I
+>> can't recall them at the moment.
+>> 
+>
+>	Probably the most basic reason: better account control.  
+>(And the money was nice too...)
+
+Account control seemed to be at the bottom of everything.  I've
+been trying to imagine how in the world we could have dealt with
+a distribution on the order of millions and also kept the quality
+standards that we had.  We had problems dealing with 1000 CPUs
+out in the field;  I can't imagine how we could have dealt with
+2000 (let alone 1,000,000) and still have maintained the quality
+we imposed on ourselves.  Just considering the SPR procedures 
+becomes a mind-numbing exercise.
+
+/BAH
+
+
+Article 3717 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!newsfeed.internetmci.com!206.214.99.1!ix.netcom.com!news
+From: JCGreen@ix.netcom.com (John C Green Jr)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Monitor names
+Date: Wed, 18 Feb 1998 03:19:48 GMT
+Organization: Netcom
+Lines: 31
+Message-ID: <6cdkap$dl7@dfw-ixnews3.ix.netcom.com>
+References: <ALDERSON.98Feb11114430@netcom16.netcom.com> <6camvq$f4n@dfw-ixnews10.ix.netcom.com> <6ccd1u$es7$1@hirame.wwa.com> <6ccikm$rda$1@hirame.wwa.com>
+NNTP-Posting-Host: sjx-ca82-07.ix.netcom.com
+X-NETCOM-Date: Tue Feb 17  9:25:13 PM CST 1998
+X-Newsreader: Forte Free Agent 1.0.82
+Xref: nntp1.ba.best.com alt.sys.pdp10:3717
+
+jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) wrote:
+
+>In article <6ccd1u$es7$1@hirame.wwa.com>, jeverett@wwa.DEFEAT.UCE.BOTS.com 
+>says...
+>>
+>>
+>>Sorry, not true. The PDP-10/10 configuration and monitor were indeed built, 
+>>the monitor by Tony Wachs. 
+
+>I've been corrected via email by Bob Clements (who lurks but never posts 
+>here) that I'm thinking of the 10/30 monitor, which was indeed DECtape based. 
+>Just another demonstration of how fallible our memories become after 30+ 
+>years.
+
+And the 10/30 had 16K.  It was the 8K memory and the two monitors:
+    10/10 paper tape only
+    10/20 DECtape
+that weren't built.
+
+There was a time in 1969 when #2 ran the 10/50 monitor all the time.
+10/40 customers complained that their monitor was very unstable.
+Management decreed that #2 would run the 10/40 monitor 1/2 day
+every week.  The monitor group chose Friday mornings from 08:00 to
+13:00.  They of course started coming in at 13:00.  The machine sat
+in the idle loop for five hours, not achieving the testing
+management had hoped for.
+- - -
+RP10 (controller for RP02) Project Engineer
+21483 Old Mine Rd             (408)353-1870
+Los Gatos CA 95030    JCGreen@ix.netcom.com
+
+
+
+Article 3719 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsxfer3.itd.umich.edu!cpk-news-hub1.bbnplanet.com!cam-news-hub1.bbnplanet.com!news.bbnplanet.com!tuco.xcom.net!news.ultranet.com!d3
+From: jmfbahxx@ma.ultranet.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: Monitor names
+Date: Wed, 18 Feb 98 13:44:50 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 49
+Message-ID: <6cen7m$iup$1@decius.ultra.net>
+References: <ALDERSON.98Feb11114430@netcom16.netcom.com> <6camvq$f4n@dfw-ixnews10.ix.netcom.com> <6ccd1u$es7$1@hirame.wwa.com> <6ccikm$rda$1@hirame.wwa.com> <6cdkap$dl7@dfw-ixnews3.ix.netcom.com>
+NNTP-Posting-Host: d3.dial-17.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 18 Feb 1998 13:20:54 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:3719
+
+In article <6cdkap$dl7@dfw-ixnews3.ix.netcom.com>,
+   JCGreen@ix.netcom.com (John C Green Jr) wrote:
+>jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) wrote:
+>
+>>In article <6ccd1u$es7$1@hirame.wwa.com>, 
+jeverett@wwa.DEFEAT.UCE.BOTS.com 
+>>says...
+>>>
+>>>
+>>>Sorry, not true. The PDP-10/10 configuration and monitor were indeed 
+built, 
+>>>the monitor by Tony Wachs. 
+>
+>>I've been corrected via email by Bob Clements (who lurks but never posts 
+>>here) that I'm thinking of the 10/30 monitor, which was indeed DECtape 
+>>based. Just another demonstration of how fallible our memories become 
+>>after 30+ years.
+>
+>And the 10/30 had 16K.  It was the 8K memory and the two monitors:
+>    10/10 paper tape only
+>    10/20 DECtape
+>that weren't built.
+>
+>There was a time in 1969 when #2 ran the 10/50 monitor all the time.
+>10/40 customers complained that their monitor was very unstable.
+>Management decreed that #2 would run the 10/40 monitor 1/2 day
+>every week.  The monitor group chose Friday mornings from 08:00 to
+>13:00.  They of course started coming in at 13:00.  The machine sat
+>in the idle loop for five hours, not achieving the testing
+>management had hoped for.
+
+Chuckle.  Yup, that's how they played the game [grinning emoticon here].
+We went to extraordinary efforts to "out-psych" ourselves so that 
+every monitor load would get tested.  It got more complicated in
+Marlboro because we didn't have System 40 for a timesharing system (I'm
+talking about the general timesharing service that was provided from
+Building 5-B.
+
+One of the "rules" established, after much debate, was 3 crashes and
+drop back.  If the monitor designated by the monitor guys crashed
+three times, operations could drop back to the previous week's load.
+If that load didn't run (and here I'm hazy about the heuristics), there
+was a drop-back drop-back procedures.  There were a few times when the
+monitor that was finally run was the maintenance build.  A maintenance
+build used to be called the SOUP monitor and was shipped as n.nnx where
+n.nn was the major version of a monitor release and x was A, B, ... or
+Z.  I can't remember if we ever shipped a 5.0nC.
+
+/BAH
+
+
+Article 3722 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsxfer3.itd.umich.edu!news.itd.umich.edu!not-for-mail
+Newsgroups: alt.sys.pdp10
+Subject: Re: Monitor names
+References: <ALDERSON.98Feb11114430@netcom16.netcom.com> <6ccikm$rda$1@hirame.wwa.com> <6cdkap$dl7@dfw-ixnews3.ix.netcom.com> <6cen7m$iup$1@decius.ultra.net>
+Reply-To: sarr@umich.edu
+Organization: University of Michigan
+From: sarr@engin.umich.edu (Sarr J. Blumson)
+Lines: 28
+Message-ID: <NiEG.1849$N4.11186357@news.itd.umich.edu>
+Date: Wed, 18 Feb 1998 16:49:49 GMT
+NNTP-Posting-Host: sinshan.engin.umich.edu
+NNTP-Posting-Date: Wed, 18 Feb 1998 11:49:49 EST
+Xref: nntp1.ba.best.com alt.sys.pdp10:3722
+
+In article <6cen7m$iup$1@decius.ultra.net>,  <jmfbahxx@ma.ultranet.com> wrote:
+>
+>One of the "rules" established, after much debate, was 3 crashes and
+>drop back.  If the monitor designated by the monitor guys crashed
+>three times, operations could drop back to the previous week's load.
+>If that load didn't run (and here I'm hazy about the heuristics), there
+>was a drop-back drop-back procedures.  There were a few times when the
+>monitor that was finally run was the maintenance build.  A maintenance
+>build used to be called the SOUP monitor and was shipped as n.nnx where
+>n.nn was the major version of a monitor release and x was A, B, ... or
+>Z.  I can't remember if we ever shipped a 5.0nC.
+
+I seem to recall many long nights integrating Cyphernetics' (it wasn't
+ADP yet) changes into 5.02C.  So yes, you did.  It was the first 5 series
+monitor we tried.
+
+-- 
+--------
+Sarr Blumson                    sarr@umich.edu
+voice: +1 734 764 0253          home: +1 734 665 9591
+ITD, University of Michigan     http://www-personal.umich.edu/~sarr/
+519 W William, Ann Arbor, MI 48103-4943
+
+
+Article 3726 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.voicenet.com!news2.voicenet.com.POSTED!not-for-mail
+From: "Nick Bush" <Bush@A.C.M.org>
+Newsgroups: alt.sys.pdp10
+References: <ALDERSON.98Feb11114430@netcom16.netcom.com> <34E8DE6D.2196@cisco.com> <6cc5jc$lbe$2@decius.ultra.net> <6cf55i$mav@dfw-ixnews12.ix.netcom.com> <6ci0a6$p09$1@shell3.ba.best.com>
+Subject: Re: Monitor names
+Lines: 44
+X-Newsreader: Microsoft Outlook Express 4.71.1712.3
+X-MimeOLE: Produced By Microsoft MimeOLE V4.71.1712.3
+Message-ID: <%G6H.11497$Cv2.7147441@news2.voicenet.com>
+Date: Fri, 20 Feb 1998 03:23:39 GMT
+NNTP-Posting-Host: rotary832-pri.voicenet.com
+NNTP-Posting-Date: Thu, 19 Feb 1998 22:23:39 EST
+Xref: nntp1.ba.best.com alt.sys.pdp10:3726
+
+
+Smith and O'Halloran wrote in message <6ci0a6$p09$1@shell3.ba.best.com>...
+>In article <6cf55i$mav@dfw-ixnews12.ix.netcom.com>,
+>John C Green Jr <JCGreen@ix.netcom.com> wrote:
+>>In 1969 DEC accepted a purchase order from a German university. Only later
+>>did they translate the contract into English and read it.  The contract
+>>required delivery of an SMP monitor with the PDP-10 hardware.
+>
+>What about ANSI tape labels?
+>
+>The Colorado School of Mines was a beta test site for GALAXY/QUASAR/PULSAR.
+>At one meeting in Marlboro, I remarked on how big of a change this was
+>for TOPS-10, and asked how it was that DEC committed to so such a project.
+>
+>It appears that one of the salesmen had signed a contract that required
+>mandatory tape labels.
+>
+>Anyone else have more details?
+> -Joe
+>
+>--
+>INWAP.COM is Joe and Sally Smith, John and Chris O'Halloran and our cats
+>See http://www.inwap.com/ for "ReBoot", PDP-10, and Clan MacLeod.
+
+The story I had heard about GALAXY overall was that a DEC salesman in Norway
+had told a prospective customer (I believe it was the University of Oslo)
+that TOPS-10 had a large number of features in its batch queuing system -
+including all of the complex job scheduling that GALAXY attempted to
+implement.  The story at the time was not that this was included in a
+written contract, but had been given verbally to the representatives of the
+University, and only after the contract was signed did DEC find out that the
+verbal commitments were considered binding in Norway.  The result of not
+having the functions was that DEC had to deliver a lot of extra hardware
+(tape drives, and perhaps disk drives) to allow the job mix to run without
+the manual scheduling until the functions were available.  The amount of
+investment DEC had sitting in Oslo was supposedly one of the main reasons
+why there was such a push to get GALAXY shipping, even though the first
+field test release wouldn't stay running for 24 hours.
+
+Nick Bush
+
+
+
+
+
+
+Article 3727 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsxfer3.itd.umich.edu!news-out.internetmci.com!newsfeed.internetmci.com!207.241.0.194!news.wwa.com!not-for-mail
+From: jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Monitor names
+Date: 20 Feb 1998 15:35:47 GMT
+Organization: Everett Associates
+Lines: 42
+Message-ID: <6ck7sj$499$1@hirame.wwa.com>
+References: <ALDERSON.98Feb11114430@netcom16.netcom.com> <34E8DE6D.2196@cisco.com> <6cc5jc$lbe$2@decius.ultra.net> <6cf55i$mav@dfw-ixnews12.ix.netcom.com> <6ci0a6$p09$1@shell3.ba.best.com>
+NNTP-Posting-Host: pool1-040.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.8 (x86 32bit)
+Xref: nntp1.ba.best.com alt.sys.pdp10:3727
+
+In article <6ci0a6$p09$1@shell3.ba.best.com>, inwap@shell3.ba.best.com 
+says...
+>
+>What about ANSI tape labels?
+
+During the period I was in the monitor group (1969-1974) I was "Mr. Magtape". 
+When I was with Honeywell I had worked extensively with their tape 
+controllers and drives, which at that point in time were considered the best 
+in the industry. DEC had hired Dick "Doc" Lawrence from Honeywell to help 
+improve their magtape products, and Doc and I worked closely to improve the 
+monitor's magtape service. We fought an uphill battle with the product line 
+people, trying to get them to get serious about offering a decent tape 
+system. I recall at one point writing a memo to just about everyone I could 
+think of saying the best thing we could do for our customers who were 
+complaining about the PDP-10's tape systems was to give them STC's phone 
+number. I was told later that this memo lead to DEC's acquiring STC drives.
+
+We also knew that tape labeling was important to our "data processing" 
+customers. I acquired a copy of the ANSI standard (was it 3.27?) and studied 
+it thoroughly. DEC made a deal with Emory University for some free hardware 
+in exchange for design work on a tape labeling system. I spent a week in 
+Atlanta meeting with Rob Warnock (who I believe later became somewhat famous 
+as a hardware designer in Silicon Valley) going over his work and coming up 
+with a design for the implementation of tape labeing. This was in August, 
+1974. When I returned to Marlboro with the design, I found a message from 
+First Data Corporation. Turns out they wanted to offer me a job.
+
+At that time I was working on TAPSER, a total replacement for MTXSER, which I 
+had also written. It was a project I had been trying to get DEC to commit to 
+for some time. I turned FDC down by telling them I wanted $20K to leave DEC, 
+a figure I thought was totally rediculous (1974 dollars). They came back a 
+week later with the $20K, an "offer I couldn't refuse". So I left DEC, Ted 
+Hess and Len Bosack took over the TAPSER project, and I believe Chuck O'Toole 
+implemented tape labelling as part of the GALAXY project. I have no idea how 
+much the work Rob and I did in Atlanta influenced the design. Chuck?
+
+-- 
+jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) http://www.wwa.com/~jeverett
+             ^^^^^^^^^^^^^^^
+Things have gotten so bad I feel the need to disguise my email address.
+And I don't like this explanation because I just hate long signatures.
+
+
+
+Article 3728 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newshub1.home.com!news.home.com!Supernews60!supernews.com!Supernews69!not-for-mail
+From: racerdave@net1plus.com (Dave Lyons)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Monitor names
+Date: Sat, 21 Feb 1998 04:47:52 GMT
+Organization: Low
+Lines: 24
+Message-ID: <34ee2348.12088990@news.net1plus.com>
+References: <ALDERSON.98Feb11114430@netcom16.netcom.com> <6camvq$f4n@dfw-ixnews10.ix.netcom.com> <6ccd1u$es7$1@hirame.wwa.com> <6ccikm$rda$1@hirame.wwa.com> <6cdkap$dl7@dfw-ixnews3.ix.netcom.com> <6cen7m$iup$1@decius.ultra.net>
+Reply-To: racerdave@net1plus.com
+NNTP-Posting-Host: 16584@208.200.157.20
+X-Newsreader: Forte Free Agent 1.11/32.235
+Xref: nntp1.ba.best.com alt.sys.pdp10:3728
+
+On Wed, 18 Feb 98 13:44:50 GMT, jmfbahxx@ma.ultranet.com wrote:
+
+>
+>One of the "rules" established, after much debate, was 3 crashes and
+>drop back.  If the monitor designated by the monitor guys crashed
+>three times, operations could drop back to the previous week's load.
+>If that load didn't run (and here I'm hazy about the heuristics), there
+>was a drop-back drop-back procedures.  There were a few times when the
+>monitor that was finally run was the maintenance build.  A maintenance
+>build used to be called the SOUP monitor and was shipped as n.nnx where
+>n.nn was the major version of a monitor release and x was A, B, ... or
+>Z.  I can't remember if we ever shipped a 5.0nC.
+>
+>/BAH
+
+Of course, when that was going on, the rest of us had programmed the
+front end (dc76) to play adventure while we were waiting for a stable
+monitor to get booted...
+
+DRLyons [10,4067]
+
+p.s.  I still have the system logo from KA #1, when it was torn apart
+in the DoomsDay Too lab, back in middle earth.
+
+
+
+Article 3775 of alt.sys.pdp10:
+Newsgroups: alt.folklore.computers,alt.sys.pdp10,comp.unix.advocacy,comp.os.vms
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!news.new-york.net!news.decus.org!eisner!cornelius
+From: cornelius@eisner.decus.org (George Cornelius)
+Subject: Re: Ken Olsen on the bueaty of Unix, 1984
+Lines: 33
+Organization: DECUServe
+Message-ID: <1998Feb26.052702.1@eisner>
+References: <6cpsp0$7sv$1@nntp.ucs.ubc.ca> <6cptmg$8dt$1@nntp.ucs.ubc.ca> <6cqsul$og7$1@nntp.ucs.ubc.ca> <6cst84$27k$1@nntp.ucs.ubc.ca>
+X-Trace: news.decus.org 888488825 727 CORNELIUS [192.67.173.2]
+X-Nntp-Posting-Host: eisner.decus.org
+Date: Thu, 26 Feb 1998 10:27:02 GMT
+Xref: nntp1.ba.best.com alt.folklore.computers:99717 alt.sys.pdp10:3775 comp.unix.advocacy:51952 comp.os.vms:86333
+
+In article <6cst84$27k$1@nntp.ucs.ubc.ca>, shoppa@alph02.triumf.ca (Tim Shoppa) writes:
+>                                 The November 1984 (Volume 8/Number 5) issue
+> of DECWORLD contains a transcript of the State of the Company address given
+> by Ken Olsen (president of DEC) at the DEC annual meeting. [...]
+
+>    With UNIX, if you're looking for something, you can easily and quickly
+> check that small manual and find out that it's not there. With VMS, no
+> matter what you look for -- it's literally a five-foot shelf of
+> documentation -- if you look long enough it's there. That's the difference
+> -- the beauty of UNIX is it's simple; and the beauty of VMS is that it's all
+> there.
+
+And Olson was just echoing, perhaps unknowingly, the words of someone
+higher up in the OS food chain at the time:
+
+"Operating System/360 is hailed by its builders as the finest ever built,
+because it indisputably has the most function. [...] On the other hand,
+the Time-Sharing System for the PDP-10 is hailed by its builders as the
+finest, because of its simplicity and the spareness of its concepts. By
+any measure, however, its function is not even in the same class as that
+of OS/360".
+
+    - Frederick P. Brooks, Jr., known as the "father of the IBM System/
+      360", in _The Mythical Man Month_, Addison-Wesley, c1972, 1975.
+
+Mature systems are high-functioning but complex, and are often lacking
+in beauty compared to newer designs, which can be planned from the outset
+to seamlessly accommodate features which had to be painstakingly added
+to their predecessors.
+
+--
+George Cornelius              cornelius@eisner.decus.org
+                              cornelius@mayo.edu
+
+

@@ -1,0 +1,2410 @@
+Article 4079 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!newsfeed.internetmci.com!192.220.250.21!netnews1.nw.verio.net!netnews.nwnet.net!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Clarification desired re: instructions on KA10
+Date: Thu, 10 Sep 1998 18:24:44 -0700
+Organization: Networks & Distributed Computing
+Lines: 27
+Message-ID: <Pine.NXT.4.04.9809101820070.22549-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <35F7E313.167E@zk3.dec.com> <6t9ju3$k6j$1@shell3.ba.best.com> <6t9ova$67t$2@void.agames.com>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 905477086 13612 (None) 140.142.17.35
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: clane
+To: Mike Albaugh <albaugh@agames.com>
+In-Reply-To: <6t9ova$67t$2@void.agames.com>
+Xref: nntp1.ba.best.com alt.sys.pdp10:4079
+
+On 10 Sep 1998, Mike Albaugh wrote:
+> 	IIRC, There was still a working PDP-6 in Cory Hall at U.C.
+> Berkeley when I left in 1972. FWIW. It was the only "-10" I ever
+> had the privilege of using.
+
+Alas, that PDP-6 was scrapped.  I have a registers board from that
+machine.
+
+Stanford's PDP-6 was not retired until c.1980 when SAIL moved from the DC
+Power Building to Margaret Jacks Hall, breaking up the world's only triple
+processor KL/KA/PDP-6 system.  The KL and KA moved, the PDP-6 stayed.  The
+DC Power Building was taken over by the Computer Music folks, who were
+also the last users of the PDP-6.  The PDP-6 ran a stripped down version
+of the monitor called "Mule" and was used to operate the various music
+synthesizers.  I don't know if the PDP-6 was used after the KL/KA moved;
+the Computer Music people used a Foonly (PDP-10 clone) which ran the same
+OS as SAIL.
+
+The PDP-6 was at DECUS for the 20th anniversary of 36 bits in 1984, and
+subsequently was donated to the Computer Museum.  A big mistake.
+
+-- Mark --
+
+* RCW 19.149 notice: This email address is located in Washington State.	*
+* Unsolicited commercial email may be billed $500 per message.		*
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+Article 4074 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!newsfeed.internetmci.com!192.220.250.21!netnews1.nw.verio.net!netnews.nwnet.net!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Clarification desired re: instructions on KA10
+Date: Thu, 10 Sep 1998 15:32:17 -0700
+Organization: Networks & Distributed Computing
+Lines: 44
+Message-ID: <Pine.NXT.4.04.9809101451100.22309-100000@Tomobiki-Cho.CAC.Washington.EDU>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 905466739 35230 (None) 140.142.17.39
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: bjj
+To: Megan Gentry <gentry@zk3.dec.com>
+In-Reply-To: <35F7E313.167E@zk3.dec.com>
+Xref: nntp1.ba.best.com alt.sys.pdp10:4074
+
+On Thu, 10 Sep 1998, Megan Gentry wrote:
+> Perenial question - Can anyone explain the differences between the
+> pdp-6 and the KA10?
+
+Normally I don't post to alt.* groups, but in this case I'll make an
+exception.
+
+This is probably only of academic interest, since I believe that the
+Computer Museum destroyed the last working PDP-6 in the world which was
+donated to them 14 years ago.  Unfortunately, I do not have any PDP-6
+prints; I do have several PDP-6 manuals and the diagnostic paper tape for
+the CONS instruction which was on SAIL's PDP-6 (see above re "last working
+PDP-6 in the world").
+
+I thought that I had a comparison chart that covered the PDP-6, but I
+don't, so here's what I came up with in a quick compare of the "Programmed
+Data Processor-6 Handbook" (DEC manual F-65 dated 8/64) with the "PDP-10
+System Reference Manual."  I concentrated on user program differences with
+the KD-10; it would take a lot longer to work out all the exec program
+differences.
+
+The PDP-6 did not have UFA, DFN, JFFO.
+
+JFCL 1, tests PC Change on the PDP-6, Floating Overflow on the PDP-10.
+AFAIK, this was the only way to skip or jump on the PDP-6 without setting
+PC Change!
+
+The PDP-6 did not have high segments or User I/O Mode.
+
+All UUOs are MUUOs on the PDP-6.
+
+All unassigned instructions are no-ops on the PDP-6.
+
+
+The PDP-6 was, of course, much flakier than the KA10.  The PDP-10 was in
+every way a superior machine, even though it was not significantly faster
+than the PDP-6.
+
+-- Mark --
+
+* RCW 19.149 notice: This email address is located in Washington State.	*
+* Unsolicited commercial email may be billed $500 per message.		*
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+Article 4083 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Smith and O'Halloran)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Clarification desired re: instructions on KA10
+Date: 11 Sep 1998 09:35:05 -0700
+Organization: Chez INWAP (people, computers, cats)
+Lines: 24
+Message-ID: <6tbjfp$kmb$1@shell3.ba.best.com>
+References: <35F7E313.167E@zk3.dec.com> <6t9ju3$k6j$1@shell3.ba.best.com> <Ez3IBv.6BC@world.std.com>
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: 905531706 23515 inwap  206.184.139.132
+Xref: nntp1.ba.best.com alt.sys.pdp10:4083
+
+In article <Ez3IBv.6BC@world.std.com>, Megan <mbg@world.std.com> wrote:
+>inwap@best.com (Smith and O'Halloran) writes:
+>>				PDP-6		KA10
+>>PC flag bit 12		PC changed	Floating Overflow
+>
+>So, for the pdp-6, when is it set?  When is it cleared?
+
+Processor Reference Manual AA-H391A-TK (July 1980) page 2-112:
+2.15 Programming Examples, Processor Identification.
+
+    The instruction repertoires of all PDP-10 processors and the 166
+    processor used in the PDP-6 are very similar, and most programs
+    require no changes to run on any of them.  Because of minor
+    differences and the fact that some instructions are not availabel
+    on the eariler machines, a progrma that is to be compatible with
+    all should have some way of distinguishing which machine it is
+    running on.  This simple test suffices.
+
+	JFCL	17,.+1		;Clear all four flags
+	JRST	.+1		;Change PC
+	JFCL	1,PDP6		;PDP-6 has PC Change flag
+-- 
+INWAP.COM is Joe and Sally Smith, John and Chris O'Halloran and our cats
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 4086 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!news.eecs.umich.edu!news.bu.edu!csa!budd
+From: budd@csa.bu.edu (Phil Budne)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Clarification desired re: instructions on KA10
+Followup-To: alt.sys.pdp10
+Date: 11 Sep 1998 19:40:42 GMT
+Organization: Computer Science Department, Boston University, Boston, MA, USA
+Lines: 245
+Message-ID: <6tbubq$kef$1@news1.bu.edu>
+References: <Pine.NXT.4.04.9809101451100.22309-100000@tomobiki-cho.cac.washington.edu>
+NNTP-Posting-Host: csa.bu.edu
+Xref: nntp1.ba.best.com alt.sys.pdp10:4086
+
+In article <Pine.NXT.4.04.9809101451100.22309-100000@tomobiki-cho.cac.washington.edu>,
+Mark Crispin  <mrc@CAC.Washington.EDU> wrote:
+
+>Unfortunately, I do not have any PDP-6 prints
+
+See http://www.ai.mit.edu/people/tk/pdp6/pdp6.html
+
+>I thought that I had a comparison chart that covered the PDP-6
+
+Here is information from Appendix E of HARDWARE REFERENCE MANUAL
+DEC-10-XSRNA-A-D (Feb 1975) which covers the PDP-6 the KA10 and the
+KI10.  I'm leaving out the KI and any area where the '6 and the KA are
+the same, and summarizing some text;
+
+Address Break
+	PDP-6		No.
+	KA10		Switch and flag
+
+Address stop
+	PDP-6	switches compared with virtual addresses (unreloacted)	
+	KA10	switches compared with physical addresses (relocated)
+
+Byte pointer incrementing
+	PDP-6	Address overflow carries into index field, and EA calc
+		from the pointer uses the new index register
+	KA10	Address overflow carries, but ILDB or IDPB use
+		original index register, unless an interrupt occurs
+		between the two parts of the the instruction, in which
+		case the updated index register is used.
+
+Carry flags
+	PDP-6	Subtractiuon done in 3 steps: complement minuend,
+		add, complement sum.  The resulting effect on the Carry
+		flags is the opposite of that listed of SUB, SOJ and SOS
+	KA10	Subtraction done directly
+
+Clock
+	PDP-6	Progrm must diable Clock interrupts when opertator
+		is using single instruction mode
+	KA10	The flags is disabled when single isntruction mode is on
+
+Console programming
+	PDP-6	DATAI APR,
+	KA10	DATAI APR, and DATAO PI, to load MI
+
+First Part Done
+	PDP-6	Set only by interrupt between parts of an IDPB or ILDB,
+		and cleared only when the PC word is saved by an interrupt
+		instruction or an instruction executed by a UUO.
+		(Flag is often reffered to as Byte Increment Supression)
+	KA10	Set same as PDP-6, but cleared whenever PC word is saved.
+
+Floating Overflow
+	PDP-6	No.
+	KA10	Yes - in PC and processor conditions.
+
+FP Instructions
+	PDP-6	FSC plus four standard operations, with and without
+		rounding, in basic, Long, Memory and Both modes.
+	KA10	PDP-6 complement, except Immediate replaces Long with
+		routing, plus UFA and DFN to facilitate double precision.
+
+FP Immediate mode
+	PDP-6	No.
+	KA10	Yes - operand E,0, but only with rounding
+		(FADRI, FSBRI, FMPRI, FDVRI)
+
+FP Long mode FADL, FSBL, FMPL
+	PDP-6	In low order word, fraction begins in bit 1 (no exponent)
+		and sign is not forced to 0.
+	KA10	Low order word has fraction and expoenet in standard
+		software format.
+
+FP Long mode With rounding
+	PDP-6	Stores meaningless low order word or remainder
+	KA10	Replaced by immediate mode.
+
+FP Long mode: FDVL
+	PDP-6	Remainder is incorrect and lacks exponent
+	KA10	Correct remainder stored in std. FP format, but not normalized
+
+FP Normalization
+	PDP-6	In add subtract and multiply if high order word of double
+		length result is (positive) zero, no normalization takes place.
+		In FSC h/w does not normalize result.
+	KA10	Result always normalized (except UFA and DFN)
+
+FP Rounding
+	PDP-6	If low order part is exactly 1/2 LSB in a negative number,
+		rounding is toward zero
+	KA10	A low order part of exactly 1/2 LSB is rounded away from zero
+
+Floating Underflow
+	PDP-6	No.
+	KA10	Yes - in PC word and processor conditions
+
+HALT
+	PDP-6	Cannot be performed in user mode.
+	KA10	Can be performed in user mode only if User In-out set.
+
+IDIV
+	PDP-6	Overflow if dividend -2^35
+	KA10	Dividend -2^35 OK except No Divide if divisor +/-1.
+
+Interrupt locations
+	PDP-6	Executive (physical) locations 42-57
+	KA10	Executive (physical) locations 42-57 or 142-157 if offset
+
+Interrupt instructions
+	PDP-6	Must use JSR to enter interrupt routine.
+	KA10	Can use JSR, JSP, JSA, PUSHJ or JRST to enter interrupt routine
+
+Interruipt points
+	PDP-6	Before instruction fetch and each address word fetch
+	KA10	After each instruction fetch and each address word fetch
+
+CONI PI,
+	PDP-6	bits 21-27 not used
+	KA10	bits 21-27 show interrupts in progress
+
+JEN
+	PDP-6	Cannot be performed in user mode.
+	KA10	Can be performed in user mode if User In-out set.
+
+JFCL bit 12 (JFCL 1,)
+	PDP-6	PC Chhange
+	KA10	Floating Overflow
+
+JFFO
+	PDP-6	No.
+	KA10	Yes.
+
+JRSTF (JRST 2,)
+	PDP-6	When used with indexing (no indirect) restores flags
+		correctly only if previous instruction leaves left
+		half of AR clear.
+	KA10	No problem.
+
+Memory management
+	PDP-6	One each, protection and relocation registers.
+	KA10	Two each, protection and relocation registers.
+
+Memory Protection Interrupt
+	PDP-6	After an illegal user reference, the interrupt occurs before
+		the next instruction fetch
+	KA10	After an illegal user reference, the processor executes a
+		zero instruction (UUO), which is trapped in executive location
+		40.  The interrupt occurs after the instruction in executive
+		location 41 is fetched.
+
+Memory references
+	PDP-6	memory references are made in SETZ, SETO, SETA annd SETCA
+	KA10	unnecessary references of the PDP-6 are not made.
+
+No Divide
+	PDP-6	No.
+	KA10	Yes - In PC word.
+
+Overflow
+	PDP-6	Overflow (arithmetic) and Pushdown Overflow flags,
+		which cause interrupts.  Overflow conditions set flags
+		in all circumstances.
+	KA10	PDP-6 plus Floating Overflow, Floating Underfloa and
+		No Divide flags.
+
+PC Change
+	PDP-6	Yes.
+	KA10	No.
+
+PC Word
+	PDP-6	0 Overflow
+		3 PC Change
+	KA10	0 Overflow
+		3 Floating Overflow
+		11 Floating Underflow
+		12 No Divide
+
+Processior conditions: CONO APR,
+	PDP-6	27 Disable PC Change Interrupt
+		28 Enable PC Change Interrupt
+		29 Clear PC Change
+	KA10	21 Clear Address Break
+		27 Clear Floating Overflow Interrupt
+		28 Enable Floating Overflow Interrupt
+		29 Clear Floating Overflow
+
+Processior conditions: CONI APR,
+	PDP-6	28 PC Change Interrupt Enabled
+		29 PC Change
+	KA10	28 Floating Overflow Interrupt Enabled
+		29 Floating Overflow
+		30 Trap Offset
+
+Parity Error
+	PDP-6	No.
+	KA10	Read by CONI PI,
+
+POP AC,AC
+	PDP-6	AC receives decremented pointer
+	KA10	AC receives word taken from stack and pointer is lost
+
+Power Failure
+	PDP-6	No.
+	KA10	Read by CONI PI,
+
+Program management
+	PDP-6	User can necver give HALT or JEN
+		can use IO only if User In-out set
+		Illegal instruction executes as UUO
+	KA10	IO, HALT and JEN illegal unless User In-out set,
+		in which case all are legal.
+		Illgeal instruction executes as MUUO.
+
+Read-in
+	PDP-6	No hardware read in; key allows access to readin area
+		(first 16 core locations) for bootstrap.
+	KA10	Yes. Ends by executing last word in the block as instruction
+
+Trap Offset
+	PDP-6	No.
+	KA10	Turning off MA TRP OFFSET switch sets flag (a proc cond)
+
+Unssigned codes
+	PDP-6	100-131, 243, 247, 257.  On most machines these execute
+		like UUOs, but use executive locations 60-61; on some
+		machines the execute as no-ops (there is no standard) [!!!]
+	KA10	247 and 257 are not regarded as unassigned and execute as noops
+		unless implemented by special hardware.
+
+Unimplemented operations
+	PDP-6	If FP and byte instructions are not implemented in h/w
+		codes 132-177 act like unassigned codes.
+
+User In-out
+	PDP-6	Allows IO instructions to be performed in user mode.
+	KA10	Allows IO instructions, HALT and JEN to be performed
+		in user mode.
+
+UUO
+	PDP-6	All UUOs 000-077 use executive locations 40-41
+	KA10	LUUOs 001-037 use user locations 40-41 in user mode
+		executive locations 40-41 in executive mode.
+		MUUOs and 040-077 use executive locations 40-41
+		(Trap offset changes executive locations 40-41 to 140-141)
+
+
+
+Article 4088 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!logbridge.uoregon.edu!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Clarification desired re: instructions on KA10
+Date: Fri, 11 Sep 1998 12:59:17 -0700
+Organization: Networks & Distributed Computing
+Lines: 28
+Message-ID: <Pine.NXT.4.04.9809111243070.24024-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <35F7E313.167E@zk3.dec.com> <6t9ju3$k6j$1@shell3.ba.best.com> <Ez3IBv.6BC@world.std.com> <6tbb4q$g5j$1@hirame.wwa.com>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 905543961 26756 (None) 140.142.17.37
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: u812
+In-Reply-To: <6tbb4q$g5j$1@hirame.wwa.com>
+Xref: nntp1.ba.best.com alt.sys.pdp10:4088
+
+On 11 Sep 1998, John Everett wrote:
+> Lo-seg? What's a lo-seg? On the -6 there was no such concept. Core images 
+> were only a single segment (and saved as .sav files).
+                                            ^^^
+
+DMP files.  All words from JOBCDP (location 75) to the location pointed to
+by JOBFF.  If DDT is loaded, DDT's symbol table was also dumped. [Verified
+from the "PDP-6 Multiprogramming System Manual" dated 4/66]
+
+Unlike SAV files, a DMP file was a straight binary dump that could be
+loaded with a single IOWD.  I am pretty sure that the first PDP-10
+monitors also used DMP files, and that SAV files came in somewhere in late
+3 series or 4 series.
+
+WAITS, SAIL's OS, used DMP files until it was retired in 1990; it's last
+common ancestor was TOPS-10 was 3.54.  I was a system programmer on WAITS
+from 1977-1979 (and occasionally after that; my main responsibility after
+1979 was the Score DEC-20) and remember DMP files quite well.
+
+I was told that Berkeley actually had 5.07 running on their PDP-6 before
+it was retired.
+
+-- Mark --
+
+* RCW 19.149 notice: This email address is located in Washington State.	*
+* Unsolicited commercial email may be billed $500 per message.		*
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+Article 4087 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!news.eecs.umich.edu!news.bu.edu!csa!budd
+From: budd@csa.bu.edu (Phil Budne)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Clarification desired re: instructions on KA10
+Followup-To: alt.sys.pdp10
+Date: 11 Sep 1998 19:49:27 GMT
+Organization: Computer Science Department, Boston University, Boston, MA, USA
+Lines: 10
+Message-ID: <6tbus7$l0k$1@news1.bu.edu>
+References: <35F7E313.167E@zk3.dec.com>
+NNTP-Posting-Host: csa.bu.edu
+Xref: nntp1.ba.best.com alt.sys.pdp10:4087
+
+In article <35F7E313.167E@zk3.dec.com>,
+Megan Gentry  <gentry@zk3.dec.com> wrote:
+>Finally, can someone provide the names/numbers for the
+>protection and relocation options?  One could have a single
+>set of registers (which relocated low-seg addresses) or two
+>sets of registers (which relocated low- and hi-seg addresses).
+
+My notes say:
+KT10    KA10 single protection/relocation reg [never sold]
+KT10A   KA10 dual protection/relocation regs
+
+
+Article 4218 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!nntprelay.mathworks.com!newsfeed.cwix.com!207.241.0.194!news.wwa.com!not-for-mail
+From: jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: 9 Oct 1998 13:56:09 GMT
+Organization: Everett Associates
+Lines: 16
+Message-ID: <6vl4lp$k3v$1@hirame.wwa.com>
+References: <Pine.LNX.3.96.980928112124.10870D-100000@bony.umtec.com> <6vdd7g$ohs$1@nntpd.lk <F0HM1q.2tF@world.std.com> <6vjjvc$4qm$1@nntpd.lkg.dec.com> <361d61a8.0@news.wizvax.net> <361d6c9e.13147729@news.clark.net>
+NNTP-Posting-Host: poolf5-007.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.8 (x86 32bit)
+Xref: news3.best.com alt.sys.pdp10:4218
+
+In article <361d6c9e.13147729@news.clark.net>, gagner@clark.net says...
+>
+>The PDP-6 sported wonderful positive action microswitches that gave a
+>satisfying click when you switched them. Coupled with the brushed
+>aluminum panel, you felt like you were really doing science when you
+>used the machine. Dr. Who would have been proud to use them.
+
+Switches that were shared with the PDP-4 and PDP-5, along with the blue 
+cabinets and brushed aluminum front panels.
+
+-- 
+jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) http://www.wwa.com/~jeverett
+             ^^^^^^^^^^^^^^^
+Things have gotten so bad I feel the need to disguise my email address.
+And I don't like this explanation because I just hate long signatures.
+
+
+
+Article 4220 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!nntprelay.mathworks.com!newsfeed.cwix.com!205.139.29.29!news.navisite.net!news
+From: "Aron K. Insinga" <AInsingaExciseThis@InfoMation.ExciseThis.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: Fri, 09 Oct 1998 15:04:08 -0400
+Organization: InfoMation Publishing Corp.
+Lines: 103
+Message-ID: <361E5E28.1DD1C12B@InfoMation.ExciseThis.com>
+References: <Pine.LNX.3.96.980928112124.10870D-100000@bony.umtec.com> <6vdd7g$ohs$1@nntpd.lk <F0HM1q.2tF@world.std.com> <6vjjvc$4qm$1@nntpd.lkg.dec.com> <361d61a8.0@news.wizvax.net> <361d6c9e.13147729@news.clark.net> <6vl4lp$k3v$1@hirame.wwa.com>
+Reply-To: AInsingaExciseThis@InfoMation.ExciseThis.com
+NNTP-Posting-Host: wh224.cmgi.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 4.04 [en] (WinNT; I)
+Xref: news3.best.com alt.sys.pdp10:4220
+
+John Everett wrote:
+
+> In article <361d6c9e.13147729@news.clark.net>, gagner@clark.net says...
+> >
+> >The PDP-6 sported wonderful positive action microswitches that gave a
+> >satisfying click when you switched them. Coupled with the brushed
+> >aluminum panel, you felt like you were really doing science when you
+> >used the machine. Dr. Who would have been proud to use them.
+>
+> Switches that were shared with the PDP-4 and PDP-5, along with the blue
+> cabinets and brushed aluminum front panels.
+
+Oh, good, a discussion of lights and switches, a subject near and dear to my
+heart!
+
+I don't know about the exact switch types, but the watershed in packaging is the
+PDP-8.
+
+I believe that all of the earlier machines (1,4,5,6,7) had brushed aluminum
+front panels,
+and panels at the top of the cabinets, with toggle switches and lights in small
+cylinders
+with flat, translucent white tops that that stuck through a hole in the aluminum
+panel and
+plugged into a couple of little contacts on a circuit board under the panel.  I
+salvaged a
+cabinet top panel from a PDP-7 with the I/O-related lights as cheap scrap from
+American
+Used Computer (or was it American Abused Computer? :-) in Boston near Kenmore
+Sq.
+long ago.  The labels were silkscreened onto the aluminum panel.  And of course
+they
+used System Modules and soldered backplanes and were packaged in relay racks,
+since the panels of sockets had to be bolted into the panel before the wires
+were added.
+
+The interconnect problems of the PDP-6, the appearance of the Sylvania
+wirewrap sockets and Gardner-Denver wirewrap machine, and the prospect
+of building many, cheap computers on an assembly line forced changes.
+
+Starting with the PDP-8, DEC machines had slide switches with plastic bats.
+The lights and switches were on a large circuit board and shone through or
+stuck through or below the silkscreened sheet of plastic with the labels on it.
+On the 8, the 2 key switches (one on the right and one on the left, one for
+power
+and one for panel lock, I think) were *really* there to hold the sheet of
+plastic in
+place.  At least some of this was Ken Olsen's idea.  In a lecture he said that
+he hung out a Lechmere (a large department store) studying the appliances to
+find a cheaper way, to the point where he thought the store staff suspected him
+of "casing the joint" for a possible robbery.  (That might have been the talk
+where
+Gordon Bell introduced Ken as a packaging engineer on his staff. :-)
+And of course they used Flip Chips and the wirewrapped backplanes.
+Also, this is where, for the smaller machines, the package starts moving from
+the
+rack down to a box that fits into the rack, which let the embedded systems
+market
+happen.  Later they added those white-edged black panels that plug onto the rack
+
+to cover up the box.
+
+Some of the later 11s (45, 70) might have had real toggle switches under the
+bats,
+but the 11/20 had slide switches like the 8s.
+
+[Hmm, I guess that screening the plastic panel and molding the plastic bats
+were what let DEC get into interesting colors for their machines.  Reviving
+a notable feature of the ancestral TX-0?]
+
+My recollection is that some machines used stiffer plastic in the bats
+(8, 11/10, 11/45, 11/70) while others used softer plastic (8/e, 11/20)
+but I don't know for sure.  Maybe someone with can say what the
+plastics were.  Earlier machines used flat-handled bats, while later 11s
+(45, 70) used triangular bats and the metal bezel(?) around the edge of
+the front panel was molded at the bottom to stick out in the same shape
+as the switches.  I think that was to protect the switches.  Little pins
+on the sides fit into holes on metal pieces on each side of the "real" switch.
+
+Re: pushing vs. pulling somewhere in this thread: The deposit switch was usually
+
+upside-down so that you had to flip it up above the neutral position instead of
+flipping it down, to make it harder to accidently change memory.  And it was
+spring-loaded so it returned to its normal position.
+
+Several machines (KA10, PDP-8/<I forget which one>, PDP-12, PDP-15 or XVM)
+had the rocker switches.  I was under the impression that the rocker switches
+were
+covers over slide switches like the bats, but I don't think I ever saw under one
+to be
+sure.
+
+The KI10 was a (very nice to look at, anyway) anomoly.  I don't know why it used
+
+the push-buttons with lights in them.
+
+There are a few PDP-11 pictures at
+<http://www.eecis.udel.edu/~mader/delta/aronpics.html>
+but I haven't scanned my 36-bit-family pictures yet.  (RealSoonNow...)
+
+- Aron Insinga
+
+
+
+
+Article 4221 of alt.sys.pdp10:
+Subject: Re: KL Console Commands
+From: aek@spies.com (Al Kossow)
+Newsgroups: alt.sys.pdp10
+References: <361E5E28.1DD1C12B@InfoMation.ExciseThis.com>
+Originator: aek@spies.com
+NNTP-Posting-Host: goonsquad.spies.com
+Message-ID: <361e73e0.0@news.spies.com>
+Date: 9 Oct 1998 13:36:48 -0800
+X-Trace: 9 Oct 1998 13:36:48 -0800, goonsquad.spies.com
+Lines: 24
+Path: news3.best.com!news1.best.com!news.maxwell.syr.edu!news.idt.net!enews.sgi.com!news.sgi.com!news.spies.com!spies.com!aek
+Xref: news3.best.com alt.sys.pdp10:4221
+
+From article <361E5E28.1DD1C12B@InfoMation.ExciseThis.com>, by "Aron K. Insinga" <AInsingaExciseThis@InfoMation.ExciseThis.com>:
+> John Everett wrote:
+> 
+> Some of the later 11s (45, 70) might have had real toggle switches under the
+> bats,
+> but the 11/20 had slide switches like the 8s.
+> 
+
+11/20's used the same slide switches and handles as 8E/M
+
+> Several machines (KA10, PDP-8/<I forget which one>, PDP-12, PDP-15 or XVM)
+> had the rocker switches.  I was under the impression that the rocker switches
+> were
+> covers over slide switches like the bats, but I don't think I ever saw under one
+> to be
+> sure.
+
+8I's, 12's and 15's use rocker style slide switches
+
+The 11/05,11/10 were the first 11's to use Alco molded switches which were used
+on all subsequent front panels. These were also the same switches (sans plastic
+frob) that were used on the Altair and with a frob on IMSAIs.
+
+
+
+
+Article 4254 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!nntprelay.mathworks.com!europa.clark.net!206.55.3.15!news.clark.net!not-for-mail
+From: gagner@clark.net (Philip Gagner)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: Tue, 13 Oct 1998 00:33:23 GMT
+Organization: TWLG
+Lines: 18
+Message-ID: <36239e18.6108655@news.clark.net>
+References: <Pine.LNX.3.96.980928112124.10870D-100000@bony.umtec.com> <6vdd7g$ohs$1@nntpd.lk <F0HM1q.2tF@world.std.com> <6vjjvc$4qm$1@nntpd.lkg.dec.com> <361d61a8.0@news.wizvax.net> <361d6c9e.13147729@news.clark.net> <6vl4lp$k3v$1@hirame.wwa.com> <361E5E28.1DD1C12B@InfoMation.ExciseThis.com>
+Reply-To: gagner@clark.net
+NNTP-Posting-Host: gagner-ppp.clark.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Newsreader: Forte Agent 1.5/32.451
+Xref: news3.best.com alt.sys.pdp10:4254
+
+"Aron K. Insinga" <AInsingaExciseThis@InfoMation.ExciseThis.com>
+wrote:
+
+>John Everett wrote:
+<snip>
+>
+>The interconnect problems of the PDP-6, the appearance of the Sylvania
+>wirewrap sockets and Gardner-Denver wirewrap machine, and the prospect
+>of building many, cheap computers on an assembly line forced changes.
+>
+Standard maintenance on a PDP-6 was running a heavy tool across the
+back of the boards (the contacts were on the front) to shake them up a
+bit and seat them in their sockets better. It would solve many many
+problems. Higher level maintenance was pulling the boards, staring at
+them for a few seconds, and shoving them back in with lots of
+wiggling. Harder problems would be solved that way.
+
+
+
+
+Article 4257 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!nntprelay.mathworks.com!news.idt.net!netnews.com!mr.net!data.pa.vix.com!news1.digital.com!pa.dec.com!nntpd.lkg.dec.com!not-for-mail
+From: nospam@zk3.dec.com (Eric Werme - replace nospam with werme)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: 13 Oct 1998 01:18:11 GMT
+Organization: Digital Equipment Corporation
+Lines: 25
+Message-ID: <6vu9oj$g3e$1@nntpd.lkg.dec.com>
+References: <Pine.LNX.3.96.980928112124.10870D-100000@bony.umtec.com> <6vdd7g$ohs$1@nntpd.lk <F0HM1q.2tF@world.std.com> <6vjjvc$4qm$1@nntpd.lkg.dec.com> <361d61a8.0@news.wizvax.net>
+Reply-To: (Replace nobody with werme) nobody@zk3.dec.com
+NNTP-Posting-Host: alingo.zk3.dec.com
+X-Newsreader: NN version 6.5.0 CURRENT #60
+Xref: news3.best.com alt.sys.pdp10:4257
+
+wilson@dbit.com (John Wilson) writes:
+
+>In article <6vjjvc$4qm$1@nntpd.lkg.dec.com>,
+>Eric Werme - replace nospam with werme <> wrote:
+>>The KA rocker switches were nicely rounded and had a much better feel
+>>than most other console switches.
+
+>The thing I like about my 8/E's front panel is that the flimsy
+>little bat switches (really slide switches with bats mounted over them) are
+>very lightweight so it's easy to change the switches quickly by whacking them
+>with the side of your finger, but the KA10 rockers and most PDP-11 triangles
+>look like you'd have to go a lot more slowly since it takes a good solid poke
+>to flip them.  Am I wrong?
+
+So "bats" is the word du jour?  I think the KA had good old slide switches
+under the bats.  You could clear the whole set by running the back of
+your fingers along the row of switches, but the bats could rotate or twist
+and bind a bit so I generally didn't do that.  With pressure directly on
+the bat, they'd be quite happy to flop back and forth.  Only the friction
+in the slide switch held them in position.
+--
+<>    Eric (Ric) Werme     <> The above is unlikely to contain   <>
+<>    ROT-13 addresses:    <> official claims or policies of     <>
+<>   <jrezr@mx3.qrp.pbz>   <> Compaq Computer Corp.              <>
+<> <jrezr@plorecbegny.arg> <>  http://www.cyberportal.net/werme  <>
+
+
+Article 4216 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!nntprelay.mathworks.com!newshub.northeast.verio.net!newsfeed.xcom.net!news.ultranet.com!d16
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: Fri, 09 Oct 98 11:06:39 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 31
+Message-ID: <6vkv1g$tba$3@ligarius.ultra.net>
+References: <Pine.LNX.3.96.980928112124.10870D-100000@bony.umtec.com> <3615172c.19558816@news.clark.net> <6v2n7j$9at$9@strato.ultra.net> <F08Eoo.377@world.std.com> <6v65lv$4pd$1@shell3.ba.best.com> <361a928c.10585390@news.clark.net> <6vdd7g$ohs$1@nntpd.lk <F0HM1q.2tF@world.std.com> <6vjjvc$4qm$1@nntpd.lkg.dec.com>
+NNTP-Posting-Host: d16.dial-13.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 9 Oct 1998 12:20:00 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: news3.best.com alt.sys.pdp10:4216
+
+In article <6vjjvc$4qm$1@nntpd.lkg.dec.com>,
+   nospam@zk3.dec.com (Eric Werme - replace nospam with werme) wrote:
+>mbg@world.std.com (Megan) writes:
+>
+>>jmfbahciv@aol.com writes:
+>
+>
+>>>Ric, I don't remember _pulling_ anything.  Weren't they just
+>>>the old -11 toggle switches?  Geez.. this stuff is so hazed
+>>>in my brain.  I'm glad we're talking about real stuff :-).
+>
+>>The 11/40 (/35, /45, /55, /70) had essentially triangular shaped
+>>switches with a rounded apex sticking out from the panel.  It
+>>had a pivot point located in the center of the base of the triangle.
+>>In the down position, it was a zero, lift for a one...
+>
+>That wasn't my reference.  All the momentary contact switches were
+>spring loaded triangles that you pushed down and would spring back.
+>Deposit was the one exception - you had to lift it up and it would
+>spring down.  BAH - I don't think you ever had much need to muck
+>with bits on the various -11s.  Rebooting them was mostly setting the
+>start address in the switches and pushing load address and start.
+
+Chuckle.  That just shows how much you know :-).  I was flipping
+8's and 11's way before your time in a group known then as Tape
+Prep.  But I never got to work on that PDP-12 and I never met
+a PDP-6...nor a 1.
+
+/BAH
+
+Sigh! - Subtract a hundred and four for e-mail.
+
+
+Article 4769 of alt.sys.pdp10:
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Path: news3.best.com!news1.best.com!144.212.100.101.MISMATCH!newsfeed.mathworks.com!newsfeed.enteract.com!ix.netcom.com!netcom!alderson
+From: alderson@netcom.netcom.com (Richard M. Alderson III)
+Subject: The Computer Museum did WHAT???? [was Re: YKYBHTLW]
+In-Reply-To: "Alan H. Martin"'s message of Fri, 23 Apr 1999 01:06:23 -0400
+Message-ID: <ALDERSON.99Apr23110146@netcom.netcom.com>
+Sender: alderson@netcom.netcom.com
+Reply-To: alderson@netcom.com
+Organization: NETCOM On-line services
+References: <160419991655286030%drissman@acm.org> <7f9rhv$al3$3@ligarius.ultra.net>
+	<3719f951.76285607@news.cadvision.com> <7fgd03$3sv$1@nntpd.lkg.dec.com>
+	<dBkT2.1867$hl6.69133@news.itd.umich.edu>
+	<371E7EB5.8123AF06@stoneweb.com> <7fn7kh$g42@nnrp4.farm.idt.net>
+	<371F47A6.B8D17E18@stoneweb.com> <371FFFCF.91181191@MA.UltraNet.Com>
+Date: Fri, 23 Apr 1999 18:01:46 GMT
+Lines: 12
+Xref: news3.best.com alt.folklore.computers:128664 alt.sys.pdp10:4769
+
+In article <371FFFCF.91181191@MA.UltraNet.Com> "Alan H. Martin"
+<AMartin@MA.UltraNet.Com> writes:
+
+>When the Computer Museum was selling off PDP-6 boards at the MR cafeteria
+>garage sale
+
+My blood pressure just went through the roof.  Please, tell me you were joking!
+-- 
+Rich Alderson   You know the sort of thing that you can find in any dictionary
+                of a strange language, and which so excites the amateur philo-
+                logists, itching to derive one tongue from another that they
+                know better: a word that is nearly the same in form and meaning
+                as the corresponding word in English, or Latin, or Hebrew, or
+                what not.
+                                                --J. R. R. Tolkien,
+alderson@netcom.com                               _The Notion Club Papers_
+
+
+Article 4770 of alt.sys.pdp10:
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: The Computer Museum did WHAT???? [was Re: YKYBHTLW]
+References: <160419991655286030%drissman@acm.org> <371F47A6.B8D17E18@stoneweb.com> <371FFFCF.91181191@MA.UltraNet.Com> <ALDERSON.99Apr23110146@netcom.netcom.com>
+Organization: D Bit, Troy, NY
+From: wilson@dbit.com (John Wilson)
+NNTP-Posting-Host: dbit.dbit.com
+Message-ID: <3720bb48.0@news.wizvax.net>
+Date: 23 Apr 1999 14:26:16 -0500
+X-Trace: 23 Apr 1999 14:26:16 -0500, dbit.dbit.com
+Lines: 16
+Path: news3.best.com!news1.best.com!newshub.northeast.verio.net!newspeer.monmouth.com!newsfeed.wizvax.net!news.wizvax.net!dbit.com!wilson
+Xref: news3.best.com alt.folklore.computers:128668 alt.sys.pdp10:4770
+
+In article <ALDERSON.99Apr23110146@netcom.netcom.com>,
+Richard M. Alderson III <alderson@netcom.com> wrote:
+>In article <371FFFCF.91181191@MA.UltraNet.Com> "Alan H. Martin"
+><AMartin@MA.UltraNet.Com> writes:
+>
+>>When the Computer Museum was selling off PDP-6 boards at the MR cafeteria
+>>garage sale
+>
+>My blood pressure just went through the roof.  Please, tell me you were joking!
+
+Is this what happened to the Stanford PDP-6 of which the CM never even
+acknowledged receipt?  (hmm, that was a weird sentence)  I gather there
+were already hard feelings about that, this would make it a lot worse...
+
+John Wilson
+D Bit
+
+
+Article 4787 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!newsfeed.stanford.edu!news.ems.psu.edu!bonkers!not-for-mail
+From: peter@taronga.com (Peter da Silva)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: The Computer Museum did WHAT???? [was Re: YKYBHTLW]
+Date: 24 Apr 1999 09:32:33 -0500
+Organization: none
+Lines: 16
+Message-ID: <7fskm1$5ae@bonkers.taronga.com>
+References: <160419991655286030%drissman@acm.org> <371F47A6.B8D17E18@stoneweb.com> <371FFFCF.91181191@MA.UltraNet.Com> <ALDERSON.99Apr23110146@netcom.netcom.com>
+NNTP-Posting-Host: bonkers.in.taronga.com
+Xref: news3.best.com alt.folklore.computers:128746 alt.sys.pdp10:4787
+
+In article <ALDERSON.99Apr23110146@netcom.netcom.com>,
+Richard M. Alderson III <alderson@netcom.com> wrote:
+>In article <371FFFCF.91181191@MA.UltraNet.Com> "Alan H. Martin"
+><AMartin@MA.UltraNet.Com> writes:
+>>When the Computer Museum was selling off PDP-6 boards at the MR cafeteria
+>>garage sale
+
+>My blood pressure just went through the roof.  Please, tell me you were joking!
+
+They also cut up CDC 6*00s and sold the core memory boards for souvenirs.
+
+-- 
+This is The Reverend Peter da Silva's Boring Sig File - there are no references
+to Wolves, Kibo, Discordianism, or The Church of the Subgenius in this document
+"Twenty-two points, plus triple-word-score, plus fifty points for using all
+ my letters.  Game's over.  I'm outta here." -- Melissa ... by Kwyjibo.
+
+
+Article 4771 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: YKYBHTLW
+Date: Fri, 23 Apr 1999 11:22:07 -0700
+Organization: Networks & Distributed Computing
+Lines: 49
+Message-ID: <Pine.NXT.4.20.9904231108500.12574-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <160419991655286030%drissman@acm.org> <7f9rhv$al3$3@ligarius.ultra.net> <3719f951.76285607@news.cadvision.com> <7fgd03$3sv$1@nntpd.lkg.dec.com> <dBkT2.1867$hl6.69133@news.itd.umich.edu> <371E7EB5.8123AF06@stoneweb.com> <7fn7kh$g42@nnrp4.farm.idt.net> <371F47A6.B8D17E18@stoneweb.com> <371FFFCF.91181191@MA.UltraNet.Com>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 924891737 7686 (None) 140.142.17.38
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: scott
+To: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+In-Reply-To: <371FFFCF.91181191@MA.UltraNet.Com>
+Xref: news3.best.com alt.folklore.computers:128670 alt.sys.pdp10:4771
+
+On Fri, 23 Apr 1999, Alan H. Martin wrote:
+> When the Computer Museum was selling off PDP-6 boards at the MR cafeteria
+> garage sale
+
+Is that what happened to the Stanford PDP-6 after it was donated to the
+Computer Museum in 1984?  That is disgusting.
+
+The Stanford PDP-6 was perhaps the last operational PDP-6 in the world.  
+It was part of the Stanford AI Lab tri-processor KL10/KA10/PDP-6 system
+until 1980, when the KL and KA moved from the DC Power Building to
+Margaret Jacks Hall.  I was at SAIL from 1977 - 1979 (when I became the
+system programmer for the Computer Science DEC-20) and have fond memories
+of seeing the old gal put through her paces.
+
+The PDP-6 had its own 64K core memory bank, and was used as a dedicated
+machine to operate the synthesizers used by the computer music group.
+
+The PDP-6 stayed at DC Power, along with the Computer Music group.  I
+don't know if the PDP-6 was ever run with the Foonly, but I think that the
+musicians attached the synthesizers directly to the Foonly and the PDP-6
+was retired after the tri-processor was broken up.
+
+I saw it running at the 20th anniversary celebration in 1984, but
+apparently some register bit was stuck on so they had to program around it
+in making a little light-blinking program.  [Which reminds me, we need a
+36th anniversary celebration next year...]
+
+Well, I confess, the KA10 had a similar fate.  It was used as an XGP
+(XeroGraphic Printer) controller, and finally toasted itself due to a
+cooling fan failure.  At that point, it was considered unrepairable,
+retired, and I presently bought it for $500.  I took the front panel,
+light panels, and adder boards for myself; I sent the BBN Pager to the
+Swedish hackers; and the rest was sold to a scrap metal dealer.
+
+The Swedish hackers were a bit distressed at the demolition of an
+historical KA, but it really was toasted.  The last I heard, the BBN Pager
+had been installed in a KA in Sweden and was running Tenex (many, many
+years after it was supplied to SAIL with the intent of getting SAIL to run
+Tenex).
+
+I still have that front panel, as well as the front panel to one of the
+IMSSS KI10s.
+
+-- Mark --
+
+* RCW 19.190 notice: This email address is located in Washington State.	*
+* Unsolicited commercial email may be billed $500 per message.		*
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+Article 4768 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!cyclone.news.idirect.com!island.idirect.com!router1.news.adelphia.net!uunet!nyc.uu.net!ffx.uu.net!in3.uu.net!world!weiner
+From: weiner@world.std.com (Sam Weiner)
+Subject: Re: PDP-6
+Message-ID: <FAnGoy.M2s@world.std.com>
+Date: Fri, 23 Apr 1999 16:05:22 GMT
+References: <37200ACD.896E0BCE@watson.ibm.com>
+Organization: The World Public Access UNIX, Brookline, MA
+Lines: 35
+Xref: news3.best.com alt.sys.pdp10:4768
+
+In article <37200ACD.896E0BCE@watson.ibm.com>,
+David Aubespin  <aubespin@watson.ibm.com> wrote:
+>Hi folks,
+>
+>I know this is the PDP-10 ng, but there's no PDP-6 one so...
+
+It's all in the family.
+
+>I looked all over the internet, and couldn't find a PDP-6 emulator!  Amazing.
+>Therefore, I decided to write my own.
+>I am now looking for information about this computer.  I could find the PDP-10
+>instruction set which is a good start, but I'd also like the PDP-6 one.  More
+>important, I need information about its architecture (both official and
+>non-official since I never had my hands on this computer... I'm "too" young.)
+>Please help me out.
+>david
+
+Since the instruction set is almost the same, why specifically a PDP-6?
+
+If you search old articles via dejanews or somesuch for PDP-6, there have
+been discussions in the past about which instructions are different.
+Also, check out the PDP-10 links at www.36bit.org, there may be some
+information there.
+
+The family tree goes PDP-6, KA, KI, KL (KS is off to the side a bit.)
+A PDP-6 emulator would disable a bunch of instructions and paging plus
+change some details of a couple of instructions in minor ways.  I'm not
+sure about the last edition but most of the hardware reference manuals
+for the -10 included a section or notes on the differences between
+processors.
+
+Good luck, Sam
+
+
+
+
+
+Article 4780 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!wn4feed!worldnet.att.net!wnmaster1!not-for-mail
+From: david.razler@worldnet.att.net (David M. Razler)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Re: PDP-6
+Date: Sat, 24 Apr 1999 13:13:40 GMT
+Organization: AT&T WorldNet Services
+Lines: 11
+Message-ID: <3721c32d.86427375@netnews.worldnet.att.net>
+References: <37200ACD.896E0BCE@watson.ibm.com> <FAnGoy.M2s@world.std.com>
+Reply-To: david.razler@worldnet.att.net
+NNTP-Posting-Host: 12.79.220.193
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: bgtnsc03.worldnet.att.net 924959652 27453 12.79.220.193 (24 Apr 1999 13:14:12 GMT)
+X-Complaints-To: abuse@worldnet.att.net
+NNTP-Posting-Date: 24 Apr 1999 13:14:12 GMT
+X-Newsreader: Forte Agent 1.5/32.452
+Xref: news3.best.com alt.sys.pdp10:4780
+
+weiner@world.std.com (Sam Weiner) wrote:
+
+Not to be too picky but:
+| 
+The family tree goes PDP-3, PDP-6, KA, KI, KL (KS is off to the side a bit.)
+
+it was designed and one was indeed built.
+
+				dmr
+David M. Razler
+david.razler@worldnet.att.net
+
+
+Article 4783 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Subject: Re: Re: PDP-6
+References: <37200ACD.896E0BCE@watson.ibm.com> <FAnGoy.M2s@world.std.com> <3721c32d.86427375@netnews.worldnet.att.net> <7fshb1$ct6$1@ligarius.ultra.net>
+Organization: D Bit, Troy, NY
+From: wilson@dbit.com (John Wilson)
+NNTP-Posting-Host: dbit.dbit.com
+Message-ID: <3721f08d.0@news.wizvax.net>
+Date: 24 Apr 1999 12:25:49 -0500
+X-Trace: 24 Apr 1999 12:25:49 -0500, dbit.dbit.com
+Lines: 13
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newspeer.monmouth.com!newsfeed.wizvax.net!news.wizvax.net!dbit.com!wilson
+Xref: news3.best.com alt.sys.pdp10:4783
+
+In article <7fshb1$ct6$1@ligarius.ultra.net>,  <jmfbahciv@aol.com> wrote:
+>And to be even a bit picker, the KS was not off
+>to the side a bit.  It was an honest-to-goodness
+>PDP-10 product that was supported by TOPS-10 and
+>TOPS-20.
+
+Maybe his point was just that the other machines were each bigger and
+meaner than their predecessors, but the KS was just intended to be less
+expensive so it was a big step down as far as performance and features
+went.  So it's not part of the stepwise progression that the others were...
+
+John Wilson
+D Bit
+
+
+Article 4795 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!news-peer.gip.net!news.gsl.net!gip.net!newsfeed.berkeley.edu!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Re: PDP-6
+Date: Sat, 24 Apr 1999 16:59:40 -0700
+Organization: Networks & Distributed Computing
+Lines: 14
+Message-ID: <Pine.NXT.4.20.9904241657040.13885-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <37200ACD.896E0BCE@watson.ibm.com> <FAnGoy.M2s@world.std.com> <3721c32d.86427375@netnews.worldnet.att.net>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 924998383 36062 (None) 140.142.17.38
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: dhack
+To: "David M. Razler" <david.razler@worldnet.att.net>
+In-Reply-To: <3721c32d.86427375@netnews.worldnet.att.net>
+Xref: news3.best.com alt.sys.pdp10:4795
+
+On Sat, 24 Apr 1999, David M. Razler wrote:
+> The family tree goes PDP-3, PDP-6, KA, KI, KL (KS is off to the side a bit.)
+> it was designed and one was indeed built.
+
+The PDP-3 was a 36-bit machine; however, its architecture had nothing in
+common with the PDP-6 or the PDP-10.  It doesn't belong in the family
+tree.
+
+-- Mark --
+
+* RCW 19.190 notice: This email address is located in Washington State.	*
+* Unsolicited commercial email may be billed $500 per message.		*
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+Article 4803 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!howland.erols.net!news.idt.net!nntp.farm.idt.net!news
+From: "Chris Ward" <ccw@idt.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-6
+Date: Sun, 25 Apr 1999 09:07:59 -0400
+Organization: IDT (Best News In The World)
+Lines: 43
+Message-ID: <7fv4aj$ifd@nnrp4.farm.idt.net>
+References: <37200ACD.896E0BCE@watson.ibm.com> <FAnGoy.M2s@world.std.com> <3721c32d.86427375@netnews.worldnet.att.net> <Pine.NXT.4.20.9904241657040.13885-100000@Tomobiki-Cho.CAC.Washington.EDU> <372405f0.53799837@netnews.worldnet.att.net>
+NNTP-Posting-Host: ppp-23.ts-1-bay.hob.idt.net
+X-Newsreader: Microsoft Outlook Express 4.72.3612.1700
+X-MimeOLE: Produced By Microsoft MimeOLE V4.72.3612.1700
+Xref: news3.best.com alt.sys.pdp10:4803
+
+
+David M. Razler wrote in message
+<372405f0.53799837@netnews.worldnet.att.net>...
+>That's like saying that the 18-bit series does *not* go 1,4,7,9,15 because
+the
+>hardware architecture of each machine differed radically, and the software
+>architecture of the 1 differed from its successors.
+>
+>The 1 used (from memory) 2-bit instruction definition vs. 3 for the
+remainder,
+>the 4 and 9 were "budget models" with the 9 using a horrendous chunk of
+core
+>microcode, while the 7 and 15 were, effectively, RISC machines except for
+the
+>"horizontal microcode" (using one instruction plus individual bit flags
+for,
+>for instance all the rotates),  only the 7 and 9 shared semi-compatable
+logic
+>(yes, you could plug a PDP-7 DECTape controller into a 9 with a small
+>kludge,er, adapter, in fact, with a logic level converter you could plug it
+>into a 15, but I don't want to talk about it)
+>
+> dmr
+>
+>David M. Razler
+>david.razler@worldnet.att.net
+
+I would be inclined to agree with Mr. Crispin on this one.  For instance, if
+you were to discuss the DG Nova, I would put it in the PDP-5/8/12 family (12
+bit) and not the PDP-11 family (16 bit) based on how the machines worked,
+and not just the word length.  For that matter, the Nicolet 1080 (20 bits)
+seemed to be strongly influenced by the PDP-8, while the 1180 (again 20
+bits) seemed more influenced by the Nova.
+
+Also as I recall, one PDP-3 was built, but not by DEC.  It would be thus be
+more difficult for it to influence later DEC designs, either in hardware or
+software.
+
+Chris
+
+
+
+
+
+
+Article 4808 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!wn4feed!worldnet.att.net!wnmaster1!not-for-mail
+From: david.razler@worldnet.att.net (David M. Razler)
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-6
+Date: Sun, 25 Apr 1999 18:50:23 GMT
+Organization: AT&T WorldNet Services
+Lines: 64
+Message-ID: <372563e6.77857143@netnews.worldnet.att.net>
+References: <37200ACD.896E0BCE@watson.ibm.com> <FAnGoy.M2s@world.std.com> <3721c32d.86427375@netnews.worldnet.att.net> <Pine.NXT.4.20.9904241657040.13885-100000@Tomobiki-Cho.CAC.Washington.EDU> <372405f0.53799837@netnews.worldnet.att.net> <7fv4aj$ifd@nnrp4.farm.idt.net>
+Reply-To: david.razler@worldnet.att.net
+NNTP-Posting-Host: 12.79.220.103
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: bgtnsc02.worldnet.att.net 925066255 15403 12.79.220.103 (25 Apr 1999 18:50:55 GMT)
+X-Complaints-To: abuse@worldnet.att.net
+NNTP-Posting-Date: 25 Apr 1999 18:50:55 GMT
+X-Newsreader: Forte Agent 1.5/32.452
+Xref: news3.best.com alt.sys.pdp10:4808
+
+"Chris Ward" <ccw@idt.net> wrote:
+
+| 
+| David M. Razler wrote in message
+| <372405f0.53799837@netnews.worldnet.att.net>...
+| >That's like saying that the 18-bit series does *not* go 1,4,7,9,15 because
+| the
+| >hardware architecture of each machine differed radically, and the software
+| >architecture of the 1 differed from its successors.
+| >
+| >The 1 used (from memory) 2-bit instruction definition vs. 3 for the
+| remainder,
+| >the 4 and 9 were "budget models" with the 9 using a horrendous chunk of
+| core
+| >microcode, while the 7 and 15 were, effectively, RISC machines except for
+| the
+| >"horizontal microcode" (using one instruction plus individual bit flags
+| for,
+| >for instance all the rotates),  only the 7 and 9 shared semi-compatable
+| logic
+| >(yes, you could plug a PDP-7 DECTape controller into a 9 with a small
+| >kludge,er, adapter, in fact, with a logic level converter you could plug it
+| >into a 15, but I don't want to talk about it)
+| >
+| > dmr
+| >
+| >David M. Razler
+| >david.razler@worldnet.att.net
+| 
+| I would be inclined to agree with Mr. Crispin on this one.  For instance, if
+| you were to discuss the DG Nova, I would put it in the PDP-5/8/12 family (12
+| bit) and not the PDP-11 family (16 bit) based on how the machines worked,
+| and not just the word length.  For that matter, the Nicolet 1080 (20 bits)
+| seemed to be strongly influenced by the PDP-8, while the 1180 (again 20
+| bits) seemed more influenced by the Nova.
+| 
+| Also as I recall, one PDP-3 was built, but not by DEC.  It would be thus be
+| more difficult for it to influence later DEC designs, either in hardware or
+| software.
+| 
+| Chris
+The hardware design, and I *believe* (pending getting around to filing a
+Freedom of Information Act request to get the specifics) some of the software
+was designed by DEC - (previous posts here have connected the company that
+built it with a CIA shell declassified in the 1970s) It was built out of DEC
+modules on DEC racks to DEC standards.
+
+Last known running in Oregon 25 years ago under MIT's ownership (Bell et al.)
+It may be running yet. 
+
+Again, if we are going to fall into "how the machines worked" mentality, then
+the "PDP-11 family" is not a family at all, because (like the 7-9-15 series)
+the instruction set was implemented in so many different ways using multiple
+bus systems, etc. Do Unibus MASSBus and LSIBus systems work the same way?
+
+Does the DECMate belong in the PDP-8 family? How about the 8/A? 8/S?
+
+Are all CPM/DOS machines in the PDP-8 family because of the structure, command
+set and nature of the OS?| 
+                                                                dmr
+| 
+
+David M. Razler
+david.razler@worldnet.att.net
+
+
+Article 4810 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!144.212.100.101.MISMATCH!newsfeed.mathworks.com!newsswitch.lcs.mit.edu!newsfeed.berkeley.edu!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-6
+Date: Sun, 25 Apr 1999 13:07:03 -0700
+Organization: Networks & Distributed Computing
+Lines: 31
+Message-ID: <Pine.NXT.4.20.9904251300410.14420-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <37200ACD.896E0BCE@watson.ibm.com> <FAnGoy.M2s@world.std.com> <3721c32d.86427375@netnews.worldnet.att.net> <Pine.NXT.4.20.9904241657040.13885-100000@Tomobiki-Cho.CAC.Washington.EDU> <372405f0.53799837@netnews.worldnet.att.net>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 925070828 20106 (None) 140.142.17.38
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: btik
+To: "David M. Razler" <david.razler@worldnet.att.net>
+In-Reply-To: <372405f0.53799837@netnews.worldnet.att.net>
+Xref: news3.best.com alt.sys.pdp10:4810
+
+On Sun, 25 Apr 1999, David M. Razler wrote:
+> | > The family tree goes PDP-3, PDP-6, KA, KI, KL (KS is off to the side a bit.)
+> | > it was designed and one was indeed built.
+> | The PDP-3 was a 36-bit machine; however, its architecture had nothing in
+> | common with the PDP-6 or the PDP-10.  It doesn't belong in the family
+> | tree.
+> That's like saying that the 18-bit series does *not* go 1,4,7,9,15 because the
+> hardware architecture of each machine differed radically, and the software
+> architecture of the 1 differed from its successors.
+
+The 18-bit series is usually represented as 4,7,8,15.  The 1 did not have
+a direct successor, except in the sense that the VAX was a "successor" to
+the PDP-11.
+
+However, the PDP-3 was a completely different architecture.  It had
+36-bits, but otherwise had nothing in common with the 6/10.  The IBM 7090
+with its CAR/CDR was closer to the PDP-6 than the PDP-3 (however, there's
+really no similarity between the 7090's instructions and the PDP-6).  Or,
+put another way, the PDP-6 was a completely new design, with Lisp strongly
+influencing the architecture, and the 7090 was the contemporary Lisp
+machine.
+
+DEC never built a PDP-3; one was built by a DEC customer.  Generally, the
+PDP-3 is excluded from the list of DEC computers (like the PDP-2).
+
+-- Mark --
+
+* RCW 19.190 notice: This email address is located in Washington State.	*
+* Unsolicited commercial email may be billed $500 per message.		*
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+Article 4811 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!newshub.sdsu.edu!newsfeed.berkeley.edu!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-6
+Date: Sun, 25 Apr 1999 13:18:20 -0700
+Organization: Networks & Distributed Computing
+Lines: 25
+Message-ID: <Pine.NXT.4.20.9904251309040.14420-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <37200ACD.896E0BCE@watson.ibm.com> <FAnGoy.M2s@world.std.com> <3721c32d.86427375@netnews.worldnet.att.net> <Pine.NXT.4.20.9904241657040.13885-100000@Tomobiki-Cho.CAC.Washington.EDU> <372405f0.53799837@netnews.worldnet.att.net>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 925071503 31850 (None) 140.142.17.38
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: clam
+To: "David M. Razler" <david.razler@worldnet.att.net>
+In-Reply-To: <372405f0.53799837@netnews.worldnet.att.net>
+Xref: news3.best.com alt.sys.pdp10:4811
+
+On Sun, 25 Apr 1999, David M. Razler wrote:
+>  the software
+> architecture of the 1 differed from its successors.
+
+This is also an important point.  Most user mode PDP-6 programs will run
+on every subsequent PDP-10 processor and emulators, including the non-DEC
+machines (Maxc, Foonly, SC, and XKL).  You could make a PDP-6 only program
+if you tried hard enough (e.g. depending upon the PC change flag), but few
+people did.  SAIL never used the CONS instruction in PDP-6 Lisp (someday,
+I intend to read in the paper tape for the CONS diagnostic and find out
+how it worked).
+
+Going the other way (running a PDP-10 program on a PDP-6) depends upon not
+using hisegs, not using new system calls (the last TOPS-10 monitor that
+ran on a PDP-6 was 5.07), and being careful with floating point.
+
+There was no such path with the PDP-1 and the 4/7/9/15.  PDP-1 programs
+died with the PDP-1.
+
+-- Mark --
+
+* RCW 19.190 notice: This email address is located in Washington State.	*
+* Unsolicited commercial email may be billed $500 per message.		*
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+Article 4868 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!newsswitch.lcs.mit.edu!news.ultranet.com!not-for-mail
+From: "Larry S. Samberg" <larry-samberg@sonoma-systems.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-6
+Date: Wed, 28 Apr 1999 12:40:10 -0400
+Organization: Sonoma Systems
+Lines: 20
+Sender: larry@163.182.152.31
+Message-ID: <7g7dm7$h17$1@antiochus.ultra.net>
+References: <37200ACD.896E0BCE@watson.ibm.com> <FAnGoy.M2s@world.std.com>
+	 <3721c32d.86427375@netnews.worldnet.att.net>
+	 <Pine.NXT.4.20.9904241657040.13885-100000@Tomobiki-Cho.CAC.Washington.EDU
+	> <372405f0.53799837@netnews.worldnet.att.net>
+	 <Pine.NXT.4.20.9904251309040.14420-100000@Tomobiki-Cho.CAC.Washington.EDU
+	>
+NNTP-Posting-Host: 163.182.152.31
+Mime-Version: 1.0
+Content-Type: text/plain; charset="US-ASCII"
+Content-Transfer-Encoding: 7bit
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 28 Apr 1999 16:40:39 GMT
+X-Newsreader: Microsoft Outlook Express Macintosh Edition - 4.5 (0410)
+Xref: news3.best.com alt.sys.pdp10:4868
+
+Did 5.07 really run on a PDP6? I spent some time helping the physics 
+department at Rutgers upgrade to a -10 so they could get off of 4.50 or 4.72
+or something like that. (I think I am remembering this right, it was in 1972
+:)
+
+----------------------------------------------------
+Larry Samberg       larry-samberg@sonoma-systems.com
+Sonoma Systems, Inc.           Marlborough, MA 01752
+Phone: 508-481-2215 x342           Fax: 508-861-0261
+
+
+----------
+In article
+<Pine.NXT.4.20.9904251309040.14420-100000@Tomobiki-Cho.CAC.Washington.EDU>,
+Mark Crispin <mrc@CAC.Washington.EDU> wrote:
+
+
+> Going the other way (running a PDP-10 program on a PDP-6) depends upon not
+> using hisegs, not using new system calls (the last TOPS-10 monitor that
+> ran on a PDP-6 was 5.07), and being careful with floating point.
+
+
+Article 4878 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-6
+Date: Wed, 28 Apr 1999 18:39:25 -0700
+Organization: Networks & Distributed Computing
+Lines: 17
+Message-ID: <Pine.NXT.4.20.9904281837130.17245-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <37200ACD.896E0BCE@watson.ibm.com> <FAnGoy.M2s@world.std.com>  <3721c32d.86427375@netnews.worldnet.att.net>  <Pine.NXT.4.20.9904241657040.13885-100000@Tomobiki-Cho.CAC.Washington.EDU > <372405f0.53799837@netnews.worldnet.att.net>  <Pine.NXT.4.20.9904251309040.14420-100000@Tomobiki-Cho.CAC.Washington.EDU > <7g7dm7$h17$1@antiochus.ultra.net>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 925349967 15516 (None) 140.142.17.35
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: seung
+To: "Larry S. Samberg" <larry-samberg@sonoma-systems.com>
+In-Reply-To: <7g7dm7$h17$1@antiochus.ultra.net>
+Xref: news3.best.com alt.sys.pdp10:4878
+
+On Wed, 28 Apr 1999, Larry S. Samberg wrote:
+> Did 5.07 really run on a PDP6?
+
+Yes, the University of California at Berkeley PDP-6 ran 5.07 before it was
+retired.
+
+Regrettably, I never got to meet the beast, although I have one of its
+6205 boards.  I did meet the MIT AI and DM PDP-6s, as well as the SAIL
+PDP-6.  In fact, I remember both the AI and SAIL PDP-6s as operational
+systems.  Neither ran TOPS-10, though.
+
+-- Mark --
+
+* RCW 19.190 notice: This email address is located in Washington State.	*
+* Unsolicited commercial email may be billed $500 per message.		*
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+Article 4899 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-6
+Date: 30 Apr 1999 10:31:12 -0700
+Organization: Chez Inwap
+Message-ID: <7gcpd0$ein$1@shell3.ba.best.com>
+References: <37200ACD.896E0BCE@watson.ibm.com> <372405f0.53799837@netnews.worldnet.att.net> <Pine.NXT.4.20.9904251309040.14420-100000@Tomobiki-Cho.CAC.Washington.EDU> <54hfpyv8yj.fsf@flipper.cisco.com>
+Lines: 30
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 925493477 236 inwap@206.184.139.134
+Xref: news3.best.com alt.sys.pdp10:4899
+
+In article <54hfpyv8yj.fsf@flipper.cisco.com>,
+Bill Westfield  <billw@flipper.cisco.com> wrote:
+>    Going the other way (running a PDP-10 program on a PDP-6) depends upon not
+>    using hisegs, not using new system calls (the last TOPS-10 monitor that
+>    ran on a PDP-6 was 5.07), and being careful with floating point.
+>
+>Also OWGBPs and such, or were they tops-20 only?
+
+Only on TOPS-20 running on a KL with nonzero sections.
+Not on TOPS-20 on a KS, not on TOPS-10 with microcode prior to what was
+shipped with 7.04.  The comment about not using hisegs automatically
+eliminates extended addressing.
+
+>I was under the impression that the PDP-6 lacked a lot of the byte
+>pointer stuff (ADJBP, etc), which was pretty common in later software.
+
+ADJBP and ADJSP did not exist on the KA or KI either.  Rumor has it that
+someone added some NOR gates to their KI to cause an illegal instruction
+trap whenever the AC field of an IBP instruction was nonzero so that they
+could emulate ADJBP in software.
+
+Most of the other fancy byte-string manipulation instructions (such as
+MOVST, CVTBDO and EDIT) were used only by the COBOL compiler.  Only
+MOVSLJ and XBLT were really useful.
+	-Joe
+
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 230 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntp.primenet.com!nntp.gblx.net!hermes.visi.com!news-out.visi.com!uunet!ffx.uu.net!news.kersur.net!not-for-mail
+From: "Geoffrey G. Rochat" <geoff@pkworks.com>
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: PDP-6 info
+Date: Mon, 24 Jul 2000 07:26:43 -0400
+Organization: Kersur Technologies
+Lines: 7
+Message-ID: <8lh8oj$799$1@news.kersur.net>
+References: <8566pv3mnb.fsf@junk.nocrew.org>
+NNTP-Posting-Host: 02-075.024.popsite.net
+X-Trace: news.kersur.net 964437587 7465 216.126.160.75 (24 Jul 2000 11:19:47 GMT)
+X-Complaints-To: usenet@kersur.net
+NNTP-Posting-Date: 24 Jul 2000 11:19:47 GMT
+X-Newsreader: Microsoft Outlook Express 4.72.3110.1
+X-MimeOLE: Produced By Microsoft MimeOLE V4.72.3110.3
+Xref: nntp1.ba.best.com alt.sys.pdp10:230 alt.folklore.computers:2127
+
+
+>Has any PDP-6 documentation survived into these days?  In particulary,
+>I'm interested in which instructions the 166 CPU supported.
+
+Take a squint at:  www.ai.mit.edu/people/tk/pdp6/pdp6.html
+
+
+
+
+Article 245 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news-hog.berkeley.edu!ucberkeley!newsfeed.stanford.edu!paloalto-snf1.gtei.net!news.gtei.net!forum.apple.com!news.apple.com!haxrus.apple.com!user
+From: aek@spies.com (Al Kossow)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: PDP-6 info
+Date: Tue, 25 Jul 2000 09:05:26 -0700
+Organization: Apple Computer, Inc.
+Lines: 59
+Message-ID: <aek-2507000905260001@haxrus.apple.com>
+References: <8566pv3mnb.fsf@junk.nocrew.org>
+NNTP-Posting-Host: haxrus.apple.com
+X-Trace: news.apple.com 964541113 20524 17.205.21.66 (25 Jul 2000 16:05:13 GMT)
+X-Complaints-To: usenet@news.apple.com
+NNTP-Posting-Date: 25 Jul 2000 16:05:13 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:245 alt.folklore.computers:2276
+
+In article <8566pv3mnb.fsf@junk.nocrew.org>, lars brinkhoff
+<lars@nocrew.org> wrote:
+
+> Has any PDP-6 documentation survived into these days?  In particulary,
+> I'm interested in which instructions the 166 CPU supported.
+
+Here's a posting from a few years ago which gives the differences.
+Too bad Dejanews has developed amnesia.
+
+---
+
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Clarification desired re: instructions on KA10
+Date: Thu, 10 Sep 1998 15:32:17 -0700
+
+On Thu, 10 Sep 1998, Megan Gentry wrote:
+> Perenial question - Can anyone explain the differences between the
+> pdp-6 and the KA10?
+
+Normally I don't post to alt.* groups, but in this case I'll make an
+exception.
+
+This is probably only of academic interest, since I believe that the
+Computer Museum destroyed the last working PDP-6 in the world which was
+donated to them 14 years ago.  Unfortunately, I do not have any PDP-6
+prints; I do have several PDP-6 manuals and the diagnostic paper tape for
+the CONS instruction which was on SAIL's PDP-6 (see above re "last working
+PDP-6 in the world").
+
+I thought that I had a comparison chart that covered the PDP-6, but I
+don't, so here's what I came up with in a quick compare of the "Programmed
+Data Processor-6 Handbook" (DEC manual F-65 dated 8/64) with the "PDP-10
+System Reference Manual."  I concentrated on user program differences with
+the KD-10; it would take a lot longer to work out all the exec program
+differences.
+
+The PDP-6 did not have UFA, DFN, JFFO.
+
+JFCL 1, tests PC Change on the PDP-6, Floating Overflow on the PDP-10.
+AFAIK, this was the only way to skip or jump on the PDP-6 without setting
+PC Change!
+
+The PDP-6 did not have high segments or User I/O Mode.
+
+All UUOs are MUUOs on the PDP-6.
+
+All unassigned instructions are no-ops on the PDP-6.
+
+
+The PDP-6 was, of course, much flakier than the KA10.  The PDP-10 was in
+every way a superior machine, even though it was not significantly faster
+than the PDP-6.
+
+-- Mark --
+
+-- 
+The eBay Curse:
+"May you find everything you're looking for.."
+
+
+Article 2329 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news2.best.com!news.maxwell.syr.edu!news-hog.berkeley.edu!ucberkeley!enews.sgi.com!paloalto-snf1.gtei.net!news.gtei.net!forum.apple.com!news.apple.com!haxrus.apple.com!user
+From: aek@spies.com (Al Kossow)
+Newsgroups: alt.sys.pdp10
+Subject: Re: VAX and PDP-10 similarities (was Re: Debugging GALAXY)
+Date: Sun, 10 Dec 2000 12:31:24 -0800
+Organization: Apple Computer, Inc.
+Lines: 15
+Message-ID: <aek-1012001231240001@haxrus.apple.com>
+References: <_bDV5.29294$IP1.861987@news1.giganews.com> <90nt27$2590$1@nntp1.ba.best.com> <z5RX5.54977$IP1.1812271@news1.giganews.com> <7ZUX5.43925$%j3.481457@news6.giganews.com> <90qfh3$a4o$5@bob.news.rcn.net> <jh5Y5.58703$IP1.1922945@news1.giganews.com> <mddaea5rp5f.fsf@panix3.panix.com> <qhelzhlznm.fsf_-_@ruckus.brouhaha.com> <87g0jwtcuj.fsf@k9.prep.synonet.com>
+NNTP-Posting-Host: haxrus.apple.com
+X-Trace: news.apple.com 976480284 10576 17.205.21.66 (10 Dec 2000 20:31:24 GMT)
+X-Complaints-To: usenet@news.apple.com
+NNTP-Posting-Date: 10 Dec 2000 20:31:24 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2329
+
+In article <87g0jwtcuj.fsf@k9.prep.synonet.com>, Paul Repacholi
+<prep@prep.synonet.com> wrote:
+
+> Hum, having just looked at the ASCII in F-65, the PDP-6 proc
+> manual, this is a giggle.
+> 
+> And before anyone asks, it will be scanned and 'made available'
+> ASAP.
+
+Before you do that check out
+http://www.ai.mit.edu/people/tk/pdp6/pdp6.html
+
+-- 
+The eBay Curse:
+"May you find everything you're looking for.."
+
+
+Article 4054 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc01.blue.aol.com!news.stealth.net!news-sto.telia.net!news.defero.net!junk.nocrew.org!not-for-mail
+From: Lars Brinkhoff <lars.spam@nocrew.org>
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-6 instruction set
+Organization: nocrew
+Lines: 13
+Sender: lars@junk.nocrew.org
+Message-ID: <85k85kir2w.fsf@junk.nocrew.org>
+References: <alec-C98F4D.11342320032001@slb-newsm1.svr.pol.co.uk>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+User-Agent: Gnus/5.0808 (Gnus v5.8.8) Emacs/20.7
+Date: Tue, 20 Mar 2001 12:04:50 GMT
+NNTP-Posting-Host: 212.73.17.42
+X-Complaints-To: abuse@defero.net
+X-Trace: news.defero.net 985089890 212.73.17.42 (Tue, 20 Mar 2001 13:04:50 MET)
+NNTP-Posting-Date: Tue, 20 Mar 2001 13:04:50 MET
+Xref: nntp1.ba.best.com alt.sys.pdp10:4054
+
+Alec McKenzie <alec@paddocks.org.uk> writes:
+> I am trying to get hold of a list of the PDP-6 instruction codes.
+> Can anyone suggest where I might find this?
+
+PDP-6 Arithmetic Processor 166 Instruction Manual:
+http://www.ai.mit.edu/people/tk/pdp6/pdp6-hardware-manual.ps
+
+Phil Budne's summary of PDP-6 vs KA10 differences from Appendix E of
+HARDWARE REFERENCE MANUAL DEC-10-XSRNA-A-D:
+http://pdp10.nocrew.org/docs/pdp6-ka10.diffs.txt
+
+-- 
+http://lars.nocrew.org/
+
+
+Article 4526 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!feed.textport.net!newsfeed.mesh.ad.jp!sjc1.nntp.concentric.net!newsfeed.concentric.net!newsfeed.ozemail.com.au!nsw.nnrp.telstra.net!intgwpad.nntp.telstra.net!news-server.bigpond.net.au!not-for-mail
+Message-ID: <3ADC0A5C.E875A508@its.uq.edu.aus>
+From: Wilber Williams <W.Williams@its.uq.edu.aus>
+X-Mailer: Mozilla 4.76 [en] (Win98; U)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-6 instruction set
+References: <alec-C98F4D.11342320032001@slb-newsm1.svr.pol.co.uk> <85k85kir2w.fsf@junk.nocrew.org> <3ad63013.2234788@news.m.iinet.net.au> <3AD65D10.1247CCC5@Empire.Net> <Pine.NXT.4.40.0104122000590.21815-100000@Tomobiki-Cho.CAC.Washington.EDU> <Pine.LNX.4.21.0104131246360.8599-100000@sakura.lunar-tokyo.net> <aek-1304011128150001@haxrus.apple.com> <9bc53j$nms$4@bob.news.rcn.net> <EnPC6.1341$Hp.49516@typhoon.aracnet.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 24
+Date: Tue, 17 Apr 2001 09:17:46 GMT
+NNTP-Posting-Host: 203.45.132.11
+X-Complaints-To: news@bigpond.net.au
+X-Trace: news-server.bigpond.net.au 987499066 203.45.132.11 (Tue, 17 Apr 2001 19:17:46 EST)
+NNTP-Posting-Date: Tue, 17 Apr 2001 19:17:46 EST
+Organization: BigPond Internet Services (http://www.bigpond.net.au)
+Xref: nntp1.ba.best.com alt.sys.pdp10:4526
+
+Max Burnett, DEC Australia employee #000003, is the man who can tell you of the
+wherabouts of any DEC-x machine in Australia, whether intact or in pieces. he
+has a large colelction. I'll see if I can dis up his e-mail address and ask
+him.
+
+Wilber
+
+"Zane H. Healy" wrote:
+
+> jmfbahciv@aol.com wrote:
+> > Surely there's got to be a PDP-8 on the wet coast.
+>
+> I'm guessing this is a typo?  There are lots of PDP-8's on both coasts, and
+> in between.  I've got a -8/m.
+>
+> If you mean PDP-6, I could have sworn that I've heard of one that still
+> exists in Australia.  But I might be wrong.
+>
+> Here is the link to the PDP-6 homepage:
+> http://www.ai.mit.edu/people/tk/pdp6/pdp6.html
+> It looks like the maintenance manual and printset are there in postscript.
+>
+>                         Zane
+
+
+
+Article 4527 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!newsfeed.icl.net!colt.net!news.tele.dk!203.50.2.79!intgwlon.nntp.telstra.net!news-server.bigpond.net.au!not-for-mail
+Message-ID: <3ADC0D2D.D1EFE73E@its.uq.edu.aus>
+From: Wilber Williams <W.Williams@its.uq.edu.aus>
+X-Mailer: Mozilla 4.76 [en] (Win98; U)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-6 instruction set
+References: <alec-C98F4D.11342320032001@slb-newsm1.svr.pol.co.uk> <85k85kir2w.fsf@junk.nocrew.org> <3ad63013.2234788@news.m.iinet.net.au> <3AD65D10.1247CCC5@Empire.Net> <Pine.NXT.4.40.0104122000590.21815-100000@Tomobiki-Cho.CAC.Washington.EDU> <Pine.LNX.4.21.0104131246360.8599-100000@sakura.lunar-tokyo.net> <aek-1304011128150001@haxrus.apple.com> <9bc53j$nms$4@bob.news.rcn.net> <EnPC6.1341$Hp.49516@typhoon.aracnet.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 24
+Date: Tue, 17 Apr 2001 09:29:47 GMT
+NNTP-Posting-Host: 203.45.132.11
+X-Complaints-To: news@bigpond.net.au
+X-Trace: news-server.bigpond.net.au 987499787 203.45.132.11 (Tue, 17 Apr 2001 19:29:47 EST)
+NNTP-Posting-Date: Tue, 17 Apr 2001 19:29:47 EST
+Organization: BigPond Internet Services (http://www.bigpond.net.au)
+Xref: nntp1.ba.best.com alt.sys.pdp10:4527
+
+See http://www.terrigal.net.au/~acms/z0104.htm
+
+Damn! I was in Perth a couple of weeks ago - I could have gone tot he
+museum....
+
+Wilber
+
+"Zane H. Healy" wrote:
+
+> jmfbahciv@aol.com wrote:
+> > Surely there's got to be a PDP-8 on the wet coast.
+>
+> I'm guessing this is a typo?  There are lots of PDP-8's on both coasts, and
+> in between.  I've got a -8/m.
+>
+> If you mean PDP-6, I could have sworn that I've heard of one that still
+> exists in Australia.  But I might be wrong.
+>
+> Here is the link to the PDP-6 homepage:
+> http://www.ai.mit.edu/people/tk/pdp6/pdp6.html
+> It looks like the maintenance manual and printset are there in postscript.
+>
+>                         Zane
+
+
+
+Article 4543 of alt.sys.pdp10:
+Sender: prep@k9
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-6 instruction set
+References: <alec-C98F4D.11342320032001@slb-newsm1.svr.pol.co.uk> <85k85kir2w.fsf@junk.nocrew.org> <3ad63013.2234788@news.m.iinet.net.au> <3AD65D10.1247CCC5@Empire.Net> <Pine.NXT.4.40.0104122000590.21815-100000@Tomobiki-Cho.CAC.Washington.EDU> <Pine.LNX.4.21.0104131246360.8599-100000@sakura.lunar-tokyo.net> <aek-1304011128150001@haxrus.apple.com> <9bc53j$nms$4@bob.news.rcn.net> <EnPC6.1341$Hp.49516@typhoon.aracnet.com> <3ADC0D2D.D1EFE73E@its.uq.edu.aus>
+From: Paul Repacholi <prep@prep.synonet.com>
+Date: 17 Apr 2001 20:08:04 +0800
+Message-ID: <878zkziva3.fsf@prep.synonet.com>
+Lines: 16
+User-Agent: Gnus/5.0807 (Gnus v5.8.7) Emacs/20.7
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: 157.pe01.dial.iqnet.net.au
+X-Trace: 17 Apr 2001 21:38:02 +0800, 157.pe01.dial.iqnet.net.au
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!newsfeed.skycache.com!Cidera!netnews.com!newspeer.cwnet.com!sjc1.nntp.concentric.net!newsfeed.concentric.net!newsfeed.ozemail.com.au!news1.optus.net.au!optus!news.uwa.edu.au!nntp!usenet.per.paradox.net.au!127.0.0.1!nobody
+Xref: nntp1.ba.best.com alt.sys.pdp10:4543
+
+Wilber Williams <W.Williams@its.uq.edu.aus> writes:
+
+> See http://www.terrigal.net.au/~acms/z0104.htm
+> 
+> Damn! I was in Perth a couple of weeks ago - I could have gone tot he
+> museum....
+
+Hunt arround over there Wil, several sections of the 6/KA-10 went to UQ
+when UWA got the KL. Therer may still be bits around that Max has not
+got his hands on.
+
+-- 
+Paul Repacholi                               1 Crescent Rd.,
++61 (08) 9257-1001                           Kalamunda.
+                                             West Australia 6076
+Raw, Cooked or Well-done, it's all half baked.
+
+
+Article 4542 of alt.sys.pdp10:
+Sender: prep@k9
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-6 instruction set
+References: <alec-C98F4D.11342320032001@slb-newsm1.svr.pol.co.uk> <85k85kir2w.fsf@junk.nocrew.org> <3ad63013.2234788@news.m.iinet.net.au> <3AD65D10.1247CCC5@Empire.Net> <Pine.NXT.4.40.0104122000590.21815-100000@Tomobiki-Cho.CAC.Washington.EDU> <Pine.LNX.4.21.0104131246360.8599-100000@sakura.lunar-tokyo.net> <aek-1304011128150001@haxrus.apple.com> <9bc53j$nms$4@bob.news.rcn.net> <EnPC6.1341$Hp.49516@typhoon.aracnet.com>
+From: Paul Repacholi <prep@prep.synonet.com>
+Date: 17 Apr 2001 20:06:09 +0800
+Message-ID: <87d7abivda.fsf@prep.synonet.com>
+Lines: 26
+User-Agent: Gnus/5.0807 (Gnus v5.8.7) Emacs/20.7
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: 157.pe01.dial.iqnet.net.au
+X-Trace: 17 Apr 2001 21:38:00 +0800, 157.pe01.dial.iqnet.net.au
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!enews.sgi.com!news.xtra.co.nz!news.mel.connect.com.au!news1.optus.net.au!optus!news.uwa.edu.au!nntp!usenet.per.paradox.net.au!127.0.0.1!nobody
+Xref: nntp1.ba.best.com alt.sys.pdp10:4542
+
+"Zane H. Healy" <healyzh@shell1.aracnet.com> writes:
+
+> jmfbahciv@aol.com wrote:
+
+> > Surely there's got to be a PDP-8 on the wet coast.
+> 
+> I'm guessing this is a typo?  There are lots of PDP-8's on both
+> coasts, and in between.  I've got a -8/m.
+
+> If you mean PDP-6, I could have sworn that I've heard of one that
+> still exists in Australia.  But I might be wrong.
+
+ONE, the first, PDP-6 came to .au. It was sold to UWA in '64. The
+'console' bays are at the Wireless Hill Museum, and the display is
+in ACMS(WA) store. Two stripped out cab are still at UWA with coms
+gear in them. I have the nameplate from the 630. The PDP-8 disk
+controller is at a friends place.
+
+Hum, change nameplate to namePLATE. It is 1/4" think machined Al.
+
+
+-- 
+Paul Repacholi                               1 Crescent Rd.,
++61 (08) 9257-1001                           Kalamunda.
+                                             West Australia 6076
+Raw, Cooked or Well-done, it's all half baked.
+
+
+Article 4444 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!panix!news.panix.com!not-for-mail
+From: Rich Alderson <alderson+news@panix.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-6 instruction set
+Date: 13 Apr 2001 15:11:57 -0400
+Organization: Systems Administration, XKL LLC, Redmond WA 98052
+Lines: 12
+Sender: alderson+news@panix3.panix.com
+Message-ID: <mddeluwhawy.fsf@panix3.panix.com>
+References: <alec-C98F4D.11342320032001@slb-newsm1.svr.pol.co.uk> <85k85kir2w.fsf@junk.nocrew.org> <3ad63013.2234788@news.m.iinet.net.au> <3AD65D10.1247CCC5@Empire.Net> <Pine.NXT.4.40.0104122000590.21815-100000@Tomobiki-Cho.CAC.Washington.EDU> <3AD6D7BC.FD633A8C@Empire.Net>
+NNTP-Posting-Host: panix3.panix.com
+X-Trace: news.panix.com 987189117 755 166.84.0.228 (13 Apr 2001 19:11:57 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: 13 Apr 2001 19:11:57 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.7
+Xref: nntp1.ba.best.com alt.sys.pdp10:4444
+
+John Sauter <J_Sauter@Empire.Net> writes:
+
+> Why do you regard this particular PDP-6 as beloved?
+
+Because it was the last one in the world?  Because SAIL was a cool place?
+
+Hey, I got the opportunity to see it in place at the D. C. Power Lab just
+before it was dismantled for its trip to Anaheim for the 20th Anniversary.
+
+-- 
+Rich Alderson                                          alderson+news@panix.com
+  "You get what anybody gets.  You get a lifetime."  --Death, of the Endless
+
+
+Article 4448 of alt.sys.pdp10:
+Message-ID: <3AD78C4A.91B65453@Empire.Net>
+Date: Fri, 13 Apr 2001 19:31:22 -0400
+From: John Sauter <J_Sauter@Empire.Net>
+Organization: System Eyes Computer Store
+X-Mailer: Mozilla 4.73 [en]C-CCK-MCD NSCPCD47  (WinNT; U)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-6 instruction set
+References: <alec-C98F4D.11342320032001@slb-newsm1.svr.pol.co.uk> <85k85kir2w.fsf@junk.nocrew.org> <3ad63013.2234788@news.m.iinet.net.au> <3AD65D10.1247CCC5@Empire.Net> <Pine.NXT.4.40.0104122000590.21815-100000@Tomobiki-Cho.CAC.Washington.EDU> <3AD6D7BC.FD633A8C@Empire.Net> <mddeluwhawy.fsf@panix3.panix.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+NNTP-Posting-Host: 198.144.141.148
+X-Trace: News.Destek.net 987204677 198.144.141.148 (13 Apr 2001 19:31:17 -0500)
+Lines: 25
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!news-out.cwix.com!newsfeed.cwix.com!News.Destek.net
+Xref: nntp1.ba.best.com alt.sys.pdp10:4448
+
+I got to see its beginning; I helped Bob and the rest
+of the AI crew push it onto the raised floor.  I was
+its system programmer from then until 1969, and worked
+on 10's and 20's until 1978, when I defected to the
+VAX.  Nevertheless, I don't consider it, or any
+computer, beloved.  Not even the PDP-1, which was the
+first computer I programmed.  When you have seen
+enough of your friends die, you get defensive and
+thick-skinned.  They're only computers.
+    John Sauter (J_Sauter@Empire.Net)
+
+Rich Alderson wrote:
+> 
+> John Sauter <J_Sauter@Empire.Net> writes:
+> 
+> > Why do you regard this particular PDP-6 as beloved?
+> 
+> Because it was the last one in the world?  Because SAIL was a cool place?
+> 
+> Hey, I got the opportunity to see it in place at the D. C. Power Lab just
+> before it was dismantled for its trip to Anaheim for the 20th Anniversary.
+> 
+> --
+> Rich Alderson                                          alderson+news@panix.com
+>   "You get what anybody gets.  You get a lifetime."  --Death, of the Endless
+
+
+Article: 15318 of alt.sys.pdp10
+Message-ID: <3C4B2A0D.FD103970@Empire.Net>
+Date: Sun, 20 Jan 2002 15:35:25 -0500
+From: John Sauter <J_Sauter@Empire.Net>
+Organization: System Eyes Computer Store
+X-Mailer: Mozilla 4.73 [en]C-CCK-MCD NSCPCD47  (WinNT; U)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: comp.os.vms,alt.sys.pdp10,comp.sys.dec
+Subject: Re: VMS missing features (was how to do deamons on VMS)
+References: <3roT7.207043$tf5.13617499@bin5.nnrp.aus1.giganews.com> <Pine.NXT.4.43.0112180728280.29894-100000@Tomobiki-Cho.CAC.Washington.EDU> <bPdy0bnguswq@eisner.encompasserve.org> <9vsfqc$1ng$4@bob.news.rcn.net> <QdaytLRYA6HS@eisner.encompasserve.org> <ggce4ucl9415ticbdvh7hechcm4lts93s3@4ax.com> <a27jrv$fmi@gap.cco.caltech.edu> <Pine.NXT.4.50.0201171823270.6206-100000@Tomobiki-Cho.CAC.Washington.EDU> <87it9yxohs.fsf@prep.synonet.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+NNTP-Posting-Host: hydra141-152.empire.net
+X-Trace: News.Destek.net 1011558927 hydra141-152.empire.net (20 Jan 2002 15:35:27 -0500)
+Lines: 16
+Path: iad-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!newsfeed.mathworks.com!newsfeed.cwix.com!News.Destek.net
+Xref: dfw-artgen.news.verio.net comp.os.vms:124151 alt.sys.pdp10:15318 comp.sys.dec:25002
+
+Paul Repacholi wrote (excerpted):
+
+Am I right that there was only one Full Moby (256K) PDP-6? 
+One of the Stanford ones?
+
+John Sauter responded:
+
+As far as I know, Stanford had only one PDP-6, and it was
+among the last ones manufactured.  Before the arrival
+of SAIL's KA10 I believe it had only 64 K words.  
+After the KA10 was installed we ran a two-CPU system 
+(KA10 and 166, with the 166 operating as a slave)
+and I think the memory was increased after that, 
+but a system that includes a KA10 is not, strictly 
+speaking, a PDP-6 any more.
+    John Sauter (J_Sauter@Empire.Net)
+
+
+Article: 15333 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!iad-feed.news.verio.net!phl-feed.news.verio.net!news.verio.net!newsmaster.cc.columbia.edu!panix!bloom-beacon.mit.edu!newsfeed.stanford.edu!logbridge.uoregon.edu!news.u.washington.edu!140.142.17.34.MISMATCH!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: comp.os.vms,alt.sys.pdp10,comp.sys.dec
+Subject: Re: VMS missing features (was how to do deamons on VMS)
+Date: Mon, 21 Jan 2002 20:02:10 -0800
+Organization: Pandamonium Reigns
+Lines: 14
+Message-ID: <Pine.NXT.4.50.0201211959590.18724-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <3roT7.207043$tf5.13617499@bin5.nnrp.aus1.giganews.com>
+ <Pine.NXT.4.43.0112180728280.29894-100000@Tomobiki-Cho.CAC.Washington.EDU>
+ <bPdy0bnguswq@eisner.encompasserve.org> <9vsfqc$1ng$4@bob.news.rcn.net>
+ <QdaytLRYA6HS@eisner.encompasserve.org> <ggce4ucl9415ticbdvh7hechcm4lts93s3@4ax.com>
+ <a27jrv$fmi@gap.cco.caltech.edu> <Pine.NXT.4.50.0201171823270.6206-100000@Tomobiki-Cho.CAC.Washington.EDU>
+ <87it9yxohs.fsf@prep.synonet.com>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp6.u.washington.edu 1011672136 9710 (None) 140.142.17.40
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: senf
+In-Reply-To: <87it9yxohs.fsf@prep.synonet.com>
+Content-Length: 314159 (believe this at your own risk)
+Xref: dfw-artgen.news.verio.net comp.os.vms:124351 alt.sys.pdp10:15333 comp.sys.dec:25014
+
+On 20 Jan 2002, Paul Repacholi wrote:
+> Am I right that there was only one Full Moby (256K) PDP-6? One
+> of the Stanford ones?
+
+The MIT AI Lab PDP-6 had a full moby (Fabritek), an unheard-of thing at
+the time.  I don't know if Stanford's PDP-6 ever did; at the time I was
+there (starting in 1977) it only had the original 64K memory box.
+
+-- Mark --
+
+http://staff.washington.edu/mrc
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+
+Article: 15339 of alt.sys.pdp10
+Message-ID: <3C4D4DC1.4444CFBE@Empire.Net>
+Date: Tue, 22 Jan 2002 06:32:17 -0500
+From: John Sauter <J_Sauter@Empire.Net>
+Organization: System Eyes Computer Store
+X-Mailer: Mozilla 4.73 [en]C-CCK-MCD NSCPCD47  (WinNT; U)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: comp.os.vms,alt.sys.pdp10,comp.sys.dec
+Subject: Re: VMS missing features (was how to do deamons on VMS)
+References: <3roT7.207043$tf5.13617499@bin5.nnrp.aus1.giganews.com>
+	 <Pine.NXT.4.43.0112180728280.29894-100000@Tomobiki-Cho.CAC.Washington.EDU>
+	 <bPdy0bnguswq@eisner.encompasserve.org> <9vsfqc$1ng$4@bob.news.rcn.net>
+	 <QdaytLRYA6HS@eisner.encompasserve.org> <ggce4ucl9415ticbdvh7hechcm4lts93s3@4ax.com>
+	 <a27jrv$fmi@gap.cco.caltech.edu> <Pine.NXT.4.50.0201171823270.6206-100000@Tomobiki-Cho.CAC.Washington.EDU>
+	 <87it9yxohs.fsf@prep.synonet.com> <Pine.NXT.4.50.0201211959590.18724-100000@Tomobiki-Cho.CAC.Washington.EDU>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+NNTP-Posting-Host: hydra140-97.empire.net
+X-Trace: News.Destek.net 1011699139 hydra140-97.empire.net (22 Jan 2002 06:32:19 -0500)
+Lines: 14
+Path: iad-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!crtntx1-snh1.gtei.net!washdc3-snh1.gtei.net!news.gtei.net!feeder.qis.net!news.maxwell.syr.edu!out.nntp.be!propagator-SanJose!in.nntp.be!news-in-sanjose!News.Destek.net
+Xref: dfw-artgen.news.verio.net comp.os.vms:124387 alt.sys.pdp10:15339 comp.sys.dec:25022
+
+Mark Crispin wrote:
+
+The MIT AI Lab PDP-6 had a full moby (Fabritek), an 
+unheard-of thing at the time.  I don't know if Stanford's 
+PDP-6 ever did; at the time I was there (starting in 1977) 
+it only had the original 64K memory box.
+
+John Sauter responded:
+
+The original memory for the Stanford PDP-6 was four
+16K memory boxes, model 163s.  An additional box,
+a model 162, held 16 words of memory, addressed as
+locations 0-15.
+    John Sauter (J_Sauter@Empire.Net)
+
+
+Article: 15360 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!newspump.sol.net!newsfeed.direct.ca!look.ca!news.he.net!news-hog.berkeley.edu!ucberkeley!news.u.washington.edu!140.142.17.34.MISMATCH!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: comp.os.vms,alt.sys.pdp10,comp.sys.dec
+Subject: Re: VMS missing features (was how to do deamons on VMS)
+Date: Tue, 22 Jan 2002 12:36:47 -0800
+Organization: Pandamonium Reigns
+Lines: 20
+Message-ID: <Pine.NXT.4.50.0201221235120.19126-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <3roT7.207043$tf5.13617499@bin5.nnrp.aus1.giganews.com> 
+ <Pine.NXT.4.43.0112180728280.29894-100000@Tomobiki-Cho.CAC.Washington.EDU>
+  <bPdy0bnguswq@eisner.encompasserve.org> <9vsfqc$1ng$4@bob.news.rcn.net> 
+ <QdaytLRYA6HS@eisner.encompasserve.org> <ggce4ucl9415ticbdvh7hechcm4lts93s3@4ax.com>
+  <a27jrv$fmi@gap.cco.caltech.edu> <Pine.NXT.4.50.0201171823270.6206-100000@Tomobiki-Cho.CAC.Washington.EDU>
+  <87it9yxohs.fsf@prep.synonet.com> <Pine.NXT.4.50.0201211959590.18724-100000@Tomobiki-Cho.CAC.Washington.EDU>
+ <3C4D4DC1.4444CFBE@Empire.Net>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp6.u.washington.edu 1011731809 93198 (None) 140.142.17.37
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: allos
+To: John Sauter <J_Sauter@Empire.Net>
+In-Reply-To: <3C4D4DC1.4444CFBE@Empire.Net>
+Content-Length: 314159 (believe this at your own risk)
+Xref: dfw-artgen.news.verio.net comp.os.vms:124518 alt.sys.pdp10:15360 comp.sys.dec:25030
+
+On Tue, 22 Jan 2002, John Sauter wrote:
+> Mark Crispin wrote:
+> > The MIT AI Lab PDP-6 had a full moby (Fabritek), an
+> > unheard-of thing at the time.  I don't know if Stanford's
+> > PDP-6 ever did; at the time I was there (starting in 1977)
+> > it only had the original 64K memory box.
+> The original memory for the Stanford PDP-6 was four
+> 16K memory boxes, model 163s.  An additional box,
+> a model 162, held 16 words of memory, addressed as
+> locations 0-15.
+
+The 162 (a.k.a. fast ACs) was still there in 1977 when I started work at
+SAIL, but the 163s were gone, replaced with this big honking box that held
+all of 64K.
+
+-- Mark --
+
+http://staff.washington.edu/mrc
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+Article: 15437 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!iad-peer.news.verio.net!news.verio.net!fu-berlin.de!newsfeed.iinet.net.au!nntp.waia.asn.au!nnrp.waia.asn.au!!nobody
+From: Paul Repacholi <prep@prep.synonet.com>
+Newsgroups: comp.os.vms,alt.sys.pdp10,comp.sys.dec
+Subject: PDP-6 memory
+Date: 24 Jan 2002 19:30:49 +0800
+Organization: iQnet
+Lines: 18
+Sender: prep@k9
+Message-ID: <878zaovvdi.fsf_-_@prep.synonet.com>
+References: <3roT7.207043$tf5.13617499@bin5.nnrp.aus1.giganews.com> <Pine.NXT.4.43.0112180728280.29894-100000@Tomobiki-Cho.CAC.Washington.EDU> <bPdy0bnguswq@eisner.encompasserve.org> <9vsfqc$1ng$4@bob.news.rcn.net> <QdaytLRYA6HS@eisner.encompasserve.org> <ggce4ucl9415ticbdvh7hechcm4lts93s3@4ax.com> <a27jrv$fmi@gap.cco.caltech.edu> <Pine.NXT.4.50.0201171823270.6206-100000@Tomobiki-Cho.CAC.Washington.EDU> <87it9yxohs.fsf@prep.synonet.com> <Pine.NXT.4.50.0201211959590.18724-100000@Tomobiki-Cho.CAC.Washington.EDU> <3C4D4DC1.4444CFBE@Empire.Net> <Pine.NXT.4.50.0201221235120.19126-100000@Tomobiki-Cho.CAC.Washington.EDU>
+NNTP-Posting-Host: news-01.core.usertools.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Trace: nnrp.waia.asn.au 1011884489 2565 203.12.222.155 (24 Jan 2002 15:01:29 GMT)
+X-Complaints-To: usenet@nnrp.waia.asn.au
+NNTP-Posting-Date: Thu, 24 Jan 2002 15:01:29 +0000 (UTC)
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.1
+Cache-Post-Path: angelina!unknown@p203.ch01.auto.usertools.net
+X-Cache: nntpcache 2.3.3 (see http://www.nntpcache.org/)
+Xref: dfw-artgen.news.verio.net comp.os.vms:124837 alt.sys.pdp10:15437 comp.sys.dec:25050
+
+Mark Crispin <mrc@CAC.Washington.EDU> writes:
+
+> The 162 (a.k.a. fast ACs) was still there in 1977 when I started
+> work at SAIL, but the 163s were gone, replaced with this big honking
+> box that held all of 64K.
+
+The story I was told, twice, once by a ex Tops developer, and once by
+someone from DEC oz, was that <site> had expanded the memory on their
+6.  It was booted, and nothing happened. Dead as a maggo. Then the
+penny dropped, it was sizing memory, and waiting for the NXM as it
+counted up :) I thought it was Stanford.
+
+-- 
+Paul Repacholi                               1 Crescent Rd.,
++61 (08) 9257-1001                           Kalamunda.
+                                             West Australia 6076
+Raw, Cooked or Well-done, it's all half baked.
+EPIC, The Architecture of the future, always has been, always will be.
+
+
+Article: 15457 of alt.sys.pdp10
+Message-ID: <3C50D1D9.1715428E@Empire.Net>
+Date: Thu, 24 Jan 2002 22:32:41 -0500
+From: John Sauter <J_Sauter@Empire.Net>
+Organization: System Eyes Computer Store
+X-Mailer: Mozilla 4.73 [en]C-CCK-MCD NSCPCD47  (WinNT; U)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: comp.os.vms,alt.sys.pdp10,comp.sys.dec
+Subject: Re: PDP-6 memory
+References: <3roT7.207043$tf5.13617499@bin5.nnrp.aus1.giganews.com> <Pine.NXT.4.43.0112180728280.29894-100000@Tomobiki-Cho.CAC.Washington.EDU> <bPdy0bnguswq@eisner.encompasserve.org> <9vsfqc$1ng$4@bob.news.rcn.net> <QdaytLRYA6HS@eisner.encompasserve.org> <ggce4ucl9415ticbdvh7hechcm4lts93s3@4ax.com> <a27jrv$fmi@gap.cco.caltech.edu> <Pine.NXT.4.50.0201171823270.6206-100000@Tomobiki-Cho.CAC.Washington.EDU> <87it9yxohs.fsf@prep.synonet.com> <Pine.NXT.4.50.0201211959590.18724-100000@Tomobiki-Cho.CAC.Washington.EDU> <3C4D4DC1.4444CFBE@Empire.Net> <Pine.NXT.4.50.0201221235120.19126-100000@Tomobiki-Cho.CAC.Washington.EDU> <878zaovvdi.fsf_-_@prep.synonet.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+NNTP-Posting-Host: hydra141-181.empire.net
+X-Trace: News.Destek.net 1011929564 hydra141-181.empire.net (24 Jan 2002 22:32:44 -0500)
+Lines: 22
+Path: iad-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!crtntx1-snh1.gtei.net!nycmny1-snh1.gtei.net!news.gtei.net!news-out.visi.com!hermes.visi.com!out.nntp.be!propagator-SanJose!in.nntp.be!news-in-sanjose!News.Destek.net
+Xref: dfw-artgen.news.verio.net comp.os.vms:124926 alt.sys.pdp10:15457 comp.sys.dec:25062
+
+Paul Repacholi wrote:
+
+The story I was told, twice, once by a ex Tops developer, 
+and once by someone from DEC oz, was that <site> had 
+expanded the memory on their 6.  It was booted, and 
+nothing happened. Dead as a maggo. Then the penny 
+dropped, it was sizing memory, and waiting for the NXM 
+as it counted up :) I thought it was Stanford.
+
+John Sauter retorted:
+
+I can't be sure it wasn't Stanford, but Stanford had
+only one PDP-6, and I was the System Programmer at
+the AI Lab from 1964 (when we got the system) until
+1969, and I don't recall it happening.  At the time
+I left we still had the 166, but the system was no
+longer a PDP-6, strictly speaking, because it also
+had a KA10 processor.  Perhaps the system was later
+split up, and 256KW of memory was put on the 166?
+
+What's a maggo?
+    John Sauter (J_Sauter@Empire.Net)
+
+
+Article: 15482 of alt.sys.pdp10
+From: berdpee@ami.com.au
+Newsgroups: alt.sys.pdp10
+Subject: PDP-6 a machine of great beauty!
+Date: Sat, 26 Jan 2002 00:32:54 GMT
+Message-ID: <3c51f801.5245860@news.ami.com.au>
+X-Newsreader: Forte Free Agent 1.21/32.243
+NNTP-Posting-Host: a0s04.ami.com.au
+X-Trace: 26 Jan 2002 08:33:11 +0800, a0s04.ami.com.au
+Lines: 7
+Path: iad-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!crtntx1-snh1.gtei.net!washdc3-snh1.gtei.net!news.gtei.net!feeder.qis.net!news.maxwell.syr.edu!newsfeed.media.kyoto-u.ac.jp!news-out.spamkiller.net!propagator-maxim!feed.newsfeeds.com!newsfeed.iinet.net.au!nntp.waia.asn.au!usenet.per.paradox.net.au!a0s04.ami.com.au
+Xref: dfw-artgen.news.verio.net alt.sys.pdp10:15482
+
+Despite the PC change flag and other understandable mistakes the PDP-6
+was still a machine of great beauty. I for one loved it dearly, else
+why would  I have gone at 3am to the UWA computing centre week in and
+week out for months to work on my print spooler and other changes to
+the OS. I might add completely UNPAID and unthanked. I did however get
+some free time for my trouble.  
+aeolus
+
+
+Article: 18654 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!news-out.nuthinbutnews.com!propagator2-sterling!news-in-sterling.newsfeed.com!newsfeed.iinet.net.au!nntp.waia.asn.au!nnrp.waia.asn.au!127.0.0.1!nobody
+From: Paul Repacholi <prep@prep.synonet.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Access to the chook manuals
+Date: 04 Jan 2003 05:26:28 +0800
+Organization: none
+Lines: 25
+Sender: prep@k9
+Message-ID: <87u1gpdiwr.fsf@prep.synonet.com>
+References: <3e15b27d_2@news.iglou.com> <av4ft1$fpe$1@spies.com> <3E15D000.4070007@planet.nl> <3e15d70b$1_1@news.iglou.com>
+NNTP-Posting-Host: news-01.core.usertools.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Trace: nnrp.waia.asn.au 1041629345 25750 202.154.80.9 (3 Jan 2003 21:29:05 GMT)
+X-Complaints-To: usenet@nnrp.waia.asn.au
+NNTP-Posting-Date: Fri, 3 Jan 2003 21:29:05 +0000 (UTC)
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.2
+Cache-Post-Path: heidi.pe!unknown@p212.qv1-01.dial.usertools.net
+X-Cache: nntpcache 2.3.3 (see http://www.nntpcache.org/)
+Xref: dfw-artgen alt.sys.pdp10:18654
+
+"Douglas H. Quebbeman" <dougq@iglou.com> writes:
+
+> > Broken yes, but fixable. They got the file extension wrong on all
+> > the links, so the tif directory has the .tif files but the index
+> > shows .pdf Likewise the pdf dir has .pdf's but the index shows
+> > .tif.
+ 
+> The links in the left-hand frame are also broken- obviously a
+> work-in-progress. yesterday, I was able to google up a cached page
+> of links from chook, but today, it's gone...
+
+The unis are on xmas hols, for a variable time, so I'd not hold
+my breath at this time of the year. :) 
+
+It seems to have dropped of the face of the DNS to boot...
+
+BTW, they got the pdp-6 memory boxes from UWA as I remember.
+
+-- 
+Paul Repacholi                               1 Crescent Rd.,
++61 (08) 9257-1001                           Kalamunda.
+                                             West Australia 6076
+comp.os.vms,- The Older, Grumpier Slashdot
+Raw, Cooked or Well-done, it's all half baked.
+EPIC, The Architecture of the future, always has been, always will be.
+
+
+Article: 18659 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newsfeed.cwix.com!newsfeed.mathworks.com!wn13feed!worldnet.att.net!204.127.198.203!attbi_feed3!attbi_feed4!attbi.com!sccrnsc02.POSTED!not-for-mail
+Message-ID: <3E16A384.F3102E5E@ev1.net>
+From: Charles Richmond <richmond@ev1.net>
+Reply-To: richmond@ev1.net
+Organization: Canine Computer Center
+X-Mailer: Mozilla 4.7C-CCK-MCD {C-UDP; EBM-APPLE} (Macintosh; I; PPC)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: Access to the chook manuals
+References: <3e15b27d_2@news.iglou.com> <av4ft1$fpe$1@spies.com> <3E15D000.4070007@planet.nl>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 34
+NNTP-Posting-Host: 12.237.69.162
+X-Complaints-To: abuse@attbi.com
+X-Trace: sccrnsc02 1041663904 12.237.69.162 (Sat, 04 Jan 2003 07:05:04 GMT)
+NNTP-Posting-Date: Sat, 04 Jan 2003 07:05:04 GMT
+Date: Sat, 04 Jan 2003 07:05:04 GMT
+Xref: dfw-artgen alt.sys.pdp10:18659
+
+Jan van Mastbergen wrote:
+> 
+> Al Kossow wrote:
+> > From article <3e15b27d_2@news.iglou.com>, by "Douglas H. Quebbeman" <dougq@iglou.com>:
+> >
+> >>  http://www.computer.museum.uq.edu.au/pdf/index.html
+> >>
+> >
+> >
+> > Every actual document link is broken.
+> >
+> 
+> Broken yes, but fixable. They got the file extension wrong on all the
+> links, so the tif directory has the .tif files but the index shows .pdf
+> Likewise the pdf dir has .pdf's but the index shows .tif.
+> 
+1) Go to the page above:
+
+	<http://www.computer.museum.uq.edu.au/pdf/index.html>
+
+2) Make sure that your location bar is showing on your browser.
+
+3) Click on one of the ".tif" links on this page
+
+4) When the "not found" page comes up, modify what is in the
+   location toolbar by deleting the last ".tif" and replacing
+   it with a ".pdf"
+
+5) Press enter...the Acrobat file will start to download.
+
+-- 
++-------------------------------------------------------------+
+|     Charles and Francis Richmond     <richmond@plano.net>   |
++-------------------------------------------------------------+
+
+
+Article: 108028 of alt.folklore.computers
+Newsgroups: comp.os.vms,comp.sys.dec,de.comp.os.vms,alt.folklore.computers
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newsfeed.cwix.com!wn14feed!worldnet.att.net!198.6.0.123!uunet!sac.uu.net!ash.uu.net!world!bdc
+From: bdc@world.std.com (Brian 'Jarai' Chase)
+Subject: Dinosaurs on the net? [was Re: vax6k.openecs.org rebirth]
+X-No-Ahbou: yes
+Message-ID: <H7r1I7.FJB@world.std.com>
+Sender: bdc@world.std.com
+Date: Thu, 26 Dec 2002 23:06:07 GMT
+X-Face: "CVLf:[<KxmZ4`JL2L]sLxmzFfk}lq-ZVnHX4~\rN(J4,Q#HJ]/Pp!roJnOvpg*ndNm^hrC?DB/G&?Nc"+;x|<;I0:mhDrq@\T04N%Xhulr"i,Ci]ueIfuvq[NgfE|Y[!{5y8)~vMVrE|UKX/IAw
+References: <3E05FE9D.B3A12286@vax6k.openecs.org> <3e0f265c.7463269@news.btopenworld.com> <H7nz1r.385@world.std.com> <6oseua.f5i.ln@via.reistad.priv.no>
+X-No-Archive: Yes
+Organization: HappyNet Bungalow
+Lines: 17
+Xref: dfw-artgen comp.os.vms:167358 comp.sys.dec:28409 de.comp.os.vms:3578 alt.folklore.computers:108028
+
+In article <6oseua.f5i.ln@via.reistad.priv.no>,
+Morten Reistad  <mrr@reistad.priv.no> wrote:
+
+> I am not too well versed in PDP10s predating the KL and Tops20 version 3A;
+> but I believe the KA10 would run versions of Tops10 that supported telnet.
+> The KA10 is most certainly a transistor (and diode!) construction.
+
+Or if not the KA10, what about DEC's PDP-6 systems?  SAIL was originally 
+a PDP-6 when it went online in 1966.  Eventually it was upgraded to a more
+capable processor, but how long did they run with on the PDP-6; was it
+long enough to have it connected to Arpanet?  Were there any other PDP-6
+systems around that would've been on the net sometime during the 1970s?
+
+-brian.
+-- 
+--- Brian Chase | bdc@world.std.com | http://world.std.com/~bdc/ -----
+Computers are useless.  They can only give you answers.  -- Pablo Picasso.
+
+
+Article: 108096 of alt.folklore.computers
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newsfeed.cwix.com!news1.optus.net.au!optus!news.uwa.edu.au!nntp.waia.asn.au!nnrp.waia.asn.au!127.0.0.1!nobody
+From: Paul Repacholi <prep@prep.synonet.com>
+Newsgroups: comp.os.vms,comp.sys.dec,de.comp.os.vms,alt.folklore.computers
+Subject: Re: Dinosaurs on the net? [was Re: vax6k.openecs.org rebirth]
+Date: 28 Dec 2002 03:46:00 +0800
+Organization: none
+Lines: 32
+Sender: prep@k9
+Message-ID: <87ptrndz47.fsf@prep.synonet.com>
+References: <3E05FE9D.B3A12286@vax6k.openecs.org> <3e0f265c.7463269@news.btopenworld.com> <H7nz1r.385@world.std.com> <6oseua.f5i.ln@via.reistad.priv.no> <H7r1I7.FJB@world.std.com>
+NNTP-Posting-Host: news-01.core.usertools.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Trace: nnrp.waia.asn.au 1041022595 9053 202.154.80.9 (27 Dec 2002 20:56:35 GMT)
+X-Complaints-To: usenet@nnrp.waia.asn.au
+NNTP-Posting-Date: Fri, 27 Dec 2002 20:56:35 +0000 (UTC)
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.2
+Cache-Post-Path: heidi.pe!unknown@p155.qv1-01.dial.usertools.net
+X-Cache: nntpcache 2.3.3 (see http://www.nntpcache.org/)
+Xref: dfw-artgen comp.os.vms:167469 comp.sys.dec:28432 de.comp.os.vms:3591 alt.folklore.computers:108096
+
+bdc@world.std.com (Brian 'Jarai' Chase) writes:
+
+> In article <6oseua.f5i.ln@via.reistad.priv.no>,
+> Morten Reistad  <mrr@reistad.priv.no> wrote:
+ 
+> > I am not too well versed in PDP10s predating the KL and Tops20
+> > version 3A; but I believe the KA10 would run versions of Tops10
+> > that supported telnet.  The KA10 is most certainly a transistor
+> > (and diode!) construction.
+ 
+> Or if not the KA10, what about DEC's PDP-6 systems?  SAIL was
+> originally a PDP-6 when it went online in 1966.  Eventually it was
+> upgraded to a more capable processor, but how long did they run with
+> on the PDP-6; was it long enough to have it connected to Arpanet?
+> Were there any other PDP-6 systems around that would've been on the
+> net sometime during the 1970s?
+
+Possibly. UWA had PDP-6 sn 4, the first one sold. In '72 it was
+replaced by a Cyber 72... and a few month later, a KA-10 was installed.
+There was much joy from many! That machine was one of the first to
+use a packet switched net from UWA to WAIT in 74 (I think...I can
+never remember if it was 74 or 75) The Arpanet was running to some
+degree before that, so the SAIL 6 well could have been on it.
+
+
+-- 
+Paul Repacholi                               1 Crescent Rd.,
++61 (08) 9257-1001                           Kalamunda.
+                                             West Australia 6076
+comp.os.vms,- The Older, Grumpier Slashdot
+Raw, Cooked or Well-done, it's all half baked.
+EPIC, The Architecture of the future, always has been, always will be.
+
+

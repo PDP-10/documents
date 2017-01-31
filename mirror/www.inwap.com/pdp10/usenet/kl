@@ -1,0 +1,1955 @@
+Article 5542 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.sys.pdp10
+Subject: Re: MCA25 cache/pager question & other obscure hardware questions
+Date: 31 Jul 1999 23:22:39 -0700
+Organization: Chez Inwap
+Message-ID: <7o0p3f$c7c$1@shell3.ba.best.com>
+References: <qhg1257gy1.fsf@ruckus.brouhaha.com>
+Lines: 19
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 933488563 206 inwap@206.184.139.134
+Xref: news3.best.com alt.sys.pdp10:5542
+
+In article <qhg1257gy1.fsf@ruckus.brouhaha.com>,
+Eric Smith  <eric-no-spam-for-me@brouhaha.com> wrote:
+>Did the MCA25 cache/pager upgrade for the KL10 (which was standard on the
+>KL10-PW as used in the 1095 and 2065, IINM) require new microcode?
+
+As I remember, the answer is "no".  It was not a new pager, it was a
+pager with a larger TLB (translation look-aside buffer).  It meant that
+more virtual-to-physical translations were kept in the pager, which
+reduced the number of times that the microcode had to go to the page
+tables.  As for the cache, there were simply more entries in the table
+that was indexed into by a portion of the physical address bits.  The
+microcode was unaware of the increased table size; there simply were
+less cache misses than before.
+	-Joe
+
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 5547 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newsfeed.cwix.com!152.163.239.227!portc03.blue.aol.com!audrey01.news.aol.com!not-for-mail
+From: madbeing@aol.coms1x (MadBeing)
+Newsgroups: alt.sys.pdp10
+Subject: Re: MCA25 cache/pager question & other obscure hardware questions
+Lines: 52
+NNTP-Posting-Host: ladder07.news.aol.com
+X-Admin: news@aol.com
+Date: 03 Aug 1999 13:40:26 GMT
+References: <qhso64fhtw.fsf@ruckus.brouhaha.com>
+Organization: AOL http://www.aol.com
+Message-ID: <19990803094026.20390.00002644@ng-ch1.aol.com>
+Xref: news3.best.com alt.sys.pdp10:5547
+
+>Thanks for confirming that.  I think there must have also been a single wire
+>change on the backplane for the signal that controls the address
+>multiplexers.
+
+There might have been such a mod.  The FS guy we had was very good, fast
+and precise.  I might have been out of the machine room when he did that
+piece.
+
+>Anyhow, since I don't have a set of MF20 prints, I have a few more
+>questiosn about that.
+>
+>The memory array boards in the MF20 and MG20 are 11 bits wide, and there are
+>four of them to make a 36-bit work plus 8 bits for ECC.  The MF20/MG20
+>backplane has room for three sets of four boards.  Each MG20 set would be
+>1 Mword.  The MG20 prints indicate that only two sets can be installed for a
+>total MG20 capacity of 2 Mwords.  (And two of those could be used on a KL10
+>to reach the maximum physical addressing limit of 4 Mwords.)
+
+I think the 2 set limit for the MG20 might have been related to either power
+or cooling limitations.  I know that FS didn't like you to run the processor
+for any length of time with the cages opened.  Anyway, I can't give you
+a definite on that one.  If I can dig up one of my FS buddies from TOPS20
+days they might remember.  The power supplies on those systems were
+always a problem.  It got to a point were FS cache'd a spare main power
+supply on site for us.
+
+>Since the MF20 used 16K DRAMs, I'd expect that each set would be 256 Kwords.
+>So was the maximum capacity of an MF20 768 Kwords?  That seems like an
+>unusual size.
+
+Yes, that was the size of a max'ed out MF20.  Its not really that unusual, just
+a multiple of 256K word chunks which was a pretty common unit to sell
+memory in those days.  768Kw is enough to timeshare quite a few people
+with good response.  When I first started working at the site we had only
+512Kw of MB core memory (which was _really_ slow) and we handled about
+40 interactive users combined with batch cobol jobs running the university
+accounting systems.
+
+>And how many MF20s could be connected to a KL10?  The KL10-PV prints show
+>up to four; was that the limit?
+
+This one I'm not sure of..  We had two KL's at our site.   One ended up with
+a single MG20 and the other had two max'd MF20's.  If you could put 4 on
+the processor there must have been an additional cab you needed to
+purchase because 2 mem units really filled up the M-box.
+
+
+Dan Smith
+
+"Old Programmers never die,
+  They just jrst to a new address"
+
+
+
+Article 5549 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!howland.erols.net!ix.netcom.com!nntp.ix.netcom.com!alderson
+From: alderson@netcom16.netcom.com (Richard M. Alderson III)
+Newsgroups: alt.sys.pdp10
+Subject: Re: MCA25 cache/pager question & other obscure hardware questions
+Date: 06 Aug 1999 23:26:55 GMT
+Organization: NETCOM On-line services
+Lines: 12
+Message-ID: <ALDERSON.99Aug6162655@netcom16.netcom.com>
+References: <qhg1257gy1.fsf@ruckus.brouhaha.com>
+	<19990731082458.18167.00003577@ng-fn1.aol.com>
+	<qhso64fhtw.fsf@ruckus.brouhaha.com>
+Reply-To: alderson@netcom.com
+NNTP-Posting-Host: netcom16.netcom.com
+X-NETCOM-Date: Fri Aug 06  6:26:55 PM CDT 1999
+NNTP-Posting-User: alderson
+In-reply-to: Eric Smith's message of 31 Jul 1999 17:46:51 -0700
+Xref: news3.best.com alt.sys.pdp10:5549
+
+In article <qhso64fhtw.fsf@ruckus.brouhaha.com> Eric Smith
+<eric-no-spam-for-me@brouhaha.com> writes:
+
+>And how many MF20s could be connected to a KL10?  The KL10-PV prints show
+>up to four; was that the limit?
+
+Yes, that was the limit, and you got 3MW on the system.  One of our KLs at LOTS
+had that configuration until we got more MG20.
+--
+Rich Alderson			Last LOTS Tops-20 Systems Programmer, 1984-1991
+				Current maintainer, MIT TECO EMACS (v. 170)
+last name @ XKL dot COM		Chief systems administrator, XKL LLC, 1998-now
+
+
+Article 7763 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!howland.erols.net!ix.netcom.com!news.mindspring.net!firehose.mindspring.com!news.mindspring.com!alderson
+From: alderson@netcom2.netcom.com (Richard M. Alderson III)
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 Physical Memory Capacity?
+Date: 30 Mar 2000 01:22:59 GMT
+Organization: NETCOM On-line services
+Lines: 31
+Message-ID: <ALDERSON.00Mar29172259@netcom2.netcom.com>
+References: <20000318214233.01947.00006343@ng-dc1.aol.com>
+	<38D53B78.EBC266E5@prescienttech.com>
+Reply-To: alderson@netcom.com
+NNTP-Posting-Host: c7.b7.09.66
+X-Server-Date: 30 Mar 2000 01:22:59 GMT
+In-reply-to: "Carl R. Friend"'s message of Sun, 19 Mar 2000 15:41:28 -0500
+Xref: news3.best.com alt.sys.pdp10:7763
+
+In article <38D53B78.EBC266E5@prescienttech.com> "Carl R. Friend"
+<carl.friend@prescienttech.com> writes:
+
+>JimCook wrote:
+
+>> What is the physical memory capacity (address limit) of the various
+>> PDP-10 processors?
+
+>> KI-10?
+
+>   256 kw logical, 4 Mw physical (22-bit MA bus)
+
+>> KL-10?
+
+>  Same as KI for -10s (-20s with segments _may_ be different)
+
+The hardware limit on the KL was, as you say, 4MW.  On Tops-20, the logical
+address space prior to version 4 (extended addressing) was 256KW; after the
+invention of extended addressing on the KL (30 bits of address), the logical
+address space went to 8MW (23 bits of address).
+
+The XKL-1 CPU on the Toad-1 implements the full 30-bit physical address space
+as well as the 30-bit logical address space when running Tops-20; our Tops-10
+implementation only went to 32MW physical so that we didn't have to schratz
+around with creating another level of page tables in an OS we didn't know as
+well.
+
+Rich Alderson			Last LOTS Tops-20 Systems Programmer, 1984-1991
+				Current maintainer, MIT TECO EMACS (v. 170)
+				Customer Advocacy, XKL LLC, 1993-now
+last name @ XKL dot COM		Chief systems administrator, XKL LLC, 1998-now
+
+
+Article 8144 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newsfeeds.sol.net!news.execpc.com!newspeer.sol.net!posts0.nwblwi.newsops.execpc.com!posts.news.execpc.com!reader3-nwblwi.newsops.execpc.com!not-for-mail
+Date: Fri, 14 Apr 2000 23:43:13 -0500
+From: "Robert J. Stevens" <snevets@execpc.com>
+X-Mailer: Mozilla 4.08 [en] (Win95; U)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: Implementing shared memory on TOPS-20
+References: <8d1vu4$i0d$1@nnrp1.deja.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 27
+Message-ID: <38f7f3d4$0$26042@news.execpc.com>
+Organization: ExecPC Internet - Milwaukee, WI
+NNTP-Posting-Host: aa3ab5bb.news.execpc.com
+X-Trace: Tl\okXWcmL7I5[332>a9Y;bfNiaEHUgJ7RYcgIRLSUE=FN0UQVRR\a5cBoPT_4]VQ;lD=NV0VOVD5YdN__\LJQD5F]oQm9]^\A2
+X-Complaints-To: abuse@execpc.com
+Xref: news3.best.com alt.sys.pdp10:8144
+
+I have a box of Original Digital Diskettes I was given a few years ago.
+Here's a list
+AS-M329D-BM TOPS-20 RSX20F V15-15 FLP A
+AS-M330D-BM TOPS-20 RSX20F V15-15 FLP B
+AS-M331C-BM TOPS-20 RSX20F V15-15 FLP C
+AS-M330C-BM TOPS-20 RSX20F V14-45 FLP A
+AS-M330C-BM TOPS-20 RSX20F V14-45 FLP B
+AS-M330B-BM TOPS-20 RSX20F V14-45 FLP B MASTER <--- WRITTEN LABEL
+AS-M330D-BM TOPS-20 RSX20F V15-15 FLP B WORKING SET <--- WRITTEN LABEL
+AS-M331B-BM TOPS-20 RSX20F V14-45 FLP C MASTER 5&5.1<--- WRITTEN LABEL
+AS-M331C-BM TOPS-20 RSX20F V15-15 FLP C WORKING SET <--- WRITTEN LABEL
+AS-BB33A-BM KL10 MCRD V326 FLP
+AS-BB33A-BM KL10 MCRD V326 FLP
+
+Plus two Others marked
+REL 3 SYS FLOP "A" 9/8/78
+REL 3A SYS A 12/12/78
+
+What might these be worth and would anyone be interested. They all seem to
+be in very good shape and only a couple show any signs of being in the
+drives or having been used.
+MAKE ME AN OFFER
+Bob in Wisconsin
+
+
+
+
+
+
+Article 748 of alt.sys.pdp10:
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.folklore.computers,comp.arch,alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11
+Subject: Re: Q: Why not (2^n)-bit?
+References: <rpNl5.131549$lU5.898906@news1.rdc1.nj.home.com> <39a013e5.25745326@news.remarq.com> <VeVl5.132515$lU5.901926@news1.rdc1.nj.home.com> <399941CC.1CC6DFA5@netinsight.se> <8noeok$q6t$6@bob.news.rcn.net>
+X-Disclaimer: Everything I write is false.
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+X-Newsreader: Gnus v5.5/Emacs 20.3
+Date: 20 Aug 2000 20:24:28 -0700
+Message-ID: <qhd7j3fg9f.fsf@ruckus.brouhaha.com>
+Lines: 23
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 20 Aug 2000 20:30:25 -0700, ruckus.brouhaha.com
+Path: nntp1.ba.best.com!news1.best.com!news.sgi.com!news.spies.com!ruckus.brouhaha.com
+Xref: nntp1.ba.best.com alt.folklore.computers:4285 comp.arch:1950 alt.sys.pdp8:336 alt.sys.pdp10:748 alt.sys.pdp11:360
+
+jmfbahciv@aol.com writes:
+> Now I'm not sure what you mean by architecture.  Don't you
+> consider the KA and the KL, both PDP-10s, different hardware
+> architecture?  We sure did.  
+
+In the Blaauw & Brooks taxonomy [*], architecture is what is seen by the
+programmers.  In that sense, the PDP-6 and KA10 are nearly identical.
+The later PDP-10 processors are mostly the same, with the addition
+of paging, which is mostly only an issue for the monitor developers.
+
+The implementation is how the logic design implements the architecture.
+The KA, KI, KL, and KS had very different implementations.
+
+Even within an implementation, there can be large differences in the
+realization, which is how the logic is physically implemented.  For
+instance, the IBM 709 and 7090 had the same architecture and implementation,
+but the realization was tubes for the 709 and transistors for the 7090.
+
+
+
+[*] _Computer Architecture: Concepts and Evolution_,
+Gerrit A> Blaauw & Frederick P. Brooks Jr, Addison-Wesley, 1997
+http://www.amazon.com/exec/obidos/ASIN/0201105578/
+
+
+Article 2605 of alt.sys.pdp10:
+From: wilson@dbit.com (John Wilson)
+Newsgroups: alt.sys.pdp10
+Subject: Re: about KL10 console?
+Date: 16 Dec 2000 18:03:32 -0500
+Organization: D Bit, Troy, NY
+Lines: 13
+Message-ID: <91gsc4$omm$1@dbit.dbit.com>
+References: <uthelz8ws7t.fsf@vipunen.hut.fi> <3A3B60DD.929AB0F5@bellatlantic.net>
+NNTP-Posting-Host: dbit.dbit.com
+X-Original-NNTP-Posting-Host: dbit.dbit.com
+X-Trace: 16 Dec 2000 18:05:03 -0500, dbit.dbit.com
+XPident: wilson
+X-Original-NNTP-Posting-Host: 199.181.141.3
+XPident: Unknown
+Path: nntp1.ba.best.com!news1.best.com!news2.best.com!news.maxwell.syr.edu!newspeer.phoen-x.net!news.wizvax.net!dbit.com!not-for-mail
+Xref: nntp1.ba.best.com alt.sys.pdp10:2605
+
+In article <3A3B60DD.929AB0F5@bellatlantic.net>,
+hg/jb  <shsrms@bellatlantic.net> wrote:
+>11/35-11/40 did go end of life after the 34 and 44 were announced..
+
+I was told at one point, that LCG kept the 11/40 in production for their
+own purposes long after it was dropped as a separate product -- true?
+They certainly seemed to have their own silk screen for the front panel
+(which was remote mounted on the short+fat 20s).  I've heard of 11/34s
+being used as FEs, my impression was that that was done in the field though,
+anyway the nice thing with the 11/40 is the non-volatile switch register.
+
+John Wilson
+D Bit
+
+
+Article 2696 of alt.sys.pdp10:
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: RH20 question, reposted
+References: <uthg0jk1s9s.fsf@vipunen.hut.fi>
+X-Disclaimer: Everything I write is false.
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 19 Dec 2000 13:42:31 -0800
+Message-ID: <qh1yv4f5q0.fsf@ruckus.brouhaha.com>
+Lines: 20
+User-Agent: Gnus/5.0807 (Gnus v5.8.7) Emacs/20.7
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 19 Dec 2000 13:43:22 -0800, ruckus.brouhaha.com
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!nntp.flash.net!cyclone-sjo1.usenetserver.com!news-out.usenetserver.com!HSNX.atgi.net!news.kjsl.com!news.spies.com!ruckus.brouhaha.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:2696
+
+Erno Palonheimo <esp@vipunen.hut.fi> writes:
+> I have a RH20 disk interface - how similar is this to RH11?  Can it be
+> used in place of one and have the DEC operating systems support it?
+> And, how should it be installed and what cards should I have (I'm not
+> sure whether it's complete).  It is going to be installed into a
+> pdp11/34 that used to be the console of a KL10.  The KL10 is long
+> gone, sadly enough, but I'm about to revive the pdp11 part that was
+> left.
+
+The RH20 is not *anything* like an RH11.  OK, the Massbus transceiver
+modules are the same, but everything else is different.
+
+The RH20 is *NOT* a Unibus device, and cannot be used in any way
+on a PDP-11.  It plugs into dedicated slots of a KL10, and is electrically
+part of the KL10 C bus and E bus.
+
+If you have an RH20 with no KL10 to plug it into, the only use for it
+is to send it to someone who has a KL10.  I volunteer.  :-)
+
+Eric
+
+
+Article 2827 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!news-hog.berkeley.edu!ucberkeley!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Emulators and microcoded machines
+Date: Fri, 22 Dec 2000 20:41:01 -0800
+Organization: Networks & Distributed Computing
+Lines: 30
+Message-ID: <Pine.NXT.4.32.0012222031400.21964-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <3a43c9e5.3140062@news.m.iinet.net.au>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 977546463 68580 (None) 140.142.17.35
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: sean
+In-Reply-To: <3a43c9e5.3140062@news.m.iinet.net.au>
+Xref: nntp1.ba.best.com alt.sys.pdp10:2827
+
+On Fri, 22 Dec 2000, Rolie Baldock wrote:
+> There is a lot of talk about emulators on this NG but what is the
+> difference between an emulator and a microcoded machine?
+
+It is my contention that there is no real difference between an emulator
+and microcode.
+
+The difference, such as it is, is that microcode tends to be written for a
+platform that runs no other software, whereas an emulator is typically
+written for a platform that runs a range of application software.
+Microcode also tends to be the sole application running on the hardware,
+wheras an emulator is often just a single process on a multiprogramming
+platform or even a timesharing system.
+
+I regard these differences as illusory.  There is no clear black and white
+distinction.  I understand that KL10 hardware was once microcoded to
+emulate an S/360.  Re-read the previous statement carefully...it proves my
+point.
+
+If you restrict "PDP-10" to those machines which implemented the
+instruction set in hardware, then you'd be limited to the PDP-6, the KA10,
+and the KI10.  Even then, the PDP-6 and KA10 used hardware subroutines
+(and thus were easily hacked to add other instructions), and the KI10 had
+somewhat of a proto-microcode.
+
+-- Mark --
+
+http://staff.washington.edu/mrc
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+Article 3380 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc01.blue.aol.com!news.maxwell.syr.edu!intgwpad.nntp.telstra.net!news-server.bigpond.net.au!not-for-mail
+From: Mark Garrett <Mark.Garrett@wedontwantyourspam.com.au>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Help understanding interrupt processing
+Organization: Garetech Computer Solutions
+Lines: 23
+Message-ID: <B6A4BA8B.1153F%Mark.Garrett@wedontwantyourspam.com.au>
+References: <3A764A09.8FEE136B@digiweb.com> <3A78E586.8864B7C7@MA.UltraNet.Com> <3A7D0848.29678A56@mail.bcpl.net> <95lkti$15d3$1@nntp1.ba.best.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset="US-ASCII"
+Content-Transfer-Encoding: 7bit
+User-Agent: Microsoft-Outlook-Express-Macintosh-Edition/5.02.2022
+Date: Mon, 05 Feb 2001 09:28:48 GMT
+NNTP-Posting-Host: 144.132.244.163
+X-Complaints-To: news@bigpond.net.au
+X-Trace: news-server.bigpond.net.au 981365328 144.132.244.163 (Mon, 05 Feb 2001 20:28:48 EST)
+NNTP-Posting-Date: Mon, 05 Feb 2001 20:28:48 EST
+Xref: nntp1.ba.best.com alt.sys.pdp10:3380
+
+in article 95lkti$15d3$1@nntp1.ba.best.com, Joe Smith at inwap@best.com
+wrote on 05/02/2001 18:32:
+
+> In article <3A7D0848.29678A56@mail.bcpl.net>,
+> Ken McMonigal  <kmcmonig@mail.bcpl.net> wrote:
+>> Questions are:
+>> 
+>> 1) Will instruction look-ahead affect the emulator? As I ask this, I
+>> am working on trying to find available on-line docs (for the -10) as
+>> well as my on-disk files on interrupts/exceptions/pipelines for
+>> non -10 systems.  How does/did the hardware handle it?
+> 
+> The PDP-10 (as sold by DEC) had no pipeline.
+> Instructions were executed one at a time.
+> Concepts like conditional execution and branch prediction are totally foreign.
+The closest a KL got to modern processor tricks was memory pre-fetches.
+JUPITER that got cancelled was meant to have more than one micro engine and
+pipelined instruction fetch and execute. Some other non-DEC KL equivalents
+IIRC did have pipelines there name escapes me ATM.
+
+    Cheers
+        Mark ;)
+
+
+
+Article 3382 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!nntp.abs.net!news.abs.net!not-for-mail
+Message-ID: <3A7EA309.7B128B2@mail.bcpl.net>
+From: Ken McMonigal <kmcmonig@mail.bcpl.net>
+X-Mailer: Mozilla 4.61 [en] (Win98; I)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: Help understanding interrupt processing
+References: <3A764A09.8FEE136B@digiweb.com> <3A78E586.8864B7C7@MA.UltraNet.Com> <3A7D0848.29678A56@mail.bcpl.net> <95lkti$15d3$1@nntp1.ba.best.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 66
+Date: Mon, 05 Feb 2001 07:56:41 -0500
+NNTP-Posting-Host: 207.19.142.56
+X-Complaints-To: abuse@bcpl.net
+X-Trace: news.abs.net 981377624 207.19.142.56 (Mon, 05 Feb 2001 07:53:44 EST)
+NNTP-Posting-Date: Mon, 05 Feb 2001 07:53:44 EST
+Xref: nntp1.ba.best.com alt.sys.pdp10:3382
+
+Joe Smith wrote:
+> 
+> In article <3A7D0848.29678A56@mail.bcpl.net>,
+> Ken McMonigal  <kmcmonig@mail.bcpl.net> wrote:
+> >Questions are:
+> >
+> >1) Will instruction look-ahead affect the emulator? As I ask this, I
+> >am working on trying to find available on-line docs (for the -10) as
+> >well as my on-disk files on interrupts/exceptions/pipelines for
+> >non -10 systems.  How does/did the hardware handle it?
+> 
+> The PDP-10 (as sold by DEC) had no pipeline.
+> Instructions were executed one at a time.
+> Concepts like conditional execution and branch prediction are totally foreign.
+> 
+> On the KA, the fastest way to search for a string in a text buffer was
+> to use self-modifying code.  If the inner loop could be implemented in
+> fewer than 12 instructions, the code would be loaded into the accumulators
+> ("Fast Memory") and the program would jump into the accumulators (where
+> the Program Counter has a value between 0 and 17 inclusive).
+> 
+> > Are the instructions that are being sent to the
+> >emulator assumed to be executed without invoking look-ahead?
+> 
+> In order to run with the existing TOPS-10 or TOPS-20 Monitors, it would
+> have to be done in such as way that the page-fault handler and interrupt
+> handler would not be able to see any affects of look-ahead.
+> 
+> >Since "interrupt" is generally used to describe asynchronous
+> >I/O requests, this would seem to be more like an exception
+> >in a x86 when an arithmetic error occurs. Did the KI-10 have an
+> >instruction pipeline & will flushing of it be necessary?
+> 
+> No pipeline.  No flushing.
+> 
+> >2) As I have never written an emulator, I was wondering how true
+> >to the initial product the user is expecting it to be?
+> 
+> 100%.  Should be able to run any and all of the user-mode diagnostics
+> and most of the kernel-mode ones.
+>         -Joe
+> 
+> --
+> See http://www.inwap.com/ for PDP-10 and "ReBoot" pages.
+
+Thanks for the info, Joe, as well as taking the time to wander through
+a rather long post. As always, you are very informative.
+
+I had not seen that technique of running in the accumulators before
+& think it is probably worthy of posting in alt.folklore.comp. 
+
+Of course, today, with structured programming, self-modifying
+code is frowned upon. Also, with the newer architectures, it
+probably can cause ram cache misses and slow things up.
+
+I'm thinking of going through my old Univac-1108 assembler stuff
+to see if any equivalent technique as you described could occur.
+
+At our company, around 1974-1983, we used our own version of the
+the HP-2100 (micro-coded). We employed self-modifying code,
+although very rarely. One example that comes to mind was a
+shift or rotate command to properly normalize numbers for
+subsequent multiplication to ensure that overflows didn't occur.
+
+Of course, self-modifying code made for really fun debugging
+sessions!  :)
+
+
+Article 3565 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!newsfeed.direct.ca!look.ca!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: 36 bits
+Date: Fri, 16 Feb 2001 15:46:48 -0800
+Organization: Networks & Distributed Computing
+Lines: 14
+Message-ID: <Pine.NXT.4.40.0102161544430.12226-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <96k947$7u1$1@watsol.cc.columbia.edu>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 982367211 53708 (None) 140.142.17.39
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: del
+To: Frank da Cruz <fdc@columbia.edu>
+In-Reply-To: <96k947$7u1$1@watsol.cc.columbia.edu>
+Xref: nntp1.ba.best.com alt.sys.pdp10:3565
+
+On 16 Feb 2001, Frank da Cruz wrote:
+> So in fact, 36 bits ruled from 1952 to 1983 -- 31 years
+
+Try 1952 until 1988.  DEC announced the cancellation in 1983, but new
+hardware and software came out for 5 years thereafter.  In fact, there was
+even a new KL10 variant.
+
+So, 36-bits lasted 36 years.
+
+-- Mark --
+
+http://staff.washington.edu/mrc
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+Article 3580 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!newsfeed.cwix.com!sjc-peer.news.verio.net!news.verio.net!ord-read.news.verio.net.POSTED!not-for-mail
+Newsgroups: alt.sys.pdp10
+Subject: Re: 36 bits
+From: jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett)
+Organization: Everett Associates
+X-Newsreader: WinVN 0.99.8 (x86 32bit)
+References: <96k947$7u1$1@watsol.cc.columbia.edu> <Pine.NXT.4.40.0102161544430.12226-100000@Tomobiki-Cho.CAC.Washington.EDU>
+MIME-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+Lines: 29
+Message-ID: <6LSj6.2251$ws2.139496@ord-read.news.verio.net>
+Date: Sun, 18 Feb 2001 16:28:50 GMT
+NNTP-Posting-Host: 157.238.70.4
+X-Complaints-To: abuse@verio.net
+X-Trace: ord-read.news.verio.net 982513730 157.238.70.4 (Sun, 18 Feb 2001 16:28:50 GMT)
+NNTP-Posting-Date: Sun, 18 Feb 2001 16:28:50 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:3580
+
+In article 
+<Pine.NXT.4.40.0102161544430.12226-100000@Tomobiki-Cho.CAC.Washington.EDU>, 
+mrc@CAC.Washington.EDU says...
+>
+>On 16 Feb 2001, Frank da Cruz wrote:
+>> So in fact, 36 bits ruled from 1952 to 1983 -- 31 years
+>
+>Try 1952 until 1988.  DEC announced the cancellation in 1983, but new
+>hardware and software came out for 5 years thereafter.  In fact, there was
+>even a new KL10 variant.
+>
+>So, 36-bits lasted 36 years.
+
+Yes, "lasted" would be a much more appropriate term than "ruled". Have we 
+forgotten that the late '50s and early '60s were "ruled" by byte oriented 
+machines such as the IBM 1401 and it's various semi-clones (such as the 
+Honeywell 200). Actually the term "byte" wasn't at that time used to describe 
+this class of machines, they were contemporaneously refered to as character 
+machines.
+
+In the mid-'60s IBM introduced the 360 series, which spearheaded the trend 
+toward 32-bit machines. By 1970, 32 bits "ruled".
+
+The best that can be said of 36-bit machines is that they "ruled" a relatively 
+small backwater of computing.
+
+-- 
+jeverett<AT>wwa<DOT>com (John Everett)    http://www.wwa.com/~jeverett
+
+
+
+Article 3578 of alt.sys.pdp10:
+Message-ID: <3A8FC6C5.68C3FB16@ev1.net>
+Date: Sun, 18 Feb 2001 04:57:41 -0800
+From: Charles Richmond <richmond@ev1.net>
+Reply-To: richmond@ev1.net
+Organization: Cannine Computer Center
+X-Mailer: Mozilla 4.7C-CCK-MCD {C-UDP; EBM-APPLE} (Macintosh; I; PPC)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: 36 bits
+References: <96k947$7u1$1@watsol.cc.columbia.edu>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+NNTP-Posting-Host: taydal-207-55-144-176.ev1.net
+X-Trace: newsa.ev1.net 982494122 taydal-207-55-144-176.ev1.net (18 Feb 2001 05:02:02 -0600)
+Lines: 22
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc01.blue.aol.com!newsfeed.skycache.com!Cidera!newsa.ev1.net
+Xref: nntp1.ba.best.com alt.sys.pdp10:3578
+
+Frank da Cruz wrote:
+> 
+>      [snip...]     [snip...]     [snip...]
+> 
+> But we also know, or at least suspect, that the PDP-6 must have been
+> inspired at least in part by the IBM 7094, also a 36-bit machine, which is
+> not only where LISP came from (CARs and CDRs), but the first timesharing
+> (MIT's CTSS).  The 7094 was preceded by the 7090, which in turn was
+> preceded by the 709 and that by the 701.  The 701 was the world's first
+> production computer using binary (not decimal) logic, and it had 36-bit
+> words.  So in fact, 36 bits ruled from 1952 to 1983 -- 31 years, which is
+> way longer than 16, 32, or 64 bits have ruled, so really, 36 bits are
+> normal and everything else is strange.
+> 
+The first Lisp was actually done on an IBM 704...*not* an IBM 7090...
+although *older* versions of the Jargon file said the 7090. I have it on
+*very* good authority that the first Lisp was done on the IBM 704.
+
+-- 
++-------------------------------------------------------------+
+|     Charles and Francis Richmond     <richmond@plano.net>   |
++-------------------------------------------------------------+
+
+
+Article 3733 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!inwap
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.sys.pdp10
+Subject: Re: O/S for PDP-10 plus PDP-10 FPGA box prototype
+Date: 5 Mar 2001 22:19:40 GMT
+Organization: Chez Inwap
+Lines: 23
+Message-ID: <9813ds$e0p$1@nntp1.ba.best.com>
+References: <3aa0266f.4659287@news.m.iinet.net.au> <3AA0844E.A2E68512@mail.bcpl.net> <3aa17069.4085815@news.m.iinet.net.au> <6uk8658w3r.fsf@chonsp.franklin.ch>
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 983830780 14361 206.184.139.134 (5 Mar 2001 22:19:40 GMT)
+X-Complaints-To: abuse@best.com
+NNTP-Posting-Date: 5 Mar 2001 22:19:40 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:3733
+
+In article <6uk8658w3r.fsf@chonsp.franklin.ch>,
+Neil Franklin  <neil@franklin.ch.remove> wrote:
+>berd_kalamunda@techemail.com (Rolie Baldock) writes:
+>
+>> We have enough info from Tom Stockebrand and others in this NG to put
+>> DECTAPEs on a KI/KA ten.
+>
+>Neat. Usually they only were on KL-10s. I like DECTAPEs since I first
+>saw this elegantly simple device running on an PDP-8/A.
+
+No, not usually on KL-10s.  User-accessable DECtapes were ubiquitous on
+KA and KI but somewhat rare on KL.  (The DECtapes that were attached to
+the console front-end were NOT assessable via the MOUNT command.)
+
+The Colorado School of Mines had a couple hundred student-owned DECtapes
+in the library when we upgrade from a KA to a KL + KS.  Because we were
+keeping a lot of the KA peripherals, we ordered a KL-1091 with I/O-Bus
+adapter, and two TU55 transports.  We ran into a couple of problems
+getting DTB defined (no problem with just a single DECtape controller; DTA).
+I ended up disassembling the DECtape formatter program, adding mnemonics
+to the re-created source, and defining a feature-test for DTA vs DTB.
+--
+See http://www.inwap.com/ for PDP-10 and "ReBoot" pages.
+
+
+Article 3882 of alt.sys.pdp10:
+Sender: prep@k9
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL questions
+References: <uccs6.394298$f36.13271351@news20.bellglobal.com> <qhd7biwidu.fsf@ruckus.brouhaha.com>
+From: Paul Repacholi <prep@prep.synonet.com>
+Date: 16 Mar 2001 13:42:10 +0800
+Message-ID: <87zoeml171.fsf@prep.synonet.com>
+Lines: 56
+User-Agent: Gnus/5.0807 (Gnus v5.8.7) Emacs/20.7
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: 202.61.201.172
+X-Trace: 16 Mar 2001 13:27:57 +0800, 202.61.201.172
+Path: nntp1.ba.best.com!news2.best.com!news-hog.berkeley.edu!ucberkeley!enews.sgi.com!harbinger.cc.monash.edu.au!news.uwa.edu.au!nntp!usenet.per.paradox.net.au!127.0.0.1!nobody
+Xref: nntp1.ba.best.com alt.sys.pdp10:3882
+
+Eric Smith <eric-no-spam-for-me@brouhaha.com> writes:
+
+> > Can anybody point me to
+> >     some online mechanical photos or drawings, and module maps?
+>
+> Not much online yet.  Module utilization for the KL10-PV APR (model B
+> backplane) and I/O backplane (from a DECsystem-1090) is at:
+
+Rough layout of a KL-10E:  (from memory...)
+
+                +-------------+
+                |---|      Fan|
+               *|Bat|         |
+                |-----   -----|
+                |    |   |CPU |
+                |CPU |   | E  |
+                |PS  |   |Box |
+                |Reg |   |    |
+               *|MFPS|   | M  |
+                |und |   |Box |
+                +----|   |----+
+                |--------|IO  |
+                |----|   |    |* CPU PS
+                |MF  |   |4x  | 3 Ph Ferro-resonant
+                |20  |---|RH  |   15V out to Regs
+                |----|   |CINI|
+                |        |----|
+                |             |
+                |  11/40 FE   |
+                |  IO box PS  |
+                |             |
+                +--         --+
+                |             |
+                |  DH-11 TTY  |
+                |  and cable  |
+                |   trunk     |
+                |             |
+                +-------------+
+
+Notes. Stuuf with * next to it is underneath
+BBU is for MF-20. 48V @ 60A good for 30sec!
+CPU reg out, 350A @ -5.2V 240A @ 2V
+Fugistsu SMPSs from an Armdahl ideal swap!
+( and bring system power down to ~3-4KW )
+MF PS is under CPU PS. Stuff on left is on
+swing out frames.
+
+IO PS is H744s in a ??? 11 family PS unit. Same as 40 almost.
+
+Forgot the KW-20 is on the right above the FE.
+
+--
+Paul Repacholi                               1 Crescent Rd.,
++61 (08) 9257-1001                           Kalamunda.
+                                             West Australia 6076
+Raw, Cooked or Well-done, it's all half baked.
+
+
+Article 3923 of alt.sys.pdp10:
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL questions
+References: <uccs6.394298$f36.13271351@news20.bellglobal.com> <qhd7biwidu.fsf@ruckus.brouhaha.com> <87zoeml171.fsf@prep.synonet.com>
+X-Disclaimer: Everything I write is false.
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 16 Mar 2001 20:15:24 -0800
+Message-ID: <qh66h9ni8z.fsf@ruckus.brouhaha.com>
+Lines: 6
+User-Agent: Gnus/5.0807 (Gnus v5.8.7) Emacs/20.7
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 16 Mar 2001 20:18:22 -0800, ruckus.brouhaha.com
+Path: nntp1.ba.best.com!news1.best.com!uninett.no!news.tele.dk!64.152.100.70!news-out.usenetserver.com!news-out-sjo.usenetserver.com!HSNX.atgi.net!news.kjsl.com!news.spies.com!ruckus.brouhaha.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:3923
+
+Paul Repacholi <prep@prep.synonet.com> writes:
+> CPU reg out, 350A @ -5.2V 240A @ 2V
+
+Only 140A at -2.0V.  The configuration is
+nine or ten regulators at -5.2V 35A,
+and four at -2.0V 35A.
+
+
+Article 3883 of alt.sys.pdp10:
+Sender: prep@k9
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL questions
+References: <uccs6.394298$f36.13271351@news20.bellglobal.com> <98rmev$289m$1@fido.engr.sgi.com> <bdes6.395035$f36.13289475@news20.bellglobal.com> <qh7l1qwib1.fsf@ruckus.brouhaha.com>
+From: Paul Repacholi <prep@prep.synonet.com>
+Date: 16 Mar 2001 13:53:48 +0800
+Message-ID: <87r8zyl0nn.fsf@prep.synonet.com>
+Lines: 30
+User-Agent: Gnus/5.0807 (Gnus v5.8.7) Emacs/20.7
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: 202.61.201.172
+X-Trace: 16 Mar 2001 13:28:03 +0800, 202.61.201.172
+Path: nntp1.ba.best.com!news2.best.com!news-hog.berkeley.edu!ucberkeley!enews.sgi.com!harbinger.cc.monash.edu.au!news.uwa.edu.au!nntp!usenet.per.paradox.net.au!127.0.0.1!nobody
+Xref: nntp1.ba.best.com alt.sys.pdp10:3883
+
+Eric Smith <eric-no-spam-for-me@brouhaha.com> writes:
+
+> jfrancis@dungeon.engr.sgi.com (John Francis) wrote:
+> > Half?  Wasn't a standard KL-10 three bays wide?
+> 
+> "Heinz Wolter" <h.wolter@sympatico.ca> writes:
+> > Maybe I'm missing a box - my setup was separated
+> > into two parts - one has the RH, the 11/44 and I guess
+> > the other has the CPU. I hope I'm not missing
+> > the memory box...
+> 
+> It sounds worse than that.  You're missing not only
+> the memory, but also the RH20s (Massbus interfaces)
+> and DTE20s (front end and I/O processor interfaces).
+
+If they are 2 wide 'corp cab' vax like, then he has everything.  THe
+RHs are in the IO box, above the 11/40, as is the DTE.  The Memory, if
+it is MF or MG, is at the back of the IO cab.  If it is MA... core,
+that would have been in the bottom of the CPU cab *I think*
+
+DEC in there infinite wisdom initialy would only ship MOS to 20s. We
+went through this with the UWA KL. They LENT 512K of core, until they
+changed the availabiliy... Would not even come at shipping a '20' to
+run Tops-10...
+
+-- 
+Paul Repacholi                               1 Crescent Rd.,
++61 (08) 9257-1001                           Kalamunda.
+                                             West Australia 6076
+Raw, Cooked or Well-done, it's all half baked.
+
+
+Article 3930 of alt.sys.pdp10:
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL questions
+References: <uccs6.394298$f36.13271351@news20.bellglobal.com> <98rmev$289m$1@fido.engr.sgi.com> <bdes6.395035$f36.13289475@news20.bellglobal.com> <qh7l1qwib1.fsf@ruckus.brouhaha.com> <87r8zyl0nn.fsf@prep.synonet.com>
+X-Disclaimer: Everything I write is false.
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 16 Mar 2001 21:01:53 -0800
+Message-ID: <qhk85pm1j2.fsf@ruckus.brouhaha.com>
+Lines: 17
+User-Agent: Gnus/5.0807 (Gnus v5.8.7) Emacs/20.7
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 16 Mar 2001 21:04:51 -0800, ruckus.brouhaha.com
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!HSNX.atgi.net!news.kjsl.com!news.spies.com!ruckus.brouhaha.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:3930
+
+Paul Repacholi <prep@prep.synonet.com> writes:
+> If they are 2 wide 'corp cab' vax like, then he has everything.  THe
+> RHs are in the IO box, above the 11/40, as is the DTE.  The Memory, if
+> it is MF or MG, is at the back of the IO cab.  If it is MA... core,
+> that would have been in the bottom of the CPU cab *I think*
+
+That's certainly not true of the 2060s and 2065s I've seen, they definitely
+had three corporate cabinets, and the DTE20s, RH20s, and memory are in
+a separate cabinet from the 11/40.
+
+I suppose it's possible that the 2040 might have fit in two cabinets.
+The 2040 didn't support the DMA20 memory interface.  DIA20 I/O bus
+interface.  If they also reduced the number of supprted DTE20s and
+RH20s, and only allowd for one memory box, and didn't have a BA11
+expander on the 11/40, I can see how they might have just barely squeeze
+that all into two cabinets instead of three.  However, I'm pretty sure
+my 2040 print set shows a three-cabinet configuration.
+
+
+Article 3922 of alt.sys.pdp10:
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL questions
+References: <uccs6.394298$f36.13271351@news20.bellglobal.com> <qhd7biwidu.fsf@ruckus.brouhaha.com> <IIfs6.396178$f36.13305387@news20.bellglobal.com>
+X-Disclaimer: Everything I write is false.
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 16 Mar 2001 20:12:16 -0800
+Message-ID: <qhae6lnie7.fsf@ruckus.brouhaha.com>
+Lines: 24
+User-Agent: Gnus/5.0807 (Gnus v5.8.7) Emacs/20.7
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 16 Mar 2001 20:15:14 -0800, ruckus.brouhaha.com
+Path: nntp1.ba.best.com!news1.best.com!newshub.sdsu.edu!news-spur1.maxwell.syr.edu!news.maxwell.syr.edu!HSNX.atgi.net!news.kjsl.com!news.spies.com!ruckus.brouhaha.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:3922
+
+"Heinz Wolter" <h.wolter@sympatico.ca> writes:
+> I don't remember seeing a pdp11 hiding in there...but ot's been years
+> I *DO* have a spare 11/45 - will that work - if I can get
+> it running RSX20F ? (offhand I can't remember the differences)
+> *** but I would be missing the DTE interface boards, no?
+> or are they housed in the 10 chassis with only a unibus cable going to the
+> 11?
+
+Yes, the DTE20s, RH20s, and the optional DIA20 and DMA20 do in what
+I call the "I/O Controller" cabinet.  I'm not sure if there's a more
+official name for it.
+
+This is NOT the same cabinet that houses the PDP-11/40 front end.
+
+> Thanks for your help, Eric. Great web site, by the way.. Did you ever
+> build the dram board? you could use 36 bit wide parity 72 sticks if
+> you can find those these days...would he an interesting hardware hack.
+
+Not yet.  I'll be trying to set up the DECSYSTEM-2065 later in the year.
+Since it already has working MG20 memory, the need to build a board is
+less urgent, but I'd still like to do it.  If I do, I'll probably use
+a Xilinx Spartan II FPGA for control and ECC, and synchronous SRAMs
+for the memory.  The objective is to make the memory operate as fast
+as the KL10 can handle.
+
+
+Article 4006 of alt.sys.pdp10:
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL questions
+References: <uccs6.394298$f36.13271351@news20.bellglobal.com> <qhd7biwidu.fsf@ruckus.brouhaha.com> <IIfs6.396178$f36.13305387@news20.bellglobal.com> <qhae6lnie7.fsf@ruckus.brouhaha.com> <87n1al6j0r.fsf@prep.synonet.com>
+X-Disclaimer: Everything I write is false.
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 18 Mar 2001 23:48:19 -0800
+Message-ID: <qhy9u2kxmk.fsf@ruckus.brouhaha.com>
+Lines: 24
+User-Agent: Gnus/5.0807 (Gnus v5.8.7) Emacs/20.7
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 18 Mar 2001 23:51:40 -0800, ruckus.brouhaha.com
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!64.152.100.70!news-out.usenetserver.com!news-out-sjo.usenetserver.com!HSNX.atgi.net!news.kjsl.com!news.spies.com!ruckus.brouhaha.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:4006
+
+I wrote about the KL10 packaging:
+> Yes, the DTE20s, RH20s, and the optional DIA20 and DMA20 do in what
+> I call the "I/O Controller" cabinet.  I'm not sure if there's a more
+> official name for it.
+> 
+> This is NOT the same cabinet that houses the PDP-11/40 front end.
+
+Paul Repacholi <prep@prep.synonet.com> wrote:
+> Yes, you are right. Just had a look. 3 corp cabs, not 2... What else
+> was in the 3rd one with the 40? Power controller in the bottom, but
+> is that all?
+
+The front end cabinet of a KL10-C, -E or -R (corporate cabinets)
+contains the 11/40, a BA11 expansion box, the RX01 dual floppy drive,
+and the power control.  I think in some configurations there may
+also be MF20 memory boxes in this cabinet, though I'd have to dig
+out the MF20 installation docs to check.
+
+The BA11 expansion box is presumably present because it was expected
+that all the unit-record equipment and at least some of the
+terminal muxes would be on the front end Unibus, whereas on the
+tall-cabinet KLs (the 1080 and 1090) such things were on the KI I/O
+bus (attached to a DIA20).
+
+
+
+Article 4073 of alt.sys.pdp10:
+Sender: prep@k9
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL questions
+References: <uccs6.394298$f36.13271351@news20.bellglobal.com> <qhd7biwidu.fsf@ruckus.brouhaha.com> <IIfs6.396178$f36.13305387@news20.bellglobal.com> <qhae6lnie7.fsf@ruckus.brouhaha.com> <87n1al6j0r.fsf@prep.synonet.com> <qhy9u2kxmk.fsf@ruckus.brouhaha.com>
+From: Paul Repacholi <prep@prep.synonet.com>
+Date: 21 Mar 2001 03:48:19 +0800
+Message-ID: <87k85k2pdo.fsf@prep.synonet.com>
+Lines: 16
+User-Agent: Gnus/5.0807 (Gnus v5.8.7) Emacs/20.7
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: 172.pe01.dial.iqnet.net.au
+X-Trace: 21 Mar 2001 03:08:56 +0800, 172.pe01.dial.iqnet.net.au
+Path: nntp1.ba.best.com!news1.best.com!newshub.sdsu.edu!news-spur1.maxwell.syr.edu!news.maxwell.syr.edu!dispose.news.demon.net!demon!skynet.be!newsfeed.iinet.net.au!nntp!usenet.per.paradox.net.au!127.0.0.1!nobody
+Xref: nntp1.ba.best.com alt.sys.pdp10:4073
+
+Eric Smith <eric-no-spam-for-me@brouhaha.com> writes:
+
+> The BA11 expansion box is presumably present because it was expected
+> that all the unit-record equipment and at least some of the
+> terminal muxes would be on the front end Unibus, whereas on the
+> tall-cabinet KLs (the 1080 and 1090) such things were on the KI I/O
+> bus (attached to a DIA20).
+
+Ah, I forgot the BA-11... I tossed several DHs and shoehorned one into
+the 40 cab. No need for the BA :) Hell, 32 lines is plenty for home!
+
+-- 
+Paul Repacholi                               1 Crescent Rd.,
++61 (08) 9257-1001                           Kalamunda.
+                                             West Australia 6076
+Raw, Cooked or Well-done, it's all half baked.
+
+
+Article 3907 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news-hog.berkeley.edu!ucberkeley!enews.sgi.com!newshub2.rdc1.sfba.home.com!news.home.com!news1.rdc1.nj.home.com.POSTED!not-for-mail
+From: "rich catena" <rcatena@iname.com>
+Newsgroups: alt.sys.pdp10
+References: <uccs6.394298$f36.13271351@news20.bellglobal.com> <qhd7biwidu.fsf@ruckus.brouhaha.com>
+Subject: Re: KL questions
+Lines: 106
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Newsreader: Microsoft Outlook Express 5.50.4133.2400
+X-MimeOLE: Produced By Microsoft MimeOLE V5.50.4133.2400
+Message-ID: <VMvs6.387880$w35.61865492@news1.rdc1.nj.home.com>
+Date: Fri, 16 Mar 2001 21:42:13 GMT
+NNTP-Posting-Host: 24.9.95.209
+X-Complaints-To: abuse@home.net
+X-Trace: news1.rdc1.nj.home.com 984778933 24.9.95.209 (Fri, 16 Mar 2001 13:42:13 PST)
+NNTP-Posting-Date: Fri, 16 Mar 2001 13:42:13 PST
+Organization: Excite@Home - The Leader in Broadband http://home.com/faster
+Xref: nntp1.ba.best.com alt.sys.pdp10:3907
+
+The 11 only booted off floppy as a last resort ( in troubleshooting
+situations) . normally it booted of a 16 bit formated section of a dual
+ported rp06 or 7.
+
+
+
+"Eric Smith" <eric-no-spam-for-me@brouhaha.com> wrote in message
+news:qhd7biwidu.fsf@ruckus.brouhaha.com...
+> "Heinz Wolter" <h.wolter@sympatico.ca> writes:
+> > I visited my KL in storage for the first time in two years.
+> > The half-cabinet that is easily accessible shows an RH10. I think
+> > I can spot the half rack of the 11/44 on the other side of the bay.
+>
+> The RH10 is not part of a KL, although it certainly can be part of a
+> DECsystem-10 or DECSYSTEM-20.
+>
+> > Both cabinet halves are vax780 style, size and colour (sky blue?).
+>
+> There should be *three* cabinets that size.  It's a DECsystem-1091 or
+1095,
+> depending on whether it has the MCA25 pager & cache upgrade.
+>
+> One cabinet houses the main CPU card cage (about 54 slots of extended
+> hex cards of ECL logic).  One cabinet houses the I/O control (RH20s, and
+> optionally DIA20 I/O bus interface and DMA20 memory bus interface)
+> and memory (usually MF20 or MG20 semiconductor, but could be MA20 or MB20
+> core).  One cabinet houses the PDP-11/40 front end processor, a BA11
+> expander box, and an RX01 dual 8" floppy drive.
+>
+> If you're missing any of those three cabinets, you don't really have a
+> KL.  Pray that the one you're missing is the front end, since you can
+> cobble up another PDP-11 to replace it.  If you're missing the main CPU
+> or I/O cabinets, your screwed.
+>
+> > I thought KLs were DEC "terracotta"?
+>
+> Only if they're in DECSYSTEM-20s.
+>
+> > q1: can someone tell me what kl's booted the 11/44 off? RL02's? RX's?
+> >     ie what did the 11/44 load the RSX variant from?
+> >     was it a part of or file system on the 10's RP/RM disks?
+>
+> A KL does not have an 11/44.
+>
+> The KL's 11/40 boots RSX20F from an RX01.
+>
+> > q2: has anyone seen commercialmassbus plug-in compatible hard drive
+> > units?  for SCSI drives preferably... is there any (small) market for
+> > such a beast?  I'm sure people don't relish running noisy power hungry
+> > washing-machine sized RP's...I've got no RPs and no way to run
+> > anything unless I fake out the MASSBUS disks.
+>
+> Several companies have made Massbus/SCSI interfaces.  Some worked in
+> 18-bit mode, and thus could be used on 36-bit machines.  Others did not.
+> None were cheap.
+>
+> > q3: the power plugs look like 220v 3 phase hubbels- I heard some people
+had
+> > managed to rewire the transformers to use 220v single  phase?
+>
+> Most of the stuff inside the KL runs on single phase.
+>
+> Except the APR (arithmetic processor, the "real" CPU).  The first stage
+> power supply for that runs three phase through three step-down
+> transformers into a diode bridge to produce 12VDC at a rated 490A.  By
+> using a three-phase bridge, the rectified waveform never drops below
+> 0.86 * peak, which substantially reduces the demand on the filter
+> capacitors.
+>
+> If you want to run it on single phase, you're going to need to
+> completely replace the input stage of the power supply, and you'll need
+> upwards of 50A of 120V.
+>
+> The alternative is to replace both the first and second stages of the
+> power supply.  The APR cage actually needs nine tightly regulated
+> -5.2V at 35A supplies, and four -2.0V at 35A supplies.  Using switching
+> power supplies at 80% efficiency, you would need 2397.5W input, or
+> 20A of 120V (assuming a unity power factor).
+>
+> Remember, that's just for the APR.  I haven't even added up the
+> power requirements for the I/O controller cabinet an front end cabinet.
+> I imagine that you'll need at least another 20A for those.
+>
+> > q5: The DEC Datasystem 570, I was told repacked 11/70. None of my books
+> >     mention that nomenclature.. anyone know?
+>
+> By amazing coincidence, I have one of those too.  It is, as you say, just
+> a repackaging.
+>
+> > q6> I'm assuming all modern KLs used "mos" drams for memory and that
+> >     it was housed in the CPU half of the cabinet.
+>
+> It's in the I/O controller cabinet of the CPU, with cables to the APR
+> cabinet.  I think I vaguely recall that if you have MA20, MB20, or MF20
+> memory, that some of it can wind up in the front end cabinet.  There isn't
+> room in the APR cabinet for it.
+>
+> > Can anybody point me to
+> >     some online mechanical photos or drawings, and module maps?
+>
+> Not much online yet.  Module utilization for the KL10-PV APR (model B
+> backplane) and I/O backplane (from a DECsystem-1090) is at:
+>
+>   http://www.brouhaha.com/~eric/retrocomputing/pdp-10/kl10d_modules.html
+
+
+
+
+Article 3909 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!enews.sgi.com!newshub2.rdc1.sfba.home.com!news.home.com!news3.rdc1.on.home.com.POSTED!not-for-mail
+From: "Don Chiasson" <don_chiasson@notmail.com>
+Newsgroups: alt.sys.pdp10
+References: <uccs6.394298$f36.13271351@news20.bellglobal.com> <qhd7biwidu.fsf@ruckus.brouhaha.com>
+Subject: Re: KL questions
+Lines: 82
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Newsreader: Microsoft Outlook Express 5.00.2615.200
+X-MimeOLE: Produced By Microsoft MimeOLE V5.00.2615.200
+Message-ID: <BIxs6.55338$p66.16646744@news3.rdc1.on.home.com>
+Date: Fri, 16 Mar 2001 23:54:09 GMT
+NNTP-Posting-Host: 24.42.241.65
+X-Complaints-To: abuse@home.net
+X-Trace: news3.rdc1.on.home.com 984786849 24.42.241.65 (Fri, 16 Mar 2001 15:54:09 PST)
+NNTP-Posting-Date: Fri, 16 Mar 2001 15:54:09 PST
+Organization: Excite@Home - The Leader in Broadband http://home.com/faster
+Xref: nntp1.ba.best.com alt.sys.pdp10:3909
+
+
+Eric Smith <eric-no-spam-for-me@brouhaha.com> wrote in message
+news:qhd7biwidu.fsf@ruckus.brouhaha.com...
+> "Heinz Wolter" <h.wolter@sympatico.ca> writes:
+> > I visited my KL in storage for the first time in two years.
+> > The half-cabinet that is easily accessible shows an RH10.
+> > I think
+> > I can spot the half rack of the 11/44 on the other
+> > side of the bay.
+>
+> The RH10 is not part of a KL, although it certainly can
+> be part of a
+> DECsystem-10 or DECSYSTEM-20.
+>
+> > Both cabinet halves are vax780 style, size and colour
+> > (sky blue?).
+>
+> There should be *three* cabinets that size.  It's a
+> DECsystem-1091 or 1095,
+> depending on whether it has the MCA25 pager &
+> cache upgrade.
+>
+> One cabinet houses the main CPU card cage (about 54
+> slots of extended > hex cards of ECL logic).  One cabinet
+> houses the I/O control (RH20s, and optionally DIA20
+> I/O bus interface and DMA20 memory bus interface)
+> and memory (usually MF20 or MG20 semiconductor,
+> but could be MA20 or MB20 core).  One cabinet
+> houses the PDP-11/40 front end processor, a BA11
+> expander box, and an RX01 dual 8" floppy drive.
+>
+> If you're missing any of those three cabinets, you don't
+> really have a KL.  Pray that the one you're missing
+> is the front end, since you can cobble up another
+> PDP-11 to replace it.  If you're missing the
+> main CPU or I/O cabinets, your screwed.
+>
+> > I thought KLs were DEC "terracotta"?
+>
+> Only if they're in DECSYSTEM-20s.
+>
+I thought the DEC-20's were two units wide, and about 5' high,
+but each unit had two standard 19" wide rack mount units.Don't
+know about 10's, though. I thought they were 6' racks, each of
+which contained one 19" rack.
+
+
+> > q3: the power plugs look like 220v 3 phase hubbels-
+> > I heard some people had managed to rewire the
+> > transformers to use 220v single  phase?
+>
+> Most of the stuff inside the KL runs on single phase.
+>
+> Except the APR (arithmetic processor, the "real" CPU).
+> The first stage power supply for that runs three phase
+> through three step-down transformers into a diode
+> bridge to produce 12VDC at a rated 490A.  By
+> using a three-phase bridge, the rectified waveform
+> never drops below 0.86 * peak, which substantially
+> reduces the demand on the filter capacitors.
+>
+> If you want to run it on single phase, you're going to need to
+> completely replace the input stage of the power
+> supply, and you'll need upwards of 50A of 120V.
+>
+<snip>
+Again, for 20's, they ran on three phase 208 volts, slightly non
+standard. But that's 208 volts phase to phase. Voltage from phase
+to neutral is 208/SQRT(3), (ask any *real* electrical engineer
+about 1.732, i.e. SQRT(3)) which is 120 volts, standard house
+voltage (but as you say, lots of current to feed the ECL).
+
+            Don
+
+[e-mail address: that's not not, it's hot]
+
+
+
+
+
+
+
+
+
+Article 3920 of alt.sys.pdp10:
+Sender: prep@k9
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL questions
+References: <uccs6.394298$f36.13271351@news20.bellglobal.com> <qhd7biwidu.fsf@ruckus.brouhaha.com> <BIxs6.55338$p66.16646744@news3.rdc1.on.home.com>
+From: Paul Repacholi <prep@prep.synonet.com>
+Date: 17 Mar 2001 11:27:43 +0800
+Message-ID: <87ofv1847k.fsf@prep.synonet.com>
+Lines: 19
+User-Agent: Gnus/5.0807 (Gnus v5.8.7) Emacs/20.7
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: 202.61.201.181
+X-Trace: 17 Mar 2001 11:10:27 +0800, 202.61.201.181
+Path: nntp1.ba.best.com!news1.best.com!news2.best.com!news-hog.berkeley.edu!ucberkeley!enews.sgi.com!harbinger.cc.monash.edu.au!news.uwa.edu.au!nntp!usenet.per.paradox.net.au!127.0.0.1!nobody
+Xref: nntp1.ba.best.com alt.sys.pdp10:3920
+
+"Don Chiasson" <don_chiasson@notmail.com> writes:
+
+> I thought the DEC-20's were two units wide, and about 5' high, but
+> each unit had two standard 19" wide rack mount units.Don't know
+> about 10's, though. I thought they were 6' racks, each of which
+> contained one 19" rack.
+
+KL-10, B, C, and Ds where in Full height 19"racks. The KL-10E and
+KL-10RE, aka 1091 and 1095 where in double width corp cabs.  Mine are
+distinctly BLUE. Well, the tops and fan trims anyway...
+
+The power is meant to be direct connected. I dont even want to think
+of the price for a plus and switched socket...
+
+-- 
+Paul Repacholi                               1 Crescent Rd.,
++61 (08) 9257-1001                           Kalamunda.
+                                             West Australia 6076
+Raw, Cooked or Well-done, it's all half baked.
+
+
+Article 3928 of alt.sys.pdp10:
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL questions
+References: <uccs6.394298$f36.13271351@news20.bellglobal.com> <qhd7biwidu.fsf@ruckus.brouhaha.com> <BIxs6.55338$p66.16646744@news3.rdc1.on.home.com> <87ofv1847k.fsf@prep.synonet.com>
+X-Disclaimer: Everything I write is false.
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 16 Mar 2001 20:56:05 -0800
+Message-ID: <qhofv1m1sq.fsf@ruckus.brouhaha.com>
+Lines: 25
+User-Agent: Gnus/5.0807 (Gnus v5.8.7) Emacs/20.7
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 16 Mar 2001 20:59:03 -0800, ruckus.brouhaha.com
+Path: nntp1.ba.best.com!news1.best.com!news2.best.com!news.maxwell.syr.edu!HSNX.atgi.net!news.kjsl.com!news.spies.com!ruckus.brouhaha.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:3928
+
+Paul Repacholi <prep@prep.synonet.com> writes:
+> The power is meant to be direct connected. I dont even want to think
+> of the price for a plus and switched socket...
+
+In the US they commonly have a fairly massive Hubbell pin-and-sleeve
+connector.  This is the next step up from the more common twist-lock
+connectors.  In the case of the KL10-E, I think what they're using
+is a 4P5W (four pole five wire) 60A 3-phase 120/208V connector, Hubbell
+part number HBL560P7W or C560P9W plug.  These plugs are about 113 mm in
+diameter and 254 mm long.
+
+These connectors are in section F of Hubbell's catalog, which used to be
+available online in PDF format at
+	http://www.hubbell-wiring.com/
+but it appears that they're revising section F in the online catalog.
+Some of the material is available in individual data sheets in their
+PDF Data Library section.
+
+They conform to international standards IEC 309-1 and IEC 309-2, which
+specify a different pin configuration for every combination of number of
+poles, voltage, and current.  So there should be a suitable connector
+for any supported KL10 configuration worldwide.
+
+I haven't priced these yet; I'll have to contact my local distributor,
+Bell Electrical.
+
+
+Article 3924 of alt.sys.pdp10:
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL questions
+References: <uccs6.394298$f36.13271351@news20.bellglobal.com> <qhd7biwidu.fsf@ruckus.brouhaha.com> <BIxs6.55338$p66.16646744@news3.rdc1.on.home.com>
+X-Disclaimer: Everything I write is false.
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 16 Mar 2001 20:17:51 -0800
+Message-ID: <qh1yrxni4w.fsf@ruckus.brouhaha.com>
+Lines: 14
+User-Agent: Gnus/5.0807 (Gnus v5.8.7) Emacs/20.7
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 16 Mar 2001 20:20:48 -0800, ruckus.brouhaha.com
+Path: nntp1.ba.best.com!news1.best.com!newshub.sdsu.edu!news-spur1.maxwell.syr.edu!news.maxwell.syr.edu!HSNX.atgi.net!news.kjsl.com!news.spies.com!ruckus.brouhaha.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:3924
+
+"Don Chiasson" <don_chiasson@notmail.com> writes:
+> I thought the DEC-20's were two units wide, and about 5' high,
+> but each unit had two standard 19" wide rack mount units.
+
+Three cabinets.  Only the front end cabinet uses standard 19" rack
+mount.
+
+> Don't
+> know about 10's, though. I thought they were 6' racks, each of
+> which contained one 19" rack.
+
+The earlier KL10s as used in the DECsystem-1080 and 1090 (but not the
+1091 and 1095) are in 6' cabinets.  Two of the cabinets are 23" racks,
+and one (the front end) is 19".
+
+
+Article 3926 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!feed.textport.net!news.stealth.net!logbridge.uoregon.edu!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL questions
+Date: Fri, 16 Mar 2001 20:47:32 -0800
+Organization: Networks & Distributed Computing
+Lines: 33
+Message-ID: <Pine.NXT.4.40.0103162033160.5824-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <uccs6.394298$f36.13271351@news20.bellglobal.com>
+ <qhd7biwidu.fsf@ruckus.brouhaha.com> <BIxs6.55338$p66.16646744@news3.rdc1.on.home.com>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 984804455 32604 (None) 140.142.17.37
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: martell
+In-Reply-To: <BIxs6.55338$p66.16646744@news3.rdc1.on.home.com>
+Xref: nntp1.ba.best.com alt.sys.pdp10:3926
+
+On Fri, 16 Mar 2001, Don Chiasson wrote:
+> Again, for 20's, they ran on three phase 208 volts, slightly non
+> standard.
+
+I assume that you mean "slightly non-standard" with respect to single
+phase "220 volt" power (which can be 220-240 volts).  "220 volt" power
+involves two "hot" 110-120 volt (with respect to neutral) wires, at an 180
+degree AC phase difference from each other, instead of a "hot" and a
+neutral.
+
+208 volts is, of course, perfectly standard for three-phase, which has
+three "hot" 110-120 volt (with respect to neutral) wires at a 120 degree
+AC phase difference from each other.
+
+A "208 volt" peripheral is one which expects to use two wires of a
+three-phase power source, but is not three-phase.  It will work on a "220
+volt" power source, but the excessively hot voltage will presently fry the
+power supply unless it's of relatively modern manufacture.
+
+There are instructions in the RM05 service manual for how to rewire the
+power supply to 220-240V.  I don't know if it's possible for TU77s or
+TU78s.
+
+The RP06 is an actual three-phase device.  Not that anyone with any sense
+would actually use one, but if there is, I have a working RP06 drive free
+to anyone who will come and haul it out of my garage.
+
+-- Mark --
+
+http://staff.washington.edu/mrc
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+
+Article 3934 of alt.sys.pdp10:
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL questions
+References: <uccs6.394298$f36.13271351@news20.bellglobal.com> <qhd7biwidu.fsf@ruckus.brouhaha.com> <BIxs6.55338$p66.16646744@news3.rdc1.on.home.com> <Pine.NXT.4.40.0103162033160.5824-100000@Tomobiki-Cho.CAC.Washington.EDU>
+X-Disclaimer: Everything I write is false.
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 16 Mar 2001 22:18:00 -0800
+Message-ID: <qh3dccnckn.fsf@ruckus.brouhaha.com>
+Lines: 17
+User-Agent: Gnus/5.0807 (Gnus v5.8.7) Emacs/20.7
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 16 Mar 2001 22:20:59 -0800, ruckus.brouhaha.com
+Path: nntp1.ba.best.com!news1.best.com!news.voicenet.com!HSNX.atgi.net!news.kjsl.com!news.spies.com!ruckus.brouhaha.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:3934
+
+Mark Crispin <mrc@CAC.Washington.EDU> writes:
+> The RP06 is an actual three-phase device.  Not that anyone with any sense
+> would actually use one, but if there is, I have a working RP06 drive free
+> to anyone who will come and haul it out of my garage.
+
+I used to think so too, and someone here corrected me.  Sure enough,
+a look at the prints reveals that it actually only uses two phases out
+of the three.  The power chained to a second attached drive uses a
+different pair, i.e., if the main drive uses phases A and B, the
+second drive uses A and C (or B and C).
+
+Also, the power section of the maintenance manual reveals that the
+drive will work on 220-240V rather than 208V, with no change.
+
+In summary, it should be easy to wire up an RP06 to run on a single-phase
+240V circuit, as is commonly found in US residences for electric ranges
+and clothes dryers.
+
+
+Article 3939 of alt.sys.pdp10:
+Sender: prep@k9
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL questions
+References: <uccs6.394298$f36.13271351@news20.bellglobal.com> <qhd7biwidu.fsf@ruckus.brouhaha.com> <BIxs6.55338$p66.16646744@news3.rdc1.on.home.com> <Pine.NXT.4.40.0103162033160.5824-100000@Tomobiki-Cho.CAC.Washington.EDU> <qh3dccnckn.fsf@ruckus.brouhaha.com>
+From: Paul Repacholi <prep@prep.synonet.com>
+Date: 17 Mar 2001 18:03:01 +0800
+Message-ID: <87d7bg7lwq.fsf@prep.synonet.com>
+Lines: 27
+User-Agent: Gnus/5.0807 (Gnus v5.8.7) Emacs/20.7
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: 202.61.201.210
+X-Trace: 17 Mar 2001 20:41:03 +0800, 202.61.201.210
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!newsfeed.cwix.com!intgwpad.nntp.telstra.net!news1.optus.net.au!optus!news.uwa.edu.au!nntp!usenet.per.paradox.net.au!127.0.0.1!nobody
+Xref: nntp1.ba.best.com alt.sys.pdp10:3939
+
+Eric Smith <eric-no-spam-for-me@brouhaha.com> writes:
+
+> Mark Crispin <mrc@CAC.Washington.EDU> writes:
+
+> > The RP06 is an actual three-phase device.  Not that anyone with
+> > any sense would actually use one, but if there is, I have a
+> > working RP06 drive free to anyone who will come and haul it out of
+> > my garage.
+
+> I used to think so too, and someone here corrected me.  Sure enough,
+> a look at the prints reveals that it actually only uses two phases
+> out of the three.  The power chained to a second attached drive uses
+> a different pair, i.e., if the main drive uses phases A and B, the
+> second drive uses A and C (or B and C).
+
+I was sure it was a 3 phase motor, plus a fair lump extra for the
+electronics from one phase. RP07s are seriously 3 phase. Like about
+70A/ph start current!
+
+Time to brave the Styx on go looking for the 667 manual. And the PR07
+one. Ah Sperry 8470 service manual. No sign of the 667 one yet...
+
+-- 
+Paul Repacholi                               1 Crescent Rd.,
++61 (08) 9257-1001                           Kalamunda.
+                                             West Australia 6076
+Raw, Cooked or Well-done, it's all half baked.
+
+
+Article 3942 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!news.voicenet.com!newspeer.monmouth.com!news.monmouth.com!not-for-mail
+From: pechter@i4got.pechter.dyndns.org (Bill Pechter)
+Newsgroups: alt.sys.pdp10
+Subject: Re: RP05/6 power requirements (was KL Questions)
+Date: 17 Mar 2001 12:27:15 -0500
+Organization: Unknown
+Lines: 26
+Message-ID: <9906pj$tg$1@i4got.pechter.dyndns.org>
+References: <uccs6.394298$f36.13271351@news20.bellglobal.com> <qhd7biwidu.fsf@ruckus.brouhaha.com> <BIxs6.55338$p66.16646744@news3.rdc1.on.home.com> <Pine.NXT.4.40.0103162033160.5824-100000@Tomobiki-Cho.CAC.Washington.EDU>
+NNTP-Posting-Host: bg-tc-ppp918.monmouth.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:3942
+
+In article <Pine.NXT.4.40.0103162033160.5824-100000@Tomobiki-Cho.CAC.Washington.EDU>,
+Mark Crispin  <mrc@CAC.Washington.EDU> wrote:
+>
+>The RP06 is an actual three-phase device.  Not that anyone with any sense
+>would actually use one, but if there is, I have a working RP06 drive free
+>to anyone who will come and haul it out of my garage.
+>
+>-- Mark --
+
+Actually, the RP05/6 and DCL are using two real phases.  RP04's were three
+phases. The third phase was included to allow daisy chaining two RP06
+together with one power lead and a special RP06->RP06 cable (which I've
+done ONCE at DEC Field Service) in cases where there were less than the 
+needed number of connections under the floor.  
+
+Two phases were used by each drive -- the RP06 used a two phase motor
+which would not have the propensity to spin backwards like the RP04
+when plugged in to a three phase outlet wired by the site electricians.
+
+--Bill
+
+-- 
+-- 
+bpechter@monmouth.com    | FreeBSD since 1.0.2, Linux since 0.99.10  
+Brainbench MVP           | Unix Sys Admin since Sys V/BSD 4.2
+Unix Sys.Admin.          | Windows System Administration: "Magical Misery Tour"
+
+
+Article 5054 of alt.sys.pdp10:
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.sys.pdp10
+Subject: NIA20 ethernet interface (Re: RH20 Interface Status)
+References: <thuujfco4ti70c@corp.supernews.com>
+X-Disclaimer: Everything I write is false.
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 07 Jun 2001 11:15:08 -0700
+Message-ID: <qhr8ww40nn.fsf@ruckus.brouhaha.com>
+Lines: 19
+User-Agent: Gnus/5.0807 (Gnus v5.8.7) Emacs/20.7
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 7 Jun 2001 11:33:14 -0700, ruckus.brouhaha.com
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!out.nntp.be!propagator-dallas!news-in-dallas.newsfeeds.com!in.nntp.be!news.kjsl.com!news.spies.com!ruckus.brouhaha.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:5054
+
+Timothy Stark <sword7@grace.speakeasy.net> writes:
+> Also, I found out that KLNI device. (KNI - device code 564)  Hmmm.
+> it is micro-procesor for network interface!  Does anyone have KLNI
+> specifications?  Check KNISER.MAC and KNIPRM.MAC in TOPS-10 7.03.
+
+As sold, it is called an NIA20.  It's an Ethernet interface that replaces
+two RH20s (numbers 4 and 5, IIRC).  The CI20 interface also replaces two
+RH20s (numbers 6 and 7, IIRC).
+
+> It uses IPA20 interface (is reserved for 564 (KNI) and 574 (CI).
+
+Sounds like they are using "IPA20" as a name for the three-module set
+that goes in the RH20 backplane (M3001, M3002, M3003).  In an NIA20, this
+connects to a box containing an LI0072.  In a CI20, it connects to a box
+containing multiple modules, and I don't recall the module IDs.
+
+Maybe "IPA" stands for Intelligent Peripheral Adapter or some such.
+It has a bit-slice processor into which the KL must load microcode.
+ 
+
+
+Article 6424 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!panix!news.panix.com!not-for-mail
+From: Rich Alderson <alderson+news@panix.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Price of maintenance on the PDPs
+Date: 22 Oct 2001 15:50:52 -0400
+Organization: Systems Administration, XKL LLC, Redmond WA 98052
+Lines: 13
+Sender: alderson+news@panix1.panix.com
+Message-ID: <mdd4rorqwrn.fsf@panix1.panix.com>
+References: <9r0s8d$qr6$2@bob.news.rcn.net>
+NNTP-Posting-Host: panix1.panix.com
+X-Trace: news.panix.com 1003780253 2224 166.84.1.1 (22 Oct 2001 19:50:53 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: 22 Oct 2001 19:50:53 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.7
+Xref: nntp1.ba.best.com alt.sys.pdp10:6424
+
+jmfbahciv@aol.com writes:
+
+> The other day somebody asked me how much it cost to have DEC do maintenance.
+> I had no idea.  What did we charge?  Was it split up into hardware and
+> software?  Was it a percentage of the cost of hardware?
+
+The last figure I knew was $40,000/year for the KL ($20,000/year educational
+discount)--the price was lowered just after we had sent in our $120,000 for 3
+systems at LOTS, so we got two years' support for that payment.
+
+-- 
+Rich Alderson                                          alderson+news@panix.com
+  "You get what anybody gets.  You get a lifetime."  --Death, of the Endless
+
+
+Article: 19881 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!dfw-peer!news.verio.net!newsfeeds.sol.net!news-out.visi.com!petbe.visi.com!dca1-feed2.news.algx.net!allegiance!panix!not-for-mail
+From: Rich Alderson <news@alderson.users.panix.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: How common is the TOAD-1?
+Date: 20 May 2003 21:33:10 -0400
+Organization: Systems Administration, XKL LLC, Redmond WA 98052
+Lines: 21
+Sender: alderson+news@panix5.panix.com
+Message-ID: <mdd1xyt9j8p.fsf@panix5.panix.com>
+References: <badvm7$t66$1@tabloid.uwaterloo.ca> <Pine.WNT.4.60.0305201429480.6792@Tomobiki-Cho.CAC.Washington.EDU>
+NNTP-Posting-Host: panix5.panix.com
+X-Trace: reader1.panix.com 1053480790 23929 166.84.1.5 (21 May 2003 01:33:10 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: Wed, 21 May 2003 01:33:10 +0000 (UTC)
+X-Newsreader: Gnus v5.7/Emacs 20.7
+Xref: dfw-artgen alt.sys.pdp10:19881
+
+Mark Crispin <MRC@CAC.Washington.EDU> writes:
+
+> On Tue, 20 May 2003, David Evans wrote:
+
+>> Anybody know how many TOAD-1s are out there?  Are they thick on the ground
+>> or almost rare?
+
+> I only know of two TOAD-1 machines outside of XKL.  XKL has two TOAD-1
+> machines on the Internet that I know of (one only accepts SMTP
+> connections though), and a handful of others.
+
+Double the outside sales number.  Only one at XKL was outside the firewall when
+I left.
+
+> I suspect that fewer than a dozen were built.
+
+There were more than a dozen in use internally when I left.
+
+-- 
+Rich Alderson                                     news@alderson.users.panix.com
+  "You get what anybody gets.  You get a lifetime."  --Death, of the Endless
+
+
+Article: 21060 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!bloom-beacon.mit.edu!news.bu.edu!budd
+From: budd@csa.bu.edu (Phil Budne)
+Newsgroups: alt.sys.pdp10
+Subject: Re: DECtape on -10's
+Followup-To: alt.sys.pdp10
+Date: 19 Jul 2003 15:33:28 GMT
+Organization: Boston University Computer Science Dept.
+Lines: 89
+Message-ID: <bfboc8$d3j$1@news3.bu.edu>
+References: <mddznjenxf2.fsf@panix5.panix.com> <bf8hv5$4me$3@bob.news.rcn.net> <bfafpg$k5k$1@news3.bu.edu> <bfb61j$avf$1@bob.news.rcn.net>
+X-Trace: news3.bu.edu 1058628808 13427 128.197.12.3 (19 Jul 2003 15:33:28 GMT)
+X-Complaints-To: news@bu.edu
+Xref: dfw-artgen alt.sys.pdp10:21060
+
+In article <bfb61j$avf$1@bob.news.rcn.net>,  <jmfbahciv@aol.com> wrote:
+>In article <bfafpg$k5k$1@news3.bu.edu>, budd@csa.bu.edu (Phil Budne) wrote:
+>>home% grep ^102 ~ftp/pub/pdp10/bucs20-anon/decapr/decapr.txt.4
+>>1025    TOPS-20 DEC H/W Eng             DEC, Marlboro           KL10
+>>1026    TOPS-10 Development             DEC, Marlboro           KL1099  
+
+>Nitpick.  #1042 was the second highboy in that SMP system.
+
+My search above only displayed serials 102x.  The list I have contains
+over 30 KL systems with serials below 1100.
+
+>When we ran 3 CPUs, we added a KL1091 which was serial number 2nnn
+>[whoosh] those last three numbers just fell on my bit floor..2471?
+
+2476
+
+I thought it was also the ARPAnet TOPS-20 development system as well,
+but recently someone here with a knowledge of where the various cards
+and options were installed said they doubted that a 1091 could have
+BOTH an external memory controller (DMA20) *AND* a KI10 I/O bus
+adaptor (DIA20) which would have been required to talk to the IMP
+interface...
+
+>>1029    TOPS-20 DEC H/W Eng             DEC, Marlboro           KL10
+>>
+>>I do remember hearing one had DECtapes.
+>
+>Both should have.  Diagnostics were developed on them, too.
+
+Do you mean PDP-10 I/O bus (TD10) connected DECtapes?
+Of _course_ they had them on their front ends!
+
+	Anything with a serial number below 2100 (or so) was
+	manufactured as a 1090 (or 1080), in bright blue "high boy"
+	(rack height) cabinets, with "external" core memory that had
+	multiple ports, and could be used for SMP.
+
+	The higher range were either 2040/2050/2060's (orange) or
+	1091's (a paler blue), in "corporate" (VAX height) cabinets,
+	with "internal" semiconductor (MOS DRAM) memory.
+
+	2065's (and 1095) were manufactured in the FCC RFI safe boxes
+	(designed for Jupiter) were any of the FCC cabinets blue??
+
+Here is a complete list of all the 10's at DEC Marlboro in the 80's;
+
+ 514	TOPS-10 Development		DEC, Marlboro		KI10
+ 546	TOPS-10 Development		DEC, Marlboro		KI10
+1025	TOPS-20 DEC H/W Eng		DEC, Marlboro		KL10
+1026	TOPS-10 Development		DEC, Marlboro		KL1099	SMP
+1029	TOPS-20 DEC H/W Eng		DEC, Marlboro		KL10
+1030	TOPS-20 Hard Dev		DEC, Marlboro		KL10
+1031	TOPS-20 Hard Dev		DEC, Marlboro		KL10
+1042	TOPS-10 Development		DEC, Marlboro		KL10	SMP
+2102	TOPS-20 Soft Dev		DEC, Marlboro		KL20
+2116	TOPS-20 Soft Dev		DEC, Marlboro		KL20
+2136	TOPS-20 Soft Dev		DEC, Marlboro		KL20
+2137	TOPS-20 Soft Dev		DEC, Marlboro		KL20
+2244	TOPS-20 Marketing		DEC, Marlboro		KL20
+2263	TOPS-20 Diag. Eng.		DEC, Marlboro		KL20?
+2476	TOPS-10 Digital Eq. Corporation Marlboro, MA		KL10
+2530	TOPS-20 DEC H/W Eng		Marlboro, Ma		KL10
+2791	TOPS-20 Digital "EMILY"		Marlborough, Ma		2060
+2798	TOPS-20 Digital "ETHER"		Marlborough, Ma		2060
+2844	TOPS-20 Digital "ESTA"		Marlborough, Ma		2060
+2866	TOPS-20 Digital "CLOYD"		Marlborough, Ma		2060
+2871	TOPS-20 Digital "GIDNEY"	Marlborough, Ma		2060
+2906	TOPS-20 Digital "IBOX"		Marlborough, Ma		2060
+2933	TOPS-20 Digital "SAGE"		Marlborough, Ma		2060
+2942	10/20	Digital "CHIP"		Marlborough, Ma		1091
+2943	10/20	Digital "DALE"		Marlborough, Ma		2060
+2996	TOPS-20 Digital "RONCO"		Marlborough, Ma		2060
+3026	TOPS-20 Digital "SNAP"		Marlborough, Ma		2060
+3500	TOPS-10 Development/SIRUS	DEC, Marlboro		KL1095
+4097	TOPS-20 Development		DEC, Marlboro		KS2020
+4101	TOPS-10 Development		DEC, Marlboro		KS2020
+4145	TOPS-10 DEC CSSE		DEC Marlboro		KS10
+
+I remember the Venus (8600) project had some 2060's they used for
+development (wrote code to handle net lists in extended addressing
+FORTRAN), but they don't seem to appear on the list (it's possible
+they were absorbed by 36-bit engineering, and DO appear). The Jupiter
+microcode people had a system "IO - One of Jupiters Moons" -- I
+suppose that could have been #2530...
+
+On the topic of low serial number KL's, here are two other famous systems:
+
+1038	ITS	Macsyma Consort		MIT, Cambridge		KL10
+1075	SAIL	SAIL			Stanford, CA		KL10
+
+
+Article: 21050 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!sjc-peer.news.verio.net!news.verio.net!image.surnet.ru!WWW1.relcom.ru!newshosting.com!news-xfer1.atl.newshosting.com!news-spur1.maxwell.syr.edu!news.maxwell.syr.edu!sn-xit-03!sn-xit-01!sn-post-01!supernews.com!corp.supernews.com!not-for-mail
+From: m_thompson-NOSPAM@ids.net (Michael Thompson)
+Newsgroups: alt.sys.pdp10
+Subject: Re: DECtape on -10's
+Date: Fri, 18 Jul 2003 12:16:11 -0000
+Organization: Posted via Supernews, http://www.supernews.com
+Message-ID: <vhfp8bp3mfm39@corp.supernews.com>
+X-Newsreader: WinVN 0.99.9 (Released Version) (x86 32bit)
+References: <mddznjenxf2.fsf@panix5.panix.com>
+MIME-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Complaints-To: abuse@supernews.com
+Lines: 19
+Xref: dfw-artgen alt.sys.pdp10:21050
+
+There is an image of a PDP10 with DECtapes at: 
+http://starfish.rcsri.org/rcs/DECsystem/1090/hybrid.jpg
+
+This machine was originally a KA10 and eventually turned into a KL10 1090.
+Most of the original KA10 peripherals were used on the KL10, including the 
+DECtapes.
+
+In article <mddznjenxf2.fsf@panix5.panix.com>, news@alderson.users.panix.com 
+says...
+>
+>Just a question for curiosity's sake:  Was the DT10 interface an available
+>option on KL-based systems, or only on KA- and KI-based systems?  Was it rare
+>on KIs, even?
+>
+>-- 
+>Rich Alderson                                     
+news@alderson.users.panix.com
+>  "You get what anybody gets.  You get a lifetime."  --Death, of the Endless
+
+
+
+Article: 21065 of alt.sys.pdp10
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: DECtape on -10's
+References: <mddznjenxf2.fsf@panix5.panix.com> <bf8hv5$4me$3@bob.news.rcn.net> <bfafpg$k5k$1@news3.bu.edu> <bfb61j$avf$1@bob.news.rcn.net> <bfboc8$d3j$1@news3.bu.edu>
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 20 Jul 2003 00:15:07 -0700
+Message-ID: <qhadb98y9w.fsf@ruckus.brouhaha.com>
+Lines: 11
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.2
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 20 Jul 2003 00:31:21 -0700, ruckus.brouhaha.com
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newsfeed.cwix.com!news.maxwell.syr.edu!news.he.net!news.kjsl.com!news.spies.com!ruckus.brouhaha.com
+Xref: dfw-artgen alt.sys.pdp10:21065
+
+budd@csa.bu.edu (Phil Budne) writes:
+> I thought it was also the ARPAnet TOPS-20 development system as well,
+> but recently someone here with a knowledge of where the various cards
+> and options were installed said they doubted that a 1091 could have
+> BOTH an external memory controller (DMA20) *AND* a KI10 I/O bus
+> adaptor (DIA20) which would have been required to talk to the IMP
+> interface...
+
+The 1091 I/O bay backplane probably doesn't have any slots for the DMA20,
+since internal memory was standard on those.  It should have room for
+a DIA20 (or DIB20?) KI10 I/O bus adapter.
+
+
+Article: 21085 of alt.sys.pdp10
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: DIA vs DIB?
+References: <mddznjenxf2.fsf@panix5.panix.com> <bf8hv5$4me$3@bob.news.rcn.net> <bfafpg$k5k$1@news3.bu.edu> <bfb61j$avf$1@bob.news.rcn.net> <bfboc8$d3j$1@news3.bu.edu> <qhadb98y9w.fsf@ruckus.brouhaha.com> <87k7adjibr.fsf_-_@prep.synonet.com>
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 21 Jul 2003 13:25:11 -0700
+Message-ID: <qhd6g3wrtk.fsf@ruckus.brouhaha.com>
+Lines: 16
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.2
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 21 Jul 2003 13:41:43 -0700, ruckus.brouhaha.com
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!in.100proofnews.com!in.100proofnews.com!cycny01.gnilink.net!cyclone1.gnilink.net!small1.nntp.aus1.giganews.com!border1.nntp.aus1.giganews.com!nntp.giganews.com!cyclone-sf.pbi.net!216.218.192.242!news.he.net!news.kjsl.com!news.spies.com!ruckus.brouhaha.com
+Xref: dfw-artgen alt.sys.pdp10:21085
+
+Paul Repacholi <prep@prep.synonet.com> writes:
+> OK, what is the difference between a DIA and a DIB?
+
+As I understand it, just the backplane.  The functionality is identical.
+This is what I've pieced together from various documentation, so it could
+be wrong; I haven't found any really definitive reference.  
+
+In the I/O bay of the processor, the 1080 and 1090 have a backplane that has
+room for the DMA20 memory bus interface (only needed with external memory
+such as the DEC M[ABDEFGH]10 core memory or Ampex ARM10 semiconductor
+memory) and a DIA20, both of which are standard.
+
+The 1091, 1095, 2060, and 2065 instead have mounting space for a
+backplane that only has room for the I/O adapter, which is optional
+(possibly standard on the 1091 and 1095, the documents are
+inconsistent).  The I/O adapter with backplane is called a DIB20.
+
+
+Article: 21340 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!sjc-peer.news.verio.net!news.verio.net!newsfeed.berkeley.edu!news-hog.berkeley.edu!ucberkeley!nntp.cs.ubc.ca!torn!snoopy.risq.qc.ca!nf3.bellglobal.com!nf1.bellglobal.com!nf2.bellglobal.com!news20.bellglobal.com.POSTED!not-for-mail
+Reply-To: "Cray Guy" <crayguy@sympatico.ca>
+From: "Cray Guy" <crayguy@sympatico.ca>
+Newsgroups: alt.sys.pdp10
+Subject: Looking for 2060/2065 owners specifically PDP10 KL10E
+Lines: 10
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Newsreader: Microsoft Outlook Express 6.00.2800.1158
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1165
+Message-ID: <Q8t2b.1672$_F1.160625@news20.bellglobal.com>
+Date: Mon, 25 Aug 2003 15:08:23 -0400
+NNTP-Posting-Host: 65.93.99.102
+X-Complaints-To: abuse@sympatico.ca
+X-Trace: news20.bellglobal.com 1061838512 65.93.99.102 (Mon, 25 Aug 2003 15:08:32 EDT)
+NNTP-Posting-Date: Mon, 25 Aug 2003 15:08:32 EDT
+Organization: Bell Sympatico
+Xref: dfw-artgen alt.sys.pdp10:21340
+
+Other than the machines listed here, does anyone have a more complete
+list of KL10-x owners? I'm especially looking for other 2060/2065 owners.
+Paul Allen's machines would-be museum machines don't appear to be listed
+here;)
+http://216.239.41.104/search?q=cache:nWs-NFCOMZcJ:starfish.rcsri.org/rcs/DECsystem/FAQ/Serial_Number_Master.pdf+kl10e&hl=en&ie=UTF-8
+
+Regards,
+Heinz
+
+
+
+
+Article: 21341 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!sn-xit-03!sn-xit-06!sn-post-01!supernews.com!corp.supernews.com!not-for-mail
+From: m_thompson-NOSPAM@ids.net (Michael Thompson)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Looking for 2060/2065 owners specifically PDP10 KL10E
+Date: Mon, 25 Aug 2003 21:20:49 -0000
+Organization: Posted via Supernews, http://www.supernews.com
+Message-ID: <vkkvdhpsm6e5fe@corp.supernews.com>
+X-Newsreader: WinVN 0.99.9 (Released Version) (x86 32bit)
+References: <Q8t2b.1672$_F1.160625@news20.bellglobal.com>
+MIME-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Complaints-To: abuse@supernews.com
+Lines: 19
+Xref: dfw-artgen alt.sys.pdp10:21341
+
+I have found most KL10 collectors to be very private. I have sent many emails 
+asking for information on collector's machines and have received only a few 
+replys. I would appreciate any help that you can provide to improve the list.
+
+In article <Q8t2b.1672$_F1.160625@news20.bellglobal.com>, crayguy@sympatico.ca 
+says...
+>
+>Other than the machines listed here, does anyone have a more complete
+>list of KL10-x owners? I'm especially looking for other 2060/2065 owners.
+>Paul Allen's machines would-be museum machines don't appear to be listed
+>here;)
+>http://216.239.41.104/search?q=cache:nWs-NFCOMZcJ:starfish.rcsri.org/rcs/DECs
+ystem/FAQ/Serial_Number_Master.pdf+kl10e&hl=en&ie=UTF-8
+>
+>Regards,
+>Heinz
+>
+>
+
+
+

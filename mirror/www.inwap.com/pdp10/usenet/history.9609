@@ -1,0 +1,2521 @@
+Article 1903 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!news.texas.net!imci2!news.internetMCI.com!newsfeed.internetmci.com!in1.uu.net!info-server.bbn.com!cole
+From: cole@bbn.com (Jon Cole)
+Newsgroups: alt.sys.pdp10
+Subject: Another machine shutdown
+Date: 4 May 1996 14:12:48 GMT
+Organization: Bolt Beranek and Newman (BBN)
+Lines: 8
+Sender: cole@bbn.com
+Message-ID: <4mfol0$72j@info-server.bbn.com>
+NNTP-Posting-Host: labs-n.bbn.com
+
+BBN turned off its last KL this week.
+The 1st KA machine arrived in '68 or '69, we forgotten exactly when,
+and was used for Tenex development.
+
+About 27 years, running 10/50, then Tenex, then TOPS20.  Plus running
+the Gov't-owned Prophet TOPS10/SMP for a few years.
+
+Cheers
+
+
+Article 1928 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!swrinde!tank.news.pipex.net!pipex!netcom.net.uk!ix.netcom.com!ixnews1.ix.netcom.com!netcom.com!pfarrell
+From: pfarrelL@netcom.com (Pat Farrell)
+Subject: Tenex working sets, was: so, what do we want posted?
+Message-ID: <pfarrellDs8L68.L6@netcom.com>
+Sender: pfarrell@netcom23.netcom.com
+Organization: NETCOM On-line Communication Services (408 261-4700 guest)
+X-Newsreader: Forte Free Agent 1.0.82
+References: <pfarrellDrw39F.K6K@netcom.com> <4oki2l$csq@news.kth.se>
+Date: Thu, 30 May 1996 21:07:17 GMT
+Lines: 60
+
+evaf@mumrik.nada.kth.se (Eva Frykevall) wrote:
+>Pat Farrell (pfarrelL@netcom.com) wrote:
+>: +++ crys that no recent OS/CPU has bothered to read PJ Denning's work
+>: on virtual memory, which was proven optimal, 
+>: and thus use PRU instead
+                               ^^^ opps, this should be LRU, of 
+course.
+
+>: of working sets?
+>If I want to read it, where can I find it? And where is the proof that
+>it is optimal?
+
+It was published in a long time ago, back before Tenex. 
+Here are some citations:
+
+Peter J Denning, "Virtual Memory" ACM Computing Surveys 2,  No 2, 
+March-April p 111-114
+
+Denning and Tichy, 1991, "Operating Systems," in _Encyclopedia of
+Computer Science_ Van Norstrand Reinhold
+
+Denning, "Working sets, past and present" IEEE Transactions on
+Software Engineering SE-6, No 1 (January) p 64-84
+
+ It was also described in several texts on
+operating systems, including Denning's.
+
+I never, personally, saw the proof that is is optimal, but when I was
+studying Operating Systems with Denning, he talked about it. He said
+that a few years after his work, another paper compared the emperical
+results using working sets against a theoritical optimal system that
+knew what pages would be needed, and in what order. The paper showed
+that you could get very close to the impossible "theoritical optimal"
+(about 4% worse) using proper working set tuning. I could find the
+cite, by asking Peter, if there is lots of interest.
+
+The LRU approach that way too many systems use is not close to
+optimal, and requires far too much manual tuning to get even decent
+balance. I haven't seen a lot of detail for other OS approaches, but I
+spent far too much time understanding VMS'. bletch. 
+
+What is truely sad is that Denning's virtual memory had a great 
+track record on Tenex/Tops-20 systems, yet Cutler and the PDP-11
+folks paid no attention to it when they built the Vax. Worse still,
+IMHO, is that he apparently didn't even do it right on NT. I can
+forgive a mistake that is nearly 20 years old, but someone should have
+learned in the years since.
+
+One of the things that amazed me when I was a graduate teaching
+assistant for Denning's Operating Systems class was that of the
+students, that hadn't been completely mindzapped thinking that MS-DOS
+was the only operating system, could not even imagine that with
+working sets, the system tunes the sizes automatically rather than
+requiring a sys-admin to set quotas and limits.
+
+Pat
+Pat Farrell        Grad Student         http://www.isse.gmu.edu/~pfarrell
+Info. Systems & Software Engineering, George Mason University, Fairfax, VA
+PGP key available on homepage               #include <standard.disclaimer>
+
+
+
+Article 1944 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!nntp.primenet.com!news.cais.net!newsfeed.internetmci.com!globe.indirect.com!root
+From: root@truchas.sciso.com (Bob Knight)
+Newsgroups: alt.sys.pdp10
+Subject: Re: What was LOTS ?
+Date: 19 Jun 1996 19:28:30 GMT
+Organization: 
+Lines: 41
+Message-ID: <slrn4sgl7k.35q.root@truchas.sciso.com>
+References: <4q9edb$dn3@ninja.zso.dec.com>
+NNTP-Posting-Host: truchas.sciso.com
+X-Newsreader: slrn (0.8.3)
+
+LOTS stood for "Low Overhead TimeSharing", which referred to the
+staffing, not the quality of service.  It was founded in the late 70's
+by Ralph Gorin (now of XKL?) and John McCarthy.  Ralph served as its
+first full-time manager.  FTE staff was 3.5 when I was there (.5 time
+Director, FT manager, FT systems programmer, FT administrative
+assistant), with loads of help provided by students and other Stanford
+facilities.
+
+LOTS ran Stanford-modified TOPS-20 (on a 2040, at first, which was
+upgraded to a 2050 and augmented by a 2050 in 1981-2).  Typical heavy
+user load on each machine was in the neighborhood of 100-120 users.
+
+We had a user community of about 6,000 total.  It was a fun place to work.
+
+Bob
+ex-LOTS manager, 1981-1984
+
+
+In article <4q9edb$dn3@ninja.zso.dec.com>, "Carl J. Appellof" wrote:
+>I'm getting tired of not seeing any postings in this newsgroup for a 
+>while, so I'll ask a question that came up at lunch yesterday.
+>
+>What operating system ran LOTS at Stanford?  One of our crew claims it 
+>was a custom O/S that could support thousands of users on a single -10 or 
+>-20.  Another says it was a pretty vanilla TOPS-20 system.  (I can't 
+>believe it could support over 100 users in that case.)
+>
+>-- 
+>[10,170]
+>not speaking for
+>Digital Equipment Corporation
+>
+>
+
+
+-- 
+--------------------------------------------------------------------------
+bob@indirect.com					      P.O. Box 917
+(505) 867-5863 (voice)					Placitas, NM 87043
+(505) 867-5880 (FAX)					
+
+
+
+Article 1946 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!enews.sgi.com!ames!usenet.cisco.com!cronkite!billw
+From: billw@puli.cisco.com (William )
+Newsgroups: alt.sys.pdp10
+Subject: Re: What was LOTS ?
+Date: 20 Jun 1996 05:13:19 GMT
+Organization: cisco Systems, Inc.
+Lines: 32
+Message-ID: <BILLW.96Jun19221319@puli.cisco.com>
+References: <4q9edb$dn3@ninja.zso.dec.com>
+NNTP-Posting-Host: puli.cisco.com
+In-reply-to: "Carl J. Appellof"'s message of 19 Jun 1996 17:46:19 GMT
+
+    What operating system ran LOTS at Stanford?  One of our crew claims it 
+    was a custom O/S that could support thousands of users on a single -10 or 
+    -20.  Another says it was a pretty vanilla TOPS-20 system.  (I can't 
+    believe it could support over 100 users in that case.)
+
+At it's peak, LOTS was *THREE* pretty vanilla TOPS-20 systems (w/CFS), a
+backup/devlopment machine, and a Systems Concept SC-30M.  "Pretty vanilla"
+is relative, Stanford being one of the sites that did a fair amount of
+monitor, exec, and utility development, but a lot of those were general
+enough to get folded back in by DEC (eventually), and there wasn't anything
+that would stop anyone from calling it tops20.  I don't think it ever hit
+1000 simultaneous users (for the cluster), but it certainly got up to "too
+many"...
+
+There was a vax or two and an IBM mini-mainframe, too, but they didn't
+really count.
+
+Sadly, the LOTS (Low Overhead Timesharing, where you get students and
+volunteers to do a lot of the work that is normally necessary to support
+a mainframe computer facility) philosophy gave way to the "microcomputers
+need no support at all" philosophy, and any interesting applications or
+systems modifications that might get developed simply dissappear when
+the next student boots the machine, instead of surviving for all.
+(And of course, the size of the organization supporting the "no support"
+computers is much larger than the size of the old LOTS stafff :-)
+
+A fair number of the last of the LOTS crew ended up at XKL, and I suspect
+that Rich, at least, will say more.  I was merely on the periphery
+(occasionally using the development machine for development.)
+
+BillW
+
+
+
+Article 1947 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!nntp.primenet.com!news.cais.net!newsfeed.internetmci.com!uunet!inXS.uu.net!newstf01.news.aol.com!newsbf02.news.aol.com!not-for-mail
+From: jmfbah@aol.com (JMFBAH)
+Newsgroups: alt.sys.pdp10
+Subject: How did the old guys work?
+Date: 20 Jun 1996 10:03:13 -0400
+Organization: America Online, Inc. (1-800-827-6364)
+Lines: 56
+Sender: root@newsbf02.news.aol.com
+Message-ID: <4qbln1$d42@newsbf02.news.aol.com>
+Reply-To: jmfbah@aol.com (JMFBAH)
+NNTP-Posting-Host: newsbf02.mail.aol.com
+
+Following is a story I wrote in alt.folklore.computers.  I believe it also
+belongs here for nostalgia purposes.
+
+-----
+Subject: Re: Paper tape (was Did tab shops run all night?)
+From: jmfbah@aol.com (JMFBAH)
+Date: 19 Jun 1996 08:33:40 -0400
+Message-ID: <4q8s34$8oc@newsbf02.news.aol.com>
+
+
+In article <4q80no$fgi@access4.digex.net>,
+R. D. Davis <rdd@access4.digex.net> wrote:
+>In article <werme.834707385@alingo>, Eric Werme <werme@zk3.dec.com>
+wrote:
+>>jmfbah@aol.com (JMFBAH) writes:
+>>>  I hated dealing with paper tape, oiled and otherwise.
+>>
+>>"The only thing worse than fanfold paper tape is non-fanfold paper tape"
+>>			-Bob Clements,  ca. 1970
+>
+>What's wrong with paper tape?
+
+(If Tim Shoppa hadn't replied to your question, I would have never seen
+it; this software often skips messages and I haven't determined why.)
+
+Paper tape was very clumsy to use.  I will tell  you how Digital used to
+do their development cycles on the smaller machines (read that not
+PDP-10s; they did things the right way [smiley face here showing its
+prejudice).  A programmer would code by writing on coding paper.  He
+(there were no shes) would then submit the hand-written code to Tape Prep.
+ Tape Prep would then type it off-line on a KSR-35 transferring the
+hand-written to oil paper tape.  Now note that this oil paper tape (when
+the typing job was finished) could be 50-100' long.  The tape was then
+read on the KSR-35 reader, producing a listing which could be proofed. 
+Errors were marked up and edited (use your imagination about how one goes
+about editing a 50' oiled paper tape).  When all edits were made and the
+paper tape reflected what the programmer wanted,  the oil paper tape was
+then copied to fan-fold.  If the programmer wanted an assembly done, this
+fan-fold paper tape was taken to System 40 (a PDP-10, remember that
+system, guys?), read in with the paper tape reader to disk [sigh,
+finally].  Then the code was assembled with all its errors, a listing
+produced, etc. with the appropriate cross-assembler.  If the programmer
+wanted his stuff on DECtape (the best media ever invented in the whole
+wide world), it was copied using FILEX.
+
+B.T.W., when I got in charge of the RUNOFF group in Tape Prep.  Those
+KSR-35 procedures became history fast.  Everyone got their own PPN and
+everything was entered on-line.  If the programmer wanted a paper tape, we
+produced one, but it was a rare request.  Everybody wanted stuff on
+DECtape.
+
+Now, if you had a 50' paper tape, and you dropped it, it was a mess. 
+Reading 50' of fanfold in the -10's paper tape reader was an art that
+required acrobatic skills. I would have much rather handled cards.
+
+/BAH
+
+
+Article 1948 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!nntp.primenet.com!news.sprintlink.net!news-stk-3.sprintlink.net!news.sprintlink.net!new-news.sprintlink.net!news.wwa.com!news
+From: jeverett@wwa.com (John Everett)
+Newsgroups: alt.sys.pdp10
+Subject: Re: How did the old guys work?
+Date: 20 Jun 1996 15:41:37 GMT
+Organization: WorldWide Access (tm) - Chicagoland Internet Services (http://www.wwa.com)
+Lines: 20
+Message-ID: <4qbrfh$2ft@kirin.wwa.com>
+References: <4qbln1$d42@newsbf02.news.aol.com>
+NNTP-Posting-Host: pool10-009.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.7
+
+In article <4qbln1$d42@newsbf02.news.aol.com>, jmfbah@aol.com says...
+>
+
+>Paper tape was very clumsy to use.  I will tell  you how Digital used to
+>do their development cycles on the smaller machines (read that not
+>PDP-10s; they did things the right way [smiley face here showing its
+>prejudice).  A programmer would code by writing on coding paper.  He
+>(there were no shes) <snip>
+
+Barb:
+
+There actually were some she type programmers around. From memory, Martha 
+Sifnas, Evelyn Dow, Margaret Palmer, Arundati Badrenath (spelling may not be 
+correct, but she worked on TSS-8), and many others whose faces I remember but 
+whose names are gone. I'm assuming we're talking pre-1970 here. Several of 
+the above were already at DEC when I joined in 1966.
+
+-- 
+jeverett@wwa.com (John V. Everett)
+
+
+
+Article 1960 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!nntp.primenet.com!news.asu.edu!ennfs.eas.asu.edu!cs.utexas.edu!howland.reston.ans.net!news-e2a.gnn.com!newstf01.news.aol.com!newsbf02.news.aol.com!not-for-mail
+From: jmfbah@aol.com (JMFBAH)
+Newsgroups: alt.sys.pdp10
+Subject: Re: How did the old guys work?
+Date: 22 Jun 1996 08:23:22 -0400
+Organization: America Online, Inc. (1-800-827-6364)
+Lines: 30
+Sender: root@newsbf02.news.aol.com
+Message-ID: <4qgojq$bs5@newsbf02.news.aol.com>
+References: <4qevo5$b8v@aurora.cs.athabascau.ca>
+Reply-To: jmfbah@aol.com (JMFBAH)
+NNTP-Posting-Host: newsbf02.mail.aol.com
+
+rwa@cs.athabascau.ca (Ross Alexander) writes about dropped card decks:
+
+<The unprepared and luckless exist in all times and places.  It's
+<trivially easy to draw a diagonal stripe down the side of a deck with
+<a magic marker.  Then the sort job becomes one of reconstructing the
+<line.  I had several colours of markers to accomodate edits.
+
+Ah! I had forgotten that trick!  Also, if you didn't disturb the cards
+that had fallen, one could pick them up such that the original order was
+preserved.  There were only a few that had to be inserted.  Now, if you
+dropped a paper tape (especially the oil tape) it would fly down the
+hallway into nooks and crannies of the old mill.  While one was trying to
+pick it up (we ususally emptied a waste paper basket and just dumped the
+tape into it) some people or machine would come along and kick it aside,
+stomp on it, etc.  It was just another flotsam and jetsam in the mill. 
+Tapes usually didn't survive an encounter with one of those motorized
+loaders that  hauled boxes and stuff all over the place.
+
+DECtapes were grand things.  I could tote about 20 at a time.  I could
+wear them as bracelets all the way up my arms and carry other stuff (or
+type) with my hands free.  I was trying to remember the command name that
+stored a request in a queue for an operator to mount a DECtape and then
+the software would read/write a file as requested.  Wasn't it FILE
+o,file.nam where o was the read/write/delete operation you wanted?  This
+was run on System 40 when it was a KA and resided in the basement of
+building 5.
+
+/BAH
+
+\
+
+
+Article 1968 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!swrinde!newsfeed.internetmci.com!uunet!inXS.uu.net!world!weiner
+From: weiner@world.std.com (Sam Weiner)
+Subject: Re: How did the old guys work?
+Message-ID: <DtH7ru.HGw@world.std.com>
+Organization: The World Public Access UNIX, Brookline, MA
+References: <4qevo5$b8v@aurora.cs.athabascau.ca> <4qgojq$bs5@newsbf02.news.aol.com>
+Date: Sun, 23 Jun 1996 23:26:17 GMT
+Lines: 27
+
+In article <4qgojq$bs5@newsbf02.news.aol.com>, JMFBAH <jmfbah@aol.com> wrote:
+[snip -smw]
+
+>DECtapes were grand things.  I could tote about 20 at a time.  I could
+>wear them as bracelets all the way up my arms and carry other stuff (or
+>type) with my hands free.  I was trying to remember the command name that
+>stored a request in a queue for an operator to mount a DECtape and then
+>the software would read/write a file as requested.  Wasn't it FILE
+>o,file.nam where o was the read/write/delete operation you wanted?  This
+>was run on System 40 when it was a KA and resided in the basement of
+>building 5.
+>
+Actually, it was FILE op,id,file.ext,...  The id allowed the operator
+to pick your tape from the rack.  op could be C (check queue,) D (delete
+file from tape,) L (create a file with a tape directory,) R (recall a
+file from tape,) F (file a file to tape,) W (wait for pending requests
+to complete,) and Z (zero tape directory and then same as F.)  Since disks
+were small, you often kept both programs and data on DECtapes.  The above
+command allowed a batch job to request the files it needed and put them
+back thus avoiding disk usage charges if it finished before the system
+job which calculated disk usage ran.
+
+Ah, those were the days.
+
+Sam
+
+
+
+
+Article 1952 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!swrinde!howland.reston.ans.net!news-e2a.gnn.com!newstf01.news.aol.com!newsbf02.news.aol.com!not-for-mail
+From: jmfbah@aol.com (JMFBAH)
+Newsgroups: alt.sys.pdp10
+Subject: Re: How did the old guys work?
+Date: 21 Jun 1996 09:36:59 -0400
+Organization: America Online, Inc. (1-800-827-6364)
+Lines: 23
+Sender: root@newsbf02.news.aol.com
+Message-ID: <4qe8hr$cnh@newsbf02.news.aol.com>
+References: <4qbln1$d42@newsbf02.news.aol.com>
+Reply-To: jmfbah@aol.com (JMFBAH)
+NNTP-Posting-Host: newsbf02.mail.aol.com
+
+I have been called to task about my reference that there weren't any women
+programmers in those days.  I know there were female programmers (3) in
+the TOPS10 group.  I made the statement from my memory of Tape Prep work
+back then.  I don't think we did very much work for female programmers. 
+The only women I really remember (that means I saw them come into the
+rooms more than once/year) were the writers.  My apologies to the female
+programmers who existed back then (I had the ability myself...just didn't
+get paid for it) [smiley face here].
+
+I have also been questioned about my reference to KSR35s with the
+suggestion that maybe I meant ASR35 or, more likely, ASR33s.  I know that
+they weren't 33s; those things broke if you type faster than 30 w.p.m.  I
+was banned from using them at W.M.U. by DEC's field service after I broke
+them many times.
+These machines that we used in Tape Prep had a huge footprint (more than
+double the footprint of the 35s used as CTYs on a PDP10.  These machines
+had a paper tape punch and a paper tape reader.  They punched oil tape
+that was on a roll about 8" in diameter.  I don't remember them being
+referred to as ASR35s.  Note that I never saw these flavors of TTYs
+anywhere else other than Tape Prep.
+
+
+/BAH
+
+
+Article 1961 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!swrinde!howland.reston.ans.net!newsfeed.internetmci.com!news.wwa.com!news
+From: jeverett@wwa.com (John Everett)
+Newsgroups: alt.sys.pdp10
+Subject: Re: How did the old guys work?
+Date: 22 Jun 1996 13:13:23 GMT
+Organization: WorldWide Access (tm) - Chicagoland Internet Services (http://www.wwa.com)
+Lines: 27
+Message-ID: <4qgrhj$cih@kirin.wwa.com>
+References: <4qbln1$d42@newsbf02.news.aol.com> <4qe8hr$cnh@newsbf02.news.aol.com>
+NNTP-Posting-Host: pool2-054.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.7
+
+In article <4qe8hr$cnh@newsbf02.news.aol.com>, jmfbah@aol.com says...
+>
+>
+>I have also been questioned about my reference to KSR35s with the
+>suggestion that maybe I meant ASR35 or, more likely, ASR33s.  I know that
+>they weren't 33s; those things broke if you type faster than 30 w.p.m.  I
+>was banned from using them at W.M.U. by DEC's field service after I broke
+>them many times.
+>These machines that we used in Tape Prep had a huge footprint (more than
+>double the footprint of the 35s used as CTYs on a PDP10.  These machines
+>had a paper tape punch and a paper tape reader.  They punched oil tape
+>that was on a roll about 8" in diameter.  I don't remember them being
+>referred to as ASR35s.  Note that I never saw these flavors of TTYs
+>anywhere else other than Tape Prep.
+>
+
+The Teletypes(tm) that Tape Prep used were ASR-35s (Automatic Send/Receive). 
+Most of the PDP-10 CTYs were KSR-35s (Keyboard Send/Receive), but I do recall 
+that occasionally an ASR would appear as a CTY. Remember the aborted attempt 
+to use the KSR-37 as a CTY? At 150 baud they were certainly faster, and with 
+upper/lower case somewhat sexier, but alas they proved fatally flawed by 
+their unreliability.
+
+
+-- 
+jeverett@wwa.com (John V. Everett)
+
+
+
+Article 1971 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!nntp.coast.net!netnews.worldnet.att.net!newsadm
+From: david.razler@postoffice.worldnet.att.net (David M. Razler)
+Newsgroups: alt.sys.pdp10
+Subject: Re: What was LOTS ?
+Date: Mon, 24 Jun 1996 06:38:38 GMT
+Organization: AT&T WorldNet Services
+Lines: 64
+Message-ID: <31ce2ba6.161924404@netnews.worldnet.att.net>
+References: <4q9edb$dn3@ninja.zso.dec.com> <slrn4sgl7k.35q.root@truchas.sciso.com> <4qkn68$ae9@dns.plano.net>
+Reply-To: david.razler@worldnet.att.net
+NNTP-Posting-Host: 37.new-york-4.ny.dial-access.att.net
+X-Newsreader: Forte Agent .99e/32.227
+
+Charles Richmond <richmond@plano.net> wrote:
+
+>root@truchas.sciso.com (Bob Knight) wrote:
+>>LOTS ran Stanford-modified TOPS-20 (on a 2040, at first, which was
+>>upgraded to a 2050 and augmented by a 2050 in 1981-2).  Typical heavy
+>>user load on each machine was in the neighborhood of 100-120 users.
+>>
+>Huh??? I used a DEC-2050 at college and it was heavily loaded with 15 or 
+>16 users. How did you ever get 100-120 users on this machine at one 
+>time? OK, I admit that we only had 256k words of real memory. And I know 
+>that a PDP-11 was used to do the page swaps. But how can you pump these 
+>machines up to service 100+ users adequately?
+>
+>
+Depands on what the users are doing, and how fast they're doing it and how
+well the system is optimized for them:
+
+For example Long Island Regional Instructional Computer Service:
+<note, the configurations quoted are from my memory, which means possibly
+faulty>
+
+1970 - PDP-8I/16K core, 128K DF-01, 1 h/s PTR - 12 simultaneous users via
+genuine Western Electric #103 DataPumps through Leasco-owned and maintained
+accoustic couplers and ASR-33s, running a mixture of 'big' BASIC, FOCAL,
+Fortran, TSS-8 assembler jobs. Maximum size of a model of John Conway's Life
+under TSS-8 BASIC, 9x9 - fire up a glider and go out for lunch.
+
+1971 KA-10, 256K core, 2x RP-02 2MWord disk packs <Memorex>, 8X TU-55, HS
+PTP/PTR, above PDP-8/I turned into DCA-680 UART: 72 simultaneous users running
+a mixture of Bell-103 compatible modems, terminals <ASR-33s stil predominate>
+up to 300 baud. SYSTATS show periodic peak loads of about 93% of available
+reasources. Terminal waiting of more than 5 seconds RARE, despite much work
+done to patch security holes in TOPS-10, which show up regularly when several
+hundred high-school hackers are attacking the system. BASIC performs at
+full-speed when running 72X72 Life jobs and assorted other time draggers
+
+late 1971 - MUX/leased line cuts down number of local modems,  user numbers
+slowly rise above theoretical maximum of 72, though peak time loads are
+reduced by greater accessability to terminals by students. Swapping disk
+added.
+
+1972 - More lines, more MUX'es +2 RP-02s, Still topping out at 95% system
+reasources used despite an outrageous number of insane jobs. No real waiting
+except for folks getting frustrated with ASR-33s. All are now versed in the
+"major" ASR-33 repairs which can be made with 1 paper clip, 2-4 rubber bands
+and Scotch Magic Mending Tape.
+
+1973 - late - 256Kwrd core box arrives, along with a 9-track magtape.
+Decwriters and Hazeltine 2000 series terminals begin to replace ASR-33s at
+many lcoations. More modems running at Bell 212 standards. Still no overload.
+
+1974-6 the single-CPU KA-10 maxes out, but despite jobs ranging from mammoth
+macro programs running under DDT, folks attempting to calculate "full"
+fibbonacci sequence with BASIC brute force programs,  programming in TECO,
+interpreters like CRYPTC <Bruce Maier's utter free-form language (take that,
+oh ye of little faith who feel thee must declarest all variables>, system
+performance is still good. 120+ terminals logged on at a time.
+
+It worked. It worked well.
+
+			dmr
+
+David M. Razler
+david.razler@worldnet.att.net
+
+
+Article 1996 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!enews.sgi.com!EU.net!Norway.EU.net!nntp.uio.no!news.cais.net!nntp.coast.net!netnews.worldnet.att.net!ix.netcom.com!news
+From: JCGreen@ix.netcom.com (John C Green Jr)
+Newsgroups: alt.sys.pdp10
+Subject: Re: How big were they?
+Date: Wed, 26 Jun 1996 03:36:39 GMT
+Organization: Netcom
+Lines: 30
+Message-ID: <4qqbdt$l9c@sjx-ixn3.ix.netcom.com>
+References: <4q9edb$dn3@ninja.zso.dec.com> <slrn4sgl7k.35q.root@truchas.sciso.com> <4qkn68$ae9@dns.plano.net> <31ce2ba6.161924404@netnews.worldnet.att.net> <DLM.96Jun25162927@firebird.osf.org>
+NNTP-Posting-Host: sjx-ca12-19.ix.netcom.com
+X-NETCOM-Date: Tue Jun 25  8:39:41 PM PDT 1996
+X-Newsreader: Forte Free Agent 1.0.82
+
+dlm@firebird.osf.org ( Dan Murphy ) wrote:
+
+>In article <31ce2ba6.161924404@netnews.worldnet.att.net>
+>david.razler@postoffice.worldnet.att.net (David M. Razler) writes:
+>
+>>    1971 KA-10, 256K core, 2x RP-02 2MWord disk packs <Memorex>, 8X TU-55, HS
+>
+>    Was an RP02 really only 2 Mwords??
+
+    128 words / sector
+    10 sectors / track
+    20 tracks / cylinder
+    203 cylinders / disk
+
+Looks like 5,196,800 Engineer's Words to me;
+5,196,800 / 1024 / 1024 = 4.956+ M Programmer's Words.
+
+RP01 was 10 sectors / track, 10 tracks / cylinder or 1/4 size of RP02.
+3 RP01s were put on #2 and 5 shipped to a customer. We convinced
+Memorex to take them all back even though they were in Digital
+magenta and pea green colors.
+
+It's not often that I can speak from a position of absolute
+authority. Thanks for giving me the opportunity.
+
+- - -
+RP10 (controller for RP02) Project Engineer
+21483 Old Mine Rd             (408)353-1870
+Los Gatos CA 95030    JCGreen@ix.netcom.com
+
+
+
+Article 1994 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!news.exodus.net!ddsw1!news.mcs.net!van-bc!uniserve!n2van.istar!van.istar!ott.istar!istar.net!winternet.com!nntp.primenet.com!news.cais.net!newsfeed.internetmci.com!swrinde!gatech!usenet.eel.ufl.edu!news.ultranet.com!d8.nsh.nh.ultra.net!user
+From: francini@ultranet.com (John J. Francini)
+Newsgroups: alt.sys.pdp10
+Subject: Re: How big were they?
+Date: 26 Jun 1996 05:16:20 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 60
+Message-ID: <francini-2606960118020001@d8.nsh.nh.ultra.net>
+References: <4q9edb$dn3@ninja.zso.dec.com> <slrn4sgl7k.35q.root@truchas.sciso.com> <4qkn68$ae9@dns.plano.net> <31ce2ba6.161924404@netnews.worldnet.att.net> <DLM.96Jun25162927@firebird.osf.org>
+NNTP-Posting-Host: d8.nsh.nh.ultra.net
+X-Newsreader: Yet Another NewsWatcher 2.2.0b4
+
+In article <DLM.96Jun25162927@firebird.osf.org>, dlm@firebird.osf.org (
+Dan Murphy ) wrote:
+
+> In article <31ce2ba6.161924404@netnews.worldnet.att.net>
+david.razler@postoffice.worldnet.att.net (David M. Razler) writes:
+> 
+> 
+> >    1971 KA-10, 256K core, 2x RP-02 2MWord disk packs <Memorex>, 8X TU-55, HS
+> 
+>     Was an RP02 really only 2 Mwords??
+
+I think it was certainly more than that.
+
+I have in front of me the 1978-79 PDP-11 Peripherals Handbook.  While the
+numbers it gives are in terms of 8-bit bytes (since most drives were
+formatted for 16 bit words for 11s), the capacities for 18-bit formatting
+would probably be a bit higher, but still in the ballpark.
+
+> 
+>     I realized recently that I couldn't actually remember the
+>     capacities of the various RP disk packs.  Who recalls the size of
+>     RP04 and RP06 packs?
+>     
+>     Whatever it was, it seemed big at the time...
+
+Here are the capacities (in mbytes) for various DEC drives that were also
+connectable to systems whose word lengths divide by 6 rather than 8,
+according to this book:
+
+Model    Type            Platters   Size MB  Access Time  Xfer Rate  Rot. Speed
+-----    ----------      --------   -------  -----------  ---------  ----------
+RK05     Rem. cartridge    1           1.2      70 ms     1.1us/word  1500 rpm
+RL01     Rem. cartridge    1           5.2      55 ms     512KB/sec   2400
+RM03     Rem. disk pack    5          67        38 ms     1.2MB/sec   3600
+RP04/5   Rem. disk pack   10          88        36 ms     806KB/sec   3600
+RP06     Rem. disk pack   10         176        36 ms     806KB/sec   3600
+RP07     Fixed Winchester  9         516        31.3 ms   1.3MB/2.2MB* 3633
+RA60     Rem. disk pack    5         205        50        1.98MB/sec  3600
+RA81     Fixed Winchester  4         456        36.3      2.2MB/sec   3600
+
+* 1.3 MB/sec in brain-dead VAX mode; RP07-D (for 36-bits) did 2.2MB/sec. 
+One of the fastest drives Digital sold during the 36-bit era; not matched
+until the RA81.  Of course, the RA81's speed was mitigated by all the
+extra latency added by going through an HSC.
+
+I don't have any info on the RP20, nor the RP02 or RP03.
+
+>     
+>     
+>     dlm
+>     
+
+John Francini
+ex-Digit and continuing 36-bit fan...
+
+-- 
+John Francini
+
+I speak for none but myself.
+francini@ultranet.com (home)  francini@progress.com (work)
+
+
+Article 1975 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!nntp.primenet.com!news.cais.net!newsfeed.internetmci.com!in1.uu.net!nwnews.wa.com!news.halcyon.com!Ikkoku-Kan.Panda.COM!mrc
+From: Mark Crispin <mrc@Panda.COM>
+Newsgroups: alt.sys.pdp10
+Subject: Re: What was LOTS ?
+Date: Mon, 24 Jun 1996 13:02:33 -0700
+Organization: Pandamonium Reigns
+Lines: 36
+Message-ID: <Pine.NXT.3.94.960624125503.7619A-100000@Ikkoku-Kan.Panda.COM>
+References: <4q9edb$dn3@ninja.zso.dec.com> <slrn4sgl7k.35q.root@truchas.sciso.com> <4qkn68$ae9@dns.plano.net>
+NNTP-Posting-Host: panda.wa.com
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+To: Charles Richmond <richmond@plano.net>
+cc: root@truchas.sciso.com
+In-Reply-To: <4qkn68$ae9@dns.plano.net>
+
+On 24 Jun 1996, Charles Richmond wrote:
+> root@truchas.sciso.com (Bob Knight) wrote:
+> >LOTS ran Stanford-modified TOPS-20 (on a 2040, at first, which was
+> >upgraded to a 2050 and augmented by a 2050 in 1981-2).  Typical heavy
+> >user load on each machine was in the neighborhood of 100-120 users.
+
+Yup.  I remember those days quite well, given that I was a LOTS user from
+1977 when I joined the Stanford staff until the time when the plug was
+finally pulled on the SC-30M.
+
+> Huh??? I used a DEC-2050 at college and it was heavily loaded with 15 or 
+> 16 users. How did you ever get 100-120 users on this machine at one 
+> time? OK, I admit that we only had 256k words of real memory. And I know 
+> that a PDP-11 was used to do the page swaps. But how can you pump these 
+> machines up to service 100+ users adequately?
+
+You answered your question.  You only had 256KW of memory.  Even in the
+early days, the operating system and its data structures were pretty close
+to 256K (about 128K or so of which needed to be resident).  We're talking
+*major* thrash opportunity here.  DEC once sold 128K machines as bottom of
+the line systems, but those were completely unusable and eventually even
+the OS punted on trying to support them.
+
+You can especially see this on a 2020.  A 256KW 2020 is slow; a 512KW 2020
+makes a nice single-user machine.
+
+Of course, if you had CS types running lots of TeX and (shudder!) LISP
+jobs, you really needed a 4MW machine...
+
+The PDP-11 did not do swapping.  The PDP-11 handled the terminals.
+
+-- Mark --
+
+DoD #0105, R90/6 pilot  FAX: (206) 842-0758  ICBM: N 47.36'24" W 122.34'08"
+TOPS-20: A Great Improvement Over Its Successors
+
+
+
+Article 2007 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!nntp.primenet.com!news.cais.net!newsfeed.internetmci.com!news.wwa.com!news
+From: jeverett@wwa.com (John Everett)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Tops should be in the public domain
+Date: 26 Jun 1996 21:41:37 GMT
+Organization: WorldWide Access (tm) - Chicagoland Internet Services (http://www.wwa.com)
+Lines: 22
+Message-ID: <4qsaqh$1st@kirin.wwa.com>
+References: <4qom88$eps@quest.ccsi.com>
+NNTP-Posting-Host: pool1-028.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.7
+
+In article <4qom88$eps@quest.ccsi.com>, hsnewman@infinity.ccsi.com says...
+>
+>Why isn't tops 10 in the public domain?  Isn't there a time limit on 
+>copyrights?  Also, they distributed the sources...why don't they just 
+>give it away, they aren't using it?
+>
+
+Many new to the 36 bit world are unaware that those of us who built TOPS-10 
+are offended by lumping TOPS-10 and TOPS-20 together and calling them Tops. 
+Even some DEC people late in the life of the 36 bit product line were 
+starting to practice this sacrilege. Of course this is somewhat amusing given 
+the general revulsion when David Stone announced at a Monitor Group meeting 
+one day that the PDP-10 Monitor would henceforth be called TOPS-10. We just 
+HATED the name.
+
+We were similarly unimpressed when DEC decided on TOPS-20 for Dan Murphy's 
+operating system. What was wrong with TENEX,...or VIROS,...or SNARK?
+
+
+-- 
+jeverett@wwa.com (John V. Everett)
+
+
+
+Article 1987 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!nntp.coast.net!netnews.worldnet.att.net!ix.netcom.com!news
+From: JCGreen@ix.netcom.com (John C Green Jr)
+Newsgroups: alt.sys.pdp10
+Subject: TOPS-10 was SMALL (was: What was LOTS?)
+Date: Tue, 25 Jun 1996 17:56:13 GMT
+Organization: Netcom
+Lines: 47
+Message-ID: <4qp9dn$mra@sjx-ixn5.ix.netcom.com>
+NNTP-Posting-Host: sjx-ca55-06.ix.netcom.com
+X-NETCOM-Date: Tue Jun 25 10:59:19 AM PDT 1996
+X-Newsreader: Forte Free Agent 1.0.82
+
+I worked in PDP-10 Engineering for 2 years starting JUN68. TOPS-10 was small in
+those days. The development machine, KA10 #2, had 32KW. One day in '69
+several engineers went to the cafeteria just before 1PM and joined several
+programmers who were already in a lunchroom discussion.
+
+One programmer said, "Here's a few users. Let's ask them." He then described a
+new feature they had just put in the OS. We said it sounds good, what's the
+issue? We were told it takes 3 words of resident core. In '69 this was suitable
+for lunchroom discussion.
+
+Some of you remember W102s were hard to come by. The development team wanted a
+third bank of memory on #2. Manufacturing had lots of core stacks but no W102s.
+Tom Eggers noticed the two banks of memory on #2 each had 3 memory ports
+populated with W102s. Only 2 ports were being used. They got a third memory bank
+sans W102s from manufacturing, populated two ports, and upgraded #2 to 48KW WITH
+NO ADDITIONAL USERS. Needless to say the OS started growing.
+
+The previous LOTS discussion pointed out that it wasn't long before TOPS-20
+wouldn't boot on 128K:
+
+Mark Crispin <mrc@Panda.COM> wrote:
+
+>On 24 Jun 1996, Charles Richmond wrote:
+>
+>>root@truchas.sciso.com (Bob Knight) wrote:
+>>
+>>>LOTS ran Stanford-modified TOPS-20. User load on each
+>>>machine was in the neighborhood of 100-120 users.
+>>
+>> Huh??? I used a DEC-2050 at college and it was heavily
+>>loaded with 15 or 16 users. How did you ever get 100-120
+>>users on this machine at one time? OK, I admit that we only
+>>had 256k words of real memory.
+>
+>You answered your question.  You only had 256KW of memory.
+>Even in the early days, the operating system and its data
+>structures were pretty close to 256K (about 128K or so of
+>which needed to be resident).  We're talking *major* thrash
+>opportunity here.  DEC once sold 128K machines as bottom of
+>the line systems, but those were completely unusable and
+>eventually even the OS punted on trying to support them.
+
+- - -
+Internet Marketing and Business Development
+21483 Old Mine Rd             (408)353-1870
+Los Gatos CA 95030    JCGreen@ix.netcom.com
+
+
+
+Article 1989 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!enews.sgi.com!decwrl!news.PBI.net!samba.rahul.net!rahul.net!a2i!bush.a2i!bush
+From: Bill Bush <bush@rahul.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 was SMALL (was: What was LOTS?)
+Date: 25 Jun 1996 20:13:01 GMT
+Organization: a2i network
+Lines: 7
+Sender: Bill Bush <bill@bush.com>
+Message-ID: <4qph8d$3un@samba.rahul.net>
+References: <4qp9dn$mra@sjx-ixn5.ix.netcom.com>
+NNTP-Posting-Host: waltz.rahul.net
+NNTP-Posting-User: bush
+
+I remember when the KA10 at Harvard got a third bank in 1972 and user space
+went to 31 KW -- we were doing a project in a LISPoidal extensible language
+system called ECL, and we finally had enough space to complete the project.
+48 KW total -- what a luxury!
+
+Also, if memory serves, in 1970 I remember swapping to DECtape (problems with
+the Vermont Research drum).
+
+
+Article 2012 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!nntp.primenet.com!news.cais.net!newsfeed.internetmci.com!news.cybercom.net!mfd-dial1-10.cybercom.net!user
+From: Moon@cybercom.net (David A. Moon)
+Newsgroups: alt.sys.pdp10
+Subject: Re: How big were they?
+Date: Thu, 27 Jun 1996 11:37:12 -0400
+Organization: Cyber Access Internet Services (617) 396-0491
+Lines: 15
+Message-ID: <Moon-2706961137120001@mfd-dial1-10.cybercom.net>
+References: <4q9edb$dn3@ninja.zso.dec.com> <slrn4sgl7k.35q.root@truchas.sciso.com> <4qkn68$ae9@dns.plano.net> <31ce2ba6.161924404@netnews.worldnet.att.net> <DLM.96Jun25162927@firebird.osf.org> <francini-2606960118020001@d8.nsh.nh.ultra.net>
+NNTP-Posting-Host: mfd-dial1-10.cybercom.net
+
+In article <francini-2606960118020001@d8.nsh.nh.ultra.net>,
+francini@ultranet.com (John J. Francini) wrote:
+
+> I don't have any info on the RP20, nor the RP02 or RP03.
+
+The RP02 was a clone of the IBM 2314, the RP03 was a double-density version
+of that, and the RP04 was a clone of the IBM 3330.  The approximate capacities
+were 20 MB, 40 MB, and 80 MB.  For example, an RP02 had 40,600 sectors of
+128 36-bit words or about 5 megawords.  An RP04 had 156,180 sectors of
+the same size or a bit short of 20 megawords.  These figures are from the
+source code of ITS, a pdp-10 operating system that supports all those disks,
+examined by Emacs running on ITS.
+
+I don't know anything about RP20.
+--Dave Moon
+
+
+Article 2018 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!swrinde!newsfeed.internetmci.com!news.emf.net!overload.lbl.gov!sseos.lbl.gov!tonyk
+From: tonyk@sseos.lbl.gov (Tony Konashenok)
+Newsgroups: alt.sys.pdp10
+Subject: Re: How big were they?
+Date: 27 Jun 1996 23:52:45 GMT
+Organization: Lawrence Berkeley Laboratory
+Lines: 15
+Distribution: world
+Message-ID: <4qv6sd$2ae@overload.lbl.gov>
+References: <4q9edb$dn3@ninja.zso.dec.com> <slrn4sgl7k.35q.root@truchas.sciso.com> <4qkn68$ae9@dns.plano.net> <31ce2ba6.161924404@netnews.worldnet.att.net> <DLM.96Jun25162927@firebird.osf.org> <francini-2606960118020001@d8.nsh.nh.ultra.net> <Moon-2706961137120001@mfd-dial1-10.cybercom.net>
+NNTP-Posting-Host: sseos.lbl.gov
+
+In article <Moon-2706961137120001@mfd-dial1-10.cybercom.net>, Moon@cybercom.net (David A. Moon) writes:
+
+|> The RP02 was a clone of the IBM 2314, the RP03 was a double-density version
+|> of that, and the RP04 was a clone of the IBM 3330.  The approximate capacities
+|> were 20 MB, 40 MB, and 80 MB.  For example, an RP02 had 40,600 sectors of
+|> 128 36-bit words or about 5 megawords.  An RP04 had 156,180 sectors of
+|> the same size or a bit short of 20 megawords.  These figures are from the
+|> source code of ITS, a pdp-10 operating system that supports all those disks,
+|> examined by Emacs running on ITS.
+
+If it's true, then IBM used the same drives more efficiently:
+2314 = 29 MB = 200 cyl (+ 3 spares) x 20 tracks x  7294 bytes
+3330 = 100MB = 411 cyl              x 19 tracks x 13030 bytes
+
+Tony Konashenok
+
+
+Article 2024 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!enews.sgi.com!decwrl!pa.dec.com!nntpd.lkg.dec.com!lead.zk3.dec.com!zk2nws.zko.dec.com!denton.zko.dec.com!amartin
+From: amartin@denton.zko.dec.com (Alan H. Martin)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Tops should be in the public domain
+Date: 28 Jun 1996 16:47:16 GMT
+Organization: DEC
+Lines: 8
+Message-ID: <4r12ak$84h@zk2nws.zko.dec.com>
+References: <4qom88$eps@quest.ccsi.com> <4qsaqh$1st@kirin.wwa.com>
+NNTP-Posting-Host: denton.zko.dec.com
+
+In article <4qsaqh$1st@kirin.wwa.com> jeverett@wwa.com (John Everett) writes:
+>We were similarly unimpressed when DEC decided on TOPS-20 for Dan Murphy's 
+>operating system. What was wrong with TENEX,...or VIROS,...or SNARK?
+
+Or KRANS?
+				/AHM
+-- 
+Alan Howard Martin				AMartin@TLE.ENet.DEC.Com
+
+
+Article 2013 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!enews.sgi.com!decwrl!pa.dec.com!nntpd.lkg.dec.com!usenet
+From: pcote@mse1.enet.dec.com (Paul Cote)
+Newsgroups: alt.sys.pdp10
+Subject: Re: How did the old guys work?
+Date: 27 Jun 1996 17:08:55 GMT
+Organization: Chaos
+Lines: 25
+Message-ID: <4quf77$en6@nntpd.lkg.dec.com>
+References: <4qevo5$b8v@aurora.cs.athabascau.ca> <SETALA.96Jun26021825@pinta.kolumbus.fi>
+NNTP-Posting-Host: mrcote.mse.tay.dec.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.6
+
+In article <SETALA.96Jun26021825@pinta.kolumbus.fi>, 
+setala@pinta.kolumbus.fi says...
+>
+>In article <4qp3l9$6th@usenet.pa.dec.com> "Carl J. Appellof" 
+<cja@zso.dec.com> writes:
+>
+>   The one I hated was Joe Smith wearing a 9-track tape seal as a belt.  
+Now 
+>   THAT'S skinny!
+>
+>Ehh? Is this true or just folklore?
+>I must dig out some tapes from basement and try them on... :)
+
+
+  I remember doing that but it got uncomfortable when you exhaled :)
+
+  I'm impressed with the number of former pdp10/tops10 folks still
+  active (alive) who worked in MR01 and write to this newsgroup.
+
+  So test your memory: can you name (meaning serial #s, ie. 1026) all
+  the 36-bit systems that were fixtures in the mr01-2 "LCG" lab ? 
+  I think I can but will wait to post it.
+
+  Paul
+
+
+
+Article 2022 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!nntp.primenet.com!news.cais.net!newsfeed.internetmci.com!sgigate.sgi.com!enews.sgi.com!decwrl!pa.dec.com!nntpd.lkg.dec.com!lead.zk3.dec.com!zk2nws.zko.dec.com!denton.zko.dec.com!amartin
+From: amartin@denton.zko.dec.com (Alan H. Martin)
+Newsgroups: alt.sys.pdp10
+Subject: Re: How did the old guys work?
+Date: 28 Jun 1996 00:17:55 GMT
+Organization: DEC
+Lines: 24
+Message-ID: <4qv8bj$c8b@zk2nws.zko.dec.com>
+References: <4qevo5$b8v@aurora.cs.athabascau.ca> <SETALA.96Jun26021825@pinta.kolumbus.fi> <4quf77$en6@nntpd.lkg.dec.com>
+NNTP-Posting-Host: denton.zko.dec.com
+
+In article <4quf77$en6@nntpd.lkg.dec.com> pcote@mse1.enet.dec.com (Paul Cote) writes:
+>  So test your memory: can you name (meaning serial #s, ie. 1026) all
+>  the 36-bit systems that were fixtures in the mr01-2 "LCG" lab ? 
+
+ 514	TOPS-10 Development		DEC, Marlboro	KI10
+ 546    TOPS-10 Development     	DEC, Marlboro   KI10
+1026    TOPS-10 Development     	DEC, Marlboro   KL10    SMP
+1031    TOPS-20 Hard Dev        	DEC, Marlboro   KL10
+1042    TOPS-10 Development     	DEC, Marlboro   KL10    SMP
+2102    TOPS-20 Soft Dev        	DEC, Marlboro   KL20
+2116    TOPS-20 Soft Dev        	DEC, Marlboro   KL20
+2136    TOPS-20 Soft Dev		DEC, Marlboro   KL20
+2137    TOPS-20 Soft Dev        	DEC, Marlboro   KL20
+2244    TOPS-20 Marketing       	DEC, Marlboro   KL20
+2263    ?       Diag. Eng.      	DEC, Marlboro   KL20?
+2476	TOPS-10	Soft Dev		Marlboro, MA	KL10
+4097    TOPS-10 Development     	DEC, Marlboro   KS2020	TWINKY
+4101    TOPS-10 Development     	DEC, Marlboro   KS2020
+4145	TOPS-20	Soft Dev		DEC, Marlboro	KS20	GINSU
+
+Hmmm, is MRFORT in that list?
+				/AHM
+-- 
+Alan Howard Martin				AMartin@TLE.ENet.DEC.Com
+
+
+Article 2054 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!nntp.primenet.com!news.asu.edu!ennfs.eas.asu.edu!cs.utexas.edu!usc!elroy.jpl.nasa.gov!swrinde!howland.reston.ans.net!nntp.coast.net!news-res.gsl.net!news.gsl.net!portc01.blue.aol.com!newstf01.news.aol.com!newsbf02.news.aol.com!not-for-mail
+From: jmfbah@aol.com (JMFBAH)
+Newsgroups: alt.sys.pdp10
+Subject: Re: How did the old guys work?
+Date: 10 Jul 1996 10:03:07 -0400
+Organization: America Online, Inc. (1-800-827-6364)
+Lines: 15
+Sender: root@newsbf02.news.aol.com
+Message-ID: <4s0d6r$mq4@newsbf02.news.aol.com>
+References: <4quf77$en6@nntpd.lkg.dec.com>
+Reply-To: jmfbah@aol.com (JMFBAH)
+NNTP-Posting-Host: newsbf02.mail.aol.com
+
+< So test your memory: can you name (meaning serial #s, ie. 1026) all
+<  the 36-bit systems that were fixtures in the mr01-2 "LCG" lab ? 
+<  I think I can but will wait to post it.
+
+Sigh.  Does no one remember our beloved System 40/2?  System 2 was taken
+from hardware engineering when they moved on to faster machines and became
+the second processor for a dual KA system for the TOPS10 Monitor Group. 
+It would run the red packs when all TOPS10 systems were up and available
+for timesharing.  
+
+I'm really sorry that messages to this newsgroup aren't kept on-line
+longer.  I feel I've missed a bunch of them since this thread was started
+by me and it's evolved into some real nostalgia.
+
+/BAH
+
+
+Article 2060 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!nntp.primenet.com!news.cais.net!hunter.premier.net!netnews.worldnet.att.net!ix.netcom.com!ixnews1.ix.netcom.com!decwrl!pa.dec.com!nntpd.lkg.dec.com!lead.zk3.dec.com!zk2nws.zko.dec.com!denton.zko.dec.com!amartin
+From: amartin@denton.zko.dec.com (Alan H. Martin)
+Newsgroups: alt.sys.pdp10
+Subject: Re: How did the old guys work?
+Date: 11 Jul 1996 20:49:48 GMT
+Organization: DEC
+Lines: 20
+Message-ID: <4s3pdc$pt0@zk2nws.zko.dec.com>
+References: <4quf77$en6@nntpd.lkg.dec.com> <4s0d6r$mq4@newsbf02.news.aol.com>
+NNTP-Posting-Host: denton.zko.dec.com
+
+In article <4s0d6r$mq4@newsbf02.news.aol.com> jmfbah@aol.com (JMFBAH) writes:
+>< So test your memory: can you name (meaning serial #s, ie. 1026) all
+><  the 36-bit systems that were fixtures in the mr01-2 "LCG" lab ? 
+><  I think I can but will wait to post it.
+>
+>Sigh.  Does no one remember our beloved System 40/2?  ...
+
+The Maynard systems I know about are:
+
+   2	TOPS-10	PDP-10 Engineering	Maynard, MA	KA10
+  40	TOPS-10	Development		Maynard, MA	KA10
+ 169	TOPS-10	Development		Maynard, MA	KA10
+ 246	TOPS-10	Development		Maynard, MA	KA10
+1079    TOPS-10 DEC ISSG        	Maynard, MA	KL10
+2152    TOPS-20 Mill 20         	Maynard, MA     KL20
+
+Care to add to the list?
+				/AHM/THX
+-- 
+Alan Howard Martin				AMartin@TLE.ENet.DEC.Com
+
+
+Article 2064 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!nntp.coast.net!news-res.gsl.net!news.gsl.net!hunter.premier.net!newsfeed.internetmci.com!btnet!zippy.dct.ac.uk!zippy.dct.ac.uk!nntp
+Newsgroups: alt.sys.pdp10
+Subject: Re: How did the old guys work?
+Message-ID: <31EB87CF.43B35ECA@tay.ac.uk>
+From: Alan Greig <A.Greig@tay.ac.uk>
+Date: Tue, 16 Jul 1996 12:15:11 +0000
+References: <4qevo5$b8v@aurora.cs.athabascau.ca> 
+ <decwolf-0207962315580001@prv-ri6-47.ix.netcom.com> <1996Jul11.130343.25741@indyvax.iupui.edu> <31ea0de0.1306665@news.oslonett.no>
+Organization: University of Abertay Dundee
+Nntp-Posting-Host: river.tay.ac.uk
+X-Mailer: Mozilla 2.0Ib6a (X11; I; AlphaServer 2100 4/275 )
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 25
+
+Bjorn Hell Larsen wrote:
+
+> At the University of Oslo we had a relatively stable and uncomplicated ANF
+> network with our single SMP -10 as the centre, but when we started getting
+> VAXen and setting up a DECnet, it was decided to rename the existing nodes. It
+> was decided to use Norwegian Christian names for the different nodes. So I
+> renamed the two main DN87s, previously known as NODE01 and NODE02, to ODD and
+> EVEN - both rather common first names in Norway.
+
+As a student at Dundee University in 1981 we had a DEC-10 connected via
+ANF-10 to several other machines including a DEC-10 at Edinburgh University.
+At one point Dundee University upgraded to (and my version number
+memory is hazy now but roughly) TOPS-10 7 something while Edinburgh were
+still at 6 something. Previously TOPS-10 had attempted to assign all DN87(?)
+lines to itself and leave them connected but now Dundee would disconnect
+them at the end of a session ("HOST SENT DISCONNECT") and they would be grabbed by
+Edinburgh. Result was that hundreds of network unware students would find
+themselves fruitlessly trying to login to a machine 50 miles away at the end of a
+low speed link. Eventually Dundee patched the DN87 code to prevent it from
+attaching terminals to anything other than their own machines.
+
+--
+Alan Greig                           Tel: (01382) 308802
+University of Abertay Dundee       Email: A.Greig@tay.ac.uk
+   ** Never underestimate the power of human stupidity **
+
+
+Article 2085 of alt.sys.pdp10:
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Path: nntp1.best.com!news1.best.com!news.sgi.com!swrinde!howland.reston.ans.net!ixnews1.ix.netcom.com!ix.netcom.com!ix.netcom.com!netcom.com!netcom3!alderson
+From: alderson@netcom3.netcom.com (Richard M. Alderson III)
+Subject: Re: FTP: ASCII vs Binary vs Tenex (was Re: What is "ASCII"?)
+In-Reply-To: Paul DeMone's message of 1 Aug 1996 13:41:54 GMT
+Message-ID: <ALDERSON.96Aug1104037@netcom3.netcom.com>
+Sender: alderson@netcom3.netcom.com
+Reply-To: alderson@netcom.com
+Organization: NETCOM On-line services
+References: <kenwest-2807961809220001@ts23-04.tor.istar.ca> <4th1i2$kpg@hecate.umd.edu>
+	<4th8t5$ga7@nntp.ucs.ubc.ca> <BILLW.96Jul29175833@puli.cisco.com>
+	<4tkebo$2l4@shellx.best.com> <4tqc72$3ec@kannews.ca.newbridge.com>
+Date: Thu, 1 Aug 1996 17:40:37 GMT
+Lines: 18
+Xref: nntp1.best.com alt.folklore.computers:69256 alt.sys.pdp10:2085
+
+In article <4tqc72$3ec@kannews.ca.newbridge.com> Paul DeMone
+<pdemone@tundra.com> writes:
+
+>Don't forget "radix 50" on PDP-11s.
+
+RADIX50 preceded the PDP-11 by a long time.  It was used on the PDP-10 (and I
+think the PDP-6), where it allowed packing 6-character symbol names into the
+rightmost 32 bits of a 36-bit word, with the other 4 bits used for flags to the
+linker.
+
+I also don't think it was a DEC invention; I seem to remember that it was first
+devised by J. A. N. Lee for the FORTRAN compiler on the IBM 704, another 36-bit
+machine.
+-- 
+Rich Alderson   You know the sort of thing that you can find in any dictionary
+                of a strange language, and which so excites the amateur philo-
+                logists, itching to derive one tongue from another that they
+                know better: a word that is nearly the same in form and meaning
+                as the corresponding word in English, or Latin, or Hebrew, or
+                what not.
+                                                --J. R. R. Tolkien,
+alderson@netcom.com                               _The Notion Club Papers_
+
+
+Article 2101 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!news.sgi.com!spool.mu.edu!agate!bh
+From: bh@anarres.CS.Berkeley.EDU (Brian Harvey)
+Newsgroups: alt.sys.pdp10
+Subject: Re: FTP: ASCII vs Binary vs Tenex (was Re: What is "ASCII"?)
+Date: 18 Aug 1996 16:03:00 GMT
+Organization: University of California, Berkeley
+Lines: 49
+Message-ID: <4v7erk$60u@agate.berkeley.edu>
+References: <ALDERSON.96Aug16111205@netcom4.netcom.com> <4v762v$m55@newsbf02.news.aol.com>
+NNTP-Posting-Host: anarres.cs.berkeley.edu
+
+jmfbah@aol.com (JMFBAH) writes:
+>The first I ever heard of "TENEX" was when Murphy started to take the KIs
+>stand-alone to work on the OS that was would be sold as TOPS20.  Is there
+>a connection between Murphy's TENEX and the "TENEX mode" that you
+>described as an Unixism?
+
+The Arpanet File Transfer Protocol supported five "representation types":
+	TYPE A	ASCII
+	TYPE I	image
+	TYPE L	local byte
+	TYPE P	print file
+	TYPE E	EBCDIC
+The first two of these are still in widespread use; most FTP programs
+have "ascii" and "image" commands.  For this discussion, what you have
+to understand is the difference between types I and L.
+
+Sending text was straightforward unless you were talking to an IBM machine.
+You used TYPE A, which implied an 8-bit byte sent over the net.  If you
+were a PDP-10, you converted to/from a 7-bit byte for the local file,
+packed in the usual five-per-word way.
+
+Sending binary files was more problematic.  Type I, image type, requires
+that the bits be tightly packed at both sending and receiving ends of the
+transfer.  So, for example, if you send a 36-bit PDP-10 word to an 8-bit
+machine, the latter machine must put the first 32 bits into four bytes, and
+then the fifth byte of the destination file will contain the last four bits
+of the first word and the first four bits of the second word!  Image type was
+intended for two similar machines, not for dissimilar ones.
+
+Type L, local byte type, to the rescue.  It allows each end of the
+transfer to arrange the bit stream into bytes in a convenient way
+for its particular architecture.  In particular, it allows 36-bit
+machines and 8-bit machines to communicate by using only 32 bits
+out of each PDP-10 word, supposing that you say TYPE L and BYTE 8
+or BYTE 32.  (If you say TYPE L and BYTE 36, then you are using all
+of the PDP-10 word, and telling the 8-bit end to use five bytes
+for each PDP-10 word, or telling a 32-bit machine to use two of its
+words for each PDP-10 word.)
+
+There was never a TENEX type in the FTP spec.  8-bit Unix machines
+had an FTP client program that accepted a TENEX command, which
+caused it to send TYPE L and (I believe) BYTE 8.  It was called
+TENEX rather than PDP-10 because that FTP program was written at
+a time when TOPS-10 didn't yet have virtual memory, and TOPS-20
+didn't exist (that is, DEC hadn't yet bought TENEX from BBN), and
+so almost all the PDP-10s on the Arpanet were running TENEX.
+
+See NIC 14333 for full info on the File Transfer Protocol at the
+relevant time.
+
+
+Article 2105 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!nntp04.primenet.com!nntp.primenet.com!news.asu.edu!ennfs.eas.asu.edu!cs.utexas.edu!swrinde!howland.erols.net!newsfeed.internetmci.com!in3.uu.net!usenet.cisco.com!cronkite!billw
+From: billw@puli.cisco.com (William )
+Newsgroups: alt.sys.pdp10
+Subject: Re: FTP: ASCII vs Binary vs Tenex (was Re: What is "ASCII"?)
+Date: 19 Aug 1996 21:29:00 GMT
+Organization: cisco Systems, Inc.
+Lines: 15
+Message-ID: <BILLW.96Aug19142901@puli.cisco.com>
+References: <ALDERSON.96Aug16111205@netcom4.netcom.com> <4v762v$m55@newsbf02.news.aol.com>
+NNTP-Posting-Host: puli.cisco.com
+In-reply-to: jmfbah@aol.com's message of 18 Aug 1996 09:33:19 -0400
+
+    The first I ever heard of "TENEX" was when Murphy started to take the KIs
+    stand-alone to work on the OS that was would be sold as TOPS20.  Is there
+    a connection between Murphy's TENEX and the "TENEX mode" that you
+    described as an Unixism?
+
+Yes.  TENEX was a paging OS for PDP-10s developed by BBN.  With extensive
+hacking by DEC, it became tops-20, eventually.  I'm surprised that the unix
+ftp command turned out to be "tenex" - by the time this became a widely
+useful command (about the time WSMR put the entire CPM shareware libraries
+on line at Simtel-20 (1980?)), tops20 existed and was pretty well
+entrenched.  Certainly by the time the net converted to TCP (1983) , TENEX
+was no longer the dominant operating system for PDP-10 architecture
+computers on the internet.
+
+BillW
+
+
+Article 2115 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!howland.erols.net!news2.digex.net!digex.net!not-for-mail
+From: doug@ss1.digex.net (Doug Humphrey)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 and third party Massbuss boards
+Date: 8 Sep 1996 23:07:34 -0400
+Organization: Express Access Online Communications USA: 800-969-9090
+Lines: 43
+Message-ID: <5101lm$k6s@ss1.digex.net>
+References: <50uk4d$dpp@student.computer.org>
+NNTP-Posting-Host: ss1.digex.net
+
+
+We are going into the wayback machine here...  
+
+I *think* that the reason that this idea didn't fly when we first
+thought about it (the quest for less powerhungry disk having been 
+a long and ongoing saga) goes like this...
+
+The KS10 uses the RH11C version of the traditional RH11 massbuss 
+controller.  This is meaningful because it does not do 16 bits+2 parity,
+but instead does 18 bits + no parity.  Being a 36 bit machine, 18 is good,
+16 is bad.  The RM03 and RP06 (and RP07 and RM80) were able to fake this
+18bit world as well, though some of them (RP07?) needed to have special
+HDAs.  Man, all of this is fuzzy now...
+
+So, what you might have luck doing is taking the mass buss adapter out 
+of an RM03 and hooking the 2322 or other fuji spinning storage up to 
+that; I am not sure if they did funny things to the device IDs although
+I get a feeling now that I think on it that they did...  There was some 
+issue with the number of sectors, etc. too.   I think that after the 
+MBA in the drive is the closest that things come to being "standard" in 
+this chain of events, and thus the easiest to fake it, but your mileage
+may vary, as they say.  
+
+If you really want to have fun, now that RAM prices are getting so low
+you could build a ramdisk for it and really let it fly ;-)  Of course,
+going from 2901 to 29203 super-slice bit slice processors might also help
+things, but then we are into microcode hackery and we have lives now, and 
+dave moon no doubt has other things to do...  Reality intrudes.
+
+One thing that MIGHT have more promise is to realize exactly how low
+performance those ooriginal drives were, and see if you could take a 
+machine, say a unix box or whatever weapon you feel you wield the best,
+and put that disk channel onto a parallel port on that thing (if you can 
+get a port that will do 18 bits ;-) and write some tight code that will 
+see the requests come down the line, and go fetch the right thing from 
+disk.  With even general purpose machines flying at mach 6 these days, 
+might one of them be able to perform the tasks that we used to have to 
+do with really specialized hardware playing smart disk controllers?
+That way, you can put disk on the machine at a price of a grand per 
+gig or even MUCH less.
+
+Doug
+
+
+
+Article 2116 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!howland.erols.net!newsfeed.internetmci.com!in3.uu.net!news.u.washington.edu!fetrow
+From: fetrow@biostat.washington.edu (David Fetrow)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 and third party Massbuss boards
+Date: 9 Sep 1996 08:15:27 GMT
+Organization: University of Washington, Dept. of Biostatistics
+Lines: 95
+Message-ID: <510jmv$91f@nntp4.u.washington.edu>
+References: <50uk4d$dpp@student.computer.org> <5101lm$k6s@ss1.digex.net>
+NNTP-Posting-Host: orac.biostat.washington.edu
+NNTP-Posting-User: fetrow
+
+ From the Archives:
+
+=============================================================================
+From sam@iii2.iii.net Tue Jul 18 13:07:11 PDT 1995
+Article: 1373 of alt.sys.pdp10
+Path: news.u.washington.edu!news.uoregon.edu!tank.news.pipex.net!pipex!swrinde!howland.reston.ans.net!EU.net!uunet!in1.uu.net!news.iii.net!iii2.iii.net!not-for-mail
+From: sam@iii2.iii.net (Sam Weiner)
+Newsgroups: alt.sys.pdp10
+Subject: Re: ITS AI archive disappearing...
+Date: 17 Jul 1995 23:48:54 -0400
+Organization: What me?
+Lines: 77
+Message-ID: <3ufav6$gmo@iii2.iii.net>
+References: <3tjckk$h7g@bronze.lcs.mit.edu> <3tkruu$olu@ss2.digex.net> <phrDBowv9.2x8@netcom.com>
+NNTP-Posting-Host: iii2.iii.net
+
+In article <phrDBowv9.2x8@netcom.com> phr@netcom.com (Paul Rubin) writes:
+:In article <3tkruu$olu@ss2.digex.net>,
+:Doug Humphrey <doug@ss2.digex.net> wrote:
+:>Another note to the tens_on_the_net crowd; It looks 
+:>like Fuji 2322 disk drives are same geometry as the 
+:>RM03's basically...  and they are SMD.  Might be a 
+:>quick and easy way to put a couple of strings of them 
+:>on a KS and have enough disk to make all of this info 
+:>available (I think that we can have 3 UBAs in a KS 
+:>even though DEC only said that you could do 2, which
+:>would mean one tape and two disk strings...)
+:
+:I thought there was some place selling a Massbus SCSI host adapter a
+:while back.  Certainly things like that exist for the Unibus.
+
+All sorts of strange things in my TOPS-20 mailing list archives.  Joe
+Dempster also mentioned that SC Group had a RH20 to SCSI interface.
+
+	Sam
+
+PS	Both Jerry and Pat have moved on from the below address.
+	I have the rest of the RM06 specs Pat mentions if anyone wants them.
+
+Date: Wed, 31 Mar 93 03:04:27 -0500
+From: decwrl::JWEINER@ccr2.bbn.com (JERRY WEINER BBN 617-873-3242)
+To: tops-20@wsmr-simtel20.army.mil
+Subject: FYI-SCSI MASSBUSS Disks
+Status: RO
+
+Folks,
+
+        COMPUCOM in Atlanta John Spencer 404-452-1090
+
+        Has available RH10/RH20 plug & play SCSI adapter and disks to replace 
+RP06/RP07 without any monitor changes.
+
+        I am just passing on the info. I have no experience with the devices.
+
+Jerry Weiner
+
+Date: Mon, 19 Apr 93 15:20:19 -0400
+From: decwrl::PAT@fisher.hs.washington.edu (Pat Tressel)
+To: tops-20@wsmr-simtel20.army.mil
+Subject: Massbus to SCSI adapter, and new Massbus drive
+Status: RO
+
+Shawn mentioned the need for a Massbus to SCSI adapter.  There's a
+company in Florida that makes an anything to anything adapter, and they've
+put together a Massbus to SCSI version for DEC, which they package with
+a read/write optical drive and call the RM06 or RP12.  The only problem is
+it's VERY expensive.  There are two questions I haven't asked yet -- first
+is, is it too fast to use with a KS-10, and second is, is there an off-
+the-shelf 18 bit version, or only 16 bits.  The following info (from Bob
+Welzel of DEC, who has very kindly been helping with getting info on the
+Alpha and KL microcode for use with our KL-emulator-to-run-on-an-Alpha
+project -- I'll post something on this soon) implies that there *would*
+be some changes required:
+
+>      -The hardware universal controller we talked about is made by
+>       SETASI, of Hollywood, Florida.  The basic device is now
+>       distributed by DEC, and is called the RM06 ( to replace the
+>       RP06), and is called RP12 to replace the RP07.  To work with
+>       a DECsystem 10, 20 CPU, it will require a special connector
+>       block, and some special chip coding. You can contact SETASI, 
+>       at 305-963-1267, and ask for John Jones, or Bud DeFore.
+
+I'm appending the info on the RM06 given me by from our local DEC sales rep.
+I haven't really pursued this because an entire Alpha would be cheaper...
+One thing that might be interesting to look into is whether one might buy
+the interface alone, and plug some other SCSI drive into it.
+
+                                Patricia Tressel
+                                Locke Computer Center
+                                University of Washington
+                                pat@fisher.hs.washington.edu
+                                pat@uwalocke.bitnet
+
+
+
+
+
+Article 2117 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!howland.erols.net!newsfeed.internetmci.com!news.wwa.com!news
+From: jeverett@wwa.com (John Everett)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 and third party Massbuss boards
+Date: 9 Sep 1996 15:27:20 GMT
+Organization: WorldWide Access (tm) - Chicagoland Internet Services (http://www.wwa.com)
+Lines: 29
+Distribution: world
+Message-ID: <511d0o$60i@kirin.wwa.com>
+References: <50uk4d$dpp@student.computer.org>
+NNTP-Posting-Host: pool4-032.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.7
+
+In article <50uk4d$dpp@student.computer.org>, cz@alembic.crystel.com says...
+>So, does anyone know if it is possible to put a Unibus SC1x type controller 
+>in a KS10 and have it do the disk I/O to a 2322? If this is doable, it would 
+>elliminate one power hungry RH11, and several RM03's in my life. It would 
+>also allow me to slide 640Mb of disk into the KS10's cabinet, and make this 
+>thing a single box computer :-)
+
+First, my credentials - I ported TOPS-10 to the KS-10 over the winter of 
+1977-78, and wrote the disk service routine for the UBA (Unibus Adaptor) 
+interfaced RM03 and RP06.  I see no reason any Unibus device can't be made to 
+work with the KS-10. Just a small matter of programming. Are you planning on 
+running TOPS-10 or TOPS-20 on your KS? Getting TOPS-20 to work with a new 
+controller would be easier (assuming you have access to the sources) because 
+of the page-only I/O. TOPS-10 would be more of a bear because of the way I/O 
+can be split across discontinuous page boundaries, but at least the sources 
+are more easily available. I seem to recall the key is to be found in a 
+routine called "MAPIO" which may be located in FILIO (or perhaps in VMSER).
+
+Oh yes, another potential problem just occured to me. You need some way to 
+format the drives into 128 36-bit words. The RM03 and RP06 were set up to 
+work in either PDP-11 or PDP-10 modes. If you have full RM02 emulation then 
+this may be possible. I can't recall whether the RM02 had a 36-bit mode. The 
+more I think about it the more I come up with potential problems, but can't 
+think of any that are insurmountable. If you have specific questions don't 
+hesitate to email me. I still have a warm spot in my heart for the KS.
+
+-- 
+jeverett@wwa.com (John V. Everett)
+
+
+
+Article 2120 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!noos.hooked.net!www.nntp.primenet.com!nntp.primenet.com!howland.erols.net!newsfeed.internetmci.com!news.computer.org!usenet
+From: cz@alembic.crystel.com (Chris Zach)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 and third party Massbuss boards
+Date: 10 Sep 1996 00:31:55 GMT
+Organization: IEEE Computer Society
+Lines: 47
+Distribution: world
+Message-ID: <512ctr$quk@student.computer.org>
+References: <50uk4d$dpp@student.computer.org> <511d0o$60i@kirin.wwa.com>
+NNTP-Posting-Host: alembic.crystel.com
+X-Newsreader: RadicalNews (TM) 0.8.8 Beta(n)
+Cc: jeverett@wwa.com
+
+>Are you planning on 
+> running TOPS-10 or TOPS-20 on your KS? Getting TOPS-20 to work with a new 
+> controller would be easier (assuming you have access to the sources) 
+because 
+> of the page-only I/O. TOPS-10 would be more of a bear because of the way 
+I/O 
+> can be split across discontinuous page boundaries, but at least the sources 
+> are more easily available. I seem to recall the key is to be found in a 
+> routine called "MAPIO" which may be located in FILIO (or perhaps in VMSER).
+Actually, I was planning to run ITS on this contraption. Big problem is that 
+ITS really wants an RP06, instead of an RM03.
+
+Some of the SCxx series controllers can emulate RP06's as well... Another 
+reason to think emulator instead of rock-controller...
+
+> 
+> Oh yes, another potential problem just occured to me. You need some way to 
+> format the drives into 128 36-bit words. The RM03 and RP06 were set up to 
+> work in either PDP-11 or PDP-10 modes. If you have full RM02 emulation then 
+> this may be possible. I can't recall whether the RM02 had a 36-bit mode. 
+The 
+> more I think about it the more I come up with potential problems, but can't 
+> think of any that are insurmountable. If you have specific questions don't 
+> hesitate to email me. I still have a warm spot in my heart for the KS.
+
+Formatting would have to be done in the controller, yep.
+
+From my recollections, the RM02 was basically an RM03 that only spun at 2400 
+RPM instead of 3600 RPM. With the lower bit-cell time, the RH11 controller 
+could keep up. However it is true that the KS10 uses the RH11, but it had a 
+clever hack (well kinda clever) called "Super Hog mode DMA" where the 
+controller grabbed the UNibus for something like 32 clock cycles instead of 
+4-8. Enough to keep up with the 3600RPM RM03.
+
+Jesus, didn't these guys ever think of just buffering a whole track, instead 
+of a piddly sector buffer...
+
+Thanks for the offer of help though. I'll probably need it before I get this 
+thing running. I do have a warm spot in my house for this Dec/20...
+
+Chris Zach
+
+--
+Time to take time
+For Spring will turn to Fall
+In just no time at all...
+
+
+
+Article 2118 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!newsfeed.internetmci.com!info.ucla.edu!unixg.ubc.ca!alph02.triumf.ca!shoppa
+From: shoppa@alph02.triumf.ca (Tim Shoppa)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 and third party Massbuss boards
+Date: 9 Sep 1996 18:02:10 GMT
+Organization: Tri-University Meson Facility
+Lines: 52
+Message-ID: <511m32$fv3@nntp.ucs.ubc.ca>
+References: <50uk4d$dpp@student.computer.org>
+NNTP-Posting-Host: alph02.triumf.ca
+
+In article <50uk4d$dpp@student.computer.org>,
+Chris Zach <cz@alembic.crystel.com> wrote:
+>Morning all!
+>
+>In my continuing quest to make a KS10 that one can plug into house current 
+>(without causing the power meter to spin like a top), I came across a bit of 
+>a problem.
+>
+>The "official" drives for the KS series seem to be either RM03's, or RP06's. 
+>RM03's pull at least 8 amps and only offer 70mb of storage. RP's pull way too 
+>much, and at 220 volts to boot.
+>
+>Then I got to thinking. Here I have a few PDP11's running Fujitsu 2322 SMD 
+>drives with Emulex SC03 type controllers. Fujitsu's take almost no current, 
+>relatively, and can offer 160//320 mb per spindle with perfect RM02 
+>emulation...
+>
+>Hm.......
+>
+>So, does anyone know if it is possible to put a Unibus SC1x type controller 
+>in a KS10 and have it do the disk I/O to a 2322? If this is doable, it would 
+>elliminate one power hungry RH11, and several RM03's in my life. It would 
+>also allow me to slide 640Mb of disk into the KS10's cabinet, and make this 
+>thing a single box computer :-)
+
+The Emulex SC1x series only know how to work in "16-bit" mode, and
+don't work in "18-bit" mode.  I think they may fake a few 18-bit
+operations to satisfy some of the PDP-11 diagnostics, but the 
+structure on disk is 16-bit words only.
+
+There are also considerations about the differences between "real"
+Massbus device registers and the "emulated" Massbus device registers
+on the Emulex SC1x-type interfaces.  For example, the SC1x series
+works fine on a Unibus PDP-11 and looks like a Massbus device to the
+OS, but it doesn't work right if you pop it into the Unibus of a
+VAX 11/780.  This is because the Massbus adapter on a 11/780 doesn't
+live at all in Unibus address space - the Massbus adapters hang differently
+from the SBI (I believe the original terminology is that they are on
+a different "nexus".)
+
+On the other hand, RP's and RM's are very SMD-like inside.  There
+are supposedly a few inverted signals to screw you over if you try
+this, but you could replace, say, the RM03 drive with a 2322 and keep
+the SMD-ish to massbus boards which are in the pedestal.  If you're
+really interested in this option, I believe I have print sets for
+both the DEC RM03 and the CDC drive it was based on (9762?  Serious
+brain fade going on here.)
+
+Didn't System Concepts make 18-bit SMD to Massbus adapters?  Or
+was that (shudder) System Industries?
+
+Tim. (shoppa@triumf.ca)
+
+
+Article 2121 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!noos.hooked.net!www.nntp.primenet.com!nntp.primenet.com!howland.erols.net!newsfeed.internetmci.com!news.computer.org!usenet
+From: cz@alembic.crystel.com (Chris Zach)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 and third party Massbuss boards
+Date: 10 Sep 1996 00:47:08 GMT
+Organization: IEEE Computer Society
+Lines: 80
+Message-ID: <512dqc$quk@student.computer.org>
+References: <50uk4d$dpp@student.computer.org> <511m32$fv3@nntp.ucs.ubc.ca>
+NNTP-Posting-Host: alembic.crystel.com
+X-Newsreader: RadicalNews (TM) 0.8.8 Beta(n)
+Cc: shoppa@alph02.triumf.ca
+
+> The Emulex SC1x series only know how to work in "16-bit" mode, and
+> don't work in "18-bit" mode.  I think they may fake a few 18-bit
+> operations to satisfy some of the PDP-11 diagnostics, but the 
+> structure on disk is 16-bit words only.
+
+Drat...
+
+> There are also considerations about the differences between "real"
+> Massbus device registers and the "emulated" Massbus device registers
+> on the Emulex SC1x-type interfaces.  For example, the SC1x series
+> works fine on a Unibus PDP-11 and looks like a Massbus device to the
+> OS, but it doesn't work right if you pop it into the Unibus of a
+> VAX 11/780.  This is because the Massbus adapter on a 11/780 doesn't
+> live at all in Unibus address space - the Massbus adapters hang differently
+> from the SBI (I believe the original terminology is that they are on
+> a different "nexus".)
+
+Very true, however that does not mean that one can't write a driver on a Vax 
+to talk to a RH11 on a UBA. Just twiddle the registers, set the transfer 
+address, and go...
+
+Well, not that simple. If memory serves me right, the UBAs on the 11/780 were 
+the slowest things in creation. Even slower than the UBA on the 11/70. With 
+that slug speed, one could never use Hog mode, and would probably be limited 
+to 2400 RPM RM02's unless one wanted to do some seriously bad sector 
+interleaves.
+
+The 20/20 could pull this stunt because the UBA was heavily buffered, and the 
+RH11 (in Super Hog mode) was the only thing on the bus.
+
+Side question: Did the MASSBUSS on the 11/70 live partially on the UBA? Just 
+curious if one programmed it by twiddling the bits on the Unibus, and then 
+sitting back while the 32Bit Massbuss Direct Cache//Memory interface sucked 
+your data in like a hoover...
+
+> On the other hand, RP's and RM's are very SMD-like inside.  There
+> are supposedly a few inverted signals to screw you over if you try
+> this, but you could replace, say, the RM03 drive with a 2322 and keep
+> the SMD-ish to massbus boards which are in the pedestal.  If you're
+> really interested in this option, I believe I have print sets for
+> both the DEC RM03 and the CDC drive it was based on (9762?  Serious
+> brain fade going on here.)
+
+Hm... While the thought of the controllers sucking twice as much power as the 
+HDA itself appeals to me, I'm not sure if this is the route I'd pursue off 
+the bat. 
+
+The big problem here is I'd have to use a HDA that precicely matched a RM02 
+drive (what was it: 677 cyls, 5 heads, 30s/t?). Giving me a piddly 70Mb of 
+disk space (well, those are 16 bit words). Per power sucking, noisy 
+controller... Not too high a ROI...
+
+But then there is the RM05. 256 Mb with a geometry that might be matchable. 
+And if memory serves me right, one could connect 2 RM05's to each MASSBUSS 
+controller. Though was the RM05 supported by TOPS/20? Or ITS? Doubt ITS, but 
+perhaps T20.
+
+Of course we COULD write a driver for the RM05.
+
+Then again, we COULD just give up and hack a driver for the UDA50. Even if 
+one stuffed 36 bits across 5 byte boundaries, the drives would be a lot 
+bigger... Ah, but DEC doesn't tell you how to use the DSA specs, do they?
+
+> 
+> Didn't System Concepts make 18-bit SMD to Massbus adapters?  Or
+> was that (shudder) System Industries?
+
+Hm. Hope at last?
+
+> 
+> Tim. (shoppa@triumf.ca)
+> 
+
+CZ
+
+--
+Time to take time
+For Spring will turn to Fall
+In just no time at all...
+
+
+
+Article 2126 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!howland.erols.net!newsfeed.internetmci.com!info.ucla.edu!unixg.ubc.ca!alph02.triumf.ca!shoppa
+From: shoppa@alph02.triumf.ca (Tim Shoppa)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 and third party Massbuss boards
+Date: 10 Sep 1996 16:07:59 GMT
+Organization: Tri-University Meson Facility
+Lines: 46
+Message-ID: <5143ov$qn8@nntp.ucs.ubc.ca>
+References: <50uk4d$dpp@student.computer.org> <511m32$fv3@nntp.ucs.ubc.ca> <512dqc$quk@student.computer.org>
+NNTP-Posting-Host: alph02.triumf.ca
+
+In article <512dqc$quk@student.computer.org>,
+Chris Zach <cz@alembic.crystel.com> wrote:
+>Very true, however that does not mean that one can't write a driver on a Vax 
+>to talk to a RH11 on a UBA. Just twiddle the registers, set the transfer 
+>address, and go...
+
+If you're going to write your own drivers, I'd just find a unused
+parallel port (or build one) and hook up an IDE drive.  It'll require
+a couple of chips of TTL in between, but the interface is trivial:
+an IDE drive is just a set of registers.  Of course, any DMA support
+would be up to you to design - most all IDE drives work through
+programmed I/O on PC-clones.  No IDE drives that I know of support
+non-8-bit words, but as long as you're working around the lack of DMA,
+this is trivial in comparison.
+
+>Side question: Did the MASSBUSS on the 11/70 live partially on the UBA? Just 
+>curious if one programmed it by twiddling the bits on the Unibus, and then 
+>sitting back while the 32Bit Massbuss Direct Cache//Memory interface sucked 
+>your data in like a hoover...
+
+That's exactly how it works.  All the drive and control registers appeared
+on Unibus connectors in the Massbus slots.
+
+>The big problem here is I'd have to use a HDA that precicely matched a RM02 
+>drive (what was it: 677 cyls, 5 heads, 30s/t?). Giving me a piddly 70Mb of 
+>disk space (well, those are 16 bit words). Per power sucking, noisy 
+>controller... Not too high a ROI...
+
+The Fujitsu 2321 is a pretty good match for that.  You'd have to set
+the sector length properly for 18-bit words, but that's absolutely
+straightforward.
+
+>But then there is the RM05. 256 Mb with a geometry that might be matchable. 
+
+The hard part matching this will be finding a drive with a slow enough
+data rate.  The more modern SMD drives of this capacity or bigger (in
+particular the Fujitsu 2351A, 2361, 2333, 2334, 2344, etc.) which are
+readily available on the surplus market have higher data rates.  You
+could probably put in a Fujitsu 2284-series drive, and while this is
+an improvement over a RM05, it's still a 150 pound 14-inch disk drive.
+And they aren't as reliable as the later Fujitsu drives, so you're
+less likely to find them in working condition.  They were late enough
+that they had a lot of custom Fujitsu MSI chips in them, making repair
+a bit more difficunt than the RM05-era drives.  
+
+Tim. (shoppa@triumf.ca)
+
+
+Article 2128 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!howland.erols.net!newsfeed.internetmci.com!news.stealth.net!solace!news.ifm.liu.se!lien
+From: lien@lysator.liu.se (Jan Lien)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 and third party Massbuss boards
+Date: 12 Sep 1996 00:58:00 GMT
+Lines: 14
+Message-ID: <517n6o$ebd@newsy.ifm.liu.se>
+References: <50uk4d$dpp@student.computer.org> <511m32$fv3@nntp.ucs.ubc.ca> <512dqc$quk@student.computer.org> <5143ov$qn8@nntp.ucs.ubc.ca>
+NNTP-Posting-Host: tina.lysator.liu.se
+Mime-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+X-Newsreader: NN version 6.5.0 #24 (NOV)
+
+
+>But then there is the RM05. 256 Mb with a geometry that might be matchable. 
+
+RM05 have been interfaced to TOPS-20 KS-10.  I have seen it.
+Peter Lothberg in Sweden, had it.  So the software hack is there.
+
+RM80.  I have heard that RM80 (jumpered to 18-bit mode) will be usable
+at least for ITS.  So the software hack for ITS is there.
+
+No, I don't have any of these.  All I know is that making a Massbus adpater
+takes a _lot_ of effort, lots of poorly documented signals, which have to
+be timed accurately for the Massbus interface in the machine.
+
+Jan Lien
+
+
+Article 2129 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!howland.erols.net!EU.net!newsfeed.internetmci.com!news.wwa.com!news
+From: jeverett@wwa.com (John Everett)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 and third party Massbuss boards
+Date: 12 Sep 1996 16:07:38 GMT
+Organization: WorldWide Access (tm) - Chicagoland Internet Services (http://www.wwa.com)
+Lines: 18
+Message-ID: <519cga$air@kirin.wwa.com>
+References: <50uk4d$dpp@student.computer.org> <511m32$fv3@nntp.ucs.ubc.ca> <512dqc$quk@student.computer.org> <5143ov$qn8@nntp.ucs.ubc.ca> <517n6o$ebd@newsy.ifm.liu.se>
+NNTP-Posting-Host: pool1-048.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.7
+
+In article <517n6o$ebd@newsy.ifm.liu.se>, lien@lysator.liu.se says...
+>
+>
+>>But then there is the RM05. 256 Mb with a geometry that might be matchable. 
+>
+>RM05 have been interfaced to TOPS-20 KS-10.  I have seen it.
+>Peter Lothberg in Sweden, had it.  So the software hack is there.
+>
+
+I seem to recall that when I did the TOPS-10 port I included RM05 support in 
+the code even though it wasn't a standard option. Of course it never got 
+tested but it seemed to be a reasonable thing to do while I was mucking about 
+in the sources. This is from memory at a distance of nineteen years or so, so 
+I may be mistaken.
+
+-- 
+jeverett@wwa.com (John V. Everett)
+
+
+
+Article 2130 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!howland.erols.net!netcom.com!netcom16!alderson
+From: alderson@netcom16.netcom.com (Richard M. Alderson III)
+Subject: Re: KS10 and third party Massbuss boards
+In-Reply-To: jeverett@wwa.com's message of 12 Sep 1996 16:07:38 GMT
+Message-ID: <ALDERSON.96Sep12112037@netcom16.netcom.com>
+Sender: alderson@netcom16.netcom.com
+Reply-To: alderson@netcom.com
+Organization: NETCOM On-line services
+References: <50uk4d$dpp@student.computer.org> <511m32$fv3@nntp.ucs.ubc.ca>
+	<512dqc$quk@student.computer.org> <5143ov$qn8@nntp.ucs.ubc.ca>
+	<517n6o$ebd@newsy.ifm.liu.se> <519cga$air@kirin.wwa.com>
+Date: Thu, 12 Sep 1996 18:20:37 GMT
+Lines: 13
+
+In article <519cga$air@kirin.wwa.com> jeverett@wwa.com (John Everett) writes:
+
+>I seem to recall that when I did the TOPS-10 port I included RM05 support in 
+>the code even though it wasn't a standard option.
+
+I just looked through RPXKON and RHXKON, but all I saw were RP04/05/06, RM03,
+and RP07 as available drive types.  Looks like it got lost somewhere along the
+line.  This is in 7.04/7.05 sources.
+-- 
+Rich Alderson   You know the sort of thing that you can find in any dictionary
+                of a strange language, and which so excites the amateur philo-
+                logists, itching to derive one tongue from another that they
+                know better: a word that is nearly the same in form and meaning
+                as the corresponding word in English, or Latin, or Hebrew, or
+                what not.
+                                                --J. R. R. Tolkien,
+alderson@netcom.com                               _The Notion Club Papers_
+
+
+Article 2131 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!howland.erols.net!newsfeed.internetmci.com!in3.uu.net!nwnews.wa.com!Ikkoku-Kan.Panda.COM!mrc
+From: Mark Crispin <mrc@Panda.COM>
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 and third party Massbuss boards
+Date: Thu, 12 Sep 1996 14:46:18 -0700
+Organization: Pandamonium Reigns
+Lines: 26
+Message-ID: <Pine.NXT.3.95.960912144109.12385A-100000@Ikkoku-Kan.Panda.COM>
+References: <50uk4d$dpp@student.computer.org> <511m32$fv3@nntp.ucs.ubc.ca> <512dqc$quk@student.computer.org> <5143ov$qn8@nntp.ucs.ubc.ca> <517n6o$ebd@newsy.ifm.liu.se> <519cga$air@kirin.wwa.com>
+NNTP-Posting-Host: panda.wa.com
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+To: John Everett <jeverett@wwa.com>
+In-Reply-To: <519cga$air@kirin.wwa.com>
+
+On 12 Sep 1996, John Everett wrote:
+> In article <517n6o$ebd@newsy.ifm.liu.se>, lien@lysator.liu.se says...
+> >RM05 have been interfaced to TOPS-20 KS-10.  I have seen it.
+> >Peter Lothberg in Sweden, had it.  So the software hack is there.
+> I seem to recall that when I did the TOPS-10 port I included RM05 support in 
+> the code even though it wasn't a standard option.
+
+I can confirm that Peter's RM05 code for TOPS-20 works; it's the obvious,
+trivial addition to the sources.  I run it on my 2020.  I never tried
+TOPS-10's RM05 support. 
+
+The more nasty job is to format the RM05 for PDP-10s.  You need to add (or
+was it cut?) a jumper in the controller to get 18-bit mode, and you need
+to modify the formatting program (DDRPI, DSRMA, FORMAT, KSFORM) to handle
+it.  Peter hacked up DSRMA to know about RM05s.
+
+Then, too, if you don't have 3-phase power you need to rewrite the power
+supply in the the RM05 to use the correct transformer tap for 240V instead
+of 208V.  It'll run without you doing this....for a few months until the
+power supply burns out...
+
+-- Mark --
+
+DoD #0105, R90/6 pilot  FAX: (206) 842-0758  ICBM: N 47.36'24" W 122.34'08"
+TOPS-20: A Great Improvement Over Its Successors
+
+
+
+Article 2132 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!howland.erols.net!newsfeed.internetmci.com!in2.uu.net!brighton.openmarket.com!decwrl!pa.dec.com!nntpd.lkg.dec.com!alingo.zk3.dec.com!werme
+From: werme@alingo.zk3.dec.com (Eric Werme)
+Newsgroups: alt.sys.pdp10
+Subject: Re: The Computer Museum (
+Date: 13 Sep 96 00:06:31 GMT
+Organization: Digital Equipment Corporation
+Lines: 33
+Message-ID: <werme.842573191@alingo.zk3.dec.com>
+References: <4ho1js$1l0@tricia.msn.fullfeed.com> <8BC750D.0BBD0000A9.uuout@compudata.com>
+Reply-To: werme@zk3.dec.com
+NNTP-Posting-Host: alingo.zk3.dec.com
+
+david.razler@compudata.com (DAVID RAZLER) writes:
+
+
+>JR>eric@goonsquad.spies.com (Eric Smith) wrote:
+
+>I played it on the PDP-1 opening day of TCM in the Boston Harbor 
+>building before the Lords of Darkness (Intel, Microsoft and Apple) made 
+>it into a showroom.
+
+I played it on a PDP-1 on the 25th anniversary celebration of Space War
+at TCM.  I was at TCM last weekend.  Showroom indeed.  Pity.  I think I
+should stop donating money to them.
+
+>JR>>I would add Moon Lander (inspiration for the Atari coin-op Lunar
+>JR>Lander) >to this list.  It ran on a GT-40, which was a PDP-11/05 with
+>JR>a VT-11 vector >display configured to be used as a graphics terminal.
+>JR>Al Kossow gave me the >source.
+
+Absolutely!  It's one of the best designed video games ever.  It also taught
+some physics.  I have no patience for the see-how-fast-you-can-hit-fire
+games.  I'm the only person I know who landed safely on his first try.
+
+>Nope. The original Lunar Lander (text only) had its origins in TSS-8 
+>BASIC, and was written as part of the Huntington Project. Ran on a PDP-
+>8/I
+
+I haven't seen the TSS-8 game, but the author of the GT40 program, Jack
+Burness, knew the key PDP-8 hackers at DEC then.  I didn't meet Jack
+until years later at Alliant Computer where he had a contract to do some
+graphics work.
+-- 
+  <>    Eric (Ric) Werme   <>  Why Government Doesn't Work!  For details   <>
+  <>  <werme@zk3.dec.com>  <>     visit http://www.HarryBrowne96.org/      <>
+
+
+Article 2133 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!cam-news-hub1.bbnplanet.com!das-news2.harvard.edu!oitnews.harvard.edu!canopus.hbs.edu!news-in.tiac.net!posterchild!news@tiac.net
+From: Alan Bawden <alan@lcs.mit.edu>
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 and third party Massbuss boards
+Date: Thu, 12 Sep 1996 23:55:10 -0400
+Organization: ITS Preservation Society
+Lines: 21
+Message-ID: <3238DB1E.41C67EA6@lcs.mit.edu>
+References: <50uk4d$dpp@student.computer.org> <511m32$fv3@nntp.ucs.ubc.ca> <512dqc$quk@student.computer.org> <5143ov$qn8@nntp.ucs.ubc.ca> <517n6o$ebd@newsy.ifm.liu.se>
+NNTP-Posting-Host: oolong.camellia.org
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 3.0 (X11; U; FreeBSD 2.1.0-RELEASE i386)
+
+Jan Lien wrote:
+> RM80.  I have heard that RM80 (jumpered to 18-bit mode) will be usable
+> at least for ITS.  So the software hack for ITS is there.
+
+Yeah, we had that working for a while.  I'm not convinced that the RM80
+support for 18-bit mode really worked though.  It was often the case
+that when you powered the drive up your data was gone.  We never figured
+out exactly what the problem was, but I developed the superstition that
+you were -more- likely to lose if you powered the drive up when it was
+write-protected (you read that right).
+
+To answer a question someone else asked: yes it was Systems Concepts
+that
+marketed a box that emulated RP06's and RP07's.  We almost got one at
+MIT
+to keep our ITS machines running when our RP06's became unmaintainable.
+It was rather pricey as I recall...
+
+-- 
+Alan Bawden                                    Alan@LCS.MIT.EDU
+617/492-7274                   06BF9EB8FC4CFC24DC75BDAE3BB25C4B
+
+
+Article 2134 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!howland.erols.net!EU.net!Norway.EU.net!nntp.uio.no!solace!news.ifm.liu.se!lien
+From: lien@lysator.liu.se (Jan Lien)
+Newsgroups: alt.sys.pdp10
+Subject: RP06 replacemet: for KS-10 and others
+Date: 13 Sep 1996 04:49:38 GMT
+Lines: 20
+Message-ID: <51ap52$h07@newsy.ifm.liu.se>
+NNTP-Posting-Host: tina.lysator.liu.se
+Mime-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+X-Newsreader: NN version 6.5.0 #24 (NOV)
+
+There is actually a SCSI controller and disk for (among other
+machines) the KS-10.  It will emulate a RP06, complete with
+Massbus contacts!   Yes, it will do 18 or 16 bit.  And, if someone
+hacks the monitor code a little, to allow larger disks than the 
+standard RP06, the controller can have maybe 2 or more GB of SCSI....
+
+Now, this has a serious drawback:  Price!  DEC lists it at some
+US $ 14.000 (fourteen thousand dollars, yes you read it right).
+
+However, if there are many interested people out there, to buy in
+group, the price could possibly be talked down a little.  Just a
+little, this is not a $100 card that is sold at a terrific profit,
+it does actually cost real money to manufacture.  I have checked this
+with the guys that constructed it.
+
+Anyone interested shoudl call me for more details,  as soon as
+ever possible,  202-374 9925 from 10.00 until late Eastern time
+zone (US time).
+
+Jan Lien
+
+
+Article 2135 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!news.sprintlink.net!news-peer.sprintlink.net!newsfeed.internetmci.com!news.stealth.net!solace!news.ifm.liu.se!lien
+From: lien@lysator.liu.se (Jan Lien)
+Newsgroups: alt.sys.pdp10
+Subject: Re: RP06 replacemet: for KS-10 and others
+Date: 13 Sep 1996 13:47:02 GMT
+Lines: 14
+Message-ID: <51bokm$1g7@newsy.ifm.liu.se>
+References: <51ap52$h07@newsy.ifm.liu.se>
+NNTP-Posting-Host: tina.lysator.liu.se
+Mime-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+X-Newsreader: NN version 6.5.0 #24 (NOV)
+
+Jan Lien (myself) wrote:
+
+>There is actually a SCSI controller and disk for (among other
+>machines) the KS-10.  It will emulate a RP06, complete with
+>Massbus contacts!   
+
+Oh, stupid me forgot to mention that this is the RM06, the DEC
+"replacement" RP06.  That was so clear in my mind, so I guess you 
+would know that....  It actually even slows down disk access to the
+speed a KS-10 can handle.
+
+Jan Lien
+
+if interested, call me:  202-374 9925 now!
+
+
+Article 2136 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!noos.hooked.net!www.nntp.primenet.com!nntp.primenet.com!arclight.uoregon.edu!news.sprintlink.net!news-peer.sprintlink.net!news-peer.gsl.net!news.gsl.net!bloom-beacon.mit.edu!bone.think.com!paperboy.osf.org!paperboy.osf.org!dlm
+From: dlm@firebird.osf.org ( Dan Murphy )
+Newsgroups: alt.sys.pdp10
+Subject: Alan Kotok Retiring
+Date: 13 Sep 1996 16:23:57 GMT
+Organization: Open Software Foundation
+Lines: 20
+Distribution: world
+Message-ID: <DLM.96Sep13122357@firebird.osf.org>
+NNTP-Posting-Host: firebird.osf.org
+
+
+    As most of you know, Alan was the co-architect of the PDP-6, along
+    with Gordon Bell.  He was a designer and engineer of the KA-10,
+    KI-10 and KL-10 as well.
+    
+    dlm
+    
+-- Forwarded mail follows --
+
+From:	US2RMC::"Bill.Laing@AltaVista.digital.com" "Bill Laing" 12-SEP-1996 18:00:13.84
+
+        This is to let you know that after 34 years with Digital, Alan Kotok
+has decided to take early retirement. It will take effect from the end of
+November. In the intervening weeks Alan will be on a leave of absence,
+however he will be continue to be on-line via email at <kotok@ultranet.com>.
+
+        Near the end of November we will be organizing a social event to
+celebrate Alan's career and many achievements in Digital and to wish him
+well for the future. Please send me a note if you wish to be notified.
+Please also feel free to forward this announcement.
+
+
+Article 2150 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!cam-news-hub1.bbnplanet.com!nntp-hub2.barrnet.net!news1.digital.com!pa.dec.com!nntpd.lkg.dec.com!alingo.zk3.dec.com!werme
+From: werme@alingo.zk3.dec.com (Eric Werme)
+Newsgroups: alt.sys.pdp11,alt.sys.pdp10,vmsnet.pdp-11
+Subject: Re: GT40 MOONLANDER (waw Re: The Computer Museum)
+Date: 1 Oct 96 00:51:43 GMT
+Organization: Digital Equipment Corporation
+Lines: 17
+Message-ID: <werme.844131103@alingo.zk3.dec.com>
+References: <52kqkj$k82@nntp.ucs.ubc.ca> <52l37h$p9r@goonsquad.spies.com>
+Reply-To: werme@zk3.dec.com
+NNTP-Posting-Host: alingo.zk3.dec.com
+Xref: nntp1.best.com alt.sys.pdp11:1730 alt.sys.pdp10:2150 vmsnet.pdp-11:3689
+
+aek@goonsquad.spies.com (Al Kossow) writes:
+
+>From article <52kqkj$k82@nntp.ucs.ubc.ca>, by shoppa@alph02.triumf.ca (Tim Shoppa):
+>> 
+>> Anybody care to take a stab at the fraction of time that GT40's
+>> spent running something *other* than Lunar Lander?  My 8.5" x 11"
+
+I (and others) wrote terminal emulators which we used to talking to
+the KI10 based TOPS-20 system used to design the KL10.  They were used
+for a lot of CAM work.  (Yes, that was KI10 and TOPS-20 in the same
+sentence.)  I also ported my ROSES program from C-MU (where we called
+it PETAL) to RT11 and then to standalone GT40.  That too was a commonly
+used program.  If I ever have time I want to dress up my X11 version
+and get that out.
+-- 
+  <>    Eric (Ric) Werme   <>  Why Government Doesn't Work!  For details   <>
+  <>  <werme@zk3.dec.com>  <>     visit http://www.HarryBrowne96.org/      <>
+
+
+Article 2151 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!netcom.com!pfarrell
+From: pfarrelL@netcom.com (Pat Farrell)
+Subject: Re: GT40 MOONLANDER (waw Re: The Computer Museum)
+Message-ID: <pfarrellDyKz7K.BK2@netcom.com>
+Sender: pfarrell@netcom23.netcom.com
+Organization: NETCOM On-line Communication Services (408 261-4700 guest)
+X-Newsreader: Forte Free Agent 1.0.82
+References: <52kqkj$k82@nntp.ucs.ubc.ca> <52l37h$p9r@goonsquad.spies.com> <werme.844131103@alingo.zk3.dec.com>
+Date: Tue, 1 Oct 1996 05:00:00 GMT
+Lines: 24
+
+werme@alingo.zk3.dec.com (Eric Werme) wrote:
+>.  (Yes, that was KI10 and TOPS-20 in the same sentence.)
+
+Good, so I'm not the only one with fond memories of the whole
+'10/20 line. There is a lot more in common between blue and orange
+KLs than there ever was between LCG and Vaxen.
+
+>They were used for a lot of CAM work.  
+
+Any old timer LCG-head willing to admit in public that one of the
+major causes for killing the Jupitor was the lack of available time to
+
+do all the CAM work to make a Jupitor really work?
+
+Comments on the state of 1982-vintage massive pipeline architectures
+welcome, but I understand why you might want to be quiet in a public
+forum.
+
+Pat
+
+Pat Farrell        Grad Student         http://www.isse.gmu.edu/~pfarrell
+Info. Systems & Software Engineering, George Mason University, Fairfax, VA
+PGP key available on homepage               #include <standard.disclaimer>
+
+
+
+Article 2154 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp11,alt.sys.pdp10,vmsnet.pdp-11
+Path: nntp1.best.com!news1.best.com!news.zeitgeist.net!wizard.pn.com!news.gte.com!news-in.tiac.net!uunet!in3.uu.net!world!mbg
+From: mbg@world.std.com (Megan)
+Subject: Re: GT40 MOONLANDER (waw Re: The Computer Museum)
+Message-ID: <DyoKDF.9rn@world.std.com>
+Organization: The World Public Access UNIX, Brookline, MA
+References: <52kqkj$k82@nntp.ucs.ubc.ca> <52l37h$p9r@goonsquad.spies.com> <werme.844131103@alingo.zk3.dec.com>
+Date: Thu, 3 Oct 1996 03:29:39 GMT
+Lines: 32
+Xref: nntp1.best.com alt.sys.pdp11:1733 alt.sys.pdp10:2154 vmsnet.pdp-11:3720
+
+werme@alingo.zk3.dec.com (Eric Werme) writes:
+
+>I (and others) wrote terminal emulators which we used to talking to
+>the KI10 based TOPS-20 system used to design the KL10.  They were used
+>for a lot of CAM work.  (Yes, that was KI10 and TOPS-20 in the same
+>sentence.)  I also ported my ROSES program from C-MU (where we called
+>it PETAL) to RT11 and then to standalone GT40.  That too was a commonly
+>used program.  If I ever have time I want to dress up my X11 version
+>and get that out.
+
+Hey Ric... I think I still have a copy of the -10 end of the roses
+program as well as the teco file which ran the demo... somewhere...
+
+If you don't have these parts, I'll look for them...
+
+I also wrote a program a number of years ago which did the host-end
+protocol for the down-line load of a GT40... the program (I called
+it GTLOAD) ran on a pdp-11 running RT...  I'll have to look for
+that as well...
+
+					Megan Gentry
+					Former RT-11 Developer
+
++--------------------------------------+-------------------------------------+
+| Megan Gentry                         | tcp/ip (work):   gentry@zk3.dec.com |
+| Unix Support and Engineering Group   |      or: gentry@rusure.enet.dec.com |
+| Digital Equipment Corporation        |    (non-work):    mbg@world.std.com |
+| 110 Spitbrook Rd. ZK03-2/T43         | URL http://world.std.com/~mbg/      | 
+| Nashua, NH 03062                     | "Still real-time after all these    |
+| (603) 881 1055                       |  years."                            |
++--------------------------------------+-------------------------------------+
+
+
+
+Article 2153 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp11,alt.sys.pdp10,vmsnet.pdp-11
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!howland.erols.net!news.mathworks.com!uunet!in1.uu.net!world!mbg
+From: mbg@world.std.com (Megan)
+Subject: Re: GT40 MOONLANDER (waw Re: The Computer Museum)
+Message-ID: <DyoK9K.8tu@world.std.com>
+Organization: The World Public Access UNIX, Brookline, MA
+References: <4ho1js$1l0@tricia.msn.fullfeed.com> <w <ERIC.96Sep22231211@goonsquad.spies.com> <1996Sep28.093951.961@flying-disk.com> <52kqkj$k82@nntp.ucs.ubc.ca> <52l4eq$r55@dfw-ixnews1.ix.netcom.com>
+Date: Thu, 3 Oct 1996 03:27:20 GMT
+Lines: 32
+Xref: nntp1.best.com alt.sys.pdp11:1732 alt.sys.pdp10:2153 vmsnet.pdp-11:3719
+
+bugs@freebsd.netcom.com (Mark Hittinger) writes:
+
+>I remember seeing the gt-40 at Georgia Tech busy with a "spacewar"
+>implementation - anybody have sources for that?  :-)
+
+I have a friend who was a fellow student at WPI during the
+'70s who wrote a version of spacewar which ran off the
+switches, but was also conditionalized to run with a DR11-C
+wired to a set of boxes which provided the correct bit
+for control.  There was also a console switch setting
+which enabled or disabled gravity, or enabled or disabled
+asteroids...
+
+He did a great job with it... I think I have a set of sources
+for it somewhere... but I'd have to contact him to see if
+he's okay with releasing it.  Also, we'd have to come up with
+some sort of schematic for the boxes... I still have my DR11-C
+and home-made boxes for when I had it working on a VT11 at
+home...
+
+					Megan Gentry
+					Former RT-11 Developer
+
++--------------------------------------+-------------------------------------+
+| Megan Gentry                         | tcp/ip (work):   gentry@zk3.dec.com |
+| Unix Support and Engineering Group   |      or: gentry@rusure.enet.dec.com |
+| Digital Equipment Corporation        |    (non-work):    mbg@world.std.com |
+| 110 Spitbrook Rd. ZK03-2/T43         | URL http://world.std.com/~mbg/      | 
+| Nashua, NH 03062                     | "Still real-time after all these    |
+| (603) 881 1055                       |  years."                            |
++--------------------------------------+-------------------------------------+
+
+
+
+Article 2152 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!enews.sgi.com!decwrl!pa.dec.com!usenet
+From: "Carl J. Appellof" <cja@zso.dec.com>
+Newsgroups: alt.sys.pdp11,alt.sys.pdp10,vmsnet.pdp-11
+Subject: Re: GT40 MOONLANDER (waw Re: The Computer Museum)
+Date: Wed, 02 Oct 1996 11:22:42 -0700
+Organization: Digital Equipment Corporation
+Lines: 15
+Message-ID: <3252B2F2.7860@zso.dec.com>
+References: <4ho1js$1l0@tricia.msn.fullfeed.com> <w <ERIC.96Sep22231211@goonsquad.spies.com> <1996Sep28.093951.961@flying-disk.com> <52kqkj$k82@nntp.ucs.ubc.ca>
+NNTP-Posting-Host: chmist.zso.dec.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 3.0Gold (WinNT; I)
+Xref: nntp1.best.com alt.sys.pdp11:1731 alt.sys.pdp10:2152 vmsnet.pdp-11:3715
+
+Tim Shoppa wrote:
+
+> Anybody care to take a stab at the fraction of time that GT40's
+> spent running something *other* than Lunar Lander?
+
+I know the GT40 we had at Wesleyan University had the mountains
+permanently burned into the screen.
+
+The one I used in the chem department at the University of Washington
+also spent some of its time playing spacewar (almost wore out the toggle
+switches) and chess (I took the standard pdp-11 chess program and added
+GT40 graphics.)
+
+Now and then, we would also use it for drawing and rotating pictures of
+molecules.
+
+
+Article 2163 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!netcom.com!netcom20!alderson
+From: alderson@netcom20.netcom.com (Richard M. Alderson III)
+Subject: Re: Tymnet 10's
+In-Reply-To: abaddon@ibm.net's message of Mon, 14 Oct 1996 23:05:40 GMT
+Message-ID: <ALDERSON.96Oct15181305@netcom20.netcom.com>
+Sender: alderson@netcom20.netcom.com
+Reply-To: alderson@netcom.com
+Organization: NETCOM On-line services
+References: <3266c4fb.8635418@news-s01.ny.us.ibm.net>
+Date: Wed, 16 Oct 1996 01:13:05 GMT
+Lines: 11
+
+Tymnet, now a division of MCI, sold their 4 KL10s recently, after replacing
+them with two XKL Systems Toad-1's running Tops-20 v. 7.0.
+
+At XKL, we are still running 1 KL10B, now under Tops-10 as a reference imple-
+mentation as we put finishing touches on 7.05 for the Toad-1.  This was our -20
+named Mathom; it is now named HEATER, in honour of its power dissipation...
+-- 
+Rich Alderson   You know the sort of thing that you can find in any dictionary
+                of a strange language, and which so excites the amateur philo-
+                logists, itching to derive one tongue from another that they
+                know better: a word that is nearly the same in form and meaning
+                as the corresponding word in English, or Latin, or Hebrew, or
+                what not.
+                                                --J. R. R. Tolkien,
+alderson@netcom.com                               _The Notion Club Papers_
+
+
+Article 2159 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!feed1.news.erols.com!howland.erols.net!newsfeed.internetmci.com!news-in2.uu.net!news-m01.ny.us.ibm.net!news-s01.ny.us.ibm.net!usenet
+From: abaddon@ibm.net (Michael Ross)
+Newsgroups: alt.sys.pdp10
+Subject: Tymnet 10's
+Date: Mon, 14 Oct 1996 23:05:40 GMT
+Lines: 18
+Message-ID: <3266c4fb.8635418@news-s01.ny.us.ibm.net>
+NNTP-Posting-Host: slip139-92-20-150.wk.uk.ibm.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Newsreader: Forte Agent .99f/16.299
+
+I recently came across an 'old systems' web page which mentioned 10's
+at Tymnet - said some KL's still in use, some KI's and KS's which were
+described as 'retired' - presumably switched off but still on-site. I
+promptly failed to bookmark the site and have been unable to find it
+again!
+
+Is this info totally out of date? What site were these machines on?
+Does anyone know of any places where KI's may still exist? 
+
+In particular, here in the UK, the 'last' KI, belonging to the
+Scottish Special Housing Association, was dismantled and removed ?with
+DEC assistance? by "The Scottish Museum of Computing", an organisation
+which vanished without trace sometime later. Does anyone know what
+became of this machine, or the people involved in the museum?
+
+Thanks
+
+Mike
+
+
+Article 2185 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!cpk-news-hub1.bbnplanet.com!newsfeed.internetmci.com!news.webspan.net!ix.netcom.com!news
+From: JCGreen@ix.netcom.com (John C Green Jr)
+Newsgroups: alt.sys.pdp10
+Subject: When core was king
+Date: Sun, 27 Oct 1996 03:19:46 GMT
+Organization: Netcom
+Lines: 21
+Message-ID: <54uket$rvi@sjx-ixn10.ix.netcom.com>
+NNTP-Posting-Host: bos-ma14-25.ix.netcom.com
+X-NETCOM-Date: Sat Oct 26  8:21:01 PM PDT 1996
+X-Newsreader: Forte Free Agent 1.0.82
+
+    Back in '69 when I worked in PDP-10 engineering a few of
+us used to play bridge and run to the cafeteria at 12:55 just
+before it closed.
+    One day we joined some TOPS-10 programmers who were talking
+shop over lunch. One of them said, "Here's some users; let's
+ask them." He then described some new feature they had just
+added to the monitor on the development system, KA10 #2.
+    One of us said, "Sounds good. What's the issue?"
+    The reply, "It takes three words of resident code."
+    It's been a long time since increasing the size of a
+monitor by 3 words was suitable for a lunch time shop
+discussion. It's also been a long time since the list price
+of 3 words of memory was $9.16.
+    Back then MA10 memory cost $50K for 16K words (80K x
+8-bits) or $0.61/byte or $640K/Mbyte vs. ~$11/Mbyte today.
+- - -
+Internet Marketing and Business Development
+Website Development and Project Management
+21483 Old Mine Rd             (408)353-1870
+Los Gatos CA 95030    JCGreen@ix.netcom.com
+
+
+
+Article 2188 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!hunter.premier.net!netnews.worldnet.att.net!newsadm
+From: david.razler@postoffice.worldnet.att.net (David M. Razler)
+Newsgroups: alt.sys.pdp10
+Subject: Re: When core was king
+Date: Mon, 28 Oct 1996 05:53:49 GMT
+Organization: AT&T WorldNet Services
+Lines: 32
+Message-ID: <32754533.120168578@netnews.worldnet.att.net>
+References: <54uket$rvi@sjx-ixn10.ix.netcom.com>
+Reply-To: david.razler@worldnet.att.net
+NNTP-Posting-Host: 202.bridgeton-054.mo.dial-access.att.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Newsreader: Forte Agent .99f/32.299
+
+JCGreen@ix.netcom.com (John C Green Jr) wrote:
+
+|     It's been a long time since increasing the size of a
+| monitor by 3 words was suitable for a lunch time shop
+| discussion. It's also been a long time since the list price
+| of 3 words of memory was $9.16.
+|     Back then MA10 memory cost $50K for 16K words (80K x
+| 8-bits) or $0.61/byte or $640K/Mbyte vs. ~$11/Mbyte today.
+| - - -
+It should be noted that it actually was worse, given that KA memory was
+produced during the Vietnam Era Inflation,  and the Arab Oil Embargo Inflation
+which was followed by  the  Post-Vietnam/Oil Embargo Inflation <which ran
+through Ford and Carter until the Reagan Recession, which had little effect on
+the value of the dollar took hold>.
+
+Guestimating the cost of core in 1996 dollars, we're probably looking at
+better than $1,500/Mbyte.
+
+That's *only* the cost of the memory.
+
+Core *also* carried with it the substantial cost of 24-hour-day power and
+cooling, floor space plus several hundred dollars <again, when a dollar was at
+least half a dollar and not a quarter> a year for the service contract on
+every box owned. And the largest KA-10 box, to my knowledge, held 256KWords.
+(It should be noted that many big systems were junked because of the cost of
+the service contracts, power, cooling and space. The service contract factor
+oft seemed juggled, IMHO, to increase new machine sales.)
+
+				dmr
+
+David M. Razler
+david.razler@worldnet.att.net
+
+
+Article 2189 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!nntp.primenet.com!news-peer.gsl.net!news.gsl.net!portc01.blue.aol.com!newstf01.news.aol.com!newsbf02.news.aol.com!not-for-mail
+From: jmfbah@aol.com (JMFBAH)
+Newsgroups: alt.sys.pdp10
+Subject: Re: When core was king
+Date: 28 Oct 1996 08:32:48 -0500
+Organization: America Online, Inc. (1-800-827-6364)
+Lines: 20
+Sender: root@newsbf02.news.aol.com
+Message-ID: <552cm0$6np@newsbf02.news.aol.com>
+References: <32754533.120168578@netnews.worldnet.att.net>
+Reply-To: jmfbah@aol.com (JMFBAH)
+NNTP-Posting-Host: newsbf02.mail.aol.com
+
+david.razler@postoffice.worldnet.att.net (David M. Razler) wrote:
+
+<snip talk about the costs of owning a KA10>
+
+<(It should be noted that many big systems were junked because of the cost
+of
+<the service contracts, power, cooling and space. The service contract
+factor
+<oft seemed juggled, IMHO, to increase new machine sales.)
+
+I don't remember it being that way.  It may have been a way to move
+customers to other machines when (ahem) Digital got serious about dropping
+support for PDP10s.  Customers tended to upgrade to newer hardware because
+they needed the compute/storage power.  Please note that I'm talking about
+PDP10s.  In the 80s, at least, there were some stupid pricing decisions
+made.  But we tried to correct them as soon as we heard about them.
+
+/BAH
+
+
+
+
+
+From tops-20-request@panda.com Mon Sep 16 00:03:02 1996
+From: Clive Dawson <Clive.Dawson@AMD.COM>
+To: tops-20@Panda.COM
+Subject: [rmp@MA.UltraNet.Com: Alan Kotok retirement (fwd)]
+
+Hi Folks,
+
+Here's some news about one of the most notable of our 36-Bit Pioneers.
+
+After all the computer retirements we've heard about on this list,
+this is a refreshing contrast...!
+
+Clive Dawson
+Advanced Micro Devices
+Austin, TX
+
+
+------- Start of forwarded message -------
+Return-Path: <rmp@MA.UltraNet.Com>
+Date: Fri, 13 Sep 1996 16:40:02 +0000 ()
+From: Robert Praetorius <rmp@MA.UltraNet.Com>
+X-Sender: rmp@popj1.ultranet.com
+Subject: Alan Kotok retirement (fwd)
+
+        This is to let you know that after 34 years with Digital, Alan Kotok
+has decided to take early retirement. It will take effect from the end of
+November. In the intervening weeks Alan will be on a leave of absence,
+however he will be continue to be on-line via email at <kotok@ultranet.com>.
+
+        Near the end of November we will be organizing a social event to
+celebrate Alan's career and many achievements in Digital and to wish him
+well for the future. Please send me a note if you wish to be notified.
+Please also feel free to forward this announcement.
+
+/Bill Laing
+____________________________________________________________________________
+Bill.laing@AltaVista.Digital.com       Tel: +44-1506-423262  DTN: 824-3262
+Internet Software Business Unit        Fax: +44-1506-423366  DTN: 824-3366
+Digital Equipment Corporation          http://altavista.software.digital.com
+

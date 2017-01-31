@@ -1,0 +1,147 @@
+Article 1295 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!inwap
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP10 screen log with 'SET W V F'.
+Date: 23 Sep 2000 08:51:24 GMT
+Organization: Chez Inwap
+Lines: 129
+Message-ID: <8qhquc$19qd$1@nntp1.ba.best.com>
+References: <Gpdx5.17451$SN6.426798@news4.giganews.com> <8q7k8s$cmk$1@bob.news.rcn.net> <8q9fuc$2u70$1@nntp1.ba.best.com> <ALDERSON.00Sep20174510@netcom2.netcom.com>
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 969699084 42829 206.184.139.134 (23 Sep 2000 08:51:24 GMT)
+X-Complaints-To: abuse@best.com
+NNTP-Posting-Date: 23 Sep 2000 08:51:24 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:1295
+
+In article <ALDERSON.00Sep20174510@netcom2.netcom.com>,
+Richard M. Alderson III <alderson+netcom@panix.com> wrote:
+>In article <8q9fuc$2u70$1@nntp1.ba.best.com> inwap@best.com (Joe Smith) writes:
+>
+>> The previous table entry %CNDTM [53..11] has the date/time in a format that
+>> is not affected by Y2K.  (Days since 15-Nov-1858.)
+>
+>Should that be 17 Nov 1858?  Tops-20 counts time since midnight GMT on that
+>date--time 0 is 16:00 16-Nov-1858 PST.
+
+Yep, I misremembered.
+
+I found a web page that describes why that particular date was chosen.
+http://www.magnet.ch/serendipity/hermetic/cal_stud/jdn.htm describes how
+astronomers decided that 17-Nov-1858 is day 0 for the Modified Julian Day
+Number.
+
+(They subtracted 2,400,000 from the full Julian Day Number, allowing dates
+up to the year 2130 can be specified as a 5 digit number, instead of 7 digits.)
+        -Joe            
+
+
+
+
+
+   Julian Day Numbers by Peter Meyer
+     
+  HISTORY
+  
+     The Julian Day number system was invented by Joseph Justus Scaliger
+     (born 1540-08-05 J in Agen, France, died 1609-01-21 J in Leiden,
+     Holland), who during his life immersed himself in Greek, Latin,
+     Persian and Jewish literature. His invention (in 1583) of the Julian
+     day number system is considered by some the foundation of the
+     science of chronology.
+     
+     Although the term Julian Calendar derives from the name of Julius
+     Caesar, the term Julian day number probably does not. Most say that
+     this system was named, not after Julius Caesar, but after its
+     inventor's father, Julius Caesar Scaliger (1484-1558). Perhaps it
+     was simply named after the Julian Calendar.
+     
+     The younger Scaliger combined three traditionally recognized
+     temporal cycles of 28, 19 and 15 years to obtain a great cycle, the
+     Scaliger cycle, or Julian period, of 7980 years (7980 is the
+     least common multiple of 28, 19 and 15). According to the
+     Encyclopedia Brittanica:
+     
+     The length of 7,980 years was chosen as the product of 28 times 19
+     times 15; these, respectively, are the numbers of years in the
+     so-called solar cycle of the Julian calendar in which dates recur on
+     the same days of the week; the lunar or Metonic cycle, after which
+     the phases of the Moon recur on a particular day in the solar year,
+     or year of the seasons; and the cycle of indiction, originally a
+     schedule of periodic taxes or government requisitions in ancient
+     Rome.
+     
+     The first Scaliger cycle began with Year 1 on -4712-01-01 (Julian)
+     and will end after 7980 years on 3267-12-31 (Julian), which is
+     3268-01-22 (Gregorian). 3268-01-01 J is the first day of Year 1 of
+     the next Scaliger cycle.
+     
+     
+       _______________________________________________________________
+     
+     
+     
+     
+     
+  ASTRONOMICAL SYTEM
+  
+     Little mention seems to be made as to whether Joseph Scaliger
+     regarded -4712-01-01 J as day 0 or as day 1 in the first Julian
+     period. Astronomers adopted this system and adapted it to their own
+     purposes, and they took noon GMT -4712-01-01 as their zero point.
+     For astronomers a day begins at noon and runs until the next noon
+     (so that the nighttime falls conveniently within one "day"). Thus
+     they defined the Julian day number of a day as the number of days
+     (or part of a day) elapsed since noon GMT (or more exactly, UTC) on
+     January 1st, 4713 B.C., in the Proleptic Julian Calendar. Thus the
+     Julian day number of noon GMT on -4712-01-01 (Julian), or more
+     casually, the Julian day number of -4712-01-01 itself, is 0. (Note
+     that 4713 B.C. is the year -4712 according to the astronomical year
+     numbering.) The Julian day number of 1996-03-31 is 2,450,174 --
+     meaning that on 1996-03-31 2,450,174 days had elapsed since
+     -4712-01-01 (or more exactly, that at noon on 1996-03-31 2,450,174
+     days had elapsed since noon on -4712-01-01).
+     
+     Scaliger preceded the astronomers in introducing the notion of
+     decimal times, designating midnight as .00, 6 a.m. as .25, midday as
+     .50 and 6 p.m. as .75, thus allowing easier calculation involving
+     dates and times. Astronomers, as noted above, preferred to use .00
+     to mean midday and .50 to mean midnight.
+     
+     
+       _______________________________________________________________
+     
+     
+     
+     
+     
+  MODIFIED JULIAN DAY NUMBER
+  
+     This was not to the liking of all scholars using the Julian day
+     number system, in particular, historians. For chronologists who
+     start "days" at midnight, the zero point for the Julian day number
+     system is 00:00 at the start of -4712-01-01 J, and this is day 0.
+     This means that 2000-01-01 G is 2,451,545 JD.
+     
+     Since most days within about 150 years of the present have Julian
+     day numbers beginning with "24", Julian day numbers within this
+     300-odd-year period can be abbreviated. In 1975 the convention of
+     the modified Julian day number was adopted:
+     
+     Given a Julian day number JD, the modified Julian day number MJD is
+     defined as MJD = JD - 2,400,000.5. This has two purposes:
+     
+    1. Days begin at midnight rather than noon.
+    2. For dates in the period from 1859 to about 2130 only five digits
+       need to be used to specify the date rather than seven.
+       
+     
+     
+     MJD 0 thus corresponds to JD 2,400,000.5, which is twelve hours
+     after noon on JD 2,400,000 = 1858-11-16. Thus MJD 0 designates the
+     midnight of November 16th/17th, 1858, so day 0 in the system of
+     modified Julian day numbers is the day 1858-11-17.
+--
+See http://www.inwap.com/ for PDP-10 and "ReBoot" pages.
+
+

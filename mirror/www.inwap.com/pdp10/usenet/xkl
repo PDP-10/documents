@@ -1,0 +1,373 @@
+Article 3635 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!ix.netcom.com!netcom11!alderson
+From: alderson@netcom11.netcom.com (Richard M. Alderson III)
+Subject: Re: PA1050 Error Messages on DEC20
+In-Reply-To: inwap@best.com's message of 19 Jan 1998 20:06:14 -0800
+Message-ID: <ALDERSON.98Jan20123854@netcom11.netcom.com>
+Sender: alderson@netcom11.netcom.com
+Reply-To: alderson@netcom.com
+Organization: NETCOM On-line services
+References: <68iin3$i2e@snews2.zippo.com> <34b7ac18.0@news.wizvax.net>
+	<34BAB34E.63E02FA1@nul.concentric.net> <EMxnGA.4C@woodshed.iupui.edu>
+	<6a17rm$q7c$1@shell3.ba.best.com>
+Date: Tue, 20 Jan 1998 20:38:53 GMT
+Lines: 41
+Xref: nntp1.ba.best.com alt.sys.pdp10:3635
+
+In article <6a17rm$q7c$1@shell3.ba.best.com> inwap@best.com
+(Smith and O'Halloran) writes:
+	   -Joe
+
+>  PDP-10 Features       TOAD-1
+>====================    ======
+>Year announced          1995
+			 1994 -- e-mail to Tops-20 mailing list, Dec. 20 1994
+>CPU type                XKL
+			 XKL-1, technically
+>Clock speed nanoseconds ?
+			 33MHz clock
+>Extended sections       4096
+>G-floating              Yes
+>Size of Cache           ?
+			 8000 cache lines X 2-way set-associative X 8 wds/line
+>I/O bus or Unibus       Ethernet
+			 SCSI-2 FAST-WIDE
+			 (Ethernet isn't an I/O bus on our box)
+>Internal memory         ?
+			 Yes
+>Height of cabinets      shorter
+			 19"w x 35"h x 25"d
+>Console Front-End       builtin
+>Bootstrap device        ROM
+>Runs TOPS-10 7.01       No
+>Runs TOPS-10 7.02       No
+>Runs TOPS-10 7.03/7.04  CTY
+			 Really, Tops-10 7.05 (a very late maintenance release)
+			 as that was the source tree given us by Digital (and
+			 no, I don't mean "DEC" in that context ;-)
+>Runs TOPS-20 rel 4      No
+>Runs TOPS-20 rel 5      No
+>Runs TOPS-20 rel 6      Yes
+			 No
+ Runs TOPS-20 rel 7	 Yes
+-- 
+Rich Alderson   You know the sort of thing that you can find in any dictionary
+                of a strange language, and which so excites the amateur philo-
+                logists, itching to derive one tongue from another that they
+                know better: a word that is nearly the same in form and meaning
+                as the corresponding word in English, or Latin, or Hebrew, or
+                what not.
+                                                --J. R. R. Tolkien,
+alderson@netcom.com                               _The Notion Club Papers_
+
+
+Article 3646 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!newsfeed.internetmci.com!206.214.99.1!ix.netcom.com!netcom11!alderson
+From: alderson@netcom11.netcom.com (Richard M. Alderson III)
+Subject: Additional Toad-1 specs [was Re: PA1050 Error Messages on DEC20]
+In-Reply-To: inwap@best.com's message of 21 Jan 1998 00:53:50 -0800
+Message-ID: <ALDERSON.98Jan22100756@netcom11.netcom.com>
+Sender: alderson@netcom11.netcom.com
+Reply-To: alderson@netcom.com
+Organization: NETCOM On-line services
+References: <68iin3$i2e@snews2.zippo.com> <EMxnGA.4C@woodshed.iupui.edu>
+	<6a17rm$q7c$1@shell3.ba.best.com>
+	<ALDERSON.98Jan20123854@netcom11.netcom.com>
+	<6a4d2u$i4e$1@shell3.ba.best.com>
+Date: Thu, 22 Jan 1998 18:07:55 GMT
+Lines: 19
+Xref: nntp1.ba.best.com alt.sys.pdp10:3646
+
+In article <6a4d2u$i4e$1@shell3.ba.best.com> inwap@best.com
+(Smith and O'Halloran) writes:
+
+>Thanks.  What is the maximum amount of memory it supports?
+
+In the released version of Tops-20, 32MW (one XMG-1 memory board).  We have
+since made experimental versions of the OS that support multiple boards.
+
+Those who have never seen the specs of the Toad-1 should be made aware that it
+has a 7-slot active backplane; the default configuration is 1 each of the XKL-1
+CPU, XMG-1 memory, XRH-1 4-port SCSI, and XNI-1 4-port Ethernet.  Depending on
+application, an additional memory or SCSI is not an unreasonable addition, but
+the older applications for which we originally targeted the system didn't need
+that much memory or I/O (one SCSI board can support up to 60 devices).
+-- 
+Rich Alderson   You know the sort of thing that you can find in any dictionary
+                of a strange language, and which so excites the amateur philo-
+                logists, itching to derive one tongue from another that they
+                know better: a word that is nearly the same in form and meaning
+                as the corresponding word in English, or Latin, or Hebrew, or
+                what not.
+                                                --J. R. R. Tolkien,
+alderson@netcom.com                               _The Notion Club Papers_
+
+
+Article 5264 of alt.sys.pdp10:
+Message-ID: <375A8AC3.303A4A66@jetnet.ab.ca>
+Date: Sun, 06 Jun 1999 08:50:43 -0600
+From: bfranchuk <bfranchuk@jetnet.ab.ca>
+X-Mailer: Mozilla 4.5 [en] (X11; I; Linux 2.0.36 i586)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: A new PDP-10 !?
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+NNTP-Posting-Host: 207.153.6.35
+X-Trace: 6 Jun 1999 08:41:34 -0700, 207.153.6.35
+Lines: 32
+Path: news3.best.com!news2.best.com!newshub.northeast.verio.net!cyclone.news.idirect.com!island.idirect.com!news.oanet.com!207.153.6.35
+Xref: news3.best.com alt.sys.pdp10:5264
+
+Found this under "List of FPGA-based Computing Machines"
+http://www.io.com/~guccione/HW_list.html
+
+XKL-1 
+
+FPGA Devices: 
+      2 Xilinx XC4010E-3 
+On-board RAM: 
+      2 x 8K x 8 x 36 cache
+      2 x 8K x 38 pager (TLB)
+      8K x 36 scratchpad 
+External bus: 
+      XKL proprietary 2Gbit/sec active backplane bus 
+Interconnect: 
+      None 
+Contact: 
+      Product Information
+      XKL Systems Corp.
+      8420 154th Avenue NE
+      Redmond, WA 98052
+      np-info@nospam.xkl.com 
+Notes: 
+      This is the CPU for the TOAD-1, a 36-bit computer instruction-set
+compatible with the Digital Equipment Corporation PDP-10
+      family of computers (best known as the DECsystem-10 and
+DECSYSTEM-20, defined by the respective operating systems
+      Tops-10 and Tops-20). 
+      The FPGAs are used for all arithmetic, including floating-point
+and byte-selection operations. (Note: The PDP-10 architecture is
+      word-oriented, with byte size and position within the 36-bit word
+defined by a pointer word which also contains the word
+      address.)
+
+
+Article 5266 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!newsfeed.enteract.com!ix.netcom.com!netcom2!alderson
+From: alderson@netcom2.netcom.com (Richard M. Alderson III)
+Subject: Re: A new PDP-10 !?
+In-Reply-To: bfranchuk's message of Sun, 06 Jun 1999 08:50:43 -0600
+Message-ID: <ALDERSON.99Jun7162408@netcom2.netcom.com>
+Sender: alderson@netcom2.netcom.com
+Reply-To: alderson@netcom.com
+Organization: NETCOM On-line services
+References: <375A8AC3.303A4A66@jetnet.ab.ca>
+Date: Mon, 7 Jun 1999 23:24:08 GMT
+Lines: 17
+Xref: news3.best.com alt.sys.pdp10:5266
+
+In article <375A8AC3.303A4A66@jetnet.ab.ca> bfranchuk <bfranchuk@jetnet.ab.ca>
+writes:
+
+>Found this under "List of FPGA-based Computing Machines"
+>http://www.io.com/~guccione/HW_list.html
+
+[ snip ]
+
+Never thought about it, but Mr. Guccione should have included dates on his
+pages; I supplied that info to him two or three years ago.
+
+XKL has been in business since 1991; we shipped beta Toad-1 systems to customer
+sites starting in October, 1995; merchantable units shipped from April, 1996.
+-- 
+Rich Alderson			Last LOTS Tops-20 Systems Programmer, 1984-1991
+				Current maintainer, MIT TECO EMACS (v. 170)
+last name @ XKL dot COM		Chief systems administrator, XKL LLC, 1998-now
+
+
+Article 310 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!cpk-news-hub1.bbnplanet.com!news.gtei.net!firehose.mindspring.com!news.mindspring.com!alderson
+From: alderson@netcom2.netcom.com (Richard M. Alderson III)
+Newsgroups: alt.sys.pdp10
+Subject: XKL is hiring
+Date: 28 Jul 2000 18:50:56 GMT
+Organization: NETCOM On-line services
+Lines: 20
+Message-ID: <ALDERSON.00Jul28115056@netcom2.netcom.com>
+Reply-To: alderson@netcom.com
+NNTP-Posting-Host: c7.b7.09.66
+X-Server-Date: 28 Jul 2000 18:51:54 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:310
+
+Hi, folks!
+
+We have a major hiring push on at XKL.  The new stuff is not directly PDP-10
+related, but there are lots of Toad-1 Systems in the house.  What we're working
+on is extremely exciting.
+
+Details are available at our (temporary) revamped website, www.xkl.com.
+
+For today, a different signature:
+
+Richard M. Alderson, III
+Manager, Systems Administration
+XKL LLC
+8420 154th Avenue NE
+Redmond, WA 98052-3800
+
+425-869-9050
+425-861-7863 (FAX)
+
+P. S.  98052(10) = 277404(8).
+
+
+Article 316 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newshub.sdsu.edu!news-hog.berkeley.edu!ucberkeley!newsswitch.lcs.mit.edu!feed2.onemain.com!feed1.onemain.com!news-out.cwix.com!newsfeed.cwix.com!nwnews.wa.com!brokaw.wa.com!not-for-mail
+From: katz@halcyon.com (Alan Katz)
+Newsgroups: alt.sys.pdp10
+Subject: Re: XKL is hiring
+Date: 28 Jul 2000 15:52:29 -0700
+Organization: XKL LLC
+Lines: 12
+Message-ID: <8lt2rd$gb2$1@halcyon.com>
+References: <ALDERSON.00Jul28115056@netcom2.netcom.com>
+NNTP-Posting-Host: king.halcyon.com
+X-Trace: brokaw.wa.com 964824750 3395 206.63.63.10 (28 Jul 2000 22:52:30 GMT)
+NNTP-Posting-Date: 28 Jul 2000 22:52:30 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:316
+
+Let me second this.  If you would like to get paid to work with TOPS20
+and code in Macro10 (and live in the Northwest), send us your resume or
+look at our web site.  I'd be glad to answer questions.
+
+
+     Alan Katz (Katz@XKL.Com)
+     Software Engineering Lead, XKL-LLC
+     Redmond, WA  98052
+
+
+
+
+
+
+Article 1476 of alt.sys.pdp10:
+From: Neil Franklin <neil@franklin.chi.remove>
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 in an FPGA chip (was Re: Timothy Stark's effort)
+Date: 08 Oct 2000 23:45:21 +0200
+Organization: My own Private Self
+Lines: 44
+Message-ID: <6uzokfhury.fsf@chonsp.franklin.ch>
+References: <39D163D1.C119CCF1@bartek.net> <39D16BC9.F048C9D2@bartek.net> <8qslsk$jom$3@bob.news.rcn.net> <39D1F581.CE63E00C@bartek.net> <8qv92s$es9$6@bob.news.rcn.net> <Pine.NXT.4.30.0009281139160.12384-100000@Tomobiki-Cho.CAC.Washington.EDU> <39D3BD18.639FF1AC@bartek.net> <6u7l7tbhos.fsf_-_@chonsp.franklin.ch> <39D55251.36123656@jetnet.ab.ca> <B5FCD42F.23F3%dgc@spies.com> <8rf8qg$r1c$4@bob.news.rcn.net> <B6013FBA.24DF%dgc@spies.com> <8rhj10$9rp$3@bob.news.rcn.net> <39DD28B9.9CAE8313@bellatlantic.net> <8rkcmk$a4v$1@bob.news.rcn.net> <39DE4002.FB9CDDFB@bellatlantic.net> <FbxD5.35241$pu4.3786599@typhoon.ne.mediaone.net> <39DF3A68.1F73A353@bellatlantic.net>
+X-Complaints-To: news@chonsp.franklin.ch
+NNTP-Posting-Date: 8 Oct 2000 21:45:23 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.4
+NNTP-Posting-Host: dua131221.dialup800-stat.ethz.ch
+X-Trace: 8 Oct 2000 23:47:24 +0100, dua131221.dialup800-stat.ethz.ch
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!EU.net!npeer.kpnqwest.net!news2.kpn.net!news.kpn.net!newsfeeds.belnet.be!news.belnet.be!news-ge.switch.ch!news-zh.switch.ch!pfaff.ethz.ch!chonsp.franklin.ch!not-for-mail
+Xref: nntp1.ba.best.com alt.sys.pdp10:1476
+
+"justme.bob" <sfmc68@bellatlantic.net> writes:
+
+> I bet I could get some good folks on the left coast to
+> put together a toad 2 or 3.
+
+And we are back on topic (FPGA PDP-10s)!
+
+From: http://www.io.com/~guccione/HW_list.html#XKL-1
+
+----------
+XKL-1
+
+FPGA Devices:
+     2 Xilinx XC4010E-3
+On-board RAM:
+     2 x 8K x 8 x 36 cache
+     2 x 8K x 38 pager (TLB)
+     8K x 36 scratchpad
+External bus:
+     XKL proprietary 2Gbit/sec active backplane bus
+Interconnect:
+     None
+Contact:
+     Product Information
+     XKL Systems Corp.
+     8420 154th Avenue NE
+     Redmond, WA 98052
+     np-info@nospam.xkl.com
+Notes:
+     This is the CPU for the TOAD-1, a 36-bit computer instruction-set compatible with the
+     Digital Equipment Corporation PDP-10 family of computers (best known as the     DECsystem-10 and DECSYSTEM-20, defined by the respective operating systems
+     Tops-10 and Tops-20).
+     The FPGAs are used for all arithmetic, including floating-point and byte-selection
+     operations. (Note: The PDP-10 architecture is word-oriented, with byte size and position
+     within the 36-bit word defined by a pointer word which also contains the word address.)
+----------
+
+I just found that page yesterday evening.
+
+
+--
+Neil Franklin, neil@franklin.ch.remove http://neil.franklin.ch/
+Nerd, Geek, Hacker, Unix Guru, Sysadmin, Roleplayer, LARPer, Mystic
+
+
+Article: 21549 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!sjc-peer.news.verio.net!news.verio.net!newsfeed.berkeley.edu!ucberkeley!newspeer.monmouth.com!newsfeed.mathworks.com!bloom-beacon.mit.edu!panix!not-for-mail
+From: Rich Alderson <news@alderson.users.panix.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: XKL arch ref manual - font-related problems
+Date: 20 Oct 2003 14:37:45 -0400
+Organization: Systems Administration, XKL LLC, Redmond WA 98052
+Lines: 34
+Sender: alderson+news@panix5.panix.com
+Message-ID: <mddad7vycue.fsf@panix5.panix.com>
+References: <NoSdnQNl9amYvQ6iRTvUqg@speakeasy.net>
+NNTP-Posting-Host: panix5.panix.com
+X-Trace: reader1.panix.com 1066675065 4639 166.84.1.5 (20 Oct 2003 18:37:45 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: Mon, 20 Oct 2003 18:37:45 +0000 (UTC)
+X-Newsreader: Gnus v5.7/Emacs 20.7
+Xref: dfw-artgen alt.sys.pdp10:21549
+
+"Timothy Stark" <sword7nospam@speakeasy.org> writes:
+
+> Hello folks,
+
+> I tried to read that XKL arch ref manual but its font are so fuzzy and
+> blurry (difficult to read) on Acrobat Reader because I do not have
+> postscript viewer for Windows.  I converted them to PDF files through
+> Acrobat Distiller.   However, I can read them clearly on Linux platform by
+> using Ghostscript viewer.   However, with TOPS-20 assembly programming
+> manual (learning book),
+> I can read them clearly because they uses true-type fonts on Acrobat.
+
+No, they do not.  They use Type 1 fonts.
+
+> When I magnified fonts by 1600%, I noticed that fonts are blocky instead of
+> smooth (not true-type fonts).  Yes, it did not use true-type fonts.
+
+No, nor did it use Type 1 fonts, which were not yet available when the manual
+was put into Postscript format.
+
+> Does anyone have know which good postscript viewer is best for that manual
+> to read clearly?
+
+Use Ghostscript for Windows--but since the fonts used in the document are
+converted Metafont in Type 3 format, they will still be blocky.
+
+I suggest that you write to webmaster@xkl.com and ask politely that they make a
+PDF of the architecture manual available on their website.
+
+-- 
+Rich Alderson					    | /"\ ASCII ribbon     |
+news@alderson.users.panix.com			    | \ / campaign against |
+"You get what anybody gets. You get a lifetime."    |  x  HTML mail and    |
+			 --Death, of the Endless    | / \ postings         |
+
+

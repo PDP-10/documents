@@ -1,0 +1,247 @@
+Article 6400 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!news.algonet.se!algonet!masternews.telia.net!newsc.telia.net.POSTED!not-for-mail
+Message-ID: <38B10175.D560886A@netinsight.se>
+From: Johnny Billquist <Johnny.Billquist@netinsight.se>
+Organization: Netinsight AB
+X-Mailer: Mozilla 4.5 [en] (X11; I; Linux 2.2.14 i686)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10,alt.folklore.computers,alt.sys.pdp11
+Subject: Re: write rings
+References: <38AB2C53.E3F70B35@kilonet.net> <20000219084101.14768.00000423@ng-fh1.aol.com> <38afb528$0$216@nntp1.ba.best.com> <88ojbi$1es$1@bob.news.rcn.net> <88q31b$13vm$1@citadel.in.taronga.com> <38B0FDCE.53FA68D3@netinsight.se>
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+Lines: 140
+Date: Mon, 21 Feb 2000 09:12:21 GMT
+NNTP-Posting-Host: 194.16.221.2
+X-Complaints-To: abuse@telia.com
+X-Trace: newsc.telia.net 951124341 194.16.221.2 (Mon, 21 Feb 2000 10:12:21 MET)
+NNTP-Posting-Date: Mon, 21 Feb 2000 10:12:21 MET
+Xref: news3.best.com alt.sys.pdp10:6400 alt.folklore.computers:150972 alt.sys.pdp11:6532
+
+Argh. Hate modern news readers...
+Let's see it I can get the file in here this time...
+
+---------------------
+From alt.folklore.computers Thu Sep  8 19:00:47 1994
+Path:
+Krille.Update.UU.SE!columba.udac.uu.se!sunic!uunet!decwrl!pa.dec.com!nntpd.lkg.dec.com!jac.zko.dec.com!math.zk3.dec.com!edp
+From: edp@math.zk3.dec.com (Eric Postpischil)
+Newsgroups: alt.fan.dave_barry,alt.folklore.computers
+Subject: Re: "Always mount a scratch Harry"
+Date: 7 Sep 1994 18:20:56 GMT
+Organization: Digital Equipment Corporation
+Lines: 93
+Distribution: world
+Message-ID: <34l0a8$frq@jac.zko.dec.com>
+References: <33tq9h$5t2@tequesta.gate.net> <CvFz4H.9sq@agora.rdrop.com>
+<34b8o5$j0t@clarknet.clark.net> <CvqqBq.GEo@espada.chi.il.us>
+Reply-To: edp@mv.com
+NNTP-Posting-Host: math.zk3.dec.com
+Xref: Krille.Update.UU.SE alt.fan.dave_barry:3704
+alt.folklore.computers:14491
+
+In article <CvqqBq.GEo@espada.chi.il.us>, cgordon@vpnet.chi.il.us
+(gordon hlavenka) writes:
+
+>This seems like a good time for someone to tell the "Scratch Monkey"
+>story.  I know it, but I'm sure somebody else could tell it better
+>than I could.  Any volunteers?
+
+
+            <<< NOVA::NOTES_DISK:[NOTES$LIBRARY]WAR_STORY.NOTE;1 >>>
+                          -<  Computer War Stories  >-
+=================================================================================
+Note 47.18                       Scratch Monkeys                      
+18 of 21
+RUSURE::EDP "Always mount a scratch monkey."         61 lines
+11-FEB-1993 14:14
+                    -< Authenticated Scratch Monkey Story >-
+---------------------------------------------------------------------------------
+    This morning, I spoke for an hour with Laura Creighton, who wrote
+the
+    device driver for the equipment between the monkeys and the
+computer.
+
+    This incident happened at the University of Toronto in late November
+of
+    1979 or 1980.  The zoology department had used digital-to-analog and
+    analog-to-digital converters in a large number of experiments,
+    including attempting to synthesize pheromones to reduce breeding of
+    beetles that fed on tobacco crops, some rat neurological
+experiments,
+    and some cricket behavior/population studies.  The rat experiments
+    involved implanting electrodes in the rats' brains, and the rats
+    experienced some pain.  The Humane Society learned of this and
+raised
+    complaints, resulting in the shutting down of the zoology department
+    for a day while the experiment was stopped.  The University of
+Toronto
+    has the third or fourth most respected zoology department in the
+world
+    and wanted to maintain that prestige, so there was lots of screaming
+to
+    avoid having such a thing happening again.
+
+    The various data from the experiments was collected by PDP-11/05
+front
+    ends and sent to an 11/44.  Laura Creighton had written the software
+    for this, fixing a problem they had previously with the 11/44 not
+being
+    fast enough to collect the data by itself.  This was being done for
+16
+    to 18 experiments.
+
+    The folks in the physiology section of the Department of Medicine
+    (separate from Science, which contained the zoology department) had
+    bought their first VAX, an 11/780, and wanted a similar set-up.  So
+    Laura Creighton and the zoology department agreed to set up their
+    software for this.  The physiology people decided not to use 11/05s
+in
+    between, since the VAX was fast enough to handle the data.  So five
+    monkeys were fitted with caps intended to sense brain waves, and the
+    caps were attached to various A-to-D and D-to-A converters (which
+were
+    US Army surplus from 1956) which were in turn connected to the VAX. 
+    This connection was piggybacked on a disk drive (pre-RL02), which
+    contained a disk and was mounted read-only -- the read-only button
+was
+    pressed and taped over with a warning not to remove it.  In normal
+    operation, software would read data from that drive and write it to
+a
+    regular disk.  The room containing the monkeys was several stories
+    removed from the computer room.
+
+    After some time, the VAX crashed.  It was on a service contract, and
+    Digital was called.  Laura Creighton was not called although she was
+on
+    the short list of people who were supposed to be called in case of
+    problem.  The Digital Field Service engineer came in, removed the
+disk
+    from the drive, figured it was then okay to remove the tape and make
+    the drive writable, and proceeded to run diagnostics which wrote to
+    that drive.
+
+    Two of the monkeys were stunned, and three died.  The Digital
+engineer
+    needed to be calmed down; he was going to call the Humane Society. 
+    This became known as the Great Dead Monkey Project, and it leads of
+    course to the aphorism I use as my motto:  "Always mount a scratch
+    monkey."
+
+    Laura Creighton points out that although this is told as a
+gruesomely
+    amusing story, three monkeys did lose their lives, and there are
+    lessons to be learned in treatment of animals and risk management. 
+    Particularly, the sign on the disk drive should have explained why
+the
+    drive should never have been enabled for write access.
+
+
+                                -- edp
+---------------------------------------------------------
+
+                                -- edp (Eric Postpischil)
+                                "Always mount a scratch monkey."
+                                edp@mv.com
+
+
+Disclaimer:  The opinions of Digital Equipment Corporation do not
+reflect mine.
+
+Public key fingerprint:  8e ad 63 61 ba 0c 26 86  32 0a 7d 28 db e7 6f
+75.
+To get PGP, FTP /pub/unix/security/crypt/pgp23A.zip from ftp.funet.fi.
+
+-- 
+Johnny Billquist             |  johnny.billquist@netinsight.net
+Net Insight AB               |  phone:  +46 8 685 04 88
+Västberga Allé 9             |  fax:    +46 8 685 04 20
+Box 42093                    |
+SE-126 30 STOCKHOLM, Sweden  |  http://www.netinsight.net
+
+
+Article 6397 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!news.algonet.se!algonet!masternews.telia.net!newsc.telia.net.POSTED!not-for-mail
+Message-ID: <38B0FDCE.53FA68D3@netinsight.se>
+From: Johnny Billquist <Johnny.Billquist@netinsight.se>
+Organization: Netinsight AB
+X-Mailer: Mozilla 4.5 [en] (X11; I; Linux 2.2.14 i686)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10,alt.folklore.computers,alt.sys.pdp11
+Subject: Re: write rings
+References: <38AB2C53.E3F70B35@kilonet.net> <20000219084101.14768.00000423@ng-fh1.aol.com> <38afb528$0$216@nntp1.ba.best.com> <88ojbi$1es$1@bob.news.rcn.net> <88q31b$13vm$1@citadel.in.taronga.com>
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+Lines: 30
+Date: Mon, 21 Feb 2000 08:56:46 GMT
+NNTP-Posting-Host: 194.16.221.2
+X-Complaints-To: abuse@telia.com
+X-Trace: newsc.telia.net 951123406 194.16.221.2 (Mon, 21 Feb 2000 09:56:46 MET)
+NNTP-Posting-Date: Mon, 21 Feb 2000 09:56:46 MET
+Xref: news3.best.com alt.sys.pdp10:6397 alt.folklore.computers:150971 alt.sys.pdp11:6531
+
+Peter da Silva wrote:
+> 
+> In article <88ojbi$1es$1@bob.news.rcn.net>,  <jmfbahciv@aol.com> wrote:
+> >>              "Always mount a scratch monkey."
+> 
+> >I never have figured out what this was supposed to mean :-).
+> 
+> It's about Mabel.
+> 
+> http://www.acme.com/jef/netgems/scratch_monkey.html
+> 
+
+That was a very truncated and incorrect version.
+It don't even explain where the "mount" came into this.
+Oh well...
+
+Funny, how stories get twisted with time. This story was
+posted to a.f.c in 1994...
+
+Fortunately I have the correct version lying around...
+
+Here it goes....
+---------------------------------------
+
+-- 
+Johnny Billquist             |  johnny.billquist@netinsight.net
+Net Insight AB               |  phone:  +46 8 685 04 88
+Västberga Allé 9             |  fax:    +46 8 685 04 20
+Box 42093                    |
+SE-126 30 STOCKHOLM, Sweden  |  http://www.netinsight.net
+
+
+Article 6402 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!cleanfeed.inet.tele.dQ!netscum.int!news-feed.inet.tele.dk!bofh.vszbr.cz!news-proxy.baileynm.com!citadel.in.taronga.com!not-for-mail
+From: peter@taronga.com (Peter da Silva)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers,alt.sys.pdp11
+Subject: Re: write rings
+Date: 21 Feb 2000 13:41:32 GMT
+Organization: TSS Inc.
+Lines: 12
+Message-ID: <88rfac$23go$1@citadel.in.taronga.com>
+References: <38AB2C53.E3F70B35@kilonet.net> <88q31b$13vm$1@citadel.in.taronga.com> <38B0FDCE.53FA68D3@netinsight.se> <38B10175.D560886A@netinsight.se>
+NNTP-Posting-Host: citadel.in.taronga.com
+X-Trace: citadel.in.taronga.com 951140492 69144 10.0.0.43 (21 Feb 2000 13:41:32 GMT)
+X-Complaints-To: usenet@taronga.com
+NNTP-Posting-Date: 21 Feb 2000 13:41:32 GMT
+X-Newsreader: trn 4.0-test72 (19 April 1999)
+Xref: news3.best.com alt.sys.pdp10:6402 alt.folklore.computers:150979 alt.sys.pdp11:6534
+
+Thanks. I've seen several versions of the story, but they have always been
+about "Mabel the swimming monkey" and they've always started with "YOU
+KILLED MABEL" and ended with "Can you swim?".
+
+The reason why PMing the machine (when it's named it's always been a
+PDP-11, not a VAX, by the way) killed the monkey varies quite a bit.
+
+-- 
+This is The Reverend Peter da Silva's Boring Sig File - there are no references
+to Wolves, Kibo, Discordianism, or The Church of the Subgenius in this document
+
+Executive Vice President, Corporate Communications, Entropy Gradient Reversals.
+
+

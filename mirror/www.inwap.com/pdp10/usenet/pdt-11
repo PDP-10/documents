@@ -1,0 +1,105 @@
+Article 3396 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Path: nntp1.ba.best.com!news1.best.com!su-news-hub1.bbnplanet.com!cpk-news-hub1.bbnplanet.com!news.bbnplanet.com!news-peer.sprintlink.net!news.sprintlink.net!Sprint!uunet!in5.uu.net!world!mbg
+From: mbg@world.std.com (Megan)
+Subject: Re: DEC PDP11/10
+Message-ID: <EH5Ats.MHp@world.std.com>
+Organization: The World Public Access UNIX, Brookline, MA
+References: <5v6e4g$1g7a$1@flood.weeg.uiowa.edu> <341E6680.1FE5@uni-muenster.de> <6064t9$st5@epervier.CC.UMontreal.CA> <34271231.29D54379@stoneweb.com> <34279600.6709@cisco.com> <hshubs-2509971817200001@ip203.oklahoma-city3.ok.pub-ip.psi.net>
+Date: Sat, 27 Sep 1997 02:27:27 GMT
+Lines: 46
+Xref: nntp1.ba.best.com alt.sys.pdp10:3396 alt.folklore.computers:92602
+
+hshubs@mindspring.com (Howard S Shubs) writes:
+
+>In article <34279600.6709@cisco.com>, "Henry W. Miller"
+><hmiller@cisco.com> wrote:
+
+>>Carl R. Friend wrote:
+>>> 
+>>        Which PDP-11 was the board-solution, that could be slipped 
+>>into a VT100 class terminal for a self-contained computer system?  I
+>>thought that the 11/10 was that unit.
+
+>I thought the PDT-11 was an -03 or -23.  No?
+
+All of the PDT-11 series were based on the 11/2 chipset.  There was
+the PDT-11/150, which had a free-standing unit with two 8" floppy
+drives and a number of serial (synch/asynch) and parallel ports.
+
+The PDT-11/130 was built into a VT100 case (essentially) with two
+TU58s as the system devices.
+
+The PDT-11/110 was also in a VT100 case, but had no storage.  It
+was supposed to be down-loaded with the same protocol as the
+GT40 used when being downloaded from a -10.
+
+The chipset consisted of 4 chips, but there was an option which
+replaced the 3007/3010 microms with a single dual microm, which
+freed space for installation of the EIS/FIS chip (I know, I've done
+the modification to several PDT-11/150s).
+
+RT-11 ran on both the 11/130 and 11/150, using the same PD device
+handler.  In fact, the rom code on the 11/130 and 11/150 knew about
+RT-11 Qelements, and all the handler had to do was pass the Qelement
+structure to the rom code for it to do the processing.
+
+					Megan Gentry
+					Former RT-11 Developer
+
++--------------------------------------+-------------------------------------+
+| Megan Gentry                         | tcp/ip (work):   gentry@zk3.dec.com |
+| Unix Support and Engineering Group   |      or: gentry@rusure.enet.dec.com |
+| Digital Equipment Corporation        |    (non-work):    mbg@world.std.com |
+| 110 Spitbrook Rd. ZK03-2/T43         | URL http://world.std.com/~mbg/      | 
+| Nashua, NH 03062                     | "Still real-time after all these    |
+| (603) 881 1055                       |  years."                            |
++--------------------------------------+-------------------------------------+
+
+
+
+Article 3397 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Path: nntp1.ba.best.com!news1.best.com!su-news-hub1.bbnplanet.com!su-news-feed1.bbnplanet.com!news.bbnplanet.com!newsgate.tandem.com!uunet!in5.uu.net!world!mbg
+From: mbg@world.std.com (Megan)
+Subject: Re: DEC PDP11/10
+Message-ID: <EH5Ay5.500@world.std.com>
+Organization: The World Public Access UNIX, Brookline, MA
+References: <5v6e4g$1g7a$1@flood.weeg.uiowa.edu> <341E6680.1FE5@uni-muenster.de> <6064t9$st5@epervier.CC.UMontreal.CA> <34271231.29D54379@stoneweb.com> <34279600.6709@cisco.com> <hshubs-2509971817200001@ip203.oklahoma-city3.ok.pub-ip.psi.net>
+Date: Sat, 27 Sep 1997 02:30:05 GMT
+Lines: 31
+Xref: nntp1.ba.best.com alt.sys.pdp10:3397 alt.folklore.computers:92606
+
+hshubs@mindspring.com (Howard S Shubs) writes:
+
+>In article <34279600.6709@cisco.com>, "Henry W. Miller"
+><hmiller@cisco.com> wrote:
+
+>>Carl R. Friend wrote:
+>>> 
+>>        Which PDP-11 was the board-solution, that could be slipped 
+>>into a VT100 class terminal for a self-contained computer system?  I
+>>thought that the 11/10 was that unit.
+
+Oh yes, there was also the VT103, which was a VT100 with a more gutsy
+power supply and a Q/Q backplane.  I had one of these in my office when
+I used to do RT-11 Development (system device was a DSD880... I still
+have them).  Since the backplane was Q/Q, you could install any of the
+Qbus CPUs which would run in a Q/Q backplane.  I'll have to pull out
+the system to check, but I think I had a KDJ11-A in it when I
+moth-balled it...
+
+					Megan Gentry
+					Former RT-11 Developer
+
++--------------------------------------+-------------------------------------+
+| Megan Gentry                         | tcp/ip (work):   gentry@zk3.dec.com |
+| Unix Support and Engineering Group   |      or: gentry@rusure.enet.dec.com |
+| Digital Equipment Corporation        |    (non-work):    mbg@world.std.com |
+| 110 Spitbrook Rd. ZK03-2/T43         | URL http://world.std.com/~mbg/      | 
+| Nashua, NH 03062                     | "Still real-time after all these    |
+| (603) 881 1055                       |  years."                            |
++--------------------------------------+-------------------------------------+
+
+
+

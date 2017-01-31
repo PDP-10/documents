@@ -1,0 +1,262 @@
+Article 6385 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!newsfeed.direct.ca!look.ca!news.u.washington.edu!140.142.17.34.MISMATCH!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: comp.unix.tru64,comp.os.vms,alt.sys.pdp10,comp.sys.dec
+Subject: Re: Higher prices for Alpha processors
+Date: Wed, 17 Oct 2001 12:06:10 -0700
+Organization: Networks & Distributed Computing
+Lines: 41
+Message-ID: <Pine.NXT.4.41.0110171126270.13392-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <3bc2f4b4@siufuxsun02.unifr.ch> <3BC5AEA5.B544BB8C@gtech.com>
+ <3BC5FE2C.396F328A@videotron.ca> <3BC6F8E7.339CFD92@gtech.com>
+ <d7791aa1.0110160719.5d201757@posting.google.com> <4liqstoobpn8cn82ab7r6vumh7a3jlrchb@4ax.com>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp6.u.washington.edu 1003345572 21348 (None) 140.142.17.35
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: nobu
+To: Alan Greig <a.greig@virgin.net>
+In-Reply-To: <4liqstoobpn8cn82ab7r6vumh7a3jlrchb@4ax.com>
+Xref: nntp1.ba.best.com comp.unix.tru64:4490 comp.os.vms:43525 alt.sys.pdp10:6385 comp.sys.dec:6959
+
+On Wed, 17 Oct 2001, Alan Greig wrote:
+> wsmr-simtel20.army.mil was one of the last holdouts but even ".mil"
+> couldn't save it from DEC,
+
+DEC had nothing to do with it.
+
+Speaking as someone who was there, SIMTEL20 was killed by a combination of
+factors:
+ 1) perceived costs of ownership and maintenance.
+ 2) perceived irrelevance, inappropriateness, and illegality of the archive.
+ 3) perceived superiority of AT&T 3B2 systems as "modern" Internet engines.
+ 4) politics.  The less said about this, the better; the individuals
+    involved are now retired.  Let's just say that in government, including
+    military, one of the well-used ways to get at someone you loathe is to
+    attack his subordinates and their projects.
+
+Note my usage of the word "perceived".  We are not talking about the
+perceptions of anyone involved with SIMTEL20.  Consider how item (4)
+interacts with perception.
+
+SIMTEL20 suffered a mortal wound over a year before the plug was finally
+pulled.  It was not a happy time.  The SIMTEL20 archivist, and especially
+the fellow who was the heart and soul of the SIMTEL20 TOPS-20 system from
+its inception, bore the brunt.  I have evil memories nonetheless.
+
+I ensured that all the email queued on SIMTEL20 was passed on before the
+plug was pulled.  SIMTEL20's last act before the electrons ceased flowing
+was to foist the last queued but undeliverable message (due to destination
+host down) onto one of the "modern" 3B2s which replaced it.
+
+It is amazing that the archive didn't die, since that was one of the goals
+of shutting down SIMTEL20.  At least in that respect, the bastards lost.
+
+There is a lot more to this story than I am telling here, but you'll have
+to hear it from someone else.
+
+-- Mark --
+
+http://staff.washington.edu/mrc
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+Article 12724 of alt.sys.pdp10:
+Path: sea-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!crtntx1-snh1.gtei.net!cpk-news-hub1.bbnplanet.com!news.gtei.net!news.algonet.se!algonet!newspeer.clara.net!news.clara.net!news5-gui.server.ntli.net!ntli.net!news6-win.server.ntlworld.com.POSTED!not-for-mail
+Message-ID: <3BCDE359.FE81D17B@virgin.net>
+From: Alan Greig <a.greig@virgin.net>
+X-Mailer: Mozilla 4.6 [en] (Win95; I)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: comp.unix.tru64,comp.os.vms,alt.sys.pdp10,comp.sys.dec
+Subject: Re: Higher prices for Alpha processors
+References: <3bc2f4b4@siufuxsun02.unifr.ch> <3BC5AEA5.B544BB8C@gtech.com>
+	 <3BC5FE2C.396F328A@videotron.ca> <3BC6F8E7.339CFD92@gtech.com>
+	 <d7791aa1.0110160719.5d201757@posting.google.com> <4liqstoobpn8cn82ab7r6vumh7a3jlrchb@4ax.com> <Pine.NXT.4.41.0110171126270.13392-100000@Tomobiki-Cho.CAC.Washington.EDU>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 45
+Date: Wed, 17 Oct 2001 21:00:26 +0100
+NNTP-Posting-Host: 62.252.140.17
+X-Complaints-To: abuse@virgin.net
+X-Trace: news6-win.server.ntlworld.com 1003348911 62.252.140.17 (Wed, 17 Oct 2001 21:01:51 BST)
+NNTP-Posting-Date: Wed, 17 Oct 2001 21:01:51 BST
+Organization: Virgin Net Usenet Service
+Xref: dfw-artgen.news.verio.net comp.unix.tru64:6346 comp.os.vms:111158 alt.sys.pdp10:12724 comp.sys.dec:21241
+
+
+
+Mark Crispin wrote:
+
+> On Wed, 17 Oct 2001, Alan Greig wrote:
+> > wsmr-simtel20.army.mil was one of the last holdouts but even ".mil"
+> > couldn't save it from DEC,
+>
+> DEC had nothing to do with it.
+>
+
+Mark, I was referring to military use of TOPS-20 not being suffficient to save
+*TOPS-20* from DEC. Not save SIMTEL20 itself. Earlier in this thread, before I
+added the crossposting, someone had stated that Compaq could never kill VMS
+because it was used by the military. I just picked SIMTEL20 as a well known
+example of a site with a ".mil" domain which survived into the relatively recent
+Internet age.
+
+>
+> It is amazing that the archive didn't die, since that was one of the goals
+> of shutting down SIMTEL20.  At least in that respect, the bastards lost.
+>
+
+Presumably the old DUMPER tapes survive. Just to mark a bit of Arpanet/Internet
+history it would be nice to bring up the SIMTEL20 archives on an emulated PDP-10
+and make it available online. Someone would have to rebuild a KS-10 version of
+TOPS-20 with Internet support though as the currently booting TOPS-20 V4.1 KS-10
+distribution doesn't have Arpanet support built in. Do you still have a
+buildable KS-10 distribution by any chance? Was there ever an official KS-10
+distribution with Arpanet support or was that limited to KL-10 distributions
+only?
+
+>
+> There is a lot more to this story than I am telling here, but you'll have
+> to hear it from someone else.
+>
+> -- Mark --
+>
+> http://staff.washington.edu/mrc
+> Science does not emerge from voting, party politics, or public debate.
+
+--
+Alan Greig
+
+
+
+
+Article: 137907 of alt.folklore.computers
+Path: iad-read.news.verio.net!dfw-artgen!sjc-peer.news.verio.net!news.verio.net!hammer.uoregon.edu!enews.sgi.com!news-hog.berkeley.edu!ucberkeley!news.cis.ohio-state.edu!malgudi.oar.net!plonk.apk.net!news.apk.net!not-for-mail
+From: drushel@apk.net (Richard F. Drushel, Ph.D.)
+Newsgroups: alt.folklore.computers,comp.os.cpm
+Subject: wsmr-simtel20 shut down 10 years ago today
+Date: 30 Sep 2003 20:22:45 GMT
+Organization: Coleco ADAM Online, Ltd.
+Lines: 109
+Message-ID: <blcoml$51i$1@plonk.apk.net>
+NNTP-Posting-Host: junior.apk.net
+X-Trace: plonk.apk.net 1064953365 5170 207.54.158.21 (30 Sep 2003 20:22:45 GMT)
+X-Complaints-To: abuse@apk.net
+NNTP-Posting-Date: 30 Sep 2003 20:22:45 GMT
+User-Agent: tin/1.4.6-20020816 ("Aerials") (UNIX) (SunOS/5.8 (sun4u))
+Xref: dfw-artgen alt.folklore.computers:137907 comp.os.cpm:21353
+
+	The famous anonymous FTP archive at wsmr-simtel20.army.mil shut
+down 10 years ago today.  It was hosted on a DECsystem 2060.  I used
+it often to search for CP/M and MS-DOS software.  I was logged into it
+when it went offline.  Here (courtesy of Google, though I do have my own
+copy archived somewhere) is the memorial post I made 10 years ago, with
+the final session log.
+
+	*Rich*
+
+> From: rfd@po.CWRU.Edu (Richard F. Drushel)
+> Newsgroups: comp.os.cpm,alt.folklore.computers
+> Subject: Farewell to wsmr-simtel20.army.mil
+> Date: 1 Oct 1993 00:32:34 GMT
+> Organization: Case Western Reserve University, Cleveland, OH (USA)
+> Lines: 85
+> Message-ID: <28ftr2$pmc@usenet.INS.CWRU.Edu>
+> Reply-To: rfd@po.CWRU.Edu (Richard F. Drushel)
+> NNTP-Posting-Host: slc12.ins.cwru.edu
+
+	Today was the shutdown of wsmr-simtel20.army.mil, one of
+the few (if any?) remaining DECsystem 2060s on the net.  This was
+my favorite site for CP/M software, and I found a few MS-DOS
+items of interest as well.  Out of curiosity and as a tribute, I
+had an open anonymous ftp session when the machine was disconnected.
+Here is the session log; thank you, simtel20.
+
+*************************** begin transcript *******************************
+ 
+cwbiol2.cwru.edu> date
+Thu Sep 30 17:27:05 EDT 1993
+ 
+cwbiol2.cwru.edu> ftp wsmr-simtel20.army.mil
+Connected to wsmr-simtel20.army.mil.
+ 
+220 WSMR-SIMTEL20.ARMY.MIL FTP Server Process 5Z(119)-7 at Thu 30-Sep-93 15:27-MDT
+Name (wsmr-simtel20.army.mil:drushel): anonymous
+331 ANONYMOUS user ok, send real ident as password.
+Password:
+230-WSMR-SIMTEL20.ARMY.MIL is owned and operated by the U.S. Army White Sands
+230-Missile Range, New Mexico.  SIMTEL20 is usually always up, except for PM
+230-on the first Wednesday of each month, 4pm and 8pm Mountain Time (GMT-7).
+230-Send problem reports to ACTION@WSMR-SIMTEL20.ARMY.MIL.
+230-
+230-*** Due to funding constraints, realignment of mission functions, ***
+230-*** and Department of Army downsizing;                            ***
+230-***      SIMTEL20 will cease operations !!!                       ***
+230-***      30 September 1993 - 1600 HOURS Mountain Daylight Time    ***
+230-***       Only one more day of SIMTEL20 operations!               ***
+230-
+230-Only nine ANONYMOUS FTP logins are allowed during weekday prime time, 5am
+230-to 3pm Mountain Time, but 27 all other times.  Try restricting your
+230-connection attempts to those "other times" for best results.
+230-* New ANONYMOUS users: please "get 00-readme.txt" and read it. *
+230-
+230-SIMTEL20 files are also available by anonymous ftp from mirror sites
+230-OAK.Oakland.Edu (141.210.10.117), wuarchive.wustl.edu (128.252.135.4),
+230-archive.orst.edu (128.193.2.13), ftp.uu.net (137.39.1.9), nic.funet.fi
+230-(128.214.6.100), src.doc.ic.ac.uk (146.169.3.7), nic.switch.ch
+230-(130.59.1.40), archie.au (139.130.4.6), or nctuccca.edu.tw (140.111.3.21).
+230-See also the CDROM.INF file for CD-ROM availability information.
+230- The system will go down today at 17:27:54 until 1-Jan-2000 00:00:00
+230 User ANONYMOUS logged in at Thu 30-Sep-93 15:27-MDT, job 33. 
+ftp>
+
+[...]
+ 
+ftp> !date
+Thu Sep 30 18:05:35 EDT 1993
+ 
+ftp> !finger @wsmr-simtel20.army.mil
+[wsmr-simtel20.army.mil]
+ User    Personal name       Job Subsys Idle %CPU TTY Console location
+ ???                           6              2.6 211 Aida.Update.UU.SE
+                              14        4d11          Detached
+                              16        4d11          Detached
+                              18 EXEC         1.6.213 TACOM-EMH1.ARMY.MIL
+                              24        1d23      216 Internet NVT
+ANONYMOU FTP-only Guest       15 FTPSRT 3:06  0.1 215 Internet NVT
+                              25 FTPSRT    2  0.2 221 devax.admin.athabascau.ca
+                              33 FTPSRT       0.6 227 cwbiol2.BIOL.CWRU.Edu
+                              34 FTPSRT       2.3 231 [192.56.137.12]
+GHICKS   Greg Hicks           29 EXEC         0.6.224 Rota Spain
+MRC      Mark R. Crispin      17 EXEC         6.2.212 panda.wa.com
+TTAYLOR  Thad T. Taylor       19 EXEC      1  0.4. 40 VI102 (9600)
+W8SDZ    Keith Petersen       12 REMARK       0.4.220 Remote: Warren, Michigan
+ 
+ftp> 
+ 
+[at this point, I had to leave to pick up my daughter from school.  I left
+the terminal logged in.  When I returned to the lab 20 minutes later...]
+ 
+ftp> !date
+Thu Sep 30 18:25:48 EDT 1993
+ 
+ftp> !finger @wsmr-simtel20.army.mil
+[wsmr-simtel20.army.mil]
+connect: Connection timed out
+ 
+ftp> bye
+ 
+cwbiol2.cwru.edu>
+ 
+*************************** end transcript *********************************
+
+-- 
+Richard F. Drushel, Ph.D.            | "Aplysia californica" is your taxonomic
+Department of Biology, Slug Division | nomenclature.  /  A slug, by any other
+Case Western Reserve University      | name, is still a slug by nature.
+Cleveland, Ohio  44106-7080  U.S.A.  |     -- apologies to Data, "Ode to Spot"
+
+

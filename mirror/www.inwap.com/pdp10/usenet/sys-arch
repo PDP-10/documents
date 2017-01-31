@@ -1,0 +1,77 @@
+Article 1085 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sdd.hp.com!spool.mu.edu!agate!library.ucla.edu!newsfeed.internetmci.com!tank.news.pipex.net!pipex!in1.uu.net!news3.digex.net!digex.net!not-for-mail
+From: doug@ss2.digex.net (Doug Humphrey)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Interesting question...
+Date: 17 Sep 1995 17:57:27 -0400
+Organization: Express Access Online Communications USA: 800-969-9090
+Lines: 63
+Message-ID: <43i5k7$f3d@ss2.digex.net>
+References: <811240514snz@rwentk.demon.co.uk> <43elu6$36@caesar.ultra.net>
+NNTP-Posting-Host: ss2.digex.net
+
+In article <43elu6$36@caesar.ultra.net>,
+>Richard Wentk <leo@rwentk.demon.co.uk> wrote:
+>>In terms of speed and power - never mind OS wars, let's just talk 
+>>about bare metal here - how does the KL-10 compare to the PC I have 
+>>under my desk? This thing clunks along at 66MHz, has 8Mb of RAM
+>>and 1Gig of storage. That would have been a mighty hefty computer 
+>>a decade ago, no?
+>>
+>>Any comments, anyone?
+
+An issue that has been debated a thousand times - the main difference, 
+and the reason why it is difficult to compare the machines, is the 
+matter of "system architecture" and of course what you were using 
+the machines for.
+
+Your PC is N mips.  The KL 10 was between 1 and 2 mips as I recall.
+My old KA was way-sub-mip.  Yet, KL10 systems were spotted with 
+hundreds of logged in users, and keeping the users happy.  
+
+Logic states that it must not be a matter of CPU speed, and this is
+correct.
+
+"System Architecture" is a lost art.  "Processor architecture" is the 
+new art.  One does not replace the other.  We have PCs here at Digex 
+that run BSD and play nameservers, and they are great, but they are 
+loaded with about 100 megs of memory to make sure that they never, 
+ever, ever, ever swap, because then the IO system of the PC gets 
+involved, and it sucks SO BAD that it ruins the utility of the machine.  
+As long as you are confined to the kernal, no little context switching,
+no IO, these things blaze!  As soon as you need to get into the context
+switching/paging/swapping game, down the drain...
+
+DEC10 system architecture was pretty good, and it had to be because
+you couldn't just assume that the CPU was so fast that you would let
+it do all of the work.  Smart comm front ends (from the DN87 and growing
+up from there) handled issues of interupts and tty service; smart 
+channels talked to IO devices and took care of moving blocks of data
+around without the CPU getting involved very much; memory subsystems 
+did their best to give fast, wide, wait-free delivery of data to the 
+CPU, and to other devices like the channels (you didn't have to go 
+through the CPU to get to main memory - some people who only know 
+"modern" machines might not understand that as even being possible).
+
+In short, a MIP went a whole lot farther when all of the other pieces
+of the puzzle had at least a little bit of smarts in them (they had
+logic, but not CPU's since there were no micro-processors yet) and 
+could be told "go move that block of data from that IO device into 
+that block of main memory, using the dedicated memory buss (and the 
+fact that the core memory boxes could talk to 4 or 8 different ports
+(i.e. devices) all at once) and then interupt me when you are done; I'm
+gonna go run this program over here while I am waiting for you..."
+
+You know, nobody seems to be building mainframes any longer.  Maybe 
+if you decided to apply some of the old systems architecture rules to
+the current technology...
+
+No, then the machines cost real money, and all machines these days
+are "dumpster upgrades"; you throw them in the trash when they break
+or you are done with them.
+
+I enjoyed the 10 architecture.
+
+Doug
+
+

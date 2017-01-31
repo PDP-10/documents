@@ -1,0 +1,33 @@
+Article: 18709 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!sn-xit-03!sn-xit-06!sn-post-01!supernews.com!corp.supernews.com!not-for-mail
+From: news@freeN0:5P@Mshell:com. (News MINION)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: [TOPS-20] twenex.org announcement
+Date: Sat, 11 Jan 2003 03:10:45 -0000
+Organization: SDF Public Access UNIX System, est. 1987 - sdf.lonestar.org
+Message-ID: <v1v2pl8ga82a95@corp.supernews.com>
+X-Newsreader: trn 4.0-test74 (May 26, 2000)
+Originator: news@freeN0:5P@Mshell:com. (News MINION)
+X-Complaints-To: abuse@supernews.com
+Lines: 17
+Xref: dfw-artgen alt.sys.pdp10:18709 alt.folklore.computers:109121
+
+The announcement is that twenex.org is now ready for public access.
+During our testing in the past year we've had over 500 accounts created.
+Oddly, most people were under the impression they could compile and run an
+'eggdrop' IRC robot. So out of that 500, a handful of newbies and wizards
+have stuck around.  (Though anyone is welcome to *try* to write a bot).
+
+Now account creation is automated .. if you are interested in using the
+system, you can telnet to twenex.org and login as 'new new' .. Information
+as well as account creation can be found at http://twenex.org
+
+When you create an account, you will have immediate access to email,
+usenet (limited groups/retention), webspace, games, chat, compilers
+and utilities.
+
+The machine is hosted by the SDF public access UNIX system.
+
+(aliases for this site are decsystem.org, sixbit.org & pdp10.org)
+
+

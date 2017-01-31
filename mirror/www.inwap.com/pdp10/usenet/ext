@@ -1,0 +1,157 @@
+Article 3922 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Smith and O'Halloran)
+Newsgroups: alt.sys.pdp10
+Subject: List of file extensions used on TOPS-10 and TOPS-20
+Date: 22 May 1998 01:37:39 -0700
+Organization: Chez INWAP (people, computers, cats)
+Lines: 86
+Message-ID: <6k3dgj$hr9$1@shell3.ba.best.com>
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: 895826260 14328 inwap  206.184.139.132
+Xref: nntp1.ba.best.com alt.sys.pdp10:3922
+
+>Date: Wed, 13 May 1998 11:57:14 -0700
+>To: js-cgi@inwap.com
+>From: Anthony Nemmer <edelsys@mindspring.net>
+>I am creating a list of all known file extensions.
+>(For example, .html for HTML, .pl1 for Multics PL/1
+>source.)  My list currently contains over 5,000
+>file extensions plus their definitions.
+> 
+>I would like to include file extensions from
+>DEC and Data General operating systems in my list,
+>but I can find very little information about them
+>on the Net.  (I did find some RT-11 file extensions
+>from a book on laboratory computing. =)
+> 
+>Thanks,
+>Anthony Nemmer
+ 
+I have sent him this list of TOPS-10 file extensions.
+I'm sure there are some that I've missed, and some TOPS-20 specific ones.
+  -Joe
+
+	PDP-10 extensions
+
+File system
+SYS = system file (SWAP.SYS, SAT.SYS, HOME.SYS)
+UFD = user file directory
+SFD = sub file directory
+
+Program binaries
+REL = relocatable object file (input to LINK-10 or LOADER)
+OVL = overlay (pre-virtual memory)
+SAV = zero-compressed executable binary
+DMP = uncompressed core dump
+LOW = low segment of a two-segment program
+HGH = high segment of a two-segment program
+SHR = shareable hiseg
+EXE = page-mapped executable binary
+
+Compilers (all of these create REL files)
+MAC = MACRO-10 Assembler
+FOR = FORTRAN-10
+F40 = FORTRAN-4
+F77 = FORTRAN-77
+SIT = Steven's Institute of Technology load-and-go Fortran-77
+CBL = COBOL
+SNO = SNOBOL
+SAI = SAIL
+FAI = FAIL
+BLI = BLISS-10
+B36 = BLISS-36
+PAL = program assembly language (PDP-8 code cross-compiled on a PDP-10)
+ALG = ALGOL
+MOD = MODULA-II
+PAS = PASCAL
+
+Text files
+BAK = editors rename their input to create a backup file
+TEC = TECO macro
+HLP = help file
+TXT = genral text
+MEM = memo
+RNO = RUNOFF input, creates MEM
+DOC = general documentation
+RND = RUNOFF input, created DOC
+PLM = program logic manual
+LPT = line printer output
+CTL = batch control file
+LOG = batch log file
+MIC = macro interpreted commands (sort of like a BAT file on MS-DOS)
+CMD = indirect command file
+CCL = concise command language; used by COMPIL.EXE to talk to compilers
+TMP = temporary
+DDT = commands for the DDT debugger, or FILDDT file patcher
+PAT = commands for the DDT debugger, or FILDDT file patcher
+SCM = source compare - FILCOM output showing differences by line
+BCM = binary compare - FILCOM output showing differences by octal words
+
+Binary files
+DAT = general data, might be text or binary
+BIN = general binary
+PLT = plotter (one byte per increment)
+QUE = print queue, submit queue, plot queue
+
+-- 
+INWAP.COM is Joe and Sally Smith, John and Chris O'Halloran and our cats
+See http://www.inwap.com/ for "ReBoot", PDP-10, and Clan MacLeod.
+
+
+Article 3938 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!enews.sgi.com!harbinger.cc.monash.edu.au!news.latrobe.edu.au!lucifer.its.latrobe.edu.au!cchd
+From: cchd@lucifer.its.latrobe.edu.au (Huw Davies)
+Newsgroups: alt.sys.pdp10
+Subject: Re: List of file extensions used on TOPS-10 and TOPS-20
+Date: 25 May 1998 01:57:03 GMT
+Organization: La Trobe University
+Lines: 40
+Message-ID: <6kaj5f$5qm$1@news.latrobe.edu.au>
+References: <6k3dgj$hr9$1@shell3.ba.best.com>
+NNTP-Posting-Host: lucifer.its.latrobe.edu.au
+X-Newsreader: TIN [version 1.2 PL2]
+Xref: nntp1.ba.best.com alt.sys.pdp10:3938
+
+Smith and O'Halloran (inwap@best.com) wrote:
+
+: Compilers (all of these create REL files)
+: MAC = MACRO-10 Assembler
+: FOR = FORTRAN-10
+: F40 = FORTRAN-4
+: F77 = FORTRAN-77
+: SIT = Steven's Institute of Technology load-and-go Fortran-77
+: CBL = COBOL
+: SNO = SNOBOL
+: SAI = SAIL
+: FAI = FAIL
+: BLI = BLISS-10
+: B36 = BLISS-36
+: PAL = program assembly language (PDP-8 code cross-compiled on a PDP-10)
+: ALG = ALGOL
+: MOD = MODULA-II
+: PAS = PASCAL
+
+To this list add:
+
+ BCL = BCPL
+ ALW = Algol-W
+ SIM = Simula-67
+ A68 = Algol-68
+
+I'm sure there were others, but most of my program listing files are in
+storage somewhere in my study at home...
+
+I was involved in a project to compare "systems programming" languages
+on the DECsystem-10. We started with a BCPL program which produced
+cross references for BCPL programs and then rewrote it in various languages
+(Simula-67, Algol-60, Algol-68, Pascal, Macro-10, BLISS-10). My favorite
+was BLISS-10 of course, although I still have a soft spot for Algol-68. When
+I'm rich enough, I might just buy a copy of the Algol-68 compiler for Windows.
+--
+ Huw Davies                      | e-mail: Huw.Davies@latrobe.edu.au
+ Information Technology Services | Phone: +61 3 9479 1550  Fax: +61 3 9479 1999
+ La Trobe University             | "My Alfas keep me poor in a monetary
+ Melbourne Australia 3083        | sense, but rich in so many other ways"
+
+

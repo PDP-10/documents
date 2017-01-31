@@ -1,0 +1,27 @@
+Article: 17831 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.tele.dk!small.news.tele.dk!130.133.1.3!fu-berlin.de!uni-berlin.de!junk.nocrew.ORG!not-for-mail
+From: Lars Brinkhoff <lars.spam@nocrew.org>
+Newsgroups: alt.sys.pdp10
+Subject: GNU C Library
+Date: 25 Sep 2002 10:38:43 +0200
+Organization: nocrew
+Lines: 7
+Sender: lars@junk.nocrew.org
+Message-ID: <85smzy4g6k.fsf@junk.nocrew.org>
+NNTP-Posting-Host: junk.nocrew.org (213.242.147.30)
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Trace: fu-berlin.de 1032943220 8864907 213.242.147.30 (16 [140306])
+X-Orig-Path: junk.nocrew.org!not-for-mail
+User-Agent: Gnus/5.0808 (Gnus v5.8.8) Emacs/20.7
+Xref: dfw-artgen alt.sys.pdp10:17831
+
+On request by XKL, I've started porting the GNU C Library to TOPS-20.
+I've reached a stage where almost everything builds (with GCC and
+MACRO), but I haven't implemented any system calls yet.
+
+-- 
+Lars Brinkhoff          http://lars.nocrew.org/     Linux, GCC, PDP-10,
+Brinkhoff Consulting    http://www.brinkhoff.se/    HTTP programming
+
+

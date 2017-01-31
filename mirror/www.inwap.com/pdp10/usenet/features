@@ -1,0 +1,222 @@
+Article 4370 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!cpk-news-hub1.bbnplanet.com!news.gtei.net!feed2.news.rcn.net!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Tops10 a "baroque" operating system?
+Date: Sun, 08 Apr 2001 22:19:53 -0400
+Lines: 130
+Message-ID: <3AD11C49.149F9B84@MA.UltraNet.Com>
+References: <z2Yz6.3296$Rj2.11602@NewsReader>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: UmFuZG9tSVZFS7I6WeIYR1UHDM3Pfg+FJ9JMHwSS9UohfVT8Icaez87GG3QWKWvq
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 9 Apr 2001 02:19:59 GMT
+X-Mailer:  Mozilla 4.76 [en] (Win95; U)
+X-Accept-Language:  en,en-US,en-GB,es
+Xref: nntp1.ba.best.com alt.sys.pdp10:4370
+
+JD wrote:
+
+> Perhaps my memory is going, but, looking at the MIG and trying out TS10, it
+> sure looks as though Tops10, before it finally died, went right over the top
+> with switches, gizmos, daemons and options.  ...
+>
+> The Tops10 I remember was far simpler and more straightforward than
+> 7.03/7.04.  When did it get so incredibly baroque?  Was there one monitor
+> where the ratio of bells and whistles to functionality took a big jump?  Am
+> I correct in believing that Tops20 never acquired such a level of gadgetry?
+
+Some functionality was accessible through 2, 3, 4 families of UUOs.
+Some utilities were written and replaced wholesale 2, 3, 4 times.
+
+But some of the added functionality was to support concepts that
+didn't exist when the original systems shipped, or wouldn't even fit
+on the original systems.
+
+Also, the TOPS-10 you remember was parameterized so it could be
+configured with a bunch of software options.  Many parameters that
+hadn't been turned on or off in ages were removed to simplify
+maintenance.  Much of this may have happened after you last used a -10.
+
+The following options were made mandatory:
+
+5.06
+EXECUTE ONLY FILES
+
+7.00
+GALAXY-10 FEATURES
+VIRTUAL MEMORY
+SWAPPER
+COMPIL COMMANDS
+NXM ERROR RECOVERY CODE
+MEMORY PARITY RECOVERY CODE
+2 SEGMENT MONITOR
+LOGIN
+DISK SYSTEM
+SUPPORT CTY1
+DEVICE ERRS TO OPER
+TMPCOR AREA
+
+7.01
+JOBSTS AND CNTLJOB UUOS
+JOB PRIVS
+GETTAB UUO
+SLEEP UUO
+HIBER/WAKE UUOS
+COMPIL-CLASS
+QUEUE AND FRIENDS
+SET UUO/COMMAND
+BATCH CONTROL FILE
+SET DAYTIME AND SET DATE
+FINISH AND CLOSE
+REASSIGN UUO/COMMAND
+E AND D
+SEND
+USER NAME
+KI-10 INSTR CHECK ON KA10
+BOOT BOOTSTRAP
+HALTS IN MONITOR
+INTERNAL REDUNDANCY CHECKS
+MISC. 5-SERIES UUOS
+PHYSICAL ONLY
+STRUUO FUNCTIONS
+SMALLER ALLOC. OF DISK CORE BLOCKS
+INCLUDE RP04 SUPPORT
+READ BACKWARDS ON TU70
+TAPOP. UUO
+HIGH-SPEED LOGICAL DEVICE SEARCH
+
+7.02
+JOB CONTINUE
+EXTENDED PJOB COMMAND
+ATTACH COMMAND/UUO
+ACCOUNTING SUPPORT
+TIME/CORE LIMITS, ETC.
+CHARGE NUMBER
+KILO-CORE-TICKS
+RUN TIME
+22 BIT CHANNEL (DF10C)
+MULT. SWAPPING DEVICES
+WHY RELOAD
+LIB/SYS/OLD/NEW ETC.
+APPEND IMPLIES READ
+MULTIPLE STRUCTURES
+SUB FILE DIRECTORIES
+SWAP READ ERROR RECOVERY
+HUNG DISK RECOVERY
+LATENCY OPTIMIZATION
+DC76
+SPECIAL LINE CONTROL
+HARDWARE SCANER
+CDP TROUBLE INTERCEPT
+CDR TROUBLE INTERCEPT
+LPT DEVICE ERROR RECOVERY
+CDR SUPER IMAGE MODE
+MTA DENSITY/BLOCK COMMANDS
+
+
+The following options were eliminated:
+
+7.00
+2-REGISTER RELOCATION
+SHUFFLER
+THIS IS A KA10
+SWAPPING PDB
+MONITOR CHECKSUMMED
+MONITOR WRITE PROTECTED
+TYPESET-10 FEATURES IN DC76
+
+7.01
+2 PART ACCESS BLOCKS
+PREVENT RACES IN FILFND
+
+7.02
+SEEK UUO
+BACK TRACKING FEATURES
+DISK ERROR SIMULATOR
+
+7.03
+SUPPORT 2741-LIKE TERMINALS
+U.K. MODEM SUPPORT
+TRULY HALF DUPLEX TERMINALS
+
+7.04
+DC10-H (2741 ON DC10)
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 4471 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!207.172.3.44!feed2.news.rcn.net!feed1.news.rcn.net!rcn!207-172-245-190
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: Tops10 a "baroque" operating system?
+Date: Sun, 15 Apr 01 10:37:13 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 53
+Message-ID: <9bc664$nms$8@bob.news.rcn.net>
+References: <z2Yz6.3296$Rj2.11602@NewsReader> <3AD18A06.25DABDFB@inwap.com> <9ba4iu$aa0$1@bob.news.rcn.net> <wwn19jmb4x.fsf@saturn.cfht.hawaii.edu>
+X-Trace: UmFuZG9tSVZoo5V2JBUQJ/XMRU6X8vjiRNyZnJGMKxPCOKPHTM/AczIHxia5QmWB
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 15 Apr 2001 13:03:00 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:4471
+
+In article <wwn19jmb4x.fsf@saturn.cfht.hawaii.edu>,
+   Jim Thomas <thomas@saturn.cfht.hawaii.edu> wrote:
+>>>>>> "/BAH" == jmfbahciv  <jmfbahciv@aol.com> writes:
+>
+> /BAH> In article <3AD18A06.25DABDFB@inwap.com>,
+> /BAH>    Joe Smith <js-cgi@inwap.com> wrote:
+>
+> >> I blame PULSAR and friends in 7.03.
+>
+> >> PULSAR was the process that allowed ANSI standard tape labels,
+> >> invisible to the application.  Hit the end of a 2400-foot 1/2-inch
+> >> tape?  No problem.  PULSAR writes EOV tape labels, puts in a tape 
+mount
+> >> request to QUASAR, who gets ORION to notify the operators via OPR.  
+New
+> >> scratch tape mounted, PULSAR writes header records, then allows the
+> >> application to proceed.  The user sees a single logical tape spanning
+> >> several physical volumes.
+>
+> >> That's when things got all hairy.
+>
+> /BAH> We wouldn't have done if the customers hadn't screamed for it.
+> /BAH> Customers _said_ that they couldn't live without labelled tapes
+> /BAH> and that they had to have them in order to do their business.
+> /BAH> We wasted 2 developers' time for ...what?...2 years for a product
+> /BAH> that didn't get used by the ones screaming for it.
+>
+>Sorry, but getting back on topic ;-) I would use the "baroque" for the
+>above sequence.  The I/O library that should have been LINKed in with my
+>program would have done all the header stuff and communicated to OPSER.
+>Why all the other monkey motion?
+
+OPSER was a PITA to use from an operator's POV.  
+It was also geared for hardcopy and
+almost useless for CRTs.  The whole GALAXY project was worthwhile
+in that it eliminated MPB.  It also provided the programming
+interface (which became a standard of sorts) for IPCF.
+And we no longer had to fuck with OMOUNT.
+
+
+
+>
+>I doubt I would have used the above programs either.  But then I liked my
+>KI-10 just fine; it just got a bit "slow" :-)
+
+They all ran on the KI :-).  Where do think they got debugged?
+514/546 was our secondary system and ran those yellow packs.
+
+Remember the green, yellow and red  system packs?
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+

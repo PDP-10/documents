@@ -1,0 +1,2545 @@
+Article 1055 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!tank.news.pipex.net!pipex!in1.uu.net!newstf01.news.aol.com!newsbf02.news.aol.com!not-for-mail
+From: jmfbah@aol.com (JMFBAH)
+Newsgroups: alt.sys.pdp10
+Subject: Another TECO trivia
+Date: 12 Sep 1995 10:03:45 -0400
+Organization: America Online, Inc. (1-800-827-6364)
+Lines: 12
+Sender: root@newsbf02.news.aol.com
+Message-ID: <434401$g3s@newsbf02.news.aol.com>
+Reply-To: jmfbah@aol.com (JMFBAH)
+NNTP-Posting-Host: newsbf02.mail.aol.com
+
+TW (Tony Wachs) was of the opinion that, if it couldn't be done with a
+TECO macro, then it wasn't worth doing.   Most of the pulling apart,
+rearranging, etc. of 6.03A in preparation for the SMP project (7.01) was
+all done by TECO macros written by himself with assistance from JMF, and,
+when they were both stymied, from DMN (Dave Nixon).  There were a few
+piles of hair littered around the console and TW/JMF's offices in those
+days from all the hair pulling that was done.  And I don't think those two
+ever had more fun.
+
+/BAH
+
+
+
+
+Article 1108 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!cs.utexas.edu!news.sprintlink.net!newsie.dmc.com!spdcc!om3!gwes
+From: gwes@oat.com (Geoff Steckel)
+Subject: front ends (was Re: Interesting question...)
+Message-ID: <1995Sep21.005409.3907@oat.com>
+Organization: Omnivore Technology
+References: <43elu6$36@caesar.ultra.net> <43i5k7$f3d@ss2.digex.net> <mhk-1909951724570001@mhk.tiac.net>
+Date: Thu, 21 Sep 1995 00:54:09 GMT
+Lines: 52
+
+In article <mhk-1909951724570001@mhk.tiac.net> mhk@tiac.net (Mark Kaepplein) writes:
+>Actually, most everything after the DC10 helped with comm..
+
+Helped +-.  Cost a lot, as I recall.
+
+>One code change I worked on for the DNXX and TOPS-10 was getting command
+>line input to buffer. The DNxx would send off an ANF-10 packet to the 10
+>for each character typed. The 87 code would often buffer tty input in
+>packets because it did wait for a little while before sending the packets.
+>Nonetheless, lines in local echo mode should have been able to buffer up
+>characters until a break character before sending them off. Code changes
+>to do this buffering in the 87 and netser were minimal. The challenge
+>was scnser. Since this was a midnight (unoffical) hack (project), I
+>resigned to let well enough alone.
+
+ISC (Interactive Sciences Corp., Braintree MA. later ADP and then First Data)
+got a complete network with remote echoing and a guaranteed-correct echo state
+protocol working in the middle 70's.  I was involved in the protocol design,
+hardware design & implementation, and the -10 side implementation.
+
+We stole as much as we could (conceptually) from TELNET and added special case
+hooks for TECO mode, etc., with echoing/break classes defined.  The network
+links were (loosely) copied from X.25, and we had a simple routing algorithm.
+Worked pretty well.
+
+The network nodes those days were PDP-8's!!  The code there was Not Pretty.
+When we got 11/04s we added a lot of remote peripheral stuff.
+I designed and built interfaces for the 10 to the 11s.
+We also added a connection-based NFS-like network file system before pretty much
+anyone else that worked for and from the 11s and the 10s.
+
+The SCNSER changes were not too bad, and mostly improved the clarity
+of the logic.  Basically we reduced the number of points where echoing behavior
+could change, and then it was pretty easy.  Researching the defined behavior
+was harder!
+
+We had customers multiplexed across a single 9600 baud line to San Francisco
+(expensive in those days!) and they got local echoing that worked.
+We could also drive a roomful of 9600 baud terminals at full bore (well, 6 to
+8 from a KA-10, more from a KI).
+
+When KLs came out we decided not to migrate the technology because we didn't
+want to deal with the KL's interface to 11s, and the company didn't want to
+spend money on software development.
+
+Oh well; we -should- have publicized the technology at the time.  Dunno if DEC
+would have looked at it - NIH.  It worked better than LAT.
+-- 
+I own the company.  Opinions worth what you paid for them.
+Geoff Steckel					   gwes@oat.com
+Omnivore Technology
+127 Cornell St.  Newton, MA 02162  (617) 332-9252
+
+
+Article 1219 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!sdd.hp.com!usc!cs.utexas.edu!news.sprintlink.net!news1.cris.com!news
+From: Dick Maliska <Rmaliska@cris.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Home grown Hardware diags
+Date: 13 Oct 1995 11:34:45 GMT
+Organization: Countryside Software Services
+Lines: 32
+Message-ID: <45lisl$3d6@spectator.cris.com>
+References: <45hg1k$8q@www.uno.edu> <45j703$3qq@newsbf02.news.aol.com> <ERIC.95Oct12155023@goonsquad.spies.com>
+NNTP-Posting-Host: crc3-fddi.cris.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 1.2 (Windows; U; 16bit)
+
+eric@goonsquad.spies.com (Eric Smith) wrote:
+>In article <45j703$3qq@newsbf02.news.aol.com> jmfbah@aol.com (JMFBAH) writes:
+>> That reminds me of  a fixed head disk that was used for swapping (could it
+>> have been a Burroughs?) on a 48K KA system.  There were ways to cause it
+>> to walk across the floor to the other side of the room.
+>
+>A *FIXED*HEAD* disk?  What could the software do to make it move?
+
+Actually, there was one thing that made the Burroughs Swapper move;
+
+When the first drives were delivered from Burroughs, there were a few 
+inexplicable head crashes.  The drives were returned/repaired and it 
+happened again.  So what happened?  Well, the drives were being checked 
+out on 5-5 of the mill (the building on Thompson St.) and were sitting on 
+the floor parallel to the street.  Every once in a while a trailer truck 
+would back up and hit the loading dock and cause the building to shake.  
+This also caused the drive to move a little and forced a head crash!  
+Shortly after discovering this, an edict was given that all drives would 
+be placed on the floor "perpendicular to Thompson Street".  Eventually 
+drums were used instead of disks as swappers.
+-- 
+
+                                                                Regards,
+  Dick Maliska (Rmaliska@cris.com)
+                                            
+    COUNTRYSIDE SOFTWARE SERVICES. (508) 692-3124
+      Hardware/Software Support, Networking and Application Development.
+        (Snail Mail: 183 Concord Road; Westford, MA 01886)
+
+           "Rainbows are just to look at, not to really understand."
+
+
+
+
+Article 1248 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sdd.hp.com!spool.mu.edu!uwm.edu!chi-news.cic.net!newsfeed.internetmci.com!news.sprintlink.net!in1.uu.net!news1.digital.com!pa.dec.com!nntpd.lkg.dec.com!alingo.zk3.dec.com!werme
+From: werme@alingo.zk3.dec.com (Eric Werme)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Home grown Hardware diags
+Date: 22 Oct 95 17:39:05 GMT
+Organization: Digital Equipment Corporation
+Lines: 63
+Message-ID: <werme.814383545@alingo.zk3.dec.com>
+References: <45hg1k$8q@www.uno.edu> <45j703$3qq@newsbf02.news.aol.com> <ERIC.95Oct12155023@goonsquad.spies.com> <hedleyDGGD7J.99s@netcom.com>
+Reply-To: werme@zk3.dec.com
+NNTP-Posting-Host: alingo.zk3.dec.com
+
+hedley@netcom.com (Hedley Rainnie) writes:
+
+>Eric Smith (eric@goonsquad.spies.com) wrote:
+>: In article <45j703$3qq@newsbf02.news.aol.com> jmfbah@aol.com (JMFBAH) writes:
+>: > That reminds me of  a fixed head disk that was used for swapping (could it
+>: > have been a Burroughs?) on a 48K KA system.  There were ways to cause it
+>: > to walk across the floor to the other side of the room.
+
+>: A *FIXED*HEAD* disk?  What could the software do to make it move?
+
+Barbara is probably a little confused.  Indeed, the fix head disks generally
+sat there and you never knew they were running.  The early removable disk
+pack drives were indeed the stuff of walk-around-the-room lore.  Just watching
+them do random seeks was enough to disuade me from searching for their
+resonant frequency!
+
+>Didn't the Illiac IV have fixed head disks? They would have a head
+>dedicated to a track for fast roll in/roll out. 
+
+Could well have.  Fixed head disks were common in that era.  The -10 had three:
+
+RM10B	The Bryant drum, actually a truncated cone.  As it came up to speed,
+	centrifugal force lifted the drum to the heads providing a gentle
+	start to flying heads.  Its card cage had point-to-point soldered
+	wiring, the only peripheral in the -10 line that wasn't
+	wirewrapped, as far as I know.  It was so fast, just a few usec
+	per word (I forget the exact speed), that TOPS-10 would swap
+	programs to the drum and read them back instead of running the
+	memory shuffler when some other program wanted to grow.
+
+RD10	The Burroughs disk. About 4 feet in diameter.
+
+RF10?	About the size of a RP02 platter in a rack mountable box.  Latest
+	of the three.
+
+I don't have the specs of any of these at my finger tips.  They were certainly
+good technology for swapping and paging in a memory starved system.
+
+
+As for a home-grown hardware diagnostic, we had occasional parity errors
+at CMU in our 64K Ampex core memory, and DEC's diagnostics never found
+anything.  So I wrote a standalone diagnostic that had three processes.
+The first created one of several patterns, wrote it to the RM10B, read it
+back, and checked it.  The second did the same to the maintenance tracks
+of a RP02.  The third just ran on the CPU creating and checking the patterns.
+The processes were essentially just the interrupt routines, so the CPU
+test kept getting interrupted.  The -10 never looked busier than when the
+diagnostic was running, and turning off the computer room lights made it
+even more impressive.  The RM10B, its controller (RC10) and channel (DF10)
+ran through the patterns quickly, the RP02, its controller (RP10) and
+DF10 did so more slowly.  The memory boxes jumped back and forth, sometimes
+pausing as all the transfers went to other boxes, and CPU looked like it
+was sweating, never sticking with any pattern for more than a fraction
+of a second.
+
+And it even found some memory errors, around the time we concluded that
+some of the wires in the Ampex memory were failing due to turbulence from
+the cooling fans.  Fortunately they were 16Kx20 core planes, so we had
+some spare strings we could use before we had to get it completely
+restrung.
+-- 
+Eric (Ric) Werme         |  werme@zk3.dec.com
+Digital Equipment Corp.  |  This space intentionally left blank.
+
+
+Article 1268 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sdd.hp.com!swrinde!howland.reston.ans.net!news-e1a.megaweb.com!newstf01.news.aol.com!newsbf02.news.aol.com!not-for-mail
+From: jmfbah@aol.com (JMFBAH)
+Newsgroups: alt.sys.pdp10
+Subject: Re: emulator
+Date: 25 Oct 1995 09:24:40 -0400
+Organization: America Online, Inc. (1-800-827-6364)
+Lines: 21
+Sender: root@newsbf02.news.aol.com
+Message-ID: <46ldqo$jtl@newsbf02.news.aol.com>
+References: <Pine.NXT.3.92.951023173747.4389B-100000@Tomobiki-Cho.CAC.Washi
+Reply-To: jmfbah@aol.com (JMFBAH)
+NNTP-Posting-Host: newsbf02.mail.aol.com
+
+On 23Oct95, Mark Crispin wrote:
+<The BLISS compiler was written in BLISS, as (I think) was the FORTRAN
+<compiler.  Since most people didn't have FORTRAN compiler sources, it
+<didn't really matter that much that it was unmaintainable.
+
+From TOPS10's point of view, it did matter that BLISS was unmaintainable. 
+BLISS-10 (the FORTRAN-10 compiler was written with this) had a bad bug; I
+don't remember the specific details but I think it had to do with the use
+bits being diddled with by that naughty compiler.  BLISS-10 was so
+unmaintainable that TW agreed to "fix" the bug in the monitor rather than
+force the maintainance group to distribute the real fix in BLISS-10.
+
+Since I was the person who designed, spec'ed, and implemented the build
+procedures on TOPS10 since 7.01,  I can assure you that all those pieces
+that used any flavor in BLISS were a pain in the a--!  Since we
+distributed sources (TOPS20 didn't so it didn't have as much of a
+problem), I had to make sure that what the customer got on tape (the
+binaries) was bit-for-bit identical if he decided to build it himself. 
+The stuff written in BLISS was almost impossible to enforce this rule.
+
+/BAH
+
+
+Article 1505 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sdd.hp.com!gatech!newsfeed.internetmci.com!news.sprintlink.net!news.voicenet.com!fly.compudata.com!bbs!david.razler
+From: david.razler@compudata.com (DAVID RAZLER)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Working for PDP-10 En
+Message-ID: <8B8625E.0BBD000016.uuout@compudata.com>
+Date: Sun, 07 Jan 96 10:06:00 -0400
+Distribution: world
+Organization: Compu-Data BBS -=- Turnersville, NJ -=- 609-232-1245
+Reply-To: david.razler@compudata.com (DAVID RAZLER)
+References: <4ch6u3$agc@goonsquad.spies.com>
+X-Newsreader: PCBoard Version 15.22
+X-Mailer: PCBoard/UUOUT Version 1.20
+Lines: 17
+
+
+AK>In the late 70's my desk was about 10 feet from an RP02.  If you 
+AK>recall, it had a mechanical cyl lock that would set when it was on
+AK>cyl (tick).
+
+AK>tick, tick tick, tickticktickticktickticktick     arggggggggg!
+
+AK>..thing drove me nuts
+
+Worse still was the sound of yet another head crashing on the (damnit, 
+the manual is even stuck back behind the 370 JCL book so I don't have 
+the number) KA-10 swapping drum. I forget the manufacturer, but I think 
+by the time we took the LIRICS drum out of service, about half of the 
+256? heads were each making the sound of nails on a chalkboard, each at 
+its own separate frequency.
+
+                                    dmr
+
+
+Article 1511 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!newsfeed.internetmci.com!sundog.tiac.net!mhk.tiac.net!user
+From: mhk@tiac.net (Mark Kaepplein)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Working for PDP-10 Engineering in '68 ... a personal account
+Date: 9 Jan 1996 03:00:53 GMT
+Organization: None
+Lines: 17
+Message-ID: <mhk-0801962257100001@mhk.tiac.net>
+References: <4cfi93$52o@ss2.digex.net> <4ch6u3$agc@goonsquad.spies.com> <4ck43g$r07@netnews.intertel.net> <4csbb4$4o5@ixnews4.ix.netcom.com>
+NNTP-Posting-Host: mhk.tiac.net
+X-Newsreader: Yet Another NewsWatcher 2.0
+
+In article <4csbb4$4o5@ixnews4.ix.netcom.com>, JohnCGreen@aol.com (John C
+Green Jr) wrote:
+
+> For those of you who don't know what we're talking about the RP-02
+> used a linear motor to move the head assembly. There was a rack
+> machined with teeth spaced 0.02 in. apart. There were two pawls offset
+> by 0.01 in. arranged such that either one or the other of them would
+> mesh with a few teeth and hold the head assembly in place. There were
+> 203 cylinders 0.01 in apart.
+
+If to further confirm my packrat status, I still have a RP02 disk pack
+at my parent's house. Intact as far as I know. I used it at Colgate
+on their KA when I was a student there. I had Typeset-10 (aka itps)
+on it (perhaps sources) which I used with a NEC Spinwriter (after
+building the font tables -yuck) for term papers. Oh, I got it while
+working summers in HOSS at MR1 (plenty of rp02 packs around when
+everything was rp04's and 6's).
+
+
+Article 1532 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!newsfeed.internetmci.com!in1.uu.net!brighton.openmarket.com!decwrl!pa.dec.com!nntpd.lkg.dec.com!alingo.zk3.dec.com!werme
+From: werme@alingo.zk3.dec.com (Eric Werme)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Working for PDP-10 Engineering in '74 ... a personal account
+Date: 15 Jan 96 14:25:33 GMT
+Organization: Digital Equipment Corporation
+Lines: 28
+Message-ID: <werme.821715933@alingo.zk3.dec.com>
+References: <4cfi93$52o@ss2.digex.net> <4ch6u3$agc@goonsquad.spies.com> <4ck43g$r07@netnews.intertel.net> <4csbb4$4o5@ixnews4.ix.netcom.com>
+Reply-To: werme@zk3.dec.com
+NNTP-Posting-Host: alingo.zk3.dec.com
+
+JohnCGreen@aol.com (John C Green Jr) writes:
+
+>I had to test a maximum configuration of 8 for weeks in the mill on
+>floor 5-0, below milll pond level and untouched by sunlight. But
+>that's another story.
+
+Long after John C left, the company's main timesharing system, a dual KI10,
+was down there (between the salvage area and the Maynard sewer connection).
+Lighting was fluourescent lights hanging from the ceiling (essentially cheap
+shop lights without reflectors).  One day, a Telco person was stringing new
+TTY cables.  He'd toss the cable over the lights, and tack it to the ceiling
+later.  On one toss he dislodged a bulb which fell down on top of a RP04
+(3?) drive's window.  The window didn't break, but the bulb shattered, of
+course.
+
+The Telco guy froze, suddenly aware that he may have done something Very
+Bad.  I immediately took a couple steps to the drive to hit the off button,
+but a field service person was closer and closing in too.  I figured the
+positive pressure and window seals would have kept the glass shards out, but
+with the pack inspector we saw half a dozen concentric scratches at various
+radii.  While it wasn't one of our permanently mounted file systems, it
+often in use, and the OS immediately start complaining that it could no
+longer talk to the drive.
+
+Never saw that particular Telco guy again.
+-- 
+Eric (Ric) Werme         |  werme@zk3.dec.com
+Digital Equipment Corp.  |  This space intentionally left blank.
+
+
+Article 1559 of alt.sys.pdp10:
+Path: shellx.best.com!number1
+From: vsocci@best.com (Vance Socci)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Working for PDP-10 En
+Date: Sat, 27 Jan 96 03:27:38 GMT
+Organization: Vcc Technical Services
+Lines: 57
+Distribution: world
+Message-ID: <4eb6f5$moa@shellx.best.com>
+References: <4e4100$svv@zk2nws.zko.dec.com>
+NNTP-Posting-Host: vsocci.vip.best.com
+X-Newsreader: News Xpress Version 1.0 Beta #2.1
+
+amartin@denton.zko.dec.com (Alan H. Martin) wrote:
+>
+>david.razler@compudata.com (DAVID RAZLER) wrote:
+>>Worse still was the sound of yet another head crashing on the (damnit,
+>>the manual is even stuck back behind the 370 JCL book so I don't have
+>>the number) KA-10 swapping drum. I forget the manufacturer, but I think
+>>by the time we took the LIRICS drum out of service, about half of the
+>>256? heads were each making the sound of nails on a chalkboard, each at
+>>its own separate frequency.
+>>                                    dmr
+>
+>I looked it up in Appendix F of my Monitor Calls manual ("Comparison of
+>Disk-Like Devices") last night.  I imagine you were either referring to an
+>RD10 Burroughs fixed head disk, or an RM10B Bryant drum.
+>
+>I got a tour of LIRICS once in the spring of '75, but I couldn't remember
+>which the system had, now.  For that matter, we called the swapper on Stevens
+>KA101 "the faha" (FHA, fixed-head disk), but I can't swear it wasn't a drum,
+>since it was an opaque black box and drums allegedly came up as FH devices as
+>well.
+>				/AHM
+>--
+
+I was one of the systems programmers at Stevens from 1970-1974, and I can
+assure you that the FHA on KA system 101 was an RD-10 Burroughs fixed
+head disk. Ah, how many times did I watch the fiendish service people replace
+heads on that beast . . . I think I even still have one of the bad heads in a box
+somewhere with the rest of my PDP-10 memorabilia.
+
+One thing I donated to Stevens that I now wish I had taken with me is the
+NUL-10, which as you may remember sat on top of the TD-10 (DECTape
+controller). It would spell out "TILT" in its lights when it lost power, and
+randomly flashed the lights when it had power. It was made of a genuine
+TD-10 faceplate with neon bulbs populating the indicators, and had enough
+lights to be interesting. One of the F.E.s gave me the TD-10 faceplate
+because of a standing joke I had about building a broken PDP-10! I'd collect
+all the bad parts they extracted from the system that they would have thrown
+out, and to this day I'm still working on it . . .
+
+/evs
+
+p.s. The real "name" of the RD-10 at Stevens in my days there was GLZX - its
+unit name on the system. Of course, it had to be GLZX II, since the original GLZX
+was on system #2 in Maynard.
+
+>Alan Howard Martin				AMartin@TLE.ENet.DEC.Com
+
+
+
+
+
+  Vance Socci   vsocci@best.com
+
+ -  "The worst secrets are those we keep from ourselves"
+ - "Fear breeds stagnation"
+ -  "I am not a number; I am a free man!" - No. 6
+
+
+
+Article 1567 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sdd.hp.com!usc!chi-news.cic.net!newsfeed.internetmci.com!howland.reston.ans.net!ix.netcom.com!netnews
+From: JCGreen@ix.netcom.com (John C Green Jr)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Working for PDP-10 En
+Date: Sat, 27 Jan 1996 17:34:06 GMT
+Organization: Netcom
+Lines: 22
+Message-ID: <4ednvh$2mm@ixnews2.ix.netcom.com>
+References: <4e4100$svv@zk2nws.zko.dec.com> <4e6q5s$sfg@spectator.cris.com> <3109355E.27E8@bsis.com>
+NNTP-Posting-Host: ix-sj34-23.ix.netcom.com
+X-NETCOM-Date: Sat Jan 27  9:38:57 AM PST 1996
+
+Bob Christiansen <bob.christiansen@bsis.com> wrote:
+
+>There was nothing quite like the sound of compressed air as those 
+>Burroughs heads loaded! Also as I recall, we had to fasten them to the 
+>floor as they were inclined to gyroscopically-precess across the floor!
+
+Suggest you NEVER power down a Burroughs disk unless absolutely
+necessary!
+
+Never saw one move; of course the mill had unfinished hardwood floors
+and things tended to adhere to the linseed oil muck :-) Now the RP02
+on the other hand ...
+
+RCA was also a Memorex 660 customer. One of their diagnostic
+programmers with time on his hands wrote a diagnostic that would make
+one of them walk across the floor.
+
+- - -     NOTE NEW E-MAIL ADDRESS     - - -
+Internet Marketing and Business Development
+21483 Old Mine Rd             (408)353-1870
+Los Gatos CA 95030    JCGreen@ix.netcom.com
+
+
+
+Article 1576 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sdd.hp.com!swrinde!gatech!newsfeed.internetmci.com!in1.uu.net!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Anybody save the good SPRs?
+Date: Mon, 29 Jan 1996 00:00:33 -0800
+Organization: Networks & Distributed Computing
+Lines: 14
+Message-ID: <Pine.NXT.3.92.960128235646.9678B-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <4e7dpa$ofe@shellx.best.com> <4edcp0$go9@zk2nws.zko.dec.com>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+NNTP-Posting-User: uhhl
+In-Reply-To: <4edcp0$go9@zk2nws.zko.dec.com>
+
+I hope that somebody saved my SPR on having NIN% and NOUT% support
+SIXBIT/ROMAN/ in AC3 (the base argument).  That was, of course, influenced
+by corresponding support in MacLisp.
+
+DEC did promise that it would be implemented in TOPS-20 at about the time
+that the sun novas.  Hmm, I guess they'll be putting in that fix to make
+time be a doubleword.  Gotta get that in before August 7, 2576 (at
+midnight UTC on August 8, the clock will run out)...
+
+-- Mark --
+
+DoD #0105, R90/6 pilot, FAX: (206) 685-4045  ICBM: N 47 39'35" W 122 18'39"
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+Article 1582 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sdd.hp.com!gatech!swrinde!sgigate.sgi.com!enews.sgi.com!decwrl!pa.dec.com!nntpd.lkg.dec.com!lead.zk3.dec.com!zk2nws.zko.dec.com!denton.zko.dec.com!amartin
+From: amartin@denton.zko.dec.com (Alan H. Martin)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Drumming
+Date: 31 Jan 1996 20:13:25 GMT
+Organization: DEC
+Lines: 25
+Message-ID: <4eoih5$9ej@zk2nws.zko.dec.com>
+References: <4e6q5s$sfg@spectator.cris.com> <8B9906C.0BBD000040.uuout@compudata.com> <4eaj38$r4q@spectator.cris.com>
+NNTP-Posting-Host: denton.zko.dec.com
+
+In article <4eaj38$r4q@spectator.cris.com> Dick Maliska <rmaliska@cris.com> writes:
+>Hmmm... If it was a Bryant Drum, then there were two additional boxes 
+>required to support it:
+>
+>1. RC10 Controller (which handled both Burroughs Disk and Bryant Drum)
+>2. DF10 Data Channel which gave the disk direct access to memory.
+
+Yep; I think we had two of each.  (And once field service allegedly
+cannibalized a seek board out of the drum's controller for the controller for
+the 2 RP02's and 2 RP03's - "the drum didn't need it").
+
+The controllers were moved from KA101 to KL1282.  There's a picture of me in
+one or more college catalogs showing me with a box open (an RC10?).  I'm
+showing one of the student operators the "write headers" (?) toggle switch
+inside, which was only used for formatting packs.  It's a good joke, because
+I'm sure "timesharing was up" when they took the photo, and if I'd touched it
+I presume all hell would have broken loose.
+
+>Actually, the RM10B (bryant drum) was also anchorworthy...
+
+Stevens sold theirs to Princeton after we got the KL. One of our physics
+professors was doing some experiments there, and had some use for it.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@TLE.ENet.DEC.Com
+
+
+Article 1580 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!newsfeed.internetmci.com!uwm.edu!msunews!netnews.upenn.edu!news.voicenet.com!fly.compudata.com!bbs!david.razler
+From: david.razler@compudata.com (DAVID RAZLER)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Drums/LIRICS
+Message-ID: <8B9D579.0BBD000055.uuout@compudata.com>
+Date: Tue, 30 Jan 96 23:21:00 -0400
+Distribution: world
+Organization: Compu-Data BBS -=- Turnersville, NJ -=- 609-232-1245
+Reply-To: david.razler@compudata.com (DAVID RAZLER)
+References: <4edc7u$g0s@zk2nws.zko.dec.com>
+X-Newsreader: PCBoard Version 15.22
+X-Mailer: PCBoard/UUOUT Version 1.20
+Lines: 23
+
+
+
+AH>In article <4e6q5s$sfg@spectator.cris.com> Dick Maliska
+AH><rmaliska@cris.com> wri tes:
+AH>>The Bryant Drum was contained within a (Dec) standard 19" rack.
+AH>>
+AH>>The Burroughs Disk was contained in a blue container which (as I
+AH>recall)  >was about 4 1/2 or so feet long by about 4 feet high by
+AH>about 18" thick.
+
+AH>Well, that settles that.  The Stevens "faha" stood alone in a corner.
+AH>By the time I came on the scene it was surrounded by 4 posts holding
+AH>theater crowd-control ropes to keep people from bumping into it,
+AH>although I don't remember the tale about what prompted *that*
+AH>innovation.                                 /AHM/THX
+AH>-- 
+
+It also confirms that the LIRICS beast was a Bryant drum <btw> does 
+anybody out there have a can of DEC disk wax? The stuff you were 
+supposed to polish the surface of the DF-32 disk with before hooking up 
+the reformatter? No, I don't need it - lost my DF-32s 5 years ago, but 
+I'd just like a description of what the stuff was.
+                                          dmr
+
+
+Article 1583 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!enews.sgi.com!decwrl!pa.dec.com!nntpd.lkg.dec.com!lead.zk3.dec.com!zk2nws.zko.dec.com!denton.zko.dec.com!amartin
+From: amartin@denton.zko.dec.com (Alan H. Martin)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Working for PDP-10 En
+Date: 31 Jan 1996 20:19:17 GMT
+Organization: DEC
+Lines: 20
+Distribution: world
+Message-ID: <4eois5$9kb@zk2nws.zko.dec.com>
+References: <4e4100$svv@zk2nws.zko.dec.com> <4eb6f5$moa@shellx.best.com>
+NNTP-Posting-Host: denton.zko.dec.com
+
+In article <4eb6f5$moa@shellx.best.com> vsocci@best.com (Vance Socci) writes:
+
+>I was one of the systems programmers at Stevens from 1970-1974, and I can
+>assure you that the FHA on KA system 101 was an RD-10 Burroughs fixed
+>head disk.  ...
+
+OK.  I'd never questioned the concept until I saw that aside in the orange
+phone book appendix last week...
+
+>One thing I donated to Stevens that I now wish I had taken with me is the
+>NUL-10, which as you may remember sat on top of the TD-10 (DECTape
+>controller).  ...
+
+I don't think I ever saw it powered up, although I think it was there while
+KA101 was there.
+
+(BTW, the MK10 was run on KA101's last night).
+				/AHM
+-- 
+Alan Howard Martin				AMartin@TLE.ENet.DEC.Com
+
+
+Article 1586 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!newsfeed.internetmci.com!in2.uu.net!pgh!powell
+From: powell@pgh.nauticom.net (Reed Powell)
+Subject: Re: Anybody save the good SPRs?
+Message-ID: <DM2DJ0.nM@pgh.nauticom.net>
+Date: Wed, 31 Jan 1996 21:11:23 GMT
+References: <4e7dpa$ofe@shellx.best.com>
+Organization: Nauticom - Internet Access Provider
+X-Newsreader: TIN [version 1.2 PL2]
+Lines: 67
+
+Anyone have the text of the famous MOUNTR SPR (and its reply) online?  This 
+was the one using descriptive phrases such as "pile of steaming fecal 
+matter" to describe MOUNTR, and referring to the developer (Rick Ace) as 
+not "one of your ace programmers."
+
+I have a box with bunches of old TOPS stuff in it, will look and see if 
+it has the dispatches.  ALso have tons of fiche (we fiched and filmed 
+everything in sight as we were closing down LCG), which might include 
+dome dispatch issues.  The 20th Anniversary celebration had a discussion 
+on "great moments in SPR history" or some such.  Maybe I should get into 
+the video production business again!
+
+-reed
+
+J.Smith and J.O'Halloran (inwap@shellx.best.com) wrote:
+: Anyone still got copies of the TOPS-10 Software Dispatch?
+: Some of the SPRs were real classics. 
+
+: From: bob.christiansen@ccmail.bsis.com
+: Date: Wed, 24 Jan 1996 17:53:33 -0500 (EST)
+: Subject: PDP-10 Homepage
+: To: js-cgi@inwap.com
+
+:      Joe...Stumbled across your PDP-10 homepage last night, and shed a few 
+:      tears. I worked at University of Queensland (Australia) when we got 
+:      our first KA-10 (Serial#s 3 & 4 as I recall - 2 Series Monitor - no 
+:      swapping - "Core is available but not for you!"). Worked as an 
+:      operating system programmer maintaining and 'enhancing' 4-series then 
+:      5-series monitors. I wish you could post the text of some of the SPRs 
+:      from the old days...they were hilarious...some great flames before 
+:      flames were so named.
+:      
+:      Went to the UK in '76 to work at Time Sharing Limited (PDP-10 based 
+:      bureau) as Systems Engineering Manager and worked with the Systems 
+:      Concepts guys on the device drivers for the SA-10. Company was bought 
+:      by ADP Network Services so moved to the US and worked 'till 1983 on 
+:      various PDP-10 operating system things. (We modified the KL-10 
+:      microcode to emulate the Xerox Sigma-7 instruction set so that one of 
+:      our clients could run programs for which they had lost the sourcecode 
+:      - and the Sigma-7!)
+:      
+:      Got to know Wachs & Flemming well and was saddened to learn of their 
+:      passing - though Jim had had a close call or two before).
+:      
+:      Keep up the good work! It is surely a labor of love!
+:      
+:      Bob Christiansen (PDP-10 '69 thru '83)
+
+
+: From: js-cgi@inwap.com (Joe Smith)
+: Subject: Re: PDP-10 Homepage
+: To: bob.christiansen@ccmail.bsis.com
+: Date: Wed, 24 Jan 1996 23:16:38 -0800 (PST)
+
+: >      I wish you could post the text of some of the SPRs 
+: >      from the old days...they were hilarious...some great flames before 
+: >      flames were so named.
+
+: I ended up throwing out all the Software Dispatches just before I left
+: CSM.  I didn't even save my own SPRs.  I wish I knew what happened to
+: our microfiche.  I don't know of anyone that still has the Dispatches.
+
+: -- 
+: Joe Smith  <jms@inwap.com> or <inwap@best.com>  work phone: (408)922-6220
+: CA license plate: "POPJ P,"  36-bits forever! (4 Tymshare PDP-10s still going!)
+: Humorous disclaimer: "My Amiga 3000 speaks for me." http://www.inwap.com/
+
+
+
+Article 1713 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: nntp1.best.com!news1.best.com!news.exodus.net!imci4!newsfeed.internetmci.com!swrinde!cs.utexas.edu!chi-news.cic.net!nntp.coast.net!howland.reston.ans.net!ix.netcom.com!netcom.com!phr
+From: phr@netcom.com (Paul Rubin)
+Subject: Re: Working for PDP-10 En
+Message-ID: <phrDnsELs.AHK@netcom.com>
+Organization: NETCOM On-line Communication Services (408 261-4700 guest)
+References: <DMJ1IM.MuJ@network.com> <4h4uef$qjr@lyra.csx.cam.ac.uk> <4h5tao$9i1@cloner4.netcom.com> <4h72am$9p9@lyra.csx.cam.ac.uk>
+Date: Tue, 5 Mar 1996 09:05:51 GMT
+Lines: 26
+Sender: phr@netcom9.netcom.com
+
+In article <4h72am$9p9@lyra.csx.cam.ac.uk>,
+A.R. Duell <ard12@eng.cam.ac.uk> wrote:
+>JCGreen@ix.netcom.com (John C Green Jr) writes:
+>>PDP-6 was so sensitive (putting a scope probe on a pin could
+>>frequently make a problem go away) that Alan Kotok seriously
+>>considered issuing an ECO to add a 1" twisted-pair to nowhere
+>>on a pin pair as a TINY capacitor to simulate a scope probe.
+>
+>:-). I've pulled tricks like that in an emergency. I once needed a very 
+>slow inverter as a kludge-replavement for a delay line. It turned out 
+>that a 74C04 with about 4" of stripboard soldered to it was an ideal 
+>replacement. The stripboard got sandwiched between the IC socket and the 
+>PCB - and, I think, it's still working.
+
+There is a story about something like this in the Hackers' Dictionary.
+Apparently Guy Steele (?) found a mysterious two-position switch that
+someone had hacked onto one of the AI PDP-10's.  One position was
+labelled "magic", and the other position was labelled "more magic".
+The switch was set to "more magic" when he found it.  I don't remember
+the details but he traced the wires going into the switch and it
+appeared to not go anywhere, so he flipped it, and the computer
+instantly crashed.  He called over one of the hardware people, who
+traced the wire and determined that the switch could not possibly do
+anything, so the hardware person flipped the switch and the computer
+crashed again!  He then diked out the switch and everything ran fine.
+Anyone know the full story?
+
+
+Article 1752 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!news.exodus.net!uunet!in1.uu.net!lexis-nexis!newsjunkie.ans.net!newsfeeds.ans.net!news-m01.ny.us.ibm.net!usenet
+From: mross@ibm.net
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: Working for PDP-10 En
+Date: Sun, 10 Mar 1996 20:52:57 GMT
+Lines: 11
+Message-ID: <4hvfne$opi@news-s01.ny.us.ibm.net>
+References: <1996Mar3.044008.16024@grian.cps.altadena.ca.us> <4hcnuh$1cj@lyra.csx.cam.ac.uk> <3139F95A.20A0@dsp.com> <4hfifu$t4o@lyra.csx.cam.ac.uk>
+NNTP-Posting-Host: slip139-92-17-160.pt.uk.ibm.net
+X-Newsreader: Forte Free Agent 1.0.82
+Xref: nntp1.best.com alt.sys.pdp10:1752 alt.folklore.computers:54925
+
+ard12@eng.cam.ac.uk (A.R. Duell) wrote:
+
+Re museums...
+
+My garage (here in Cambridge!) contains several 8s, 11s, a 12, a 15
+(xvm), a KL10, and a 2020! Does this qualify?
+
+BTW, does anyone know where I can find some memory for the KL?
+
+Or even a complete KA or KI?
+
+
+
+Article 1772 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!swrinde!newsfeed.internetmci.com!in2.uu.net!news-m01.ny.us.ibm.net!usenet
+From: mross@ibm.net
+Newsgroups: alt.sys.pdp10
+Subject: Am I a lunatic...
+Date: Tue, 12 Mar 1996 19:38:45 GMT
+Lines: 14
+Message-ID: <4i4k4f$3nq4@news-s01.ny.us.ibm.net>
+NNTP-Posting-Host: slip139-92-17-129.pt.uk.ibm.net
+X-Newsreader: Forte Free Agent 1.0.82
+
+I only just found this topic - thought folks might like to know that
+my garage here in Cambridge contains several 8's, 11's, a 12, a 15
+(XVM), a KL10, and a couple of 2020's! 
+
+I have fairly complete manuals and print sets for the KL if anyone can
+make better use of them than I can (the KL isn't  working due to a
+lack of 3-phase power!)
+
+Also, the KL has no memory - if someone can find me an MG10 or similar
+I might just be daft enough to try to get it working. Any
+suggestions...
+
+BTW, good home given to KA or KI if I can find one..
+
+
+
+Article 1780 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!swrinde!howland.reston.ans.net!news-e2a.gnn.com!newstf01.news.aol.com!newsbf02.news.aol.com!not-for-mail
+From: jmfbah@aol.com (JMFBAH)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: The Computer Museum (long)
+Date: 13 Mar 1996 08:58:33 -0500
+Organization: America Online, Inc. (1-800-827-6364)
+Lines: 16
+Sender: root@newsbf02.news.aol.com
+Message-ID: <4i6ka9$e9s@newsbf02.news.aol.com>
+References: <4i4l8c$i3q@new-news.cc.brandeis.edu>
+Reply-To: jmfbah@aol.com (JMFBAH)
+NNTP-Posting-Host: newsbf02.mail.aol.com
+Xref: nntp1.best.com alt.sys.pdp10:1780 alt.folklore.computers:55234
+
+One of the stories of the PDP-10 Adventure game.....
+It essentially stopped monitor development for a few days.   There were
+programmers who played this game for at least 3 days non-stop, night and
+day, all weekend.  The game was completed with the exception of 1 point. 
+Now these monitor developers don't f.... around.   To be a monitor
+developer, one needs that kind of curiosity that refuses to be quenched
+until all questions of a particular aspect  are answered.  The game wasn't
+complete until that last point was scored and there was nothing obvious
+about where the point came from. Solution?  Set address break; and that's
+how they found the last point.   Jim was amused for at least a week when
+he heard 1) how long these people played with no sleep and 2) how they
+finally solved the last point problem.  I don't remember who all played
+that weekend but maybe someone who did  can expand on the story since my
+info is second-hand.
+
+/BAH
+
+
+Article 1825 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!news.exodus.net!uunet!in2.uu.net!newsfeed.internetmci.com!swrinde!sgigate.sgi.com!enews.sgi.com!decwrl!pa.dec.com!nntpd.lkg.dec.com!racer.tay.dec.com!dave
+From: dave@racer.tay.dec.com (dave)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: ADVENT.FOR on PDP-10
+Date: 16 Mar 1996 20:34:00 GMT
+Organization: Digital Equipment Corporation
+Lines: 31
+Distribution: world
+Message-ID: <4if8jo$na1@nntpd.lkg.dec.com>
+References: <NEWTNews.825545043.11191.ljs@helios.x.helios.xo.com> <4ho1js$1l0@tricia.msn.fullfeed.com> <4hplm3$cp0@kirin.wwa.com> <4i4l8c$i3q@new-news.cc.brandeis.edu> <4igfoc$ker@shellx.best.com>
+Reply-To: dave@racer.tay.dec.com (dave)
+NNTP-Posting-Host: racer.tay.dec.com
+X-Newsreader: mxrn 6.18-32
+Xref: nntp1.best.com alt.sys.pdp10:1825 alt.folklore.computers:55837
+
+
+|>: ADVENT
+|>:
+|>: <games> /ad'vent/ The prototypical computer adventure game, first
+|>: implemented on the PDP-10 by Will Crowther as an attempt at
+|>: computer-refereed fantasy gaming, and expanded into a puzzle-oriented game
+|>: by Don Woods. Now better known as Adventure, but the TOPS-10 operating
+|>: system permitted only six-letter filenames. See also vadding. 
+
+We also had most of the game running in the DC76 front end.
+When the -10 crashed, one lucky user would not see the standard
+
+	DECsystem-10 not running.
+
+but rather got:
+
+	It seems that the -10 has crashed again.  Would
+	you like to play adventure while you wait?
+
+If you said yes, the game started and kept going until you died or
+won.  I the ten was up at that point, you were connected.  If not
+some other lucky person got the prompt and you started to see the 
+"d10nr" message just like everyone else.
+--
+
+Dave Lyons, RACER::DAVE or dave@racer.tay.dec.com
+
+If you think I know anything about NetView, then
+let me give you some free advice.  It will be worth
+every penny you paid.
+
+
+
+Article 1832 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!news.exodus.net!imci4!newsfeed.internetmci.com!howland.reston.ans.net!nntp.crl.com!crl3.crl.com!not-for-mail
+From: monkey@crl.com (Scott Householder)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: ADVENT.FOR on PDP-10
+Followup-To: alt.sys.pdp10,alt.folklore.computers
+Date: 19 Mar 1996 07:39:13 -0800
+Organization: CRL Dialup Internet Access	(415) 705-6060  [Login: guest]
+Lines: 17
+Message-ID: <4imkf1$9mm@crl3.crl.com>
+References: <NEWTNews.825545043.11191.ljs@helios.x.helios.xo.com> <4ho1js$1l0@tricia.msn.fullfeed.com> <4hplm3$cp0@kirin.wwa.com> <4i4l8c$i3q@new-news.cc.brandeis.edu> <4igfoc$ker@shellx.best.com>
+NNTP-Posting-Host: crl3.crl.com
+X-Newsreader: TIN [version 1.2 PL2]
+Xref: nntp1.best.com alt.sys.pdp10:1832 alt.folklore.computers:55933
+
+Smith and O'Halloran (inwap@shellx.best.com) wrote:
+: In article <4i4l8c$i3q@new-news.cc.brandeis.edu>,
+: David Wittenberg <dkw@cs.brandeis.edu> wrote:
+: : >We tried (but failed) to reverse engineer the wizard password, which allowed you to
+: : >play at any time during the day.
+
+: After several times of getting the challenge word, encrypting it with
+: "dwarf" and the current time-of-day, I decided to create a backdoor.
+: I created a 6-instruction assembly language routine disguised as an
+: integer array.  It did a GETTAB and returned .TRUE. if the current
+: job had POKE privileges.  Programmers with the TOPS-10 defined wizard bit
+: were allowed to run ADVENT at any time at CSM.
+
+I once tried to compile ADVENT.FOR on TOPS-10 _with the /OPTIMIZE switch_:
+It ran for a day and a half (with SET PRIVELIDGE n to get a bigger share
+of the timeslicing), and I finally had to kill it since there were complaints
+about system slugishness ....
+
+
+Article 1828 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!news.exodus.net!imci4!newsfeed.internetmci.com!news.sprintlink.net!dns.plano.net!news	
+From: Charles Richmond <richmond@plano.net>
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: The Computer Museum (long)
+Date: 19 Mar 1996 03:30:26 GMT
+Organization: Canine Computer Center
+Lines: 33
+Message-ID: <4il9oi$b29@dns.plano.net>
+References: <NEWTNews.825545043.11191.ljs@helios.x.helios.xo.com> <DnLFxA.FFF@world.std.com> <ERIC.96Mar2125909@goonsquad.spies.com> <4ho1js$1l0@tricia.msn.fullfeed.com> <4hplm3$cp0@kirin.wwa.com> <4i4l8c$i3q@new-news.cc.brandeis.edu>
+NNTP-Posting-Host: aux50.plano.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 1.1N (Macintosh; I; 68K)
+To: dkw@cs.brandeis.edu
+X-URL: news:4i4l8c$i3q@new-news.cc.brandeis.edu
+Xref: nntp1.best.com alt.sys.pdp10:1828 alt.folklore.computers:55884
+
+dkw@cs.brandeis.edu (David Wittenberg) wrote:
+>In article <4hplm3$cp0@kirin.wwa.com>, jeverett@wwa.com (John Everett) writes:
+>
+>|> 
+>|> Let my put in a vote for the original PDP-10 Adventure game, a seminal piece 
+>|> of software if there ever was one. As a 350 point cavemaster, I would really 
+>|> enjoy a chance to play it again, even with the clunky TTY interface. 
+>|> 
+>|> "... and disappears in a cloud of greasy black smoke."
+>
+>I'm not sure the PDP-10 version was the original.  In 79 or so, a friend of
+>mine had the sources to Adventure.  They were in FORTRAN, and the comments
+>made it clear that it had been ported at least a couple of times.  We tried
+>(but failed) to reverse engineer the wizard password, which allowed you to
+>play at any time during the day.
+>
+The original Crowther & Woods Adventure game has been ported many, many times, I 
+am sure. I have a FORTRAN listing for a Data General Eclipse version. However, I 
+feel *very* sure that the *first* C & W Adventure was written on a PDP-10. 
+According to the book _Hackers_ by Steven Levy, it was written at the Stanford 
+Artificial Intelligence Laboratory and placed on a PDP-10 there.
+
+There is a Colossal Cave Adventure page on the WEB. It's at:
+
+                http://www.winternet.com/~radams/adventure/
+
+There is a short description there of the origins of the original Adventure.
+
+Finally, the Jargon file also says that the original Adventure was implemented on 
+a PDP-10.  (Yeah, I *know* there are lots of errors in the Jargon file, but it is 
+just *one* more confirmation.)
+
+
+
+
+Article 1834 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!news.exodus.net!uunet!in2.uu.net!news.oz.net!news.wwa.com!news
+From: jeverett@wwa.com (John Everett)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: The Computer Museum (long)
+Date: 19 Mar 1996 15:58:01 GMT
+Organization: WorldWide Access (tm) - Chicagoland Internet Services (http://www.wwa.com)
+Lines: 64
+Message-ID: <4imli9$hgp@kirin.wwa.com>
+References: <NEWTNews.825545043.11191.ljs@helios.x.helios.xo.com> <DnLFxA.FFF@world.std.com> <ERIC.96Mar2125909@goonsquad.spies.com> <4ho1js$1l0@tricia.msn.fullfeed.com> <4hplm3$cp0@kirin.wwa.com> <4i4l8c$i3q@new-news.cc.brandeis.edu> <4il9oi$b29@dns.plano.net>
+NNTP-Posting-Host: pool1-008.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.7
+Xref: nntp1.best.com alt.sys.pdp10:1834 alt.folklore.computers:55938
+
+In article <4il9oi$b29@dns.plano.net>, richmond@plano.net says...
+>
+>dkw@cs.brandeis.edu (David Wittenberg) wrote:
+>>In article <4hplm3$cp0@kirin.wwa.com>, jeverett@wwa.com (John Everett) 
+writes:
+>>
+>>|> 
+>>|> Let my put in a vote for the original PDP-10 Adventure game, a seminal 
+piece 
+>>|> of software if there ever was one. As a 350 point cavemaster, I would 
+really 
+>>|> enjoy a chance to play it again, even with the clunky TTY interface. 
+>>|> 
+>>|> "... and disappears in a cloud of greasy black smoke."
+>>
+>>I'm not sure the PDP-10 version was the original.  In 79 or so, a friend of
+>>mine had the sources to Adventure.  They were in FORTRAN, and the comments
+>>made it clear that it had been ported at least a couple of times.  We tried
+>>(but failed) to reverse engineer the wizard password, which allowed you to
+>>play at any time during the day.
+>>
+>The original Crowther & Woods Adventure game has been ported many, many 
+times, I 
+>am sure. I have a FORTRAN listing for a Data General Eclipse version. 
+However, I 
+>feel *very* sure that the *first* C & W Adventure was written on a PDP-10. 
+>According to the book _Hackers_ by Steven Levy, it was written at the 
+Stanford 
+>Artificial Intelligence Laboratory and placed on a PDP-10 there.
+>
+>There is a Colossal Cave Adventure page on the WEB. It's at:
+>
+>                http://www.winternet.com/~radams/adventure/
+>
+>There is a short description there of the origins of the original Adventure.
+>
+>Finally, the Jargon file also says that the original Adventure was 
+implemented on 
+>a PDP-10.  (Yeah, I *know* there are lots of errors in the Jargon file, but 
+it is 
+>just *one* more confirmation.)
+>
+>
+
+Since I seem to have originated this sub-thread, let me put in my two cents 
+worth. I'm relying solely on memory which tends to be fallible (see above: 
+the dwarf 'vanishes', not 'disappears') but my best recollection is that 
+ADVENT.EXE first appeared on the PDP-10s at ADP (the old First Data in 
+Waltham, Mass.) in 1977. It was an incomplete version which only had about 
+250 points worth of treasure. I seem to recall that there was nothing past 
+the troll bridge but an 'under construction' sign or some such. I believe our 
+copy came from WPI, but word at the time was it was developed at Stanford. 
+Two or three months later we got the full 350 point game.
+
+There is an accurate recreation of the original game at 
+http://tjwww.stanford.edu/adventure/. It is in reality an HTML front end to 
+the BSD C source implementation, but seems faithful to the original FORTRAN 
+implementation. An interesting sidelight is the guestbook page. The reactions 
+of people who have no idea they are playing a part of computer game history 
+are really amusing.  
+
+-- 
+jeverett@wwa.com (John V. Everett)
+
+
+
+Article 1838 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!news.exodus.net!uunet!in2.uu.net!newstf01.news.aol.com!newsjunkie.ans.net!newsfeeds.ans.net!news-m01.ny.us.ibm.net!usenet
+From: mross@ibm.net
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: PDP-6/KA documentation
+Date: Wed, 20 Mar 1996 22:45:03 GMT
+Lines: 23
+Message-ID: <4iq22d$1lj0@news-s01.ny.us.ibm.net>
+References: <DnzLJx.n0G@world.std.com> <4hs35d$3re@newsbf02.news.aol.com> <4ht11t$i6f@caesar.ultra.net> <TK.96Mar11175744@watt.ai.mit.edu>
+NNTP-Posting-Host: slip139-92-20-74.wk.uk.ibm.net
+X-Newsreader: Forte Free Agent 1.0.82
+Xref: nntp1.best.com alt.sys.pdp10:1838 alt.folklore.computers:56062
+
+tk@ai.mit.edu (Tom Knight) wrote:
+
+>>>> "Carl" == Carl R Friend <carl.friend@swec.com> writes:
+>Carl> I'm moping for exactly the opposite reason. When I departed my
+>Carl> first employment (where I was lucky enough to work on -10s) I
+>Carl> "willed" my (somewhat) personalised documentation to the bloke I
+>Carl> thought best to carry the torch.  Included in those archives
+>Carl> were things I dearly wish I had today, and have a sightly
+>Carl> greater appreciation of today (detailed KA, KI, and KL-10 timing
+>Carl> readouts, for example). These are also things that, I imagine,
+>Carl> are gone today.
+
+>I've got complete print sets, hardware manuals, and card schematics
+>for both the PDP-6 and KA-10.  Anyone who REALLY wants a set can get
+>one from me.  If enough people want them, I'll scan them and put them
+>on the net.
+
+I have in my Cambridge garage some 8's and 11's, a 12, a 15 (xvm), a
+KL and two 2020's. I have fairly complete docs for KL, if anyone can
+make better use of them than I (I have 2 problems - no 3-phase, no KL
+memory!). If anyone can suggest the whereabouts of some KL memory or
+(sigh) a complete KA or KI, I would be very interested...
+
+
+
+Article 1847 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!news.exodus.net!imci4!newsfeed.internetmci.com!news.sesqui.net!uuneo.neosoft.com!bonkers!not-for-mail
+From: peter@taronga.com (Peter da Silva)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: Adventure (Was: The Computer Museum)
+Date: 26 Mar 1996 12:59:20 -0600
+Organization: none
+Lines: 4
+Message-ID: <4j9eq8$5ga@bonkers.taronga.com>
+References: <960319054842@fwancho.whc.net> <4iqlgf$hhk@tricia.msn.fullfeed.com> <4j3409$2o2@dns.plano.net> <Doup0z.2Mp@cwi.nl>
+NNTP-Posting-Host: localhost.taronga.com
+Xref: nntp1.best.com alt.sys.pdp10:1847 alt.folklore.computers:56624
+
+So does anyone have the Berkeley extended adventure with the gnome and the
+beach puzzle? I'd like a copy because I'm in it, as a mad Australian on
+a skateboard who throws a pile of "adventure" printouts in many programming
+languages at you.
+
+
+Article 1866 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!news.msfc.nasa.gov!newsfeed.internetmci.com!howland.reston.ans.net!news-e2a.gnn.com!newstf01.news.aol.com!newsbf02.news.aol.com!not-for-mail
+From: jmfbah@aol.com (JMFBAH)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10,alt.dinosaur-os.advocacy.sacrilege
+Subject: ASR33s and other terminal reminiscences
+Date: 20 Apr 1996 09:41:58 -0400
+Organization: America Online, Inc. (1-800-827-6364)
+Lines: 23
+Sender: root@newsbf02.news.aol.com
+Message-ID: <4lapj6$ops@newsbf02.news.aol.com>
+References: <4l8oqs$mnj@electron.rutgers.edu>
+Reply-To: jmfbah@aol.com (JMFBAH)
+NNTP-Posting-Host: newsbf02.mail.aol.com
+Xref: nntp1.best.com alt.folklore.computers:59192 alt.sys.pdp10:1866
+
+Somebody wrote:
+<:Cory, I remember my days of struggle at Columbia U learning how to use
+a...
+<:Teletypewriter terminal!!!! and the generic Televideo terminals hooked
+up to 
+<:DEC-20's. 
+
+Are you sure it was a DEC-20?  I don't think we ever sold a DEC-20 with
+teletypes.  B.T.W. My definition of teletypes is an ASR-33.  My memories
+of those terminals are of frustration.  Field Service had me banned from
+using them because, if you typed faster than 30-35 words/minute, they
+broke.  So I had to use ASR-35s, a better terminal, in my opinion.  When
+there wasn't any -35s available, and I had to use the -33s,  I usually
+used LINED instead of TECO because it forced me to type slower. The best
+video terminals were the VT06s.  Remember them, guys?  I think JMF had the
+very last one (he had all the broken ones in his office to be used for
+spare parts).  I do believe he was close to tears when that one finally
+died and couldn't be fixed.
+
+/BAH
+
+
+/BAH
+
+
+Article 1868 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!news.texas.net!imci2!imci3!imci4!newsfeed.internetmci.com!news.wwa.com!news
+From: jeverett@wwa.com (John Everett)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10,alt.dinosaur-os.advocacy.sacrilege
+Subject: Re: ASR33s and other terminal reminiscences
+Date: 21 Apr 1996 13:58:40 GMT
+Organization: WorldWide Access (tm) - Chicagoland Internet Services (http://www.wwa.com)
+Lines: 38
+Message-ID: <4ldeug$i4l@kirin.wwa.com>
+References: <4l8oqs$mnj@electron.rutgers.edu> <4lapj6$ops@newsbf02.news.aol.com>
+NNTP-Posting-Host: pool6-006.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.7
+Xref: nntp1.best.com alt.folklore.computers:59300 alt.sys.pdp10:1868
+
+In article <4lapj6$ops@newsbf02.news.aol.com>, jmfbah@aol.com says...
+>
+>
+>Are you sure it was a DEC-20?  I don't think we ever sold a DEC-20 with
+>teletypes.  B.T.W. My definition of teletypes is an ASR-33.  My memories
+>of those terminals are of frustration.  Field Service had me banned from
+>using them because, if you typed faster than 30-35 words/minute, they
+>broke.  So I had to use ASR-35s, a better terminal, in my opinion.  When
+>there wasn't any -35s available, and I had to use the -33s,  I usually
+>used LINED instead of TECO because it forced me to type slower. The best
+>video terminals were the VT06s.  Remember them, guys?  I think JMF had the
+>very last one (he had all the broken ones in his office to be used for
+>spare parts).  I do believe he was close to tears when that one finally
+>died and couldn't be fixed.
+>
+>/BAH
+>
+
+Yes, Barb, the -35s were vastly superior to the -33s. I'd forgotten that 
+there was an ASR-35, most of the ones we had at DEC were KSRs. I liked the 
+-35 because of the tactile feedback you got from the keys when you typed, a 
+feature missing from the -33. Remember the -37, the last (I think) of the 
+Teletype brand terminals offered by DEC; 150 baud, upper/lower case? I don't 
+believe many of them were delivered before DEC started making DECwriters, 
+sometimes refered to as "Tom's Terrific Terminal" after Tom Stockebrand.
+
+Jim's VT06 reminded me of the carpenter who had been using the same hammer 
+for 35 years. Of course he had replaced the handle many times and the head a 
+time or two. When I returned to DEC in 1977 to port TOPS-10 to the KS-10 I 
+couldn't find a free VT06 and had to settle for a VT05. I recall they had an 
+interesting problem that scrambled the screen from time to time. The 
+"approved" fix was to lift the front of the terminal precisely one inch off 
+the desk and let it drop. Cleared up the screen every time.
+
+
+-- 
+jeverett@wwa.com (John V. Everett)
+
+
+
+Article 1888 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: nntp1.best.com!news1.best.com!news.texas.net!imci2!news.internetMCI.com!newsfeed.internetmci.com!howland.reston.ans.net!ixnews1.ix.netcom.com!netcom.com!alderson
+From: alderson@netcom.com (Richard M. Alderson III)
+Subject: Re: ASR33s and other terminal reminiscences
+In-Reply-To: jmfbah@aol.com's message of 22 Apr 1996 09:31:28 -0400
+Message-ID: <aldersonDqHFDv.C9E@netcom.com>
+Reply-To: alderson@netcom.com
+Fcc: /u9/alderson/postings
+Organization: NETCOM On-line Communication Services (408 261-4700 guest)
+References: <4levl9$78o@reuters2.mitre.org> <4lg1ng$d43@newsbf02.news.aol.com>
+Date: Fri, 26 Apr 1996 18:29:54 GMT
+Lines: 25
+Sender: alderson@netcom18.netcom.com
+
+In article <4lg1ng$d43@newsbf02.news.aol.com> jmfbah@aol.com (JMFBAH) writes:
+
+>TOPS10 designated terminal devices as TTYs.  I always pronounced this word as
+>"tittys".  This reminds me of a risque story.  Is the telling of risque
+>stories allowed in this newsgroup?
+
+I certainly think all (or at least most) of us in the PDP-10 universe are old
+enough to remember when the telling of risque stories was an acceptable way of
+increasing the intimacy level of our friendships.  I have shortened the list to
+just "our" newsgroup.
+
+When I worked at Stanford, my boss and I were discussing some parameter changes
+needed in the terminal initialization daemon, TTYINI.  As we blithely spoke of
+TTY parameters and the like, the systems manager for the new IBM 4381s we had
+been saddled with^W^Wgranted by Big Blue walked by, and did a massive double-
+take.  She then burst out laughing, made motions in front of her chest with her
+hands, and said "I kept twirling the knobs all night, but she never got any
+better looking!"
+
+We all got to be good friends in short order.
+-- 
+Rich Alderson   You know the sort of thing that you can find in any dictionary
+                of a strange language, and which so excites the amateur philo-
+                logists, itching to derive one tongue from another that they
+                know better: a word that is nearly the same in form and meaning
+                as the corresponding word in English, or Latin, or Hebrew, or
+                what not.
+                                                --J. R. R. Tolkien,
+alderson@netcom.com                               _The Notion Club Papers_
+
+
+Article 1889 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!news.texas.net!news.frontiernet.net!gollum.kingston.net!news4.ottawa.istar.net!news3.ottawa.istar.net!istar.net!imci2!news.internetMCI.com!newsfeed.internetmci.com!howland.reston.ans.net!news-e2a.gnn.com!newstf01.news.aol.com!newsbf02.news.aol.com!not-for-mail
+From: jmfbah@aol.com (JMFBAH)
+Newsgroups: alt.sys.pdp10
+Subject: Re: ASR33s and other terminal reminiscences
+Date: 27 Apr 1996 09:39:56 -0400
+Organization: America Online, Inc. (1-800-827-6364)
+Lines: 31
+Sender: root@newsbf02.news.aol.com
+Message-ID: <4lt83c$t0q@newsbf02.news.aol.com>
+References: <decwolf-2204962211190001@pool039.max11.boston.ma.dynip.alter.n
+Reply-To: jmfbah@aol.com (JMFBAH)
+NNTP-Posting-Host: newsbf02.mail.aol.com
+
+On 25 Apr 96, J. Chris Hausler <jchausler@delphi.com> wrote:
+< that computing just would not be the same without that unique
+< smell of hot oil you get from a
+<teletype.  It somehow helps one think........;->    Chris
+
+Ahhh. I had forgotten about the smell...Thanks for the reminder.   Which
+reminds me...
+My group, Tape Prep, had the job of editing the TOPS10 monitor every
+Tuesday.
+We would traipse upstairs from 12-1 to 3-5 to edit the marks that the
+members
+of the TOPS10 Monitor Group had made during the last week.  Then two guys
+would take the edited sources and make all the various flavours of
+monitors
+that were needed to run for development, testing, etc.
+
+The terminals we worked on were 35s.  There was a monitor guy who would
+take
+out his frustration on the poor 35s with the direct result of the windows
+breaking.  One always knew if this man had been in the room by the
+presence
+of the glassless 35s.  Field Service finally got so fed up with the
+hopeless
+job replacing these windows, that they stopped.  As a result, whenever one
+of
+these 35s got serviced by a Field Service guy who was liberal with his
+oilcan, one could get a waterless oil bath.   Just another hazard of the
+mill
+in those good ol' days.
+
+/BAH  
+
+
+Article 1890 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!news.aimnet.com!ns2.mainstreet.net!news.jersey.net!news.win.bright.net!news.bright.net!usenet.eel.ufl.edu!newsfeed.internetmci.com!news.wwa.com!news
+From: jeverett@wwa.com (John Everett)
+Newsgroups: alt.sys.pdp10
+Subject: Re: ASR33s and other terminal reminiscences
+Date: 29 Apr 1996 01:12:59 GMT
+Organization: WorldWide Access (tm) - Chicagoland Internet Services (http://www.wwa.com)
+Lines: 13
+Message-ID: <4m152r$g00@kirin.wwa.com>
+References: <decwolf-2204962211190001@pool039.max11.boston.ma.dynip.alter.n <4lt83c$t0q@newsbf02.news.aol.com>
+NNTP-Posting-Host: pool1-019.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.7
+
+In article <4lt83c$t0q@newsbf02.news.aol.com>, jmfbah@aol.com says...
+>
+
+>The terminals we worked on were 35s.  There was a monitor guy who would
+>take
+>out his frustration on the poor 35s with the direct result of the windows
+>breaking.  
+
+Tom Hastings!
+
+-- 
+jeverett@wwa.com (John V. Everett)
+
+
+
+Article 1897 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!news.exodus.net!imci4!newsfeed.internetmci.com!howland.reston.ans.net!news-e2a.gnn.com!newstf01.news.aol.com!newsbf02.news.aol.com!not-for-mail
+From: jmfbah@aol.com (JMFBAH)
+Newsgroups: alt.sys.pdp10
+Subject: Re: ASR33s and other terminal reminiscences
+Date: 2 May 1996 08:03:21 -0400
+Organization: America Online, Inc. (1-800-827-6364)
+Lines: 21
+Sender: root@newsbf02.news.aol.com
+Message-ID: <4ma8a9$a53@newsbf02.news.aol.com>
+References: <4m7q1m$356@tribune.concentric.net>
+Reply-To: jmfbah@aol.com (JMFBAH)
+NNTP-Posting-Host: newsbf02.mail.aol.com
+
+In a message dated 96-04-28 21:13:19 EDT, jeverett@wwa.com wrote:
+
+>>out his frustration on the poor 35s with the direct result of the
+>>windows breaking.  
+>
+>Tom Hastings!
+>
+>
+
+Yup.  One of my more memoriable moments is the time I was editing
+MONGEN.  I had a question (a compiling error, I think) and you were on
+one side of me and Tom was on the other side.  Both of you were
+arguing about what to do about it.  This argument went on for at least
+15 minutes.  At any  moment I was expecting Tom to smash the terminal
+(it still had the glass) but I knew he would miss it and get me
+because my head was higher than the terminal.  I couldn't get out of
+the way because of how you two were positioned around my chair.  
+Monitor guys sure had their eccentricities.  
+
+/BAH
+
+
+
+Article 1916 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!news.texas.net!newsfeed.concentric.net!winternet.com!uunet!in2.uu.net!news.voicenet.com!fly.compudata.com!bbs!david.razler
+From: david.razler@compudata.com (DAVID RAZLER)
+Newsgroups: alt.sys.pdp10
+Subject: Re: advice
+Message-ID: <8C1402B.0BBD000014.uuout@compudata.com>
+Date: Sat, 25 May 96 00:43:00 -0400
+Distribution: world
+Organization: Compu-Data -=- Turnersville, NJ -=- 609-232-7747
+Reply-To: david.razler@compudata.com (DAVID RAZLER)
+References: <pfarrellDrw39F.K6K@netcom.com>
+X-Newsreader: PCBoard Version 15.22
+X-Mailer: PCBoard/UUOUT Version 1.20
+Lines: 82
+
+
+
+PF>Fellow KA/KI/KL fans, 
+
+PF>This group has been pretty quite lately.
+PF>Not much posting, I actually had to beat on my dumb PC software
+PF>to not purge the group as inactive.
+
+PF>So.....
+
+PF>What should we talk about? 
+
+PF>I've already found a fair number of former co-workers, and gotten the
+PF>"latest" from people foolishly trying to sell KL-clones to customers
+PF>that foolishly want them.
+
+Give me a desktop-size KL clone and I'll jump on it. Resurrect Jupiter! 
+Then again, I *also* have an order in for the single-chip ENIAC. <price 
+and availability as yet unset by U. of Penn.>
+
+PF>But what do we want?
+
+PF>+++great Macro-10/20 hacks?
+
+Lets round up any folks out there from the old Long Island Regional 
+Instructional Computer Service. Nothing finds holes in software better 
+than 3,000 high-school programmers!
+
+PF>+++stories of the good ol' days?
+
+I remember when we got our first 256K-word core box.....
+
+PF>+++strong posts that notice that modern RISC chips are neither
+PF>Reduced now now when they implement KL-class instructions?
+
+Well, the only good RISC machine I ever met was a PDP-8. One of these 
+days, I'm going to have to get the plans from CMU for the super-
+optimized multi-pipelined version.
+
+
+PF>+++ crys that no recent OS/CPU has bothered to read PJ Denning's work
+PF>on virtual memory, which was proven optimal, and thus use PRU instead
+PF>of working sets?
+
+Think of it, fantastic OS, most user-friendly of its day, took all of a 
+small portion of a 2-Meg diskpack.
+
+PF>+++ shocking invention of shared memory between processes?
+
+PF>other ideas.....
+
+PF>I mean, what is this group about? we have lots of old folks with tons
+PF>of experience, what do we want to say?
+
+Sage Advice: If rebuilding a KA-10, be prepared to replace the big 2W 
+resistors on *every* B-212 (or was that B-213?) with 5W+ models, thereby 
+avoiding fire. Also, be prepared to replace the oil-filled caps in the 
+power supplies, and remember, some were pcb contaminated. 
+
+
+
+PF>Please not have it be silence.
+
+PF>Pat
+
+PF>Pat Farrell        Grad Student
+PF>http://www.isse.gmu.edu/~pfarrell Info. Systems & Software
+PF>Engineering, George Mason University, Fairfax, VA PGP key available
+PF>on homepage               #include <standard.disclaimer>
+
+
+No problem. Good advice, I've got it all. (also complete prints to build 
+your own PDP-7, 8 or 15 from scratch....)
+
+                        dmr
+
+note: moving both body and electrons
+new address:
+david.razler@worldnet.att.net
+[WTP Associates: Old systems and parts sought
+and good homes found for them. Museum-quality 
+restoration work available]
+
+
+Article 1933 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Date: Mon, 03 Jun 96 10:12:40 PDT
+From: Reed Powell <powell@nauticom.net>
+Subject: SPRs:  "Why Autopatch"
+Lines: 79
+X-Newsreader: NEWTNews & Chameleon -- TCP/IP for MS Windows from NetManage
+Message-ID: <NEWTNews.833822014.24484.powell@net8.nauticom.net>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+NNTP-Posting-Host: 204.171.127.138
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!swrinde!newsfeed.internetmci.com!pgh.nauticom.net!
+
+
+[found this in my files, typos are probably mine.  -reed]
+
+SPR # 20-17669
+
+OPERATING SYSTEM        VERSION PROGRAM         DATE
+TOPS-20                 4(3417) AUTOPATCH       13-APR-82
+
+KEITH LANE
+KEPLINGER COMPUTER SYSTEMS, INC.
+HOUSTON TEXAS
+
+I have just completed applying autopatch 1 and 2 to the
+Monitor and EXEC.
+
+Why Autopatch?
+
+I sure used a lot of disk space, CPU time and my time to
+obtain an updated MOnitor and Exec.  Why couldn't you just
+have put the updated .EXE files on the tape.
+
+Why can't these components be put on an update tape?
+
+Why can't I apply an .SPR DDT patch(s) to the autopatched
+components?
+
+
+
+========= PROPOSED SPR ANSWER ========
+
+        Thank you for your SPR on Autopatch.   We regret the
+fact that you were disappointed by having to spend so much
+time rebuilding the Monitor and EXEC.  Better you than us.
+You only have to rebuild a single version of the Monitor -
+we would have to build fifteen of the suckers!  We have
+better things to do with our resources, so if you don't want
+to rebuild the programs, forget it!  The resulting files
+will only be a disappointment to you in any event.  One of
+the reasons that we don't build the products is that we
+don't need them.  We certainly don't use them; we use stuff
+that is even worse.
+
+        And you pointed out that you used a lot of disk
+space.  Yes, we planned it that way.  We had a surplus of
+disk drives lying aroumd, and we all got together to decide
+how to get rid of them.  Autopatch seemed to do the trick.
+That's one of the reasons we decided to send it to all the
+customer base, to sell more drives!
+
+        And now about all that CPU time you spent building
+your programs. Thank your lucky stars that you have a 2060;
+the 2020 customers usually suffer several crashes while
+building since it takes so long.  This was in keeping with
+our plans to upgrade the 2020 customers to 2060s.  We
+figured that if they got discouraged enough by building our
+software every few months that they would HAVE to upgrade
+just to get any useful work done!
+
+        You suggested that we put the updated components on
+an update tape. Too easy for all of our guys.  If we have to
+suffer with trying to get together these products, you are
+going to have to suffer some too. Several of the maintainers
+have gotten so sick of it all that they even discourage
+customers from buying the service.  They figure that if no
+one buys the service that they will not have to keep
+cranking out all these tapes.
+
+        Finally, you inquired as to why the DDT patches
+cannot be applied to the Autopatch components.  We planned
+it that way.  Since the patches stand about a 75% chance of
+doing harm to your system, we figured that we should patch
+against a version that you can never duplicate.  That way
+you will never figure out how to get it installed.  Some
+customers actually have figured it out in some cases - boy,
+were they sorry!
+
+        We hope that this answers all your questions
+regarding the Autopatch service.  We look forward to a long,
+happy relationship...
+
+
+
+
+
+Article 1950 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!nntp.primenet.com!news.sprintlink.net!news-stk-3.sprintlink.net!news.sprintlink.net!new-news.sprintlink.net!newsfeed.internetmci.com!newsxfer2.itd.umich.edu!netnews.worldnet.att.net!ix.netcom.com!prv-ri4-19.ix.netcom.com!user
+From: decwolf@ix.netcom.com (Keith Pepin/DECwolf)
+Newsgroups: alt.sys.pdp10
+Subject: Re: paper tape
+Date: 21 Jun 1996 02:19:24 GMT
+Organization: DECwolf VAX Project
+Lines: 26
+Message-ID: <decwolf-2006962223290001@prv-ri4-19.ix.netcom.com>
+References: <1996Jun20.113530.1@homer.ds.boeing.com>
+NNTP-Posting-Host: prv-ri4-19.ix.netcom.com
+X-NETCOM-Date: Thu Jun 20  9:19:24 PM CDT 1996
+
+In article <1996Jun20.113530.1@homer.ds.boeing.com>,
+inge@homer.ds.boeing.com wrote:
+
+-> Speaking of paper-tape:  I was taking a course at Marlboro. Somebody in the
+-> class had a copy of Star Trek (I think) and everyone wanted a copy. No one
+-> thought to bring DECtapes with them, so we queued up SEVEN copies of the
+-> program to the paper tape punch. Sometime later, an irate operator came
+-> to the classroom and demanded that we come clean up the mess on the computer
+-> room floor.
+
+I had the amusing incident of going in to work one day with my father. I
+was allowed into the computer room, and they let me log on the VAX. I
+started playing around on a VAX-11/725 that wasn't doing anything, and
+they let me have priveledged access. BIG mistake. I dragged out a Teletype
+[thought it was more fun than the VT102], and found in the same storage
+room an old serial high-speed punch, 300 baud. I rigged it to the VAX,
+linked 33 boxes of DEC fan-fold tape together, and ran 3 feet of leader
+out the third story window. I then wrote a short program to read a magtape
+and dump it to the punch. I left, figuring it would take a while to reach
+the ground. I had reached this point at about 10AM. At about 4PM a pair of
+very pissed security guards walked in...
+----****####****----
+Keith Pepin/DECwolf
+Obsessed with DEC/lover of lupines: Have you hugged your ALPHA today?
+----****####****----
+8^L - Werewolf with glasses and snout, smoking cigarette: THAT'S ME!!
+
+
+Article 1957 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!nntp.coast.net!news-res.gsl.net!news.gsl.net!bloom-beacon.mit.edu!bone.think.com!paperboy.osf.org!paperboy.osf.org!dlm
+From: dlm@firebird.osf.org ( Dan Murphy )
+Newsgroups: alt.sys.pdp10
+Subject: Re: paper tape
+Date: 21 Jun 1996 19:18:59 GMT
+Organization: Open Software Foundation
+Lines: 46
+Message-ID: <DLM.96Jun21151859@firebird.osf.org>
+References: <1996Jun20.113530.1@homer.ds.boeing.com>
+NNTP-Posting-Host: firebird.osf.org
+In-reply-to: inge@homer.ds.boeing.com's message of Thu, 20 Jun 1996 19:35:30
+	GMT
+
+
+    Ah yes, paper tape.  Recall that on the earlier PDP-1s, there was
+    no disk, no magtape, no network/floppy/etc/etc.  Paper tape and
+    the console typewriter were IT for 'permanent' storage output.  Of
+    those two, only paper tape could also be read back into the
+    computer, so it was the preferred medium.
+
+    Off-line paper tape preparation was done on Frieden Flexowriters,
+    heavy, noisy, electric typewrite-like devices with paper tape
+    reader and punch.  As one might guess, correcting typing errors on
+    paper tape was a challenge.  Restuffing the holes*, although not
+    absolutely impossible, was difficult enough that it was done in
+    only the most extreme of circumstances.  (It really was.  Honest.)
+    More commonly, one would manually back the tape up to the
+    offending frame and punch an additional hole or holes that would
+    cause the frame to be ignored.  (On the PDP-1, a hole in the
+    seventh column had this effect.  On teletypes, all holes were
+    punched thus producing the RUBOUT character.)  Of course, if your
+    one-character error was several frames back, you'd probably have
+    to delete all intervening frames and retype from the point of the
+    error to (hopefully) get things right.
+
+    The Flexowriters also had the ability to nanofanfold the tape.
+    Microfanfold is what you got from the high-speed readers on the
+    PDP-1/6/10 if the tape stopped folding correctly.  Nanofanfold
+    could be produced by getting the tape stuck in the Flexo's reader
+    or punch.  The uninitiated might call it "crumpled", but we knew
+    better.
+    
+    
+    dlm
+
+
+    * - Skeptics beware.  This really can be done, generally with the
+    help of some Scotch(tm) tape.  Note, however, that what you could
+    do depended on what would later read the tape.  The high-speed
+    readers on the computer were optical, so a hole with reasonably
+    clear Scotch(tm) tape over it would still be read as a hole.  The
+    readers on the Flexos were mechanical, however, and a small, metal
+    finger had to be able to pass through the plane of the tape in
+    order for the device to consider it a hole.  These points had to
+    be kept in mind when repairing ripped, snagged, torn, and
+    mutilated paper tapes also.  Still, it's a long time since we've
+    had a medium that could be read by a human being without the aid
+    of any machine.
+    
+
+
+Article 1954 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!nntp.primenet.com!news.texas.net!imci2!news.internetMCI.com!pull-feed.internetmci.com!imci5!imci4!newsfeed.internetmci.com!howland.reston.ans.net!nntp.coast.net!news.dacom.co.kr!bofh.dot!news.kreonet.re.kr!news.postech.ac.kr!usenet.kornet.nm.kr!agate!bh
+From: bh@anarres.CS.Berkeley.EDU (Brian Harvey)
+Newsgroups: alt.sys.pdp10
+Subject: Re: How did the old guys work?
+Date: 21 Jun 1996 15:46:48 GMT
+Organization: University of California, Berkeley
+Lines: 12
+Message-ID: <4qeg58$nat@agate.berkeley.edu>
+References: <4qbln1$d42@newsbf02.news.aol.com> <4qbrfh$2ft@kirin.wwa.com>
+NNTP-Posting-Host: anarres.cs.berkeley.edu
+
+jeverett@wwa.com (John Everett) writes:
+>There actually were some she type programmers around [...]
+> [...] already at DEC when I joined in 1966.
+
+On the other hand, I remember a tour of the mill organized by the
+MIT student IEEE chapter, I think it was, some time around 1968,
+at which the official DEC tour guide showed us the semi-automatic
+wire-wrap machines ("semi-automatic" meaning that the machine
+positioned itself to the right pin, but a human being had to do
+the actual wrapping) and proudly told us, "We hire women to run
+these machines because they can tolerate the repetitive work
+better."  :-(
+
+
+Article 1959 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!olivea!decwrl!usenet.cisco.com!cronkite!billw
+From: billw@puli.cisco.com (William )
+Newsgroups: alt.sys.pdp10
+Subject: Re: How did the old guys work?
+Date: 22 Jun 1996 07:50:58 GMT
+Organization: cisco Systems, Inc.
+Lines: 16
+Message-ID: <BILLW.96Jun22005058@puli.cisco.com>
+References: <4qbln1$d42@newsbf02.news.aol.com>
+	<31c9aa48.242918878@netnews.worldnet.att.net>
+	<decwolf-2106961101510001@prv-ri3-23.ix.netcom.com>
+NNTP-Posting-Host: puli.cisco.com
+In-reply-to: decwolf@ix.netcom.com's message of 21 Jun 1996 14:57:44 GMT
+
+    -> However, I *have* seen people drop boxes of cards, and simply fall
+    -> to the floor and  break down in tears.
+
+    Oh, I can imagine... I got frustrated enough when a backup set onto 360K
+    disks from a 20MB drive got scattered across the floor... at least they
+    were labelled ;-)
+
+Hmm.  At least you still have the cards.  I remember once after a six
+hour marathon programming session overwriting my code with the JCL that
+would have compiled it.  ("Yes of course I'm sure", I told the editor.)
+Poof.  All gone.  Sigh.
+
+If it had been tops20, I'd have still had the previous versions.  I wonder
+why that hasn't made it into a "modern (popular) operating system"...
+
+BillW
+
+
+Article 1967 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!nntp.primenet.com!news.cais.net!usenet.seri.re.kr!news.dacom.co.kr!bofh.dot!nntp.coast.net!netnews.worldnet.att.net!ix.netcom.com!news
+From: mcknighl@ix.netcom.com (Lawrence E. McKnight)
+Newsgroups: alt.sys.pdp10
+Subject: Re: How did the old guys work?
+Date: Sun, 23 Jun 1996 19:18:49 GMT
+Organization: Netcom
+Lines: 23
+Message-ID: <31cd7979.3360531@nntp.ix.netcom.com>
+References: <4qbln1$d42@newsbf02.news.aol.com> <31c9aa48.242918878@netnews.worldnet.att.net> <decwolf-2106961101510001@prv-ri3-23.ix.netcom.com> <4qjic6$a5c@news.eecs.nwu.edu>
+NNTP-Posting-Host: sjx-ca35-25.ix.netcom.com
+X-NETCOM-Date: Sun Jun 23 12:21:57 PM PDT 1996
+X-Newsreader: Forte Agent .99e/16.227
+
+bonomi@eecs.nwu.edu (Robert Bonomi) wrote:
+
+[snip...
+>
+>*must* have been a BASIC job.  You -really- could get away with that with
+>a lot of early basics.  Some of them, you didn't even have to pull out a
+>card that was in error.  Just punch a new one, with the same statement
+>number, and slap it on the end of the deck.  (it only saw the -last-
+>occurance of any statement number, obviously)   Made for a _whole_new_
+>class of 'malicious' spaghetti-programing techniques.  <grin>
+
+Well, this is certainly getting off-topic for alt.sys.pdp10, but the
+'end of the deck' bit was very common on IBM (gasp!) 1401 object decks.
+Many shops severly restricted availability for compiles, so programs
+were 'maintained' by patching the object deck (yes, the output of the
+compiler was a card deck), and nice programmers would add the patch to
+the end of the deck, which overlaid the original code, rather than
+replace the original card.  It was much easier then to read the original
+program listing and figure out what it did with the patches.
+
+---------------
+Larry McKnight
+(this space unintentionally left blank.....
+
+
+Article 1963 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!swrinde!newsfeed.internetmci.com!newsxfer2.itd.umich.edu!netnews.worldnet.att.net!ix.netcom.com!news
+From: mcknighl@ix.netcom.com (Lawrence E. McKnight)
+Newsgroups: alt.sys.pdp10
+Subject: Re: How did the old guys work?
+Date: Sat, 22 Jun 1996 16:58:41 GMT
+Organization: Netcom
+Lines: 38
+Message-ID: <31cb3ebf.2663972@nntp.ix.netcom.com>
+References: <4qbln1$d42@newsbf02.news.aol.com> <31c9aa48.242918878@netnews.worldnet.att.net> <4qevo5$b8v@aurora.cs.athabascau.ca>
+NNTP-Posting-Host: sjx-ca54-23.ix.netcom.com
+X-NETCOM-Date: Sat Jun 22 12:01:51 PM CDT 1996
+X-Newsreader: Forte Agent .99e/16.227
+
+rwa@cs.athabascau.ca (Ross Alexander) wrote:
+
+>david.razler@postoffice.worldnet.att.net (David M. Razler) writes:
+[snip...
+
+>>However, I *have* seen people drop boxes of cards, and simply fall to the
+>>floor and  break down in tears.
+>
+>The unprepared and luckless exist in all times and places.  It's
+>trivially easy to draw a diagonal stripe down the side of a deck with
+>a magic marker.  Then the sort job becomes one of reconstructing the
+>line.  I had several colours of markers to accomodate edits.
+
+Hmm.  I always put the stripe(s) on the top of the deck.  
+
+A couple of stories (secondhand, of course) about 'dropped' cards.
+
+1)  At a telephone office, a clerk pushing a cart with about 30 trays of
+cards which had just gone through an 18 hour EAM sort (this was the old,
+old, days) decided to race somebody, and tipped the cart over.  His
+advancement opportunities became severly limited.
+
+2) While a large job was being read, the operator casually asked the
+programmer who was chatting with him if the job included a copy to tape.
+When the programmer indicated that it did, he asked 'Why'?.  The
+operator directed his attention to the card reader, on which he had
+forgotten to install the proper mechanism to catch the cards, and the
+cards were spewing out of the machine  onto the floor.  The programmer
+stood quietly, finger crossed, until the copy to tape task completed.
+>
+>regards,
+>Ross
+>--
+>Ross Alexander, ve6pdq  --  (403) 675 6311  --  rwa@cs.athabascau.ca
+
+---------------
+Larry McKnight
+(this space unintentionally left blank.....
+
+
+Article 1966 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!nntp.coast.net!howland.reston.ans.net!newsfeed.internetmci.com!uwm.edu!news.cse.psu.edu!news.eecs.nwu.edu!bonomi
+From: bonomi@eecs.nwu.edu (Robert Bonomi)
+Newsgroups: alt.sys.pdp10
+Subject: Re: How did the old guys work?
+Date: 23 Jun 1996 14:18:43 GMT
+Organization: EE/CS Department, Northwestern University, Evanston, IL.
+Lines: 60
+Message-ID: <4qjjo3$aag@news.eecs.nwu.edu>
+References: <4qbln1$d42@newsbf02.news.aol.com> <31c9aa48.242918878@netnews.worldnet.att.net> <4qevo5$b8v@aurora.cs.athabascau.ca> <31cb3ebf.2663972@nntp.ix.netcom.com>
+NNTP-Posting-Host: delta.eecs.nwu.edu
+
+In article <31cb3ebf.2663972@nntp.ix.netcom.com>,
+Lawrence E. McKnight <mcknighl@ix.netcom.com> wrote:
+>rwa@cs.athabascau.ca (Ross Alexander) wrote:
+>
+>>david.razler@postoffice.worldnet.att.net (David M. Razler) writes:
+>[snip...
+>
+>>>However, I *have* seen people drop boxes of cards, and simply fall to the
+>>>floor and  break down in tears.
+>>
+>>The unprepared and luckless exist in all times and places.  It's
+>>trivially easy to draw a diagonal stripe down the side of a deck with
+>>a magic marker.  Then the sort job becomes one of reconstructing the
+>>line.  I had several colours of markers to accomodate edits.
+>
+>Hmm.  I always put the stripe(s) on the top of the deck.  
+>
+>A couple of stories (secondhand, of course) about 'dropped' cards.
+>
+>1)  At a telephone office, a clerk pushing a cart with about 30 trays of
+>cards which had just gone through an 18 hour EAM sort (this was the old,
+>old, days) decided to race somebody, and tipped the cart over.  His
+>advancement opportunities became severly limited.
+>
+>2) While a large job was being read, the operator casually asked the
+>programmer who was chatting with him if the job included a copy to tape.
+>When the programmer indicated that it did, he asked 'Why'?.  The
+>operator directed his attention to the card reader, on which he had
+>forgotten to install the proper mechanism to catch the cards, and the
+>cards were spewing out of the machine  onto the floor.  The programmer
+>stood quietly, finger crossed, until the copy to tape task completed.
+
+*MUCH* more disconcerting is one that actually happened to me.  We had a
+RJE terminal, that was 'self-serve'.  One fine day, I stuck a deck of 
+about 550 cards in the input hopper.  did the appropriate incantations
+and hit the LOAD butten. Fpppppptttt... the cards started disappearing 
+from the input hopper.  *NOTHING* shows up on the output side.  The
+-entire- deck disappeared into the machine. (the internal path was
+approximately -three- cards long.)  I hunted up operations asd reported
+"The _______ ate my deck".  got a dis-believing look. (like 'why are
+-you- bothering us with _that_?'  I was well known to them, as one of
+the few people who, when an 029 keypunch was misbehaving, it was "ok
+to just give him the toolbox", and let me fix it. usually quicker than
+they could get to it. :)     Anyway, th ops _manager_ comes out to
+see what the problem is. opens up the chassis of the RJE reader.  We
+-both- break up laughing.  *All* the free space inside the box is -full-
+of crumpled up punch-cards.  _somebody_ hadn't put one of the cover-
+plates back down on the card-path.  So, -zip-, they come flying down
+the track, hit the 'open' space, and went all over *everywhere*.  the
+-only- thing to do was grab the garbage can, and start raking stuff
+into it.
+
+It -was- a relatively small deck, thank goodness.  Even better, the
+-only- thing the job was doing was 'copy input to disk'. and things
+were flying around _after_ they'd been under the read head.  Good
+thing, too.  something like -seven- of the cards were recovered in
+'useable' condition.
+
+
+
+
+
+Article 1976 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!nntp.primenet.com!news.cais.net!newsfeed.internetmci.com!in2.uu.net!news1.digital.com!pa.dec.com!nntpd.lkg.dec.com!alingo.zk3.dec.com!werme
+From: werme@alingo.zk3.dec.com (Eric Werme)
+Newsgroups: alt.sys.pdp10
+Subject: Re: How did the old guys work?
+Date: 24 Jun 96 20:23:51 GMT
+Organization: Digital Equipment Corporation
+Lines: 12
+Message-ID: <werme.835647831@alingo.zk3.dec.com>
+References: <4qevo5$b8v@aurora.cs.athabascau.ca> <4qgojq$bs5@newsbf02.news.aol.com>
+Reply-To: werme@zk3.dec.com
+NNTP-Posting-Host: alingo.zk3.dec.com
+
+jmfbah@aol.com (JMFBAH) writes:
+
+>DECtapes were grand things.  I could tote about 20 at a time.  I could
+>wear them as bracelets all the way up my arms and carry other stuff (or
+>type) with my hands free.
+
+You know, that was one of the things that annoyed me about you.  My hands
+were too big to fit into DECtape spools.  And you did it like you did it
+everyday.  Grumble, grumble....
+-- 
+Eric (Ric) Werme         |  werme@zk3.dec.com
+Digital Equipment Corp.  |  This space intentionally left blank.
+
+
+Article 1985 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!nntp.primenet.com!news.cais.net!newsfeed.internetmci.com!csn!nntp-xfer-1.csn.net!decwrl!pa.dec.com!usenet
+From: "Carl J. Appellof" <cja@zso.dec.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: How did the old guys work?
+Date: 25 Jun 1996 16:20:57 GMT
+Organization: Digital Equipment Corporation
+Lines: 22
+Message-ID: <4qp3l9$6th@usenet.pa.dec.com>
+References: <4qevo5$b8v@aurora.cs.athabascau.ca> <4qgojq$bs5@newsbf02.news.aol.com> <werme.835647831@alingo.zk3.dec.com>
+NNTP-Posting-Host: chmist.zso.dec.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 1.1 (Windows; I; 32bit)
+
+werme@alingo.zk3.dec.com (Eric Werme) wrote:
+>jmfbah@aol.com (JMFBAH) writes:
+>
+>>DECtapes were grand things.  I could tote about 20 at a time.  I could
+>>wear them as bracelets all the way up my arms and carry other stuff (or
+>>type) with my hands free.
+>
+>You know, that was one of the things that annoyed me about you.  My hands
+>were too big to fit into DECtape spools.  And you did it like you did it
+>everyday.  Grumble, grumble....
+>-- 
+
+Talk about geek bracelets.  Well, Barb always WAS a skinny chick.
+
+The one I hated was Joe Smith wearing a 9-track tape seal as a belt.  Now 
+THAT'S skinny!
+-- 
+Carl Appellof
+not speaking for
+Digital Equipment Corporation
+
+
+
+
+Article 1993 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!imci3!newsfeed.internetmci.com!newsxfer2.itd.umich.edu!netnews.worldnet.att.net!ix.netcom.com!prv-ri2-06.ix.netcom.com!user
+From: decwolf@ix.netcom.com (Keith Pepin/DECwolf)
+Newsgroups: alt.sys.pdp10
+Subject: Re: How did the old guys work?
+Date: 26 Jun 1996 02:00:43 GMT
+Organization: DECwolf VAX Project
+Lines: 18
+Message-ID: <decwolf-2506962205010001@prv-ri2-06.ix.netcom.com>
+References: <4qevo5$b8v@aurora.cs.athabascau.ca> <4qgojq$bs5@newsbf02.news.aol.com> <werme.835647831@alingo.zk3.dec.com> <4qp3l9$6th@usenet.pa.dec.com>
+NNTP-Posting-Host: prv-ri2-06.ix.netcom.com
+X-NETCOM-Date: Tue Jun 25  9:00:43 PM CDT 1996
+
+In article <4qp3l9$6th@usenet.pa.dec.com>, "Carl J. Appellof"
+<cja@zso.dec.com> wrote:
+ 
+-> Talk about geek bracelets.  Well, Barb always WAS a skinny chick.
+-> 
+-> The one I hated was Joe Smith wearing a 9-track tape seal as a belt.  Now 
+-> THAT'S skinny!
+
+Heh heh heh... I've come up with a LOT of creative ways to use computer
+equipment. By far the weirdest was when I got 4 defective core stacks
+[forget what from], and sewed them together into an interesting
+"bracelet"... I also pulled lots of pranks, including placing a dead 486
+chip, pin-side-up, into my roommate's shoe...
+----****####****----
+Keith Pepin/DECwolf
+Obsessed with DEC/lover of lupines: Have you hugged your ALPHA today?
+----****####****----
+8^L - Werewolf with glasses and snout, smoking cigarette: THAT'S ME!!
+
+
+Article 2010 of alt.sys.pdp10:
+Path: nntp1.best.com!shellx.best.com!not-for-mail
+From: inwap@best.com (Smith and O'Halloran)
+Newsgroups: alt.sys.pdp10
+Subject: Re: How did the old guys work?
+Date: 26 Jun 1996 17:02:36 -0700
+Organization: Chez INWAP (people, computers, cats)
+Lines: 19
+Message-ID: <4qsj2s$fl4@shellx.best.com>
+References: <4qevo5$b8v@aurora.cs.athabascau.ca> <4qgojq$bs5@newsbf02.news.aol.com> <werme.835647831@alingo.zk3.dec.com> <4qp3l9$6th@usenet.pa.dec.com>
+NNTP-Posting-Host: shellx.best.com
+
+In article <4qp3l9$6th@usenet.pa.dec.com>,
+Carl J. Appellof <cja@zso.dec.com> wrote:
+>Talk about geek bracelets.  Well, Barb always WAS a skinny chick.
+>
+>The one I hated was Joe Smith wearing a 9-track tape seal as a belt.  Now 
+>THAT'S skinny!
+
+I was following another thread and found the other reference to tape seals
+there.  Yep, before I got married I had eating habits which left my waist
+at 33 inches.
+
+I blame Dawn Banks for that bit of sillyness.  At CSM, she mentioned that a
+tape seal was about the right size for a belt, which meant that I had to
+do that for the next DECUS.
+
+	-Joe
+-- 
+INWAP.COM is Joe and Sally Smith, John and Chris O'Halloran (and our cats).
+See http://www.inwap.com/ for "ReBoot", PDP-10, and Clan MacLeod.
+
+
+Article 1972 of alt.sys.pdp10:
+Path: nntp1.best.com!shellx.best.com!not-for-mail
+From: inwap@best.com (Smith and O'Halloran)
+Newsgroups: alt.sys.pdp10
+Subject: Re: How did the old guys work?
+Date: 23 Jun 1996 23:46:31 -0700
+Organization: Chez INWAP (people, computers, cats)
+Lines: 20
+Message-ID: <4qldk7$77h@shellx.best.com>
+References: <4qbln1$d42@newsbf02.news.aol.com> <31c9aa48.242918878@netnews.worldnet.att.net>
+NNTP-Posting-Host: shellx.best.com
+
+In article <31c9aa48.242918878@netnews.worldnet.att.net>,
+David M. Razler <david.razler@worldnet.att.net> wrote:
+>there lurking) of someone who wrote a massive collection of cards that did not
+>have to be run in any particular order, "accidentally" dropped them on the way
+>to the Brooklyn Poly 360 reader, gathered them up at random, put a JCL card on
+>top and handed them to a rather shocked batch intake person, who was
+>reportedly seriously disoriented when the job ran without error).
+
+We had a guy do that at the Colorado School of Mines.  And it was FORTRAN.
+
+The trick is trivial once you realize that PDP-10 FORTRAN allows multiple
+statements to punched on a single card, separated by semicolons.
+Each card had a line number, and each one ended with ";GOTO NNN".
+
+As long as the first card was first and the END card was last, the remaining
+cards sould be shuffled and the program ran correctly.
+	-Joe
+-- 
+INWAP.COM is Joe and Sally Smith, John and Chris O'Halloran (and our cats).
+See http://www.inwap.com/ for "ReBoot", PDP-10, and Clan MacLeod.
+
+
+Article 1974 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!nntp.primenet.com!news.cais.net!newsfeed.internetmci.com!news.dacom.co.kr!bofh.dot!news.kreonet.re.kr!usenet.etri.re.kr!usenet.kornet.nm.kr!ames!enews.sgi.com!decwrl!pa.dec.com!usenet
+From: "Carl J. Appellof" <cja@zso.dec.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: paper tape
+Date: 24 Jun 1996 16:45:25 GMT
+Organization: Digital Equipment Corporation
+Lines: 32
+Message-ID: <4qmgn5$dkd@usenet.pa.dec.com>
+References: <1996Jun20.113530.1@homer.ds.boeing.com>
+NNTP-Posting-Host: chmist.zso.dec.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 1.1 (Windows; I; 32bit)
+
+I remember a few things about paper tape from college.
+
+First, we had a minicomputer in our lab with nothing but an ASR-33.  The 
+BASIC interpreter took at least 30 minutes to load via non fan-fold paper 
+tape.  We had an old record player rigged up to rewind the tape onto a 
+spool after the program was loaded.  Luckily, the machine had 
+honest-to-goodness magnetic core, so the interpreter would remain in 
+memory through power cycles, and we didn't have to reload too often.
+
+Second: The output of the optical paper tape reader on our KI-10 could be 
+conveniently aimed at a waste basket.  Good for reading results from our 
+spectrometer paper tape onto disk. (Before the days of direct 
+computer-instrument interfacing.)
+
+Third: The chaff (?) from the punch made great confetti, and was VERY 
+hard to remove.  I think my old prof still has a few bits stuck in his 
+desk drawers from a prank 25 years ago.
+
+Punch cards:  I hated 'em, and would still be a chemist today if that's 
+all I'd had.  But they were wonderfully tactile.  I remember writing a 
+program to display a card image on a VT100.  As you typed a line of text, 
+black punches would appear on a video-reversed white screen.  Stole the 
+-029 lookup table from some TOPS-10 sources to get the punch patterns 
+right.  Never did simulate the punches drifting downwards into little 
+piles at the bottom of the screen, though.
+
+-- 
+Carl Appellof
+not speaking for
+Digital Equipment Corporation
+
+
+
+
+Article 1979 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!nntp.primenet.com!news.cais.net!news.sprintlink.net!news-dc-2.sprintlink.net!nntp.coast.net!netnews.worldnet.att.net!newsadm
+From: david.razler@postoffice.worldnet.att.net (David M. Razler)
+Newsgroups: alt.sys.pdp10
+Subject: Re: paper tape
+Date: Tue, 25 Jun 1996 00:26:05 GMT
+Organization: AT&T WorldNet Services
+Lines: 50
+Message-ID: <31cf1483.221546975@netnews.worldnet.att.net>
+References: <1996Jun20.113530.1@homer.ds.boeing.com> <4qmgn5$dkd@usenet.pa.dec.com>
+Reply-To: david.razler@worldnet.att.net
+NNTP-Posting-Host: 88.new-york-4.ny.dial-access.att.net
+X-Newsreader: Forte Agent .99e/32.227
+
+"Carl J. Appellof" <cja@zso.dec.com> wrote:
+
+>Punch cards:  I hated 'em, and would still be a chemist today if that's 
+>all I'd had.  But they were wonderfully tactile.  I remember writing a 
+>program to display a card image on a VT100.  As you typed a line of text, 
+>black punches would appear on a video-reversed white screen.  Stole the 
+>-029 lookup table from some TOPS-10 sources to get the punch patterns 
+>right.  Never did simulate the punches drifting downwards into little 
+>piles at the bottom of the screen, though.
+>
+>-- 
+My *hate* of punch cards (and *one* of the reasons I dropped out of
+programming and took up journalism) was that, in 1974 we had two main
+computers at the State U. of NY at Stony Brook,  a 370 and a KA-10.
+
+Coming off three years of KA-10 experience, I took on Comp. Sci. 101 and asked
+for an account on the '10 - and was ordered by my prof to do all my work on
+the 370, cutting mt cards like all the other freshmen in the room containing
+45 zero-feedback keypunches - using field-sensitive ALGOL.
+
+Spoke to Bruce Maier, then living one dorm over and managing the LIRICS-10
+through a DECWriter II. No problem.
+
+Except with the professor.
+
+Who didn't believe in timesharing.
+
+Or any language except ALGOL, specifically as writ for an IBM mainframe by his
+professor in his undergrad days, and his requirement that everything be
+submitted *on* punch cards *with* the sheets resulting from the batch run from
+the 370.
+
+The next year, SUNY @SB decided to scrap both the IBM and the KA-10 for a
+UNIVAC. The head of the selection team was hired by UNIVAC six months later.
+
+Oh, I kept up with *some* computer work, occasionally dropping by LIRICS,  and
+finding the odd 12 or 18-bit machine squirrel led away (like the second of the
+two LINAC PDP-9s  that was used extensively to test and retest DECUS
+kaleidoscope routines while the 128x128 ADC on the other machine collected
+data.
+
+Later a PDP-8 unused for years would disappear from an engineering lab only to
+reappear in a dorm room running MIT Chess and spark local competition  for the
+best "electronic fireplace" programs capable of simulating the closest thing
+to "fire" on the front panel lights.
+
+				dmr
+
+David M. Razler
+david.razler@worldnet.att.net
+
+
+Article 2009 of alt.sys.pdp10:
+Path: nntp1.best.com!shellx.best.com!not-for-mail
+From: inwap@best.com (Smith and O'Halloran)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: How did the old guys work?
+Date: 26 Jun 1996 16:44:22 -0700
+Organization: Chez INWAP (people, computers, cats)
+Lines: 13
+Message-ID: <4qsi0m$4ke@shellx.best.com>
+References: <4qbln1$d42@newsbf02.news.aol.com> <decwolf-2506962207300001@prv-ri2-06.ix.netcom.com> <31d0d187.335488310@netnews.worldnet.att.net> <4qrt9l$og5@aurora.cs.athabascau.ca>
+NNTP-Posting-Host: shellx.best.com
+Xref: nntp1.best.com alt.sys.pdp10:2009 alt.folklore.computers:65591
+
+In article <4qrt9l$og5@aurora.cs.athabascau.ca>,
+Ross Alexander <rwa@cs.athabascau.ca> wrote:
+
+>ps: a 9track tape seal is just short of 33".  That's small alright.
+
+Hey!  I did that.  Back when I was a single guy (and not eating enough),
+I used to wear a tape seal as a belt.  But I haven't fit into 33x32
+pants for years.
+	-Joe
+
+-- 
+INWAP.COM is Joe and Sally Smith, John and Chris O'Halloran (and our cats).
+See http://www.inwap.com/ for "ReBoot", PDP-10, and Clan MacLeod.
+
+
+Article 2015 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!news-res.gsl.net!news.gsl.net!bloom-beacon.mit.edu!bone.think.com!paperboy.osf.org!paperboy.osf.org!dlm
+From: dlm@firebird.osf.org ( Dan Murphy )
+Newsgroups: alt.sys.pdp10
+Subject: Re: Tops should be in the public domain
+Date: 27 Jun 1996 19:05:36 GMT
+Organization: Open Software Foundation
+Lines: 46
+Message-ID: <DLM.96Jun27150536@firebird.osf.org>
+References: <4qom88$eps@quest.ccsi.com> <4qsaqh$1st@kirin.wwa.com>
+NNTP-Posting-Host: firebird.osf.org
+In-reply-to: jeverett@wwa.com's message of 26 Jun 1996 21:41:37 GMT
+
+In article <4qsaqh$1st@kirin.wwa.com> jeverett@wwa.com (John Everett) writes:
+
+
+>    Many new to the 36 bit world are unaware that those of us who built TOPS-10 
+>    are offended by lumping TOPS-10 and TOPS-20 together and calling them Tops. 
+
+    The TOPS-20 folks aren't too keen on it either.  :-)
+    
+>    starting to practice this sacrilege. Of course this is somewhat amusing given 
+>    the general revulsion when David Stone announced at a Monitor Group meeting 
+>    one day that the PDP-10 Monitor would henceforth be called TOPS-10. We just 
+>    HATED the name.
+    
+    As I recall, both groups usually referred to their respective OS
+    as simply "the Monitor".  And virtually nobody called TOPS-10 by
+    that name until TOPS-20 came along and the distinction had to be
+    made. 
+
+>    We were similarly unimpressed when DEC decided on TOPS-20 for Dan Murphy's 
+>    operating system. 
+
+    So were we.  We were quite amazed that dozens of highly paid and
+    therefore extremely capable marketing managers and vice presidents
+    could labor and contemplate for weeks and come up with something
+    that creative.  I could never have done that.  I guess that's why
+    I'm (still) an engineer.
+
+    As to the sources, it's interesting to note that sources were
+    shipped with TOPS-10 as normal practice.  When TOPS-20 came along,
+    those selfsame managers and vice presidents decided we had to do
+    things the modern, businesslike way (read: like IBM) and NOT ship
+    sources.  However, TOPS-10 continued to ship them, at least as for
+    as long as I recall.
+
+    I'm quite convinced that the real bottom line on all this is that
+    nobody at DEC knows enough to deal with this, and they wouldn't be
+    willing to bother if they did.  For similar reasons, I doubt DEC
+    would go after anyone who had the sources and used them, even for
+    commercial purposes, provided a few simple precautions were taken,
+    e.g. removing DEC's names and trademarks.  Of course, I'm neither
+    a lawyer nor a representative of DEC, so I take no responsibility
+    for what happens if you try it.
+    
+    
+    dlm
+    
+
+
+Article 2061 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!nntp.coast.net!chi-news.cic.net!news.ind.net!aim.et.iupui.edu!indyvax.iupui.edu!mwood
+From: mwood@indyvax.iupui.edu (Mark H. Wood)
+Newsgroups: alt.sys.pdp10
+Subject: Re: How did the old guys work?
+Message-ID: <1996Jul11.130343.25741@indyvax.iupui.edu>
+Date: 11 Jul 96 13:03:43 -0500
+References: <4qevo5$b8v@aurora.cs.athabascau.ca> <decwolf-0207962315580001@prv-ri6-47.ix.netcom.com>
+Distribution: world
+Lines: 24
+
+In article <decwolf-0207962315580001@prv-ri6-47.ix.netcom.com>, decwolf@ix.netcom.com (Keith Pepin/DECwolf) writes:
+> How about the best node names? I configured nodenames on an IP network I
+> set up at my school among the students so that when I e-mailed a certain
+> machine, the path showed as "help!ive!fallen!and!i!cant!get!up".
+
+One time I set up a DN20 to provide a DECnet link to another campus.  There is
+sometimes rivalry between the campi as you may imagine.  I named the DN20
+CHARON::.  I wanted to call the '20s THING1:: and THING2:: but was told to use
+boring DECA:: and DECB::.
+
+If it won't give people apoplexy to read about VAXen here, I'll mention a
+certain VAXcluster with boot host SNOW:: and seven satellites DOC::, SNEEZY::,
+GRUMPY::, BASHFL::, SLEEPY::, DOPEY::, and HAPPY::.  It was interesting to see
+CNXMAN say:
+
+	Connection established, system HAPPY
+
+or better yet:
+
+	Connection established, system GRUMPY
+-- 
+Mark H. Wood, Lead Systems Programmer    +1 317 274 0749   [@disclaimer@]
+Internet:  MWOOD@INDYVAX.IUPUI.EDU       BITNET:  MWOOD@INDYVAX
+Trapped in a world he never made.
+
+
+Article 2171 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!nntp.primenet.com!feed1.news.erols.com!howland.erols.net!agate!news.ucsc.edu!haynes
+From: haynes@cats.ucsc.edu (James H. Haynes)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Tymnet 10's
+Date: 18 Oct 1996 22:15:52 GMT
+Organization: University of California, Santa Cruz
+Lines: 10
+Message-ID: <548vio$ftf@darkstar.ucsc.edu>
+References: <3266c4fb.8635418@news-s01.ny.us.ibm.net> <ALDERSON.96Oct15181305@netcom20.netcom.com> <32655B5B.61CF@zso.dec.com> <ALDERSON.96Oct17154854@netcom15.netcom.com>
+NNTP-Posting-Host: hobbes.ucsc.edu
+
+In article <ALDERSON.96Oct17154854@netcom15.netcom.com>,
+Richard M. Alderson III <alderson@netcom.com> wrote:
+>On the other hand, I've recommended that since the Toad-1 started out a deep
+>electric blue, we offer International Safety Orange as a color option for the
+>Tops-10 crowd...
+
+Reminds me of a story I heard from an Amdahl engineer years ago.  Amdahl's
+boxes were bright orange.  One of their first sales was to Texas A&M.
+Oops!  Orange is the color of arch-rival U of Texas.  They had to send out
+for a bucket of maroon paint ASAP.
+
+
+Article 2174 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!howland.erols.net!news2.digex.net!digex.net!not-for-mail
+From: rdd@access1.digex.net (R. D. Davis)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Tymnet 10's
+Date: 20 Oct 1996 14:17:50 -0400
+Organization: Society for the Obsolescence of Obsolescence
+Lines: 57
+Message-ID: <54dqce$arj@access1.digex.net>
+References: <3266c4fb.8635418@news-s01.ny.us.ibm.net> <53usjc$1r4@ss1.digex.net> <53uvc9$202@ss1.digex.net>
+NNTP-Posting-Host: access1.digex.net
+
+In article <53uvc9$202@ss1.digex.net>,
+Doug Humphrey <doug@ss1.digex.net> wrote:
+>Please pardon the strange syntax of the message below - I am on 
+>painkillers for hurting my foot....
+
+Ouch! :-( Hopefully your foot will feel much better real soon.
+Nothing too seriously wrong, I hope.
+
+Ermmm... If you get desparate, you might want to try my quick-fix
+method for temporarily releiving foot pain: get someone to stomp on
+the other foot (but not hard enough to really do any damage), thus
+taking your mind off of the other foot. :-) This pain-relief method
+works for fingers, arms, etc. as well.  WARNING: try this at your own
+risk!  For some odd reason, some people don't like to follow my advice
+about this method of pain relief.
+
+>In article <53usjc$1r4@ss1.digex.net>,
+>Doug Humphrey <doug@ss1.digex.net> wrote:
+>>It soulds like it is time for a general accounting of 10's that 
+>>might be saved by interested persons...  Anyone out there with a 
+>>10 (KA, KI, KL, KS, KC ;-)  that is "available", maybe you should
+>>post and let us know what it is, where, what condition, etc.  I think
+>>that the number available is rapidly that asymptotic aproach to zero,
+
+Hopefully none of the remaining systems will end up being scrapped.
+One thing that might help is for some people to make telephone calls
+to scrap-metal dealers, such as those who advertise in The Processor.
+Can someone post a good visual description of these systems?  
+
+I almost had some success in saving some PERQ workstations this way.
+Unfortunately, the one scrap dealer that was familiar with PERQs, and
+who was expecting a shipment of them to arrive, discovered that the
+PERQs were crushed before he received them.  Apparently some companies
+and government agencies destroy equipment before sending it to scrap
+dealers.
+
+>>and some of us might be up for a mission to save and 10 or two or three 
+>>and give them homes...
+
+I'd be willing to help with this. :-) I'll try to put together a list
+of scrap dealers and make a few calls.  Out of curiosity, has anyone
+been able to save any systems, or any type, from local scrap dealers?
+
+Note that I've added a computer humor archive to my ftp'able files,
+extracted from files in Anthony A. Datri's (huge) humor archive, which
+he kindly geve me permission to make available.  There's some folklore
+pertaining to these systems scattered here and there in some of those
+computer humor related files, as well as folklore pertaining to other
+ncie older systems.  This isn't available from my web page yet, as
+I've not updated the html scripts yet, but files can be ftp'd from:
+ftp.digex.net, /pub/access/rdd/comp-humor.
+
+-- 
+R. D. Davis  *  Tel: +1 410 744-4900 (work) *  http://www.access.digex.net/~rdd
+===============================================================================
+People aren't busier in the so-called busy 1990's than they were in the 1890's;
+they just often lack common sense & the ability to think for thelselves now.
+
+
+Article 2180 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!feed1.news.erols.com!howland.erols.net!newsfeed.internetmci.com!in3.uu.net!netnews.worldnet.att.net!anchor.cis.att.com!psinntp!psinntp!pubxfer.news.psi.net!usenet
+From: David HM Spector <spector@wintermute.ny.zeitgeist.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Tymnet 10's
+Date: 23 Oct 1996 10:03:03 -0400
+Organization: PSI Public Usenet Link
+Lines: 21
+Message-ID: <m2rampzsko.fsf@wintermute.ny.zeitgeist.com>
+References: <3266c4fb.8635418@news-s01.ny.us.ibm.net>
+	<53usjc$1r4@ss1.digex.net> <53uvc9$202@ss1.digex.net>
+	<54dqce$arj@access1.digex.net>
+NNTP-Posting-Host: 204.243.76.2
+X-Newsreader: Gnus v5.3/Emacs 19.34
+
+
+As an old '10 junkie... I would personally find a home for a 10 or 20
+if one came available.   There are several "antique" collectors here in
+NYC who would also help out to save such a classic and seminal  peice
+of computing history.
+
+So... I volunteer to give one a home if any are available.
+
+David
+
+-- 
+-----------------------------------------------------------------------------
+David HM Spector				Software/Network Designer
+spector@zeitgeist.com				voice: +1 212.721.6974
+Amateur Radio: N2BCA                            http://www.zeitgeist.com/
+                               -+-+-+-+-+-
+ Fools rush in where angels fear to tread, but that doesn't mean you
+	       can get them to do it a *second* time...
+                                      -- A Barneys NY Winter-Sale Ad
+
+
+
+
+Article 2181 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!enews.sgi.com!decwrl!pa.dec.com!lead.zk3.dec.com!zk2nws.zko.dec.com!denton.zko.dec.com!amartin
+From: amartin@denton.zko.dec.com (Alan H. Martin)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Tymnet 10's
+Date: 23 Oct 1996 14:50:59 GMT
+Organization: DEC
+Lines: 20
+Message-ID: <54lbcj$3c6@zk2nws.zko.dec.com>
+References: <ALDERSON.96Oct15181305@netcom20.netcom.com> <32655B5B.61CF@zso.dec.com> <KMP.96Oct18081037@romulus.harlequin.com>
+NNTP-Posting-Host: denton.zko.dec.com
+
+In article <KMP.96Oct18081037@romulus.harlequin.com> kmp@harlequin.com (Kent Pitman) writes:
+>In article <32655B5B.61CF@zso.dec.com> "Carl J. Appellof" <cja@zso.dec.com> writes:
+>
+>> I assume you've repainted the box blue?
+>
+>Who would dare?  I was told once that repainting a 10 constitutes an
+>unauthorized hardware modification and voids DEC's warranty or service
+>agreement or some such critical item...  ...
+
+As I recall, when Stevens bought KL1282 and got rid of KA101, we had to juggle
+some racks to accomodate the 2nd DECtape controller (DTB[0-3]:), etc.  We made
+a custom-sized door for some of the front of the rack by hacksawing a taller
+door down to size, and the taller door did not come in core-box blue.  So, DEC
+sold (or gave) Stevens a 12-can case of official core-box-blue spray paint.
+
+I've wondered from time to time where the other 11.99 cans of paint went, and
+what's been painted with it.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@TLE.ENet.DEC.Com
+
+
+Article 2182 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!howland.erols.net!newsfeed.internetmci.com!nntp-hub2.barrnet.net!news1.digital.com!pa.dec.com!usenet
+From: "Carl J. Appellof" <cja@zso.dec.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Tymnet 10's
+Date: Wed, 23 Oct 1996 09:48:03 -0700
+Organization: Digital Equipment Corporation
+Lines: 11
+Message-ID: <326E4C43.D17@zso.dec.com>
+References: <ALDERSON.96Oct15181305@netcom20.netcom.com> <32655B5B.61CF@zso.dec.com> <KMP.96Oct18081037@romulus.harlequin.com> <54lbcj$3c6@zk2nws.zko.dec.com>
+NNTP-Posting-Host: chmist.zso.dec.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 3.0Gold (WinNT; I)
+
+Alan H. Martin wrote:
+
+> I've wondered from time to time where the other 11.99 cans of paint went, and
+> what's been painted with it.
+
+Well, it's almost Halloween, and Stephan Wolfe is probably out with one
+or two of those cans painting pumpkins blue again.
+-- 
+Carl Appellof
+not speaking for
+Digital Equipment Corporation
+
+
+Article 2369 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!enews.sgi.com!EU.net!usenet2.news.uk.psi.net!uknet!usenet1.news.uk.psi.net!uknet!psinntp!psinntp!pubxfer.news.psi.net!usenet
+From: David HM Spector <spector@wintermute.ny.zeitgeist.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: LICUS/LIRICS online MACRO-10 training...
+Date: 05 Dec 1996 11:53:23 -0500
+Organization: PSI Public Usenet Link
+Lines: 39
+Message-ID: <m24ti1djb0.fsf@wintermute.ny.zeitgeist.com>
+References: <544ti14963.fsf@puli.cisco.com>
+NNTP-Posting-Host: 204.243.76.2
+X-Newsreader: Gnus v5.3/Emacs 19.34
+
+
+Hi Bill...
+
+(*sigh*) Ah! LIRICS! Wow ...what a blast of memories!!
+
+That's where/how I got my first taste of a PDP-10.  In fact, its what
+causes me to lust afer owning one personally (and the root of my
+friend Steve Jones' <smj@crash.com> inquiries about 2020's in this
+group -- he's into "the classics" too).
+
+An old (and unfortunately long gone) mentor by the name of Steve
+Wandell got me hooked on Macro36 back in 1977.  I learned TECO with
+that tutorial system -- as well as ALGOL.  I think I have paper copies
+of some of the TECO and ALGOL lessons on TTY paper in a box
+somewhere... I still have the DECSystem-10 System Reference Manual on
+my bookshelves (rebound into a hardcover form by the LIRICS folk).
+One of my most prized computer memorobelia posessions!  
+
+After he passed away I got to spend quite a lot of time at the LIRICS
+data center cleaning up his accounts and actually having close
+encounters of the 3rd kind with the '10.  
+
+I wonder what happened to that beautiful old machine... I rememebr
+that they had aquired five 20's by 1981... I wonder if they're still
+alive somewhere.  I wonder what Jerry Damm (ex-DEC guy who ran LIRICS)
+is up to these days...
+
+_DHMS
+-- 
+-----------------------------------------------------------------------------
+David HM Spector				Software/Network Designer
+spector@zeitgeist.com				voice: +1 212.721.6974
+Amateur Radio: N2BCA                            http://www.zeitgeist.com/
+                               -+-+-+-+-+-
+ Fools rush in where angels fear to tread, but that doesn't mean you
+	       can get them to do it a *second* time...
+                                      -- A Barneys NY Winter-Sale Ad
+
+
+
+

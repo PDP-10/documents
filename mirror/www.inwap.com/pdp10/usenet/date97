@@ -1,0 +1,55 @@
+Article 2819 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!news.bc.net!unixg.ubc.ca!alph02.triumf.ca!shoppa
+From: shoppa@alph02.triumf.ca (Tim Shoppa)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Open VMS has a DATE75 problem?
+Date: 20 May 1997 22:51:51 GMT
+Organization: TRIUMF, Canada's National Meson Facility
+Lines: 40
+Message-ID: <5lt9u7$36p$1@nntp.ucs.ubc.ca>
+References: <5lt28a$o03$1@shell3.ba.best.com>
+NNTP-Posting-Host: alph02.triumf.ca
+Xref: nntp1.ba.best.com alt.sys.pdp10:2819
+
+In article <5lt28a$o03$1@shell3.ba.best.com>,
+Smith and O'Halloran <inwap@best.com> wrote:
+>The newspaper says that Bay Area police departments in Emeryville, Oakland,
+>Piedmont, Walnut Creek, and portions of the Contra Costa County Sheriff's Dept
+>all use DEC's Open VMS System.  It appears that Open VMS hit the equivalent of
+>the TOPS-10 DATE75 problem on Monday, 19-May-97.
+>
+>Why would a 64-bit OS have a 27-year date limit?  Something in the PDP-11
+>compatible RMS stuff?  I can't believe that DEC didn't learn from the DATE75
+>problem.
+
+DEC did learn from the DATE75 problem.  The internal VMS representation
+of time works until 31-JUL-31086 02:48:05.47.  The problem with
+19-May-1997 is that some C programmers like to know the number of
+days from 1-Jan-1970 (the Unix base time).  To do this, these
+programmers used some "Delta-time" routines that are part of the
+VMS system libraries.  These delta-time routines have a maximum of 9999
+days difference built in to them, and this maximum was well documented 
+in the library manuals.  Nevertheless, application programmers
+tended to ignore this restriction and use the delta-time routines
+anyway.  Recently, some optional components of OpenVMS (such as the
+Security Server) were written in C and would suffer from the same
+problems, so this delta-time trap was more insidious than just affecting
+third-party applications.
+
+DEC, in order to step around this problem, has released patched
+delta-time routines which no longer have the original documented 9999
+day limit.  As a result, application programs written in C which
+calculate delta-times from 1-Jan-1970 will continue to work properly
+after the patch is applied, despite the fact that the application
+programmers blissfully ignored the documented restrictions.
+
+The 9999-day limit on delta times had always existed.  It's just
+that the proliferation of programs which like to know the number of
+days since the Unix base time is now the largest abuser of this limit.
+Before 19-May-1997, you'd encounter exactly the same problems if
+you tried to calculate the delta-time between any two dates more than
+9999 days apart.
+
+Tim. (shoppa@triumf.ca)
+
+

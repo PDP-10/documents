@@ -1,0 +1,39 @@
+Article 4679 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newspeer.monmouth.com!uunet!ffx.uu.net!in3.uu.net!world!weiner
+From: weiner@world.std.com (Sam Weiner)
+Subject: Re: question about autopatch tapes
+Message-ID: <F6IJKx.DLD@world.std.com>
+Date: Tue, 2 Feb 1999 06:05:21 GMT
+References: <qhd83zq7it.fsf@ruckus.brouhaha.com> <36b25f93.5680658@news.zoomnet.net>
+Organization: The World Public Access UNIX, Brookline, MA
+Lines: 25
+Xref: news3.best.com alt.sys.pdp10:4679
+
+In article <36b25f93.5680658@news.zoomnet.net>,
+Patrick Donini <pdonini@zoomnet.net> wrote:
+>On 28 Jan 1999 15:53:14 -0800, Eric Smith
+><eric-no-spam-for-me@brouhaha.com> wrote:
+
+snip...
+
+>I believe the last autopatch tapes required an unlock key to decrypt
+>the backup savesets on the autopatch tape.
+
+Actually, the last autopatch tapes weren't autopatch tapes, they were
+TSU (TOPS Software Update) tapes.  Getting the keys to the right customers
+was a bit of a pain especially since the wrong key was sent out for
+one product on its last release tape and a special tape had to be made.
+This was post TOPS-10 7.04 and TOPS-20 7.0.
+
+TSU replaced whole files instead of using SOUP/CAM/whatever to update
+sources or DDT to update object only products (e.g.  RMS or DBMS.)  Not
+only was this easier when installing the updates, it was a whole lot
+easier to create the updates (especially the DDT patches.)
+
+Sam
+
+
+
+
+

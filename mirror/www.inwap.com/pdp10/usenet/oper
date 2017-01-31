@@ -1,0 +1,106 @@
+Article 5210 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!feed.textport.net!news.stealth.net!news-east.rr.com!news.rr.com!news01.optonline.net!news02.optonline.net.POSTED!not-for-mail
+From: Arthur Krewat <krewat@bartek.dontspamme.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Creating users under tops10
+Organization: Kilonet.net
+Lines: 31
+Message-ID: <3B2972A8.DF1B92A0@bartek.dontspamme.net>
+References: <UCcW6.27920$lq1.8744835@typhoon.austin.rr.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 4.7 [en] (X11; I; SunOS 5.8 i86pc)
+X-Accept-Language: en
+Date: Fri, 15 Jun 2001 02:31:41 GMT
+NNTP-Posting-Host: 24.186.100.134
+X-Trace: news02.optonline.net 992572301 24.186.100.134 (Thu, 14 Jun 2001 22:31:41 EDT)
+NNTP-Posting-Date: Thu, 14 Jun 2001 22:31:41 EDT
+Xref: nntp1.ba.best.com alt.sys.pdp10:5210
+
+"Harris S. Newman" wrote:
+> 
+> So I created a user using react.  How do I set the search list?
+
+Hmm, I've been playing with 6.03 TOPS-10, which version are you talking
+about?
+
+In REACT under 6.03, I do this:
+
+.R REACT
+*A                 ; Read the aux accounting file.
+*I 76,5
+NUM STRS: 1
+STR NAME: DSKC
+RESRVD: 0
+FCFS: 100000
+QUOTA OUT: 100000
+STATUS BITS: 
+*W		   ; write out the file.
+*^Z
+EXIT
+
+.
+
+In 7.03 it's much different, but I believe it's still the same idea.
+Somewhere in REACT you have to tell it that you want that PPN to 
+"default" to that structure.
+
+I'd boot 7.03, but I'm in the middle with 6.03 right now... :)
+
+aak
+
+
+Article 5218 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!feed.textport.net!news.stealth.net!news-east.rr.com!news.rr.com!news01.optonline.net!news02.optonline.net.POSTED!not-for-mail
+From: Arthur Krewat <krewat@bartek.dontspamme.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Creating users under tops10
+Organization: Kilonet.net
+Lines: 31
+Message-ID: <3B29A238.C6482D42@bartek.dontspamme.net>
+References: <UCcW6.27920$lq1.8744835@typhoon.austin.rr.com> <3B2972A8.DF1B92A0@bartek.dontspamme.net> <zHfW6.65076$F6.21163@typhoon.aracnet.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 4.7 [en] (X11; I; SunOS 5.8 i86pc)
+X-Accept-Language: en
+Date: Fri, 15 Jun 2001 05:51:43 GMT
+NNTP-Posting-Host: 24.186.100.134
+X-Trace: news02.optonline.net 992584303 24.186.100.134 (Fri, 15 Jun 2001 01:51:43 EDT)
+NNTP-Posting-Date: Fri, 15 Jun 2001 01:51:43 EDT
+Xref: nntp1.ba.best.com alt.sys.pdp10:5218
+
+"Zane H. Healy" wrote:
+> 
+> >> So I created a user using react.  How do I set the search list?
+> 
+> > Hmm, I've been playing with 6.03 TOPS-10, which version are you talking
+> > about?
+> 
+> BTW, anyone know how to get around the following?  This is under 7.03.
+> 
+> .login 1,2
+> Job 2  KS10       TTY1
+> Password:
+> ?LGNMNL May not LOGIN remote
+> 
+> .KJOB
+> .
+
+.R REACT
+REACT>CHANGE [1,2
+USER>access-types
+ACCESS-TYPES>REMOTE
+ACCESS-TYPES>DONE
+USER>DONE
+REACT>^Z
+
+EXIT
+.
+
+At least, I'm theorizing, this took about 2 minutes using the ? in REACT.
+
+aak
+
+

@@ -1,0 +1,403 @@
+Article 4362 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news1.best.com!peerfeed.ncal.verio.net!news.he.net!news.pagesat.net!decwrl!pa.dec.com!nntpd.lkg.dec.com!not-for-mail
+From: nospam@zk3.dec.com (Eric Werme - replace nospam with werme)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: What was the TOPS-10 DATE75 fix?
+Date: 10 Nov 1998 02:39:24 GMT
+Organization: Digital Equipment Corporation
+Lines: 86
+Message-ID: <72890s$dft$1@nntpd.lkg.dec.com>
+References: <36444B15.2FBA1EA5@trailing-edge.com>
+Reply-To: (Replace nobody with werme) nobody@zk3.dec.com
+NNTP-Posting-Host: alingo.zk3.dec.com
+X-Newsreader: NN version 6.5.0 CURRENT #60
+Xref: news3.best.com alt.sys.pdp10:4362 alt.folklore.computers:117381
+
+Tim Shoppa <shoppa@trailing-edge.com> writes:
+
+>This format broke on 4-Jan-1975, when the date representation
+>overflowed 4095 and no longer fit in 12 bits.  I know that the
+>date was extended to 15 bits by the DATE75 patches, but I
+>don't know how these extra 3 bits fit into the TOPS-10
+>DECTape format, or if they even did make it into the DECTape
+>format spec.  Does anyone have a copy of the TOPS-10 DECTape
+>format spec that officially says where these three bits go?
+
+I don't have the official data, but I have code I used through
+1978 in my TULIP documentation.  (Tulip was a very nice I/O
+package that used user UUOs.  The instructions below that start
+with W are Tulip Write instructions):
+
+    70					;SYMBOLS WE NEED:
+    71			000000		DTA==0				;IO CHANNEL FOR DECTAPE
+    72			000100		PDLLEN==100			;LENGTH OF PUSHDOWN LIST
+    73			000200		DIRSIZ==200			;SIZE OF DTA DIRECTORY BLOCK
+    74			000144		DIRADR==^D100			;ADDRESS OF DIRECTORY BLOCK
+    75			000026		MAXFIL==^D22			;MAX # OF FILES THAT WILL FIT ON A TAPE
+    76			001102		TAPLEN==^D578			;# OF BLOCKS ON A DECTAPE
+    77			000000		DIRBYT==0			;RELATIVE ADDR OF DIRECTORY BYTE MAP (5 BIT BYTES)
+    78			000123		DIRFIL==^D83			;RELATIVE ADDR OF FIRST FILENAME
+    79			000151		DIREXT==^D105			;RELATIVE ADDR OF EXTENSION/DATE WORD
+    80			000177		DIRLBL==^D127			;RELATIVE ADDR OF LABEL WORD
+
+TULIP4 - VERSION 4(3) - PROGRAM 4 FOR TULIP MANUAL	MACRO %50(272) 04:11 13-JAN-75 PAGE 17
+EXAMPL	MAC	11-JAN-75 00:12		RIC WERME, OCTOBER 1974
+
+   562					;COLLECTED ALL THE DATA WE NEED, PRINT THE HEADER NOW
+   563						DISIX	[[SIXBIT\D&IRECTORY %#&F&REE: % BLOCKS, % FILES#!\]
+   564							 PUSHJ	P,DATTIM;PRINT DIRECTORY HEADER. FIRST DATE AND TIME
+   565							 WDEC	FILSIZ	;THEN THE FREE BLOCKS
+   566	400072'	001 10 0 00 401002'			 WDEC	FREFIL]	;AND THE FREE FILES
+   567	400073'	332 01 0 05 000177 		SKIPE	T1,DIRLBL(P1)	;DOES THIS TAPE HAVE A LABEL?
+   568						DISIX	[[SIXBIT\T&APE &ID: %#!\]
+   569	400074'	001 10 0 00 401011'			 WNAME	T1]
+   570	400075'	001 03 0 00 003212 		W2CHI	CRLF		;SEPARATE HEADER FROM DATA
+   571
+   572	400076'	200 01 0 00 000643'		MOVE	T1,FREFIL	;CHECK TO SEE IF ANY REASON TO PRINT
+   573	400077'	306 01 0 00 000026 		CAIN	T1,MAXFIL	;  DIRECTORY. SAY EMPTY IF NO FILES WRITTEN
+   574	400100'	001 10 0 00 401017'	ZERDIR:	DISIX	[CPOPJ##,,[SIXBIT\D&IRECTORY EMPTY###!\]]
+   575	400101'	201 04 0 00 000001 		MOVEI	T4,1		;MAKE INDEX INTO FILSIZ FOR BLOCKS USED
+   576									;NO NEED TO SAVE P1 NOW, USE IT AS AOBJN WORD
+   577
+   578					;NOW PRINT OUT INFO FOR EACH FILE
+   579	400102'	336 00 0 05 000123 	DIRLOP:	SKIPN	DIRFIL(P1)	;DOES THIS FILE EXIST?
+   580	400103'	254 00 0 00 400115'		JRST	DIRAOB		;NO, TRY NEXT
+   581	400104'	135 01 0 00 401020'		LDB	T1,[POINT 12,DIREXT(P1),35];GET LOW 12 BITS OF CREATION DATE
+   582	400105'	201 02 0 00 000001 		MOVEI	T2,1		;CHECK THE BYTE MAP FOR THE TOP 3 BITS
+   583	400106'	612 02 0 05 000000 		TDNE	T2,DIRBYT(P1)
+   584	400107'	435 01 0 00 010000 		IORI	T1,1B23		;BRING UPTO 1985
+   585	400110'	612 02 0 05 000026 		TDNE	T2,DIRBYT+MAXFIL(P1)
+   586	400111'	435 01 0 00 020000 		IORI	T1,1B22		;UPTO 2007
+   587	400112'	612 02 0 05 000054 		TDNE	T2,DIRBYT+<2*MAXFIL>(P1)
+   588	400113'	435 01 0 00 040000 		IORI	T1,1B21		;UPTO 2051 (FOR THE PDP-10 IN THE SMITHSONIAN)
+   589						DISIX	[[SIXBIT\%.% %  %#!\]
+   590							 WSIX	6,DIRFIL(P1);FILE
+   591							 WSIX	3,DIREXT(P1);AND EXTENSION
+   592							 WDEC	3,FILSIZ(T4);THEN LENGTH
+   593	400114'	001 10 0 00 401023'			 PUSHJ	P,DATTHN]   ;AND CREATION DATE
+   594	400115'	201 04 0 04 000001 	DIRAOB:	MOVEI	T4,1(T4)	;POINT TO NEXT FILE NUMBER
+   595	400116'	253 05 0 00 400102'		AOBJN	P1,DIRLOP	;AND LOOP FOR NEXT FILE
+   596	400117'	002 00 0 00 401030'	DIRXIT:	WSIX	[SIXBIT\##!\]	;ADD A LITTLE SPACE
+   597	400120'	263 17 0 00 000000 		POPJ	P,		;OR RETURN WHEN DONE
+
+   886					;SUBROUTINE TO PRINT EITHER CURRENT DATE (ENTER AT DATPRT) OR DATE
+   887					;PASSED IN T1 (ENTER AT DATTHN). USES T1-T3
+   888
+   889	400400'	047 01 0 00 000014 	DATPRT:	DATE	T1,		;GET TODAY'S DATE
+   890	400401'	231 01 0 00 000564 	DATTHN:	IDIVI	T1,^D<12*31>	;T1_YEAR-64
+   891	400402'	231 02 0 00 000037 		IDIVI	T2,^D<   31>	;T2_MONTH-1, T3_DAY-1
+   892	400403'	004 02 0 03 000001 		WDECI	2,1(T3)		;DAY
+   893	400404'	010 01 0 02 400447'		WNAME	MONTAB(T2)	;.MONTH.
+   894	400405'	004 00 0 01 000100 		WDECI	^D64(T1)	;AND YEAR
+   895	400406'	263 17 0 00 000000 		POPJ	P,		;AND RETURN
+
+The above should be viewed in 132 column monospace, of course....
+
+	-Ric
+--
+<>    Eric (Ric) Werme     <> The above is unlikely to contain   <>
+<>    ROT-13 addresses:    <> official claims or policies of     <>
+<>   <jrezr@mx3.qrp.pbz>   <> Compaq Computer Corp.              <>
+<> <jrezr@plorecbegny.arg> <>  http://www.cyberportal.net/werme  <>
+
+
+Article 4744 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.sys.pdp10
+Subject: Re: need the date of Day 4096
+Date: 5 Apr 1999 19:36:02 -0700
+Organization: Chez Inwap
+Message-ID: <7ebrui$g49$1@shell3.ba.best.com>
+References: <37082c39.88427826@netnews.worldnet.att.net>
+Lines: 38
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 923366169 204 inwap@206.184.139.134
+Xref: news3.best.com alt.sys.pdp10:4744
+
+In article <37082c39.88427826@netnews.worldnet.att.net>,
+David M. Razler <david.razler@worldnet.att.net> wrote:
+>
+>Exactly what day was it when the 12-bit date memory field expired requiring
+>the emergency fix?
+
+Method 1:
+  4096 divided by 31 = 132 with a remainder of 4. (item "A)
+   132 divided by 12 = 11 with a remainder of 0. (items "B" and "C")
+
+	C: year  = 11 + 1964 = 1975
+	B: month =  0 + 1 = January
+	A: day   =  4 + 1 = 5th
+ 
+Method 2:
+  4096 divided by (12*31) = 11 with a remainder of 4, therefore 11th year.
+     4 divided by 31 = 0 with a remainder of 4, therefore 1st month, 5th day.
+
+The date format was designed to be easy to determine on machine that
+had the integer divide instruction implemented in hardware.  The hardware
+that implemented LDB and DPB (load and deposit byte instructions) was
+(theoretically) optional.
+
+TOPS-20 uses a date format that allows elapsed time to be calculated
+by simply subtracting two date numbers.  The same cannot be said of the
+TOPS-10 12-bit or 15-bit date fields.
+
+Later versions of TOPS-10 used the 18+18 bit format internally, where the
+left halfword was incremented once a day, and the right half was a
+fraction of a day that was calculated once a second (but incremented by
+approximately 3 counts per second).
+
+	-Joe
+
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 4756 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!newsswitch.lcs.mit.edu!news.ultranet.com!not-for-mail
+From: "Larry S. Samberg" <larry-samberg@sonoma-systems.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: need the date of Day 4096
+Date: Sun, 11 Apr 1999 15:33:38 -0400
+Organization: Sonoma Systems
+Lines: 45
+Sender: larry@bsg-ma1-248.ix.netcom.com
+Message-ID: <7eqtej$p3f$1@antiochus.ultra.net>
+References: <37082c39.88427826@netnews.worldnet.att.net>
+	 <7eq12e$qkn$2@ligarius.ultra.net> <7eq9nv$lvs$2@hirame.wwa.com>
+	 <7eqfvd$vjc$1@antiochus.ultra.net>
+NNTP-Posting-Host: bsg-ma1-248.ix.netcom.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset="US-ASCII"
+Content-Transfer-Encoding: 7bit
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 11 Apr 1999 19:33:39 GMT
+X-Newsreader: Microsoft Outlook Express Macintosh Edition - 4.5 (0410)
+Xref: news3.best.com alt.sys.pdp10:4756
+
+Wow, what a memory. You are right, Rick did write the project plan. A name
+out of the past.
+
+But I think John was wrong. The 18+18 format was good for several hundred
+years (about 700) from 1858. So it would have done just fine for Y2K (except
+for DECtape). Also most of the routines that I remember dealt with the with
+century leapyear (or lack thereof) correctly.
+
+----------------------------------------------------
+Larry Samberg                      lsamberg@ieee.org
+Fax: 508-861-0261         larry@samberg.ultranet.com
+ICQ: 23815949
+
+
+
+----------
+In article <7eqfvd$vjc$1@antiochus.ultra.net>, jmfbahciv@aol.com wrote:
+
+
+> In article <7eq9nv$lvs$2@hirame.wwa.com>,
+>    jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) wrote:
+>>In article <37082c39.88427826@netnews.worldnet.att.net>,
+>>>   david.razler@worldnet.att.net (David M. Razler) wrote:
+>>>
+>>>Exactly what day was it when the 12-bit date memory field
+>>>expired requiring the emergency fix?
+>>
+>>January 5, 1975. Note that the original 12 bit date field
+>>has now overflowed three times; again in January, 1986,
+>>and in January, 1997. I forget the exact dates however.
+>
+> I also should have said that Rick Corbin wrote the project
+> plan (I think) and the spec.  Now that's a name out of the
+> blue.  :-)
+>
+>>
+>>I don't believe TOPS-10 will survive Y2K.
+>>
+> I don't know why.  Somebody told me that they found
+> one or two Y2K bugs but never gave me the specifics.
+> I've actually spent some mind time trying to remember.
+>
+> /BAH
+>
+> Subtract a hundred and four for e-mail.
+
+
+Article 4758 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!newsfeed.enteract.com!ix.netcom.com!netcom!alderson
+From: alderson@netcom.netcom.com (Richard M. Alderson III)
+Subject: Re: need the date of Day 4096
+In-Reply-To: jmfbahciv@aol.com's message of Sun, 11 Apr 99 14:01:09 GMT
+Message-ID: <ALDERSON.99Apr12105845@netcom.netcom.com>
+Sender: alderson@netcom.netcom.com
+Reply-To: alderson@netcom.com
+Organization: NETCOM On-line services
+References: <37082c39.88427826@netnews.worldnet.att.net> <7eq12e$qkn$2@ligarius.ultra.net>
+	<7eq9nv$lvs$2@hirame.wwa.com> <7eqfvd$vjc$1@antiochus.ultra.net>
+Date: Mon, 12 Apr 1999 17:58:45 GMT
+Lines: 20
+Xref: news3.best.com alt.sys.pdp10:4758
+
+In article <7eqfvd$vjc$1@antiochus.ultra.net> jmfbahciv@aol.com writes:
+
+>In article <7eq9nv$lvs$2@hirame.wwa.com>,
+>   jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) wrote:
+
+>>I don't believe TOPS-10 will survive Y2K.
+
+>I don't know why.  Somebody told me that they found one or two Y2K bugs but
+>never gave me the specifics.  I've actually spent some mind time trying to
+>remember.
+
+That was probably me, Barb.  The monitor itself is fine; there were several
+CUSPs that had a little problem, but they were easily enough fixed.  Since
+Tops-10 shipped with sources, anyone should be able to fix those with a
+judicious setting of the system clock.  (I didn't do the investigation, so
+I don't know which CUSPs in particular.)
+-- 
+Rich Alderson			Last LOTS Tops-20 Systems Programmer, 1984-1991
+				Current maintainer, MIT TECO EMACS (v. 170)
+last name @ XKL dot COM		Chief systems administrator, XKL LLC, 1998-now
+
+
+Article 4759 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!newsswitch.lcs.mit.edu!news.ultranet.com!d5
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: need the date of Day 4096
+Date: Mon, 12 Apr 99 22:09:08 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 29
+Message-ID: <7eu0us$rum$1@antiochus.ultra.net>
+References: <37082c39.88427826@netnews.worldnet.att.net> <7eq12e$qkn$2@ligarius.ultra.net>
+	<7eq9nv$lvs$2@hirame.wwa.com> <7eqfvd$vjc$1@antiochus.ultra.net> <ALDERSON.99Apr12105845@netcom.netcom.com>
+NNTP-Posting-Host: d5.dial-22.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 12 Apr 1999 23:51:56 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: news3.best.com alt.sys.pdp10:4759
+
+In article <ALDERSON.99Apr12105845@netcom.netcom.com>,
+   alderson@netcom.netcom.com (Richard M. Alderson III) wrote:
+>In article <7eqfvd$vjc$1@antiochus.ultra.net> jmfbahciv@aol.com writes:
+>
+>>In article <7eq9nv$lvs$2@hirame.wwa.com>,
+>>   jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) wrote:
+>
+>>>I don't believe TOPS-10 will survive Y2K.
+>
+>>I don't know why.  Somebody told me that they found one or 
+>>two Y2K bugs but never gave me the specifics.  I've actually 
+>>spent some mind time trying to
+>>remember.
+>
+>That was probably me, Barb.  The monitor itself is fine; 
+>there were several CUSPs that had a little problem, but 
+>they were easily enough fixed.  Since
+>Tops-10 shipped with sources, anyone should be able to fix those with a
+>judicious setting of the system clock.  (I didn't do the investigation, so
+>I don't know which CUSPs in particular.)
+
+All right, now I'm really curious.  $.02 says FILCOM had a problem.
+What are the other crufties?  CREF; TECO wouldn't dare.  And I bet
+the person who did the investigation didn't even touch the Customer
+Supported Tape :-).
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 4760 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!wn4feed!worldnet.att.net!wnmaster1!not-for-mail
+From: david.razler@worldnet.att.net (David M. Razler)
+Newsgroups: alt.sys.pdp10
+Subject: Re: need the date of Day 4096
+Date: Tue, 13 Apr 1999 01:24:04 GMT
+Organization: AT&T WorldNet Services
+Lines: 14
+Message-ID: <37129745.99244595@netnews.worldnet.att.net>
+References: <37082c39.88427826@netnews.worldnet.att.net> <7eq12e$qkn$2@ligarius.ultra.net> <7eq9nv$lvs$2@hirame.wwa.com> <7eqfvd$vjc$1@antiochus.ultra.net> <ALDERSON.99Apr12105845@netcom.netcom.com> <7eu0us$rum$1@antiochus.ultra.net>
+Reply-To: david.razler@worldnet.att.net
+NNTP-Posting-Host: 12.68.21.220
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: bgtnsc03.worldnet.att.net 923966677 6417 12.68.21.220 (13 Apr 1999 01:24:37 GMT)
+X-Complaints-To: abuse@worldnet.att.net
+NNTP-Posting-Date: 13 Apr 1999 01:24:37 GMT
+X-Newsreader: Forte Agent 1.5/32.452
+Xref: news3.best.com alt.sys.pdp10:4760
+
+j
+Getting back to my original question and curiosity.....
+	I seem to remember that on 1/5/75 the LIRICS KA-10 and assorted other
+KA-10s around the nation crashed because of the date overflow (as in getting
+the news from LIRICS de-facto SYSOP Bruce Maier a day later) Since Bruce seems
+to have fallen off the face of the earth along with a lot of other people
+connected with the Damm Machine (after the name of the official SYSOP) I have
+no idea whether I'm dropping bits or some PDP-10 SYSOPS did not implement the
+patches properly or never got word to...
+	Opinions, history, comments welcome
+				dmr
+
+David M. Razler
+david.razler@worldnet.att.net
+
+
+Article 4744 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.sys.pdp10
+Subject: Re: need the date of Day 4096
+Date: 5 Apr 1999 19:36:02 -0700
+Organization: Chez Inwap
+Message-ID: <7ebrui$g49$1@shell3.ba.best.com>
+References: <37082c39.88427826@netnews.worldnet.att.net>
+Lines: 38
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 923366169 204 inwap@206.184.139.134
+Xref: news3.best.com alt.sys.pdp10:4744
+
+In article <37082c39.88427826@netnews.worldnet.att.net>,
+David M. Razler <david.razler@worldnet.att.net> wrote:
+>
+>Exactly what day was it when the 12-bit date memory field expired requiring
+>the emergency fix?
+
+Method 1:
+  4096 divided by 31 = 132 with a remainder of 4. (item "A)
+   132 divided by 12 = 11 with a remainder of 0. (items "B" and "C")
+
+	C: year  = 11 + 1964 = 1975
+	B: month =  0 + 1 = January
+	A: day   =  4 + 1 = 5th
+ 
+Method 2:
+  4096 divided by (12*31) = 11 with a remainder of 4, therefore 11th year.
+     4 divided by 31 = 0 with a remainder of 4, therefore 1st month, 5th day.
+
+The date format was designed to be easy to determine on machine that
+had the integer divide instruction implemented in hardware.  The hardware
+that implemented LDB and DPB (load and deposit byte instructions) was
+(theoretically) optional.
+
+TOPS-20 uses a date format that allows elapsed time to be calculated
+by simply subtracting two date numbers.  The same cannot be said of the
+TOPS-10 12-bit or 15-bit date fields.
+
+Later versions of TOPS-10 used the 18+18 bit format internally, where the
+left halfword was incremented once a day, and the right half was a
+fraction of a day that was calculated once a second (but incremented by
+approximately 3 counts per second).
+
+	-Joe
+
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+

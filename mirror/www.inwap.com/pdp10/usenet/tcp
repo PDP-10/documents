@@ -1,0 +1,437 @@
+Article 2754 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!210.147.7.1!newsfeed.mesh.ad.jp!osa.uu.net!dfw.uu.net!ffx.uu.net!world!weiner
+From: weiner@world.std.com (Sam Weiner)
+Subject: Re: Setting up a IP connection on TOPS-20
+Message-ID: <G5wEy5.65t@world.std.com>
+Date: Thu, 21 Dec 2000 03:27:41 GMT
+References: <Pine.LNX.4.10.10012101712550.16843-100000@bony.umtec.com> <9113m0$oji$1@spies.com> <mddofyjlndh.fsf@panix2.panix.com>
+Organization: The World Public Access UNIX, Brookline, MA
+Lines: 56
+Xref: nntp1.ba.best.com alt.sys.pdp10:2754
+
+In article <mddofyjlndh.fsf@panix2.panix.com>,
+Rich Alderson  <alderson+news@panix.com> wrote:
+>aek@spies.com (Al Kossow) writes:
+>
+>> From article <Pine.LNX.4.10.10012101712550.16843-100000@bony.umtec.com>, by
+>> Daniel Seagraves <root@bony.umtec.com>:
+>
+>>> On Sun, 10 Dec 2000, Harris Newman wrote:
+>
+>>>> I'm unclear, I though I was running 6.1...not four.
+>
+>>> Dammit.  Response-before-reading again.
+>
+>>> Well, you appear to be in the same boat I am in then.  I need a monitor
+>>> that has TCP/IP and the NIA20 in it.  TOPS-20 TCPIP appears to have been a
+>>> seperate product you had to buy.
+>
+>> Correct. A tape was located last week. I'm trying to get the 7.0
+>> monitor that went with it currently.
+>
+>> I have no experience with TOPS-20, what are the files with the extension
+>> '.key' ?
+>
+>The binaries for some of the Tops-20 stuff is encrypted; the files plus the
+>*.key matching files get run through some program (hey, it's been more than 10
+>years since I had to do that) to produce the working stuff.  Sources may have
+>been treated similarly; I forget.
+
+I may be wrong but I don't think the distribution tapes were
+encrypted.  The .key files were required when updating layered
+products.  There may have been a couple which required them in
+Autopatch days.  When we went to full file replacement with
+TSU (post TOPS-10 7.04/TOPS-20 7.0, circa 1988,) .key files
+were sent out with the last set of layered product distribution
+tapes.  There were one or two products which had bad .key files
+and thus required the creation of special tapes with just the
+proper .key file.  The encryption wasn't very strong so I'd expect
+someone who knows this stuff and had the .key file, an encrypted
+update file, and the decrypted updated file could crack it with
+today's systems.  I think you are right about sources using the
+same mechanism.
+
+In case anyone is interested, most updates in Autopatch days,
+especially for layered products, involved [FIL]DDT patches of .exe
+or object modules from libraries.  Bundled products with sources
+often had the equivalent of a diff patch.
+
+Creating the DDT patches could be fun.  I got to create one for
+DBMS-20 as my first task (after finding the bug of course) at
+DEC.  It seems like it took as long to create the patch so it
+would past muster as it did to find the problem after resurrecting
+the sources and test system.  A couple of tests needed to be
+reversed so fixing the source was easy.  The patch was another
+matter :-)
+
+Sam
+
+
+Article 2351 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!newsfeed.direct.ca!look.ca!nntp2.aus1.giganews.com!nntp3.aus1.giganews.com!news6.giganews.com.POSTED!barn.net1plus.com!192.168.1.12
+From: R.J.S. <not@available.right.now>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Setting up a IP connection on TOPS-20
+Organization: Very Organized
+Message-ID: <vm483ts7eevce0d9f31t44jm3vbftcq8ge@4ax.com>
+References: <200012102209.QAA29333@blkbox.com> <Pine.LNX.4.10.10012101712550.16843-100000@bony.umtec.com>
+X-Newsreader: Forte Agent 1.8/32.548
+X-No-Archive: yes
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Original-NNTP-Posting-Host: 192.168.1.12
+X-Original-Trace: 10 Dec 2000 18:34:55 -0500, 192.168.1.12
+Lines: 22
+NNTP-Posting-Date: Sun, 10 Dec 2000 17:37:24 CST
+X-Trace: sv2-B730vu0YN6VdjCwHPfDRhIXE5h8ENSxjkUSwauNzfDnlaayxqBcvpJeBGrbvp2TTO9uoCue6eD+YCF4!h30o+iPOufjPnResflL5MX/YGB3Vq6I=
+X-Complaints-To: abuse@GigaNews.Com
+X-Abuse-Info: Please be sure to forward a copy of ALL headers
+X-Abuse-Info: Otherwise we will be unable to process your complaint properly
+Date: Sun, 10 Dec 2000 18:37:42 -0500
+Xref: nntp1.ba.best.com alt.sys.pdp10:2351
+
+On Sun, 10 Dec 2000 17:14:55 -0600, Daniel Seagraves
+<root@bony.umtec.com> wrote:
+
+>On Sun, 10 Dec 2000, Harris Newman wrote:
+>
+>> I'm unclear, I though I was running 6.1...not four.
+>
+>Dammit.  Response-before-reading again.
+>
+>Well, you appear to be in the same boat I am in then.  I need a monitor
+>that has TCP/IP and the NIA20 in it.  TOPS-20 TCPIP appears to have been a
+>seperate product you had to buy.
+>
+>By the way, you have a V6 monitor and a V5 userland, and that's bad.
+>It ate disk packs when I tried that.  (Well, CHECKD did anyway...)
+
+Yep, the AN monitor was a separate build, and a different monitor.
+Also, I think older monitors (e.g. V5 and older) didn't have NIA20
+support, only IMP support.  I don't think you are likely to find many
+IMPs (or TIPs) these days.
+
+
+
+
+Article 2327 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntp.primenet.com!nntp.gblx.net!news.maxwell.syr.edu!newsfeed.slurp.net!bony.umtec.com!root
+Newsgroups: alt.sys.pdp10
+From: Daniel Seagraves <root@bony.umtec.com>
+Subject: Re: Setting up a IP connection on TOPS-20
+In-Reply-To: <9109r6$g6k$1@nnrp1.deja.com>
+Message-ID: <Pine.LNX.4.10.10012101426340.16582-100000@bony.umtec.com>
+References: <9109r6$g6k$1@nnrp1.deja.com>
+Approved: Why bother?
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+Lines: 24
+Date: Sun, 10 Dec 2000 14:27:38 -0600
+NNTP-Posting-Host: 198.199.189.6
+X-Trace: newsfeed.slurp.net 976479693 198.199.189.6 (Sun, 10 Dec 2000 14:21:33 CDT)
+NNTP-Posting-Date: Sun, 10 Dec 2000 14:21:33 CDT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2327
+
+On Sun, 10 Dec 2000, Harris S. Newman wrote:
+
+> Ok,
+> I am running Stu's emulator.  I have a disk image which is configured
+> as follows:
+> Tops-20 Monitor 6.1(16230)-4
+> Command processor 5.1(1354)
+> 
+> When I run telnet, version 4(11) and try to connect to a site, I get:
+> The imp is dead!
+
+TOPS-20 version 4 wants an IMP for the network connection.  You need
+version 6 of TOPS-20 which has Ethernet support.  He emulates 
+the NIA20, not an IMP.
+
+"Confuse, annoy, and DEE-STROY!" -- Jet Wolf | "Nothing Happens." -- ADVENT
+"You'd be surprised what you can live through..." -- Anonymous
+"...A man can pass his family and his name down through his sons, but it's
+his honour that gets passed through his daughters.  He can see the best
+and worst of life in his girls.  A daughter is something far too precious,
+and he'll do anything to protect her."
+	-- Reichsfuehrer Siegfried Koenig, _Matrose_Mond_, David Oliver
+
+
+
+
+Article 2773 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!news-out.cwix.com!newsfeed.cwix.com!sjc-peer.news.verio.net!ord-feed.news.verio.net!news.verio.net!newsmaster.cc.columbia.edu!watsun.cc.columbia.edu!fdc
+From: fdc@watsun.cc.columbia.edu (Frank da Cruz)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Good news! TOPS-20 v4.1 booted successfully
+Date: 21 Dec 2000 15:06:00 GMT
+Organization: Columbia University
+Lines: 22
+Message-ID: <91t68o$lds$1@newsmaster.cc.columbia.edu>
+References: <fsCZ5.55241$%j3.692480@news6.giganews.com> <mddg0jj966j.fsf@panix6.panix.com> <91qh0b$iv7$1@newsmaster.cc.columbia.edu> <7xpuimmks8.fsf@ruckus.brouhaha.com>
+NNTP-Posting-Host: watsun.cc.columbia.edu
+X-Trace: newsmaster.cc.columbia.edu 977411160 21948 128.59.39.2 (21 Dec 2000 15:06:00 GMT)
+X-Complaints-To: postmaster@columbia.edu
+NNTP-Posting-Date: 21 Dec 2000 15:06:00 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2773
+
+In article <7xpuimmks8.fsf@ruckus.brouhaha.com>,
+Paul Rubin  <phr-n2000@nightsong.com> wrote:
+: fdc@watsun.cc.columbia.edu (Frank da Cruz) writes:
+: > I suppose there will be a good reason to do this once we have live
+: > emulators on the net, assuming they will be able to run TCP/IP (which
+: > appears doubtful in the TOPS-10 case and pre-6.0(?) TOPS-20).
+: 
+: There have been some TOPS-10 machines on the net.  What's the deal?
+: 
+I'm not sure that TOPS-10 ever supported TCP/IP internally.  At least
+the early versions of TOPS-10 and TOPS-20 required an outboard processor
+(ANF-10 or DN20) for this.  TOPS-20 6.0 and later, as I recall, supported
+TCP/IP through its own internal Ethernet interface (NI20).  I don't know
+if TOPS-10 ever did this.
+
+: I agree, even being able to telnet into a "serial" port would accomplish
+: most of the goals.  No need to use Kermit to transfer files.  Just ftp
+: over a magtape image and mount it ;-)
+:
+Using FTP on the Internet that isn't there?
+
+- Frank
+
+
+Article 2782 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!news-out.cwix.com!newsfeed.cwix.com!sjc-peer.news.verio.net!ord-feed.news.verio.net!news.verio.net!newsmaster.cc.columbia.edu!watsun.cc.columbia.edu!fdc
+From: fdc@watsun.cc.columbia.edu (Frank da Cruz)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Good news! TOPS-20 v4.1 booted successfully
+Date: 21 Dec 2000 16:50:02 GMT
+Organization: Columbia University
+Lines: 39
+Message-ID: <91tcbq$po9$1@newsmaster.cc.columbia.edu>
+References: <fsCZ5.55241$%j3.692480@news6.giganews.com> <7xpuimmks8.fsf@ruckus.brouhaha.com> <91t68o$lds$1@newsmaster.cc.columbia.edu> <91ta8d$v5g$1@slb7.atl.mindspring.net>
+NNTP-Posting-Host: watsun.cc.columbia.edu
+X-Trace: newsmaster.cc.columbia.edu 977417402 26377 128.59.39.2 (21 Dec 2000 16:50:02 GMT)
+X-Complaints-To: postmaster@columbia.edu
+NNTP-Posting-Date: 21 Dec 2000 16:50:02 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2782
+
+In article <91ta8d$v5g$1@slb7.atl.mindspring.net>,
+Mark Hittinger <bugs@netcom.com> wrote:
+: fdc@watsun.cc.columbia.edu (Frank da Cruz) writes:
+: >I'm not sure that TOPS-10 ever supported TCP/IP internally.  At least
+: >the early versions of TOPS-10 and TOPS-20 required an outboard processor
+: >(ANF-10 or DN20) for this.  TOPS-20 6.0 and later, as I recall, supported
+: >TCP/IP through its own internal Ethernet interface (NI20).  I don't know
+: >if TOPS-10 ever did this.
+: 
+: There was non-Digital code available in days gone by that supported the
+: "imp" arpanet front end.  Ftp, telnet etc was functional.  In those days
+: there was no DNS yet, everything was still a giant hosts.txt file.
+:
+Yes, I remember when you could type:
+
+  send somebody@?
+
+in MM and get a complete list of hostnames :-)
+
+: If we could get ahold of that code we might be able to get something barely
+: adequate in the air.  I'd bet some mil.net sites have this software sitting
+: in some secure tape vault.
+: 
+: So we'd need an "imp" emulator too :-)
+: 
+Right, kind of puts the kibosh on that idea.  Really, for TOPS-20 anyway,
+the thing to do is to get the ARPAnet monitor that used the NI.  Or, as
+somebody else suggested, and which would work for any version of TOPS-20,
+TOPS-10, TENEX, etc, would be a special Telnet server that ran a copy of
+the PDP-10 emulator underneath itself, through a PTY, in such a way that
+the OS is already running and the telnet client gets the login prompt
+(i.e. does not have to sysgen and boot the OS, etc, before logging in).
+
+I tend to think this would be a "trivial" change to the telnet server,
+which would then be assigned to a special high-numbered port.  The hard
+part, I think, would be finding a way to start the PDP-10 emulator in
+user mode at its login prompt.
+
+- Frank
+
+
+Article 2791 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news1.best.com!nntp.primenet.com!nntp.gblx.net!newsfeed.direct.ca!look.ca!cyclone-sjo1.usenetserver.com!news-out.usenetserver.com!news01.optonline.net!news02.optonline.net.POSTED!not-for-mail
+From: Arthur Krewat <krewat@bartek.dontspamme.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Good news! TOPS-20 v4.1 booted successfully
+Organization: Kilonet.net
+Lines: 41
+Message-ID: <3A424950.301C6AB5@bartek.dontspamme.net>
+References: <fsCZ5.55241$%j3.692480@news6.giganews.com> <91ta8d$v5g$1@slb7.atl.mindspring.net> <91tcbq$po9$1@newsmaster.cc.columbia.edu> <3A4239DB.463FD5C3@bartek.dontspamme.net> <91tf5c$rqf$1@newsmaster.cc.columbia.edu>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 4.7 [en] (X11; I; SunOS 5.8 i86pc)
+X-Accept-Language: en
+Date: Thu, 21 Dec 2000 18:25:36 GMT
+NNTP-Posting-Host: 167.206.68.16
+X-Trace: news02.optonline.net 977423136 167.206.68.16 (Thu, 21 Dec 2000 13:25:36 EST)
+NNTP-Posting-Date: Thu, 21 Dec 2000 13:25:36 EST
+Xref: nntp1.ba.best.com alt.sys.pdp10:2791
+
+Frank da Cruz wrote:
+> 
+> : I can write a module for the emulator that would simulate a DZ11 and be able
+> : to accept telnet's to port 2020. The emulator would be up at all times.
+> :
+> That would seem to solve the problem of not making each user sysgen and
+> start the OS.  In this case the OS is already running.  The system console
+> is the PC's actual keyboard and screen (or a window on the screen), and
+> timesharing is active.  Each user gets a session, and can see the other
+> sessions (systat, finger, talk, advise, ...).
+
+Exactly. 
+
+However, I would change the console stuff a little bit too - dump output
+to syslog, get input/output by telnetting to another port. The goal
+would be to get the emulator running totally in the background.
+
+> An interesting situation will occur when people have both UNIX and TOPS-xx
+> access on the same computer, and will want to cross-mount file systems.
+> But once it's all out in the open, that's the kind of fun they can have.
+
+Having control of what a DZ11 "is" has it's advantages:
+
+- Start Kermit under TOPS-10, connect to a "TTY" on the "DZ11" and you
+  get a UNIX prompt. Or, a kermit session in SERVER mode which would let
+  you do FTP-type things. Or just a plain outbound telnet session to 
+  wherever you want.
+
+- Going the other way, you could use ANOTHER port and give the incoming
+  connection a Kermit session in server mode. Again, FTP-type things.
+  Plus, the advantage that you could do this from a remote machine on
+  the Internet. Shameless Kermit plug :)
+
+Isn't it fun deciding what to do with software that's 20 years old,
+running on an emulator that isn't even released yet?
+
+I hope the GCC port happens... that would help getting a newer
+version of Kermit running. Frank, care to do the port of C-Kermit
+to the PDP-10?
+
+art k.
+
+
+Article 2821 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntp.primenet.com!nntp.gblx.net!newsfeed.cwix.com!sjc-peer.news.verio.net!ord-feed.news.verio.net!news.verio.net!newsmaster.cc.columbia.edu!watsun.cc.columbia.edu!fdc
+From: fdc@watsun.cc.columbia.edu (Frank da Cruz)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Good news! TOPS-20 v4.1 booted successfully
+Date: 22 Dec 2000 15:04:06 GMT
+Organization: Columbia University
+Lines: 60
+Message-ID: <91vqh6$8d4$1@newsmaster.cc.columbia.edu>
+References: <fsCZ5.55241$%j3.692480@news6.giganews.com> <91tf5c$rqf$1@newsmaster.cc.columbia.edu> <3A424950.301C6AB5@bartek.dontspamme.net> <91venl$8ut$2@bob.news.rcn.net>
+NNTP-Posting-Host: watsun.cc.columbia.edu
+X-Trace: newsmaster.cc.columbia.edu 977497446 8612 128.59.39.2 (22 Dec 2000 15:04:06 GMT)
+X-Complaints-To: postmaster@columbia.edu
+NNTP-Posting-Date: 22 Dec 2000 15:04:06 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2821
+
+In article <91venl$8ut$2@bob.news.rcn.net>,  <jmfbahciv@aol.com> wrote:
+: Why can't you just treat the kermit as just another node to the
+: -10 system?  I don't know if it's possible with the -20 stuff
+: since they were always hamstrung with not wanting to do an ANF-10
+: style implementation.  And, if the kermit node was treated via
+: the ethernet, both -10 and -20 have code that already know how
+: to talk that protocol.
+: 
+Kermit is a regular user program like TECO, that reads and writes the
+job's controlling TTY, but unlike TECO.  But rather than reading
+editing commands and printing their results, Kermit is reading and
+writing file-transfer protocol packets.
+
+Meanwhile, you are accessing the PDP-10 (or emulator) from (say) a
+VT100 emulator on a PC.  When you want to transfer a file from the PC
+to the PDP-10, you start Kermit on the 10, tell it to receive,
+"escape back" to the PC (e.g. by typing Alt-x), and tell it to send the
+file.  And vice versa in the other direction.
+
+I think we're complicating matters unnecessarily (and perhaps fatally)
+by postulating yet another outboard processor for networking.  Maybe
+I'm not understanding something, but it seems awfully complicated to
+require the PC to simultaneously emulate two or three different
+computers of different architectures, plus the varied and sundry
+connections and protocols between them ("ring the doorbell", etc),
+than to emulate just one computer, especially on a general-purpose
+timesharing system like UNIX, where process scheduling might get in
+the way of the timing constraints in those protocols.
+
+Implementing ARPAnet protocols for the entire PDP-10 line would be a
+big job, since there were so many ways to do it -- outboard
+processors, host-to-IMP protocols, host-to-ANF10 protocols, etc etc.
+TOPS-20 v6 and later could do it all internally, which is much
+simpler.  But as I recall, in all cases the ARPAnet monitor was a
+"layered product", not part of the base system.
+
+I think the choice of KS10 for the first emulation was wise because
+it minimizes the multiple emulations problem -- I don't recall for
+sure, but I don't think the KS10 had a PDP-11 front end for terminals...
+But the KL sure did.  And then think of ITS with its SUPDUP front
+ends, and the crazy setup they had at CMU, with a hierarchical
+network of PDP-11s all over campus running a home-grown OS (as I
+recall) that multiplexed and compressed terminal sessions.
+
+A serial-port-driver to Telnet interface, however, gets bare-bones
+Internet connectivity for all of these at once (I think).  Maybe it
+won't let you make, e.g., Telnet or FTP connections OUT OF the 10, but
+you can make Telnet connections INTO the 10, and you can transfer
+files into and out of the 10 over these connections.  Later, if
+somebody finds a way to implement ARPAnet protocols for some
+particular combination of OS version and outboard processor, then you
+get all the rest -- FTP, Telnet, Finger, etc, initiated FROM the 10,
+plus email, bboard, etc.
+
+Actually, the serial-port/telnet emulator *could* let you make
+connections out of the 10 with Kermit, if it came with a Telnet client
+as well as a server, since Kermit-10 and Kermit-20 both let you dial
+out from a serial port.
+
+- Frank
+
+
+Article 3527 of alt.sys.pdp10:
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Kermit (Was: Barb, DSKB is not in catalog!)
+References: <3A85706B.B4A96DC3@nospam.nospam> <963uq7$b9s$1@spies.com> <9643f0$ohe$1@newsmaster.cc.columbia.edu> <uitmdafwq.fsf@nonews.net> <96e538$d0h$1@newsmaster.cc.columbia.edu> <B6B15121.11E13%Mark.Garrett@wedontwantyourspam.com.au> <87hf1w4uwg.fsf@prep.synonet.com>
+X-Disclaimer: Everything I write is false.
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 15 Feb 2001 17:50:23 -0800
+Message-ID: <qhd7cjs8f4.fsf@ruckus.brouhaha.com>
+Lines: 15
+User-Agent: Gnus/5.0807 (Gnus v5.8.7) Emacs/20.7
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 15 Feb 2001 17:50:33 -0800, ruckus.brouhaha.com
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!enews.sgi.com!news.spies.com!ruckus.brouhaha.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:3527
+
+Paul Repacholi <prep@prep.synonet.com> writes:
+> The CI-20 was a CI-780 with differnet paddle cards. Don't know
+> about the NI-20.
+
+There's a lot more difference than "paddle cards".  There's a set of
+boards that installs in the place of an RH20, and also requires a few
+backplane changes.
+
+Those boards attach by a cable to the box that has the CI20 guts;
+that box may be the same as the CI780 box.  But the interface boards
+are *much* different.
+
+The NIA20 (AKA NI20) uses the same interface boards as a CI20 attached
+to a different box.  I think some of the boards in the box are even the
+same, but I don't have detailed hardware docs or prints.
+
+

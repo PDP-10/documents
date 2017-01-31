@@ -1,0 +1,95 @@
+Article 1491 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!news.texas.net!imci2!newsfeed.internetmci.com!in1.uu.net!news1.digital.com!decwrl!amd!netcomsv!uu4news.netcom.com!netcomsv!uu3news.netcom.com!ix.netcom.com!netnews
+From: jcgreen@ix.netcom.com(John C Green Jr )
+Newsgroups: alt.sys.pdp10
+Subject: Working for PDP-10 Engineering in '68 ... a personal account
+Date: 2 Jan 1996 20:45:29 GMT
+Organization: Netcom
+Lines: 53
+Message-ID: <4cc5h9$btj@ixnews2.ix.netcom.com>
+NNTP-Posting-Host: ix-sj23-21.ix.netcom.com
+X-NETCOM-Date: Tue Jan 02 12:45:29 PM PST 1996
+
+I graduated in JUN68 with BSEE and joined PDP-10 Engineering
+(rather than being one of 300 engineers designing the IBM
+System/360 Model 195 which was my only other computer
+offer).
+
+There were two major transitions going on then:
+* Digital was growing from small to large
+* The industry was going from discrete components to ICs
+
+I was the 11th engineer in PDP-10 Engineering--each was
+given lots of responsibility. My first assignment was as
+Project Engineer of the RP10--a PDP-10 disk controller for
+RP-02 (Digital's name for OEMed Memorex 660--IBM 2314 type)
+25 MB disks. The RP10 listed for $29K, the RP-02 for $25K.
+They ended up selling 300 RP10s and 1500 RP-02s for a list
+of $8.7M of controllers + $37.5M of disks which I felt was
+quite a bit of responsibility when June grads were making
+$6,800 to $8,600 (actual numbers from my school's placement
+office for jobs accepted in JUN68).
+
+The next Spring I saw a job posting. The PDP-11 product line
+(no product had yet been announced) was looking for a JUN69
+graduate to design a disk controller to the same RP-02. Only
+the candidate was to be a Junior Engineer understudying a
+Senior Engineer for his first project. Digital had made the
+transition from small to large. New hire June grads were in
+training for the first year.
+
+All my Senior labs were with ICs. When I started at Digital
+I asked for an approved parts list. My manager said, "We
+don't use ICs. The last time we evaluated them they didn't
+have enough noise rejection." (Of course not if you take
+every pin of every chip and bring it out to a Gardner-Denver
+wirewrap backplane 15.5 inches wide and 21.0 inches high or
+bigger!) As a result the RP-10 was 6' high, 19" wide, had
+144 lights, and almost 500 discrete component circuit cards!
+
+Anyway I'm only 49yo, but I designed a major piece of
+digital logic for a major computer vendor with discrete
+components.
+
+Back in '69 when the RP10 and RP-02 first shipped the disk
+was $25K/25MB or $1000./MB. A recent Fry's ad in the San
+Jose Mercury offers a Conner IDE hard drive at $249./1.6GB
+or $0.156/MB (over 6400 times cheaper)--but that's another
+story.
+
+36-bits or none at all! :-)
+- - -
+Internet Marketing and Business Development
+21483 Old Mine Rd             (408)353-1870
+Los Gatos CA 95030           JohnCGreen@aol.com
+
+
+
+Article 1500 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!news.texas.net!news.sprintlink.net!newsfeed.internetmci.com!swrinde!sgigate.sgi.com!genmagic!news.spies.com!goonsquad.spies.com!not-for-mail
+From: aek@goonsquad.spies.com (Al Kossow)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Working for PDP-10 Engineering in '68 ... a personal account
+Date: 4 Jan 1996 10:40:03 -0800
+Organization: Internet Wiretap
+Lines: 14
+Message-ID: <4ch6u3$agc@goonsquad.spies.com>
+References: <4cfi93$52o@ss2.digex.net>
+NNTP-Posting-Host: goonsquad.spies.com
+
+From article <4cfi93$52o@ss2.digex.net>, by doug@ss2.digex.net (Doug Humphrey):
+> As someone who had RP02's and an RP10 in his dining room for a
+> while, I would like to say thanks!  Your work with Flip Chips is 
+> appreciated.
+> 
+
+In the late 70's my desk was about 10 feet from an RP02.  If you 
+recall, it had a mechanical cyl lock that would set when it was on
+cyl (tick).
+
+tick, tick tick, tickticktickticktickticktick     arggggggggg!
+
+..thing drove me nuts
+
+
+

@@ -1,0 +1,1009 @@
+Article 1377 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!newsfeed.internetmci.com!in2.uu.net!news.iii.net!iii2.iii.net!not-for-mail
+From: sam@iii2.iii.net (Sam Weiner)
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-20 Documentation Sets
+Date: 22 Nov 1995 23:06:18 -0500
+Organization: What me?
+Lines: 43
+Message-ID: <490rvq$8u3@iii2.iii.net>
+References: <48jdfo$oqu@doctor.Tymnet.COM> <1995Nov18.180511.22161@zippy.dct.ac.uk>
+NNTP-Posting-Host: iii2.iii.net
+
+In article <1995Nov18.180511.22161@zippy.dct.ac.uk> ccdarg@zippy.dct.ac.uk (Alan Greig) writes:
+:In article <48jdfo$oqu@doctor.Tymnet.COM>, carl@doctor.Tymnet.COM (Carl A Baltrunas) writes:
+: 
+[deleted -smw]
+:> Apparently (I'm told) that DEC no longer has any TOPS-20 materials
+:> and may have destroyed whatever stock they had in their warehouses.
+:> If anyone knows this to be true or untrue and can locate a set or
+:> two we would appreciate it greatly.
+:
+:I can perhaps believe that they no longer have hard copies but surely
+:the online sources must still exist somewhere. I'm fairly sure we 
+:had a complete set of TOPS20 V5 Docs in lineprinter format from an
+:early ship field test to support an RP07 and TU78. Also several of
+:the manuals (including Monitor Calls) were available in INFO format
+:as of around TOPS20 4A.
+
+As I mentioned in mail to Carl, the last few updates to TOPS-10 7.04 and
+TOPS-20 7.0 included online manuals for newly updated volumes (basically,
+the core OS manuals since layered products were in bug fix only mode
+by then.)  I've since found my list of the TOPS-20 manuals delivered
+with TSU 4:
+
+        File name               Manual title (as best I can recall)
+        ----------              -----------------------------------
+        COMMANDS                Commands Reference Manual
+        DDT44C                  DDT
+        JSYS_REF                JSYS Reference Manual
+        JSYS_USERS              JSYS Users Guide
+        MGR_GUIDE               System Manager's Guide
+        MODELB_INS              Installation Guide for KL Model B Systems
+        MONITOR_TABLES          Monitor Tables
+        OPRCOM                  OPR Commands
+        OP_GUIDE                Operator's Guide
+        SIX12                   SIX12 Manual (BLISS debugger)
+        TSU                     TOPS Software Update Manual
+        USERS                   User's Guide
+        USER_UTILS              Utilities Guide (I think)
+
+All with .MEM and in line printer format.  I think VT100 formatted
+versions (filename_VT.MEM) made it onto the tape as well.
+
+Sam
+
+
+
+Article 1380 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!newsfeed.internetmci.com!in1.uu.net!world!weiner
+From: weiner@world.std.com (Sam Weiner)
+Subject: Re: TOPS-20 Documentation Sets
+Message-ID: <DIK6K7.FyC@world.std.com>
+Organization: The World Public Access UNIX, Brookline, MA
+References: <48jdfo$oqu@doctor.Tymnet.COM> <48tlfm$9u8@gap.cco.caltech.edu>
+Date: Fri, 24 Nov 1995 17:43:19 GMT
+Lines: 36
+
+In article <48tlfm$9u8@gap.cco.caltech.edu>,
+Tim Shoppa <shoppa@altair.krl.caltech.edu> wrote:
+>In article <48jdfo$oqu@doctor.Tymnet.COM>,
+>Carl A Baltrunas <carl@doctor.Tymnet.COM> wrote:
+>>
+>>Apparently (I'm told) that DEC no longer has any TOPS-20 materials
+>>and may have destroyed whatever stock they had in their warehouses.
+>>If anyone knows this to be true or untrue and can locate a set or
+>>two we would appreciate it greatly.
+>
+>That might be true, but the part numbers for the TOPS-20AN distribution
+>and media are still listed in the SPD (21.30.04) at gatekeeper.dec.com.
+>Sometimes, armed with the appropriate part number, you can convince
+>the folks at DECdirect to sell you something which all other branches
+>of the company insist doesn't exist.  Of course, just because you
+>have a part number doesn't mean it exists, either!  [There's a wonderful
+>story I was told about someone ordering a replacement caster for a
+>BA123 "world box"; a few months after the order was placed, it came
+>back, with a standard form saying "part number <whatever> not available
+>individually; order next higher subassembly: BA123"!!!]
+>
+>If it helps any, here are the numbers listed in that SPD:
+>
+>PRODUCT NAME: TOPS-20AN, Version 5.1                          SPD 21.30.04 
+[SPD text with lots of extra ^Ms deleted -smw]
+
+Ooops, another SPD that got through the purge.  All 36 bit related SPDs
+were supposed to have been deleted by the end of 1993 when all corporate
+support ended.
+
+While knowing a specific part number and the magic phone number to call will
+sometimes get you a part that DECdirect doesn't know about, I doubt it would
+help here.  Calling Publishing and Circulation Services (or whatever they
+are called these days) might.
+
+Sam
+
+
+Article 5464 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!enews.sgi.com!paloalto-snf1.gtei.net!news.gtei.net!forum.apple.com!news.apple.com!il0502a-dhcp38.apple.com!user
+From: aek@spies.com (Al Kossow)
+Newsgroups: alt.sys.pdp10
+Subject: complete DTE-20 manual
+Date: Fri, 29 Jun 2001 22:37:20 -0700
+Organization: Apple Computer, Inc.
+Lines: 1
+Message-ID: <aek-2906012237200001@il0502a-dhcp38.apple.com>
+NNTP-Posting-Host: il0502a-dhcp38.apple.com
+X-Trace: news.apple.com 993879440 29075 17.205.24.38 (30 Jun 2001 05:37:20 GMT)
+X-Complaints-To: usenet@news.apple.com
+NNTP-Posting-Date: 30 Jun 2001 05:37:20 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:5464
+
+http://www.spies.com/aek/pdf/dec/pdp10/ek-dte20-ud-003.pdf
+
+
+Article: 15323 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!newsfeed.mathworks.com!news.voicenet.com!feed2.news.rcn.net!feed1.news.rcn.net!rcn!209-122-232-156
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: Unpacking my 15-year old office boxes generates memory refreshes
+Date: Mon, 21 Jan 02 13:43:06 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 163
+Message-ID: <a2hdh8$ro9$1@bob.news.rcn.net>
+References: <9u0b4u$bb4$1@bob.news.rcn.net> <9ud33k$p76$5@bob.news.rcn.net> <uk7w5y4qe.fsf@earthlink.net> <9ulats$a43$4@bob.news.rcn.net> <4otnu9.682.ln@teabag.cbhnet> <9unvmv$4ca$4@bob.news.rcn.net> <9uvtc5$5n3$1@bob.news.rcn.net> <3C1355B4.2C7F6772@trailing-edge.com> <9v25i9$a73$1@bob.news.rcn.net> <9v56r7$dqd$6@bob.news.rcn.net> <9v5ajf$3vi$1@bob.news.rcn.net> <a1cg51$9mi$3@bob.news.rcn.net>
+X-Trace: UmFuZG9tSVaR1m03a4vOnXpdB6EaA+0j2TG1MSPEyBWrJCD9s8iM7O/lKRtVuTWP
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 21 Jan 2002 15:53:12 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: dfw-artgen.news.verio.net alt.sys.pdp10:15323 alt.folklore.computers:79236
+
+Following is an itemized list of the little pieces I've found
+in my boxes.  If there is any more info you need let me know
+here since I have no e-mail access yet (AOL disconnected their
+local phone number).
+
+/BAH
+
+
+[Beginning of list]
+
+(3) decsystem10 System Reference Card (Including the DECsystem-1070)
+1974
+Part #:  DEC-10-XSRCA-B-D
+One in perfect condition
+One ruined by mouse nibbles but I finally found my truth table cheat 
+sheet!!
+One marked up to reflect the KA instructions replaced by KASER.
+
+DECsystem-10 and DECSYSTEM-20 KL SYSTEM Reference Card
+1981
+Part #:  EK-OKL10-RC-001
+
+pdp11 Programming Card for Family of PDP-11 Computers
+July 1975
+No part # (that I can see). 
+Card must have belonged to a Henry Yang.
+
+Two  BLISS pocket guides (this is not for BLISS-10)
+1983    mentions BLISS Version 4
+Part #:  AV-AT45A-TK
+
+decsystem-10 COBOL Pocket Reference Version 6 COBOL
+No date                             Version 7 Libol
+Part #:  DEC-10-OCRCA-A-D
+
+TOPS-20 COBOL Language Reference Card (Mouse ate a corner)
+March 1984
+Part #:  AV-N421A-TM
+
+(2) TOPS-10/TOPS-20 COBOL-74 Language Reference Card
+October 1981
+Part #:  AV-L854A-TK
+
+TOPS-10 Commands Quick Reference Guide
+October 1981
+Part #:  AV-K729A-TB
+
+TOPS-20 Commands Reference Card
+December 1982
+Part #:  AV-L704B-TM
+
+TOPS-20 Commands Reference Card
+September 1985
+Part #:  AV-FP79A-TM
+
+DBMS-20 DDL Programmers's Reference Card   (fanfold card)
+1981
+Part #:  AV-J879A-TM
+
+DBMS-20 DML Programmer's Reference Card (fanfold card)
+1981
+Part #:  AV-H230A-TM
+
+DBMS-20 DDL Programmer's Reference Card (booklet)
+June 1984
+Part #:  AV-J879B-TM
+
+DBMS-20 DML Programmer's Reference Card (booklet)
+June 1984
+Part #:  AV-H230B-TM
+
+DBMS-20 Utilities Reference Manual (booklet)
+June 1984
+Part #:  AV-Z784A-TM
+
+TOPS-10/TOPS-20 DDT Reference Card
+April 1982
+Part #:  AV-M272A-TK
+
+TOPS-20 DIGITAL Standard Runoff Version 2.0 Pocket
+        Reference Guide
+December 1982
+Part #:  AV-N390A-TM
+
+Ethernet Communications Server 
+         Terminal Server User's Reference Card
+1984
+Part #:  AV-X021A-TK
+
+TOPS-20/TOPS-20 FORTRAN Reference Card  (Mouse-nibbled)
+March 1983
+Part #:  AV-P529A-TK
+
+(2) TOPS-10/TOPS-20 FORTRAN Pocket Guide  (One is mouse-nibbled)
+May 1985
+Part #:  AA-P529B-TK
+
+TOPS-10/TOPS-20 FORTRAN Pocket Guide  (Mouse-nibbled)
+February 1987
+Part #:  AA-P529C-TK
+
+decsystem10 Monitor Calls Pocket Reference Guide (6.02 Monitor)
+1976
+Part #:  DEC-10-OMCRB-C-D
+
+KL10 maintenance Handbook (may have belonged once to Phil Taylor)
+1977
+Part #:  EK-KL10-HB-001
+
+DIGITAL Networking Pocket Guide  (mentions 10 operating systems)
+July 1983
+Part #:  AV-N956A-TK
+
+decsystem10 Operating System Commands Reference Card
+            (6.01/5.07 Monitor)
+1974
+Part #:  DEC-10-OTSMB-B-D
+
+TOPS-10/TOPS-20 OPR Commands Reference Card
+January 1983
+Part #:  AV-P380A-TK
+
+TOPS-20 PASCAL Reference Card
+September 1983
+Part #:  AV-L316A-TM
+
+RSX-11M Mini-Reference Version 4.0 (5x7-1/2" ring binder)
+1982
+Part #:  AV-5570D-TC
+May have once been owned by Leapline (Steve?)
+
+TOPS-10 SOS Reference Card
+1978
+Part #:  AV-D578A-TB
+
+(2) TOPS-10/TOPS-20 SPEAR Reference Card
+1985
+Part #:  AV-M752B-TK
+
+TECO Pocket Reference List DECsystem-10
+     Computation Center The University of Texas at Austin
+May 1977
+Part #:  ???? (may be CCRL-7)
+
+TECO pocket guide (mentions 4 OSes)
+1978
+Part #:  AV-D530A-TK
+May have once been owned by P. Taylor
+
+TOPS-20 TV Reference Card (Mouse-nibbled)
+December 1979
+Part #:  AV-J341A-TM
+
+TOPS-10/TOPS-20/VMS Operator's Reference Card
+September 1985
+Part #:  AV-DB38A-TK
+
+[end of list]
+
+
+
+
+Subtract a hundred and four for e-mail.
+
+
+Article: 15500 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!crtntx1-snh1.gtei.net!cpk-news-hub1.bbnplanet.com!news.gtei.net!feed2.news.rcn.net!feed1.news.rcn.net!rcn!207-172-97-23
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: Unpacking my 15-year old office boxes generates memory refreshes
+Date: Sat, 26 Jan 02 12:41:35 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 84
+Message-ID: <a2ufr9$qbb$2@bob.news.rcn.net>
+References: <9u0b4u$bb4$1@bob.news.rcn.net> <9ud33k$p76$5@bob.news.rcn.net> <uk7w5y4qe.fsf@earthlink.net> <9ulats$a43$4@bob.news.rcn.net> <4otnu9.682.ln@teabag.cbhnet> <9unvmv$4ca$4@bob.news.rcn.net> <9uvtc5$5n3$1@bob.news.rcn.net> <3C1355B4.2C7F6772@trailing-edge.com> <9v25i9$a73$1@bob.news.rcn.net> <9v56r7$dqd$6@bob.news.rcn.net> <9v5ajf$3vi$1@bob.news.rcn.net> <a1cg51$9mi$3@bob.news.rcn.net> <a2hdh8$ro9$1@bob.news.rcn.net>
+X-Trace: UmFuZG9tSVbtj8PanEOgu9vdxGaIl9mOoPvs9rT1vv1qH8J5/bmD3EmUlEIBxEk4
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 26 Jan 2002 14:52:25 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: dfw-artgen.news.verio.net alt.sys.pdp10:15500 alt.folklore.computers:79720
+
+I was able to spend some time yesterday on those boxes.  Here's
+what I found.
+
+Apparently, sometimes writers would give me a complimentary copy 
+of the manuals I typed in.  Following is a list of a couple of
+them.
+
+decsystem10 system40 users guide  
+
+    You know how old that is because of the lack of capital 
+    letters and dashes.  System 40 used to be the name of 
+    the in-house timesharing system and group.  (This
+    was before the KA CPU #40 was transferred to the PDP-10 
+    development group.  The system resided in 5-B (Building 5,
+    the basement) which was one of the spookiest walks of the
+    Mill; I did that walk just about every day.
+
+    This document was aimed at PDP-11 programming types who
+    weren't used to doing their work on-line.  It has keyboard
+    layout diagrams and one section tells them what to do
+    if the system crashes and there's no operator :-)))).  I'd
+    forgotten such things happened; I must be completely PC'ed these
+    days.
+
+The cover says:
+pdp11 PIP, File Utility Package, programmer's manual
+
+The cover page says;
+PDP-11 FILE UTILITY PACKAGE (PIP) FOR THE DISK OPERATING SYSTEM
+
+Part #:  DEC-11-PIDB-D
+
+   It has a closeup, but incomplete picture of some flavor
+   of PDP-11 (purple) front panel.  The copyright date is
+   1971.  And by gosh, by golly, it gives a list of the
+   PDP-11 Disk Operating System software.  The first item
+   is DOS Monitor.
+
+
+
+pipc users manual   white cover with black printing and OS/8
+                    printing date is 1973
+Part #:  DEC-S8-OPIPB-A-D
+
+   The c in pipc is for cassettes.  The intro recommends the
+   document CASSETTE PROGRAMMING SYSTEM USER'S MANUAL.  It
+   also mentions the CAPS-8 system.  So that's two OSes on
+   the PDP-8:  OS/8 and CAPS-8.
+
+
+
+project leader's notebook  
+
+This has no part number as it was an internal DEC document.
+The date is September 1972 and is probably the first stab
+at creating the Project Notebook that was used to guide
+project planning from inception to ship.  Dave Stone was
+the guy behind this notebook creation.  Just before he
+died he gave a talk to high level managers and consultants
+informing them that the underlying goal of the notebeook
+was to delay product ships.  And nobody asked him why that
+was a goal.  One of the examples included in this manual
+is the "Project Plan For The Multi-User Option for DOS-11"
+I don't know if this stuff is even of interest to the 
+computing biz history.
+
+There's another item of real interest here but I'll separate
+that one out into another post.
+
+/BAH
+
+
+
+
+
+
+
+
+
+
+
+
+
+Subtract a hundred and four for e-mail.
+
+
+Article: 16343 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!feed2.news.rcn.net!feed1.news.rcn.net!rcn!207-172-97-159
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: Unpacking my 15-year old office boxes generates memory refreshes
+Date: Tue, 26 Feb 02 12:11:15 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 25
+Message-ID: <a5g5vt$qep$1@bob.news.rcn.net>
+References: <9u0b4u$bb4$1@bob.news.rcn.net> <9ud33k$p76$5@bob.news.rcn.net> <uk7w5y4qe.fsf@earthlink.net> <9ulats$a43$4@bob.news.rcn.net> <4otnu9.682.ln@teabag.cbhnet> <9unvmv$4ca$4@bob.news.rcn.net> <9uvtc5$5n3$1@bob.news.rcn.net> <3C1355B4.2C7F6772@trailing-edge.com> <9v25i9$a73$1@bob.news.rcn.net> <9v56r7$dqd$6@bob.news.rcn.net> <9v5ajf$3vi$1@bob.news.rcn.net> <a1cg51$9mi$3@bob.news.rcn.net> <a2hdh8$ro9$1@bob.news.rcn.net> <a2ufr9$qbb$2@bob.news.rcn.net> <a33hqs$4f8$1@bob.news.rcn.net>
+X-Trace: UmFuZG9tSVb4Rc3YQT4H7J9qaHS+alufnnDlhuodYoypf31TZPAyDhd/m0ZWN86m
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 26 Feb 2002 14:27:09 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: dfw-artgen alt.sys.pdp10:16343 alt.folklore.computers:82880
+
+I worked on my boxes some more yesterday.  
+
+[extremely awed emoticon]  I have a lewiney.
+
+I also found a yellow phone book.  I don't know what to do
+with this.  It's not going to given away on a FCFS basis
+but I don't have a criteria of who should get it.
+
+I found three redentions of my calling cards.  Are these of
+any interest?  What do you guys do with your old ones?
+
+I also found a 1980 Datamation that had Alan Wilson's paper
+on TOPS-10 SMP in it.  I don't know if this magazine is of
+any interest.
+
+There's more.  But I'll talk about it later.
+
+Note that nobody has said anything about the document lists
+that I've posted twice.
+
+/BAH
+
+
+
+Subtract a hundred and four for e-mail.
+
+
+Article: 16348 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!feed2.news.rcn.net!feed1.news.rcn.net!rcn!207-172-245-31
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: Unpacking my 15-year old office boxes generates memory refreshes
+Date: Wed, 27 Feb 02 08:16:17 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 49
+Message-ID: <a5icjl$72f$1@bob.news.rcn.net>
+References: <9v25i9$a73$1@bob.news.rcn.net> <9v56r7$dqd$6@bob.news.rcn.net> <9v5ajf$3vi$1@bob.news.rcn.net> <a1cg51$9mi$3@bob.news.rcn.net> <a2hdh8$ro9$1@bob.news.rcn.net> <a2ufr9$qbb$2@bob.news.rcn.net> <a33hqs$4f8$1@bob.news.rcn.net> <a5g5vt$qep$1@bob.news.rcn.net> <3c7befc3_2@news.iglou.com>
+X-Trace: UmFuZG9tSVZxV7O6YRQ8GSrIWD5gcebFRQJyj8IOsg3Ethhu8sOuP7ICwi5YKysn
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 27 Feb 2002 10:32:21 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: dfw-artgen alt.sys.pdp10:16348 alt.folklore.computers:82951
+
+In article <3c7befc3_2@news.iglou.com>,
+   "Douglas H. Quebbeman" <dougq@ixnayamspayiglou.com> wrote:
+><jmfbahciv@aol.com> wrote in message news:a5g5vt$qep$1@bob.news.rcn.net...
+>> I worked on my boxes some more yesterday.  
+>> 
+>> [extremely awed emoticon]  I have a lewiney.
+>
+>Ok, while I know about the yellow phone book, this 
+>one's a mystery...
+
+Oh, sorry.  Don Lewine had a nervous habit of taking a piece
+of wire and winding it into a coil.  One could always tell
+when he'd been around because he usually left them behind.
+One day we found one in the back room of the Marketing machine
+and couldn't figure out why he had been there.
+
+The wire would always have a coil at the bottom (I'm having trouble
+describing this) with an end sticking up.  Then somebody would 
+add a triangular shaped piece of paper and stick that on top
+of the protruding wire end.  
+
+>
+>> I also found a yellow phone book.  I don't know what to do
+>> with this.  It's not going to given away on a FCFS basis
+>> but I don't have a criteria of who should get it.
+>
+>I vote it go to the person most likely to get it scanned 
+>and online, if voting's in the forecast...
+
+This hasn't been scanned?  I've also got the next edition of
+the phone book (but it was blue and white) so it was no longer
+called a phone book.
+>
+>> There's more.  But I'll talk about it later.
+>> 
+>> Note that nobody has said anything about the document lists
+>> that I've posted twice.
+>
+>We're in awe!
+
+Awe doesn't get the stuff distributed ;-).
+I am not looking forward to working on the one box that has
+my files in it.  I have no idea what might be important or
+of interest.  In my mind, everything is of interest, but that's
+because of the associated memories :-).
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article: 16351 of alt.sys.pdp10
+From: aek@spies.com (Al Kossow)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: Unpacking my 15-year old office boxes generates memory refreshes
+Date: 27 Feb 2002 09:18:52 -0800
+Organization: Spies In The Wire
+Lines: 13
+Message-ID: <a5j4ds$e4u$1@spies.com>
+References: <0b1j5a.tv2.ln@escape.shannon.net>
+NNTP-Posting-Host: spies.com
+X-Trace: 27 Feb 2002 09:19:50 -0800, spies.com
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!lon1-news.nildram.net!news.gradwell.net!news.kjsl.com!news.spies.com!localhost!not-for-mail
+Xref: dfw-artgen alt.sys.pdp10:16351 alt.folklore.computers:82990
+
+From article <0b1j5a.tv2.ln@escape.shannon.net>, by shannon@news.widomaker.com (Charles Shannon Hendrix):
+> I was interested, but I was expecting some discussion of the best
+> formats to convert these into.
+> 
+
+1 bit per pixel 400bpi Group 4 FAX compressed TIFFs are a good place to start.
+
+> I'd like to just have them as part of my collection, but I thought the
+> idea was to convert them to an electronic format.  I suggested something
+> like SGML, nroff, or TeX but never got a response.
+
+Probably because no one would have enough time to do it.
+
+
+
+Article: 16387 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!cyclone2.usenetserver.com!usenetserver.com!feed.cgocable.net!newsfeed-tor.nnrp.ca!newsfeed-tor.nnrp.ca!teleglobe.net!teleglobe.net!66.185.86.143.MISMATCH!news03.bloor.is!news1.bloor.is.POSTED!12dc6cf53ab2750!not-for-mail
+From: "Don Chiasson" <don_chiasson@notmail.com>
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+References: <a5nrfn$n1u$3@bob.news.rcn.net> <a5o0gu$enr$1@spies.com> <a5o1l7$bk7$3@bob.news.rcn.net> <1by9hcl3eq.fsf@cs.nmsu.edu>
+Subject: Re: Unpacking my 15-year old office boxes generates memory refreshes
+Lines: 30
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Newsreader: Microsoft Outlook Express 5.50.4807.1700
+X-MimeOLE: Produced By Microsoft MimeOLE V5.50.4807.1700
+Message-ID: <SjVf8.5052$635.1674@news1.bloor.is>
+Date: Sat, 02 Mar 2002 00:48:50 GMT
+NNTP-Posting-Host: 24.43.220.117
+X-Complaints-To: abuse@rogers.com
+X-Trace: news1.bloor.is 1015030130 24.43.220.117 (Fri, 01 Mar 2002 19:48:50 EST)
+NNTP-Posting-Date: Fri, 01 Mar 2002 19:48:50 EST
+Xref: dfw-artgen alt.sys.pdp10:16387 alt.folklore.computers:83190
+
+
+"Joe Pfeiffer" <pfeiffer@cs.nmsu.edu> wrote in message
+news:1by9hcl3eq.fsf@cs.nmsu.edu...
+> jmfbahciv@aol.com writes:
+> >
+> > Isn't it a matter of mapping a defined colored pixel pattern to
+> > an ASCII code?
+<<snip>>
+> The upshot is that, on good clean text a good OCR system can get
+> something like 99% accuracy -- which means one letter out of every
+> hundred is wrong.  Looking at old listings, it's going to be worse.
+> And if you *really* want to preserve exactly the original information,
+> OCR systems will tend to make mistakes like fixing some of the
+> original typos while introducing new ones of their own...
+
+I recently had to run a ten year old program for which the source files
+were lost, only the listings from a report were available. I scanned
+in thirty five pages of program, but it took nearly two months to
+get it going. This was FORTRAN where variables do not have to be
+declared, so misspelled variables were simply accepted. (Inserting
+IMPLICIT NONE helped a lot.) Most common errors were confusion
+between 1) zero,  and oh; and 2) one, lower case ell, and upper
+case eye. Single quote marks often disappeared (or appeared).
+Spacing was inexact. Not the same as simple text, but much work.
+                    Don
+e-mail: it's not not, it's hot.
+
+
+
+
+
+
+Article: 16395 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newsfeed.cwix.com!wn2feed!wn3feed!worldnet.att.net!198.6.0.7!uunet!ash.uu.net!spool0901.news.uu.net!spool0900.news.uu.net!reader0901.news.uu.net!not-for-mail
+Message-ID: <3C808F91.ED30479@trailing-edge.com>
+Date: Sat, 02 Mar 2002 08:38:41 -0400
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Organization: Trailing Edge Technology
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.2     AlphaServer 1200 5/533 4MB)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: Unpacking my 15-year old office boxes generates memory refreshes
+References: <0b1j5a.tv2.ln@escape.shannon.net> <a5l228$hl0$2@bob.news.rcn.net> <r96m5a.9ps.ln@escape.shannon.net> <aek-2802021634220001@il0502a-dhcp188.apple.com> <a5ot91$qa$1@i4got.pechter.dyndns.org> <a5qeeb$17a$4@bob.news.rcn.net>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 39
+NNTP-Posting-Host: 63.73.218.130
+X-Trace: 1015076322 reader1.ash.ops.us.uu.net 8684 63.73.218.130
+Xref: dfw-artgen alt.sys.pdp10:16395 alt.folklore.computers:83216
+
+jmfbahciv@aol.com wrote:
+> Try it.  I understand that Tim has the doc tape that was distributed
+> (FINALLY!).  They should have the original *.RNO sources.  They
+> might have been called *.RNM (M for manual).
+
+Actually, it's been in the archive for at least a year :-).
+
+The latest doc tape is 
+
+  Documentation Update Files
+      for TOPS-10 V7.04
+           DOCC
+       30-Nov-1990
+
+It has the following as *.MEM (line-printer-formatted) documents:
+
+TOPS-10 Crash Analysis Guide (15-Nov-90)
+TOPS-10 Operating Systems Commands Manual (13-Nov-90)
+TOPS-10 DDT Manual (15-Nov-90)
+TOPS-10 Monitor Calls Manual (2 vols) (23-Jul-90)
+TOPS-10 Monitor Tables Description (August 89)
+TOPS-10 Operator's Command Language Reference Manual (Sep-90)
+TOPS-10 Operator's Guide (Sep-90)
+TOPS-10 Software Installation Guide (Dec-90)
+TOPS-10 Stopcode Specification (Jun-90)
+TOPS-10/TOPS-20 Software Update User's Guide (Feb-90)
+TOPS-10 User Utilities Manual (Dec-90)
+
+All up for browsing (your choice of "with line-printer to HTML"
+or "without-line-printer to HTML") at
+
+  http://test-pdp-10.trailing-edge.com/tops10v704_docc/index.html
+
+Now *some* earlier versions of these manuals are available as
+*.RNO's on other tapes in the archives.  While I agree that it
+would be good to have everything as *.RNO too, I'm quite happy that
+these documents are available in any format.
+
+Tim.
+
+
+Article: 16398 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newsfeed.cwix.com!wn2feed!wn3feed!worldnet.att.net!198.6.0.7!uunet!ash.uu.net!spool0900.news.uu.net!reader0901.news.uu.net!not-for-mail
+Message-ID: <3C809AC7.5FABB61F@trailing-edge.com>
+Date: Sat, 02 Mar 2002 09:26:31 -0400
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Organization: Trailing Edge Technology
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.2     AlphaServer 1200 5/533 4MB)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: Unpacking my 15-year old office boxes generates memory refreshes
+References: <0b1j5a.tv2.ln@escape.shannon.net> <a5l228$hl0$2@bob.news.rcn.net> <r96m5a.9ps.ln@escape.shannon.net> <aek-2802021634220001@il0502a-dhcp188.apple.com> <a5ot91$qa$1@i4got.pechter.dyndns.org> <a5qeeb$17a$4@bob.news.rcn.net> <3C808F91.ED30479@trailing-edge.com> <a5qlar$pl6$2@bob.news.rcn.net>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 14
+NNTP-Posting-Host: 63.73.218.130
+X-Trace: 1015079192 reader1.ash.ops.us.uu.net 8684 63.73.218.130
+Xref: dfw-artgen alt.sys.pdp10:16398 alt.folklore.computers:83220
+
+jmfbahciv@aol.com wrote:
+> It occurred to me that I didn't give a general file spec that
+> would capture most of the RUNOFF source files.   *.RN?  should
+> get everything.
+
+There are 919 files in the archive matching *.RN? (and presumably
+mostly runoff source), and 416 matching *.MEM (presumably line-printer
+docs.)  There are 1968 *.DOC's (again, mostly line-printer docs.)
+
+One of the archive features currently under development is
+search-by-filename-with-wildcards-and-return-result-sorted-by-date.
+Implemented with BerkeleyDB under Perl, of course :-).
+
+Tim.
+
+
+Article: 16396 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!dfw-peer!news.verio.net!newspump.sol.net!news-out.visi.com!hermes.visi.com!uunet!ash.uu.net!spool0900.news.uu.net!reader0901.news.uu.net!not-for-mail
+Message-ID: <3C80903D.49CBF5BE@trailing-edge.com>
+Date: Sat, 02 Mar 2002 08:41:33 -0400
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Organization: Trailing Edge Technology
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.2     AlphaServer 1200 5/533 4MB)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: Unpacking my 15-year old office boxes generates memory refreshes
+References: <0b1j5a.tv2.ln@escape.shannon.net> <a5l228$hl0$2@bob.news.rcn.net> <r96m5a.9ps.ln@escape.shannon.net> <aek-2802021634220001@il0502a-dhcp188.apple.com> <a5ot91$qa$1@i4got.pechter.dyndns.org> <a5qeeb$17a$4@bob.news.rcn.net> <3C808F91.ED30479@trailing-edge.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 17
+NNTP-Posting-Host: 63.73.218.130
+X-Trace: 1015076494 reader1.ash.ops.us.uu.net 8684 63.73.218.130
+Xref: dfw-artgen alt.sys.pdp10:16396 alt.folklore.computers:83217
+
+Tim Shoppa wrote:
+> All up for browsing (your choice of "with line-printer to HTML"
+> or "without-line-printer to HTML") at
+> 
+>   http://test-pdp-10.trailing-edge.com/tops10v704_docc/index.html
+
+Whoops - remove the "test-" from the hostname to get the
+official archive site.  The "test-" prefix takes you to my experimental
+site, which in this case happens to be pretty close to the
+official site, but is likely to change radically on my slightest
+whim as I play with new indexing methods.
+
+So the real, unlikely to disappear or change soon URL is
+
+  http://pdp-10.trailing-edge.com/tops10v704_docc/index.html
+
+Tim.
+
+
+Article: 16413 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!feed2.news.rcn.net!feed1.news.rcn.net!rcn!207-172-216-165
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: Unpacking my 15-year old office boxes generates memory refreshes
+Date: Sun, 03 Mar 02 09:23:25 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 36
+Message-ID: <a5t22r$cko$5@bob.news.rcn.net>
+References: <0b1j5a.tv2.ln@escape.shannon.net> <a5l228$hl0$2@bob.news.rcn.net> <r96m5a.9ps.ln@escape.shannon.net> <aek-2802021634220001@il0502a-dhcp188.apple.com> <a5ot91$qa$1@i4got.pechter.dyndns.org> <a5qeeb$17a$4@bob.news.rcn.net> <3C808F91.ED30479@trailing-edge.com> <3C817830.54779C24@ev1.net>
+X-Trace: UmFuZG9tSVYAIOuB2ShpT+MsCCZBJMbo8KTq60QNxI384ejZzLCnKKHMFOx5PTvS
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 3 Mar 2002 11:40:11 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: dfw-artgen alt.sys.pdp10:16413 alt.folklore.computers:83239
+
+In article <3C817830.54779C24@ev1.net>,
+   Charles Richmond <richmond@ev1.net> wrote:
+>Tim Shoppa wrote:
+>> 
+>>      [snip...]     [snip...]     [snip...]
+>>
+>> Now *some* earlier versions of these manuals are available as
+>> *.RNO's on other tapes in the archives.  While I agree that it
+>> would be good to have everything as *.RNO too, I'm quite happy that
+>> these documents are available in any format.
+>> 
+>Is there a print "filter" available to take the RUNOFF printer
+>output and convert it to Acrobat (.pdf) files??? If so, this
+>might work better for many people. I can handle Acrobat format,
+>but I have *no* way to format RUNOFF or groff documents.
+>
+Heh.  I got a strange burst of energy yesterday, took a TOPS-20
+commands card, and a TeX manual (from a very nice man who went
+shopping for me) and tried to figure out what kinds of TECO
+macroes would be needed to convert a RUNOFF format to a TeX
+format.  I was reminded why I hated Knuth's work; it is very clear
+that he's a compiler thinker with delusions of professorism.  I'm
+also too used to the way WE documented our stuff.  We did not play
+fucking guessing games with the reader.  
+
+Anyway.  I can (sort of) reproduce some of these cards using
+RUNOFF (but not any of the system reference cards can be done),
+but I can't do the art work with it.  
+
+It was a very nice review of all the frustrations I experienced
+when I was doing all of that DOC preparation work; RUNOFF did
+tie my thumbs to the bottom of the keyboard.
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article: 16422 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newsfeed.cwix.com!newsfeed.icl.net!diablo.netcom.net.uk!netcom.net.uk!diablo.theplanet.net!diablo.theplanet.net!news.theplanet.net!bilbo!not-for-mail
+From: alan.nospam@glaramara.freeserve.co.uk (Alan J. Wylie)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: Unpacking my 15-year old office boxes generates memory refreshes
+Date: 03 Mar 2002 19:51:26 +0000
+Organization: very little
+Lines: 19
+Message-ID: <wgd6ylfn0h.fsf@nospam.glaramara.freeserve.co.uk>
+References: <0b1j5a.tv2.ln@escape.shannon.net> <a5l228$hl0$2@bob.news.rcn.net> <r96m5a.9ps.ln@escape.shannon.net> <aek-2802021634220001@il0502a-dhcp188.apple.com> <a5ot91$qa$1@i4got.pechter.dyndns.org> <a5qeeb$17a$4@bob.news.rcn.net> <3C808F91.ED30479@trailing-edge.com> <3C817830.54779C24@ev1.net>
+NNTP-Posting-Host: modem-1027.orangutan.dialup.pol.co.uk
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Trace: news8.svr.pol.co.uk 1015185423 26579 217.135.228.3 (3 Mar 2002 19:57:03 GMT)
+NNTP-Posting-Date: 3 Mar 2002 19:57:03 GMT
+X-Complaints-To: abuse@theplanet.net
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.1
+Xref: dfw-artgen alt.sys.pdp10:16422 alt.folklore.computers:83248
+
+On Sat, 02 Mar 2002 23:11:10 GMT, Charles Richmond <richmond@ev1.net> said:
+
+> Is there a print "filter" available to take the RUNOFF printer
+> output and convert it to Acrobat (.pdf) files??? If so, this might
+> work better for many people. I can handle Acrobat format, but I have
+> *no* way to format RUNOFF or groff documents.
+
+http://www.ibiblio.org/pub/packages/TeX/support/rnototex/
+
+Might be a start. Written in VAX Pascal.
+
+It's a long time since I used it, but IIRC it worked OK for me
+(though I did have access to VAXEN in those days).
+
+-- 
+Alan J. Wylie                        http://www.glaramara.freeserve.co.uk/
+"Perfection [in design] is achieved not when there is nothing left to add,
+but rather when there is nothing left to take away."
+  Antoine de Saint-Exupery
+
+
+Article: 15286 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen.news.verio.net!iad-peer.news.verio.net!news.verio.net!news.tele.dk!small.news.tele.dk!64.152.100.70!peer1-sjc1.usenetserver.com!usenetserver.com!e420r-atl1.usenetserver.com.POSTED!not-for-mail
+From: "Zane H. Healy" <healyzh@shell1.aracnet.com>
+Subject: PDP-10 Algol manual online
+Newsgroups: alt.sys.pdp10
+Organization: Aracnet
+User-Agent: tin/1.4.4-20000803 ("Vet for the Insane") (UNIX) (Linux/2.2.19 (i686))
+Lines: 13
+Message-ID: <IWH18.107$h31.23265@e420r-atl1.usenetserver.com>
+X-Complaints-To: abuse@usenetserver.com
+X-Abuse-Info: Please be sure to forward a copy of ALL headers
+X-Abuse-Info: Otherwise we will be unable to process your complaint properly.
+NNTP-Posting-Date: Thu, 17 Jan 2002 17:07:36 EST
+Date: Thu, 17 Jan 2002 22:07:36 GMT
+Xref: dfw-artgen.news.verio.net alt.sys.pdp10:15286
+
+Thanks to the efforts of Ronald Tatum working from a very bad copy, the
+PDP-10 ALGOL Programmer's Reference Manual from the late 60's or early 70's
+is now online at the PDP-10 Emulation Webpage.
+
+	http://www.aracnet.com/~healyzh/pdp10emu.html
+
+It is in seven parts with a errata page where Ronald Tatum did his best to
+figure out what some of the 'smudges' on his copy said.  Unfortunatly
+apparently whoever copied this back around '74 or earlier didn't consider 
+the page that would have dated the manual worth copying.
+
+			Zane
+
+
+
+
+Article: 16003 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!crtntx1-snh1.gtei.net!cambridge1-snf1.gtei.net!news.gtei.net!newstransit.mitre.org!news.tufts.edu!logbridge.uoregon.edu!arclight.uoregon.edu!enews.sgi.com!harbinger.cc.monash.edu.au!bunyip.cc.uq.edu.au!not-for-mail
+From: Wilber Williams <W.Williams@its.uq.edu.au>
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 Algol manual online
+Date: Wed, 06 Feb 2002 10:58:30 +1000
+Organization: The University of Queensland
+Lines: 37
+Message-ID: <3C607FB6.6588CB06@its.uq.edu.au>
+References: <IWH18.107$h31.23265@e420r-atl1.usenetserver.com> <3C4752C8.59C7E12A@bartek.dontspamme.net> <lcof4u01u5k9co42o8c3b60b4k0entavo6@4ax.com> <2CX18.1289$h31.320833@e420r-atl1.usenetserver.com> <a29ql5$1e0m$1@news.louisville.edu> <3C4EBAFD.D601C52D@its.uq.edu.au>
+NNTP-Posting-Host: chook.cc.uq.edu.au
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: bunyip.cc.uq.edu.au 1012957245 10222 130.102.128.100 (6 Feb 2002 01:00:45 GMT)
+X-Complaints-To: news@uq.edu.au
+NNTP-Posting-Date: 6 Feb 2002 01:00:45 GMT
+X-Mailer: Mozilla 4.78 [en] (Win98; U)
+X-Accept-Language: en
+Xref: dfw-artgen.news.verio.net alt.sys.pdp10:16003
+
+... First pass of the manual is available from -
+http://chook.cc.uq.edu.au/DEC-10-KRZB-D%20DECsystem10%20Mathematical%20Languages%20Handbook.pdf
+
+Wilber
+
+Wilber Williams wrote:
+> 
+> I still have my "Mathematical Languages Handbook" here, with
+> Fortran4/Basic/Algol, I'll try and scan it in sometime soon.
+> 
+> Wilber
+> 
+> Calvin Miracle wrote:
+> >
+> > "Zane H. Healy" wrote:
+> > > I'd say whatever can be found should be scanned!  I for one would love to
+> > > see the BASIC booklet!
+> >
+> > I agree with Zane!  Hell, I did my physics homework last semester
+> > in TOPS-10 Basic... Someday I hope to see the documentation for all
+> > the TOPS-10 programming languages fully restored (VAX as well,
+> > but I cannot mention that on this newsgroup).
+> >
+> > Peace.
+> >
+> > -- Calvin Miracle
+> >    University of Louisville Libraries
+
+-- 
+Wilber
+Associate Director, Networks And Design Services
++----------------------------------------------------------------------+
+|Wilber WILLIAMS                          w.williams@its.uq.edu.au     |
+|                                         Telephone :  +61 7 3365 4232 |
+|ITS The University of Queensland         Facsimile :  +61 7 3365 7539 |
+|Brisbane Qld 4072  AUSTRALIA             Mobile    :  +61 412 210 063 |
++----------------------------------------------------------------------+
+
+
+Article: 15317 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!newsfeed.mathworks.com!wn3feed!wn4feed!worldnet.att.net!198.6.0.7!uunet!ash.uu.net!spool0900.news.uu.net!reader0901.news.uu.net!not-for-mail
+Message-ID: <3C4A7DF8.2AEC4BD7@trailing-edge.com>
+Date: Sun, 20 Jan 2002 08:21:12 -0400
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Organization: Trailing Edge Technology
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.2     AlphaServer 1200 5/533 4MB)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: PDP-10 Archive migration plan
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 76
+NNTP-Posting-Host: 63.73.218.130
+X-Trace: 1011532885 reader1.ash.ops.us.uu.net 29227 63.73.218.130
+Xref: dfw-artgen.news.verio.net alt.sys.pdp10:15317 alt.folklore.computers:79140
+
+As announced over a month ago, I am migrating the PDP-10 archive 
+
+  http://pdp-10.trailing-edge.com/
+
+from the large, heavy, power-hungry VMSCluster to a small,
+lightweight, and efficient linux PC.
+
+Ignore the relation to the VMS vs Unix vs PDP-10 thread that has
+been taking up so much space in this newsgroup.  The main reason
+for this migration is nothing more than power efficiency - I can
+keep a little PC (drawing less than 50 Watts) up for hours on a
+cheap UPS, while keeping the older cluster up for more than a few
+minutes on a big UPS is a hassle.
+
+Not only will the webserver and files reside on a different machine,
+but there will also be a number of other changes:
+
+1.  No longer will *.TPC (DECUS TPC-style, blocks are preceded by 16-
+ bit block length) tape archives be listed.  The archive of tape images
+ will be offered solely as as *.tap (emulator-style, blocks are
+ preceded *and* followed by their 32-bit block length) images.
+
+  Internally I will continue to use *.TPC tape archives for some
+ purposes.  But my impression is that the emulator community is
+ much better served by the *.tap style images.  If anyone disagrees
+ with me, speak up!
+
+2.  The compression method for tape images will change as well:
+ Instead of gzipped (*.tap.gz), they will now be compressed with
+ bzip2 and filenames will be of the form *.tap.bz2.  Bzip2 offers
+ significantly better compression (10-20%) on these images, and
+ it adds up when there are many thousands of megabytes of them.
+
+  More bzip2 informattion is available at
+
+   http://sources.redhat.com/bzip2/
+
+3.  The extracted files will now be prepared using the "backup10"
+ and "read20" programs, which I have been patching up over the
+ past month to the point that I am very happy with their capabilities.
+ My patched versions of these very useful tools will be made available
+ shortly.
+
+4.  The web pages that index into the archives will be more CSS
+ (style-sheet) oriented and less table-oriented.  I aim to make the
+ resulting pages easily viewed on both graphical *and* text-based
+ browsers.  At the same time, I will also be making use of
+ server-side includes to make web site maintenance easier for me.
+ (Read that as: if you point out an error on the home page, I hope
+ to be able to fix it more quickly than the couple of months it
+ now takes me to get around to it!)
+
+5.  A site search engine will allow searching of the extracted files
+ quickly and efficiently.
+
+6.  An index of scanned and line-printer documents will eventually
+ happen.
+
+Many of the above elements can be seen already at the "test site",
+
+ http://new-pdp-10.trailing-edge.com/
+
+but not all the above elements have yet been combined (for example,
+as of Sunday morning the test site still uses tables extensively.)
+
+The actual switchover will occur early in the morning of
+21-Jan-2002 EST.  The old archive will remain up and going even
+after the switchover at
+
+  http://old-pdp-10.trailing-edge.com/
+
+for at least a few weeks, as I perfect the redirects and rewrites
+of URL's.  Besides, if I shut the old cluster down at this time of
+year the basement would get too chilly :-).
+
+Tim. (shoppa@trailing-edge.com)
+
+
+

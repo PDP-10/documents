@@ -1,0 +1,165 @@
+Article: 21016 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!dfw-peer!news.verio.net!newsfeed1.easynews.com!easynews.com!easynews!sjc72.webusenet.com!sjc70.webusenet.com!news.webusenet.com!cyclone.bc.net!logbridge.uoregon.edu!tethys.csu.net!pln-w!spln!dex!extra.newsguy.com!newsp.newsguy.com!not-for-mail
+From: "Zane H. Healy" <healyzh@shell1.aracnet.com>
+Newsgroups: alt.sys.pdp10,alt.sys.pdp11,vmsnet.pdp-11,comp.os.rsts,comp.os.vms
+Subject: Re: PDP-11 OS Release Dates
+Date: 12 Jul 2003 00:57:00 GMT
+Organization: Aracnet
+Lines: 23
+Message-ID: <benmcs028j6@enews2.newsguy.com>
+References: <behgbr047t@enews4.newsguy.com> <behogu$cbo$1@aton.pcde.inka.de> <bei5u10pva@enews1.newsguy.com> <bekbut$3m2$1@aton.pcde.inka.de>
+NNTP-Posting-Host: p-812.newsdawg.com
+User-Agent: tin/1.4.4-20000803 ("Vet for the Insane") (UNIX) (Linux/2.2.22 (i686))
+Xref: dfw-artgen alt.sys.pdp10:21016 alt.sys.pdp11:8043 vmsnet.pdp-11:22306 comp.os.rsts:756 comp.os.vms:188982
+
+In vmsnet.pdp-11 Dennis Grevenstein <dennis@pcde.inka.de> wrote:
+> In alt.sys.pdp11 healyzh@noaracnetspam.com wrote:
+>> 
+>> Is OS-11 related to RT-11?  I think this is the first I've heard of it.
+>  
+> It's mentioned in some RT-11 guide I have here.
+> I don't know it myself.
+
+I just found the following post from Sept. 2002 from Tim Shoppa:
+"The RT-11 Historical Overview states:
+
+  The year 1971 was an exciting time...A popular operating system
+  for the PDP-8, called OS/8, was the design model for the new PDP-11
+  operating system, tentatively called OS-11...
+
+  ...in the fall of 1972...the groundwork was laid to make OS-11
+  compatible with OS/8 and TOPS-10...
+
+  OS-11 was renamed first to RTPS-11 (Real-Time Programming System),
+  then to RT-11 (Real Time).  Version 1 of RT-11 was completed in the
+  fall of 1973."
+
+			Zane
+
+
+Article: 21005 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newsfeed.icl.net!newsfeed.fjserv.net!feed.news.nacamar.de!news.belwue.de!news.uni-stuttgart.de!rz.uni-karlsruhe.de!inka.de!aton!not-for-mail
+From: Dennis Grevenstein <dennis@pcde.inka.de>
+Newsgroups: alt.sys.pdp10,alt.sys.pdp11,vmsnet.pdp-11,comp.os.rsts,comp.os.vms
+Subject: Re: PDP-11 OS Release Dates
+Date: Wed, 9 Jul 2003 18:56:30 +0000 (UTC)
+Organization: insane in the mainframe
+Lines: 29
+Message-ID: <behogu$cbo$1@aton.pcde.inka.de>
+References: <behgbr047t@enews4.newsguy.com>
+NNTP-Posting-Host: audrey.pcde.inka.de
+X-Trace: aton.pcde.inka.de 1057776990 12664 192.168.2.10 (9 Jul 2003 18:56:30 GMT)
+X-Complaints-To: usenet@aton.pcde.inka.de
+NNTP-Posting-Date: Wed, 9 Jul 2003 18:56:30 +0000 (UTC)
+User-Agent: tin/1.5.18-20030602 ("Darts") (UNIX) (Darwin/6.6 (Power Macintosh))
+Xref: dfw-artgen alt.sys.pdp10:21005 alt.sys.pdp11:8010 vmsnet.pdp-11:22273 comp.os.rsts:744 comp.os.vms:188763
+
+In alt.sys.pdp11 Zane H. Healy <healyzh@shell1.aracnet.com> wrote:
+> 
+> I'm looking for release dates for the various PDP-11 OS's.  For example for
+> RT-11:
+> 
+> RT-11 V4 was February 21st, 1980
+> RT-11 V5 was March 12th, 1983
+> RT-11 V5.6 was 1992
+> RT-11 V5.7 was October, 29th, 1998
+ 
+I've got a book here which says:
+
+OS-11		1972
+RT11 V1		1973
+RT11 V2		1974
+RT11 V2C	1976
+RT11 V3		1977
+RT11 V5.1	1984
+RT11 V5.2	1985
+RT11 V5.3	1986
+RT11 V5.4	1987
+
+mfg
+Dennis
+
+-- 
+The long journey to world domination begins with a single step.
+
+                                                         Illiad
+
+
+Article: 21023 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newsfeed.vmunix.org!peer02.cox.net!peer01.cox.net!cox.net!feed2.news.rcn.net!feed1.news.rcn.net!rcn!not-for-mail
+From: Glenn Everhart <Everhart-nospam@gce.com>
+Newsgroups: alt.sys.pdp10,alt.sys.pdp11,comp.os.vms
+Subject: Re: PDP-11 OS Release Dates
+Date: Sat, 12 Jul 2003 16:23:59 -0400
+Lines: 56
+Message-ID: <bepocl$m92$1@bob.news.rcn.net>
+References: <behgbr047t@enews4.newsguy.com> <behogu$cbo$1@aton.pcde.inka.de> <bei5u10pva@enews1.newsguy.com> <bekbut$3m2$1@aton.pcde.inka.de> <110720032007475862%elliott@yrl.co.uk> <N4EbaxEWIIox@elias.decus.ch>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Trace: UmFuZG9tSVaOT+HaYlmGkEgK6DFTBPls/U91i9K7DflMiWuW3Ktv3L4ARcJlo4hj
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 12 Jul 2003 19:43:17 GMT
+In-Reply-To:  <N4EbaxEWIIox@elias.decus.ch>
+X-Accept-Language:  en-us, en
+User-Agent:  Mozilla/5.0 (Windows; U; Windows NT 5.0; en-US; rv:1.4) Gecko/20030624
+Xref: dfw-artgen alt.sys.pdp10:21023 alt.sys.pdp11:8063 comp.os.vms:189020
+
+I seem to recall some discussions of an "OS-11" code name inside DEC
+fpr RT11, which was initially often thought of and spoken of as
+"OS-8 with the interrupts on".
+
+DOS-11 existed from the earliest pdp11s,  starting maybe 1971 or so
+and by 1976 it was up to V10, used a variant of the RSX11D taskbuilder
+as its linker, and had a fair bit of software in the DECUS library to
+do interesting stuff with it. It was used to boot early RSTS and some 
+other pdp11 OSs and its internals had somewhat in common with RSX11C and 
+later RSX11B. (RSX11A was an entirely different animal.)
+The main problem DOS had was that it used .read and .write calls for 
+most of its I/O. While its low level I/O was reasonably fast, .read and 
+.write did at least scores if not hundreds of instructions per byte in 
+formatting and checking for all the funny options those services had. As 
+a result when RT11 came along, and had apps do their own I/O, it looked 
+blindingly faster. A decent record system in DOS would of course have 
+equalized this.
+
+I sometimes think of RMS when recalling this.
+
+Glenn Everhart
+
+
+Paul Sture wrote:
+> In article <110720032007475862%elliott@yrl.co.uk>, Elliott Roper <elliott@yrl.co.uk> writes:
+> 
+>>In article <bekbut$3m2$1@aton.pcde.inka.de>, Dennis Grevenstein
+>><dennis@pcde.inka.de> wrote:
+>>
+>>
+>>>In alt.sys.pdp11 healyzh@noaracnetspam.com wrote:
+>>>
+>>>>Is OS-11 related to RT-11?  I think this is the first I've heard of it.
+>>>
+>>> 
+>>>It's mentioned in some RT-11 guide I have here.
+>>>I don't know it myself.
+>>
+>>It has been a long time, so I might be wrong. ISTR there was not an
+>>OS-11 but there was a DOS-11 in the very early PDP-11 days. There were
+>>remnants of it in the RSTS CIL.
+>>
+>>Yep. I found this on Deja-Google from 1994
+>>
+>>http://www.google.com/groups?q=DOS-11&start=10&hl=en&lr=&ie=UTF-8&safe=o
+>>ff&selm=940927100650.62%40arisia.gce.com&rnum=13
+>>
+>>If Everhart said it, it is right.
+>>
+>>Show complete thread when you get there. Some famous names are still
+>>around here.
+> 
+> 
+> Thanks for that link. It brought back fond memories of RT-11, including
+> ones of RSX feeling tardy at times in contrast :-)
+
+
+

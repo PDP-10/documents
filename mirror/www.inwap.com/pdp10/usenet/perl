@@ -1,0 +1,35 @@
+Article 4841 of alt.sys.pdp10:
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Path: news3.best.com!news1.best.com!su-news-hub1.bbnplanet.com!news.gtei.net!nntp.primenet.com!ix.netcom.com!netcom19!alderson
+From: alderson@netcom19.netcom.com (Richard M. Alderson III)
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+In-Reply-To: cdu@jawa.'s message of 26 Apr 1999 02:42:39 GMT
+Message-ID: <ALDERSON.99Apr26161028@netcom19.netcom.com>
+Sender: alderson@netcom19.netcom.com
+Reply-To: alderson@netcom.com
+Organization: NETCOM On-line services
+References: <371be3e4.0@newsfeed.one.net> <7fri4v$3eq@weyl.math.psu.edu>
+	<8LoU2.21349$tY1.13078@wbnws01.ne.mediaone.net>
+	<87hfq5dd5j.fsf@banet.net> <7g0jqv$fbb$1@pravda.ucr.edu>
+Date: Mon, 26 Apr 1999 23:10:28 GMT
+Lines: 16
+Xref: news3.best.com alt.folklore.computers:128903 alt.sys.pdp10:4841
+
+In article <7g0jqv$fbb$1@pravda.ucr.edu> cdu@jawa. (chris ulrich) writes:
+
+>  Okay, to make this post slightly on-topic:
+>  how hard would it be to write/run X clients on a pdp-10 OS? 
+
+It took Dick Helliwell most of the summer, 1993, to port X clients to Tops-20
+on the KL (in anticipation of having them available on the Toad-1).
+
+It required that he first make Perl run on Tops-20; he did a presentation on
+the latter at the May, 1994, DECUS Symposia in New Orleans (L&T SIG, since
+there was no longer a Large Systems or Site/Management SIG to host it), and fix
+some problems--or create workarounds--in the C compiler and libraries.
+-- 
+Rich Alderson			Last LOTS Tops-20 Systems Programmer, 1984-1991
+				Current maintainer, MIT TECO EMACS (v. 170)
+last name @ XKL dot COM		Chief systems administrator, XKL LLC, 1998-now
+
+

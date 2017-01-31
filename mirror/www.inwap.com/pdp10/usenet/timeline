@@ -1,0 +1,302 @@
+Article 3230 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!infeed1.internetmci.com!newsfeed.internetmci.com!199.60.229.5!feta.direct.ca!newsfeed.direct.ca!newsfeed.gte.net!news.gte.net!not-for-mail
+From: "al bissell" <allenb1@gte.net>
+Newsgroups: alt.sys.pdp10,alt.folklore.computers,comp.sys.dec.micro
+Subject: Re: Dec 40th anniversary web pages
+Date: 29 Aug 1997 18:48:01 GMT
+Organization: gte.net
+Lines: 11
+Message-ID: <5u75h1$obf$1@gte2.gte.net>
+References: <5tfkn8$8uh@src-news.pa.dec.com> <5tsm8d$sa0$1@newbabylon.rs.itd.umich.edu> <3402352B.76BC@cisco.com> <5u50u7$iiu$1@shell3.ba.best.com> <5u6ebi$8es$1@kirin.wwa.com>
+NNTP-Posting-Host: npr004109.gte.net
+X-Auth: 54195b50065395cf42468411
+X-Newsreader: Microsoft Internet News 4.70.1161
+Xref: nntp1.ba.best.com alt.sys.pdp10:3230 alt.folklore.computers:91300 comp.sys.dec.micro:3250
+
+Top row , third for left - Possibly Alan Kotok ?
+
+>       Can anyone identify the KS-10 developers in the pictur?
+> 
+> I checked out the picture, and although I recognize most of the faces
+find I 
+> can't put a single name to one. What's worse is that I worked closely
+with 
+> many of them while porting TOPS-10 to the KS. Sigh!
+> 
+> 
+
+
+Article 1482 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!newsxfer.eecs.umich.edu!news.bu.edu!budd
+From: budd@csa.bu.edu (Phil Budne)
+Newsgroups: alt.sys.pdp10
+Subject: stuff [was photos of TOPOS-10 teams]
+Followup-To: alt.sys.pdp10
+Date: 10 Oct 2000 06:33:33 GMT
+Organization: Boston University Computer Science Dept.
+Lines: 257
+Message-ID: <8rud7t$o46$1@news3.bu.edu>
+References: <8rq8ob$aqr$1@fe2.cs.interbusiness.it> <JlnE5.325$gE2.24449@ord-read.news.verio.net>
+X-Trace: news3.bu.edu 971159613 24710 128.197.12.3 (10 Oct 2000 06:33:33 GMT)
+X-Complaints-To: news@bu.edu
+Xref: nntp1.ba.best.com alt.sys.pdp10:1482
+
+John Everett <jeverett@wwa.DEFEAT.UCE.BOTS.com> wrote:
+In article <JlnE5.325$gE2.24449@ord-read.news.verio.net>,
+>>In article <8rq8ob$aqr$1@fe2.cs.interbusiness.it>, jk3380@naida.org says...
+>>Is there a site with photos of the teams that worked on TOPS-10 and
+>>HW; I'd like to have a look at the people that did all this stuff
+>>when I was not even a teenager!
+....
+>Somewhere recently (last couple of years or so) I've seen an old picture of a 
+>very young Bob Clements (RCC), but can't remember where.
+
+http://www.inwap.com/pdp10/
+
+Look in the section "Developers, DECUS, People";
+
+There's also a photo of Jim Flemming (JMF) and Tony Wachs (TW) in
+front of a 1091 (KL10 in a short blue cab).
+
+>There's also a picture somewhere of the KS-10 hardware team, but I don't know 
+>where that's located either.
+
+http://www.inwap.com/pdp10/timeline.html
+look down to 1978 for the 2020.
+many photos.
+
+>I've never come across any other pictures of either the hardware or software 
+>development teams. 
+
+There's a photo of the PDP-6 team.  I know I have hardcopies (one in a
+DEC newsletter, and one in a glossy anniversary brochure I got Alan
+Kotok to sign at his DEC retirement dinner).
+
+I just put up a PDP-10 page of my own at www.ultimate.com/phil/pdp10/
+which includes the entire LCG organization, taken on the 20th
+anniversary of 36-bit systems (1984) and other tidbits I've collected.
+
+I have some notes that must have come from some publication made that
+year;
+
+PDP-6 development team;
+
+Harlan Anderson, VP of Eng
+       Gordon Bell, System Architect
+		Alan Kotok, Asst. Architect, Logic Designer
+			Russ Doane, Circuits
+			Ken Senior(?), Field Service
+			Bob Reed, Technician
+			Leo Gussall(?), Diagnostics
+		Dit Morse, Software Project Leader
+			Tom Hastings, Dave Gross; Monitor
+			Harris Hyman, Steve Pinar; MACRO
+			Tom Eggers; DDT
+			Bell Segal; Utilities
+			Peter Sampson, Al Blackington; FORTRAN
+			Ed Yourdon (yep, that one); LOADER
+
+[Ironicly, I was working for Al Blackingington at the time, who had
+returned to DEC, to work on .... FORTRAN!]
+
+
+================
+TOPS-10 Evolution
+
+1964-66	1.4-1.9	PDP-6 Support, DECtape only, 27 jobs (UFA, 1 bit per job)
+1967	2.18	KA support, disk support, shuffler
+1968	3.27	swapping, 36 jobs (using JFFO)
+1969	4.50	dual segments
+	4.72	CCL, 63 jobs
+1970	5.01	TOPS-10, Disk Service rewrite (Phase I)
+1971	5.02	MPB (batch), RTTRP (real time), Disk Service rewrite (phase II)
+1972	5.03	1055 multiprocessor (dual KA)
+	5.04	KI support
+1973	5.05	1077 support (dual KI)
+	5.06	SFDs (subdirectories)
+1974	5.07/6.01
+		KL support, VM, IPCF (interprocess communication)
+1975	6.02	1088 support (dual KL), class shced, RP04/6
+		ENQ/DEQ (resource locking), Galaxy I (spooling)
+1977/78	6.03/A	1091 (MOS memory, RH20), ANF (PDP-10 comm network)
+		FILDAE (file access daemon)
+1979	7.00	SMP (limited)
+1980/82	7.01/A	SMP (full), logical names, Galaxy 4.1
+1984	7.02	DECnet-10 Phase III
+
+================
+
+KA teams, 1967
+
+Hardware:
+	Alan Kotok
+	Bob Clements
+	Dave Gross
+	Bill English (documentation)
+
+Software:
+	Tom Hastings
+	Tony Wachs
+	Dave Plummer
+	Don whitcraft
+	Alan Frantz
+	Pat White
+	Valdeane Alusic
+	Penny Land
+	Mauri Fredrickson
+	Joe Fries
+	Nick Pappas
+	Tom Eliot (documentation)
+
+================
+PDP-6 SOftware - 1965
+
+T/S monitor	5K
+DECtape editor	1K
+FORTRAN II	10K to 22K
+FORSE		1.5K		(fortran runtime)
+MACRO		9K
+Loader		1K
+DDT		3K
+PIP		1K
+
+================
+PDP-6 User's Guide (Entire)
+
+IJOB		Initialize Job
+PJOB		Print Job number
+KJOB		Kill Job
+CORE n		Allocate core for JOB
+GET dev:file	Load program into core
+SAVE dev:file
+START loc
+CONTINUE
+DDT
+ASSIGN dev:
+^C		(could be typed with one hand - tom hastings)
+<rubout>
+
+================
+DECtape editor commands;
+
+SX,name		select "name" on DECtape unix X
+In		insert line at n
+Pn		print line at n
+E		end of session
+
+================
+BBN TENEX team;
+
+Ted Strollo, Project Supervisor
+	Jerry Birchfield, Ray Tomlinson; Hardware (BB&N Pager)
+	Dan Murphy; Scheduler, Pager
+	Ray Tomlinson; File system, I/O drivers
+	John Barnaby; EXEC, date/time
+	Ted Strollo; FLIN/FLOUT
+
+================
+
+1964	PDP-6 Single relocation/protection register
+1966	BB&N simulated paging in software on PDP-1
+1967	KA10 Dual protection registers
+1970	BB&N paging box for KA - TENEX
+1972	KI10
+1973	KI10 Tenex
+1975	KL10 w/ KI10 paging
+1976	DECSYSTEM-20 has TENEX paging in microcode
+
+================
+
+TOPS-20 Evolution
+
+2/76	1	First release
+4/76	1A	LPT, CDR
+10/76	1B	Maint release
+12/76	101B	ARPA support
+7/77	2	mountable structures, quotas
+3/78	3	2780, 3780, account validation, subdirs, larger dirs
+		merged in ARPA support
+4/78	3A	DECnet Phase II, 2060, 2020
+4/80	4	performance ctrls(?), tape labels, GALAXY
+		ACJ (access control job), RAMP, archiving, execute-only
+6/82	5	extended addressing, RP07, TU78, NVT (network virt. terminals)
+3/83	5.1	DECnet Phase III
+12/82	5.2	TCP/IP support (BBN JSYS interface)
+6/83	5.3	DEC TCP/IP interface (TCP: device)
+
+================
+
+TENEX -> TOPS-20 (1973-1976)
+
+Rewrite;
+   System Init
+   Filesys update strategy
+   directory structure
+   tape handler
+
+KL Hardware;
+   KL processor
+   memory parity
+   I/O devices
+   DTE
+   RSX-20F
+   BOOT
+
+Additions;
+   Search lists
+   Logical names
+   IPCF
+   ENQ/DEQ
+   COMND/TEXTI
+   BAT blocks
+   Backup of root
+   PTYs
+   Wildcards
+
+Naming;
+
+1970 TENEX
+1972 -> DEC
+
+TENEX
+VIROS	John Lange called it VIRUS
+SNARK
+KRANS	(snark backwards -- funeral wreath in swedish)
+SNARK	(with forks and hope)
+TOPS-20
+
+================
+
+Early TOPS-20 Team;
+
+Software;
+	Dan Murphy
+	Peter Hurley
+	Arnold Miller
+	Len Bosack
+	Tom Hastings
+	Ron McClean (RSX-20F)
+	Roland Belanger
+	Tom Porcher (?)
+	Judy Hall
+
+Docs;
+	Susan Porada
+	Twig McGee
+	Maria Bonsavage
+
+Ed Svcs;
+	Claire Grant
+
+================
+
+System thruput;
+
+1055	1.6-1.8*KA
+1077	1.3-1.5*KI
+1088	0.8-1.2*KL
+1099SMP	1.7*KL
+TRI SMP	2.6*KL
+TOPS-20 CFS = 1.6-1.8*KL
+
+

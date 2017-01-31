@@ -1,0 +1,191 @@
+Article 1687 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!panix!newsmaster.cc.columbia.edu!watsun.cc.columbia.edu!fdc
+From: fdc@watsun.cc.columbia.edu (Frank da Cruz)
+Newsgroups: comp.os.vms,alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11
+Subject: Re: Q: Why not (2^n)-bit?
+Date: 26 Oct 2000 14:32:00 GMT
+Organization: Columbia University
+Lines: 36
+Message-ID: <8t9f90$17f$1@newsmaster.cc.columbia.edu>
+References: <rpNl5.131549$lU5.898906@news1.rdc1.nj.home.com> <39f3f412.1185688119@news.newsguy.com> <8t7jsj$2ht$1@nntp1.ba.best.com> <39f7f409.1447825132@news.newsguy.com>
+NNTP-Posting-Host: watsun.cc.columbia.edu
+X-Trace: newsmaster.cc.columbia.edu 972570720 1263 128.59.39.2 (26 Oct 2000 14:32:00 GMT)
+X-Complaints-To: postmaster@columbia.edu
+NNTP-Posting-Date: 26 Oct 2000 14:32:00 GMT
+Xref: nntp1.ba.best.com comp.os.vms:12634 alt.sys.pdp8:643 alt.sys.pdp10:1687 alt.sys.pdp11:717
+
+In article <39f7f409.1447825132@news.newsguy.com>,
+Alan Greig <A.Greig@virgin.net> wrote:
+: On 25 Oct 2000 21:38:27 GMT, inwap@best.com (Joe Smith) wrote:
+: 
+: >In article <39f3f412.1185688119@news.newsguy.com>,
+: >Alan Greig <A.Greig@virgin.net> wrote:
+: >>Were console  front end terminal lines really not supported under
+: >>TOPS-10? That was the normal connection method with TOPS-20. We had
+: >>128 serial lines on the front end without problems.
+: >
+: >They were not supported with the 1091 first came out (version 7.00).
+: >By 7.02, they were supported.  The thing that gave the system a real
+: >workout was a smooth-scrolling VT100 running at 9600 baud.
+: 
+: We had quite a number of these connected and I don't recall them ever
+: causing problems under TOPS-20. ...
+:
+I remember this quite well.  We had just installed our first DEC-20 in
+1977 when our DEC salesperson brought a brand-new VT100 to show it off.
+We connected it to a front-end port at 9600 bps, enabled smooth scrolling,
+TYPE'd a file, and the front end crashed right away because of the flood
+of Xoffs and Xons.  As soon as it came back, it crashed again, etc etc.
+
+A similar incident had occurred previously when one of our programmers
+fell asleep on the keyboard of his (non-VT100) terminal, causing the keys
+to autorepeat.  When we complained to DEC about this vulnerability, their
+answer was "don't do that".  Similarly for terminals that had a "page
+transmit" function.  But when their own VT100 became the culprit, they
+tightened up RSX20F pretty quick.
+
+Nevertheless, the front end was very definitely designed with only people's
+fingers in mind on the input side.  Even after the fixes, RSX20F was
+markedly intolerant of large bursts of input.  Which is why the original
+Kermit protocol enforced a 94-byte maximum packet length.
+
+- Frank
+
+
+Article 1789 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!inwap
+From: inwap@best.com (Joe Smith)
+Newsgroups: comp.os.vms,alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11
+Subject: Re: Q: Why not (2^n)-bit?
+Date: 29 Oct 2000 20:43:06 GMT
+Organization: Chez Inwap
+Lines: 68
+Message-ID: <8ti24q$rks$1@nntp1.ba.best.com>
+References: <rpNl5.131549$lU5.898906@news1.rdc1.nj.home.com> <39f7f409.1447825132@news.newsguy.com> <8t9f90$17f$1@newsmaster.cc.columbia.edu> <39f94c2c.1535925093@news.newsguy.com>
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 972852186 28316 206.184.139.134 (29 Oct 2000 20:43:06 GMT)
+X-Complaints-To: abuse@best.com
+NNTP-Posting-Date: 29 Oct 2000 20:43:06 GMT
+Xref: nntp1.ba.best.com comp.os.vms:12912 alt.sys.pdp8:652 alt.sys.pdp10:1789 alt.sys.pdp11:733
+
+In article <39f94c2c.1535925093@news.newsguy.com>,
+Alan Greig <A.Greig@virgin.net> wrote:
+>On 26 Oct 2000 14:32:00 GMT, fdc@watsun.cc.columbia.edu (Frank da
+>Cruz) wrote:
+>
+>>
+>>I remember this quite well.  We had just installed our first DEC-20 in
+>>1977 when our DEC salesperson brought a brand-new VT100 to show it off.
+>>We connected it to a front-end port at 9600 bps, enabled smooth scrolling,
+>>TYPE'd a file, and the front end crashed right away because of the flood
+>>of Xoffs and Xons.  As soon as it came back, it crashed again, etc etc.
+>>
+>>A similar incident had occurred previously when one of our programmers
+>>fell asleep on the keyboard of his (non-VT100) terminal, causing the keys
+>>to autorepeat.  When we complained to DEC about this vulnerability, their
+>>answer was "don't do that".  Similarly for terminals that had a "page
+>>transmit" function.  But when their own VT100 became the culprit, they
+>>tightened up RSX20F pretty quick.
+>>
+>>Nevertheless, the front end was very definitely designed with only people's
+>>fingers in mind on the input side.  Even after the fixes, RSX20F was
+>>markedly intolerant of large bursts of input.  Which is why the original
+>>Kermit protocol enforced a 94-byte maximum packet length.
+>
+>I think this partly came down to the size of a TOPS-20 buffer called
+>something like ttbuf. There was some logiic that upped the buffer size
+>depending on line speed. I remember for certain that I patched this to
+>use larger buffers on all lines but it's highly unlikely I did
+>anything similar to the front end code.
+>
+>Just before I first saw Kermit (around 1981?) I'd  written some code
+>to transfer between a 10 and a 20 and got away with 256 byte buffers
+>but to do this I needed to disable XON/XOFF handling and have it
+>handled by the code itself. This sounds counter-intuitive but it
+>allowed me to use longer buffers than if I left flow control to the
+>front end. When the TOPS-10 system XOFFed it still had room for a
+>number of characters in its own input buffer so the fact that a few
+>more were sent  before the program had time to detect the XOFF and
+>stop the output didn't matter. Of course if you were sending to
+>something like an Apple II then any chars transmitted after an XOFF
+>just got dropped.
+>
+>It's all slowly coming back now as I also remember having a program
+>that scanned the tty input buffer counts looking for lines where the
+>input character rate approximated to the input line speed and then set
+>the speed to zero or something like that. I think we wrote that
+>locally based on an idea from elsewhere.
+>
+>>
+>>- Frank
+>
+>--
+>Alan Greig
+
+Around that time I came up with a hack to the TOPS-10 Monitor to do
+both local and remote XON/XOFF processing.  If the terminal was in
+packed-image mode, and XON/XOFF was enabled in the LDB, then when a
+Control-S came in, I had it mark the line as being XOFFed and put the
+Control-S character in the input buffer.  (Previously, it was one or
+the other, not both.)  With the hack in, the smooth-scrolling VT100
+could tell the local system to stop sending, and KERMIT (in connect mode)
+could tell the remote TOPS-20 system to also stop sending.
+
+I also had some help from Dawn Banks (who was working at DEC at the time)
+on tweeks that could be applied to the RSX20F load image.
+	-Joe
+--
+See http://www.inwap.com/ for PDP-10 and "ReBoot" pages.
+
+
+Article 1790 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!inwap
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP10 (KS10) Emulator status.
+Date: 29 Oct 2000 20:53:07 GMT
+Organization: Chez Inwap
+Lines: 33
+Message-ID: <8ti2nj$sga$1@nntp1.ba.best.com>
+References: <Q96J5.37434$YX4.1183868@news2.giganews.com> <8t3v2j$j87$3@bob.news.rcn.net> <6EhJ5.86142$bI6.2817650@news1.giganews.com> <8t6qvc$cgo$3@bob.news.rcn.net>
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 972852787 29194 206.184.139.134 (29 Oct 2000 20:53:07 GMT)
+X-Complaints-To: abuse@best.com
+NNTP-Posting-Date: 29 Oct 2000 20:53:07 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:1790
+
+In article <8t6qvc$cgo$3@bob.news.rcn.net>,  <jmfbahciv@aol.com> wrote:
+>In article <6EhJ5.86142$bI6.2817650@news1.giganews.com>,
+>   Timothy Stark <sword7@grace.speakeasy.org> wrote:
+>>Hehe.  Yeah. I agree with you.  I have not implemented DZ-11 devices yet
+>>because I need DZ-11 functional specs.  However, I can implement KLINIK
+>>for second terminal soon.
+>
+>I didn't know that KLINIK could have two terminals.
+>As far as I knew the KLINIK line was to pretend that
+>the especially blessed person dialing in should have
+>all the privs as if he were physically at the console.
+>And I thought the console was limited to one line.
+>The CTY had power, even more than [1,2] jobs.
+><snip two "I know that"s>
+
+Remember, Barb, that the KS10 had a REMOTE DIAGNOSIS switch with three
+positions:
+  DISABLE = Ignore RD, CD, RI and all other signals from the KLINIK line.
+  ENABLE  = Allows free acces to the system without password protection.
+	    This is like the KL KLINIK; the lines wired in parallel.
+  PROTECT = Allows access to the system with a password.
+	There was a separate command you had to type on the console
+	to tell the 8080 front end what the password was.  When the FE
+	called up the modem connected to the KLINIK line, he would be
+	asked for the password.  If it matched, the KLINIK line would
+	be connected to the console.  If it did not match the line would
+	be an ordinary terminal line.
+
+I forget now whether the line was CTY+1 or CTY-1, but it did allow
+logging in as a "normal" user (such as [6,6] or [6,10]).
+	-Joe
+--
+See http://www.inwap.com/ for PDP-10 and "ReBoot" pages.
+
+

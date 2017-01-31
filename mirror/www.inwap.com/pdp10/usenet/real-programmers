@@ -1,0 +1,108 @@
+Article 3738 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!newsfeed.internetmci.com!164.67.42.145!awabi.library.ucla.edu!137.82.194.1!unixg.ubc.ca!alph02.triumf.ca!shoppa
+From: shoppa@alph02.triumf.ca (Tim Shoppa)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Real Programmers Don't Write Specs
+Date: 23 Feb 1998 04:12:05 GMT
+Organization: TRIUMF, Canada's National Meson Facility
+Lines: 62
+Message-ID: <6cqsul$og7$1@nntp.ucs.ubc.ca>
+References: <6cpsp0$7sv$1@nntp.ucs.ubc.ca> <6cptmg$8dt$1@nntp.ucs.ubc.ca>
+NNTP-Posting-Host: alph02.triumf.ca
+Xref: nntp1.ba.best.com alt.folklore.computers:99492 alt.sys.pdp10:3738
+
+Circa 1983 or so, REAL PROGRS from the MC vaults.  Was this really -
+as the line at the bottom seems to indicate - once James Gosling's
+finger plan?
+
+Return-path: <rsl@SPA-NIMBUS>
+Received: from SPA-NIMBUS by SCRC-TENEX with CHAOS; Tue 3-May-83 22:07:09-EDT
+Date: Tuesday, 3 May 1983, 19:23-PDT
+From: Richard Lamson <rsl at SPA-Nimbus>
+Subject: Found in Gloria (apologies to those who get this again)
+To: Info-Cobol at mc
+Bcc: Fun at scrc
+
+               Real Programmers Don't Write Specs
+ 
+Real Programmers don't write specs -- users should consider themselves
+lucky to get any programs at all and take what they get.
+ 
+Real Programmers don't comment their code.  If it was hard to write,
+it should be hard to understand.
+ 
+Real Programmers don't write application programs; they program right
+down on the bare metal.  Application programming is for feebs who
+can't do systems programming.
+ 
+Real Programmers don't eat quiche.  In fact, real programmers don't
+know how to SPELL quiche. They eat Twinkies, and Szechwan food.
+ 
+Real Programmers don't write in COBOL.  COBOL is for wimpy
+applications programmers.
+ 
+Real Programmers' programs never work right the first time.  But if
+you throw them on the machine they can be patched into working in
+"only a few" 30-hour debugging sessions.
+ 
+Real Programmers don't write in FORTRAN.  FORTRAN is for pipe stress
+freaks and crystallography weenies.
+ 
+Real Programmers never work 9 to 5.  If any real programmers are
+around at 9 AM, it's because they were up all night.
+ 
+Real Programmers don't write in BASIC.  Actually, no programmers write
+in BASIC, after the age of 12.
+ 
+Real Programmers don't write in PL/I.  PL/I is for programmers who
+can't decide whether to write in COBOL or FORTRAN.
+ 
+Real Programmers don't play tennis, or any other sport that requires
+you to change clothes.  Mountain climbing is OK, and real programmers
+wear their climbing boots to work in case a mountain should suddenly
+spring up in the middle of the machine room.
+ 
+Real Programmers don't document.  Documentation is for simps who can't
+read the listings or the object deck.
+ 
+Real Programmers don't write in PASCAL, or BLISS, or ADA, or any of
+those pinko computer science languages.  Strong typing is for people
+with weak memories.
+
+
+				-- From Peter Capek @ YKTVMV
+				   via Mark Seiden @ dagobah
+  **==> That was James Gosling's plan file.
+
+
+Article 3739 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!nntp2.ba.best.com!thvv
+From: thvv@best.com (Tom Van Vleck)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Real Programmers Don't Write Specs
+Date: Sun, 22 Feb 1998 22:44:19 -0800
+Organization: Multicians
+Lines: 13
+Message-ID: <thvv-2202982244200001@thvv.vip.best.com>
+References: <6cpsp0$7sv$1@nntp.ucs.ubc.ca> <6cptmg$8dt$1@nntp.ucs.ubc.ca> <6cqsul$og7$1@nntp.ucs.ubc.ca>
+NNTP-Posting-Host: thvv.vip.best.com
+X-Trace: 888216264 13687 (none) 206.86.0.12
+X-Newsreader: MT-NewsWatcher 2.4.1
+X-url: http://www.best.com/~thvv/multics.html
+Xref: nntp1.ba.best.com alt.folklore.computers:99495 alt.sys.pdp10:3739
+
+In article <6cqsul$og7$1@nntp.ucs.ubc.ca>, shoppa@alph02.triumf.ca (Tim
+Shoppa) wrote:
+
+> Circa 1983 or so, REAL PROGRS from the MC vaults.
+
+I wrote this in 1982, after I had left the Multics group
+and was working in Calfornia.  I was thinking of particular
+colleagues and former colleagues for several of the paragraphs.
+For example, "pipe stress" refers to a large FORTRAN program
+at Universal Oil Products in Des Plaines Ill, 
+and I was thining of Noel Morris when I wrote
+> Real Programmers never work 9 to 5.  If any real programmers are
+> around at 9 AM, it's because they were up all night.
+
+

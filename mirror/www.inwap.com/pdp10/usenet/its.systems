@@ -1,0 +1,93 @@
+Article 1149 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!news3.net99.net!news.cais.net!newsfeed.internetmci.com!usenet.eel.ufl.edu!tank.news.pipex.net!pipex!howland.reston.ans.net!swrinde!sgigate.sgi.com!uhog.mit.edu!bloom-beacon.mit.edu!ai-lab!usenet
+From: tk@ai.mit.edu (Tom Knight)
+Newsgroups: alt.sys.pdp10
+Subject: Re: TECO and mung command
+Followup-To: alt.sys.pdp10
+Date: 26 Sep 1995 00:23:45 GMT
+Organization: MIT Artificial Intelligence Laboratory
+Lines: 25
+Message-ID: <TK.95Sep25202345@entropy.ai.mit.edu>
+References: <441uci$d4l$1@perth.dialix.oz.au> <443pfm$7l7@news.cerf.net>
+	<444687$t3h@agate.berkeley.edu> <444a1d$dm4@news.cerf.net>
+	<PD.95Sep24234457@horus.sics.se>
+NNTP-Posting-Host: entropy.ai.mit.edu
+In-reply-to: pd@sics.se's message of 24 Sep 1995 22:44:57 GMT
+
+>>> "-" == Per Danielsson <pd@sics.se> writes:
+
+-> That would have been Stewart Nelson borrowing a screwdriver from
+-> Bill Bennett. Or so the story goes.  I don't think Nelson munged
+-> the screwdriver, though.
+
+On the contrary.  Bill Bennett was fond of telling anyone around that
+"Tools don't just get used up."  Nelson was rewiring one of the light
+switches, which, regretably, was live.  He shorted the live wire to
+the box, blew the breaker, and arc-welded this 1/4" circular hole out
+of the corner of the screwdriver blade.  He left it on Bennett's desk
+with a note that said "used up."
+
+Someone asked how many ITS machines there were.  There was the
+original PDP-6, AI,
+and a KA-10 (with pager) (also called AI).
+There was a Mathlab KA, ML, with SC pager.
+There was a dynamic modelling KA, DM (home of Zork), also with SC pager.
+There was a new Mathlab KL (MC).
+There was a pair of KS-10's later which were renamed AI and MC.
+
+I think that was it for the systems at MIT.  I think a few others were
+brought up other places -- one of the KL's went to Sweden, and I think
+MRC brought ITS up a few times on his machine.  KLH has run ITS on his
+simulator.
+
+
+Article 1155 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!tank.news.pipex.net!pipex!btnet!uunet!in1.uu.net!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: TECO and mung command
+Date: Mon, 25 Sep 1995 21:53:57 -0700
+Organization: Networks & Distributed Computing
+Lines: 31
+Message-ID: <Pine.NXT.3.92.950925213716.20359A-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <441uci$d4l$1@perth.dialix.oz.au> <443pfm$7l7@news.cerf.net><444687$t3h@agate.berkeley.edu> <444a1d$dm4@news.cerf.net><PD.95Sep24234457@horus.sics.se> <TK.95Sep25202345@entropy.ai.mit.edu>
+Reply-To: Mark Crispin <mrc@CAC.Washington.EDU>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+NNTP-Posting-User: senf
+In-Reply-To: <TK.95Sep25202345@entropy.ai.mit.edu>
+
+On 26 Sep 1995, Tom Knight wrote:
+> I think that was it for the systems at MIT.  I think a few others were
+> brought up other places -- one of the KL's went to Sweden, and I think
+> MRC brought ITS up a few times on his machine.  KLH has run ITS on his
+> simulator.
+
+Yup.  I helped debug the RM03 code; there was a loop waiting for a
+controller status register to get lit that happened with RP06s, but never
+on RM03s.
+
+Unfortunately, ITS on an RM03 was pretty much useless; with only 67MB to
+play around with you ending up having to be fairly aggressive in flushing
+stuff.  It was easy to flush some of the random crud that had accumulated
+over the years, but then you had to start making tough decisions...
+
+I thought about writing RM05 support, but I never got A Round Tuit.  ;-)
+
+What did strike me was how dependent ITS had become on the network.  There
+were links to MC: in the system directories, MAIL and INQUIR wouldn't run
+without the network, and I think that LISP would valret if it couldn't
+find the net.
+
+I still have the ITS pack mounted on one of the RM03 spindles, so ITS is
+only a boot switch away...
+
+-- Mark --
+
+DoD #0105, R90/6 pilot, FAX: (206) 685-4045  ICBM: N 47 39'35" W 122 18'39"
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+

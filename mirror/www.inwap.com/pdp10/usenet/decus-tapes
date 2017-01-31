@@ -1,0 +1,856 @@
+Article 6127 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!nntp.abs.net!uunet!ffx.uu.net!ffx2nh5!not-for-mail
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Stu's Emulator? open-source TOPS-10/20 and ITS?
+Date: Thu, 28 Oct 1999 09:48:58 -0400
+Organization: Trailing Edge Technology
+Lines: 834
+Message-ID: <38181C09.33A331E@trailing-edge.com>
+References: <s1YR3.3545$pp1.76838@dfw-read.news.verio.net>
+NNTP-Posting-Host: timaxp.trailing-edge.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: ffx2nh5.news.uu.net 941118609 13211 63.73.218.130 (28 Oct 1999 13:50:09 GMT)
+X-Complaints-To: news@ffx2nh5.news.uu.net
+NNTP-Posting-Date: 28 Oct 1999 13:50:09 GMT
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.0     DEC 3000 Model 300L)
+Xref: news3.best.com alt.sys.pdp10:6127
+
+Timothy Stark wrote:
+> Recently I heard about the open-source TOPS-10, TOPS-20, ITS, etc.  Where
+> do you get them?
+
+Good question, and I don't know the answer.  I *do* know several
+folks who do have distribution tapes, but they won't let me touch
+them.  It's a shame - they have the tapes but no 9-track drive,
+and I have a room full of 7-track and 9-track drives but I don't
+have the -10 and -20 distribution tapes.
+
+If and when someone does dig up any relevant tapes, I'll gladly make
+exact images of them here and put them up for FTP.  I'd also be happy
+to put the CD mastering facilities here to use in writing CD's
+with the software for distribution.  (Assuming these activities
+are allowed under the terms of the license, of course...)
+
+In the meantime, I *do* have several hundred megabytes of DECUS
+PDP-10 (10-xxx and TOPS 20-xxx numbers) freeware sources and binaries
+available.  Would folks be interested in this collection?  Below
+I've got a list of TOPS-20 package titles and their status...
+
+-- 
+ Tim Shoppa                        Email: shoppa@trailing-edge.com
+ Trailing Edge Technology          WWW:   http://www.trailing-edge.com/
+ 7328 Bradley Blvd                 Voice: 301-767-5917
+ Bethesda, MD, USA 20817           Fax:   301-767-5927
+
+
+                     Prepared by David Todd
+             DECUS DECSYSTEM-20 Library Coordinator
+                          15 March 1981
+
+
+
+     The following list describes the contents of the DECUS
+DECSYSTEM-20 Library Distribution Tapes as of 15 March 1981.  The
+program packages in the Library were converted from the
+DECsystem-10 Library during the summer and autumn of 1980 by Paul
+Robinson at Wesleyan University for DECUS.  During the
+conversion, packages were evaluated using the following criteria:
+
+     1.  Does the package support features available under
+         TOPS-20 or on the DECSYSTEM-20?  For example, DECtape
+         support packages were deleted.
+
+     2.  Does the package compile, load, and begin execution
+         successfully?
+
+     3.  If test data are available, does the recompiled program
+         correctly run the test data.
+
+     4.  Is the package of such high potential value that even if
+         it does not compile and load correctly it should be
+         distributed in hopes an interested DECSYSTEM-20 user
+         will develop a working package?
+
+     5.  Even if there is no source code, is the package of such
+         high potential value that users would benefit from
+         having just the .EXE files available?
+
+Under these criteria, the following packages were selected to
+constitute the initial DECSYSTEM-20 Library.  The abstracts below
+do not describe the packages but rather the state of the package
+after review, and in cases where modifications were required, the
+types of modifications made.  Refer to the DECUS DECSYSTEM-20
+Library Catalog for program descriptions.
+
+     Note that several of the major packages, notably PASCAL,
+SIMULA, and SAIL/FAIL, were submitted as revised versions by
+Charles Hedrick of Rutgers.  We are grateful to him for his help
+in making these packages available.
+
+     In the descriptions, the phrase "compiled, loaded, and
+executed successfully" indicates that the program package begins
+execution successfully but that no verification of the accuracy
+of the program has been done.  The phrase "executes correctly"
+indicates that the program was tested either with data supplied
+with the package or with obvious test data and appears to execute
+correctly on that test data.
+
+     Of course, DECUS cannot guarantee correct execution of any
+of the packages but welcomes - in fact solicits - reviews of
+packages which do not appear to function as specified.  For this
+purpose, the first directory on the distribution tape,
+<DECUS.20-0000> contains review forms and an interactive review
+program which will aid you in preparing a review of any program
+you use.  Please submit the completed review on 1600 bpi DUMPER
+tape (preferably) or as typewritten copy of the completed review
+form to DECUS for review by DECUS staff and inclusion on
+subsequent releases of the distribution and update tapes.  You
+will find on this tape reviews of several packages kept with the
+package directory.  The review files have names of the form
+DECnnn.RNO, where "nnn" is the number of the DEC-20 package.  The
+reviews were completed for the versions running on the
+DECsystem-10 but should still be valid for the DECSYSTEM-20
+versions as well.
+
+     The Library packages are stored as separate directories with
+naming conventions <DECUS.20-nnnn>, where "nnnn" is a sequence
+number.  Directory <DECUS.20-0000> contains Library
+administration files such as the .RNO file which created this
+document, a "disposition" document which tells the disposition of
+DEC-10 library packages by DEC-10 number cross-referenced to
+DEC-20 number, review programs and forms, and a file which can be
+used by DLUSER to create DECUS directories if desired.  Note that
+there are subdirectories under many DECUS.20-nnnn directories.
+
+     The Library distribution tapes contain the complete DECUS
+DECSYSTEM-20 program library packaged on 9-track, 1600-bpi,
+DUMPER-format magnetic tape.  There are five tapes, and their
+contents are as follow:
+
+          ____
+          ___   ________
+          1     0000-0025
+          2     0026-0076
+          3     0077-0099
+          4     0100-0135
+          5     0136-0149
+
+Each tape contains 8000 to 10,000 pages of programs.  We hope to
+hav regular updates for these program plus new additions made
+available in the future through a subscription service in the
+same way the DEC-10 library is served.  Contact the DECUS office
+for details.
+
+
+
+DECSYSTEM-20 Library Distribution Notes [2 Feb 81]/HDT     Page 3
+
+
+"20"      "10"
+Number    Number    Status
+
+
+0001      -         CALC (TOPS-20)
+                    Compiles, loads, and runs successfully.
+                    Indirect commands do not appear to function.
+
+0002      86        SAIL/FAIL
+                    Original DEC-10 version has been supplemented
+                    by some routines supplied by Charles Hedrick
+                    of Rutgers which fix bugs on the DEC-20.
+                    Program appears to compile correctly.  The
+                    newly compiled version differs from the one
+                    submitted by Hedrick;  the newly compiled
+                    version is the .EXE file and the version
+                    submitted by Hedrick is SAIL-OLD.EXE.  Check
+                    the file SAIL.LOG to see error messages
+                    associated with compilation of SAIL.
+
+0003      283       SYSTEMS PROGRAMMERS PASCAL
+                    Native-20-mode System Programmer's PASCAL
+                    from Charles Hedrick at Rutgers.  Executes
+                    correctly in preliminary tests.  Has
+                    excellent debugging enhancements over earlier
+                    versions.
+
+0004      -         INTERLISP (TOPS-20)
+
+                    Patched BOOT.SAV to replace a JSYS which had
+                    been deleted after Release 2 of TOPS-20;
+                    program now begins execution.  Note that no
+                    source files are supplied (.EXE only) and
+                    that the first chapter of the manual is
+                    missing.  Other chapters renamed *.DOC.
+
+0005      12        PAL-10
+                    Minor modification required in logical name
+                    list;  compiles, loads, and runs
+                    successfully.
+
+0006      22        JACOBI
+                    Converted subroutine calls to PUSHJ/POPJ;
+                    now compiles correctly.  Execution testing
+                    not done.
+
+0007      23        SPEEDY (PDP-10/8 Loader)
+                    Loader appears to run from a load of the .REL
+                    file (no testing done).  Source file is
+                    garbled and cannot be used to generate the
+                    .REL file.
+
+0008      27        GASP II
+                    Compiles and loads cleanly.  No further
+                    testing done.
+0009      30        NVERTX
+                    Compiles with some warning messages, loads,
+                    and runs to completion with the test data
+                    supplied.
+
+0010      31        PALX-11
+                    Compiles, loads, and begins execution.  No
+                    testing done.
+
+0011      33        W
+                    Converted octal constants to form required by
+                    FORTRAN-20;  program compiles and runs.
+
+0012      38        FLOW CHARTER
+                    Compiles, loads, and runs successfully.
+
+0013      43        RANDOM NUMBERS
+                    Converted subroutine calls to PUSHJ/POPJ;
+                    programs now compile, load, and run
+                    successfully.  Results not checked for
+                    accuracy.
+
+0014      57        SIMPLE
+                    Converted subroutine calls to PUSHJ/POPJ;
+                    programs now compile, load, and correctly run
+                    the test data supplied with the programs.
+
+0015      59        LISP 1.6
+                    Redefined JOBDAT symbols and replaced one
+                    outdated JSYS.  Some possible problems with
+                    source file ALVINE.MAC (HRRZ@ opcodes).  No
+                    testing done on this package.
+
+0016      61        MLISP
+                    No modifications required.  Package is
+                    expected to be a transportable LISP package,
+                    but no testing was done.
+
+0017      65        LEARNS
+                    Program compiles, loads, and runs
+                    successfully.
+
+0018      68        PAL-12
+                    Modified logical name search;  program
+                    compiles, loads, and successfully executes
+                    two test programs supplied.
+
+0019      70        FAKE
+                    Converted subroutine calls to PUSHJ/POPJ and
+                    redefined JOBDAT symbols.  Program assembles;
+                    no testing done.
+
+0020      72        DARTMOUTH BASIC LIBRARY
+                    Random sample of programs tested appear to
+                    function correctly.
+0021      88        SALESMAN
+                    Program compiles and runs successfully.
+
+0022      89        JOTTO
+                    Typographical errors were corrected.  Program
+                    compiles but needs a dictionary.
+
+0023      90        BARTEE
+                    Redefined JOBDAT symbols;  program
+                    compiles,loads, and correctly executes test
+                    data given in .DOC file.
+
+0024      97        BASIC TUTORIAL
+                    A random sample of programs tested functioned
+                    correctly.
+
+0025      100       ONLINE BASIC AND FORTRAN DEMOS
+                    A random sample of the BASIC programs ran.
+                    FORTRAN files which did not run were modified
+                    for FORTRAN-20 compatibility.  Files were
+                    given filetypes .BAS, .FOR, and .TXT,
+                    depending upon their functions.  Calling
+                    sequence of RAND.MAC was converted to
+                    PUSHJ/POPJ.
+
+0026      101       SSP
+                    Programs ran without modification and gave
+                    results in agreement with expected test
+                    results to within 5 to 7 significant figures.
+
+0027      102       PDP-8 SIMULATOR
+                    Changed JOBDAT symbols;  compiles, loads, and
+                    runs successfully.
+
+0028      104       SNOBOL4
+                    Converted .SHR to .EXE file;  the .EXE file
+                    runs.  No attempt to recompile and reload
+                    (which should be done).
+
+0029      105       DOCTOR AND ELIZA
+                    Converted .SAV to .EXE file, which functions
+                    correctly.  No source file is included.
+
+0030      110       CHESS
+                    Converted .SAV file to .EXE file, which
+                    functions correctly.  No source file is
+                    included.
+
+0031      114       MATTAC
+                    Converted .SAV file to .EXE file, which runs.
+
+0032      115       TAPBLK
+                    Converted .SAV file to .EXE file, which
+                    begins execution.  Did not test.
+
+
+0033      116       QED
+                    Redefined JOBDAT symbols.  Program compiles,
+                    loads, and executes.
+
+0034      130       RENBR
+                    Compiles, loads, and runs successfully.  The
+                    .CMD file was modified for TOPS-20.
+
+0035      133       ALGOLW
+                    Redefined JOBDAT symbols.  Program compiles,
+                    loads, and runs successfully.
+
+0036      134       FISHER
+                    Edited the source file to delete extra
+                    CRLF's.  Program compiles, loads, and runs
+                    successfully.
+
+0037      137       COB300
+                    Modified one variable to be a non-reserved
+                    word;  program compiles and loads.  Should be
+                    tested on a Burroughs COBOL program.
+
+0038      139       TALK8F
+                    Redefined format of octal constants and
+                    redefined JOBDAT symbols.  Program compiles,
+                    loads, and runs.  Needs a PDP-8 for testing.
+
+0039      142       MATHLAB
+                    Converted .SAV to .EXE file, patched ESC
+                    character as described in manual.  Program
+                    ran test case in manual correctly.  Program
+                    should be recompiled and reloaded.
+
+0040      143       COBSTD
+
+                    Minor syntactical correction required, but
+                    otherwise program compiled, loaded, and ran
+                    successfully.
+
+0041      151       KWIC
+                    Compiles, loads, and runs successfully.
+
+0042      153       CHANGE
+                    Redefined JOBDAT symbols.  Program compiles,
+                    loads, and runs.  Needs testing.  Note that a
+                    revised version is available directly from
+                    DEC.
+
+0043      156       ASYNC COMMUNICATION WITH PDP-8
+                    Redefined JOBDAT symbols and altered logical
+                    name search.  Programs now compile, load, and
+                    run.  Needs testing with a PDP-8.
+
+0044      157       STREAM
+                    Changed subroutine calls to PUSHJ/POPJ's.
+                    Fixed argument list references.  Program now
+                    compiles and loads.  Needs testing.
+
+0045      159       PAGER
+                    Program compiles, loads, and runs
+                    successfully.
+
+0046      161       ABACUS
+                    Minor modifications required because of MACRO
+                    version changes.  Program compiles, loads,
+                    and runs successfully.
+
+0047      164       CROSS
+                    Created IOFIL.FOR to handle IFILE/OFILE
+                    subroutine calls from F40 and modified
+                    RENAME.MAC to use PUSHJ/POPJ calls.  Modified
+                    FORMAT statements.  Program now compiles,
+                    loads, and runs test case correctly.
+
+0048      165       RDMT11
+                    Compiles, loads, and runs successfully.
+                    Needs testing with PDP-11 magnetic tapes,
+                    though.
+
+0049      167       GENPLT
+                    Added DOUBLE PRECISION statement to allow 6
+                    characters per word.  Programs compile, load,
+                    and run test case correctly.
+
+0050      168       TBLTRN
+                    Modified one macro subroutine to use
+                    PUSHJ/POPJ calling convention.  Program
+                    compiles, loads, and runs successfully.
+
+0051      169       CTFFT
+                    Program compiled, loaded, and ran one test
+                    file correctly (within roundoff error).  The
+                    other test file (for subroutine FOURG) was
+                    garbled at the time of original submittal.
+                    The subroutine compiles, however.
+
+0052      170       UFLIP
+                    Program compiled, loaded, and ran test case
+                    correctly.
+
+0053      171       CARDIAC MACHINE LANGUAGE SIMULATOR
+                    Corrected one mistyped line in the BASIC
+                    program.  Program runs successfully.
+
+0054      173       FLMON
+                    Program compiles, loads, and runs
+                    successfully.  Needs testing with a plotter.
+
+0055      177       SIGN MAKER
+                    Changed format of octal constants to
+                    FORTRAN-20 form;  changed DEFINE FILE to
+                    OPEN;  and changed search for SIGN.LIB from
+                    [1,4] to SYS:.  Program compiles, loads, and
+                    runs correctly.
+
+0056      178       MTIO
+                    Changed calling sequence to PUSHJ/POPJ.
+                    Program compiles.  Needs to be tested with a
+                    magtape and main program.
+
+0057      179       FASBOL
+                    Converted .SAV to .EXE file, which appears to
+                    run (saved as FASBOL.EXE).  Recompiled,
+                    reloaded, and resaved as SNOBOL.EXE (which
+                    appears to run correctly).
+
+0058      181       EDITS
+                    A spurious character in source file was
+                    deleted.  Program compiles, loads, and runs
+                    successfully.
+
+0059      182       TXTPAD AND TXTTAB
+                    Programs compile.  TXTPAD has undefined
+                    globals on loading because of need for
+                    hardware routines.  TXTTAB ran successfully.
+
+0060      183       GRAPH
+                    Subroutines compile and load with warnings.
+
+0061      185       SYNTAX
+                    Fails to compile, but code is sufficiently
+                    similar to PASCAL that conversion to working
+                    PASCAL code should be relatively easy.  Left
+                    in the library for revision by interested
+                    user.
+
+0062      186       META2
+                    Redefined .JBFF;  program compiles, loads,
+                    and runs successfully.
+
+0063      187       ASYNCH COMMUNICATION
+                    Converted calling sequence to PUSHJ/POPJ for
+                    FORTRAN subroutines.  Programs compile and
+                    load.  Needs testing.
+
+0064      189       MAFIA
+                    Redefined JOBDAT symbols.  Program compiles,
+                    loads, and runs successfully.  Needs testing.
+
+0065      190       BATTLESHIP
+                    Program runs.
+
+0066      193       *1
+                    Needs to be recompiled.  No testing done.
+
+0067      197       FILTER
+                    Sources compiled with numerous errors caused
+                    by use of (new) reserved words.  Changes yet
+                    to be made but should be easy to fix.
+0068      198       IMP72
+                    Converted .SAV file to .EXE, which ran
+                    successfully.  Recompilation fails for some
+                    program modules.
+
+0069      200       VTED AND RTRANS
+                    RTRANS runs correctly.  VTED needs testing on
+                    DEC VT terminals.
+
+0070      203       GUNNER
+                    Program runs correctly.
+
+0071      207       EYES
+                    Compiles, loads, and runs successfully.
+
+0072      208       SCAT2
+                    Program compiles, loads, and runs
+                    successfully.
+
+0073      209       RANDU
+                    Subroutine compiles, loads, and runs
+                    successfully.  Results not verified for
+                    accuracy.
+
+0074      211       GNOSIS
+                    Program compiles, loads, and runs
+                    successfully.
+
+0075      212       SPPLT AND SPTEX
+                    Programs compile and run successfully.
+
+0076      214       ABACUS
+                    Converted JOBDAT symbols.  Program compiles,
+                    loads, and runs successfully.
+
+
+0077      221       NMRSIM AND TTYOPS
+                    Changed subroutine calling sequence to
+                    PUSHJ/POPJ;  programs compile, load, and run
+                    successfully.  No testing without plotter
+                    hardware.
+
+0078      223       SIMULA
+                    Compiler assembled, loaded, and ran
+                    successfully.  Note an error message
+                    associated with module M2.MAC which is
+                    apparently caused by a misplaced conditional
+                    terminator, but the resulting symbol is
+                    properly defined as external nevertheless.
+                    Note that the package has been reorganized to
+                    contain just DEC-20 code.
+
+0079      224       SPICE/SLIC/SINC
+                    Programs compile, load, and run correctly.
+
+0080      226       AVAIL
+                    Programs compile, load, and run correctly.
+                    Note that there is a requirement for
+                    directory numbers, though.  This program
+                    should be modified when a native-20 FOROTS
+                    system is available.
+
+0081      227       UTILITIES
+                    Some programs in this package needed COBOL
+                    variable-names to be changed because of
+                    changes in COBOL reserved words;  they then
+                    compiled, loaded, and ran successfully.
+                    Others in the package appear to be incomplete
+                    and unusable.  Complete package is left in
+                    the library for those who want to work on
+                    them.
+
+0082      228       CALCOMP PLOTTER PACKAGE
+                    Some modifications required to get package to
+                    load properly.  Programs compile, load, and
+                    run successfully.  Requires plotter hardware
+                    to verify.
+
+0083      229       ASTRO
+                    Program compiles, load, and runs
+                    successfully.
+
+0084      230       ASYNCH COMMUNICATION
+                    Programs compile, load, and run successfully.
+                    No testing done.
+
+0085      233       ZAP
+                    Program compiles, loads, and runs
+                    successfully.
+
+0087      235       LAN
+                    Programs run.  No testing done.
+
+
+0088      237       PILOT
+                    Modified compiler to look for PILOT.EXE
+                    rather than PILOT.SHR.  Compiler compiles
+                    with a few MACRO "E" errors, but loads
+                    successfully.  Resulting program successfully
+                    compiled the demo program supplied.
+
+0089      238       EXETER
+                    Programs compile (with truncation warnings),
+                    load, and run successfully.
+
+0090      240       KISMET
+                    Modified search path for help file.  Program
+                    compiles, loads, and runs successfully.
+
+0091      241       FORTH
+                    Compiles, loads, and runs successfully.
+
+0092      244       WGMM11
+                    Corrected garbled characters in middle of
+                    source file.  Program now compiles, loads,
+                    and runs successfully.
+
+0093      245       MESS
+                    Programs compile, load, and run successfully.
+
+0094      248       TR
+                    Program compiles, loads, and runs
+                    successfully.
+
+0095      249       GAUSS
+                    Subroutines compile.  No testing done.
+
+0096      251       TBF
+                    Program compiles, loads, and runs
+                    successfully.
+
+0097      253       READ
+                    Program compiles, loads, and runs
+                    successfully.
+
+0098      254       MAGGIE
+                    Program compiles, loads, and runs
+                    successfully.  Needs testing with magnetic
+                    tape.
+
+0099      255       INVSIM
+                    Program compiles, loads, and runs
+                    successfully.
+
+0100      257       LINCUR
+                    Revised submittal lacked functions DARCOS and
+                    DARSIN which were in the sources for original
+                    submittal.  These were copied from original
+                    into file DAFUNS.FOR and the load command
+                    string modified.  File LINCUR.CTL contains
+                    revisions necessary to compile, load, and
+                    test revised version on a DEC-20.  Programs
+                    compile, load, and run successfully.
+
+0101      258       NONLIN
+                    Revised submittal lacked functions DARCOS and
+                    DARSIN which were in the sources for original
+                    submittal.  These were copied from original
+                    into file DAFUNS.FOR and the load command
+                    string modified.  File NONLIN.CTL contains
+                    revisions necessary to compile, load, and
+                    test revised version on a DEC-20.  Programs
+                    compile, load, and run test data correctly.
+
+0102      260       INFORMATION STORAGE AND RETRIEVAL
+                    Program compiles and runs successfully.
+
+
+0103      261       SORTER
+                    Program compiles and runs successfully.
+
+0104      262       COMPUT AND TWOPER
+                    Programs compile and run successfully.
+
+0105      264       XTEC
+                    Program compiles, loads, and runs
+                    successfully.
+
+0106      265       BASIC 17E
+                    Note that there are no sources.  The .SHR
+                    files were converted to .EXE files and ran
+                    correctly.  Note the bugs listed in the
+                    review.
+
+0107      266       TOPS-10 SIMULATOR
+                    Compiles with warnings, loads, and runs
+                    successfully.  No documentation of format of
+                    parameter file.
+
+0108      267       COBEDT
+                    Program compiles, loads, and runs
+                    successfully.
+
+0109      269       ADRES
+                    Program compiles (under SIMULA, 20-0078),
+                    loads, and runs successfully.
+
+0110      270       PROC10
+                    Converted .SHR to .EXE file, which runs.
+                    Cannot recompile and reload because of
+                    missing source modules.
+
+0111      272       BESLIB
+                    Program compiles, loads, and correctly runs
+                    test case.
+0112      273       INDEX
+                    Program compiles, loads, and runs BESLIB test
+                    case successfully.
+
+0113      274       CADA
+                    Program compiles and runs successfully.
+
+0114      276       FPRINT
+                    Subroutine compiles correctly.  Not tested.
+
+0115      277       TWOSID
+                    Program compiles, loads, and runs correctly.
+
+0118      284       PICTURE BOOK
+                    Modified INCH and OUTCH for TOPS-20 MACRO.
+                    Programs compile, load, and run successfully.
+
+0119      285       SQUASH
+                    Modified subroutines to use PUSHJ/POPJ
+                    convention;  program compiles, loads, and
+                    runs successfully.
+
+0120      286       CUSH2
+                    Program compiles, loads, and correctly
+                    executes test data from documentation.
+
+0121      290       VENN
+                    Program compiles, loads, and runs
+                    successfully.
+
+0122      291       XPL
+                    Program compiles, loads, and runs
+                    successfully.
+
+0123      292       REVISED PLOTTER SUBROUTINES
+                    Programs compile, load, and run successfully.
+
+0124      293       FLECS
+                    Program compiles, loads, and runs
+                    successfully.  Implementation manual, which
+                    was supposed to be with package, was not.
+
+0125      295       GIDUS/DISLIB
+                    Programs compile successfully.  No testing
+                    done.  New command file was created.
+
+0126      297       ATOPLT
+                    Program compiles, loads, and runs
+                    successfully.  Needs testing.
+
+0127      298       NORMAL
+                    Program compiles, loads, and runs
+                    successfully.
+
+0128      299       COPYMT
+                    Program compiles, loads, and runs
+                    successfully.
+
+0129      300       BAKGMN
+                    Program compiles, loads, and runs
+                    successfully.
+
+0130      301       STRMAC
+                    Program compiles, loads, and runs
+                    successfully.
+
+0131      302       LIBMAN
+                    Program compiles, loads, and runs correctly
+                    (except that the DIRECT program doesn't exist
+                    on TOPS-20).
+
+0132      303       DUMPR
+                    Program compiles, loads, and runs
+                    successfully.
+
+0133      305       BIORTH
+                    Replaced a GETTAB UUO with GTAD JSYS.
+                    Program compiles, loads, and runs
+                    successfully.
+
+0134      306       FOCAL-10
+                    Program compiles, loads, and runs
+                    successfully.  Extensive testing not done.
+
+0135      307       VIDED
+                    Source files for latest version are in COMP
+                    subdirectory but will not load correctly
+                    because of multiply-defined globals.  Source
+                    files for older version are in SOURCE and
+                    will not compile under current SIMULA
+                    (20-0078).  The .EXE files from the earlier
+                    version are in the SYS subdirectory.
+
+0136      309       MACY-11/LNKX-11
+                    Programs compile, load, and run correctly.
+
+0137      310       WMU Application Library
+                    Most programs work as submitted.  Some work
+                    done to load without overlays.  Individual
+                    packages were split into separate
+                    subdirectories.  Note that source code for
+                    the application library built into WMU's
+                    FORLIB are not contained in the package and
+                    are referenced from APLIB.REL and FORLIB.REL
+                    in the superior directory.
+
+0138      312       MAGTAPE UTILITY PACKAGE
+                    Programs compile, load, and run successfully.
+
+0139      316       TECO10
+                    Renamed files to TECO20, recompiled with
+                    runs.  Does not recognize filename supplied
+                    on command line, but does seem to function.
+
+0140      317       CROSS
+                    Program compiles, loads, and runs
+                    successfully.
+
+0141      318       FASP
+                    Program compiles, loads, and runs
+                    successfully.
+
+0142      319       WKDAY
+                    Program compiles, loads, and runs correctly.
+
+
+0143      320       STRUCT
+                    Macros compile and seems to work.
+
+0144      322       CALENDAR MAKER
+                    Data files generate output as desired.
+
+0149      324       MULREG
+                    Program compiles with warning messages and
+                    loads and runs correctly (when compiled with
+                    the DEC-20 SIMULA from DECUS).  Packages
+                    included so that anyone with SIMULA
+                    experience can attempt to determine the
+                    source of the problem.
+
+0145      325       ANTE
+                    Compiles, loads, and runs successfully.
+
+0146      326       KEYWRD
+                    Compiles, loads, and successfully runs test
+                    case supplied by author.
+
+0147      328       FORMAT
+                    Compiles, loads, and successfully runs test
+                    case supplied by author.
+
+0148      184       SPELL
+                    Original program failed to compile because
+                    symbols in conditional statements weren't
+                    assembled and defined;  simple fixes to
+                    source file were required.  Program now
+                    compiles and runs correctly.  Dictionary is
+                    preloaded in the .EXE file supplied.
+
+0149      324       MULREG
+                    Compiles using SIMULA (20-0078) with warning
+                    messages, loads successfully, and appears to
+                    process author-supplied test data correctly.
+
+

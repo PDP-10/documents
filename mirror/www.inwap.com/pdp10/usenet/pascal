@@ -1,0 +1,729 @@
+Article 3272 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!howland.erols.net!panix!news.panix.com!not-for-mail
+From: Rich Alderson <alderson+news@panix.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Demise and alt futures of the PDP-10
+Date: 24 Jan 2001 14:02:33 -0500
+Organization: Systems Administration, XKL LLC, Redmond WA 98052
+Lines: 20
+Sender: alderson+news@panix2.panix.com
+Message-ID: <mddbssw3h9y.fsf@panix2.panix.com>
+References: <3a43c9e5.3140062@news.m.iinet.net.au> <Pine.NXT.4.32.0012270310240.25886-100000@Tomobiki-Cho.CAC.Washington.EDU> <3A4A233F.37F9DBF5@jetnet.ab.ca> <92db95$e1j$1@abbenay.CS.Berkeley.EDU> <92dfkh$bnc$1@citadel.in.taronga.com> <3A4A5C00.8ECD08C5@bartek.dontspamme.net> <Pine.LNX.4.10.10012272029410.9055-100000@bony.umtec.com> <3A4AA216.C972A990@bellatlantic.net> <Pine.NXT.4.32.0012281251550.27112-100000@Tomobiki-Cho.CAC.Washington.EDU> <92pq9f$8ah$1@bob.news.rcn.net> <3A6E63B7.BA93128F@MA.UltraNet.Com>
+NNTP-Posting-Host: panix2.panix.com
+X-Trace: news.panix.com 980362953 29599 166.84.0.227 (24 Jan 2001 19:02:33 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: 24 Jan 2001 19:02:33 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.7
+Xref: nntp1.ba.best.com alt.sys.pdp10:3272
+
+"Alan H. Martin" <AMartin@MA.UltraNet.Com> writes:
+
+> The only thing I can think of offhand was that PASCAL never shipped on
+> TOPS-10 - only on TOPS-20.  The compiler was panned in field test as
+> thrashing the hell out of the -10.  Doubtless.
+
+By this I assume you mean the native-mode Tops-20 compiler, right?  Based on
+the Tops-10 compiler originally out of Rutgers, Chuck Hedrick's implementation
+of Wirth's original CDC 6600 compiler?
+
+The Hedrick compiler was common at Tops-20 as well as Tops-10 academic sites
+for a very long time.  My first exposure to it was at UChicago, after a friend
+and I had worked for several months to bootstrap the BYTE "Tiny Pascal" inter-
+preter (using BASIC+2 for Northstar BASIC)--one of the IS systems analysts had
+a friend at 3M who sent him a copy.  That was my intro to compiler design and
+computer science in general...
+
+-- 
+Rich Alderson                                          alderson+news@panix.com
+  "You get what anybody gets.  You get a lifetime."  --Death, of the Endless
+
+
+Article 3269 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news2.best.com!news-hog.berkeley.edu!ucberkeley!nntp.cs.ubc.ca!newsfeed.direct.ca!look.ca!news-out.usenetserver.com!news01.optonline.net!news02.optonline.net.POSTED!not-for-mail
+From: Arthur Krewat <krewat@bartek.dontspamme.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Demise and alt futures of the PDP-10
+Organization: Kilonet.net
+Lines: 36
+Message-ID: <3A6F0214.341CAF6D@bartek.dontspamme.net>
+References: <3a43c9e5.3140062@news.m.iinet.net.au> <Pine.NXT.4.32.0012270310240.25886-100000@Tomobiki-Cho.CAC.Washington.EDU> <3A4A233F.37F9DBF5@jetnet.ab.ca> <92db95$e1j$1@abbenay.CS.Berkeley.EDU> <92dfkh$bnc$1@citadel.in.taronga.com> <3A4A5C00.8ECD08C5@bartek.dontspamme.net> <Pine.LNX.4.10.10012272029410.9055-100000@bony.umtec.com> <3A4AA216.C972A990@bellatlantic.net> <Pine.NXT.4.32.0012281251550.27112-100000@Tomobiki-Cho.CAC.Washington.EDU> <92pq9f$8ah$1@bob.news.rcn.net> <3A6E63B7.BA93128F@MA.UltraNet.Com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 4.61 [en] (X11; U; SunOS 5.8 i86pc)
+X-Accept-Language: en
+Date: Wed, 24 Jan 2001 16:30:46 GMT
+NNTP-Posting-Host: 24.190.213.53
+X-Trace: news02.optonline.net 980353846 24.190.213.53 (Wed, 24 Jan 2001 11:30:46 EST)
+NNTP-Posting-Date: Wed, 24 Jan 2001 11:30:46 EST
+Xref: nntp1.ba.best.com alt.sys.pdp10:3269
+
+"Alan H. Martin" wrote:
+> 
+> jmfbahciv@aol.com wrote:
+> >
+> > In article
+> > <Pine.NXT.4.32.0012281251550.27112-100000@Tomobiki-Cho.CAC.Washington.EDU>,
+> >    Mark Crispin <mrc@CAC.Washington.EDU> wrote:
+> ...
+> > >The deliberate withholding or delaying of new compiler versions.
+> >
+> > I don't remember this happening.  Got an example?
+> 
+> The only thing I can think of offhand was that PASCAL never shipped on
+> TOPS-10 - only on TOPS-20.  The compiler was panned in field test as
+> thrashing the hell out of the -10.  Doubtless.
+> 
+> Solution?  Burn your PASCAL-10 tape, because we'll only sell the
+> language on the -20, where it's not a problem.
+> 
+> Perhaps the compiler could have been fixed.  Perhaps the problem wasn't
+> actually a showstopper.
+> 
+> Maybe we couldn't have turned a profit after paying for a rewrite.
+> Maybe the authors were needed for something else.
+> I don't know.
+
+BOCES III in Dix Hills had a Pascal compiler running under TOPS-10 6.03.
+I remember Gerry Damm had to pull teeth to get it, and then I think we
+had to fix a few bugs in it ourselves (not by me, before my time).
+
+It was a memory hog, but it worked fine. I think it was called PASCAL-10,
+so it might have been a DEC product. Most students used BASIC-10, so
+when they started using Pascal, it was a big hit in system performance
+overall.
+
+art k.
+
+
+Article 3265 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!208.184.7.66!newsfeed.skycache.com!Cidera!cyclone2.ba-dsg.net!typhoon2.ba-dsg.net.POSTED!not-for-mail
+Message-ID: <3A6EAF35.D1669176@bellatlantic.net>
+From: hg/jb <shsrms@bellatlantic.net>
+Reply-To: shsrms@bellatlantic.net
+X-Mailer: Mozilla 4.75 [en]C-CCK-MCD BA45DSL  (WinNT; U)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: Demise and alt futures of the PDP-10
+References: <3a43c9e5.3140062@news.m.iinet.net.au> <Pine.NXT.4.32.0012270310240.25886-100000@Tomobiki-Cho.CAC.Washington.EDU> <3A4A233F.37F9DBF5@jetnet.ab.ca> <92db95$e1j$1@abbenay.CS.Berkeley.EDU> <92dfkh$bnc$1@citadel.in.taronga.com> <3A4A5C00.8ECD08C5@bartek.dontspamme.net> <Pine.LNX.4.10.10012272029410.9055-100000@bony.umtec.com> <3A4AA216.C972A990@bellatlantic.net> <Pine.NXT.4.32.0012281251550.27112-100000@Tomobiki-Cho.CAC.Washington.EDU> <92pq9f$8ah$1@bob.news.rcn.net> <3A6E63B7.BA93128F@MA.UltraNet.Com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 32
+Date: Wed, 24 Jan 2001 10:30:56 GMT
+NNTP-Posting-Host: 138.88.72.209
+X-Complaints-To: newsadmin@bellatlantic.net
+X-Trace: typhoon2.ba-dsg.net 980332256 138.88.72.209 (Wed, 24 Jan 2001 05:30:56 EST)
+NNTP-Posting-Date: Wed, 24 Jan 2001 05:30:56 EST
+Xref: nntp1.ba.best.com alt.sys.pdp10:3265
+
+"Alan H. Martin" wrote:
+> 
+> jmfbahciv@aol.com wrote:
+> >
+> > In article
+> > <Pine.NXT.4.32.0012281251550.27112-100000@Tomobiki-Cho.CAC.Washington.EDU>,
+> >    Mark Crispin <mrc@CAC.Washington.EDU> wrote:
+> ...
+> > >The deliberate withholding or delaying of new compiler versions.
+> >
+> > I don't remember this happening.  Got an example?
+> 
+> The only thing I can think of offhand was that PASCAL never shipped on
+> TOPS-10 - only on TOPS-20.  The compiler was panned in field test as
+> thrashing the hell out of the -10.  Doubtless.
+
+and of course, the extensions beyond 30bit addressing - could not do
+that cause the vax could not do that.
+bob
+> 
+> Solution?  Burn your PASCAL-10 tape, because we'll only sell the
+> language on the -20, where it's not a problem.
+> 
+> Perhaps the compiler could have been fixed.  Perhaps the problem wasn't
+> actually a showstopper.
+> 
+> Maybe we couldn't have turned a profit after paying for a rewrite.
+> Maybe the authors were needed for something else.
+> I don't know.
+>                                 /AHM
+> --
+> Alan Howard Martin                              AMartin@MA.UltraNet.Com
+
+
+Article 3297 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!xfer13.netnews.com!netnews.com!feed2.news.rcn.net!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Demise and alt futures of the PDP-10
+Date: Sun, 28 Jan 2001 06:20:37 -0500
+Lines: 26
+Message-ID: <3A740085.3F92FD40@MA.UltraNet.Com>
+References: <3a43c9e5.3140062@news.m.iinet.net.au> <Pine.NXT.4.32.0012270310240.25886-100000@Tomobiki-Cho.CAC.Washington.EDU> <3A4A233F.37F9DBF5@jetnet.ab.ca> <92db95$e1j$1@abbenay.CS.Berkeley.EDU> <92dfkh$bnc$1@citadel.in.taronga.com> <3A4A5C00.8ECD08C5@bartek.dontspamme.net> <Pine.LNX.4.10.10012272029410.9055-100000@bony.umtec.com> <3A4AA216.C972A990@bellatlantic.net> <Pine.NXT.4.32.0012281251550.27112-100000@Tomobiki-Cho.CAC.Washington.EDU> <92pq9f$8ah$1@bob.news.rcn.net> <3A6E63B7.BA93128F@MA.UltraNet.Com> <3A6F0214.341CAF6D@bartek.dontspamme.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: UmFuZG9tSVZh3RuafIx/FesaI4831WsovE5aaDmxQn5ihUQYLDWwYQwB8PZd1eGw
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 28 Jan 2001 11:21:53 GMT
+X-Mailer:  Mozilla 4.75 [en] (Win95; U)
+X-Accept-Language:  en,en-US,en-GB,es
+Xref: nntp1.ba.best.com alt.sys.pdp10:3297
+
+Arthur Krewat wrote:
+> 
+> "Alan H. Martin" wrote:
+> >
+> > The only thing I can think of offhand was that PASCAL never shipped on
+> > TOPS-10 - only on TOPS-20.  The compiler was panned in field test as
+> > thrashing the hell out of the -10.  Doubtless.
+...
+> BOCES III in Dix Hills had a Pascal compiler running under TOPS-10 6.03.
+> I remember Gerry Damm had to pull teeth to get it, and then I think we
+> had to fix a few bugs in it ourselves (not by me, before my time).
+>
+> It was a memory hog, but it worked fine. I think it was called PASCAL-10,
+> so it might have been a DEC product. Most students used BASIC-10, so
+> when they started using Pascal, it was a big hit in system performance
+> overall.
+
+PASCAL-10 didn't ship around 1985.
+
+Rutgers Pascal (a heavily enhanced copy of someone else's Pascal- the
+original source was commented in German) was free and well established
+for the -10 by 1980, and was being upgraded to use extended addressing
+in the early 80's.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 3304 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc03.blue.aol.com!news.maxwell.syr.edu!intgwpad.nntp.telstra.net!news-server.bigpond.net.au!not-for-mail
+From: Mark Garrett <Mark.Garrett@wedontwantyourspam.com.au>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Demise and alt futures of the PDP-10
+Organization: Garetech Computer Solutions
+Lines: 40
+Message-ID: <B69A6A16.10A7D%Mark.Garrett@wedontwantyourspam.com.au>
+References: <3a43c9e5.3140062@news.m.iinet.net.au> <Pine.NXT.4.32.0012270310240.25886-100000@Tomobiki-Cho.CAC.Washington.EDU> <3A4A233F.37F9DBF5@jetnet.ab.ca> <92db95$e1j$1@abbenay.CS.Berkeley.EDU> <92dfkh$bnc$1@citadel.in.taronga.com> <3A4A5C00.8ECD08C5@bartek.dontspamme.net> <Pine.LNX.4.10.10012272029410.9055-100000@bony.umtec.com> <3A4AA216.C972A990@bellatlantic.net> <Pine.NXT.4.32.0012281251550.27112-100000@Tomobiki-Cho.CAC.Washington.EDU> <92pq9f$8ah$1@bob.news.rcn.net> <3A6E63B7.BA93128F@MA.UltraNet.Com> <3A6F0214.341CAF6D@bartek.dontspamme.net> <3A740085.3F92FD40@MA.UltraNet.Com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset="US-ASCII"
+Content-Transfer-Encoding: 7bit
+User-Agent: Microsoft-Outlook-Express-Macintosh-Edition/5.02.2022
+Date: Sun, 28 Jan 2001 13:38:39 GMT
+NNTP-Posting-Host: 144.132.244.163
+X-Complaints-To: news@bigpond.net.au
+X-Trace: news-server.bigpond.net.au 980689119 144.132.244.163 (Mon, 29 Jan 2001 00:38:39 EST)
+NNTP-Posting-Date: Mon, 29 Jan 2001 00:38:39 EST
+Xref: nntp1.ba.best.com alt.sys.pdp10:3304
+
+in article 3A740085.3F92FD40@MA.UltraNet.Com, Alan H. Martin at
+AMartin@MA.UltraNet.Com wrote on 28/01/2001 22:20:
+
+> Arthur Krewat wrote:
+>> 
+>> "Alan H. Martin" wrote:
+>>> 
+>>> The only thing I can think of offhand was that PASCAL never shipped on
+>>> TOPS-10 - only on TOPS-20.  The compiler was panned in field test as
+>>> thrashing the hell out of the -10.  Doubtless.
+> ...
+>> BOCES III in Dix Hills had a Pascal compiler running under TOPS-10 6.03.
+>> I remember Gerry Damm had to pull teeth to get it, and then I think we
+>> had to fix a few bugs in it ourselves (not by me, before my time).
+>> 
+>> It was a memory hog, but it worked fine. I think it was called PASCAL-10,
+>> so it might have been a DEC product. Most students used BASIC-10, so
+>> when they started using Pascal, it was a big hit in system performance
+>> overall.
+> 
+> PASCAL-10 didn't ship around 1985.
+> 
+> Rutgers Pascal (a heavily enhanced copy of someone else's Pascal- the
+> original source was commented in German) was free and well established
+> for the -10 by 1980, and was being upgraded to use extended addressing
+> in the early 80's.
+
+The source of this compiler was Hamburg Germany, then Stanford LOTS (maybe
+Rich might know its history there) and then the Rutgers compiler was derived
+from the Stanford one.
+
+I think the original thread here was Pascal + TOPS-10. Isn't  there
+something wrong with your equation : TOPS-10 + PASCAL + extended addressing
+where date <= 1985 ???
+    Maybe on TOPS-20, early 80's and usermode extended addressing.
+
+
+    Mark :)
+
+
+
+
+Article 3315 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!feed2.news.rcn.net!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Demise and alt futures of the PDP-10
+Date: Sun, 28 Jan 2001 13:54:04 -0500
+Lines: 28
+Message-ID: <3A746ACC.9D48BE78@MA.UltraNet.Com>
+References: <3a43c9e5.3140062@news.m.iinet.net.au> <Pine.NXT.4.32.0012270310240.25886-100000@Tomobiki-Cho.CAC.Washington.EDU> <3A4A233F.37F9DBF5@jetnet.ab.ca> <92db95$e1j$1@abbenay.CS.Berkeley.EDU> <92dfkh$bnc$1@citadel.in.taronga.com> <3A4A5C00.8ECD08C5@bartek.dontspamme.net> <Pine.LNX.4.10.10012272029410.9055-100000@bony.umtec.com> <3A4AA216.C972A990@bellatlantic.net> <Pine.NXT.4.32.0012281251550.27112-100000@Tomobiki-Cho.CAC.Washington.EDU> <92pq9f$8ah$1@bob.news.rcn.net> <3A6E63B7.BA93128F@MA.UltraNet.Com> <3A6F0214.341CAF6D@bartek.dontspamme.net> <3A740085.3F92FD40@MA.UltraNet.Com> <B69A6A16.10A7D%Mark.Garrett@wedontwantyourspam.com.au>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: UmFuZG9tSVazJnXlcy86ZCV4n8Y70xkZY7Rrr0xRZG4c7Hh+t9P0JCAe9aqys4o5
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 28 Jan 2001 18:55:23 GMT
+X-Mailer:  Mozilla 4.75 [en] (Win95; U)
+X-Accept-Language:  en,en-US,en-GB,es
+Xref: nntp1.ba.best.com alt.sys.pdp10:3315
+
+Mark Garrett wrote:
+> 
+> in article 3A740085.3F92FD40@MA.UltraNet.Com, Alan H. Martin at
+> AMartin@MA.UltraNet.Com wrote on 28/01/2001 22:20:
+> >
+> > PASCAL-10 didn't ship around 1985.
+> >
+> > Rutgers Pascal (a heavily enhanced copy of someone else's Pascal- the
+> > original source was commented in German) was free and well established
+> > for the -10 by 1980, and was being upgraded to use extended addressing
+> > in the early 80's.
+> 
+> The source of this compiler was Hamburg Germany, then Stanford LOTS (maybe
+> Rich might know its history there) and then the Rutgers compiler was derived
+> from the Stanford one.
+> 
+> I think the original thread here was Pascal + TOPS-10. Isn't  there
+> something wrong with your equation : TOPS-10 + PASCAL + extended addressing
+> where date <= 1985 ???
+>     Maybe on TOPS-20, early 80's and usermode extended addressing.
+
+Rutgers Pascal  was ported to both the -10 and -20.  I used it on the
+-10 by 1980 if not earlier (my roommate Ken's Othello program was
+written in Apr-79).  Norm Samuelson was starting to have Rutgers Pascal
+working with extended addressing by 4-Oct-82.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 3299 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!howland.erols.net!feed2.news.rcn.net!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Demise and alt futures of the PDP-10
+Date: Sun, 28 Jan 2001 07:19:59 -0500
+Lines: 63
+Message-ID: <3A740E6F.2DEB6F14@MA.UltraNet.Com>
+References: <3a43c9e5.3140062@news.m.iinet.net.au> <Pine.NXT.4.32.0012270310240.25886-100000@Tomobiki-Cho.CAC.Washington.EDU> <3A4A233F.37F9DBF5@jetnet.ab.ca> <92db95$e1j$1@abbenay.CS.Berkeley.EDU> <92dfkh$bnc$1@citadel.in.taronga.com> <3A4A5C00.8ECD08C5@bartek.dontspamme.net> <Pine.LNX.4.10.10012272029410.9055-100000@bony.umtec.com> <3A4AA216.C972A990@bellatlantic.net> <Pine.NXT.4.32.0012281251550.27112-100000@Tomobiki-Cho.CAC.Washington.EDU> <92pq9f$8ah$1@bob.news.rcn.net> <3A6E63B7.BA93128F@MA.UltraNet.Com> <mddbssw3h9y.fsf@panix2.panix.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: UmFuZG9tSVZ9wscOnUISUGVmeo9cKz68LnPrL8h+HUddccMJ1bNoIYWR32Q2a+KU
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 28 Jan 2001 12:21:18 GMT
+X-Mailer:  Mozilla 4.75 [en] (Win95; U)
+X-Accept-Language:  en,en-US,en-GB,es
+Xref: nntp1.ba.best.com alt.sys.pdp10:3299
+
+Rich Alderson wrote:
+> 
+> "Alan H. Martin" <AMartin@MA.UltraNet.Com> writes:
+> 
+> > The only thing I can think of offhand was that PASCAL never shipped on
+> > TOPS-10 - only on TOPS-20.  The compiler was panned in field test as
+> > thrashing the hell out of the -10.  Doubtless.
+> 
+> By this I assume you mean the native-mode Tops-20 compiler, right?  ...
+
+No, as far as I remember, the Pascal developed at Marlboro was a real
+layered product to be available for $$$, and was not a productization
+of Rutgers Pascal.
+
+Chuck did indeed refer to the original port of that Pascal to the PDP-10
+as ``Pascal-10'' in his ``.REL files'' TOPS-20 list message of 6-Nov-85.
+However, it was known colloquially as ``Rutgers Pascal'' even when I
+used it in '80-'81 at Stevens.  Chuck didn't object to that name when
+I used it in EMail to him.
+
+On the other hand, PASCAL.HACKERS refers to itself as ``PASCAL-20'' and
+``DECSYSTEM-20 PASCAL''.
+
+
+I also see that Dan Murphy's summary of Tuesday, 1-Nov-83 DECUS sessions
+states that Peter Hurley's ``Engineering Directions'' portion of the
+9-noon Product Panel discussed Pascal futures:
+
+	PASCAL-20 V1, ISO, VAX compatible.  PASCAL-10 withdrawn from
+	field test because poor performance on TOPS10.
+
+Considering how relatively little resources were used to develop
+PASCAL-10/20, the VAX compatibility reference makes me wonder if it was
+a port of VAX Pascal.
+
+
+>...  Based on
+> the Tops-10 compiler originally out of Rutgers, Chuck Hedrick's implementation
+> of Wirth's original CDC 6600 compiler?
+
+PASCAL.MEM states:
+
+"
+This  document  is  an  introduction  to DECSYSTEM-20 and DECsystem-10
+Pascal. This Pascal system is the result of cooperation among a number
+of different people.  It was originally written at the  University  of
+Hamburg  by  a  group  of  people under the supervision of Prof. H.-H.
+Nagel.  This version was  developed  from  Prof.  Nagel's  by  Charles
+Hedrick,  and  is  maintained by him.  Lee Cooprider and others at the
+University of Southern California have been  particularly  helpful  in
+supplying improvements, largely to the debugger.  A number of compiler
+bug   fixes   were   supplied  by  Andrew  Hisgen  at  Carnegie-Mellon
+University.
+"
+
+The first Pascal implementation was developed at ETH Zurich in
+Switzerland.  I bet a description of the relationship between Wirth
+and Nagel's group is in Software Practice and Experience, V6#1,
+pp. 29-42: ``D. O. Grosse-Lindemann, H. H. Nagel: Postlude to a
+PASCAL-Compiler Bootstrap on a DECSystem-10''.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 3308 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc03.blue.aol.com!news.maxwell.syr.edu!news.mel.connect.com.au!news1.optus.net.au!optus!intgwpad.nntp.telstra.net!news-server.bigpond.net.au!not-for-mail
+From: Mark Garrett <Mark.Garrett@wedontwantyourspam.com.au>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Demise and alt futures of the PDP-10
+Organization: Garetech Computer Solutions
+Lines: 25
+Message-ID: <B69A7048.10A81%Mark.Garrett@wedontwantyourspam.com.au>
+References: <3a43c9e5.3140062@news.m.iinet.net.au> <Pine.NXT.4.32.0012270310240.25886-100000@Tomobiki-Cho.CAC.Washington.EDU> <3A4A233F.37F9DBF5@jetnet.ab.ca> <92db95$e1j$1@abbenay.CS.Berkeley.EDU> <92dfkh$bnc$1@citadel.in.taronga.com> <3A4A5C00.8ECD08C5@bartek.dontspamme.net> <Pine.LNX.4.10.10012272029410.9055-100000@bony.umtec.com> <3A4AA216.C972A990@bellatlantic.net> <Pine.NXT.4.32.0012281251550.27112-100000@Tomobiki-Cho.CAC.Washington.EDU> <92pq9f$8ah$1@bob.news.rcn.net> <3A6E63B7.BA93128F@MA.UltraNet.Com> <mddbssw3h9y.fsf@panix2.panix.com> <3A740E6F.2DEB6F14@MA.UltraNet.Com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset="US-ASCII"
+Content-Transfer-Encoding: 7bit
+User-Agent: Microsoft-Outlook-Express-Macintosh-Edition/5.02.2022
+Date: Sun, 28 Jan 2001 14:08:38 GMT
+NNTP-Posting-Host: 144.132.244.163
+X-Complaints-To: news@bigpond.net.au
+X-Trace: news-server.bigpond.net.au 980690918 144.132.244.163 (Mon, 29 Jan 2001 01:08:38 EST)
+NNTP-Posting-Date: Mon, 29 Jan 2001 01:08:38 EST
+Xref: nntp1.ba.best.com alt.sys.pdp10:3308
+
+in article 3A740E6F.2DEB6F14@MA.UltraNet.Com, Alan H. Martin at
+AMartin@MA.UltraNet.Com wrote on 28/01/2001 23:19:
+
+> Rich Alderson wrote:
+>> 
+>> "Alan H. Martin" <AMartin@MA.UltraNet.Com> writes:
+>> 
+>>> The only thing I can think of offhand was that PASCAL never shipped on
+>>> TOPS-10 - only on TOPS-20.  The compiler was panned in field test as
+>>> thrashing the hell out of the -10.  Doubtless.
+>> 
+>> By this I assume you mean the native-mode Tops-20 compiler, right?  ...
+> 
+> No, as far as I remember, the Pascal developed at Marlboro was a real
+> layered product to be available for $$$, and was not a productization
+> of Rutgers Pascal.
+> 
+Thats what I read, two different compilers. And the other comments about
+poor performance, that may have been an interpretation of the problem, and
+probably some result of the problem. To much core used to the point that it
+would be practically useless as a real compiler.
+
+    Cheers
+        Mark :)
+
+
+
+Article 3310 of alt.sys.pdp10:
+Message-ID: <3A71C42C.744D7F52@jetnet.ab.ca>
+Date: Fri, 26 Jan 2001 11:38:36 -0700
+From: Ben Franchuk <bfranchuk@jetnet.ab.ca>
+X-Mailer: Mozilla 4.76 [en] (X11; U; Linux 2.2.18 i586)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: Demise and alt futures of the PDP-10
+References: <3a43c9e5.3140062@news.m.iinet.net.au> <Pine.NXT.4.32.0012270310240.25886-100000@Tomobiki-Cho.CAC.Washington.EDU> <3A4A233F.37F9DBF5@jetnet.ab.ca> <92db95$e1j$1@abbenay.CS.Berkeley.EDU> <92dfkh$bnc$1@citadel.in.taronga.com> <3A4A5C00.8ECD08C5@bartek.dontspamme.net> <Pine.LNX.4.10.10012272029410.9055-100000@bony.umtec.com> <3A4AA216.C972A990@bellatlantic.net> <Pine.NXT.4.32.0012281251550.27112-100000@Tomobiki-Cho.CAC.Washington.EDU> <92pq9f$8ah$1@bob.news.rcn.net> <3A6E63B7.BA93128F@MA.UltraNet.Com> <mddbssw3h9y.fsf@panix2.panix.com> <3A740E6F.2DEB6F14@MA.UltraNet.Com> <B69A7048.10A81%Mark.Garrett@wedontwantyourspam.com.au>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+NNTP-Posting-Host: 207.153.6.49
+X-Trace: 28 Jan 2001 07:47:16 -0700, 207.153.6.49
+Organization: OA Internet
+Lines: 22
+Path: nntp1.ba.best.com!news1.best.com!feeder.via.net!newshub2.rdc1.sfba.home.com!news.home.com!newsfeed.direct.ca!look.ca!west2.newsfeed.sprint-canada.net!news.oanet.com!207.153.6.49
+Xref: nntp1.ba.best.com alt.sys.pdp10:3310
+
+Mark Garrett wrote:
+<cut> pascal compilers </cut>
+
+> Thats what I read, two different compilers. And the other comments about
+> poor performance, that may have been an interpretation of the problem, and
+> probably some result of the problem. To much core used to the point that it
+> would be practically useless as a real compiler.
+> 
+My guess it was string handling in pascal that was the killer.A program
+with a lot of unpacked strings (8 bit?) could take up a lot of room
+if half words are used.
+
+I wish that same rule applied to NEW computers. Here I am running
+linux with 64 Meg and it still wants MORE. Playing around with a 
+12 bit FPGA computer design 32k is ample (No not a PDP-8 emulator).
+Anyhow did not the PDP-8 have a pascal compiler?
+
+Ben. 
+-- 
+"We do not inherit our time on this planet from our parents...
+ We borrow it from our children."
+"Luna family of Octal Computers" http://www.jetnet.ab.ca/users/bfranchuk
+
+
+Article 3319 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!wn3feed!worldnet.att.net!198.6.0.7!uunet!ash.uu.net!spool0.news.uu.net!reader2.news.uu.net!not-for-mail
+Message-ID: <3A74339F.38EE9A88@trailing-edge.com>
+Date: Sun, 28 Jan 2001 14:58:39 -0400
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Organization: Trailing Edge Technology
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.2     AlphaServer 1200 5/533 4MB)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Rutgers Pascal for the -10 found? (was Re: Demise and alt futures of the PDP-10)
+References: <3a43c9e5.3140062@news.m.iinet.net.au> <Pine.NXT.4.32.0012270310240.25886-100000@Tomobiki-Cho.CAC.Washington.EDU> <3A4A233F.37F9DBF5@jetnet.ab.ca> <92db95$e1j$1@abbenay.CS.Berkeley.EDU> <92dfkh$bnc$1@citadel.in.taronga.com> <3A4A5C00.8ECD08C5@bartek.dontspamme.net> <Pine.LNX.4.10.10012272029410.9055-100000@bony.umtec.com> <3A4AA216.C972A990@bellatlantic.net> <Pine.NXT.4.32.0012281251550.27112-100000@Tomobiki-Cho.CAC.Washington.EDU> <92pq9f$8ah$1@bob.news.rcn.net> <3A6E63B7.BA93128F@MA.UltraNet.Com> <3A6F0214.341CAF6D@bartek.dontspamme.net> <3A740085.3F92FD40@MA.UltraNet.Com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 21
+NNTP-Posting-Host: 63.73.218.130
+X-Trace: reader2.news.uu.net 980711919 14476 63.73.218.130
+Xref: nntp1.ba.best.com alt.sys.pdp10:3319
+
+Alan H. Martin wrote:
+> Rutgers Pascal (a heavily enhanced copy of someone else's Pascal- the
+> original source was commented in German) was free and well established
+> for the -10 by 1980, and was being upgraded to use extended addressing
+> in the early 80's.
+
+Is this "Rutgers Pascal" the same as DECUS entry 10-344 and 10-345,
+as can be found at
+
+  http://pdp-10.trailing-edge.com/www/lib10/0530/
+
+and
+
+  http://pdp-10.trailing-edge.com/www/lib10/0531/
+
+?  Certainly Rutgers is referred to in DEBUG.PAS and PASCAL.OPR.
+I'll have to find the abstracts to match this tape so it the
+entries can be properly indexed!  (Yet another thing to do in my
+copious free time...)
+
+Tim.
+
+
+Article 3331 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!207.172.3.44!feed2.news.rcn.net!feed1.news.rcn.net!rcn!207-172-97-239
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: Demise and alt futures of the PDP-10
+Date: Mon, 29 Jan 01 11:46:00 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 28
+Message-ID: <953pfl$kvs$2@bob.news.rcn.net>
+References: <Pine.LNX.4.10.10012272029410.9055-100000@bony.umtec.com> <3A4AA216.C972A990@bellatlantic.net> <Pine.NXT.4.32.0012281251550.27112-100000@Tomobiki-Cho.CAC.Washington.EDU> <92pq9f$8ah$1@bob.news.rcn.net> <3A6E63B7.BA93128F@MA.UltraNet.Com> <mddbssw3h9y.fsf@panix2.panix.com> <3A740E6F.2DEB6F14@MA.UltraNet.Com> <B69A7048.10A81%Mark.Garrett@wedontwantyourspam.com.au> <3A71C42C.744D7F52@jetnet.ab.ca>
+X-Trace: UmFuZG9tSVZqRlk2diOxZRlpeSStOGVCsLCvBGneq5YXBTsJhiW+RLJvbryIXu40
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 29 Jan 2001 12:59:33 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:3331
+
+In article <3A71C42C.744D7F52@jetnet.ab.ca>,
+   Ben Franchuk <bfranchuk@jetnet.ab.ca> wrote:
+>Mark Garrett wrote:
+><cut> pascal compilers </cut>
+>
+>> Thats what I read, two different compilers. And the other comments about
+>> poor performance, that may have been an interpretation of the problem, 
+and
+>> probably some result of the problem. To much core used to the point that 
+it
+>> would be practically useless as a real compiler.
+>> 
+>My guess it was string handling in pascal that was the killer.A program
+>with a lot of unpacked strings (8 bit?) could take up a lot of room
+>if half words are used.
+
+<snip>
+
+Well, I'm still trying to figure out who was doing the work.
+If Norm Samuelson was in charge, then Mike Brown wasn't a
+supervisor.  Mike was in my group in Software Support and Norm
+was in development.  In any event, none of those people knew
+how to do a development project which is key to getting a 
+piece of software out of the door.  
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 3357 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!feeder.qis.net!feed2.news.rcn.net!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Demise and alt futures of the PDP-10
+Date: Wed, 31 Jan 2001 20:12:37 -0500
+Lines: 26
+Message-ID: <3A78B805.6232B01B@MA.UltraNet.Com>
+References: <92dfkh$bnc$1@citadel.in.taronga.com> <3A4A5C00.8ECD08C5@bartek.dontspamme.net> <Pine.LNX.4.10.10012272029410.9055-100000@bony.umtec.com> <3A4AA216.C972A990@bellatlantic.net> <Pine.NXT.4.32.0012281251550.27112-100000@Tomobiki-Cho.CAC.Washington.EDU> <92pq9f$8ah$1@bob.news.rcn.net> <3A6E63B7.BA93128F@MA.UltraNet.Com> <3A6EAF35.D1669176@bellatlantic.net> <3A74115E.808D3B62@MA.UltraNet.Com> <9515hc$n26$8@bob.news.rcn.net> <3A746B79.2C15C78E@MA.UltraNet.Com> <956f77$526$2@bob.news.rcn.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: UmFuZG9tSVYUJYTUur6QXuTJ02tRUwDQz/iwxumjjrc1Cqor3g24OoxMQ2ByHukS
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 1 Feb 2001 01:12:46 GMT
+X-Mailer:  Mozilla 4.75 [en] (Win95; U)
+X-Accept-Language:  en,en-US,en-GB,es
+Xref: nntp1.ba.best.com alt.sys.pdp10:3357
+
+jmfbahciv@aol.com wrote:
+> 
+> In article <3A746B79.2C15C78E@MA.UltraNet.Com>,
+>    "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+> >jmfbahciv@aol.com wrote:
+> >
+> >> Do you remember who worked on PASCAL?  I sure don't remember.
+> >
+> >Paul Robinson, at least; maybe Rita Tillson[-Vasak], too.
+> >Mike Brown was in charge.
+> 
+> That doesn't make sense.  Software development and software
+> maintenance groups were still separate at that time.  ...
+
+I first heard about the reorg from Karl Kunkel on Tuesday, 18-May-82.
+
+
+>...  Perhaps
+> you mean Dick Brown rather than Mike?
+
+No; Mike Brown and I discussed shifting KL2137's PASCAL-20 files from
+PS:<LATEST-AND-GREATEST> to PS:<FIELD-TEST> upon field test entry on the
+morning of 2-Feb-83.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 3359 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!207.172.3.44!feed2.news.rcn.net!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Demise and alt futures of the PDP-10
+Date: Wed, 31 Jan 2001 20:21:32 -0500
+Lines: 29
+Message-ID: <3A78BA1C.9BD21DD0@MA.UltraNet.Com>
+References: <3a43c9e5.3140062@news.m.iinet.net.au> <Pine.NXT.4.32.0012270310240.25886-100000@Tomobiki-Cho.CAC.Washington.EDU> <3A4A233F.37F9DBF5@jetnet.ab.ca> <92db95$e1j$1@abbenay.CS.Berkeley.EDU> <92dfkh$bnc$1@citadel.in.taronga.com> <3A4A5C00.8ECD08C5@bartek.dontspamme.net> <Pine.LNX.4.10.10012272029410.9055-100000@bony.umtec.com> <3A4AA216.C972A990@bellatlantic.net> <Pine.NXT.4.32.0012281251550.27112-100000@Tomobiki-Cho.CAC.Washington.EDU> <92pq9f$8ah$1@bob.news.rcn.net> <3A6E63B7.BA93128F@MA.UltraNet.Com> <mddbssw3h9y.fsf@panix2.panix.com> <3A740E6F.2DEB6F14@MA.UltraNet.Com> <B69A7048.10A81%Mark.Garrett@wedontwantyourspam.com.au> <3A71C42C.744D7F52@jetnet.ab.ca>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: UmFuZG9tSVaMC1lKdx6z4uxWPUVdU1m8E4Nq0M1K8xXFpbprTzQMG5Yc+AwpVNR1
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 1 Feb 2001 01:21:41 GMT
+X-Mailer:  Mozilla 4.75 [en] (Win95; U)
+X-Accept-Language:  en,en-US,en-GB,es
+Xref: nntp1.ba.best.com alt.sys.pdp10:3359
+
+Ben Franchuk wrote:
+> 
+> Mark Garrett wrote:
+> <cut> pascal compilers </cut>
+> 
+> > Thats what I read, two different compilers. And the other comments about
+> > poor performance, that may have been an interpretation of the problem, and
+> > probably some result of the problem. To much core used to the point that it
+> > would be practically useless as a real compiler.
+> >
+> My guess it was string handling in pascal that was the killer.A program
+> with a lot of unpacked strings (8 bit?) could take up a lot of room
+> if half words are used.
+
+A code generation thought:
+
+Unpacked arrays are a way of trading space for speed.
+
+Did any -10 compilers know how to transform a loop to use halfword
+instructions to access 18-bit bytes faster than a straightforward
+ILDB/IDPB of an 18-bit byte pointer?  (If there even *are* such faster
+code sequences?)
+
+If not, a Pascal implementation that actually wanted unpacked char
+arrays to be faster than packed char would store one char per 36-bit
+word.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 5506 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!panix!news.panix.com!not-for-mail
+From: Rich Alderson <alderson+news@panix.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Algol-10
+Date: 03 Jul 2001 21:14:02 -0400
+Organization: Systems Administration, XKL LLC, Redmond WA 98052
+Lines: 16
+Sender: alderson+news@panix3.panix.com
+Message-ID: <mdd8zi5338l.fsf@panix3.panix.com>
+References: <3B422380.58B395E7@bartek.dontspamme.net> <tk4lhug0osg968@corp.supernews.com> <rTt07.29556$J91.937344@bgtnsc06-news.ops.worldnet.att.net>
+NNTP-Posting-Host: panix3.panix.com
+X-Trace: news.panix.com 994209242 7414 166.84.0.228 (4 Jul 2001 01:14:02 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: 4 Jul 2001 01:14:02 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.7
+Xref: nntp1.ba.best.com alt.sys.pdp10:5506
+
+"Henry W. Miller" <henry.miller@worldnet.att.net> writes:
+
+> Was there an "official" Pascal for the PDP-10?  While at DEC, I wrote a major
+> piece of code (under protest) in Pascal, and I believe that this version came
+> from Stanford.
+
+The LOTS compiler, perhaps?
+
+There was eventually a Pascal-20, essentially a cleaned-up version of the
+Rutgers compiler (also the source of the LOTS compiler), which in turn was
+based on the PDP-10 port of the original CDC 6600 compiler.  Pascal-20 has a
+COMND%-based interface.
+
+-- 
+Rich Alderson                                          alderson+news@panix.com
+  "You get what anybody gets.  You get a lifetime."  --Death, of the Endless
+
+
+Article 5521 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!wn3feed!wn4feed!worldnet.att.net!198.6.0.7!uunet!ash.uu.net!world!news
+From: Christopher Stacy <cstacy@spacy.Boston.MA.US>
+Subject: PASCAL [was: Algol-10]
+Message-ID: <ulmm40wkm.fsf_-_@spacy.Boston.MA.US>
+Sender: CStacy@BONK
+Date: Thu, 5 Jul 2001 05:33:13 GMT
+References: <3B422380.58B395E7@bartek.dontspamme.net> <tk4lhug0osg968@corp.supernews.com> <rTt07.29556$J91.937344@bgtnsc06-news.ops.worldnet.att.net>
+NNTP-Posting-Host: ppp0b176.std.com
+Organization: The World @ Software Tool & Die
+X-Newsreader: Gnus v5.7/Emacs 20.7
+Lines: 7
+Xref: nntp1.ba.best.com alt.sys.pdp10:5521
+
+>>>>> On Wed, 04 Jul 2001 00:59:03 GMT, Henry W Miller ("Henry") writes:
+ Henry> Was there an "official" Pascal for the PDP-10?  While at DEC, I wrote a
+ Henry> major piece of code (under protest) in Pascal, and I believe that this
+ Henry> version came from Stanford.
+
+On ITS we used a version of PASCAL that was for TOPS-10,
+running under an emulator.  This was necessary for TeX.
+
+

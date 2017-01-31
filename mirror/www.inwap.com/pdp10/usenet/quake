@@ -1,0 +1,321 @@
+Article 3690 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!panix!news.panix.com!not-for-mail
+From: Rich Alderson <alderson+news@panix.com>
+Newsgroups: alt.sys.pdp10
+Subject: Seattle earthquake update
+Date: 28 Feb 2001 21:38:04 -0500
+Organization: Systems Administration, XKL LLC, Redmond WA 98052
+Lines: 19
+Sender: alderson+news@panix2.panix.com
+Message-ID: <mddhf1e2oz7.fsf@panix2.panix.com>
+NNTP-Posting-Host: panix2.panix.com
+X-Trace: news.panix.com 983414284 20950 166.84.0.227 (1 Mar 2001 02:38:04 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: 1 Mar 2001 02:38:04 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.7
+Xref: nntp1.ba.best.com alt.sys.pdp10:3690
+
+As many of you will have heard by now, the Puget Sound area of Washington was
+rocked by a fairly large earthquake at 10:54 local time this morning.  The
+temblor was centered roughly 10 miles north of Olympia and 30 miles down.
+
+The Seattle area escaped major damage, though Seattle-Tacoma Airport was closed
+because all the glass in the air-traffic control tower shattering out, making
+it unusable.  Olympia was hit much harder--visible damage to downtown buildings
+and a large crack in the capital dome.
+
+At the offices of XKL, in Redmond, we were very lucky.  The building is fairly
+new (about 10 years old), so withstood the shaking; within our offices, only a
+few items improperly stored on top of system consoles and the like fell to the
+floor.
+
+I hope that all our compatriots here in the Puget Sound area were as lucky.
+
+-- 
+Rich Alderson                                          alderson+news@panix.com
+  "You get what anybody gets.  You get a lifetime."  --Death, of the Endless
+
+
+Article 3692 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsxfer3.itd.umich.edu!nntp.cs.ubc.ca!logbridge.uoregon.edu!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Seattle earthquake update
+Date: Wed, 28 Feb 2001 22:02:25 -0800
+Organization: Networks & Distributed Computing
+Lines: 16
+Message-ID: <Pine.NXT.4.40.0102282200130.4313-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <mddhf1e2oz7.fsf@panix2.panix.com>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 983426549 23490 (None) 140.142.17.39
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: pra
+In-Reply-To: <mddhf1e2oz7.fsf@panix2.panix.com>
+Xref: nntp1.ba.best.com alt.sys.pdp10:3692
+
+On 28 Feb 2001, Rich Alderson wrote:
+> As many of you will have heard by now, the Puget Sound area of Washington was
+> rocked by a fairly large earthquake at 10:54 local time this morning.
+
+Yup, a 6.8 magnitude.
+
+> At the offices of XKL, in Redmond, we were very lucky.
+
+The same at my home (site of Panda.COM and two working 2020 systems) and
+office.  Just some small stuff fell, no damage and nothing broken.
+
+-- Mark --
+
+http://staff.washington.edu/mrc
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+Article 3697 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newshub.sdsu.edu!news-spur1.maxwell.syr.edu!news.maxwell.syr.edu!newsfeed.mathworks.com!panix!news.panix.com!not-for-mail
+From: Rich Alderson <alderson+news@panix.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Seattle earthquake update
+Date: 01 Mar 2001 17:45:15 -0500
+Organization: Systems Administration, XKL LLC, Redmond WA 98052
+Lines: 18
+Sender: alderson+news@panix2.panix.com
+Message-ID: <mdditltw1l0.fsf@panix2.panix.com>
+References: <mddhf1e2oz7.fsf@panix2.panix.com>
+NNTP-Posting-Host: panix2.panix.com
+X-Trace: news.panix.com 983486715 10930 166.84.0.227 (1 Mar 2001 22:45:15 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: 1 Mar 2001 22:45:15 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.7
+Xref: nntp1.ba.best.com alt.sys.pdp10:3697
+
+One of the problems with reporting from one's own point of view is how wrong
+one can be.  A number of older buildings in one of Seattle's historical areas
+were damaged, some badly, and Boeing Field has damage to the runways.
+
+Mark's home is a good deal closer to the epicenter than Redmond, so the capri-
+cious nature of the damage is clear.  Some roads were badly damaged although
+further away, including one of the approach roads to my house (though not my
+usual route)--one rural highway suffered a break with a difference in height
+between the two sides of about 2 feet (60 cm).
+
+The damage estimates for the region are coming in at $2,000,000,000.  But there
+were very few serious injuries and only one fatality (from a heart attack).
+
+Thanks to everyone for allowing this little off-topic report.
+
+-- 
+Rich Alderson                                          alderson+news@panix.com
+  "You get what anybody gets.  You get a lifetime."  --Death, of the Endless
+
+
+Article 3702 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!canoe.uoregon.edu!logbridge.uoregon.edu!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Seattle earthquake update
+Date: Thu, 1 Mar 2001 16:03:32 -0800
+Organization: Networks & Distributed Computing
+Lines: 68
+Message-ID: <Pine.NXT.4.40.0103011539440.5052-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <mddhf1e2oz7.fsf@panix2.panix.com> <mdditltw1l0.fsf@panix2.panix.com>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 983491415 21546 (None) 140.142.17.39
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: pare0
+In-Reply-To: <mdditltw1l0.fsf@panix2.panix.com>
+Xref: nntp1.ba.best.com alt.sys.pdp10:3702
+
+On 1 Mar 2001, Rich Alderson wrote:
+> A number of older buildings in one of Seattle's historical areas
+> were damaged, some badly, and Boeing Field has damage to the runways.
+
+Most of the damage was indeed to older buildings, and buildings in the
+industrial area (largely built on fill).  Many of these old buildings have
+extensive masonry.
+
+Was it Boeing Field or Sea-Tac with the runway damage?
+
+> Mark's home is a good deal closer to the epicenter than Redmond, so the capri-
+> cious nature of the damage is clear.
+
+My understanding is that the epicenter was in the south end of Puget
+Sound, so between that and the great depth of the quake it was pretty far
+away from both of us.
+
+The quake was violent; the worst that I've ever experienced.  I was just
+finishing breakfast when it hit.  First I said "oh shit!", then I dove
+under the dining room table.  My dog was outside on the deck, watching me
+through the sliding glass door, but presently decided that she really
+didn't want to be on a wooden deck in an earthquake and jumped onto terra
+(non-)firma.
+
+Stuff was shaking and knocking about.  At first, I was worried about the
+house, but the intensity stayed about the same throughout and it became
+clear that the house wasn't in trouble.  Then I worried about the
+grandfather clock -- an heirloom that I had just spent a lot of money
+fixing -- since I could hear it banging about.
+
+When the quake stopped, I waited a couple of seconds and got up.  The
+electricity was still on, and I didn't smell any gas.  The furnace and
+clothes dryer were going the whole time.  The dining room chandelier was
+still swaying violently.  So were the weights on the grandfather clock;
+they had knocked the door open; fortunately the latch gave before the
+glass did.  The clock didn't work when I tried starting it again.  I
+discovered that the quake had caused the pendulum to separate from the
+clockworks; the clockworks has a pin that got into a corresponding hole in
+the pendulum, and this pin was at the side.  Simple to fix.
+
+Throughout the house, little things had fallen down and pictures on the
+wall were awry, but nothing was broken.  It took no more than about 5
+minutes to go around and set everything right.
+
+It was a similar story elsewhere on the island, although at the grocery
+stores they had a lot of stuff fall from the shelves and the ceiling at
+the Safeway partially failed.  I think that they've re-opened by now.
+
+They kicked people out of the office building at UW where I work, but the
+damage was only a couple of loose ceiling tiles and cracked drywall over
+an expansion joint (OK, what ditz drywalled over an expansion joint??).
+But the time I arrived, the structural engineers had already OK'd the
+building for reoccupancy.
+
+The bottom line is that although it was a hard hit, but it was a glancing
+blow.  There was no disaster here.  By next week, I think that it'll be
+forgotten.  Unlike SF, LA, or Kobe, this won't be a famous earthquake.
+
+> Thanks to everyone for allowing this little off-topic report.
+
+And also thanks to everybody for their good wishes.
+
+-- Mark --
+
+http://staff.washington.edu/mrc
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+
+Article 5723 of alt.tv.reboot:
+Path: nntp1.ba.best.com!news2.best.com!news.voicenet.com!feed2.news.rcn.net!rcn!newsfeed.direct.ca!look.ca!newsfeed.bc.tac.net!news.bc.tac.net!not-for-mail
+Message-ID: <3A9D6E4C.F8C18964@reboot.com>
+From: mairi welman <mairi@reboot.com>
+Reply-To: mairi@reboot.com
+X-Mailer: Mozilla 4.5 (Macintosh; U; PPC)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.tv.reboot
+Subject: Earthquake!
+Content-Type: text/plain; charset=us-ascii; x-mac-type="54455854"; x-mac-creator="4D4F5353"
+Content-Transfer-Encoding: 7bit
+Lines: 22
+Date: Wed, 28 Feb 2001 13:32:02 -0800
+NNTP-Posting-Host: 207.194.87.97
+X-Complaints-To: news@bctel.net
+X-Trace: news.bc.tac.net 983396023 207.194.87.97 (Wed, 28 Feb 2001 13:33:43 PST)
+NNTP-Posting-Date: Wed, 28 Feb 2001 13:33:43 PST
+Xref: nntp1.ba.best.com alt.tv.reboot:5723
+
+Well, that was exciting!
+A weird rolling sensation, like being on a boat that is taking on a wake
+sideways. It was quite strong. No damage here in Vancouver except a
+couple of windows that blew out. Looks like Seattle got the worst of it,
+and apparently it was felt all the way to Salt Lake City.
+But...now the sun is shining, the sky is blue and , if I didn't know
+better, I'd say Spring has arrived! (With a bang, not a whimper... hee
+hee).
+Mairi
+---------------------------------------------------------------------------
+
+Mairi Welman                              email: mairi@reboot.com
+Director of Communications        tel: 604-714-2600
+Mainframe Entertainment, Inc.     fax: 604-714-2641
+500 - 2025 W. Broadway             www.mainframe.ca
+Vancouver, BC, V6J 1Z6
+---------------------------------------------------------------------------
+
+"The only real posession we ever own is our character."
+                                                       Tom Wolfe
+
+
+
+
+Article 5727 of alt.tv.reboot:
+Path: nntp1.ba.best.com!news1.best.com!nntp.primenet.com!nntp.gblx.net!newsfeed.direct.ca!look.ca!newshub2.rdc1.sfba.home.com!news.home.com!news1.sttls1.wa.home.com.POSTED!not-for-mail
+User-Agent: Microsoft-Outlook-Express-Macintosh-Edition/5.02.2022
+Subject: Re: Earthquake!
+From: World Associates <worldassociates@mac.com>
+Newsgroups: alt.tv.reboot
+Message-ID: <B6C2C05D.3404%worldassociates@mac.com>
+References: <3A9D6E4C.F8C18964@reboot.com>
+Mime-version: 1.0
+Content-Type: text/plain; charset="US-ASCII"
+Content-transfer-encoding: 7bit
+Lines: 53
+Date: Wed, 28 Feb 2001 22:46:55 GMT
+NNTP-Posting-Host: 24.0.90.46
+X-Complaints-To: abuse@home.net
+X-Trace: news1.sttls1.wa.home.com 983400415 24.0.90.46 (Wed, 28 Feb 2001 14:46:55 PST)
+NNTP-Posting-Date: Wed, 28 Feb 2001 14:46:55 PST
+Organization: Excite@Home - The Leader in Broadband http://home.com/faster
+Xref: nntp1.ba.best.com alt.tv.reboot:5727
+
+in article 3A9D6E4C.F8C18964@reboot.com, mairi welman at mairi@reboot.com
+wrote on 2/28/01 1:32 PM:
+
+> Well, that was exciting!
+> A weird rolling sensation, like being on a boat that is taking on a wake
+> sideways. It was quite strong. No damage here in Vancouver except a
+> couple of windows that blew out. Looks like Seattle got the worst of it,
+
+Funny you should mention that. Just got through posting the following to our
+local Mac User Group BBS:
+
+[For those of you not familiar with the Seattle area, the Alaska Way Viaduct
+is an older doubledecker highway that runs along the waterfront. Recent
+California and Kobe quakes had similar roadways collapse, squishing cars and
+their occupants.]
+
+OK, so where's the one place you really wouldn't want to be during an
+earthquake? The lower deck of the Alaska Way Viaduct?
+
+That's where I was when it hit, between the downtown entrance and the Safeco
+Field exit. The car started shaking, and I thought I was getting a flat
+tire. Then I noticed the buildings to my left were losing pieces, chunks
+peeling off and falling away.
+
+The cars ahead of me started slowing down, despite my most rapid and
+colorful vocal urging for them to not slowdown until AFTER we were off the
+road. When we got to the off ramp, the light fixtures were swaying wildly,
+and dust was rising along First Avenue South from falling chunks.
+
+As you've all seen on TV by now, the damage was extensive. Lots of broken
+windows. People were pouring out of their work places, many with cell phones
+to their ears.
+
+Once off the ramp, I pulled over and waited for my heartbeat to slow below
+double-digit-beats-per-second, then drove on to my client. They are located
+a couple of blocks south of Safeco. The building next to theirs had a large
+chunk missing from the roof and top floor, the bricks littering the parking
+lot below.
+
+Their power was out, and about a half a dozen UPS battery back up devices
+were beeping. I was unable to call home, due to cell phone system overload.
+Since there was no work to be done, I chatted with the clients for a while,
+then came home.
+
+Our house was completely uneffected. Couple of crooked pictures on the wall,
+that's it. It was a striking contrast to the scene I came from.
+
+I love the Viaduct, and always have. I am thrilled and grateful it acquitted
+itself so well today. I did, however, take Elliot Way home. No use pushing
+it. ;-)
+
+CDW
+
+
+

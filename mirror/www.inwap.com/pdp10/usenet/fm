@@ -1,0 +1,97 @@
+Article 4765 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newspeer.monmouth.com!news.ultranet.com!not-for-mail
+From: "Carl R. Friend" <carl.friend@stoneweb.com>
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: YKYBHTLW
+Date: Thu, 22 Apr 1999 12:00:38 -0400
+Organization: as little as possible!
+Lines: 27
+Message-ID: <371F47A6.B8D17E18@stoneweb.com>
+References: <160419991655286030%drissman@acm.org> <7f9rhv$al3$3@ligarius.ultra.net> <3719f951.76285607@news.cadvision.com> <7fgd03$3sv$1@nntpd.lkg.dec.com> <dBkT2.1867$hl6.69133@news.itd.umich.edu> <371E7EB5.8123AF06@stoneweb.com> <7fn7kh$g42@nnrp4.farm.idt.net>
+NNTP-Posting-Host: zephyr.ultranet.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 22 Apr 1999 16:00:40 GMT
+X-Mailer: Mozilla 4.5 [en] (X11; I; Linux 2.0.29 i586)
+X-Accept-Language: en
+Xref: news3.best.com alt.folklore.computers:128544 alt.sys.pdp10:4765
+
+Chris Ward wrote:
+> 
+> I may be wrong, but the first 16 words on the KA may have been core
+> memory (which was persistant across powerups) and was "hidden" by the
+> fast memory accumulators and the contents persisted (like ROM!)
+> across powerups.
+
+   Your memory is correct, but only for the KA. "Fast Memory" was not
+switchable in KIs and later. On a KA with the FM (No, not _that_ FM)
+switched off, the ACs, indeed, were in core. There was a penalty in
+performance, of course. As far as I'm aware, FM was a _very_ popular
+option in the KA and not too many shipped without it.
+
+> It has been 20 years since I operated a 10, but I do remember you
+> could key in a bootstrap from the front panel switches.
+
+   For devices which didn't support READIN-mode, you pretty much had
+to enter the bootstrap from the panel. However, most devices tended
+to be compatible with the READIN convention.
+
+-- 
++------------------------------------------------+---------------------+
+| Carl Richard Friend (UNIX Sysadmin)            | West Boylston       |
+| Minicomputer Collector / Enthusiast            | Massachusetts, USA  |
+| mailto:crfriend@ma.ultranet.com                |                     |
+| http://www.ultranet.com/~crfriend/museum       | ICBM: N42:22 W71:47 |
++------------------------------------------------+---------------------+
+
+
+Article 4767 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!news.ultranet.com!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: YKYBHTLW
+Date: Fri, 23 Apr 1999 01:06:23 -0400
+Organization: UltraNet Communications , an RCN Company http://www.ultranet.com/
+Lines: 26
+Message-ID: <371FFFCF.91181191@MA.UltraNet.Com>
+References: <160419991655286030%drissman@acm.org> <7f9rhv$al3$3@ligarius.ultra.net> <3719f951.76285607@news.cadvision.com> <7fgd03$3sv$1@nntpd.lkg.dec.com> <dBkT2.1867$hl6.69133@news.itd.umich.edu> <371E7EB5.8123AF06@stoneweb.com> <7fn7kh$g42@nnrp4.farm.idt.net> <371F47A6.B8D17E18@stoneweb.com>
+NNTP-Posting-Host: 207-172-255-163.s163.tnt2.sbo.ma.dialup.rcn.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 23 Apr 1999 05:06:52 GMT
+X-Mailer: Mozilla 4.5 [en] (Win95; U)
+X-Accept-Language: en,en-US,en-GB,es
+Xref: news3.best.com alt.folklore.computers:128598 alt.sys.pdp10:4767
+
+"Carl R. Friend" wrote:
+> 
+> Chris Ward wrote:
+> >
+> > I may be wrong, but the first 16 words on the KA may have been core
+> > memory (which was persistant across powerups) and was "hidden" by the
+> > fast memory accumulators and the contents persisted (like ROM!)
+> > across powerups.
+> 
+>    Your memory is correct, but only for the KA. "Fast Memory" was not
+> switchable in KIs and later. On a KA with the FM (No, not _that_ FM)
+> switched off, the ACs, indeed, were in core.  ...
+
+The KA which Chris used (#101) once had an intermittent in the FM ENB switch,
+causing the hardware ACs to be randomly switched in and out as the margin
+check/maintenance panel vibrated (or was tapped by the field servant).
+
+
+When the Computer Museum was selling off PDP-6 boards at the MR cafeteria
+garage sale, I asked Gordon if read-in mode was implemented as a diode matrix,
+and if so, could he direct me to that board.  He said it wasn't, and that I
+really wanted an AR/MQ/MB/lamp driver(Memory Indicator?) S6205K arithmetic
+register bit slice instead.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+

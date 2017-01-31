@@ -1,0 +1,70 @@
+Article 501 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!dfw-peer.news.verio.net!sea-feed.news.verio.net!news.verio.net!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.folklore.computers,comp.arch,alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11,vmsnet.pdp-11
+Subject: Re: Q: Why not (2^n)-bit?
+Date: Mon, 14 Aug 2000 15:09:11 -0700
+Organization: Networks & Distributed Computing
+Lines: 48
+Message-ID: <Pine.NXT.4.30.0008141408040.3253-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <rpNl5.131549$lU5.898906@news1.rdc1.nj.home.com> <8n8mcb$ogt$1@yorikke.arb-phys.uni-dortmund.de> <u3dk8m0dn.fsf@roundpoint.com> <%0Tl5.132491$lU5.900249@news1.rdc1.nj.home.com> <christian.bau-1408001549450001@christian-mac.isltd.insignia.com> <8n91sd$107g$1@ausnews.austin.ibm.com> <39985A75.485B@hda.hydro.com>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 966290955 75808 (None) 140.142.17.37
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: rogue
+To: Terje Mathisen <Terje.Mathisen@hda.hydro.com>
+In-Reply-To: <39985A75.485B@hda.hydro.com>
+Xref: nntp1.ba.best.com alt.folklore.computers:3772 comp.arch:1623 alt.sys.pdp8:111 alt.sys.pdp10:501 alt.sys.pdp11:150 vmsnet.pdp-11:172
+
+On Mon, 14 Aug 2000, Terje Mathisen wrote:
+> UTF8 defines encodings for up to 31-bit chars, so presumably the last 2G
+> of encodings aren't used.
+
+Like UTF-16, UTF-8 defines encodings for 20 1/2-bit characters.  Unicode
+only defines the 16-bit Basic Multilingual Plane (BMP) plus 16 additional
+planes.  Yes, there are 17 planes!
+
+You're thinking about UCS-4, which defines the full range of 31-bit
+characters in ISO 10646.  However, ISO JTC1/SC2/WG2 has stipulated that
+planes 1 - 14 (0xe) are to be used for future character assignments, and
+this is being done in tandem with Unicode.  Plane 14 (0xe) has been
+further co-opted for tag character purposes.  Planes 15 (0xf) and 16
+(0x10) are reserved for private use.
+
+Of the other ISO 10646 planes of UCS-4, groups 0x60 to 0x7f and planes
+0xe0 to 0xff in group 0x00 are reserved for private use, but are strongly
+discouraged because these codepoint values can't interoperate with
+Unicode.
+
+Graphically, the UCS-4 assignments look like:
+
+00 00 00 00 - 00 00 00 7f	ASCII
+00 00 00 00 - 00 10 ff ff	Unicode
+00 00 00 00 - 7f ff ff ff	ISO 10646 (UCS-4)
+
+00 00 00 00 - 00 00 ff ff	ISO 10646/Unicode BMP and surrogates
+00 00 01 00 - 00 0e ff ff	ISO 10646/Unicode future characters
+00 0f 00 00 - 00 10 ff ff	ISO 10646/Unicode private use
+00 11 00 00 - 00 df ff ff	ISO 10646 unassigned(?)
+00 e0 00 00 - 00 ff ff ff	ISO 10646 private use
+01 00 00 00 - 5f ff ff ff	ISO 10646 unassigned(?)
+60 00 00 00 - 7f ff ff ff	ISO 10646 private use
+
+Surrogates use the S (Special) zone of the BMP, between 0xd800 and 0xdfff,
+in a pair.  The low order 10 bits of each pair member combine to form a 20
+bit value, and then 0x10000 is added to this (so a surrogate can never
+represent a BMP value).  So now you know why there are 17 planes.
+
+The PDP-10 byte instructions would have been quite useful for UTF-8!
+
+-- Mark --
+
+* RCW 19.190 notice: This email address is located in Washington State.	*
+* Unsolicited commercial email may be billed $500 per message.		*
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+

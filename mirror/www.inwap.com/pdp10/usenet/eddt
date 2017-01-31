@@ -1,0 +1,285 @@
+Article 4317 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Smith and O'Halloran)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: 19 Oct 1998 11:00:22 -0700
+Organization: Chez INWAP (people, computers, cats)
+Message-ID: <70funm$nvf$1@shell3.ba.best.com>
+References: <qhu31sc8nn.fsf@ruckus.brouhaha.com> <3 <F11Lyt.E1o@world.std.com> <70f9d4$rqo$1@strato.ultra.net>
+Lines: 68
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: 908820028 12441 inwap 206.184.139.134
+Xref: news3.best.com alt.sys.pdp10:4317
+
+In article <70f9d4$rqo$1@strato.ultra.net>,  <jmfbahciv@aol.com> wrote:
+>In article <F11Lyt.E1o@world.std.com>, mbg@world.std.com (Megan) wrote:
+>>With all this talk about DDT... does anyone have a source copy or
+>>binary copy of a DDT which doesn't depend on a monitor running
+>>(and hence doesn't depend on UUOs)?  I'm hoping there is some
+>>form of a debugger which did it's own I/O from/to the console.
+>>Further, I'm hoping there's one which doesn't use the PI system.
+>>I don't have that working yet.
+>
+>There isn't a single program that we shipped that didn't have a
+>UUO.  Consider RESET. So, to answer your question, no there isn't
+>a DDT with the constraints that you want.
+>/BAH
+
+There most certainly is.  It's called EDDT, and it is part of MONITR.EXE
+(TOPS-20) and SYSTEM.EXE (TOPS-10).  All you have to do is tell the console
+front end (or paper-tape bootstrap loader) to read in the operating
+system without starting it.  For TOPS-10, it was either 141 or 147 as
+the starting address of EDDT.
+
+On startup, DDT (all flavors) first stored the PC and PC flags into an
+accumulator.  If the USER bit was on, it would do ordinary UUO/JSYS calls
+to talk to the controlling terminal.  But if the USER bit was off, it
+would do CONI/CONO/DATAI/DATAO directly to the console TTY, with interrupts
+off.  (It would first have to execute a series of instructions to determine
+what type of processor it was on: KA/KI vs KL vs KS.  Then it would use
+the appropriate supervisor-mode I/O routine.)
+
+You can try http://www.inwap.com/pdp10/monitr.exe - have fun getting that
+36-bit core image into your emulator over an 8-bit FTP link.
+	-Joe
+
+(home/inwap) inwap@shell3% pdp10/type36 pdp10/monitr.exe | head
+                36-bit dump of pdp10/monitr.exe
+address     even word       odd word            ASCII (hex)          text
+000000|  1776,,    31|300000,,     1| 00 3F 70 00 8C 30 00 00 00 80  .?p..0....
+000002|     0,,     0|100000,,     2| 00 00 00 00 00 10 00 00 00 01  ..........
+000004|156000,,     1|100000,,   161| 1B 40 00 00 80 10 00 00 00 B8  .@........
+000006|     0,,   162|100000,,   162| 00 00 00 00 39 10 00 00 00 39  ....9....9
+000010|     0,,   164|300000,,   163| 00 00 00 00 3A 30 00 00 00 B9  ....:0....
+000012|  1000,,   165|300000,,   165| 00 20 00 00 BA 30 00 00 00 BA  . ...0....
+000014|255000,,   317|300000,,   443| 2B 20 00 00 E7 30 00 00 01 91  + ...0....
+000016| 17000,,   714|140000,,     0| 03 60 00 01 66 18 00 00 00 00  .`..f.....
+(home/inwap) inwap@shell3% pdp10/type36 pdp10/monitr.exe | \
+ perl -n -e 'print if /[A-Za-z]{6,9}/' | head -20
+                36-bit dump of pdp10/monitr.exe
+address     even word       odd word            ASCII (hex)          text
+001000| 64250,,347640|546451,,143620| 0D 0A 43 4F 50 59 52 49 47 48  ..COPYRIGH
+001004|522031,,420212|506531,,150232| 54 41 4C 20 45 51 55 49 50 4D  TAL EQUIPM
+001006|426352,,420206|476452,, 47644| 45 4E 54 20 43 4F 52 50 4F 52  ENT CORPOR
+001014|442512,,320244|426470,,551254| 48 54 53 20 52 45 53 45 52 56  HTS RESERV
+003004| 64250,,347640|546451,,143620| 0D 0A 43 4F 50 59 52 49 47 48  ..COPYRIGH
+003010|522031,,420212|506531,,150232| 54 41 4C 20 45 51 55 49 50 4D  TAL EQUIPM
+003012|426352,,420206|476452,, 47644| 45 4E 54 20 43 4F 52 50 4F 52  ENT CORPOR
+003022|512230,,744250|515012,,242646| 52 49 47 48 54 53 20 52 45 53  RIGHTS RES
+004310| 64241,,122640|512370,,246212| 0D 0A 09 25 50 52 4F 42 4C 45  ...%PROBLE
+036764|203315,,761726|627104,, 62336| 20 6C 6F 63 6B 65 64 20 64 6F   locked do
+036770|462071,,344634|445014,,671336| 4C 43 4B 49 4E 49 20 66 72 6F  LCKINI fro
+036776| 64250,,252616|442312,,420302| 0D 0A 42 55 47 48 4C 54 20 61  ..BUGHLT a
+047554| 64253,,346636|472232,,447644| 0D 0A 5B 4D 4F 4E 49 54 4F 52  ..[MONITOR
+047556|351012,,373702|703415,,167316| 3A 20 53 77 61 70 70 69 6E 67  : Swapping
+047562|607536,,372312|621304,, 73702| 61 75 73 74 65 64 2C 20 77 61  austed, wa
+114176|242231,,446212|436031,,420250| 28 49 4C 4C 45 47 41 4C 20 54  (ILLEGAL T
+114574|647514,,364312|621015,,767100| 69 74 63 68 65 64 20 6F 6E 20  itched on 
+114576|623136,,664706|625644,,     0| 64 65 76 69 63 65 3A 20 00 00  device: ..
+-- 
+INWAP.COM is Joe and Sally Smith, John and Chris O'Halloran and our cats
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 4320 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: news3.best.com!news1.best.com!news.maxwell.syr.edu!news.shore.net!uunet!in2.uu.net!world!mbg
+From: mbg@world.std.com (Megan)
+Subject: Re: KL Console Commands
+Message-ID: <F13HDE.7x6@world.std.com>
+Date: Mon, 19 Oct 1998 22:05:38 GMT
+References: <qhu31sc8nn.fsf@ruckus.brouhaha.com> <3 <F11Lyt.E1o@world.std.com> <70f9d4$rqo$1@strato.ultra.net> <70funm$nvf$1@shell3.ba.best.com>
+Organization: The World Public Access UNIX, Brookline, MA
+Lines: 132
+Xref: news3.best.com alt.sys.pdp10:4320
+
+inwap@best.com (Smith and O'Halloran) writes:
+
+
+>There most certainly is.  It's called EDDT, and it is part of MONITR.EXE
+>(TOPS-20) and SYSTEM.EXE (TOPS-10).  All you have to do is tell the console
+>front end (or paper-tape bootstrap loader) to read in the operating
+>system without starting it.  For TOPS-10, it was either 141 or 147 as
+>the starting address of EDDT.
+
+Thank you!  I'll take a look at it...
+
+>On startup, DDT (all flavors) first stored the PC and PC flags into an
+>accumulator.  If the USER bit was on, it would do ordinary UUO/JSYS calls
+>to talk to the controlling terminal.  But if the USER bit was off, it
+>would do CONI/CONO/DATAI/DATAO directly to the console TTY, with interrupts
+>off.  (It would first have to execute a series of instructions to determine
+>what type of processor it was on: KA/KI vs KL vs KS.  Then it would use
+>the appropriate supervisor-mode I/O routine.)
+
+Great... I've got terminal (and ptr and ptp) programmed I/O working
+(modulo some characteristics I may not know about) and about to get
+PI working...
+
+>You can try http://www.inwap.com/pdp10/monitr.exe - have fun getting that
+>36-bit core image into your emulator over an 8-bit FTP link.
+>	-Joe
+
+I'll take a look... as for loading... if I can find out the format of
+the file, then I can modify the sim_load routines in my emulator (invoked
+by the call from the simulation control package by Bob Supnik), then it
+can just load it as is, doing any conversion on the fly.
+
+To test instruction fetch, decode and execute, I used the following
+segment of code which I got from someone about a year ago (I had to
+hand-code it since I don't have an assembler):
+
+(also, the comments have not been kept up to date as for where it
+ places itself in the BLT, it is still a butterfly BLT pattern but
+ it will exist twice on a given page, not just once).
+
+- - - - -
+    /* Now, load a sample program into main memory.
+     * This sample program moves itself (BLT) back and forth between
+     * pages (0, 777, 1, 776, etc...), executing itself in each page
+     * it moves itself to.  Not an exhaustive test of memory or the
+     * CPU, but a number of things have to be working for this to
+     * do its job...
+     */
+
+    M[0140] = (int64)(0646000777777);   /*      trcn    777777          */
+    M[0141] = (int64)(0254015000005);   /*      jrst    5(15)           */
+
+    M[0142] = (int64)(0551451000400);   /*      hrrzi   11,400(11)      */
+    M[0143] = (int64)(0200540000011);   /*      move    13,11           */
+    M[0144] = (int64)(0254015000007);   /*      jrst    7(15)           */
+
+    M[0145] = (int64)(0551512777400);   /*      hrrzi   12,777400(12)   */
+    M[0146] = (int64)(0200540000012);   /*      move    13,12           */
+    M[0147] = (int64)(0504040000015);   /*      hrl     1,15            */
+    M[0150] = (int64)(0541053000140);   /*      hrri    1,140(13)       */
+    M[0151] = (int64)(0550100000001);   /*      hrrz    2,1             */
+    M[0152] = (int64)(0251042000225);   /*      blt     1,225(2)        */
+    M[0153] = (int64)(0200600000015);   /*      move    14,15           */
+    M[0154] = (int64)(0201653000140);   /*      movei   15,140(13)      */
+    M[0155] = (int64)(0254015000016);   /*      jrst    16(15)          */
+
+    M[0300] = (int64)(0400000000000);   /*      setz    0               */
+    M[0301] = (int64)(0403440000012);   /*      setzb   11,12           */
+    M[0302] = (int64)(0201640000140);   /*      movei   15,140          */
+    M[0303] = (int64)(0400240000000);   /*      setz    5               */
+    M[0304] = (int64)(0205040777753);   /*      movsi   1,777753        */
+    M[0305] = (int64)(0540040000015);   /*      hrr     1,15            */
+    M[0306] = (int64)(0270241000000);   /*      add     5,(1)           */
+    M[0307] = (int64)(0253040000306);   /*      aobjn   1,306           */
+    M[0310] = (int64)(0254015000000);   /*      jrst    (15)            */
+- - - - -
+
+which is disassembed by the emulator as follows:
+
+sim> set cpu test
+sim> e -m 140-165
+140:    TRCN    777777
+141:    JRST    5(15)
+142:    HRRZI   11,400(11)
+143:    MOVE    13,11
+144:    JRST    7(15)
+145:    HRRZI   12,777400(12)
+146:    MOVE    13,12
+147:    HRL     1,15
+150:    HRRI    1,140(13)
+151:    HRRZ    2,1
+152:    BLT     1,225(2)
+153:    MOVE    14,15
+154:    MOVEI   15,140(13)
+155:    JRST    16(15)
+156:    SETZ    2,0
+157:    MOVSI   1,777753
+160:    HRR     1,15
+161:    ADD     2,0(1)
+162:    AOBJN   1,21(15)
+163:    CAMN    2,5
+164:    JRST    0(15)
+165:    JRST    4,0
+
+And the following is the code I used to test console terminal
+programmed ID...
+
+100:    CONO    TTY,3770
+101:    CONSO   TTY,40
+102:    JRST    101
+103:    DATAI   TTY,0
+104:    CONSO   TTY,10
+105:    JRST    104
+106:    DATAO   TTY,0
+107:    CONSO   PTP,10
+110:    JRST    107
+
+If it doesn't someday run TOPS-10 or TOPS-20, it still has been a lot
+of fun to work on...
+
+					Megan Gentry
+					Former RT-11 Developer
+
++--------------------------------+-------------------------------------+
+| Megan Gentry, EMT/B, PP-ASEL   | Internet (work): gentry!zk3.dec.com |
+| Unix Support Engineering Group |          (home):  mbg!world.std.com |
+| Compaq Computer Corporation    | addresses need '@' in place of '!'  |
+| 110 Spitbrook Rd. ZK03-2/T43   | URL:     http://world.std.com/~mbg/ | 
+| Nashua, NH 03062               | "pdp-11 programmer - some assembler |
+| (603) 884 1055                 |  required." - mbg                   |
++--------------------------------+-------------------------------------+
+
+
+
+Article 4980 of alt.sys.pdp10:
+From: nospam-gagner@clark.net (Philip Gagner)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: Tue, 04 May 1999 01:10:05 GMT
+Organization: TWLG
+Reply-To: nospam-gagner@clark.net
+Message-ID: <37324689.4539727@news.kivex.com>
+References: <371be3e4.0@newsfeed.one.net> <7g0usf$4lg@weyl.math.psu.edu> <H20V2.1086$WA4.216881@ptah.visi.com> <p98mccabe-2604991226580001@mepa2pp48.alltel.net> <7g26qv$55r@weyl.math.psu.edu> <7g9jj5$88h$2@antiochus.ultra.net>
+X-Newsreader: Forte Agent 1.5/32.451
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+NNTP-Posting-Host: pc162.svg-law.com
+Lines: 35
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!newsfeed.cwix.com!129.250.35.146!iad-peer.news.verio.net!uunet!ffx.uu.net!in3.uu.net!newsfeed.one.net!news!pc162.svg-law.com
+Xref: news3.best.com alt.folklore.computers:129465 alt.sys.pdp10:4980
+
+Yes, this was the theory. In practice, if what one was debugging
+wasn't really VERY likely to halt the system, then you a user with
+appropriate privileges could load FILDDT and watch (as well as modify)
+memory directly, including monitor tables, etc.
+
+On very many more than one occassions, people in the monitor group
+wrote code in a patch space, then loaded a jump to that code, thereby
+debugging the monitor while it wasn't stand alone. On very few
+occassions this resulted in the system crashing, which resulted in
+sheepish explanations, lectures from management, annoyed operators,
+and half-hearted assurances it would never happen again. Of course
+what the managers meant would never happen was this sort of
+test-on-the-fly during daylight timesharing hours. What WE meant was
+that the system wouldn't crash next time, because we'd figured out a
+fix.
+
+Oh, and FILDDT was, of course, a user-level program. So although BAH
+is correct as a matter of management theory, the facility existed to
+do it differently.
+
+>When one wanted to debug the TOPS10 monitor, one took the whole
+>system stand-alone.  The monitor could not be debugged as a user
+>mode program.  A very special DDT, called EDDT, was loaded with
+>the monitor for symbolic debugging purposes.  On our systems,
+>one could go to the system console, type <ctrl-D>, and stop
+>the system by hitting that special break point.  Since our
+>shops were run based on something we called "gentleman's 
+>timesharing" this was not done unless there existed a great
+>need.  There a few times that the command was typed by
+>mistake but an <altmode>P would continue system operation.
+>
+>/BAH
+>
+>Subtract a hundred and four for e-mail.
+
+
+

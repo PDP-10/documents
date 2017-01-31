@@ -1,0 +1,201 @@
+Article 3595 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!newsfeed.internetmci.com!206.214.99.1!ix.netcom.com!news
+From: xkladmin@paulallen.com (XKLeTen Admin)
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11,comp.sys.dec
+Subject: XKL (PDP10) Site Announcement
+Date: Tue, 30 Dec 1997 02:55:47 GMT
+Organization: XKLeTen
+Lines: 51
+Message-ID: <34a85fd3.3481181@nntp.ix.netcom.com>
+Reply-To: xkladmin@paulallen.com
+NNTP-Posting-Host: stl-wa16-15.ix.netcom.com
+X-NETCOM-Date: Mon Dec 29  6:56:58 PM PST 1997
+X-Newsreader: Forte Free Agent 1.11/32.235
+Xref: nntp1.ba.best.com alt.sys.pdp8:2302 alt.sys.pdp10:3595 alt.sys.pdp11:3375 comp.sys.dec:34254
+
+Dear Fellow PDP-10 Enthusiast,
+
+Over the past 25 years, it's been challenging for all of us to find a
+place to run our PDP-10 software.  At the same time, there hasn't
+been a library of PDP-10 software that is well taken care of, and
+made easily available to the interested public.
+
+I would like to offer a solution.  I have invested in a TOAD-1
+machine running the PDP-10 architecture, and would like to make
+its capabilities available.  The TOAD is manufactured
+by XKL Systems Corporation, and is a completely new hardware
+implementation of Digital's 36-bit PDP-10 architecture, not an
+emulator running on another platform.  This machine I've purchased
+will be a repository for PDP10 public domain software, including the
+collection of the DEC-10 and DEC-20 DECUS tapes.
+
+By making access accounts available to an initial limited group, we
+hope to learn of any issue areas with our new program.  Through an
+account you can set up with us, you can access this library, and run
+programs you may not have seen for years.  You may also submit your
+own programs for storage, and for use by fellow advocates.  These
+programs may be submitted via FTP, email or 9-track tapes.  Once you
+have an account established you could access XKLeTen via telnet.
+Anyone may download the libraries of software through anonymous
+FTP from XKLeTen.paulallen.com.
+
+The machine, named XKLeTen, is configured as follows:
+	TOAD-1, 36-bit computing system
+	TOPS-20 system software
+	32 MW memory board
+	4 mm DDS tape drive
+	9 track tape drive
+ 	8 gigabyte disk
+
+I encourage any of you who are interested to contact us to set up an
+account.  To be considered for an account, please submit the
+following information to XKLadmin@paulallen.com:
+	Full name
+	Email address
+	Interest or purpose in this project (short summary)
+	Desired account name
+
+If you have any questions about XKLeTen, or how to execute the
+anonymous FTP, please contact us via the same email address.
+
+Bill Gates and I used PDP10s to develop much of Microsoft's early
+software.  I hope many of you take advantage of this new opportunity
+to keep alive some of your old memories.  
+
+
+Paul G. Allen
+
+
+Article 3596 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11,comp.sys.dec
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!ix.netcom.com!netcom16!alderson
+From: alderson@netcom16.netcom.com (Richard M. Alderson III)
+Subject: Re: XKL (PDP10) Site Announcement
+In-Reply-To: xkladmin@paulallen.com's message of Tue, 30 Dec 1997 02:55:47 GMT
+Message-ID: <ALDERSON.97Dec29212951@netcom16.netcom.com>
+Sender: alderson@netcom16.netcom.com
+Reply-To: alderson@netcom.com
+Organization: NETCOM On-line services
+References: <34a85fd3.3481181@nntp.ix.netcom.com>
+Date: Tue, 30 Dec 1997 05:29:50 GMT
+Lines: 17
+Xref: nntp1.ba.best.com alt.sys.pdp8:2303 alt.sys.pdp10:3596 alt.sys.pdp11:3376 comp.sys.dec:34256
+
+Just one quick note to avoid confusion:
+
+XKL Systems Corporation became XKL LLC as of 1 January 1997.  Paul Allen
+started his purchase process prior to the name change, so the older name
+appears in their files.
+
+Sometimes I have to wear an *official* hat on the Net, even if I'm posting
+from a private account.
+
+Richard M. Alderson, III
+Manager, Customer Advocacy
+XKL LLC
+-- 
+Rich Alderson   You know the sort of thing that you can find in any dictionary
+                of a strange language, and which so excites the amateur philo-
+                logists, itching to derive one tongue from another that they
+                know better: a word that is nearly the same in form and meaning
+                as the corresponding word in English, or Latin, or Hebrew, or
+                what not.
+                                                --J. R. R. Tolkien,
+alderson@netcom.com                               _The Notion Club Papers_
+
+
+Article 3631 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11,comp.sys.dec
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!news-peer-east.sprintlink.net!news-peer.sprintlink.net!news.sprintlink.net!Sprint!cs.utexas.edu!news.eng.convex.com!egsner!stoneboro!htimsc
+From: htimsc@moc.rric.pcuu.orobenots (Chris Smith)
+Subject: Re: XKL (PDP10) Site Announcement
+References: <34a85fd3.3481181@nntp.ix.netcom.com>
+Organization: Home, Richardson TX
+Date: Tue, 20 Jan 1998 00:40:08 GMT
+Message-ID: <En24Iw.85o@stoneboro.uucp.cirr.com>
+Lines: 39
+Xref: nntp1.ba.best.com alt.sys.pdp8:2323 alt.sys.pdp10:3631 alt.sys.pdp11:3401 comp.sys.dec:35018
+
+xkladmin@paulallen.com (XKLeTen Admin) writes:
+
+| I have invested in a TOAD-1 machine running the PDP-10 architecture,
+| and would like to make its capabilities available.  The TOAD is
+| manufactured by XKL Systems Corporation, and is a completely new
+| hardware implementation of Digital's 36-bit PDP-10 architecture, not
+| an emulator running on another platform.  This machine I've
+| purchased will be a repository for PDP10 public domain software,
+| including the collection of the DEC-10 and DEC-20 DECUS tapes.
+
+Wow. 
+
+Lots of old friends
+
+   <unsupported>snobol.exe
+   <maclisp>grindef.lsp
+   <emacs>teco.mid.1220
+   <src.tex.source>tex.pas
+   <decus.lib20.0002>sail.exe
+   <unsupported>macsyma.exe
+   <src.reduce>reduce.exe
+   <src.7.languages>uddt.mac
+
+and enemies
+
+   <system>acj.exe
+
+and (!)
+ 
+   <root.usr.local.bin>true
+   <root.usr.bin.x11>xphoon.exe
+   <root.web>httpd.exe
+   <root.usr.local.bin>gnuemacs.exe
+
+not to mention the other 25000 files.
+
+Just wow.
+
+(PS: look in <help> and <info> to boot those old neurons)
+
+
+Article: 15454 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!crtntx1-snh1.gtei.net!cpk-news-hub1.bbnplanet.com!news.gtei.net!nntp.abs.net!feeder.qis.net!sn-xit-02!supernews.com!postnews1.google.com!not-for-mail
+From: xkladmin@paulallen.com (XKLeTen Administrator)
+Newsgroups: alt.sys.pdp10
+Subject: Re: XKLeTen?
+Date: 24 Jan 2002 16:38:27 -0800
+Organization: http://groups.google.com/
+Lines: 22
+Message-ID: <160160ab.0201241638.2c197288@posting.google.com>
+References: <Dz038.14294$h31.1586121@e420r-atl1.usenetserver.com>
+NNTP-Posting-Host: 216.220.192.132
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 8bit
+X-Trace: posting.google.com 1011919107 5648 127.0.0.1 (25 Jan 2002 00:38:27 GMT)
+X-Complaints-To: groups-abuse@google.com
+NNTP-Posting-Date: 25 Jan 2002 00:38:27 GMT
+Xref: dfw-artgen.news.verio.net alt.sys.pdp10:15454
+
+"Zane H. Healy" <healyzh@shell1.aracnet.com> wrote in message news:<Dz038.14294$h31.1586121@e420r-atl1.usenetserver.com>...
+> Back on November 5th there was a posting to this newsgroup from
+> pdp10@paulallen.com which stated the following:
+> 
+> "The TOAD-1 XKLeTen.paulallen.com will be movingsoon to a location where it
+> can again be accessed from the internet. Stay tuned for more information."
+> 
+> Anyone know what's up?  Did I miss seeing an announcement?
+> 
+> 			Zane
+
+Sorry for the delay in XKLeTen's return.
+
+XKLeTen has been back on the net for about a week,
+Xkleten.paulallen.com resolves to 216.220.195.4 for the time being. 
+We are still working on a FTP problem that prevents PCs which use NAT
+from connecting.  Until we have a solution - Telenet works and FTP
+works if you have non-NATed IP address.  Accounts from the past have
+been preserved.  For XKLeTen related questions or for accounts on the
+TOAD please use xkladmin@paulallen.com.
+
+Thank you for patience
+
+

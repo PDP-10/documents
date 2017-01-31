@@ -1,0 +1,35 @@
+Article 6231 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!nntp2.deja.com!nnrp1.deja.com!not-for-mail
+From: Tom Van Vleck <thvv@multicians.org>
+Newsgroups: alt.sys.pdp10
+Subject: Re: CTSS file system
+Date: Wed, 05 Jan 2000 00:43:33 GMT
+Organization: Deja.com - Before you buy.
+Lines: 16
+Message-ID: <84u43h$qv3$1@nnrp1.deja.com>
+References: <uyaafbunb.fsf@graphics.cornell.edu>
+NNTP-Posting-Host: 216.1.188.162
+X-Article-Creation-Date: Wed Jan 05 00:43:33 2000 GMT
+X-Http-User-Agent: Mozilla/4.7 (Macintosh; U; PPC)
+X-Http-Proxy: 1.0 x21.deja.com:80 (Squid/1.1.22) for client 216.1.188.162
+X-MyDeja-Info: XMYDJUIDthvv
+Xref: news3.best.com alt.sys.pdp10:6231
+
+Stephen H. Westin wrote:
+> Here's a question for the knowledgeable: did Multics originate the
+> concept of a hierarchical file system, or did it already exist in
+> CTSS?
+
+CTSS directories were named after your problem number and programmer
+number.  Each problem number also had some "common file directories"
+usable by all users on the project.  So there was a sense in which
+there was a static hierarchy.. but CTSS users really wanted to make
+subdirectories and organize their stuff below their home directory,
+and there was no way to do this.  This feature was one of the big
+selling points for Multics.
+
+
+Sent via Deja.com http://www.deja.com/
+Before you buy.
+
+

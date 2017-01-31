@@ -1,0 +1,188 @@
+From bh@abbenay.cs.berkeley.edu Wed Jan  3 19:11:34 PST 2001
+Article: 2928 of alt.sys.pdp10
+Path: nntp1.ba.best.com!news2.best.com!news-hog.berkeley.edu!ucberkeley!agate.berkeley.edu!agate!abbenay.CS.Berkeley.EDU!not-for-mail
+From: bh@abbenay.cs.berkeley.edu (Brian Harvey)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Demise and alt futures of the PDP-10
+Date: 29 Dec 2000 09:15:06 -0800
+Organization: University of California, Berkeley, Computer Science Division
+Lines: 24
+Message-ID: <92igqq$fmp$1@abbenay.CS.Berkeley.EDU>
+References: <3a43c9e5.3140062@news.m.iinet.net.au> <Pine.LNX.4.10.10012272029410.9055-100000@bony.umtec.com> <3A4AA216.C972A990@bellatlantic.net> <Pine.NXT.4.32.0012281251550.27112-100000@Tomobiki-Cho.CAC.Washington.EDU>
+NNTP-Posting-Host: abbenay.cs.berkeley.edu
+X-Trace: agate.berkeley.edu 978110107 29461 128.32.35.58 (29 Dec 2000 17:15:07 GMT)
+X-Complaints-To: abuse@berkeley.edu
+NNTP-Posting-Date: 29 Dec 2000 17:15:07 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2928
+
+Mark Crispin <mrc@CAC.Washington.EDU> writes:
+>It's amazing how closely they pay attention to what the customers are
+>saying.  It's almost as if they had a corporate policy of "if you hear
+>someone making a comment about a missing feature in our software, make
+>sure that feature is in the next release."  No wonder Evil Empireware
+>bloats.
+
+Well, not quite all the customers.  They actually sent an official Education
+Representative to my office (not just me, making the rounds at Berkeley CS),
+and I told him to make the Help feature work even if you have your colors set
+to white on black, and that was many years ago, and it still doesn't work.
+(You might think that given the helpfuless of MS help messages it would be an
+improvement to see them in black-on-black, but the trouble is that third party
+software developers use MS Help too.)
+
+>  The GIGI, which the Atari 800 ran circles around.
+
+This gave me a smile.  At my high school computer lab we had both GIGIs
+and Atari 800s as graphics terminals for our Unix machine (because we
+got them both free -- graphics terminals cost way too much back then).
+The Ataris were definitely easier to program, but the GIGIs had better
+resolution, so you could edit text on them, too; the Ataris were useless
+for text with only 40 columns.  And the GIGIs came with that cool
+screen print feature.
+
+
+From rpw3@rigden.engr.sgi.com Wed Jan  3 19:16:02 PST 2001
+Article: 2953 of alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!news.sgi.com!fido.engr.sgi.com!rigden.engr.sgi.com!rpw3
+From: rpw3@rigden.engr.sgi.com (Rob Warnock)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Demise and alt futures of the PDP-10
+Date: 30 Dec 2000 09:20:10 GMT
+Organization: Silicon Graphics Inc., Mountain View, CA
+Lines: 30
+Message-ID: <92k9ca$j9bln$1@fido.engr.sgi.com>
+References: <3a43c9e5.3140062@news.m.iinet.net.au> <Pine.NXT.4.32.0012281251550.27112-100000@Tomobiki-Cho.CAC.Washington.EDU> <92igqq$fmp$1@abbenay.CS.Berkeley.EDU> <Pine.NXT.4.32.0012291005370.27969-100000@Tomobiki-Cho.CAC.Washington.EDU>
+NNTP-Posting-Host: rigden.engr.sgi.com
+X-Trace: fido.engr.sgi.com 978168010 20229815 163.154.34.115 (30 Dec 2000 09:20:10 GMT)
+X-Complaints-To: news@fido.engr.sgi.com
+NNTP-Posting-Date: 30 Dec 2000 09:20:10 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2953
+
+Mark Crispin  <mrc@CAC.Washington.EDU> wrote:
++---------------
+| On 29 Dec 2000, Brian Harvey wrote:
+| > the GIGIs had better resolution, so you could edit text on them, too
+| 
+| Ah yes, but what if you tried to do any *color* graphics?  Your GIGI
+| resolution quickly went south because they didn't have enough memory to do
+| resolution *and* color.
++---------------
+
+Actually, the luminance resolution (foreground/background switches per
+distance) stayed the same, but the GIGI could only change foreground
+colors every 12 pixels, since the frame buffer used some cute intermingled
+encoding of luminance & colors[*]. That worked reasonably well if you used
+only fixed-width fonts that were 12 pixels wide (including inter-character
+spacing), but was useless for colored proportional fonts or arbitrary
+pictures/graphics.
+
+
+-Rob
+
+[*] IIRC, a flag bit, a 3-bit foreground color, and 12 foreground/background
+    pixels per 16-bit word, or something like that, with the flag bit saying
+    whether a 12-pixel time was video data or H/V sync. Or some such...
+
+-----
+Rob Warnock, 31-2-510		rpw3@sgi.com
+SGI Network Engineering		http://reality.sgi.com/rpw3/
+1600 Amphitheatre Pkwy.		Phone: 650-933-1673
+Mountain View, CA  94043	PP-ASEL-IA
+
+
+From rpw3@rigden.engr.sgi.com Wed Jan  3 19:17:01 PST 2001
+Article: 2953 of alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!news.sgi.com!fido.engr.sgi.com!rigden.engr.sgi.com!rpw3
+From: rpw3@rigden.engr.sgi.com (Rob Warnock)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Demise and alt futures of the PDP-10
+Date: 30 Dec 2000 09:20:10 GMT
+Organization: Silicon Graphics Inc., Mountain View, CA
+Lines: 30
+Message-ID: <92k9ca$j9bln$1@fido.engr.sgi.com>
+References: <3a43c9e5.3140062@news.m.iinet.net.au> <Pine.NXT.4.32.0012281251550.27112-100000@Tomobiki-Cho.CAC.Washington.EDU> <92igqq$fmp$1@abbenay.CS.Berkeley.EDU> <Pine.NXT.4.32.0012291005370.27969-100000@Tomobiki-Cho.CAC.Washington.EDU>
+NNTP-Posting-Host: rigden.engr.sgi.com
+X-Trace: fido.engr.sgi.com 978168010 20229815 163.154.34.115 (30 Dec 2000 09:20:10 GMT)
+X-Complaints-To: news@fido.engr.sgi.com
+NNTP-Posting-Date: 30 Dec 2000 09:20:10 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2953
+
+Mark Crispin  <mrc@CAC.Washington.EDU> wrote:
++---------------
+| On 29 Dec 2000, Brian Harvey wrote:
+| > the GIGIs had better resolution, so you could edit text on them, too
+| 
+| Ah yes, but what if you tried to do any *color* graphics?  Your GIGI
+| resolution quickly went south because they didn't have enough memory to do
+| resolution *and* color.
++---------------
+
+Actually, the luminance resolution (foreground/background switches per
+distance) stayed the same, but the GIGI could only change foreground
+colors every 12 pixels, since the frame buffer used some cute intermingled
+encoding of luminance & colors[*]. That worked reasonably well if you used
+only fixed-width fonts that were 12 pixels wide (including inter-character
+spacing), but was useless for colored proportional fonts or arbitrary
+pictures/graphics.
+
+
+-Rob
+
+[*] IIRC, a flag bit, a 3-bit foreground color, and 12 foreground/background
+    pixels per 16-bit word, or something like that, with the flag bit saying
+    whether a 12-pixel time was video data or H/V sync. Or some such...
+
+-----
+Rob Warnock, 31-2-510		rpw3@sgi.com
+SGI Network Engineering		http://reality.sgi.com/rpw3/
+1600 Amphitheatre Pkwy.		Phone: 650-933-1673
+Mountain View, CA  94043	PP-ASEL-IA
+
+
+From inwap@best.com Wed Jan  3 19:17:07 PST 2001
+Article: 3037 of alt.sys.pdp10
+Path: nntp1.ba.best.com!inwap
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Demise and alt futures of the PDP-10
+Date: 4 Jan 2001 03:15:59 GMT
+Organization: Chez Inwap
+Lines: 28
+Message-ID: <930ptf$j3s$1@nntp1.ba.best.com>
+References: <3a43c9e5.3140062@news.m.iinet.net.au> <92igqq$fmp$1@abbenay.CS.Berkeley.EDU> <Pine.NXT.4.32.0012291005370.27969-100000@Tomobiki-Cho.CAC.Washington.EDU> <92k9ca$j9bln$1@fido.engr.sgi.com>
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 978578159 19580 206.184.139.134 (4 Jan 2001 03:15:59 GMT)
+X-Complaints-To: abuse@best.com
+NNTP-Posting-Date: 4 Jan 2001 03:15:59 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:3037
+
+In article <92k9ca$j9bln$1@fido.engr.sgi.com>,
+Rob Warnock <rpw3@rigden.engr.sgi.com> wrote:
+>Mark Crispin  <mrc@CAC.Washington.EDU> wrote:
+>+---------------
+>| On 29 Dec 2000, Brian Harvey wrote:
+>| > the GIGIs had better resolution, so you could edit text on them, too
+>| 
+>| Ah yes, but what if you tried to do any *color* graphics?  Your GIGI
+>| resolution quickly went south because they didn't have enough memory to do
+>| resolution *and* color.
+>+---------------
+>
+>Actually, the luminance resolution (foreground/background switches per
+>distance) stayed the same, but the GIGI could only change foreground
+>colors every 12 pixels, since the frame buffer used some cute intermingled
+>encoding of luminance & colors[*]. That worked reasonably well if you used
+>only fixed-width fonts that were 12 pixels wide (including inter-character
+>spacing), but was useless for colored proportional fonts or arbitrary
+>pictures/graphics.
+
+I had a Pacman file that drew a yellow circle with a narrow black wedge,
+and then redrew a larger wedge that blinked between yellow and black.
+The stair-step effect every 12 pixels worked out good for this.  It also
+included code that scrolled the whole thing horizontally, flashed all
+the LEDs on the keyboard, and made wacka-wacka sounds.
+	-Joe
+--
+See http://www.inwap.com/ for PDP-10 and "ReBoot" pages.
+
+

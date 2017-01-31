@@ -1,0 +1,4005 @@
+Article 4981 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!chnws02.mediaone.net!24.128.1.101!chnws05.ne.mediaone.net!24.128.44.7!wbnws01.ne.mediaone.net.POSTED!not-for-mail
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+References: <372d88f7$0$490@news.zetnet.co.uk> <7gkgdq$pj9$5@antiochus.ultra.net>
+X-Newsreader: NN version 6.5.0 CURRENT #119
+From: werme@werme.ne.mediaone.net (Ric Werme)
+Lines: 29
+Message-ID: <2IsX2.28538$tY1.18718@wbnws01.ne.mediaone.net>
+Date: Tue, 04 May 1999 02:12:14 GMT
+NNTP-Posting-Host: 24.128.109.10
+X-Trace: wbnws01.ne.mediaone.net 925783934 24.128.109.10 (Mon, 03 May 1999 22:12:14 EDT)
+NNTP-Posting-Date: Mon, 03 May 1999 22:12:14 EDT
+Xref: news3.best.com alt.folklore.computers:129468 alt.sys.pdp10:4981
+
+jmfbahciv@aol.com writes:
+
+>In article <372d88f7$0$490@news.zetnet.co.uk>, lisard@zetnet.co.uk wrote:
+>>
+>>
+>>On 1999-05-03 weiner@world.std.com(SamWeiner) said:
+>>   :It should be noted BLISS was descended from BCPL and used for a
+>>   :number of TOPS-10/-20 programs including FORTRAN-10, RMS-10/-20,
+>>   :Datatrieve-20, etc.  A few customers used it as well despite the
+>>   :lack of support from Digital.
+>>   :Sam
+>>   :PS Yes Barb, I've heard your rant before but I still liked it.
+>>
+>>I haven't. Please, do tell...
+
+><grin>  Can't....unless you allow swears.  BLISS of any flavor
+>rapidly became a swear in one of my jobs.  Of course, BLISS
+>was a swear to anybody who had to support it, too.
+
+After I found Ed Taft's PDP-10 I/O package he wrote at Harvard, I started
+rewriting some of my BLISS code in MACRO-10.  With I/O hassles solved, fast
+compile times, and a wonder macro language, why use BLISS?
+
+I later named the package Tulip, it's on a DECUS tape.  Need to write a WWW
+page for it someday.
+--
+Ric Werme                  | http://people.ne.mediaone.net/werme
+werme@nospam.mediaone.net  | http://www.cyberportal.net/werme
+      ^^^^^^^ delete
+
+
+Article 4983 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!uninett.no!Norway.EU.net!not-for-mail
+From: blarsen@infostream.no (Bjørn Hell Larsen)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: 04 May 1999 11:04:13 +0200
+Lines: 20
+Message-ID: <u6769mcj6.fsf@infostream.no>
+References: <372d88f7$0$490@news.zetnet.co.uk> <7gkgdq$pj9$5@antiochus.ultra.net> <2IsX2.28538$tY1.18718@wbnws01.ne.mediaone.net>
+NNTP-Posting-Host: aubert.svg.infostream.no
+X-Newsreader: Gnus v5.5/Emacs 20.3
+Xref: news3.best.com alt.folklore.computers:129478 alt.sys.pdp10:4983
+
+
+werme@werme.ne.mediaone.net (Ric Werme) writes:
+
+> After I found Ed Taft's PDP-10 I/O package he wrote at Harvard, I started
+> rewriting some of my BLISS code in MACRO-10.  With I/O hassles solved, fast
+> compile times, and a wonder macro language, why use BLISS?
+> 
+> I later named the package Tulip, it's on a DECUS tape.  Need to write a WWW
+> page for it someday.
+
+You wrote Tulip? In that case, here's a fan letter. I used stuff in Tulip
+regularly for several years, it was a great library.
+
+The documentation was great, especially the section that explained the
+coroutine support in Tulip. One of the more hilarious documents I've
+ever read.
+
+
+Bjorn
+
+
+
+Article 5017 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!newsfeed.enteract.com!netnews.com!chnws02.mediaone.net!24.128.1.101!chnws05.ne.mediaone.net!24.128.44.7!wbnws01.ne.mediaone.net.POSTED!not-for-mail
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+References: <372d88f7$0$490@news.zetnet.co.uk> <7gkgdq$pj9$5@antiochus.ultra.net>
+     <2IsX2.28538$tY1.18718@wbnws01.ne.mediaone.net> <u6769mcj6.fsf@infostream.no>
+X-Newsreader: NN version 6.5.0 CURRENT #119
+From: werme@werme.ne.mediaone.net (Ric Werme)
+Lines: 54
+Message-ID: <vvOX2.1222$kE6.916@wbnws01.ne.mediaone.net>
+Date: Wed, 05 May 1999 03:00:43 GMT
+NNTP-Posting-Host: 24.128.109.10
+X-Complaints-To: abuse@rr.com
+X-Trace: wbnws01.ne.mediaone.net 925873243 24.128.109.10 (Tue, 04 May 1999 23:00:43 EDT)
+NNTP-Posting-Date: Tue, 04 May 1999 23:00:43 EDT
+Organization: Road Runner
+Xref: news3.best.com alt.folklore.computers:129543 alt.sys.pdp10:5017
+
+blarsen@infostream.no writes:
+
+
+>werme@werme.ne.mediaone.net (Ric Werme) writes:
+
+>> After I found Ed Taft's PDP-10 I/O package he wrote at Harvard, I started
+>> rewriting some of my BLISS code in MACRO-10.  With I/O hassles solved, fast
+>> compile times, and a wonderful macro language, why use BLISS?
+
+>> I later named the package Tulip, it's on a DECUS tape.  Need to write a WWW
+>> page for it someday.
+
+>You wrote Tulip? In that case, here's a fan letter. I used stuff in Tulip
+>regularly for several years, it was a great library.
+
+I wrote just the documentation!  Well, I think I added four
+instructions to the parser.  Ed didn't write any documentation, so I
+figured I should, if only to repay him for the time it saved me.
+
+>The documentation was great, especially the section that explained the
+>coroutine support in Tulip. One of the more hilarious documents I've
+>ever read.
+
+Also one of the first pieces of prose I _wanted_ to write, or at least
+to write well.  One thing I learned from it was a) boy, do a lot of
+typos slip in, and b) after fixing everything I could find I was now a
+great proofreader.  The latter can be more hindrance than help -
+beyond a certain % of misspellings in a USENET post, I hit the n key,
+no matter how interesting the post appeared.  I can spot typos in
+things I'm not reading.  When I started typing this I noticed I had
+written "wonder macro language".  A few months ago I was reading one
+of Bob Metcalfe's columns in the back of Infoworld about networking in
+schools.  I was the first to point out to him that he had written
+"pubic education".  I don't remember anything else about the column,
+it may not have been on networking, but the school system itself.
+
+Yeah, I had fun writing it.  Let's see, I had a couple challenges in it.
+One was what was the item in the index that conveyed no useful information.
+That was the start of the index.  There was also something about that
+coroutine code.  I think the second coroutine did a jump to the JSP
+in the first to save an instruction.  (You really have to see that on
+paper for it to make any sense.)
+
+I do have the documentation and sample programs.  I will get them on
+the WWW, but not for a while.
+
+I do have a new page on the WWW you might enjoy -
+http://people.ne.mediaone.net/werme/deimos.html
+
+	-Ric Werme
+--
+Ric Werme                  | http://people.ne.mediaone.net/werme
+werme@nospam.mediaone.net  | http://www.cyberportal.net/werme
+      ^^^^^^^ delete
+
+
+Article 5345 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!ptdnetP!newsgate.ptd.net!news.cc.ukans.edu!srvr1.engin.umich.edu!news.tc.cornell.edu!news.graphics.cornell.edu!news
+From: westin*nospam@graphics.cornell.edu (Stephen H. Westin)
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: 30 Jun 1999 10:05:22 -0400
+Organization: Cornell University Program of Computer Graphics
+Lines: 46
+Sender: westin@DIESEL
+Message-ID: <un1xhiy1p.fsf@graphics.cornell.edu>
+References: <7kg08v$iht$1@news.latrobe.edu.au> 	 <7kh5pj$fe0@dfw-ixnews7.ix.netcom.com><7kigdi$49t$3@autumn.news.rcn.net> 	 <ALDERSON.99Jun20154524@netcom17.netcom.com> <376e6250.0@news.kivex.com> <7l94re$9ms$1@autumn.news.rcn.net>
+NNTP-Posting-Host: diesel.graphics.cornell.edu
+X-Newsreader: Gnus v5.5/Emacs 20.3
+Xref: news3.best.com alt.sys.pdp10:5345
+
+
+It seems to me that most of the 36-bit folks were not fans of
+BLISS. There are two main reasons for using a higher-level language.
+
+o Programmer productivity: by using a language that maps better to
+  a programmer's thought processes or the problem at hand, we can
+  get the same work done in less time. Or more work in the same time,
+  etc.
+
+o Portability: by avoiding machine language, we have some hope of
+  separating the code from the hardware details of a single machine.
+
+In which ways did BLISS fail in these promises? I can think of several
+possibilities.
+
+o By failing to improve on the expressiveness of machine code, it
+  didn't really improve productivity. I've never used BLISS and don't
+  know much about it; could the experts comment on this?
+
+o By including too much of the peculiar details of a particular
+  machine architecture (word length, or byte addressability), it
+  failed to be portable. As, say, Multics would be a pain to port
+  because of all the explicit PL/1 declarations of 36-bit integers.
+
+o By failing to be reliable, it negated any benefits that might
+  otherwise accrue.
+
+o By generating code so inefficient that it wasn't practical to use.
+
+o Maybe the 36-bit machines were just so different that it wasn't
+  practical to port code (especially system code) between them and the
+  16/32-bit byte-oriented architectures.
+
+Anyway, it seems that C succeeded in a big way where BLISS failed. I
+can think of a couple of reasons for that, like the proprietary
+single-vendor nature of BLISS, and that it has largely succeeded on
+16/32/64-bit byte oriented machines that probably ease the porting
+load.
+
+Any comments from those who know a lot more than I?
+
+-- 
+-Stephen H. Westin
+Any information or opinions in this message are mine: they do not
+represent the position of Cornell University or any of its sponsors.
+
+
+
+Article 5348 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!logbridge.uoregon.edu!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: Wed, 30 Jun 1999 12:39:46 -0700
+Organization: Networks & Distributed Computing
+Lines: 24
+Message-ID: <Pine.NXT.4.20.9906301223560.29451-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <7kg08v$iht$1@news.latrobe.edu.au>   <7kh5pj$fe0@dfw-ixnews7.ix.netcom.com><7kigdi$49t$3@autumn.news.rcn.net>   <ALDERSON.99Jun20154524@netcom17.netcom.com> <376e6250.0@news.kivex.com> <7l94re$9ms$1@autumn.news.rcn.net> <un1xhiy1p.fsf@graphics.cornell.edu>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 930771592 21766 (None) 140.142.17.37
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: att
+To: "Stephen H. Westin" <westin@graphics.cornell.edu>
+In-Reply-To: <un1xhiy1p.fsf@graphics.cornell.edu>
+Xref: news3.best.com alt.sys.pdp10:5348
+
+The problem with BLISS on the PDP-10 was that it was much easier to write
+an application in PDP-10 assembly language than BLISS.  The only PDP-10
+operating system which had system calls that were remotely ameniable for
+high-level languages was ITS (the .CALL UUO).  In all other operating
+systems, setting up a system call required that you knew the precise
+accumulator and memory values; this was trivial in assembly language but a
+nightmare in a high level language.
+
+C succeeded where BLISS failed for many reasons.  C's syntax is much more
+reasonable, and it certainly much easier to write applications in C than
+in assembly language on these gruesome hardware architectures being built
+today.
+
+I spent 15 years programming PDP-10 assembly language, and a subsequent 11
+years programming in C.  I would not think of writing in assembly language
+on an Alpha, Pentium, etc.  On the other hand, to this day, I can still
+write a PDP-10 program better in assembly language than in C.
+
+-- Mark --
+
+* RCW 19.190 notice: This email address is located in Washington State.	*
+* Unsolicited commercial email may be billed $500 per message.		*
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+Article 5349 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!news.idt.net!nyd.news.ans.net!newsxfer.itd.umich.edu!srvr1.engin.umich.edu!news.tc.cornell.edu!news3.cac.psu.edu!not-for-mail
+From: viro@weyl.math.psu.edu (Alexander Viro)
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: 30 Jun 1999 16:41:05 -0400
+Organization: -ENOENT
+Lines: 29
+Message-ID: <7ldvd1$6p6@weyl.math.psu.edu>
+References: <7kg08v$iht$1@news.latrobe.edu.au> <7l94re$9ms$1@autumn.news.rcn.net> <un1xhiy1p.fsf@graphics.cornell.edu> <Pine.NXT.4.20.9906301223560.29451-100000@Tomobiki-Cho.CAC.Washington.EDU>
+NNTP-Posting-Host: weyl.math.psu.edu
+Xref: news3.best.com alt.sys.pdp10:5349
+
+In article <Pine.NXT.4.20.9906301223560.29451-100000@Tomobiki-Cho.CAC.Washington.EDU>,
+Mark Crispin  <mrc@CAC.Washington.EDU> wrote:
+>The problem with BLISS on the PDP-10 was that it was much easier to write
+>an application in PDP-10 assembly language than BLISS.  The only PDP-10
+>operating system which had system calls that were remotely ameniable for
+>high-level languages was ITS (the .CALL UUO).  In all other operating
+>systems, setting up a system call required that you knew the precise
+>accumulator and memory values; this was trivial in assembly language but a
+>nightmare in a high level language.
+
+Could you elaborate on that? If anything, library written in assembler
+usually isolates such stuff pretty well. Not all Unices implement system
+calls as calls to invalid addresses - normally it's "set registers and cause
+a particular trap". Mixing pathes used for syscalls and paging is not
+too bright idea... C doesn't know about PDP-11 "trap" or x86 "int $0x80"
+either...
+
+>C succeeded where BLISS failed for many reasons.  C's syntax is much more
+>reasonable, and it certainly much easier to write applications in C than
+>in assembly language on these gruesome hardware architectures being built
+>today.
+
+ObBLISSsyntax: what kind of pervert came up with idea of _ and . usage
+in BLISS? In C usage of . is more bearable, but using it in place of
+unary *... Mind-boggling. Especially nice on dirty printouts...
+
+-- 
+"You're one of those condescending Unix computer users!"
+"Here's a nickel, kid.  Get yourself a better computer" - Dilbert.
+
+
+Article 5351 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!enews.sgi.com!harbinger.cc.monash.edu.au!news.latrobe.edu.au!lucifer.its.latrobe.edu.au!cchd
+From: cchd@lucifer.its.latrobe.edu.au (Huw Davies)
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: 1 Jul 1999 01:44:20 GMT
+Organization: La Trobe University
+Lines: 38
+Message-ID: <7leh5k$blq$2@news.latrobe.edu.au>
+References: <7kg08v$iht$1@news.latrobe.edu.au> <7l94re$9ms$1@autumn.news.rcn.net> <un1xhiy1p.fsf@graphics.cornell.edu> <Pine.NXT.4.20.9906301223560.29451-100000@Tomobiki-Cho.CAC.Washington.EDU> <7ldvd1$6p6@weyl.math.psu.edu>
+NNTP-Posting-Host: lucifer.its.latrobe.edu.au
+X-Trace: news.latrobe.edu.au 930793460 11962 131.172.12.11 (1 Jul 1999 01:44:20 GMT)
+X-Complaints-To: usenet@news.latrobe.edu.au
+NNTP-Posting-Date: 1 Jul 1999 01:44:20 GMT
+X-Newsreader: TIN [version 1.2 PL2]
+Xref: news3.best.com alt.sys.pdp10:5351
+
+Alexander Viro (viro@weyl.math.psu.edu) wrote:
+
+: ObBLISSsyntax: what kind of pervert came up with idea of _ and . usage
+: in BLISS? In C usage of . is more bearable, but using it in place of
+: unary *... Mind-boggling. Especially nice on dirty printouts...
+
+Well of course, until they changed the standard, _ printed out as <-
+(but one character). The idea of . was for consistancy. In most programming
+languges, a variable name means either its address or its value depending
+on placement. For example, in fortran
+
+    i = i + 1
+
+the i has different meanings. Typically this is expressed as the lvalue (the
+address on the left hand side of the =) and the rvalue (the value, on the
+right). In Bliss, everything is an lvalue, to get the rvalue, preceed with .
+
+Thus, in Bliss
+
+    i = i + 1
+
+is completely valid, it just doesn't do what you might expect. (It adds one
+to the address in memory where i is stored and stores the result in the
+memory location pointed to by i). To get "normal" behaviour write
+
+    i = .i + 1
+
+I much prefer this approach to that used by c, but it's a personal thing!
+I find things like
+
+    .i = .j
+
+fun to right and easy to understand....
+--
+ Huw Davies                      | e-mail: Huw.Davies@latrobe.edu.au
+ Information Technology Services | Phone: +61 3 9479 1550  Fax: +61 3 9479 1999
+ La Trobe University             | "If God had wanted soccer to be played
+ Melbourne Australia 3083        | in the air, the sky would be green" 
+
+
+Article 5353 of alt.sys.pdp10:
+From: viro@weyl.math.psu.edu (Alexander Viro)
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: 30 Jun 1999 23:44:09 -0400
+Organization: -ENOENT
+Lines: 26
+Message-ID: <7leo69$843@weyl.math.psu.edu>
+References: <7kg08v$iht$1@news.latrobe.edu.au> <Pine.NXT.4.20.9906301223560.29451-100000@Tomobiki-Cho.CAC.Washington.EDU> <7ldvd1$6p6@weyl.math.psu.edu> <7leh5k$blq$2@news.latrobe.edu.au>
+NNTP-Posting-Host: weyl.math.psu.edu
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!news.syr.edu!newsstand.cit.cornell.edu!news.tc.cornell.edu!news3.cac.psu.edu!not-for-mail
+Xref: news3.best.com alt.sys.pdp10:5353
+
+In article <7leh5k$blq$2@news.latrobe.edu.au>,
+Huw Davies <cchd@lucifer.its.latrobe.edu.au> wrote:
+>Alexander Viro (viro@weyl.math.psu.edu) wrote:
+>
+>: ObBLISSsyntax: what kind of pervert came up with idea of _ and . usage
+>: in BLISS? In C usage of . is more bearable, but using it in place of
+>: unary *... Mind-boggling. Especially nice on dirty printouts...
+>
+>Well of course, until they changed the standard, _ printed out as <-
+>(but one character). The idea of . was for consistancy. In most programming
+>languges, a variable name means either its address or its value depending
+>on placement. For example, in fortran
+[snip the explanation of explicit vs. implicit dereferencing]
+
+Sorry, but... It's a different question. FWIW I prefer C way - IMHO it's a nice
+balance between bare-bones BLISS rules and convoluted mess of A-68, but
+that's a personal thing. I was actually asking about a different thing -
+choice of operation symbol. I know what '.' means in BLISS and I know the
+ideology behind it (no implicit rules, no l- and r-values), but dot is the
+worst character for such usage - way too easy to miss it in dirty printout.
+***q=**p; is not the easiest thing to read, but ....Q_...P is much nastier.
+And as any child of BCPL BLISS is weak-typed, so...
+
+-- 
+"You're one of those condescending Unix computer users!"
+"Here's a nickel, kid.  Get yourself a better computer" - Dilbert.
+
+
+Article 5356 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!news.idt.net!nyd.news.ans.net!newsxfer.itd.umich.edu!news.itd.umich.edu!sarr
+Newsgroups: alt.sys.pdp10
+References: <7kg08v$iht$1@news.latrobe.edu.au> <7l94re$9ms$1@autumn.news.rcn.net> <un1xhiy1p.fsf@graphics.cornell.edu> <Pine.NXT.4.20.9906301223560.29451-100000@Tomobiki-Cho.CAC.Washington.EDU>
+Reply-To: sarr@umich.edu
+Organization: University of Michigan
+Subject: Re: BLISS-10
+From: sarr@stick.us.itd.umich.edu (Sarr J. Blumson)
+Lines: 23
+Message-ID: <PtMe3.1014$ce5.19829@news.itd.umich.edu>
+Date: Thu, 01 Jul 1999 16:14:39 GMT
+NNTP-Posting-Host: 141.211.165.85
+X-Trace: news.itd.umich.edu 930845679 141.211.165.85 (Thu, 01 Jul 1999 12:14:39 EDT)
+NNTP-Posting-Date: Thu, 01 Jul 1999 12:14:39 EDT
+Xref: news3.best.com alt.sys.pdp10:5356
+
+In article <Pine.NXT.4.20.9906301223560.29451-100000@Tomobiki-Cho.CAC.Washington.EDU>,
+Mark Crispin  <mrc@CAC.Washington.EDU> wrote:
+>
+>I spent 15 years programming PDP-10 assembly language, and a subsequent 11
+>years programming in C.  I would not think of writing in assembly language
+>on an Alpha, Pentium, etc.  On the other hand, to this day, I can still
+>write a PDP-10 program better in assembly language than in C.
+
+Having ported Ingres (the version that came with BSD 4.1 [?], not the
+commercial version) to TOPS-10, the one thing that really bit me was that
+there was no good choice for representing (char *) on the 10.  The compiler
+I was using stored them as a byte count from 0, which made pointer arithmetic
+easy but made dereferencing a pointer, or casting it to a non char pointer,
+expensive.  Storing them as byte pointers would have done the opposite.
+
+Of course this was aggravated by the tendency of the original Ingres crew to
+declare _all_ pointers as char *.
+
+-- 
+--------
+Sarr Blumson                    sarr@umich.edu
+voice: +1 734 764 0253          home: +1 734 665 9591
+ITD, University of Michigan     http://www-personal.umich.edu/~sarr/
+
+
+Article 5361 of alt.sys.pdp10:
+From: "Phil Gagner" <gagner@svg-law.com>
+Newsgroups: alt.sys.pdp10
+References: <7kg08v$iht$1@news.latrobe.edu.au> <7l94re$9ms$1@autumn.news.rcn.net> <un1xhiy1p.fsf@graphics.cornell.edu> <Pine.NXT.4.20.9906301223560.29451-100000@Tomobiki-Cho.CAC.Washington.EDU> <PtMe3.1014$ce5.19829@news.itd.umich.edu>
+Subject: Re: BLISS-10
+Date: Fri, 2 Jul 1999 16:49:37 -0400
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Newsreader: Microsoft Outlook Express 5.00.2314.1300
+X-MimeOLE: Produced By Microsoft MimeOLE V5.00.2314.1300
+NNTP-Posting-Host: pc162.svg-law.com
+Message-ID: <377d1819.0@news.kivex.com>
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!dispose.news.demon.net!demon!news-lond.gip.net!news.gsl.net!gip.net!nntp.news.xara.net!xara.net!tank.news.pipex.net!pipex!uunet!zur.uu.net!ffx.uu.net!news2.one.net!news.kivex.com!pc162.svg-law.com
+Lines: 43
+Xref: news3.best.com alt.sys.pdp10:5361
+
+This is verbatim from HAKMEM, and unless I miss the point of this post, it's
+not that hard...
+It's one of those little tricks that comes from indexed address arithmetic.
+
+ITEM 165 (Freiberg):
+A byte pointer can be converted to a character address < 2^18 by MULI A,<#
+bytes/word> followed by SUBI B,1-<# b/w>(A). To get full word character
+address, use SUB into a magic table.
+
+Sarr J. Blumson <sarr@stick.us.itd.umich.edu> wrote in message
+news:PtMe3.1014$ce5.19829@news.itd.umich.edu...
+> In article
+<Pine.NXT.4.20.9906301223560.29451-100000@Tomobiki-Cho.CAC.Washington.EDU>,
+> Mark Crispin  <mrc@CAC.Washington.EDU> wrote:
+> >
+> >I spent 15 years programming PDP-10 assembly language, and a subsequent
+11
+> >years programming in C.  I would not think of writing in assembly
+language
+> >on an Alpha, Pentium, etc.  On the other hand, to this day, I can still
+> >write a PDP-10 program better in assembly language than in C.
+>
+> Having ported Ingres (the version that came with BSD 4.1 [?], not the
+> commercial version) to TOPS-10, the one thing that really bit me was that
+> there was no good choice for representing (char *) on the 10.  The
+compiler
+> I was using stored them as a byte count from 0, which made pointer
+arithmetic
+> easy but made dereferencing a pointer, or casting it to a non char
+pointer,
+> expensive.  Storing them as byte pointers would have done the opposite.
+>
+> Of course this was aggravated by the tendency of the original Ingres crew
+to
+> declare _all_ pointers as char *.
+>
+> --
+> --------
+> Sarr Blumson                    sarr@umich.edu
+> voice: +1 734 764 0253          home: +1 734 665 9591
+> ITD, University of Michigan     http://www-personal.umich.edu/~sarr/
+
+
+
+
+Article 5350 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!enews.sgi.com!harbinger.cc.monash.edu.au!news.latrobe.edu.au!lucifer.its.latrobe.edu.au!cchd
+From: cchd@lucifer.its.latrobe.edu.au (Huw Davies)
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: 1 Jul 1999 01:37:26 GMT
+Organization: La Trobe University
+Lines: 25
+Message-ID: <7legom$blq$1@news.latrobe.edu.au>
+References: <7kg08v$iht$1@news.latrobe.edu.au>   <7kh5pj$fe0@dfw-ixnews7.ix.netcom.com><7kigdi$49t$3@autumn.news.rcn.net>   <ALDERSON.99Jun20154524@netcom17.netcom.com> <376e6250.0@news.kivex.com> <7l94re$9ms$1@autumn.news.rcn.net> <un1xhiy1p.fsf@graphics.cornell.edu>
+NNTP-Posting-Host: lucifer.its.latrobe.edu.au
+X-Trace: news.latrobe.edu.au 930793046 11962 131.172.12.11 (1 Jul 1999 01:37:26 GMT)
+X-Complaints-To: usenet@news.latrobe.edu.au
+NNTP-Posting-Date: 1 Jul 1999 01:37:26 GMT
+X-Newsreader: TIN [version 1.2 PL2]
+Xref: news3.best.com alt.sys.pdp10:5350
+
+Stephen H. Westin (westin*nospam@graphics.cornell.edu) wrote:
+
+I did a fair amount of BLISS-10 code (mainly for recreational purposes) as
+well as lots of MACRO-10. At the time the learning curve of BLISS was quite
+high (in terms of getting the compiler to generate the code that I wanted
+rather than its view) but in the end I was reasonably happy with the
+two larger projects I wrote - a user mode version of SYSDPY and a translation
+of a BCPL program used to produce cross reference listings of BCPL programs.
+The reason for the second program was a project to compare "systems 
+programming" languages on the DECsystem-10.
+
+: Anyway, it seems that C succeeded in a big way where BLISS failed. I
+: can think of a couple of reasons for that, like the proprietary
+: single-vendor nature of BLISS, and that it has largely succeeded on
+: 16/32/64-bit byte oriented machines that probably ease the porting
+: load.
+
+Anyone who has tried to port c programs from either 16bit systems to 32bits
+or 32bits to 64bits will find that many programmers make assumptions about
+the size of pointers and integers that aren't true....
+--
+ Huw Davies                      | e-mail: Huw.Davies@latrobe.edu.au
+ Information Technology Services | Phone: +61 3 9479 1550  Fax: +61 3 9479 1999
+ La Trobe University             | "If God had wanted soccer to be played
+ Melbourne Australia 3083        | in the air, the sky would be green" 
+
+
+Article 5355 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!newsfeed1.earthlink.net!uunet!lax.uu.net!ffx.uu.net!in5.uu.net!news-master.cisco.com!not-for-mail
+From: Bill Westfield <billw@flipper.cisco.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: 30 Jun 1999 23:25:59 -0700
+Organization: Cisco Systems, Inc.
+Lines: 42
+Message-ID: <54aetg6g3s.fsf@flipper.cisco.com>
+References: <7kg08v$iht$1@news.latrobe.edu.au>
+	<7kh5pj$fe0@dfw-ixnews7.ix.netcom.com><7kigdi$49t$3@autumn.news.rcn.net>
+	<ALDERSON.99Jun20154524@netcom17.netcom.com>
+	<376e6250.0@news.kivex.com> <7l94re$9ms$1@autumn.news.rcn.net>
+	<un1xhiy1p.fsf@graphics.cornell.edu>
+NNTP-Posting-Host: flipper.cisco.com
+X-Newsreader: Gnus v5.3/Emacs 19.34
+Xref: news3.best.com alt.sys.pdp10:5355
+
+    o By failing to be reliable, it negated any benefits that might
+      otherwise accrue.
+
+That's for sure.
+
+
+    o By generating code so inefficient that it wasn't practical to use.
+
+I dunno.  Other horrendously bad code generators were/are successful.  This
+isn't nearly as bad as the reliability issue above.  For the most part, code
+efficiency is only interesting "near the edge", where most programs AREN'T.
+If a language catches on, the code generation gets better.
+
+
+    o Maybe the 36-bit machines were just so different that it wasn't
+      practical to port code (especially system code) between them and the
+      16/32-bit byte-oriented architectures
+
+
+Could be.  More like "the target audience for BLISS already was proficient
+in assembly language, and therefore recoiled in horror."  You get people to
+write in high level languages because its HARD to write assembler (for one
+reason or another.)  Macro wasn't HARD, especially for the would-be converts
+to bliss.
+
+
+    Anyway, it seems that C succeeded in a big way where BLISS failed. I
+    can think of a couple of reasons for that, like the proprietary
+    single-vendor nature of BLISS...
+
+It's worth noticing that C didn't "succeed in a big way" until well AFTER
+the PDP10s were thrashing around in their death throes.  As late as 1984,
+MAC-OS was released, programmed mainly in Pascal (?)  Plenty of other high
+level languages have failed (APL, Modula2, Pascal (for all practical
+purposes, I think), OCCAM, etc, etc) I suppose the real question is "why did
+languages like fortran, cobol, and C *succeed*", rather than "why did BLISS
+fail."
+
+BillW
+
+-- 
+(remove spam food from return address)
+
+
+Article 5374 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!logbridge.uoregon.edu!news.indiana.edu!news.iupui.edu!haystack!mhwood
+From: "Mark H. Wood" <mhwood@haystack.Bogusnet.IN.US>
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: Sun, 4 Jul 1999 11:50:53 GMT
+Organization: La Petite Hackerie
+Lines: 59
+Message-ID: <FECGwt.7rJ@Ameritech.net>
+References: <7kg08v$iht$1@news.latrobe.edu.au>   <7kh5pj$fe0@dfw-ixnews7.ix.netcom.com> <7kigdi$49t$3@autumn.news.rcn.net>   <ALDERSON.99Jun20154524@netcom17.netcom.com> <376e6250.0@news.kivex.com> <7l94re$9ms$1@autumn.news.rcn.net> <un1xhiy1p.fsf@graphics.cornell.edu>
+NNTP-Posting-Host: mhw.ulib.iupui.edu
+User-Agent: tin/pre-1.4-19990517 ("Psychonaut") (UNIX) (Linux/2.2.5 (i586))
+Xref: news3.best.com alt.sys.pdp10:5374
+
+Stephen H. Westin <westin*nospam@graphics.cornell.edu> wrote:
+> In which ways did BLISS fail in these promises? I can think of several
+> possibilities.
+
+> o By failing to improve on the expressiveness of machine code, it
+>   didn't really improve productivity. I've never used BLISS and don't
+>   know much about it; could the experts comment on this?
+
+That could be it.  I suspect that it was simply too powerful for the
+sort of things it made me want to do with it.  But that could be just
+me.
+
+> o By including too much of the peculiar details of a particular
+>   machine architecture (word length, or byte addressability), it
+>   failed to be portable. As, say, Multics would be a pain to port
+>   because of all the explicit PL/1 declarations of 36-bit integers.
+
+Like the three-branch IF in FORTRAN?  Or car/cdr in Lisp?  Both are
+straight out of the IBM 70x architecture.
+
+BTW take a look at Bliss-11 (used quite a bit on the CMMP), or Common
+Bliss (which was supposed to enable portability between 16-, 32-, and
+36-bit architectures, only one of which has the funky byte pointers in
+hardware).  Bliss was only tied to the PDP-10 if you chose to think of
+it that way.
+
+> o By failing to be reliable, it negated any benefits that might
+>   otherwise accrue.
+
+Do you mean that the compiler was unreliable, or that the language
+made programmers unreliable?  I don't recall either one being
+especially true of Bliss.
+
+> o By generating code so inefficient that it wasn't practical to use.
+
+On the contrary.  I thought I was a pretty good PDP-10 assembly
+programmer until I started studying assembly listings from BLIS10 and
+saw some of the things *it* did.
+
+> o Maybe the 36-bit machines were just so different that it wasn't
+>   practical to port code (especially system code) between them and the
+>   16/32-bit byte-oriented architectures.
+
+Again, FORTRAN grew up on 36-bit machines (from IBM) and made the
+transition without serious problems.
+
+The biggest problem I recall is that the learning curve was nearly a
+step function.  You didn't have to learn so many things, but they were
+hard lessons, at least for me, and you had to learn them *all* before
+you could do much.  And, as somebody else has said, assembly on the
+PDP-10 was simply too easy for most people to bother with "system
+programming" HLLs.  On TOPS-20 I wrote a mail user-agent that was
+pretty much a clone of the non-network portions of DECmail-MS,
+entirely in MACRO, and looking back I don't see how it would have been
+significantly easier in any other language we had then.
+-- 
+-- 
+Mark H. Wood, radical centrist     OpenPGP ID 876A8B75     mhwood@ameritech.net
+Why do we always draw organization charts upside down?
+
+
+Article 5376 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!ix.netcom.com!news
+From: pfarrell@netcom.com (Pat Farrell)
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: Mon, 05 Jul 1999 23:07:16 GMT
+Organization: Netcom
+Lines: 116
+Message-ID: <7lrdiu$oqm@dfw-ixnews7.ix.netcom.com>
+References: <7kg08v$iht$1@news.latrobe.edu.au> 	 <7kh5pj$fe0@dfw-ixnews7.ix.netcom.com><7kigdi$49t$3@autumn.news.rcn.net> 	 <ALDERSON.99Jun20154524@netcom17.netcom.com> <376e6250.0@news.kivex.com> <7l94re$9ms$1@autumn.news.rcn.net> <un1xhiy1p.fsf@graphics.cornell.edu>
+NNTP-Posting-Host: netcom9.netcom.com
+X-NETCOM-Date: Mon Jul 05  6:02:54 PM CDT 1999
+NNTP-Posting-User: pfarrell
+X-Newsreader: Forte Free Agent 1.0.82
+Xref: news3.best.com alt.sys.pdp10:5376
+
+westin*nospam@graphics.cornell.edu (Stephen H. Westin) wrote:
+>It seems to me that most of the 36-bit folks were not fans of
+>BLISS. There are two main reasons for using a higher-level language.
+>o Programmer productivity: >o Portability:
+
+>In which ways did BLISS fail in these promises? I can think of several
+>possibilities.
+
+> I've never used BLISS and don't   know much about it; could the experts comment on this?
+
+It is clear from your post that you didn't use it.
+
+Expressiveness of the language is not important, or we'd
+all be writing in APL.
+
+First, you should at least know that there were two
+separate Bliss compilers in 36-bit land. Bliss-10 and Bliss-36.
+Bliss-10 was the first language, and was oritented strongly towards
+TOPS-10 (and later Tops-20. Bliss-36 was supposed to be
+part of the Common Bliss family that was capable of working
+accross LCG, Vaxen, and PDP-11 families.
+
+Sometimes I wonder if I was the only person who started a 
+project in Bliss-36 and was happy.
+
+Bliss-10/36  could "express" any machine construct, it could
+simply emit machine codes if you couldn't figure out what
+would cause it to generate what you wanted. While it was a bit
+baroque, I don't think it was worse than the mess that Tops-20
+Exec bacame with all the pseudo-HLL constructs/macros
+that folks did to "improve" the codng styles.
+
+>o By including too much of the peculiar details of a particular
+>  machine architecture (word length, or byte addressability), it
+>  failed to be portable
+
+Two problems here:
+1) there wasn't much interest in portability back then. KLs were
+a damn sight more interesting and capable than Vaxen or, shudder,
+PDP-11s. We wrote truely portable code, but it cost a bunch and
+we never made back the investment.
+
+2) writing portable code is really expensive. Writing applications
+portably is expensive.  Writing system-level utilities and 
+languages accross architectures is seriously hard.
+It has only become practical recently, when improvements in
+speeds and memory sizes make "wasteful" techniques such
+as virtual machines affordable.
+
+While interpreted languages are not new (Smalltalk-80 gives a hint
+of its age in its name), they were not successful until fairly
+recently. I don't want to step into a holy war, but I don't
+consider most C code to be portable. Java and Smalltalk
+allow fairly portable code to be written, but they have
+limits and were not feasible back when KLs were feasible.
+
+>o By failing to be reliable, it negated any benefits that might
+>  otherwise accrue.
+
+Reliable? Huh? Do you have examples to back up this assertion?
+I found Bliss to be highly reliable. We wrote a DBMS package in
+Bliss-36 that ran unmodified for more than 15 years. And it used
+what were at the time, techniques that were on the forefront
+of the art, such as user mode extended addressing, OWGBP, etc.
+
+>o By generating code so inefficient that it wasn't practical to use.
+
+The Bliss-36 code generator was decent, and the peephole 
+optimizer was fine. Sure you could beat it with hand tweaked
+code, but it generated faster and more compact code than
+a beginning Macro-10/20 programmer. I had many examples
+of this from my staff.
+
+>o Maybe the 36-bit machines were just so different that it wasn't
+>  practical to port code (especially system code) between them and the
+>  16/32-bit byte-oriented architectures.
+
+We did it. The economics didn't work, but that isn't a fault if the
+language or the concept of High Level Languages. Problems
+that were solvable by PDP-11s in 1979 were not addressed
+by folks with the resources to own a KL or two.
+
+>Anyway, it seems that C succeeded in a big way where BLISS failed. I
+>can think of a couple of reasons for that, like the proprietary
+>single-vendor nature of BLISS, and that it has largely succeeded on
+>16/32/64-bit byte oriented machines that probably ease the porting
+>load.
+
+There are as many beliefs behind the success of C over Bliss as
+programmers.
+
+I subscribe to the theory that C succeeded because it was a small
+language that worked well on small machines such as the original IBM
+PC. Hackers couldn't afford KLs or even Vaxen, but they could
+afford an IBM PC or clone. They needed a language. C fit and
+was available. So a market appeared and grew.
+
+Bliss wouldn't have fit in an original PC, even the BLiss-16 compilers
+of the early 80s expected you to have a Vaxen or KL to cross compile
+on.
+
+Bliss was invented to solve similar problems as C, in the same
+timeframe. They are  closely parallel languages, altho I much
+prefer some of Bliss' constructs over C's. But like in other
+areas of technology, the superior product does not always
+succeed. I think of Bliss as the Beta of late 70s programming.
+Better than the competion that beat it in the marketplace.
+But still a loser because it lost.
+
+All just IMHO, of course.
+
+Pat
+
+Pat Farrell                           pfarrell@netcom.com
+PGP key on the usual servers
+
+
+
+Article 5378 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!d14
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: Tue, 06 Jul 99 09:11:21 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 64
+Message-ID: <7lso11$77o$1@autumn.news.rcn.net>
+References: <7kg08v$iht$1@news.latrobe.edu.au> 	 <7kh5pj$fe0@dfw-ixnews7.ix.netcom.com><7kigdi$49t$3@autumn.news.rcn.net> 	 <ALDERSON.99Jun20154524@netcom17.netcom.com> <376e6250.0@news.kivex.com> <7l94re$9ms$1@autumn.news.rcn.net> <un1xhiy1p.fsf@graphics.cornell.edu> <7lrdiu$oqm@dfw-ixnews7.ix.netcom.com>
+X-Trace: Wf3K9XC+0DwJJJ9BUwMk0rBf5DrqYX8ztH8FLV0Gs8Y=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 6 Jul 1999 11:07:13 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: news3.best.com alt.sys.pdp10:5378
+
+In article <7lrdiu$oqm@dfw-ixnews7.ix.netcom.com>,
+   pfarrell@netcom.com (Pat Farrell) wrote:
+>westin*nospam@graphics.cornell.edu (Stephen H. Westin) wrote:
+>>It seems to me that most of the 36-bit folks were not fans of
+>>BLISS. There are two main reasons for using a higher-level language.
+>>o Programmer productivity: >o Portability:
+>
+>>In which ways did BLISS fail in these promises? I can think of several
+>>possibilities.
+>
+>> I've never used BLISS and don't   know much about it; could the experts 
+comment on this?
+>
+>It is clear from your post that you didn't use it.
+>
+>Expressiveness of the language is not important, or we'd
+>all be writing in APL.
+>
+>First, you should at least know that there were two
+>separate Bliss compilers in 36-bit land. Bliss-10 and Bliss-36.
+>Bliss-10 was the first language, and was oritented strongly towards
+>TOPS-10 (and later Tops-20. Bliss-36 was supposed to be
+>part of the Common Bliss family that was capable of working
+>accross LCG, Vaxen, and PDP-11 families.
+>
+>Sometimes I wonder if I was the only person who started a 
+>project in Bliss-36 and was happy.
+
+Probably :-) none of my guys were happy.  What kind of project was it?
+I more curious about the level of the software, i.e., OS
+level, user mode level, application level, etc. rather than
+the specs of the project.
+
+<snip>
+
+>>Anyway, it seems that C succeeded in a big way where BLISS failed. I
+>>can think of a couple of reasons for that, like the proprietary
+>>single-vendor nature of BLISS, and that it has largely succeeded on
+>>16/32/64-bit byte oriented machines that probably ease the porting
+>>load.
+>
+>There are as many beliefs behind the success of C over Bliss as
+>programmers.
+>
+>I subscribe to the theory that C succeeded because it was a small
+>language that worked well on small machines such as the original IBM
+>PC. Hackers couldn't afford KLs or even Vaxen, but they could
+>afford an IBM PC or clone. They needed a language. C fit and
+>was available. So a market appeared and grew.
+<snip>
+
+One of the problems of any flavor of the blisses on the -10
+is that a build almost required a stand-alone -10 that
+didn't crash for 12 hours (that was not our environment).
+It was so much faster to build stuff written in MACRO-10
+than BLISS-xx.  So a developer who wrote in assembly
+would rarely have to wait a day for a build turn-around
+time.  Building anything, and I mean ANYTHING, with BLISS
+meant that the IBM card turnaround time mentality became
+the norm.  That wasn't our style.
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 5385 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!su-news-hub1.bbnplanet.com!news.gtei.net!logbridge.uoregon.edu!news-peer.gip.net!news.gsl.net!gip.net!ix.netcom.com!news
+From: pfarrell@netcom.com (Pat Farrell)
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: Wed, 07 Jul 1999 03:43:06 GMT
+Organization: Netcom
+Lines: 61
+Message-ID: <7lui3e$123@dfw-ixnews21.ix.netcom.com>
+References: <7kg08v$iht$1@news.latrobe.edu.au> 	 <7kh5pj$fe0@dfw-ixnews7.ix.netcom.com><7kigdi$49t$3@autumn.news.rcn.net> 	 <ALDERSON.99Jun20154524@netcom17.netcom.com> <376e6250.0@news.kivex.com> <7l94re$9ms$1@autumn.news.rcn.net> <un1xhiy1p.fsf@graphics.cornell.edu> <7lrdiu$oqm@dfw-ixnews7.ix.netcom.com> <7lso11$77o$1@autumn.news.rcn.net>
+NNTP-Posting-Host: netcom10.netcom.com
+X-NETCOM-Date: Tue Jul 06 10:38:22 PM CDT 1999
+NNTP-Posting-User: pfarrell
+X-Newsreader: Forte Free Agent 1.0.82
+Xref: news3.best.com alt.sys.pdp10:5385
+
+jmfbahciv@aol.com wrote:
+>>Sometimes I wonder if I was the only person who started a 
+>>project in Bliss-36 and was happy.
+>Probably :-) none of my guys were happy.  What kind of project was it?
+
+We actually did two.
+
+First, we wrote a DBMS package.
+Specifically because System 1022 had a hard stop limit of 18-bits of
+records per database. We needed more than that, and we ended up
+writing our own. Ended up with 700,000 records filling an RP07.
+Wow, that was huge back then.
+
+The second was a client/server application that used DEC-Pro350
+(PDP-11) "personal computers" as intellegent programmable terminals
+for our KLs. We also had a version that used a Vaxen or multi-user
+PDP-11 as an intellegent concentrator for Vt100s. This was 
+before "decnet phase 3" made interoperability and/or 
+internetworking between DEC product lines feasible :-)
+
+>I more curious about the level of the software, i.e., OS
+>level, user mode level, application level, etc. rather than
+>the specs of the project.
+
+Gee, That was along time ago, so the specifics are fuzzy.
+We were a Tops-20 source site, running the "current" monitors.
+We jumped on whatever Tops-20 first had user mode extended
+addressing. The hardware were six KL, all of which
+ended up as B models, usually 2060s or 2065s.
+
+The code was used as tools for applications, most of which
+were written in Cobol with System 1022 as the datastore.
+
+I'm not sure what else you're currious about. Let me know,
+and if I remember...
+
+>One of the problems of any flavor of the blisses on the -10
+>is that a build almost required a stand-alone -10 that
+>didn't crash for 12 hours (that was not our environment).
+
+Funny, We didn't see this problem. Of course, we weren't building
+a monitor. But we constantly used the usual edit/compile/debug cycle,
+and it was effective for Bliss-36. 
+
+For the crossported stuff, where we had to run Bliss-16 on the KL,
+the download and TKB crud from PDP-11 land added tons of time
+to the cycle. But I think the inept PDP-11 debugging tools cost
+as much as the compilers themselves.
+
+I'm not claiming Bliss-36 was as fast as Macro-20, but it was not
+a problem for us.
+
+We didn't run our KLs are grossly overloaded as education sites.
+We had users paying for the machines, and they complained about
+performance when we had 50 or so users simultaneously.
+
+Pat
+
+Pat Farrell                           pfarrell@netcom.com
+PGP key on the usual servers
+
+
+
+Article 5396 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newspeer1.nac.net!news.mv.net!not-for-mail
+From: Dan Murphy <dlm@opost.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: 09 Jul 1999 23:12:56 -0400
+Organization: MV Communications, Inc.
+Lines: 54
+Message-ID: <m27lo9qjt3.fsf@opost.com>
+References: <7kg08v$iht$1@news.latrobe.edu.au> <376e6250.0@news.kivex.com> <7l94re$9ms$1@autumn.news.rcn.net> <un1xhiy1p.fsf@graphics.cornell.edu> <377e1a77.0@news.wizvax.net>
+NNTP-Posting-Host: opost.com
+X-Trace: pyrite.mv.net 931576385 7723 207.22.41.2 (10 Jul 1999 03:13:05 GMT)
+X-Complaints-To: abuse@mv.com
+NNTP-Posting-Date: 10 Jul 1999 03:13:05 GMT
+X-Newsreader: Gnus v5.5/Emacs 20.3
+Xref: news3.best.com alt.sys.pdp10:5396
+
+wilson@dbit.com (John Wilson) writes:
+
+> In article <un1xhiy1p.fsf@graphics.cornell.edu>,
+> 
+> Anyway, I've often heard people refer to C as a glorified assembler -- I *wish*
+> that were true!
+
+    My gracious!  I pop in here after a long absense and find... a
+    compiler religious war!  Some things never change...
+    
+    I was one of the violent opponents of Bliss in the late '70s when
+    it was moving into DEC and was finally declared to be the
+    "official" implementation language by Gordon Bell.  It's not that
+    I opposed using an HLL (where the 'H' here is debatable), but I
+    really thought Bliss didn't make the grade.  It really was little
+    more than a glorified assembler and did little that I couldn't do
+    in MACRO-10 macros.
+
+    Bliss was available and basically free, and DEC was too cheap and
+    short-sighted to think beyond that.
+
+    And yes, I subsequently used Bliss a lot.  Thank GoD!  Otherwise,
+    in those circumstances, I'd have had to program in VAX Macro (gag,
+    wretch).  Ironically, PDP-10 assembler programming was so easy
+    (compared to most), especially with macros to handle stack and
+    structure stuff, that we were lulled into a false sense of not
+    really needing a more "higher level" language.
+    
+    Bad mistake.
+
+    If TOPS-20 had been written (or recoded) into an HLL, it could be
+    where Unix is today.  It was a better OS in the days when both
+    were new, but Unix won out for two reasons: ran on cheap machines
+    compared to PDP-10's, and (2) portable in a practical sense --
+    i.e. was ported to lots of other machines during critical
+    junctures.  Shit.  If we'd even have recoded in Bliss, we might
+    have had a chance.
+    
+    I knew the writing was on the wall when the ARPA community, which
+    had earlier adopted TENEX/TOPS-20, declared in the late '70s that
+    it was going to Unix, and that DEC could take VMS and shove it.
+
+    C was good enough, and "the perfect is the enemy of the good".
+    All the "much better" languages are dust.  Yes, C and Unix
+    supported each other in an amazing example of symbiosis.  Each
+    would likely have disappeared without the other.
+    
+    Saying C is not portable is ratshit.  That it is not perfectly
+    portable is exactly why it succeeded.  Those who waited for the
+    perfectly portable language are still waiting.
+    
+    
+    dlm
+    
+
+
+Article 5399 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news1.best.com!nntp.primenet.com!nntp.gctr.net!nuq-peer.news.verio.net!nntp2.cerf.net!nntp3.cerf.net!news.sdsc.edu!news.tc.cornell.edu!news3.cac.psu.edu!not-for-mail
+From: viro@weyl.math.psu.edu (Alexander Viro)
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: 10 Jul 1999 02:07:10 -0400
+Organization: -ENOENT
+Lines: 38
+Message-ID: <7m6nue$ai3@weyl.math.psu.edu>
+References: <7kg08v$iht$1@news.latrobe.edu.au> <un1xhiy1p.fsf@graphics.cornell.edu> <377e1a77.0@news.wizvax.net> <m27lo9qjt3.fsf@opost.com>
+NNTP-Posting-Host: weyl.math.psu.edu
+Xref: news3.best.com alt.sys.pdp10:5399
+
+In article <m27lo9qjt3.fsf@opost.com>, Dan Murphy  <dlm@opost.com> wrote:
+>wilson@dbit.com (John Wilson) writes:
+[snip]
+>    If TOPS-20 had been written (or recoded) into an HLL, it could be
+>    where Unix is today.  It was a better OS in the days when both
+>    were new, but Unix won out for two reasons: ran on cheap machines
+>    compared to PDP-10's, and (2) portable in a practical sense --
+>    i.e. was ported to lots of other machines during critical
+
+(3) had been licensed to many places (UCB was probably the most essential)
+(4) had an extremely lucky leak - Lions' Book.
+(5) was not controlled by the single hardware vendor.
+
+>    junctures.  Shit.  If we'd even have recoded in Bliss, we might
+>    have had a chance.
+
+Commercial success or not, but there were at least 3 reimplementations of
+UNIX kernel (Coherent, Minix and Linux). I've never seen the guts of Coherent,
+but API was pretty close to v7. Minix guts are very different, but API is
+again v7-ish. Linux... well, we are very close to 4.4BSD, both guts and API.
+Were there any attempts to write a TOPS-20 look-alike? XKL uses modified
+TOPS-20 sources. Were there any independent projects? 4BSD is not exactly
+what I mean - AFAIK many *very* nice ideas came from TOPS-20/TENEX, but...
+
+Is there *any* text that would describe the TOPS-20 internals on the level
+of Daemon Book? Printed, on-line - something? 
+
+ObInternals: could somebody give a description of the file locking in TOPS-20
+(information other systems are also welcome, indeed). I mean *technical*
+description - for $DEITY sake, to hell with advocacy. Maybe the best way would
+be to reply by email - I'll summarize and post to the group. (Reason: current
+cleanup of our file locking. And yes, I'm aware that it sucks. Those who came
+up with POSIX locks semantics should be forced to suck several putrefied
+whales through the straw. Daily. I'm sure that they will manage).
+
+-- 
+I've written small amts of c++, what more familiarity with objects do you want?
+	L. Detweiler on c.o.l.d.s, after lenghty drivel re developing OO-OS.
+
+
+Article 5409 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: Sat, 10 Jul 1999 10:51:36 -0400
+Lines: 8
+Message-ID: <37875DF8.E1AC8E3F@MA.UltraNet.Com>
+References: <7kg08v$iht$1@news.latrobe.edu.au> <7kh5pj$fe0@dfw-ixnews7.ix.netcom.com>
+		<7kigdi$49t$3@autumn.news.rcn.net> <ALDERSON.99Jun20154524@netcom17.netcom.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: w5/C3Ig/VQ7XCCsWCMwXySsPDFCYNCUUR+fA4ba5RpY=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 10 Jul 1999 14:51:53 GMT
+X-Accept-Language:  en,en-US,en-GB,es
+X-Mailer:  Mozilla 4.6 [en] (Win95; U)
+Xref: news3.best.com alt.sys.pdp10:5409
+
+"Richard M. Alderson III" wrote:
+
+> ...  Bliss-36 cost *lots* of money when it came out as a product; ...
+
+$13,800.00, as I recall.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 5429 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!144.212.100.101.MISMATCH!newsfeed.mathworks.com!news-out.cwix.com!newsfeed.cwix.com!204.59.152.222!news-peer.gip.net!news.gsl.net!gip.net!ix.netcom.com!nntp.ix.netcom.com!alderson
+From: alderson@netcom10.netcom.com (Richard M. Alderson III)
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: 12 Jul 1999 18:50:07 GMT
+Organization: NETCOM On-line services
+Lines: 16
+Message-ID: <ALDERSON.99Jul12115007@netcom10.netcom.com>
+References: <7l94re$9ms$1@autumn.news.rcn.net> <7kg08v$iht$1@news.latrobe.edu.au>
+	 <7kh5pj$fe0@dfw-ixnews7.ix.netcom.com> <7kigdi$49t$3@autumn.news.rcn.net>
+	 <ALDERSON.99Jun20154524@netcom17.netcom.com> <376e6250.0@news.kivex.com>
+Reply-To: alderson@netcom.com
+NNTP-Posting-Host: netcom10.netcom.com
+X-NETCOM-Date: Mon Jul 12  1:50:07 PM CDT 1999
+NNTP-Posting-User: alderson
+In-reply-to: "Larry S. Samberg"'s message of Mon, 28 Jun 1999 20:42:59 -0400
+Xref: news3.best.com alt.sys.pdp10:5429
+
+[ First posted on Friday, 9 July 1999.  Forgive me if it is a duplicate on your
+  system, as it never showed up on Netcom.
+  --rma ]
+
+In article <7l94re$9ms$1@autumn.news.rcn.net> "Larry S. Samberg" <larry-samberg@sonoma-systems.com> writes:
+
+>Phil, 
+>Wasn't most of Typeset-10 written in BLISS?
+
+I asked Valdeane Alusic about this this morning; she said "No."  She did say,
+after further reflection, that people might have thought so because that group
+was the first in DEC to use "structured programming" for a project.
+--
+Rich Alderson			Last LOTS Tops-20 Systems Programmer, 1984-1991
+				Current maintainer, MIT TECO EMACS (v. 170)
+last name @ XKL dot COM		Chief systems administrator, XKL LLC, 1998-now
+
+
+Article 5422 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: Sun, 11 Jul 1999 17:01:29 -0400
+Lines: 23
+Message-ID: <37890629.71FB82A6@MA.UltraNet.Com>
+References: <7kg08v$iht$1@news.latrobe.edu.au> <7kh5pj$fe0@dfw-ixnews7.ix.netcom.com> <7kigdi$49t$3@autumn.news.rcn.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: bq6qMCJa1K/9tbqFQ3xdt6LYDzVJ5GXQVYysOE+dxrs=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 11 Jul 1999 21:01:47 GMT
+X-Accept-Language:  en,en-US,en-GB,es
+X-Mailer:  Mozilla 4.6 [en] (Win95; U)
+Xref: news3.best.com alt.sys.pdp10:5422
+
+jmfbahciv@aol.com wrote:
+> 
+> In article <7kh5pj$fe0@dfw-ixnews7.ix.netcom.com>,
+>    bugs@freebsd.netcom.com (Mark Hittinger) wrote:
+...
+> >Bliss-11 may have been Decus, but a source license
+> >for Bliss-32 was probably a lot harder to get :-).  Bliss-10 came with
+> >source code in the tradition of 10-ness and was not Decus.
+> 
+> I don't think we shipped the sources.   I'd have to look at the
+> SPDs to verify this.  But I don't think there was an SPD for
+> BLISS-10, hence the customer couldn't "order" it.
+
+BLISS-10 sources were definitely available to the field, although it probably
+was only supported for building supported products written in BLISS-10.  I
+can't remember if the BLISS-10 sources initially shipped just with FORTRAN-10
+or what.
+				/AHM
+P. S.  Speaking of BLISS sources, BLISS-11 is online at
+ftp://iecc.com/pub/file/bliss.tar.gz .  Its optimizer is better than
+BLISS-10's - rather closer to Common BLISS's quality.
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 5423 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!d1
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: Mon, 12 Jul 99 09:36:16 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 40
+Message-ID: <7mcjpe$k1p$1@autumn.news.rcn.net>
+References: <7kg08v$iht$1@news.latrobe.edu.au> <7kh5pj$fe0@dfw-ixnews7.ix.netcom.com> <7kigdi$49t$3@autumn.news.rcn.net> <37890629.71FB82A6@MA.UltraNet.Com>
+X-Trace: T1uS8SIA4f1gRliStc6FDdyyZGOozvXE2TVR8yaBBvg=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 12 Jul 1999 11:33:02 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: news3.best.com alt.sys.pdp10:5423
+
+In article <37890629.71FB82A6@MA.UltraNet.Com>,
+   "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+>jmfbahciv@aol.com wrote:
+>> 
+>> In article <7kh5pj$fe0@dfw-ixnews7.ix.netcom.com>,
+>>    bugs@freebsd.netcom.com (Mark Hittinger) wrote:
+>....
+>> >Bliss-11 may have been Decus, but a source license
+>> >for Bliss-32 was probably a lot harder to get :-).  Bliss-10 came with
+>> >source code in the tradition of 10-ness and was not Decus.
+>> 
+>> I don't think we shipped the sources.   I'd have to look at the
+>> SPDs to verify this.  But I don't think there was an SPD for
+>> BLISS-10, hence the customer couldn't "order" it.
+>
+>BLISS-10 sources were definitely available to the field, although it 
+probably
+>was only supported for building supported products written in BLISS-10.
+
+Alan, think.  One didn't need BLISS-10 sources in order to build
+products written in BLISS-10.
+
+>  I
+>can't remember if the BLISS-10 sources initially shipped just with 
+FORTRAN-10
+>or what.
+
+The _Bliss_ sources weren't shipped on the tape; just the *.EXEs
+and (I can't remember this) I suspect LIBs, etc.  The Fortran
+tape was a mess since it also insisted on shipping RELs, UNVs and
+EXEs that belonged on the CUSP tape.  One of my knockdowns with
+Sara was to get that stuff off all the language tapes so that
+there would no longer be any version skews of supported products.
+It took the monitor group about 5 years to solve that problem
+along with eliminating 22 CUSP update tapes.
+
+/BAH
+
+
+Subtract a hundred and four for e-mail.
+
+
+Article 5419 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: Sun, 11 Jul 1999 14:07:15 -0400
+Lines: 110
+Message-ID: <3788DD53.6B3F6CE7@MA.UltraNet.Com>
+References: <7kg08v$iht$1@news.latrobe.edu.au> <7l94re$9ms$1@autumn.news.rcn.net> <un1xhiy1p.fsf@graphics.cornell.edu> <Pine.NXT.4.20.9906301223560.29451-100000@Tomobiki-Cho.CAC.Washington.EDU> <7ldvd1$6p6@weyl.math.psu.edu> <7leh5k$blq$2@news.latrobe.edu.au>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: l0eDdFuSA5Bsc9siQrr51kH1BAtwvsXnDbs9MRtW0Wk=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 11 Jul 1999 18:07:32 GMT
+X-Accept-Language:  en,en-US,en-GB,es
+X-Mailer:  Mozilla 4.6 [en] (Win95; U)
+Xref: news3.best.com alt.sys.pdp10:5419
+
+Huw Davies wrote:
+> 
+>... In Bliss, everything is an lvalue, ...
+
+(Except for BIND or LITERAL identifiers).
+
+
+>... to get the rvalue, preceed with .
+> 
+> Thus, in Bliss
+> 
+>     i = i + 1
+> 
+> is completely valid, it just doesn't do what you might expect. (It adds one
+> to the address in memory where i is stored and stores the result in the
+> memory location pointed to by i). To get "normal" behaviour write
+> 
+>     i = .i + 1
+> 
+> I much prefer this approach to that used by c, but it's a personal thing!
+> I find things like
+> 
+>     .i = .j
+> 
+> fun to right and easy to understand....
+
+This one might put hair on your chest:
+
+"
+GLOBAL ROUTINE IOBLD (NODEDATA,DEFUNIT,UNITFLAG)= ! [1465] New
+
+!----------------------------------------------------------------------
+!This routine expects a pointer in STK[0] to:
+!	pointer to:
+!		unit expression
+!		format expression
+...
+!	option
+!	iolist
+!----------------------------------------------------------------------
+!
+! For ENCODE and DECODE, the action routine that parses the keyword list
+! guarantees that unit, format, and variable are all present.
+
+BEGIN
+...
+	REGISTER BASE R1:R2;
+...
+	! Offsets into semantic block built by KEYSCAN
+
+	STRUCTURE RBASE [I,J,K,L] =
+		  CASE .I OF SET
+   %0%		     (\.RBASE +.J)<.K,.L>;
+   %1%		    (@\.RBASE +.J)<.K,.L>
+		  TES;
+
+	BIND RBASE QUNIT = 0<FULL,R2>:
+		   QFMT = 1<FULL,R2>:
+		   ...
+
+	R1 = .STK[0];			! Get pointer to args
+	R2 = .R1[ELMNT];
+...
+	IF .QUNIT EQL 0
+	...
+
+	! Check UNIT.  Legal forms are *, integer expression,
+	! character variable or array element or substring,
+	! or character array name.
+
+	IF .QUNIT^(-18) EQL ASTERISK
+	THEN
+	...
+	ELSE IF .QUNIT[VALTYPE] EQL CHARACTER
+	THEN
+	...
+"
+
+Note all three dereference operators (atsign/backslash/dot) used in a row in
+the definition of structure RBASE.
+
+
+@y<p,s,x,i> would generate:
+	MOVE	AC,y		; Ignore p, s, x, i
+
+\y<p,s,x,i> would do:
+	MOVE	AC,@(i)y(x)	; Ignore p, s
+
+.y<p,s,x,i> would do:
+	LDB	AC,[POINT p,s,@(i)y(x)]
+(or	MOVE	AC,@(i)y(x) if P == 0, S == 36)
+
+The %1% case arm used @, because it was known if one wanted to indirect one
+more time, the fetched value was just an 18-bit address.  So, it wouldn't work
+to treat it as a byte pointer with a general-case LDB, and it didn't contain
+indexing or indirection, so there was no point chewing on it with a full-blown
+effective address calculation.
+
+Both case arms used \, because the table was known to contain indirect words
+which indexed off of some register named R2, and so you needed the generated
+code to indirect through the table entry.
+
+
+I didn't write the code - I just had the honor of pre-reviewing it before the
+project meeting.  (The author didn't want to have to pull me out of the
+ceiling by the ankles if it had been sprung on me unawares).  The code was
+necessary and sufficient; we shipped it; it works.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 5420 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!su-news-hub1.bbnplanet.com!news.gtei.net!logbridge.uoregon.edu!newspeer1.nac.net!netnews.com!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: Sun, 11 Jul 1999 15:19:12 -0400
+Lines: 155
+Message-ID: <3788EE30.3B7E7B0F@MA.UltraNet.Com>
+References: <7kg08v$iht$1@news.latrobe.edu.au>   <7kh5pj$fe0@dfw-ixnews7.ix.netcom.com><7kigdi$49t$3@autumn.news.rcn.net>   <ALDERSON.99Jun20154524@netcom17.netcom.com> <376e6250.0@news.kivex.com> <7l94re$9ms$1@autumn.news.rcn.net> <un1xhiy1p.fsf@graphics.cornell.edu> <Pine.NXT.4.20.9906301223560.29451-100000@Tomobiki-Cho.CAC.Washington.EDU>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: pHAaNvlmKh8/y4F4Ia5n3YpHplF2/55jYtEncIX/TgU=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 11 Jul 1999 19:19:30 GMT
+X-Accept-Language:  en,en-US,en-GB,es
+X-Mailer:  Mozilla 4.6 [en] (Win95; U)
+Xref: news3.best.com alt.sys.pdp10:5420
+
+Mark Crispin wrote:
+> 
+> The problem with BLISS on the PDP-10 was that it was much easier to write
+> an application in PDP-10 assembly language than BLISS.  The only PDP-10
+> operating system which had system calls that were remotely ameniable for
+> high-level languages was ITS (the .CALL UUO).  In all other operating
+> systems, setting up a system call required that you knew the precise
+> accumulator and memory values; this was trivial in assembly language but a
+> nightmare in a high level language.
+
+It was trivial in BLISS-36 to define custom linkages for Tops-20 JSY which put
+input and output parameters into the proper registers.  For instance, DFOUT
+took AC1-AC4 as inputs, left stuff in AC1 and AC4, and had a single skip
+return on success.
+
+LINKAGE
+	J_1234_14_1 = JSYS(1, 2, 3, 4; 1, 4) : SKIP(1);
+BIND ROUTINE
+	DFOUT = %O'235' : J_1234_14;
+
+So, a DFOUT of the contents of variables A, B, C and D, which put the output
+parameters into variables Y and Z, and which evaluated true if the call
+skipped, would be written:
+
+	IF NOT DFOUT(.A, .B, .C, .D; Y, Z)
+	THEN error
+
+
+On TOPS-10, you constructed the arg block in memory, stuck its address into
+the AC of your choice, and executed the CALLI of your choice with a MACHOP or
+MACHSKIP builtin.
+
+With BLISS-10, you declared the CALLI opcode as a MACHOP and called them as
+functions (perhaps in an IFSKIP statement).
+
+
+Here's some BLISS-36 to print the lowseg and hiseg filespec of a TOPS-10 job. 
+Comments might help, but I can still reverse engineer all the fields of those
+system calls from the code.  A tighter coding style, a subroutine for pulling
+a job or hiseg's path, and a printf would have come in handy, too.  (It would
+really rock with C++ wrappers for the CALLIs).
+
+ROUTINE PNAMES_DSP(JOB) : NOVALUE=
+BEGIN
+
+REGISTER
+	T1,T2;
+LOCAL
+	PATH_BLOCK:STR_PATH;
+
+	T1=GET_TAB(.JOB,$GTRDV,0);
+	IF .T1 NEQ 0
+	 THEN
+	  BEGIN
+		SIXWRD(T1);
+		OUTASZ(':');
+	  END;
+	T1=GET_TAB(.JOB,$GTRFN,%SIXBIT '??????');
+	SIXOUT(6,T1);
+	PATH_BLOCK[PATH_PPN]=GET_TAB(.JOB,$GTRDI,0);
+	IF .PATH_BLOCK[PATH_PPN] NEQ 0
+	 THEN
+	  BEGIN
+		T1=0;
+		DO
+		  BEGIN
+			T2=(PATH_BLOCK[PATH_SFD]+.T1)=
+			 GET_TAB(.JOB,$GTRS0+.T1,0);
+			T1=.T1+1
+		  END
+		 UNTIL .T2 EQL 0;
+		DIR_DSP(PATH_BLOCK)
+	  END;
+
+	IF .POINTR(HISEG,SN_SPY) NEQ 1
+	 THEN
+	  BEGIN
+		IF .HISEG<RH> NEQ 0
+		 THEN
+		  BEGIN
+			OUTASZ(' + ');
+			T1=GET_TAB(.HISEG<RH>,$GTDEV,%SIXBIT '??????');
+			IF .T1 NEQ 0
+			 THEN
+			  BEGIN
+				SIXWRD(T1);
+				OUTASZ(':')
+			  END;
+			IF .POINTR(HISEG,SN_SHR)
+			 THEN T1=GET_TAB(.HISEG<RH>,$GTPRG,%SIXBIT '??????')
+			 ELSE T1=%SIXBIT '(Priv)';
+			SIXOUT(6,T1);
+			T1=PATH_BLOCK[PATH_PPN]=GET_TAB(.HISEG<RH>,$GTPPN,0);
+			IF .T1<LH> NEQ 0
+			 THEN
+			  BEGIN
+				T1=0;
+				DO
+				  BEGIN
+					T2=(PATH_BLOCK[PATH_SFD]+.T1)=
+					 GET_TAB(.HISEG<RH>,$GTRS0+.T1,0);
+					T1=.T1+1
+				  END
+				 UNTIL .T2 EQL 0;
+				DIR_DSP(PATH_BLOCK)
+			  END;
+			OUTASZ(' ')
+		  END
+	  END
+	 ELSE
+	  BEGIN
+		OUTASZ(' + SPY:');
+		T1=(.HISEG<RH>+1)^-9;
+		DECOUT(T1);
+		OUTASZ('P ')
+	  END
+END;
+
+BTW, those SIXOUT and DECOUT calls are invoking LUUOs in-line.
+
+
+> C succeeded where BLISS failed for many reasons.  C's syntax is much more
+> reasonable, and it certainly much easier to write applications in C than
+> in assembly language on these gruesome hardware architectures being built
+> today.
+
+Common BLISS could be written very portably between 10's, 11's, VAXen and
+Alphas, but engineering almost never paid the extra investment it required -
+extra rules to follow every step of the way.  Those decisions are still
+bearing fruit.
+
+Two examples of portability shortcuts: VAX DEBUG was written with only
+half-hearted use of the character-handling functions which abstracted away
+PDP-10 byte pointers from 11/VAX byte addressing.  So, a port to the -10 would
+have required looking at every line of code to see where CH$ builtins had to
+be added.  And I suspect that a lot of BLISS-32 code *knew* that a fullword
+was 32 bits, which must have been just lovely to port to Alpha.
+
+There was no silver bullet to learning BLISS.  The Fortran-10 group once hired
+3 or 4 people in a row who learned BLISS-10 in college, but that was an
+aberration.  A vanishingly small user community outside the company guaranteed
+that you had to train almost everyone (sometimes without even in-house course
+materials), and wait the months for them to come fully up to speed.  That kept
+costs too high once C really became the rage.
+
+A lot of BLISS programmers have been just as opposed to C as any BLISS
+opposition by MACRO programmers we see here.  Widespread C use inside Digital
+seems to postdate the advent of X/DECwindows.  I don't know how much change
+was caused by it, but many products did have to write or rewrite GUIs. 
+Maintaining and using in-house BLISS bindings that shadowed the various X APIs
+didn't really catch on.  So, a critical mass of people got dipped in C sooner
+or later (and more and more people came in the door already knowing C).
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 5421 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: Sun, 11 Jul 1999 16:49:18 -0400
+Lines: 43
+Message-ID: <3789034E.1DCE46B1@MA.UltraNet.Com>
+References: <7kg08v$iht$1@news.latrobe.edu.au> <37706667.3038342@netnews.worldnet.att.net> <Pine.NXT.4.20.9906222324400.20271-100000@Tomobiki-Cho.CAC.Washington.EDU> <QCgc3.2767$Wr1.95137@wbnws01.ne.mediaone.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: iHKGllPsYd3F949Jjs+X+7XFUpYH5e8Dv+P+wEzR9Q8=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 11 Jul 1999 20:49:36 GMT
+X-Accept-Language:  en,en-US,en-GB,es
+X-Mailer:  Mozilla 4.6 [en] (Win95; U)
+Xref: news3.best.com alt.sys.pdp10:5421
+
+Ric Werme wrote:
+> 
+> Mark Crispin <mrc@CAC.Washington.EDU> writes:
+> 
+> >As I recall, the code generated by the BLISS compiler was horrible.  Most
+> >C compilers on x86, Alpha, etc. can generate better code than a human can
+> >write assembly by hand.  The situation was the exact opposite on the
+> >PDP-10.
+> 
+> I guess I don't remember the code quality.  I do recall keeping tabs
+> on the object file size - it jumped up if I forgot a "." in front of a
+> variable.  One problem - BLISS wanted to pass arguments on the stack.
+> Assembler programmers use registers and on the -10 use certain
+> registers for pointers to things that needed to be passed to many
+> routines within a module, so the argument passing cost for them was
+> zero.
+
+BLISS-10's code quality was nothing to write home about.  BLISS-36's was
+pretty good, especially for the time.  (I suspect it was tighter than the
+MACRO code in the average random cusp).
+
+As far as reserving special registers goes, BLISS-10 had some features for it,
+and BLISS-36 was very good at it.  BLISS-10 would let you state where the
+stack pointer, etc. lived, and let you reserve some registers to be declared
+as variables.  BLISS-36 would let you declare that specific routines of yours
+passed certain arguments in certain registers.  Furthermore I recall that if
+you told it (as I posted elsewhere today), "this JSYS takes ACs 1, and 2 as
+input, and leaves something in AC1 as a result", and said your own routine
+took a byte pointer in AC1, then code like this:
+
+ROUTINE MY_ROUTINE(BUFFER_BP) : MY_ROUTINE_LINKAGE=
+BEGIN
+	...
+	THE_JSYS(.BUFFER_BP, .THIS_STRING; BUFFER_BP);
+	THE_JSYS(.BUFFER_BP, .THAT_STRING; BUFFER_BP);
+	...
+END;
+
+would allocate the buffer byte pointer to AC1 and leave it there for all the
+calls, which were moving it along as they wrote to the in-core buffer.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 5431 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: Mon, 12 Jul 1999 22:38:19 -0400
+Lines: 61
+Message-ID: <378AA69B.D8772FC0@MA.UltraNet.Com>
+References: <7kg08v$iht$1@news.latrobe.edu.au> <7kh5pj$fe0@dfw-ixnews7.ix.netcom.com> <7kigdi$49t$3@autumn.news.rcn.net> <37890629.71FB82A6@MA.UltraNet.Com> <7mcjpe$k1p$1@autumn.news.rcn.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: To339Uy55OW1soIwrNYumWYfYp1APK4df4gqXx0ZZ30=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 13 Jul 1999 02:38:40 GMT
+X-Accept-Language:  en,en-US,en-GB,es
+X-Mailer:  Mozilla 4.6 [en] (Win95; U)
+Xref: news3.best.com alt.sys.pdp10:5431
+
+jmfbahciv@aol.com wrote:
+> 
+> In article <37890629.71FB82A6@MA.UltraNet.Com>,
+>    "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+> >jmfbahciv@aol.com wrote:
+> >>
+> >> In article <7kh5pj$fe0@dfw-ixnews7.ix.netcom.com>,
+> >>    bugs@freebsd.netcom.com (Mark Hittinger) wrote:
+> >....
+> >> >Bliss-11 may have been Decus, but a source license
+> >> >for Bliss-32 was probably a lot harder to get :-).  Bliss-10 came with
+> >> >source code in the tradition of 10-ness and was not Decus.
+> >>
+> >> I don't think we shipped the sources.   I'd have to look at the
+> >> SPDs to verify this.  But I don't think there was an SPD for
+> >> BLISS-10, hence the customer couldn't "order" it.
+> >
+> >BLISS-10 sources were definitely available to the field, although it
+> probably
+> >was only supported for building supported products written in BLISS-10.
+> 
+> Alan, think.  One didn't need BLISS-10 sources in order to build
+> products written in BLISS-10.
+
+0.  I entered a couple of dozen DCE edits to Fortran-10 from the Software
+Dispatch while I was in the field.
+
+1.  BLISS-10 sources were definitely available to the field.
+
+2.  BLISS-10 was probably only supported to build supported products written
+in BLISS-10.  (Just like PA1050 would only accept bugs encountered while
+running supported compatibility mode cusps).  However by 1981, BLISS-10 bugs
+would probably have been dumped in the Fortran group's lap, and we would have
+just issued a permanent restriction w/workaround.  It was a non-goal to touch
+a hair on BLISS-10's head.
+
+I once met the last BLISS-10 maintainer, but I can't remember his name...
+
+
+> >  I
+> >can't remember if the BLISS-10 sources initially shipped just with
+> FORTRAN-10
+> >or what.
+> 
+> The _Bliss_ sources weren't shipped on the tape; just the *.EXEs
+> and (I can't remember this) I suspect LIBs, etc.  ...
+
+Quite plausible.  I don't remember how the BLISS-10 sources were available to
+the field.
+
+
+>... The Fortran
+> tape was a mess since it also insisted on shipping RELs, UNVs and
+> EXEs that belonged on the CUSP tape.  One of my knockdowns with
+> Sara was to get that stuff off all the language tapes so that
+> there would no longer be any version skews of supported products.
+
+Might have been before my time.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 5435 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: Tue, 13 Jul 1999 00:20:13 -0400
+Lines: 79
+Message-ID: <378ABE7D.69E03940@MA.UltraNet.Com>
+References: <7kg08v$iht$1@news.latrobe.edu.au> 	 <7kh5pj$fe0@dfw-ixnews7.ix.netcom.com><7kigdi$49t$3@autumn.news.rcn.net> 	 <ALDERSON.99Jun20154524@netcom17.netcom.com> <376e6250.0@news.kivex.com> <7l94re$9ms$1@autumn.news.rcn.net> <un1xhiy1p.fsf@graphics.cornell.edu>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: dy/zVqvLozSu/VZ3HhN7Bvzk9/iqorzCpMqKMHnHQnw=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 13 Jul 1999 04:20:33 GMT
+X-Accept-Language:  en,en-US,en-GB,es
+X-Mailer:  Mozilla 4.6 [en] (Win95; U)
+Xref: news3.best.com alt.sys.pdp10:5435
+
+"Stephen H. Westin" wrote:
+> 
+> It seems to me that most of the 36-bit folks were not fans of
+> BLISS. There are two main reasons for using a higher-level language.
+> 
+> o Programmer productivity: by using a language that maps better to
+>   a programmer's thought processes or the problem at hand, we can
+>   get the same work done in less time. Or more work in the same time,
+>   etc.
+> 
+> o Portability: by avoiding machine language, we have some hope of
+>   separating the code from the hardware details of a single machine.
+> 
+> In which ways did BLISS fail in these promises? I can think of several
+> possibilities.
+...
+> o By failing to be reliable, it negated any benefits that might
+>   otherwise accrue.
+
+Between 1977 and 1986, I can recall seeing evidence of 3 bugs in BLISS-10. 
+(It had plenty of bug fixes, but these were all the ones I saw evidence of). 
+The evidence was one piece of graffiti, a revelation found by reading
+BLISS-10's sources, and an actual bug encountered while coding:
+
+1.  This comment in FORTRAN-10:
+
+"
+%(****FEB 23,1972 - THE FOLLOWING BLOCK WAS INSERTED TO
+	PREVENT A BLISS BUG THAT DELETED CODE . THIS BLOCK FORCES
+	BLISS TO USE 2 TEMP REGS***)%
+BEGIN
+	OWN T,T1,T2,T3;
+	T = 1; T1 = 2; T2 = 3; T3 = 4;
+END;
+"
+
+We never saw another example of it, and for all we know the bug was fixed.
+
+
+2.  One of the two typos in FORTRAN-10's PEEPOP.BLI was dutifully copied into
+BLISS-10's H3PEEP.BLI (a comparison of an instruction's Y field symbol table
+pointer, instead of the Y field's value, to another instruction's register
+number).  It would erroneously go ahead and change this:
+
+	MOVEM	R1,R2
+	OP	R2,ANY
+	MOVE	R1,R2
+to this:
+	MOVEM	R1,R2
+	OP	R2,ANY
+
+even though R2 had been changed by OP, and so R1 did really need to be
+reloaded. 
+I never heard of anyone encountering the bug; we didn't try and fix it.  (The
+other bug, a missing dot, was silently fixed in BLISS-10 without being
+reported back to FORTRAN-10, until I spotted it while reading code).
+
+
+3.  This would make BLISS-10 punt:
+
+MACRO
+	OUTASZ(STR)=OUTSTR(PASZ STR)$;
+
+	OUTASZ('~');
+
+The value for tilde was used as an escape by BLISS's macro processor, and it
+couldn't tolerate it as a macro actual.  The one place we wanted to pass a
+tilde to a macro (the place in FINE's help screen for M-~), we just expanded
+the macro in-place.
+
+Of course, I saw many dozens of people use BASIC-10 for 3 1/2 years in high
+school, and never once saw BASIC screw anyone there.  So by that metric, BLISS
+was incredibly unreliable.
+
+
+BLISS-36?  I should have been so lucky as to have had a job using it.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 5437 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!nntp.abs.net!newshub2.home.com!news.home.com!newshub1-work.home.com!null!albaugh
+From: albaugh@agames.com (Mike Albaugh)
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: 13 Jul 1999 17:46:43 GMT
+Organization: Atari Games Corporation
+Lines: 24
+Message-ID: <7mfu23$7ic$1@null.agames.com>
+References: <7kg08v$iht$1@news.latrobe.edu.au> <Pine.NXT.4.20.9906241055470.22648-100000@Tomobiki-Cho.CAC.Washington.EDU> <7ku5qp$d62$1@null.agames.com> <378AAC9A.308D1AF3@MA.UltraNet.Com>
+NNTP-Posting-Host: java.agames.com
+X-Trace: null.agames.com 931888003 7756 192.245.83.156 (13 Jul 1999 17:46:43 GMT)
+X-Complaints-To: abuse@agames.com
+NNTP-Posting-Date: 13 Jul 1999 17:46:43 GMT
+X-Newsreader: TIN [version 1.2 PL2]
+Xref: news3.best.com alt.sys.pdp10:5437
+
+Alan H. Martin (AMartin@MA.UltraNet.Com) wrote:
+: Mike Albaugh wrote:
+: > 
+
+: >         Ob. Bliss reference: at least two coin-operated video-games
+: > were writen in Bliss. One giant "attaperson" to the one who can
+: > name them... :-)
+
+: Doesn't sound like there are any takers - what's the answer?
+
+	APB (top-down "Cop Game") and 720 (The original Skateboard game,
+which used the phrase "Skate or Die", but is otherwise not related
+to the unauthorized sequel of that name :-) Both written in Bliss-16
+and run on T-11s. The relevance to alt.sys.PDP10 is pretty low, until
+I also mention that when DEC came around trying to sell us J-11 chipsets,
+we were already pretty tired of "stupid MMU tricks" (The games used
+a homebrew banking scheme. noit a real DEC MMU), and unwilling to
+sell the new single-chip Vaxen (not that we could really have used
+them, ...), so I asked the salesdroid about the possibility of a
+single-chip KI10 equivalent. He just about swallowed his tongue, but
+claimed he'd "Ask about it". Good thing I didn't hold my breath.
+
+					Mike
+| albaugh@agames.com, speaking only for myself
+
+
+Article 5449 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!su-news-hub1.bbnplanet.com!paloalto-snf1.gtei.net!news.gtei.net!news1.digital.com!pa.dec.com!sniff.shr.dec.com!chuck.enet.dec.com!otoole
+From: otoole@chuck.enet.dec.com (Chuck O'Toole)
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: 14 Jul 1999 13:43:46 GMT
+Organization: Compaq Computer Corporation, Shrewsbury MA.
+Lines: 44
+Distribution: world
+Message-ID: <7mi46i$b2e$1@sniff.shr.dec.com>
+References: <7kg08v$iht$1@news.latrobe.edu.au> <7kh5pj$fe0@dfw-ixnews7.ix.netcom.com> <7kigdi$49t$3@autumn.news.rcn.net> <37890629.71FB82A6@MA.UltraNet.Com> <7mcjpe$k1p$1@autumn.news.rcn.net> <378AA69B.D8772FC0@MA.UltraNet.Com>
+Reply-To: otoole@chuck.enet.dec.com (Chuck O'Toole)
+NNTP-Posting-Host: chuck.shr.dec.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 7bit
+X-Newsreader: mxrn 6.18-31
+Xref: news3.best.com alt.sys.pdp10:5449
+
+
+In article <378AA69B.D8772FC0@MA.UltraNet.Com>, "Alan H. Martin"
+<AMartin@MA.UltraNet.Com> writes:
+
+  [snip...]
+
+|>2.  BLISS-10 was probably only supported to build supported products
+|>written
+|>in BLISS-10.  (Just like PA1050 would only accept bugs encountered while
+|>running supported compatibility mode cusps).  However by 1981, BLISS-10
+|>bugs
+|>would probably have been dumped in the Fortran group's lap, and we would
+|>have
+|>just issued a permanent restriction w/workaround.  It was a non-goal to
+|>touch
+|>a hair on BLISS-10's head.
+|>
+  [snip...]
+
+"the horror...the horror..."  [Brando]
+
+Ah, Bliss-10.  In late '75 I inherited MCS-10 (Message Control System
+- DEC's answer to transaction processing at the time).  The majority
+of the messaging logic was written in Bliss-10, about a 4 inch thick
+listing on old 132 column fan fold printer paper.
+
+After I finally got it to work (and ship!), with JMF's help of course,
+a new version of Bliss-10 came out and when I compiled MCS with it, MCS
+completely stopped working.  Some construct I was using stopped generating
+the proper code.  Rather than re-qualify and test that much Bliss code, I
+simply started shipping the older Bliss .EXE on the MCS tape.  Ruffled a
+few feathers but it was the only way I was ever going to get off the MCS
+project, I didn't want that to become my life's work.
+
+That was my only encounter with Bliss, ever.  Scarred me for life.  I stuck
+with assembly (-10, -11, VAX) until the mid 80's when I had to learn Pascal
+(don't ask)
+-- 
+
+/cdo
+-----
+Disclaimer:  The opinions expressed are my own and
+do not necessarily represent those of my employer,
+loved ones, or passing acquaintances.
+
+
+Article 5452 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!nntp.primenet.com!nntp.gctr.net!newspeer1.nac.net!netnews.com!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: Wed, 14 Jul 1999 21:50:17 -0400
+Lines: 45
+Message-ID: <378D3E59.2CE7A0C5@MA.UltraNet.Com>
+References: <7kg08v$iht$1@news.latrobe.edu.au> <7kh5pj$fe0@dfw-ixnews7.ix.netcom.com> <7kigdi$49t$3@autumn.news.rcn.net> <37890629.71FB82A6@MA.UltraNet.Com> <7mcjpe$k1p$1@autumn.news.rcn.net> <378AA69B.D8772FC0@MA.UltraNet.Com> <7mht44$ns2$1@autumn.news.rcn.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: SBUM7VhsmKx359PZgH95zEhwhhpBYHBwdElh0ZAiQko=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 15 Jul 1999 01:50:53 GMT
+X-Accept-Language:  en,en-US,en-GB,es
+X-Mailer:  Mozilla 4.6 [en] (Win95; U)
+Xref: news3.best.com alt.sys.pdp10:5452
+
+jmfbahciv@aol.com wrote:
+> 
+> In article <378AA69B.D8772FC0@MA.UltraNet.Com>,
+>    "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+> >jmfbahciv@aol.com wrote:
+...
+> >> Alan, think.  One didn't need BLISS-10 sources in order to build
+> >> products written in BLISS-10.
+> >
+> >0.  I entered a couple of dozen DCE edits to Fortran-10 from the Software
+> >Dispatch while I was in the field.
+> 
+> DCE?  What's that?  ...
+
+DCE was not only a Fortran-10 maintainer, but probably had to sign off on all
+of *your* bug fixes.
+
+
+>... Patches to Fortran-10 are not patches to
+> Bliss.
+
+It means I have experience patching Fortran-10 in the field.  Have you?
+
+
+> >However by 1981, BLISS-10 bugs
+> >would probably have been dumped in the Fortran group's lap,
+> 
+> Nope.  There was an official Bliss maintainer but he worked
+> closely with the Fortran group.
+
+The last BLISS-10 build was 19-Jan-78.
+
+
+> >
+> >I once met the last BLISS-10 maintainer, but I can't remember his name...
+> 
+> What do mean once met.  He was at the Fortran meetings quite often.
+> Eric Magrath.
+
+I know who Eric is; I met him on or before 4-Jun-81.  This was a younger guy,
+probably with a less conservative haircut.  I think he was visiting the office
+area.
+				/ahm
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 5451 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!newshub.northeast.verio.net!howland.erols.net!outgoing.news.rcn.net.MISMATCH!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: Wed, 14 Jul 1999 21:08:34 -0400
+Lines: 21
+Message-ID: <378D3492.FAC48090@MA.UltraNet.Com>
+References: <7kg08v$iht$1@news.latrobe.edu.au> 	 <7kh5pj$fe0@dfw-ixnews7.ix.netcom.com><7kigdi$49t$3@autumn.news.rcn.net> 	 <ALDERSON.99Jun20154524@netcom17.netcom.com> <376e6250.0@news.kivex.com> <7l94re$9ms$1@autumn.news.rcn.net> <un1xhiy1p.fsf@graphics.cornell.edu> <378ABE7D.69E03940@MA.UltraNet.Com> <7mht84$ns2$2@autumn.news.rcn.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: JQajaqLftdvVYNkeA4dqmYFZAiA5HW9VYZ8kc/Cmewo=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 15 Jul 1999 01:09:02 GMT
+X-Accept-Language:  en,en-US,en-GB,es
+X-Mailer:  Mozilla 4.6 [en] (Win95; U)
+Xref: news3.best.com alt.sys.pdp10:5451
+
+jmfbahciv@aol.com wrote:
+> 
+> In article <378ABE7D.69E03940@MA.UltraNet.Com>,
+>    "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+
+> >Between 1977 and 1986, I can recall seeing evidence of 3 bugs in BLISS-10.
+...
+> >1.  This comment in FORTRAN-10:
+> >
+> >"
+> >%(****FEB 23,1972 - THE FOLLOWING BLOCK WAS INSERTED TO
+> >       PREVENT A BLISS BUG THAT DELETED CODE . THIS BLOCK FORCES
+> >       BLISS TO USE 2 TEMP REGS***)%
+> <snip>
+> 
+> Now look at the date.  ...
+
+During V1 development or field test.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 5458 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!144.212.100.101.MISMATCH!newsfeed.mathworks.com!solaris.cc.vt.edu!news.vt.edu!news.cc.ukans.edu!srvr1.engin.umich.edu!news.tc.cornell.edu!news.graphics.cornell.edu!news
+From: westin*nospam@graphics.cornell.edu (Stephen H. Westin)
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: 15 Jul 1999 09:44:18 -0400
+Organization: Cornell University Program of Computer Graphics
+Lines: 56
+Sender: westin@DIESEL
+Message-ID: <uyagif2od.fsf@graphics.cornell.edu>
+References: <7kg08v$iht$1@news.latrobe.edu.au> 	 <7kh5pj$fe0@dfw-ixnews7.ix.netcom.com><7kigdi$49t$3@autumn.news.rcn.net> 	 <ALDERSON.99Jun20154524@netcom17.netcom.com> <376e6250.0@news.kivex.com> <7l94re$9ms$1@autumn.news.rcn.net> <un1xhiy1p.fsf@graphics.cornell.edu> <7ldaoo$el2$1@autumn.news.rcn.net> <ulnd1ir14.fsf@graphics.cornell.edu> <7mkevn$82j$3@autumn.news.rcn.net>
+NNTP-Posting-Host: diesel.graphics.cornell.edu
+X-Newsreader: Gnus v5.5/Emacs 20.3
+Xref: news3.best.com alt.sys.pdp10:5458
+
+jmfbahciv@aol.com writes:
+
+> In article <ulnd1ir14.fsf@graphics.cornell.edu>,
+>    westin*nospam@graphics.cornell.edu (Stephen H. Westin) wrote:
+> >jmfbahciv@aol.com writes:
+> >
+> >> In article <un1xhiy1p.fsf@graphics.cornell.edu>,
+> >>    westin*nospam@graphics.cornell.edu (Stephen H. Westin) wrote:
+> >> >
+> >> >It seems to me that most of the 36-bit folks were not fans of
+> >> >BLISS. There are two main reasons for using a higher-level language.
+> >> >
+> >> >o Programmer productivity: by using a language that maps better to
+> >> >  a programmer's thought processes or the problem at hand, we can
+> >> >  get the same work done in less time. Or more work in the same time,
+> >> >  etc.
+> >> 
+> >> Phooey.
+> >
+> >Well, I had hoped for a somewhat more extensive discussion than
+> >that. 
+> <snip>
+> 
+> Stephen,  Have you been following the stories? 
+
+Well, your article was the first I saw in reply to mine, so at the
+point I posted that, there were no "stories" to follow. A more
+extensive discussion has, in fact, ensued. Possibly before your
+message quoted above, given the asychronous nature of USENET.
+
+> Hidden in them
+> are a lot of the reasons that Bliss was a pig.
+
+Well I get the impression that you just don't trust any
+compiler. Certainly developing a system using tools (including
+compilers) that themselves are under development is a real problem; I
+get the impression that this is what happened with BLISS on the 36-bit
+machines, as the compiler either would generate bad code, forcing
+workarounds, or would suddenly change its code generation, breaking
+existing code. It's not, I think, a fundamental flaw in the concept of
+using higher-level languages. I suspect that this factor had a lot to
+do with the relative ease of developing Unix compared to Multics:
+since C is such a simpler language than PL/1, a functional, reliable
+compiler was much easier to develop.
+
+I also get the impression that moving from an assembly-oriented
+environment is a real problem, as cultural assumptions have already
+worked their way deep into the system design. Arbitrary calling
+conventions are hard to accomodate in a higher level language, for
+instance, and this apparently made BLISS something of an outsider in
+TOPS-10.
+
+-- 
+-Stephen H. Westin
+Any information or opinions in this message are mine: they do not
+represent the position of Cornell University or any of its sponsors.
+
+
+Article 5467 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: Sat, 17 Jul 1999 12:36:36 -0400
+Lines: 19
+Message-ID: <3790B114.20E7987@MA.UltraNet.Com>
+References: <7kg08v$iht$1@news.latrobe.edu.au> 	 <7kh5pj$fe0@dfw-ixnews7.ix.netcom.com><7kigdi$49t$3@autumn.news.rcn.net> 	 <ALDERSON.99Jun20154524@netcom17.netcom.com> <376e6250.0@news.kivex.com> <7l94re$9ms$1@autumn.news.rcn.net> <un1xhiy1p.fsf@graphics.cornell.edu> <7lrdiu$oqm@dfw-ixnews7.ix.netcom.com> <7lso11$77o$1@autumn.news.rcn.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: L9N37jjp83EnLSMFwAULj2cwen4EZPadN0T0mkutJEM=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 17 Jul 1999 16:37:05 GMT
+X-Accept-Language:  en,en-US,en-GB,es
+X-Mailer:  Mozilla 4.6 [en] (Win95; U)
+Xref: news3.best.com alt.sys.pdp10:5467
+
+jmfbahciv@aol.com wrote:
+
+> One of the problems of any flavor of the blisses on the -10
+> is that a build almost required a stand-alone -10 that
+> didn't crash for 12 hours (that was not our environment).
+> It was so much faster to build stuff written in MACRO-10
+> than BLISS-xx.  So a developer who wrote in assembly
+> would rarely have to wait a day for a build turn-around
+> time.  Building anything, and I mean ANYTHING, with BLISS
+> meant that the IBM card turnaround time mentality became
+> the norm.  That wasn't our style.
+
+Building 350K lines of the FORTRAN compiler took an order of magnitude
+less time than that on KL2137 (let alone MRFORT).  A single module
+rebuild meant typing in the compile and link lines; no script - just a
+.CCL file for the modules on the link line.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 5466 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: Sat, 17 Jul 1999 12:23:35 -0400
+Lines: 31
+Message-ID: <3790AE07.5087C480@MA.UltraNet.Com>
+References: <7kg08v$iht$1@news.latrobe.edu.au> <37706667.3038342@netnews.worldnet.att.net> <Pine.NXT.4.20.9906222324400.20271-100000@Tomobiki-Cho.CAC.Washington.EDU>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: 4cPM/G26chvbdzT1O7FnvHhJLz6R+2IRQVLzuyKUooI=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 17 Jul 1999 16:24:01 GMT
+X-Accept-Language:  en,en-US,en-GB,es
+X-Mailer:  Mozilla 4.6 [en] (Win95; U)
+Xref: news3.best.com alt.sys.pdp10:5466
+
+Mark Crispin wrote:
+> 
+> > BLISS was never looked upon very favorably in 36-bit-land for a couple
+> > of reasons.  One is that MACRO was the "true language" of 36-bit
+> > implementation;  anything done in BLISS was looked at askance by most
+> > 36-bitters.
+> 
+> For a good reason.  Anything written in BLISS was pretty much
+> unmaintainable by the vast majority of 36-bitters.  ...
+
+One might get that impression from reading some of this string.
+
+
+> As I recall, the code generated by the BLISS compiler was horrible.  Most
+> C compilers on x86, Alpha, etc. can generate better code than a human can
+> write assembly by hand.  The situation was the exact opposite on the
+> PDP-10.
+
+BLISS-10's code quality was nothing to write home about - better than
+ALGOL-10 worse than FORTRAN-10 and perhaps KCC-10; perhaps on a par with
+F40.  (Note the irony: without BLISS-10 to implement FORTRAN-10, I
+wonder whether there would ever have been an optimizing replacement for
+F40.  Without an optimizing FORTRAN, there would have been a lot less
+demand for KL's).
+
+I think BLISS-36 would surprise us on occasion.  (I can remember it
+recognizing a common subexpression over such a great distance that we
+hadn't even realized there were two uses of the same expression).
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 5475 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!nntp.primenet.com!nntp.gctr.net!nuq-peer.news.verio.net!ord-feed.news.verio.net!feed.news.verio.net!mozo.cc.purdue.edu!news.iupui.edu!haystack!mhwood
+From: "Mark H. Wood" <mhwood@haystack.Bogusnet.IN.US>
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: Sat, 17 Jul 1999 14:39:18 GMT
+Organization: La Petite Hackerie
+Lines: 30
+Message-ID: <FF0rDI.FHy@Ameritech.net>
+References: <7kg08v$iht$1@news.latrobe.edu.au> <7kh5pj$fe0@dfw-ixnews7.ix.netcom.com> <7kigdi$49t$3@autumn.news.rcn.net> <37890629.71FB82A6@MA.UltraNet.Com> <7mcjpe$k1p$1@autumn.news.rcn.net>
+NNTP-Posting-Host: mhw.ulib.iupui.edu
+User-Agent: tin/pre-1.4-19990517 ("Psychonaut") (UNIX) (Linux/2.2.5 (i586))
+Xref: news3.best.com alt.sys.pdp10:5475
+
+jmfbahciv@aol.com wrote:
+> In article <37890629.71FB82A6@MA.UltraNet.Com>,
+>    "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+>>jmfbahciv@aol.com wrote:
+>>> 
+>>> In article <7kh5pj$fe0@dfw-ixnews7.ix.netcom.com>,
+>>>    bugs@freebsd.netcom.com (Mark Hittinger) wrote:
+>>....
+>>> >Bliss-11 may have been Decus, but a source license
+>>> >for Bliss-32 was probably a lot harder to get :-).  Bliss-10 came with
+>>> >source code in the tradition of 10-ness and was not Decus.
+>>> 
+>>> I don't think we shipped the sources.   I'd have to look at the
+>>> SPDs to verify this.  But I don't think there was an SPD for
+>>> BLISS-10, hence the customer couldn't "order" it.
+>>
+>>BLISS-10 sources were definitely available to the field, although it 
+> probably
+>>was only supported for building supported products written in BLISS-10.
+
+> Alan, think.  One didn't need BLISS-10 sources in order to build
+> products written in BLISS-10.
+
+Well, I don't know how we got BLISS-10 sources but at least one
+customer had 'em, because I crudely hacked in something we needed
+w.r.t. JSYS when we moved from TOPS-10 to TOPS-20.
+-- 
+-- 
+Mark H. Wood, radical centrist     OpenPGP ID 876A8B75     mhwood@ameritech.net
+Why do we always draw organization charts upside down?
+
+
+Article 5479 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!d2
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: Mon, 19 Jul 99 09:07:20 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 53
+Message-ID: <7mv0pe$52h$1@autumn.news.rcn.net>
+References: <7kg08v$iht$1@news.latrobe.edu.au> <7kh5pj$fe0@dfw-ixnews7.ix.netcom.com> <7kigdi$49t$3@autumn.news.rcn.net> <37890629.71FB82A6@MA.UltraNet.Com> <7mcjpe$k1p$1@autumn.news.rcn.net> <FF0rDI.FHy@Ameritech.net>
+X-Trace: P+kOviWeRzTtOdxEXz1Wd9akgtFjrBPl7fZhNsrXMR4=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 19 Jul 1999 11:05:18 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: news3.best.com alt.sys.pdp10:5479
+
+In article <FF0rDI.FHy@Ameritech.net>,
+   "Mark H. Wood" <mhwood@haystack.Bogusnet.IN.US> wrote:
+>jmfbahciv@aol.com wrote:
+>> In article <37890629.71FB82A6@MA.UltraNet.Com>,
+>>    "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+>>>jmfbahciv@aol.com wrote:
+>>>> 
+>>>> In article <7kh5pj$fe0@dfw-ixnews7.ix.netcom.com>,
+>>>>    bugs@freebsd.netcom.com (Mark Hittinger) wrote:
+>>>....
+>>>> >Bliss-11 may have been Decus, but a source license
+>>>> >for Bliss-32 was probably a lot harder to get :-).  Bliss-10 came 
+with
+>>>> >source code in the tradition of 10-ness and was not Decus.
+>>>> 
+>>>> I don't think we shipped the sources.   I'd have to look at the
+>>>> SPDs to verify this.  But I don't think there was an SPD for
+>>>> BLISS-10, hence the customer couldn't "order" it.
+>>>
+>>>BLISS-10 sources were definitely available to the field, although it 
+>> probably
+>>>was only supported for building supported products written in BLISS-10.
+>
+>> Alan, think.  One didn't need BLISS-10 sources in order to build
+>> products written in BLISS-10.
+>
+>Well, I don't know how we got BLISS-10 sources but at least one
+>customer had 'em, because I crudely hacked in something we needed
+>w.r.t. JSYS when we moved from TOPS-10 to TOPS-20.
+
+I was commenting on the edit history that was posted.
+I originally stated that I didn't know if there was 
+a tape available for customers to get it by "honest"
+means.  A lot of stuff was carried into customer sites
+and left there under the table, depending on the customer's
+needs.  I do know that Magee never built a BLISS tape (she
+would have been complaining to me for hundreds of hours).
+So that means that a tape wasn't submitted to SDC from
+1976 or 1977 on.  I also do know that, even though a 
+release of Bliss-10 was highly desirable (this was in 1982),
+the logistics of doing a release ala the Project Notebook
+was impossible.
+
+One of the things that I started, was a formal review of
+the SDC paperwork with each monitor release.  A part of that
+review involved going over all of the SPDs to assess the
+impact and, more importantly, the deimpact of anything
+that would affect the tape submission.  I don't recall
+seeing a Bliss SPD.
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 5477 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!newshub.northeast.verio.net!netnews.com!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: Sun, 18 Jul 1999 10:14:57 -0400
+Lines: 24
+Message-ID: <3791E161.2D1D82FE@MA.UltraNet.Com>
+References: <7kg08v$iht$1@news.latrobe.edu.au> <37706667.3038342@netnews.worldnet.att.net> <Pine.NXT.4.20.9906222324400.20271-100000@Tomobiki-Cho.CAC.Washington.EDU> <3790AE07.5087C480@MA.UltraNet.Com> <7msaq4$mtr$2@autumn.news.rcn.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: M/H/KmvRBALE5cLR7UAe6p1sUs7odyLkfjUKs0UW/68=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 18 Jul 1999 14:15:27 GMT
+X-Accept-Language:  en,en-US,en-GB,es
+X-Mailer:  Mozilla 4.6 [en] (Win95; U)
+Xref: news3.best.com alt.sys.pdp10:5477
+
+jmfbahciv@aol.com wrote:
+> 
+> In article <3790AE07.5087C480@MA.UltraNet.Com>,
+>    "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+> >
+> >....  (Note the irony: without BLISS-10 to implement FORTRAN-10, I
+> >wonder whether there would ever have been an optimizing replacement for
+> >F40.  Without an optimizing FORTRAN, there would have been a lot less
+> >demand for KL's).
+> 
+> Why do you think that?
+
+DEC invested money in replacing F40 with FORTRAN-10/20 because the
+customers said it was necessary (just like those TU7x's).  The last I
+heard, FORTRAN-10/20 had the highest PDP-10 market penetration of any
+DEC layered product.
+
+A product like FORTRAN-10/20 couldn't have been developed for nearly the
+same cost in people, time and money without some implementation language
+like BLISS-10.  What BLISS substitutes were already available on the -10
+in the early 70's?
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 5481 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!news2.best.com!feed1.news.rcn.net!rcn!d2
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: Mon, 19 Jul 99 09:17:18 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 40
+Message-ID: <7mv1bu$52h$3@autumn.news.rcn.net>
+References: <7kg08v$iht$1@news.latrobe.edu.au> <37706667.3038342@netnews.worldnet.att.net> <Pine.NXT.4.20.9906222324400.20271-100000@Tomobiki-Cho.CAC.Washington.EDU> <3790AE07.5087C480@MA.UltraNet.Com> <7msaq4$mtr$2@autumn.news.rcn.net> <3791E161.2D1D82FE@MA.UltraNet.Com>
+X-Trace: JLbrQl37/XJ/lI3gWtVfPZEYzfg8puRBHiWGHBjxBI0=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 19 Jul 1999 11:15:10 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: news3.best.com alt.sys.pdp10:5481
+
+In article <3791E161.2D1D82FE@MA.UltraNet.Com>,
+   "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+>jmfbahciv@aol.com wrote:
+>> 
+>> In article <3790AE07.5087C480@MA.UltraNet.Com>,
+>>    "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+>> >
+>> >....  (Note the irony: without BLISS-10 to implement FORTRAN-10, I
+>> >wonder whether there would ever have been an optimizing replacement for
+>> >F40.  Without an optimizing FORTRAN, there would have been a lot less
+>> >demand for KL's).
+>> 
+>> Why do you think that?
+>
+>DEC invested money in replacing F40 with FORTRAN-10/20 because the
+>customers said it was necessary (just like those TU7x's).  The last I
+>heard, FORTRAN-10/20 had the highest PDP-10 market penetration of any
+>DEC layered product.
+>
+>A product like FORTRAN-10/20 couldn't have been developed for nearly the
+>same cost in people, time and money without some implementation language
+>like BLISS-10.  What BLISS substitutes were already available on the -10
+>in the early 70's?
+
+But you've got your years so screwed up.  That project started when
+the KI was getting announced.
+
+DEC hadn't developed a compiler that could be used for compiler
+implementations.  So they did the usual thing that was done back
+then and acquired work done at CMU ala G. Bell.  Norma Abel
+(I think) could talk about why they picked that approach to 
+the implementation lanaguage.  Sara was there, too, but I don't 
+know if she was in that part of the planning stages.  I was a
+mere Tape Prep type then, so I usually got the info at the
+other end of the development cycle.  I do remember that the
+work was getting done on 3-5.
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 5482 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!144.212.100.101.MISMATCH!newsfeed.mathworks.com!feeder.qis.net!feed1.news.rcn.net!rcn!d2
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: Mon, 19 Jul 99 09:58:55 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 48
+Message-ID: <7mv3pv$mia$1@autumn.news.rcn.net>
+References: <7kg08v$iht$1@news.latrobe.edu.au> <37706667.3038342@netnews.worldnet.att.net> <Pine.NXT.4.20.9906222324400.20271-100000@Tomobiki-Cho.CAC.Washington.EDU> <3790AE07.5087C480@MA.UltraNet.Com> <7msaq4$mtr$2@autumn.news.rcn.net> <3791E161.2D1D82FE@MA.UltraNet.Com> <7mv1bu$52h$3@autumn.news.rcn.net>
+X-Trace: 5IhIGNyWHvLbGSbd0t1XZAfxnFdcPN2c/rkYPl1eAjI=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 19 Jul 1999 11:56:47 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: news3.best.com alt.sys.pdp10:5482
+
+In article <7mv1bu$52h$3@autumn.news.rcn.net>, jmfbahciv@aol.com wrote:
+>In article <3791E161.2D1D82FE@MA.UltraNet.Com>,
+>   "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+>>jmfbahciv@aol.com wrote:
+>>> 
+>>> In article <3790AE07.5087C480@MA.UltraNet.Com>,
+>>>    "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+>>> >
+>>> >....  (Note the irony: without BLISS-10 to implement FORTRAN-10, I
+>>> >wonder whether there would ever have been an optimizing replacement 
+for
+>>> >F40.  Without an optimizing FORTRAN, there would have been a lot less
+>>> >demand for KL's).
+>>> 
+>>> Why do you think that?
+>>
+>>DEC invested money in replacing F40 with FORTRAN-10/20 because the
+>>customers said it was necessary (just like those TU7x's).  The last I
+>>heard, FORTRAN-10/20 had the highest PDP-10 market penetration of any
+>>DEC layered product.
+>>
+>>A product like FORTRAN-10/20 couldn't have been developed for nearly the
+>>same cost in people, time and money without some implementation language
+>>like BLISS-10.  What BLISS substitutes were already available on the -10
+>>in the early 70's?
+>
+>But you've got your years so screwed up.  That project started when
+>the KI was getting announced.
+<snip>
+
+And we're definitely talking about very different projects.
+F40 was FortranII.  Fortran-10/20 was Fortran IV.  I don't
+remmeber when the optimizer was done nor who did it.  I got
+a feeling it was that guy :-) but I can't remember his name.
+Somebody who disappeared fairly quickly?
+
+The Fortran IV project had problems getting it tested.  So
+they offered a reward for every bug found.  I won $1.00.  And
+that was before and after the time DEC bought the RCA building
+and moved to Marlboro.  I don't remember the optimiser being
+a part of that test bed.
+
+/BAH
+
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 5484 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: Mon, 19 Jul 1999 11:19:49 -0400
+Lines: 38
+Message-ID: <37934215.3F11A0C4@MA.UltraNet.Com>
+References: <7kg08v$iht$1@news.latrobe.edu.au> <37706667.3038342@netnews.worldnet.att.net> <Pine.NXT.4.20.9906222324400.20271-100000@Tomobiki-Cho.CAC.Washington.EDU> <3790AE07.5087C480@MA.UltraNet.Com> <7msaq4$mtr$2@autumn.news.rcn.net> <3791E161.2D1D82FE@MA.UltraNet.Com> <7mv1bu$52h$3@autumn.news.rcn.net> <7mv3pv$mia$1@autumn.news.rcn.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: OMOIUWZCQiP4ilzsc7Vc1CDTU4nAvF5Op2cFBBb5Xls=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 19 Jul 1999 15:20:28 GMT
+X-Accept-Language:  en,en-US,en-GB,es
+X-Mailer:  Mozilla 4.6 [en] (Win95; U)
+Xref: news3.best.com alt.sys.pdp10:5484
+
+jmfbahciv@aol.com wrote:
+> 
+> In article <7mv1bu$52h$3@autumn.news.rcn.net>, jmfbahciv@aol.com wrote:
+> >In article <3791E161.2D1D82FE@MA.UltraNet.Com>,
+> >   "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+> >>A product like FORTRAN-10/20 couldn't have been developed for nearly the
+> >>same cost in people, time and money without some implementation language
+> >>like BLISS-10.  What BLISS substitutes were already available on the -10
+> >>in the early 70's?
+> >
+> >But you've got your years so screwed up.  That project started when
+> >the KI was getting announced.
+
+It's not as if some substitute language bloomed and died before
+BLISS-10.
+
+
+> And we're definitely talking about very different projects.
+> F40 was FortranII.  Fortran-10/20 was Fortran IV.  ...
+
+And how many million-dollar systems do you think would have been bought
+with nothing more than a non-optimizing FORTRAN-II?
+
+A big part of the -10 market needed a product (F10) whose timely
+delivery depended upon BLISS-10.
+
+
+>... I don't
+> remmeber when the optimizer was done nor who did it.  I got
+> a feeling it was that guy :-) but I can't remember his name.
+> Somebody who disappeared fairly quickly?
+
+Frank did most of the parser; Norma did (at least) most of the global
+optimizer; Sara did (at least) most of the local optimizer and code
+generation.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 5491 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!144.212.100.101.MISMATCH!newsfeed.mathworks.com!europa.netcrusader.net!207.172.3.37!feed1.news.rcn.net!rcn!d13
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: Thu, 22 Jul 99 08:45:15 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 54
+Message-ID: <7n6skn$2l$2@autumn.news.rcn.net>
+References: <7kg08v$iht$1@news.latrobe.edu.au> <37706667.3038342@netnews.worldnet.att.net> <Pine.NXT.4.20.9906222324400.20271-100000@Tomobiki-Cho.CAC.Washington.EDU> <3790AE07.5087C480@MA.UltraNet.Com> <7msaq4$mtr$2@autumn.news.rcn.net> <3791E161.2D1D82FE@MA.UltraNet.Com> <7mv1bu$52h$3@autumn.news.rcn.net> <7mv3pv$mia$1@autumn.news.rcn.net> <37934215.3F11A0C4@MA.UltraNet.Com>
+X-Trace: ZB2r1OFYwjAl+pm+RZaX/4Uz5B+RWAx1JqiAFIi2whw=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 22 Jul 1999 10:43:35 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: news3.best.com alt.sys.pdp10:5491
+
+In article <37934215.3F11A0C4@MA.UltraNet.Com>,
+   "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+>jmfbahciv@aol.com wrote:
+>> 
+>> In article <7mv1bu$52h$3@autumn.news.rcn.net>, jmfbahciv@aol.com wrote:
+>> >In article <3791E161.2D1D82FE@MA.UltraNet.Com>,
+>> >   "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+>> >>A product like FORTRAN-10/20 couldn't have been developed for nearly 
+the
+>> >>same cost in people, time and money without some implementation 
+language
+>> >>like BLISS-10.  What BLISS substitutes were already available on the 
+-10
+>> >>in the early 70's?
+>> >
+>> >But you've got your years so screwed up.  That project started when
+>> >the KI was getting announced.
+>
+>It's not as if some substitute language bloomed and died before
+>BLISS-10.
+>
+>
+>> And we're definitely talking about very different projects.
+>> F40 was FortranII.  Fortran-10/20 was Fortran IV.  ...
+>
+>And how many million-dollar systems do you think would have been bought
+>with nothing more than a non-optimizing FORTRAN-II?
+
+I think, in the KL era you mentioned, most of them.  And stop
+talking about F-II.  That was gone by KI days.
+
+>
+>A big part of the -10 market needed a product (F10) whose timely
+>delivery depended upon BLISS-10.
+
+Where did you get all this info?  
+
+>
+>
+>>... I don't
+>> remmeber when the optimizer was done nor who did it.  I got
+>> a feeling it was that guy :-) but I can't remember his name.
+>> Somebody who disappeared fairly quickly?
+>
+>Frank did most of the parser; Norma did (at least) most of the global
+>optimizer; Sara did (at least) most of the local optimizer and code
+>generation.
+
+That's right; Frank.  Somedays I wish I was gifted with the
+ability to remember names :-).
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 5492 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!d13
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: TU10/20/7x (was: SA10 front panel (was Re: Multiple stupid TOPS-10 questions...))
+Date: Thu, 22 Jul 99 08:47:40 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 43
+Message-ID: <7n6sp8$2l$3@autumn.news.rcn.net>
+References: <Pine.LNX.4.10.9905171202310.15552-100000@bony.umtec.com> <7mgjsk$9fr$1@shell3.ba.best.com> <7mhtf7$ns2$3@autumn.news.rcn.net> <V2cj3.16$C4.2784@news2.voicenet.com> <7mrj5n$hrj$1@shell3.ba.best.com> <iXHk3.320$O2.15699@ord-read.news.verio.net> <7n4a1k$d0u$1@autumn.news.rcn.net> <R4pl3.27$XM5.798@ord-read.news.verio.net>
+X-Trace: Xkl5WKVtmfYIvgtYA6morZj/yzh+fOcdZcXUnQLCP4c=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 22 Jul 1999 10:46:00 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: news3.best.com alt.sys.pdp10:5492
+
+In article <R4pl3.27$XM5.798@ord-read.news.verio.net>,
+   jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) wrote:
+>In article <7n4a1k$d0u$1@autumn.news.rcn.net>, jmfbahciv@aol.com says...
+>>
+>>In article <iXHk3.320$O2.15699@ord-read.news.verio.net>,
+>>   jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) wrote:
+>>>When I was young, foolish, and a bit impulsive, (and also responsible 
+for 
+>>MTA 
+>>>support in TOPS-10) I wrote a somewhat intemperate memo addressed to 
+>>>practically anyone who was anyone in 36-bit land. 
+>>>
+>>Jeez, it certainly took them long enough.  Jim had a chuckle
+>>because, one day, DEC was talking about a deal with STC in
+>>one end of the building (MRO) and talking about suing them
+>>in the other end of the building.
+>
+>It should be said the the above referenced memo was written while we were 
+>still in Maynard.
+
+Which was pre-1975.  But, if you wrote the memo, it was earlier than
+that.  Wasn't it?  I don't remember seeing you when the move to
+Marlboro happened.
+
+>
+>>When the KL was first powered up, it blew the Marlboro
+>>plant's electric grid.  Is this true?  
+>
+>I don't recall that this happened. I'm also trying to recall where the KL 
+was 
+>first powered up, Maynard or Marlboro. I know a lot of the design and 
+>engineering took place on 5-5 in Maynard, but can't recall where the first 
+>prototype was built and tested. Anyone? RCC, if you're still lurking 
+perhaps 
+>you remember.
+>
+
+Or Jud; or Alan.  But I haven't anything about him for years.
+
+/BAH
+
+
+Subtract a hundred and four for e-mail.
+
+
+Article 5498 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!news.idt.net!nntp.farm.idt.net!news
+From: "Chris Ward" <ccw@idt.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10/F40/F10
+Date: Sat, 24 Jul 1999 00:32:35 -0400
+Organization: IDT (Best News In The World)
+Lines: 50
+Message-ID: <7nbfl1$p8b@nnrp1.farm.idt.net>
+References: <7kg08v$iht$1@news.latrobe.edu.au> <37706667.3038342@netnews.worldnet.att.net> <Pine.NXT.4.20.9906222324400.20271-100000@Tomobiki-Cho.CAC.Washington.EDU> <3790AE07.5087C480@MA.UltraNet.Com> <7msaq4$mtr$2@autumn.news.rcn.net> <3791E161.2D1D82FE@MA.UltraNet.Com> <7mv1bu$52h$3@autumn.news.rcn.net> <7mv3pv$mia$1@autumn.news.rcn.net> <37934215.3F11A0C4@MA.UltraNet.Com>
+NNTP-Posting-Host: ppp-32.ts-1-bay.hob.idt.net
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Newsreader: Microsoft Outlook Express 5.00.2314.1300
+X-MimeOLE: Produced By Microsoft MimeOLE V5.00.2314.1300
+Xref: news3.best.com alt.sys.pdp10:5498
+
+
+Alan H. Martin <AMartin@MA.UltraNet.Com> wrote in message
+news:37934215.3F11A0C4@MA.UltraNet.Com...
+> jmfbahciv@aol.com wrote:
+> >
+> > In article <7mv1bu$52h$3@autumn.news.rcn.net>, jmfbahciv@aol.com
+wrote:
+> > >In article <3791E161.2D1D82FE@MA.UltraNet.Com>,
+> > >   "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+> > >>A product like FORTRAN-10/20 couldn't have been developed for
+nearly the
+> > >>same cost in people, time and money without some
+implementation language
+> > >>like BLISS-10.  What BLISS substitutes were already available
+on the -10
+> > >>in the early 70's?
+> > >
+> > >But you've got your years so screwed up.  That project started
+when
+> > >the KI was getting announced.
+>
+> It's not as if some substitute language bloomed and died before
+> BLISS-10.
+>
+>
+> > And we're definitely talking about very different projects.
+> > F40 was FortranII.  Fortran-10/20 was Fortran IV.  ...
+>
+> And how many million-dollar systems do you think would have been
+bought
+> with nothing more than a non-optimizing FORTRAN-II?
+>
+At least when I worked with it, the sematics of the F40 language was
+almost identical to the F10 language, at least when we were
+implementing Stewart's XRAY76 programs on the 10.  F40 implemented
+subroutines via JSR's (I think), but whatever it did, it left the
+return address in the first address of the subroutine, which was
+actually the "classical" Fortran (II or IV) manner.  F10 implemented
+subroutine calls via PUSHJs and POPJs (but I do not think it was
+recursive).  I also remember the compiler generating optimizer
+errors - the same type which plauge compilers today.  So we turned
+the optimizer off.  Or tested the results VERY thuroughly.
+
+But F40 was indeed Fortran IV, and not Fortran II.  Fortran II had a
+quite different look to the PRINT statement (I think leaving out the
+device number).  And it had the full range of conditionals, and more
+complete than the IBM 1130 FORTRAN I started out with (only
+arithmetic IFs), and that was called FORTRAN IV.
+
+
+
+
+Article 2537 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!wn3feed!worldnet.att.net!207.207.0.27!nntp2.aus1.giganews.com!nntp3.aus1.giganews.com!news1.giganews.com.POSTED!not-for-mail
+From: Timothy Stark <sword7@grace.speakeasy.org>
+Subject: Re: BLT 17,17 bug had been fixed but..
+Newsgroups: alt.sys.pdp10
+References: <6TiY5.46657$%j3.530564@news6.giganews.com> <90teal$10b$1@bob.news.rcn.net> <J9AY5.115963$DG3.2253745@news2.giganews.com> <9105q9$8d3$1@bob.news.rcn.net> <gCeZ5.121937$DG3.2418389@news2.giganews.com> <9154bi$8am$1@bob.news.rcn.net> <UpwZ5.77193$IP1.2582629@news1.giganews.com> <917jrq$2s6$2@bob.news.rcn.net> <Z7YZ5.59759$%j3.763939@news6.giganews.com> <91a8c1$fj$1@bob.news.rcn.net> <HD4_5.84262$IP1.2834867@news1.giganews.com> <874s06ex9i.fsf@k9.prep.synonet.com>
+User-Agent: tin/1.4.2-20000205 ("Possession") (UNIX) (Linux/2.2.17 (i686))
+Lines: 28
+Message-ID: <3rc_5.85329$IP1.2884825@news1.giganews.com>
+NNTP-Posting-Date: Thu, 14 Dec 2000 17:09:51 CST
+Organization: Giganews.Com - Premium News Outsourcing
+X-Trace: sv2-wP74oLoWgiANa58r0IWH5dWl5riKBhoSbVcLcRkMEZ2tuyMoixgHbgaDMfiTxuVY1URS+YXUogeBshB!N0e2Qe3YjxbgPcCtBo7JfWUP0NM=
+X-Complaints-To: abuse@GigaNews.Com
+X-Abuse-Info: Please be sure to forward a copy of ALL headers
+X-Abuse-Info: Otherwise we will be unable to process your complaint properly
+Date: Thu, 14 Dec 2000 23:09:52 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2537
+
+Paul Repacholi <prep@prep.synonet.com> wrote:
+> Timothy Stark <sword7@grace.speakeasy.org> writes:
+
+>> jmfbahciv@aol.com wrote:
+>> > Neither of these BLISSes were shipped with sources so you'll only
+>> > find the EXEs (and in the case of -36, RELs and librarys).
+>> 
+>> I am surprised.  However, DEC recently released BLISS-32/64 with
+>> source codes to public but they are for OpenVMS only.  I have them.
+
+> What, with SOURCE??? Are you sure of that? Where?
+
+Yes, BLISS-11 sources.
+
+Its directory is http://www.openvms.compaq.com/freeware/BLISS/
+
+> The BLISS-11 sources are out there now, so that is MOST of the CMU
+> BLISS-10. Oh for a complete set of BLISS compilers, including
+> the memory compaction stuff...
+
+-- Tim Stark
+
+-- 
+Timothy Stark	<><	Inet: sword7@speakeasy.org
+--------------------------------------------------------------------------
+"For God so loved the world, that he gave his only begotten Son, that 
+whosoever believeth in him should not perish, but have everlasting life.
+Amen." -- John 3:16 (King James Version Bible)
+
+
+Article 2671 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!feed2.news.rcn.net!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLT 17,17 bug had been fixed but..
+Date: Tue, 19 Dec 2000 01:24:13 -0500
+Lines: 89
+Message-ID: <3A3EFF0D.A94ECC02@MA.UltraNet.Com>
+References: <6TiY5.46657$%j3.530564@news6.giganews.com> <90teal$10b$1@bob.news.rcn.net> <J9AY5.115963$DG3.2253745@news2.giganews.com> <9105q9$8d3$1@bob.news.rcn.net> <gCeZ5.121937$DG3.2418389@news2.giganews.com> <9154bi$8am$1@bob.news.rcn.net> <UpwZ5.77193$IP1.2582629@news1.giganews.com> <917jrq$2s6$2@bob.news.rcn.net> <Z7YZ5.59759$%j3.763939@news6.giganews.com> <91a8c1$fj$1@bob.news.rcn.net> <HD4_5.84262$IP1.2834867@news1.giganews.com> <874s06ex9i.fsf@k9.prep.synonet.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: UmFuZG9tSVZA4AQx6q5Bbo2O6k04fZSE8aaU38aoPOchUEOQhEn0X/9Luz1wVdxW
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 19 Dec 2000 06:24:52 GMT
+X-Mailer:  Mozilla 4.75 [en] (Win95; U)
+X-Accept-Language:  en,en-US,en-GB,es
+Xref: nntp1.ba.best.com alt.sys.pdp10:2671
+
+Paul Repacholi wrote:
+> 
+> Timothy Stark <sword7@grace.speakeasy.org> writes:
+> 
+> >...  DEC recently released BLISS-32/64 with
+> > source codes to public but they are for OpenVMS only.  I have them.
+> 
+> What, with SOURCE??? Are you sure of that? Where?
+
+I'd like to see those VMSINSTAL freeware savesets of BLISS-32/64
+expanded someplace...
+
+
+> The BLISS-11 sources are out there now, so that is MOST of the CMU
+> BLISS-10.  ...
+
+BLISS-10 is in:
+
+http://pdp-10.trailing-edge.com/pdp-10/BB-D868B-BM_TOPS20_V3A_2020_DIST.html
+
+BLISS-11 is in:
+
+http://pdp-10.trailing-edge.com/www/lib10/0325/index.html
+
+
+Here is a cheat sheet called MODULE.TXT I wrote up in the early 80's by
+whiffreading the BLISS-10 sources:
+
+.SUP	.BLI	Name	Purpose
+
+AD0	LOADDR	LOADDR	Predicates and helpers for I/X/Y field generation
+AD2	H2ADDR	ADDRESS	I/X/Y field and byte pointer code generation
+AR2N	AR2N	ARITH	Unary/binary operator code generation (CTCE/DELAY/CODE)
+AS3	H3ASSY	H3ASSY	Makes listing palatable to MACRO-10
+	BEGIN	BEGIN	Common parameter file (require file)
+	BL10ER	BL10ER	INDEX output - indices into BLIS10.ERR (require file)
+CC3	H3CCL	H3CCL	COMPIL-class command routines
+CN1N	CN1N	CONTROL	Manipulates code linked lists, generates control code
+CN2N	CN2N	H2CNTR	Generates prolog/epilog code
+CN3	CN3	H3CNTR	Generates stack, timer code, version numbers
+DE0N	DE0N	LODECL	Helpers for declaration scope, forwards
+DE1N	DE1N	H1DECL	Declaration processing
+DE3N	DE3N	H3DECL	Common code for routine/funct/struct decls, machops
+DR0N	DR0N	LODRIV	I/O, error, listing utility routines
+DR3N	DR3N	DRIVER	Main driver code, listing file routines
+GT0	LOGTRE	LOGTRE	Graph table helper routines
+GT1N	GT1N	H1GTRE	Main graph table routines
+GT2	H2GTRE	H2GTRE	Special case graph table routines
+	INDEX	INDEX	Utility program to convert .ERR file into .BLI file
+LD3N	LD3N	H3LDIN	REL generator, macro listing routines
+LOIO.MAC	LOIO	Low level I/O, including command scanner
+LS0	LOLSTP	LOLSTP	Low level linked list processing routines
+LS3N	LS3N	H3LSTP	Predicates and helpers for code list processing
+LX0N	LX0N	LOLEXA	Lexical analyzer
+LX1N	LX1N	H1LEXA	Scope related lexical analysis helpers
+LX3	H3LEXA	H3LEXA	Purges GENSYMS list at the end of a routine
+MA0N	MA0N	LOMACR	Macro expansion processing
+MA1N	MA1N	H1MACR	Macro definition processing
+NOONCE.MAC	LOONCE	Once only initialization code
+PE3	H3PEEP	H3PEEP	Peephole optimizer
+RG2	H2REGI	H2REGI	Register allocator
+RG3N	RG3N	H3REGI	Register data structure initialization
+RQ1N	RQ1N	RQ1N	Require file code, and LIBRARY declarations too
+	SIX12	SIX12	Debugger
+SN1N	SN1N	H1SYNT	Parser routines (including top level semantics)
+XR0N	XR0N	LOXREF	Cross reference data management routines
+XR3N	XR3N	H3XREF	Cross reference listing routines
+
+Compare that to the description of BLISS-11 in Wulf, Johnson, Weinstock,
+Hobbs, and Geschke's _The Design of an Optimizing Compiler_:
+
+http://www.amazon.com/exec/obidos/ASIN/0444001581
+http://www.amazon.com/exec/obidos/ASIN/0444001646
+
+Some stuff is similar; compare the routine EXPRESSION in:
+
+http://pdp-10.trailing-edge.com/pdp-10/BB-D868B-BM_TOPS20_V3A_2020_DIST/3A-SOURCES/SN1N.BLI
+with:
+http://pdp-10.trailing-edge.com/www/lib10/0325/SYNTAX.BLI
+
+However, I believe that a lot of the stuff in BLISS-11 (syntax-directed
+translation-based(?) optimizations) just doesn't exist in BLISS-10.
+
+I think BLISS-11 should be a much better hint at Common BLISS's
+internals.  Another reference would be _The GEM Optimizing Compiler
+System_, http://www.digital.com/DTJ808/DTJ808SC.TXT
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 2758 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!newsfeed.cwix.com!news.umass.edu!world!weiner
+From: weiner@world.std.com (Sam Weiner)
+Subject: Re: BLT 17,17 bug had been fixed but..
+Message-ID: <G5wII5.n45@world.std.com>
+Date: Thu, 21 Dec 2000 04:44:28 GMT
+References: <6TiY5.46657$%j3.530564@news6.giganews.com> <91a8c1$fj$1@bob.news.rcn.net> <HD4_5.84262$IP1.2834867@news1.giganews.com> <874s06ex9i.fsf@k9.prep.synonet.com>
+Organization: The World Public Access UNIX, Brookline, MA
+Lines: 40
+Xref: nntp1.ba.best.com alt.sys.pdp10:2758
+
+In article <874s06ex9i.fsf@k9.prep.synonet.com>,
+Paul Repacholi  <prep@prep.synonet.com> wrote:
+>Timothy Stark <sword7@grace.speakeasy.org> writes:
+>
+>> jmfbahciv@aol.com wrote:
+>> > Neither of these BLISSes were shipped with sources so you'll only
+>> > find the EXEs (and in the case of -36, RELs and librarys).
+>> 
+>> I am surprised.  However, DEC recently released BLISS-32/64 with
+>> source codes to public but they are for OpenVMS only.  I have them.
+>
+>What, with SOURCE??? Are you sure of that? Where?
+
+As others have pointed out, on the VMS freeware CD which is
+also available on the net, sorry I don't have the URL handy.
+
+>The BLISS-11 sources are out there now, so that is MOST of the CMU
+>BLISS-10. Oh for a complete set of BLISS compilers, including
+>the memory compaction stuff...
+
+The sequence is BLISS-10, BLISS-11 which ran on TOPS-10/20 and
+has been in the DECUS library for a while (get the book by Wulf,
+good quick read,) Common BLISS which is much more like BLISS-11
+than BLISS-10.  Among other things, the BLISS-10 macro (preprocessor)
+facility was primitive next to BLISS-11 and Common BLISS.  I wonder
+if BLISS-36 conditioned code is still in the sources.
+
+Even before it was included on the DEC distributions, you could
+get BLISS-10 from CMU if you knew the right people.  That is where
+the copy I first used at Rapidata came from.  BLISS-36 was another
+matter, it was like pulling teeth.  Same with RMS-10 even after it
+was being used by COBOL.
+
+When is one of the multitude of -10 emulators going to be released
+so we can use this stuff instead of just talking about it?
+
+Sam
+
+
+
+
+
+Article 2542 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!feed2.news.rcn.net!feed1.news.rcn.net!rcn!207-172-245-54
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLT 17,17 bug had been fixed but..
+Date: Fri, 15 Dec 00 09:49:53 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 31
+Message-ID: <91ctd7$aj0$1@bob.news.rcn.net>
+References: <6TiY5.46657$%j3.530564@news6.giganews.com> <90teal$10b$1@bob.news.rcn.net> <J9AY5.115963$DG3.2253745@news2.giganews.com> <9105q9$8d3$1@bob.news.rcn.net> <gCeZ5.121937$DG3.2418389@news2.giganews.com> <9154bi$8am$1@bob.news.rcn.net> <UpwZ5.77193$IP1.2582629@news1.giganews.com> <917jrq$2s6$2@bob.news.rcn.net> <Z7YZ5.59759$%j3.763939@news6.giganews.com> <91a8c1$fj$1@bob.news.rcn.net> <HD4_5.84262$IP1.2834867@news1.giganews.com>
+X-Trace: UmFuZG9tSVafjF8WWaDffJwAgeNHMQyqiZiboHaj/yZP5Yo8iFCoOD2DPZO+iEgF
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 15 Dec 2000 10:56:39 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:2542
+
+In article <HD4_5.84262$IP1.2834867@news1.giganews.com>,
+   Timothy Stark <sword7@grace.speakeasy.org> wrote:
+>jmfbahciv@aol.com wrote:
+>> Neither of these BLISSes were shipped with sources so you'll only
+>> find the EXEs (and in the case of -36, RELs and librarys).
+>
+>I am surprised.  
+
+We had a hell of a time, convincing management to ship
+even the EXE.
+
+However, DEC recently released BLISS-32/64 with
+>source codes to public but they are for OpenVMS only.  I have them.
+
+Good Grief!  Somebody is thinking with their brain?  That's
+really good news.
+
+>
+>> You should have it.  Do a DIRECT BL????.* on DEC:
+>> <snip>
+>
+>Hmm. I will check them again.  When I installed TOPS-20 v7.04, I found 
+>out missing BLISS compiler in SYS: but I had seen them in CUSP tapes.
+>Ok, they already had.
+Well, try to be careful.  I shipped BLISS-10, BLISS-36, and
+BLISS-16 so that the customers had a snowball's chance in
+Massachusetts to do their own work.
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 2545 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!sunqbc.risq.qc.ca!cpk-news-hub1.bbnplanet.com!news.gtei.net!feed2.news.rcn.net!rcn!nntp.giganews.com!nntp3.aus1.giganews.com!news2.giganews.com.POSTED!not-for-mail
+From: Timothy Stark <sword7@grace.speakeasy.org>
+Subject: Re: BLT 17,17 bug had been fixed but..
+Newsgroups: alt.sys.pdp10
+References: <6TiY5.46657$%j3.530564@news6.giganews.com> <90teal$10b$1@bob.news.rcn.net> <J9AY5.115963$DG3.2253745@news2.giganews.com> <9105q9$8d3$1@bob.news.rcn.net> <gCeZ5.121937$DG3.2418389@news2.giganews.com> <9154bi$8am$1@bob.news.rcn.net> <UpwZ5.77193$IP1.2582629@news1.giganews.com> <917jrq$2s6$2@bob.news.rcn.net> <Z7YZ5.59759$%j3.763939@news6.giganews.com> <91a8c1$fj$1@bob.news.rcn.net> <HD4_5.84262$IP1.2834867@news1.giganews.com> <91ctd7$aj0$1@bob.news.rcn.net>
+User-Agent: tin/1.4.2-20000205 ("Possession") (UNIX) (Linux/2.2.17 (i686))
+Lines: 35
+Message-ID: <vsp_5.133896$DG3.2631970@news2.giganews.com>
+NNTP-Posting-Date: Fri, 15 Dec 2000 07:58:51 CST
+Organization: Giganews.Com - Premium News Outsourcing
+X-Trace: sv2-sVoouhlE2TI6QIthYC9+g0wUvDOyAxKWTba7nqvXTRfSW9sg/uoWd1jvaXPDijdLBirAlwjUY7upnXD!Az7koeGkK05GlwcOG+0i9x5cfjI=
+X-Complaints-To: abuse@GigaNews.Com
+X-Abuse-Info: Please be sure to forward a copy of ALL headers
+X-Abuse-Info: Otherwise we will be unable to process your complaint properly
+Date: Fri, 15 Dec 2000 13:58:51 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2545
+
+jmfbahciv@aol.com wrote:
+>>> You should have it.  Do a DIRECT BL????.* on DEC:
+>>> <snip>
+>>
+>>Hmm. I will check them again.  When I installed TOPS-20 v7.04, I found 
+>>out missing BLISS compiler in SYS: but I had seen them in CUSP tapes.
+>>Ok, they already had.
+> Well, try to be careful.  I shipped BLISS-10, BLISS-36, and
+> BLISS-16 so that the customers had a snowball's chance in
+> Massachusetts to do their own work.
+
+Barb:
+
+Hmmm.  I looked into CUSP/DIST tapes for TOPS-10 and TOPS-20.
+For TOPS-10 v7.03/v7.04, I did not see any BLISS compiler in them but
+just *.REQ, etc..  RMS-10 package comes with sources in written by
+BLISS language. 
+
+When I debugged ACTDAE... Yes, my debug log file showed weird code
+looks like very different comparsion with code written by hands.
+It was generated by a BLISS compiler.  It used stack area as local
+variables.
+
+For TOPS-20 v4.1, I found BLISS compiler but it is for TOPS-20 only.
+
+Ok, thank you again for info.
+
+-- Tim Stark
+
+-- 
+Timothy Stark	<><	Inet: sword7@speakeasy.org
+--------------------------------------------------------------------------
+"For God so loved the world, that he gave his only begotten Son, that 
+whosoever believeth in him should not perish, but have everlasting life.
+Amen." -- John 3:16 (King James Version Bible)
+
+
+Article 2665 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!207.172.3.44!feed2.news.rcn.net!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLT 17,17 bug had been fixed but..
+Date: Mon, 18 Dec 2000 23:54:20 -0500
+Lines: 49
+Message-ID: <3A3EE9FC.A73D5CAF@MA.UltraNet.Com>
+References: <6TiY5.46657$%j3.530564@news6.giganews.com> <90teal$10b$1@bob.news.rcn.net> <J9AY5.115963$DG3.2253745@news2.giganews.com> <9105q9$8d3$1@bob.news.rcn.net> <gCeZ5.121937$DG3.2418389@news2.giganews.com> <9154bi$8am$1@bob.news.rcn.net> <UpwZ5.77193$IP1.2582629@news1.giganews.com> <917jrq$2s6$2@bob.news.rcn.net> <Z7YZ5.59759$%j3.763939@news6.giganews.com> <91a8c1$fj$1@bob.news.rcn.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: UmFuZG9tSVbZtp2djL1GtpmbpO0KxEnmzp9U/TCQTOfRW5ZNgZTkznHcqGCFHS3k
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 19 Dec 2000 04:54:58 GMT
+To: jmfbahciv@aol.com
+X-Mailer:  Mozilla 4.75 [en] (Win95; U)
+X-Accept-Language:  en,en-US,en-GB,es
+Xref: nntp1.ba.best.com alt.sys.pdp10:2665
+
+jmfbahciv@aol.com wrote:
+> 
+> In article <Z7YZ5.59759$%j3.763939@news6.giganews.com>,
+>    Timothy Stark <sword7@grace.speakeasy.org> wrote:
+> 
+> >I am looking for BLISS-10 compiler for TOPS-10/20 operating system.
+
+(I'm glad you subsequently got copies).
+
+
+> BLISS-10 is on the CUSP tape; filename is probably BLIS10.EXE
+> among others ...
+
+I don't see a BLISS-10 on any of the online TOPS-10 cusp tapes:
+http://pdp-10.trailing-edge.com/pdp-10/CUSPMAR86BINSRC_1OF2_BB-X128B-SB.html
+http://pdp-10.trailing-edge.com/pdp-10/CUSPJUL86UPD_BB-JF24A-BB.html
+http://pdp-10.trailing-edge.com/pdp-10/CUST_SUP_CUSP_BB-X130C-SB.html
+http://pdp-10.trailing-edge.com/pdp-10/CUSTSUPCUSPMAR86_BB-X130B-SB.html
+	-or-
+http://pdp-10.trailing-edge.com/pdp-10/CUST_SUP_CUSP_BB-X130C-SB.html
+
+I wonder if at least the binary was on the Fortran layered product tape,
+perhaps among other places.
+
+
+>... (there were a number of GETSEGs).
+
+Nope.  I've seen BLISS-36 run with multiple hisegs (named BLSSG1 through
+BLSSG4, I think); perhaps only on TOPS-10, since
+http://pdp-10.trailing-edge.com/pdp-10/BB-J939F-BM.HTML
+only builds a single-hiseg BLISS-36.
+
+However, BLISS-10 does not have multiple hisegs.
+
+
+> Neither of these BLISSes were shipped with sources ...
+
+The place Timothy Stark subsequently found BLISS-10 (``TOPS-20 V3A 2020
+DISTRIBUTION TAPE 9 TRACK 1600 BPI MAGTAPE DRIVE# 273 S/N 2 SYS,
+BB-D868B-BM''
+http://pdp-10.trailing-edge.com/pdp-10/BB-D868B-BM_TOPS20_V3A_2020_DIST.html )
+
+was the latest version, V7E(227), and it contains all the sources.
+
+I still don't recall how TOPS-10 sites got BLISS-10 sources, but we
+certainly had them in the field.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 2685 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!207.172.3.44!feed2.news.rcn.net!feed1.news.rcn.net!rcn!207-172-245-95
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLT 17,17 bug had been fixed but..
+Date: Tue, 19 Dec 00 13:04:03 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 65
+Message-ID: <91nqad$43p$2@autumn.news.rcn.net>
+References: <6TiY5.46657$%j3.530564@news6.giganews.com> <90teal$10b$1@bob.news.rcn.net> <J9AY5.115963$DG3.2253745@news2.giganews.com> <9105q9$8d3$1@bob.news.rcn.net> <gCeZ5.121937$DG3.2418389@news2.giganews.com> <9154bi$8am$1@bob.news.rcn.net> <UpwZ5.77193$IP1.2582629@news1.giganews.com> <917jrq$2s6$2@bob.news.rcn.net> <Z7YZ5.59759$%j3.763939@news6.giganews.com> <91a8c1$fj$1@bob.news.rcn.net> <3A3EE9FC.A73D5CAF@MA.UltraNet.Com>
+X-Trace: UmFuZG9tSVZFBp8NudFrzvLryfLXj0mV3aOj5NqdF7j8TbVkidf3oGvG10662O5H
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 19 Dec 2000 14:11:25 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:2685
+
+In article <3A3EE9FC.A73D5CAF@MA.UltraNet.Com>,
+   "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+>jmfbahciv@aol.com wrote:
+>> 
+>> In article <Z7YZ5.59759$%j3.763939@news6.giganews.com>,
+>>    Timothy Stark <sword7@grace.speakeasy.org> wrote:
+>> 
+>> >I am looking for BLISS-10 compiler for TOPS-10/20 operating system.
+>
+>(I'm glad you subsequently got copies).
+>
+>
+>> BLISS-10 is on the CUSP tape; filename is probably BLIS10.EXE
+>> among others ...
+>
+>I don't see a BLISS-10 on any of the online TOPS-10 cusp tapes:
+>http://pdp-10.trailing-edge.com/pdp-10/CUSPMAR86BINSRC_1OF2_BB-X128B-SB.ht
+ml
+>http://pdp-10.trailing-edge.com/pdp-10/CUSPJUL86UPD_BB-JF24A-BB.html
+>http://pdp-10.trailing-edge.com/pdp-10/CUST_SUP_CUSP_BB-X130C-SB.html
+>http://pdp-10.trailing-edge.com/pdp-10/CUSTSUPCUSPMAR86_BB-X130B-SB.html
+>	-or-
+>http://pdp-10.trailing-edge.com/pdp-10/CUST_SUP_CUSP_BB-X130C-SB.html
+>
+>I wonder if at least the binary was on the Fortran layered product tape,
+>perhaps among other places.
+
+Yes, it was there, too.  Sara had a very bad habit of shipping
+code that belonged exclusively on the CUSP tape.
+>
+>
+>>... (there were a number of GETSEGs).
+>
+>Nope.  I've seen BLISS-36 run with multiple hisegs (named BLSSG1 through
+>BLSSG4, I think); perhaps only on TOPS-10, since
+>http://pdp-10.trailing-edge.com/pdp-10/BB-J939F-BM.HTML
+>only builds a single-hiseg BLISS-36.
+>
+>However, BLISS-10 does not have multiple hisegs.
+>
+>
+>> Neither of these BLISSes were shipped with sources ...
+>
+>The place Timothy Stark subsequently found BLISS-10 (``TOPS-20 V3A 2020
+>DISTRIBUTION TAPE 9 TRACK 1600 BPI MAGTAPE DRIVE# 273 S/N 2 SYS,
+>BB-D868B-BM''
+>http://pdp-10.trailing-edge.com/pdp-10/BB-D868B-BM_TOPS20_V3A_2020_DIST.ht
+ml )
+>
+>was the latest version, V7E(227), and it contains all the sources.
+>
+>I still don't recall how TOPS-10 sites got BLISS-10 sources, but we
+>certainly had them in the field.
+
+Any site that got BLISS-10 sources got them under the table.
+What BLISS did we use to build SYSERR (I think that was the
+name of another monster we shipped).  I think there are two
+more products that we had to use bliss10.
+
+/BAH
+
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 2708 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntp.primenet.com!nntp.gblx.net!cpk-news-hub1.bbnplanet.com!news.gtei.net!feed2.news.rcn.net!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLT 17,17 bug had been fixed but..
+Date: Tue, 19 Dec 2000 20:44:56 -0500
+Lines: 28
+Message-ID: <3A400F18.1A7A4CB@MA.UltraNet.Com>
+References: <6TiY5.46657$%j3.530564@news6.giganews.com> <90teal$10b$1@bob.news.rcn.net> <J9AY5.115963$DG3.2253745@news2.giganews.com> <9105q9$8d3$1@bob.news.rcn.net> <gCeZ5.121937$DG3.2418389@news2.giganews.com> <9154bi$8am$1@bob.news.rcn.net> <UpwZ5.77193$IP1.2582629@news1.giganews.com> <917jrq$2s6$2@bob.news.rcn.net> <Z7YZ5.59759$%j3.763939@news6.giganews.com> <91a8c1$fj$1@bob.news.rcn.net> <3A3EE9FC.A73D5CAF@MA.UltraNet.Com> <91nqad$43p$2@autumn.news.rcn.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: UmFuZG9tSVbImJifbQ+Na36bIjIzsxq9wlivh7EPS8bXsQ1N2Y/TCF38aXqQWOel
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 20 Dec 2000 01:45:37 GMT
+X-Mailer:  Mozilla 4.75 [en] (Win95; U)
+X-Accept-Language:  en,en-US,en-GB,es
+Xref: nntp1.ba.best.com alt.sys.pdp10:2708
+
+jmfbahciv@aol.com wrote:
+> 
+> In article <3A3EE9FC.A73D5CAF@MA.UltraNet.Com>,
+>    "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+...
+> >I still don't recall how TOPS-10 sites got BLISS-10 sources, but we
+> >certainly had them in the field.
+> 
+> Any site that got BLISS-10 sources got them under the table.
+
+Sure, if ``TOPS-20 V3A 2020 DISTRIBUTION TAPE 9 TRACK 1600 BPI MAGTAPE
+DRIVE# 273 S/N 2 SYS, BB-D868B-BM'' is ``under the table''.
+
+
+> What BLISS did we use to build SYSERR (I think that was the
+> name of another monster we shipped).  ...
+
+The program name is familiar, but I can't find it on any Trailing
+Edge tapes.
+
+
+>...  I think there are two
+> more products that we had to use bliss10.
+
+APL would be one of them.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 2724 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntp.primenet.com!nntp.gblx.net!europa.netcrusader.net!207.172.3.44!feed2.news.rcn.net!feed1.news.rcn.net!rcn!207-172-216-122
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLT 17,17 bug had been fixed but..
+Date: Wed, 20 Dec 00 11:25:57 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 42
+Message-ID: <91q8uo$jmn$3@bob.news.rcn.net>
+References: <9154bi$8am$1@bob.news.rcn.net> <UpwZ5.77193$IP1.2582629@news1.giganews.com> <917jrq$2s6$2@bob.news.rcn.net> <Z7YZ5.59759$%j3.763939@news6.giganews.com> <91a8c1$fj$1@bob.news.rcn.net> <3A3EE9FC.A73D5CAF@MA.UltraNet.Com> <91nqad$43p$2@autumn.news.rcn.net> <3A400F18.1A7A4CB@MA.UltraNet.Com> <91q4r8$9h2$1@bob.news.rcn.net>
+X-Trace: UmFuZG9tSVbc0q7FknmMCYbC1pta+t+6QSL+n9VuJ65c+vL0SflMYVGjF+q/tsoC
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 20 Dec 2000 12:33:28 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:2724
+
+In article <91q4r8$9h2$1@bob.news.rcn.net>, jmfbahciv@aol.com wrote:
+>In article <3A400F18.1A7A4CB@MA.UltraNet.Com>,
+>   "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+>>jmfbahciv@aol.com wrote:
+>>> 
+>>> In article <3A3EE9FC.A73D5CAF@MA.UltraNet.Com>,
+>>>    "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+>>....
+>>> >I still don't recall how TOPS-10 sites got BLISS-10 sources, but we
+>>> >certainly had them in the field.
+>>> 
+>>> Any site that got BLISS-10 sources got them under the table.
+>>
+>>Sure, if ``TOPS-20 V3A 2020 DISTRIBUTION TAPE 9 TRACK 1600 BPI MAGTAPE
+>>DRIVE# 273 S/N 2 SYS, BB-D868B-BM'' is ``under the table''.
+>
+>Those weren't BLISS-10 sources.  And I see that it's a -20 tape,
+>not a -10 tape.
+
+<snip>
+
+I should also point out that, just because there existed a
+tape in SDC, does not mean that the tape was available for
+customer purchase.  I never reviewed an SPD for BLISS-10.
+It was not a product made available for customers.  
+
+Eric did make a source tape of BLISS-10 after cleaning 
+up a Big Mess.  I advised him to make that source tape
+and have Magee submit it to SDC.  That was our way
+of ensuring archiving.  (Unfortunately, SDC apparently
+changed their business plan.)  But there wasn't any
+way for a customer to order that tape since we did NOT
+make an SPD for it.
+
+I wish people had been taught how we did our business.  It
+wasn't just writing programs and automagically the customers
+got it.
+
+/BAH
+
+
+Subtract a hundred and four for e-mail.
+
+
+Article 2526 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news2.best.com!news.maxwell.syr.edu!news-out.uswest.net!uunet!chi.uu.net!arb.uu.net!ffx.uu.net!spool1.news.uu.net!spool0.news.uu.net!reader3.news.uu.net!not-for-mail
+Message-ID: <3A38668C.205FC9B5@trailing-edge.com>
+Date: Thu, 14 Dec 2000 06:19:56 -0400
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Organization: Trailing Edge Technology
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.2     AlphaServer 1200 5/533 4MB)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLT 17,17 bug had been fixed but..
+References: <6TiY5.46657$%j3.530564@news6.giganews.com> <90teal$10b$1@bob.news.rcn.net> <J9AY5.115963$DG3.2253745@news2.giganews.com> <9105q9$8d3$1@bob.news.rcn.net> <gCeZ5.121937$DG3.2418389@news2.giganews.com> <9154bi$8am$1@bob.news.rcn.net> <UpwZ5.77193$IP1.2582629@news1.giganews.com> <917jrq$2s6$2@bob.news.rcn.net> <Z7YZ5.59759$%j3.763939@news6.giganews.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 23
+NNTP-Posting-Host: 63.73.218.130
+X-Trace: reader3.news.uu.net 976792796 23752 63.73.218.130
+Xref: nntp1.ba.best.com alt.sys.pdp10:2526
+
+Timothy Stark wrote:
+> I am looking for BLISS-10 compiler for TOPS-10/20 operating system.
+> Does anyone have it?
+
+I think at least a couple versions are in the PDP-10 Archives already,
+although I cannot promise that they are complete.  In particular,
+at
+
+  http://pdp-10.trailing-edge.com/
+
+on tape BB-D868E-BM, TOPS20 V41 2020 DIST 1OF2, we have
+
+PS:<4-1-DOCUMENTATION>BLIS10.DOC.1                   152 25-JAN-1982
+PS:<NEW-SUBSYS>BLIS10.EXE.1                          760 15-APR-1982
+PS:<NEW-SUBSYS>BLIS10.HLP.1                           16 12-MAR-1978
+PS:<LANGUAGE-SOURCES>BLIS10.ERR.1                     56 15-APR-1982
+PS:<LANGUAGE-SOURCES>BLIS20.CMD.1                     16 25-MAR-1982
+PS:<LANGUAGE-SOURCES>BLIS20.CTL.1                     24  3-FEB-1983
+PS:<LANGUAGE-SOURCES>BLIS20.LNK.1                      8 27-FEB-1978
+
+Does this help any?
+
+Tim.
+
+
+Article 2543 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!207.172.3.44!feed2.news.rcn.net!feed1.news.rcn.net!rcn!207-172-245-54
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLT 17,17 bug had been fixed but..
+Date: Fri, 15 Dec 00 09:52:38 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 25
+Message-ID: <91ctic$aj0$2@bob.news.rcn.net>
+References: <6TiY5.46657$%j3.530564@news6.giganews.com> <90teal$10b$1@bob.news.rcn.net> <J9AY5.115963$DG3.2253745@news2.giganews.com> <9105q9$8d3$1@bob.news.rcn.net> <gCeZ5.121937$DG3.2418389@news2.giganews.com> <9154bi$8am$1@bob.news.rcn.net> <UpwZ5.77193$IP1.2582629@news1.giganews.com> <917jrq$2s6$2@bob.news.rcn.net> <Z7YZ5.59759$%j3.763939@news6.giganews.com> <3A38668C.205FC9B5@trailing-edge.com> <0y4_5.62357$%j3.782275@news6.giganews.com>
+X-Trace: UmFuZG9tSVbZ5DhOFnGlxyedvlDUZM+TOP6jQ0S6dPyaSVNmF4AIqSAKwqG5ljkW
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 15 Dec 2000 10:59:24 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:2543
+
+In article <0y4_5.62357$%j3.782275@news6.giganews.com>,
+   Timothy Stark <sword7@grace.speakeasy.org> wrote:
+>Tim Shoppa <shoppa@trailing-edge.com> wrote:
+>> on tape BB-D868E-BM, TOPS20 V41 2020 DIST 1OF2, we have
+>
+>> PS:<4-1-DOCUMENTATION>BLIS10.DOC.1                   152 25-JAN-1982
+>> PS:<NEW-SUBSYS>BLIS10.EXE.1                          760 15-APR-1982
+>> PS:<NEW-SUBSYS>BLIS10.HLP.1                           16 12-MAR-1978
+>> PS:<LANGUAGE-SOURCES>BLIS10.ERR.1                     56 15-APR-1982
+>> PS:<LANGUAGE-SOURCES>BLIS20.CMD.1                     16 25-MAR-1982
+>> PS:<LANGUAGE-SOURCES>BLIS20.CTL.1                     24  3-FEB-1983
+>> PS:<LANGUAGE-SOURCES>BLIS20.LNK.1                      8 27-FEB-1978
+>
+>Well, thank you for info.  I forget that TOPS-20 v4.1 has them.
+
+Careful.  What got shipped on the -20 tapes may not be the
+code that built the stuff on the -10.  Double check that
+the edit level.  The edit level is very important and 
+had a strict standard of assignation within LCG (Large
+Computer Group)....at least, it did while some old farts
+were still around.
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 2544 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!newsfeed.direct.ca!look.ca!nntp2.aus1.giganews.com!nntp3.aus1.giganews.com!news1.giganews.com.POSTED!barn.net1plus.com!192.168.1.12
+From: R.J.S. <not@available.right.now>
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLT 17,17 bug had been fixed but..
+Organization: Very Organized
+Message-ID: <hlvj3to326rjblokbugpa7mqogg66sdvfv@4ax.com>
+References: <6TiY5.46657$%j3.530564@news6.giganews.com> <90teal$10b$1@bob.news.rcn.net> <J9AY5.115963$DG3.2253745@news2.giganews.com> <9105q9$8d3$1@bob.news.rcn.net> <gCeZ5.121937$DG3.2418389@news2.giganews.com> <9154bi$8am$1@bob.news.rcn.net> <UpwZ5.77193$IP1.2582629@news1.giganews.com> <917jrq$2s6$2@bob.news.rcn.net> <Z7YZ5.59759$%j3.763939@news6.giganews.com> <3A38668C.205FC9B5@trailing-edge.com>
+X-Newsreader: Forte Agent 1.8/32.548
+X-No-Archive: yes
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Original-NNTP-Posting-Host: 192.168.1.12
+X-Original-Trace: 15 Dec 2000 06:27:52 -0500, 192.168.1.12
+Lines: 18
+NNTP-Posting-Date: Fri, 15 Dec 2000 05:28:07 CST
+X-Trace: sv2-pDTtVG2oo4Wt9x3GS6zhHlWHGz8bGZTbQjzU7bjptyUslh2ZCpmKhfVlo7K7Jk2+//YWBGfRZxpC9iT!PevW7uyCxQ5L0agwUOn8mKsS8P0WIQ==
+X-Complaints-To: abuse@GigaNews.Com
+X-Abuse-Info: Please be sure to forward a copy of ALL headers
+X-Abuse-Info: Otherwise we will be unable to process your complaint properly
+Date: Fri, 15 Dec 2000 11:28:08 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2544
+
+On Thu, 14 Dec 2000 06:19:56 -0400, Tim Shoppa
+<shoppa@trailing-edge.com> wrote:
+
+>Timothy Stark wrote:
+>> I am looking for BLISS-10 compiler for TOPS-10/20 operating system.
+>> Does anyone have it?
+
+For quite some time, it was very common to hear someone wandering the
+halls of MR1 say "Bliss is ignorance!"  
+
+I tried to use it for some system software, but the code it generated
+was about 3 times the size of well written Macro-10, and it took me
+longer to figure out all the compiler bugs and work around them.
+
+The assembly language optimizer in Bliss only worked on a very small
+window of instructions, and while it may have been great for the VAX,
+it did nothing for RISC style machines.  For the -10, it really
+sucked.
+
+
+Article 2546 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!nntp.abs.net!cpk-news-hub1.bbnplanet.com!news.gtei.net!feed2.news.rcn.net!feed1.news.rcn.net!rcn!207-172-245-54
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLT 17,17 bug had been fixed but..
+Date: Fri, 15 Dec 00 13:29:42 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 37
+Message-ID: <91da9b$n8j$7@bob.news.rcn.net>
+References: <6TiY5.46657$%j3.530564@news6.giganews.com> <90teal$10b$1@bob.news.rcn.net> <J9AY5.115963$DG3.2253745@news2.giganews.com> <9105q9$8d3$1@bob.news.rcn.net> <gCeZ5.121937$DG3.2418389@news2.giganews.com> <9154bi$8am$1@bob.news.rcn.net> <UpwZ5.77193$IP1.2582629@news1.giganews.com> <917jrq$2s6$2@bob.news.rcn.net> <Z7YZ5.59759$%j3.763939@news6.giganews.com> <3A38668C.205FC9B5@trailing-edge.com> <hlvj3to326rjblokbugpa7mqogg66sdvfv@4ax.com>
+X-Trace: UmFuZG9tSVZVGJJmSPaxHw2Tw1AJ9yx6TJ7Q+iDiqnQMlCxT7vXWYXSllO9WsZSz
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 15 Dec 2000 14:36:27 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:2546
+
+In article <hlvj3to326rjblokbugpa7mqogg66sdvfv@4ax.com>,
+   R.J.S. <not@available.right.now> wrote:
+>On Thu, 14 Dec 2000 06:19:56 -0400, Tim Shoppa
+><shoppa@trailing-edge.com> wrote:
+>
+>>Timothy Stark wrote:
+>>> I am looking for BLISS-10 compiler for TOPS-10/20 operating system.
+>>> Does anyone have it?
+>
+>For quite some time, it was very common to hear someone wandering the
+>halls of MR1 say "Bliss is ignorance!"  
+>
+>I tried to use it for some system software, but the code it generated
+>was about 3 times the size of well written Macro-10, and it took me
+>longer to figure out all the compiler bugs and work around them.
+>
+>The assembly language optimizer in Bliss only worked on a very small
+>window of instructions, and while it may have been great for the VAX,
+>it did nothing for RISC style machines.  For the -10, it really
+>sucked.
+
+And that's why I blew up like I did.  It appears that we designed
+our cold start procedure into a corner with no way out.  Tim's
+problem is an example of depending on a HLL for all system 
+software; it's a pure CATCH-22 problem with the only solution
+has the assumption that a functional system exists before
+a coldstart installation.
+
+The current design has painted itself to ultimately rely
+on BLISS-10 code generation working reproducibly well.
+
+BLISS-10 could generally reproduce the same machine code
+(I am assuming no changes).  BLISS-36 could not.
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 2672 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!feeder.qis.net!feed2.news.rcn.net!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLT 17,17 bug had been fixed but..
+Date: Tue, 19 Dec 2000 01:39:48 -0500
+Lines: 29
+Message-ID: <3A3F02B4.7F338F2D@MA.UltraNet.Com>
+References: <6TiY5.46657$%j3.530564@news6.giganews.com> <90teal$10b$1@bob.news.rcn.net> <J9AY5.115963$DG3.2253745@news2.giganews.com> <9105q9$8d3$1@bob.news.rcn.net> <gCeZ5.121937$DG3.2418389@news2.giganews.com> <9154bi$8am$1@bob.news.rcn.net> <UpwZ5.77193$IP1.2582629@news1.giganews.com> <917jrq$2s6$2@bob.news.rcn.net> <Z7YZ5.59759$%j3.763939@news6.giganews.com> <3A38668C.205FC9B5@trailing-edge.com> <hlvj3to326rjblokbugpa7mqogg66sdvfv@4ax.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: UmFuZG9tSVYE8gDlhi1wN2TH6N+0RRMP6F1ZSFO86wacFmxUjK9/X4A7ND2pjI4U
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 19 Dec 2000 06:40:27 GMT
+X-Mailer:  Mozilla 4.75 [en] (Win95; U)
+X-Accept-Language:  en,en-US,en-GB,es
+Xref: nntp1.ba.best.com alt.sys.pdp10:2672
+
+"R.J.S." wrote:
+> 
+> >Timothy Stark wrote:
+> >> I am looking for BLISS-10 compiler for TOPS-10/20 operating system.
+...
+> I tried to use it for some system software, but the code it generated
+> was about 3 times the size of well written Macro-10, and it took me
+> longer to figure out all the compiler bugs and work around them.
+> 
+> The assembly language optimizer in Bliss only worked on a very small
+> window of instructions, ...
+
+Maybe 10 instructions.  (Fortran-10 buffered 50).
+
+
+>... and while it may have been great for the VAX,
+> it did nothing for RISC style machines.  For the -10, it really
+> sucked.
+
+BLISS-11, BLISS-32, BLISS-16, BLISS-64 *and* BLISS-36 have global
+optimizers.  I've seen BLISS-36 notice that a complex boolean was still
+sitting in a register pages of code away from where it had been computed.
+
+BLISS-10 is far simpler - perhaps has little more than that peephole
+optimizer.  BLISS-10 compares to its successors like the PDP-11 C
+compiler compares to gcc.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 2687 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!207.172.3.44!feed2.news.rcn.net!feed1.news.rcn.net!rcn!207-172-245-95
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLT 17,17 bug had been fixed but..
+Date: Tue, 19 Dec 00 13:13:49 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 49
+Message-ID: <91nqsm$43p$4@autumn.news.rcn.net>
+References: <6TiY5.46657$%j3.530564@news6.giganews.com> <90teal$10b$1@bob.news.rcn.net> <J9AY5.115963$DG3.2253745@news2.giganews.com> <9105q9$8d3$1@bob.news.rcn.net> <gCeZ5.121937$DG3.2418389@news2.giganews.com> <9154bi$8am$1@bob.news.rcn.net> <UpwZ5.77193$IP1.2582629@news1.giganews.com> <917jrq$2s6$2@bob.news.rcn.net> <Z7YZ5.59759$%j3.763939@news6.giganews.com> <3A38668C.205FC9B5@trailing-edge.com> <hlvj3to326rjblokbugpa7mqogg66sdvfv@4ax.com> <3A3F02B4.7F338F2D@MA.UltraNet.Com>
+X-Trace: UmFuZG9tSVZ5uzNKsQYDGfIlN3P4XSBtpFkCQXIKsJbBDaTYDgC1Vce53ON9HjIj
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 19 Dec 2000 14:21:10 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:2687
+
+In article <3A3F02B4.7F338F2D@MA.UltraNet.Com>,
+   "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+>"R.J.S." wrote:
+>> 
+>> >Timothy Stark wrote:
+>> >> I am looking for BLISS-10 compiler for TOPS-10/20 operating system.
+>....
+>> I tried to use it for some system software, but the code it generated
+>> was about 3 times the size of well written Macro-10, and it took me
+>> longer to figure out all the compiler bugs and work around them.
+>> 
+>> The assembly language optimizer in Bliss only worked on a very small
+>> window of instructions, ...
+>
+>Maybe 10 instructions.  (Fortran-10 buffered 50).
+>
+>
+>>... and while it may have been great for the VAX,
+>> it did nothing for RISC style machines.  For the -10, it really
+>> sucked.
+>
+>BLISS-11, BLISS-32, BLISS-16, BLISS-64 *and* BLISS-36 have global
+>optimizers.  I've seen BLISS-36 notice that a complex boolean was still
+>sitting in a register pages of code away from where it had been computed.
+>
+>BLISS-10 is far simpler - perhaps has little more than that peephole
+>optimizer.  BLISS-10 compares to its successors like the PDP-11 C
+>compiler compares to gcc.
+
+It's worse than that.  The BLISS compilers before DECnet
+are different than the BLISS compilers after DECnet.
+That BLISS-11 that you guys are talking about is a before-DECnet
+compiler. 
+
+Comparing before-DECnet BLISSes with after-DECnet-BLISSes
+is more like comparing FORTRAN II with FORTRAN IV.  
+
+And it even gets more complicated than that because BLISS
+development continued a CMU _without us getting any of the
+updates_.  So BLISS-10 and BLISS-11 compiler development
+is really some flavor of compiler that had been frozen
+in the early 70s (I'm guessing) or so.
+
+The person we need for all of this BLISS-10 and RMS stuff
+is Eric Macgrath.  Somebody go kick him.
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article: 15345 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!crtntx1-snh1.gtei.net!nycmny1-snh1.gtei.net!news.gtei.net!news-out.visi.com!hermes.visi.com!news.maxwell.syr.edu!feeder.qis.net!sn-xit-02!supernews.com!postnews1.google.com!not-for-mail
+From: jeremybarker@email.com (Jeremy Barker)
+Newsgroups: comp.os.vms,alt.sys.pdp10
+Subject: Re: BLISS pros and cons, was: Re: historical evidence of what went wrong  at DEC
+Date: 22 Jan 2002 07:47:42 -0800
+Organization: http://groups.google.com/
+Lines: 31
+Message-ID: <5b86b9ee.0201220747.3f527e97@posting.google.com>
+References: <a0l3hm$1ih4$1@citadel.in.taronga.com> <a11g1s$1s3$2@bob.news.rcn.net> <0H2Z7.2548$cD4.5034@www.newsranger.com> <V53Z7.267$5Y4.5736@news.cpqcorp.net> <Pine.NXT.4.50.0201031728530.20229-100000@Tomobiki-Cho.CAC.Washington.EDU> <11jZ7.280$5Y4.6342@news.cpqcorp.net> <3C35C22E.F44C6D8E@aaa.com> <3C35C48C.30803@compaq.com> <qhitahj434.fsf@ruckus.brouhaha.com>
+NNTP-Posting-Host: 213.122.15.133
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 8bit
+X-Trace: posting.google.com 1011714463 13867 127.0.0.1 (22 Jan 2002 15:47:43 GMT)
+X-Complaints-To: groups-abuse@google.com
+NNTP-Posting-Date: 22 Jan 2002 15:47:43 GMT
+Xref: dfw-artgen.news.verio.net comp.os.vms:124448 alt.sys.pdp10:15345
+
+Eric Smith <eric-no-spam-for-me@brouhaha.com> wrote in message news:<qhitahj434.fsf@ruckus.brouhaha.com>...
+> John Reagan <john.reagan@compaq.com> writes:
+> > While Compaq never sold BLISS for NT, we certainly continue to use it
+> > for the Fortran products (both on Alpha NT and IA32 NT) since the GEM
+> > component of the compiler is written mostly in BLISS.
+> 
+> Would it be that hard to do an automatic translation of BLISS to C?
+> I'm not a BLISS expert, but it seems to me that the semantics are
+> simple enough.  I'd expect that the hardest part would be trying to
+> identify which variables are used as pointers vs. numeric types.  For
+> variables that are used as both, the generated C code would need to
+> include casts.
+> 
+> As far as I know, standard C does not specify any pair of integer and
+> pointer types such that casting back and forth is guaranteed to work.
+> But in practice on any given implementation there usually are suitable
+> types.  So a BLISS to C translator should allow the specification of
+> the C types to be used.
+
+It's probably easier to translate C to BLISS than the reverse. 
+Especially given that nothing in C can match the BLISS macro facility.
+
+It's certainly the case that various people have looked at the
+possibility of a BLISS to C translator but the killer is the macro
+facility built into the BLISS compiler front-end.  I also know that
+someone looked at the possibility of making the BLISS compiler
+generate C source code rather than object files (the aim was to widen
+the portability of programs written in BLISS) but this idea was
+abandoned for a variety of reasons.
+
+jb
+
+
+Article: 15581 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!crtntx1-snh1.gtei.net!cpk-news-hub1.bbnplanet.com!news.gtei.net!news.tele.dk!small.news.tele.dk!212.74.64.35!colt.net!newspeer.clara.net!news.clara.net!peernews!peer.cwci.net!news5-gui.server.ntli.net!ntli.net!news6-win.server.ntlworld.com.POSTED!not-for-mail
+Message-ID: <3C558E84.83E2B32A@iee.org>
+From: "a.carlini" <arcarlini@iee.org>
+Reply-To: arcarlini@iee.org
+X-Mailer: Mozilla 4.7 [en] (Win98; I)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: comp.os.vms,alt.sys.pdp10
+Subject: Re: BLISS pros and cons, was: Re: historical evidence of what went 
+ wrong  at DEC
+References: <a0l3hm$1ih4$1@citadel.in.taronga.com> <3C35C48C.30803@compaq.com> <qhitahj434.fsf@ruckus.brouhaha.com> <5b86b9ee.0201220747.3f527e97@posting.google.com> <a329d2$1vaj$1@citadel.in.taronga.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 20
+Date: Mon, 28 Jan 2002 17:46:44 +0000
+NNTP-Posting-Host: 62.254.135.163
+X-Complaints-To: abuse@ntlworld.com
+X-Trace: news6-win.server.ntlworld.com 1012240154 62.254.135.163 (Mon, 28 Jan 2002 17:49:14 GMT)
+NNTP-Posting-Date: Mon, 28 Jan 2002 17:49:14 GMT
+Organization: ntl Cablemodem News Service
+Xref: dfw-artgen.news.verio.net comp.os.vms:125311 alt.sys.pdp10:15581
+
+Peter da Silva wrote:
+> 
+> In article <5b86b9ee.0201220747.3f527e97@posting.google.com>,
+> Jeremy Barker <jeremybarker@email.com> wrote:
+> >It's probably easier to translate C to BLISS than the reverse.
+> >Especially given that nothing in C can match the BLISS macro facility.
+> 
+> That's what m4 was invented for. It works just fine as a C preprocessor, too.
+
+And m4 was used as one for the DECnis 
+FDDI line card too IIRC.
+
+So not *everything* was done in BLISS :-)
+
+Antonio
+
+-- 
+
+---------------
+Antonio Carlini             arcarlini@iee.org
+
+
+Article: 15348 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!crtntx1-snh1.gtei.net!nycmny1-snh1.gtei.net!cpk-news-hub1.bbnplanet.com!news.gtei.net!news.maxwell.syr.edu!feeder.qis.net!sn-xit-02!supernews.com!postnews1.google.com!not-for-mail
+From: jeremybarker@email.com (Jeremy Barker)
+Newsgroups: comp.os.vms,alt.sys.pdp10
+Subject: Re: BLISS pros and cons, was: Re: historical evidence of what went wrong at DEC
+Date: 22 Jan 2002 08:13:39 -0800
+Organization: http://groups.google.com/
+Lines: 51
+Message-ID: <5b86b9ee.0201220813.4e642eea@posting.google.com>
+References: <a0l3hm$1ih4$1@citadel.in.taronga.com> <Pine.NXT.4.50.0201031728530.20229-100000@Tomobiki-Cho.CAC.Washington.EDU> <11jZ7.280$5Y4.6342@news.cpqcorp.net> <Pine.NXT.4.50.0201040717520.21933-100000@Tomobiki-Cho.CAC.Washington.EDU> <a14pr1$1vou$1@citadel.in.taronga.com> <Pine.NXT.4.50.0201041017210.22025-100000@Tomobiki-Cho.CAC.Washington.EDU>
+NNTP-Posting-Host: 213.122.162.3
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 8bit
+X-Trace: posting.google.com 1011716020 14678 127.0.0.1 (22 Jan 2002 16:13:40 GMT)
+X-Complaints-To: groups-abuse@google.com
+NNTP-Posting-Date: 22 Jan 2002 16:13:40 GMT
+Xref: dfw-artgen.news.verio.net comp.os.vms:124454 alt.sys.pdp10:15348
+
+Mark Crispin <mrc@CAC.Washington.EDU> wrote in message news:<Pine.NXT.4.50.0201041017210.22025-100000@Tomobiki-Cho.CAC.Washington.EDU>...
+> On 4 Jan 2002, Peter da Silva wrote:
+> > That is, at the time VMS development was started "C" was not even on the
+> > radar. Even if it might have made more sense to use C than BLISS (and
+> > I can't argue otherwise, really) I don't think there's any reason to expect
+> > the people making the decision to have even *heard* of C.
+> 
+> I first heard about VAX and VMS in the mid-70s.  By that time, they should
+> have known what Bell Labs was doing with all those PDP-11s, even if at
+> that time UNIX was mostly internal.
+> 
+> BCPL was widely available by that time.
+
+VAX and VMS were conceived around 1975.  I think it's stretching it a
+bit to say that BCPL was "widely" available then.  I should say that I
+learned how to write properly structured programs using BCPL.
+ 
+> > A stripped-down Algol or PL/1 might have been better solutions.
+> 
+> Agreed.  Univac used Algol, and PL/1 was the system language on Multics.
+> Both of these were already old hat by that time.
+
+Maybe so.  As I understand the situation, BLISS was favoured by DEC
+because of the DEC-CMU connections and because of the research that
+had been done at CMU on producing highly optimised code (the TOPS-10
+hosted BLISS-16 compiler).  My view (which others will likely disagree
+with) is that it was only around the mid-1970s timeframe that DEC
+became seriously interested in compilers.  It had previously done
+pretty much everything in assembly language of one sort or another and
+compilers were just something that customers needed so had to be
+provided.  Some compilers were bought in (BASIC-PLUS on RSTS for
+example).  You have to remember that DEC was basically a hardware
+company that used software (which was often given away) to leverage
+hardware sales.  That model only really changed after the PDP-11
+appeared and VAX was the first hardware designed along with software.
+ 
+> > Actually, I've found that it's easier to write portable code in Fortran
+> > than in most languages, though that may partly have been due to the kinds
+> > of things you actually wrote in Fortran.
+> 
+> Definitely true.  DEC adhered to Fortran II style I/O for a long time, but
+> for the most part Fortran IV is Fortran IV no matter where you go.
+
+I remember that the computing service at Cambridge University produced
+a guide to FORTRAN portability which showed what language features
+were portable and to what degree.  Although the core of the language
+was highly portable there were lots of features that IBM (especially
+in the S/370 H compiler) and others added that were distinctly
+non-portable.
+ 
+jb
+
+
+Article: 15347 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!newsfeed1.uni2.dk!news.get2net.dk!not-for-mail
+From: "Dr. Dweeb" <Dweeb@NoSpam.com>
+Newsgroups: comp.os.vms,alt.sys.pdp10
+References: <a0l3hm$1ih4$1@citadel.in.taronga.com> <a11g1s$1s3$2@bob.news.rcn.net> <0H2Z7.2548$cD4.5034@www.newsranger.com> <V53Z7.267$5Y4.5736@news.cpqcorp.net> <5b86b9ee.0201220733.97fe903@posting.google.com>
+Subject: Re: BLISS pros and cons, was: Re: historical evidence of what went wrong at DEC
+Lines: 7
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Newsreader: Microsoft Outlook Express 6.00.2600.0000
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2600.0000
+Message-ID: <UZf38.111$EU.3174@news.get2net.dk>
+Date: Tue, 22 Jan 2002 16:57:57 +0100
+NNTP-Posting-Host: 129.142.252.2
+X-Complaints-To: abuse@uni2.dk
+X-Trace: news.get2net.dk 1011715060 129.142.252.2 (Tue, 22 Jan 2002 16:57:40 MET)
+NNTP-Posting-Date: Tue, 22 Jan 2002 16:57:40 MET
+Organization: UNI2 Internet Kunde
+Xref: dfw-artgen.news.verio.net comp.os.vms:124451 alt.sys.pdp10:15347
+
+CompaQ killed the BLISS/NT intel and Alpha compilers, but they existed for
+quite some time.  OracleRdb/NT used them extensively.
+
+Copies may exist, or maybe CompaQ got soft and put them in the public
+domain.
+
+
+
+
+Article: 15349 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!crtntx1-snh1.gtei.net!washdc3-snh1.gtei.net!nycmny1-snh1.gtei.net!cpk-news-hub1.bbnplanet.com!news.gtei.net!nntp.abs.net!feeder.qis.net!sn-xit-02!supernews.com!postnews1.google.com!not-for-mail
+From: jeremybarker@email.com (Jeremy Barker)
+Newsgroups: comp.os.vms,alt.sys.pdp10
+Subject: Re: BLISS pros and cons, was: Re: historical evidence of what went wrong at DEC
+Date: 22 Jan 2002 08:26:26 -0800
+Organization: http://groups.google.com/
+Lines: 24
+Message-ID: <5b86b9ee.0201220826.19a064@posting.google.com>
+References: <a0l3hm$1ih4$1@citadel.in.taronga.com> <a11g1s$1s3$2@bob.news.rcn.net> <0H2Z7.2548$cD4.5034@www.newsranger.com> <V53Z7.267$5Y4.5736@news.cpqcorp.net> <3c3e24d1.37592805@news.process.com>
+NNTP-Posting-Host: 213.122.37.220
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 8bit
+X-Trace: posting.google.com 1011716787 15056 127.0.0.1 (22 Jan 2002 16:26:27 GMT)
+X-Complaints-To: groups-abuse@google.com
+NNTP-Posting-Date: 22 Jan 2002 16:26:27 GMT
+Xref: dfw-artgen.news.verio.net comp.os.vms:124459 alt.sys.pdp10:15349
+
+goathunter@goatley.com (Hunter Goatley) wrote in message news:<3c3e24d1.37592805@news.process.com>...
+> On Thu, 3 Jan 2002 15:20:09 -0500, "Fred Kleinsorge"
+> <kleinsorge@star.zko.dec.com> wrote:
+> >
+> >Just religion.  Larry will tell you that Ada is the best language.  UNIX
+> >hacks will tell you C.  The kiddies will tell you JAVA.  I'm sure someone
+> >still loves RPG-II.
+> >
+> But we all know that objectively, BLISS is best.
+> 
+> >The early VMS developers jumped on it as a way to write much of the kernel
+> >code for VMS - as opposed to writing it in Macro-32.  The language itself
+> >never caught on.
+> 
+> It never helped that DEC priced the compiler so high---second only to Ada in
+> the '80s.  If they'd given the compiler away, or at least made it as affordable
+> as C, PLI, and others, it might have had a chance, IMO.
+
+I always thought that the exorbitant pricing of the BLISS compiler was
+a mistake.  I think there was a lot of pressure internally to not sell
+it (it being seen as a competitive advantage) so the high price was
+probably intended as a deterrant.
+
+jb
+
+
+Article: 15459 of alt.sys.pdp10
+Newsgroups: comp.os.vms,alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!crtntx1-snh1.gtei.net!nycmny1-snh1.gtei.net!news.gtei.net!news-out.visi.com!hermes.visi.com!uunet!ash.uu.net!world!not-for-mail
+From: weiner@TheWorld.com (Sam Weiner)
+Subject: Re: BLISS pros and cons, was: Re: historical evidence of what went wrong at DEC
+Sender: news@world.std.com (Mr Usenet Himself)
+Message-ID: <GqH7EF.6xn@world.std.com>
+Date: Fri, 25 Jan 2002 04:06:14 GMT
+References: <a0l3hm$1ih4$1@citadel.in.taronga.com> <V53Z7.267$5Y4.5736@news.cpqcorp.net> <3c3e24d1.37592805@news.process.com> <5b86b9ee.0201220826.19a064@posting.google.com>
+Nntp-Posting-Host: shell01.theworld.com
+Organization: The World Public Access UNIX, Brookline, MA
+X-Newsreader: trn 4.0-test72 (19 April 1999)
+Lines: 40
+Xref: dfw-artgen.news.verio.net comp.os.vms:124933 alt.sys.pdp10:15459
+
+In article <5b86b9ee.0201220826.19a064@posting.google.com>,
+Jeremy Barker <jeremybarker@email.com> wrote:
+>goathunter@goatley.com (Hunter Goatley) wrote in message
+>news:<3c3e24d1.37592805@news.process.com>...
+>> On Thu, 3 Jan 2002 15:20:09 -0500, "Fred Kleinsorge"
+>> <kleinsorge@star.zko.dec.com> wrote:
+>> >
+>> >Just religion.  Larry will tell you that Ada is the best language.  UNIX
+>> >hacks will tell you C.  The kiddies will tell you JAVA.  I'm sure someone
+>> >still loves RPG-II.
+>> >
+>> But we all know that objectively, BLISS is best.
+>> 
+>> >The early VMS developers jumped on it as a way to write much of the kernel
+>> >code for VMS - as opposed to writing it in Macro-32.  The language itself
+>> >never caught on.
+>> 
+>> It never helped that DEC priced the compiler so high---second only to Ada in
+>> the '80s.  If they'd given the compiler away, or at least made it as
+>affordable
+>> as C, PLI, and others, it might have had a chance, IMO.
+>
+>I always thought that the exorbitant pricing of the BLISS compiler was
+>a mistake.  I think there was a lot of pressure internally to not sell
+>it (it being seen as a competitive advantage) so the high price was
+>probably intended as a deterrant.
+
+We started with BLIS10 straight from CMU in mid 70s but
+migrated to BLISS-36 once it was finally available.  I
+still miss the macro facility.  And unlike C, it doesn't
+pretend to be all things to all people.
+
+DEC had the same policy with other things, such as making
+the RMS API available outside FORTRAN and COBOL.  It would
+have saved us time, money, and much pain.
+
+Sam
+
+
+
+
+
+Article: 21444 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!sjc-peer.news.verio.net!news.verio.net!pln-e!extra.newsguy.com!lotsanews.com!nntp.abs.net!feed2.news.rcn.net!feed1.news.rcn.net!rcn!208-59-182-144
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: BCPL
+Date: Mon, 22 Sep 03 13:30:07 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 49
+Message-ID: <bkn1m8$d3r$3@bob.news.rcn.net>
+References: <3f60bac1$0$12650$afc38c87@news.easynet.co.uk> <bk4keg$p0u$1@news.louisville.edu> <bked3l$d1@library2.airnews.net> <bkes57$fom$4@bob.news.rcn.net> <bkmt09$v3b@library1.airnews.net>
+X-Trace: UmFuZG9tSVagPv0eMOkbuz/ft0aLZv/YsP+N2k5ZTV3rDO+k7nlNGyP7Q/55HFom
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 22 Sep 2003 14:41:12 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: dfw-artgen alt.sys.pdp10:21444
+
+In article <bkmt09$v3b@library1.airnews.net>,
+   huw.davies@kerberos.davies.net.au wrote:
+>jmfbahciv@aol.com wrote:
+>> In article <bked3l$d1@library2.airnews.net>,
+>>    huw.davies@kerberos.davies.net.au wrote:
+>
+>> 'ey, Huw.
+>
+>Hi
+>
+>> You can do all the BLISS you want.  Just don't ask me to
+>> package it.  If I have to package it, I suggest you come
+>> prepared:  suit of armor, asbestos shorts, blarney, and
+>> a control file that will build the product _without_
+>> warnings or informational messages are requirements.
+>
+>Indeed. Using BLISS was sometimes a matter of faith.
+
+<mutter..wink>  I would not have used the word faith.
+
+> .. As I've
+>said before, I was using BLISS-10 not BLISS-36
+
+BLISS-36 is a whole 'nuther story about how not to business.
+
+> .. and still have the
+>source code to the compiler handy when things became "interesting"
+
+One of the problems with BLISS-10 is that we (LCG) never
+managed it well.  It was always in that limbo land of sorta
+supported and not sorta supported and nobody in charge of that
+language was willing to treat like a real product.  I don't know
+how much having CMU fingers in the pie fucked it up.  If I ever
+heard that CMU was "involved" in something, I nixed it or I gave
+up on it.  I've always traced these problems directly back to 
+Bell's <ahem>thinking.
+
+I had some problems with the lanagage itself but they were minor.
+But it was my first lesson in what happens when HLLs are used
+as a language to deliver computing service.  The number of files 
+one had to keep hanging around to do anything was horrible.
+This back when disks weren't cheap and a max capacity of 80,000
+blocks.
+
+/BAH
+
+
+
+Subtract a hundred and four for e-mail.
+
+

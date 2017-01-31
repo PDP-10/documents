@@ -1,0 +1,68 @@
+Article 973 of alt.sys.pdp10:
+Path: news1.best.com!agis!gatech!bloom-beacon.mit.edu!usc!usc!not-for-mail
+From: tli@skat.usc.edu (Tony Li)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Decwar Lives!
+Date: 30 Jul 1995 23:25:56 -0700
+Organization: University of Southern California, Los Angeles, CA
+Lines: 27
+Sender: tli@skat.usc.edu
+Message-ID: <3vht1k$9a7@skat.usc.edu>
+References: <3uotuk$4h9@infinity.ccsi.com> <3vf1gj$21d@infinity.ccsi.com> <3vgjqq$cs5@aurora.cs.athabascau.ca> <CSTACY.95Jul30190452@world.spacy.boston.ma.us>
+NNTP-Posting-Host: skat.usc.edu
+
+In article <CSTACY.95Jul30190452@world.spacy.boston.ma.us>,
+Christopher C Stacy <cstacy@spacy.boston.ma.us> wrote:
+    Rather than apply archeological reasoning to figuring out computers
+    from the 1970s, which is only 20 years ago, I would suggest simply
+    asking the people who were there and who designed the things.
+    
+    If you don't know who to ask about CP/M, offhand I'd suggest
+    contacting BYTE magazine for a start.
+    
+    I was certainly hacking computers around then (and before then), but I
+    don't know much of the history of CP/M and DOS and what TOPS-10 might
+    have had to do with it.  But the responsible people around.  I would
+    recommend believing what the actual progrm authors had to say,
+    as opposed to what anyone else might think they know or knew.
+    
+Asking Gary Kildall is rather difficult right now.  ;-(
+
+Will you take sorta second hand?  I was a summer intern at Digital Research
+during 1981 and 1982.  
+
+The story, as I recall it, is that CP/M was "influenced" by RT-11.  Which
+of course, was rather heavily influenced in it's own right by Tops-10.
+
+Tony
+
+-- 
+	     Good Happens -- just a whole lot less frequently
+
+
+Article 977 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: news1.best.com!sgigate.sgi.com!genmagic!bug.rahul.net!a2i!news.erinet.com!uunet!in1.uu.net!world!mbg
+From: mbg@world.std.com (Megan)
+Subject: Re: Decwar Lives!
+Message-ID: <DCLE0s.JLA@world.std.com>
+Organization: The World Public Access UNIX, Brookline, MA
+References: <3uotuk$4h9@infinity.ccsi.com> <3vf1gj$21d@infinity.ccsi.com> <3vgjqq$cs5@aurora.cs.athabascau.ca> <CSTACY.95Jul30190452@world.spacy.boston.ma.us> <3vht1k$9a7@skat.usc.edu>
+Date: Mon, 31 Jul 1995 18:00:28 GMT
+Lines: 13
+
+tli@skat.usc.edu (Tony Li) writes:
+
+>The story, as I recall it, is that CP/M was "influenced" by RT-11.  Which
+>of course, was rather heavily influenced in it's own right by Tops-10.
+
+That is my understanding as well.  In fact, I remember when we were still
+in the mill (ML5-5 to be exact) and were experimenting with a CP/M
+system ... I remember we decided that it must have been modelled after
+V3 or V3B due to the programs and options.
+
+					Megan Gentry
+					Former RT-11 Developer
+
+
+

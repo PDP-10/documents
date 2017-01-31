@@ -1,0 +1,368 @@
+Article 8457 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!newsfeed.mathworks.com!portc03.blue.aol.com!cpk-news-hub1.bbnplanet.com!news.gtei.net!news.mindspring.net!firehose.mindspring.com!not-for-mail
+From: bugs@netcom5.netcom.com (Mark Hittinger)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Good news but...
+Date: 6 May 2000 02:52:00 GMT
+Organization: MindSpring Enterprises
+Lines: 64
+Message-ID: <8f01cg$fom$1@slb6.atl.mindspring.net>
+References: <uAKQ4.54772$MB.1175375@news6.giganews.com>
+NNTP-Posting-Host: c7.b7.09.69
+X-Newsreader: NN version 6.5.0 CURRENT #120
+Xref: news3.best.com alt.sys.pdp10:8457
+
+Timothy Stark <sword7@grace.speakeasy.org> writes:
+>Does anyone have information about how to install TOPS-10 system from
+>scratch?  That's why I need some information to format disk drive and
+>install TOPS-10 stuffs into it.
+
+I spent some time reading some of the limited docs I kept (treasures, not
+for sale) trying to jog some memories loose about how to do that.
+
+My experience is with KL10A and 6/7 pre 7.03 monitors.
+
+There was a diagnostic on the "KLAD" disk pack that we used to format
+the disks (rp04 rp06).  A copy of the "KLAD" distribution would be a good
+thing to try and recover - it was a field service thing.
+
+Having made a formatted pack you could boot the initial monitor tape.  I
+have dim memories of starting the monitor and selecting a particular option
+and entering the "once" dialog.  
+
+That dialog was sort of a stand alone disk initializer that partially prepared 
+(it was called "refresh") the disk.  After booting the monitor you may have
+had to run a second user-level program called "twice" to do other file system 
+things.  I believe the "once dialog" was used to put the bootstrap on the
+disk, set up the swap file, the crash dump file, etc.
+
+One of the documents that I still have (tops-10 7.01 update document
+EY-CD139-SG-001) pulls a little more out of the old memory -
+
+the monitor reached a "STARTUP OPTION:" prompt and you can use /HELP
+there to see the "once" commands.  /STANDALONE boots in standalone :-)
+
+You have to define a "SDL" or "system dump list" which is a series of
+disks that a crash dump will try to be written to.
+
+It doesn't sound like you are getting far enough to receive the
+"STARTUP OPTION:" prompt, so you are probably not dealing with a problem
+related to the initialization of "disk packs" yet.  I bet you are getting
+caught by some device initialization code prior to the disks, although
+it is possible that the monitor is trying to see which disks are "spun up"
+prior to displaying "STARTUP OPTION:".
+
+After once/twice you'd boot and run mongen, turn on/off various feature test
+switches, assemble your monitor, put it out there and boot it!  
+
+By the way I also have DEC-10/20 Processor Reference Manual AA-H391A-TK,
+a very old copy of "PDP-10 Reference Handbook order code AIW (1969!!),
+and for some bizarre reason I also kept the March 1982 CMCO software
+dispatch.  I now realize I did not keep any documents for how to set up a
+system!
+
+There is a reference to "tops-10 monitor installation guide" with the
+SDC number of AA-5056B-TB in the 7.01 update document.
+
+Good luck to all emulator hackers, software distribution recoverers, and
+manual recoverers!
+
+Frankly we may need to build a monitor that meets the emulator half way.  We
+can cut out vast chunks of code that support devices we would be insane to
+try and emulate (and are probably causing your emulator to wig out).
+
+Later
+
+Mark Hittinger (former KL1059 guy)
+Earthlink
+bugs@netcom.com
+
+
+Article 8461 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!207.172.3.37!feed1.news.rcn.net!rcn!207-172-102-112
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: Good news but...
+Date: Sat, 06 May 00 07:42:21 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 77
+Message-ID: <8f0s0q$epp$1@bob.news.rcn.net>
+References: <uAKQ4.54772$MB.1175375@news6.giganews.com> <8f01cg$fom$1@slb6.atl.mindspring.net>
+X-Trace: 7j++sMmFQnn98AYhBg0bTZAPFXoCh0pqVf5u23j9Kbk=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 6 May 2000 10:26:34 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: news3.best.com alt.sys.pdp10:8461
+
+In article <8f01cg$fom$1@slb6.atl.mindspring.net>,
+   bugs@netcom5.netcom.com (Mark Hittinger) wrote:
+>Timothy Stark <sword7@grace.speakeasy.org> writes:
+>>Does anyone have information about how to install TOPS-10 system from
+>>scratch?  That's why I need some information to format disk drive and
+>>install TOPS-10 stuffs into it.
+>
+>I spent some time reading some of the limited docs I kept (treasures, not
+>for sale) trying to jog some memories loose about how to do that.
+>
+>My experience is with KL10A and 6/7 pre 7.03 monitors.
+>
+>There was a diagnostic on the "KLAD" disk pack that we used to format
+>the disks (rp04 rp06).  A copy of the "KLAD" distribution would be a good
+>thing to try and recover - it was a field service thing.
+
+No, no, no!!!  Don't use the KLAD!!!!
+
+<snip more advice assuming too much>
+
+What he needs to do is find a MIGnnn.MEM.  I have no idea
+how he would find one.  Maybe Eric or Tim has one of them
+on their disks.  What is really, really important is that
+he use a MIG (Monitor Installation Guide) that _matches_
+
+AND I CAN'T STRESS THIS ENOUGH
+
+the monitor.  Thus if your monitor is V7.03x, then you have
+to use the MIG703.MEM.  I can't remember if I won the battle
+of putting this file on the Monitor Distribution Tape.
+
+
+>It doesn't sound like you are getting far enough to receive the
+>"STARTUP OPTION:" prompt, so you are probably not dealing with a problem
+>related to the initialization of "disk packs" yet.  I bet you are getting
+>caught by some device initialization code prior to the disks, although
+>it is possible that the monitor is trying to see which disks are "spun up"
+>prior to displaying "STARTUP OPTION:".
+
+Well, it looked very strange that he typed in /TM03 but
+received the "source" message that the monitor was loaded from
+DSKB:SYSTEM.EXE[1,4].  That's not right.
+
+>
+>After once/twice you'd boot and run mongen, turn on/off 
+>various feature test
+>switches, assemble your monitor, put it out there and boot it!  
+
+Yes, but he can't do this yet.  That why he was asking for 
+a cross-assembler.
+
+>
+>By the way I also have DEC-10/20 Processor Reference Manual AA-H391A-TK,
+>a very old copy of "PDP-10 Reference Handbook order code AIW (1969!!),
+>and for some bizarre reason I also kept the March 1982 CMCO software
+>dispatch.  I now realize I did not keep any documents for how to set up a
+>system!
+>
+>There is a reference to "tops-10 monitor installation guide" with the
+>SDC number of AA-5056B-TB in the 7.01 update document.
+
+It should be a file called MIGnnn.MEM.
+>
+>Good luck to all emulator hackers, software distribution recoverers, and
+>manual recoverers!
+>
+>Frankly we may need to build a monitor that meets the emulator 
+>half way.  We
+>can cut out vast chunks of code that support devices we would be insane to
+>try and emulate (and are probably causing your emulator to wig out).
+
+Well, we went through this discussion a couple of months ago.
+And I was soundly trashed by purists :-).
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 8470 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!newsfeed.mathworks.com!newsfeed.direct.ca!router1.news.adelphia.net!news.hyperioncom.net!uunet!nyc.uu.net!ffx.uu.net!spool0.news.uu.net!reader1.news.uu.net!not-for-mail
+Message-ID: <39148220.531B4E8D@trailing-edge.com>
+Date: Sat, 06 May 2000 20:35:44 -0400
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Organization: Trailing Edge Technology
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.0     DEC 3000 Model 300L)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: Good news but...
+References: <uAKQ4.54772$MB.1175375@news6.giganews.com> <DN1R4.58410$MB.1231264@news6.giganews.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 27
+NNTP-Posting-Host: 63.73.218.130
+X-Trace: reader1.news.uu.net 957659745 15208 63.73.218.130
+Xref: news3.best.com alt.sys.pdp10:8470
+
+Timothy Stark wrote:
+> Ok, I am looking for MIG704.MEM file for TOPS-10 v7.04.  I looked for it
+> through Tim's archives and can't find it.
+
+I don't think there is any such file there.  Or anything matching
+MIG*.*, for that matter.  I've looked through the filenames, and
+I've searched through the text for "Installation Guide" and haven't
+turned up anything promising.
+
+The closest we come are some of the *.BWR (Beware) files, which
+did contain some updates to the printed Installation Guide notes.
+
+The 7.04 Beware file, at
+
+http://pdp-10.trailing-edge.com/pdp-10/TOPS10_704_MONITORANF_BB-X140C-SB/704.BWR
+
+simply refers you to:
+
+  3.0  INSTALLATION INSTRUCTIONS
+
+  For normal installation, refer to the  TOPS-10  Software  Installation
+  Guide.
+
+Without a printed copy of the Installation Guide, we pretty much have
+to stick to people's memories and the sources for guidance, it seems!
+
+Tim.
+
+
+Article 8478 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!207.172.3.37!feed1.news.rcn.net!rcn!207-172-255-251
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: Good news but...
+Date: Sun, 07 May 00 08:55:14 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 40
+Message-ID: <8f3klo$5gt$6@bob.news.rcn.net>
+References: <uAKQ4.54772$MB.1175375@news6.giganews.com> <DN1R4.58410$MB.1231264@news6.giganews.com> <39148220.531B4E8D@trailing-edge.com> <Hu4R4.570$701.16824@news4.giganews.com>
+X-Trace: HlP9k2o/Ucr5i9yFGgwNMXtjBl+pTFU/+RsEPwQKkF4=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 7 May 2000 11:39:36 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: news3.best.com alt.sys.pdp10:8478
+
+In article <Hu4R4.570$701.16824@news4.giganews.com>,
+   Timothy Stark <sword7@grace.speakeasy.org> wrote:
+>Tim Shoppa <shoppa@trailing-edge.com> wrote:
+>> The 7.04 Beware file, at
+>
+>> 
+http://pdp-10.trailing-edge.com/pdp-10/TOPS10_704_MONITORANF_BB-X140C-SB/70
+4.BWR
+>
+>> simply refers you to:
+>
+>>   3.0  INSTALLATION INSTRUCTIONS
+>
+>>   For normal installation, refer to the  TOPS-10  Software  Installation
+>>   Guide.
+>
+>Yeah.  I looked into that and noticed it. :-(  I learned that in this
+>file.  It said that it requires BOOT V4 to load TOPS-10 7.04 properly.
+>Ah! I already had experience with it when I attempted to load a monitor by
+>using old BOOTM that does not use bootstrap information.
+
+Yea, there was a dependence.  When you take your break, you might
+want to take a look at the MCO file that should have been shipped
+on the Monitor tape.  It contains all of the publishable changes
+to the monitor and we wrote an MCO for just about each and every
+change.  MCO stands for Monitor Change Order.  
+
+The filename should be something like 704.MCO or some combination
+of the letters MCO and the version number of the release.
+
+In that file, should be a description of why the change
+caused these versions of BOOT and the monitor to be tied
+together.  A perusal of the edit history of the file BOOT.MAC
+should also give you a clue.  Tony Dzedzic would have done
+most of those changes, although it might be under DPM's name.
+
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 8477 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!207.172.3.37!feed1.news.rcn.net!rcn!207-172-255-251
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: Good news but...
+Date: Sun, 07 May 00 08:45:21 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 70
+Message-ID: <8f3k36$5gt$3@bob.news.rcn.net>
+References: <uAKQ4.54772$MB.1175375@news6.giganews.com> <DN1R4.58410$MB.1231264@news6.giganews.com> <8f2cvi$5ct$1@slb6.atl.mindspring.net>
+X-Trace: nd8bbJgPyl+R4iiqqF7gneoNFpPcLTcydVL1W8wwQjI=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 7 May 2000 11:29:42 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: news3.best.com alt.sys.pdp10:8477
+
+In article <8f2cvi$5ct$1@slb6.atl.mindspring.net>,
+   bugs@netcom5.netcom.com (Mark Hittinger) wrote:
+>Timothy Stark <sword7@grace.speakeasy.org> writes:
+>>Ok, I am looking for MIG704.MEM file for TOPS-10 v7.04.  I looked for it
+>>through Tim's archives and can't find it.
+>
+>Maybe look for mig704.rnm or .rno :-)
+
+I was not allowed to ship sources, so this is not good advice.
+If there's way to do wildcarding, look for MIG70?.???.
+I don't remember review a MIG704, nor do I remember arrangements
+for having a Token Dummy do an installation.  Although all
+of shit went on with that 7.04 release.
+
+
+>
+>I don't remember there being one of these for each release. 
+
+Sigh!  There had to be if the installation procedures 
+were changed.  
+
+> I do remember
+>a "beware" file being attached to each release, look for *.bwr.  What we
+>generally had was a document for a major release and the minor releases
+>that came afterwards generally had differences mentioned in the beware
+>file.  
+
+No, no, no.  A beware file would not have mentioned anything
+about installation procedures.  I guarantee you that since
+I was the one who farted around with them all.
+
+However, it's a good point about pointing him at the beware
+files...and I mean _every_ beware file.  For the CUSP tape,
+I combined all of the beware files into one, CUSP.BWR, when
+I redesigned the tape format into SFDs. 
+
+>(i.e. you might find a mig700.mem in the 7.0 distribution and then
+>any changes from that would be in a ???704.bwr file on the 7.04 tape)
+
+No, NO, NOOO.  The mig700 would have no bearing on a V7.04 installation.
+
+Things changed drastically between the ships of V7.00 and V7.04.
+Think DECnet, HSCs, RP07s, TU78s, etc.
+
+<snip>
+
+>You are certainly getting ready to step into the hostile 
+>territory where your
+>brain will begin to hurt.  
+
+Yup.  I was going to tell him to take a break for a day or
+two to rest it :-).
+
+>Having access to an actually working KL-10 or
+>KS-10 would be quite helpfull to you at this point because you can code
+>small examples and try them out on a "reference implementation".
+>
+>These instructions (especially edit) have a lot of very weird boundary
+>condition behavior that I'm not sure anyone understands.
+Well, we won't even tell him that all the processors gave
+different results when zero was divided by zero.  Jim
+"discovered" this based on an SPR.  The SPR only talked
+about one processor but Jim got curious about the other
+processor.  He got different results (but I don't remember
+what they were :-(((  ) for a KA, KI, and KL.  The KS
+didn't exist at the time.  He chuckled for a week.
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+

@@ -1,0 +1,130 @@
+Article 3929 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!su-news-hub1.bbnplanet.com!news.bbnplanet.com!newsfeed.wli.net!Supernews73!supernews.com!Supernews69!not-for-mail
+From: racerdave@net1plus.com (SP-1)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Re: List of file extensions used on TOPS-10 and TOPS-20
+Date: Sat, 23 May 1998 16:09:00 GMT
+Organization: "Postulate" Terrorist
+Lines: 56
+Message-ID: <3566f112.10705406@news.net1plus.com>
+References: <6k3dgj$hr9$1@shell3.ba.best.com> <6k3n99$tee$2@ligarius.ultra.net>
+Reply-To: racerdave@net1plus.com
+NNTP-Posting-Host: 208.200.157.74
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: 895943165 P0XQBQRYN9D4AD0C8C usenet58.supernews.com
+X-Complaints-To: newsabuse@supernews.com
+X-Newsreader: Forte Agent 1.5/32.452
+X-No-Archive: yes
+Xref: nntp1.ba.best.com alt.sys.pdp10:3929
+
+On Fri, 22 May 98 10:33:40 GMT, jmfbahxx@ma.ultranet.com appears to have said:
+
+> There was also an appendix or something in the commands manual
+> that listed absolutely everything.
+> 
+> /BAH
+
+Well, I looked in my books, and it wasn't there, however I did find:
+
+Size of Swapping Monitor:
+
+	1)	Required code (10K)
+	2)	Optional device code (0-4K)
+	3)	Tables and buffers per job (1K for every 8 jobs)
+
+Required code
+
+	Lower core		96
+	COMMON			475
+	CLOCK1			376
+	COMCON			1592
+	CORE1				214
+	DLSINT			48
+	DSKINT			130
+	DSKSRB			2448
+	ERRCON			211
+	SCHEDB			741
+	SCNSRF			1264
+	SEGCON			709
+	SYSINI			81
+	UUOCON			1190
+						-----
+						10375 words (decimal)
+
+(I skipped the optional device stuff)
+
+Tables and buffers
+
+	21	Words of tables per job
+	54	Words of DSK device data block space per job
+	55	Words of TTY device data block space per job
+	130 Words per job
+
+Total for Complete 16 user system = 10375 + 3987 + 16 * 130 = 16442 Words
+
+WARNING:	The Monitor [their capitol M] will continue to grow despite the best
+efforts to prevent it.  Most new features are put in with conditional assembly
+so that a customer can reduce this size of the Monitor by giving up some of the
+new features.
+
+[A 64 job complete system (all devices) required 22.7 K words]
+[A "Multi-Programminf non-disk Monitor" required about 1/2 the space...]
+
+--
+
+I wait for delivery, every day until three.
+
+
+Article 3937 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!su-news-hub1.bbnplanet.com!news.bbnplanet.com!newsfeed.wli.net!Supernews73!supernews.com!Supernews69!not-for-mail
+From: racerdave@net1plus.com (SP-1)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Re: Re: List of file extensions used on TOPS-10 and TOPS-20
+Date: Sun, 24 May 1998 13:59:54 GMT
+Organization: "Postulate" Terrorist
+Lines: 28
+Message-ID: <356824f8.1571406@news.net1plus.com>
+References: <6k3dgj$hr9$1@shell3.ba.best.com> <6k3n99$tee$2@ligarius.ultra.net> <3566f112.10705406@news.net1plus.com> <6k90pd$ula$2@ligarius.ultra.net>
+Reply-To: racerdave@net1plus.com
+NNTP-Posting-Host: 208.200.157.82
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: 896018501 P0XQBQRYN9D52D0C8C usenet88.supernews.com
+X-Complaints-To: newsabuse@supernews.com
+X-Newsreader: Forte Agent 1.5/32.452
+X-No-Archive: yes
+Xref: nntp1.ba.best.com alt.sys.pdp10:3937
+
+On Sun, 24 May 98 10:46:10 GMT, jmfbahxx@ma.ultranet.com appears to have said:
+
+> 
+> Wow!  I don't remember ever seeing that.  You must be looking at
+> the original phone book?  (I think I typed every document in the
+> Notebooks that came out in the early 70s.)
+> 
+> /BAH
+
+PDP-10 Reference Handbook, Copyright 1969.  Its in a slightly "shorter" format
+then the other phone books, and has a glossy cover (with pictures!).  But yes,
+it's the original phone book.
+
+One picture of an RP02 with cover open, one of two men (with ties) looking that
+the asr33 console, one of a spinning DECtape (tu55) with someone's hand,   Other
+rather silly pictures, and the back had a picture of the entire system, with a
+key to what each box in the picture was.
+
+I also have a decsystem10 assembly language handbook, mathematical languages
+handbook, and the (ugh!) cobol language handbook, all three being the later
+(second) edition, in the slightly taller format.  These are from 1972 and 1973.
+These had the blue and orange covers, no pictures.
+
+bah:  I still have part of KA#1 in the basement......
+
+--
+
+I wait for delivery, every day until three.
+
+

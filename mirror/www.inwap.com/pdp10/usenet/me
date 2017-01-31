@@ -1,0 +1,50 @@
+Article: 21330 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!sjc-peer.news.verio.net!news.verio.net!iad-read.news.verio.net.POSTED!not-for-mail
+Newsgroups: alt.sys.pdp10,alt.sys.pdp11,comp.os.vms
+Subject: Re: PDP-11 OS Release Dates
+References: <behgbr047t@enews4.newsguy.com> <bgtj4m$r50$5@bob.news.rcn.net> <bgtqd7$lnh$1@tabloid.uwaterloo.ca> <VrqdnYQY_sgOG6qiXTWc-g@speakeasy.net>
+Organization: Chez Inwap
+X-Newsreader: trn 4.0-test76 (Apr 2, 2001)
+From: inwap@inwap.com (Joe Smith)
+Originator: inwap@inwap.com (Joe Smith)
+Lines: 30
+Message-ID: <hr_1b.261$Zr2.10494@iad-read.news.verio.net>
+Date: Sun, 24 Aug 2003 08:11:57 GMT
+NNTP-Posting-Host: 130.94.177.175
+X-Complaints-To: abuse@verio.net
+X-Trace: iad-read.news.verio.net 1061712717 130.94.177.175 (Sun, 24 Aug 2003 08:11:57 GMT)
+NNTP-Posting-Date: Sun, 24 Aug 2003 08:11:57 GMT
+Xref: dfw-artgen alt.sys.pdp10:21330 alt.sys.pdp11:8464 comp.os.vms:192359
+
+In article <VrqdnYQY_sgOG6qiXTWc-g@speakeasy.net>,
+Rob Warnock <rpw3@rpw3.org> wrote:
+>Even in PDP-10 land, having multiple entry points was not all that
+>uncommon (though on the -10 one couldn't jump into the middle of an
+>instruction, of course).
+
+Another example:
+
+OCTOUT::TDZA	T3,T3		; Output T1 in octal
+DECOUT:: MOVEI	T3,2		; Output T1 in decimal
+	IDIVI	T1,8(T3)	; Divide by 8 or by 10
+	HRL	T2,(P)		; Put remainder on program stack
+	SKIPE	T1		; Stop when done
+	 PUSHJ	P,DECOUT+1	; Recursively create digits, right to left
+	HLRZ	T1,(P)		; Next digit
+	ADDI	T1,"0"		; Convert to ASCII
+CHROUT::OUTCHR	T1		; Output T1 as a single ASCII character
+	POPJ	P,		; Loop back to RADOUT+4 until done
+
+
+Another variation on the theme:
+
+OCTOUT:	SKIPA	T3,CHROUT+1
+DECOUT:	 MOVEI	T3,^D10
+RADOUT:	IDIVI	T1,0(T3)	; RH of T3 is the radix; 2, 8, or 10.
+	...
+CHROUT:	OUTCHR	T1
+	POPJ	P,8		; Store constant in RH of this instruction
+-- 
+See http://www.inwap.com/ for PDP-10 and "ReBoot" pages.
+
+

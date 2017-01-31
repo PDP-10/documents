@@ -1,0 +1,535 @@
+Article 6154 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!hermes.visi.com!news-out.visi.com!uunet!ffx.uu.net!world!mbg
+From: mbg@world.std.com (Megan)
+Subject: Re: Stu's Emulator? open-source TOPS-10/20 and ITS?
+Message-ID: <FKnLH1.E2r@world.std.com>
+Date: Thu, 4 Nov 1999 03:24:36 GMT
+References: <7vee6l$6ud$1@autumn.news.rcn.net> <381b77af@news.spies.com> <FKG7yG.CD8@world.std.com> <7vh5mq$4j5$2@autumn.news.rcn.net>
+Organization: The World Public Access UNIX, Brookline, MA
+Lines: 39
+Xref: news3.best.com alt.sys.pdp10:6154
+
+jmfbahciv@aol.com writes:
+
+>Which ones?  Also is the RP06 something you built?  If it's just
+>from a monitor distribution, it probably will be missing a whole
+>lot.  There were quite a bit of extra liscenses.
+
+The RP06 was built for me by an old friend... Don Mastrovito.  He
+built it from the tapes that I also have.  I just pulled out all
+the tapes I could find today, and I have the following (that I
+remember:
+
+	KS10 Microcode
+	KS10 Diagnostics
+	KS10 Formatter (disks, I assume)
+	TOPS-10 7.03 bin/src tapes 1 and 2
+	TOPS-10 ???? CUS CUSP tapes
+
+>What I really want is an honest to goodness list of the tapes
+>specifying the title that's on the tapes.  Then I can tell you
+>which ones are missing or version skewed.  One can get into
+>great trouble if a hodge-podge of version releases are used.
+>There's no point in redebugging what the guys have already done.
+
+I'll try to get a definitive list together tomorrow.  I'm sending
+them off to someone to off-load to image files that we could then
+exchange...
+
+					Megan Gentry
+					Former RT-11 Developer
+
++--------------------------------+-------------------------------------+
+| Megan Gentry, EMT/B, PP-ASEL   | Internet (work): gentry!zk3.dec.com |
+| Unix Support Engineering Group |          (home):  mbg!world.std.com |
+| Compaq Computer Corporation    | addresses need '@' in place of '!'  |
+| 110 Spitbrook Rd. ZK03-2/T43   | URL:     http://world.std.com/~mbg/ | 
+| Nashua, NH 03062               | "pdp-11 programmer - some assembler |
+| (603) 884 1055                 |  required." - mbg                   |
++--------------------------------+-------------------------------------+
+
+
+
+Article 6354 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!colt.net!newspeer.clara.net!news.clara.net!newsfeed.icl.net!newsfeed.icl.net!skynet.be!tank.news.pipex.net!pipex!uunet!ams.uu.net!ffx.uu.net!ffx2nh5!not-for-mail
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Where does BTSPRM.UNV come from?
+Date: Wed, 16 Feb 2000 14:44:38 -0400
+Organization: Trailing Edge Technology
+Lines: 31
+Message-ID: <38AAB7D6.3F923E97@trailing-edge.com>
+References: <Pine.LNX.4.10.10002161351490.775-100000@bony.umtec.com>
+NNTP-Posting-Host: timaxp.trailing-edge.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: ffx2nh5.news.uu.net 950730300 2891 63.73.218.130 (16 Feb 2000 19:45:00 GMT)
+X-Complaints-To: news@ffx2nh5.news.uu.net
+NNTP-Posting-Date: 16 Feb 2000 19:45:00 GMT
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.0     DEC 3000 Model 300L)
+Xref: news3.best.com alt.sys.pdp10:6354
+
+Daniel Seagraves wrote:
+> 
+> Trying to build 7.04 on Toad (still), the code wants BTSPRM.UNV but can't
+> find it, and there's no BTSPRM.MAC.  I found the UNV on a tape image on
+> Tim's page, but I need to know which source file it is built from so I can
+> recompile it (the binary is mostly useless unless someone knows how to
+> extract a .TPC file on Toad.)
+
+You're going to have to explain  more fully what you're trying
+to do.  I *think* I'm the "Tim" you refer to in "Tim's page" above,
+but other than that I'm almost completely lost :-)
+
+It may be that what you're looking for is BOOT.MAC at
+
+http://pdp-10.trailing-edge.com/pdp-10/CUSPBINSRC_1OF2_BB-X128C-SB.html
+
+
+In particular, it begins:
+
+UNIVER  BTSPRM - PARAMETER FILE FOR DECSYSTEM-10 BOOTSTRAP
+SUBTTL  D. MASTROVITO /DPM/JAD  3-JUN-88
+
+and then goes for another quarter megabyte or so of Macro-10 code.
+
+Is this perhaps what you're looking for?
+
+-- 
+ Tim Shoppa                        Email: shoppa@trailing-edge.com
+ Trailing Edge Technology          WWW:   http://www.trailing-edge.com/
+ 7328 Bradley Blvd                 Voice: 301-767-5917
+ Bethesda, MD, USA 20817           Fax:   301-767-5927
+
+
+Article 8238 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!cpk-news-hub1.bbnplanet.com!news.gtei.net!firehose.mindspring.com!news.mindspring.com!alderson
+From: alderson@netcom2.netcom.com (Richard M. Alderson III)
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10,alt.folklore.computers
+Subject: Monitor source sizes [was Re: ooh, a *real* flamewar :)]
+Date: 20 Apr 2000 18:38:47 GMT
+Organization: NETCOM On-line services
+Lines: 408
+Message-ID: <ALDERSON.00Apr20113848@netcom2.netcom.com>
+References: <AtP94.8925$7S.6211@news20.bellglobal.com>
+	<slrn8e9qnc.5bk.jmaynard@thebrain.conmicro.cx>
+	<8cqg2u$pkp@adsl-216-61-138-75.dsl.hstntx.swbell.net>
+	<8csf1r$bn7$7@bob.news.rcn.net> <8csgo2$t5@weyl.math.psu.edu>
+Reply-To: alderson@netcom.com
+NNTP-Posting-Host: c7.b7.09.66
+X-Server-Date: 20 Apr 2000 18:39:02 GMT
+In-reply-to: viro@weyl.math.psu.edu's message of 10 Apr 2000 08:17:06 -0400
+Xref: news3.best.com alt.sys.pdp8:5309 alt.sys.pdp10:8238 alt.folklore.computers:155414
+
+In article <8csgo2$t5@weyl.math.psu.edu> viro@weyl.math.psu.edu
+(Alexander Viro) writes:
+
+> ... that's interesting. Rather interesting. Could you give (rough) sizes of
+> monitor source/everything you need to build it/stuff you need to boot the
+> system and at least be able to launch external programs if they are brought
+> to the box? Because even that would be pretty interesting. One can learn a
+> lot about UNIX just from the kernel source. And it seems that you had a lot
+> of stuff we are doing in userland sitting in the monitor.
+
+I've been meaning to get back to this for a week and a half.
+
+In the following directory listings, the fields are
+
+ filename.type.gen	size bytecount(bytesize) date-and-time-of-write
+
+where _size_ is in Tops-20 disk pages (512 words, often with 5 7-bit ASCII
+characters/word).  The header is the structure ("filesystem") and directory.
+
+First, the Tops-20 monitor:
+
+   DXX:<7.MONITOR>
+ ANAUNV.MAC.20     33 84479(7)    7-Oct-1999 13:09:18
+ APRSRV.MAC.75    130 330537(7)   7-Feb-2000 10:29:46
+ ARP.MAC.17        24 60791(7)    6-Oct-1999 10:56:14
+ BOOCMD.MAC.21    120 305629(7)   9-Apr-1998 15:30:46
+ BOOEND.MAC.1       1 110(7)      4-Oct-1995 19:39:50
+ BOOINI.MAC.15     29 73529(7)   13-Nov-1996 14:29:55
+ BOOPAR.MAC.11     29 72859(7)   12-Dec-1996 12:38:39
+ BOOSUB.MAC.14     95 241716(7)  14-Nov-1996 17:41:53
+ BOOTSV.MAC.5       6 13848(7)   20-Nov-1996 14:36:13
+ BOOXRH.MAC.20    109 278314(7)  19-Sep-1997 16:22:39
+ CFSPAR.MAC.3       4 10210(7)   14-May-1997 15:21:06
+ CFSSRV.MAC.8      87 221767(7)  24-Apr-1996 11:48:13
+ CFSUSR.MAC.3      14 33615(7)   29-Sep-1999 16:19:27
+ CHECKD.MAC.46    119 304625(7)   8-Jun-1998 10:58:19
+ CIDLL.MAC.1       24 59203(7)    6-Oct-1995 12:03:13
+ CLUDGR.MAC.4      73 186446(7)  24-Apr-1996 11:53:09
+ CLUFRK.MAC.2      23 57799(7)   24-Apr-1996 11:55:05
+ CLUPAR.MAC.1       4 9700(7)    15-Nov-1988 12:50:28
+ COMND.MAC.6       72 182587(7)   9-Sep-1998 18:51:58
+ CRYPT.MAC.4        8 17928(7)   27-Mar-1999 11:08:52
+ CTERMD.MAC.1      10 23869(7)    6-Mar-1989 13:07:52
+ CTHSRV.MAC.2      49 123316(7)  19-Dec-1995 16:16:14
+ D36COM.MAC.1      60 151450(7)  12-Jun-1995 12:50:44
+ D36PAR.MAC.1      31 78971(7)    3-Mar-1988 11:48:52
+ DATIME.MAC.4      34 85430(7)    3-Jan-2000 10:35:36
+ DEVICE.MAC.3      11 26016(7)   27-Jan-1996 09:28:03
+ DIAG.MAC.3        24 61124(7)   20-Mar-1996 14:29:03
+ DIRECT.MAC.9      87 221091(7)  27-May-1998 09:08:48
+ DISC.MAC.14       49 125185(7)  27-Mar-1999 11:10:13
+ DNADLL.MAC.1      34 85140(7)    8-Nov-1995 12:37:47
+ DOB.MAC.2         35 89503(7)   19-Dec-1995 14:52:01
+ DOMSYM.MAC.1       1 363(7)     12-Jan-1994 18:24:07
+ DSKALC.MAC.34    128 326676(7)  27-Mar-1999 11:13:19
+ DSKDEF.MAC.1       1 1653(7)     8-Sep-1995 13:41:40
+ DSYMS1.MAC.1       2 4371(7)     8-Sep-1988 15:51:03
+ DSYMS2.MAC.1       1 610(7)      8-Sep-1988 14:08:12
+ DTESRV.MAC.2      77 194754(7)  19-Dec-1995 14:52:10
+ ENET.MAC.2        17 41394(7)   19-Dec-1995 17:06:05
+ ENQ.MAC.2         40 101946(7)  19-Dec-1995 16:16:12
+ ENQPAR.MAC.1       3 6058(7)     9-Feb-1988 12:20:24
+ ENQSRV.MAC.1      30 76303(7)    8-Nov-1988 12:33:41
+ EP.MAC.39         25 63626(7)    5-Jun-1999 21:34:12
+ FESRV.MAC.1       11 25685(7)    8-Nov-1995 12:50:27
+ FILINI.MAC.17     26 65396(7)   27-Mar-1999 11:14:54
+ FILMSC.MAC.15     28 71134(7)   27-Mar-1999 11:16:13
+ FORK.MAC.20       78 197990(7)  27-Apr-1999 10:25:15
+ FREE.MAC.12       55 140582(7)  27-Mar-1999 15:07:15
+ FUTILI.MAC.5      15 36603(7)   27-Mar-1999 11:22:31
+ GETSAV.MAC.6      30 75713(7)   26-Jan-2000 11:34:27
+ GLOBS.MAC.42      34 85046(7)   19-Oct-1999 12:50:47
+ GTDOM.MAC.4       27 68364(7)    2-Jan-1998 12:36:58
+ GTJFN.MAC.9       70 177345(7)  27-Mar-1999 12:33:30
+ IO.MAC.20         40 100262(7)   4-Nov-1998 09:03:22
+ IPCF.MAC.9        45 113855(7)   7-Sep-1998 17:22:17
+ IPFREE.MAC.20     25 62846(7)    1-Feb-2000 16:15:44
+ IPIPIP.MAC.27     91 232150(7)  19-Jan-2000 17:44:34
+ JSYSA.MAC.20     118 300777(7)  27-Mar-1999 11:39:19
+ JSYSF.MAC.23     141 360111(7)  27-Mar-1999 11:52:15
+ JSYSM.MAC.41     103 261793(7)  12-Jan-2000 11:45:26
+ LATSRV.MAC.2     111 283985(7)  19-Dec-1995 15:06:29
+ LDINIT.MAC.7       3 5815(7)    11-Feb-1999 08:28:04
+ LINEPR.MAC.2      20 48951(7)   19-Dec-1995 16:22:58
+ LOGNAM.MAC.5      29 73103(7)   27-Mar-1999 11:36:57
+ LOOKUP.MAC.3       9 21959(7)   25-Apr-1996 17:12:16
+ LPFEDV.MAC.1       3 6859(7)     7-Mar-1994 11:35:06
+ MAGTAP.MAC.13     48 122180(7)  20-Dec-1996 14:28:59
+ MEXEC.MAC.90      71 181749(7)  17-Jan-2000 12:40:12
+ MFLIN.MAC.3        5 10871(7)   21-Dec-1995 17:52:44
+ MFLOUT.MAC.2      11 27923(7)   19-Dec-1995 15:07:56
+ MNETDV.MAC.23     41 104772(7)  11-Oct-1999 15:23:51
+ MSCPAR.MAC.1      11 25970(7)   11-Feb-1988 08:03:23
+ MSTR.MAC.18       52 131751(7)  27-Mar-1999 11:47:15
+ NAMXKL.MAC.1       1 715(7)     27-Dec-1993 11:03:37
+ NEADV.MAC.1       47 118769(7)  26-Oct-1995 18:27:21
+ NIPAR.MAC.1        5 12361(7)   11-Feb-1988 08:42:49
+ NOKLPA.MAC.1       1 1080(7)    26-Oct-1995 16:56:08
+ PAGEM.MAC.89     131 333934(7)  25-Feb-1999 15:43:15
+ PAGUTL.MAC.59    138 352481(7)  31-Mar-1999 16:30:31
+ PARAMS.MAC.12      6 15143(7)   26-Feb-1999 09:46:29
+ PARKL.MAC.1        2 2586(7)     8-Mar-1994 17:28:15
+ PARTD1.MAC.12      2 4564(7)    21-Jan-2000 12:49:25
+ PAT20I.MAC.16     20 50237(7)    1-Dec-1999 08:22:20
+ PATPAR.MAC.10      6 14968(7)   19-Jun-1999 14:16:01
+ PDVADR.MAC.1       1 62(7)       7-Sep-1993 17:21:03
+ PHYH2.MAC.1       22 54931(7)   14-Jun-1995 13:37:00
+ PHYKLP.MAC.2      97 245854(7)  10-Nov-1995 16:47:52
+ PHYM2.MAC.1       21 53294(7)    7-Sep-1995 18:44:48
+ PHYM78.MAC.2      23 58336(7)    8-Nov-1995 18:21:07
+ PHYMEI.MAC.1      16 40388(7)    5-Mar-1994 17:17:13
+ PHYMSC.MAC.2      52 132661(7)  28-Nov-1995 14:21:03
+ PHYMVR.MAC.1      33 83134(7)   14-Jun-1995 15:39:03
+ PHYPAR.MAC.15     18 45010(7)    9-Oct-1997 14:58:53
+ PHYPAT.MAC.22     70 177095(7)  20-Oct-1999 16:56:49
+ PHYSDK.MAC.62     42 104999(7)   6-Apr-1999 17:23:44
+ PHYSIO.MAC.72     79 200795(7)   9-Aug-1999 10:48:43
+ PHYSTP.MAC.62     29 73250(7)    7-Oct-1999 13:02:26
+ PHYT20.MAC.10     35 89393(7)   21-Jul-1997 15:53:10
+ PHYXNI.MAC.27     34 86460(7)   13-Oct-1999 12:32:05
+ PHYXRH.MAC.90     61 155700(7)   7-Sep-1998 17:49:35
+ PIPE.MAC.4        13 30889(7)   19-Oct-1999 09:13:15
+ PKOPR.MAC.1       15 36455(7)   15-Jul-1994 09:09:58
+ POSTLD.MAC.13     32 80175(7)   26-Feb-1999 12:06:06
+ PROLOG.MAC.35     75 191130(7)  26-Feb-1999 12:09:53
+ PUP.MAC.2        112 285831(7)  10-Nov-1995 16:51:18
+ PUPNM.MAC.1       15 37103(7)    5-Mar-1994 17:24:53
+ PUPPAR.MAC.1       2 3243(7)    14-Jan-1994 10:08:32
+ PURGE.MAC.1        1 431(7)     13-Jan-1994 21:42:19
+ REL7.MAC.1         1 582(7)     26-Dec-1993 14:00:06
+ RSXSRV.MAC.1      20 49361(7)    7-Mar-1994 11:38:22
+ SCAMPI.MAC.4     135 345117(7)   7-Sep-1998 17:43:36
+ SCAPAR.MAC.2      46 116079(7)   7-Sep-1998 17:39:20
+ SCHED.MAC.78     114 291216(7)   7-Sep-1998 18:22:27
+ SCPAR.MAC.1        7 16605(7)   11-Feb-1988 15:33:06
+ SCSJSY.MAC.4      75 190126(7)  24-Apr-1996 15:08:56
+ SERCOD.MAC.18      9 22038(7)   21-Jun-1996 14:45:57
+ SETCOD.MAC.1       1 14(7)      13-Jan-1994 22:45:39
+ SETSPD.MAC.15     62 156528(7)  25-Nov-1997 18:17:26
+ SITE.MAC.2         1 279(7)     19-Dec-1995 17:25:07
+ STG.MAC.75       142 362792(7)   5-Oct-1999 12:44:31
+ SWPALC.MAC.31     16 38759(7)    9-Oct-1997 18:30:08
+ SYSERR.MAC.12     13 31144(7)    6-Aug-1998 10:17:13
+ TAPE.MAC.17       81 205121(7)  27-Mar-1999 11:50:39
+ TCPBBN.MAC.14     27 66753(7)   26-Feb-1999 13:01:01
+ TCPCRC.MAC.3       6 14886(7)   26-Nov-1997 11:06:42
+ TCPJFN.MAC.20     36 90821(7)    1-Mar-1999 14:54:11
+ TCPTCP.MAC.26     94 240002(7)   1-Mar-1999 15:00:04
+ TD1DEF.MAC.17      9 22209(7)   13-Jan-1999 12:01:58
+ TIMER.MAC.3        9 22170(7)   21-Dec-1995 18:09:24
+ TTYDEF.MAC.4       9 20615(7)   26-Nov-1997 11:44:27
+ TTYSRV.MAC.24    102 259349(7)  15-Dec-1997 16:02:00
+ TVTSRV.MAC.13     26 65480(7)    2-Jan-1998 17:42:07
+ VEDIT.MAC.1        1 16(7)      11-Mar-1994 11:40:29
+ VERSIO.MAC.488     2 2668(7)     5-Jun-1999 22:32:58
+ XNI10I.MAC.1       4 8366(7)    30-Oct-1995 09:42:24
+ XNI20I.MAC.23     16 39343(7)    1-Dec-1999 08:21:57
+ XNIPAR.MAC.7       7 17303(7)   19-Feb-1998 15:40:30
+
+ Total of 5432 pages in 136 files
+
+The page count allows for a maximum of 13,905,920 bytes of source.  The binary
+is called MONITR.EXE:
+
+ TOAD:<SYSTEM>
+ MONITR.EXE.102560     504 258048(36)  3-Jan-2000 11:15:23
+
+The command processor, called EXEC.EXE, is a user-level program, like the Unix
+shell, but we should compare it, as well:
+
+   DXX:<7.EXEC>
+ EDEXEC.MAC.68      1 33(7)      11-Oct-1999 15:57:32
+ EXEC0.MAC.6       61 155695(7)  26-Aug-1997 15:52:31
+ EXEC1.MAC.14      56 141625(7)  18-Mar-1998 16:48:07
+ EXEC2.MAC.4       22 54129(7)    1-Feb-1996 17:57:50
+ EXEC3.MAC.1       30 75358(7)   20-Apr-1988 14:23:14
+ EXEC4.MAC.5       21 53240(7)   27-Nov-1996 10:28:05
+ EXECCA.MAC.7      18 45657(7)   20-Mar-1998 16:42:05
+ EXECCS.MAC.3      49 125420(7)  19-Jun-1997 21:27:54
+ EXECDE.MAC.5      18 43740(7)   26-Aug-1997 11:40:08
+ EXECED.MAC.1      11 26995(7)   20-Apr-1988 16:44:42
+ EXECF0.MAC.1       1 1077(7)     7-Mar-1988 15:23:00
+ EXECGL.MAC.6      11 25699(7)   29-Jun-1996 15:25:09
+ EXECHS.MAC.1      41 104775(7)   6-Dec-1985 23:06:52
+ EXECIN.MAC.21     57 143977(7)  20-Mar-1998 17:32:35
+ EXECMI.MAC.2      23 57943(7)   26-Mar-1996 18:54:17
+ EXECMT.MAC.2      16 40213(7)   10-Jun-1996 18:13:09
+ EXECP.MAC.17      63 160910(7)  18-Mar-1998 16:31:23
+ EXECPM.MAC.1      21 52520(7)   21-Mar-1985 11:06:19
+ EXECPR.MAC.5      16 38582(7)   13-Aug-1997 16:07:53
+ EXECPS.MAC.1       8 18836(7)    9-Mar-1981 19:49:13
+ EXECQU.MAC.2      50 126568(7)  28-Aug-1997 11:05:51
+ EXECSE.MAC.10     64 161609(7)   3-Sep-1997 10:05:13
+ EXECSU.MAC.21     92 233862(7)  11-Oct-1999 15:56:19
+ EXECTT.MAC.1       5 11239(7)   29-Mar-1985 20:02:19
+ EXECVR.MAC.3       2 3117(7)    25-Jan-1996 18:20:08
+ MICPRM.MAC.1       1 2319(7)     7-Mar-1988 15:28:21
+ SUDEF.MAC.3        2 2886(7)    25-Jan-1996 18:20:03
+
+ Total of 760 pages in 27 files
+
+for a maximum size of 1,945,600 bytes; the binary is
+
+   TOAD:<SYSTEM>
+ EXEC.EXE.4207       176 90112(36)  11-Oct-1999 15:59:45
+
+For comparison, the Tops-10 monitor sources (which I have to report in Tops-20
+sizes, because we aren't running a Tops-10 system these days) are as follows:
+
+   DXX:<TOPS10.MONITOR>
+ APRSER.MAC.200    76 193304(7)  21-Nov-1996 17:06:52
+ AUTCON.MAC.24     37 94706(7)   11-Jan-1997 17:03:46
+ CLOCK1.MAC.107    59 149970(7)   7-Jan-1997 15:27:13
+ COMCON.MAC.41    143 365343(7)  10-Jun-1997 19:19:25
+ COMDEV.MAC.19     46 116714(7)  12-Dec-1996 18:51:58
+ COMMOD.MAC.31     51 130162(7)  23-Oct-1996 11:56:42
+ COMMON.MAC.303   159 406885(7)   8-Jan-1997 16:52:00
+ CORE1.MAC.43      31 76828(7)    3-Jan-1997 14:22:33
+ CPNSER.MAC.33     37 94068(7)   17-Oct-1996 12:10:07
+ CTXSER.MAC.10     46 117509(7)   4-Oct-1996 12:37:06
+ D36COM.MAC.2      55 138993(7)  11-Dec-1996 12:23:11
+ D36PAR.MAC.2      28 71595(7)   11-Dec-1996 17:57:51
+ DATMAN.MAC.7      15 36148(7)    7-Nov-1996 14:30:02
+ DEVPRM.MAC.23     29 73290(7)   22-Oct-1996 16:42:17
+ DNADLL.MAC.2      44 110931(7)  10-Dec-1996 17:19:58
+ ERRCON.MAC.21     56 142521(7)   3-Sep-1996 17:56:49
+ ETHPRM.MAC.3      10 4688(36)   15-Feb-1988 23:53:00
+ ETHSER.MAC.3      35 87282(7)   11-Dec-1996 10:39:30
+ ETHUUO.MAC.2      26 64535(7)   24-Apr-1990 23:08:00
+ F.MAC.29           2 2856(7)    10-Dec-1996 17:42:18
+ FAKEND.MAC.1       1 108(7)      6-Jun-1995 16:50:39
+ FAKKNI.MAC.3       2 2719(7)    10-Dec-1996 14:51:10
+ FAKSRV.MAC.21      3 7563(7)    11-Dec-1996 17:57:50
+ FAKSTG.MAC.27      8 18227(7)   28-Mar-1997 20:49:38
+ FAKT20.MAC.96      6 15101(7)   10-Jun-1997 20:22:22
+ FILFND.MAC.4      77 196720(7)   8-Aug-1996 10:18:44
+ FILIO.MAC.61     140 356152(7)   8-Nov-1996 14:30:11
+ FILUUO.MAC.9     116 295929(7)  16-Oct-1996 14:52:06
+ FTEDDT.MAC.7       1 462(7)     24-Jun-1996 14:19:43
+ FTEJBD.MAC.1       1 53(36)     15-Feb-1988 23:54:00
+ FTSIM.MAC.1        1 12(7)      21-Jun-1995 15:15:58
+ FYSORG.MAC.1       1 152(7)     11-Sep-1995 15:49:17
+ IMPDDB.MAC.2       5 11061(7)   12-Aug-1996 16:51:33
+ IMPINT.MAC.3       9 21227(7)   12-Aug-1996 17:02:29
+ IMPMAC.MAC.6      75 189557(7)  12-Aug-1996 17:06:28
+ IMPSER.MAC.4      55 138598(7)  12-Aug-1996 14:57:17
+ INTGEN.MAC.7       6 13431(7)   18-May-1995 15:02:51
+ IPCSER.MAC.12     49 125099(7)  28-Oct-1996 12:15:35
+ IPSER.MAC.6       24 60389(7)   11-Aug-1996 14:03:59
+ KNISER.MAC.32     55 140528(7)  16-Jan-1997 16:19:07
+ LATSER.MAC.2      97 247178(7)  10-Dec-1996 14:26:49
+ LLINKS.MAC.1      90 46056(36)  15-Feb-1988 23:54:00
+ LLMOP.MAC.1       60 30253(36)  29-Nov-1990 11:36:00
+ LLMPRM.MAC.1       2 964(36)    15-Feb-1988 23:54:00
+ LOKCON.MAC.22     37 93861(7)    4-Nov-1996 11:15:31
+ MACSYM.MAC.3      39 98080(7)    2-Feb-1988 03:19:00
+ MACTEN.MAC.2      12 28671(7)    8-Aug-1996 16:51:23
+ MONBEG.MAC.21      2 4675(7)    11-Dec-1996 14:06:50
+ MONGEN.MAC.23     77 196138(7)  12-Dec-1996 18:41:50
+ MONPFH.MAC.12     19 48087(7)   16-Dec-1996 17:03:30
+ MPXSER.MAC.1      20 49935(7)    2-Oct-1990 23:40:00
+ MSISER.MAC.3       3 6288(7)     1-Jun-1995 19:43:08
+ NETDEF.MAC.6       3 7125(7)    31-Jul-1996 16:47:53
+ NETDEV.MAC.2     106 271179(7)  10-Dec-1996 14:27:25
+ NETMAC.MAC.6      11 26585(7)    8-Aug-1996 16:52:43
+ NETPRM.MAC.1      19 47855(7)   24-Apr-1990 23:09:00
+ NETSER.MAC.2     112 284657(7)  11-Dec-1996 14:20:20
+ NETSUB.MAC.6      19 46403(7)   12-Aug-1996 16:44:04
+ NRTSER.MAC.1      49 24785(36)  15-Feb-1988 23:55:00
+ NTMAN.MAC.2       46 116866(7)  10-Dec-1996 14:27:43
+ NULFEK.MAC.2       5 10999(7)   11-Dec-1996 14:31:40
+ ONCMOD.MAC.27     68 172567(7)  27-Aug-1996 18:23:59
+ PARAMS.MAC.6       6 14370(7)   27-Oct-1995 10:07:43
+ PARNEW.MAC.2       1 223(7)      8-Nov-1995 22:15:49
+ PARTD1.MAC.5       2 3251(7)     8-Nov-1995 21:40:37
+ PATCH.MAC.5        1 1173(7)    16-Jul-1996 18:13:02
+ PHXKON.MAC.256    20 50079(7)   10-Jun-1997 19:18:08
+ PSISER.MAC.16     25 63861(7)   16-Dec-1996 15:08:39
+ PTMACS.MAC.3       8 20115(7)    1-Jun-1995 19:44:29
+ PTMSAV.MAC.3       6 14505(7)    1-Jun-1995 19:44:39
+ PTTEST.MAC.3       1 356(7)      1-Jun-1995 19:44:47
+ PTYSER.MAC.1       8 20140(7)   24-Apr-1990 23:09:00
+ QUESER.MAC.4      38 95482(7)    6-Nov-1996 10:00:33
+ REFSTR.MAC.8      26 65736(7)   14-Aug-1996 10:05:04
+ REL1.MAC.6         1 324(7)     12-Mar-1979 11:15:43
+ ROUTER.MAC.1      85 215160(7)  24-Apr-1990 23:09:00
+ RTTRP.MAC.5       12 30162(7)    2-Sep-1996 11:59:03
+ S.MAC.144        112 284353(7)  10-Dec-1996 16:52:32
+ SCHED1.MAC.22     60 151961(7)  16-Oct-1996 14:54:31
+ SCLINK.MAC.2      86 219971(7)  11-Dec-1996 16:28:44
+ SCMUUO.MAC.2      30 75173(7)   11-Dec-1996 12:08:08
+ SCNSER.MAC.23    158 404446(7)   7-Nov-1996 15:51:45
+ SCPAR.MAC.1        6 2856(36)   15-Feb-1988 23:56:00
+ SEGCON.MAC.31     87 222289(7)   4-Nov-1996 14:57:46
+ STTEST.MAC.3       1 240(7)      1-Jun-1995 19:49:24
+ STVARS.MAC.3       1 2260(7)     1-Jun-1995 19:49:29
+ SWPSER.MAC.24     10 23357(7)   23-Oct-1996 15:29:12
+ SYSINI.MAC.143    72 183281(7)  16-Jan-1997 17:35:20
+ T20FAK.MAC.2       2 3575(7)     1-Jun-1995 19:50:44
+ TAPSER.MAC.20     23 57576(7)   18-Nov-1996 16:34:12
+ TAPUUO.MAC.56     59 150554(7)   8-Nov-1996 15:05:49
+ TCPSER.MAC.11     57 145447(7)  11-Aug-1996 14:19:48
+ TD1SER.MAC.42      7 15851(7)   25-Nov-1996 13:49:22
+ TMPUUO.MAC.1       5 2306(36)   15-Feb-1988 23:56:00
+ USRONC.MAC.9      12 29014(7)   25-Oct-1996 14:32:49
+ UUOCON.MAC.50    172 437824(7)   7-Nov-1996 15:59:10
+ VEDIT.MAC.5        1 16(7)      11-Mar-1994 11:40:29
+ VERSIO.MAC.5       3 6050(7)     8-Nov-1995 22:26:21
+ VMSER.MAC.141    162 413919(7)  16-Dec-1996 15:12:15
+ XNI10I.MAC.4       4 8760(7)    27-Sep-1996 16:30:20
+
+ Total of 3886 pages in 100 files
+
+This is a maximum of 9,948,160 bytes, and includes the command interpreter,
+which is part of the monitor.  The binary, named SYSTEM.EXE, is
+
+   DXX:<TOPS10.MONITOR.BUILD>
+ SYSTEM.EXE.213   528 270336(36) 10-Jun-1997 20:26:58
+
+ Total of 528 pages in 1 file
+
+Finally, general operating system services (print spooler, magtape and disk
+mounting, etc.) are provided by the GALAXY subsystem, a collection of programs
+that communicate among each other and with the EXEC by IPCF.  All of this is
+user-level code (and much of it is common between Tops-20 and Tops-10).
+
+   DXX:<7.GALAXY>
+ BATCON.MAC.1      59 148726(7)   8-Mar-1988 13:31:12
+ BATLOG.MAC.1       8 18750(7)    8-Mar-1988 13:33:07
+ BATMAC.MAC.1       7 15692(7)    8-Mar-1988 13:33:42
+ D60JSY.MAC.1      55 140132(7)   5-Jul-1988 12:04:30
+ D60UNV.MAC.1      15 35943(7)   11-Mar-1988 12:45:27
+ GALCNF.MAC.2       3 5920(7)    11-Sep-1996 14:41:37
+ GALGEN.MAC.4      19 47759(7)   11-Sep-1996 14:40:59
+ GLXCOM.MAC.1       9 22946(7)    8-Mar-1988 13:44:40
+ GLXFIL.MAC.1      29 72134(7)    8-Mar-1988 13:45:23
+ GLXINI.MAC.1       4 9221(7)     8-Mar-1988 13:46:31
+ GLXINT.MAC.2      18 45136(7)   15-Feb-1996 17:33:39
+ GLXIPC.MAC.1      23 57364(7)    8-Mar-1988 13:47:55
+ GLXKBD.MAC.1      17 42633(7)    8-Mar-1988 13:48:25
+ GLXLNK.MAC.1       8 17995(7)    8-Mar-1988 13:49:06
+ GLXMAC.MAC.2      55 139554(7)  15-Feb-1996 17:35:21
+ GLXMEM.MAC.1      13 32945(7)    8-Mar-1988 13:50:30
+ GLXOTS.MAC.1       3 6588(7)     8-Mar-1988 13:50:59
+ GLXPUR.MAC.1       1 13(7)       5-Jan-1996 16:19:23
+ GLXSCN.MAC.1      45 114742(7)   8-Mar-1988 13:51:30
+ GLXTXT.MAC.1      19 47607(7)    8-Mar-1988 13:52:49
+ LPTCLU.MAC.1      42 105414(7)   8-Mar-1988 14:00:26
+ LPTDQS.MAC.1      29 71918(7)    6-May-1988 07:26:07
+ LPTMAC.MAC.2      11 27303(7)   15-Feb-1996 17:38:24
+ LPTSPL.MAC.3      86 217650(7)  19-Feb-1996 12:25:25
+ LPTSUB.MAC.2      19 47820(7)   15-Feb-1996 17:40:20
+ LPTUSR.MAC.1       5 10426(7)    8-Mar-1988 14:06:08
+ MOUNTR.MAC.6     186 475819(7)  20-Dec-1996 15:51:01
+ MTRCFS.MAC.1      18 45467(7)    8-Mar-1988 14:08:13
+ MTRDDB.MAC.1       8 18208(7)    8-Mar-1988 14:09:10
+ MTRFOO.MAC.1       1 237(7)     20-Dec-1996 15:29:39
+ MTRMAC.MAC.6      24 59325(7)   20-Dec-1996 16:58:09
+ MTRUSR.MAC.1       2 3067(7)     8-Mar-1988 14:11:29
+ NEBMAC.MAC.1      35 88865(7)    5-May-1988 15:19:41
+ NEBULA.MAC.1     127 324068(7)  14-May-1988 11:04:18
+ OPR.MAC.2         24 61121(7)   15-Feb-1996 17:17:20
+ OPRCMD.MAC.2      17 41962(7)   15-Feb-1996 17:41:59
+ OPRERR.MAC.1       2 3701(7)     8-Mar-1988 14:19:22
+ OPRLOG.MAC.1      12 28763(7)    8-Mar-1988 14:20:08
+ OPRNEB.MAC.1      12 28275(7)    5-May-1988 15:39:30
+ OPRNET.MAC.1       5 12444(7)    8-Mar-1988 14:21:06
+ OPRPAR.MAC.1      35 88621(7)   14-Apr-1988 19:20:03
+ OPRQSR.MAC.4      43 108104(7)  20-Dec-1996 10:38:34
+ OPRSCM.MAC.3      15 38325(7)   20-Dec-1996 10:37:55
+ ORION.MAC.2       86 218936(7)  15-Feb-1996 17:21:30
+ ORNMAC.MAC.2      46 117226(7)  20-Dec-1996 10:37:16
+ PLEASE.MAC.1      10 24941(7)    8-Mar-1988 14:48:32
+ QSRADM.MAC.3      42 105379(7)   8-Sep-1997 15:55:31
+ QSRDSP.MAC.2      54 136227(7)   1-Feb-2000 12:45:05
+ QSRFSS.MAC.1       9 22185(7)    8-Mar-1988 14:51:04
+ QSRIPC.MAC.1       4 7924(7)     8-Mar-1988 14:51:22
+ QSRMAC.MAC.4      79 201377(7)  20-Dec-1996 10:39:32
+ QSRMDA.MAC.2     126 321789(7)  15-Feb-1996 17:23:47
+ QSRMEM.MAC.1       3 6502(7)     8-Mar-1988 14:53:17
+ QSRNET.MAC.2      27 68129(7)   15-Feb-1996 17:24:31
+ QSRQUE.MAC.2      46 117139(7)  15-Feb-1996 16:37:40
+ QSRSCH.MAC.2      35 87523(7)   15-Feb-1996 17:26:37
+ QSRT20.MAC.4      37 93038(7)   13-Aug-1997 16:09:00
+ QUASAR.MAC.2      16 39014(7)   15-Feb-1996 17:29:12
+ TCPSPL.MAC.11     58 146243(7)  13-Aug-1997 10:56:25
+
+ Total of 1846 pages in 59 files
+
+This is a maximum of 4,725,760 bytes of code; the pieces we use on our Tops-20
+systems total out at
+
+   TOAD:<SYSTEM>
+ QUASAR.EXE.13     63 32256(36)   1-Feb-2000 12:59:24
+ ORION.EXE.8       45 23040(36)  20-Dec-1996 11:02:49
+ MOUNTR.EXE.11     43 22016(36)  20-Dec-1996 17:05:19
+ BATCON.EXE.7      18 9216(36)   20-Dec-1996 11:12:20
+ TCPSPL.EXE.13     19 9728(36)   31-Jul-1997 13:03:30
+ LPTSPL.EXE.20     46 23552(36)  20-Dec-1996 11:21:36
+
+ Total of 234 pages in 6 files
+
+So there you have it.
+
+Rich Alderson			Last LOTS Tops-20 Systems Programmer, 1984-1991
+				Current maintainer, MIT TECO EMACS (v. 170)
+				Customer Advocacy, XKL LLC, 1993-2000
+last name @ XKL dot COM		Chief systems administrator, XKL LLC, 1998-now
+
+

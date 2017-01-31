@@ -1,0 +1,101 @@
+Article 8511 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!uninett.no!CensurBot.NetScum.Dk!newsfeedZ.netscum.dQ!netscum.int!news.algonet.se!algonet!cpk-news-hub1.bbnplanet.com!news.gtei.net!firehose.mindspring.com!news.mindspring.com!alderson
+From: alderson@netcom2.netcom.com (Richard M. Alderson III)
+Newsgroups: alt.sys.pdp11,vmsnet.pdp-11,comp.os.rsts,alt.sys.pdp10
+Subject: Re: PDP-11 9-Track Tapes
+Date: 09 May 2000 22:41:30 GMT
+Organization: NETCOM On-line services
+Lines: 27
+Distribution: inet
+Message-ID: <ALDERSON.00May9154130@netcom2.netcom.com>
+References: <8epj68$4nf$1@info.cs.uofs.edu> <3910228B.49615006@trailing-edge.com>
+	<8eq82h$qdu$1@newsmaster.cc.columbia.edu>
+	<3910717C.768C59DE@trailing-edge.com>
+Reply-To: alderson@netcom.com
+NNTP-Posting-Host: c7.b7.09.66
+X-Server-Date: 9 May 2000 22:41:49 GMT
+In-reply-to: Tim Shoppa's message of Wed, 03 May 2000 18:35:40 -0400
+Xref: news3.best.com alt.sys.pdp11:6772 vmsnet.pdp-11:9806 comp.os.rsts:694 alt.sys.pdp10:8511
+
+In article <3910717C.768C59DE@trailing-edge.com> Tim Shoppa
+<shoppa@trailing-edge.com> writes:
+
+> TOPS-20 never was good at dealing with arbitrary tape formats.  If someone
+> wants to correct me, and show me how to make a "tape image" program under
+> TOPS-20, I'd gladly listen.  But I've had TOPS-20 system programmers tell me
+> that if you do unbuffered I/O, only core-dump format is possible, which means
+> converting the data, and if you use buffered I/O, you can't have a buffer big
+> enough to handle the largest records in core-dump format.
+
+This is all true.
+
+The problem is that tape buffers are taken from the Job Status Block, a monitor
+data structure, and are limited to 20 pages.  A DUMPER-format tape written at
+the maximum blocking factor comes out to 24 pages per block if read back in as
+8-bit bytes, so you can't get an arbitrary tape-copy program to work on Tops-20
+due to size limitations.
+
+I once set out to create a version of Tops-20 with additional space in the JSB
+for tape buffers, to at least allow the copying of maximally sized DUMPER tapes
+(so that I could have more than one copy of a bunch of stuff).  It's hard, a
+lot harder than it ought to be...
+
+Rich Alderson			Last LOTS Tops-20 Systems Programmer, 1984-1991
+				Current maintainer, MIT TECO EMACS (v. 170)
+				Customer Advocacy, XKL LLC, 1993-2000
+last name @ XKL dot COM		Chief systems administrator, XKL LLC, 1998-now
+
+
+Article 3498 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!inwap
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.sys.pdp10
+Subject: Re: File transfers  was Re: Barb, DSKB is not in catalog!
+Date: 15 Feb 2001 10:33:33 GMT
+Organization: Chez Inwap
+Lines: 35
+Message-ID: <96gb9t$2b97$1@nntp1.ba.best.com>
+References: <3A85706B.B4A96DC3@nospam.nospam> <qh3ddh81oy.fsf@ruckus.brouhaha.com> <3A8AE84B.99DF2D93@digiweb.com> <3A8AF157.6ABD1DE1@bartek.dontspamme.net>
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 982233213 77095 206.184.139.134 (15 Feb 2001 10:33:33 GMT)
+X-Complaints-To: abuse@best.com
+NNTP-Posting-Date: 15 Feb 2001 10:33:33 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:3498
+
+In article <3A8AF157.6ABD1DE1@bartek.dontspamme.net>,
+Arthur Krewat  <krewat@bartek.dontspamme.net> wrote:
+>Hans B Pufal wrote:
+>> 
+>> Good point, would it be possible with emulated tapes though? Attach a
+>> host file to a tape drive and ask TOPS-x to read it in, don't know how
+>> the formatting would work but the emulated tape drive can do format
+>> translations if required.
+>> 
+>> Similarily on output, ask TOPS-x to output a tape and have the emulator
+>> write a host  file doing any required reformatting.
+>
+>Having a dumb tape drive device determine filenames on the fly would involve
+>reverse engineering BACKUP. Sheesh.
+
+No, it wouldn't.  TOPS-10 supported ANSI-labeled tapes.
+
+When creating a file on tape, the program could optionally use the ENTER UUO
+to specify a name to associate with the tape file.
+
+When reading a file from tape, a zeroed-out LOOKUP block could be used
+to get the name of the next file.
+
+BACKUP is not involved.  PIP is.
+
+	.COPY MTA:=*.*		; Copy files in current directory to tape
+	.REWIND MTA:
+	.COPY DSK:=MTA:*.*	; Copy files from tape to disk
+
+It doesn't take much programming effort to make a "dump tape drive emulator"
+look for 80-byte records.  You'll find two or more records per block
+in tape file 3n+0 and 3n+2 (with data in tape file 3n+1).
+	-Joe
+--
+See http://www.inwap.com/ for PDP-10 and "ReBoot" pages.
+
+

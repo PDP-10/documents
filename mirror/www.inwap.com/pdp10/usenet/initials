@@ -1,0 +1,1841 @@
+Article 69 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!news.he.net!cnn.nas.nasa.gov!news.hawaii.edu!not-for-mail
+From: Jim Thomas <thomas@atlas.cfht.hawaii.edu>
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 maintainers' initials
+Date: 28 Jun 2000 13:46:39 -1000
+Organization: Canada France Hawai`i Telescope
+Lines: 187
+Message-ID: <wwbt0lmkrk.fsf@atlas.cfht.hawaii.edu>
+References: <wwituzn7i1.fsf@atlas.cfht.hawaii.edu> <39558825.9597CD60@dvorak.amd.remove.com> <Pine.NXT.4.30.0006251320530.14575-100000@Tomobiki-Cho.CAC.Washington.EDU> <wwlmzsm3am.fsf@atlas.cfht.hawaii.edu> <wwituvnanf.fsf@atlas.cfht.hawaii.edu> <eD665.1683$vP1.68435@ord-read.news.verio.net> <wwem5imvsw.fsf@atlas.cfht.hawaii.edu>
+NNTP-Posting-Host: atlas.cfht.hawaii.edu
+X-Trace: news.hawaii.edu 962236000 2965 128.171.80.135 (28 Jun 2000 23:46:40 GMT)
+X-Complaints-To: usenet@hawaii.edu
+NNTP-Posting-Date: 28 Jun 2000 23:46:40 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.6
+Xref: nntp1.ba.best.com alt.sys.pdp10:69
+
+Here's the current version:
+
+List of initials seen on TOPS-10 monitor and CUSP sources
+
+CJA	Carl Appelloff (?)
+RCB	Raun (Spider) Boardman
+VJB	Vern Brownell
+DLC	Larry Campbell (sp?)
+TMC	T. Michael Church (LNS/MIT)
+RCC	Bob Clements
+PFC	Peter Conklin
+WXD	William Davenport
+JLd	Jim delaHoussaye
+DBD	Doug Detroy
+MD	Monique Duhamel
+JAD	Joseph Anthony (Tony) Dziedzic
+TWE	Tom Eggers
+DCE	Dave Elkund
+JE	John Everett
+JMF	Jim Flemming
+CMF	Craig M. Fletcher (also CF?)
+EGF	Ed Fortmiller
+AF	Alan Frantz
+MF	Mauritz (Maury) Fredriksen
+JNG	Mike Gilbert
+RPG	Richard (Dick) Gruen
+PAH	Pat A. Hardy
+JCH	John Hallyburton
+TH	Tom Hastings
+TAH	Ted Hess
+RDH	Bob Houk
+BAH	Barb Huizenga
+PMH	Peter Hurley (also PH? - or was that someone else?)
+MHK	Mark Keplien
+KK	Karen Kolling
+TK	Teunis Korteweg
+AK-DAG	Alan Kotok & Dave Gross
+TL	Tony Lauck
+DAL	Don Lewine
+SML	Sandy Libman
+DRL	Dave Lyons
+AHM	Alan Martin
+WEM	Todd Matson
+DMcC	Dave McClure
+TNM	T. N. McManus
+DPM	Don Mastrovito
+SMM	Steve Meidel
+SRM	Sara Murphy
+DZN	Dave Neff
+TARL	Tarl Neustaedter
+WGN	Wick Nichols
+DMN	David Nixon
+CDO	Chuck O'Toole
+S?P	Steve Pavola
+EP	Eric Peabody
+RAP	Alan Pommer
+KMR	Karen M. Rabideau
+EAR	Ernie Racine
+AJR	Anthony Rizzolo
+LSS	Larry Samberg
+JBS	John Sauter
+EVS	Ernie Socci
+JHT	Jeff Talmadge (sp?)
+NT	Nick Tamburri (?)
+JNT	Jim Thomas (Nothead)
+DRT	Don Todd
+GMU	(George) Mike Uhler
+TW	Tony Wachs
+LW	Larry Wade
+EJW	Ric Werme
+HPW	H. P. Weiss
+CHW	Chris White (?)
+AW	Alan Wilson
+DAW	Don Witcraft
+KBY	Kimo Yap
+PY	Paul Young
+EY	Ed Yourdon
+
+Need Names:
+
+DJB	?
+GSB	?
+MFB	?
+MRB	?
+JBC	?
+MCHC	?
+VJC	?
+CBD	?
+HD	?
+NED	?
+RLD	?
+BGE	? (Bernie Eiben?)
+CF	? (Craig Fletcher?)
+JEF	?
+MCF	?
+RJF	?
+JBG	?
+JEG	?
+RDG	?
+RG	?
+SSG	?
+GBH	?
+GH	?
+RKH	?
+TNH	?
+WLH	?
+DML	?
+DRL	?
+RL	? (Richard Lary?)
+WCL	?
+CAM	? (Chuck McComas?)
+CM	? (Chuck McComas?)
+EGM	? (Eric Magrath?)
+MJM	?
+RCM	?
+WJM	?
+WM	?
+CGN	?
+LLN	? (Laura Neff?)
+KDO	?
+HMP	?
+JMP	?
+NGP	?
+OP	?
+CMQ	?
+AVR	?
+GDR	?
+KR	?
+LCR	?
+RCR	?
+TXR	?
+BGS	?
+DAS	?
+ERS	?
+JCS	?
+LWS	?
+WRS	?
+JMT	?
+MAT	?
+PMV	?
+PMW	?
+WFW	?
+
+Need initials used (guesses to right):
+
+Al Blackington
+Don Black		DLB?
+Sumner Blount		GSB?
+Len Bosack
+Bob Bowering
+Rick Corbin
+Kent King
+Rich Krasin		RLK?
+Frank Natoli
+W. O'Neill
+Serge Polevitzky	SAP?
+Nick Pappas		NGP?
+Dave Plummer
+Kalman Reti		KR?
+Hanley Strapman
+Donalene Trafton
+R.G. Underwood
+P. Watt			PMW?
+W. Weiher		WFW?
+Paul (?) Wexelblat (sp?)
+Pete Wilson		PMW?
+Ken Young
+
+FORTRAN folks
+
+NEA	Norma Able
+AlB	Al (Alan Eugene) Blackington (second time around)
+PLB	Phil Budne
+JLC	John Campbell
+FJI	Frank Infante
+RVM	Randy Meyers
+CDM	Charlie McCutcheon
+CKS	Chris Smith
+TFV	Tom (Thomas Francis Michael) Vasak
+	Sarah Murphy appears above
+
+
+Not DEC, Stevens from TECO
+
+GSB	Gary Brown
+RCM	Robert C. McQueen
+JMP	John Potachnak
+
+
+Article 55 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!feed1.news.rcn.net!rcn!207-172-245-207
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 maintainers' initials
+Date: Wed, 28 Jun 00 07:43:51 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 105
+Message-ID: <8jckhl$j3s$1@bob.news.rcn.net>
+References: <wwituzn7i1.fsf@atlas.cfht.hawaii.edu> <39558825.9597CD60@dvorak.amd.remove.com> <Pine.NXT.4.30.0006251320530.14575-100000@Tomobiki-Cho.CAC.Washington.EDU> <wwlmzsm3am.fsf@atlas.cfht.hawaii.edu> <wwituvnanf.fsf@atlas.cfht.hawaii.edu> <eD665.1683$vP1.68435@ord-read.news.verio.net>
+X-Trace: m5X+0odpvtQf5rUmMBoMCItMaQUI0Y3M1vBeHz3vV9A=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 28 Jun 2000 10:37:41 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:55
+
+In article <eD665.1683$vP1.68435@ord-read.news.verio.net>,
+   jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) wrote:
+>In article <wwituvnanf.fsf@atlas.cfht.hawaii.edu>, 
+>thomas@atlas.cfht.hawaii.edu says...
+>>
+>>With the help of some lists from Phil Budne (mahalo) and previous posts,
+>>here's the current version.
+>
+>Quite an impressive list. 
+
+Yup.  I hadn't realized there had been that many people.
+
+<snip>
+
+>>SRM     Sara Murphy
+>
+>Wife of Dan Murphy, "Father of TOPS-10"
+
+I beg your pardon?
+>
+>>DZN     Dave Neff
+
+>>AW      A. Wilson (?)
+>
+>Alan "Pete" Wilson???
+
+Nope.  There was a Pete Wilson, but he left sometime in 1972 or 73.
+Alan Wilson was the guy who did the 1091, ala, Alan Titcomb, when
+nobody else would let the project get funded.
+
+>
+>>KBY     Kimo Yap
+>
+>Or was this Ken Young??
+
+Nope.  KBY is Kimo; he's on the left coast these days.
+
+<snip>
+
+>>BGE     ?
+>
+>Bernie Eiben??
+
+I don't remember.  
+>
+>>CF      ?
+>
+>Craig Fletcher???
+
+I should remember his but can't at the moment.  I got to
+work for him...twice.
+>
+>>CMF     ?
+
+>>KK      ?
+>
+>First name "Karen", now who can come up with the last name???
+
+Right.  I'm going to be spelling it wrong...Kolling, Kollen?
+
+>>EGM     ?
+
+Possibly, Eric Magrath.
+
+>>EP      ?
+>
+>Eric Peabody??
+
+Yeah...
+
+>>DRT     ?
+>
+>Donalene Trafton???
+
+Nope, this was Don's.
+<snip>
+
+>>Rich Krasin
+>
+>RLK??? (BAH should know this one!)
+
+Yup, I should.  But I'm having a lot of problems with my
+memory retrieval these days :-).
+
+>
+>>Frank Natoli
+>>W. O'Neill
+>>Serge Polevitzky
+>
+>SAP???
+>
+>>Nick Pappas             NGP?
+>>Dave Plummer
+>>Kalman Reti             KR?
+>>Larry Samberg           LSS/LWS?
+>
+>I'm pretty sure Larry was LSS.
+
+Yup.  It was.  Since he was the other GALAXY inventor, his
+name and initials should be sprinkled all over all of the
+GALAXY modules...unless somebody sanitized those, too.
+
+//BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 72 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc01.blue.aol.com!wn4feed!worldnet.att.net!135.173.83.20!wnmasters3!bgtnsc06-news.ops.worldnet.att.net.POSTED!not-for-mail
+From: Nylander@I_HATE_SPAM_EMAIL_worldnet.att.net (Chip Nylander)
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 maintainers' initials
+Message-ID: <395aad1f.3812921@netnews.worldnet.att.net>
+References: <wwituzn7i1.fsf@atlas.cfht.hawaii.edu>
+X-Newsreader: Forte Free Agent 1.1/32.230
+Lines: 22
+Date: Thu, 29 Jun 2000 02:22:32 GMT
+NNTP-Posting-Host: 12.79.179.184
+X-Complaints-To: abuse@worldnet.att.net
+X-Trace: bgtnsc06-news.ops.worldnet.att.net 962245352 12.79.179.184 (Thu, 29 Jun 2000 02:22:32 GMT)
+NNTP-Posting-Date: Thu, 29 Jun 2000 02:22:32 GMT
+Organization: AT&T Worldnet
+Xref: nntp1.ba.best.com alt.sys.pdp10:72
+
+CGN was *me*.   Charles ("Chip" to those  who knew me) G. Nylander.
+
+Hi BAH, remember me?  Probably not.  I was unremarkable.  You were
+always nice, though.
+
+Others that I know that I don't think have been provided in previous
+replies:
+
+RL	Roger Lipsett
+EGM	Evelyn McCarthy
+WCL	William (Bill) C. Lynch
+DJB	David Bell (probably) 
+LCR      L. Carlos Rodriguez
+EAR	Ernie Racine
+VJC	Victor Coppella (probably)
+LLN	Laura Neff (where is David Neff?  Did he never touch TOPS-10?)
+
+I'm a bit surprised at the initials that aren't in the list.  Where is
+Don Dossa, Ira Machefsky, K.P. Young, Ed Fortmuller, CLRH, and others
+I expected to see?
+
+
+
+
+Article 78 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news1.best.com!feeder.via.net!news.he.net!sn-xit-03!supernews.com!sn-inject-01!corp.supernews.com!barn.net1plus.com!127.0.0.1
+From: "Me (again)" <David@Clam.Central.Org>
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 maintainers' initials
+Date: Thu, 29 Jun 2000 06:18:43 -0400
+Organization: ARSCC
+Lines: 14
+Message-ID: <4b8mlsor5ckrcbqprojvcrq0r324qje4u1@4ax.com>
+References: <wwituzn7i1.fsf@atlas.cfht.hawaii.edu> <395aad1f.3812921@netnews.worldnet.att.net>
+Reply-To: ...OTs will know where...Try Gold Base...
+X-Complaints-To: newsabuse@supernews.com
+X-Newsreader: Forte Agent 1.8/32.548
+X-No-Archive: yes
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Xref: nntp1.ba.best.com alt.sys.pdp10:78
+
+On Thu, 29 Jun 2000 02:22:32 GMT, Nylander@I_HATE_SPAM_EMAIL_worldnet.att.net (Chip
+Nylander) wrote:
+
+>DJB	David Bell (probably) 
+>
+>I'm a bit surprised at the initials that aren't in the list.  Where is
+>Don Dossa, Ira Machefsky, K.P. Young, Ed Fortmuller, CLRH, and others
+>I expected to see?
+>
+DJB was NOT Dave Bell.  DBell's full name is David Roger Ingals Bell.  (Don't even ask how
+I know...)  a.k.a.  Buzzard.  He used DIB as his initials, IIRC.
+
+CLRH is still married to KP Young, and still, as far as I know, living in the development
+in Hudson Mass that's right behind the HLO buildings.  
+
+
+Article 86 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!wn3feed!worldnet.att.net!wnmasters3!bgtnsc04-news.ops.worldnet.att.net.POSTED!not-for-mail
+From: Nylander@I_HATE_SPAM_EMAIL_worldnet.att.net (Chip Nylander)
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 maintainers' initials
+Message-ID: <395c1a5e.2971951@netnews.worldnet.att.net>
+References: <wwituzn7i1.fsf@atlas.cfht.hawaii.edu> <395aad1f.3812921@netnews.worldnet.att.net> <wwn1k4m5en.fsf@atlas.cfht.hawaii.edu>
+X-Newsreader: Forte Free Agent 1.1/32.230
+Lines: 29
+Date: Fri, 30 Jun 2000 03:56:08 GMT
+NNTP-Posting-Host: 12.79.180.83
+X-Complaints-To: abuse@worldnet.att.net
+X-Trace: bgtnsc04-news.ops.worldnet.att.net 962337368 12.79.180.83 (Fri, 30 Jun 2000 03:56:08 GMT)
+NNTP-Posting-Date: Fri, 30 Jun 2000 03:56:08 GMT
+Organization: AT&T Worldnet
+Xref: nntp1.ba.best.com alt.sys.pdp10:86
+
+CLRH was "Charlotte L. Richardson Houde".  She did enough "stuff" that
+I had expected to see her initials in the list of maintainers.  An
+energetic maintainer.
+
+As a previous reply pointed out, she was last seen happily married to
+Paul Young in Hudson, MA (which I suppose makes her CLRHY now....).
+
+In the 1970's I was too young and inexperienced in the ways of the
+working world to  realize what a gem of a colleague CLRH was.  Oh that
+all the people I work with now could be so good-natured and energetic
+at the same time.
+
+Jim Thomas <thomas@atlas.cfht.hawaii.edu> wrote:
+
+>>>>>> "Chip" == Chip Nylander <Nylander@I_HATE_SPAM_EMAIL_worldnet.att.net> writes:
+>
+>    Chip> RL Roger Lipsett ....
+>
+>Thanks for the additions.
+>
+>    Chip> I'm a bit surprised at the initials that aren't in the list.
+>    Chip> Where is Don Dossa, Ira Machefsky, K.P. Young, Ed Fortmuller,
+>    Chip> CLRH, and others I expected to see?
+>
+>Initials for the first two?  I seem to remember "CLRH" but no name shows up
+>to go with that :-(  Name?
+>
+>Nothead
+
+
+
+Article 91 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news1.best.com!feeder.via.net!news.he.net!sn-xit-03!supernews.com!sn-inject-01!corp.supernews.com!barn.net1plus.com!127.0.0.1
+From: R.J.S. <not@available.right.now>
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 maintainers' initials
+Date: Fri, 30 Jun 2000 06:37:53 -0400
+Organization: Very Organized
+Lines: 6
+Message-ID: <83uolsg36mct8ctpiu9p1g6sql5o3hr1nl@4ax.com>
+References: <wwituzn7i1.fsf@atlas.cfht.hawaii.edu>
+X-Complaints-To: newsabuse@supernews.com
+X-Newsreader: Forte Agent 1.8/32.548
+X-No-Archive: yes
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Xref: nntp1.ba.best.com alt.sys.pdp10:91
+
+On 23 Jun 2000 16:21:58 -1000, Jim Thomas <thomas@atlas.cfht.hawaii.edu> wrote:
+
+<snip>
+
+DDB  David Dyer-Bennet
+
+
+
+Article 112 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!207.172.3.37!feed1.news.rcn.net!rcn!207-172-255-43
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 maintainers' initials
+Date: Tue, 04 Jul 00 08:46:17 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 33
+Message-ID: <8jsigf$5ss$1@bob.news.rcn.net>
+References: <wwituzn7i1.fsf@atlas.cfht.hawaii.edu> <39558825.9597CD60@dvorak.amd.remove.com> <Pine.NXT.4.30.0006251320530.14575-100000@Tomobiki-Cho.CAC.Washington.EDU> <wwlmzsm3am.fsf@atlas.cfht.hawaii.edu> <wwituvnanf.fsf@atlas.cfht.hawaii.edu> <eD665.1683$vP1.68435@ord-read.news.verio.net> <3960F131.336C925B@MA.UltraNet.Com>
+X-Trace: DmyFAsK3vZ/3JAKCZ/L3L16jAUCVuKoCfEnnqmeKx/4=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 4 Jul 2000 11:41:03 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:112
+
+In article <3960F131.336C925B@MA.UltraNet.Com>,
+   "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+>John Everett wrote:
+>> 
+>> In article <wwituvnanf.fsf@atlas.cfht.hawaii.edu>,
+>> thomas@atlas.cfht.hawaii.edu says...
+>....
+>> >Need Names:
+>....
+>> >BGE     ?
+>> 
+>> Bernie Eiben??
+>
+>Absolutely.
+
+Not necessarily.  I don't remember Bernie doing code.
+What was Brucie baby's initials?
+
+
+>> >Don Witcraft
+>> 
+>> DAW
+>
+>Dave Wright was (also?) DAW.
+
+Nope.  Dave was a late comer.  If he had the same initials
+that had already been used, the rule was that he would have
+to pick a unique set.  That's why you really can't match
+real names to initials and why Magee's file is valuable.
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 113 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!207.172.3.37!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 maintainers' initials
+Date: Tue, 04 Jul 2000 12:07:04 -0400
+Lines: 79
+Message-ID: <39620BA8.7C52A145@MA.UltraNet.Com>
+References: <wwituzn7i1.fsf@atlas.cfht.hawaii.edu> <39558825.9597CD60@dvorak.amd.remove.com> <Pine.NXT.4.30.0006251320530.14575-100000@Tomobiki-Cho.CAC.Washington.EDU> <wwlmzsm3am.fsf@atlas.cfht.hawaii.edu> <wwituvnanf.fsf@atlas.cfht.hawaii.edu> <eD665.1683$vP1.68435@ord-read.news.verio.net> <3960F131.336C925B@MA.UltraNet.Com> <8jsigf$5ss$1@bob.news.rcn.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: 4/LSukpoUzpeFF45GC6UZ9Ci3N3Y1TAgkLObCycQLNQ=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 4 Jul 2000 16:08:44 GMT
+X-Accept-Language:  en,en-US,en-GB,es
+X-Mailer:  Mozilla 4.7 [en] (Win95; U)
+Xref: nntp1.ba.best.com alt.sys.pdp10:113
+
+jmfbahciv@aol.com wrote:
+> 
+> In article <3960F131.336C925B@MA.UltraNet.Com>,
+>    "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+> >John Everett wrote:
+> >>
+> >> In article <wwituvnanf.fsf@atlas.cfht.hawaii.edu>,
+> >> thomas@atlas.cfht.hawaii.edu says...
+> >....
+> >> >Need Names:
+> >....
+> >> >BGE     ?
+> >>
+> >> Bernie Eiben??
+> >
+> >Absolutely.
+> 
+> Not necessarily.  ...
+
+Not only do I have a BGE EMail alias for Bernie dating to the mid-80's,
+the ``Regarding'' header below demonstrates that *he* thought that his
+middle initial was G on 12-Oct-83:
+
+"
+26-Oct-83 13:48:21,1284;000000000011
+
+Sender: VASAK
+
+Date: 26 Oct 1983 1448-EDT
+
+From: Tom Vasak <VASAK at MRFORT>
+
+To: EIBEN at MARKET
+
+cc: AMartin at MRFORT, Dyer-Bennet at KL2137, Hardy at KL2137,
+
+    Nourse at KL2137
+
+Reply-to: Vasak at MRFORT
+
+Subject: Re: BBOARD program
+
+Message-ID: <"MS10(2124)+GLXLIB1(1137)" 11962622553.14.56.167816 at MRFORT>
+
+Regarding: Message from B.G.Eiben LCG-Applications ext 617-467-4431 <EIBEN at MARKET>
+
+              of 12-Oct-83 1912-EDT
+
+In-reply-to: <"MS10(2124)+GLXLIB1(1136)" 11959000576.23.558.56186 at DEC-MARLBORO>
+
+...
+"
+
+>...  I don't remember Bernie doing code.
+
+SEAL-20 security package, at least.
+He also gets credit to this day for contributions to KERMIT.
+
+Was it Bernie who wrote and distributed their own text editor?
+
+
+> >> >Don Witcraft
+> >>
+> >> DAW
+> >
+> >Dave Wright was (also?) DAW.
+> 
+> Nope.  ...
+
+Dave made 155 edits signed DAW in FORHST.MAC alone, and DEC licensed
+and shipped his SITGO contributions signed DAW while still in college.
+
+
+>...  Dave was a late comer.  ...
+
+37 of the edits predating the sole BAH edit 1507 of 4-Jun-81.
+				/AHM/QED
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 115 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!feeder.via.net!news-spur1.maxwell.syr.edu!news.maxwell.syr.edu!feed1.news.rcn.net!rcn!207-172-255-247
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 maintainers' initials
+Date: Wed, 05 Jul 00 08:06:15 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 66
+Message-ID: <8jv4hk$nbn$1@bob.news.rcn.net>
+References: <wwituzn7i1.fsf@atlas.cfht.hawaii.edu> <39558825.9597CD60@dvorak.amd.remove.com> <Pine.NXT.4.30.0006251320530.14575-100000@Tomobiki-Cho.CAC.Washington.EDU> <wwlmzsm3am.fsf@atlas.cfht.hawaii.edu> <wwituvnanf.fsf@atlas.cfht.hawaii.edu> <eD665.1683$vP1.68435@ord-read.news.verio.net> <3960F131.336C925B@MA.UltraNet.Com> <8jsigf$5ss$1@bob.news.rcn.net> <39620BA8.7C52A145@MA.UltraNet.Com>
+X-Trace: 6zHjrQoY1UL3DX8Rs1Khn7+k/RgkXtRWu3/efKXzksE=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 5 Jul 2000 11:01:08 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:115
+
+In article <39620BA8.7C52A145@MA.UltraNet.Com>,
+   "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+>jmfbahciv@aol.com wrote:
+>> 
+>> In article <3960F131.336C925B@MA.UltraNet.Com>,
+>>    "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+>> >John Everett wrote:
+>> >>
+>> >> In article <wwituvnanf.fsf@atlas.cfht.hawaii.edu>,
+>> >> thomas@atlas.cfht.hawaii.edu says...
+>> >....
+>> >> >Need Names:
+>> >....
+>> >> >BGE     ?
+>> >>
+>> >> Bernie Eiben??
+>> >
+>> >Absolutely.
+>> 
+>> Not necessarily.  ...
+>
+>Not only do I have a BGE EMail alias for Bernie dating to the mid-80's,
+>the ``Regarding'' header below demonstrates that *he* thought that his
+>middle initial was G on 12-Oct-83:
+
+So what?  Don't you read what I write these days?  I'll repeat
+that initials that went into listings didn't necessarily match
+a person's birth name.  Now, Eiben's initials may have been
+put into listings.  I'm just documenting 1. the tradition and
+2. what I remember about who did what when.
+<snip..shrug>
+
+>>...  I don't remember Bernie doing code.
+>
+>SEAL-20 security package, at least.
+>He also gets credit to this day for contributions to KERMIT.
+
+And he also gave TW some code fixes once with the request to not
+include his initials.
+
+>> >> >Don Witcraft
+>> >>
+>> >> DAW
+>> >
+>> >Dave Wright was (also?) DAW.
+>> 
+>> Nope.  ...
+>
+>Dave made 155 edits signed DAW in FORHST.MAC alone, and DEC licensed
+>and shipped his SITGO contributions signed DAW while still in college.
+
+I noticed you dele'd the text, leaving just a denial.  Tsk, tsk.
+
+>
+>
+>>...  Dave was a late comer.  ...
+>
+>37 of the edits predating the sole BAH edit 1507 of 4-Jun-81.
+
+And that by my definition is a latecomer.
+
+Now, what else do want to argue about?  The color of the sky?
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 130 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!feed1.news.rcn.net!rcn!207-172-245-242
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 maintainers' initials
+Date: Sat, 08 Jul 00 07:52:41 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 132
+Message-ID: <8k70t6$qdd$1@bob.news.rcn.net>
+References: <wwituzn7i1.fsf@atlas.cfht.hawaii.edu> <39558825.9597CD60@dvorak.amd.remove.com> <Pine.NXT.4.30.0006251320530.14575-100000@Tomobiki-Cho.CAC.Washington.EDU> <wwlmzsm3am.fsf@atlas.cfht.hawaii.edu> <wwituvnanf.fsf@atlas.cfht.hawaii.edu> <eD665.1683$vP1.68435@ord-read.news.verio.net> <3960F131.336C925B@MA.UltraNet.Com> <8jsigf$5ss$1@bob.news.rcn.net> <39620BA8.7C52A145@MA.UltraNet.Com> <8jv4hk$nbn$1@bob.news.rcn.net> <3966B77E.169BA2CD@MA.UltraNet.Com>
+X-Trace: TksRhEmHbI4DHDR0o1EqhwmPAGDqi7k9GmaVUyAHcU8=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 8 Jul 2000 10:48:06 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:130
+
+In article <3966B77E.169BA2CD@MA.UltraNet.Com>,
+   "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+>jmfbahciv@aol.com wrote:
+>> 
+>> In article <39620BA8.7C52A145@MA.UltraNet.Com>,
+>>    "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+>> >jmfbahciv@aol.com wrote:
+>> >>
+>> >> In article <3960F131.336C925B@MA.UltraNet.Com>,
+>> >>    "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+>> >> >John Everett wrote:
+>....
+>> >Not only do I have a BGE EMail alias for Bernie dating to the mid-80's,
+>> >the ``Regarding'' header below demonstrates that *he* thought that his
+>> >middle initial was G on 12-Oct-83:
+>> 
+>> So what?  Don't you read what I write these days?  I'll repeat
+>> that initials that went into listings didn't necessarily match
+>> a person's birth name.  Now, Eiben's initials may have been
+>> put into listings.  I'm just documenting 1. the tradition and
+>> 2. what I remember about who did what when.
+>
+>OK.  Although since that "tradition" wasn't followed in all files at all
+>times, it's not an absolute help. ...
+
+But it would have been a better start because the file contained
+the "real" letter usage no matter what the developers' actual 
+names were.
+
+>  ... You may know what files were managed
+>with Magee's file; I don't (except when counterexamples show what
+>wasn't managed).
+
+The method was usually a word of mouth cooperation.  When the
+"latecomer" era happened, quite a bit of that stopped.
+>
+>I do wonder what Bernie might have put in S.MAC (whose header started
+>this), if that's who that BGE refers to.
+
+I do seem to recall that Bernie didn't care for "credit".  Credit
+also meant ownership of any problems the edit might have generated.
+If it was S.MAC, he might have had TW define some bits for
+diagnostics.  Damn, I'm really getting to hate this disease.  
+Bernie might have been involved in the SPEAR project or the 
+TU70 project.  That was about the time he haunted TW's office.
+Of course, I have no idea what was done during the years of
+1973, 1974, and part of 1975 since I wasn't doing the monitor
+edit nor was my office in the monitor groups' area.
+>
+>
+>> >> >> >Don Witcraft
+>> >> >>
+>> >> >> DAW
+>> >> >
+>> >> >Dave Wright was (also?) DAW.
+>> >>
+>> >> Nope.  ...
+>> >
+>> >Dave made 155 edits signed DAW in FORHST.MAC alone, ...
+>> 
+>> I noticed you dele'd the text, leaving just a denial.  Tsk, tsk.
+>
+>Here's your paragraph:
+>
+>"Nope.  Dave was a late comer.  If he had the same initials
+>that had already been used, the rule was that he would have
+>to pick a unique set.  That's why you really can't match
+>real names to initials and why Magee's file is valuable."
+>
+>Let's consider those points:
+>
+>1.  "Dave was a late comer."
+>
+>I can believe that some guy named "Don Witcraft" signed DEC PDP-10
+>software with "DAW" before Dave Wright worked for LCG, not least because
+>"Don Witcraft" doesn't sound familiar to me and it sounds like he was
+>probably well before my time..
+
+He was before my time :-).
+>
+>2.  "If he had the same initials that had already been used, the rule
+>    was that he would have to pick a unique set."
+>
+>A perfectly sensible rule, and if all PDP-10 software was developed by
+>people working bound by that rule, it would make things simpler.
+
+And it was a rule adhered to until the beginning of the 
+disintegration edict.  <gag...whata line>
+
+>
+>3.  "That's why you really can't match real names to initials and why
+>    Magee's file is valuable."
+>
+>Nothead wanted to know what Don Witcraft's signature was.
+>John Everett said Don signed DAW.
+>I said that Dave definitely signed DAW, regardless of what Don used.
+
+And Sara should have known better than that.  She was of the era
+when Don Witcraft was around.
+>
+>118 of those DAW Fortran runtime edits were made while I was working in
+>the Fortran-10/20 group.
+>
+>0.  "Nope."
+>
+>Was your point that Dave couldn't have signed DAW, or that Don couldn't
+>have signed DAW, or something else?
+
+Yes.
+
+>
+>
+>> >>...  Dave was a late comer.  ...
+>> >
+>> >37 of the edits predating the sole BAH edit 1507 of 4-Jun-81.
+>> 
+>> And that by my definition is a latecomer.
+>
+>Fine by me.
+
+Are we talking FOROTS.MAC here?  You should also remember that
+the PDP-10 product line was ended as of 1983.
+
+I don't remember Dave Wright making any FOROTS V5 edits.  Now,
+interpret that statement to be "development of V5 FOROTS".  The
+first I remember of Dave is working on V6 which was a complete
+rewrite of FOROTS.  I sure don't remember doing an edit to
+V6 in 1980.
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 108 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 maintainers' initials
+Date: Mon, 03 Jul 2000 16:04:40 -0400
+Lines: 24
+Message-ID: <3960F1D8.720B3F9E@MA.UltraNet.Com>
+References: <wwituzn7i1.fsf@atlas.cfht.hawaii.edu> <39558825.9597CD60@dvorak.amd.remove.com> <Pine.NXT.4.30.0006251320530.14575-100000@Tomobiki-Cho.CAC.Washington.EDU> <wwlmzsm3am.fsf@atlas.cfht.hawaii.edu> <wwituvnanf.fsf@atlas.cfht.hawaii.edu> <eD665.1683$vP1.68435@ord-read.news.verio.net> <8jckhl$j3s$1@bob.news.rcn.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: 3N2fzIuZaS/Un1xBcKF2T+FgSGu/IvR8o7rjfVyPfyU=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 3 Jul 2000 20:06:14 GMT
+X-Accept-Language:  en,en-US,en-GB,es
+X-Mailer:  Mozilla 4.7 [en] (Win95; U)
+Xref: nntp1.ba.best.com alt.sys.pdp10:108
+
+jmfbahciv@aol.com wrote:
+> 
+> In article <eD665.1683$vP1.68435@ord-read.news.verio.net>,
+>    jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) wrote:
+> >In article <wwituvnanf.fsf@atlas.cfht.hawaii.edu>,
+> >thomas@atlas.cfht.hawaii.edu says...
+...
+> >>KK      ?
+> >
+> >First name "Karen", now who can come up with the last name???
+> 
+> Right.  I'm going to be spelling it wrong...Kolling, Kollen?
+
+(Definitely Kolling).
+
+
+> >>EGM     ?
+> 
+> Possibly, Eric Magrath.
+
+Absolutely.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 105 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!feeder.qis.net!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 maintainers' initials
+Date: Mon, 03 Jul 2000 16:15:05 -0400
+Lines: 31
+Message-ID: <3960F449.70FDF191@MA.UltraNet.Com>
+References: <wwituvnanf.fsf@atlas.cfht.hawaii.edu> <eD665.1683$vP1.68435@ord-read.news.verio.net> <5kgilssnqq4sru55k5g2ea6grkfjlv4811@4ax.com> <8jcqtg$cbu$1@canard.ulcc.ac.uk> <la6llsc5ackt0o9hd1nqaeigbqstjbi1qt@4ax.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: qnanXw9NLloEYwPWSym7+Kj5ixvyfsheUuH/RR73o+o=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 3 Jul 2000 20:16:42 GMT
+X-Accept-Language:  en,en-US,en-GB,es
+X-Mailer:  Mozilla 4.7 [en] (Win95; U)
+Xref: nntp1.ba.best.com alt.sys.pdp10:105
+
+"Me (again)" wrote:
+> 
+> On 28 Jun 2000 12:26:24 GMT, ronan@noc.ulcc.ac.uk (Ronan Flood) wrote:
+> 
+> >"Me (again)" <David@Clam.Central.Org> wrote:
+> >
+> >> HANLEY STRAPMAN, who was the person who actually wrote all of TOPS-10,
+> >> at least if you ask a member of the 4.07 users group.  :-)
+> >
+> >Hanley M: that was the (fictitious?) name used in various programming
+> 
+> Hanley M Strapman (HMS) was certainly not fictitious, after all, he wrote all the
+> programming examples, didn't he?   :-)
+
+> This line worked very well when he was at the U of Arizona, where he wrote a rather large
+> number of SPRs on the -10 they had there (as well and the ANF network they were running,
+> with an ANF connection to the CDC systems, as well.)
+
+
+1.  Two "p"'s?  Strappman.
+2.  An edit of Hanley's was once logged against LINK using the initials
+HAS.  Eric Magrath ultimately changed the initials before shipment.
+3.  Favorite graffito: written in the inter-tile grouting above one of
+the urinals on MR1-2 (probably the northernmost men's room):
+
+Red ink:           n't
+Blue ink: Hanley was  here.
+                    ^
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 106 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntp.primenet.com!nntp.gblx.net!europa.netcrusader.net!207.172.3.37!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 maintainers' initials
+Date: Mon, 03 Jul 2000 16:20:22 -0400
+Lines: 12
+Message-ID: <3960F586.520C1B62@MA.UltraNet.Com>
+References: <wwituzn7i1.fsf@atlas.cfht.hawaii.edu> <39558825.9597CD60@dvorak.amd.remove.com> <Pine.NXT.4.30.0006251320530.14575-100000@Tomobiki-Cho.CAC.Washington.EDU> <wwlmzsm3am.fsf@atlas.cfht.hawaii.edu> <wwituvnanf.fsf@atlas.cfht.hawaii.edu> <eD665.1683$vP1.68435@ord-read.news.verio.net> <5kgilssnqq4sru55k5g2ea6grkfjlv4811@4ax.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: UbKUQ+3psRwVhN1EkqZkPg0cvPQI50ObwIGniv9tkHY=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 3 Jul 2000 20:22:00 GMT
+X-Accept-Language:  en,en-US,en-GB,es
+X-Mailer:  Mozilla 4.7 [en] (Win95; U)
+Xref: nntp1.ba.best.com alt.sys.pdp10:106
+
+"Me (again)" wrote:
+> 
+> On Tue, 27 Jun 2000 18:45:30 GMT, jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) wrote:
+> 
+> What about JCH (John Hallyburton)
+
+Whose Tops-20 account name was QHALLYBURTON either because he got unique
+username/directory completion with Q<alt>, and/or because it sent his
+LPT output to the Q box (which no one else printed to).
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 110 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news2.best.com!cnn.nas.nasa.gov!news.hawaii.edu!not-for-mail
+From: Jim Thomas <thomas@atlas.cfht.hawaii.edu>
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 maintainers' initials
+Date: 03 Jul 2000 12:58:03 -1000
+Organization: Canada France Hawai`i Telescope
+Lines: 11
+Message-ID: <wwk8f2n7no.fsf@atlas.cfht.hawaii.edu>
+References: <wwituzn7i1.fsf@atlas.cfht.hawaii.edu> <39558825.9597CD60@dvorak.amd.remove.com> <Pine.NXT.4.30.0006251320530.14575-100000@Tomobiki-Cho.CAC.Washington.EDU> <wwlmzsm3am.fsf@atlas.cfht.hawaii.edu> <wwituvnanf.fsf@atlas.cfht.hawaii.edu> <eD665.1683$vP1.68435@ord-read.news.verio.net> <5kgilssnqq4sru55k5g2ea6grkfjlv4811@4ax.com> <3960F586.520C1B62@MA.UltraNet.Com>
+NNTP-Posting-Host: atlas.cfht.hawaii.edu
+X-Trace: news.hawaii.edu 962665084 6961 128.171.80.135 (3 Jul 2000 22:58:04 GMT)
+X-Complaints-To: usenet@hawaii.edu
+NNTP-Posting-Date: 3 Jul 2000 22:58:04 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.6
+Xref: nntp1.ba.best.com alt.sys.pdp10:110
+
+>>>>> "Alan" == Alan H Martin <AMartin@MA.UltraNet.Com> writes:
+
+ >> On Tue, 27 Jun 2000 18:45:30 GMT, jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) wrote:
+ >> What about JCH (John Hallyburton)
+
+ Alan> Whose Tops-20 account name was QHALLYBURTON either because he got unique
+ Alan> username/directory completion with Q<alt>, and/or because it sent his
+ Alan> LPT output to the Q box (which no one else printed to).
+
+Harumph!  They wouldn't let me have my printouts go to "Nothead" 'cause
+that wasn't my name.  So I used "T,Nothead" :-)
+
+
+Article 147 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news2.best.com!cnn.nas.nasa.gov!news.hawaii.edu!not-for-mail
+From: Jim Thomas <thomas@atlas.cfht.hawaii.edu>
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 maintainers' initials
+Date: 11 Jul 2000 14:37:51 -1000
+Organization: Canada France Hawai`i Telescope
+Lines: 217
+Message-ID: <wwn1jombds.fsf@atlas.cfht.hawaii.edu>
+References: <wwituzn7i1.fsf@atlas.cfht.hawaii.edu> <favlms4mmkvkisiti2iaan6aftqmfd1pf2@4ax.com>
+NNTP-Posting-Host: atlas.cfht.hawaii.edu
+X-Trace: news.hawaii.edu 963362271 6738 128.171.80.135 (12 Jul 2000 00:37:51 GMT)
+X-Complaints-To: usenet@hawaii.edu
+NNTP-Posting-Date: 12 Jul 2000 00:37:51 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.6
+Xref: nntp1.ba.best.com alt.sys.pdp10:147
+
+I was waiting for more input from Alan, but here's the current version :-)
+
+=================================== 8< -----------------------------------
+
+List of initials seen on TOPS-10 monitor and CUSP sources
+
+CJA	Carl Appelloff (?)
+DRB	Dawn Banks
+DIB	David (Dave) (Buzzard) Roger Ingals Bell
+DDB	David Dyer-Bennet
+RCB	Raun (Spider) Boardman
+LB	Len Bosack
+VJB	Vern Brownell
+DLC	Larry Campbell (sp?)
+TMC	T. Michael Church (LNS/MIT)
+RCC	Bob Clements
+PFC	Peter Conklin
+VJC	Victor Coppella (?)
+WXD	William Davenport
+JLd	Jim delaHoussaye
+DBD	Doug Detroy
+DHD	Dan D'Urso (did he touch anything?)
+MD	Monique Duhamel
+JAD	Joseph Anthony (Tony) Dziedzic
+TWE	Tom Eggers
+BGE	Bernie Eiben
+DCE	Dave Elkund
+JE	John Everett
+JMF	Jim Flemming
+CMF	Craig M. Fletcher (also CF?)
+EGF	Ed Fortmiller (sp?)
+AF	Alan Frantz
+MF	Mauritz (Maury) Fredriksen
+JNG	John (Mike) Gilbert
+RPG	Richard (Dick) Gruen
+PAH	Pat A. Hardy
+JCH	John Hallyburton
+TH	Tom Hastings
+TAH	Ted Hess
+RDH	Bob Houk
+RKH	Bob Hyatt
+BAH	Barb Huizenga
+PMH	Peter Hurley (also PH? - or was that someone else?)
+MHK	Mark Keplien
+KK	Karen Kolling
+TK	Teunis Korteweg
+AK-DAG	Alan Kotok & Dave Gross
+TL	Tony Lauck
+DAL	Don Lewine
+SML	Sandy Libman
+RL	Roger Lipsett or Ron Lusk (?)
+WCL	William (Bill) C. Lynch
+DRL	Dave Lyons
+EGM	Eric Magrath
+WEM	Todd Matson
+DMcC	Dave McClure
+TNM	T. N. McManus
+DPM	Don Mastrovito
+SMM	Steve Meidel
+SRM	Sara Murphy
+DZN	Dave Neff
+LLN	Laura Neff
+TARL	Tarl Neustaedter
+WGN	Wick Nichols
+DMN	David Nixon
+CGN	Charles (Chip) G. Nylander
+CDO	Chuck O'Toole
+S?P	Steve Paavola
+EP	Eric Peabody
+RAP	Alan Pommer
+KMR	Karen M. Rabideau
+EAR	Ernie Racine
+TXR	Tim Rentsch
+AJR	Anthony Rizzolo
+LCR	Luis Carlos Rodriguez
+LSS	Larry Samberg
+JBS	John Sauter (did he ever work for DEC? or just contracts?)
+WRS	Bill Sears
+EVS	Ernie Socci
+HMS	Hanley Strap(p?)man (also HAS?)
+JHT	Jeff Talmadge (sp?)
+NT	Nick Tamburri (?)
+JNT	Jim Thomas (Nothead)
+DRT	Don Todd
+GMU	(George) Mike Uhler
+TW	Tony Wachs
+LW	Larry Wade
+EJW	Ric Werme
+HPW	H. P. Weiss
+CHW	Chris White (?)
+AW	Alan Wilson
+DAW (?)	Don Witcraft
+DAW	Dave Wright
+KBY	Kimo Yap
+KPY	Ken (Kippy) P. Young
+PY	Paul Young
+EY	Ed Yourdon
+
+Need Names:
+
+DJB	?
+GSB	?
+MFB	?
+MRB	?
+JBC	?
+MCHC	?
+CBD	?
+HD	?
+NED	?
+RLD	?
+CF	? (also used by Craig Fletcher?)
+JEF	?
+MCF	?
+RJF	?
+ILG	? (Ingrid ??)
+JBG	?
+JEG	?
+RDG	?
+RG	?
+SSG	?
+CLRH	?
+GBH	?
+GH	?
+TNH	?
+WLH	?
+DML	?
+DRL	?
+CAM	? (Chuck McComas?)
+CM	? (Chuck McComas?)
+MJM	?
+RCM	?
+WJM	?
+WM	?
+KDO	?
+HMP	?
+JMP	?
+NGP	?
+OP	?
+CMQ	?
+AVR	?
+GDR	?
+KR	?
+RCR	?
+BGS	?
+DAS	? (David Stone?)
+ERS	?
+JCS	?
+LWS	?
+JMT	? (Jim Totten?)
+MAT	?
+PMV	?
+PMW	?
+WFW	?
+
+Need initials used (guesses to right):
+
+Valdene Alusik (sp?)		(TOPS-20 only?)
+Don Black		DLB?
+Sumner Blount		GSB?
+Bob Bowering
+Rick Corbin			(originator of the DATE75 SPR :-)
+Don Dossa
+Harris Hyman
+Kent King
+Rich Krasin		RLK?
+Ira Machefsky
+Frank Natoli
+W. O'Neill
+Serge Polevitzky	SAP?
+Nick Pappas		NGP?
+Dave Plummer
+Kalman Reti		KR?
+Cliff Romash
+Norm Samuals			(did he touch any code?)
+Donalene Trafton
+R.G. Underwood
+P. Watt			PMW?
+W. Weiher		WFW?
+Paul (?) Wexelblat (sp?)
+Pete Wilson		PMW?
+John Xenakis			(did he ever do anything besides his PL/I
+				 and XSERV?)
+
+Communications
+
+???	Rick Pottenger
+???	Alan Warshaw
+
+FORTRAN folks (plus some languages in general)
+
+NEA	Norma Abel
+AlB	Al (Alan Eugene) Blackington (second time around)
+PLB	Phil Budne
+JLC	John Campbell
+CLRH	Charlotte L. Richardson Houde
+FJI	Frank Infante
+AHM	Alan Martin
+CDM	Charlie McCutcheon
+RVM	Randy Meyers
+???	Jim Mills (did he touch code?)
+CKS	Chris Smith
+TFV	Tom (Thomas Francis Michael) Vasak
+	Sarah Murphy appears above
+
+Commercial
+
+???	John Conner
+???	Dana Lajoie (sp?)
+EGM	Evelyn McCarthy
+???	Sonya Reed
+
+
+Not DEC, Stevens from TECO
+
+GSB	Gary Brown
+RCM	Robert C. McQueen
+JMP	John Potachnak
+
+
+Article 149 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!207.172.3.37!feed1.news.rcn.net!rcn!207-172-97-63
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 maintainers' initials
+Date: Wed, 12 Jul 00 08:39:35 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 101
+Message-ID: <8khl66$sdn$2@bob.news.rcn.net>
+References: <wwituzn7i1.fsf@atlas.cfht.hawaii.edu> <favlms4mmkvkisiti2iaan6aftqmfd1pf2@4ax.com> <wwn1jombds.fsf@atlas.cfht.hawaii.edu>
+X-Trace: vJK05SRWmNl9PB+pi5kemjYhwu0Ghu8TICJLgfYePtM=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 12 Jul 2000 11:35:34 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:149
+
+In article <wwn1jombds.fsf@atlas.cfht.hawaii.edu>,
+   Jim Thomas <thomas@atlas.cfht.hawaii.edu> wrote:
+>I was waiting for more input from Alan, but here's the current version :-)
+>
+>=================================== 8< -----------------------------------
+>
+>List of initials seen on TOPS-10 monitor and CUSP sources
+<snip>
+
+>JBS	John Sauter (did he ever work for DEC? or just contracts?)
+
+AFAIR, he was strictly contract; but he sure did a whole lot
+of code.
+
+>NT	Nick Tamburri (?)
+
+Yup.
+
+>CLRH	?
+
+This is Charlotte, isn't it?
+
+>MJM	?
+
+Mary Morotta.  She was the last writer for TOPS-10.
+Just as a note:  At some point, some body thought it
+would be a good idea for the writers to go over the
+comments in source listings and make it into English.
+And that's how some of their initials got in.  There
+were a few who actually did some real work, and corrected
+error messages.  And, now, I'm trying to remember the
+name of a writer who actually did some mods...Laurie Piper?
+She was killed in a car accident.  She was a damn fine writer,
+had common sense.
+
+>DAS	? (David Stone?)
+
+I don't remember him doing any code.  It would have to be
+in John's time frame.  When I started Stone was already 
+a manager, but I thought his background was exclusively
+small computers.
+
+>LWS	?
+
+I know who this but my brain is just not producing proper
+names today.  Larry...We hired him from ORNL..twice.  He
+did quite a bit of GALAXY work.  Tall, blond.  Shit, sorry,
+Larry.  I just can't remember your last name.
+>JMT	? (Jim Totten?)
+
+Yup. Pretty sure.
+
+>PMW	?
+
+>Need initials used (guesses to right):
+>
+>Valdene Alusik (sp?)		(TOPS-20 only?)
+>Don Black		DLB?
+>Sumner Blount		GSB?
+>Bob Bowering
+>Rick Corbin			(originator of the DATE75 SPR :-)
+>Don Dossa
+>Harris Hyman
+>Kent King
+>Rich Krasin		RLK?
+>Ira Machefsky
+>Frank Natoli
+>W. O'Neill
+>Serge Polevitzky	SAP?
+>Nick Pappas		NGP?
+>Dave Plummer
+>Kalman Reti		KR?
+
+Yup.
+
+>Cliff Romash
+
+His initials are in DAEMON for sure.
+
+>Norm Samuals			(did he touch any code?)
+
+No.  He was just an idiot manager.
+
+>Donalene Trafton
+
+TW gave her the nickname Crash.
+
+
+>P. Watt			PMW?
+
+Could this have been Pat White's initials?  I can't believe
+that we forgot her.  She did an awful lot of work.
+
+>John Xenakis			(did he ever do anything besides his PL/I
+>				 and XSERV?)
+
+Nope.  I think that's all he did.  Before programming, wasn't
+he a writer?
+
+
+Subtract a hundred and four for e-mail.
+
+
+Article 157 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!newsfeed.direct.ca!look.ca!hammer.uoregon.edu!news.hawaii.edu!not-for-mail
+From: Jim Thomas <thomas@atlas.cfht.hawaii.edu>
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 maintainers' initials
+Date: 13 Jul 2000 09:15:35 -1000
+Organization: Canada France Hawai`i Telescope
+Lines: 28
+Message-ID: <wwk8epn8o8.fsf@atlas.cfht.hawaii.edu>
+References: <wwituzn7i1.fsf@atlas.cfht.hawaii.edu> <favlms4mmkvkisiti2iaan6aftqmfd1pf2@4ax.com> <wwn1jombds.fsf@atlas.cfht.hawaii.edu> <8khl66$sdn$2@bob.news.rcn.net>
+NNTP-Posting-Host: atlas.cfht.hawaii.edu
+X-Trace: news.hawaii.edu 963515735 18791 128.171.80.135 (13 Jul 2000 19:15:35 GMT)
+X-Complaints-To: usenet@hawaii.edu
+NNTP-Posting-Date: 13 Jul 2000 19:15:35 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.6
+Xref: nntp1.ba.best.com alt.sys.pdp10:157
+
+>>>>> "/BAH" == jmfbahciv  <jmfbahciv@aol.com> writes:
+
+ >> CLRH	?
+
+ /BAH> This is Charlotte, isn't it?
+
+Oops, missed deleting her out of the unknown initials list.
+
+ >> Cliff Romash
+
+ /BAH> His initials are in DAEMON for sure.
+
+Yup, gotem, CER.  Unfortunately, looking at the DAEMON SUBTTL line got 7
+more initials:
+
+RKB
+DBD
+RLD
+JSL
+ISM
+PMW
+TJW
+
+ >> Donalene Trafton
+
+ /BAH> TW gave her the nickname Crash.
+
+I remember that :-)
+
+
+Article 163 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntp.primenet.com!nntp.gblx.net!europa.netcrusader.net!207.172.3.37!feed1.news.rcn.net!rcn!207-172-102-136
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 maintainers' initials
+Date: Fri, 14 Jul 00 08:25:24 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 25
+Message-ID: <8kmt44$7qa$2@bob.news.rcn.net>
+References: <wwituzn7i1.fsf@atlas.cfht.hawaii.edu> <favlms4mmkvkisiti2iaan6aftqmfd1pf2@4ax.com> <wwn1jombds.fsf@atlas.cfht.hawaii.edu> <8khl66$sdn$2@bob.news.rcn.net> <396e2947.0@news.kivex.com>
+X-Trace: M+kZ8F0WH0lVZpqS+kiaNxOjJ3EK3I/CcvLH/UdtMOo=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 14 Jul 2000 11:21:40 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:163
+
+In article <396e2947.0@news.kivex.com>,
+   "Phil Gagner" <gagner@svg-law.com> wrote:
+><jmfbahciv@aol.com> wrote in message news:8khl66$sdn$2@bob.news.rcn.net...
+>> In article <wwn1jombds.fsf@atlas.cfht.hawaii.edu>,
+>>    Jim Thomas <thomas@atlas.cfht.hawaii.edu> wrote:
+>> >===================================
+>8< -----------------------------------
+>> >LWS ?
+>>
+>> I know who this but my brain is just not producing proper
+>> names today.  Larry...We hired him from ORNL..twice.  He
+>> did quite a bit of GALAXY work.  Tall, blond.  Shit, sorry,
+>> Larry.  I just can't remember your last name.
+>> >JMT ? (Jim Totten?)
+>
+>Larry Samberg? (I'm not sure of the spelling)
+
+Nope. 
+
+The guy I'm thinking about is Larry Sendlosky.  Thanks to
+Tarl and Tim Litt for the memory refresh. 
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 150 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntp.primenet.com!nntp.gblx.net!feeder.qis.net!news-hog.berkeley.edu!ucberkeley!sn-xit-03!supernews.com!sn-inject-01!corp.supernews.com!not-for-mail
+From: "cdo" <cdo@qwsi.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 maintainers' initials
+Date: Wed, 12 Jul 2000 19:43:03 -0400
+Organization: Posted via Supernews, http://www.supernews.com
+Lines: 34
+Message-ID: <smq0fd6cnd646@corp.supernews.com>
+References: <wwituzn7i1.fsf@atlas.cfht.hawaii.edu> <favlms4mmkvkisiti2iaan6aftqmfd1pf2@4ax.com> <wwn1jombds.fsf@atlas.cfht.hawaii.edu>
+X-Complaints-To: newsabuse@supernews.com
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Newsreader: Microsoft Outlook Express 5.00.2314.1300
+X-MimeOLE: Produced By Microsoft MimeOLE V5.00.2314.1300
+Xref: nntp1.ba.best.com alt.sys.pdp10:150
+
+[snip]
+
+> DBD Doug Detroy
+
+Didn't Doug also go by DD or D2 (as in D-squared).  Mostly I remember "Doug
+Destroy", particularly related to the KS
+
+{more snip]
+
+> ILG ? - Irwin L. Goverman.  Worked on Galaxy, and, to my everlasting
+shame, I dragged him into the MCS-10 mess.
+
+> MRB ? - Wasn't this Murray Berkowitz (Galaxy after my time.)  /lss, is
+that right?
+
+[...]
+
+> Serge Polevitzky SAP? Arrrgh...after BATCON V11, SAP is what we called
+him, not sure if it was his initials ;-)
+
+> Norm Samuals (did he touch any code?)  Don't think so, manager/supervisor
+type when I knew him.
+
+> Paul (?) Wexelblat (sp?)  I think Paul went by WEX (sp is right)
+
+> John Xenakis (did he ever do anything besides his PL/I
+> and XSERV?)  Well, he did write the winning program in the MOO tournament,
+does that count....;-)
+>
+
+/cdo
+
+
+
+
+
+Article 153 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!feeder.via.net!news-spur1.maxwell.syr.edu!news.maxwell.syr.edu!feed1.news.rcn.net!rcn!207-172-216-83
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 maintainers' initials
+Date: Thu, 13 Jul 00 08:16:07 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 40
+Message-ID: <8kk86f$99k$1@bob.news.rcn.net>
+References: <wwituzn7i1.fsf@atlas.cfht.hawaii.edu> <favlms4mmkvkisiti2iaan6aftqmfd1pf2@4ax.com> <wwn1jombds.fsf@atlas.cfht.hawaii.edu> <smq0fd6cnd646@corp.supernews.com>
+X-Trace: zlRV3EX4WbrkueJFs0IF/MdImrl27v0lG4ze0xG0H3o=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 13 Jul 2000 11:12:15 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:153
+
+In article <smq0fd6cnd646@corp.supernews.com>, "cdo" <cdo@qwsi.net> wrote:
+>[snip]
+>
+>> DBD Doug Detroy
+>
+>Didn't Doug also go by DD or D2 (as in D-squared).  Mostly 
+>I remember "Doug
+>Destroy", particularly related to the KS
+
+That nickname came from TW after Doug did something that
+broke the rest of the monitor.  TW didn't give a shit what
+he did with the KS, but he certainly cared about what
+he did to the KL.
+
+>
+>{more snip]
+>
+>> ILG ? - Irwin L. Goverman.  Worked on Galaxy, and, to my everlasting
+>shame, I dragged him into the MCS-10 mess.
+
+Yup.  That's Irwin's.  Oh, but what war stories came out
+of that MCS-10 mess.  <grin>
+
+>
+>> MRB ? - Wasn't this Murray Berkowitz (Galaxy after my time.)  /lss, is
+>that right?
+
+Maybe.  It'ld be more help if we knew the module that the
+initials came from.
+
+>
+>[...]
+>
+>> Serge Polevitzky SAP? Arrrgh...after BATCON V11, SAP is what we called
+>him, not sure if it was his initials ;-)
+
+Was that his first project?
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 173 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!newsfeed.cwix.com!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 maintainers' initials
+Date: Sat, 15 Jul 2000 16:53:34 -0400
+Lines: 24
+Message-ID: <3970CF4E.599D9C84@MA.UltraNet.Com>
+References: <wwituzn7i1.fsf@atlas.cfht.hawaii.edu> <favlms4mmkvkisiti2iaan6aftqmfd1pf2@4ax.com> <wwn1jombds.fsf@atlas.cfht.hawaii.edu> <8khl66$sdn$2@bob.news.rcn.net> <wwk8epn8o8.fsf@atlas.cfht.hawaii.edu>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: DFHX3aCkwDfr+89Jcq8SiB1RpUM6ByxnJNsJ/rDUBHM=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 15 Jul 2000 20:55:37 GMT
+X-Accept-Language:  en,en-US,en-GB,es
+X-Mailer:  Mozilla 4.7 [en] (Win95; U)
+Xref: nntp1.ba.best.com alt.sys.pdp10:173
+
+Jim Thomas wrote:
+> 
+> >>>>> "/BAH" == jmfbahciv  <jmfbahciv@aol.com> writes:
+...
+>...  Unfortunately, looking at the DAEMON SUBTTL line got 7
+> more initials:
+> 
+> RKB
+
+Rich Braun.
+
+
+> JSL
+
+I wonder if Jerry Leichter touched any PDP-10 code?  I've only knew him
+after he could have.
+
+
+> TJW
+
+Ted Wojcik.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 174 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 maintainers' initials
+Date: Sat, 15 Jul 2000 17:29:07 -0400
+Lines: 61
+Message-ID: <3970D7A3.24C51EE@MA.UltraNet.Com>
+References: <wwituzn7i1.fsf@atlas.cfht.hawaii.edu> <favlms4mmkvkisiti2iaan6aftqmfd1pf2@4ax.com> <wwn1jombds.fsf@atlas.cfht.hawaii.edu> <8khl66$sdn$2@bob.news.rcn.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: 60GitJxJG3SpT8i4GzqRYwSMaQZS2QDJtnt6CLR86QM=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 15 Jul 2000 21:31:10 GMT
+X-Accept-Language:  en,en-US,en-GB,es
+X-Mailer:  Mozilla 4.7 [en] (Win95; U)
+Xref: nntp1.ba.best.com alt.sys.pdp10:174
+
+jmfbahciv@aol.com wrote:
+> 
+> In article <wwn1jombds.fsf@atlas.cfht.hawaii.edu>,
+>    Jim Thomas <thomas@atlas.cfht.hawaii.edu> wrote:
+...
+> >JBS    John Sauter (did he ever work for DEC? or just contracts?)
+
+What code did those initials come from?  They also match Jim Selders,
+who worked on Algol, DDT, and I don't know what else.
+
+
+> AFAIR, he was strictly contract; but he sure did a whole lot
+> of code.
+
+I never heard that John was contract while working on FMS (DECforms?),
+etc.  He also wrote the VAX/VMS DST dumper.
+
+
+> >MJM    ?
+> 
+> Mary Morotta.  She was the last writer for TOPS-10.
+
+Mary Marotta.  Fix spelling.
+
+
+>...  And, now, I'm trying to remember the
+> name of a writer who actually did some mods...Laurie Piper?
+> She was killed in a car accident.  She was a damn fine writer,
+> had common sense.
+
+Who was the writer who was killed by a drunk driver going the wrong way
+down I-495 in Marlboro right outside the plant?  Ron Anderson mentioned
+
+
+> >DAS    ? (David Stone?)
+> 
+> I don't remember him doing any code.  It would have to be
+> in John's time frame.  When I started Stone was already
+> a manager, but I thought his background was exclusively
+> small computers.
+
+David Stone's initials, possibly from the phone book, were DLS.
+
+Those match Deb Schmitt; did she touch any code?
+
+
+> >JMT    ? (Jim Totten?)
+> 
+> Yup. Pretty sure.
+
+Those match Jim Totton.  Fix spelling.
+
+
+> >Need initials used (guesses to right):
+...
+> >Sumner Blount          GSB?
+
+Sumner's initials, possibly from the phone book, were SEB.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 178 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newshub.sdsu.edu!news-hog.berkeley.edu!ucberkeley!news.maxwell.syr.edu!newsfeed.skycache.com!Cidera!152.163.239.131!portc03.blue.aol.com!newsfeed.cwix.com!skin02.micron.net!admin-srv3.micron.com!not-for-mail
+From: "Charlie Thompson" <cthompson@micron.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 maintainers' initials
+Date: Tue, 18 Jul 2000 08:17:59 -0600
+Organization: Micron technology VMS
+Lines: 18
+Message-ID: <8l1otg$ajp$1@admin-srv3.micron.com>
+References: <wwituzn7i1.fsf@atlas.cfht.hawaii.edu> <favlms4mmkvkisiti2iaan6aftqmfd1pf2@4ax.com> <wwn1jombds.fsf@atlas.cfht.hawaii.edu>
+NNTP-Posting-Host: cthompson.micron.com
+X-Newsreader: Microsoft Outlook Express 4.72.3155.0
+X-MimeOLE: Produced By Microsoft MimeOLE V4.72.3155.0
+Xref: nntp1.ba.best.com alt.sys.pdp10:178
+
+LWS is Larry Sendlosky. You'all hired him from SAIC in Oak Ridge into the
+group doing DECsystem-10 SPRs. I had stolen him from Jim Grossen at
+University of Tennessee (he still hates me for that). Then, he went back to
+ORNL and you got him again, but I was gone and lost track.
+
+Charlie Thompson
+
+Jim Thomas wrote in message ...
+>I was waiting for more input from Alan, but here's the current version :-)
+>
+>=================================== 8< -----------------------------------
+>
+>List of initials seen on TOPS-10 monitor and CUSP sources
+
+>LWS ?
+
+
+
+
+
+Article 190 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc01.blue.aol.com!dc1.nntp.concentric.net!newsfeed.concentric.net!global-news-master
+From: Paul Wexelblat <boguswexav@altavista.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 maintainers' initials
+Date: 19 Jul 2000 22:46:31 EDT
+Organization: Concentric Internet Services
+Lines: 29
+Message-ID: <39766807.D1082AD7@altavista.com>
+References: <wwituzn7i1.fsf@atlas.cfht.hawaii.edu> <favlms4mmkvkisiti2iaan6aftqmfd1pf2@4ax.com> <wwn1jombds.fsf@atlas.cfht.hawaii.edu> <8l1otg$ajp$1@admin-srv3.micron.com>
+NNTP-Posting-Host: 206.173.12.18
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii; x-mac-type="54455854"; x-mac-creator="4D4F5353"
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 4.72 (Macintosh; I; PPC)
+X-Accept-Language: en,pdf
+To: Charlie Thompson <cthompson@micron.com>
+Xref: nntp1.ba.best.com alt.sys.pdp10:190
+
+Sorry if this is off the subject or redundant - judging from the subj, most
+postings expired so I can't tell
+
+PMW is me (Monitor group from 6.04 to 7.00)
+from 6.x to 700
+Paul Wexelblat
+
+remove bogus for email
+
+
+
+Charlie Thompson wrote:
+
+> LWS is Larry Sendlosky. You'all hired him from SAIC in Oak Ridge into the
+> group doing DECsystem-10 SPRs. I had stolen him from Jim Grossen at
+> University of Tennessee (he still hates me for that). Then, he went back to
+> ORNL and you got him again, but I was gone and lost track.
+>
+> Charlie Thompson
+>
+> Jim Thomas wrote in message ...
+> >I was waiting for more input from Alan, but here's the current version :-)
+> >
+> >=================================== 8< -----------------------------------
+> >
+> >List of initials seen on TOPS-10 monitor and CUSP sources
+>
+> >LWS ?
+
+
+
+Article 3617 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!news.voicenet.com!feed2.news.rcn.net!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: now - interest in multi-processing (SMP)
+Date: Sun, 25 Feb 2001 14:20:17 -0500
+Lines: 28
+Message-ID: <3A995AF1.6635F2AA@MA.UltraNet.Com>
+References: <3A764A09.8FEE136B@digiweb.com> <3A78E586.8864B7C7@MA.UltraNet.Com> <3A7D0848.29678A56@mail.bcpl.net> <95lkti$15d3$1@nntp1.ba.best.com> <95lun5$204$1@bob.news.rcn.net> <3A859F62.4E6D22B@MA.UltraNet.Com> <qhitmiuoar.fsf@ruckus.brouhaha.com> <3A85EC42.D2118443@MA.UltraNet.Com> <3A866359.38EDF560@mail.bcpl.net> <6usnlkolpx.fsf@chonsp.franklin.ch> <3A90A3FC.B0CD86E4@MA.UltraNet.Com> <3A90D76B.A3577EA0@mail.bcpl.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: UmFuZG9tSVbq8doFTsXx2VW6axrTLi/N0FxsGVuLRLzGZ8Vp+7PaNyTvEL3tekvH
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 25 Feb 2001 19:21:00 GMT
+X-Mailer:  Mozilla 4.76 [en] (Win95; U)
+X-Accept-Language:  en,en-US,en-GB,es
+Xref: nntp1.ba.best.com alt.sys.pdp10:3617
+
+Ken McMonigal wrote:
+> 
+> "Alan H. Martin" wrote:
+...
+> > Tenex was designed to accomodate SMP support:
+> >
+> > "
+> > to:       DLM, DGB, RST, ERF, JRB, WRS, JIE, LC
+> > From:     TRS
+> > Subject:  TENEX-2, Coding Style
+> > Date:     January 15, 1970
+> > ...
+> 
+> TRS = Theodore Strollo ?
+
+Since ``TENEX-1  SYSTEM OVERVIEW  1/15/70   UPDATE 11/3/70'' cites:
+
+1.   Strollo T.R., Tomlinson R.S., Fiala E.R., Elkind  J.I.,
+     "The  BBN  Hybrid  Processor," BBN Report No.  1598, 30
+     June 1968.
+	-and-
+3.   Strollo, T.R., et al, Inserts 10, 11, 14, 15 and 16  to
+     the PDP-10 System Reference Manual.
+
+that makes sense to me.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+

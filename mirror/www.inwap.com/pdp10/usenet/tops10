@@ -1,0 +1,164 @@
+Article: 21238 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!in.100proofnews.com!in.100proofnews.com!peernews-us.colt.net!newsfeed.news2me.com!snoopy.risq.qc.ca!elk.ncren.net!news.bu.edu!budd
+From: Phil Budne <budd@cs.bu.edu>
+Newsgroups: alt.sys.pdp10
+Subject: PDP-10 O/S Release Dates
+Date: 10 Aug 2003 14:45:44 GMT
+Organization: Boston University Computer Science Dept.
+Lines: 73
+Sender: budd@csa
+Message-ID: <bh5lqo$ro5$1@news3.bu.edu>
+X-Trace: news3.bu.edu 1060526744 28421 128.197.12.3 (10 Aug 2003 14:45:44 GMT)
+X-Complaints-To: news@bu.edu
+Xref: dfw-artgen alt.sys.pdp10:21238
+
+With the cross-posted thread on PDP-11 O/S release dates still around
+I was inspired to update some of my lists which can be found at
+http://www.ultimate.com/phil/pdp10/index.html#lists
+including:
+
+TOPS-10 release dates;
+	http://www.ultimate.com/phil/pdp10/tops-10
+
+	Using the UUOSYM revision history as a guide, I added more
+	solid dates.  I also added the version number of UUOSYM
+	released with each monitor.
+
+	Sadly, some conventions (upping the UUOSYM major version
+	number with each major O/S release, and upping the minor
+	version for each minor O/S release, and keeping a detailed
+	revision history in the source) were not continued after 7.03
+	(post Barb?).  Fortunately, downloading all the copies of
+	UUOSYM.MAC I could find on trailing-edge.com I was able to
+	track the changes made in the last 4 years.
+
+TOPS-20 Releases;
+	http://www.ultimate.com/phil/pdp10/tops-20
+
+	This list had been more complete.  I recently added some
+	pre-release 1 dates: start of TENEX development, first TENEX
+	production, dates of several "KL paging" memos by Dan Murphy.
+
+PDP-6 Serial Numbers;
+	http://www.ultimate.com/phil/pdp10/pdp6-serials
+
+	Sites for 19 or so of the 23 systems built, includes urls for
+	mentions, photos, etc.  Including photos of a dual PDP-6
+	installation at Lawrence Livermore Labs!  "Actual" serial
+	numbers for only a few systems are known, and even those are
+	suspect.
+
+	If any old hands still remember any serials, or if you know of
+	any installations not on the list, please let me know.
+
+	If you know of anyone who might know, or know someone who
+	might know someone, please pass this message on!
+
+KL & KS Microcode versions;
+	http://www.ultimate.com/phil/pdp10/kl-ucode
+	http://www.ultimate.com/phil/pdp10/ks-ucode
+
+	Both are now populated with the revision histories from the
+	sources available at trailing-edge!  Much is still missing
+	about what versions were released, when, and for/with what
+	monitor/hardware releases.
+
+Old Hardware Option "Type" numbers
+	http://www.ultimate.com/phil/pdp10/types
+
+	Al Kossow and Bob Supnick sent me some new entries
+	and new mysteries.
+
+TENEX/TOPS-20 JSYS list;
+	http://www.ultimate.com/phil/pdp10/pdp6-serials
+
+	new. no information for when various JSYi were added
+	in TENEX development, or TOPS-20 development before release 3.
+
+	I haven't found any MONSYM files for 5 series monitors.
+
+The http://www.ultimate.com/phil/pdp10/index.html (Phil's PDP-10
+Miscellany) has undergone growth, organization, and expansion.
+
+I've added editorial text (ie. actual content) which may not be the
+perfect truth, but which I hope helps provide context for those not
+previously steeped in the lore.  The "Other History Links" section has
+grown beyond the context of PDP-10s, with many links for predecessor
+systems (particularly the TX-0 and PDP-1).
+
+
+Article: 21243 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!nntp1.roc.gblx.net!nntp.gblx.net!nntp.gblx.net!priapus.visi.com!news-out.visi.com!petbe.visi.com!news1.optus.net.au!optus!news.uwa.edu.au!nntp.waia.asn.au!nnrp.waia.asn.au!127.0.0.1!nobody
+From: Paul Repacholi <prep@prep.synonet.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 O/S Release Dates
+Date: Mon, 11 Aug 2003 00:04:05 +0800
+Organization: none
+Lines: 19
+Message-ID: <87llu15wju.fsf@prep.synonet.com>
+References: <bh5lqo$ro5$1@news3.bu.edu>
+NNTP-Posting-Host: zion-a01.conceptual.net.au
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Trace: nnrp.waia.asn.au 1060565144 26391 203.190.192.4 (11 Aug 2003 01:25:44 GMT)
+X-Complaints-To: usenet@nnrp.waia.asn.au
+NNTP-Posting-Date: Mon, 11 Aug 2003 01:25:44 +0000 (UTC)
+User-Agent: Gnus/5.1001 (Gnus v5.10.1) Emacs/21.2 (gnu/linux)
+Cancel-Lock: sha1:dOQgunrT4qdKLZHHO28cbYZlqJo=
+Cache-Post-Path: grimiore.conceptual.net.au!unknown@dialup-195-57.conceptual.net.au
+X-Cache: nntpcache 2.3.3 (see http://www.nntpcache.org/)
+Xref: dfw-artgen alt.sys.pdp10:21243
+
+Phil Budne <budd@cs.bu.edu> writes:
+
+> PDP-6 Serial Numbers;
+> 	http://www.ultimate.com/phil/pdp10/pdp6-serials
+
+The UWA 6 also had memory box sn#1. I will see if I can find a makers
+plate and sn on what remains and send photos.  That should solve the
+argument bit :)
+
+I should also have a copy of the `TN User Manual' dated April 65.  If
+I can find the damb thing, I will scan and post. And sent to Tim.
+
+-- 
+Paul Repacholi                               1 Crescent Rd.,
++61 (08) 9257-1001                           Kalamunda.
+                                             West Australia 6076
+comp.os.vms,- The Older, Grumpier Slashdot
+Raw, Cooked or Well-done, it's all half baked.
+EPIC, The Architecture of the future, always has been, always will be.
+
+
+Article: 21242 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!router1.news.adelphia.net!news1.news.adelphia.net.POSTED!not-for-mail
+From: John Sauter <J_Sauter@Empire.Net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 O/S Release Dates
+Organization: System Eyes Computer Store
+Reply-To: J_Sauter@Empire.Net
+Message-ID: <e9hdjv4r0qasgvh6a8hhkhd8cu8786tl19@4ax.com>
+References: <bh5lqo$ro5$1@news3.bu.edu>
+X-Newsreader: Forte Agent 1.93/32.576 English (American)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 9
+Date: Sun, 10 Aug 2003 22:24:10 GMT
+NNTP-Posting-Host: 67.21.211.15
+X-Complaints-To: abuse@adelphia.net
+X-Trace: news1.news.adelphia.net 1060554250 67.21.211.15 (Sun, 10 Aug 2003 18:24:10 EDT)
+NNTP-Posting-Date: Sun, 10 Aug 2003 18:24:10 EDT
+Xref: dfw-artgen alt.sys.pdp10:21242
+
+I do not know the serial number of the Stanford AI PDP-6,
+but we were told that it was the last system built.  After the
+arrival of the KA-10, the 166 was a second processor in
+a home-grown asymmetric dual-processor system.
+Its I/O bus was attached to a locally-built interface to
+the Type 30 display that we liberated from the PDP-1.
+    John Sauter (J_Sauter@Empire.Net)
+
+
+
+

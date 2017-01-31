@@ -1,0 +1,124 @@
+Article 8794 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!cpk-news-hub1.bbnplanet.com!news.gtei.net!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: ooh, a *real* flamewar :)
+Date: Sun, 21 May 2000 22:40:45 -0400
+Lines: 103
+Message-ID: <39289E2D.28C7E60C@MA.UltraNet.Com>
+References: <38E767FD.D3D0BBE8@MA.UltraNet.Com> <8cseeb$bn7$3@bob.news.rcn.net> <38F9DFD0.FFF04951@MA.UltraNet.Com> <8df8bg$55i$1@bob.news.rcn.net> <38fb8af5$0$214@nntp1.ba.best.com> <8dhjde$4r2$2@bob.news.rcn.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: p/wOmXwbKe3u+BcGGQoWBXv9cGMKUFnjrzm45qav95s=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 22 May 2000 02:41:23 GMT
+X-Accept-Language:  en,en-US,en-GB,es
+X-Mailer:  Mozilla 4.7 [en] (Win95; U)
+Xref: news3.best.com alt.sys.pdp10:8794
+
+jmfbahciv@aol.com wrote:
+> 
+> In article <38fb8af5$0$214@nntp1.ba.best.com>,
+>    inwap@best.com (Joe Smith) wrote:
+> >In article <8df8bg$55i$1@bob.news.rcn.net>,  <jmfbahciv@aol.com> wrote:
+> >>In article <38F9DFD0.FFF04951@MA.UltraNet.Com>,
+> >>   "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+...
+> >>>Now the truth can be told:  Once upon a time, FOROTS had to refer to a
+> >>>secret bit in I/O buffer headers.
+> >>>
+> >>>During backspace operations it would wait until I/O was done, and then
+> >>>count the number of buffers that had been read, turning off use bits on
+> >>>the way.
+> >>
+> >>Woe be to any program that messed with use bits.  The routine below
+> >>wasn't testing a usebit and it wasn't setting anything either.
+> >>The N in the TLNE means no modification.
+> >>
+> >>>FNDUSE: MOVE T4,-1(T3)               ;GET STATUS WORD
+> >>>        TLNE T4,40                   ;TAPE EOF?
+> >>>         AOJA        T1,USEDON               ;YES. WE'RE DONE
+> >
+> >Yes, it was testing a usebit.  The E in the TLNE says to skip the next
+> >instruction if the bit in question is equal to zero.  The code is the
+> >right way to check to see of the monitor had gotten around to doing
+> >anything to that particular buffer.
+> 
+> I thought the use bit was bit 0 of the second word of the
+> buffer ring header (or is it the buffer header?).  Damn, I
+> wish I had stolen my Software Notebook set.  I never did
+> I/O stuff without my trusty monitor calls manual open.
+
+You're right Barb, the fragment I quoted wasn't touching a buffer use
+bit (which is a public bit) - it tests the secret "this buffer hit EOF"
+bit.  The code you haven't seen is what clears the use bit
+(status's sign bit).
+
+Here's the whole enchilada.  The routine runs around until it hits all
+the buffers, or the buffer containing EOF (whichever comes first),
+clearing all use bits along the way:
+
+"
+;Routine to clear the "use" bits of all active buffers, and
+; return how many there were in T1.
+
+%CLRBC:
+CLRBCB:	SETZM	ICNT(D)			;CLEAR BUFFER CONTROL BLOCK
+	HRLOI	T1,7700			;EXCEPT BYTE SIZE IN PNTR
+	ANDM	T1,IPTR(D)
+	MOVE	T2,CHAN(D)		;GET CHANNEL
+	HRRI	T2,.FOWAT		;SETUP FOR WAIT
+	MOVE	T1,[1,,T2]		;DO FILOP
+	FILOP.	T1,
+	 $ECALL	IOE,%ABORT
+
+	SETZ	T1,			;CLEAR ACTIVE BUFFER COUNT
+	HRRZ	T3,IBCB(D)		;GET PNTR TO BUFFER
+	MOVEI	T2,(T3)			;COPY IT
+FNDUSE:	MOVE	T4,-1(T3)		;GET STATUS WORD
+	TLNE	T4,40			;TAPE EOF?
+	 AOJA	T1,USEDON		;YES. WE'RE DONE
+	MOVE	T4,(T3)			;GET THE USE WORD
+	TLZE	T4,(1B0)		;TURN OFF. WAS IT ON?
+	  ADDI	T1,1			;YES. ADD TO ACTIVE COUNTER
+	MOVEM	T4,(T3)			;PUT IT BACK
+	HRRZ	T3,(T3)			;GET WHAT IT POINTS TO
+	CAIN	T2,(T3)			;POINTING TO CURRENT BUFFER?
+	  POPJ	P,			;YES. WE'VE DONE IT
+	JRST	FNDUSE			;AND TRY AGAIN
+USEDON:	HRLOI	T4,377777		;TURN OFF USE BIT JUST IN CASE
+	ANDM	T4,(T3)
+	POPJ	P,
+"
+
+Strictly by coincidence, I just found that BACKUP refers to the same
+secret buffer EOF bit.
+
+From BACKRS.MAC
+
+"
+IO.END==40		;END OF FILE BIT IN LH OF BUFFER STATUS WORD
+...
+	IN	F.MTAP,		;[402] EXECUTE IN UUO
+	  JRST	BUFSTS		;[402] ALL IS OK
+...
+BUFSTS:	MOVE	T1,S.MBPT##	;[257] CURRENT BUFFER ADDRESS
+	HRLZI	T1,2(T1)	;[257] PLUS TWO
+	HRRI	T1,TAPHLD+1	;[257] AREA FOR SAFEKEEPING
+	BLT	T1,<TAPHLD+N*200+M>	;[257] MOVE DATA
+	HRRZ	P2,S.MBPT##	;[257] GET BUFFER ADDRESS
+	MOVE	P1,-1(P2)	;GET STATUS FROM BUFFER HEADER
+	MOVEM	P1,TAPHLD	;[257] SAVE STATUS BITS
+
+	TLNN	P1,IO.END	;END OF FILE?
+	JRST	NIEOF		;NO--SKIP
+
+	CLOSE	F.MTAP,		;YES--CLEAR STATUS
+...
+"
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+

@@ -1,0 +1,245 @@
+Article: 13611 of alt.sys.pdp10
+From: aek@spies.com (Al Kossow)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Software used on Foonly F-1 for Tron?
+Date: 7 Dec 2001 17:14:54 -0800
+Organization: Spies In The Wire
+Lines: 10
+Message-ID: <9urpie$sv6$1@spies.com>
+References: <Go030L.Gvr@world.std.com>
+NNTP-Posting-Host: spies.com
+X-Trace: 7 Dec 2001 17:20:07 -0800, spies.com
+Path: dfw-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!newsfeed.mathworks.com!arclight.uoregon.edu!logbridge.uoregon.edu!newsfeed.stanford.edu!news.kjsl.com!news.spies.com!localhost!not-for-mail
+Xref: dfw-artgen.news.verio.net alt.folklore.computers:76053 alt.sys.pdp10:13611
+
+From article <Go030L.Gvr@world.std.com>, by bdc@world.std.com (Brian 'Jarai' Chase):
+> 
+> What operating system was running on the Foonly F-1 they used for the
+> digital visual effects on Tron?
+
+Later versions used a modified Tenex called Foonex.
+
+Sadly, no software or hardware/software docs for any of the F-series has
+been located yet.
+
+
+
+Article: 13643 of alt.sys.pdp10
+From: aek@spies.com (Al Kossow)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Software used on Foonly F-1 for Tron?
+Date: 9 Dec 2001 07:58:09 -0800
+Organization: Spies In The Wire
+Lines: 15
+Message-ID: <9v01mh$83j$1@spies.com>
+References: <85r8q4ahwc.fsf@junk.nocrew.org>
+NNTP-Posting-Host: spies.com
+X-Trace: 9 Dec 2001 08:03:43 -0800, spies.com
+Path: dfw-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!stl-feed.news.verio.net!news.cc.ukans.edu!logbridge.uoregon.edu!arclight.uoregon.edu!enews.sgi.com!news.spies.com!localhost!not-for-mail
+Xref: dfw-artgen.news.verio.net alt.folklore.computers:76117 alt.sys.pdp10:13643
+
+From article <85r8q4ahwc.fsf@junk.nocrew.org>, by Lars Brinkhoff <lars.spam@nocrew.org>:
+> bdc@world.std.com (Brian 'Jarai' Chase) writes:
+>> So what happened to the [F1]?  I can't imagine it just disappeared.
+> 
+> I asked Dave Dyer <ddyer@bigfoot.com> about this, and he answered:
+> 
+>> It could be in a garage somewhere.  I think Karol Brandt had
+>> posession last.
+
+I'll ask Karol what happened to it the next time I see him.
+
+In the time I've known him (about 15 years) I don't recall seeing
+it (would be hard to miss..)
+
+
+
+
+Article: 13675 of alt.sys.pdp10
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Path: dfw-read.news.verio.net!dfw-artgen.news.verio.net!iad-peer.news.verio.net!news.verio.net!nntp1.roc.gblx.net!nntp.gblx.net!nntp.gblx.net!newsfeed.cwix.com!news.maxwell.syr.edu!wn4feed!wn3feed!worldnet.att.net!198.6.0.7!uunet!ash.uu.net!world!bdc
+From: bdc@world.std.com (Brian 'Jarai' Chase)
+Subject: Re: Software used on Foonly F-1 for Tron?
+Message-ID: <Go5706.1nM@world.std.com>
+Date: Mon, 10 Dec 2001 19:19:17 GMT
+References: <Go030L.Gvr@world.std.com> <9urpie$sv6$1@spies.com> <Go298x.JqF@world.std.com> <85r8q4ahwc.fsf@junk.nocrew.org>
+Organization: HappyNet Bungalow
+Lines: 34
+Xref: dfw-artgen.news.verio.net alt.folklore.computers:76194 alt.sys.pdp10:13675
+
+In article <85r8q4ahwc.fsf@junk.nocrew.org>,
+Lars Brinkhoff  <lars.spam@nocrew.org> wrote:
+> bdc@world.std.com (Brian 'Jarai' Chase) writes:
+
+> > So what happened to the [F1]?  I can't imagine it just disappeared.
+> 
+> I asked Dave Dyer about this, and he answered:
+> 
+> > It could be in a garage somewhere.  I think Karol Brandt had
+> > posession last.  You might also try Gary Demos for news.  I don't
+> > have current email addresses for either of them.  You could try Tom
+> > McMahon (tlm@microsoft.com), he used to be my source for Foonly
+> > gossip.
+
+I received the following in mail from Dave Sieg who worked with the system
+while it was at Paramount:
+
+-> When Omnibus folded in 1986, Jim Rapley, who had worked with me on
+-> the F1, had a friend whose company I believe was called Intergon.
+-> They acquired the F1 and the PFRs and tried making movies with it.
+-> I believe they were not successful, and as I understand it, Intergon no
+-> longer exists.  Jim Rapley would probably be the one person that would
+-> know where the remains of the system are.  I had an email address for
+-> him but can't seem to find it.
+
+I can't find anything useful on Intergon, but I may be able to find some
+things on Jim Rapley.  I know some people who worked on Tron and spent
+time at Omnibus. Of what little I've found so far, the above seems like
+the best lead.
+
+-brian.
+-- 
+--- Brian Chase | bdc@world.std.com | http://world.std.com/~bdc/ -----
+      I'm sorry, this doesn't make any sense.  TO YOU!!!  -- K.
+
+
+Article: 15314 of alt.sys.pdp10
+Path: sea-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!stl-feed.news.verio.net!newsreader.wustl.edu!gumby.it.wmich.edu!newsxfer3.itd.umich.edu!forum.apple.com!news.apple.com!il0502a-dhcp193.apple.com!user
+From: aek@spies.com (Al Kossow)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Xerox Sigma-7 vs. DEC PDP-10
+Date: Sat, 19 Jan 2002 15:58:48 -0800
+Organization: Apple Computer, Inc.
+Lines: 40
+Message-ID: <aek-1901021558480001@il0502a-dhcp193.apple.com>
+References: <vwn28.4722$ag.85137@dfw-read.news.verio.net>
+NNTP-Posting-Host: il0502a-dhcp193.apple.com
+X-Trace: news.apple.com 1011484727 20782 17.205.24.193 (19 Jan 2002 23:58:47 GMT)
+X-Complaints-To: usenet@news.apple.com
+NNTP-Posting-Date: 19 Jan 2002 23:58:47 GMT
+Xref: dfw-artgen.news.verio.net alt.sys.pdp10:15314
+
+In article <vwn28.4722$ag.85137@dfw-read.news.verio.net>, inwap@inwap.com
+(Joe Smith) wrote:
+
+> In regards to an e-mail about possible myth of the PDP-10 clone at Xerox:
+> 
+> That story is the topic of Chapter 7 "The Clone" in "Dealers of Lightning,
+> XEROX PARC and the Dawn of the Computer Age" by Michael Hiltzik
+> (ISBN 0-88730-891-0).
+> 
+>         "The talk," Kay said, "turned into how long it would take
+>         us to _build_ our own PDP-10."  The answer was about one year
+>         and less than $1 million.  The truth was that Xerox had only
+>         forbidden the lab to buy a PDP-10.  Nobody had said
+>         anything about cloning one.
+> 
+> It was called the MAXC (Multiple Access Xerox Computer) and had to be
+> bug-for-bug compatible with the PDP-10's floating point instructions
+> in order to run LISP.
+>         -Joe
+> 
+> -- 
+> See http://www.inwap.com/ for PDP-10 and "ReBoot" pages.
+
+MAXC and MAXC II are pretty well documented. There was an article
+in IEEE computer about MAXC (May 1978 pp 57-67) and I have scans
+of some information on it at www.spies.com/aek/pdf/xerox
+
+Something I had wondered about was HOW they got it done so quickly.
+
+I suspect it had a lot to do with Thacker, et al 's experience at
+Berkeley Computer Corporation building the BCC-500. They knew how
+to build microcoded machines, having just built that one, and they
+also decided to use the then new semiconductor RAM devices rather
+than go through the pain they went through with the flakey core
+memory system they bought for the BCC.
+
+I'm less familiar with the BBN people who came over to PARC at
+the same time that worked on MAXC (Fiala in particular) but I'm
+sure they must have been as sharp as the folks who came over
+from BCC.
+
+
+Article: 111136 of alt.folklore.computers
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!washdc3-snh1.gtei.net!chcgil2-snh1.gtei.net!news.gtei.net!wn12feed!worldnet.att.net!204.127.198.204!attbi_feed4!attbi.com!rwcrnsc53.POSTED!not-for-mail
+Newsgroups: alt.folklore.computers
+Subject: Re: Foonly F-1
+References: <db952829.0301281042.68b538be@posting.google.com>
+From: jwusenet5@smoe.org (Jeff Wasilko)
+Organization: smoe.org
+X-Newsreader: trn 4.0-test76 (Apr 2, 2001)
+Message-ID: <1qcm1b-nf4.ln@proxy.smoe.org>
+Lines: 20
+NNTP-Posting-Host: 66.30.212.245
+X-Complaints-To: abuse@attbi.com
+X-Trace: rwcrnsc53 1044297349 66.30.212.245 (Mon, 03 Feb 2003 18:35:49 GMT)
+NNTP-Posting-Date: Mon, 03 Feb 2003 18:35:49 GMT
+Date: Mon, 03 Feb 2003 18:35:49 GMT
+Xref: dfw-artgen alt.folklore.computers:111136
+
+In article <db952829.0301281042.68b538be@posting.google.com>,
+GanjaTron <ganjatron@gmx.net> wrote:
+>Greetings, programs!
+>
+>Just wondering: whatever happened to the (one and only) Foonly F-1
+>used by III (Triple I) to produce the CGI in TRON?
+
+I worked at triple-I (after the Movie division went elsehwere),
+and I've got a scan of a couple of documents related to the Foonly and 
+the Tron project:
+
+http://www.smoe.org/jeffw/triple-i_history.pdf
+
+Some other web sites that might be of interest:
+
+http://vhost2.zfx.com/~dave/f1.html
+http://vhost2.zfx.com/~dave/ddyer.html
+http://www.accad.ohio-state.edu/~waynec/history/tree/iii.html
+
+-jeff
+
+
+Article: 117196 of alt.folklore.computers
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newsfeed.icl.net!newsfeed.fjserv.net!newsfeed.icl.net!newsfeed.fjserv.net!colt.net!nycmny1-snf1.gtei.net!nycmny1-snh1.gtei.net!news.gtei.net!panix!not-for-mail
+From: Rich Alderson <news@alderson.users.panix.com>
+Newsgroups: alt.folklore.computers
+Subject: Re: death of the PDP-10
+Date: 25 Mar 2003 14:43:46 -0500
+Organization: Systems Administration, XKL LLC, Redmond WA 98052
+Lines: 23
+Sender: alderson+news@panix5.panix.com
+Message-ID: <mddhe9rw7t9.fsf@panix5.panix.com>
+References: <b5d96r$28bdcr$1@ID-175938.news.dfncis.de> <00hf5b.8e3.ln@teabag.cbhnet> <b5holg$289lkc$1@ID-143435.news.dfncis.de> <3E7CADE1.29CC6D6E@yahoo.com> <b5od3u$bt0$1@xuxa.iecc.com>
+NNTP-Posting-Host: panix5.panix.com
+X-Trace: reader2.panix.com 1048621426 10524 166.84.1.5 (25 Mar 2003 19:43:46 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: Tue, 25 Mar 2003 19:43:46 +0000 (UTC)
+X-Newsreader: Gnus v5.7/Emacs 20.7
+Xref: dfw-artgen alt.folklore.computers:117196
+
+johnl@iecc.com (John R. Levine) writes:
+
+> After Jupiter, there were two follow-on attempts to build a PDP-10 by
+> geeky PDP-10 lovers, Foonly and Mars, both of which built impressive
+> prototypes, but neither of which could be manufactured, shipped, or
+> maintained.
+
+By "Mars" I assume you mean Systems Concepts, a company whose first product
+allowed the attachment of IBM bus-and-tag devices to PDP-10 systems on the
+IObus; they eventually built a successful clone family (the SC-30M, the SC-25,
+the SC-20, and the SC-40).  The -40 was licensed by CompuServe, who built
+their entire network using these things to replace older DEC equipment; their
+needs were so great that SC could not keep up with demand.
+
+Foonly was also in business very early, building clones of the early PDP-10
+systems.  A follow-on design, the SuperFoonly, migrated to DEC and became
+the underpinnings of the KL10 processor.
+
+And there is a third company I heard about...
+
+-- 
+Rich Alderson                                     news@alderson.users.panix.com
+  "You get what anybody gets.  You get a lifetime."  --Death, of the Endless
+
+

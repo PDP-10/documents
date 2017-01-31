@@ -1,0 +1,1959 @@
+From m_thompson@ids.net Sat Sep  7 23:33:36 PDT 2002
+Article: 17640 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!newsfeed-east.nntpserver.com!nntpserver.com!newsfeed1.easynews.com!easynews.com!easynews!sn-xit-02!sn-xit-06!sn-post-01!supernews.com!corp.supernews.com!not-for-mail
+From: m_thompson@ids.net (Michael Thompson)
+Newsgroups: alt.sys.pdp10
+Subject: Re: A bug in TOPS-10 7.04?
+Date: Thu, 15 Aug 2002 17:19:16 -0000
+Organization: Posted via Supernews, http://www.supernews.com
+Message-ID: <ulnokk7pgo2s8e@corp.supernews.com>
+X-Newsreader: WinVN 0.99.9 (Released Version) (x86 32bit)
+References: <ulm4add28mvpbb@corp.supernews.com> <ajfueq$fh3$1@bob.news.rcn.net> <dk5nlugf0dnpvqj5lcrmclujobqn3o0ovm@4ax.com>
+MIME-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Complaints-To: newsabuse@supernews.com
+Lines: 14
+Xref: dfw-artgen alt.sys.pdp10:17640
+
+In article <dk5nlugf0dnpvqj5lcrmclujobqn3o0ovm@4ax.com>, Ron.Hubbard@spamex.com 
+says...
+>
+>jmfbahciv@aol.com seems to have said:
+>
+>>System comes up with three CPUs and begins timesharing.  Shit happens
+>>and CPU0 (the boot CPU) has to come down.  
+>
+>Of course, the type of "shit" we are talking about here is someone
+>like CDO or JMF poking the monitor of 1026 while the rest of the folks
+>on the floor were trying to get real work done...   :-)
+
+Then CPUs 1042 and 1322 would stay running...
+
+
+
+From jmfbahciv@aol.com Sat Sep  7 23:33:54 PDT 2002
+Article: 17645 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newsfeed.wirehub.nl!newspeer.monmouth.com!cpk-news-hub1.bbnplanet.com!news.gtei.net!feed2.news.rcn.net!feed1.news.rcn.net!rcn!208-59-181-88
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: A bug in TOPS-10 7.04?
+Date: Fri, 16 Aug 02 09:08:10 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 31
+Message-ID: <ajijeb$d7t$2@bob.news.rcn.net>
+References: <ulm4add28mvpbb@corp.supernews.com> <ajfueq$fh3$1@bob.news.rcn.net> <dk5nlugf0dnpvqj5lcrmclujobqn3o0ovm@4ax.com> <ulnokk7pgo2s8e@corp.supernews.com>
+X-Trace: UmFuZG9tSVYmW7/Z9pDTExbJFr8qJtocDEU3am77W8OF1wW8guugfCgdn1WZk7r6
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 16 Aug 2002 10:16:43 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: dfw-artgen alt.sys.pdp10:17645
+
+In article <ulnokk7pgo2s8e@corp.supernews.com>,
+   m_thompson@ids.net (Michael Thompson) wrote:
+>In article <dk5nlugf0dnpvqj5lcrmclujobqn3o0ovm@4ax.com>, 
+Ron.Hubbard@spamex.com 
+>says...
+>>
+>>jmfbahciv@aol.com seems to have said:
+>>
+>>>System comes up with three CPUs and begins timesharing.  Shit happens
+>>>and CPU0 (the boot CPU) has to come down.  
+>>
+>>Of course, the type of "shit" we are talking about here is someone
+>>like CDO or JMF poking the monitor of 1026 while the rest of the folks
+>>on the floor were trying to get real work done...   :-)
+>
+>Then CPUs 1042 and 1322 would stay running...
+>
+Once in a blue moon if the crash was due to fumble fingers.
+When those guys patched on the fly they usually did a thorough
+job.  
+
+I should note that any hardware paths that were unique to
+a CPU went down with that CPU.  This included front end
+comm lines and remote stations that didn't have a dual path.
+
+Thank the bit gods for Ethernet.
+
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+From jmfbahciv@aol.com Sat Sep  7 23:34:06 PDT 2002
+Article: 17644 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newsfeed.wirehub.nl!newsfeed.media.kyoto-u.ac.jp!newsfeed.gol.com!feed1.news.rcn.net!rcn!208-59-181-88
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: A bug in TOPS-10 7.04?
+Date: Fri, 16 Aug 02 09:05:42 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 19
+Message-ID: <ajij9m$d7t$1@bob.news.rcn.net>
+References: <ulm4add28mvpbb@corp.supernews.com> <ajfueq$fh3$1@bob.news.rcn.net> <dk5nlugf0dnpvqj5lcrmclujobqn3o0ovm@4ax.com>
+X-Trace: UmFuZG9tSVZX0wFp77nwayAOhvWjvn4vUl5WTll1YUvFPFKqF/7FoNr1kulfI36k
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 16 Aug 2002 10:14:14 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: dfw-artgen alt.sys.pdp10:17644
+
+In article <dk5nlugf0dnpvqj5lcrmclujobqn3o0ovm@4ax.com>,
+   Ron <Ron.Hubbard@spamex.com> wrote:
+>jmfbahciv@aol.com seems to have said:
+>
+>>System comes up with three CPUs and begins timesharing.  Shit happens
+>>and CPU0 (the boot CPU) has to come down.  
+>
+>Of course, the type of "shit" we are talking about here is someone
+>like CDO or JMF poking the monitor of 1026 while the rest of the folks
+>on the floor were trying to get real work done...   :-)
+
+
+<grin>  There is no defense from fumble fingering.  That usually
+happened early on (for you daytimers).  Poking usually wasn't done
+after 8:30 or so. ;-).
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+From Ron.Hubbard@spamex.com Sat Sep  7 23:34:11 PDT 2002
+Article: 17660 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newsfeed.wirehub.nl!news-out.nuthinbutnews.com!propagator-sterling!news-in.nuthinbutnews.com!feed.textport.net!sn-xit-02!sn-xit-06!sn-post-02!sn-post-01!supernews.com!corp.supernews.com!Barn.!not-for-mail
+From: Ron <Ron.Hubbard@spamex.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: A bug in TOPS-10 7.04?
+Date: Sun, 18 Aug 2002 14:55:19 -0400
+Organization: HCO
+Message-ID: <h8rvluoh91k9o526mvje8lr1ujkmrb6gv4@4ax.com>
+Reply-To: Ron.Hubbard@spamex.com
+References: <ulm4add28mvpbb@corp.supernews.com> <ajfueq$fh3$1@bob.news.rcn.net> <dk5nlugf0dnpvqj5lcrmclujobqn3o0ovm@4ax.com> <ajij9m$d7t$1@bob.news.rcn.net>
+X-Newsreader: Forte Agent 1.92/32.570
+X-No-Archive: yes
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Complaints-To: newsabuse@supernews.com
+Lines: 7
+Xref: dfw-artgen alt.sys.pdp10:17660
+
+jmfbahciv@aol.com seems to have said:
+
+><grin>  There is no defense from fumble fingering.  That usually
+>happened early on (for you daytimers).  Poking usually wasn't done
+>after 8:30 or so. ;-).
+
+For me it was late, as I had 1026 & 514 till 3:00 AM.  :-)
+
+
+From jmfbahciv@aol.com Sat Sep  7 23:34:22 PDT 2002
+Article: 17661 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newsfeed.wirehub.nl!news-out.visi.com!hermes.visi.com!feed2.news.rcn.net!feed1.news.rcn.net!rcn!207-172-102-49
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: A bug in TOPS-10 7.04?
+Date: Mon, 19 Aug 02 09:17:22 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 16
+Message-ID: <ajqh4g$952$1@bob.news.rcn.net>
+References: <ulm4add28mvpbb@corp.supernews.com> <ajfueq$fh3$1@bob.news.rcn.net> <dk5nlugf0dnpvqj5lcrmclujobqn3o0ovm@4ax.com> <ajij9m$d7t$1@bob.news.rcn.net> <h8rvluoh91k9o526mvje8lr1ujkmrb6gv4@4ax.com>
+X-Trace: UmFuZG9tSVb4YA29s8o3gGCpbu/2nHOLeRv5taifwUlL1fb5+n29C7vf5yCHsvOd
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 19 Aug 2002 10:26:24 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: dfw-artgen alt.sys.pdp10:17661
+
+In article <h8rvluoh91k9o526mvje8lr1ujkmrb6gv4@4ax.com>,
+   Ron <Ron.Hubbard@spamex.com> wrote:
+>jmfbahciv@aol.com seems to have said:
+>
+>><grin>  There is no defense from fumble fingering.  That usually
+>>happened early on (for you daytimers).  Poking usually wasn't done
+>>after 8:30 or so. ;-).
+>
+>For me it was late, as I had 1026 & 514 till 3:00 AM.  :-)
+
+:-))  That's when TW would come in and growl.  If he hadn't
+had his coffee, his bite was worse than his bark.
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+From healyzh@shell1.aracnet.com Sat Sep  7 23:34:43 PDT 2002
+Article: 17648 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!pln-e!spln!dex!extra.newsguy.com!newsp.newsguy.com!not-for-mail
+From: "Zane H. Healy" <healyzh@shell1.aracnet.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: A bug in TOPS-10 7.04?
+Date: 16 Aug 2002 20:08:40 GMT
+Organization: Aracnet
+Lines: 25
+Message-ID: <ajjm4802h76@enews1.newsguy.com>
+References: <ulm4add28mvpbb@corp.supernews.com> <ajfueq$fh3$1@bob.news.rcn.net>
+NNTP-Posting-Host: p-340.newsdawg.com
+User-Agent: tin/1.4.4-20000803 ("Vet for the Insane") (UNIX) (Linux/2.2.19 (i686))
+Xref: dfw-artgen alt.sys.pdp10:17648
+
+jmfbahciv@aol.com wrote:
+> SYSUPT is the counter for the _system_ uptime.  This is not necessarily
+> the same number as the CPU uptime.  Let me give you a scenario.
+
+> System comes up with three CPUs and begins timesharing.  Shit happens
+> and CPU0 (the boot CPU) has to come down.  Now CPU1 is the boot CPU.
+> Time passes and more shit happens.  Now CPU1 is down and CPU2 takes
+> over as the boot CPU.  NOTE THAT TIMESHARING HAS NOT BEEN INTERRUPTED!
+> So SYSUPT is a large number and does match the uptimer for CPU2.
+> Now CPU0 has been deemed OK and ADDed into the system; CPU2 is still
+> the boot CPU.  After a while, CPU1 gets ADDed back.  Then more shit
+> happens and CPU2 bites the dust.  Either CPU0 or CPU1 will take over
+> as the BOOT CPU; let's let CPU1 be it.  
+
+> Now the SYSUPT contents doesn't match any CPU uptime.  This is 
+> a case where the sum is greater than its parts.
+
+You know, reading this brings a tear to my eye!  I've been playing with toy
+computers way to long, and had pretty much forgotten that real computer
+systems can do things like this.  Unfortunatly the only system I ever got to
+work on that was able to do this was a 4 CPU Honeywell DPS-8 system running
+GCOS-8.  The closest I've seen to this in modern Hardware would have to be
+a VMS Cluster.
+
+			Zane
+
+
+From alderson+news@panix.com Sat Sep  7 23:44:29 PDT 2002
+Article: 17605 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!cpk-news-hub1.bbnplanet.com!nycmny1-snh1.gtei.net!news.gtei.net!panix!not-for-mail
+From: Rich Alderson <alderson+news@panix.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: An archive program for TOPS-20?
+Date: 07 Aug 2002 02:07:58 -0400
+Organization: Systems Administration, XKL LLC, Redmond WA 98052
+Lines: 18
+Sender: alderson+news@panix5.panix.com
+Message-ID: <mddwur38am9.fsf@panix5.panix.com>
+References: <ZuZ%8.1900$o9.465665@reader1.news.jippii.net> <mddsn1w7nz2.fsf@panix5.panix.com> <s80vkuoibrpdl37v9sem2n0i2nfjkndmj4@4ax.com>
+NNTP-Posting-Host: panix5.panix.com
+X-Trace: reader1.panix.com 1028700478 15112 166.84.1.5 (7 Aug 2002 06:07:58 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: Wed, 7 Aug 2002 06:07:58 +0000 (UTC)
+X-Newsreader: Gnus v5.7/Emacs 20.7
+Xref: dfw-artgen alt.sys.pdp10:17605
+
+Alan Greig <a.greig@virgin.net> writes:
+
+> On 02 Aug 2002 21:03:29 -0400, Rich Alderson <alderson+news@panix.com>
+> wrote:
+
+>> There was a TAR for Tops-20, but it sucked sharp gravel through a soggy
+>> paper straw.
+
+> Unless I'm suffering faulty memory, Chuck Hedrick had a version of tar
+> written in S-PASCAL complete with COMND% interface which didn't suck.
+
+The one with which I had to contend was written in MIDAS, if I remember
+correctly.  It was more Unix-like than Tops-20-like, which is surprising
+when you think about the implementation language.  Or perhaps not.
+
+-- 
+Rich Alderson                                          alderson+news@panix.com
+  "You get what anybody gets.  You get a lifetime."  --Death, of the Endless
+
+
+From jmfbahciv@aol.com Sun Sep  8 00:17:48 PDT 2002
+Article: 17609 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!feed2.news.rcn.net!feed1.news.rcn.net!rcn!209-122-234-68
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: DEC CC341 (36 Bit Software) Group Photo Update
+Date: Wed, 07 Aug 02 12:18:46 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 21
+Message-ID: <air74q$ij9$1@bob.news.rcn.net>
+References: <ah4ae9$cn2$1@news3.bu.edu>
+X-Trace: UmFuZG9tSVa+JeV6f22g+gpX3gEASJNLZYQwUjTqOc9AUtoxNfxquMhvyGbxFl8s
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 7 Aug 2002 13:25:46 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: dfw-artgen alt.sys.pdp10:17609
+
+In article <ah4ae9$cn2$1@news3.bu.edu>, budd@csa.bu.edu (Phil Budne) wrote:
+<snip>
+
+>If you make any new identifications, please let me know!
+>Phil (who was 31,5732 on KL1026, and BUDNE on MRFORT)
+
+The person whose head is right behind Clair Grant and before
+Howard Mayberry is Susan Anderson...I think.  She was
+a secretary.  I've been trying to remember her married 
+name but have drawn a blank so far.
+
+The person whose head is behind Alan's, and sorta next to Phil,
+is Carol Perlman, a writer.  
+
+I forgot to print out your list of names and numbers.  My apologies
+if you've already got them on the list.
+
+/BAH
+
+
+Subtract a hundred and four for e-mail.
+
+
+From jmfbahciv@aol.com Sun Sep  8 00:22:22 PDT 2002
+Article: 17611 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!feed2.news.rcn.net!feed1.news.rcn.net!rcn!209-122-234-68
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: Unpacking my 15-year old office boxes generates memory refreshes
+Date: Wed, 07 Aug 02 12:41:53 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 56
+Message-ID: <air8g9$mm5$1@bob.news.rcn.net>
+References: <3C1355B4.2C7F6772@trailing-edge.com> <9v25i9$a73$1@bob.news.rcn.net> <9v56r7$dqd$6@bob.news.rcn.net> <9v5ajf$3vi$1@bob.news.rcn.net> <a1cg51$9mi$3@bob.news.rcn.net> <a2hdh8$ro9$1@bob.news.rcn.net> <a2ufr9$qbb$2@bob.news.rcn.net> <a33hqs$4f8$1@bob.news.rcn.net> <a5g5vt$qep$1@bob.news.rcn.net>
+X-Trace: UmFuZG9tSVbDEokQCfYgS1lAAx5B4DtjRByCO/Uj+d+gi/nExAGKMWMQ2MDxiW3H
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 7 Aug 2002 13:48:57 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: dfw-artgen alt.sys.pdp10:17611 alt.folklore.computers:94795
+
+I found the following typed on a 8-1/2x11 paper with sprocket holes
+along with a dollar bill.  (It took me years to get people to spell
+my name without a New England accent.)
+
+I've tried to reproduce it as printed, but am unable to smudge the
+print quality to spec.
+
+
+FORT:CONTES.STS[31,1565]
+
+                subj:   FORTRAN-10 Bug Contest
+                        **********************
+
+                to:     Bug Contest Winners (see below)
+                        QAF List
+                        KC Shih
+                        Peter Conklin
+                        Pat White
+                        Heinz Frantz
+                        Craig Flectcher
+                        Art Clark
+
+                from:   F. Michael Harris
+
+                date:   17 July 1973
+
+
+
+        The contest has been running since 11-June-1973.  Over a hundred
+        entries have been received, and the contest will continue until
+        further notice.
+
+        The winners (EXPERT SLEUTHS) so far are:
+
+
+                David Nixon             1107, 1108, 1148        $3.00
+                Frank DiPace            1001, 1019, 1149        $3.00
+                S. Rabinowitz           1079, 1080, 1083        $3.00
+                Nancy Gillis Ohm        1098, 1162              $2.00
+                Craig Fletcher          1032                    $1.00
+                Don Lewine              1099                    $1.00
+                David Rosenberg         1036                    $1.00
+                Mary Payne              1064                    $1.00
+                Don McKee               1135                    $1.00
+                Barbara Huisinger       1205                    $1.00
+
+
+        The real winner is, of course, FORTRAN-10;  the reliability and
+        usability of its forthcoming official release have shown obvious
+        improvement as a consequence of this in-house exposure.
+
+        We sincerely thank all contest participants, and urge everyone
+        to keep trying!
+
+
+Subtract a hundred and four for e-mail.
+
+
+From bdc@world.std.com Sun Sep  8 00:36:06 PDT 2002
+Article: 17653 of alt.sys.pdp10
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!nntp.abs.net!uunet!dca.uu.net!ash.uu.net!world!bdc
+From: bdc@world.std.com (Brian 'Jarai' Chase)
+Subject: Unix on the PDP-10?
+Message-ID: <H0z5Gv.9rz@world.std.com>
+Date: Sat, 17 Aug 2002 06:17:19 GMT
+Organization: HappyNet Bungalow
+Lines: 16
+Xref: dfw-artgen alt.folklore.computers:96266 alt.sys.pdp10:17653
+
+Has there ever been a port of Unix (or a Unix-like operating system) to
+the PDP-10 family of computer systems, /prior/ to the NetBSD/pdp10 port?  
+Which, btw, is far from a pipe dream now. The kernel boots to the point of
+looking for a filesystem to mount. The last major obstacle to overcome
+would appear to be getting ffs to deal with disk sectors that are made up
+of 9-bit bytes.
+
+I'm sure once it's finally working, the unholy marriage of NetBSD to the
+PDP-10 will cause the heads of various ITS, SAIL, TOPS-10, and TOPS-20
+hacker's to explode; assuming, of course, a Unix port hasn't already been
+done by someone else.
+
+-brian.
+-- 
+--- Brian Chase | bdc@world.std.com | http://world.std.com/~bdc/ -----
+This counter is [6,177,399,753] times as pointless as a real one.  -- K.
+
+
+From dgc@spies.com Sun Sep  8 02:25:57 PDT 2002
+Article: 17765 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newsfeed.icl.net!newsfeed.fjserv.net!newsfeed.icl.net!newsfeed.fjserv.net!news.tele.dk!small.news.tele.dk!207.115.63.138!newscon04.news.prodigy.com!newsmst01.news.prodigy.com!prodigy.com!postmaster.news.prodigy.com!newssvr14.news.prodigy.com.POSTED!3a2e9f9f!not-for-mail
+User-Agent: Microsoft-Outlook-Express-Macintosh-Edition/5.0.5
+Subject: Re: fpga pdp-10 status report
+From: "David G. Conroy" <dgc@spies.com>
+Newsgroups: alt.sys.pdp10
+Message-ID: <B9A00FB9.21A%dgc@spies.com>
+References: <B99D96B1.1C5%dgc@spies.com> <alcpsu$b8p$3@bob.news.rcn.net> <3D7A97ED.6EEC4CE0@ev1.net>
+Mime-version: 1.0
+Content-Type: text/plain; charset="US-ASCII"
+Content-transfer-encoding: 7bit
+Lines: 47
+NNTP-Posting-Host: 66.120.160.139
+X-Complaints-To: abuse@prodigy.net
+X-Trace: newssvr14.news.prodigy.com 1031454925 ST000 66.120.160.139 (Sat, 07 Sep 2002 23:15:25 EDT)
+NNTP-Posting-Date: Sat, 07 Sep 2002 23:15:25 EDT
+Organization: Prodigy Internet http://www.prodigy.com
+X-UserInfo1: SCSYASVDLRUORWDYNCOF_W\@PJ_^PBQLGPQRJRQIMASJETAANVW[AKWZE\]^XQWIGNE_[EBL@^_\^JOCQ^RSNVLGTFTKHTXHHP[NB\_C@\SD@EP_[KCXX__AGDDEKGFNB\ZOKLRNCY_CGG[RHT_UN@C_BSY\G__IJIX_PLSA[CCFAULEY\FL\VLGANTQQ]FN
+Date: Sun, 08 Sep 2002 03:15:25 GMT
+Xref: dfw-artgen alt.sys.pdp10:17765
+
+The design had already run the DEC core diagnostics
+for the instructions it implements (AA-AM, CA-CB) which caught a few
+errors. Finding the two errors I mentioned would require
+a fairly exhaustive diagnostic which ran with paging enabled. There are no
+DEC diagnostics which can run with ITS paging enabled, and the
+diagnostic I wrote from scratch to take a quick swish around the ITS
+executive mode instructions was far from exhaustive.
+
+> From: Charles Richmond <richmond@ev1.net>
+> Organization: Canine Computer Center
+> Reply-To: richmond@ev1.net
+> Newsgroups: alt.sys.pdp10
+> Date: Sat, 07 Sep 2002 22:23:27 GMT
+> Subject: Re: fpga pdp-10 status report
+> 
+> jmfbahciv@aol.com wrote:
+>> 
+>> In article <B99D96B1.1C5%dgc@spies.com>,
+>> "David G. Conroy" <dgc@spies.com> wrote:
+>>> Tonight I logged into an ITS, running on the
+>>> micromachine simulator, which believes that consoles look like
+>>> 16c450 UARTS, and disks have ATA-2 interfaces.
+>>> 
+>>> Fixing ITS to understand a different kind of terminal
+>>> and disk was easy. Fixing ITS to understand a model of machine which
+>>> was like a KS, but not exactly a KS, was fairly easy too (once
+>>> I clued into the fact that "IFE KA10P" really means "IFN KL10P\KS10P").
+>> 
+>> Heh, heh.  Those pesky macroes.
+>> 
+> BAH, were there any "test suites" that DEC ran on the -10's
+> to beat the hell out of them??? I read in _The Soul of a New
+> Machine_ about such test suites that were used on the MV-8000
+> at Data General. These programs loop back and forth, execute
+> all kinds of instructions in many, many combinations, and
+> generally do everything they can to expose a flaw in the
+> hardware. Something like this for the -10 would be helpful
+> to all the fpga developers out there building their own -10.
+> IMHO.
+> 
+> Did such programs ever exist at DEC???
+> 
+> -- 
+> +-------------------------------------------------------------+
+> |     Charles and Francis Richmond     <richmond@plano.net>   |
+> +-------------------------------------------------------------+
+
+
+
+From jmfbahciv@aol.com Wed Sep 18 13:22:15 PDT 2002
+Article: 17771 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!dfw-peer!news.verio.net!newspump.sol.net!newsfeed.news2me.com!canoe.uoregon.edu!logbridge.uoregon.edu!news-hub.kaist.ac.kr!nntp.kreonet.re.kr!newsfeed.gol.com!feed1.news.rcn.net!rcn!207-172-216-141
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: fpga pdp-10 status report
+Date: Sun, 08 Sep 02 10:22:36 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 58
+Message-ID: <alfcl8$mct$5@bob.news.rcn.net>
+References: <B99D96B1.1C5%dgc@spies.com> <alcpsu$b8p$3@bob.news.rcn.net> <3D7A97ED.6EEC4CE0@ev1.net>
+X-Trace: UmFuZG9tSVb1taMTlwHrZGfGt/+Zmj0PIPqRLK61KhrQCVTpfJQPi6Lsf3jnNVQg
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 8 Sep 2002 11:35:04 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: dfw-artgen alt.sys.pdp10:17771
+
+In article <3D7A97ED.6EEC4CE0@ev1.net>,
+   Charles Richmond <richmond@ev1.net> wrote:
+>jmfbahciv@aol.com wrote:
+>> 
+>> In article <B99D96B1.1C5%dgc@spies.com>,
+>>    "David G. Conroy" <dgc@spies.com> wrote:
+>> >Tonight I logged into an ITS, running on the
+>> >micromachine simulator, which believes that consoles look like
+>> >16c450 UARTS, and disks have ATA-2 interfaces.
+>> >
+>> >Fixing ITS to understand a different kind of terminal
+>> >and disk was easy. Fixing ITS to understand a model of machine which
+>> >was like a KS, but not exactly a KS, was fairly easy too (once
+>> >I clued into the fact that "IFE KA10P" really means "IFN KL10P\KS10P").
+>> 
+>> Heh, heh.  Those pesky macroes.
+>> 
+>BAH, were there any "test suites" that DEC ran on the -10's
+>to beat the hell out of them???
+
+A group got paid to do this.  The only people in that group
+who actually did any useful work didn't stay long.  To 
+compensate for the lack of testing out of this group, we found
+that the Tuesday builds of the monitor gave the system a
+pretty good workout (I can't say that this exercised the
+hardware--it sure exercised the montior software).  
+
+We always wanted ORNL for our field test site because they
+had a lot of "users" who did all kinds of different things.
+I've quoted the users because a lot of them thought they
+were using the IBM machines.
+
+
+> .. I read in _The Soul of a New
+>Machine_ about such test suites that were used on the MV-8000
+>at Data General. These programs loop back and forth, execute
+>all kinds of instructions in many, many combinations, and
+>generally do everything they can to expose a flaw in the
+>hardware. Something like this for the -10 would be helpful
+>to all the fpga developers out there building their own -10.
+>IMHO.
+
+That was supposed to be provided with the diagnostics.
+Unfortunately, the diagnostic mind set was based on a hardware
+p.o.v. and not a software p.o.v. (this is my hypothesis).  The
+last guy in charge of the dianostic group did try to add as
+many lapses as he could into the diags.  
+
+The problem with diags is that they were targeted at _pieces_
+of hardware, not the interaction of different kinds of hardware.
+
+>Did such programs ever exist at DEC???
+>
+Yup.  TOPS-10.
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+From gah@ugcs.caltech.edu Wed Sep 18 13:24:04 PDT 2002
+Article: 17782 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!washdc3-snh1.gtei.net!cpk-news-hub1.bbnplanet.com!news.gtei.net!howland.erols.net!usc.edu!attla2!ip.att.net!attbi_feed3!attbi.com!sccrnsc01.POSTED!not-for-mail
+From: "glen herrmannsfeldt" <gah@ugcs.caltech.edu>
+Newsgroups: alt.sys.pdp10,alt.sys.pdp11,alt.sys.pdp8
+References: <468vmuokjgbipol3qh5uke4f2odp5bllnj@4ax.com> <qhfzwvsedb.fsf@ruckus.brouhaha.com> <aksjsv$4ua$1@panix2.panix.com> <aksuk8$6dt$1@bob.news.rcn.net> <VFDe9.17671$T_.395915@iad-read.news.verio.net>
+Subject: Re: Extension to SIMH magtape format
+Lines: 32
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Newsreader: Microsoft Outlook Express 5.00.2919.6700
+X-MimeOLE: Produced By Microsoft MimeOLE V5.00.2919.6700
+Message-ID: <bXdf9.371419$me6.42747@sccrnsc01>
+NNTP-Posting-Host: 12.228.58.87
+X-Complaints-To: abuse@attbi.com
+X-Trace: sccrnsc01 1031629639 12.228.58.87 (Tue, 10 Sep 2002 03:47:19 GMT)
+NNTP-Posting-Date: Tue, 10 Sep 2002 03:47:19 GMT
+Organization: AT&T Broadband
+Date: Tue, 10 Sep 2002 03:47:20 GMT
+Xref: dfw-artgen alt.sys.pdp10:17782 alt.sys.pdp11:6708 alt.sys.pdp8:5544
+
+
+"Joe Smith" <inwap@inwap.com> wrote in message
+news:VFDe9.17671$T_.395915@iad-read.news.verio.net...
+> In article <aksuk8$6dt$1@bob.news.rcn.net>,  <jmfbahciv@aol.com> wrote:
+> >Could there be an erased portion in the middle of a physical
+> >tape?  That is, the layout of the tape is <data,erase,data,>?
+>
+> Yes.  TAPOP. code 12 (.TFWLG) = Write Long Gap = Write 3 inches
+> of blank tape.  Used with read-verify-while-writing on tape drives
+> that have separate read and write heads.  The device driver can
+> be configured to read back the data that was being written, and if
+> there was a read error, backspace one record, write a long gap, and
+> try again.  This allowed skipping over parts of the tape where the
+> oxide was substandard.
+>
+> When such a tape was rewound and read back, there was no indication
+> that there was a long gap.  As long as the first byte of data started
+> coming in within 30 seconds of tape motion, all was OK.
+
+IBM's tape drives would have even less problems.  As I understand they
+will go through the whole tape looking for the first block.  If you mount
+a blank tape when it is expecting a labeled or unlabeled tape it will run
+it off the reel looking for the label.
+
+Then again, I used to hear stories about PDP10 tape drives that had
+the ability to do fast forward and rewind at the same time.  You got
+your tape back on two reels when it started on only one.  (I knew
+someone who this happened to.)
+
+-- glen
+
+
+
+
+From fdc@columbia.edu Wed Oct  2 00:52:34 PDT 2002
+Article: 17889 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newsfeed.cwix.com!bloom-beacon.mit.edu!aanews.merit.edu!gumby.it.wmich.edu!newsreader.wustl.edu!stl-feed.news.verio.net!news.cmnh.org!phl-feed.news.verio.net!newsmaster.cc.columbia.edu!news.columbia.edu!news-not-for-mail
+From: fdc@columbia.edu (Frank da Cruz)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Wanted: the SOUNDS of classic computing
+Date: 27 Sep 2002 15:58:09 -0400
+Organization: Columbia University
+Lines: 24
+Message-ID: <an2d8h$6go$1@watsol.cc.columbia.edu>
+References: <amvl57$9eg$1@luna.vcn.bc.ca> <3aJk9.241731$216.8812895@bin4.nnrp.aus1.giganews.com> <0T1l9.25287$A%3.321111@ord-read.news.verio.net>
+NNTP-Posting-Host: watsol.cc.columbia.edu
+X-Trace: newsmaster.cc.columbia.edu 1033156693 2642 128.59.39.139 (27 Sep 2002 19:58:13 GMT)
+X-Complaints-To: postmaster@columbia.edu
+NNTP-Posting-Date: 27 Sep 2002 19:58:13 GMT
+Xref: dfw-artgen alt.folklore.computers:99951 alt.sys.pdp10:17889
+
+In article <0T1l9.25287$A%3.321111@ord-read.news.verio.net>,
+Robert Bonomi <bonomi@c-ns.> wrote:
+: ...
+: We had a couple of Dataproducts drum printers, with different
+: character-sets.  One had any given character at different rotational
+: positions at each column.  another had a character at the _same_ position
+: at each column.  That latter one was _really_ noisy, when somebody printed
+: a row of dashes, for example, to separate sections of a report --- "whing,
+: whing, whing, whing, *BANG*, whing, whing, whing, whing, *BANG*...."  I
+: kept threatening to do an "1812 Overture" on that one -- the cannon-fire
+: going to be _easy_!
+:
+Complete with flames!  When I was a young'un and wrote my first line-printer
+plotting program that scaled the data and rotated the graph to natural x/y
+orientation, cleverly sorting the data pairs by y-value and then going thru
+the list and printing an asterisk for each point...  the program came to a
+cluster of values in the data that caused it to print the same asterisk in
+the same place repeatedly with a little tic tic tic tic noise.  Then after
+several hundred of these a VRRRROOOOOOOM!!! noise as the paper and ribbon 
+burst into flame...
+
+That's how I learned about output buffering.
+
+- Frank
+
+
+From jcmorris@mitre.org Wed Oct  2 00:54:46 PDT 2002
+Article: 17924 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!logbridge.uoregon.edu!arclight.uoregon.edu!news.tufts.edu!newstransit.mitre.org!news.mitre.org!jcmorris
+From: jcmorris@mitre.org (Joe Morris)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Wanted: the SOUNDS of classic computing
+Date: Sat, 28 Sep 2002 16:00:24 +0000 (UTC)
+Organization: The MITRE Organization
+Lines: 24
+Message-ID: <an4jmo$eas$1@newslocal.mitre.org>
+References: <amvl57$9eg$1@luna.vcn.bc.ca> <3aJk9.241731$216.8812895@bin4.nnrp.aus1.giganews.com> <0T1l9.25287$A%3.321111@ord-read.news.verio.net>
+Reply-To: jcmorris@mitre.org
+NNTP-Posting-Host: jmorris-pc.mitre.org
+X-Trace: newslocal.mitre.org 1033228824 14684 128.29.114.13 (28 Sep 2002 16:00:24 GMT)
+X-Complaints-To: news@mitre.org
+NNTP-Posting-Date: Sat, 28 Sep 2002 16:00:24 +0000 (UTC)
+X-Newsreader: NN version 6.5.6 (NOV)
+Xref: dfw-artgen alt.folklore.computers:100080 alt.sys.pdp10:17924
+
+bonomi@c-ns. (Robert Bonomi) writes:
+
+>>The sound of a high end tape drive running at full clip.
+
+>Continuous start/stop I/O.
+
+>And that jet-turbine rewind. particularly as it started up, and/or braked to a 
+>stop.
+
+...and the slap-slap-slap sound of a tape that has just run past the EOT
+marker and has left the supply reel empty.  Usually followed by a bellow
+of profanity from the operator who now has to rethread the tape on a reel
+that has no fingerholes.
+
+Don't forget the sounds of an entire machine room coming to life from
+a cold shutdown.  Start with dead quiet, then a quiet <click> of the
+power-on button, followed by loud kerCHUNK sounds from the power relays (plus
+pinball-game-like sounds from the rotary relay in the CPU as it skips
+over unused power-control connections), followed by thudrrrrreeeeeeIIIII
+>from the huge motors that spun the disk drives...all accompanied by the
+increasingly loud noise from the fans in the various boxes, and the chatter
+of the 8" floppy readers loading microcode.
+
+Joe Morris
+
+
+From bonomi@c-ns. Wed Oct  2 00:55:05 PDT 2002
+Article: 17886 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!newsfeed.cwix.com!sjc-peer.news.verio.net!dfw-peer!news.verio.net!ord-read.news.verio.net.POSTED!not-for-mail
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Wanted: the SOUNDS of classic computing
+References: <amvl57$9eg$1@luna.vcn.bc.ca> <3aJk9.241731$216.8812895@bin4.nnrp.aus1.giganews.com>
+Organization: Not Much
+X-Newsreader: trn 4.0-test69 (20 September 1998)
+From: bonomi@c-ns. (Robert Bonomi)
+Lines: 58
+Message-ID: <0T1l9.25287$A%3.321111@ord-read.news.verio.net>
+Date: Fri, 27 Sep 2002 18:58:04 GMT
+NNTP-Posting-Host: 207.241.52.60
+X-Complaints-To: abuse@verio.net
+X-Trace: ord-read.news.verio.net 1033153084 207.241.52.60 (Fri, 27 Sep 2002 18:58:04 GMT)
+NNTP-Posting-Date: Fri, 27 Sep 2002 18:58:04 GMT
+Xref: dfw-artgen alt.folklore.computers:99945 alt.sys.pdp10:17886
+
+In article <3aJk9.241731$216.8812895@bin4.nnrp.aus1.giganews.com>,
+Mark Hittinger <bugs@pu.net> wrote:
+>Thomas Dzubin <dzubint@vcn.bc.ca> writes:
+>>Has anyone archived any sound recordings of old systems and made them
+>>accessible on the Internet?
+>>Really.  I'm not kidding.
+>
+>Wow another set of "things" that we've lost
+>
+>The sound of a line printer printing out a snoopy or psa jet poster with
+>overprinting.
+
+Also, line-printer "music".  "She'll be Comin' Round the Mountian" was one
+of the more common ones.  Had to be 'tuned' for the specific printer and
+character-set. 
+
+We had a couple of Dataproducts drum printers, with different character-sets.
+One had any given character at different rotational positions at each column.
+another had a character at the _same_ position at each column.  That latter
+one was _really_ noisy, when somebody printed a row of dashes, for example,
+to separate sections of a report --- "whing, whing, whing, whing, *BANG*, whing,
+whing, whing, whing, *BANG*...."   I kept threatening to do an "1812 Overture"
+on that one -- the cannon-fire going to be _easy_!  <grin>
+
+>The sound of a high end tape drive running at full clip.
+
+Continuous start/stop I/O.
+
+And that jet-turbine rewind. particularly as it started up, and/or braked to a 
+stop.
+
+>The sound of a Decwriter printing out acct.sys.
+
+Or various status and/or error messages.
+a "Name that error-message" contest, from just the -sound- of it ?  :))
+
+>
+>The sound of an RP06 seeking like crazy.
+>
+>The sound of a DECtape drive looking for a file.
+>
+>The sound of a "silent 700" writing a file to a cassette tape.
+>
+>The sound of a card reader getting a pic check.
+
+a card punch at work, a regular deck         also making 'lace' cards
+
+Some plotters also had 'interesting' sound-effects. Not sure they were 
+standard enough to be recognizable, though.
+
+
+Then there's some of the off-line equipment
+  punch-card sorter,
+  punch-card 'interpreter',
+  decollater (for separating multi-part form stock into separate stacks)
+  burster (turned continus-form into a pile of individual sheets)
+
+  
+
+
+From jmfbahciv@aol.com Wed Oct  2 00:58:15 PDT 2002
+Article: 17970 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!feed2.news.rcn.net!feed1.news.rcn.net!rcn!208-59-181-153
+From: jmfbahciv@aol.com
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Wanted: the SOUNDS of classic computing
+Date: Mon, 30 Sep 02 08:41:43 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 18
+Message-ID: <an9773$cb6$4@bob.news.rcn.net>
+References: <amvl57$9eg$1@luna.vcn.bc.ca> <3aJk9.241731$216.8812895@bin4.nnrp.aus1.giganews.com> <0T1l9.25287$A%3.321111@ord-read.news.verio.net> <an4jmo$eas$1@newslocal.mitre.org> <594.37T2208T5185349@kltpzyxm.invalid>
+X-Trace: UmFuZG9tSVbVi6rO6j3rPuFalrT4hg9Gj70RonqzXk5ytANwMM0NtcGzVZKUeU/A
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 30 Sep 2002 09:57:55 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: dfw-artgen alt.folklore.computers:100251 alt.sys.pdp10:17970
+
+In article <594.37T2208T5185349@kltpzyxm.invalid>,
+   "Charlie Gibbs" <cgibbs@kltpzyxm.invalid> wrote:
+>In article <an4jmo$eas$1@newslocal.mitre.org> jcmorris@mitre.org
+>(Joe Morris) writes:
+>
+>>...and the slap-slap-slap sound of a tape that has just run past the
+>>EOT marker and has left the supply reel empty.  Usually followed by
+>>a bellow of profanity from the operator who now has to rethread the
+>>tape on a reel that has no fingerholes.
+>
+>Don't forget the initial THWUP as the end of the tape slams to the
+>bottom of the vacuum column...
+>
+DECtapes used to go slap..slap..slap after an UNLOAD DTA0: command.
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+From mrr@foo.eunet.no Wed Oct  2 01:03:22 PDT 2002
+Article: 17983 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newsfeed.icl.net!newsfeed.fjserv.net!newspeer.clara.net!news.clara.net!feed.news.nacamar.de!uio.no!Norway.EU.net!not-for-mail
+From: mrr@foo.eunet.no (Morten Reistad)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Wanted: the SOUNDS of classic computing
+Date: 30 Sep 2002 15:34:14 GMT
+Organization: EUnet
+Lines: 70
+Message-ID: <an9qtm$foi$1@oslo-nntp.eunet.no>
+References: <amvl57$9eg$1@luna.vcn.bc.ca> <3aJk9.241731$216.8812895@bin4.nnrp.aus1.giganews.com> <0T1l9.25287$A%3.321111@ord-read.news.verio.net> <an4jmo$eas$1@newslocal.mitre.org>
+NNTP-Posting-Host: www.reistad.priv.no
+X-Trace: oslo-nntp.eunet.no 1033400054 16146 193.71.26.162 (30 Sep 2002 15:34:14 GMT)
+X-Complaints-To: abuse@KPNQwest.no
+NNTP-Posting-Date: 30 Sep 2002 15:34:14 GMT
+X-Newsreader: trn 4.0-test69 (20 September 1998)
+Xref: dfw-artgen alt.folklore.computers:100307 alt.sys.pdp10:17983
+
+In article <an4jmo$eas$1@newslocal.mitre.org>,
+Joe Morris <jcmorris@mitre.org> wrote:
+>bonomi@c-ns. (Robert Bonomi) writes:
+>
+>>>The sound of a high end tape drive running at full clip.
+>
+>>Continuous start/stop I/O.
+>
+>>And that jet-turbine rewind. particularly as it started up, and/or braked to a 
+>>stop.
+>
+>...and the slap-slap-slap sound of a tape that has just run past the EOT
+>marker and has left the supply reel empty.  Usually followed by a bellow
+>of profanity from the operator who now has to rethread the tape on a reel
+>that has no fingerholes.
+
+Or the sounds of paper tape punches; they were real mechanical devices
+making real mechanical sounds. Made a real mess if(when!) a paper tape broke.
+
+>Don't forget the sounds of an entire machine room coming to life from
+>a cold shutdown.  Start with dead quiet, then a quiet <click> of the
+>power-on button, followed by loud kerCHUNK sounds from the power relays (plus
+>pinball-game-like sounds from the rotary relay in the CPU as it skips
+>over unused power-control connections), followed by thudrrrrreeeeeeIIIII
+>from the huge motors that spun the disk drives...all accompanied by the
+>increasingly loud noise from the fans in the various boxes, and the chatter
+>of the 8" floppy readers loading microcode.
+
+Attempting this one in any of the installations I have been working at
+would just burn a large, fat hole in some major circuit-breakers covering
+the entire city block. (did that once). The sound was rather like a loud
+bang, followed by *total* silence. 
+
+The startup sounds would be a clatter of sequencing relays, first big
+"clank-clack-clack" of the main relays hitting power, and then lots of
+minor "clack-dzzzZZRRR" as motors (disks) or fans were
+started. Installers were fine-tuning all of this, all the disks needed
+to spin up in time for the boot-code not to time out, but without
+blowing fuses on the way. In between all of this were cooling and
+ventilation units starting. There were separate sequencers attached to
+all the major hardware; the trick was to have them be suitably staggered.
+A cabinet full of (10) old Fujitsu 770MB Winchester SMD drives took
+a three-phase 32A C-type 220V fuse, and that just blew if they all started
+without sequencing.
+
+At the Oslo Stock Exchange there were (probably still is) bi-annual
+events where the entire shutdown/startup register is exercised, to check
+that things really coldstart cleanly.
+
+A powerfail at the same installation also produced spectacular sounds.
+First, the non-priority stuff lost power(3/4th of lightning, lots of
+monitors; ventilation/heating/cooling), the building took an eerie,
+dim half-silence for a minute or so while the diesel engine got
+pre-heated; and then it started with a spectacutar roar that shook the
+building; and the sequencing stuff started switching in things; with
+clicks and flashes as item after item got power back.  The dark
+computer monitors came right back where they were, the
+terminal/pc/whatever was on UPS power, but non-essential monitors were
+not.
+
+Going back to main power did all of this in reverse, as there was a break in
+power when building power went off generator back to utility power.   
+The power load was simply too great to switch without operating as a
+standalone power generation utility, and that requires lots of licenses.
+
+It gets kind of weird building one of those mini-itx systems that actually
+can run most of the old trading system code on 2-3 unix systems; and they
+can run a day from a single car battery.
+
+-- Morten Reistad
+
+
+From peter@taronga.com Wed Oct  2 01:08:21 PDT 2002
+Article: 17877 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!newsfeed.stanford.edu!news.usenet2.org!news-proxy.baileynm.com!citadel.in.taronga.com!not-for-mail
+From: peter@taronga.com (Peter da Silva)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Wanted: the SOUNDS of classic computing
+Date: 27 Sep 2002 15:44:55 GMT
+Organization: TSS Inc.
+Lines: 13
+Message-ID: <an1udn$24nk$1@citadel.in.taronga.com>
+References: <amvl57$9eg$1@luna.vcn.bc.ca> <amvvfl$s1k$1@shell.golden.net> <an1gs2$f0$3@bob.news.rcn.net> <_F_k9.1343$p03.56@fe01>
+NNTP-Posting-Host: citadel.in.taronga.com
+X-Trace: citadel.in.taronga.com 1033141495 70388 10.0.0.43 (27 Sep 2002 15:44:55 GMT)
+X-Complaints-To: usenet@taronga.com
+NNTP-Posting-Date: 27 Sep 2002 15:44:55 GMT
+X-Newsreader: trn 4.0-test72 (19 April 1999)
+Xref: dfw-artgen alt.folklore.computers:99914 alt.sys.pdp10:17877
+
+In article <_F_k9.1343$p03.56@fe01>, Kevin Handy  <kth@srv.net> wrote:
+>Wouldn't you also want to change your font to one which looks like
+>you've been using the ribbon too long, and where the hollows in the
+>'e' and 'o' have been filled in by dried ink, and the letters don't
+>quite line up properly?
+
+http://www.eyewire.com/magazine/columns/robin/typewriter/
+
+-- 
+Rev. Peter da Silva, ULC.	 29.6852N 95.5770W                       WWFD?
+
+"Be conservative in what you generate, and liberal in what you accept"
+	-- Matthew 10:16 (l.trans)
+
+
+From rcs@osfn.org Thu Oct  3 18:39:57 PDT 2002
+Article: 18028 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!bloom-beacon.mit.edu!newsswitch.lcs.mit.edu!snoopy.risq.qc.ca!newsfeed.news2me.com!newsfeed-west.nntpserver.com!hub1.meganetnews.com!nntpserver.com!telocity-west!TELOCITY!sn-xit-03!sn-xit-06!sn-post-01!supernews.com!corp.supernews.com!not-for-mail
+From: RCS / RI <rcs@osfn.org>
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Wanted: the SOUNDS of classic computing
+Date: Thu, 03 Oct 2002 11:56:46 -0400
+Organization: The Retro-Computing Society of RI
+Message-ID: <3D9C68BE.59A67268@osfn.org>
+X-Mailer: Mozilla 4.7 [en] (X11; I; SunOS 5.8 sun4m)
+X-Accept-Language: en
+MIME-Version: 1.0
+References: <amvl57$9eg$1@luna.vcn.bc.ca>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Complaints-To: abuse@supernews.com
+Lines: 26
+Xref: dfw-artgen alt.folklore.computers:100597 alt.sys.pdp10:18028
+
+Thomas Dzubin wrote:
+> 
+> Has anyone archived any sound recordings of old systems and made them
+> accessible on the Internet?
+> 
+> Anybody have an old IBM card reader that they could power up and run a
+> couple of decks of cards through and mike the sound?   Or have an old
+> Model 35 TTY running that they could punch out a tape and record it?
+> Or an old DECWriter II printing out a code listing.
+
+Ask, and ye shall receive.
+
+At the below URL you will find short sound recordings of an ASR-33
+Teletype punching paper tape and a Univac 1710 VIP punching a card.
+
+http://starfish.osfn.org/rcs/audio/
+
+As we get the chance we will add more sounds to this archive.
+
+-mikeu
+Michael Umbricht
+
+-- 
+The Retro-Computing Society of RI, Inc.                   (401) 861-1977
+25 Eagle St Bldg 5 Ste 206                      http://www.osfn.org/rcs/
+Providence RI 02908                       telnet://kronos.egr-ri.ids.net
+
+
+From huw.davies@kerberos.davies.net.au Fri Oct 25 22:01:11 PDT 2002
+Article: 18117 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!news.airnews.net!cabal12.airnews.net!cabal2.airnews.net!news-f.iadfw.net!not-for-mail
+From: huw.davies@kerberos.davies.net.au
+Newsgroups: alt.sys.pdp10
+Subject: Re: Wanted: the SOUNDS of classic computing
+Followup-To: alt.folklore.computers,alt.sys.pdp10
+Date: 14 Oct 2002 06:37:45 GMT
+Organization: Airnews.net! at Internet America
+Lines: 18
+Sender: Huw Davies <cchd@adslgw.davies.net.au>
+Message-ID: <2215FC28C531B3E4.6C008F4B96544FE0.8C75BB1D05E1C828@lp.airnews.net>
+X-Orig-Message-ID: <aodonp$lkn@library2.airnews.net>
+References: <amvl57$9eg$1@luna.vcn.bc.ca> <ao5qsi$hl5$1@perki.connect.com.au> <ao6inb$hn2$1@newslocal.mitre.org> <20021012081012.541cdf13.steveo@eircom.net> <mq2aoa.3v1.ln@teabag.cbhnet>
+Abuse-Reports-To: abuse at airmail.net to report improper postings
+NNTP-Proxy-Relay: library2.airnews.net
+NNTP-Posting-Time: Mon Oct 14 01:37:45 2002
+NNTP-Posting-Host: !`kX51k-VP0*o9;&8#uu@2!uX (Encoded at Airnews!)
+User-Agent: tin/1.4.2-20000205 ("Possession") (UNIX) (Linux/2.2.20 (alpha))
+Xref: dfw-artgen alt.sys.pdp10:18117
+
+In alt.sys.pdp10 Chris Hedley <cbh@ieya.co.remove_this.uk> wrote:
+> According to Steve O'Hara-Smith  <steveo@eircom.net>:
+>> On Fri, 11 Oct 2002 13:12:11 +0000 (UTC)
+>> jcmorris@mitre.org (Joe Morris) wrote:
+>> JM> Joe Morris (wondering how many younger programmers get the reference)
+
+> As one of the group's sprogs, I remember seeing the odd show in the
+> '70s during summer and easter school holidays (pre-secondary...)
+
+Groan. Some of us (well at least me!) were writing real cool programs
+in the 70's in DEC-10 assembler and (my personal favorite) BLISS-10.
+You watch that last bit get me into trouble (again) :-)
+-- 
+Huw Davies          | e-mail: Huw.Davies@kerberos.davies.net.au
+                    | "If God had wanted soccer played in the
+                    | air, the sky would be painted green" 
+
+
+
+
+From huw.davies@kerberos.davies.net.au Fri Oct 25 22:02:07 PDT 2002
+Article: 18128 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!news.airnews.net!cabal12.airnews.net!cabal2.airnews.net!news-f.iadfw.net!not-for-mail
+From: huw.davies@kerberos.davies.net.au
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Wanted: the SOUNDS of classic computing
+Date: 15 Oct 2002 05:19:45 GMT
+Organization: Airnews.net! at Internet America
+Lines: 34
+Sender: Huw Davies <cchd@adslgw.davies.net.au>
+Message-ID: <D643A442E7F1B82B.5B41F31CAD603A5E.1784775107676E95@lp.airnews.net>
+X-Orig-Message-ID: <aog8hh$l0m@library2.airnews.net>
+References: <amvl57$9eg$1@luna.vcn.bc.ca> <ao5qsi$hl5$1@perki.connect.com.au> <ao6inb$hn2$1@newslocal.mitre.org> <20021012081012.541cdf13.steveo@eircom.net> <mq2aoa.3v1.ln@teabag.cbhnet> <2215FC28C531B3E4.6C008F4B96544FE0.8C75BB1D05E1C828@lp.airnews.net> <aoe567$nl5$1@bob.news.rcn.net>
+Abuse-Reports-To: abuse at airmail.net to report improper postings
+NNTP-Proxy-Relay: library2.airnews.net
+NNTP-Posting-Time: Tue Oct 15 00:19:45 2002
+NNTP-Posting-Host: !`Tp\1k-X'/W%+hFV%r/C2+X9 (Encoded at Airnews!)
+User-Agent: tin/1.4.2-20000205 ("Possession") (UNIX) (Linux/2.2.20 (alpha))
+Xref: dfw-artgen alt.folklore.computers:101464 alt.sys.pdp10:18128
+
+In alt.sys.pdp10 jmfbahciv@aol.com wrote:
+>>Groan. Some of us (well at least me!) were writing real cool programs
+>>in the 70's in DEC-10 assembler and (my personal favorite) BLISS-10.
+>>You watch that last bit get me into trouble (again) :-)
+
+> Why, Huw!  Why would that get you into trouble?  As long as you
+> do your own builds and packaging, there's nothing to get you into
+> trouble.  
+
+Well I knew you had fairly strong views on Bliss-10, especially the edict
+that all DECsystem-10 monitor development should be done in it.
+
+> What kinds of stuff did you do when you used BLISS?
+
+A variety of systems programming tasks including a user mode version of 
+SYSDPB, a reimplementation of PIP (more about this below), a BLISS-10
+interface to IOLIB, many compiler tools (I was really into compilers)
+and general programming tasks.
+
+The reimplementation of PIP (originally known as PAGER but renamed to
+TYPER to avoid confusion) came about when we discovered an interesting
+bug in the software that accounted for pages printed. It basically just
+counted line feeds and form feeds - we just filled out each line with spaces
+and removed form feeds and suddenly we didn't have a problem printing 
+out large files any more. I can't remember, but I think we had a limit of 
+200 pages per month, which was no where near enough!
+
+Looking back, I must have been a real pain as a user!
+-- 
+Huw Davies          | e-mail: Huw.Davies@kerberos.davies.net.au
+                    | "If God had wanted soccer played in the
+                    | air, the sky would be painted green" 
+
+
+
+
+From jmfbahciv@aol.com Fri Oct 25 22:02:52 PDT 2002
+Article: 18129 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!feed2.news.rcn.net!feed1.news.rcn.net!rcn!207-172-97-4
+From: jmfbahciv@aol.com
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Wanted: the SOUNDS of classic computing
+Date: Tue, 15 Oct 02 12:44:49 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 66
+Message-ID: <aoh77l$ipt$5@bob.news.rcn.net>
+References: <amvl57$9eg$1@luna.vcn.bc.ca> <ao5qsi$hl5$1@perki.connect.com.au> <ao6inb$hn2$1@newslocal.mitre.org> <20021012081012.541cdf13.steveo@eircom.net> <mq2aoa.3v1.ln@teabag.cbhnet> <2215FC28C531B3E4.6C008F4B96544FE0.8C75BB1D05E1C828@lp.airnews.net> <aoe567$nl5$1@bob.news.rcn.net> <D643A442E7F1B82B.5B41F31CAD603A5E.1784775107676E95@lp.airnews.net>
+X-Trace: UmFuZG9tSVYsBb5iy8tPZHwAjQ2ZQdVyz6QYeNCHeM4WGd/Tgv3nKxbex/Lrf7NC
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 15 Oct 2002 14:03:33 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: dfw-artgen alt.folklore.computers:101497 alt.sys.pdp10:18129
+
+In article 
+<D643A442E7F1B82B.5B41F31CAD603A5E.1784775107676E95@lp.airnews.net>,
+   huw.davies@kerberos.davies.net.au wrote:
+>In alt.sys.pdp10 jmfbahciv@aol.com wrote:
+>>>Groan. Some of us (well at least me!) were writing real cool programs
+>>>in the 70's in DEC-10 assembler and (my personal favorite) BLISS-10.
+>>>You watch that last bit get me into trouble (again) :-)
+>
+>> Why, Huw!  Why would that get you into trouble?  As long as you
+>> do your own builds and packaging, there's nothing to get you into
+>> trouble.  
+>
+>Well I knew you had fairly strong views on Bliss-10, especially the edict
+>that all DECsystem-10 monitor development should be done in it.
+
+Not Bliss-10, Bliss36.  And, not only the code, but all monitor
+patches.  You generate a BLISS-36 file that can be patched into
+the monitor without DDT.  In addition, the -10 groups were not
+allowed to have any BLISS-36 sources.  In addition to that, if
+we used BLISS-36 for any development, we would not be allowed
+to ship our sources.   If we did use BLISS-36 and we found a bug
+in the compiler, it was promised that a fix would not be
+supplied ever.  
+
+And I'm not even to the point of the viability of programming,
+maintaining, and running the fucking stuff.  I'm just talking
+about corporate head-wedges getting shoved down our asses.
+
+
+This has nothing to do with how useful BLISS is.  :-)
+
+As a packager of a few products that did use all flavors of
+BLISS, life sucked.  The organization of Bliss tools (if I
+can use that term) was horrible.  Not even a developer knew
+what files he used when doing a compile of a MAIN.
+
+
+>
+>> What kinds of stuff did you do when you used BLISS?
+>
+>A variety of systems programming tasks including a user mode version of 
+>SYSDPB, a reimplementation of PIP (more about this below), a BLISS-10
+>interface to IOLIB, many compiler tools (I was really into compilers)
+>and general programming tasks.
+>
+>The reimplementation of PIP (originally known as PAGER but renamed to
+>TYPER to avoid confusion) came about when we discovered an interesting
+>bug in the software that accounted for pages printed. It basically just
+>counted line feeds and form feeds - we just filled out each line with 
+spaces
+>and removed form feeds and suddenly we didn't have a problem printing 
+>out large files any more. I can't remember, but I think we had a limit of 
+>200 pages per month, which was no where near enough!
+
+ROTFLMAO.  Just to make it clear to the peanut gallery, this wasn't
+a PIP behaviour; it was a SPROUT count.
+
+
+>
+>Looking back, I must have been a real pain as a user!
+
+Oh, you naughty boy!  :-)))
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+From mrc@CAC.Washington.EDU Fri Oct 25 22:03:11 PDT 2002
+Article: 18130 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!logbridge.uoregon.edu!news.u.washington.edu!140.142.17.34.MISMATCH!news.u.washington.edu!shiva0.cac.washington.edu!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Wanted: the SOUNDS of classic computing
+Date: Tue, 15 Oct 2002 08:12:31 -0700
+Organization: Networks and Distributed Computing
+Lines: 28
+Message-ID: <Pine.LNX.4.50.0210150808220.12008-100000@shiva0.cac.washington.edu>
+References: <amvl57$9eg$1@luna.vcn.bc.ca> <ao5qsi$hl5$1@perki.connect.com.au>
+ <ao6inb$hn2$1@newslocal.mitre.org> <20021012081012.541cdf13.steveo@eircom.net>
+ <mq2aoa.3v1.ln@teabag.cbhnet> <2215FC28C531B3E4.6C008F4B96544FE0.8C75BB1D05E1C828@lp.airnews.net>
+ <aoe567$nl5$1@bob.news.rcn.net> <D643A442E7F1B82B.5B41F31CAD603A5E.1784775107676E95@lp.airnews.net>
+ <aoh77l$ipt$5@bob.news.rcn.net>
+NNTP-Posting-Host: shiva0.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 1034694753 13312 (None) 140.142.17.35
+X-Complaints-To: help@cac.washington.edu
+In-Reply-To: <aoh77l$ipt$5@bob.news.rcn.net>
+Content-Length: 314159 (believe this at your own risk)
+Xref: dfw-artgen alt.folklore.computers:101505 alt.sys.pdp10:18130
+
+On Tue, 15 Oct 2002 jmfbahciv@aol.com wrote:
+> >Well I knew you had fairly strong views on Bliss-10, especially the edict
+> >that all DECsystem-10 monitor development should be done in it.
+> Not Bliss-10, Bliss36.  And, not only the code, but all monitor
+> patches.  You generate a BLISS-36 file that can be patched into
+> the monitor without DDT.  In addition, the -10 groups were not
+> allowed to have any BLISS-36 sources.  In addition to that, if
+> we used BLISS-36 for any development, we would not be allowed
+> to ship our sources.   If we did use BLISS-36 and we found a bug
+> in the compiler, it was promised that a fix would not be
+> supplied ever.
+
+Needless to say, the customers wanted to have nothing to do with BLISS-36.
+If a program was written in BLISS-36 that essentially meant that it was
+unmaintainable.
+
+The common pithy saying was "BLISS is ignorance."
+
+Not all that many people were impressed with BLISS-10 either.  It was
+considered to be strictly a DEC/CMU aberration.  Far more people used SAIL
+(or even PASCAL) for systems software development than BLISS; at least
+programs in these languages were maintainable and you could get compiler
+bugs fixed!
+
+-- Mark --
+
+http://staff.washington.edu/mrc
+Science does not emerge from voting, party politics, or public debate.
+
+
+From huw.davies@kerberos.davies.net.au Fri Oct 25 22:03:44 PDT 2002
+Article: 18133 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!dfw-peer!news.verio.net!news.airnews.net!cabal13.airnews.net!cabal1.airnews.net!news-f.iadfw.net!not-for-mail
+From: huw.davies@kerberos.davies.net.au
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Wanted: the SOUNDS of classic computing
+Date: 16 Oct 2002 06:02:31 GMT
+Organization: Airnews.net! at Internet America
+Lines: 26
+Sender: Huw Davies <cchd@adslgw.davies.net.au>
+Message-ID: <F8A6A96FA2E0304E.1D51FD0D55C58742.1B7BB2CD607A8FB0@lp.airnews.net>
+X-Orig-Message-ID: <aoivdn$ica@library2.airnews.net>
+References: <amvl57$9eg$1@luna.vcn.bc.ca> <ao5qsi$hl5$1@perki.connect.com.au> <ao6inb$hn2$1@newslocal.mitre.org> <20021012081012.541cdf13.steveo@eircom.net> <mq2aoa.3v1.ln@teabag.cbhnet> <2215FC28C531B3E4.6C008F4B96544FE0.8C75BB1D05E1C828@lp.airnews.net> <aoe567$nl5$1@bob.news.rcn.net> <D643A442E7F1B82B.5B41F31CAD603A5E.1784775107676E95@lp.airnews.net> <aoh77l$ipt$5@bob.news.rcn.net> <Pine.LNX.4.50.0210150808220.12008-100000@shiva0.cac.washington.edu>
+Abuse-Reports-To: abuse at airmail.net to report improper postings
+NNTP-Proxy-Relay: library2.airnews.net
+NNTP-Posting-Time: Wed Oct 16 01:02:31 2002
+NNTP-Posting-Host: !_J7p1k-Ve0GU9;FV&#$I1pO" (Encoded at Airnews!)
+User-Agent: tin/1.4.2-20000205 ("Possession") (UNIX) (Linux/2.2.20 (alpha))
+Xref: dfw-artgen alt.folklore.computers:101554 alt.sys.pdp10:18133
+
+In alt.sys.pdp10 Mark Crispin <mrc@cac.washington.edu> wrote:
+
+> Not all that many people were impressed with BLISS-10 either.  It was
+> considered to be strictly a DEC/CMU aberration.  Far more people used SAIL
+> (or even PASCAL) for systems software development than BLISS; at least
+> programs in these languages were maintainable and you could get compiler
+> bugs fixed!
+
+Well as I said, I don't ever recall having a problem with the BLISS-10
+compiler. Some things were documented poorly in the BLISS-10 manual
+but once I gained access to the compiler sources (I just touched the
+listings for good luck) things got a lot easier....
+
+We had SAIL at La Trobe as well but I don't think it was installed for
+long. We had a printed version of the manual and I remember the famous
+"Dry Rot in SAIL compiler" error message. This was one of the few
+messages that made sense (we Australians weren't getting much
+American culture thrust upon us in those days). Things like
+the BLISS-10 compiler taking a punt and the SIX12 BLISS-10 debugger
+didn't make much sense then....
+-- 
+Huw Davies          | e-mail: Huw.Davies@kerberos.davies.net.au
+                    | "If God had wanted soccer played in the
+                    | air, the sky would be painted green" 
+
+
+
+
+From Trevor.Jenkins@suneidesis.com Fri Oct 25 22:28:59 PDT 2002
+Article: 18134 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newsfeed.icl.net!newsfeed.fjserv.net!newsfeed.icl.net!newsfeed.fjserv.net!newsfeed.arcor-online.net!fu-berlin.de!uni-berlin.de!213.208.87.130!not-for-mail
+From: Trevor.Jenkins@suneidesis.com (Trevor Jenkins)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Wanted: the SOUNDS of classic computing
+Date: 16 Oct 2002 08:15:55 GMT
+Organization: suneidesis
+Lines: 50
+Message-ID: <slrnaqq81o.8k5.Trevor.Jenkins@suneidesis.com>
+References: <amvl57$9eg$1@luna.vcn.bc.ca> <ao5qsi$hl5$1@perki.connect.com.au> <ao6inb$hn2$1@newslocal.mitre.org> <20021012081012.541cdf13.steveo@eircom.net> <mq2aoa.3v1.ln@teabag.cbhnet> <2215FC28C531B3E4.6C008F4B96544FE0.8C75BB1D05E1C828@lp.airnews.net> <aoe567$nl5$1@bob.news.rcn.net> <D643A442E7F1B82B.5B41F31CAD603A5E.1784775107676E95@lp.airnews.net> <aoh77l$ipt$5@bob.news.rcn.net> <Pine.LNX.4.50.0210150808220.12008-100000@shiva0.cac.washington.edu>
+NNTP-Posting-Host: 213.208.87.130
+X-Trace: fu-berlin.de 1034756155 24349408 213.208.87.130 (16 [129086])
+X-Orig-Path: Trevor.Jenkins
+User-Agent: slrn/0.9.6.2 (Linux)
+Xref: dfw-artgen alt.folklore.computers:101558 alt.sys.pdp10:18134
+
+On Tue, 15 Oct 2002 08:12:31 -0700, Mark Crispin <mrc@CAC.Washington.EDU> wrote:
+
+> Not all that many people were impressed with BLISS-10 either.
+
+Some business associates of mine were impressed enough that they wrote a text
+retrieval system using BLISS-10. They had fairly reasonable success selling it
+around the world. However, once the Jupiter project was killed and the
+-10s/-20s declared obsolete that ledt them without a hardware base to work
+with.
+
+> ...  It was
+> considered to be strictly a DEC/CMU aberration.
+
+And heavily influence by Dijkstra's "Goto Considered Harmful" letter.
+
+Perhaps if a larger marketing budget had been given to BLISS then we'd all be
+using it rather than C as a system implementation langauge. The macro processor
+features are so much better than those available in C. Isn't it true that there
+was a Basic interpreter written entirely in BLISS Macros?
+
+I would love to see a Bliss language front-end for GCC.
+
+> ...  Far more people used SAIL
+> (or even PASCAL) for systems software development than BLISS; at least
+> programs in these languages were maintainable and you could get compiler
+> bugs fixed!
+
+This is the line my associates took. They re-wrote their system in Pascal (VAX
+PASCAL). This version is still for sale today and ported to loads more
+operating systems than VMS/OpenVMS.
+
+One might accuse them of short-sightedness in first choosing 10s/20s as their
+operating system base, BLISS as their implementation language, and then
+compounding that by choosing PASCAL as the re-implementation language. Doesn't
+seem to have affected sales too much.
+
+My associates kept their Bliss skills by hooking their text retrieval system
+into Digital's ALL-IN-1. I got my hands dirty then by writing Bliss-32 code to
+enhance that integration. Once you got over the dotty-ness it was a nice
+language to use. Hence my desire to see Bliss added to GCC.
+
+Regards, Trevor
+
+British Sign Language is not inarticulate handwaving; it's a living language.
+Support the campaign for formal recognition by the British government now!
+Details at http://www.fdp.org.uk/ 
+
+-- 
+
+<>< Re: deemed!
+
+
+From a.greig@virgin.net Sun Jan 26 20:16:06 PST 2003
+Article: 18724 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newspeer1.nwr.nac.net!newspeer.monmouth.com!nntp1.phx1.gblx.net!nntp.gblx.net!nntp.gblx.net!pln-w!spln!dex!extra.newsguy.com!newsp.newsguy.com!enews1
+From: Alan Greig <a.greig@virgin.net>
+Newsgroups: comp.os.vms,comp.sys.dec,de.comp.os.vms,alt.folklore.computers,alt.sys.pdp10
+Subject: Re: vax6k.openecs.org rebirth
+Date: Tue, 14 Jan 2003 11:35:14 +0000
+Organization: http://extra.newsguy.com
+Lines: 31
+Message-ID: <iss72v0n5vk89kh8rdsla7djhiq9ckmn9r@4ax.com>
+References: <3E05FE9D.B3A12286@vax6k.openecs.org> <3E0DF584.5070705@vajhoej.dk> <aumlne$qk2$2@bob.news.rcn.net> <87fzsedy05.fsf@prep.synonet.com> <2JAN200322230368@gerg.tamu.edu> <7HnKc5R40lsA@eisner.encompasserve.org>
+NNTP-Posting-Host: p-409.newsdawg.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Newsreader: Forte Agent 1.8/32.548
+Xref: dfw-artgen comp.os.vms:169166 comp.sys.dec:28631 de.comp.os.vms:3707 alt.folklore.computers:109318 alt.sys.pdp10:18724
+
+On 3 Jan 2003 07:27:24 -0600, koehler@eisner.nospam.encompasserve.org
+(Bob Koehler) wrote:
+
+>In article <2JAN200322230368@gerg.tamu.edu>, carl@gerg.tamu.edu (Carl Perkins) writes:
+>> Way back when, roughly 1983, I got cought calling the phsyical memory,
+>> e.g. RAM, of an 11/780 "core" by someone who thought it odd. Why did I?
+>> I picked it up from the people I worked for and with. Why did they?
+>> Because that's what they had always called that sort of thing - they
+>> didn't care if it was real "core" type memory, it was the physical
+>> memory and they always called it "core". At that point I didn't care
+>> what the difference was (and was barely aware of the difference), and
+>> neither did they. The expression was apparently pretty commonly used
+>> that way back then.
+>
+>   Once upon a time we had a facility with 3 PDP-11, 2 PDP-10, and 8
+>   11/780.  One of the engineers came by and said we were going to
+>   replace the 1MB core in the 2050, I thought he was talking out of
+>   habit.
+
+When you replaced the core memory with IC based memory in a DEC20 the
+entire cabinet could become unstable if certain access panels were
+swung out due to  the absence of the heavy core memory.. Field Service
+engineers told me they had actually heard of machines tipping over in
+the early upgrade days before the problem was fixed. I *think* we had
+counterweights fitted but it might have just been a large warning
+sticker. Can't recall now.
+
+>   Nope.
+
+--
+Alan
+
+
+From eric-no-spam-for-me@brouhaha.com Sun Jan 26 20:18:24 PST 2003
+Article: 18740 of alt.sys.pdp10
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: comp.os.vms,comp.sys.dec,alt.folklore.computers,alt.sys.pdp10
+Subject: Re: vax6k.openecs.org rebirth
+References: <3E05FE9D.B3A12286@vax6k.openecs.org> <3E0DF584.5070705@vajhoej.dk> <aumlne$qk2$2@bob.news.rcn.net> <87fzsedy05.fsf@prep.synonet.com> <2JAN200322230368@gerg.tamu.edu> <7HnKc5R40lsA@eisner.encompasserve.org> <iss72v0n5vk89kh8rdsla7djhiq9ckmn9r@4ax.com> <3E2799B4.FEF4CA15@mrnutty.com>
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.2
+Date: 17 Jan 2003 13:18:04 -0800
+Message-ID: <qh65snh3w3.fsf@ruckus.brouhaha.com>
+Lines: 35
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: 209.66.107.17
+X-Trace: 17 Jan 2003 13:56:41 -0800, 209.66.107.17
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newsfeed.cwix.com!logbridge.uoregon.edu!arclight.uoregon.edu!enews.sgi.com!news.spies.com!209.66.107.17
+Xref: dfw-artgen comp.os.vms:169661 comp.sys.dec:28660 alt.folklore.computers:109668 alt.sys.pdp10:18740
+
+SkyWriter <skywriter@mrnutty.com> writes about memory for KL10
+processors:
+> core memory never was 'swung out' oh the MF20  nmos (i think) memory
+> it was on the back cabinet door, with the power supplies directly beneath it.
+> on MH20 core memory is was a stand alone cabinet, and the backplane was
+> fixed to the cabinet.
+
+There wasn't an MH20.  You must be thinking of an MH10 core box or the
+like.
+
+Some KL10 variants could support external memory boxes (core from DEC,
+semiconductor from Ampex and other vendors) using the DMA20 memory
+adapter.  This interfaced the KL10 S bus [*] to the KI-style external memory
+bus.  All DECsystem-1080 and -1090 systems were supplied this way.  The
+DMA20 was optional on the -1091 and -1095.
+
+However, the KL10 variants used in the DECSYSTEM-2040, -2050, -2060, and
+-2065 generally had internal memory.  MA20 and MB20 were internal core
+memory, and MF20 and MG20 were internal MOS memory.  All of these were
+normally mounted inside the KL10.  I'm not sure whether the DMA20 was
+a supported option on any of the 20s.
+
+The interface to the MF20 and MG20 MOS memory was the X bus, which had
+the same functions and timing as the S bus but at different electrical
+levels.  This required different translator modules in the main
+processor card cage.
+
+The KL10 cabinets were supposed to have stabilizer feet regardless of
+whether they had internal memory.
+
+Eric
+
+
+[*] Not to be confused with the Sun Sbus which appeared more than a
+decade later.
+
+
+From eric-no-spam-for-me@brouhaha.com Sun Jan 26 20:19:01 PST 2003
+Article: 18743 of alt.sys.pdp10
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: comp.os.vms,comp.sys.dec,alt.folklore.computers,alt.sys.pdp10
+Subject: Re: vax6k.openecs.org rebirth
+References: <3E05FE9D.B3A12286@vax6k.openecs.org> <3E0DF584.5070705@vajhoej.dk> <aumlne$qk2$2@bob.news.rcn.net> <87fzsedy05.fsf@prep.synonet.com> <2JAN200322230368@gerg.tamu.edu> <7HnKc5R40lsA@eisner.encompasserve.org> <iss72v0n5vk89kh8rdsla7djhiq9ckmn9r@4ax.com> <3E2799B4.FEF4CA15@mrnutty.com> <qh65snh3w3.fsf@ruckus.brouhaha.com> <3E28C507.4BADC181@mrnutty.com>
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 17 Jan 2003 18:50:53 -0800
+Message-ID: <qhiswnkw6q.fsf@ruckus.brouhaha.com>
+Lines: 31
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.2
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: 209.66.107.17
+X-Trace: 17 Jan 2003 19:29:33 -0800, 209.66.107.17
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!nntp1.roc.gblx.net!nntp.gblx.net!nntp.gblx.net!newspump.sol.net!newsfeed.news2me.com!newsfeed2.easynews.com!newsfeed1.easynews.com!easynews.com!easynews!news.he.net!news.kjsl.com!news.spies.com!209.66.107.17
+Xref: dfw-artgen comp.os.vms:169680 comp.sys.dec:28663 alt.folklore.computers:109701 alt.sys.pdp10:18743
+
+I wrote:
+>> I'm not sure whether the DMA20 was a supported option on any of the 20s.
+
+SkyWriter <skywriter@mrnutty.com> writes:
+> i believe the DMA20 was available, but i can't remember the modules cards.
+> it sat between the DTE m8552,53,54, and the memory M8560,61,58 (x8).
+> but i'm pretty sure the quicklatches were there.
+
+The DMA20 memory bus adapter consists of the M8560, M8563, and eight
+M8558 modules.  Those modules were not normally present in systems
+originally manufactured to use internal memory.  In most KL10-based
+DECSYSTEM-20 models the backplane doesn't even have slots for them, so
+it's not even an option.
+
+I *think* all KL10s had backplane slots for the DIA20/DIB20 adapter for
+the KI-style I/O bus (two M8550 and one M8551).  Those were standard on
+the 1080 and 1090, and optional on other systems including the 20s.
+
+>> The interface to the MF20 and MG20 MOS memory was the X bus, which had
+>> the same functions and timing as the S bus but at different electrical
+>> levels.  This required different translator modules in the main
+>> processor card cage.
+
+> either the m8516's or 19's, forgot.....
+
+Two M8519 Memory Bus Translator modules converted the processor's internal
+ECL signals to the memory bus, which then went to the DMA20 or MA20/MB20.
+For systems with internal MOS memory (MF20/MG20), one or both of the M8519
+modules were replaced by M8580 or M8581 X bus translators.
+
+Eric
+
+
+From jmfbahciv@aol.com Sun Jan 26 20:19:56 PST 2003
+Article: 18746 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!bloom-beacon.mit.edu!nycmny1-snh1.gtei.net!chcgil2-snh1.gtei.net!news.gtei.net!wn12feed!worldnet.att.net!199.184.165.233!feed2.news.rcn.net!feed1.news.rcn.net!rcn!207-172-102-105
+From: jmfbahciv@aol.com
+Newsgroups: comp.os.vms,comp.sys.dec,alt.folklore.computers,alt.sys.pdp10
+Subject: Re: vax6k.openecs.org rebirth
+Date: Sat, 18 Jan 03 11:34:39 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 42
+Message-ID: <b0bg8h$t8$2@bob.news.rcn.net>
+References: <3E05FE9D.B3A12286@vax6k.openecs.org> <3E0DF584.5070705@vajhoej.dk> <aumlne$qk2$2@bob.news.rcn.net> <87fzsedy05.fsf@prep.synonet.com> <2JAN200322230368@gerg.tamu.edu> <7HnKc5R40lsA@eisner.encompasserve.org> <iss72v0n5vk89kh8rdsla7djhiq9ckmn9r@4ax.com> <3E2799B4.FEF4CA15@mrnutty.com> <qh65snh3w3.fsf@ruckus.brouhaha.com> <3E28C507.4BADC181@mrnutty.com>
+X-Trace: UmFuZG9tSVYhGw/LpmtyUG/Cqe0WRgZgvE54wqVE+8yIqKuiWsqeIE2iubn2GT3Q
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 18 Jan 2003 12:10:57 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: dfw-artgen comp.os.vms:169707 comp.sys.dec:28666 alt.folklore.computers:109725 alt.sys.pdp10:18746
+
+In article <3E28C507.4BADC181@mrnutty.com>,
+   SkyWriter <skywriter@mrnutty.com> wrote:
+>Eric Smith wrote:
+>
+>> SkyWriter <skywriter@mrnutty.com> writes about memory for KL10
+>> processors:
+>> > core memory never was 'swung out' oh the MF20  nmos (i think) memory
+>> > it was on the back cabinet door, with the power supplies directly 
+beneath it.
+>> > on MH20 core memory is was a stand alone cabinet, and the backplane 
+was
+>> > fixed to the cabinet.
+>>
+>> There wasn't an MH20.  You must be thinking of an MH10 core box or the
+>> like.
+>>
+>
+>yup, i realized my mistake after i read it. oh well.
+>
+>>
+>> Some KL10 variants could support external memory boxes (core from DEC,
+>> semiconductor from Ampex and other vendors) using the DMA20 memory
+>> adapter.  This interfaced the KL10 S bus [*] to the KI-style external 
+memory
+>> bus.  All DECsystem-1080 and -1090 systems were supplied this way.  The
+>> DMA20 was optional on the -1091 and -1095.
+>>
+>
+>yes, i remember seeing ampex boxes too. also the DX20 for RP20 (IBM 3370
+>FBA I think)
+
+The 5-CPU SMP site at Oakridge had to use the Ampex memory.
+And we routinely used two 1090s with a 2060 to run tri-SMP.
+The internal memory on the 2060 was disabled for that configuration.
+When we REMOVEd the 2060, we could reconfigure it to run either
+as a TOPS-20 or a TOPS-10 single processor.
+
+<snip>
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+From mrc@CAC.Washington.EDU Sun Jan 26 20:28:25 PST 2003
+Article: 18762 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!bloom-beacon.mit.edu!newsfeed.stanford.edu!logbridge.uoregon.edu!news.u.washington.edu!140.142.17.34.MISMATCH!news.u.washington.edu!shiva1.cac.washington.edu!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10,alt.sys.pdp11,alt.sys.pdp8
+Subject: Re: SIMH 2.10-2
+Date: Wed, 22 Jan 2003 10:01:49 -0800
+Organization: Networks and Distributed Computing
+Lines: 27
+Message-ID: <Pine.LNX.4.53.0301220947110.28030@shiva1.cac.washington.edu>
+References: <012o2v47nu0gri6frofbe11scdufftsq1c@4ax.com>
+ <244ba93d.0301211244.6b0ee57f@posting.google.com> <aek-2101031356470001@il0502a-dhcp243.apple.com>
+ <73dff34c.0301211959.2ed9703e@posting.google.com>
+NNTP-Posting-Host: shiva1.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 1043258512 42392 (None) 140.142.17.37
+X-Complaints-To: help@cac.washington.edu
+In-Reply-To: <73dff34c.0301211959.2ed9703e@posting.google.com>
+Content-Length: 314159 (believe this at your own risk)
+Xref: dfw-artgen alt.sys.pdp10:18762 alt.sys.pdp11:7232 alt.sys.pdp8:5715
+
+On Tue, 21 Jan 2003, HarrisNewman wrote:
+> It is a shame that in such an advanced society as we have we can't
+> even keep information for even a short period of time.  Looking back
+> at the "ancients" it seems that they have one up'd us on this issue.
+
+Beginning in the 1970s, and escalating in the 1980s, there was an
+aggressive effort to erase all relics of the past of computing and rewrite
+history to suit the political correctness of the time.  Entire tape
+libraries were ordered destroyed, with prohibitions on any archival
+copies.
+
+One of the worst examples of this was at DEC, where VAX jealousy reached
+such a fever pitch that almost all record of DEC ever building another
+machine than the VAX were annihilated.
+
+But it was elsewhere.  The UNIX world never reached the insanity of VAX
+jealousy, but bad things were said and done.
+
+I don't think that today's retrocomputing fans fully appreciate the
+tremendous amount of work that was done by the old farts to save what we
+have today.  As much as we've lost, it's truly a miracle how much was
+saved.
+
+-- Mark --
+
+http://staff.washington.edu/mrc
+Science does not emerge from voting, party politics, or public debate.
+
+
+From J_Sauter@Empire.Net Fri Mar 14 23:20:24 PST 2003
+Article: 19229 of alt.sys.pdp10
+From: John Sauter <J_Sauter@Empire.Net>
+Newsgroups: alt.sys.pdp10,alt.sys.pdp11,alt.sys.pdp8,comp.os.vms
+Subject: Re: SIMH 2.10-4 released: major bug fixes to PDP-8, PDP-11, VAX, PDP-15, Interdata
+Date: Tue, 11 Mar 2003 21:32:14 -0500
+Organization: System Eyes Computer Store
+Reply-To: J_Sauter@Empire.Net
+Message-ID: <796t6v8bflis5vm6uufo1hcuqteit2nddb@4ax.com>
+References: <ddf96vckhbd5h7l528jl6t1hpurtagilj4@4ax.com> <667a2609.0303061424.30dae301@posting.google.com> <v6hmp7fr953r92@corp.supernews.com> <nbji6vg9jhkbu1iq3mq99j44mup295m40a@4ax.com> <qhadg5zmrk.fsf@ruckus.brouhaha.com> <vddm6v8ts2hmigctpdsiun3h7cc3il9bdv@4ax.com> <9adn6v82f47mt7j1f71so40ddbqvrmcneh@4ax.com> <efvo6vc1crncq7l12psmbhm05i55lv1f5c@4ax.com> <dT1ba.29645$eG2.5342@sccrnsc03> <ejoq6vs88tfc1ips2mlnriq8mat81oeqvc@4ax.com> <b4kisp$2oc$2@bob.news.rcn.net>
+X-Newsreader: Forte Agent 1.93/32.576 English (American)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+NNTP-Posting-Host: hydra141-127.empire.net
+X-Trace: news.destek.net 1047436335 198.144.141.127 (11 Mar 2003 21:32:15 -0500)
+Lines: 49
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newsfeed.cwix.com!news.destek.net!not-for-mail
+Xref: dfw-artgen alt.sys.pdp10:19229 alt.sys.pdp11:7580 alt.sys.pdp8:5877 comp.os.vms:176345
+
+On Tue, 11 Mar 03 11:10:31 GMT, jmfbahciv@aol.com wrote:
+John Sauter wrote:
+
+I am disappointed that the DN60 is not on the list.  It was
+a separate product, but I tried to arrange to include the
+PDP-11 assembly language sources on the kit.
+
+BAH wrote:
+
+But your code would be in that file, John.  IIRC, the IBM option
+was a whole different can of worms than ANF-10.  And I don't think
+anybody put the DN60 stuff on the monitor distribution tape; it
+had to be bought.  We did include the monitor stub for it on the
+general distribution, but not the DN60 PDP-11 files.  That's probably
+another tape that got shitcanned when Release Engineering's office
+got cleaned out.
+
+John Sauter responded:
+
+Well, since it was sent to every DN60 customer, it might
+still be out there somewhere.  I was quite proud of that bit
+of PDP-11 code.  It had a very small real-time kernel,
+with tasks and device drivers.  The tasks moved data
+between the DTE-20 or DL-10 and the serial line units,
+formatting as they went.  The device driver for the DTE-20
+was two interlocked state machines, reflecting the
+half-duplex nature of the hardware.  I used the fancy
+lights on the DL-10 as a load indicator, like the stack
+of LEDs on modern digital audio mixers.
+
+Allocating memory from interrupt level was quite
+a challenge.  One task was devoted to clearing
+deallocated memory and placing it on a list from
+which interrupt level could consume it.  The MACY11
+assembler helped us count microseconds in the
+critical paths.  We took advantage of the double
+buffering in the serial line units to let us take a long path
+provided that the next received character always
+took the short path.  I don't remember the highest
+speed we were able to run reliably, but it may have
+been 4800 bits per second.  I do remember that
+adding the KMC-11 didn't help.
+
+Debugging while sitting between two KL10s without
+skins was quite an experience.  If I were doing it today
+I would wear hearing protectors.
+    John Sauter (J_Sauter@Empire.Net)
+
+
+
+
+From fdc@columbia.edu Fri Mar 14 23:21:45 PST 2003
+Article: 19220 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newsfeed.stueberl.de!cox.net!newshosting.com!news-xfer1.atl.newshosting.com!129.250.35.142.MISMATCH!iad-feed.news.verio.net!phl-feed.news.verio.net!newsmaster.cc.columbia.edu!news.columbia.edu!news-not-for-mail
+From: fdc@columbia.edu (Frank da Cruz)
+Newsgroups: alt.sys.pdp10,alt.sys.pdp11,alt.sys.pdp8,comp.os.vms
+Subject: Re: SIMH 2.10-4 released: major bug fixes to PDP-8, PDP-11, VAX, PDP-15, Interdata
+Date: 11 Mar 2003 15:52:05 -0500
+Organization: Columbia University
+Lines: 28
+Message-ID: <b4li9l$jlh$1@watsol.cc.columbia.edu>
+References: <ddf96vckhbd5h7l528jl6t1hpurtagilj4@4ax.com> <efvo6vc1crncq7l12psmbhm05i55lv1f5c@4ax.com> <dT1ba.29645$eG2.5342@sccrnsc03> <ejoq6vs88tfc1ips2mlnriq8mat81oeqvc@4ax.com>
+NNTP-Posting-Host: watsol.cc.columbia.edu
+X-Trace: newsmaster.cc.columbia.edu 1047415926 8566 128.59.39.139 (11 Mar 2003 20:52:06 GMT)
+X-Complaints-To: postmaster@columbia.edu
+NNTP-Posting-Date: 11 Mar 2003 20:52:06 GMT
+Xref: dfw-artgen alt.sys.pdp10:19220 alt.sys.pdp11:7576 alt.sys.pdp8:5873 comp.os.vms:176304
+
+In article <ejoq6vs88tfc1ips2mlnriq8mat81oeqvc@4ax.com>,
+John Sauter  <J_Sauter@Empire.Net> wrote:
+: ...
+: I think the DN20 was the DECnet front end, but I could
+: be misremembering this also.  Was the DN200 a remote
+: PDP-11-based concentrator, with printer and terminals?
+: 
+Right.  At one point we had a 2040 (later upgraded) that
+had *two* DN20s: one for DECnet, one for HASP/RJE.
+
+We were also one of the few sites with a DN200.  This was
+used to put terminals and a line printer in a "remote" area
+(i.e. about a block away), connected (as I recall) with
+line drivers and a synchronous null modem at some ridiculously
+low speed that seemed perfectly adequate at the time.  This
+was in 1977.
+
+Our DN200 was unique in also having an 8-inch diskette
+drive.  More about that here:
+
+  http://www.columbia.edu/kermit/dec20.html#kermit
+
+We wound up using the DN200 only for the printer.  There
+were better ways to handle the terminals, and the DN200
+diskette drive -- removable storage for students -- was
+abandoned in favor of Kermit.
+
+- Frank
+
+
+From strohm@airmail.net Sun Apr  6 23:37:35 PDT 2003
+Article: 19412 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!news.airnews.net!cabal12.airnews.net!usenet
+From: "John R. Strohm" <strohm@airmail.net>
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Any DEC 340 Display System Doco ?
+Date: Sun, 6 Apr 2003 08:37:48 -0500
+Organization: Airnews.net! at Internet America
+Lines: 38
+Message-ID: <8E148184DB2599C3.8EF118B5E05F14E9.A4AD5465D3E6D226@lp.airnews.net>
+X-Orig-Message-ID: <b6pc8g$ofs@library2.airnews.net>
+References: <3e8ae086.45754328@news.m.iinet.net.au> 		<3e8b80d6.589280@news.m.iinet.net.au> 		<aek-0204031732010001@il0502a-dhcp132.apple.com> 		<coNia.40191$0X.7971027@twister.columbus.rr.com> 		<3e8ba3f9.9585243@news.m.iinet.net.au> 		<X3Oia.40394$0X.8026460@twister.columbus.rr.com> 		<r8vn8v0o08vmjhks52jpu7oibi0sumampq@4ax.com> <20030403212559.5cd06fef.steveo@eircom.net> <3E8E1558.37B749F8@ev1.net> <b6n0jb$ln7$2@newslocal.mitre.org> <54lv8vog00o93bsr2k1d8sd3a5ia1kjhfq@4ax.com>
+Abuse-Reports-To: abuse at airmail.net to report improper postings
+NNTP-Proxy-Relay: library2.airnews.net
+NNTP-Posting-Time: Sun Apr  6 09:06:08 2003
+NNTP-Posting-Host: !b)!P1k-WeToC31 (Encoded at Airnews!)
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Newsreader: Microsoft Outlook Express 6.00.2800.1106
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1106
+Xref: dfw-artgen alt.folklore.computers:118591 alt.sys.pdp10:19412
+
+<ararghNOSPAM@NOT.AT.enteract.com> wrote in message
+news:54lv8vog00o93bsr2k1d8sd3a5ia1kjhfq@4ax.com...
+> On Sat, 5 Apr 2003 16:34:51 +0000 (UTC), Joe Morris
+> <jcmorris@mitre.org> wrote:
+>
+> >Charles Richmond <richmond@ev1.net> writes:
+> >
+> >>Computing time on the 1130 was *much* too valuable to waste with
+> >>a game...     ;-)
+> >
+> >PLEASE remember that this is a.f.c, and games are training tools.
+> >
+> >Seriously.
+> >
+> >Back in ... um, 1974, I think, at a SHARE meeting I was having lunch
+> >with one of the sysprogs from a large manufacturing company.  He noted
+> >that his management had sent down an edict that all games were to be
+> >immediately removed from the computer (this is, of course, in the day
+> >of the mainframe), and so the games disappeared.
+> >
+> >Within a week the HR department threw a temper tantrum and convinced
+> >upper management to revoke the no-games edict.  HR had been using them
+> >to make new hires (who probably had seen computers only in el cheapo
+> >sci-fi movies or the "Mission: Impossible" TV show) comfortable with
+> >the idea of using computer terminals.
+>
+> Games are sometimes useful as burn-in tests or fault-finding tests.
+> ISTR once having a system that only failed when playing some game on
+> it, but where and when has escaped my mind.
+
+Data General once shipped a system after it passed all their diagnostics,
+only to receive an angry phone call from the customer.  The machine wouldn't
+run Adventure, for some reason.  It turned out there was a problem that the
+diagnostics didn't catch.  As a result, DG adopted a policy that no machine
+would be shipped until it had passed all the diagnostics AND run
+dventure.  --Tracy Kidder, "The Soul of a New Machine".
+
+
+
+
+From mrc@CAC.Washington.EDU Sat May 31 21:53:56 PDT 2003
+Article: 19966 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!dfw-peer!news.verio.net!newsfeed!arclight.uoregon.edu!logbridge.uoregon.edu!news.u.washington.edu!140.142.17.34.MISMATCH!news.u.washington.edu!Ikkoku-Kan.Panda.COM!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 Macsyma
+Date: Wed, 21 May 2003 20:26:40 -0700
+Organization: University of Washington
+Lines: 35
+Sender: mrc@Ikkoku-Kan.Panda.COM
+Message-ID: <Pine.NXT.4.55.0305212017330.11019@Ikkoku-Kan.Panda.COM>
+References: <F07C912B8269410C.4EB6414A03C5BA78.2E39A611F451E64A@lp.airnews.net>
+ <7xllxpuo9i.fsf@ruckus.brouhaha.com> <b8vdhn$lap$1@citadel.in.taronga.com>
+ <7x1xzgy8fd.fsf@ruckus.brouhaha.com> <b8vr07$115i$1@citadel.in.taronga.com>
+ <7xk7d8e8lq.fsf@ruckus.brouhaha.com> <Pine.NXT.4.55.0305091102240.9222@Ikkoku-Kan.Panda.COM>
+ <vmegab.87a.ln@escape.shannon.net>
+NNTP-Posting-Host: nntp6.u.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 1053574012 28770 (None) 140.142.17.40
+X-Complaints-To: help@cac.washington.edu
+In-Reply-To: <vmegab.87a.ln@escape.shannon.net>
+Xref: dfw-artgen alt.sys.pdp10:19966
+
+On Wed, 21 May 2003, Charles Shannon Hendrix wrote:
+> > vandalizing equipment,
+> Haven't heard that one.  References?
+
+After the official sources for the Lisp machine software were moved to
+Symbolics (long story there...I'm told that it was to stop RMS from making
+unilateral changes that broke it), RMS retailiated by disconnecting
+Symbolics' microwave link (which was their link to the network).
+
+RMS brags about doing that.
+
+I believe it when I'm told that it was to stop RMS from making unilateral
+changes.  RMS had a well-deserved reputation for doing that; he considered
+(and as far as I know still considers) it to be his right to edit
+anybody's files for any reason.
+
+Another thing that he would do is patch binaries without making the
+corresponding change in the source code; that way, he could keep anyone
+else from modifying his projects.
+
+> > and threating suicide
+> > bombing.
+> He is a little off, but suicide bombing?  I haven't heard that one
+> either.
+
+He denies it, but people who got the email swear it's true: he said that
+he was going to strap dynamite around his body and blow himself up in
+front of Symbolics' headquarters.
+
+He denies saying it in email, but admits that he thought about doing it.
+
+-- Mark --
+
+http://staff.washington.edu/mrc
+Science does not emerge from voting, party politics, or public debate.
+
+
+From ian@hammo.com Thu Aug  7 22:25:55 PDT 2003
+Article: 21193 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!in.100proofnews.com!in.100proofnews.com!pd2nf1so.cg.shawcable.net!residential.shaw.ca!sn-xit-03!sn-xit-01!sn-post-01!supernews.com!news.supernews.com!not-for-mail
+From: ian@hammo.com (paramucho)
+Newsgroups: alt.sys.pdp10,alt.sys.pdp11,comp.os.rsts,comp.os.vms
+Subject: Re: Does RT-11 run on the PDP-11/70?  (was Re: PDP-11 OS Release Dates)
+Date: Mon, 04 Aug 2003 08:13:29 GMT
+Organization: www.beathoven.com
+Message-ID: <3f341461.35928175@news.supernews.com>
+Reply-To: ian@hammo.com
+References: <behgbr047t@enews4.newsguy.com> <62789131a4960a272be481f908c0246d@TeraNews> <5arTa.6759$9f7.783529@news02.tsnz.net> <ikhlfb.4u3.ln@news.online.de> <PVLUa.7633$9f7.880727@news02.tsnz.net>
+X-Newsreader: Forte Agent 1.5/32.451
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Complaints-To: abuse@supernews.com
+Lines: 33
+Xref: dfw-artgen alt.sys.pdp10:21193 alt.sys.pdp11:8360 comp.os.rsts:855 comp.os.vms:191112
+
+On Sun, 27 Jul 2003 08:18:55 GMT, don@news.daedalus.co.nz (Don Stokes)
+wrote:
+
+>In article <ikhlfb.4u3.ln@news.online.de>,
+>Christian Corti  <Christian.Corti@studserv.uni-stuttgart.de> wrote:
+>>Don Stokes <don@news.daedalus.co.nz> wrote:
+>>> Yep.  And on machines with supervisor mode (until recently when
+>>> supervisor mode got used for real work), they did something clever with
+>>> the addressing so that the same pattern, in reverse, appeared on the 
+>>> address lines.  It looked like the snakes were chasing each other around
+>>> and around the two rows of lights.  It looked bloody good in a darkened
+>>> room full of 11/70s...
+>>
+>>With what OS?
+>
+>RSTS/E.  
+
+The first system I wrote was in Germany where we had a host 11/40
+running RT-11 and about ten satellite 11/10s running my RT-11 clone.
+Along with a LIGHTS routine I also implemented a SOUND idle loop. 
+
+The only sound that a PDP-11/10 could make was the terminal bell,
+which came out as a beep. I found that by suitably timing RESETs I
+could cut the beep off at various points and thus modulate the signal.
+The result was more like grunts, burps, twits, etc.
+
+Watching and listening to ten of these machines in the dark, with or
+without additional substances, was very much a trip to the jungle.
+
+
+--
+Ian
+Impressive If Haughty - Q Magazine
+
+
+From J_Sauter@Empire.Net Thu Aug  7 23:06:16 PDT 2003
+Article: 21225 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!router1.news.adelphia.net!news1.news.adelphia.net.POSTED!not-for-mail
+From: John Sauter <J_Sauter@Empire.Net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 Error Message Codes Serendipity
+Organization: System Eyes Computer Store
+Reply-To: J_Sauter@Empire.Net
+Message-ID: <uol5jvoft6obfen5hjdba3anp6029g5u4r@4ax.com>
+References: <3ed7acc3$1_3@news.iglou.com> <3F31CDA9.B117CF04@diapensia.com>
+X-Newsreader: Forte Agent 1.93/32.576 English (American)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 27
+Date: Thu, 07 Aug 2003 22:54:15 GMT
+NNTP-Posting-Host: 67.22.199.56
+X-Complaints-To: abuse@adelphia.net
+X-Trace: news1.news.adelphia.net 1060296855 67.22.199.56 (Thu, 07 Aug 2003 18:54:15 EDT)
+NNTP-Posting-Date: Thu, 07 Aug 2003 18:54:15 EDT
+Xref: dfw-artgen alt.sys.pdp10:21225
+
+geezer wrote:
+
+Well, DEC actually shipped Level D with the error comment
+
+YOU HAVE BEEN FUCKED BY THE SHIT EATING MACHINE
+
+(all caps since the console TTY was an ASR-33)
+(How's that for indelicate :-> )
+
+PMW (as in the monitor listings)
+
+John Sauter responded:
+
+That message was created by Bill Weir, author of the COMPIL
+cusps.  He wrote it in reaction to the monitor's unwillingness
+to allocate emough memory for a program, even though
+enough was available.  The problem, as I understand it,
+was that the available memory was not contiguous, which was 
+required in those pre-pager days.  Later version of the
+monitor were able to shuffle memory around to coalesce
+free space.
+
+However, I thought that DEC changed the message to
+"Memory available, but not to you."  That's both more
+delicate and more informative than Bill's rant.
+    John Sauter (J_Sauter@Empire.Net)
+
+
+

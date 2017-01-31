@@ -1,0 +1,145 @@
+Article 1890 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc03.blue.aol.com!howland.erols.net!newsfeed.mindspring.net.MISMATCH!news.mindspring.net!firehose.mindspring.com!not-for-mail
+From: bugs@netcom.com (Mark Hittinger)
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 security model
+Date: 3 Nov 2000 16:09:43 GMT
+Organization: MindSpring Enterprises
+Lines: 38
+Message-ID: <8tuo07$h5j$1@slb3.atl.mindspring.net>
+References: <8tbc1g$not$1@fe2.cs.interbusiness.it> <8th5pt$95b$6@bob.news.rcn.net>
+     <8th77p$13dk$1@citadel.in.taronga.com> <8thb21$dob$1@bob.news.rcn.net>
+     <8thfle$17q6$1@citadel.in.taronga.com> <8tufvo$slj$4@bob.news.rcn.net>
+     <8tuito$fj3$1@slb6.atl.mindspring.net> <8tul23$mlh$1@bob.news.rcn.net>
+NNTP-Posting-Host: c7.b7.09.78
+X-Newsreader: NN version 6.5.0 CURRENT #120
+Xref: nntp1.ba.best.com alt.sys.pdp10:1890
+
+jmfbahciv@aol.com writes:
+>But it didn't allow writes to it.  And all of that got deleted when
+>access validation became a function of the ACTDAE.  Having LOGIN
+>do that work was a damn big security hole that we always wanted
+>to cement up.  There was reason that LOGIN ran JACCTed.
+
+If you put a copy of pfh.exe modified to do a setuwp uuo in your directory,
+assigned SYS: to your directory, set your physical core limit down to force
+the exec to load pfh, and then ran INITIA/LOGIN, etc you could still modify
+shared protected high segs.  Loading pfh from "not real SYS:" should have 
+lit the "meddle bit" but did not.  The "meddle bit" is probably another
+obscure doo-hickey worth mentioning while discussing the TOPS-10 security
+model.  If the operating system concluded you were doing something funny
+it would set the "meddle bit" on your job and certain things were then not
+allowed.  This was mostly related to shared high segment "activities".   
+
+(pfh.exe = page fault handler, ran in user mode rather than exec)
+(setuwp = set user write protect uuo, for high segments)
+
+You don't see too many operating systems today "ramp up" their self protection
+activity based on what the system perceives the user doing.
+
+You don't see too many operating systems today that allow the user to code
+their own page-fault handling technique and use it rather than the system's
+version.   ("Toooooo dangerous!")
+
+The setuwp uup was largely replaced by the the page. uuo which allowed users 
+to control writeablity on a page-by-page basis.
+
+>Remember, having privs came with responsibilities.
+
+Doh!  Is _that_ what happened?  I should have read the fine print :-)
+
+Later
+
+Mark Hittinger
+Earthlink
+bugs@netcom.com
+
+
+Article 1971 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!feed2.news.rcn.net!rcn!cpk-news-hub1.bbnplanet.com!nycmny1-snh1.gtei.net!news.gtei.net!newsfeed.mathworks.com!arclight.uoregon.edu!hammer.uoregon.edu!logbridge.uoregon.edu!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 security model
+Date: Sun, 12 Nov 2000 22:00:25 -0800
+Organization: Networks & Distributed Computing
+Lines: 67
+Message-ID: <Pine.NXT.4.31.0011122137570.29463-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <8tbc1g$not$1@fe2.cs.interbusiness.it> <8ui3kf$1fsj$1@nntp1.ba.best.com> <8uicr2$2khq$1@citadel.in.taronga.com> <Pine.NXT.4.31.0011102107520.27987-100000@Tomobiki-Cho.CAC.Washington.EDU> <8ulkta$hu4$1@nntp1.ba.best.com>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 974095228 22328 (None) 140.142.17.39
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: cher
+In-Reply-To: <8ulkta$hu4$1@nntp1.ba.best.com>
+Xref: nntp1.ba.best.com alt.sys.pdp10:1971
+
+On 12 Nov 2000, Joe Smith wrote:
+> People who used TOPS-10 a lot more than TOPS-20 would disagree, due to
+> differing interpretations of the term "append-only".  TOPS-blue people
+> would say that a file protected 444 was "append-only", but TOPS-orange
+> people would point out that that is not the same as "unreadable
+> append-only".
+
+True, but TOPS-10 "444" protection was implementable on TOPS-20 as
+"464646" protection, but TOPS-20 "040404" was unimplementable on TOPS-10
+(at least prior to the file daemon.
+
+Here are the TOPS-20 file protection codes, like TOPS-10 and UNIX
+organized in owner/group/world, but a TOPS-20 protection code was 18 bits
+vs. 9 bits on TOPS-10 and UNIX (some would say 12 bits on UNIX).
+	40	read
+	20	write, delete
+	10	execute
+	04	append
+	02	list
+By convention, 77 was full access (even though 76 was good enough) and 00
+was no access (even though 01 was also no access).
+
+Unlike TOPS-10, TOPS-20 had no independent level for rename or update, but
+both systems had append protection which I sorely miss on UNIX.
+
+As far as I know, it is coincidence that that the high order 3 bits of a
+protection code were identical to the corresponding one on UNIX.  TOPS-20
+(in the form of Tenex) is older than UNIX by at least a year.
+
+Note the list protection of TOPS-20.  Unlike TOPS-10 and UNIX, directories
+could not be read as a file on TOPS-20 even by privileged users.  The
+TOPS-20 equivalent to readdir() was a system call, GNJFN%.  This was a
+good thing, since passwords were stored in the directories.  This meant
+that you could make a file invisible in the directory; the file was
+there but you could not find out about it or otherwise access it
+unless you knew its name.  There was a separate "invisible" status which
+worked something like the "." at the start of filename convention on UNIX.
+
+TOPS-20 directory protections worked differently:
+	40	access to files in the directory consistent with their
+		 file protection
+	10	connect to directory (which also meant acquire owner
+		 rights) without password, undelete files, expunge
+		 deleted files, change time/date/account info of files.
+	04	create files in directory
+By convention, directory protection 77 is used for full access instead of
+54, and directory protection 00 is used for no access instead of 23.
+
+Common file protections: 770000, 777752, 775252, 775200, 770404
+
+Common directory protections: 770000, 774040, 777700
+
+Ownership was decided by one of two things: either you were logged in to
+the user corresponding to that directory (a user was defined as a
+directory on the boot filesystem which did not have "files-only" status),
+or you connected to the directory.  Connecting not only set the default
+directory, it also gave you ownership rights.  If you knew the password to
+the directory, you could connect to it.  You also had ownership rights
+over a directory by the same name as your login name on a non-boot
+filesystem marked as "domestic" (as opposed to "foreign").
+
+-- Mark --
+
+http://staff.washington.edu/mrc
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+

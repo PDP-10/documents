@@ -1,0 +1,879 @@
+Article 1512 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!newsfeed.icl.net!news.algonet.se!algonet!uninett.no!news.ost.eltele.no!newsfeed1.enitel.no!masternews.telia.net!news-sto.telia.net!news.defero.net!junk.nocrew.org!not-for-mail
+From: lars brinkhoff <lars@nocrew.org>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Pipelining
+Organization: NoCrew Laboratories
+Lines: 44
+Sender: lars@junk.nocrew.org
+Message-ID: <85lmvusg4i.fsf_-_@junk.nocrew.org>
+References: <qA%E5.223$_k1.429@srvr1.engin.umich.edu> <8s3mis$i0t$1@news3.bu.edu>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+User-Agent: Gnus/5.0803 (Gnus v5.8.3) Emacs/20.7
+Date: Thu, 12 Oct 2000 06:55:34 GMT
+NNTP-Posting-Host: 212.73.17.42
+X-Complaints-To: abuse@defero.net
+X-Trace: news.defero.net 971333734 212.73.17.42 (Thu, 12 Oct 2000 08:55:34 MET DST)
+NNTP-Posting-Date: Thu, 12 Oct 2000 08:55:34 MET DST
+Xref: nntp1.ba.best.com alt.sys.pdp10:1512
+
+Perhaps this alt.folklore.computers message is of interest here?
+
+budd@csa.bu.edu (Phil Budne) writes:
+
+   In article <qA%E5.223$_k1.429@srvr1.engin.umich.edu>,
+   Sergej Roytman <ftit@engin.umich.edu> wrote:
+   >The other day in lecture, the prof said something that I thought I'd
+   >run by this newsgroup.  The discussion was about interesting
+   >addressing modes and how easy (or not) it would be for a compiler to
+   >take advantage of same.  Naturally, the PDP-11 came up, and the prof
+   >said that the demise of this particular qarchitecture was the
+   >impracticallity of pipelining the thing.
+   
+   I can't help wondering if he was thinking of the PDP-10.  It has
+   indirect addressing bit (not exactly a mode) which can be nested.
+   
+   The last DEC designed PDP-10 CPU (codename Jupiter) was killed after
+   (among other things) the designers noticed that indirect addressing
+   was hard to pipeline, and that it's use was important when writing
+   extended addressing (for access to more than 256K of 36-bit words).
+   
+   I was in the meeting where someone from the Jupiter team gave a talk
+   to the FORTRAN group on how to generate fast code for Jupiter.
+   
+      We were making FORTRAN generate extended addressing code (which was
+      used to create CAD tools for the Venus (VAX 8600) project which was
+      going on at the same time, in the same building -- Venus and
+      Jupiter were both behind schedule when Jupiter got the axe).
+      FORTRAN generated instructions which used "extended format indirect
+      words" (EFIWs) to specify addresses longer than the 18-bit offset
+      in the right half on an instruction.  Traditional indirect words
+      looked like instructions (and were called Instruction Format
+      Indirect Words -- IFIWs).
+   
+   But I don't remember if the killer point was raised in that meeting or not.
+   
+   In retrospect, I don't see why you couldn't detect and handle a single
+   level of indirection without breaking the pipe.
+   
+   I also don't see why we couldn't have made FORTRAN use indexing alone
+   for extended access.  It might have required keeping base registers,
+   and doing address arithmatic explicitly....
+   
+   [...]
+
+
+Article 2886 of alt.sys.pdp10:
+Sender: prep@k9.prep.synonet.com
+Newsgroups: alt.sys.pdp10
+Subject: Jupiter
+From: Paul Repacholi <prep@prep.synonet.com>
+Date: 28 Dec 2000 14:11:19 +0800
+Message-ID: <87snn9m5x4.fsf_-_@k9.prep.synonet.com>
+Lines: 14
+User-Agent: Gnus/5.0807 (Gnus v5.8.7) Emacs/20.7
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: 146.d01.pe.iqnet.net.au
+X-Trace: 28 Dec 2000 22:45:25 +0800, 146.d01.pe.iqnet.net.au
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!news.tele.dk!193.190.198.17!newsfeeds.belnet.be!news.belnet.be!skynet.be!newsfeed.iinet.net.au!news.waia.asn.au!usenet.per.paradox.net.au!127.0.0.1!nobody
+Xref: nntp1.ba.best.com alt.sys.pdp10:2886
+
+StrangeBrew <sfmc68@bellatlantic.net> writes:
+
+> I used the same approach for the I/O box in the Jupiter CPU - it was 
+> 100K ECL bus in the CPU to the TTL I/0 bus for the unibus and 
+> massbus and CI adapters.
+
+How about more info on Jupiter? There is so much UL around it
+that it would be nice to have some real info.
+
+-- 
+Paul Repacholi                               1 Crescent Rd.,
++61 (08) 9257-1001                           Kalamunda.
+                                             West Australia 6076
+Raw, Cooked or Well-done, it's all half baked.
+
+
+Article 2891 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!newsfeed.skycache.com!Cidera!cyclone2.ba-dsg.net!cyclone1.ba-dsg.net!typhoon2.ba-dsg.net.POSTED!not-for-mail
+Message-ID: <3A4BA7AD.62A782AC@bellatlantic.net>
+From: StrangeBrew <sfmc68@bellatlantic.net>
+X-Mailer: Mozilla 4.75 [en]C-CCK-MCD BA45DSL  (WinNT; U)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: Jupiter
+References: <87snn9m5x4.fsf_-_@k9.prep.synonet.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 114
+Date: Thu, 28 Dec 2000 20:50:50 GMT
+NNTP-Posting-Host: 138.88.77.74
+X-Complaints-To: newsadmin@bellatlantic.net
+X-Trace: typhoon2.ba-dsg.net 978036650 138.88.77.74 (Thu, 28 Dec 2000 15:50:50 EST)
+NNTP-Posting-Date: Thu, 28 Dec 2000 15:50:50 EST
+Xref: nntp1.ba.best.com alt.sys.pdp10:2891
+
+Paul Repacholi wrote:
+> 
+> StrangeBrew <sfmc68@bellatlantic.net> writes:
+> 
+> > I used the same approach for the I/O box in the Jupiter CPU - it was
+> > 100K ECL bus in the CPU to the TTL I/0 bus for the unibus and
+> > massbus and CI adapters.
+> 
+> How about more info on Jupiter? There is so much UL around it
+> that it would be nice to have some real info.
+
+From memory, I can tell you what I know for sure, I left before
+they cancelled it.
+
+The design team was small, especially compared to the major
+vax efforts at the time (Venus and Comet). My count is:
+Program manager, tech director, another manager, memory guy,
+2 microcoders/simulator guys, 2 cpu design guys, 3 I/O guys, and
+one tech.
+The manager was Ron Bingham.
+A "contract" was established with corporate to develop a 
+machine that was 5X faster than the KL. The KL was considered
+a 1 MIP processor by our math back then.  The goal was to provide
+a new cost curver per mips by supporting 5 times or more the
+number of users.
+
+The design team folks who had done 10 work before ncluded the 
+microcode/simulator folks, the memory guru, and two of the I/O
+guys. One I/O designer had worked on the KS10.  The two CPU
+designers had not done PDP10 CPU design work before.  They had done
+IBM Mainframe compatibilbe work.
+
+The way we divided up the I/O was one guy did the massbus interface,
+one did the I/O box, and I did the console.  The I/O box guy left 
+so I got that as well as the console.
+
+Fairchild had come out iwth some 100K ECL parts that seemed to be
+able to be turned into a pipelined PDP10 cpu based on a set of 
+microengines (horizontally coded micros). The concept of a pipelined
+machine, running 10 code was novel to dec.  The engineering budget
+for the effort was relatively small, with a target manufacturing
+cost of the CPU at about 50K in 1980 US dollars.  
+
+A simulator was constructed based on the SUDS designs.  Microcode 
+based on the design was developed.  Tweaking the simulator and the 
+microcode, a couple of design changes were worked out that added a 
+microengine and identified a kicker that we called a mid life kicker,
+an accelerator.
+
+The cache design was four way, set associative, and theoretically 
+projected a hit rate up to 97 percent.  The memory box did a 
+quad word fetch to increase the apparent speed of the system.
+An 8 word fetch was discussed but with memory prices at the time..
+it was shelved but would have allowed a bit more performance,
+theoretically.
+
+Testing with the simulator showed a conservative 10X perf of the
+KL.  We were thrilled and jumped on the other boxes to design.
+
+I based the console on the Fonz-11, 11/23 CPU, and worked with 
+George Lord in small systems to create a minimal chip implementation
+of the glue logic around the F11. We came up with a mealy state
+generator based design that allowed george to use the same chips
+in a follow on PDT, and me to construct the console.  COnsole was
+modeled on the lines of the KL console BUT with more diagnostic paths,
+like the IBm 43xx family, a small winchester drive, remote field
+service support, microcode load capability for the engines, and 
+automated prefailure tracking alerts. The idea was to look for changes
+in the system operating parameters so that we could project a 
+failure and get FS to have the part there on time.
+
+The I/O box that I designed was a fairly simple 100K ECL to TTL
+and TTL to ECL converter.  The memory box bus that I interfaced
+with was straight forward, limited length, synchronous bus, with
+the proper ECL drivers, layout rules, and all that.  The I/O device
+bus was a simple synchronous variation on the omnibus, wider, 
+shorter, and lots faster.
+
+Gordon Bell, Vaxland, and the committee pulled one of our cpu designers
+to help boost the performance of the venus effort - it was not in the
+same range as our simulated results, with a much larger investment.
+
+When we had our 12 meeting in 2 months to explain the concepts of our 
+design, the writing was on the wall.  When Bob E was pulled, that was
+the posters going up that we would be delayed and then killed off as
+sacrifices for the vaxen.  That is why I picked the name Hephastus for
+the KC10.
+
+Testing with the simulator showed we could tweak the balance of the
+machine between low compute/high I/O and HIGH compute/Low I/O.
+The simulator gave us numbers in the range of 50X the KL.  Simulating
+1000 users, we could just barely keep the system busy. 
+BUT THAT WAS THE SIMULATOR.
+
+Fairchild still had to deliver the parts to build the engines.
+
+Now, folks who stayed at DEC have told me stories that the machine 
+did not properly implement all of the addressing requirements of 
+the 10 running Tops.
+
+That is my story.
+bob 
+
+
+
+
+
+
+> 
+> --
+> Paul Repacholi                               1 Crescent Rd.,
+> +61 (08) 9257-1001                           Kalamunda.
+>                                              West Australia 6076
+> Raw, Cooked or Well-done, it's all half baked.
+
+
+Article 2907 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!nntp-out.monmouth.com!newspeer.monmouth.com!news.monmouth.com!not-for-mail
+From: pechter@i4got.pechter.dyndns.org (Bill Pechter)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Jupiter
+Date: 28 Dec 2000 17:47:48 -0500
+Organization: Unknown
+Lines: 31
+Message-ID: <92gfuk$j5r$1@i4got.pechter.dyndns.org>
+References: <87snn9m5x4.fsf_-_@k9.prep.synonet.com> <3A4BA7AD.62A782AC@bellatlantic.net>
+NNTP-Posting-Host: bg-tc-ppp231.monmouth.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:2907
+
+In article <3A4BA7AD.62A782AC@bellatlantic.net>,
+StrangeBrew  <sfmc68@bellatlantic.net> wrote:
+>
+>From memory, I can tell you what I know for sure, I left before
+>they cancelled it.
+>
+
+Great.  By the time I left Field Service there were so many
+stories about the cancellation due to it not running at the
+correct speed...
+
+Among the rumors was mental breakdown of the only engineer who
+understood the internal design of the E-Box.
+
+(Which was pretty difficult to believe, knowing DEC's methods of
+doing things...)
+
+By the time rumors got to Field Service they were pretty wild.
+
+Among them (the dual microcoded Jupiter/Venus box) because of the
+36 bit datapaths in part of Venus.
+
+(Was there plans to use the I/O subsystem on both machines?)
+
+--Bill
+
+-- 
+-- 
+bpechter@monmouth.com    | FreeBSD since 1.0.2, Linux since 0.99.10  
+                         | Unix Sys Admin since Sys V/BSD 4.2
+                         | Windows System Administration: "Magical Misery Tour"
+
+
+Article 2912 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!199.45.45.8!cyclone1.ba-dsg.net!typhoon2.ba-dsg.net.POSTED!not-for-mail
+Message-ID: <3A4BD248.742CD7AA@bellatlantic.net>
+From: StrangeBrew <sfmc68@bellatlantic.net>
+X-Mailer: Mozilla 4.75 [en]C-CCK-MCD BA45DSL  (WinNT; U)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: Jupiter
+References: <87snn9m5x4.fsf_-_@k9.prep.synonet.com> <3A4BA7AD.62A782AC@bellatlantic.net> <92gfuk$j5r$1@i4got.pechter.dyndns.org>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 53
+Date: Thu, 28 Dec 2000 23:52:35 GMT
+NNTP-Posting-Host: 138.88.77.74
+X-Complaints-To: newsadmin@bellatlantic.net
+X-Trace: typhoon2.ba-dsg.net 978047555 138.88.77.74 (Thu, 28 Dec 2000 18:52:35 EST)
+NNTP-Posting-Date: Thu, 28 Dec 2000 18:52:35 EST
+Xref: nntp1.ba.best.com alt.sys.pdp10:2912
+
+Bill Pechter wrote:
+> 
+> In article <3A4BA7AD.62A782AC@bellatlantic.net>,
+> StrangeBrew  <sfmc68@bellatlantic.net> wrote:
+> >
+> >From memory, I can tell you what I know for sure, I left before
+> >they cancelled it.
+> >
+> 
+> Great.  By the time I left Field Service there were so many
+> stories about the cancellation due to it not running at the
+> correct speed...
+There were rumors that the microcode - which controlled the 
+balance between io and compute - was hosed and could not hit the
+balance.  Another more credible rumor was the addressing was not 
+handled properly for all cases.
+
+My most cherished memory was when we discovered that a 
+jrst0, jrst0 sequence caused the second jrst0 to be skipped, so the 
+timing loops that used that trick were totally out of whack!!
+
+> 
+> Among the rumors was mental breakdown of the only engineer who
+> understood the internal design of the E-Box.
+> 
+> (Which was pretty difficult to believe, knowing DEC's methods of
+> doing things...)
+I heard that story too, I was in MD by then.  Note that the
+KC10 team was exceptionally small.  many times in the past the
+folks who understood a piece of gear to the max was very very
+small.  For example, KMC/DMC 11, there were 3 of us - Remi,
+Paul and me.  DP8e, there were two of us, Remi Lisee and me.
+> 
+> By the time rumors got to Field Service they were pretty wild.
+> 
+> Among them (the dual microcoded Jupiter/Venus box) because of the
+> 36 bit datapaths in part of Venus.
+I know we looked at how to do venus wit the ebox but the problem
+was the instruction set.  PDP10 instruction set is fixed width,
+the vax is variable.  that hoses the pipeline very badly.
+> 
+> (Was there plans to use the I/O subsystem on both machines?)
+No, the vaxbus, the 13.3MB/s bus was already designed and set.
+The console was going to be looked at but...they wanted to use 
+an 8080/8085 or 8086 as the console cpu.
+> 
+> --Bill
+> 
+> --
+> --
+> bpechter@monmouth.com    | FreeBSD since 1.0.2, Linux since 0.99.10
+>                          | Unix Sys Admin since Sys V/BSD 4.2
+>                          | Windows System Administration: "Magical Misery Tour"
+
+
+Article 2915 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!newsxfer.eecs.umich.edu!newsxfer3.itd.umich.edu!newsxfer.itd.umich.edu!news.itd.umich.edu!sarr
+Newsgroups: alt.sys.pdp10
+Subject: Re: Jupiter
+References: <87snn9m5x4.fsf_-_@k9.prep.synonet.com> <3A4BA7AD.62A782AC@bellatlantic.net> <92gfuk$j5r$1@i4got.pechter.dyndns.org>
+Reply-To: sarr@umich.edu
+Organization: University of Michigan
+From: sarr@engin.umich.edu (Sarr J. Blumson)
+Lines: 16
+Message-ID: <UiR26.11358$O5.310840@news.itd.umich.edu>
+Date: Fri, 29 Dec 2000 00:56:20 GMT
+NNTP-Posting-Host: 207.75.146.69
+X-Trace: news.itd.umich.edu 978051380 207.75.146.69 (Thu, 28 Dec 2000 19:56:20 EST)
+NNTP-Posting-Date: Thu, 28 Dec 2000 19:56:20 EST
+Xref: nntp1.ba.best.com alt.sys.pdp10:2915
+
+In article <92gfuk$j5r$1@i4got.pechter.dyndns.org>,
+Bill Pechter <pechter@i4got.pechter.dyndns.org> wrote:
+>
+>By the time rumors got to Field Service they were pretty wild.
+>
+>Among them (the dual microcoded Jupiter/Venus box) because of the
+>36 bit datapaths in part of Venus.
+
+Customers who were waiting for Jupiter were told this, too.
+
+-- 
+--------
+Sarr Blumson                    sarr@umich.edu
+voice: +1 734 764 0253          home: +1 734 665 9591
+JSTOR, University of Michigan   http://www-personal.umich.edu/~sarr/
+301 E Liberty, Ann Arbor, MI 48109-2262
+
+
+Article 2976 of alt.sys.pdp10:
+Message-ID: <3A4E2383.D0F23D52@ev1.net>
+Date: Sat, 30 Dec 2000 10:03:46 -0800
+From: Charles Richmond <richmond@ev1.net>
+Reply-To: richmond@ev1.net
+Organization: Cannine Computer Center
+X-Mailer: Mozilla 4.7C-CCK-MCD {C-UDP; EBM-APPLE} (Macintosh; I; PPC)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: Jupiter
+References: <87snn9m5x4.fsf_-_@k9.prep.synonet.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+NNTP-Posting-Host: taydal-207-55-153-210.ev1.net
+X-Trace: newsa.ev1.net 978192453 taydal-207-55-153-210.ev1.net (30 Dec 2000 10:07:33 -0600)
+Lines: 24
+Path: nntp1.ba.best.com!news1.best.com!feed.textport.net!newsfeed.mesh.ad.jp!sjc1.nntp.concentric.net!newsfeed.concentric.net!newsfeed.nwlink.com!nntp2.savvis.net!newsa.ev1.net
+Xref: nntp1.ba.best.com alt.sys.pdp10:2976
+
+Paul Repacholi wrote:
+> 
+> StrangeBrew <sfmc68@bellatlantic.net> writes:
+> 
+> > I used the same approach for the I/O box in the Jupiter CPU - it was
+> > 100K ECL bus in the CPU to the TTL I/0 bus for the unibus and
+> > massbus and CI adapters.
+> 
+> How about more info on Jupiter? There is so much UL around it
+> that it would be nice to have some real info.
+> 
+IMHO asking about the Jupiter project is equivalent to rubbing salt
+in the wounds of the old Dec people...and waving a red flag. It is
+certain to get some of them to explode!!! You should have posted
+a warning first:  "I am about to ask about the Jupiter project..."
+Then the old Dec folks can prepare their blood pressure medicine
+and refill their nitroglycerine prescriptions... Heck, I did *not*
+even work at Dec, and hearing about how the Jupiter was screwed
+could make me bust a gasket!!!
+
+-- 
++-------------------------------------------------------------+
+|     Charles and Francis Richmond     <richmond@plano.net>   |
++-------------------------------------------------------------+
+
+
+Article 3114 of alt.sys.pdp10:
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Bad mouthing the '10 guys?  (historic)
+References: <939oh1$2hb$1@teabag.cbhnet> <3A588798.545D2DD6@bellatlantic.net> <87lmsnmfsk.fsf@k9.prep.synonet.com> <6ur92f6lp1.fsf@chonsp.franklin.ch>
+X-Disclaimer: Everything I write is false.
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 08 Jan 2001 16:28:13 -0800
+Message-ID: <qh8zol1sde.fsf@ruckus.brouhaha.com>
+Lines: 19
+User-Agent: Gnus/5.0807 (Gnus v5.8.7) Emacs/20.7
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 8 Jan 2001 16:32:46 -0800, ruckus.brouhaha.com
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!64.152.100.70!cyclone-sjo1.usenetserver.com!news-out.usenetserver.com!HSNX.atgi.net!news.kjsl.com!news.spies.com!ruckus.brouhaha.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:3114
+
+Neil Franklin <neil@franklin.ch.remove> writes:
+> Neither of the above problems was an technical K.O. for an fast 10, so
+> long you are prepared throw transistors and design time at it.
+
+The most difficult problem with making a fast -10 is the aliasing of
+the general registers into memory (locations 00 through 17 octal).
+This makes it very difficult to do any reasonable data dependency
+analysis, scoreboarding, register renaming, etc., because you can't
+predict what registers will be live until the EAs of all preceding
+instructions are calculated.
+
+You'd pretty much have to do both register renaming and speculative
+execution to get this right.  This is now relatively common practice
+in state-of-the-art microprocessors, but not something likely to happen
+in a home-grown FPGA implementation. 
+
+Rumor has it that the Jupiter (KC10) hardware team planned to eliminate
+the register aliasing, until the software people heard about it and
+screamed bloody murder.
+
+
+Article 3209 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!panix!news.panix.com!not-for-mail
+From: Rich Alderson <alderson+news@panix.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: KC10 aka 2080
+Date: 16 Jan 2001 14:45:16 -0500
+Organization: Systems Administration, XKL LLC, Redmond WA 98052
+Lines: 20
+Sender: alderson+news@panix2.panix.com
+Message-ID: <mddu26zmgc3.fsf@panix2.panix.com>
+References: <B689E8E8.F8DE%Mark.Garrett@wedontwantyourspam.com.au>
+NNTP-Posting-Host: panix2.panix.com
+X-Trace: news.panix.com 979674316 24773 166.84.0.227 (16 Jan 2001 19:45:16 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: 16 Jan 2001 19:45:16 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.7
+Xref: nntp1.ba.best.com alt.sys.pdp10:3209
+
+Mark Garrett <Mark.Garrett@wedontwantyourspam.com.au> writes:
+
+> There seems to be a mountain of info on the real nature of the Jupiter aka
+> KC10 aka 2080 though out the tops20 sources introduced around 6.1
+
+That was an earlier designation.  I have in my possession a number of binders
+(in a nice chocolate color) with the words
+
+	DECsystem-4050
+	 Sales Training Seminar
+
+printed on them.  (I got my first from Mark Lottor, at the 1988 DEC-20 Day
+luncheon; the others came from Joe Dempster.)
+
+So Jupiter was going to be a DEC-40.  Tops-40, perhaps?  After all, wasn't it
+the sales/marketing folks who renamed the PDP-10 to be the DECsystem-10?
+
+-- 
+Rich Alderson                                          alderson+news@panix.com
+  "You get what anybody gets.  You get a lifetime."  --Death, of the Endless
+
+
+Article: 19901 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!dfw-peer!news.verio.net!newsfeed!wn13feed!worldnet.att.net!199.45.49.37!cyclone1.gnilink.net!spamkiller.gnilink.net!nwrddc04.gnilink.net.POSTED!53ab2750!not-for-mail
+Message-ID: <3ECB4958.5020308@bellatlantic.net>
+From: bob smith <sfmc68@bellatlantic.net>
+User-Agent: Mozilla/5.0 (Windows; U; WinNT4.0; en-US; rv:1.0.2) Gecko/20030208 Netscape/7.02
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10,comp.arch
+Subject: Re: A Dark Day...
+References: <ba5se1$92e$1@news3.bu.edu> <ba7mc3$kn3$1@bob.news.rcn.net> <3EC77B0D.2050008@bellatlantic.net> <ba7vmf$bkf$1@bob.news.rcn.net> <3EC784B9.1050909@bellatlantic.net> <ba80pj$cts$1@bob.news.rcn.net> <Pine.NXT.4.55.0305180725010.305@Ikkoku-Kan.Panda.COM> <baamo9$quo$1@bob.news.rcn.net> <Pine.NXT.4.55.0305190803000.305@Ikkoku-Kan.Panda.COM> <4e56972b.0305202132.3783bf79@posting.google.com>
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
+Lines: 44
+Date: Wed, 21 May 2003 09:38:37 GMT
+NNTP-Posting-Host: 138.88.67.163
+X-Complaints-To: abuse@verizon.net
+X-Trace: nwrddc04.gnilink.net 1053509917 138.88.67.163 (Wed, 21 May 2003 05:38:37 EDT)
+NNTP-Posting-Date: Wed, 21 May 2003 05:38:37 EDT
+Xref: dfw-artgen alt.sys.pdp10:19901 comp.arch:72548
+
+David Kanter wrote:
+>>>I just stated why cancelling Jupiter was a good thing.
+>>
+>>Cancelling Jupiter was, by itself, an act of suicide by Digital.
+> 
+> 
+> What were Jupiter and Venus?  I tried looking them up on Google, but
+> nothing came up that was meaningful...
+Jupiter (nee Hephastus) or KC10 (c for 100K ECL) was an instantiation of 
+the PDP10 instruction set using 100K ecl components and a series of 
+microcoded machines.  It was approved to support 30 bit addressing (CE 
+or if you prefer CGB would not allow 32 bit addressing).
+Venus was the next gen high end vax.  I don't recall which number it 
+turned into 8xxx or soemthing.  I know Al helenius and Trygve Fossum 
+wore working on it.
+
+At the time, the differences between a variable lenght instruction and a 
+fixed length instruction allowed us to project a much faster machine on 
+the 10 side than the vax side.
+//bob
+
+> 
+>  
+> 
+>>You seem not to have grasped how much that infuriated many many powerful
+>>entities. There were people who banned Digital from their corporate
+>>procurement list as a result.  Even among people who did not go that far,
+>>you did not see them go to VMS -- they went to UNIX.
+> 
+> 
+> This sounds like an interesting story...where can I find the full
+> version?
+> 
+> 
+>>Yes, Jupiter was in a great deal of trouble (as was Venus); and perhaps
+>>Venus was more important to save.  Nevertheless, it was inexcusable that
+>>Digital failed to put in the resources to save Jupiter as well.
+>>
+>>Don't confuse short-term results with long-term results.
+>>
+> 
+> 
+> David Kanter
+
+
+
+Article: 19916 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!dfw-peer!news.verio.net!newsfeed!newstransit.mitre.org!news.tufts.edu!logbridge.uoregon.edu!news.u.washington.edu!140.142.17.34.MISMATCH!news.u.washington.edu!Ikkoku-Kan.Panda.COM!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10,comp.arch
+Subject: Re: A Dark Day...
+Date: Wed, 21 May 2003 07:17:18 -0700
+Organization: University of Washington
+Lines: 23
+Sender: mrc@Ikkoku-Kan.Panda.COM
+Message-ID: <Pine.NXT.4.55.0305210712140.305@Ikkoku-Kan.Panda.COM>
+References: <ba5se1$92e$1@news3.bu.edu> <ba7mc3$kn3$1@bob.news.rcn.net>
+ <3EC77B0D.2050008@bellatlantic.net> <ba7vmf$bkf$1@bob.news.rcn.net>
+ <3EC784B9.1050909@bellatlantic.net> <ba80pj$cts$1@bob.news.rcn.net>
+ <Pine.NXT.4.55.0305180725010.305@Ikkoku-Kan.Panda.COM> <baamo9$quo$1@bob.news.rcn.net>
+ <Pine.NXT.4.55.0305190803000.305@Ikkoku-Kan.Panda.COM>
+ <4e56972b.0305202132.3783bf79@posting.google.com> <3ECB4958.5020308@bellatlantic.net>
+NNTP-Posting-Host: nntp2.u.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 1053526647 29648 (None) 140.142.17.39
+X-Complaints-To: help@cac.washington.edu
+In-Reply-To: <3ECB4958.5020308@bellatlantic.net>
+Xref: dfw-artgen alt.sys.pdp10:19916 comp.arch:72557
+
+On Wed, 21 May 2003, bob smith wrote:
+> Jupiter (nee Hephastus) or KC10 (c for 100K ECL) was an instantiation of
+> the PDP10 instruction set using 100K ecl components and a series of
+> microcoded machines.  It was approved to support 30 bit addressing (CE
+> or if you prefer CGB would not allow 32 bit addressing).
+
+30-bit addressing is the maximum in the PDP-10 instruction set.  You can't
+have 32-bit addressing without changing the format of pointers, since you
+need to fit in the global/local bit, the indirect bit, and the index bits.
+
+Note that 30-bit addressing in the PDP-10 is equivalent to "32-bits plus
+1" in a byte-addressed machine.  This is because the PDP-10 addresses
+36-bit words and not 8-bit bytes.
+
+If, as I propose, you use nonets to represent Unicode in UTF-9, you have
+exactly as many nonets of address in the PDP-10 address space as you do
+octets on a 32-bit machine.  However, UTF-9 is a much more space-efficient
+means of storage than UTF-8.
+
+-- Mark --
+
+http://staff.washington.edu/mrc
+Science does not emerge from voting, party politics, or public debate.
+
+
+Article: 19945 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!dfw-peer!news.verio.net!newsfeed!wn13feed!worldnet.att.net!199.45.49.37!cyclone1.gnilink.net!spamkiller.gnilink.net!nwrddc02.gnilink.net.POSTED!53ab2750!not-for-mail
+Message-ID: <3ECC0082.2000905@bellatlantic.net>
+From: bob smith <sfmc68@bellatlantic.net>
+User-Agent: Mozilla/5.0 (Windows; U; WinNT4.0; en-US; rv:1.0.2) Gecko/20030208 Netscape/7.02
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10,comp.arch
+Subject: Re: A Dark Day...
+References: <ba5se1$92e$1@news3.bu.edu> <ba7mc3$kn3$1@bob.news.rcn.net> <3EC77B0D.2050008@bellatlantic.net> <ba7vmf$bkf$1@bob.news.rcn.net> <3EC784B9.1050909@bellatlantic.net> <ba80pj$cts$1@bob.news.rcn.net> <Pine.NXT.4.55.0305180725010.305@Ikkoku-Kan.Panda.COM> <baamo9$quo$1@bob.news.rcn.net> <Pine.NXT.4.55.0305190803000.305@Ikkoku-Kan.Panda.COM> <4e56972b.0305202132.3783bf79@posting.google.com> <3ECB4958.5020308@bellatlantic.net> <3ECBFE12.1030909@iee.org>
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
+Lines: 42
+Date: Wed, 21 May 2003 22:40:03 GMT
+NNTP-Posting-Host: 138.88.67.163
+X-Complaints-To: abuse@verizon.net
+X-Trace: nwrddc02.gnilink.net 1053556803 138.88.67.163 (Wed, 21 May 2003 18:40:03 EDT)
+NNTP-Posting-Date: Wed, 21 May 2003 18:40:03 EDT
+Xref: dfw-artgen alt.sys.pdp10:19945 comp.arch:72581
+
+
+
+Antonio Carlini wrote:
+> bob smith wrote:
+> 
+>> Jupiter (nee Hephastus) or KC10 (c for 100K ECL) was an instantiation 
+>> of the PDP10 instruction set using 100K ecl components and a series of 
+>> microcoded machines.  It was approved to support 30 bit addressing (CE 
+>> or if you prefer CGB would not allow 32 bit addressing).
+> 
+> 
+> I gues that CGB is Gordon Bell, but who was CE?
+CGB, is indeed Chester Gordon Bell.  CE is Central Engineering, and the 
+board under bell.
+
+> 
+>> Venus was the next gen high end vax.  I don't recall which number it 
+>> turned into 8xxx or soemthing.  I know Al helenius and Trygve Fossum 
+>> wore working on it.
+> 
+> 
+> Venus was the VAX 8600. I believe they had to downgrade the
+> speed to get it out at all (and it was pretty late
+> by then). When they eventually managed to up the speed,
+> the result came out as the VAX 8650 (aka Morningstar).
+> There was a rumour of a VAX 8670, but I have no idea
+> if it was ever more than a rumour.
+> 
+> Antonio
+Thanks, I was not sure of the numbering, I just recall it was late, had 
+a HUGE staff compared to 2080, and had a target manufacturing price for 
+the CPU of 50K.
+bob
+
+> 
+> 
+> -- 
+> 
+> ---------------
+> Antonio Carlini             arcarlini@iee.org
+> 
+
+
+
+Article: 19954 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!dfw-peer!news.verio.net!newsfeed!arclight.uoregon.edu!logbridge.uoregon.edu!news.u.washington.edu!140.142.17.34.MISMATCH!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!MRC
+From: Mark Crispin <MRC@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10,comp.arch
+Subject: Re: A Dark Day...
+Date: Wed, 21 May 2003 17:23:07 -0700
+Organization: Networks & Distributed Computing
+Lines: 33
+Sender: mrc@ndcms.cac.washington.edu
+Message-ID: <Pine.WNT.4.60.0305211704150.6300@Tomobiki-Cho.CAC.Washington.EDU>
+References: <ba5se1$92e$1@news3.bu.edu> <ba7mc3$kn3$1@bob.news.rcn.net>
+ <3EC77B0D.2050008@bellatlantic.net> <ba7vmf$bkf$1@bob.news.rcn.net>
+ <3EC784B9.1050909@bellatlantic.net> <ba80pj$cts$1@bob.news.rcn.net>
+ <Pine.NXT.4.55.0305180725010.305@Ikkoku-Kan.Panda.COM> <baamo9$quo$1@bob.news.rcn.net>
+ <Pine.NXT.4.55.0305190803000.305@Ikkoku-Kan.Panda.COM>
+ <4e56972b.0305202132.3783bf79@posting.google.com> <3ECB4958.5020308@bellatlantic.net>
+ <3ECBFE12.1030909@iee.org> <3ECC0082.2000905@bellatlantic.net>
+NNTP-Posting-Host: nntp6.u.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 1053563114 29038 (None) 140.142.17.40
+X-Complaints-To: help@cac.washington.edu
+In-Reply-To: <3ECC0082.2000905@bellatlantic.net>
+Xref: dfw-artgen alt.sys.pdp10:19954 comp.arch:72584
+
+On Wed, 21 May 2003, bob smith wrote:
+> >> Jupiter (nee Hephastus) or KC10 (c for 100K ECL) was an instantiation
+> >> of the PDP10 instruction set using 100K ecl components and a series of
+> >> microcoded machines.  It was approved to support 30 bit addressing (CE
+> >> or if you prefer CGB would not allow 32 bit addressing).
+> > I gues that CGB is Gordon Bell, but who was CE?
+> CGB, is indeed Chester Gordon Bell.  CE is Central Engineering, and the
+> board under bell.
+
+Neither of them had anything to do with 30-bit vs. 32-bit addressing.  The
+PDP-10 pointer word format limits it to 30 bits (but that's still more
+memory than a 32-bit byte-oriented machine).
+
+On the other hand, I would believe a limit of 27-bit addressing.  It is
+relatively straightforward to extend from 23-bit addressing (the limit in
+the KL) to 27 bits.  Instead of a 5-bit section table, you have a full
+page (9-bit) section table, and page numbers become 18 bits instead of 14
+bits.  There's a fair amount of surgery needed to the virtual memory
+stuff, but it's relatively straightforward.
+
+Getting those last three bits, though, are a nightmare.  To start with,
+only 18 bits are available for the page number in a storage address; bits
+12-17 hold the storage medium.  So that breaks immediate page pointers and
+indirect page pointers.  It also breaks the page fail word which only has
+27 bits.
+
+I understand that XKL did this; they would have had to redefine how the
+pager works and then change lots of stuff in the TOPS-20 kernel.
+
+-- Mark --
+
+http://staff.washington.edu/mrc
+Science does not emerge from voting, party politics, or public debate.
+
+
+Article: 19956 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!dfw-peer!news.verio.net!newsfeed!wn13feed!worldnet.att.net!199.45.49.37!cyclone1.gnilink.net!spamkiller.gnilink.net!nwrddc02.gnilink.net.POSTED!53ab2750!not-for-mail
+Message-ID: <3ECC2336.6090701@bellatlantic.net>
+From: bob smith <sfmc68@bellatlantic.net>
+User-Agent: Mozilla/5.0 (Windows; U; WinNT4.0; en-US; rv:1.0.2) Gecko/20030208 Netscape/7.02
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10,comp.arch
+Subject: Re: A Dark Day...
+References: <ba5se1$92e$1@news3.bu.edu> <ba7mc3$kn3$1@bob.news.rcn.net> <3EC77B0D.2050008@bellatlantic.net> <ba7vmf$bkf$1@bob.news.rcn.net> <3EC784B9.1050909@bellatlantic.net> <ba80pj$cts$1@bob.news.rcn.net> <Pine.NXT.4.55.0305180725010.305@Ikkoku-Kan.Panda.COM> <baamo9$quo$1@bob.news.rcn.net> <Pine.NXT.4.55.0305190803000.305@Ikkoku-Kan.Panda.COM> <4e56972b.0305202132.3783bf79@posting.google.com> <3ECB4958.5020308@bellatlantic.net> <3ECBFE12.1030909@iee.org> <3ECC0082.2000905@bellatlantic.net> <Pine.WNT.4.60.0305211704150.6300@Tomobiki-Cho.CAC.Washington.EDU>
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
+Lines: 57
+Date: Thu, 22 May 2003 01:08:09 GMT
+NNTP-Posting-Host: 138.88.67.163
+X-Complaints-To: abuse@verizon.net
+X-Trace: nwrddc02.gnilink.net 1053565689 138.88.67.163 (Wed, 21 May 2003 21:08:09 EDT)
+NNTP-Posting-Date: Wed, 21 May 2003 21:08:09 EDT
+Xref: dfw-artgen alt.sys.pdp10:19956 comp.arch:72586
+
+
+
+Mark Crispin wrote:
+> On Wed, 21 May 2003, bob smith wrote:
+> 
+>>>>Jupiter (nee Hephastus) or KC10 (c for 100K ECL) was an instantiation
+>>>>of the PDP10 instruction set using 100K ecl components and a series of
+>>>>microcoded machines.  It was approved to support 30 bit addressing (CE
+>>>>or if you prefer CGB would not allow 32 bit addressing).
+>>>
+>>>I gues that CGB is Gordon Bell, but who was CE?
+>>
+>>CGB, is indeed Chester Gordon Bell.  CE is Central Engineering, and the
+>>board under bell.
+> 
+> 
+> Neither of them had anything to do with 30-bit vs. 32-bit addressing.  The
+> PDP-10 pointer word format limits it to 30 bits (but that's still more
+> memory than a 32-bit byte-oriented machine).
+> 
+> On the other hand, I would believe a limit of 27-bit addressing.  It is
+> relatively straightforward to extend from 23-bit addressing (the limit in
+> the KL) to 27 bits.  Instead of a 5-bit section table, you have a full
+> page (9-bit) section table, and page numbers become 18 bits instead of 14
+> bits.  There's a fair amount of surgery needed to the virtual memory
+> stuff, but it's relatively straightforward.
+> 
+> Getting those last three bits, though, are a nightmare.  To start with,
+> only 18 bits are available for the page number in a storage address; bits
+> 12-17 hold the storage medium.  So that breaks immediate page pointers and
+> indirect page pointers.  It also breaks the page fail word which only has
+> 27 bits.
+> 
+> I understand that XKL did this; they would have had to redefine how the
+> pager works and then change lots of stuff in the TOPS-20 kernel.
+Bingo, but when that same sort of arguement was presented to the 
+committee of consulting engineers, Bell's staff, the answer was no.
+Yes, would have broken Tops 20. Yes, would have been a departure from 
+PDP10 architecture in a subtle but majore way. Yes, it would have been a 
+discriminator. Yes, we did use that ploy to get 30 bits approved.  We 
+did spend a lot of time looking at how we could support the extended 
+addressing in fortran.
+
+I hope some of this discussion spurs some ofthe lurkers to pipe in here.
+
+It was a less than pleasent experience having to stop work and prepare a 
+briefing or presenation for a new set of CE crew while trying to keep a 
+deadline.  It was not pleasent rejustifying over and over, the decisions 
+made. It was fun when Ted Hess wore a suit and I wore jeans and a tee 
+shirt. That kind of threw them for a minute.
+
+
+> -- Mark --
+> 
+> http://staff.washington.edu/mrc
+> Science does not emerge from voting, party politics, or public debate.
+
+
+
+Article: 19955 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!dfw-peer!sjc-peer.news.verio.net!news.verio.net!newsfeed.cwix.com!newsfeed!panix!not-for-mail
+From: Rich Alderson <news@alderson.users.panix.com>
+Newsgroups: alt.sys.pdp10,comp.arch
+Subject: Re: A Dark Day...
+Date: 21 May 2003 20:51:21 -0400
+Organization: Systems Administration, XKL LLC, Redmond WA 98052
+Lines: 25
+Sender: alderson+news@panix5.panix.com
+Message-ID: <mdd4r3n952u.fsf@panix5.panix.com>
+References: <ba5se1$92e$1@news3.bu.edu> <ba7mc3$kn3$1@bob.news.rcn.net> <3EC77B0D.2050008@bellatlantic.net> <ba7vmf$bkf$1@bob.news.rcn.net> <3EC784B9.1050909@bellatlantic.net> <ba80pj$cts$1@bob.news.rcn.net> <Pine.NXT.4.55.0305180725010.305@Ikkoku-Kan.Panda.COM> <baamo9$quo$1@bob.news.rcn.net> <Pine.NXT.4.55.0305190803000.305@Ikkoku-Kan.Panda.COM> <4e56972b.0305202132.3783bf79@posting.google.com> <3ECB4958.5020308@bellatlantic.net> <3ECBFE12.1030909@iee.org> <3ECC0082.2000905@bellatlantic.net>
+NNTP-Posting-Host: panix5.panix.com
+X-Trace: reader1.panix.com 1053564684 22225 166.84.1.5 (22 May 2003 00:51:24 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: Thu, 22 May 2003 00:51:24 +0000 (UTC)
+X-Newsreader: Gnus v5.7/Emacs 20.7
+Xref: dfw-artgen alt.sys.pdp10:19955 comp.arch:72585
+
+bob smith <sfmc68@bellatlantic.net> writes:
+
+> Antonio Carlini wrote:
+
+>> Venus was the VAX 8600. I believe they had to downgrade the
+>> speed to get it out at all (and it was pretty late
+>> by then). When they eventually managed to up the speed,
+>> the result came out as the VAX 8650 (aka Morningstar).
+>> There was a rumour of a VAX 8670, but I have no idea
+>> if it was ever more than a rumour.
+
+> Thanks, I was not sure of the numbering, I just recall it was late, had 
+> a HUGE staff compared to 2080, and had a target manufacturing price for 
+> the CPU of 50K.
+
+Shortly before the cancellation, the 2080 had been renumbered as the 4050;
+I have a marketing materials binder with the DECSYSTEM-4050 name right there
+on the front for all to see.
+
+Grump.  I never thought to scan it till just now; have to wait till I can get
+it out of the storage locker.
+
+-- 
+Rich Alderson                                     news@alderson.users.panix.com
+  "You get what anybody gets.  You get a lifetime."  --Death, of the Endless
+
+

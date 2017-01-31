@@ -1,0 +1,96 @@
+Article 2164 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!nntp.abs.net!chnws02.mediaone.net!chnws05.ne.mediaone.net!24.91.0.34!typhoon.ne.mediaone.net.POSTED!not-for-mail
+From: "D. R. Banks" <dawn@drbanks.nospamDOTcom>
+Newsgroups: alt.sys.pdp10
+References: <Pine.LNX.4.10.10012030024490.3958-100000@bony.umtec.com> <90fd0b$ecr$1@dbit.dbit.com> <Pine.LNX.4.10.10012040806190.5447-100000@bony.umtec.com> <3A2BAC15.5790632B@bartek.net> <Pine.LNX.4.10.10012041233550.5447-100000@bony.umtec.com> <3A2C05A9.EBB63F46@srv.net> <Pine.LNX.4.10.10012041501250.5447-100000@bony.umtec.com> <3A2C2948.C48E90D6@bartek.net> <3A2C2FBB.EB3C6E3B@bartek.net> <90imp6$c34$4@bob.news.rcn.net> <3A2D0378.B5F07323@bartek.net>
+Subject: Re: TU45...
+Lines: 74
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Newsreader: Microsoft Outlook Express 5.50.4133.2400
+X-MimeOLE: Produced By Microsoft MimeOLE V5.50.4133.2400
+Message-ID: <dDvX5.38111$M51.13473697@typhoon.ne.mediaone.net>
+Date: Wed, 06 Dec 2000 18:32:41 GMT
+NNTP-Posting-Host: 24.218.2.13
+X-Complaints-To: abuse@mediaone.net
+X-Trace: typhoon.ne.mediaone.net 976127561 24.218.2.13 (Wed, 06 Dec 2000 13:32:41 EST)
+NNTP-Posting-Date: Wed, 06 Dec 2000 13:32:41 EST
+Organization: Road Runner
+Xref: nntp1.ba.best.com alt.sys.pdp10:2164
+
+Out of respect for everything that's decent, let's not say "TU7n."
+
+TU70s TU71s and TU72s came from Storage Technology Corp.  TU78s came from
+garbage manufacturers.
+
+The STC drives were, in a word, brilliant.  They were and are the only tape
+drives DEC ever slapped their nameplate on that I would trust useful data
+to.
+
+Sadly, DEC put a 100% markup on the drive (comparing bought from STC price
+vs. bought from DEC price), and instructed STC to never deal directly with
+DEC customers.
+
+Instead, DEC pushed those POS TU78s.  An operator, trying to do a backup to
+a TU78 (often an exercise that was even worse than a waste of time) would
+often find that upon rewinding the tape, the stupid 78 couldn't read the
+tape label that it'd just written a few minutes before.  For those not in
+the know, this was quite an achievement on the part of the TU78, as the 6250
+BPI tape density had so much error correction that you could lose one track
+on write and two tracks on read and still get your data back.
+
+If one could buy a TU72 directly from STC, it'd have come at a cheaper price
+than what one would pay for a TU78 from DEC, but sadly, Digital's
+"Marketing" department took care of that.
+
+To be fair, although the TU70,1,2 drives were pretty inexpensive, the
+interface to the -10 or -20 wasn't.  It involved a STC controller
+('spensive) and a DX-10 or DX-20.  The latter had wirewrapped components.
+The rumor was that Digital had only ever planned on selling 4 DX-20s, so it
+never bothered to setup a real manufacturing line for them.  Whether or not
+that's true, one place I used to work had 10 of the only 4 DX-20s ever
+built. ;-)
+
+An interesting thing about reading blank tape:
+
+TOPS-10 would time out requests.  If it issued a request and didn't get a
+response in about 3 mintues, it'd kill the request, and return "Hung
+device."  A TU-70 could actually get to physical end of tape on a 2400 foot
+reel in that time (it being a 200 IPS drive).  Trying to read a blank tape
+could exhaust the entire reel before getting a hung timeout.
+
+FWIW, from memory, TU-70 was 800/1600 BPI 9-Track 200 IPS, TU-71 was a
+7-track drive, TU-72 was 1600/6250 BPI 9-Track 125 IPS.
+
+STC also sold a 1600/6250 9-Track drive that did 200 IPS (memory fades, but
+I believe it was their model number 3670), but DEC didn't have any channels
+that could reliably keep up with it.
+
+How times have changed.  6250 bytes per second at 200 inches per second
+turns out to be 1.25 megabytes per second (decimal megabytes).  Today, we'd
+turn our noses up at drives that couldn't do that.  The DDS-3 DAT drive on
+my PeeCee can handle 1Mb/sec uncompressed;2 Mb/sec compressed, and that
+seems slow.
+
+"Arthur Krewat" <krewat@bartek.net> wrote in message
+news:3A2D0378.B5F07323@bartek.net...
+> jmfbahciv@aol.com wrote:
+> >
+> > >It doesn't really matter if you are past BOT on load, it will just
+rewind
+> > >the tape until it finds that shiny BOT :) So, load up on the take-up
+reel
+> > >all you want ...
+> >
+> > Welll....unless you have a runaway tape.  Do not leave the
+> > tape drive to do it's own loading...ever.  You could do that
+> > with TU7n, but that's because DEC didn't make them.
+> >
+>
+> I had a TU78 for my VAX-11/750, but it was THROWN OUT! <sob>
+>
+> ak
+
+
+
+

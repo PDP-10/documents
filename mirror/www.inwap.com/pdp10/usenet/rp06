@@ -1,0 +1,104 @@
+Article 13073 of alt.sys.pdp10:
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.sys.pdp10
+Subject: RP06 power requirements (was Re: RM03 on a KS10)
+References: <tuvkhjpm1krj81@corp.supernews.com>
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 12 Nov 2001 13:48:54 -0800
+Message-ID: <qhg07j7j95.fsf@ruckus.brouhaha.com>
+Lines: 27
+User-Agent: Gnus/5.0807 (Gnus v5.8.7) Emacs/20.7
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 12 Nov 2001 13:49:14 -0800, ruckus.brouhaha.com
+Path: sea-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!newsfeed.mathworks.com!cyclone.swbell.net!cyclone-sf.pbi.net!206.13.28.125!cyclone-transit.snfc21.pbi.net!216.218.192.242!news.he.net!news.kjsl.com!news.spies.com!ruckus.brouhaha.com
+Xref: dfw-artgen.news.verio.net alt.sys.pdp10:13073
+
+m_thompson@NOSPAMids.net (Michael Thompson) writes:
+> The Rhode Island Computer Museum has a KS10 (and Megan Gentry's ADP
+> KS10). They don't have three-phase power available so using the RP06
+> disks is a problem.
+
+This is a common myth.  The RP06 does NOT need three-phase power, though
+that it is how it is normally wired.  You don't even need a capacitor-start
+arrangement to produce "fake" three-phase, because the drive doesn't even
+use the third phase.
+
+The RP06 motor only has a single winding, which is wired between two of
+the phases.  For normal US three phase power, this is 208V.  But
+according to the Memorex 677 drive manual (included in the DEC
+maintenance docs), the motor will actually run on a wide range of
+voltages, including 220-240V.  I don't recall the limits of the range.
+
+The electronics runs between one phase and neutral on 120V.
+So a split-phase 120V/240V circuit (with neutral) would work fine.
+
+If you have a 240V circuit with no neutral, you could use a 2:1 step-down
+transformer to power the logic, or it might be possible to reconfigure
+the electronics power supply for 240V.
+
+The RP06 also has a three-phase "output" for daisy-chaining a second
+drive.  (You're not supposed to put more than two drives in a power chain.)
+This is simply the three input phases permuted so as to distribute the
+load.
+
+
+Article 13182 of alt.sys.pdp10:
+Path: sea-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!stl-feed.news.verio.net!news.cc.ukans.edu!logbridge.uoregon.edu!news.maxwell.syr.edu!news1.optus.net.au!optus!bunyip.cc.uq.edu.au!not-for-mail
+From: Wilber Williams <W.Williams@its.uq.edu.au>
+Newsgroups: alt.sys.pdp10
+Subject: Re: RP06 power requirements (was Re: RM03 on a KS10)
+Date: Thu, 15 Nov 2001 20:19:10 +1000
+Organization: The University of Queensland
+Lines: 33
+Message-ID: <3BF3969E.3FAD32B1@its.uq.edu.au>
+References: <tuvkhjpm1krj81@corp.supernews.com> <qhg07j7j95.fsf@ruckus.brouhaha.com> <87g07j8lzn.fsf@prep.synonet.com>
+NNTP-Posting-Host: chook.cc.uq.edu.au
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: bunyip.cc.uq.edu.au 1005819613 3450 130.102.128.100 (15 Nov 2001 10:20:13 GMT)
+X-Complaints-To: news@uq.edu.au
+NNTP-Posting-Date: 15 Nov 2001 10:20:13 GMT
+X-Mailer: Mozilla 4.78 [en] (Win98; U)
+X-Accept-Language: en
+Xref: dfw-artgen.news.verio.net alt.sys.pdp10:13182
+
+See if
+http://chook.cc.uq.edu.au/In%20Progress/EK-RP056-IN-001%20RP05%20%26%20RP06%20Disk%20Drive%20Installation%20Manual.pdf
+or
+http://chook.cc.uq.edu.au/In%20Progress/Memorex%20677-01%20DEC%20and%20677-51%20DEC%20Disc%20Storage%20Drives%20Technical%20Manual.pdf
+have anything useful...
+
+Wilber
+
+Paul Repacholi wrote:
+> 
+> Eric Smith <eric-no-spam-for-me@brouhaha.com> writes:
+> 
+> > The RP06 motor only has a single winding, which is wired between two of
+> > the phases.  For normal US three phase power, this is 208V.  But
+> > according to the Memorex 677 drive manual (included in the DEC
+> > maintenance docs), the motor will actually run on a wide range of
+> > voltages, including 220-240V.  I don't recall the limits of the range.
+> 
+> I have two PR06s  and a 677. All the motors are 3 phase.
+> 
+> > The electronics runs between one phase and neutral on 120V.  So a
+> > split-phase 120V/240V circuit (with neutral) would work fine.
+> 
+> Yep, you should be able to re-jumper the PS to 220v or 110v.
+> Or 240v like over here. We do have 3 phase as 'standard',
+> even into many homes though.
+> 
+> --
+> Paul Repacholi                               1 Crescent Rd.,
+> +61 (08) 9257-1001                           Kalamunda.
+>                                              West Australia 6076
+> Raw, Cooked or Well-done, it's all half baked.
+> EPIC, The Architecture of the future, always has been, always will be.
+
+

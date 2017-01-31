@@ -1,0 +1,1102 @@
+Return-Path: <hansl$:@:$obygden.udac.se>
+Date: Sun, 6 Aug 2000 19:08:39 +0200 (MET DST)
+From: Hans Liss <Hans$:@:$Liss.pp.se>
+To: i_a$:@:$wanadoo.nl
+Subject: COMND
+
+
+I didn't want to post this much to afc, but here you have the INFO section
+on COMND as an attachment. There are some CR underlines in there which I
+left in - I suppose you can remove them yourself if they cause trouble
+with your text viewer.
+
+While I'm at it, here are some examples:
+
+>From MM
+--------
+(all examples except the completion one show what happens when I type a
+'?' in different situations, so everything after the '?' up to my next
+comment is COMND:s doing)
+
+[just typing a '?' produces a command list without explanations]
+MM>? one of the following:
+ ALIAS           ANSWER           APPEND           BBDATE
+ BBOARD          BLANK            BUG              CHECK
+ CONTINUE        COPY             COUNT            CREATE-INIT
+ DAYTIME         DELETE           DIRED            DISABLE
+ ECHO            EDIT             ENABLE           EXAMINE
+ EXIT            EXPUNGE          FILE-LIST        FIND
+ FLAG            FORWARD          FROM             GET
+ HEADERS         HELP             IGNORE           JUMP
+ KEYWORDS        KILL             LIST             LITERAL-TYPE
+ LOGOUT          MARK             MOVE             NET-MAIL
+ NEXT            PREVIOUS         PROFILE          PUSH
+ QUIT            READ             REMAIL           REPLY
+ REPLY-TO        RESTORE-DRAFT    SEND             SET
+ SHOW            SORT             STATUS           STEP
+ SYSTEM-MSGS     TAKE             TYPE             UNANSWER
+ UNDELETE        UNFLAG           UNKEYWORDS       UNMARK
+ VERSION
+MM>
+
+['?' after a partial command name]
+MM>he? one of the following:
+ HEADERS   HELP
+MM>he
+[(the cursor is placed after "HE" on the new line)]
+
+[A command, a space and a '?' produces a hint on the *next* parameter
+only, not a full description of the command parameters]
+MM>echo ? text string
+MM>echo 
+[(the cursor is placed after "echo" on the new line)]
+
+[Entering a command and then pressing <enter> without all necessary
+ parameters will produce an error message, most likely. May be
+ application-specific, though]
+MM>copy
+?Filename was not specified
+MM>
+
+[Using completion with <esc>, though, will often provide some help]
+MM>copy (INTO FILE) 
+[Here the cursor is left after "(INTO FILE) "]
+
+Leaving MM and out into EXEC
+----------------------------
+[About switches: The only commands I remember as using switches are queue
+(batch and print etc) commands]
+@submit ? Switch, one of the following:
+ /ACCOUNT:               /AFTER:                  /ASSISTANCE:
+ /BATCH-LOG:             /BEGIN:                  /CARDS:
+ /CONNECTED-DIRECTORY:   /DELETE                  /DEPENDENCY-COUNT:
+ /DESTINATION-NODE:      /FEET:                   /JOBNAME:
+ /LOGDISPOSITION:        /LOGNAME:                /NOTIFY:
+ /OUTPUT:                /PAGES:                  /PRIORITY:
+ /PROCESSING-NODE:       /READER                  /RESTARTABLE:
+ /SEQUENCE:              /TAG:                    /TIME:
+ /TPLOT:                 /UNIQUE:                 /USER:
+  or ","
+  or File specification
+@submit /? Switch, one of the following:
+ /ACCOUNT:               /AFTER:                  /ASSISTANCE:
+ /BATCH-LOG:             /BEGIN:                  /CARDS:
+ /CONNECTED-DIRECTORY:   /DELETE                  /DEPENDENCY-COUNT:
+ /DESTINATION-NODE:      /FEET:                   /JOBNAME:
+ /LOGDISPOSITION:        /LOGNAME:                /NOTIFY:
+ /OUTPUT:                /PAGES:                  /PRIORITY:
+ /PROCESSING-NODE:       /READER                  /RESTARTABLE:
+ /SEQUENCE:              /TAG:                    /TIME:
+ /TPLOT:                 /UNIQUE:                 /USER:
+@submit /b? Switch, one of the following:
+ /BATCH-LOG:   /BEGIN:
+@submit /begin:? Decimal line number of control file on which to start
+processing
+@submit /begin:
+
+---------------------------------------
+Enough examples. The file name completion questions are better answered in
+the INFO file, I guess.
+
+If you port CCMD to ANSI C and get it to work, I would very much like to
+have a copy! I have looked at it, but never found the energy to begin
+porting it.
+
+If you want to know more about COMND I have the Monitor Calls Reference
+Manual somewhere, too.
+
+/Hans
+
+
+
+
+
+File: JSYSAF	Node: COMND	Previous: CLZFF	Next: CRDIR	Up: Top
+
+                             COMND     JSYS 544
+
+
+   Parses one field of a command that  is  either  typed  by  a  user  or
+   contained in a file.  When this monitor call is used to read a command
+   from a terminal, it provides the following features:
+
+        1.  Allows the input of a command (including the guide words)  to
+            be given in abbreviated, recognition (ESC and CTRL/F), and/or
+            full input mode.
+
+        2.  Allows the user to edit his input with  the  DELETE,  CTRL/U,
+            CTRL/W, and CTRL/R editing keys.
+
+        3.  Allows fields of the command to be defaulted  if  an  ESC  or
+            CTRL/F  is  typed at the beginning of any field or if a field
+            is omitted entirely.
+
+        4.  Allows a help message to be given if a question mark  (?)  is
+            typed at the beginning of any field.
+
+        5.  Allows input of an indirect file (@file)  that  contains  the
+            fields for all or the remainder of the command.
+
+        6.  Allows a recall of the correct portion of  the  last  command
+            (i.e.,  up  to  the beginning of the field where an error was
+            detected) if the next command line begins with  CTRL/H.   The
+            correct  portion  of the command is retyped, and the user can
+            then continue typing from that point.
+
+        7.  Allows input of a line to be continued onto the next line  if
+            the  user types a hyphen (-) immediately preceding a carriage
+            return.  (The carriage return is  invisible  to  the  program
+            executing  the  COMND call, although it is stored in the text
+            buffer.) The hyphen can be typed by  the  user  while  he  is
+            typing  a  comment.   The  comment is then continued onto the
+            next line.
+
+   The COMND call allows the command line that  is  input  to  contain  a
+   comment if the comment is preceded by either an exclamation point or a
+   semicolon and the previous field has been terminated.  When the  COMND
+   call  inputs  an  exclamation  point  after  a  field  that  has  been
+   terminated, it ignores all text on the remainder of the line or up  to
+   the  next  exclamation  point.  When the COMND call inputs a semicolon
+   after a field that has been terminated, it ignores  all  text  on  the
+   remainder of the line.
+
+   When an indirect file is given on the command line, it can be given at
+   the  beginning  of any field.  However, it must be the last item typed
+   on the line, and its contents must complete the current command.   The
+   user  must  terminate  his  input  of  the  indirect  file  (after any
+   recognition is performed) with a carriage  return.   If  he  does  not
+   terminate  his  input,  the  message  ?INDIRECT  FILE NOT CONFIRMED is
+   output.  Also, if the user types a question mark (instead of the  file
+   specification  of  the  indirect file) after he types the$:@:$character,
+   the message FILESPEC OF INDIRECT FILE is output.   The  indirect  file
+   itself  should  not  contain  an  ESC  or  carriage  return;  if these
+   characters are included, they will be treated as spaces.  The contents
+   of  the  indirect file are placed in the text buffer but are not typed
+   on the user's terminal.
+
+
+   As the user types his command, the characters are placed in a  command                                                                  _______
+   text buffer.  This buffer can also include the command line prompt, if   ____ ______
+   any.  Several pointers and counts reflect the  current  state  of  the
+   parsing of the command.  These pointers and counts are as follows:
+
+        1.  Pointer  to  the  beginning  of  the  prompting-text   buffer
+            (.CMRTY).   This  pointer  is  also  called the CTRL/R buffer
+            pointer since it indicates the initial part of the text  that
+            will  be  output  on  a  CTRL/R.   (The remainder of the text
+            output on a CTRL/R is what the user had typed before he typed
+            CTRL/R.)  The  buffer  containing  the  prompt  need  not  be
+            contiguous with the buffer containing the  remainder  of  the
+            command  line.   Typically this pointer is to a string in the
+            literals area.
+
+        2.  Pointer to the beginning of the user's input (.CMBFP).   This
+            is the limit back to which the user can edit.
+
+        3.  Pointer to the beginning of  the  next  field  to  be  parsed
+            (.CMPTR).
+
+        4.  Count of  the  space  remaining  in  the  text  input  buffer
+            (.CMCNT).
+
+        5.  Count of the number of characters in the buffer that have not
+            yet been parsed (.CMINC).
+
+   The illustration below is a logical arrangement of  the  pointers  and
+   counts.   Remember  that the prompting-text buffer does not have to be
+   adjacent to the text buffer.
+
+
+                                                       .CMCNT
+
+
+
+                !=======================================================!
+                !        !              !                 !             !
+                !        !              !                 !             !
+                !=======================================================!
+                ^        ^              ^
+                !        !              !
+                !        !              !        .CMINC
+                !        !              !
+                !        !              !
+                !        .CMBFP         .CMPTR
+                .CMRTY
+
+
+   These pointers and other information are contained in a command  state                                                           _______  _____
+   block,  whose  address  is  given  as an argument to the COMND monitor   _____
+   call.  The .CMINI function initializes these pointers.
+
+   Parsing of a command is performed field by field and by default begins
+   when  the user types a carriage return, ESC, CTRL/F, or question mark.
+   These characters are called action characters because they  cause  the
+   system  to  act  on  the command as typed so far.  A field can also be
+   terminated  with  a  space,  tab,   slash,   comma,   or   any   other
+   nonalphanumeric  character.  Normally, the parsing does not begin, and
+   the COMND call does not return control to the program, until an action
+   character  is typed.  However, if B8(CM%WKF) is on in word .CMFLG when
+   the COMND call  is  executed,  parsing  begins  after  each  field  is
+   terminated.
+
+
+   The command is parsed by repeated COMND calls.   Each  call  specifies
+   the  type  of  field expected to be parsed by supplying an appropriate
+   function code and any data needed for the function.  This  information
+   is  given in a function descriptor block.  On successful completion of                  ________ __________ _____
+   each call, the current text pointers and the counts are updated in the
+   command state block, and any data obtained for the field is returned.
+
+   The program executing the COMND call should not reset the pointers  in
+   the  command  state  block  after  it  completes  the  parsing of each
+   command.  It should set up the state block once at the  beginning  and
+   then  use  the  .CMINI  function when it begins parsing each line of a
+   command.  This is true because  the  .CMINI  function  implements  the
+   CTRL/H error recovery feature in addition to initializing the pointers
+   in the state block and printing the  prompt  for  the  line.   If  the
+   program  resets  the  pointers,  the  CTRL/H  feature  is not possible
+   because the pointers from the  previous  command  are  not  available.
+   When a CTRL/H is input, the .CMINI function allows error recovery from
+   the last command only if both (1) the pointer to the beginning of  the
+   user's  input (.CMBFP) is not equal to the pointer to the beginning of
+   the next field to be parsed (.CMPTR) and (2) the last character parsed
+   in the previous command was not an end-of-line character.
+
+   The design of the COMND call allows the user to delete his typed input
+   with  the  DELETE,  CTRL/W,  and  CTRL/U  keys without regard to field
+   boundaries.  When the user deletes into a field that has already  been
+   parsed,  the  COMND call returns to the program with B3(CM%RPT) set in
+   word .CMFLG.  This return informs the program to  forget  the  current
+   state  of  the  command and to reparse from the beginning of the line.
+   Because the complete line as typed and corrected by the user is in the
+   text  buffer, the parse can be repeated and will yield the same result
+   up to the point of the change.
+
+   The calling sequence to the COMND call is as follows:
+
+   ACCEPTS IN AC1:  address of the command state block
+
+              AC2:  address of the first alternative function  descriptor
+                    block
+
+   RETURNS     +1:  always (unless a reparse is needed and the right half
+                    of .CMFLG is nonzero), with
+                    AC1 containing  flags  in  the  left  half,  and  the
+                        address  of  the command state block in the right
+                        half.  The flags are copied from word  .CMFLG  in
+                        the command state block.
+                    AC2 containing either the data obtained for the field
+                        or an error code if the field could not be parsed
+                        (CM%NOP is on).
+                    AC3 containing in the left half the  address  of  the
+                        function  descriptor block given in the call, and
+                        in the right half the  address  of  the  function
+                        descriptor  block  actually  used  (i.e., the one
+                        that matched the input).
+
+
+   The format of the command state block is shown below.
+
+
+           0                        17 18                       35
+          !=======================================================!
+   .CMFLG !         Flag Bits         ! Reparse Dispatch Address  !
+          !-------------------------------------------------------!
+   .CMIOJ !         Input JFN         !        Output JFN         !
+          !-------------------------------------------------------!
+   .CMRTY !               Pointer to CTRL/R Buffer                !
+          !-------------------------------------------------------!
+   .CMBFP !            Pointer to Start of Text Buffer            !
+          !-------------------------------------------------------!
+   .CMPTR !          Pointer to Next Input To Be Parsed           !
+          !-------------------------------------------------------!
+   .CMCNT !             Count of Space Left in Buffer             !
+          !-------------------------------------------------------!
+   .CMINC !          Count of Characters Left in Buffer           !
+          !-------------------------------------------------------!
+   .CMABP !                Pointer to Atom Buffer                 !
+          !-------------------------------------------------------!
+   .CMABC !                  Size of Atom Buffer                  !
+          !-------------------------------------------------------!
+   .CMGJB !            Address of GTJFN Argument Block            !
+          !=======================================================!
+
+
+                            Command State Block                            _______ _____ _____
+
+   Word      Symbol                   Meaning
+
+     0       .CMFLG    Flag bits  in  the  left  half,  and  the  reparse
+                       dispatch  address  in  the  right half.  Some flag
+                       bits can be set by the program executing the COMND
+                       call;   others  can be set by the COMND call after
+                       its execution.  The bits that can be  set  by  the
+                       program  are described following the Command State
+                       Block description.  The bits that can  be  set  by
+                       COMND   are   described   following  the  Function
+                       Descriptor Block description.
+
+                       The reparse dispatch address is  the  location  to
+                       which  control is automatically transferred when a
+                       reparse of the command is needed because the  user
+                       edited  past  the  current pointer (i.e., the user
+                       edited characters that were already  parsed).   If
+                       this field is zero, the COMND call sets B3(CM%RPT)
+                       in the left half of this word  and  gives  the  +1
+                       return when a reparse is needed.  The program must
+                       then test CM%RPT and, if on, must reenter the code
+                       that  parses the first field of the command.  When
+                       the reparse dispatch address is given, control  is
+                       transferred automatically to that address.
+
+                       The code at the reparse  dispatch  address  should
+                       initialize  the  program's  state  to  what it was
+                       after   the   last    .CMINI    function.     This
+                       initialization  should include resetting the stack
+                       pointer, closing and releasing any  JFNs  acquired
+                       since  the  last .CMINI function, and transferring
+                       control to the code immediately following the last
+                       .CMINI function call.
+
+
+     1       .CMIOJ    Input JFN in the left half, and output JFN in  the
+                       right half.  These designators identify the source
+                       for the input of the command and  the  destination
+                       for   the   output   of   the  typescript.   These
+                       designators are usually  .PRIIN  (for  input)  and
+                       .PRIOU (for output).
+
+     2       .CMRTY    Pointer to the  beginning  of  the  prompting-text
+                       input buffer (also called the CTRL/R buffer).
+
+     3       .CMBFP    Pointer to the beginning of the user's input.  The
+                       user cannot edit back past this pointer.
+
+     4       .CMPTR    Pointer to the beginning of the next field  to  be
+                       parsed.
+
+     5       .CMCNT    Count of the space remaining in the  buffer  after
+                       the .CMPTR pointer.
+
+     6       .CMINC    Count of the number of unparsed characters in  the
+                       buffer after the .CMPTR pointer.
+
+     7       .CMABP    Pointer to the atom buffer,  a  temporary  storage
+                       buffer  that contains the last field parsed by the
+                       COMND call.  The terminator of the  field  is  not
+                       placed   in  this  buffer.   The  atom  buffer  is
+                       terminated with a null.
+
+     10      .CMABC    Count of the number  of  characters  in  the  atom
+                       buffer.  This count should be at least as large as
+                       the largest field expected to be parsed.
+
+     11      .CMGJB    Address of a GTJFN  argument  block.   This  block
+                       must  be at least 16(octal) words long and must be
+                       writable.   If  a  longer  GTJFN  block  is  being
+                       reserved,  the  count  in  the  right half of word
+                       .GJF2 of the GTJFN argument block must be  greater
+                       than four.  This block is usually filled in by the
+                       COMND call with arguments for the  GTJFN  call  if
+                       the  specified function is requesting a JFN (i.e.,
+                       functions .CMIFI, .CMOFI, and .CMFIL).   The  user
+                       should  store  data  in  this  block on the .CMFIL
+                       function only.
+
+   The flag bits that can be supplied in the left half of word .CMFLG  in
+   the  Command State Block are described below.  These bits apply to the
+   parsing of the  entire  command  and  are  preserved  by  COMND  after
+   execution.
+
+
+                        Bits Supplied on COMND Call                        ____ ________ __ _____ ____
+
+      Bit    Symbol                   Meaning
+
+       6     CM%RAI         Convert lowercase input to uppercase.
+
+       7     CM%XIF         Do  not  recognize   the  $:@:$  character   as
+                            designating   an   indirect   file;   instead
+                            consider   the    character    as    ordinary
+                            punctuation.   A  program  sets  this  bit to
+                            prevent the input of an indirect file.
+
+       8     CM%WKF         Begin parsing after each field is  terminated
+                            instead  of  only  after  an action character
+                            (carriage return, ESC, CTRL/F, question mark)
+                            is  typed.   For example, a program sets this
+                            bit    if    it    must    change    terminal
+                            characteristics   (e.g.,  it  must  turn  off
+                            echoing because a password may be  input)  in
+                            the  middle  of  a  command.  However, use of
+                            this bit is not recommended because  terminal
+                            wakeup occurs after each field is terminated,
+                            thereby  increasing  system  overhead.    The
+                            recommended   method   of  changing  terminal
+                            characteristics within a command is to  input
+                            the     field     requiring    the    special
+                            characteristic on the next line with its  own
+                            prompt.    For   example,  if  a  program  is
+                            accepting a  password,  it  should  turn  off
+                            echoing after the .CMCFM function of the main
+                            command and perform the  .CMINI  function  to
+                            type  the prompt requesting a password on the
+                            next line.
+
+   The format of the function descriptor block is shown below.
+
+
+          0           8 9          17 18                       35  
+         !=======================================================!
+         !  function   !  function   ! address of next function  !
+   .CMFNP!    code     !    flags    !     descriptor block      !
+         !-------------------------------------------------------!
+   .CMDAT!              Data for specific function               !
+         !-------------------------------------------------------!
+   .CMHLP!            Pointer to help text for field             !
+         !-------------------------------------------------------!
+   .CMDEF!          Pointer to default string for field          !
+         !=======================================================!
+
+
+                         Function Descriptor Block                         ________ __________ _____
+
+   Word      Symbol                   Meaning
+
+     0       .CMFNP    Function  code  and  pointer  to   next   function
+                       descriptor block.
+                       B0-B8(CM%FNC)   Function code 
+                       B9-B17(CM%FFL)  Function-specific flags 
+                       B18-B35(CM%LST) Address  of  the   next   function
+                                       descriptor block
+
+     1       .CMDAT    Data for the specific function, if any.
+
+     2       .CMHLP    Pointer to the help text  for  this  field.   This
+                       word  can  be zero if the program is not supplying
+                       its own help text.
+
+     3       .CMDEF    Pointer to the  default  string  for  this  field.
+                       This  word  can  be  zero  if  the  program is not
+                       supplying its own default string.
+
+   The individual words in the function descriptor block are described in
+   the following paragraphs.
+
+
+   Words .CMFNP and .CMDAT of the function descriptor block   _____ ______ ___ ______ __ ___ ________ __________ _____
+
+   Word .CMFNP contains the function code for the expected  field  to  be
+   parsed,  and  word .CMDAT contains any additional data needed for that
+   function.  The function codes, along with any required  data  for  the
+   functions, are described below.
+
+   Code      Symbol                   Meaning
+
+    0        .CMKEY    Parse a keyword, such as  a  command  name.   Word
+                       .CMDAT  contains  the  address of a keyword symbol
+                       table in the format described in the TBLUK monitor
+                       call  description  (i.e., alphabetical).  The data
+                       bits that can be defined in the right half of  the
+                       first word of the argument pointed to by the table
+                       entries (when B0-B6 of the first word are off  and
+                       B7(CM%FW) is on) are as follows:
+
+                       B35(CM%INV)    Suppress this keyword in  the  list
+                                      output on a ?.  The program can set
+                                      this bit to include entries in  the
+                                      table   that  should  be  invisible
+                                      because  they  are  not   preferred
+                                      keywords.   For  example,  this bit
+                                      can be set  to  allow  the  keyword
+                                      LIST  to  be valid, even though the
+                                      preferred  keyword  may  be  PRINT.
+                                      The   LIST  keyword  would  not  be
+                                      listed in the output given on a  ?.
+                                      This    bit   is   also   used   in
+                                      conjunction with the CM%ABR bit  to
+                                      suppress  an  abbreviation  in  the
+                                      output given on a ?.
+
+                       B34(CM%NOR)    Do not recognize this keyword  even
+                                      if  an  exact match is typed by the
+                                      user and suppress  its  listing  in
+                                      the  list output on a ?.  (Refer to
+                                      the TBLUK call description for more
+                                      information on using this bit.)
+
+                       B33(CM%ABR)    Consider  this  keyword   a   valid
+                                      abbreviation  for  another entry in
+                                      the table.  The right half of  this
+                                      table  entry  points to the keyword
+                                      for which this is an  abbreviation.
+                                      The  program  can  set  this bit to
+                                      include entries in the  table  that
+                                      are  less  than  the minimum unique
+                                      abbreviation.   For  example,  this
+                                      bit can be set to include the entry
+                                      ST (for START) in  the  table.   If
+                                      the   user   then  types  ST  as  a
+                                      keyword, it will be accepted  as  a
+                                      valid   abbreviation   even  though
+                                      there   may   be   other   keywords
+                                      beginning with ST.  To suppress the
+                                      output of this abbreviation in  the
+                                      list typed on a ?, the program must
+                                      also set the CM%INV bit.
+
+                       On a successful return, AC2 contains  the  address
+                       of the table entry where the keyword was found.
+
+
+    1        .CMNUM    Parse a number.  Word .CMDAT  contains  the  radix
+                       (from  2  to  10)  of the number.  On a successful
+                       return, AC2 contains the number.
+
+    2        .CMNOI    Parse a guide word string, but do  not  return  an
+                       error  if  no  guide  word  is input.  An error is
+                       returned only if a guide word is input  that  does
+                       not  match  the one expected by the COMND call.  A
+                       guide word field must be delimited by parentheses.
+                       Word .CMDAT contains a pointer to an ASCIZ string.
+                       This string does not contain  the  parentheses  of
+                       the  guide  word.   Guide  words are output if the
+                       user  terminated  the  previous  field  with  ESC.
+                       Guide words are not output, nor can they be input,
+                       if the user  has  caused  parsing  into  the  next
+                       field.
+
+    3        .CMSWI    Parse a switch.  A switch field must begin with  a
+                       slash  and  can  be  terminated  with  a  colon in
+                       addition to any of the  legal  terminators.   Word
+                       .CMDAT  contains  the  address of a switch keyword
+                       symbol table.  (Refer to the  TBLUK  monitor  call
+                       description  for  the  format  of  the table.) The
+                       entries in the table do not contain the  slash  of
+                       the  switch  keywords;   however,  they should end
+                       with a colon if the switch requires a value.   The
+                       data  bits  CM%INV, CM%NOR, and CM%ABR defined for
+                       the .CMKEY  function  can  also  be  set  on  this
+                       function.   On  a  successful return, AC2 contains
+                       the address of the table entry  where  the  switch
+                       keyword was found.
+
+    4        .CMIFI    Parse an input file specification.  This  function
+                       causes  the  COMND call to execute a GTJFN call to
+                       attempt to parse the specification for an existing
+                       file, using no default fields.  The .CMGJB address
+                       (word 11 in  the  command  state  block)  must  be
+                       supplied,  but  no  data  should  be stored in the
+                       block.   (Data  stored  in  the  block   will   be
+                       overwritten  by  this COMND call.) On a successful
+                       return, AC2 contains the JFN assigned.
+
+    5        .CMOFI    Parse an output file specification.  This function
+                       causes  the  COMND call to execute a GTJFN call to
+                       attempt to parse the specification  for  either  a
+                       new  or  an existing file.  The default generation
+                       number is the generation number  of  the  existing
+                       file plus 1.  The .CMGJB address must be supplied,
+                       but no data should be stored in the block.   On  a
+                       successful return, AC2 contains the JFN assigned.
+
+    6        .CMFIL    Parse a general  (arbitrary)  file  specification.
+                       This  function  causes the COMND call to execute a
+                       GTJFN to attempt to parse  the  specification  for
+                       the  file.   The  .CMGJB address must be supplied,
+                       but no data should  be  stored  in  words  .GJSRC,
+                       .GJCPP,  .GJCPC,  and  .GJRTY  of the GTJFN block.
+                       Also, the COMND call sets the following flag  bits
+                       in  the  GTJFN  block:   GJ%XTN,  G1%RND,  G1%RBF,
+                       G1%RCM, and G1%RIE.  (Refer to the long-form GTJFN
+
+
+    6        .CMFIL    call description for an explanation of these words
+             (Cont.)   and flag bits.)  The program  can  set  any  other
+                       words   and  flag  bits  in  the  GTJFN  block  it
+                       supplies.  On a successful  return,  AC2  contains
+                       the JFN assigned.
+
+    7        .CMFLD    Parse an arbitrary field.  This function is useful
+                       for fields not normally handled by the COMND call.
+                       The   input,   as   delimited   by    the    first
+                       nonalphanumeric character, is copied into the atom
+|                      buffer;  the delimiter is  not  copied.   (Hyphens
+|                      are  treated  as alphanumerics in this application
+|                      only.)  No application is  performed  nor  is  any
+                       standard help message available.  (See below.)
+
+    10       .CMCFM    Confirm.  This function  waits  for  the  user  to
+                       confirm  the  command  with  a carriage return and
+                       should be used at the end  of  parsing  a  command
+                       line.
+
+    11       .CMDIR    Parse a  directory  name.   Login  and  files-only
+                       directories  are  allowed.   Word  .CMDAT contains
+                       data  bits  for  this  function.   The   currently
+                       defined bit is as follows:
+
+                       B0(CM%DWC)     Allow  wildcard  characters  to  be
+                                      typed in a directory name.
+
+                       On a successful return, AC2  contains  the  36-bit
+                       directory number.
+
+    12       .CMUSR    Parse a user name.   Only  login  directories  are
+                       allowed.  On a successful return, AC2 contains the
+                       36-bit user number.
+
+    13       .CMCMA    Comma.  Sets B1(CM%NOP-no parse) in word .CMFLG of
+                       the  command state block and returns if a comma is
+                       not the next item in the input.  Blanks can appear
+                       on  either  side  of  the comma.  This function is
+                       useful for parsing a list of arguments.
+
+    14       .CMINI    Initialize the command line (e.g., set up internal
+                       monitor  pointers  and  type  the  prompt).   This
+                       function  should  be  used  at  the  beginning  of
+                       parsing  a  command  line but not when reparsing a
+                       line.
+
+    15       .CMFLT    Parse a floating-point number.   On  a  successful
+                       return, AC2 contains the floating-point number.
+
+    16       .CMDEV    Parse a device name.  On a successful return,  AC2
+                       contains the device designator.
+
+    17       .CMTXT    Parse the input  text  up  to  the  next  carriage
+                       return,  place  the  text  in the atom buffer, and
+                       return.  If an ESC or CTRL/F is typed,  it  causes
+                       the  terminal bell to ring (because recognition is
+                       not available with this function) and is otherwise
+                       ignored.    If  a  ?   is  typed,  an  appropriate
+                       response is given, and the ? is  not  included  in
+                       the  atom  buffer.   (A  ? can  be included in the
+                       input text if it is preceded by a CTRL/V.)
+
+
+    20       .CMTAD    Parse a date and/or time field  according  to  the
+                       setting  of bits CM%IDA and CM%ITM.  The user must
+                       input the field as  requested.   Any  date  format
+                       allowed by the IDTIM call can be input.  If a date
+                       is not input, it is  assumed  to  be  the  current
+                       date.  If a time is not input, it is assumed to be
+                       00:00:01.  When both the date and time fields  are
+                       input,  they  must  be  separated  by  one or more
+                       spaces.  If the fields are input separately,  they
+                       must  be  terminated  with  a  space  or  carriage
+                       return.  Word .CMDAT contains  bits  in  the  left
+                       half  and an address in the right half as data for
+                       the function.  The bits are:
+
+                       B0(CM%IDA) Parse a date
+                       B1(CM%ITM) Parse a time
+                       B2(CM%NCI) Do not convert the date and/or time  to
+                                  internal  format.   (Refer  to  Section
+                                  2.8.2.)
+
+                       The address in the right half is the beginning  of
+                       a  3-word block in the caller's address space.  On
+                       a successful  return,  this  block  contains  data
+                       returned  from the IDTNC call executed by COMND if
+                       B2(CM%NCI) was on in the COMND call (i.e., if  the
+                       input  date  and/or  time  field  was  not  to  be
+                       converted to internal format).  If B2(CM%NCI)  was
+                       off in the COMND call, on a successful return, AC2
+                       contains the internal date and time format.
+
+    21       .CMQST    Parse a quoted string up to the terminating quote.
+                       The  delimiters  for  the  string  must  be double
+                       quotation marks and are not  copied  to  the  atom
+                       buffer.   A double quotation mark is input as part
+                       of the string if two double quotation marks appear
+                       together.   This  function  is useful if the legal
+                       field terminators and the action characters are to
+                       be  included  as part of a string.  The characters
+                       ?, ESC, and  CTRL/F  are  not  treated  as  action
+                       characters  and  are included in the string stored
+                       in the atom buffer.  Carriage return is an invalid
+                       character in a quoted string and causes B1(CM%NOP)
+                       to be set on return.
+
+    22       .CMUQS    Parse  an  unquoted  string  up  to  one  of   the
+                       specified  break characters.  Word .CMDAT contains
+                       the  address  of  a  4-word  block  of  128  break
+                       character mask bits.  (Refer to word .RDBRK of the
+                       TEXTI call description for an explanation  of  the
+                       mask.)  The  characters  scanned are not placed in
+                       the atom buffer.  On return, .CMPTR is pointing to
+                       the  break character.  This function is useful for
+                       parsing a string with an arbitrary delimiter.  The
+                       characters  ?,  ESC, and CTRL/F are not treated as
+                       action characters (unless they  are  specified  in
+                       the  mask)  and  can  be  included  in the string.
+                       Carriage return can also be included if it is  not
+                       one of the specified break characters.
+
+
+    23       .CMTOK    Parse the  input  and  compare  it  with  a  given
+                       string.   Word  .CMDAT contains the pointer to the
+                       given string.  This function  sets  B1(CM%NOP)  in
+                       word .CMFLG of the command state block and returns
+                       if the next input  characters  do  not  match  the
+                       given  string.   Leading  blanks  in the input are
+                       ignored.  This  function  is  useful  for  parsing
+                       single or multiple character operators (e.g., + or
+                       **).
+
+    24       .CMNUX    Parse  a  number  and  terminate  on   the   first
+                       non-numeric  character.   Word .CMDAT contains the
+                       radix  (from  2  to  10)  of  the  number.   On  a
+                       successful  return, AC2 contains the number.  This
+                       function is useful for parsing a number  that  may
+                       not  be  terminated with a nonalphabetic character
+                       (e.g., 100PRINT FILEA).
+
+                       Note that non-numeric identifiers can begin with a
+                       digit  (e.g.,  1SMITH  as  a  user  name).  When a
+                       non-numeric identifier  and  a  number  appear  as
+                       alternates  for a field, the order of the function
+                       descriptor  blocks  is  important.    The   .CMNUX
+                       function,  if  given first, would accept the digit
+                       in the non-numeric identifier as  a  valid  number
+                       instead   of  as  the  beginning  character  of  a
+                       non-numeric identifier.
+
+    25       .CMACT    Parse an account string.  The input, as  delimited
+                       by  the first nonalphanumeric character, is copied
+                       into  the  atom  buffer;   the  delimiter  is  not
+                       copied.   No  verification is performed nor is any
+                       standard help message available.
+
+    26       .CMNOD    Parse a network node name.  A node  name  consists
+                       of  up  to six alphanumeric characters.  Lowercase
+                       characters are converted to uppercase  characters.
+                       The    input,    as   delimited   by   the   first
+                       nonalphanumeric character, is copied into the atom
+                       buffer.   Note  that this function does not verify
+                       the existence of the node.
+
+   In addition to the  .CMFNP  word  of  the  function  descriptor  block
+   containing  the  function  code  in  bits 0-8 (CM%FNC), this word also
+   contains function-specific flag bits in bits  9-17  (CM%FFL)  and  the
+   address of another function descriptor block in bits 18-35 (CM%LST).
+
+   The flag bits that can be set in bits 9-17 (CM%FFL) are as follows:
+
+   Bit       Symbol                   Meaning
+
+    14       CM%PO     The field is to be parsed  only  and  the  field's
+                       existence   is  not  to  be  verified.   This  bit
+                       currently  applies  to  the  .CMDIR   and   .CMUSR
+                       functions   and   is  ignored  for  the  remaining
+                       functions.  On  return,  COMND  sets  B1(CM%NOP-no
+                       parse)  only  if  the  field  typed  is not in the
+                       correct syntax.  Also, data returned  in  AC2  may
+                       not be correct.
+
+    15       CM%HPP    A pointer to a program-supplied help  message  for
+                       this  field  is  given  in word 2 (.CMHLP) of this
+                       function descriptor block.
+
+
+    16       CM%DPP    A pointer to a program-supplied default string for
+                       this  field  is  given  in word 3 (.CMDEF) of this
+                       function descriptor block.
+
+    17       CM%SDH    The output of the default help message  is  to  be
+                       suppressed  if  the  user  types  a question mark.
+                       (See below for the default messages.)
+
+   The address of another function descriptor block can be given in  bits
+   18-35  (CM%LST) of the .CMFNP word.  The use of this second descriptor
+   block is described below.  
+
+   Usually one COMND call is executed for  each  field  in  the  command.
+   However,  for some fields, more than one type of input may be possible
+   (e.g., after a keyword field, the next field could be a  switch  or  a
+   filename  field).   In  these cases, all the possibilities for a field
+   must be tried in an order selected to test unambiguous cases first.
+
+   When the COMND call  cannot  parse  the  field  as  indicated  by  the
+   function code, it does one of two things:
+
+        1.  It sets the current pointer and counts  such  that  the  next
+            call  will  attempt  to  parse the same input over again.  It
+            then returns with B1(CM%NOP) set in  the  left  half  of  the
+            .CMFLG  word in the command state block.  The caller can then
+            issue another COMND call  with  a  function  code  indicating
+            another  of the possible fields.  After the execution of each
+            call, the caller should test the CM%NOP flag to  see  if  the
+            field was parsed successfully.
+
+        2.  If an address of another function descriptor block  is  given
+            in  CM%LST,  the  COMND  call  moves to this descriptor block
+            automatically and attempts to parse the field as indicated by
+            the  function  code contained in B0-B8(CM%FNC) in word .CMFNP
+            of that block.  If the COMND call fails to  parse  the  field
+            using  this new function code, it moves to a third descriptor
+            block if one is given.  This sequence continues until  either
+            the  field  is successfully parsed or the end of the chain of
+            function blocks is reached.  Upon  completion  of  the  COMND
+            call,  AC3  contains  the  addresses  of  the  first and last
+            function blocks used.
+
+   By specifying a chained list of function blocks, the program can  have
+   the  COMND  call  automatically  check all possible alternatives for a
+   field and not have  to  issue  a  separate  call  for  each  one.   In
+   addition,  if  the user types a question mark, a list is output of all
+   the alternatives for the field as indicated by the  list  of  function
+   descriptor blocks.
+
+   Word .CMHLP of the function descriptor block   ____ ______ __ ___ ________ __________ _____
+
+   This word contains a pointer to a program-supplied  help  text  to  be
+   output  if  the  user types a question mark when entering his command.
+   The  default  help  message  is  appended  to  the   output   of   the
+   program-supplied message if B17(CM%SDH) is not set.  If B17(CM%SDH) is
+   set, only the program-supplied message is output.  If this word in the
+   descriptor  block is zero, only the default message is output when the
+   user types a question mark.  Bit 15(CM%HPP) must  be  set  in  word  0
+   (.CMFNP) of the function descriptor block for this pointer to be used.
+
+
+   The default help message depends on the particular function being used
+   to  parse  the  current field.  The table below lists the default help
+   message for each function available in the COMND call.
+
+                           Default Help Messages                           _______ ____ ________
+
+   Function                 Message
+
+   .CMKEY (keyword)         ONE OF THE FOLLOWING
+                            followed by the alphabetical  list  of  valid
+                            keywords.   If the user types a question mark
+                            in the middle of the field, only the keywords
+                            that   can   possibly   match  the  field  as
+                            currently typed are output.   If  no  keyword
+                            can possibly match the currently typed field,
+                            the message
+                            KEYWORD  (NO  DEFINED  KEYWORDS  MATCH   THIS
+                            INPUT)
+                            is output.
+
+   .CMNUM (number)          The help message output depends on the  radix
+                            specified  in .CMDAT in the descriptor block.
+                            If the radix is octal, the help message is
+                                 OCTAL NUMBER
+                            If the radix is decimal, the help message is
+                                 DECIMAL NUMBER
+                            If the radix is any  other  radix,  the  help
+                            message is
+                                 A NUMBER IN BASE nn
+                            where nn is the radix.
+
+   .CMNOI (guide word)      None
+
+   .CMSWI (switch)          ONE OF THE FOLLOWING
+                            followed by the alphabetical  list  of  valid
+                            switch keywords.  The same rules apply as for
+                            .CMKEY function.  (See above.)
+
+   .CMIFI (input file)      The help  message   output   depends  on  the
+   .CMOFI (output file)     settings of certain bits in the  GTJFN  call.
+   .CMFIL (any file)        If bit GJ%OLD is off and bit  GJ%FOU  is  on,
+                            the help message is
+                                 OUTPUT FILESPEC
+                            Otherwise, the help message is
+                                 INPUT FILESPEC
+
+   .CMFLD (any field)       None
+
+   .CMCFM (confirm)         CONFIRM WITH CARRIAGE RETURN
+
+   .CMDIR (directory)       DIRECTORY NAME
+
+   .CMUSR (user)            USER NAME
+
+   .CMCMA (comma)           COMMA
+
+   .CMINI (initialize)      None
+
+   .CMFLT (floating point)  NUMBER
+
+   .CMDEV (device)          DEVICE NAME
+
+   .CMTXT (text)            TEXT STRING
+
+
+   .CMTAD (date)            The help message depends on the bits  set  in
+                            .CMDAT in the descriptor block.  If CM%IDA is
+                            set, the help message is
+                                 DATE
+                            If CM%ITM is set, the help message is
+                                 TIME
+                            If both are set, the help message is
+                                 DATE AND TIME
+
+   .CMQST (quoted)          QUOTED STRING
+
+   .CMUQS (unquoted)        None
+
+   .CMTOK (token)           None
+
+   .CMNUX (number)          Same as .CMNUM
+
+   .CMACT (account)         None
+
+   .CMNOD (node)            NODE NAME
+
+   Word .CMDEF of the function descriptor block   ____ ______ __ ___ ________ __________ _____
+
+   This word contains a pointer to the ASCIZ string to  be  used  as  the
+   default  for this field.  For this pointer to be used, bit 16 (CM%DPP)
+   must be set in word 0 (.CMFNP) of the descriptor block.  The string is
+   output  to  the  destination, as well as copied to the text buffer, if
+   the user types an ESC or CTRL/F as the first  non-blank  character  in
+   the  field.  If the user types a carriage return, the string is copied
+   to the atom buffer but is not output to the destination.
+
+   When the caller supplies a list of  function  descriptor  blocks,  the
+   pointer  for  the  default string must be included in the first block.
+   The CM%DPP bit and the pointer for the default string are ignored when
+   they  appear in subsequent blocks.  However, the default string can be
+   worded so that it will apply to any of the  alternative  fields.   The
+   effect is the same as if the user had typed the given string.
+
+   Defaults for fields of a file specification can also be supplied  with
+   the  .CMFIL  function.   If both the pointer to the default string and
+   the GTJFN defaults have been provided, the COMND default will be  used
+   first and then, if necessary, the GTJFN defaults.
+
+
+                                    NOTE
+
+                  The  function  descriptor  block,  whose
+                  address  is  given in AC2, can be set up
+                  by the FLDDB. macro defined  in  MONSYM.
+                  (Refer  to Appendix A for the definition
+                  of the FLDDB.  macro.)
+
+
+   On a successful return, the COMND call returns flag bits in  the  left
+   half  of  AC1  and preserves the address of the command state block in
+   the right half of AC1.  These flag bits are copied from word .CMFLG in
+   the command state block and are described as follows.
+
+
+                        Bits Returned on COMND Call                        ____ ________ __ _____ ____
+
+   Bit       Symbol                   Meaning
+
+    0        CM%ESC    An ESC was typed by the user as the terminator for
+                       this field.
+
+    1        CM%NOP    The field could not be parsed because it  did  not
+                       conform  to  the  specified function(s).  An error
+                       code is returned in AC2.
+
+    2        CM%EOC    The field was terminated with a carriage return.
+
+    3        CM%RPT    Characters already  parsed  need  to  be  reparsed
+                       because  the  user edited them.  This bit does not
+                       need to be examined if the program has supplied  a
+                       reparse  dispatch  address  in  the  right half of
+                       .CMFLG in the command state block.
+
+    4        CM%SWT    A switch field was terminated with a colon.   This
+                       bit is on if the user either used recognition on a
+                       switch that ends with a colon or typed a colon  at
+                       the end of the switch.
+
+    5        CM%PFE    The previous field was terminated with an ESC.
+
+   When a field cannot be parsed, B1(CM%NOP) is set in AC1,  and  one  of
+   the  following error codes is returned in AC2.  Note that if a list of
+   function descriptor blocks is given and an error code is returned, the
+   error  is  associated  with  the last function descriptor block in the
+   list.
+
+   NPXAMB:   ambiguous
+
+   NPXNSW:   not a switch - does not begin with slash
+
+   NPXNOM:   does not match switch or keyword
+
+   NPXNUL:   null switch or keyword given
+
+   NPXINW:   invalid guide word
+
+   NPXNC:    not confirmed
+
+   NPXICN:   invalid character in number
+
+   NPXIDT:   invalid device terminator
+
+   NPXNQS:   not a quoted string - does not begin with double quote
+
+   NPXNMT:   does not match token
+
+   NPXNMD:   does not match directory or user name
+
+   NPXCMA:   comma not given
+
+   COMX18:   invalid character in node name
+
+   COMX19:   too many characters in node name
+
+
+   The COMND call causes other monitor calls to be executed, depending on
+   the  particular  function  that  is requested.  Failure of these calls
+   usually results in the failure to parse the requested field.  In these
+   cases, the relevant error code can be obtained via the GETER and ERSTR
+   monitor calls.
+
+        Any TBLUK error can occur on the keyword and switch functions.
+
+        Any NIN/NOUT  and  FLIN/FLOUT  error  can  occur  on  the  number
+        functions.
+
+        Any  GTJFN  error  except  for  GJFX37  can  occur  on  the  file
+        specification functions.
+
+        Any IDTNC error can occur on the date/time function.
+
+        Any RCDIR or RCUSR error can occur  on  the  directory  and  user
+        functions.
+
+        Any STDEV error can occur on the device function.
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   COMND ERROR MNEMONICS:
+
+   COMNX1:   invalid COMND function code
+
+   COMNX2:   field too long for internal buffer
+
+   COMNX3:   command too long for internal buffer
+
+   COMNX5:   invalid string pointer argument
+
+   COMNX8:   number base out of range 2-10
+
+   COMNX9:   end of input file reached
+
+   COMX10:   invalid default string
+
+   COMX11:   invalid CMRTY pointer
+
+   COMX12:   invalid CMBFP pointer
+
+   COMX13:   invalid CMPTR pointer
+
+   COMX14:   invalid CMABP pointer
+
+   COMX15:   invalid default string pointer
+
+   COMX16:   invalid help message pointer
+
+   COMX17:   invalid byte pointer in function block
+
+

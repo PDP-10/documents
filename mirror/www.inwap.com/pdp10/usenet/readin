@@ -1,0 +1,203 @@
+Article 4794 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!newsswitch.lcs.mit.edu!news.ultranet.com!not-for-mail
+From: "Carl R. Friend" <carl.friend@stoneweb.com>
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: YKYBHTLW
+Date: Sat, 24 Apr 1999 19:43:01 -0400
+Organization: as little as possible!
+Lines: 27
+Message-ID: <37225705.A7E8E050@stoneweb.com>
+References: <160419991655286030%drissman@acm.org> <ciVR2.174$W4.52897@srvr1.engin.umich.edu> <7f9rhv$al3$3@ligarius.ultra.net> <3719f951.76285607@news.cadvision.com> <7fgd03$3sv$1@nntpd.lkg.dec.com>
+NNTP-Posting-Host: zephyr.ultranet.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 24 Apr 1999 23:43:04 GMT
+X-Mailer: Mozilla 4.5 [en] (X11; I; Linux 2.0.29 i586)
+X-Accept-Language: en
+Xref: news3.best.com alt.folklore.computers:128768 alt.sys.pdp10:4794
+
+Eric Werme - replace nospam with werme wrote:
+> 
+> PDP-10s had a builtin bootstrap mechanism.  Set the device number,
+> press the boot button (name?) and the system would read one word
+> from the perihperal.
+>
+> [...] Disks didn't support it.  Booting from disk entailed
+> booting from DECtape and typing the name of the disk boot program.
+
+   This isn't entirely correct. The RH-10 supported READIN mode. I'm
+sure it "faked it" as all the data from the disk passed through the
+DF-10 data channel, but the scheme worked. Of course it only booted
+from RP?0, but that's a technicality.
+
+   From what I've seen in other systems, it probably faked a transfer
+of a 'JRST (wherever), JRST .' and the machine looped happily until
+the DF-10 overwrote the location of the "JRST .". (Here's one of the
+points where "standard" punctuation fails, miserably!) Just a guess,
+though.
+
+-- 
++------------------------------------------------+---------------------+
+| Carl Richard Friend (UNIX Sysadmin)            | West Boylston       |
+| Minicomputer Collector / Enthusiast            | Massachusetts, USA  |
+| mailto:crfriend@ma.ultranet.com                |                     |
+| http://www.ultranet.com/~crfriend/museum       | ICBM: N42:22 W71:47 |
++------------------------------------------------+---------------------+
+
+
+Article 4822 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: YKYBHTLW
+Date: 26 Apr 1999 01:14:58 -0700
+Organization: Chez Inwap
+Message-ID: <7g17a2$pp$1@shell3.ba.best.com>
+References: <160419991655286030%drissman@acm.org> <3719f951.76285607@news.cadvision.com> <7fgd03$3sv$1@nntpd.lkg.dec.com> <37225705.A7E8E050@stoneweb.com>
+Lines: 32
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 925114503 224 inwap@206.184.139.134
+Xref: news3.best.com alt.folklore.computers:128843 alt.sys.pdp10:4822
+
+In article <37225705.A7E8E050@stoneweb.com>,
+Carl R. Friend <carl.friend@stoneweb.com> wrote:
+>Eric Werme - replace nospam with werme wrote:
+>> 
+>> PDP-10s had a builtin bootstrap mechanism.  Set the device number,
+>> press the boot button (name?) and the system would read one word
+>> from the perihperal.
+>>
+>> [...] Disks didn't support it.  Booting from disk entailed
+>> booting from DECtape and typing the name of the disk boot program.
+>
+>   This isn't entirely correct. The RH-10 supported READIN mode. I'm
+>sure it "faked it" as all the data from the disk passed through the
+>DF-10 data channel, but the scheme worked. Of course it only booted
+>from RP?0, but that's a technicality.
+
+That may have worked with the first model of disks, but not with the
+RP02 or RP03.  The usual thing was to have a short bootstrap program
+routine in the paper-tape reader at all times.  Pressing the READ-IN
+button with the device code set to PTR would read in the pre-boot
+program from the paper-tape reader.  That program would then read in
+BOOTS from blocks 3, 4, 5 on the lowest numbered disk on the first
+disk channel.
+
+At the Colorado School of Mines, the terminal-line scanner was a PDP-8
+with a few unused memory locations.  It was set up to supply the pre-boot
+routine for READ-IN mode instead of using the paper-tape reader.
+	-Joe
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 4840 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newsswitch.lcs.mit.edu!news.ultranet.com!not-for-mail
+From: "Carl R. Friend" <carl.friend@stoneweb.com>
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: YKYBHTLW
+Date: Mon, 26 Apr 1999 19:09:55 -0400
+Organization: as little as possible!
+Lines: 29
+Message-ID: <3724F243.6A64F9C9@stoneweb.com>
+References: <160419991655286030%drissman@acm.org> <3719f951.76285607@news.cadvision.com> <7fgd03$3sv$1@nntpd.lkg.dec.com> <37225705.A7E8E050@stoneweb.com> <7g17a2$pp$1@shell3.ba.best.com>
+NNTP-Posting-Host: zephyr.ultranet.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 26 Apr 1999 23:09:57 GMT
+X-Mailer: Mozilla 4.5 [en] (X11; I; Linux 2.0.29 i586)
+X-Accept-Language: en
+Xref: news3.best.com alt.folklore.computers:128902 alt.sys.pdp10:4840
+
+Joe Smith wrote:
+> 
+> [READIN mode] may have worked with the first model of disks, but not
+> with the RP02 or RP03.
+
+   I remember it working with the RP04s at ADP. My belief is that the
+"brains" behind this lived in the RH-10, and the RH-10 returned a tiny
+program via the I/O bus and commanded the disk to transfer sector
+zero through the DF-10 into memory, at some point overwriting a self-
+jump that the RH-10 had given the processor.
+
+   Of course I may have my head up my backside, but I do not ever
+recall booting a live system using either paper tape or DECtape.
+
+> At the Colorado School of Mines, the terminal-line scanner was a PDP-8
+> with a few unused memory locations.  It was set up to supply the
+> pre-boot routine for READ-IN mode instead of using the paper-tape
+> reader.
+
+   I've read about that hack and like it a lot. That's a creative use
+of resources!
+
+-- 
++------------------------------------------------+---------------------+
+| Carl Richard Friend (UNIX Sysadmin)            | West Boylston       |
+| Minicomputer Collector / Enthusiast            | Massachusetts, USA  |
+| mailto:carl.friend@stoneweb.com                |                     |
+| http://www.ultranet.com/~crfriend/museum       | ICBM: N42:22 W71:47 |
++------------------------------------------------+---------------------+
+
+
+Article 4851 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!144.212.100.101.MISMATCH!newsfeed.mathworks.com!newsswitch.lcs.mit.edu!news.ultranet.com!d14
+From: jmfbahciv@aol.com
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: YKYBHTLW
+Date: Tue, 27 Apr 99 07:51:23 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 37
+Message-ID: <7g40en$qnq$3@antiochus.ultra.net>
+References: <160419991655286030%drissman@acm.org> <3719f951.76285607@news.cadvision.com> <7fgd03$3sv$1@nntpd.lkg.dec.com> <37225705.A7E8E050@stoneweb.com> <7g17a2$pp$1@shell3.ba.best.com> <3724F243.6A64F9C9@stoneweb.com>
+NNTP-Posting-Host: d14.dial-15.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 27 Apr 1999 09:36:23 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: news3.best.com alt.folklore.computers:128924 alt.sys.pdp10:4851
+
+In article <3724F243.6A64F9C9@stoneweb.com>,
+   "Carl R. Friend" <carl.friend@stoneweb.com> wrote:
+>Joe Smith wrote:
+>> 
+>> [READIN mode] may have worked with the first model of disks, but not
+>> with the RP02 or RP03.
+>
+>   I remember it working with the RP04s at ADP. My belief is that the
+>"brains" behind this lived in the RH-10, and the RH-10 returned a tiny
+>program via the I/O bus and commanded the disk to transfer sector
+>zero through the DF-10 into memory, at some point overwriting a self-
+>jump that the RH-10 had given the processor.
+>
+>   Of course I may have my head up my backside, but I do not ever
+>recall booting a live system using either paper tape or DECtape.
+
+First of all, one did not boot a live system; users had a habit of
+shooting the crasher [joking emoticon here just giving a little
+prod].
+
+One could boot a dead system from disk, paper tape, DECtape or 
+magtape (I'm talking about KAs and KIs here...not KLs).  
+>
+>> At the Colorado School of Mines, the terminal-line scanner was a PDP-8
+>> with a few unused memory locations.  It was set up to supply the
+>> pre-boot routine for READ-IN mode instead of using the paper-tape
+>> reader.
+>
+>   I've read about that hack and like it a lot. That's a creative use
+>of resources!
+>
+Yes, well, it got implemented to the extreme with the KL; for
+that we gave up real live lights.  TW hated it.
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+

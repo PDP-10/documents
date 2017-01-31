@@ -1,0 +1,200 @@
+Article 6347 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!pln-e!spln!dex!extra.newsguy.com!newsp.newsguy.com!enews2
+From: Alan Greig <a.greig@virgin.net>
+Newsgroups: alt.sys.pdp10,comp.os.vms
+Subject: Re: ALGOL and 1022 database
+Date: Fri, 12 Oct 2001 10:00:08 +0100
+Organization: http://extra.newsguy.com
+Lines: 129
+Message-ID: <eg9dstsq13fpbt9fdom8c7mjuvh2p4iqii@4ax.com>
+References: <3BC3CE89.5FACE6CF@bartek.dontspamme.net> <3BC49836.BEF76E24@bartek.dontspamme.net> <id3x7.196953$xi5.7173319@sjcpnn01.usenetserver.com> <1vjastcqtciaedqoi6mu08fp95tq9o6fls@4ax.com> <GL29Kz.Ip0@world.std.com>
+NNTP-Posting-Host: p-979.newsdawg.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Newsreader: Forte Agent 1.8/32.548
+Xref: nntp1.ba.best.com alt.sys.pdp10:6347 comp.os.vms:43143
+
+I wrote:
+
+|Yes renamed 1032 on VMS and it is still around. One of the 1022/1032
+|engineers monitors comp.os.vms (added a crosspost) so maybe they'll
+|spot this thread.
+|
+|I think I recall reading many years ago that 1022 was the serial
+|number of the KL-10 the database was originally developed on.
+
+
+Tym Stegner of cca did pick up on this thread over in c.o.v. but did
+not cross-post back to a.s.p (as he reads by mail I'll take the
+liberty of cross-posting back). Here's a couple of  Tym's comments.
+Jump over to c.o.v.  (if you are reading this is a.s.p) for the actual
+posts.
+
+
+From: Tym_Stegner@cca-int.com
+Newsgroups: comp.os.vms
+Subject: Re: ALGOL and 1022 database
+Message-ID: <OF96F91B8A.A513196F-ON85256AE2.006478D5@cca-int.com>
+Date: Thu, 11 Oct 2001 14:33:09 -0400
+Organization: Info-VAX<==>comp.os.vms Gateway
+X-Gateway-Source-Info: Mailing List
+Lines: 49
+Content-type: text/plain; charset=us-ascii
+Mime-Version: 1.0
+Path:
+spln!lex!extra.newsguy.com!lotsanews.com!cyclone-sf.pbi.net!206.13.28.125!cyclone-transit.snfc21.pbi.net!216.218.192.242!news.he.net!news.kjsl.com!mvb.saic.com!info-vax
+Xref: spln comp.os.vms:190396
+
+
+|Alan Greig (& others) wrote:
+|>
+|>> BTW, what IS 1022?
+|>
+|>Well, my mind is feeling a little foggy today, but IIRC, it's a database
+|>that started on the PDP-10 and was later ported to the VAX and Alpha (for
+|>OpenVMS).  I believe it's still around.  Or to put it another way it's
+|
+|Yes renamed 1032 on VMS and it is still around. One of the 1022/1032
+|engineers monitors comp.os.vms (added a crosspost) so maybe they'll
+|spot this thread.
+|
+|I think I recall reading many years ago that 1022 was the serial
+|number of the KL-10 the database was originally developed on.
+
+From the System 1022 User's Guide:
+
+"System 1022 is general purpose data management software system that
+operates on DECsystem-10 and DECSYSTEM-20 computers. [And now on
+whatever
+hardware emulates those OS's -TJS]
+
+It is easy to use interactively and in sophisticated application
+programs.
+It is a tool that brings data base management to those who use the
+data,
+yet satisfies the needs of professional managers and application
+system
+designers.
+
+Related data sets are easily linked for combined management and
+reporting
+of information.  System 1022 creates and updates large (and small)
+data
+collections.  A very fast retreival capability gives immediate access
+to
+data in the largest collections of records.  A comprehensive report
+writer
+displays this data with any level of formatting and analysis."
+
+
+A companion product from the same vendor, Software House (formerly of
+Cambridge, MA, USA); System 1032, was engineered from the ground up to
+provide System 1022-like features on the newly introduced VAX/VMS
+operating
+system.
+
+
+The *ACTUAL* origin of the System 1022/System 1032 product names are
+lost
+in the mists of time.  At least, *I've* never been able to get a clear
+story from the original engineers.  Although, the above story is the
+most
+plausible i've come across...
+
+-Tym Stegner
+System 1032 Support
+-Insert usual, broad, disclaimer here-
+
+
+
+
+And
+
+From: Tym_Stegner@cca-int.com
+Newsgroups: comp.os.vms
+Subject: re: ALGOL and 1022 database
+Message-ID: <OF74FBEA97.48197198-ON85256AE2.0065F9E0@cca-int.com>
+Date: Thu, 11 Oct 2001 14:36:37 -0400
+Organization: Info-VAX<==>comp.os.vms Gateway
+X-Gateway-Source-Info: Mailing List
+Lines: 20
+Content-type: text/plain; charset=us-ascii
+Mime-Version: 1.0
+Path:
+spln!lex!extra.newsguy.com!lotsanews.com!cyclone-sf.pbi.net!206.13.28.125!cyclone-transit.snfc21.pbi.net!216.218.192.242!news.he.net!news.kjsl.com!mvb.saic.com!info-vax
+Xref: spln comp.os.vms:190397
+
+|Larry Kilgallen (& others) wrote:
+|
+|In article <1vjastcqtciaedqoi6mu08fp95tq9o6fls@4ax.com>, Alan Greig
+<a.greig@virgin.net> |writes:
+|
+|> I think I recall reading many years ago that 1022 was the serial
+|> number of the KL-10 the database was originally developed on.
+|
+|Whereas I believe it means the software ran on (PDP-)10s and (PDP-)20s
+|too (2).  1022.
+
+This was the commonly accepted rational for the System 1022 name.  Any
+of
+the System 1022 developers would instantly gainsay it (though a better
+rational was not provided).
+
+-Tym Stegner
+--
+Alan
+
+
+Article 6421 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10,comp.os.vms
+Path: nntp1.ba.best.com!news1.best.com!news.dra.com!newsxfer.visi.net!news-spur1.maxwell.syr.edu!news.maxwell.syr.edu!feed2.onemain.com!feed1.onemain.com!uunet!dca.uu.net!ash.uu.net!world!news
+From: P Duff <pduff@duff-family.com>
+Subject: Re: ALGOL and 1022 database
+Sender: news@world.std.com (Mr Usenet Himself)
+Message-ID: <3BD40BEF.E3BBE416@duff-family.com>
+X-Priority: 3 (Normal)
+Date: Mon, 22 Oct 2001 12:07:11 GMT
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset=us-ascii
+References: <3BC3CE89.5FACE6CF@bartek.dontspamme.net> <Io%w7.190228$xi5.6965037@sjcpnn01.usenetserver.com> <3BC49836.BEF76E24@bartek.dontspamme.net> <id3x7.196953$xi5.7173319@sjcpnn01.usenetserver.com> <1vjastcqtciaedqoi6mu08fp95tq9o6fls@4ax.com> <ByyZFzW6yjUu@eisner.encompasserve.org>
+NNTP-Posting-Host: ppp0b014.std.com
+Mime-Version: 1.0
+X-Mailer: Mozilla 4.01 [en] (WinNT; I)
+Organization: MicroCephalic Endeavors
+Lines: 31
+Xref: nntp1.ba.best.com alt.sys.pdp10:6421 comp.os.vms:43744
+
+Larry Kilgallen wrote:
+> 
+> In article <1vjastcqtciaedqoi6mu08fp95tq9o6fls@4ax.com>, Alan Greig
+> <a.greig@virgin.net> writes:
+> 
+> > I think I recall reading many years ago that 1022 was the serial
+> > number of the KL-10 the database was originally developed on.
+> 
+> Whereas I believe it means the software ran on (PDP-)10s and (PDP-)20s
+> too (2).  1022.
+
+I don't monitor this group at all, in fact, I didn't know that it
+existed until a former 1022 co-worker pointed it out to me yesterday.
+Pursuant to this message and to the thread at large,
+a common guess that the name is borne of 10s and 20s, 
+is undone by the fact that when 1022 was developed there were 
+no DEC20s, only 10s. :(
+I worked w/ SH co-founders Andy Garland and Charlie Houseman 
+for about 10 years. Although I asked them and other co-workers,
+AFAIK they never revealed the source of the name.
+
+Re: expiration date, it's not entirely straightforward 
+to defeat the date checking mechanism in that version,
+since the date is checked in several stages, at different places 
+in the code, some of which happened at random times.
+If memory serves, there was one customer whose license 
+required a copy that never expired, for whom I was directed 
+to write a patch to JFCL out the expiration checks. 
+No, I didn't keep a copy of the patch, so don't ask.
+
+P Duff
+
+

@@ -1,0 +1,845 @@
+Article 6217 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!tank.news.pipex.net!pipex!uunet!zur.uu.net!ffx.uu.net!ffx2nh5!not-for-mail
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: PDP-10 Software Archive now on-line
+Date: Tue, 21 Dec 1999 15:43:02 -0400
+Organization: Trailing Edge Technology
+Lines: 30
+Message-ID: <385FA006.1638FD00@trailing-edge.com>
+NNTP-Posting-Host: timaxp.trailing-edge.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: ffx2nh5.news.uu.net 945808984 16921 63.73.218.130 (21 Dec 1999 20:43:04 GMT)
+X-Complaints-To: news@ffx2nh5.news.uu.net
+NNTP-Posting-Date: 21 Dec 1999 20:43:04 GMT
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.0     DEC 3000 Model 300L)
+Xref: news3.best.com alt.sys.pdp10:6217 alt.folklore.computers:147010
+
+I'm pleased to announce that I've finally organized the PDP-10
+related material in my posession and put it on-line.  At
+
+  http://pdp-10.trailing-edge.com/
+
+you will find several hundred megabytes of TOPS-10 and TOPS-20
+tape images (largely from Megan Gentry's efforts at rescuing
+several KS10's in Cambridge earlier this year), individual files
+extracted from those tapes, and several
+hundred megabytes of DECUS TOPS-10 and TOPS-20 freeware.
+You will also find, interspersed among the contents of that page,
+numerous plugs for me and my capabilities to archive digital media
+for the future, and my absolute dedication to exact tape images.
+
+The TOPS-10 and TOPS-20 material is provided to aid those
+folks who have accepted the terms of the 36-bit Hobbyist
+license in fulfilling their responsibilities as outlined in
+section 3.1 of that agreement.  Please see the full text of the
+license at the above URL.
+
+I'm open to comments, suggestions, criticism, etc., on the layout
+of the archives and how they are presented over the web.  Fire away!
+And if anyone has any material to add to the archives, I'm willing
+to do whatever it takes to preserve this software.
+
+-- 
+ Tim Shoppa                        Email: shoppa@trailing-edge.com
+ Trailing Edge Technology          WWW:   http://www.trailing-edge.com/
+ 7328 Bradley Blvd                 Voice: 301-767-5917
+ Bethesda, MD, USA 20817           Fax:   301-767-5927
+
+
+Article 6219 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newsfeed.tli.de!news-fra.pop.de!uunet!ams.uu.net!ffx.uu.net!ffx2nh5!not-for-mail
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Newsgroups: alt.sys.pdp10,alt.folklore.computers,comp.sys.dec,comp.org.decus
+Subject: PDP-10 Freeware Archive now has correct date stamps listed
+Date: Fri, 24 Dec 1999 14:01:47 -0400
+Organization: Trailing Edge Technology
+Lines: 27
+Message-ID: <38637CCB.30D7DC9C@trailing-edge.com>
+NNTP-Posting-Host: timaxp.trailing-edge.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: ffx2nh5.news.uu.net 946062108 21440 63.73.218.130 (24 Dec 1999 19:01:48 GMT)
+X-Complaints-To: news@ffx2nh5.news.uu.net
+NNTP-Posting-Date: 24 Dec 1999 19:01:48 GMT
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.0     DEC 3000 Model 300L)
+Xref: news3.best.com alt.sys.pdp10:6219 alt.folklore.computers:147250 comp.sys.dec:56446 comp.org.decus:5827
+
+It only took a little bit of effort (notably abandoning the Unix
+date/time stamp, which doesn't go before 1-Jan-1970 UTC, and
+switching to a system without so much lossage) to get
+the date stamps on the PDP-10 freeware archive entries at
+
+  http://pdp-10.trailing-edge.com/
+
+to be correct.  Now, if you go and look at a directory
+in the TOPS-10 or TOPS-20 categories, you will see the original
+date/time stamps as on the DECUS library tapes.  Take a look
+at
+
+  http://pdp-10.trailing-edge.com/www/lib10/0003/
+
+for an example.
+
+Thanks to a couple of old-timers who persuaded me that
+I really shouldn't list the creation dates on these files as
+being 1999, when this can be off by over thirty years :-)
+
+Enjoy!
+
+-- 
+ Tim Shoppa                        Email: shoppa@trailing-edge.com
+ Trailing Edge Technology          WWW:   http://www.trailing-edge.com/
+ 7328 Bradley Blvd                 Voice: 301-767-5917
+ Bethesda, MD, USA 20817           Fax:   301-767-5927
+
+
+Article 7011 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!howland.erols.net!newsfeed.skycache.com!portc01.blue.aol.com!uunet!ffx.uu.net!spool1.news.uu.net!spool0.news.uu.net!reader2.news.uu.net!not-for-mail
+Message-ID: <38CF5F9C.6D375362@trailing-edge.com>
+Date: Wed, 15 Mar 2000 10:02:04 -0400
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Organization: Trailing Edge Technology
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.0     DEC 3000 Model 300L)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 SYSTEM.EXE needed, any version
+References: <8am8af$8nl$1@nnrp1.deja.com> <38cedf7c$0$202@nntp1.ba.best.com> <8amtto$p20$1@nnrp1.deja.com> <x%Mz4.4383$Of2.154651@typhoon.ne.mediaone.net>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 62
+NNTP-Posting-Host: 63.73.218.130
+X-Trace: reader2.news.uu.net 953132525 9314 63.73.218.130
+Xref: news3.best.com alt.sys.pdp10:7011
+
+Ric Werme wrote:
+> 
+> hsnewman@my-deja.com writes:
+> 
+> >In article <38cedf7c$0$202@nntp1.ba.best.com>,
+> >inwap@best.com (Joe Smith) wrote:
+> >> In article <8am8af$8nl$1@nnrp1.deja.com>, <hsnewman@my-deja.com>
+> >wrote:
+> >> >I am looking for a copy of the SYSTEM.EXE file from any version of
+> >the
+> >> >TOPS-10 operating system. If you have one, I would really appreciate
+> >> >your posting it, so I can bring TOPS-10 up on the internet.
+> >>
+> >> What are you going to be running it on?
+> >> Do you have an actual PDP-10 that you will be connecting to the
+> >Internet?
+> >> Do you have a PDP-10 emulator? (KL or KS? Which author?)
+> 
+> >I have a PDP-10 simulator/emulator.  The author is unimportant.
+> 
+> Perhaps the author is unimportant to you or your goals, but I suspect
+> that over 90% of the subscribers to this newsgroup are interested in the
+> technical details.  It seems odd you want to "bring TOPS-10 up on the
+> Internet" without sharing the technical details.
+
+Actually, it'd be entirely consistent with the history of PDP-10
+emulators.  I know of at least 4 fairly complete PDP-10 emulators,
+one of which really boots and runs TOPS-20, yet the authors of these
+emulators have yet to discuss technical details or release the
+code.  There is another emulator under development, and its author
+has offered to let me into an "exclusive club" of inner knowledge
+about development, but only on the condition that I not discuss
+the details with the world at large.  I refused membership in that
+"club" because I don't like that attitude, though I really do give
+my best wishes to the developer and attempt to help him out whenever
+I'm asked questions by him.
+
+Similarly, I know of several sets of TOPS-10 and TOPS-20
+distribution tapes sitting in a basement or a storage space, in
+probably rather poor environmental conditions, just rotting away because
+the current owners don't want to share them.
+
+It's a shame that this "my-my-me-me-mine" attitude exists, but
+what's a guy to do about it?  The emulator authors are entitled to do
+whatever they want with their own code, and the owners of a tape
+can just let it sit there and rot away, and we can't force them to
+share if they don't want to.
+
+I've tried to change this attitude with the establishment of an
+archive - 
+
+  http://pdp-10.trailing-edge.com/
+
+- for distribution of tape and disk images for emulator development
+(under the conditions of the DEC 36-bit hobbyist license)
+but so far there have been exactly two contributors.  Not to belittle
+the contributions of those two kind folks - we all owe our thanks
+to the distribution tapes they've donated - but I was kind-of hoping
+there'd be a more sharing attitude among the folks who posess the
+materials.
+
+Tim.
+
+
+Article 7025 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!nntp.primenet.com!nntp.gctr.net!hermes.visi.com!news-out.visi.com!uunet!ffx.uu.net!spool0.news.uu.net!reader3.news.uu.net!not-for-mail
+Message-ID: <38CFFA2A.6FBA3DB0@trailing-edge.com>
+Date: Wed, 15 Mar 2000 21:01:30 -0400
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Organization: Trailing Edge Technology
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.0     DEC 3000 Model 300L)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: TOPS-10 SYSTEM.EXE needed, any version
+References: <8am8af$8nl$1@nnrp1.deja.com> <38CF5F9C.6D375362@trailing-edge.com> <8ao9i8$31o$1@bob.news.rcn.net> <38CF8B07.3BC28CF3@trailing-edge.com> <38cff5cb_2@news.wizvax.net> <8ap3gj$cs3$1@nnrp1.deja.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 40
+NNTP-Posting-Host: 63.73.218.130
+X-Trace: reader3.news.uu.net 953172091 9506 63.73.218.130
+Xref: news3.best.com alt.sys.pdp10:7025 alt.folklore.computers:152968
+
+hsnewman@my-deja.com wrote:
+> 
+> Sorry to be a bother, but would it be possible for us to stay on the
+> origional thread here?
+
+Sorry, I felt like whining this morning :-).
+
+>  This discussion was about the obtaining of a
+> TOPS-10 SYSTEM.EXE, any version.  Does anyone have a copy for me?
+
+I *think* that the fourth file on the tape image in
+
+http://pdp-10.trailing-edge.com/www/pdp-10/TOPS10_KS_BOOTABLE_BB-X138C-BB_704.ZIP
+
+is what you want.  This is a 10BACKUP saveset containing SYSTEM.EXE:
+
+ Start of Save Set: 
+ Volume 1 written by System: RL375A DEC10 Development
+ Written on: MTB0   at: 10-OCT-1988 12:53 using: 1600 BPI
+ 
+ SYSTEM    .EXE        1236  7-OCT-1988 14:58
+ 
+ End of Save Set: 
+ Volume 1 written by System: RL375A DEC10 Development
+ Written on: MTB0   at: 10-OCT-1988 12:53 using: 1600 BPI
+
+You can access the individual files in this (and the other)
+saveset by going to
+
+http://pdp-10.trailing-edge.com/www/pdp-10/TOPS10_KS_BOOTABLE_BB-X138C-BB_704.html
+
+Does this help any?  The first part of this tape is actually supposedly
+bootable on a real KS, so you should just be able to mount the tape
+image under your emulator and be on your way.
+
+-- 
+ Tim Shoppa                        Email: shoppa@trailing-edge.com
+ Trailing Edge Technology          WWW:   http://www.trailing-edge.com/
+ 7328 Bradley Blvd                 Voice: 301-767-5917
+ Bethesda, MD, USA 20817           Fax:   301-767-5927
+
+
+Article 8824 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!newsfeed.mathworks.com!newsfeed2.news.nl.uu.net!sun4nl!ams.uu.net!ffx.uu.net!spool1.news.uu.net!spool0.news.uu.net!reader0.news.uu.net!not-for-mail
+Message-ID: <392DA76F.1BF79453@trailing-edge.com>
+Date: Thu, 25 May 2000 22:21:36 -0400
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Organization: Trailing Edge Technology
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.0     DEC 3000 Model 300L)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: New in the PDP-10 archives - KL bootable TOPS-10 7.03
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 7
+NNTP-Posting-Host: 63.73.218.130
+X-Trace: reader0.news.uu.net 959307696 23939 63.73.218.130
+Xref: news3.best.com alt.sys.pdp10:8824
+
+A new addition to the PDP-10 archives is a KL Bootable TOPS-10
+tape, V7.03.  It's BB-X139B-BB, in the new "KL10 specific tapes"
+section at
+
+  http://pdp-10.trailing-edge.com/
+
+Enjoy!
+
+
+Article 2845 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc03.blue.aol.com!feed.newsreader.com!uunet!ash.uu.net!dfw.uu.net!ffx.uu.net!spool1.news.uu.net!spool0.news.uu.net!reader1.news.uu.net!not-for-mail
+From: shoppa@mudd.trailing-edge.com (Tim Shoppa)
+Newsgroups: alt.sys.pdp10
+Subject: PDP-10 archives down for maintenance
+Date: 25 Dec 2000 14:40:54 -0500
+Organization: Trailing-Edge
+Sender: shoppa@trailing-edge.com
+Message-ID: <9287s6$neo$1@mudd.trailing-edge.com>
+Lines: 15
+NNTP-Posting-Host: 63.73.218.151
+X-Trace: reader1.news.uu.net 977769379 15557 shoppa@63.73.218.151
+Xref: nntp1.ba.best.com alt.sys.pdp10:2845
+
+The PDP-10 archives at
+
+  http://pdp-10.trailing-edge.com/
+
+are down for maintenance.  They are being migrated to a new disk, where
+the numerous software donations received in the past months can be fully
+unpacked and made available for browsing over the web.
+
+Some stats: the "new" archives will have over 90 tape images,
+roughly 1500 Megabytes in total.  All tapes will have unpacked individual
+files whenever it is possible.  And I'm adding a makefile type utility that
+will allow easier archives maintenance and eventually allow for
+web-based indices and search queries to access the unpacked contents.
+
+Tim. (shoppa@trailing-edge.com)
+
+
+Article 2993 of alt.sys.pdp10:
+Message-ID: <3A50FD97.F45E6EF4@ev1.net>
+Date: Mon, 01 Jan 2001 13:58:47 -0800
+From: Charles Richmond <richmond@ev1.net>
+Reply-To: richmond@ev1.net
+Organization: Cannine Computer Center
+X-Mailer: Mozilla 4.7C-CCK-MCD {C-UDP; EBM-APPLE} (Macintosh; I; PPC)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: Newly indexed PDP-10 software archives up for criticism :-)
+References: <3A4FC18C.2716C740@trailing-edge.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+NNTP-Posting-Host: taydal-207-55-144-52.ev1.net
+X-Trace: newsa.ev1.net 978379349 taydal-207-55-144-52.ev1.net (1 Jan 2001 14:02:29 -0600)
+Lines: 27
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc03.blue.aol.com!news.maxwell.syr.edu!nntp.twtelecom.net!newsa.ev1.net
+Xref: nntp1.ba.best.com alt.sys.pdp10:2993 alt.folklore.computers:13865
+
+Tim Shoppa wrote:
+> 
+>      [snip...]     [snip...]     [snip...]
+> 
+> Many thanks to Al Kossow, Eric Smith, Johnny Billquist, and
+> a few other anonymous donors for the new material in the archive.
+> Again, my apologies for taking so long in updating the archive
+> with the material you've supplied: I hope to be much more prompt
+> in the future.
+> 
+Congradulations, Tim!!! Thanks a heap for doing a job that DEC
+should have done themselves over 20 years ago...archiving the
+software for the older DEC machines. This archive is a great
+resource, even for people who are *not* interested in the older
+DEC machines. The archive gives insight into how programs were
+written then, and what the editors and tools were like.
+
+When I can get a DEC-10 emulator that will run on my Mac, I want
+to run TOPS-10 and play some serious Adventure on it!!! Hey, if
+we were *paying* you to create the archive, you could appologize
+for being slow...as it is, everyone interested in this software
+owes you a *huge* thank you!!!
+
+-- 
++-------------------------------------------------------------+
+|     Charles and Francis Richmond     <richmond@plano.net>   |
++-------------------------------------------------------------+
+
+
+Article 2994 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!wn3feed!worldnet.att.net!207.207.0.27!nntp2.aus1.giganews.com!nntp3.aus1.giganews.com!news2.giganews.com.POSTED!not-for-mail
+From: Timothy Stark <sword7@grace.speakeasy.org>
+Subject: Re: Newly indexed PDP-10 software archives up for criticism :-)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+References: <3A4FC18C.2716C740@trailing-edge.com>
+User-Agent: tin/1.4.2-20000205 ("Possession") (UNIX) (Linux/2.2.17 (i686))
+Lines: 22
+Message-ID: <Xi746.192936$DG3.4234002@news2.giganews.com>
+NNTP-Posting-Date: Mon, 01 Jan 2001 16:14:15 CST
+Organization: Giganews.Com - Premium News Outsourcing
+X-Trace: sv2-93mMm95MpIuzawlCI53mCH4vhs2+1/WtjzWwoujfWPUM+Ug+ifSRcHmbhMFn9DXnKITQoZZ1Udi1n/Q!YTYTUPPDwFC8Y+LGLX+RBPguGCM=
+X-Complaints-To: abuse@GigaNews.Com
+X-Abuse-Info: Please be sure to forward a copy of ALL headers
+X-Abuse-Info: Otherwise we will be unable to process your complaint properly
+Date: Mon, 01 Jan 2001 22:14:17 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2994 alt.folklore.computers:13879
+
+In alt.sys.pdp10 Tim Shoppa <shoppa@trailing-edge.com> wrote:
+> Many thanks to Al Kossow, Eric Smith, Johnny Billquist, and
+> a few other anonymous donors for the new material in the archive.
+> Again, my apologies for taking so long in updating the archive
+> with the material you've supplied: I hope to be much more prompt
+
+Tim, Well Done!!! Congraulations!!  I already am downloading files in
+progress.  Now I have complete TOPS-20 v7.0 includes complete sources.
+
+Ok, I returned from my Christmas vacation and will resume my TS-10
+emulator development soon.  I will work on KLAD to test my all
+instructions before I release it to public and continue to extend
+my emulator to KL10 implementation for TOPS-20 v7.0.
+
+-- Tim Stark
+
+-- 
+Timothy Stark	<><	Inet: sword7@speakeasy.org
+--------------------------------------------------------------------------
+"For God so loved the world, that he gave his only begotten Son, that 
+whosoever believeth in him should not perish, but have everlasting life.
+Amen." -- John 3:16 (King James Version Bible)
+
+
+Article 4324 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!newsfeed.skycache.com!Cidera!news-reader.ntrnet.net!uunet!ash.uu.net!spool1.news.uu.net!spool0.news.uu.net!reader0.news.uu.net!not-for-mail
+Message-ID: <3ACEDE16.7AF36CCC@trailing-edge.com>
+Date: Sat, 07 Apr 2001 09:29:58 -0400
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Organization: Trailing Edge Technology
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.2     AlphaServer 1200 5/533 4MB)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Twenty new tapes in the PDP-10 archives
+Content-Type: multipart/mixed; boundary="------------7693AB15223E6E2A78A1E41B"
+Lines: 94
+NNTP-Posting-Host: 63.73.218.130
+X-Trace: reader0.news.uu.net 986650199 19064 63.73.218.130
+Xref: nntp1.ba.best.com alt.sys.pdp10:4324
+
+This is a multi-part message in MIME format.
+
+--------------7693AB15223E6E2A78A1E41B
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+Thanks to a significant donation of materials by Bob Supnik, there
+are 20 new tapes in the PDP-10 archives containing KS and KL
+microcode sources, TOPS-10 7.04 material, TOPS-10 layered products,
+and TOPS-20 4.1 tapes.  As always, both the extracted readable
+files and the tape images (both as .TPC and .tap archives) are
+available from
+
+  http://pdp-10.trailing-edge.com/
+
+The tape titles follow below.  Enjoy!
+
+Tim.
+
+--------------7693AB15223E6E2A78A1E41B
+Content-Type: text/plain; charset=us-ascii; name="new.tapes"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline; filename="new.tapes"
+
+RMS-10 1A
+April 1988
+ 
+APLSF V2 (435)
+September 1979
+ 
+BASIC-10 V17F
+18-May-1981
+ 
+BLISS-36 V4.2 (236)
+16-Oct-1989
+ 
+COBOL-74 V12C
+Octoober 1985
+ 
+DBMS V5A
+30-Jan-1980
+ 
+Fortran-10 Version 11
+Field-Test Tape 3
+January 1987
+ 
+IQL3A V30
+21-Feb-1980
+ 
+KL10 Microcode Sources
+V2A(442)
+29-May-1986
+ 
+Documentation for
+KL Microcode V326
+15-Dec-1983
+ 
+TOPS-10 KS Microcode Sources
+V130 7-Feb-1986
+ 
+Message System V11CK
+23-Jun-1986
+ 
+TOPS-10 SORT V4D
+18-Aug-1989
+ 
+TOPS-10 V7.04 Auxilluary Tape
+for TOPS-10 V7.04 Load 361
+12-Jul-1988
+ 
+Documentation Update Files
+for TOPS-10 V7.04
+DOCA
+16-May-1990
+ 
+Documentation Update Files
+for TOPS-10 V7.04
+DOCB
+2-Aug-1990
+ 
+Documentation Update Files
+for TOPS-10 V7.04
+DOCC
+30-Nov-1990
+ 
+TOPS-10 7.04 MPE
+10-OCT-1988
+ 
+T20 V4.1 EXEC SRC ATPCH 20
+ 
+T20 V4.1 MONITOR SRC ATPCH 20
+
+--------------7693AB15223E6E2A78A1E41B--
+
+
+
+Article 4326 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc01.blue.aol.com!newsfeed.skycache.com!Cidera!news-reader.ntrnet.net!uunet!ash.uu.net!spool0.news.uu.net!reader0.news.uu.net!not-for-mail
+Message-ID: <3ACEE62C.785089B8@trailing-edge.com>
+Date: Sat, 07 Apr 2001 10:04:28 -0400
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Organization: Trailing Edge Technology
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.2     AlphaServer 1200 5/533 4MB)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: Twenty new tapes in the PDP-10 archives
+References: <3ACEDE16.7AF36CCC@trailing-edge.com> <3ACF1756.8D5B23C5@bartek.dontspamme.net>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 47
+NNTP-Posting-Host: 63.73.218.130
+X-Trace: reader0.news.uu.net 986652268 19064 63.73.218.130
+Xref: nntp1.ba.best.com alt.sys.pdp10:4326
+
+Arthur Krewat wrote:
+> 
+> Tim Shoppa wrote:
+> >
+> > Thanks to a significant donation of materials by Bob Supnik
+> <snip>
+> 
+> Way to go Bob!
+> 
+> I was wondering when someone would find BASIC-10 somewhere...
+> just for nostalgic reasons...
+
+Also of very significant note to folks trying to get TOPS-10
+7.04 going are the following documents on the TOPS-10 7.04 DOC*
+tapes, equivalent to several thousand pages of paper documentation:
+
+  TOPS-10 Operating Systems Command Manual
+  http://pdp-10.trailing-edge.com/pdp-10/TOPS10V704_DOCC/CMND.MEM
+
+  TOPS-10 Crash Analysis Guide
+  http://pdp-10.trailing-edge.com/pdp-10/TOPS10V704_DOCC/CAG.MEM
+
+  TOPS-10 Monitor Calls Manual Volume 1
+  http://pdp-10.trailing-edge.com/pdp-10/TOPS10V704_DOCC/MCV1.MEM
+
+  TOPS-10 Monitor Calls Manual Volume 2
+  http://pdp-10.trailing-edge.com/pdp-10/TOPS10V704_DOCC/MCV2.MEM
+
+  TOPS-10 Monitor Tables Description
+  http://pdp-10.trailing-edge.com/pdp-10/TOPS10V704_DOCC/MONTAB.MEM
+
+  TOPS-10 Operator's Command Reference Manual
+  http://pdp-10.trailing-edge.com/pdp-10/TOPS10V704_DOCC/OCLRM.MEM
+
+  TOPS-10 Operator's Guide
+  http://pdp-10.trailing-edge.com/pdp-10/TOPS10V704_DOCC/OPGD.MEM
+
+  TOPS-10 Software Installation Guide
+  http://pdp-10.trailing-edge.com/pdp-10/TOPS10V704_DOCC/SIG.MEM
+
+  TOPS-10 Stopcodes Specification
+  http://pdp-10.trailing-edge.com/pdp-10/TOPS10V704_DOCC/STOPCD.MEM
+
+  TOPS-10 User Utilities Manual
+  http://pdp-10.trailing-edge.com/pdp-10/TOPS10V704_DOCC/UTIL.MEM
+
+Tim.
+
+
+Article 4328 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newshub.sdsu.edu!news-spur1.maxwell.syr.edu!news.maxwell.syr.edu!news-peer1.tiac.net!posterchild2.tiac.net!news@tiac.net
+From: bsupnik@us.inter.net (Bob Supnik)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Twenty new tapes in the PDP-10 archives
+Date: 7 Apr 2001 14:37:55 GMT
+Organization: rarely
+Lines: 14
+Message-ID: <9an8o3$431@news-central.tiac.net>
+References: <3ACEDE16.7AF36CCC@trailing-edge.com>
+NNTP-Posting-Host: ip20.bedford8.ma.pub-ip.psi.net
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.9 (Released Version) (x86 32bit)
+Xref: nntp1.ba.best.com alt.sys.pdp10:4328
+
+Thanks for the credit, Tim, but in fact these tapes were transcribed and 
+provided by Tim Litt from DEC/Compaq.  Tim's been critical in many areas, 
+including creating the original T10/T20 hobbyist license, and providing 
+technical documentation of simh/10.
+
+/Bob
+
+In article <3ACEDE16.7AF36CCC@trailing-edge.com>, shoppa@trailing-edge.com 
+says...
+<snip>
+>
+>Thanks to a significant donation of materials by Bob Supnik...
+<snip>
+
+
+
+Article 4339 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!nycmny1-snh1.gtei.net!paloalto-snf1.gtei.net!news.gtei.net!forum.apple.com!news.apple.com!haxrus.apple.com!user
+From: aek@spies.com (Al Kossow)
+Newsgroups: alt.sys.pdp10
+Subject: KA10 and KI10 proc maint manual scans
+Date: Sat, 07 Apr 2001 12:43:42 -0700
+Organization: Apple Computer, Inc.
+Lines: 7
+Message-ID: <aek-0704011243420001@haxrus.apple.com>
+NNTP-Posting-Host: haxrus.apple.com
+X-Trace: news.apple.com 986672621 15763 17.205.21.66 (7 Apr 2001 19:43:41 GMT)
+X-Complaints-To: usenet@news.apple.com
+NNTP-Posting-Date: 7 Apr 2001 19:43:41 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:4339
+
+Thanks to Carl Friend, I have the KA and KI processor
+maintanance manuals pdf-ed at www.spies.com/aek/pdf/dec/pdp10
+
+I hope to have the KA and KI processor print sets soon, also.
+
+-- 
+eBay: Death by a thousand cuts.
+
+
+Article 4433 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!wn3feed!worldnet.att.net!198.6.0.7!uunet!ash.uu.net!spool0.news.uu.net!reader1.news.uu.net!not-for-mail
+Message-ID: <3AD625B7.207FEC1A@trailing-edge.com>
+Date: Thu, 12 Apr 2001 22:01:27 -0400
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Organization: Trailing Edge Technology
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.2     AlphaServer 1200 5/533 4MB)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Seven more tapes in the archives
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 44
+NNTP-Posting-Host: 63.73.218.130
+X-Trace: reader1.news.uu.net 987127287 12763 63.73.218.130
+Xref: nntp1.ba.best.com alt.sys.pdp10:4433
+
+There are seven more tapes in the archives.  4 of them seem to form a
+tape backup of a KLAD "build" kit, and have detailed instructions
+(and presumably all the tools) needed to build such a pack:
+
+KLAD20-AC-7.0-A
+KLAD20-AC-7.0-A <UTILITIES>
+KLAD20-AC-7.0-A FRONT-END-SYSTEM COPY
+12-DEC-1988
+
+KLAD20-AC-7.0-A SYSTEM-COPY
+Tape 1 of 3
+12-DEC-1988
+
+KLAD20-AC-7.0-A SYSTEM-COPY
+Tape 2 of 3
+12-DEC-1988
+
+KLAD20-AC-7.0-A SYSTEM-COPY
+Tape 3 of 3
+12-DEC-1988
+
+The remaining three tapes are, from their names, diagnostics of
+some kind, but I haven't yet figured out what sort of file structure
+(if any) exists on them:
+
+DDXLAK0
+
+RED405A
+
+RED405A2
+
+I'm guessing that the last two tapes have something to do with the
+much-mentioned but not yet materialized "Red Packs".  If anyone
+figures out exactly what's on these last 3 tapes, I'd appreciate
+a pointer to the tool(s) used to decode them.
+
+As always, the good stuff is at
+
+  http://pdp-10.trailing-edge.com/
+
+In particular, these new tapes are (for now) all lumped together
+under the "KLAD" section.
+
+Tim.
+
+
+Article 5743 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc01.blue.aol.com!uunet!dca.uu.net!ash.uu.net!spool0.news.uu.net!reader1.news.uu.net!not-for-mail
+Message-ID: <3B644678.5CA8D044@trailing-edge.com>
+Date: Sun, 29 Jul 2001 17:23:04 -0400
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Organization: Trailing Edge Technology
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.2     AlphaServer 1200 5/533 4MB)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10,alt.sys.pdp11,vmsnet.pdp-11
+Subject: DECUS/Freeware PDP-10,-11 CD images available
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 43
+NNTP-Posting-Host: 63.73.218.130
+X-Trace: reader1.news.uu.net 996441784 880 63.73.218.130
+Xref: nntp1.ba.best.com alt.sys.pdp10:5743 alt.sys.pdp11:2444 vmsnet.pdp-11:2882
+
+A few new directories have been added to
+
+  ftp://ftp.trailing-edge.com/
+
+In particular, four block-by-block "iso images" of the Freeware
+CD's are now available over the net.  See
+
+  ftp://ftp.trailing-edge.com/pub/cd-images/
+
+Note that not all of them
+are purely ISO-9660 images - in particular, the RT-11 volume has
+7 RT-11 partitions at the end, and there is also an ODS-1 volume
+of RSX-11 freeware available.  Whatever you want to call them,
+these can be burned directly to a CD-R if you're too impatient
+to fill out the free CD request form at
+
+  http://www.trailing-edge.com/www/freeware.html
+
+and wait for me to burn you a set in my copious free time.
+(Actually I'm doing a pretty good job working away at the backlog
+of requests, with 150 CD's distributed to 12 countries last week.)
+
+When you do burn images, be sure to use whatever your software
+calls "ISO Image" mode to do the writing.  I use the freeware
+"cdrecord" software under Linux and OpenVMS, and here the command
+line to do a 8x burn (to my CD-Writer at SCSI unit 4) looks like
+
+  cdrecord dev=0,4,0 speed=8 rt11freewarev2.iso
+
+There are also three new FTP directories which are loopback mounts
+into the ISO-9660 CD images:
+
+  ftp://ftp.trailing-edge.com/pub/rt11freewarev2
+  ftp://ftp.trailing-edge.com/pub/rsx11freewarev2
+  ftp://ftp.trailing-edge.com/pub/pdp10freewarev2
+
+Most all of the stuff had previously been available over the
+web via http, but I've slowly been convinced that wu-ftpd now
+has had most of its seriously bad bugs pounded out of it by now.
+
+Enjoy!
+
+Tim. (shoppa@trailing-edge.com)
+
+
+Article: 15317 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!newsfeed.mathworks.com!wn3feed!wn4feed!worldnet.att.net!198.6.0.7!uunet!ash.uu.net!spool0900.news.uu.net!reader0901.news.uu.net!not-for-mail
+Message-ID: <3C4A7DF8.2AEC4BD7@trailing-edge.com>
+Date: Sun, 20 Jan 2002 08:21:12 -0400
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Organization: Trailing Edge Technology
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.2     AlphaServer 1200 5/533 4MB)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: PDP-10 Archive migration plan
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 76
+NNTP-Posting-Host: 63.73.218.130
+X-Trace: 1011532885 reader1.ash.ops.us.uu.net 29227 63.73.218.130
+Xref: dfw-artgen.news.verio.net alt.sys.pdp10:15317 alt.folklore.computers:79140
+
+As announced over a month ago, I am migrating the PDP-10 archive 
+
+  http://pdp-10.trailing-edge.com/
+
+from the large, heavy, power-hungry VMSCluster to a small,
+lightweight, and efficient linux PC.
+
+Ignore the relation to the VMS vs Unix vs PDP-10 thread that has
+been taking up so much space in this newsgroup.  The main reason
+for this migration is nothing more than power efficiency - I can
+keep a little PC (drawing less than 50 Watts) up for hours on a
+cheap UPS, while keeping the older cluster up for more than a few
+minutes on a big UPS is a hassle.
+
+Not only will the webserver and files reside on a different machine,
+but there will also be a number of other changes:
+
+1.  No longer will *.TPC (DECUS TPC-style, blocks are preceded by 16-
+ bit block length) tape archives be listed.  The archive of tape images
+ will be offered solely as as *.tap (emulator-style, blocks are
+ preceded *and* followed by their 32-bit block length) images.
+
+  Internally I will continue to use *.TPC tape archives for some
+ purposes.  But my impression is that the emulator community is
+ much better served by the *.tap style images.  If anyone disagrees
+ with me, speak up!
+
+2.  The compression method for tape images will change as well:
+ Instead of gzipped (*.tap.gz), they will now be compressed with
+ bzip2 and filenames will be of the form *.tap.bz2.  Bzip2 offers
+ significantly better compression (10-20%) on these images, and
+ it adds up when there are many thousands of megabytes of them.
+
+  More bzip2 informattion is available at
+
+   http://sources.redhat.com/bzip2/
+
+3.  The extracted files will now be prepared using the "backup10"
+ and "read20" programs, which I have been patching up over the
+ past month to the point that I am very happy with their capabilities.
+ My patched versions of these very useful tools will be made available
+ shortly.
+
+4.  The web pages that index into the archives will be more CSS
+ (style-sheet) oriented and less table-oriented.  I aim to make the
+ resulting pages easily viewed on both graphical *and* text-based
+ browsers.  At the same time, I will also be making use of
+ server-side includes to make web site maintenance easier for me.
+ (Read that as: if you point out an error on the home page, I hope
+ to be able to fix it more quickly than the couple of months it
+ now takes me to get around to it!)
+
+5.  A site search engine will allow searching of the extracted files
+ quickly and efficiently.
+
+6.  An index of scanned and line-printer documents will eventually
+ happen.
+
+Many of the above elements can be seen already at the "test site",
+
+ http://new-pdp-10.trailing-edge.com/
+
+but not all the above elements have yet been combined (for example,
+as of Sunday morning the test site still uses tables extensively.)
+
+The actual switchover will occur early in the morning of
+21-Jan-2002 EST.  The old archive will remain up and going even
+after the switchover at
+
+  http://old-pdp-10.trailing-edge.com/
+
+for at least a few weeks, as I perfect the redirects and rewrites
+of URL's.  Besides, if I shut the old cluster down at this time of
+year the basement would get too chilly :-).
+
+Tim. (shoppa@trailing-edge.com)
+
+
+

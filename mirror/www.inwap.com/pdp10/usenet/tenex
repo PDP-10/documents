@@ -1,0 +1,165 @@
+Article 5548 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!144.212.100.101.MISMATCH!newsfeed.mathworks.com!news.mv.net!not-for-mail
+From: Dan Murphy <dlm@opost.com>
+Newsgroups: alt.sys.pdp10
+Subject: MLO - MRO move.  (was Re: TU10/20/7x et al)
+Date: 06 Aug 1999 13:00:23 -0400
+Organization: MV Communications, Inc.
+Lines: 115
+Message-ID: <m2zp04ondk.fsf_-_@opost.com>
+References: <7n4a1k$d0u$1@autumn.news.rcn.net> <R4pl3.27$XM5.798@ord-read.news.verio.net>  <379FA894.1BC2466@erols.com> <7npckn$iou$1@autumn.news.rcn.net>  <1mZn3.227$Ty1.6123@ord-read.news.verio.net> <37A118B3.C0B4E833@erols.com>  <7ns1ub$r1f$2@autumn.news.rcn.net> <%0jo3.319$Ty1.9173@ord-read.news.verio.net> <wuPo3.1737$W11.33133@wbnws01.ne.mediaone.net> <7o1gn7$hk4$1@autumn.news.rcn.net>
+NNTP-Posting-Host: opost.com
+X-Trace: pyrite.mv.net 933958856 2290 207.22.41.2 (6 Aug 1999 17:00:56 GMT)
+X-Complaints-To: abuse@mv.com
+NNTP-Posting-Date: 6 Aug 1999 17:00:56 GMT
+X-Newsreader: Gnus v5.5/Emacs 20.3
+Xref: news3.best.com alt.sys.pdp10:5548
+
+
+    I haven't been lurking that much recently, so I'm not sure I got
+    the original question.  However, here are a couple salient
+    timestamps:
+
+    Jan 2, 1973 - I started at DEC as a regular employee.  For the 3
+    months prior to that, I had worked on a fixed-price fixed-time
+    contract to port TENEX to the KI-10.  As of Jan 2, John Leng and
+    the other powers-that-be had already decided to do a "new" OS for
+    the next generation of 36-bit hardware.  This decision got made
+    during my 3-month contract when: (1) it became clear that TENEX
+    really could be made to work on the KI-10, and (2) IBM announced
+    "virtual memory", thus making all the DEC marketeers believe they
+    hadda have it asap.  (I love it when things like this happen...)
+
+    Over the course of the next few months, Peter Hurley joined me in
+    the "new os" group.  We were working for the engineering manager,
+    Fred Wilhelm, at the time, not for SWE under Peter Conklin.  Tom
+    Hastings also began devoting most of his time to the project as I
+    recall, although he continued to report to PFC.  Peter and I had
+    offices on 5-5 along with the hardware engineers.  During the
+    first year, Arnie Miller and Len Bosack joined the group also.
+
+    March 1, 1974 (approx) - Our group moved to MRO.  This date is
+    easy as it was about two weeks after our first (and only) child
+    was born.  Sara and I had both been working in the Mill, but she
+    was out on maternity leave when the move to MRO happened.  At the
+    point we moved, I *think* I had had a small amount of access to
+    actual KL-10 hardware, but I'm not real clear on that.  I think
+    there was a prototype down the hall on 5-5 that I did a bit of
+    hacking on.  We continued to use a KI-10 for quite a bit of the
+    work of beefing up the OS that wasn't very machine-dependent.
+
+    When we got to MRO, I think it was just the four of us (dlm, pmh,
+    asm, lb) working directly on the OS.  Supervisors came and went,
+    and I can't recall exactly when.  Tom Hastings was supervisor for
+    a while when we were in the Mill.  Then, Howard Steadman was
+    hired.  Lou Cohen was in there somewhere after we were in MRO, and
+    then Dick Snyder.  Peter Hurley became supervisor when Snyder
+    moved up.  I stayed as technical honcho through first few releases
+    and only lost my good sense for a while in the early '80s when I
+    was TOPS-20 supervisor for a year.
+
+    Also, don't ask me to nail down dates for the various names!  Ugh.
+    I know that Fred Wilhelm came up with VIROS while we were still in
+    the Mill, and it was John Leng who always made it sound like VIRUS
+    when he said it.  (Not intentionally; it just came out that way.)
+    SNARK and the later name madness was foisted on us only after we'd
+    moved to MRO though; of that I'm sure.
+
+    (Hey, I just checked and viros.com is available!  Anybody want to
+    grab it?  Such a cool name.  snark.com is taken, but it sucks
+    anyhow.)
+
+    Anyhow, hope that helps with some of the nostalgia.
+    
+    
+    dlm
+    
+jmfbahciv@aol.com writes:
+
+> In article <wuPo3.1737$W11.33133@wbnws01.ne.mediaone.net>,
+>    werme@werme.ne.mediaone.net (Ric Werme) wrote:
+> >jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) writes:
+> >
+> >>In article <7ns1ub$r1f$2@autumn.news.rcn.net>, jmfbahciv@aol.com says...
+> >
+> >> Dan Murphy lurks here and sometimes 
+> >>contributes, so he can confirm that he joined DEC while we were still in 
+> >>Maynard. I believe he brought TENEX through the VIROS and SNARK phases of 
+> its 
+> >>lifecycle while still in the mill.
+> >
+> >No way!.  I joined DEC in July 1974.  At that point the -10 group
+> >had moved to Marlboro long enough before so that no one talked about them
+> >being in the mill.  I didn't join the group for 9 months.  At that time,
+> >VIROS was the code name, it changed to SNARK, KRANS, and back to SNARK
+> >all during my tenure in Marlboro.  Well, maybe SNARK came about when I
+> >was was in MR one a week.
+> 
+> That all happened during the time that Peter Hurley was supervisor
+> of the -20 group.  The code names were the idiots' idea of keeping
+> the new OS development a secret.  All that subtrafuge was a PITA
+> because the same people who insisted on secrecy were the ones who
+> asked for special permission to talk to particular customers about
+> it.  Every coded name change produced manhours worth of work to 
+> run macros over the documents to reflect the latest.  It was also
+> caused by a reluctance of unknown persons to want to call the
+> product TOPS-anything.
+> 
+> >
+> >I can't recall what shape the KL was in when I moved to MR, otherwise I 
+> would
+> >have piped up earlier.
+> >
+> I'll say it again.  At that time JMF and Dan were writing their
+> KLSERs and related code using the KLs that were in the 
+> engineering lab (not the software lab).  There were two KLs
+> there but I don't know if the second one was runnable at the
+> time.  There was a lot of contention between hardware and software
+> because the hardware types claimed to need the hardware to develop
+> the hardware but didn't seem to understand that they wouldn't
+> be selling a single CPU without the software.  I don't think
+> those hardware types ever learned because Jim ran into the
+> same problem later with one of the VAX flavors and Alpha.
+> We always had that problem with peripherals.  Marketing always
+> promised the first hardware to a customer but refused to let
+> software engineering have it hooked up to our systems before
+> first customer ship.  Then, when the hardware didn't work due
+> to no software, the fit hit the shan.  And it happened every
+> damn time.  Markerteers never had an ability to learn.
+> 
+> /BAH
+> 
+> Subtract a hundred and four for e-mail.
+
+
+Article 3020 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!panix!news.panix.com!not-for-mail
+From: Rich Alderson <alderson+news@panix.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 in an FPGA chip, starting (was Re: PC CRAP)
+Date: 02 Jan 2001 14:39:29 -0500
+Organization: Systems Administration, XKL LLC, Redmond WA 98052
+Lines: 11
+Sender: alderson+news@panix3.panix.com
+Message-ID: <mddelyloia6.fsf@panix3.panix.com>
+References: <3A3A338C.8DE7FFA5@bartek.dontspamme.net> <92h6pp$ql6$1@citadel.in.taronga.com> <92i6mi$ib$1@i4got.pechter.dyndns.org> <92i87u$1duf$1@citadel.in.taronga.com> <92jcoe$1nj$1@i4got.pechter.dyndns.org> <aek-2912001739180001@haxrus.apple.com> <92kojt$csh$6@bob.news.rcn.net> <87r92p7wmq.fsf@k9.prep.synonet.com> <6un1dc9swv.fsf_-_@chonsp.franklin.ch> <3A4F9C13.4E9C02C3@trailing-edge.com> <92pqre$8ah$2@bob.news.rcn.net> <3A509D31.7CA23886@bartek.dontspamme.net> <6uitnykefe.fsf@chonsp.franklin.ch>
+NNTP-Posting-Host: panix3.panix.com
+X-Trace: news.panix.com 978464369 4582 166.84.0.228 (2 Jan 2001 19:39:29 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: 2 Jan 2001 19:39:29 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.7
+Xref: nntp1.ba.best.com alt.sys.pdp10:3020
+
+Neil Franklin <neil@franklin.ch.remove> writes:
+
+> - TOPS-10 for the KI, as both TOPS-20 and Linux or NetBSD will not fit
+>   into 256kword.
+
+Tops-20 v. 3A or earlier will fit in 256K, as will TENEX.  Just have to find
+them.  TENEX is probably easier at this point...
+
+-- 
+Rich Alderson                                          alderson+news@panix.com
+  "You get what anybody gets.  You get a lifetime."  --Death, of the Endless
+
+

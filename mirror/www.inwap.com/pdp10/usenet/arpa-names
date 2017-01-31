@@ -1,0 +1,181 @@
+Article 6274 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newspeer.monmouth.com!uunet!ffx.uu.net!ffx2nh5!not-for-mail
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Newsgroups: comp.protocols.tcp-ip.domains,alt.folklore.computers,alt.sys.pdp10
+Subject: Re: reasoning for naming restrictions
+Date: Sat, 22 Jan 2000 21:55:21 -0400
+Organization: Trailing Edge Technology
+Lines: 71
+Message-ID: <388A2749.46262B49@trailing-edge.com>
+References: <388A00D9.FC6DAEDD@ehsco.com> <86ddv6$ktn$1@ns1.vrx.net> <388A46B9.DBF3A357@ehsco.com> <86di3c$mlg$1@ns1.vrx.net> <388A506D.354CEDA6@ehsco.com>
+NNTP-Posting-Host: timaxp.trailing-edge.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: ffx2nh5.news.uu.net 948596134 28996 63.73.218.130 (23 Jan 2000 02:55:34 GMT)
+X-Complaints-To: news@ffx2nh5.news.uu.net
+NNTP-Posting-Date: 23 Jan 2000 02:55:34 GMT
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.0     DEC 3000 Model 300L)
+Xref: news3.best.com comp.protocols.tcp-ip.domains:23150 alt.folklore.computers:149360 alt.sys.pdp10:6274
+
+Eric A. Hall wrote:
+> 
+> > It's no accident that domain name syntax is the same
+> > as C variable syntax.
+> 
+> That's believable. Any evidence?
+
+It's a bit misleading to offer C as the language that drove the
+standards used for the Internet.  Many of these standards have
+been inherited (often with great revision) from the early days (early
+1970's) of ARPAnet, and long predate Unix or C.  Think of TENEX and
+Multics and Fortran and COBOL, not of C and Unix.  C and Unix were
+complete non-players in setting these standards.
+
+The early recognition of the need to hook widely different 
+computers into some grand naming scheme - had to take into
+account many factors:
+
+1.  Machines used different character sets.  Yes, ASCII was one
+of those character sets, but EBCDIC, truncated versions of ASCII,
+and other "proprietary" character sets were in wide use.  If you
+wanted a name to be universal, it had damn well better be typable
+on all the machines in the network.  And it's just plain wrong
+to think of today's interpretation of ASCII, because in the late
+60's and early 70's many of the ASCII codes were still
+being revised by the committees.
+
+2.  Even if a user was accessing a machine that was capable of
+upper and lower case, they may be accessing through a terminal
+(like a Model 33) without lower case characters.  So case sensitivity
+is a no-no.
+
+3.  Between character sets, you can count on letters, numbers,
+and some *very common* punctuation being available.   The only
+punctuation codes that were widely available on all machines -
+when you look at what's in common between commercial and scientific
+character codes - you're limited to "-", "/", ".", "$", and ",".
+
+4.  The "variable name must begin with letter, not a number"
+scheme was in use long before the 1970's.  Early Fortran (and I'm
+talking early 1960's) did this, and it wouldn't surprise me if
+there are earlier languages and/or assemblers that did it as well.
+
+So why was "-" allowed, but not those other 4 characters?  I dunno.
+Many technical standards were chosen not for technical reasons,
+but because they were convenient or just because *something* had
+to be chosen.  Why are the AC electrical systems around the world
+dominately 50Hz and 60Hz?  You can go into long explanations about
+gearing ratios and subdividing circles and transformer weight and
+motor cooling, but the fact is that some
+number had to be chosen as a standard, and those are what was agreed
+on, even though they certainly weren't the only choices available,
+and possibly not even good choices for some factors.
+
+And just like many AC power frequencies haven fallen into disuse
+(it wasn't that long ago that 25Hz power was used in many places), many
+internetworking naming conventions have fallen out as well.  It
+was only a few years ago that everybody talked about bang paths
+and knew that in the UK that the endianess of the components of a name
+was reversed, but you're hard pressed to find anyone remembering those
+days now.  Heck, ten years ago all the major archive sites on the
+Internet were PDP-10's, and today you're hard pressed to find a
+FTP client that knows about TENEX mode.  Things change, and it
+wouldn't surprise me if the current host naming scheme was junked
+and forgotten just as quickly as those other conventions.
+
+-- 
+ Tim Shoppa                        Email: shoppa@trailing-edge.com
+ Trailing Edge Technology          WWW:   http://www.trailing-edge.com/
+ 7328 Bradley Blvd                 Voice: 301-767-5917
+ Bethesda, MD, USA 20817           Fax:   301-767-5927
+
+
+Article 6277 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!nntp.abs.net!uunet!ffx.uu.net!ffx2nh5!not-for-mail
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Newsgroups: comp.protocols.tcp-ip.domains,alt.folklore.computers,alt.sys.pdp10
+Subject: Re: reasoning for naming restrictions
+Date: Sun, 23 Jan 2000 08:34:52 -0400
+Organization: Trailing Edge Technology
+Lines: 66
+Message-ID: <388ABD2C.501D3305@trailing-edge.com>
+References: <388A00D9.FC6DAEDD@ehsco.com> <86di3c$mlg$1@ns1.vrx.net> <388A506D.354CEDA6@ehsco.com> <388A2749.46262B49@trailing-edge.com> <86e0vr$is$1@ns1.vrx.net>
+NNTP-Posting-Host: timaxp.trailing-edge.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: ffx2nh5.news.uu.net 948634494 26457 63.73.218.130 (23 Jan 2000 13:34:54 GMT)
+X-Complaints-To: news@ffx2nh5.news.uu.net
+NNTP-Posting-Date: 23 Jan 2000 13:34:54 GMT
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.0     DEC 3000 Model 300L)
+Xref: news3.best.com comp.protocols.tcp-ip.domains:23159 alt.folklore.computers:149384 alt.sys.pdp10:6277
+
+Richard J. Sexton wrote:
+> 
+> In article <388A2749.46262B49@trailing-edge.com>,
+> Tim Shoppa  <shoppa@trailing-edge.com> wrote:
+> >Eric A. Hall wrote:
+> >>
+> >> > It's no accident that domain name syntax is the same
+> >> > as C variable syntax.
+> >>
+> >> That's believable. Any evidence?
+> >
+> >It's a bit misleading to offer C as the language that drove the
+> >standards used for the Internet.  Many of these standards have
+> >been inherited (often with great revision) from the early days (early
+> >1970's) of ARPAnet, and long predate Unix or C.  Think of TENEX and
+> >Multics and Fortran and COBOL, not of C and Unix.  C and Unix were
+> >complete non-players in setting these standards.
+> 
+> DNS came out in the mid 80's the original poster asked about
+> domain names, not (arpa) host names.
+
+Oh yeah, right, the character set for DNS host names has nothing
+at all to do with ARPANET names, that's why the early DNS related
+RFC's contained statements like 
+
+  The labels must follow the rules for ARPANET host names.
+
+(Above quote appears in both RFC 1035 and RFC 883).  Come on,
+Richard, if you want to put up a fight at least put one up that
+isn't easily disproven by looking at the DNS RFC's.
+
+In any event, in the mid 80's all the character-set compatibility
+issues I specifically mention were still relevant.  The Internet
+was still dominated by TENEX, ITS, and other non-Unix and non-C
+machines. Just look at the HINFO fields from any mid-80's host database
+and you'll see few (if any) Unix machines.  For instance, of the
+"standard" HINFO names from RFC 883, only two were capable of running
+a Unix at the time:
+
+            PDP-11/70   C/30        C/70        VAX-11/780   
+            H-316       H-516       DEC-2060    DEC-1090T    
+            ALTO        IBM-PC      IBM-PC/XT   PERQ         
+            IBM-360/67  IBM-370/145   
+
+and indeed in the OS field these are the suggested
+choices:                    
+ 
+            ASP         AUGUST      BKY         CCP          
+            DOS/360     ELF         EPOS        EXEC-8       
+            GCOS        GPOS        ITS         INTERCOM     
+            KRONOS      MCP         MOS         MPX-RT       
+            MULTICS     MVT         NOS         NOS/BE       
+            OS/MVS      OS/MVT      RIG         RSX11        
+            RSX11M      RT11        SCOPE       SIGNAL       
+            SINTRAN     TENEX       TOPS10      TOPS20       
+            TSS         UNIX        VM/370      VM/CMS       
+            VMS         WAITS                                   
+
+Unix and C simply weren't major players at the time the standards
+were set.  Anyone claiming otherwise is itching for a fight.
+
+-- 
+ Tim Shoppa                        Email: shoppa@trailing-edge.com
+ Trailing Edge Technology          WWW:   http://www.trailing-edge.com/
+ 7328 Bradley Blvd                 Voice: 301-767-5917
+ Bethesda, MD, USA 20817           Fax:   301-767-5927
+
+

@@ -1,0 +1,732 @@
+From lars@nocrew.org Wed Oct 25 14:15:06 PDT 2000
+Article: 1544 of alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!uninett.no!news.algonet.se!algonet!newsfeed1.swip.net!swipnet!news-sto.telia.net!news.defero.net!junk.nocrew.org!not-for-mail
+From: lars brinkhoff <lars@nocrew.org>
+Newsgroups: alt.sys.pdp10
+Subject: PDP-10 processor features
+Organization: NoCrew Laboratories
+Lines: 4
+Sender: lars@junk.nocrew.org
+Message-ID: <858zrpnfvu.fsf@junk.nocrew.org>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+User-Agent: Gnus/5.0803 (Gnus v5.8.3) Emacs/20.7
+Date: Mon, 16 Oct 2000 12:17:27 GMT
+NNTP-Posting-Host: 212.73.17.42
+X-Complaints-To: abuse@defero.net
+X-Trace: news.defero.net 971698647 212.73.17.42 (Mon, 16 Oct 2000 14:17:27 MET DST)
+NNTP-Posting-Date: Mon, 16 Oct 2000 14:17:27 MET DST
+Xref: nntp1.ba.best.com alt.sys.pdp10:1544
+
+I have made a table of PDP-10 processor features, including clones:
+        http://pdp10.nocrew.org/tab.html
+
+I would greatly appreciate any corrections or additional information.
+
+
+From shsrms@bellatlantic.net Wed Oct 25 14:15:21 PDT 2000
+Article: 1548 of alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!199.45.45.8!cyclone1.ba-dsg.net!typhoon1.ba-dsg.net.POSTED!not-for-mail
+Message-ID: <39EB5F67.9155AA80@bellatlantic.net>
+From: hg/jb <shsrms@bellatlantic.net>
+Reply-To: shsrms@bellatlantic.net
+Organization: The Keltic League
+X-Mailer: Mozilla 4.73 [en]C-CCK-MCD BA45DSL  (WinNT; U)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 processor features
+References: <858zrpnfvu.fsf@junk.nocrew.org>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 10
+Date: Mon, 16 Oct 2000 20:01:13 GMT
+NNTP-Posting-Host: 138.88.64.143
+X-Complaints-To: newsadmin@bellatlantic.net
+X-Trace: typhoon1.ba-dsg.net 971726473 138.88.64.143 (Mon, 16 Oct 2000 16:01:13 EDT)
+NNTP-Posting-Date: Mon, 16 Oct 2000 16:01:13 EDT
+Xref: nntp1.ba.best.com alt.sys.pdp10:1548
+
+two corrections to KC10,
+clock speed, 50-100MHZ (micro engine)
+Frontend, F-11 based SBC (included diagnostic path)
+
+lars brinkhoff wrote:
+> 
+> I have made a table of PDP-10 processor features, including clones:
+>         http://pdp10.nocrew.org/tab.html
+> 
+> I would greatly appreciate any corrections or additional information.
+
+
+From shsrms@bellatlantic.net Wed Oct 25 14:15:32 PDT 2000
+Article: 1556 of alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!199.45.45.8!cyclone1.ba-dsg.net!typhoon2.ba-dsg.net.POSTED!not-for-mail
+Message-ID: <39ECC6D9.F9A1B17B@bellatlantic.net>
+From: hg/jb <shsrms@bellatlantic.net>
+Reply-To: shsrms@bellatlantic.net
+Organization: The Keltic League
+X-Mailer: Mozilla 4.73 [en]C-CCK-MCD BA45DSL  (WinNT; U)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 processor features
+References: <858zrpnfvu.fsf@junk.nocrew.org> <39EB5F67.9155AA80@bellatlantic.net> <85itqsm1qg.fsf@junk.nocrew.org>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 26
+Date: Tue, 17 Oct 2000 21:35:36 GMT
+NNTP-Posting-Host: 138.88.34.144
+X-Complaints-To: newsadmin@bellatlantic.net
+X-Trace: typhoon2.ba-dsg.net 971818536 138.88.34.144 (Tue, 17 Oct 2000 17:35:36 EDT)
+NNTP-Posting-Date: Tue, 17 Oct 2000 17:35:36 EDT
+Xref: nntp1.ba.best.com alt.sys.pdp10:1556
+
+
+
+lars brinkhoff wrote:
+> 
+> hg/jb <shsrms@bellatlantic.net> writes:
+> > lars brinkhoff wrote:
+> > > I have made a table of PDP-10 processor features, including clones:
+> > >         http://pdp10.nocrew.org/tab.html
+> > > I would greatly appreciate any corrections or additional information.
+> >
+> > two corrections to KC10,
+> > clock speed, 50-100MHZ (micro engine)
+> > Frontend, F-11 based SBC (included diagnostic path)
+> 
+> Thank you.
+You are welcome.
+> 
+> Is that F-11 the same processor as in the PDP-11/23 and /24?  Also,
+> what is an SBC?
+F11 is the old designator for the 11/23 class cpu, FONZ-11, SBC is
+Single Board Computer.
+The console/frontend of the KC was an F11, winchester (or ST500 style)
+MFM disk interface, diagnostic interface (to collect diag bits form the
+KC10), serial lines (vt100 or better was the physical console device),
+and a bunch of memory, and sat on the KC bus.
+bob
+
+
+From lars@nocrew.org Wed Oct 25 14:15:56 PDT 2000
+Article: 1558 of alt.sys.pdp10
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!news.tele.dk!128.39.3.166!uninett.no!newsfeed1.enitel.no!masternews.telia.net!news-sto.telia.net!news.defero.net!junk.nocrew.org!not-for-mail
+From: lars brinkhoff <lars@nocrew.org>
+Newsgroups: alt.sys.pdp10
+Subject: Tymshare System 26 and 26KL
+Organization: NoCrew Laboratories
+Lines: 176
+Sender: lars@junk.nocrew.org
+Message-ID: <85vguqwiid.fsf@junk.nocrew.org>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+User-Agent: Gnus/5.0803 (Gnus v5.8.3) Emacs/20.7
+Date: Wed, 18 Oct 2000 10:28:30 GMT
+NNTP-Posting-Host: 212.73.17.42
+X-Complaints-To: abuse@defero.net
+X-Trace: news.defero.net 971864910 212.73.17.42 (Wed, 18 Oct 2000 12:28:30 MET DST)
+NNTP-Posting-Date: Wed, 18 Oct 2000 12:28:30 MET DST
+Xref: nntp1.ba.best.com alt.sys.pdp10:1558
+
+I found these three letters referring to two Tymshare PDP-10 clones
+called System 26 and System 26KL.
+
+May it be that 26XL of Mark Crispin's posting in
+        http://www.inwap.com/pdp10/usenet/poole
+        (or http://pdp10.nocrew.org/cpu/26xl.1.txt)
+is a typo?  Or is the 26XL another clone, perhaps a follow-up to the
+26KL?
+
+To confuse the matter further, Joe Smith's PDP-10 page mentions a "X-KL"
+model:
+        My documents
+           * Tymshare
+              * History
+              * Reunion 1-Jul-2000
+              * Hardware (KI, KL, X-KL)
+                                  ^^^^
+
+Also note the reference to TYMCOM-20.
+
+----------------------------------------------------------------------
+Date: 29-Feb-84 01:41 PST
+From: Robert N. Lieberman  <RLL.TYM@OFFICE-2>
+Subject: Re: Foonly machine & code availability
+To: Ken Harrenstien <KLH@SRI-NIC>
+
+Ken, I guess I the right person to ask most of those questions. let me try ...
+
+[KLH: Are F2s or F3s still available?  What about the newer machines?]
+
+The F2 (or F3 as we call it) is no longer made.  We have  8 but they are all 
+used at TYM. Some clients some internal users.
+
+There are two models of interest relating to F4.
+
+System 26 is based on the F4 CPU and runs TENEX. It has ucode that
+supports the KA instruction set and emulates the KA TENEX map (pager).
+We have several of these, one is at SRI and one at CECOM in New Jersey
+(both of these are owned by customer).  This model is no longer being
+made although one might be obtainable in the future.
+
+System 26KL is the latest model. It is also based on the F4 CPU but is
+modified to support the full extended addressing (actually 32 bits
+hardware-wise but that is not used since TOPS-20 does not use all
+those bits either). The 26KL has totally different ucode and emulates
+the KL instruction set including ALL the extended business instruction
+set. it emulates the KL style map.  It runs the TYMCOM-20 operating
+System which is user identical to the TOPS-20 system. The 26Kl is
+spec-ed at 2.5 times the KA at the machine instruction level.  This
+seems to be proved out but we are undergoing a big performance push
+right now and hope to have formal data by spring showing this to be at
+true.
+
+System 26KL is MOST definitely available for leasing or buying.  We
+are gearing up for production of these beasts.  There is a strong
+backing internally to use these machines for internal use in addition
+to external sales/leases. This provides a built in demand.
+
+the cost of a nicely configured system (1 meg memory, a few  disks (660 MB), 
+etc.) is about $300,000.  You could probably push on that for universities but 
+not sure how much.
+
+Yes, we are willing to provide access to ucode but this has yet to be
+made a firm committment from upper management. The front end (if used
+in the KL sense) does NOT exists.  There is a Console computer that is
+used for booting and diagnostic work but has no relationship with I/O
+functions of the mainframe.
+
+We have TYMNET but no MILNET yet since we do NOT have the TCP/IP
+sources for TOPS-20 (can we get that from someone?? we do have a
+source license for TOPS-20 so I think we are entitled to it).
+
+We are anxiously seeking out programmers for both the monitor level
+work and for ucoding. I have two opening right now.  We have hired a
+few enginerring types to help with manufacturing and for enhancements.
+I personally would love to have cooperative ventures with
+universities.
+
+Let me know if there is more interest from any quarters.
+
+Robert
+----------------------------------------------------------------------
+Date:  2-Mar-84 23:47 PST
+From: Robert N. Lieberman  <RLL.TYM@OFFICE-2>
+Subject: Re: Foonly machine & code availability
+To: Ken Harrenstien <KLH@SRI-NIC>
+
+[KLH: I asked for more details on the speed differences...]
+
+The 26KL has NO cache and although it is on the list of possible items
+to do, we currently have NO plans to implement it.  You first have to
+understand why a cache on the 2060 is worth it. The memory cycle time
+is something like 800 ns so a cache can have a very dramatic effect.
+The 26KL has a memory cycle time of 350 to 425 depending on how we set
+some parameters.  Right now we can run with no problems at 375 ns.
+Thus, we feel the cache will NOT provide a significant enhancement of
+performance as compared to some other ideas.
+
+The 26KL instruction speed (running the KL set) varies from lower than
+the KL (I won't say figures) to higher than the KL. On the average
+(what ever that means) it seems to come out to about 60% of the KL.
+Remember this is an instruction set speed comparison.  I think the
+2060 wins bigger in the I/O due to multiple controllers. Currently two
+is the max for the 26KL.
+
+We have a very nice list of wonderful things we can do with the 26kl
+to make it much better (VERY likely better than the 2060) but one
+OVERRIDING factor MUST happen.  WE MUST SEE IF THE MARKETPLACE WILL
+ACCEPT THE 26KL.  (basically as is).  If not it does not make sense
+for us to develop it.  We are rounding it out now and cleaning it up.
+It really is there and works. Several are at TYM now.  We are very
+anxious to see the marketplace show interest.  It did at the show but
+that seems to have died off.  Very disappointing. (of course you may
+find fault with the lack of heavy advertising on our part, regretably
+that is a fact but not sure if that would have changed the situation).
+Whatever the marketplace says, TYM is very committed to produce these
+machines for internal use if for not other reason. However, future
+effort will key off of marketplace acceptance.
+
+The complete instruction set is there, full addressing is there. A
+wonderful implementation of the KL map is there.  Power, size and cost
+seem to heavily favor the 26KL.  With TYM maint., we can provide the
+whole thing.
+
+[KLH: I asked whether the price could be cut by leaving off the
+suede leather trim, racing stripes, etc.]
+
+Now for costs. certainly a barebones CPU (with 1/2 meg memory) can go
+for much less than the 300k figure. I will leave that up to the
+marketing types. Yes, i heard the 250k rumor but when you add
+everything else, it is easily 600k or more. So we are still 50% of
+their [KLH: DEC-2060] cost.
+
+Hope this helps.
+
+Robert
+----------------------------------------------------------------------
+Date:  4-Mar-84 23:36 PST
+From: Robert N. Lieberman  <RLL.TYM@OFFICE-2>
+Subject: Re: Foonly machine & code availability
+To: Ken Harrenstien <KLH@SRI-NIC>
+
+I would contact Cal Peterson for marketing info. I don't have his
+number here at home but will send it to you later.
+
+[KLH: I asked about the status of unbundling TOPS-20 -- not relevant
+to ITS, but interesting.]
+
+As for software on the 26KL, it is a matter of legalese on what
+TYMCOM-20 is.  Certainly TOPS-20 cannot run on the 26KL and TYMCOM-20
+cannot run on the DEC equipment.  We have very different architecture
+which means parts of the monitor must be VERy different. however, from
+the user view, we are as identical as one can be. So what is it??  We
+claim, with some legal opinion, that TYMCOM-20 is NOT TOPS-20 and
+hence no licensing is needed by us or our customers.  We certain do
+realize this might not completely dispell the fear of some legal
+action by DEC so we are trying hard to talk to DEC to clarify all
+this. TO date they are VERY hardnose.  I think everyone agrees they
+are trying to delay things with the hope we just go away or die.
+
+My point of view says this is very short sighted for DEC, bad for
+their customers, and extremely sad for all those fans of the DEC 36
+bit line.  I sincerely wish to join forces with DEC and have mutual
+software develoment for the 36 bit line. DEC can do somethings and TYM
+can do others.  Clearly the DEC 36 bit machines are now in the end of
+the line phase.  If DEC wants to keep its base and hopes to move them
+onto the DEC 32 bit line, they need to do more.  Joining with TYM will
+be a GIANT step forward. DEC has NO hope to convert those 36 bit sites
+to VAXen in the next 2 years.  Why not hold onto them by letting them
+use a TYM 26KL.  Eventually (if we are to believe DEC) the VAX will be
+bigger and better and more convenient for a 36 bit to VAX move. As I
+view it, we are really saving DEC!!!!
+
+
+Robert
+----------------------------------------------------------------------
+
+
+From lars@nocrew.org Wed Oct 25 14:23:36 PDT 2000
+Article: 1558 of alt.sys.pdp10
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!news.tele.dk!128.39.3.166!uninett.no!newsfeed1.enitel.no!masternews.telia.net!news-sto.telia.net!news.defero.net!junk.nocrew.org!not-for-mail
+From: lars brinkhoff <lars@nocrew.org>
+Newsgroups: alt.sys.pdp10
+Subject: Tymshare System 26 and 26KL
+Organization: NoCrew Laboratories
+Lines: 176
+Sender: lars@junk.nocrew.org
+Message-ID: <85vguqwiid.fsf@junk.nocrew.org>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+User-Agent: Gnus/5.0803 (Gnus v5.8.3) Emacs/20.7
+Date: Wed, 18 Oct 2000 10:28:30 GMT
+NNTP-Posting-Host: 212.73.17.42
+X-Complaints-To: abuse@defero.net
+X-Trace: news.defero.net 971864910 212.73.17.42 (Wed, 18 Oct 2000 12:28:30 MET DST)
+NNTP-Posting-Date: Wed, 18 Oct 2000 12:28:30 MET DST
+Xref: nntp1.ba.best.com alt.sys.pdp10:1558
+
+I found these three letters referring to two Tymshare PDP-10 clones
+called System 26 and System 26KL.
+
+May it be that 26XL of Mark Crispin's posting in
+        http://www.inwap.com/pdp10/usenet/poole
+        (or http://pdp10.nocrew.org/cpu/26xl.1.txt)
+is a typo?  Or is the 26XL another clone, perhaps a follow-up to the
+26KL?
+
+To confuse the matter further, Joe Smith's PDP-10 page mentions a "X-KL"
+model:
+        My documents
+           * Tymshare
+              * History
+              * Reunion 1-Jul-2000
+              * Hardware (KI, KL, X-KL)
+                                  ^^^^
+
+Also note the reference to TYMCOM-20.
+
+----------------------------------------------------------------------
+Date: 29-Feb-84 01:41 PST
+From: Robert N. Lieberman  <RLL.TYM@OFFICE-2>
+Subject: Re: Foonly machine & code availability
+To: Ken Harrenstien <KLH@SRI-NIC>
+
+Ken, I guess I the right person to ask most of those questions. let me try ...
+
+[KLH: Are F2s or F3s still available?  What about the newer machines?]
+
+The F2 (or F3 as we call it) is no longer made.  We have  8 but they are all 
+used at TYM. Some clients some internal users.
+
+There are two models of interest relating to F4.
+
+System 26 is based on the F4 CPU and runs TENEX. It has ucode that
+supports the KA instruction set and emulates the KA TENEX map (pager).
+We have several of these, one is at SRI and one at CECOM in New Jersey
+(both of these are owned by customer).  This model is no longer being
+made although one might be obtainable in the future.
+
+System 26KL is the latest model. It is also based on the F4 CPU but is
+modified to support the full extended addressing (actually 32 bits
+hardware-wise but that is not used since TOPS-20 does not use all
+those bits either). The 26KL has totally different ucode and emulates
+the KL instruction set including ALL the extended business instruction
+set. it emulates the KL style map.  It runs the TYMCOM-20 operating
+System which is user identical to the TOPS-20 system. The 26Kl is
+spec-ed at 2.5 times the KA at the machine instruction level.  This
+seems to be proved out but we are undergoing a big performance push
+right now and hope to have formal data by spring showing this to be at
+true.
+
+System 26KL is MOST definitely available for leasing or buying.  We
+are gearing up for production of these beasts.  There is a strong
+backing internally to use these machines for internal use in addition
+to external sales/leases. This provides a built in demand.
+
+the cost of a nicely configured system (1 meg memory, a few  disks (660 MB), 
+etc.) is about $300,000.  You could probably push on that for universities but 
+not sure how much.
+
+Yes, we are willing to provide access to ucode but this has yet to be
+made a firm committment from upper management. The front end (if used
+in the KL sense) does NOT exists.  There is a Console computer that is
+used for booting and diagnostic work but has no relationship with I/O
+functions of the mainframe.
+
+We have TYMNET but no MILNET yet since we do NOT have the TCP/IP
+sources for TOPS-20 (can we get that from someone?? we do have a
+source license for TOPS-20 so I think we are entitled to it).
+
+We are anxiously seeking out programmers for both the monitor level
+work and for ucoding. I have two opening right now.  We have hired a
+few enginerring types to help with manufacturing and for enhancements.
+I personally would love to have cooperative ventures with
+universities.
+
+Let me know if there is more interest from any quarters.
+
+Robert
+----------------------------------------------------------------------
+Date:  2-Mar-84 23:47 PST
+From: Robert N. Lieberman  <RLL.TYM@OFFICE-2>
+Subject: Re: Foonly machine & code availability
+To: Ken Harrenstien <KLH@SRI-NIC>
+
+[KLH: I asked for more details on the speed differences...]
+
+The 26KL has NO cache and although it is on the list of possible items
+to do, we currently have NO plans to implement it.  You first have to
+understand why a cache on the 2060 is worth it. The memory cycle time
+is something like 800 ns so a cache can have a very dramatic effect.
+The 26KL has a memory cycle time of 350 to 425 depending on how we set
+some parameters.  Right now we can run with no problems at 375 ns.
+Thus, we feel the cache will NOT provide a significant enhancement of
+performance as compared to some other ideas.
+
+The 26KL instruction speed (running the KL set) varies from lower than
+the KL (I won't say figures) to higher than the KL. On the average
+(what ever that means) it seems to come out to about 60% of the KL.
+Remember this is an instruction set speed comparison.  I think the
+2060 wins bigger in the I/O due to multiple controllers. Currently two
+is the max for the 26KL.
+
+We have a very nice list of wonderful things we can do with the 26kl
+to make it much better (VERY likely better than the 2060) but one
+OVERRIDING factor MUST happen.  WE MUST SEE IF THE MARKETPLACE WILL
+ACCEPT THE 26KL.  (basically as is).  If not it does not make sense
+for us to develop it.  We are rounding it out now and cleaning it up.
+It really is there and works. Several are at TYM now.  We are very
+anxious to see the marketplace show interest.  It did at the show but
+that seems to have died off.  Very disappointing. (of course you may
+find fault with the lack of heavy advertising on our part, regretably
+that is a fact but not sure if that would have changed the situation).
+Whatever the marketplace says, TYM is very committed to produce these
+machines for internal use if for not other reason. However, future
+effort will key off of marketplace acceptance.
+
+The complete instruction set is there, full addressing is there. A
+wonderful implementation of the KL map is there.  Power, size and cost
+seem to heavily favor the 26KL.  With TYM maint., we can provide the
+whole thing.
+
+[KLH: I asked whether the price could be cut by leaving off the
+suede leather trim, racing stripes, etc.]
+
+Now for costs. certainly a barebones CPU (with 1/2 meg memory) can go
+for much less than the 300k figure. I will leave that up to the
+marketing types. Yes, i heard the 250k rumor but when you add
+everything else, it is easily 600k or more. So we are still 50% of
+their [KLH: DEC-2060] cost.
+
+Hope this helps.
+
+Robert
+----------------------------------------------------------------------
+Date:  4-Mar-84 23:36 PST
+From: Robert N. Lieberman  <RLL.TYM@OFFICE-2>
+Subject: Re: Foonly machine & code availability
+To: Ken Harrenstien <KLH@SRI-NIC>
+
+I would contact Cal Peterson for marketing info. I don't have his
+number here at home but will send it to you later.
+
+[KLH: I asked about the status of unbundling TOPS-20 -- not relevant
+to ITS, but interesting.]
+
+As for software on the 26KL, it is a matter of legalese on what
+TYMCOM-20 is.  Certainly TOPS-20 cannot run on the 26KL and TYMCOM-20
+cannot run on the DEC equipment.  We have very different architecture
+which means parts of the monitor must be VERy different. however, from
+the user view, we are as identical as one can be. So what is it??  We
+claim, with some legal opinion, that TYMCOM-20 is NOT TOPS-20 and
+hence no licensing is needed by us or our customers.  We certain do
+realize this might not completely dispell the fear of some legal
+action by DEC so we are trying hard to talk to DEC to clarify all
+this. TO date they are VERY hardnose.  I think everyone agrees they
+are trying to delay things with the hope we just go away or die.
+
+My point of view says this is very short sighted for DEC, bad for
+their customers, and extremely sad for all those fans of the DEC 36
+bit line.  I sincerely wish to join forces with DEC and have mutual
+software develoment for the 36 bit line. DEC can do somethings and TYM
+can do others.  Clearly the DEC 36 bit machines are now in the end of
+the line phase.  If DEC wants to keep its base and hopes to move them
+onto the DEC 32 bit line, they need to do more.  Joining with TYM will
+be a GIANT step forward. DEC has NO hope to convert those 36 bit sites
+to VAXen in the next 2 years.  Why not hold onto them by letting them
+use a TYM 26KL.  Eventually (if we are to believe DEC) the VAX will be
+bigger and better and more convenient for a 36 bit to VAX move. As I
+view it, we are really saving DEC!!!!
+
+
+Robert
+----------------------------------------------------------------------
+
+
+From alderson+news@panix.com Wed Oct 25 14:24:03 PDT 2000
+Article: 1578 of alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!panix!news.panix.com!not-for-mail
+From: Rich Alderson <alderson+news@panix.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Tymshare System 26 and 26KL
+Date: 19 Oct 2000 20:36:15 -0400
+Organization: Systems Administration, XKL LLC, Redmond WA 98052
+Lines: 25
+Sender: alderson+news@panix6.panix.com
+Message-ID: <mddlmvkbb7k.fsf@panix6.panix.com>
+References: <85vguqwiid.fsf@junk.nocrew.org>
+NNTP-Posting-Host: panix6.panix.com
+X-Trace: news.panix.com 972002175 21925 166.84.0.231 (20 Oct 2000 00:36:15 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: 20 Oct 2000 00:36:15 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.6
+Xref: nntp1.ba.best.com alt.sys.pdp10:1578
+
+lars brinkhoff <lars@nocrew.org> writes:
+
+> To confuse the matter further, Joe Smith's PDP-10 page mentions a "X-KL"
+> model:
+>         My documents
+>            * Tymshare
+>               * History
+>               * Reunion 1-Jul-2000
+>               * Hardware (KI, KL, X-KL)
+>                                   ^^^^
+
+Lars,
+
+Tymshare was eventually part of MCI.  In 1995, they needed to replace 4 KL10
+systems running TYMCOM-X (their highly modified version of Tops-10, made to
+look like the user interface on a SDS 940).  They bought two Toad-1 systems
+(running Tops-20) from XKL (as in "toad.xkl.com", hmm?) for this purpose.
+
+The Toad-1 system has nothing to do with the Foonly products that Tymshare was
+going to build at one time.
+
+-- 
+Rich Alderson                                          alderson+news@panix.com
+  "You get what anybody gets.  You get a lifetime."  --Death, of the Endless
+
+
+
+From alderson+news@panix.com Wed Oct 25 14:24:40 PDT 2000
+Article: 1643 of alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!panix!news.panix.com!not-for-mail
+From: Rich Alderson <alderson+news@panix.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Tymshare System 26 and 26KL
+Date: 24 Oct 2000 18:47:11 -0400
+Organization: Systems Administration, XKL LLC, Redmond WA 98052
+Lines: 21
+Sender: alderson+news@panix3.panix.com
+Message-ID: <mddaebtrh5c.fsf@panix3.panix.com>
+References: <85vguqwiid.fsf@junk.nocrew.org> <mddlmvkbb7k.fsf@panix6.panix.com> <85lmvkqaq5.fsf@junk.nocrew.org>
+NNTP-Posting-Host: panix3.panix.com
+X-Trace: news.panix.com 972427631 16712 166.84.0.228 (24 Oct 2000 22:47:11 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: 24 Oct 2000 22:47:11 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.6
+Xref: nntp1.ba.best.com alt.sys.pdp10:1643
+
+lars brinkhoff <lars@nocrew.org> writes:
+
+> By the way, somewhere I saw that mathom.xkl.com used to be a KL, but that
+> doesn't seem to be true any more.  Does XKL still run any KLs?
+
+When XKL was founded in 1991, there was only a KL, named Mathom.  We continued
+to run the KL until 1996, when we moved all our work onto Toad-1 systems--what
+better way to find bugs in the implementation than to put all your business on
+the line?
+
+I renamed the KL Heat and tried to use it for a bit of Tops-10 debugging, but
+since I did not have a Tops-10 installation tape, I never got very far.  We
+shut the KL down permanently in 1997, and have tried to give it to two museums,
+but no one has taken it off our hands.  The major requirement is that it be
+*used*, not parted out.
+
+It is dismantled and taking up space in the computer room.
+
+-- 
+Rich Alderson                                          alderson+news@panix.com
+  "You get what anybody gets.  You get a lifetime."  --Death, of the Endless
+
+
+From tsuri@earthlink.net Thu Nov  2 11:06:23 PST 2000
+Article: 1817 of alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!63.211.125.72!cyclone2.usenetserver.com!news-out.usenetserver.com!newsfeed2.earthlink.net!newsfeed.earthlink.net!newsmaster1.prod.itd.earthlink.net!newsread1.prod.itd.earthlink.net.POSTED!not-for-mail
+User-Agent: Microsoft-Outlook-Express-Macintosh-Edition/5.02.2022
+Subject: Re: Tymshare System 26 and 26KL
+From: Tsurishaddai Williamson <tsuri@earthlink.net>
+Newsgroups: alt.sys.pdp10
+Message-ID: <B62393F2.1C454%tsuri@earthlink.net>
+References: <85vguqwiid.fsf@junk.nocrew.org> <8t7irf$179$1@nntp1.ba.best.com>
+Mime-version: 1.0
+Content-Type: text/plain; charset="US-ASCII"
+Content-transfer-encoding: 7bit
+Lines: 48
+Date: Tue, 31 Oct 2000 02:09:13 GMT
+NNTP-Posting-Host: 165.247.91.141
+X-Complaints-To: abuse@earthlink.net
+X-Trace: newsread1.prod.itd.earthlink.net 972958153 165.247.91.141 (Mon, 30 Oct 2000 18:09:13 PST)
+NNTP-Posting-Date: Mon, 30 Oct 2000 18:09:13 PST
+Organization: EarthLink Inc. -- http://www.EarthLink.net
+Xref: nntp1.ba.best.com alt.sys.pdp10:1817
+
+Maybe the X-KL was that mess of wire-wrap that I wrote a console/diagnostic
+controller for.  I remember the transition from Tymshare to McDonnell
+Douglas.  That was in 1984, not 1986.  It was a lot of fun.  We replaced the
+original LISP-based controller with a simple hardware interface to an
+IBM-XT.  I wrote the controller in Turbo Pascal.  The neat thing was that
+the user interface "client" could connect to the diagnostic "server" via a
+modem.  This allowed the engineer in the lab to access the hardware
+registers at the customer site.  We cut the downtime from days to hours as
+the engineer could quickly determine which board needed to replaced by the
+on-site techie.  It was a mess, all of that wire wrap and bird poo.  Don't
+ask how the bird doody got there.
+Tsurishaddai Williamson
+
+> From: inwap@best.com (Joe Smith)
+> Organization: Chez Inwap
+> Newsgroups: alt.sys.pdp10
+> Date: 25 Oct 2000 21:20:47 GMT
+> Subject: Re: Tymshare System 26 and 26KL
+> 
+> In article <85vguqwiid.fsf@junk.nocrew.org>,
+> lars brinkhoff  <lars@nocrew.org> wrote:
+>> I found these three letters referring to two Tymshare PDP-10 clones
+>> called System 26 and System 26KL.
+>> 
+>> May it be that 26XL of Mark Crispin's posting in
+>> http://www.inwap.com/pdp10/usenet/poole
+>> (or http://pdp10.nocrew.org/cpu/26xl.1.txt)
+>> is a typo?  Or is the 26XL another clone, perhaps a follow-up to the
+>> 26KL?
+>> 
+>> To confuse the matter further, Joe Smith's PDP-10 page mentions a "X-KL"
+>> model:
+>> My documents
+>> * Tymshare
+>> * History
+>> * Reunion 1-Jul-2000
+>> * Hardware (KI, KL, X-KL)
+>> ^^^^
+>> 
+>> Also note the reference to TYMCOM-20.
+> 
+> To reiterate:
+> The 26KL was built by Tymshare/McDonnell Douglas around 1986.
+> The XKL Corporation (now XKL LLC) built the TOAD-1 in the 90's.
+> -Joe
+> --
+> See http://www.inwap.com/ for PDP-10 and "ReBoot" pages.
+
+
+
+From eric-no-spam-for-me@brouhaha.com Fri Nov  3 11:44:41 PST 2000
+Article: 1875 of alt.sys.pdp10
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Looking for CUSP tape files for v6.03
+References: <8hoH5.62649$bI6.2262607@news1.giganews.com> <8tcasq$kc4@weyl.math.psu.edu> <22jK5.96420$bI6.3525945@news1.giganews.com> <Pine.NXT.4.30.0010271137080.5390-100000@Tomobiki-Cho.CAC.Washington.EDU> <8tqgau$25l0$1@nntp1.ba.best.com> <8trgsq$fcq$2@bob.news.rcn.net>
+X-Disclaimer: Everything I write is false.
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 02 Nov 2000 12:25:50 -0800
+Message-ID: <qhvgu6yvch.fsf@ruckus.brouhaha.com>
+Lines: 44
+X-Newsreader: Gnus v5.7/Emacs 20.7
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 2 Nov 2000 12:30:57 -0800, ruckus.brouhaha.com
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!news.sgi.com!news.spies.com!ruckus.brouhaha.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:1875
+
+falconer@best.com (Edward A. Falk) wrote:
+> * Spawn another thread and let it sleep on the keyboard.  
+> * Only check for keyboard input every 10 or 100 instructions.
+
+jmfbahciv@aol.com writes:
+> Would that last one work for ^C interrupts, though?  When
+> a user types ^C a hundred times, s/he's in panic mode and
+> wants things to stop right NOW.
+
+Even on the real hardware there could easily have been a latency of much
+more than 100 instructions.  In fact, at 9600 bps much more than 100
+instructions execute just while the character is being transmitted.
+Then you have additional sources of latency.  The following is a guess
+as to how the input characters are processed on a KL10.  I may be wrong
+in the details.
+
+1)  The DC20-F (DH11) in the front end puts the character into the
+    receive FIFO.  There may be other characters ahead of it.
+
+2)  The DC20-F requests an interrupt.
+
+3)  Sooner or later, the RSX20F interrupt handler is invoked.  The
+    interrupt handler accepts the character, puts it in a queue, and
+    wakes up a task.
+
+4)  Eventually the task is scheduled.  It gets the character, tests
+    whether it is a character requiring special handling (e.g., flow
+    control), and assuming otherwise, uses the DTE20 to write the
+    character (and perhaps some other identifying information) to a
+    queue in the KL10's memory.
+
+5)  The task tells the DTE20 to ring the doorbell to get the KL10's
+    memory.
+
+6)  Sooner or later, the TOPS-10 or TOPS-20 interrupt handler is
+    invoked.  It pulls the character out of the queue and figures
+    out what to do with it.
+
+Note that steps 3, 4, and 6 all involve unpredicable latencies that
+may take hundreds of instructions, depending on the interrupt level
+of the processor and other factors.
+
+On a KS10 the path would actually be simpler, since there isn't another
+processor between the DZ11 mux and the main processor.
+
+

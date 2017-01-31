@@ -1,0 +1,52 @@
+From alderson+news@panix.com Tue Nov 28 11:35:51 PST 2000
+Article: 2034 of alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!panix!news.panix.com!not-for-mail
+From: Rich Alderson <alderson+news@panix.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Tim Stark's emulator, Lars GCC port and ...
+Date: 27 Nov 2000 20:47:28 -0500
+Organization: Systems Administration, XKL LLC, Redmond WA 98052
+Lines: 31
+Sender: alderson+news@panix3.panix.com
+Message-ID: <mdd3dgcoojz.fsf@panix3.panix.com>
+References: <3A213AEA.D783B415@bellatlantic.net> <U9fU5.4298$IP1.186280@news1.giganews.com> <8vtibc$1qo$2@bob.news.rcn.net> <3A2298E1.36F65ACB@bartek.net>
+NNTP-Posting-Host: panix3.panix.com
+X-Trace: news.panix.com 975376049 13495 166.84.0.228 (28 Nov 2000 01:47:29 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: 28 Nov 2000 01:47:29 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.6
+Xref: nntp1.ba.best.com alt.sys.pdp10:2034
+
+Arthur Krewat <krewat@bartek.net> writes:
+
+> Am I correct in assuming that the only UNIBUS in a KL10 was in the -11
+> front-end? If so, what bus did an Ethernet controller use in a KL10?
+> Was it possible to access the UNIBUS in the -11 from the KL10?
+
+Your assumption is correct.  There was a Tops-20 program that set things up so
+that the front-end filesystem was accessible as device FE:, for transferring
+things back and forth; I expect that something similar existed on Tops-10.
+
+DEC didn't provide a native Ethernet controller until after the Jupiter
+cancellation, when they brought out the NI-20.  This was the same as the CI-20,
+with different microcode and a different network interface.  Both used up *two*
+RH20 slots.
+
+Long before DEC had an Ethernet interface, you could get a MEIS (MASSBUSS-
+Ethernet Interface Subsystem) from Stanford's Computer Science Deaprtment
+computer Facility, later also available from cisco Systems.  This is an
+interesting device, which resided in the -11 cabinet in the KL for power, but
+lived on an RH20.  Looked much like a tape device to the operating system.
+
+The NI-20 could not listen to itself, which made loopback debugging very
+difficult; the MEIS had double buffers and worked much better than the DEC
+device.
+
+I admit that I'm biased--I know the guy who designed the MEIS, and the guy who
+implemented it, and used both in my days at Stanford.
+
+-- 
+Rich Alderson                                          alderson+news@panix.com
+  "You get what anybody gets.  You get a lifetime."  --Death, of the Endless
+
+

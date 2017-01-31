@@ -1,0 +1,1201 @@
+Article 1131 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!news3.net99.net!news.cais.net!news.sprintlink.net!in1.uu.net!newshost.marcam.com!usc!sol.ctr.columbia.edu!news.msfc.nasa.gov!news.larc.nasa.gov!lerc.nasa.gov!magnus.acs.ohio-state.edu!jebright
+From: jebright@magnus.acs.ohio-state.edu (James R Ebright)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Compuserve and the DECsystem-10
+Date: 24 Sep 1995 03:27:19 GMT
+Organization: The Ohio State University
+Lines: 29
+Message-ID: <442j6n$gip@charm.magnus.acs.ohio-state.edu>
+References: <43v18a$a63@cliff.swec.com>
+NNTP-Posting-Host: top.magnus.acs.ohio-state.edu
+Xref: shellx.best.com alt.folklore.computers:36107 alt.sys.pdp10:1131
+
+In article <43v18a$a63@cliff.swec.com>,
+Carl R. Friend <carl.friend@swec.com> wrote:
+>I received an interesting rumour from the mill (Rumour mill, not DEC's
+>Maynard, Mass mill) that not only is Compuserve still actively using the
+>DECsystem-10 in daily affairs, but that they had bought DEC's Jupiter
+>project (cancelled around 1983).
+
+Yes to one.  No to two.  However, I would hardly call it a DECsystem-10.
+It is 10 architecture hardware running on a custom opsys which has
+as an ancestor a very very early version of TOPS-10.
+
+>   In addition to that little tidbit, I heard that they have been scratch-
+>building their own -10s. Could it be that the Jupiter actually went
+>into (limited/private) production after all???
+
+No.  CSNI (Compu-Serv Network Incorporated, their name at the time)
+had a Tuscon facility which was building a 10-look-alike.  It was
+cancelled before it could be completed.  It was cancelled before
+the Jupiter.
+
+C$ now uses Systems Concepts' 10 look-alikes, I think.  I left a long
+time ago but that is what I think I heard from friends who now run much 
+of the company.
+
+-- 
+ A/~~\A   'moo2u from osu'   Jim Ebright   e-mail: ebright@bronze.coil.com
+((0  0))_______  "'Eternal Vigilance Is The Price of Liberty' used to mean
+  \  /    the  \  we watched the government - not the other way around."
+  (--)\   OSU  | 			- Bill Stewart
+
+
+Article 1138 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sdd.hp.com!swrinde!emory!metro.atlanta.com!news.sprintlink.net!dns.plano.net!news	
+From: Charles Richmond <richmond@plano.net>
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Compuserve and the DECsystem-10
+Date: 25 Sep 1995 02:09:46 GMT
+Organization: Canine Computer Center
+Lines: 12
+Message-ID: <44531a$5k1@dns.plano.net>
+References: <43v18a$a63@cliff.swec.com> <442j6n$gip@charm.magnus.acs.ohio-state.edu>
+NNTP-Posting-Host: aux31.plano.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
+X-Mailer: Mozilla 1.1N (Macintosh; I; 68K)
+X-URL: news:442j6n$gip@charm.magnus.acs.ohio-state.edu
+Xref: shellx.best.com alt.folklore.computers:36175 alt.sys.pdp10:1138
+
+jebright@magnus.acs.ohio-state.edu (James R Ebright) wrote:
+>[Compuserve uses] 10 architecture hardware running on a custom opsys which has
+>as an ancestor a very very early version of TOPS-10.
+>
+Well, the compuserve ID, which consists of two octal numbers separated by a comma, is just an old DEC PPN number in disguise.  To lo=
+g in to the DEC-10, one used this same type of number. I know cause I did a lot of logging in during the 1970's.
+
+Also, I heard that Compuserve used some DEC-10 clones, some made by a company in California called Foonly Computers. Anyone have any=
+ information on this?
+
+
+
+
+
+Article 1140 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!howland.reston.ans.net!news1.digex.net!news3.digex.net!digex.net!not-for-mail
+From: doug@ss2.digex.net (Doug Humphrey)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Compuserve and the DECsystem-10
+Date: 25 Sep 1995 05:20:55 -0400
+Organization: Express Access Online Communications USA: 800-969-9090
+Lines: 34
+Message-ID: <445s9n$6pv@ss2.digex.net>
+References: <43v18a$a63@cliff.swec.com>
+NNTP-Posting-Host: ss2.digex.net
+Xref: shellx.best.com alt.folklore.computers:36204 alt.sys.pdp10:1140
+
+Bad News - No Jupiter.  The CompuServe people (almost put a $ in there but
+decided to be nice) basicly did things with Systems Concepts for their 
+box, and maybe somerthing with Foonly folks...  othere cn comment on that
+stuff.  But, noi Jupitert (I am on a box that has no active delete key!)
+
+I am looking at a binder marked "DECsystem 4050  Sales Training Seminar"
+in chocolot brown, buyt it is nothing but the binder...  sad, sad, sad.
+
+Doug
+
+
+
+
+
+In article <43v18a$a63@cliff.swec.com>,
+Carl R. Friend <carl.friend@swec.com> wrote:
+>I received an interesting rumour from the mill (Rumour mill, not DEC's
+>Maynard, Mass mill) that not only is Compuserve still actively using the
+>DECsystem-10 in daily affairs, but that they had bought DEC's Jupiter
+>project (cancelled around 1983).
+>
+>   In addition to that little tidbit, I heard that they have been scratch-
+>building their own -10s. Could it be that the Jupiter actually went
+>into (limited/private) production after all???
+>
+>   Is this true? Can it possibly be?
+>
+>   Confirm, deny, or flame appropriately....
+>
+>Carl R. Friend
+><carl.friend@swec.com>
+>
+
+
+
+
+Article 1148 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!news3.net99.net!news.cais.net!newsfeed.internetmci.com!tank.news.pipex.net!pipex!howland.reston.ans.net!nntp.crl.com!decwrl!genmagic!goonsquad.spies.com!piem3.atg.apple.com!user
+From: baum@apple.com (Allen J. Baum)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: PDP10 clones (was: Compuserve and the DEC-10)
+Date: Mon, 25 Sep 1995 18:07:06 -0700
+Organization: Apple Computer
+Lines: 27
+Message-ID: <baum-2509951807060001@piem3.atg.apple.com>
+References: <43v18a$a63@cliff.swec.com> <442j6n$gip@charm.magnus.acs.ohio-state.edu>
+NNTP-Posting-Host: piem3.atg.apple.com
+X-Newsreader: Value-Added NewsWatcher 2.0b27.1+
+Xref: shellx.best.com alt.folklore.computers:36302 alt.sys.pdp10:1148
+
+There are/were 3 companies that make clones:
+
+Foonley (now defunct) was a spinoff from the Superfoonley project at the
+Stanford AI Lab. They got ARPA funding to build a processor 10x faster
+than the KA-10. When the project folded, DEC picked up the design (and a
+designer or two) and built the KL-10. The KL-10 built upon the
+Superfoonley design, but there were differences (ECL vs. TTL, etc).
+Foonley built several models of their clones.
+
+Systems Concepts was a company founded by some of the old hackers from the
+MIT AI Labs. They've built paging boxes for the KA-10 (They may have been
+the first, and its what was used for the Tenex OS), and a lot of other
+hardware projects.
+They are still making them, as far as I know.
+
+The most recent clone maker is XKL, of Seattle. XKL was founded by Len
+Bosack of Cisco, after he left. I don't know whether they've delivered
+product yet, but you can see pictures of it in their web pages (whose ptr
+I have conveniently lost).
+
+-- 
+*******************************************************
+* Allen J. Baum                                       *
+* Apple Computer Inc. MS 305-3B                       *
+* 1 Infinite Loop                                     *
+* Cupertino, CA 95014                                 *
+*******************************************************
+
+
+Article 1151 of alt.sys.pdp10:
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Path: shellx.best.com!news1.best.com!sdd.hp.com!swrinde!tank.news.pipex.net!pipex!howland.reston.ans.net!ix.netcom.com!netcom.com!alderson
+From: alderson@netcom.com (Richard M. Alderson III)
+Subject: Re: Compuserve and the DECsystem-10
+In-Reply-To: "Carl R. Friend"'s message of 22 Sep 1995 19:02:34 GMT
+Message-ID: <aldersonDFHpLJ.JvL@netcom.com>
+Reply-To: alderson@netcom.com
+Fcc: /u9/alderson/postings
+Organization: NETCOM On-line Communication Services (408 261-4700 guest)
+References: <43v18a$a63@cliff.swec.com>
+Date: Tue, 26 Sep 1995 02:00:55 GMT
+Lines: 22
+Sender: alderson@netcom16.netcom.com
+Xref: shellx.best.com alt.folklore.computers:36315 alt.sys.pdp10:1151
+
+In article <43v18a$a63@cliff.swec.com> "Carl R. Friend" <carl.friend@swec.com>
+writes:
+
+>I received an interesting rumour from the mill (Rumour mill, not DEC's
+>Maynard, Mass mill) that not only is Compuserve still actively using the
+>DECsystem-10 in daily affairs, but that they had bought DEC's Jupiter project
+>(cancelled around 1983).
+
+Never heard that one.  Not even from my insider friends at DEC 36-bit
+Engineering.  Doesn't mean it didn't happen, but it's highly unlikely.
+
+>In addition to that little tidbit, I heard that they have been scratch-
+>building their own -10s. Could it be that the Jupiter actually went into
+>(limited/private) production after all???
+
+Now *that* is true:  They licensed the Systems Concepts design from Levitt and
+Nelson, because SC couldn't curn 'em out fast enough.
+-- 
+Rich Alderson   You know the sort of thing that you can find in any dictionary
+                of a strange language, and which so excites the amateur philo-
+                logists, itching to derive one tongue from another that they
+                know better: a word that is nearly the same in form and meaning
+                as the corresponding word in English, or Latin, or Hebrew, or
+                what not.
+                                                --J. R. R. Tolkien,
+alderson@netcom.com                               _The Notion Club Papers_
+
+
+Article 1153 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!enews.sgi.com!decwrl!cronkite.cisco.com!cronkite!billw
+From: billw@puli.cisco.com (William )
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Compuserve and the DECsystem-10
+Date: 26 Sep 1995 05:03:58 GMT
+Organization: cisco Systems, Inc.
+Lines: 41
+Message-ID: <BILLW.95Sep25220358@puli.cisco.com>
+References: <43v18a$a63@cliff.swec.com> <442j6n$gip@charm.magnus.acs.ohio-state.edu>
+	<44531a$5k1@dns.plano.net>
+NNTP-Posting-Host: puli.cisco.com
+In-reply-to: Charles Richmond's message of 25 Sep 1995 02:09:46 GMT
+Xref: shellx.best.com alt.folklore.computers:36328 alt.sys.pdp10:1153
+
+    Also, I heard that Compuserve used some DEC-10 clones, some made by a
+    company in California called Foonly Computers. Anyone have any
+    information on this?
+
+FOONLEY had a couple models of PDP-10 clones.  I believe that they were
+generally KA or KI clones, sometimes with BBN pager clones.
+
+The Foonly F1 was faster than a KL by virtue of being hardwired
+instead of microcoded, or so I heard.  One got a lot of use in some
+early hollywood computer graphics efforts.  I don't think there were
+very many.
+
+The F2 was a small pdp-10 clone (one or two 19" racks.)  
+
+I don't know if there was ever an F3.  The F4 was a faster F2, with
+ethernet and stuff.  I spent some time adding TCP to TENEX for use on
+F2s and F4s.
+
+The F5 was supposed to be a tiny version of the F4 (as in multiple F5s
+would fit in a 19" rack, or a single F5 would fit by your desk.)  I don't
+think the F5 ever made it to production, but it was supposed to show up
+in the early to mid 1980s.
+
+
+Other PDP-10 clones include the Systems Concept SC30-M (and related?), a
+nice system that left a lot of spare room in a 22 inch rack.  SC started
+out doing things like IBM Channel adaptors for dec equipment, and I think
+the SC30M could talk to IBM disks.  Lots of people were interested in the
+SC30M, which was a little faster than a KL, but SC seemed to have trouble
+pricing and producing the machine in "production" quantities.  Mid to
+late 1980s.
+
+And of course there is the new XKL machine.
+
+In addition to having a wide variety of PDP-10 clones, Compuserve did some
+work to improve the cost-of-ownership of "real" dec-10 iron.  For a modest
+fee (well, comparitively speaking), they'd come out and replace the old
+linear power supplies of your KL10 with modern switching power supplies,
+increasing power efficiency from about 30% to 80+%...
+
+BillW
+
+
+Article 1153 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!enews.sgi.com!decwrl!cronkite.cisco.com!cronkite!billw
+From: billw@puli.cisco.com (William )
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Compuserve and the DECsystem-10
+Date: 26 Sep 1995 05:03:58 GMT
+Organization: cisco Systems, Inc.
+Lines: 41
+Message-ID: <BILLW.95Sep25220358@puli.cisco.com>
+References: <43v18a$a63@cliff.swec.com> <442j6n$gip@charm.magnus.acs.ohio-state.edu>
+	<44531a$5k1@dns.plano.net>
+NNTP-Posting-Host: puli.cisco.com
+In-reply-to: Charles Richmond's message of 25 Sep 1995 02:09:46 GMT
+Xref: shellx.best.com alt.folklore.computers:36328 alt.sys.pdp10:1153
+
+    Also, I heard that Compuserve used some DEC-10 clones, some made by a
+    company in California called Foonly Computers. Anyone have any
+    information on this?
+
+FOONLEY had a couple models of PDP-10 clones.  I believe that they were
+generally KA or KI clones, sometimes with BBN pager clones.
+
+The Foonly F1 was faster than a KL by virtue of being hardwired
+instead of microcoded, or so I heard.  One got a lot of use in some
+early hollywood computer graphics efforts.  I don't think there were
+very many.
+
+The F2 was a small pdp-10 clone (one or two 19" racks.)  
+
+I don't know if there was ever an F3.  The F4 was a faster F2, with
+ethernet and stuff.  I spent some time adding TCP to TENEX for use on
+F2s and F4s.
+
+The F5 was supposed to be a tiny version of the F4 (as in multiple F5s
+would fit in a 19" rack, or a single F5 would fit by your desk.)  I don't
+think the F5 ever made it to production, but it was supposed to show up
+in the early to mid 1980s.
+
+
+Other PDP-10 clones include the Systems Concept SC30-M (and related?), a
+nice system that left a lot of spare room in a 22 inch rack.  SC started
+out doing things like IBM Channel adaptors for dec equipment, and I think
+the SC30M could talk to IBM disks.  Lots of people were interested in the
+SC30M, which was a little faster than a KL, but SC seemed to have trouble
+pricing and producing the machine in "production" quantities.  Mid to
+late 1980s.
+
+And of course there is the new XKL machine.
+
+In addition to having a wide variety of PDP-10 clones, Compuserve did some
+work to improve the cost-of-ownership of "real" dec-10 iron.  For a modest
+fee (well, comparitively speaking), they'd come out and replace the old
+linear power supplies of your KL10 with modern switching power supplies,
+increasing power efficiency from about 30% to 80+%...
+
+BillW
+
+
+Article 1158 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!howland.reston.ans.net!tank.news.pipex.net!pipex!in2.uu.net!news.sprintlink.net!news.onramp.net!onramp.net!eclectic
+From: eclectic@onramp.net (ECC User)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Compuserve and the DECsystem-10
+Date: 26 Sep 1995 10:46:59 GMT
+Organization: Eclectic Computing Concepts
+Lines: 41
+Distribution: world
+Message-ID: <448ln3$33p@news.onramp.net>
+Reply-To: eclectic@onramp.net
+NNTP-Posting-Host: stemmons09.onramp.net
+
+In message <BILLW.95Sep25220358@puli.cisco.com>, billw@puli.cisco.com (William 
+) writes:
+
+>I don't know if there was ever an F3.  The F4 was a faster F2, with
+>ethernet and stuff.  I spent some time adding TCP to TENEX for use on
+>F2s and F4s.
+>
+>The F5 was supposed to be a tiny version of the F4 (as in multiple F5s
+>would fit in a 19" rack, or a single F5 would fit by your desk.)  I don't
+>think the F5 ever made it to production, but it was supposed to show up
+>in the early to mid 1980s.
+>
+>BillW
+
+ARPA put up some money for Foonley to build F5s for SRI -- this at about the 
+time that the workstation was coming into being (Xerox 
+Dandelion/Dolphin/Dorado, Three Rivers Perq, BBN Jericho).  The thinking was 
+that they could be personal Lisp Machines that could also run other things.   I 
+piggy-backed on the buy to get a TENEX machine for what was at the time the 
+Naval Ocean Systems Center in San Diego, figuring it would be cheaper than all 
+the time we were buying from BBN and ISI.  It took forever (2 years?  trying to 
+preserve the money over government fiscal year boundaries), but we finally 
+received what was tagged a Foonley 4/5 in (I think) 1983.  It had, among other 
+interesting features, a memory-mapped graphics display which I don't think that 
+anyone ever used.
+
+Foonley wasn't like DEC in terms of support -- while the Foonley had a built-in 
+telephone connection for remote diagnostics and microcode replacement, more 
+significant repairs involved getting someone to come down to San Diego from the 
+converted elementary school in Mountain View.  Fortunately, our system manager 
+had a nice sailboat, and the offer of a weekend on the water was frequently 
+sufficient to entice a one-day support visit.
+
+Dan Lynch once looked at our machine room, holding the Foonley, two VAX 
+11/730s, one Perq, a BBN Bitgraph terminal and similar oddities and pronounced 
+it the greatest collection of bad choices he'd ever seen.  We somehow got work 
+done, however.  I'm glad we didn't show him the STARAN in the other building.
+
+bob bechtel
+
+
+
+
+Article 1159 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!howland.reston.ans.net!news.sprintlink.net!in2.uu.net!news.erinet.com!bug.rahul.net!a2i!thales.nmia.com!socorro.kanda.placitas.nm.us!bob
+From: bob@socorro.kanda.placitas.nm.us (Bob Knight)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: PDP10 clones (was: Compuserve and the DEC-10)
+Date: 26 Sep 1995 13:10:28 GMT
+Organization: New Mexico Internet Access
+Lines: 17
+Message-ID: <448u44$d97@thales.nmia.com>
+References: <43v18a$a63@cliff.swec.com> <442j6n$gip@charm.magnus.acs.ohio-state.edu> <baum-2509951807060001@piem3.atg.apple.com>
+NNTP-Posting-Host: socorro.nmia.com
+X-Newsreader: slrn (0.7.8.0)
+Xref: shellx.best.com alt.folklore.computers:36366 alt.sys.pdp10:1159
+
+In article <baum-2509951807060001@piem3.atg.apple.com>, Allen J. Baum wrote:
+>Foonley (now defunct) was a spinoff from the Superfoonley project at the
+>Stanford AI Lab. They got ARPA funding to build a processor 10x faster
+>than the KA-10. When the project folded, DEC picked up the design (and a
+>designer or two) and built the KL-10. The KL-10 built upon the
+>Superfoonley design, but there were differences (ECL vs. TTL, etc).
+>Foonley built several models of their clones.
+
+Foonly also built the F3, delivering several (five?...memory fails
+me) F3's to Tymshare in the 1980-82 timeframe.  The Kestrel Institute
+had at least one, as did CCRMA.  I think SRI (CSL?) had one, also.  The
+F4, a follow-on, was never delivered AFAIK.
+--------------------------------------------------------------------------
+bob@indirect.com					      P.O. Box 917
+(505) 867-5863 (voice)					Placitas, NM 87043
+(505) 867-5880 (FAX)
+
+
+
+Article 1160 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!uhog.mit.edu!bloom-beacon.mit.edu!ai-lab!usenet
+From: tk@ai.mit.edu (Tom Knight)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Foonly F-1
+Date: 26 Sep 1995 15:59:31 GMT
+Organization: MIT Artificial Intelligence Laboratory
+Lines: 18
+Message-ID: <TK.95Sep26115931@entropy.ai.mit.edu>
+NNTP-Posting-Host: entropy.ai.mit.edu
+In-reply-to: billw@puli.cisco.com's message of 26 Sep 1995 05:03:58 GMT
+Xref: shellx.best.com alt.folklore.computers:36374 alt.sys.pdp10:1160
+
+>>> "-" == William  <billw@puli.cisco.com> writes:
+
+-> The Foonly F1 was faster than a KL by virtue of being hardwired
+-> instead of microcoded, or so I heard.  One got a lot of use in some
+-> early hollywood computer graphics efforts.  I don't think there
+-> were very many.
+
+That's an understatement.  There was precisely one, wirewrapped
+kludge, done with low impedance (68 ohm I think?) twisted pair.  The
+wire insulation was so thin, to get the low impedance, that the wire
+cut through at the slightest provocation.  I don't think the machine
+was ever very robust, especially with cooldown-warmup cycles.  But the
+logic design was better than anything DEC put out.  I think the
+graphics in one of the early Disney efforts in the "I'm trapped in a
+video game" genre (TRON?) was done on this machine, which was located
+at Information International Inc.
+
+
+
+
+Article 1161 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!news3.net99.net!news.cais.net!news.his.com!user
+From: ehrice@his.com (Edward Rice)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: PDP10 clones (was: Compuserve and the DEC-10)
+Date: Tue, 26 Sep 1995 17:33:29 -0500
+Organization: New Dominion Software
+Lines: 23
+Distribution: world
+Message-ID: <AC8DE9E996684F3036@ehrice.his.com>
+References: <43v18a$a63@cliff.swec.com> <442j6n$gip@charm.magnus.acs.ohio-state.edu> <baum-2509951807060001@piem3.atg.apple.com>
+NNTP-Posting-Host: ehrice.his.com
+Xref: shellx.best.com alt.folklore.computers:36412 alt.sys.pdp10:1161
+
+
+
+In article <baum-2509951807060001@piem3.atg.apple.com>,
+baum@apple.com (Allen J. Baum) wrote:
+
+  > There are/were 3 companies that make clones:
+  > 
+  > Foonley (now defunct) was a spinoff from the Superfoonley project at
+the
+  > Stanford AI Lab. They got ARPA funding to build a processor 10x faster
+  > than the KA-10. When the project folded, DEC picked up the design (and
+a
+  > designer or two) and built the KL-10. The KL-10 built upon the
+  > Superfoonley design, but there were differences (ECL vs. TTL, etc).
+  > Foonley built several models of their clones.
+  > ...
+
+Glad you brought this up.  Where did the name "Foonley" (or "Foonly," as
+I've seen it before) come from?  Was it someone's surname?  An in-joke that
+goes right over my head?
+
+
+
+
+
+Article 1163 of alt.sys.pdp10:
+Path: shellx.best.com!shell1.best.com!not-for-mail
+From: inwap@best.com (J.Smith and J.Snyder)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Compuserve and the DECsystem-10
+Date: 27 Sep 1995 11:06:11 -0700
+Organization: Chez INWAP (people, computers, cats)
+Lines: 14
+Message-ID: <44c3qj$d9b@shell1.best.com>
+References: <43v18a$a63@cliff.swec.com> <442j6n$gip@charm.magnus.acs.ohio-state.edu> <44531a$5k1@dns.plano.net> <BILLW.95Sep25220358@puli.cisco.com>
+NNTP-Posting-Host: shell1.best.com
+Summary: Tymshare used F3
+Xref: shellx.best.com alt.folklore.computers:36511 alt.sys.pdp10:1163
+
+In article <BILLW.95Sep25220358@puli.cisco.com>,
+William  <billw@puli.cisco.com> wrote:
+>The F2 was a small pdp-10 clone (one or two 19" racks.)  
+>I don't know if there was ever an F3.
+
+Tymshare had several F3 system; I have the console (lights and switches) from
+one in my bedroom.  They came in two 19-inch rack; one for the wirewrapped
+CPU and 2 SMD disks, the other for the Kenedy tape drive and more SMD disks.
+Microcode loaded from 1/2-inch tape only.  A little bit slower than a KI.
+Carl can provide more details.
+	-Joe
+-- 
+INWAP.COM is Joe and Sally Smith, John and Chris O'Halloran (and our cats).
+See http://www.inwap.com/ for details, including info on "ReBoot" and PDP-10.
+
+
+Article 1164 of alt.sys.pdp10:
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!howland.reston.ans.net!ix.netcom.com!netcom.com!ddyer
+From: ddyer@netcom.com (Dave Dyer)
+Subject: Re: PDP10 clones (was: Compuserve and the DEC-10)
+Message-ID: <ddyerDFKrH9.DqK@netcom.com>
+Followup-To: alt.folklore.computers,alt.sys.pdp10
+Reply-To: ddyer@netcom.com
+Organization: NETCOM On-line Communication Services (408 261-4700 guest)
+X-Newsreader: TIN [version 1.2 PL1]
+References: <43v18a$a63@cliff.swec.com> <442j6n$gip@charm.magnus.acs.ohio-state.edu> <baum-2509951807060001@piem3.atg.apple.com>
+Date: Wed, 27 Sep 1995 17:34:20 GMT
+Lines: 30
+Sender: ddyer@netcom6.netcom.com
+Xref: shellx.best.com alt.folklore.computers:36517 alt.sys.pdp10:1164
+
+
+ : Foonley (now defunct) was a spinoff from the Superfoonley project at the
+ : Stanford AI Lab. They got ARPA funding to build a processor 10x faster
+ : than the KA-10. When the project folded, DEC picked up the design (and a
+ : designer or two) and built the KL-10. The KL-10 built upon the
+ : Superfoonley design, but there were differences (ECL vs. TTL, etc).
+ : Foonley built several models of their clones.
+
+The KL is more properly described as a compromised cripple of the Superfoonly
+design - the primary compromise being that the I and M boxes were merged to
+save money, at the cost of making the machine slower.
+
+The original Superfoonly design was TTL.  The one and only Superfoonly
+that was actually built (here at Information International) was
+redesigned using ECL 10K, by 3/4 of the original design team. The
+Foonly was more than twice as fast as a KL-10.
+
+Superfoonly required a console computer to boot it up, load it's
+microcode, and so on.  The original concept was to use a PDP-11, but
+the expedient thing turned out to be to use a KA-10 as the console
+computer (as an interim measure) and eventually to build a cheap
+pdp-10 out of 2901s and use it as the console computer.
+
+Foonly Inc. never made any more Superfoonlys, or delivered a real console
+computer to triple-i, but the design for the console computer became the
+core of Foonly Inc's business producing PDP-10 clones.
+-- 
+---
+My home page: ftp://ftp.netcom.com/pub/dd/ddyer/home.html
+or try http://www.triple-i.com/~ddyer/home.html
+
+
+Article 1166 of alt.sys.pdp10:
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Path: shellx.best.com!news1.best.com!news3.net99.net!news.cais.net!simtel!noc.netcom.net!netcom.com!alderson
+From: alderson@netcom.com (Richard M. Alderson III)
+Subject: Re: PDP10 clones (was: Compuserve and the DEC-10)
+In-Reply-To: baum@apple.com's message of Mon, 25 Sep 1995 18:07:06 -0700
+Message-ID: <aldersonDFL7yL.Bro@netcom.com>
+Reply-To: alderson@netcom.com
+Fcc: /u9/alderson/postings
+Organization: NETCOM On-line Communication Services (408 261-4700 guest)
+References: <43v18a$a63@cliff.swec.com> <442j6n$gip@charm.magnus.acs.ohio-state.edu>
+	<baum-2509951807060001@piem3.atg.apple.com>
+Date: Wed, 27 Sep 1995 23:30:21 GMT
+Lines: 38
+Sender: alderson@netcom18.netcom.com
+Xref: shellx.best.com alt.folklore.computers:36540 alt.sys.pdp10:1166
+
+In article <baum-2509951807060001@piem3.atg.apple.com> baum@apple.com
+(Allen J. Baum) writes:
+
+>There are/were 3 companies that make clones:
+
+>Systems Concepts was a company founded by some of the old hackers from the MIT
+>AI Labs. They've built paging boxes for the KA-10 (They may have been the
+>first, and its what was used for the Tenex OS), and a lot of other hardware
+>projects.
+
+Actually, Mike Levitt is a Berkeley grad.  He started the company, and then
+hired Stewart Nelson away from MIT.
+
+One of their major products was the SA-10, a device which allowed the
+connection of IBM bus-and-tag devices to the I/O bus on a -10; the original
+SC-30M at Stanford started out with no Massbus channel, only an SA channel.
+Fortunately, we had an extra string of single-density 3380 disks from a new
+4381 sitting in the room; Stu Grossman made them work with the Mars.
+
+The TENEX pager was created by Bolt, Beranek, and Newman of Cambridge.  I never
+heard that Mike and Stew had anything to do with it.
+
+>They are still making them, as far as I know.
+
+Maybe.
+
+>The most recent clone maker is XKL, of Seattle. XKL was founded by Len Bosack
+>of Cisco, after he left. I don't know whether they've delivered product yet,
+>but you can see pictures of it in their web pages (whose ptr I have
+>conveniently lost).
+
+They're a UWashington site; we're still working on our own.  I have other
+things of higher priority on my plate, like producing a new JSYS manual.
+-- 
+Rich Alderson   You know the sort of thing that you can find in any dictionary
+                of a strange language, and which so excites the amateur philo-
+                logists, itching to derive one tongue from another that they
+                know better: a word that is nearly the same in form and meaning
+                as the corresponding word in English, or Latin, or Hebrew, or
+                what not.
+                                                --J. R. R. Tolkien,
+alderson@netcom.com                               _The Notion Club Papers_
+
+
+Article 1167 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!enews.sgi.com!decwrl!ablecom!ns2.mainstreet.net!ftp.netgate.net!ng63.netgate.net!user
+From: rtm@netgate.net (Bob Martin N6MZV)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: PDP10 clones (was: Compuserve and the DEC-10)
+Date: Wed, 27 Sep 1995 20:12:04 -0700
+Organization: NetGate Communications
+Lines: 15
+Message-ID: <rtm-2709952012040001@ng63.netgate.net>
+References: <43v18a$a63@cliff.swec.com> <442j6n$gip@charm.magnus.acs.ohio-state.edu> <baum-2509951807060001@piem3.atg.apple.com> <448u44$d97@thales.nmia.com>
+NNTP-Posting-Host: ng63.netgate.net
+Xref: shellx.best.com alt.folklore.computers:36559 alt.sys.pdp10:1167
+
+I think the old ditty went something like this-
+
+A foonly is not a 360,
+A foonly is more like a 10.
+A foonly is faster than lightning,
+So I'll get a foonly, but when?
+
+...When one of the memory bay linear power supplies in our KA10
+at UCI crapped out, we replaced it with a Heathkit battery
+eliminator- which sat on top of the bay and worked quite well
+for a few weeks. Great machine.
+
+-- 
+
+Bob Martin N6MZV          * rtm@netgate.net
+
+
+Article 1168 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sdd.hp.com!usc!cs.utexas.edu!news.sprintlink.net!in1.uu.net!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: PDP10 clones (was: Compuserve and the DEC-10)
+Date: Wed, 27 Sep 1995 20:44:18 -0700
+Organization: Networks & Distributed Computing
+Lines: 31
+Message-ID: <Pine.NXT.3.92.950927203612.22855A-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <43v18a$a63@cliff.swec.com> <442j6n$gip@charm.magnus.acs.ohio-state.edu><baum-2509951807060001@piem3.atg.apple.com> <aldersonDFL7yL.Bro@netcom.com>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+NNTP-Posting-User: keil
+In-Reply-To: <aldersonDFL7yL.Bro@netcom.com>
+Xref: shellx.best.com alt.folklore.computers:36562 alt.sys.pdp10:1168
+
+On Wed, 27 Sep 1995, Richard M. Alderson III wrote:
+> One of their major products was the SA-10, a device which allowed the
+> connection of IBM bus-and-tag devices to the I/O bus on a -10; the original
+> SC-30M at Stanford started out with no Massbus channel, only an SA channel.
+> Fortunately, we had an extra string of single-density 3380 disks from a new
+> 4381 sitting in the room; Stu Grossman made them work with the Mars.
+
+Really?
+
+The prototype SC30M used the SA10 for tapes only; disks were controlled by
+an FA10.  I wrote the TOPS-20 FA10 code.  I'm surprised to hear that the
+Stanford SC30M was shipped without Massbus channels; as far I knew no
+SC30Ms were ever shipped using SA/FA channels.
+
+The main lossage with SA/FA channels is that the world had changed.  IBM
+peripherals were no longer price leaders.  Worse, it was not possible to
+poll SA/FA devices the way you could poll Massbus devices; if you changed
+the system's I/O configuration you had to build a new kernel.  This was a
+big loss for TOPS-20 sites.
+
+> The TENEX pager was created by Bolt, Beranek, and Newman of Cambridge.  I never
+> heard that Mike and Stew had anything to do with it.
+
+The pagers on the AI, ML, and DM KAs were not BBN pagers and I believe
+that Stew Nelson helped build them.
+
+-- Mark --
+
+DoD #0105, R90/6 pilot, FAX: (206) 685-4045  ICBM: N 47 39'35" W 122 18'39"
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+Article 1169 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!howland.reston.ans.net!news.sprintlink.net!in2.uu.net!info-server.bbn.com!clements
+From: clements@bbn.com (Bob Clements)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: PDP10 clones (was: Compuserve and the DEC-10)
+Date: 28 Sep 1995 14:00:49 GMT
+Organization: Bolt Beranek and Newman (BBN)
+Lines: 17
+Message-ID: <44e9qh$3gq@info-server.bbn.com>
+References: <442j6n$gip@charm.magnus.acs.ohio-state.edu> <baum-2509951807060001@piem3.atg.apple.com> <aldersonDFL7yL.Bro@netcom.com>
+NNTP-Posting-Host: lion.bbn.com
+Xref: shellx.best.com alt.folklore.computers:36591 alt.sys.pdp10:1169
+
+In article <aldersonDFL7yL.Bro@netcom.com> alderson@netcom.com writes:
+
+> The TENEX pager was created by Bolt, Beranek, and Newman of Cambridge.
+> I never heard that Mike and Stew had anything to do with it.
+
+Right.  The BBN Pager was a one-bay addition and a set of CPU mods
+to the KA-10.  It was designed and built by BBN-ers.
+
+The most common PDP-10 configuration on the ARPANET for some time was
+a KA-10, a BBN pager and a Systems Concepts SA-10 for the disks and
+tapes, running BBN-TENEX.
+
+>Rich Alderson   You know the sort of thing that you can find in any dictionary
+>alderson@netcom.com                               _The Notion Club Papers_
+
+
+Bob Clements, K1BC, clements@bbn.com,  +1 617 USE K1BC
+
+
+Article 1170 of alt.sys.pdp10:
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!howland.reston.ans.net!ix.netcom.com!netcom.com!ddyer
+From: ddyer@netcom.com (Dave Dyer)
+Subject: Re: Foonly F-1
+Message-ID: <ddyerDFMqD8.LrA@netcom.com>
+Followup-To: alt.folklore.computers,alt.sys.pdp10
+Reply-To: ddyer@netcom.com
+Organization: NETCOM On-line Communication Services (408 261-4700 guest)
+X-Newsreader: TIN [version 1.2 PL1]
+References: <TK.95Sep26115931@entropy.ai.mit.edu>
+Date: Thu, 28 Sep 1995 19:05:32 GMT
+Lines: 36
+Sender: ddyer@netcom6.netcom.com
+Xref: shellx.best.com alt.folklore.computers:36626 alt.sys.pdp10:1170
+
+
+    In article <TK.95Sep26115931@entropy.ai.mit.edu> you wrote:
+    : >>> "-" == William  <billw@puli.cisco.com> writes:
+
+    : -> The Foonly F1 was faster than a KL by virtue of being hardwired
+    : -> instead of microcoded, or so I heard.  One got a lot of use in some
+    : -> early hollywood computer graphics efforts.  I don't think there
+    : -> were very many.
+
+    : That's an understatement.  There was precisely one, wirewrapped
+    : kludge, done with low impedance (68 ohm I think?) twisted pair.  The
+    : wire insulation was so thin, to get the low impedance, that the wire
+    : cut through at the slightest provocation.  I don't think the machine
+    : was ever very robust, especially with cooldown-warmup cycles.  But the
+    : logic design was better than anything DEC put out.  I think the
+    : graphics in one of the early Disney efforts in the "I'm trapped in a
+    : video game" genre (TRON?) was done on this machine, which was located
+    : at Information International Inc.
+
+The F1 was microcoded, but the microcode was extremely "flat", 120
+bits wide if I remember correctly.  Most of the "everyday" instructions
+executed in one cycle (which was blazing fast at 100ns). Crucial parts,
+such as effective address calculation, were effectively hardwired, so
+the microcode just did a "hang until complete".
+
+There were a lot of twisted pair, and the logic pages were huge: four
+of them each about about .75m x 1.50m
+
+
+---
+My home page: ftp://ftp.netcom.com/pub/dd/ddyer/home.html
+or try http://www.triple-i.com/~ddyer/home.html
+-- 
+---
+My home page: ftp://ftp.netcom.com/pub/dd/ddyer/home.html
+or try http://www.triple-i.com/~ddyer/home.html
+
+
+Article 1171 of alt.sys.pdp10:
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Path: shellx.best.com!news1.best.com!sdd.hp.com!swrinde!howland.reston.ans.net!ix.netcom.com!netcom.com!ddyer
+From: ddyer@netcom.com (Dave Dyer)
+Subject: Re: PDP10 clones (was: Compuserve and the DEC-10)
+Message-ID: <ddyerDFMqLn.M73@netcom.com>
+Followup-To: alt.folklore.computers,alt.sys.pdp10
+Reply-To: ddyer@netcom.com
+Organization: NETCOM On-line Communication Services (408 261-4700 guest)
+X-Newsreader: TIN [version 1.2 PL1]
+References: <43v18a$a63@cliff.swec.com> <442j6n$gip@charm.magnus.acs.ohio-state.edu> <baum-2509951807060001@piem3.atg.apple.com> <AC8DE9E996684F3036@ehrice.his.com>
+Date: Thu, 28 Sep 1995 19:10:35 GMT
+Lines: 25
+Sender: ddyer@netcom6.netcom.com
+Xref: shellx.best.com alt.folklore.computers:36627 alt.sys.pdp10:1171
+
+    :   > There are/were 3 companies that make clones:
+    :   > 
+    :   > Foonley (now defunct) was a spinoff from the Superfoonley project at
+    : the
+    :   > Stanford AI Lab. They got ARPA funding to build a processor 10x faster
+    :   > than the KA-10. When the project folded, DEC picked up the design (and
+    : a
+    :   > designer or two) and built the KL-10. The KL-10 built upon the
+    :   > Superfoonley design, but there were differences (ECL vs. TTL, etc).
+    :   > Foonley built several models of their clones.
+    :   > ...
+
+    : Glad you brought this up.  Where did the name "Foonley" (or "Foonly," as
+    : I've seen it before) come from?  Was it someone's surname?  An in-joke that
+    : goes right over my head?
+
+The story Phil Pettit (designer of the M-box) told me was that it was
+the result of an editing accident, doing a global search and replace
+of FOO for something else.  Using TECO.
+
+
+-- 
+---
+My home page: ftp://ftp.netcom.com/pub/dd/ddyer/home.html
+or try http://www.triple-i.com/~ddyer/home.html
+
+
+Article 1173 of alt.sys.pdp10:
+Path: shellx.best.com!usenet
+From: Vance Socci <vsocci@vip.best.com>
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: TECO on non DEC platforms
+Date: Thu, 28 Sep 95 13:57:00 PDT
+Organization: Best Internet Communications
+Lines: 36
+Message-ID: <NEWTNews.812322139.11203.vsocci@LOCALNAME>
+References: <43kpm6$nku@darkstar.bos.locus.com> <DF5JK0.JAE@bonkers.taronga.com> <Pine.NXT.3.92.950919164934.10817A-100000@Tomobiki-Cho.CAC.Washington.EDU>  <446qld$oto@info-server.bbn.com>
+NNTP-Posting-Host: vsocci.vip.best.com
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Newsreader: NEWTNews & Chameleon -- TCP/IP for MS Windows from NetManage
+Xref: shellx.best.com alt.sys.pdp10:1173 alt.folklore.computers:36638
+
+
+In Article<446qld$oto@info-server.bbn.com>, <clements@bbn.com> write:
+> Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!cs.utexas.edu!news.sprintlink.net!in2.uu.net!info-server.bbn.com!clements
+> clements@bbn.com (Bob Clements) wrote:
+> 
+> And on another point, someone recently spouted a silly rumor that
+> a "JRST @." would hang a KA-10 and asked for an old-timer to refute it.
+> I (project engineer for the KA-10) refute it, of course.  I posted to
+> that effect a week or so ago, but posts from here weren't getting out
+> for a while.
+> 
+> 
+> 
+> /Rcc
+> 
+> Bob Clements, K1BC, clements@bbn.com, (w) +1 617 USE K1BC
+
+It might interest PDP-10 fans everywhere to note that while the
+microcode for the KL-10 was being debugged on the wirewrap #2
+machine, I discovered that JRST @. indeed hung the system . . .
+
+Judd Leonard had it fixed a couple of hours later. Then I hit him
+with XCT ., and that also hung the system: didn't check for PIs in
+progress. He fixed this a couple of hours later too.
+
+Its just hard to keep a good bug down. I have a theory that every
+architecture has a canonical set of associated bugs. If someone could
+manage to document these things, then the next machine designed
+in that architecture could be debugged that much more quickly. Somehow
+this never seems to happen  though . . .
+
+/evs
+
+
+/evs
+
+
+
+Article 1174 of alt.sys.pdp10:
+Path: shellx.best.com!usenet
+From: Vance Socci <vsocci@vip.best.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Compuserve and the DECsystem-10
+Date: Thu, 28 Sep 95 14:03:38 PDT
+Organization: Best Internet Communications
+Lines: 38
+Message-ID: <NEWTNews.812322419.12117.vsocci@LOCALNAME>
+References: <448ln3$33p@news.onramp.net>
+NNTP-Posting-Host: vsocci.vip.best.com
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Newsreader: NEWTNews & Chameleon -- TCP/IP for MS Windows from NetManage
+
+
+In Article<448ln3$33p@news.onramp.net>, <eclectic@onramp.net> write:
+> Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!howland.reston.ans.net!tank.news.pipex.net!pipex!in2.uu.net!news.sprintlink.net!news.onramp.net!onramp.net!eclectic
+> From: eclectic@onramp.net (ECC User)
+> Newsgroups: alt.sys.pdp10
+> Subject: Re: Compuserve and the DECsystem-10
+> Date: 26 Sep 1995 10:46:59 GMT
+> Organization: Eclectic Computing Concepts
+> Lines: 41
+> Distribution: world
+> Message-ID: <448ln3$33p@news.onramp.net>
+> Reply-To: eclectic@onramp.net
+> NNTP-Posting-Host: stemmons09.onramp.net
+> 
+> In message <BILLW.95Sep25220358@puli.cisco.com>, billw@puli.cisco.com (William 
+> ) writes:
+> 
+> >I don't know if there was ever an F3.  The F4 was a faster F2, with
+> >ethernet and stuff.  I spent some time adding TCP to TENEX for use on
+> >F2s and F4s.
+> >
+> >The F5 was supposed to be a tiny version of the F4 (as in multiple F5s
+> >would fit in a 19" rack, or a single F5 would fit by your desk.)  I don't
+> >think the F5 ever made it to production, but it was supposed to show up
+> >in the early to mid 1980s.
+> >
+> >BillW
+> 
+
+The F3 was a modifed F2 made for Tymshare, Inc. circa 1979. It had special
+microcode to allow it to interface to Tymnet, and microcode to make it
+look approximately like a KL-10. (I finished off and debugged the paging
+and trap microcode, and implemented the missing instructions which the
+F2 lacked like ADJBP and DMUL).
+
+/evs
+
+
+
+
+Article 1177 of alt.sys.pdp10:
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Path: shellx.best.com!news1.best.com!sdd.hp.com!swrinde!howland.reston.ans.net!ix.netcom.com!netcom.com!alderson
+From: alderson@netcom.com (Richard M. Alderson III)
+Subject: Re: PDP10 clones (was: Compuserve and the DEC-10)
+In-Reply-To: Mark Crispin's message of Wed, 27 Sep 1995 20:44:18 -0700
+Message-ID: <aldersonDFonJM.MBB@netcom.com>
+Reply-To: alderson@netcom.com
+Fcc: /u9/alderson/postings
+Organization: NETCOM On-line Communication Services (408 261-4700 guest)
+References: <43v18a$a63@cliff.swec.com>
+	<442j6n$gip@charm.magnus.acs.ohio-state.edu><baum-2509951807060001@piem3.atg.apple.com>
+	<aldersonDFL7yL.Bro@netcom.com>
+	<Pine.NXT.3.92.950927203612.22855A-100000@Tomobiki-Cho.CAC.Washington.EDU>
+Date: Fri, 29 Sep 1995 19:59:45 GMT
+Lines: 41
+Sender: alderson@netcom20.netcom.com
+Xref: shellx.best.com alt.folklore.computers:36772 alt.sys.pdp10:1177
+
+In article
+<Pine.NXT.3.92.950927203612.22855A-100000@Tomobiki-Cho.CAC.Washington.EDU> Mark
+Crispin <mrc@CAC.Washington.EDU> writes:
+
+>On Wed, 27 Sep 1995, Richard M. Alderson III wrote:
+
+>>the original SC-30M at Stanford started out with no Massbus channel, only an
+>>SA channel.  Fortunately, we had an extra string of single-density 3380 disks
+>>from a new 4381 sitting in the room; Stu Grossman made them work with the
+>>Mars.
+
+>Really?
+
+Really.
+
+>The prototype SC30M used the SA10 for tapes only; disks were controlled by an
+>FA10.  I wrote the TOPS-20 FA10 code.  I'm surprised to hear that the Stanford
+>SC30M was shipped without Massbus channels; as far I knew no SC30Ms were ever
+>shipped using SA/FA channels.
+
+What Fred delivered to us the night before Hallowe'en, 1985, was the original
+prototype.  The MI channel was not delivered for 8 months; until then, we had
+to use the 3380s.  That's why Stu had to do the work he did.
+
+Mike certainly advertised the availability of SA-attached tapes for his boxes
+at the one DEXPO I know they attended (i. e., I ran into them there).  That was
+Anaheim, 1986.
+
+>>The TENEX pager was created by Bolt, Beranek, and Newman of Cambridge.  I
+>>never heard that Mike and Stew had anything to do with it.
+
+>The pagers on the AI, ML, and DM KAs were not BBN pagers and I believe that
+>Stew Nelson helped build them.
+
+Ah, there's the confusion:  The *ITS* pager =/= the *BBN TENEX* pager.  Now
+that's not surprising.
+-- 
+Rich Alderson   You know the sort of thing that you can find in any dictionary
+                of a strange language, and which so excites the amateur philo-
+                logists, itching to derive one tongue from another that they
+                know better: a word that is nearly the same in form and meaning
+                as the corresponding word in English, or Latin, or Hebrew, or
+                what not.
+                                                --J. R. R. Tolkien,
+alderson@netcom.com                               _The Notion Club Papers_
+
+
+Article 1183 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!howland.reston.ans.net!news-e1a.megaweb.com!newstf01.news.aol.com!newsbf02.news.aol.com!not-for-mail
+From: jmfbah@aol.com (JMFBAH)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: PDP10 clones (was: Compuserve and the DEC-10)
+Date: 30 Sep 1995 10:26:38 -0400
+Organization: America Online, Inc. (1-800-827-6364)
+Lines: 6
+Sender: root@newsbf02.news.aol.com
+Message-ID: <44jk2u$hlj@newsbf02.news.aol.com>
+References: <aldersonDFonJM.MBB@netcom.com>
+Reply-To: jmfbah@aol.com (JMFBAH)
+NNTP-Posting-Host: newsbf02.mail.aol.com
+Xref: shellx.best.com alt.folklore.computers:36849 alt.sys.pdp10:1183
+
+I just ran across a letter written to Tony Wachs (TW) in 1985 from a Peter
+Samson, Director of Marketing, Systems Concepts.  In it is a document
+titled "Fifty Questons and Answers about the Systems Concepts SC-30M" and
+a chart titled "36-bit Product Evolution".  Are these worthy of archive?
+
+/BAH
+
+
+Article 1189 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!news3.net99.net!news.cais.net!news.sprintlink.net!howland.reston.ans.net!newsjunkie.ans.net!newstf01.news.aol.com!newsbf02.news.aol.com!not-for-mail
+From: jmfbah@aol.com (JMFBAH)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: Divide-bug war story
+Date: 1 Oct 1995 09:22:59 -0400
+Organization: America Online, Inc. (1-800-827-6364)
+Lines: 12
+Sender: root@newsbf02.news.aol.com
+Message-ID: <44m4nj$av5@newsbf02.news.aol.com>
+References: <Pine.NXT.3.92.950930150846.26544A-100000@Tomobiki-Cho.CAC.Wash
+Reply-To: jmfbah@aol.com (JMFBAH)
+NNTP-Posting-Host: newsbf02.mail.aol.com
+Xref: shellx.best.com alt.sys.pdp10:1189 alt.folklore.computers:36956
+
+>On Sep 30, 1995, Mark Crispin wrote:
+>
+>I thought this was in dividing by SETZ (negative zero). 
+
+
+Yup. That's right. I'm beginning to remember more.  Jim's curiosity got
+the better of him and he decided to see what the KI did.  Those results
+made him wonder what a KA did. After he tried it, I think he said that the
+KA "was the most right" of them all.
+
+/BAH
+ 
+
+
+Article 1199 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!news3.net99.net!news.cais.net!newsfeed.internetmci.com!tank.news.pipex.net!pipex!btnet!news.insnet.net!news.netkonect.net!news.sprintlink.net!in1.uu.net!noc.near.net!das-news2.harvard.edu!oitnews.harvard.edu!cmcl2!CS.Arizona.EDU!pimacc.pima.edu!vcooper
+From: VCooper@PimaCC.Pima.EDU (Vanya J. Cooper)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: PDP10 clones (was: Compuserve and the DEC-10)
+Message-ID: <1995Oct3.105122.12070@pimacc.pima.edu>
+Date: 3 Oct 95 10:51:22 -0700
+References: <43v18a$a63@cliff.swec.com>  <ddyerDFMqLn.M73@netcom.com>
+Followup-To: alt.folklore.computers,alt.sys.pdp10
+Lines: 20
+Xref: shellx.best.com alt.folklore.computers:37245 alt.sys.pdp10:1199
+
+In article <ddyerDFMqLn.M73@netcom.com>, ddyer@netcom.com (Dave Dyer) writes:
+> 
+>     : Glad you brought this up.  Where did the name "Foonley" (or "Foonly," as
+>     : I've seen it before) come from?  Was it someone's surname?  An in-joke that
+>     : goes right over my head?
+> 
+> The story Phil Pettit (designer of the M-box) told me was that it was
+> the result of an editing accident, doing a global search and replace
+> of FOO for something else.  Using TECO.
+
+I heard somewhere that Foonley was the name signed on all the hardware prints
+for one of the CPUs, possibly the KA-10.  Is this true?
+
+
+..Vanya
+
+Vanya Jonathan Cooper (VJC)             Pima Community College
+ vcooper@pimacc.pima.edu                District Central Information Technology
+ http://pimacc.pima.edu/~vcooper/       4905A East Broadway Blvd
+ Voice: +1 520 748-4809 FAX:4677        Tucson, Arizona 85709-1280 USA
+
+
+Article 1206 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sdd.hp.com!swrinde!cs.utexas.edu!news.sprintlink.net!apollo.albany.net!news1.cris.com!news
+From: Dick Maliska <Rmaliska@cris.com>
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: PDP10 clones (was: Compuserve and the DEC-10)
+Date: 6 Oct 1995 13:24:15 GMT
+Organization: Countryside Software Services
+Lines: 21
+Message-ID: <453alv$b60@spectator.cris.com>
+References: <43v18a$a63@cliff.swec.com> <ddyerDFMqLn.M73@netcom.com>	<1995Oct3.105122.12070@pimacc.pima.edu>	<mhk-0510950055480001@mhk.tiac.net> <MACRAKIS.95Oct5120538@app3.osf.org>
+NNTP-Posting-Host: crc1-fddi.cris.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 1.2 (Windows; U; 16bit)
+Xref: shellx.best.com alt.folklore.computers:37526 alt.sys.pdp10:1206
+
+Hmmm, after watching many of the plots actually being done (for the KL10), 
+I recall the signature as being "S. Foonly".  However, the mind fades 
+after so many years.  This was sort of left over after the conversion of 
+the drawing package done by RDH, et al, at Stanford.  Larry Rogers and I 
+did the initial command line conversion for that package to operate with 
+the Standard Vt05 Keyboard since there were no "bucky" or "double bucky" 
+keys to use.  Dave Gross did the actual drawing driver conversion for a 
+large screen display and finally for the GT40 (or some variant)
+
+-- 
+
+                                                                Regards,
+  Dick Maliska (Rmaliska@cris.com)
+                                            
+    COUNTRYSIDE SOFTWARE SERVICES. (508) 692-3124
+      Hardware/Software Support, Networking and Application Development.
+        (Snail Mail: 183 Concord Road; Westford, MA 01886)
+
+           "Rainbows are just to look at, not to really understand."
+
+
+
+
+Article 1207 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!news3.net99.net!news.cais.net!news.his.com!user
+From: ehrice@his.com (Edward Rice)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: PDP10 clones (was: Compuserve and the DEC-10)
+Date: Fri, 06 Oct 1995 14:04:08 -0500
+Organization: New Dominion Software
+Lines: 21
+Distribution: world
+Message-ID: <AC9AE7D896684D032F@ehrice.his.com>
+References: <43v18a$a63@cliff.swec.com> <ddyerDFMqLn.M73@netcom.com> <MACRAKIS.95Oct5120538@app3.osf.org>
+NNTP-Posting-Host: ehrice.his.com
+Xref: shellx.best.com alt.folklore.computers:37551 alt.sys.pdp10:1207
+
+
+
+In article <MACRAKIS.95Oct5120538@app3.osf.org>,
+macrakis@osf.org (Stavros Macrakis) wrote:
+
+  > Re the origin of "J. Foonly", wasn't JFN an opcode or a signal name or
+  > something on the 10?  Could JFN L or JFN L, or JFN LI be the origin of
+  > J. Foonly?
+
+When I asked about this here recently, I received e-mail from
+rwa@cs.athabascau.ca (Ross Alexander) with the following explanation:
+
+     It comes from the error diagnostic spat out by someone's pdp10
+     assembler; if you said "foo" to it, it would say "foo: nli"
+     (not legal instruction).  This became a sort of mantra.
+
+As part of a small group that makes jokes about "inpitUL" (pronounced
+"in-pi-TUHL" and which stands for "is not presently in the User List"), I
+find this entirely plausible.
+
+
+
+
+Article 1209 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sdd.hp.com!swrinde!tank.news.pipex.net!pipex!oleane!simtel!news.sprintlink.net!in1.uu.net!nwnews.wa.com!news1.halcyon.com!coho.halcyon.com!fbeast
+From: fbeast@coho.halcyon.com (R. Terry McCutchen)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: PDP10 clones (was: Compuserve and the DEC-10)
+Followup-To: alt.folklore.computers,alt.sys.pdp10
+Date: 7 Oct 1995 08:10:17 GMT
+Organization: Northwest Nexus, Inc. - Professional Internet Services
+Lines: 9
+Message-ID: <455cl9$aro@news1.halcyon.com>
+References: <43v18a$a63@cliff.swec.com>  <ddyerDFMqLn.M73@netcom.com> <1995Oct3.105122.12070@pimacc.pima.edu> <mhk-0510950055480001@mhk.tiac.net> <009977CB.1DB48DA0@sacto.mp.usbr.gov>
+NNTP-Posting-Host: coho.halcyon.com
+X-Newsreader: TIN [version 1.2 PL2]
+Xref: shellx.best.com alt.folklore.computers:37606 alt.sys.pdp10:1209
+
+I don't know the whole story {but I was part of the KL team for a while}. 
+I do recall that FOONEY (or more precisely supper fooney) was the name of 
+either the paging or cache mechanism (can't spell the "a" word).
+
+JFN was Job File Number (the thing used to handle files {and other 
+items}) When you opened a file you did a GETJFN ac,,blk to get a small 
+number to use to reference that file in the future.
+
+					/s/ Terry
+
+

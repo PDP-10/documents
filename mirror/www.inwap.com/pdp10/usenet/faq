@@ -1,0 +1,97 @@
+Article: 17863 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.tele.dk!small.news.tele.dk!130.133.1.3!fu-berlin.de!uni-berlin.de!junk.nocrew.ORG!not-for-mail
+From: Lars Brinkhoff <lars.spam@nocrew.org>
+Newsgroups: alt.sys.pdp10
+Subject: Re: FAQ questions?
+Date: 27 Sep 2002 08:10:21 +0200
+Organization: nocrew
+Lines: 31
+Sender: lars@junk.nocrew.org
+Message-ID: <853crw0xpu.fsf@junk.nocrew.org>
+References: <05c7pugvjsd94ujbnfr1a9b19vfvda54mv@4ax.com>
+NNTP-Posting-Host: junk.nocrew.org (213.242.147.30)
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Trace: fu-berlin.de 1033107314 10665769 213.242.147.30 (16 [140306])
+X-Orig-Path: junk.nocrew.org!not-for-mail
+User-Agent: Gnus/5.0808 (Gnus v5.8.8) Emacs/20.7
+Xref: dfw-artgen alt.sys.pdp10:17863
+
+My suggested answers.  I'm not sure if everything's correct.
+
+Billy Joe <Something@you.dont.know> writes:
+> What is a PDP-10?
+
+The PDP-10 architecture is a family of 36-bit word-addressed machines.
+They were manufactured primarily by DEC from 1964 to 1988, but the
+line was cancelled in 1983 in favour of the VAX family.  Clones have
+been made by Xerox PARC, Foonly, Tymshare, Systems Concepts, XKL.
+Famous software running on PDP-10s include: EMACS (the first visual
+text editor), ITS, TENEX, TECO, SPELL (the first spell checker),
+ADVENT (the first? text adventure game), Zork, Dungeon?, and MacLisp.
+
+A memory word is 36 bits long, which is also the length of the
+general-purpose registers.  All user instructions are 36 bits and have
+9 bits to specify an operation, 4 bits to specify a register, 1 bit to
+indicate indirect addressing, 4 bits to specify an index register, and
+18 bits to specify an address, offset, or immediate value.  The first
+version of the architecture was limited to a virtual address space of
+256K words; a later version extended this to a maximum of 1G words.
+
+> What operating systems ran on it?
+
+TOPS-10 and TOPS-20 by DEC.  TENEX by BBN.  ITS by MIT hackers.  WAITS
+by Stanford hackers, developed from an early version of TOPS-10.
+FOONEX, Foonly's version of TENEX.  TYMCOM-X, Tymshare's version of
+TOPS-10 or TOPS-20.
+
+-- 
+Lars Brinkhoff          http://lars.nocrew.org/     Linux, GCC, PDP-10,
+Brinkhoff Consulting    http://www.brinkhoff.se/    HTTP programming
+
+
+Article: 17872 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newsfeed.cwix.com!logbridge.uoregon.edu!news.u.washington.edu!140.142.17.34.MISMATCH!news.u.washington.edu!shiva0.cac.washington.edu!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: FAQ questions?
+Date: Fri, 27 Sep 2002 07:33:37 -0700
+Organization: Networks and Distributed Computing
+Lines: 24
+Message-ID: <Pine.LNX.4.50.0209270720410.9877-100000@shiva0.cac.washington.edu>
+References: <05c7pugvjsd94ujbnfr1a9b19vfvda54mv@4ax.com> <853crw0xpu.fsf@junk.nocrew.org>
+NNTP-Posting-Host: shiva0.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 1033137219 14054 (None) 140.142.17.35
+X-Complaints-To: help@cac.washington.edu
+In-Reply-To: <853crw0xpu.fsf@junk.nocrew.org>
+Content-Length: 314159 (believe this at your own risk)
+Xref: dfw-artgen alt.sys.pdp10:17872
+
+On Thu, 27 Sep 2002, Lars Brinkhoff wrote:
+> Famous software running on PDP-10s include: EMACS (the first visual
+> text editor), ITS, TENEX, TECO, SPELL (the first spell checker),
+> ADVENT (the first? text adventure game), Zork, Dungeon?, and MacLisp.
+
+I don't think that you need the "?" after "first".
+
+I don't know what "Dungeon" was as distinct from Zork, but there were
+certainly other dungeon-type games such as Haunt.
+
+Other notable software off the top of my head: SUDS (Stanford University
+Drawing System -- considered by some people to be the finest circuit
+drawing software of all time), MACSYMA, MacHack (Richard Greenblatt's
+chess-playing program, one of the first), TECH2 (another early chess
+program), the first IMAP server, the first KERMIT program (the "K" in
+KERMIT stood for KL10).
+
+The interest in PDP-10s goes beyond mere "retro-computing"; SUDS is still
+in production use with no obvious replacement.
+
+-- Mark --
+
+http://staff.washington.edu/mrc
+Science does not emerge from voting, party politics, or public debate.
+
+

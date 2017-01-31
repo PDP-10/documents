@@ -1,0 +1,57 @@
+From root@bony.umtec.com Tue Nov 28 11:39:14 PST 2000
+Article: 2031 of alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!feeder.qis.net!news.maxwell.syr.edu!newsfeed.slurp.net!bony.umtec.com!root
+Newsgroups: alt.sys.pdp10
+From: Daniel Seagraves <root@bony.umtec.com>
+Subject: Re: I have a KS10 now! ^_^
+In-Reply-To: <3A22BB9B.202BF87F@bartek.net>
+Message-ID: <Pine.LNX.4.10.10011271551170.28766-100000@bony.umtec.com>
+References: <Pine.LNX.4.10.10011261648260.27698-100000@bony.umtec.com> <8vtt5l$gd1$6@bob.news.rcn.net> <3A2292EF.F4884A20@bartek.net> <Pine.LNX.4.10.10011271143450.28766-100000@bony.umtec.com> <3A22A86A.D64FC5CA@bartek.net> <Pine.LNX.4.10.10011271250380.28766-100000@bony.umtec.com> <3A22BB9B.202BF87F@bartek.net>
+Approved: Why bother?
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+Lines: 36
+Date: Mon, 27 Nov 2000 15:56:31 -0600
+NNTP-Posting-Host: 198.199.189.6
+X-Trace: newsfeed.slurp.net 975361281 198.199.189.6 (Mon, 27 Nov 2000 15:41:21 CDT)
+NNTP-Posting-Date: Mon, 27 Nov 2000 15:41:21 CDT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2031
+
+On Mon, 27 Nov 2000, Arthur Krewat wrote:
+
+> Is there a module # on the face of the card (the part facing you as you
+> look at the card in it's slot)? I have to check the MASSBUS adapters in
+> my VAX (RH11 too?) and see what they are ...
+
+Probably.  There are several cards that make up an RH11.  By the way, the
+PDP-11 version is called RH11-AB, the PDP-10 version is RH11-C for the KS,
+and RH10 for the DECsystem-10s, and RH20 for the DECSYSTEM-20s.
+
+> Not that any of this matters... 
+
+No - all I'm missing is an M7294-YA, and I can probably get one.
+
+> By the way, I have plenty of MASSBUS stuff for VAX, including parts for RM80's
+> and even a board set from an RM05. I may even have the microfiche's for these,
+> although they are spread around the floor right now in my storage place - I
+> knocked over the box ... I also have MASSBUS terminators and cables. 
+
+I have terminators and cables now, I'm just missing the disk drive. :P
+
+> Would you consider putting this thing on the Internet? 
+
+That's the idea - It just will go standalone every so often so I can shoot
+test code at it: The specific reason I have the machine is to use as a
+refrence point to code e10 by.
+
+"Confuse, annoy, and DEE-STROY!" -- Jet Wolf | "Nothing Happens." -- ADVENT
+"You'd be surprised what you can live through..." -- Anonymous
+"...A man can pass his family and his name down through his sons, but it's
+his honour that gets passed through his daughters.  He can see the best
+and worst of life in his girls.  A daughter is something far too precious,
+and he'll do anything to protect her."
+	-- Reichsfuehrer Siegfried Koenig, _Matrose_Mond_, David Oliver
+
+
+
+

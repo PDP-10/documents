@@ -1,0 +1,36 @@
+Article 786 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc03.blue.aol.com!newsfeed.skycache.com!Cidera!xfer10.netnews.com!xfer11.netnews.com!netnews.com!newsfeed.wirehub.nl!sienna.impulse.net!azure.impulse.net!not-for-mail
+Message-ID: <39A20132.5E72A225@cmc.com>
+Date: Mon, 21 Aug 2000 21:27:30 -0700
+From: Lars Poulsen <lars@cmc.com>
+X-Mailer: Mozilla 4.73 [en] (Win98; I)
+X-Accept-Language: da,en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+To: Joe Morris <jcmorris@jmorris-pc.MITRE.ORG>
+Subject: Re: Assembly language formatting on IBM systems
+References: <wwn1irmhak.fsf@atlas.cfht.hawaii.edu> <Pine.NXT.4.30.0008052218510.23342-100000@Tomobiki-Cho.CAC.Washington.EDU> <wwhf8xnbks.fsf_-_@atlas.cfht.hawaii.edu> <5C570A2368375AAE.9A23F03FF79EEAEB.24938222DEF7D8B8@lp.airnews.net> <Pine.NXT.4.30.0008062323060.24368-100000@Tomobiki-Cho.CAC.Washington.EDU> <8mmbgg$o4p$1@top.mitre.org> <Pine.NXT.4.30.0008071751070.24900-100000@Tomobiki-Cho.CAC.Washington.EDU> <399D6284.9F8205F3@thinkage.ca> <Pine.NXT.4.30.0008181058240.12666-100000@Tomobiki-Cho.CAC.Washi
+	 <399ECBA8.C550BA4A@ev1.net> <8npiu1$sm8$1@top.mitre.org>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 14
+NNTP-Posting-Host: 207.154.90.88
+X-Trace: azure.impulse.net 966918427 195 207.154.90.88
+Xref: nntp1.ba.best.com alt.sys.pdp10:786 alt.folklore.computers:4358
+
+Joe Morris wrote:
+> ...which brings to mind the famous (and real!) line from the UNIX
+> sources:
+>          * You are not expected to understand this.
+>          */
+
+When quoting this, you should include the following reference:
+       http://cm.bell-labs.com/cm/cs/who/dmr/odd.html
+That is a pointer to an article by Dennis Ritchie explaining
+the context.
+
+-- 
+/ Lars Poulsen    -    http://www.cmc.com/lars     -  lars@cmc.com
+  125 South Ontare Road, Santa Barbara, CA 93105 - +1-805-569-5277
+
+

@@ -1,0 +1,938 @@
+Article 5532 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!panix!news.panix.com!not-for-mail
+From: Rich Alderson <alderson+news@panix.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Zork [was: Algol-10]
+Date: 05 Jul 2001 21:31:14 -0400
+Organization: Systems Administration, XKL LLC, Redmond WA 98052
+Lines: 130
+Sender: alderson+news@panix6.panix.com
+Message-ID: <mddpubec07x.fsf@panix6.panix.com>
+References: <3B422380.58B395E7@bartek.dontspamme.net> <tk4lhug0osg968@corp.supernews.com> <9htnjk$b3o$1@slb3.atl.mindspring.net> <7xd77hpm6d.fsf@ruckus.brouhaha.com> <mddbsn133mp.fsf@panix3.panix.com> <uofr00wpc.fsf_-_@spacy.Boston.MA.US> <3B44932A.3BCEB7FD@nospam.nospam>
+NNTP-Posting-Host: panix6.panix.com
+X-Trace: news.panix.com 994383074 17262 166.84.0.231 (6 Jul 2001 01:31:14 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: 6 Jul 2001 01:31:14 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.7
+Xref: nntp1.ba.best.com alt.sys.pdp10:5532
+
+Per Danielsson <pd@nospam.nospam> writes:
+
+> Christopher Stacy wrote:
+
+>> Yes, Zork was written in MDL. By the time that people were interested in it,
+>> the source code was being carefully guarded.
+
+> You don't need the sources to play the game. ZORK.EXE for TOPS-20 might be
+> around somewhere (it's on one of my 9-tracks somewhere) and if you prefer
+> Tops-10, I have a "PA2020" that is enough to get ZORK running. It emulates
+> all the necessary JSYSes used by ZORK of around 1980.
+
+Note that ZORK.EXE by itself is *not* Zork.  It's a small program that GET%'s
+MDL104.EXE, GTJFN%'s MADADV.SAV, and starts MDL.  So you have to have those
+three files, along with AGC104.EXE (the MDL garbage collector), all in a
+directory defined as MDL:, for it to work.
+
+ZORK.MAC follows:
+
+	TITLE ZORK BOOTSTRAP
+	SEARCH MONSYM,MACSYM
+	.REQUIRE SYS:MACREL
+	SALL
+
+Z=0			;PASS JFN IN HERE
+T1=1
+T2=2
+T3=3
+T4=4
+P=17
+
+PSTRT==^D<9*3600>		;0900
+PEND==^D<18*3600>		;1800
+
+START:	RESET
+	MOVE P,[IOWD 10,PDL]
+	MOVEI T1,.FHSLF
+	RPCAP
+	TXNE T3,SC%WHL
+	 JRST OKGO		;DONT HASSLE WHEELS
+	SETO T2,
+	SETZ T4,
+	ODCNV			;GET CURRET DATE/TIME
+	HRLZ T1,T2		;GET MONTH
+	HLR T1,T3		;GET DAY
+	AOBJN T1,.+1		;INCR BOTH HALVES
+	HRRZS T4		;TIME SINCE MIDNITE
+	HRRZS T3		;DAY OF WEEK
+	CAIE T3,5		;SATURDAY
+	 CAIN T3,6		; AND SUNDAYS
+	  JRST OKGO		; ARE OK
+	MOVEI T3,0		;INIT LOOP
+HLUP:	SKIPN HTBL(T3)		;ENTRY?
+	 JRST CKTIM		;DONE - CHECK TIME
+	CAMN T1,HTBL(T3)	;HOLIDAY MATCH?
+	 JRST OKGO		;YES - OK
+	AOJA T3,HLUP		;NO - TRY NEXT
+
+CKTIM:	CAIL T4,PSTRT		;PRIME TIME START
+	 CAIL T4,PEND		; OR PRIME END
+	  JRST OKGO		; OFF PRIME - OK
+	TMSG <
+THE DUNGEON IS AVAILABLE FOR EXPLORING MON THRU FRI:
+	00:00 - >
+	MOVEI T4,PSTRT		;START OF PRIME TIME
+	CALL TIMOUT
+	TMSG <
+	>
+	MOVEI T4,PEND		;END OF PRIME TIME
+	CALL TIMOUT
+	TMSG < - 24:00
+
+IT IS ALSO OPENED WEEKENDS AND HOLIDAYS.
+
+>
+	JRST 	OKGO
+	HALTF
+	JRST .-1
+
+TIMOUT:	MOVEI T1,.PRIOU
+	IDIVI T4,^D3600		;GET HOURS
+	MOVE T2,T4		;SET TO OUTPUT
+	MOVX T3,NO%LFL!NO%ZRO+^D10+2B17
+	NOUT			;DUMP HOURS
+	 JSERR
+	TMSG <:>
+	MOVEI T1,.PRIOU
+	IDIVI 5,^D60		;GET MINUTES
+	MOVE T2,5
+	NOUT			;DUMP IT
+	 JSERR
+	RET
+
+OKGO:	MOVX T1,GJ%OLD!GJ%SHT
+	HRROI T2,[ASCIZ /MDL:MADADV.SAVE/]
+	GTJFN		;GET HANDLE ON GAME
+	 JSHLT
+	MOVE Z,T1	;SAVE JFN IN ZERO
+	MOVX T2,44B5+OF%RD!OF%EX
+	OPENF		;OPEN FILE
+	 JSHLT
+	MOVX T1,GJ%OLD!GJ%SHT
+	HRROI T2,[ASCIZ /MDL:MDL104.EXE/]
+	GTJFN		;GET JFN ON MUDDLE
+	 JSHLT
+	HRLI T1,.FHSLF		;FOR GET JSYS
+	MOVE 16,[ACPRG,,5]
+	BLT 16,10		;FILL ACS
+	JRST 5			;CONTINUE IN ACS
+
+ACPRG:	GET
+	MOVEI T1,.FHSLF		;GET E/V FOR SELF
+	GEVEC
+	JRST 1(T2)		;START AT OFFSET 1
+
+PDL:	BLOCK 10
+
+	RADIX 10
+
+HTBL:	1,,1			;NEW YEARS
+	12,,25			;CHRISTMAS
+	0			;END OF TABLE
+
+	RADIX 8
+
+	END <1,,START>
+
+-- 
+Rich Alderson                                          alderson+news@panix.com
+  "You get what anybody gets.  You get a lifetime."  --Death, of the Endless
+
+
+Article 5563 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news2.best.com!news.maxwell.syr.edu!newsfeed.direct.ca!look.ca!pln-w!spln!dex!extra.newsguy.com!newsp.newsguy.com!enews2
+From: Alan Greig <a.greig@virgin.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Zork [was: Algol-10]
+Date: Mon, 09 Jul 2001 14:35:14 +0100
+Organization: http://extra.newsguy.com
+Lines: 149
+Message-ID: <q6bjktcahatofacm6bequfp8frv7j43d54@4ax.com>
+References: <3B422380.58B395E7@bartek.dontspamme.net> <tk4lhug0osg968@corp.supernews.com> <9htnjk$b3o$1@slb3.atl.mindspring.net> <7xd77hpm6d.fsf@ruckus.brouhaha.com> <mddbsn133mp.fsf@panix3.panix.com> <uofr00wpc.fsf_-_@spacy.Boston.MA.US> <3B44932A.3BCEB7FD@nospam.nospam> <mddpubec07x.fsf@panix6.panix.com>
+NNTP-Posting-Host: p-559.newsdawg.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Newsreader: Forte Agent 1.8/32.548
+Xref: nntp1.ba.best.com alt.sys.pdp10:5563
+
+On 05 Jul 2001 21:31:14 -0400, Rich Alderson <alderson+news@panix.com>
+wrote:
+
+>Per Danielsson <pd@nospam.nospam> writes:
+>
+>> Christopher Stacy wrote:
+>
+>>> Yes, Zork was written in MDL. By the time that people were interested in it,
+>>> the source code was being carefully guarded.
+>
+>> You don't need the sources to play the game. ZORK.EXE for TOPS-20 might be
+>> around somewhere (it's on one of my 9-tracks somewhere) and if you prefer
+>> Tops-10, I have a "PA2020" that is enough to get ZORK running. It emulates
+>> all the necessary JSYSes used by ZORK of around 1980.
+>
+>Note that ZORK.EXE by itself is *not* Zork.  It's a small program that GET%'s
+>MDL104.EXE, GTJFN%'s MADADV.SAV, and starts MDL.  So you have to have those
+>three files, along with AGC104.EXE (the MDL garbage collector), all in a
+>directory defined as MDL:, for it to work.
+>
+>ZORK.MAC follows:
+>
+>	TITLE ZORK BOOTSTRAP
+>	SEARCH MONSYM,MACSYM
+>	.REQUIRE SYS:MACREL
+>	SALL
+
+The more I look at this code the more familiar it looks. Do you know
+who wrote this? It looks very similar to code I wrote early 80s to
+front-end  ZORK at the then Dundee Tech and probably posted to the
+tops-20 mail list.. Anyone know if the archives of this list are
+available online anywhere?
+
+Also around 1982 I recalling hacking TOPS-10 Essex University Mud (Roy
+Trubshaw, Richard Bartle) to run under TOPS-20 by using a pmap'd high
+segment to emulate a TOPS-10 shared writeable high segment. A few
+other fixes to bypass the lack of PAGE UUO in PA1050 were needed as
+well. The source code for the MUD interpreter was writen in BCPL and
+confusingly the Dungeon language was also called Muddle but was not
+the same as Zork's MDL. If anyone has the source code for this classic
+mult-user dungeon I'd like to hear. I know a number of sites had it at
+one time. 
+
+
+>Z=0			;PASS JFN IN HERE
+>T1=1
+>T2=2
+>T3=3
+>T4=4
+>P=17
+>
+>PSTRT==^D<9*3600>		;0900
+>PEND==^D<18*3600>		;1800
+>
+>START:	RESET
+>	MOVE P,[IOWD 10,PDL]
+>	MOVEI T1,.FHSLF
+>	RPCAP
+>	TXNE T3,SC%WHL
+>	 JRST OKGO		;DONT HASSLE WHEELS
+>	SETO T2,
+>	SETZ T4,
+>	ODCNV			;GET CURRET DATE/TIME
+>	HRLZ T1,T2		;GET MONTH
+>	HLR T1,T3		;GET DAY
+>	AOBJN T1,.+1		;INCR BOTH HALVES
+>	HRRZS T4		;TIME SINCE MIDNITE
+>	HRRZS T3		;DAY OF WEEK
+>	CAIE T3,5		;SATURDAY
+>	 CAIN T3,6		; AND SUNDAYS
+>	  JRST OKGO		; ARE OK
+>	MOVEI T3,0		;INIT LOOP
+>HLUP:	SKIPN HTBL(T3)		;ENTRY?
+>	 JRST CKTIM		;DONE - CHECK TIME
+>	CAMN T1,HTBL(T3)	;HOLIDAY MATCH?
+>	 JRST OKGO		;YES - OK
+>	AOJA T3,HLUP		;NO - TRY NEXT
+>
+>CKTIM:	CAIL T4,PSTRT		;PRIME TIME START
+>	 CAIL T4,PEND		; OR PRIME END
+>	  JRST OKGO		; OFF PRIME - OK
+>	TMSG <
+>THE DUNGEON IS AVAILABLE FOR EXPLORING MON THRU FRI:
+>	00:00 - >
+>	MOVEI T4,PSTRT		;START OF PRIME TIME
+>	CALL TIMOUT
+>	TMSG <
+>	>
+>	MOVEI T4,PEND		;END OF PRIME TIME
+>	CALL TIMOUT
+>	TMSG < - 24:00
+>
+>IT IS ALSO OPENED WEEKENDS AND HOLIDAYS.
+>
+>>
+>	JRST 	OKGO
+>	HALTF
+>	JRST .-1
+>
+>TIMOUT:	MOVEI T1,.PRIOU
+>	IDIVI T4,^D3600		;GET HOURS
+>	MOVE T2,T4		;SET TO OUTPUT
+>	MOVX T3,NO%LFL!NO%ZRO+^D10+2B17
+>	NOUT			;DUMP HOURS
+>	 JSERR
+>	TMSG <:>
+>	MOVEI T1,.PRIOU
+>	IDIVI 5,^D60		;GET MINUTES
+>	MOVE T2,5
+>	NOUT			;DUMP IT
+>	 JSERR
+>	RET
+>
+>OKGO:	MOVX T1,GJ%OLD!GJ%SHT
+>	HRROI T2,[ASCIZ /MDL:MADADV.SAVE/]
+>	GTJFN		;GET HANDLE ON GAME
+>	 JSHLT
+>	MOVE Z,T1	;SAVE JFN IN ZERO
+>	MOVX T2,44B5+OF%RD!OF%EX
+>	OPENF		;OPEN FILE
+>	 JSHLT
+>	MOVX T1,GJ%OLD!GJ%SHT
+>	HRROI T2,[ASCIZ /MDL:MDL104.EXE/]
+>	GTJFN		;GET JFN ON MUDDLE
+>	 JSHLT
+>	HRLI T1,.FHSLF		;FOR GET JSYS
+>	MOVE 16,[ACPRG,,5]
+>	BLT 16,10		;FILL ACS
+>	JRST 5			;CONTINUE IN ACS
+>
+>ACPRG:	GET
+>	MOVEI T1,.FHSLF		;GET E/V FOR SELF
+>	GEVEC
+>	JRST 1(T2)		;START AT OFFSET 1
+>
+>PDL:	BLOCK 10
+>
+>	RADIX 10
+>
+>HTBL:	1,,1			;NEW YEARS
+>	12,,25			;CHRISTMAS
+>	0			;END OF TABLE
+>
+>	RADIX 8
+>
+>	END <1,,START>
+
+--
+Alan
+
+
+Article 5565 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!feed.textport.net!diablo.netcom.net.uk!netcom.net.uk!dispose.news.demon.net!demon!xara.net!gxn.net!server5.netnews.ja.net!ulcc.ac.uk!ronan
+From: Ronan Flood <ronan@noc.ulcc.ac.uk>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Zork [was: Algol-10]
+Date: 9 Jul 2001 15:07:13 GMT
+Organization: 1.3.6.1.4.1.6735
+Lines: 29
+Message-ID: <9ichb1$l5b$1@canard.ulcc.ac.uk>
+References: <3B44932A.3BCEB7FD@nospam.nospam> <mddpubec07x.fsf@panix6.panix.com> <q6bjktcahatofacm6bequfp8frv7j43d54@4ax.com>
+NNTP-Posting-Host: shadow.ng.ulcc.ac.uk
+Xref: nntp1.ba.best.com alt.sys.pdp10:5565
+
+Alan Greig <a.greig@virgin.net> wrote:
+
+> Also around 1982 I recalling hacking TOPS-10 Essex University Mud (Roy
+> Trubshaw, Richard Bartle) to run under TOPS-20 by using a pmap'd high
+> segment to emulate a TOPS-10 shared writeable high segment. A few
+> other fixes to bypass the lack of PAGE UUO in PA1050 were needed as
+> well.
+
+Hellfire!  Why did Richard not mention this to me when I was going
+through the same contortions at Liverpool Poly a few years later!?
+I wound up creating a bespoke version of PA1050 for it, as well as
+a PMAP etc bootstrap similar to that ZORK one.
+
+> The source code for the MUD interpreter was writen in BCPL and
+> confusingly the Dungeon language was also called Muddle but was not
+> the same as Zork's MDL. If anyone has the source code for this classic
+> mult-user dungeon I'd like to hear. I know a number of sites had it at
+> one time. 
+
+I suspect there might be legal difficulties with making it available ...
+I think I have it in a SUBFIL master snarfed from TOPS-20, in a VMS
+BACKUP saveset on a TK50 -- with no facilities for reading it back,
+AFAIA.  You'll probably be interested in <http://www.mud.co.uk/> anyway.
+
+-- 
+                      Ronan Flood <R.Flood@noc.ulcc.ac.uk>
+                        working for but not speaking for
+             Network Services, University of London Computer Centre
+     (which means: don't bother ULCC if I've said something you don't like)
+
+
+Article 5568 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.dra.com!feed2.news.rcn.net!rcn!feeder.qis.net!pln-e!spln!dex!extra.newsguy.com!newsp.newsguy.com!enews2
+From: Alan Greig <a.greig@virgin.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Zork [was: Algol-10]
+Date: Mon, 09 Jul 2001 16:53:27 +0100
+Organization: http://extra.newsguy.com
+Lines: 56
+Message-ID: <jkjjkt8ioo8e4966qfa70tlo9uaifhlbgo@4ax.com>
+References: <3B44932A.3BCEB7FD@nospam.nospam> <mddpubec07x.fsf@panix6.panix.com> <q6bjktcahatofacm6bequfp8frv7j43d54@4ax.com> <9ichb1$l5b$1@canard.ulcc.ac.uk>
+NNTP-Posting-Host: p-531.newsdawg.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Newsreader: Forte Agent 1.8/32.548
+Xref: nntp1.ba.best.com alt.sys.pdp10:5568
+
+On 9 Jul 2001 15:07:13 GMT, Ronan Flood <ronan@noc.ulcc.ac.uk> wrote:
+
+>Alan Greig <a.greig@virgin.net> wrote:
+>
+>> Also around 1982 I recalling hacking TOPS-10 Essex University Mud (Roy
+>> Trubshaw, Richard Bartle) to run under TOPS-20 by using a pmap'd high
+>> segment to emulate a TOPS-10 shared writeable high segment. A few
+>> other fixes to bypass the lack of PAGE UUO in PA1050 were needed as
+>> well.
+>
+>Hellfire!  Why did Richard not mention this to me when I was going
+>through the same contortions at Liverpool Poly a few years later!?
+>I wound up creating a bespoke version of PA1050 for it, as well as
+>a PMAP etc bootstrap similar to that ZORK one.
+
+Ronan,
+
+It's a long time ago but if you recall we were in touch way back then.
+I remember Richard suggesting I talk to you. I recall you managed to
+rapidly enter wizard mode when playing it on the DCT DEC20 by dialup
+and I never did find the backdoor in the source code that allowed
+this. IIRC it appended the name of the current player to the variable
+"us" but exactly the sequence of commands I never did decode.
+
+If you recall I also had some mods to PA1050 but as several sites
+grabbed the code I didn't want them to have to run a patched PA1050.
+Later the distribution was limited after contracts were signed for
+commercial use and I received a letter insisting we stop running it.
+Fortunately I was able to did out an old email from Richard giving
+permission for us to run it and that stood.
+
+At one point a change to TOPS-20 altered the way process mapped pages
+were unmapped in routine KSELF (I think) by setting the abort
+(cz%abt?) bit. This had the result that any pages not explicitly
+flushed to disk were replaced with the virgin version so it was
+necessary to patch MONITR.EXE as well. I never agreed with the logic
+of this change as it broke a number of other applications but Mark
+Crispin (IIRC) pointed out at the time why it was a good idea. I still
+think an extra bit should have been defined somewhere to allow both
+the old and the new behaviour.
+
+>> The source code for the MUD interpreter was writen in BCPL and
+>> confusingly the Dungeon language was also called Muddle but was not
+>> the same as Zork's MDL. If anyone has the source code for this classic
+>> mult-user dungeon I'd like to hear. I know a number of sites had it at
+>> one time. 
+>
+>I suspect there might be legal difficulties with making it available ...
+>I think I have it in a SUBFIL master snarfed from TOPS-20, in a VMS
+>BACKUP saveset on a TK50 -- with no facilities for reading it back,
+>AFAIA.  You'll probably be interested in <http://www.mud.co.uk/> anyway.
+I
+I'll have a look.
+
+--
+Alan
+
+
+Article 5581 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!newsfeed.icl.net!dispose.news.demon.net!demon!easynet-monga!easynet.net!server5.netnews.ja.net!ulcc.ac.uk!ronan
+From: Ronan Flood <ronan@noc.ulcc.ac.uk>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Zork [was: Algol-10]
+Date: 10 Jul 2001 13:16:48 GMT
+Organization: 1.3.6.1.4.1.6735
+Lines: 42
+Message-ID: <9iev80$rmq$1@canard.ulcc.ac.uk>
+References: <q6bjktcahatofacm6bequfp8frv7j43d54@4ax.com> <9ichb1$l5b$1@canard.ulcc.ac.uk> <jkjjkt8ioo8e4966qfa70tlo9uaifhlbgo@4ax.com>
+NNTP-Posting-Host: shadow.ng.ulcc.ac.uk
+Xref: nntp1.ba.best.com alt.sys.pdp10:5581
+
+Alan Greig <a.greig@virgin.net> wrote:
+
+> It's a long time ago but if you recall we were in touch way back then.
+
+I suspect your recall is better than mine, but you do ring a bell :)
+
+> I remember Richard suggesting I talk to you.
+
+Hmm, so which order were we working in?  I would have been involved
+in porting MUD mostly in '85, and I don't remember getting or sending
+modifications.
+
+> I recall you managed to
+> rapidly enter wizard mode when playing it on the DCT DEC20 by dialup
+> and I never did find the backdoor in the source code that allowed
+> this. IIRC it appended the name of the current player to the variable
+> "us" but exactly the sequence of commands I never did decode.
+
+That sounds more like something Richard would have done ...
+Reminds me of someone (yourself?) dialing in from another site, who
+managed to bypass the limited command-table we had in EXEC for student
+use by using DDT and his knowledge of the EXEC source.
+
+> If you recall I also had some mods to PA1050 but as several sites
+> grabbed the code I didn't want them to have to run a patched PA1050.
+
+I think I was trying to avoid 20-fying the MUD BCPL source too much,
+although the MACRO came in for a fair amount of addition.
+
+I can remember adding a new UUO (CALLI -2?) to PA1050 to set the
+RDTXT/TEXTI prompt-buffer so forced ^Rs would work properly, and
+adding OF%THW when the persona-file was opened, for shared read/write.
+Another interesting thing was that PA1050's implementation of the
+MSTIME UUO was not monotonically increasing across jobs.  As MUD
+used this when interlocking, one job could find that another had
+apparently taken out a lock in the (local) future.
+
+-- 
+                      Ronan Flood <R.Flood@noc.ulcc.ac.uk>
+                        working for but not speaking for
+             Network Services, University of London Computer Centre
+     (which means: don't bother ULCC if I've said something you don't like)
+
+
+Article 5584 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.voicenet.com!newsfeed.direct.ca!look.ca!pln-w!spln!dex!extra.newsguy.com!newsp.newsguy.com!enews2
+From: Alan Greig <a.greig@virgin.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Zork [was: Algol-10]
+Date: Tue, 10 Jul 2001 15:22:25 +0100
+Organization: http://extra.newsguy.com
+Lines: 70
+Message-ID: <u13mkt88unc3j3r1amk486plfdfgo027f0@4ax.com>
+References: <q6bjktcahatofacm6bequfp8frv7j43d54@4ax.com> <9ichb1$l5b$1@canard.ulcc.ac.uk> <jkjjkt8ioo8e4966qfa70tlo9uaifhlbgo@4ax.com> <9iev80$rmq$1@canard.ulcc.ac.uk>
+NNTP-Posting-Host: p-778.newsdawg.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Newsreader: Forte Agent 1.8/32.548
+Xref: nntp1.ba.best.com alt.sys.pdp10:5584
+
+On 10 Jul 2001 13:16:48 GMT, Ronan Flood <ronan@noc.ulcc.ac.uk> wrote:
+
+
+>
+>Hmm, so which order were we working in?  I would have been involved
+>in porting MUD mostly in '85, and I don't remember getting or sending
+>modifications.
+
+The order I recall was Richard saying that you (as one of the original
+coders) were now working at Liverpool Poly having transitioned to
+TOPS-20 and your initial prognosis for getting MUD running on TOPS-20
+had not been good. As I had already hacked DECWAR (I think it was) to
+emulate a shared write high segment I suggested this method and spoke
+to you at some point. I know I had to work with two distinct versions.
+The first was just plain MUD but the second also had Fraggle Rock (was
+it) and something else I can no longer recall.
+
+The whole story was featured in a 198x edition of Practical Computing
+which I may still have kicking about.
+
+>
+>> I recall you managed to
+>> rapidly enter wizard mode when playing it on the DCT DEC20 by dialup
+>> and I never did find the backdoor in the source code that allowed
+>> this. IIRC it appended the name of the current player to the variable
+>> "us" but exactly the sequence of commands I never did decode.
+>
+>That sounds more like something Richard would have done ...
+
+Maybe it was Richard (who did often call in over our then extremely
+limited JANET connections which piggy backed in through Dundee
+University) but I thought that was you. I think some interesting
+floating point arithmetic was done to an ascii string involving some
+input from the user probably dependent on the time of day. The magical
+end result was that the user name of the current player was added to
+the string "us" listing permanent wizards. At least one name for you
+was already hard-coded into that string in the original Essex sources.
+At least I think that was how it was done.
+
+>Reminds me of someone (yourself?) dialing in from another site, who
+>managed to bypass the limited command-table we had in EXEC for student
+>use by using DDT and his knowledge of the EXEC source.
+
+That sounds familiar :)
+>
+>> If you recall I also had some mods to PA1050 but as several sites
+>> grabbed the code I didn't want them to have to run a patched PA1050.
+>
+>I think I was trying to avoid 20-fying the MUD BCPL source too much,
+>although the MACRO came in for a fair amount of addition.
+>
+>I can remember adding a new UUO (CALLI -2?) to PA1050 to set the
+>RDTXT/TEXTI prompt-buffer so forced ^Rs would work properly, and
+>adding OF%THW when the persona-file was opened, for shared read/write.
+>Another interesting thing was that PA1050's implementation of the
+>MSTIME UUO was not monotonically increasing across jobs.  As MUD
+>used this when interlocking, one job could find that another had
+>apparently taken out a lock in the (local) future.
+
+Aha! I never found the cause of that locking problem and implemented
+some more locking around the "lock" routine to get round it.
+
+Do you know Steve Reece? I mentioned Essex Mud to Steve at the recent
+VMS technical update days in London and he mentioned your name which
+was the first time I had heard it in years, I think he was probably a
+student back then.
+
+
+--
+Alan
+
+
+Article 5587 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!feed2.news.rcn.net!rcn!dispose.news.demon.net!demon!easynet-monga!easynet.net!server5.netnews.ja.net!ulcc.ac.uk!ronan
+From: Ronan Flood <ronan@noc.ulcc.ac.uk>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Zork [was: Algol-10]
+Date: 11 Jul 2001 12:56:40 GMT
+Organization: 1.3.6.1.4.1.6735
+Lines: 57
+Message-ID: <9ihie8$5ie$1@canard.ulcc.ac.uk>
+References: <jkjjkt8ioo8e4966qfa70tlo9uaifhlbgo@4ax.com> <9iev80$rmq$1@canard.ulcc.ac.uk> <u13mkt88unc3j3r1amk486plfdfgo027f0@4ax.com>
+NNTP-Posting-Host: shadow.ng.ulcc.ac.uk
+Xref: nntp1.ba.best.com alt.sys.pdp10:5587
+
+Alan Greig <a.greig@virgin.net> wrote:
+
+> I know I had to work with two distinct versions.
+> The first was just plain MUD but the second also had Fraggle Rock (was
+> it) and something else I can no longer recall.
+
+I only worked with MUD and VALLEY, but there were also ROCK, MIST,
+and UNI -- these appeared after I left Essex IIRC, and were separate
+games written by others using the MUD engine.  There may have been
+more.
+
+> >Another interesting thing was that PA1050's implementation of the
+> >MSTIME UUO was not monotonically increasing across jobs.  As MUD
+> >used this when interlocking, one job could find that another had
+> >apparently taken out a lock in the (local) future.
+> Aha! I never found the cause of that locking problem and implemented
+> some more locking around the "lock" routine to get round it.
+
+I didn't bother trying to fix PA1050 for that, just changed the game
+sources to use the TIME JSYS instead.  Another PA1050 mod was to use
+THIBR instead of DISMS for the HIBER UUO, as player interaction relied
+on cross-job WAKEs.
+
+What did you do about resetting?  Under TOPS-10, the hiseg would hang
+around in swap-space even if no one was playing, so that the state of
+the game was retained -- at least for a while; depended on how busy
+the system was.  Eventually the hiseg would be flushed (and there
+were ways of forcing that, either by running lots of other programs,
+or fiddling with the EXE file) and the next time the game was run, it
+would be in its initial state again.  Under TOPS-20, this would not
+happen automatically, so I kept a virgin copy of the database file
+which would be PMAPed in and BLTed over the live database when it
+was determined that this was necessary.  I've forgotten what criteria
+were used to decide that, but probably time since last reset and
+similar.
+
+> Do you know Steve Reece? I mentioned Essex Mud to Steve at the recent
+> VMS technical update days in London and he mentioned your name which
+> was the first time I had heard it in years, I think he was probably a
+> student back then.
+
+The name is vaguely familiar, but if he's the person I'm thinking
+of, he was a lecturer/researcher who arrived in my final year.
+
+
+As regards getting hold of a copy of MUD to run under TS10/simh,
+I see that <http://www.british-legends.com/> is running a freely
+accessible version which has been ported to C++ under NT.  That
+being the case, Richard&Roy might not have a problem releasing
+whatever BCPL/MACRO source/executable survives, for hobbyist use.
+Could mean having to bootstrap a BCPL compiler though ...
+
+-- 
+                      Ronan Flood <R.Flood@noc.ulcc.ac.uk>
+                        working for but not speaking for
+             Network Services, University of London Computer Centre
+     (which means: don't bother ULCC if I've said something you don't like)
+
+
+Article 5588 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!howland.erols.net!newsfeed.lotsanews.com.MISMATCH!pln-e!spln!dex!extra.newsguy.com!newsp.newsguy.com!enews3
+From: Alan Greig <a.greig@virgin.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Zork [was: Algol-10]
+Date: Wed, 11 Jul 2001 15:14:15 +0100
+Organization: http://extra.newsguy.com
+Lines: 72
+Message-ID: <39nokt4isdtvi750f7hmsobojomdo4uitp@4ax.com>
+References: <jkjjkt8ioo8e4966qfa70tlo9uaifhlbgo@4ax.com> <9iev80$rmq$1@canard.ulcc.ac.uk> <u13mkt88unc3j3r1amk486plfdfgo027f0@4ax.com> <9ihie8$5ie$1@canard.ulcc.ac.uk>
+NNTP-Posting-Host: p-251.newsdawg.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Newsreader: Forte Agent 1.8/32.548
+Xref: nntp1.ba.best.com alt.sys.pdp10:5588
+
+On 11 Jul 2001 12:56:40 GMT, Ronan Flood <ronan@noc.ulcc.ac.uk> wrote:
+
+>Alan Greig <a.greig@virgin.net> wrote:
+>
+>> I know I had to work with two distinct versions.
+>> The first was just plain MUD but the second also had Fraggle Rock (was
+>> it) and something else I can no longer recall.
+>
+>I only worked with MUD and VALLEY, but there were also ROCK, MIST,
+>and UNI -- these appeared after I left Essex IIRC, and were separate
+>games written by others using the MUD engine.  There may have been
+>more.
+
+Yes I remember Valley now.  That was in the original distribution I
+received from Richard. Rock (Fraggle Rock) appeared in the final
+update I got from Essex before Richard left..
+
+>
+>I didn't bother trying to fix PA1050 for that, just changed the game
+>sources to use the TIME JSYS instead.  Another PA1050 mod was to use
+>THIBR instead of DISMS for the HIBER UUO, as player interaction relied
+>on cross-job WAKEs.
+
+That's starting to sound familiar as well.
+
+>
+>What did you do about resetting?  Under TOPS-10, the hiseg would hang
+>around in swap-space even if no one was playing, so that the state of
+>the game was retained -- at least for a while; depended on how busy
+>the system was.  Eventually the hiseg would be flushed (and there
+>were ways of forcing that, either by running lots of other programs,
+>or fiddling with the EXE file) and the next time the game was run, it
+>would be in its initial state again.  Under TOPS-20, this would not
+>happen automatically, so I kept a virgin copy of the database file
+>which would be PMAPed in and BLTed over the live database when it
+>was determined that this was necessary.  I've forgotten what criteria
+>were used to decide that, but probably time since last reset and
+>similar.
+
+Did that as well. I think I had a program called RESET which wizards
+could run manually. Can't recall how I checked for wizard status now.
+Maybe gave them a password.
+
+The more I think about it the more I'm sure we were in touch on and
+off for a year or so. Funny how memory is so dodgy after less than 20
+years,  I have no idea at all how you can safely convict someone based
+on world war 2 witnesses 50 years later yet it happens
+
+>
+>> Do you know Steve Reece? I mentioned Essex Mud to Steve at the recent
+>> VMS technical update days in London and he mentioned your name which
+>> was the first time I had heard it in years, I think he was probably a
+>> student back then.
+>
+>The name is vaguely familiar, but if he's the person I'm thinking
+>of, he was a lecturer/researcher who arrived in my final year.
+
+He could well have been a lecturer and or researcher I guess. He's now
+on the DECUS UK events committee. Hey, maybe I should suggest a
+TOPS-10/TOPS-20 DECUS reunion event in the UK.
+
+>
+>
+>As regards getting hold of a copy of MUD to run under TS10/simh,
+>I see that <http://www.british-legends.com/> is running a freely
+>accessible version which has been ported to C++ under NT.  That
+>being the case, Richard&Roy might not have a problem releasing
+>whatever BCPL/MACRO source/executable survives, for hobbyist use.
+>Could mean having to bootstrap a BCPL compiler though ...
+
+--
+Alan
+
+
+Article 5575 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!sn-xit-03!sn-post-01!supernews.com!corp.supernews.com!not-for-mail
+From: Timothy Stark <sword7@grace.speakeasy.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Zork [was: Algol-10]
+Date: Tue, 10 Jul 2001 02:34:13 -0000
+Message-ID: <tkkqd5f4ibdtc4@corp.supernews.com>
+References: <3B44932A.3BCEB7FD@nospam.nospam> <mddpubec07x.fsf@panix6.panix.com> <q6bjktcahatofacm6bequfp8frv7j43d54@4ax.com> <9ichb1$l5b$1@canard.ulcc.ac.uk>
+User-Agent: tin/1.4.4-20000803 ("Vet for the Insane") (UNIX) (Linux/2.2.19 (i686))
+X-Complaints-To: newsabuse@supernews.com
+Lines: 17
+Xref: nntp1.ba.best.com alt.sys.pdp10:5575
+
+Ronan Flood <ronan@noc.ulcc.ac.uk> wrote:
+> I suspect there might be legal difficulties with making it available ...
+> I think I have it in a SUBFIL master snarfed from TOPS-20, in a VMS
+> BACKUP saveset on a TK50 -- with no facilities for reading it back,
+> AFAIA.  You'll probably be interested in <http://www.mud.co.uk/> anyway.
+
+I looked into that web site.  Whoa!  Unlimited license for MUDDLE 
+developement system costs 30,000 pounds!
+
+-- Tim Stark
+
+-- 
+Timothy Stark	<><	Inet: sword7@speakeasy.org
+--------------------------------------------------------------------------
+"For God so loved the world, that he gave his only begotten Son, that 
+whosoever believeth in him should not perish, but have everlasting life.
+Amen." -- John 3:16 (King James Version Bible)
+
+
+Article 5572 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!feed.textport.net!cyclone2.usenetserver.com!portc01.blue.aol.com!news.gtei.net.MISMATCH!washdc3-snh1.gtei.net!nycmny1-snh1.gtei.net!news.gtei.net!panix!news.panix.com!not-for-mail
+From: Rich Alderson <alderson+news@panix.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Zork [was: Algol-10]
+Date: 09 Jul 2001 15:35:39 -0400
+Organization: Systems Administration, XKL LLC, Redmond WA 98052
+Lines: 17
+Sender: alderson+news@panix3.panix.com
+Message-ID: <mdd66d17v5g.fsf@panix3.panix.com>
+References: <3B422380.58B395E7@bartek.dontspamme.net> <tk4lhug0osg968@corp.supernews.com> <9htnjk$b3o$1@slb3.atl.mindspring.net> <7xd77hpm6d.fsf@ruckus.brouhaha.com> <mddbsn133mp.fsf@panix3.panix.com> <uofr00wpc.fsf_-_@spacy.Boston.MA.US> <3B44932A.3BCEB7FD@nospam.nospam> <mddpubec07x.fsf@panix6.panix.com> <q6bjktcahatofacm6bequfp8frv7j43d54@4ax.com>
+NNTP-Posting-Host: panix3.panix.com
+X-Trace: news.panix.com 994707339 24734 166.84.0.228 (9 Jul 2001 19:35:39 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: 9 Jul 2001 19:35:39 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.7
+Xref: nntp1.ba.best.com alt.sys.pdp10:5572
+
+Alan Greig <a.greig@virgin.net> writes:
+
+> The more I look at this code the more familiar it looks. Do you know who
+> wrote this? It looks very similar to code I wrote early 80s to front-end ZORK
+> at the then Dundee Tech and probably posted to the tops-20 mail list.. Anyone
+> know if the archives of this list are available online anywhere?
+
+Lemme think.  We got Zork at the University of Chicago around 1978, with the
+ZORK.MAC frontend included.  No idea who wrote it.
+
+(The very first patching hack I ever learned on the -20 was to JFCL the holiday
+check in the .EXE with a DEPOSIT.  Nearly zorched an academic career playing
+both Zork and ADVENT.)
+
+-- 
+Rich Alderson                                          alderson+news@panix.com
+  "You get what anybody gets.  You get a lifetime."  --Death, of the Endless
+
+
+Article 5578 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!pln-e!spln!dex!extra.newsguy.com!newsp.newsguy.com!enews2
+From: Alan Greig <a.greig@virgin.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Zork [was: Algol-10]
+Date: Tue, 10 Jul 2001 09:27:37 +0100
+Organization: http://extra.newsguy.com
+Lines: 31
+Message-ID: <vbelkto949d6fhat89untguk2rvaf4iqq5@4ax.com>
+References: <3B422380.58B395E7@bartek.dontspamme.net> <tk4lhug0osg968@corp.supernews.com> <9htnjk$b3o$1@slb3.atl.mindspring.net> <7xd77hpm6d.fsf@ruckus.brouhaha.com> <mddbsn133mp.fsf@panix3.panix.com> <uofr00wpc.fsf_-_@spacy.Boston.MA.US> <3B44932A.3BCEB7FD@nospam.nospam> <mddpubec07x.fsf@panix6.panix.com> <q6bjktcahatofacm6bequfp8frv7j43d54@4ax.com> <mdd66d17v5g.fsf@panix3.panix.com>
+NNTP-Posting-Host: p-924.newsdawg.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Newsreader: Forte Agent 1.8/32.548
+Xref: nntp1.ba.best.com alt.sys.pdp10:5578
+
+On 09 Jul 2001 15:35:39 -0400, Rich Alderson <alderson+news@panix.com>
+wrote:
+
+>Alan Greig <a.greig@virgin.net> writes:
+>
+>> The more I look at this code the more familiar it looks. Do you know who
+>> wrote this? It looks very similar to code I wrote early 80s to front-end ZORK
+>> at the then Dundee Tech and probably posted to the tops-20 mail list.. Anyone
+>> know if the archives of this list are available online anywhere?
+>
+>Lemme think.  We got Zork at the University of Chicago around 1978, with the
+>ZORK.MAC frontend included.  No idea who wrote it.
+
+The earliest I'd have likely written something like this was 1979 I
+think. My memory may be dodgy on this but I don't think early versions
+of MDL allowed you to start at offset 1 with with a file handle in 0.
+If you have a copy of the MDL release notes or edit history it may
+document when this change was made.
+
+>(The very first patching hack I ever learned on the -20 was to JFCL the holiday
+>check in the .EXE with a DEPOSIT.  Nearly zorched an academic career playing
+
+Not quite as much fun as bypassing the check with wheel though :) 
+
+>both Zork and ADVENT.)
+
+And I can think of several friendships ruined for ever by MUD. Plus
+several made  so not all bad :)
+
+--
+Alan
+
+
+Article 5526 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!feed.textport.net!sn-xit-04!sn-post-02!sn-post-01!supernews.com!corp.supernews.com!not-for-mail
+From: Timothy Stark <sword7@grace.speakeasy.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Zork [was: Algol-10]
+Date: Thu, 05 Jul 2001 23:16:18 -0000
+Message-ID: <tk9ta284sqen9d@corp.supernews.com>
+References: <3B422380.58B395E7@bartek.dontspamme.net> <tk4lhug0osg968@corp.supernews.com> <9htnjk$b3o$1@slb3.atl.mindspring.net> <7xd77hpm6d.fsf@ruckus.brouhaha.com> <mddbsn133mp.fsf@panix3.panix.com> <uofr00wpc.fsf_-_@spacy.Boston.MA.US> <tir8ktki39cabc5rv1dbkavv8f1rv3oacv@4ax.com> <un16jytki.fsf@spacy.Boston.MA.US>
+User-Agent: tin/1.4.4-20000803 ("Vet for the Insane") (UNIX) (Linux/2.2.19 (i686))
+X-Complaints-To: newsabuse@supernews.com
+Lines: 21
+Xref: nntp1.ba.best.com alt.sys.pdp10:5526
+
+Christopher Stacy <cstacy@spacy.boston.ma.us> wrote:
+> You mean you have the source for MDL, or the source for ZORK?  I think
+> that MDL is owned by MIT, and that ZORK was owned by some individuals
+> who worked at MIT and formed a company called InfoCom.  I don't know
+> if InfoCom is around anymore, but if it is gone, the rights to ZORK
+> were assigned to someone else (most likely back to one or more of the
+> individual authors).  I mentioned this discussion to one of them last
+> night, but haven't heard anything back.
+
+Infocom went out of business some time ago...
+
+You can check at http://www.ifarchive.org for more information...
+
+-- Tim Stark
+
+-- 
+Timothy Stark	<><	Inet: sword7@speakeasy.org
+--------------------------------------------------------------------------
+"For God so loved the world, that he gave his only begotten Son, that 
+whosoever believeth in him should not perish, but have everlasting life.
+Amen." -- John 3:16 (King James Version Bible)
+
+
+Article 5531 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!panix!news.panix.com!not-for-mail
+From: Rich Alderson <alderson+news@panix.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Zork [was: Algol-10]
+Date: 05 Jul 2001 21:22:24 -0400
+Organization: Systems Administration, XKL LLC, Redmond WA 98052
+Lines: 17
+Sender: alderson+news@panix6.panix.com
+Message-ID: <mddsngac0mn.fsf@panix6.panix.com>
+References: <3B422380.58B395E7@bartek.dontspamme.net> <tk4lhug0osg968@corp.supernews.com> <9htnjk$b3o$1@slb3.atl.mindspring.net> <7xd77hpm6d.fsf@ruckus.brouhaha.com> <mddbsn133mp.fsf@panix3.panix.com> <uofr00wpc.fsf_-_@spacy.Boston.MA.US> <tir8ktki39cabc5rv1dbkavv8f1rv3oacv@4ax.com>
+NNTP-Posting-Host: panix6.panix.com
+X-Trace: news.panix.com 994382544 17262 166.84.0.231 (6 Jul 2001 01:22:24 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: 6 Jul 2001 01:22:24 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.7
+Xref: nntp1.ba.best.com alt.sys.pdp10:5531
+
+Bob Supnik <bsupnik@us.inter.net> writes:
+
+> I have the original MDL ITS source, but only as a listing.  The
+> ownership of the source is complex (my current understanding is that
+> MIT has the copyrights).  Without a working ITS simulation system,
+> availability of the source is moot.
+
+MDL runs just fine on Tops-20, at least as of version 104.  Version 105 was a
+bit problematic, but I think could be made to run.
+
+MDL105 was how I first made CStacy's net.acquaintance nearly 20 years ago,
+obtaining it for the use of the University of Chicago's then-new CS department.
+Perhaps one we'll meet in the real world.
+
+-- 
+Rich Alderson                                          alderson+news@panix.com
+  "You get what anybody gets.  You get a lifetime."  --Death, of the Endless
+
+

@@ -1,0 +1,126 @@
+Article 4337 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news2.best.com!feed2.news.rcn.net!rcn!newsfeed.direct.ca!look.ca!brick.direct.ca!quark.idirect.com.POSTED!not-for-mail
+Message-ID: <3ACF6475.45EE98FC@idirect.com>
+From: Jerome Fine <jhfine@idirect.com>
+X-Mailer: Mozilla 4.03 [en] (Win95; U)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10,alt.sys.pdp11
+Subject: Re: RX211 documentation
+References: <infrct4k2cfm04agel8a1s31110crifb99@4ax.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 104
+Date: Sat, 07 Apr 2001 15:03:18 -0500
+NNTP-Posting-Host: 209.161.237.98
+X-Complaints-To: abuse@look.ca
+X-Trace: quark.idirect.com 986670313 209.161.237.98 (Sat, 07 Apr 2001 15:05:13 EDT)
+NNTP-Posting-Date: Sat, 07 Apr 2001 15:05:13 EDT
+Organization: Look Communications - http://www.look.ca
+Xref: nntp1.ba.best.com alt.sys.pdp10:4337 alt.sys.pdp11:2135
+
+>Bob Supnik wrote:
+
+> If anyone has scanned a copy of the RX211 (double density floppy)
+> manual, could you please let me know its location?  TOPS-10 supported
+> (sort of) this device, but the peripheral handbooks are a little hazy
+> on the programming details, such as:
+> - In what order did the fill and empty commands expect to receive the
+> bus address and word count?
+> - Did the device support double sided diskettes?  The manuals say no,
+> but the TOPS-10 driver says yes.
+
+Jerome Fine replies:
+
+I have always found that the best source for this type of information is the
+actual code.  The RT-11 device driver for the RX02 (DY.MAC) contains
+a wealth of information in this regard.  Even the uncommented source in
+V5.03 of RT-11 shows the details, but if you need anything with extra
+details, then contact me off list and we can probably arrange something.
+I would have thought that at some point, you would have paid DEC for
+an unlimited PDP-11 license for all and any PDP-11 software.  If so,
+then such sources can be made available to you.
+
+Before I mention a few points, I would appreciate the courtesy of anyone
+who is adding to this thread to explicitly include my e-mail address in the
+response since the ISP I am using (LOOK.CA) has recently dropped the
+ball with the news server and only about 1/5 of the posts are available.
+
+The actual DEC RX02 dual floppy disk drive and the M8029 controller
+for the Qbus did not have hardware support for double sided diskettes.
+In addition, starting with V5.00 (if I remember correctly), DEC removed
+the extra code that was in the DY.MAC file from V4.00 that supported
+double sided hardware.  So if you really want to see the code for a double-
+side floppy drive which is RX02 compatible, that is a good starting point
+(i.e. V4.00 DY.MAC from DEC - around 1980).  Note however that
+the 1980 DY.MAC file probably has a bug or two in the double-sided
+code since I don't think DEC ever implemented an RX03.  As far as I
+know, the M8029 probably supported an RX03 (maybe the one from
+that plotter company).  In the digital interfaces handbook from 1980
+at the very top of page 615, BIT 9 is the head select bit and can select
+the head to be used for double sided operation.  DSD hardware uses
+the same bit.
+
+There are a few DECUS files available with double-sided implementations.
+
+There is double-sided hardware support available with the DSD RX03
+(Data Systems Design) 3 * RL02 880/30 combination.  However, DEC
+did not provide support for this device and I don't remember seeing any
+DSD version of RT-11 for the DY.MAC with double-sided software
+support.  But I am probably having a "senior" moment and the manual
+is buried at this point.
+
+The reason I am positive that the DSD RX03 supports double-sided
+8" floppy diskettes is that I used them for a number of years as my
+primary backup on the DSD 880/30 hardware.  There is a version
+of the DYX.SYS device driver available which supports both
+double-sided 8" floppy diskettes along with 22 bits user addresses
+which can be used with the DSD 880/30.  This version of the
+DYX.SYS operates under V5.04G of RT-11 and also allows the
+DEC RX02 to be used in a 22 bit environment - there is no difference
+between the hardware of a single-sided DEC RX02 and the DSD
+RX03 when used in the single sided mode - at least from the software
+point of view in the device driver.  One point worth noting is that
+with an 11/73 on a lightly loaded system, the DYX.SYS device
+driver has enough time even with a 22 bit address user buffer to
+first transfer the data from/to the user buffer and then initiate the
+I/O transfer between the floppy media and the silo on the controller.
+With an 11/23, there is insufficient time to do so before the
+interleave is missed;  thus with an 11/23 the transfer of sectors
+will be very slow if that procedure is followed.  Also note that
+it is possible to put a double-pole double-throw switch into
+the detection circuit and convert all single-sided floppy diskettes
+into double-sided diskettes (at least on the DSD 880/30 with
+the exception of about 25% of DEC 8" floppies which I could
+not format in the DSD 880/30 although I never had any difficulty
+with any other brand of 8" diskettes).  So the actual location of
+the index hole in the sleeve of the double-sided 8" floppy is not
+critical with respect to the timing.  Before I learned that trick,
+I used a hole punch to set up the extra pair of holes in a
+single-sided 8" floppy.
+
+As for the order of the fill and empty commands, I don't really
+understand your question.  I could be a smart ass and say the
+the usual order on a read is to first fill the silo from the user
+buffer, then initiate the transfer to the media which empties the
+silo.  If you did it in the reverse order, the results would be less
+than desirable.  But I suspect I am missing the point of the
+question.  If I remember the software, there is a GO bit in
+the CSR to initiate transfers when everything is ready and set
+up in the CSR and other registers, so likely you may be hinting
+at that aspect.  Since the CSR can be one 16 bit register, it
+is considered reasonable to set the GO bit with the same
+MOV instruction which sets up the other parts of the CSR in
+which case the address and count portions needed in other
+I/O page registers would have to be done first.  Is that your
+actual question?
+
+By the way, I have not expressed my appreciation of the PDP-11
+emulator which is available to the hobby user PDP-11 community
+along with the hobby license for V5.03 of RT-11.
+
+Sincerely yours,
+
+Jerome Fine
+
+
+

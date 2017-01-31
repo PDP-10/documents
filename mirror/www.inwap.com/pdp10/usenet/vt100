@@ -1,0 +1,268 @@
+Article 5510 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!newsfeed.nyu.edu!newsmaster.cc.columbia.edu!watsun.cc.columbia.edu!fdc
+From: fdc@watsun.cc.columbia.edu (Frank da Cruz)
+Newsgroups: comp.os.vms,comp.terminals,alt.sys.pdp10
+Subject: Re: SMG vs. windows telnets
+Date: 27 Jul 1999 21:44:11 GMT
+Organization: Columbia University
+Lines: 31
+Message-ID: <7nl97b$neg$1@newsmaster.cc.columbia.edu>
+References: <7n9rhi$26g$1@husk.cso.niu.edu> <3798b65d@news.nwlink.com> <7nalqp$5vm$1@newsmaster.cc.columbia.edu> <379E1C79.57D8@smarts.com>
+NNTP-Posting-Host: watsun.cc.columbia.edu
+X-Trace: newsmaster.cc.columbia.edu 933111851 24016 128.59.39.2 (27 Jul 1999 21:44:11 GMT)
+X-Complaints-To: postmaster@columbia.edu
+NNTP-Posting-Date: 27 Jul 1999 21:44:11 GMT
+Xref: news3.best.com comp.os.vms:130488 comp.terminals:7525 alt.sys.pdp10:5510
+
+In article <379E1C79.57D8@smarts.com>,
+Jerry Leichter  <leichter@smarts.com> wrote:
+: ...
+: The second generation of the VT100 family was cost-reduced, and had no
+: options:  The VT101 was essentially a VT100 without AVO, and the VT102
+: was essentially a VT100 *with* AVO.  A VT101 couldn't be upgraded to a
+: VT102.  (VT101's were quite rare.)  As I recall, the VT10x added some
+: very minor stuff to the original VT100, but what it was, I couldn't now
+: tell you.
+: 
+I can.  The VT101, which we bought truckloads of here at Columbia U as
+soon as it came out, added local echo.  This let it access our IBM
+mainframe through the 3705 (half duplex) front end.  Prior to the VT101,
+our VT100s could only access our PDP-11s and DEC-20s.
+
+The VT100 and 101, however, were both quite painful to use with EMACS on
+the low-speed dialup connections of the day (300bps, maybe 1200).  The
+VT102 added the crucial feature: character insert/delete.  It's hard to
+imagine in this day & age of gigabit Ethernets etc what a HUGE difference
+that made.
+
+On a related nostalgic note: The VT100's smooth scrolling feature was
+quite amazing to everyone when they first saw it, so much so that the
+VT100 became quite the status symbol.  As soon as we hooked a few of them
+up to the campus "network" (a big serial port switch) and thence to the
+DEC-20, the DEC-20 would crash every couple minutes.  Why?  When the
+VT100 was in smooth scrolling mode, it would send Xoffs and Xons at such
+a hellish rate, it crashed the DEC-20 front end, which was designed based
+on the statistics of people typing (i.e. 10cps per port).
+
+- Frank
+
+
+Article 5512 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!news.cis.ohio-state.edu!news.ems.psu.edu!bonkers!not-for-mail
+From: peter@taronga.com (Peter da Silva)
+Newsgroups: comp.os.vms,comp.terminals,alt.sys.pdp10
+Subject: Re: SMG vs. windows telnets
+Date: 27 Jul 1999 19:50:56 -0500
+Organization: none
+Lines: 24
+Message-ID: <7nlk5g$kvl@bonkers.taronga.com>
+References: <7n9rhi$26g$1@husk.cso.niu.edu> <7nalqp$5vm$1@newsmaster.cc.columbia.edu> <379E1C79.57D8@smarts.com> <7nl97b$neg$1@newsmaster.cc.columbia.edu>
+NNTP-Posting-Host: bonkers.in.taronga.com
+Xref: news3.best.com comp.os.vms:130504 comp.terminals:7526 alt.sys.pdp10:5512
+
+In article <7nl97b$neg$1@newsmaster.cc.columbia.edu>,
+Frank da Cruz <fdc@watsun.cc.columbia.edu> wrote:
+>On a related nostalgic note: The VT100's smooth scrolling feature was
+>quite amazing to everyone when they first saw it, so much so that the
+>VT100 became quite the status symbol.  As soon as we hooked a few of them
+>up to the campus "network" (a big serial port switch) and thence to the
+>DEC-20, the DEC-20 would crash every couple minutes.  Why?  When the
+>VT100 was in smooth scrolling mode, it would send Xoffs and Xons at such
+>a hellish rate, it crashed the DEC-20 front end, which was designed based
+>on the statistics of people typing (i.e. 10cps per port).
+
+At Berkeley the TERMCAP entry for the vt100 with smooth scroll had simply
+incredible delays for anything that did scrolling, so it avoided most of
+the really bad handshaking behaviour.
+
+I found that smooth scroll made it harder for me to eyegrep documents at 300
+and 1200 baud... my point of view would "stick" to the scrolling text
+instead of scanning back and forth over the last line looking for keywords.
+
+-- 
+This is The Reverend Peter da Silva's Boring Sig File - there are no references
+to Wolves, Kibo, Discordianism, or The Church of the Subgenius in this document
+
+Executive Vice President, Corporate Communications, Entropy Gradient Reversals.
+
+
+Article 3327 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!inwap
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: VT100 keyboard
+Date: 29 Jan 2001 02:47:59 GMT
+Organization: Chez Inwap
+Lines: 68
+Message-ID: <952lkv$27l8$1@nntp1.ba.best.com>
+References: <6ZC96.20807$lV5.338311@news2.giganews.com> <951ted$18ll$1@nntp1.ba.best.com> <3A743625.7DDD6C21@trailing-edge.com> <3A7489A7.9A247338@mail.bcpl.net>
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 980736479 73384 206.184.139.134 (29 Jan 2001 02:47:59 GMT)
+X-Complaints-To: abuse@best.com
+NNTP-Posting-Date: 29 Jan 2001 02:47:59 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:3327 alt.folklore.computers:15484
+
+	>From: Ken McMonigal <kmcmonig@mail.bcpl.net>
+	>X-Mailer: Mozilla 4.61 [en] (Win98; I)
+	>MIME-Version: 1.0
+	>Content-Type: multipart/alternative;
+	>  boundary="------------4BC2E93C091716A01A54E674"
+	>
+	>--------------4BC2E93C091716A01A54E674
+	>Content-Type: text/plain; charset=us-ascii
+	>Content-Transfer-Encoding: 7bit
+	>  ...
+	>--------------4BC2E93C091716A01A54E674
+	>Content-Type: text/html; charset=us-ascii
+	>Content-Transfer-Encoding: 7bit
+	>
+	><!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+	><html>
+	>  ...
+	>--------------4BC2E93C091716A01A54E674--
+
+  Please don't post in HTML.
+
+  In Netscape, go to Edit->Preferences->Mail&News->Formatting and
+  select "Use the plain text editor to compose messages."
+
+
+In article <3A7489A7.9A247338@mail.bcpl.net>,
+Ken McMonigal  <kmcmonig@mail.bcpl.net> wrote:
+>
+>I would like to now include Bob's post in this thread, seen elsewhere.
+>
+>> SU                      b1b2b3swap
+>> esc 1 2 3 4 5 6 7 8 9 0 - = \ push break
+>>  Q W E R T Y U I O P [ ]   rco  <--rco means rub out or rub car out,
+>> ctl caps A S D F G H J K L ;  return rwo <--rub word out
+>> ns shift Z C V B N M , . / shift \
+>> space bar
+>>  are keys that are missing.
+
+The above looks more like a modified VT100 keyboard, one set up for
+WPS-8 or some other Word Processing System.
+
+Differences between the above and a real VT100 keyboard:
+
+Top row is SET-UP, indicator lights, cursor-Up, cursor-Down,
+  cursor-Left, cursor-Right, gap to numeric keypad, PF1, PF2, PF3, PF4.
+
+On 2nd row, to the right of "0" (zero) is hyphen/underscore,
+  equal/plus, backtick/tilde, BACKSPACE, BREAK, gap, 7, 8, 9, minus.
+
+3rd row starts with a TAB and ends with [/{, ]/}, top 1/3rd of RETURN
+  and DELETE.  Then a gap to numeric 4, 5, 6 and comma.
+
+On the 4th row, after "L" is ;/:, '/", 2/3rds of RETURN, backslash/vert-bar,
+  gap, 1, 2, 3 and top half of ENTER.
+
+The 5th row ends witn comma/<, period/>, slash/question, double wide shift
+LINEFEED, gap, double wide 0, period and bottom half of ENTER.
+
+
+SETUP                (4 LEDs)               CU  CD  CL  CR          P1 P2 P3 P4
+ESC 1/! 2/@ 3/# 4/$ 5/% 6/^ 7/& 8/* 9/( 0/) -/_ =/+ `/~ BS  BRK      7  8  9  -
+TAB  q/Q w/W e/E r/R t/T y/Y u/U i/I o/O p/P [/{ ]/}     DEL         4  5  6  ,
+CTL CL a/A s/S d/D f/F g/G h/H i/I j/J k/K l/L ;/: '/" RETURN /\|    1  2  3  E
+NS SHIFT z/Z x/X c/C v/V b/B n/N m/M ,/< ./> //? SHIFT LINEFEED       00   .  E
+
+	-Joe
+--
+See http://www.inwap.com/ for PDP-10 and "ReBoot" pages.
+
+
+Article: 116099 of alt.folklore.computers
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newsfeed.icl.net!newsfeed.fjserv.net!news.maxwell.syr.edu!sn-xit-03!sn-xit-06!sn-post-01!supernews.com!news.supernews.com!not-for-mail
+From: Paul Williams <news@celigne.co.uk>
+Newsgroups: alt.folklore.computers
+Subject: Re: VT-100 semantics
+Date: Mon, 17 Mar 2003 19:19:15 -0000
+Organization: http://vt100.net
+Message-ID: <Xns9341C3C73C955newscelignecouk@216.168.3.30>
+References: <eYlda.118680$3D1.4231@sccrnsc01>
+User-Agent: Xnews/L5
+X-Complaints-To: abuse@supernews.com
+Lines: 36
+Xref: dfw-artgen alt.folklore.computers:116099
+
+"George R. Gonzalez" <grg2@attbi.com> wrote in
+news:eYlda.118680$3D1.4231@sccrnsc01: 
+
+> Was there any document from DEC that truly specified what a VT-100
+> did, including boundary conditions and out-of-range values?
+
+Here's an interesting post from Jerry Leichter from 1999, in which he says 
+that DEC had an internal document that looked like the published VT102 
+documentation, but included fragments of Pascal that defined the behaviour 
+in detail. I would like to see this document, but I've never even found a 
+name for it.
+
+http://groups.google.com/groups?selm=379E1C79.57D8%40smarts.com
+
+As far as subsequent DEC terminals go, "VT100 compatible" actually means 
+VT100 plus the Level 1 Editing Extension that was part of the VT102.
+
+Although this means that the VT102 User Guide is probably the best source 
+of information for VT100 emulators (along with a real VT102 and vttest), I 
+think that that manual has some mistakes. DEC's later terminals certainly 
+don't follow the VT102 User Guide's description of the behaviour of Delete 
+Character (DCH).
+
+The VT100 Technical Manual doesn't help in this area, which is a shame 
+because the LA120 Technical Manual describes all seven states of that 
+machine's escape sequence parser.
+
+I have written a document that tries to fill some of the holes in the 
+available specifications by checking the behaviour of DEC's later 
+terminals, but there is still a lot that could be written in this area.
+
+http://vt100.net/emu/dec_ansi_parser
+
+Warning: may cause drowsiness.
+
+- Paul
+
+
+Article: 116080 of alt.folklore.computers
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!skynet.be!skynet.be!kibo.news.demon.net!demon!easynet-quince!easynet.net!news-peer.gradwell.net!not-for-mail
+Newsgroups: alt.folklore.computers
+Subject: Re: VT-100 semantics
+References: <eYlda.118680$3D1.4231@sccrnsc01> <slrnb7brbe.bpe.jmaynard@thebrain.conmicro.cx>
+From: Arthur Chance <{spamtrap}@qeng-ho.org>
+Organization: Rare
+Reply-To: Arthur Chance <usenet-0qedgsl75nufl5bp0fni8thn1i@qeng-ho.org>
+Date: 17 Mar 2003 16:33:14 +0000
+Message-ID: <877kayt0l1.fsf@pooh.wired.qeng-ho.org>
+User-Agent: Gnus/5.0807 (Gnus v5.8.7) XEmacs/21.1 (Channel Islands)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Lines: 20
+NNTP-Posting-Date: 17 Mar 2003 17:04:01 GMT
+NNTP-Posting-Host: 217.155.128.242
+X-Trace: 1047920641 news.gradwell.net 66680 qeng-ho/217.155.128.242
+X-Complaints-To: news-abuse@gradwell.net
+Xref: dfw-artgen alt.folklore.computers:116080
+
+jmaynard@thebrain.conmicro.cx (Jay Maynard) writes:
+
+> On Mon, 17 Mar 2003 15:36:42 GMT, George R. Gonzalez <grg2@attbi.com> wrote:
+> >Was there any document from DEC that truly specified what a VT-100 did,
+> >including
+> >boundary conditions and out-of-range values?
+
+The OP may find http://vt100.net/ useful.
+
+> Good questions. IIRC, there's a program out there that exercised a VT-100
+> (or possibly VT-220) emulation thoroughly, and would reveal just about any
+> incompatibility. I wish I could remmeber the name of the program, or where
+> it could be found, as I've got a need for it now...
+
+vttest. You'll find a link to it at the above URL or go directly to
+
+http://dickey.his.com/vttest/vttest.html
+
+-- 
+2, 3, 3 & 37: the Prime Factors of the Beast.
+
+

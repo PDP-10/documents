@@ -1,0 +1,250 @@
+Article 4275 of alt.sys.pdp10:
+Path: nuq-read.news.verio.net!iad-artgen.news.verio.net!nuq-peer.news.verio.net!ord-feed.news.verio.net!news.verio.net!mozo.cc.purdue.edu!HSNX.atgi.net!hardy.tc.umn.edu!newsxfer.eecs.umich.edu!news-spur1.maxwell.syr.edu!news.maxwell.syr.edu!newsfeed.berkeley.edu!news2.best.com!news3.best.com!nntp1.ba.best.com!not-for-mail
+Newsgroups: alt.sys.pdp10
+Subject: Re: Daniel Seagrave's e10
+References: <Pine.LNX.4.10.10005301229490.13504-100000@bony.umtec.com>
+Organization: Chez Inwap
+From: inwap@best.com (Joe Smith)
+Date: 03 Jun 2000 01:59:09 GMT
+Lines: 127
+Message-ID: <3938666d$0$229@nntp1.ba.best.com>
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 959997549 229 inwap@206.184.139.134
+Xref: iad-artgen.news.verio.net alt.sys.pdp10:4275
+
+In article <Pine.LNX.4.10.10005301229490.13504-100000@bony.umtec.com>,
+Daniel Seagraves  <root@bony.umtec.com> wrote:
+>I'm currently toying with a rewrite (Yes, again), this time using pthreads
+>and other stuff.  The current stumbling block is that I still have no idea
+>how do handle math, and nobody has a decent explanation of it.
+
+Pick up any textbook for CS101 - Introduction To Computer Science, and
+it will describe how to do decimal to binary conversion and simple
+binary arithemetic.
+
+>Need this for my emulator, and nobody can explain to me how it works, and
+>I can't find any documentation that's useful to me.  Specifically, I need
+>stuff like "you shift left and then check the last bit" etc. etc.
+>Basically, I have a bunch of ones and zeroes and I have to know how to
+>add/subtract/multiply/divide with them.
+
+		Addition and Subtraction
+
+When adding the least significant bits, you'll be using a half-adder -
+something that takes two input bits and produces one bit of output
+plus one bit to be carried to the next most significant column.
+
+  0+0 = 0; 0+1 = 1; 1+0 = 1; 1+1 = 0 with C (carry into the next adder).
+
+A full-adder takes two input bits plus a carry bit from the previous stage
+and produces one output bit plus a carry bit to the next stage.
+
+  0+0+NC = 0;    0+0+C = 1;        0+1+NC = 1;        0+1+C = 0 with C;
+  1+0+NC = 1;    1+0+C = 0 with C; 1+1+NC = 0 with C; 1+1+C = 1 with C;
+
+Subtraction on a two's-complement machine (like the PDP-10) is done by
+taking the two's complement of the second number and doing an addition
+to the first number.  (This is also covered in any 1st-year Computer
+Science textbook.)
+
+PDP-10 specific aspects of addition and subtraction:
+    The input values are 36 bits each, 1 sign bit and 35 data bits.
+    The result is 1 sign bit and 35 data bits, with two testable carry bits.
+	(The CPU is capable of detecting Integer Overflow, when two positive
+	numbers produce a result that looks negative, and vice versa.)
+    DADD and DSUB operate on double-words (1+35+1+35 bits).
+
+One way of doing 36-bit addition on a 32-bit computer is to follow the
+method using on the KS-10.  It used 40 bits in two independent adders,
+where the carry between the right and left half could be disabled.
+The right half-word had 18 data bits left justified.  The two rightmost
+bits on the adder were unused except for doing rounding on floating-point
+operations.  The left half-word had 18 data bits right justified.  This
+left two extra carry bits, very handy for calculating the true sign
+bit during integer overflow conditions.
+
+		Multiplication and Division
+
+Multiplication and Division operate the same way in computers as you
+would expect on a blackboard.  Instead of adding the multiplicand to
+itself repeatedly, the bits of the multiplicand are shifted left and are
+either added to the running total or not, depending on whether the
+corresponding bit in the multiplier is set or not.  The details of the
+multiply algorithm may not be in the 1st-year textbook, but it should be
+found in the later courses.  Look for a section that describes how to do
+a multiply by doing binary shift and adds.  The details of an integer
+multiply are pretty much applicable to any processor.
+
+PDP-10 specific aspects of multiplication:
+    The input values are 36 bits each, 1 sign bit and 35 data bits.
+    The result of a multiply is 70 data bits and 2 sign bits.
+    The MUL instruction is used when the input numbers are considered to
+	be between 0.0000 and +/- 0.99999999997089616954 [1.0 - 2**(-35)];
+	it keeps the most significant 1+35 bits of the result and throws
+	the low-order half away.
+    The IMUL instruction is used when the input numbers are considered to
+	be integers from 0 to 2**35-1; it keeps the least significant
+	1+35 bits of the result and triggers an Integer Overflow if the
+	high-order half is not all zeroes or not all ones.
+    DMUL multiplies two signed 70-bit quantities to create a 140 bit
+	result (with 1 sign bit and 3 unused bits).
+
+The details on doing a divide are a bit more messy.  Other than the time
+I helped implement a 32-bit divide routine on an 8-bit processor, I have
+avoided looking at the details.
+
+PDP-10 specific aspects of division for DIV:
+    The dividend is a 72-bit quantity from two consecutive accumulators.
+    The dividend and divisor are both considered to be numbers between
+	0.0000 and +/- 0.99999999997089616954 .
+    Trigger Integer Overflow if quotient is not in the same range.
+
+PDP-10 specific aspects of division for DIV:
+    The dividend and divisor are both considered to be integers.
+    The quotient goes to the specified destination.  If the destination
+	is an accumulator, put the remainder in the next accumulator.
+    DDIV divides a signed 140-bit quantity (in 4 consecutive accumulators)
+	by a signed 70-bit divisor and stores signed 70-bit quotient
+	and signed 70-bit remainder in said 4 accumulators.
+
+		Floating Point
+
+Floating point is a whole 'nother can of worms.  But that can wait for
+a later phase, since the Monitor does not use any floating point instructions.
+
+PDP-10 specifics of floating point numbers:
+
+    Single precison: 1 sign bit, 8 bits exponent (excess 128), 27 bits
+	in fraction with explicit LSB.  (This format allows the compare
+	instructions for equal, less than, greater than, etc to work
+	equally well with two floating point arguments as with two integers.
+	Range = 1.5e-39 to 1.7e38.  Precision: approx 7 digits.
+
+    KA-10 software double precision: Forget it; not implemented on KL or KS.
+
+    D-Float: 1 sign bit, 8 bits exponent, 27+35 bits fraction, 1 unused bit.
+	Implemented on KI, KL and KS (not KA, not PDP-6).
+	Range = 1.5e-39 to 1.7e38.  Precision: approx 18 digits.
+
+    G-Float (not part of original KL implementation; requires microcode
+	version 271 or greater): 1 sign bit, 11 bits exponent (excess 1024),
+	24+35 bits fraction, 1 unused bit.
+	Range = 2.8e-309 to 9.0e307.
+
+		Other Math
+
+The CIS (Commercial Instruction Set) EXTENDed KL instructions are to
+be avoided whereever possible.  The only software to use BCD arithmetic on
+a KL was the (ugh) COBOL compiler.
+	-Joe
+--
+See http://www.inwap.com/ for PDP-10 and "ReBoot" pages.
+
+
+Article 4289 of alt.sys.pdp10:
+Path: nuq-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!logbridge.uoregon.edu!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Daniel Seagrave's e10
+Date: Sat, 10 Jun 2000 15:33:32 -0400
+Lines: 86
+Message-ID: <3942980C.AF3BD1CD@MA.UltraNet.Com>
+References: <Pine.LNX.4.10.10005301229490.13504-100000@bony.umtec.com> <3938666d$0$229@nntp1.ba.best.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: puS7DVLpXTBS7AhaX6UIvRFp6oAd45marXpwcucRUL0=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 10 Jun 2000 19:34:50 GMT
+X-Accept-Language:  en,en-US,en-GB,es
+X-Mailer:  Mozilla 4.7 [en] (Win95; U)
+Xref: dfw-artgen.news.verio.net alt.sys.pdp10:4289
+
+Joe Smith wrote:
+
+>                 Multiplication and Division
+...
+> PDP-10 specific aspects of multiplication:
+>     The input values are 36 bits each, 1 sign bit and 35 data bits.
+>     The result of a multiply is 70 data bits and 2 sign bits.
+>     The MUL instruction is used when the input numbers are considered to
+>         be between 0.0000 and +/- 0.99999999997089616954 [1.0 - 2**(-35)];
+>         it keeps the most significant 1+35 bits of the result and throws
+>         the low-order half away.
+>     The IMUL instruction is used when the input numbers are considered to
+>         be integers from 0 to 2**35-1; it keeps the least significant
+>         1+35 bits of the result and triggers an Integer Overflow if the
+>         high-order half is not all zeroes or not all ones.
+...
+> PDP-10 specific aspects of division for DIV:
+>     The dividend is a 72-bit quantity from two consecutive accumulators.
+>     The dividend and divisor are both considered to be numbers between
+>         0.0000 and +/- 0.99999999997089616954 .
+>     Trigger Integer Overflow if quotient is not in the same range.
+> 
+> PDP-10 specific aspects of division for DIV:
+>     The dividend and divisor are both considered to be integers.
+>     The quotient goes to the specified destination.  If the destination
+>         is an accumulator, put the remainder in the next accumulator.
+
+I think I saw more MUL's and DIVs used in pairs to multiply an integer
+by a ratio.  If you wanted to compute X*(N/D), you'd multiply X by N and
+then divide the result by D.  Some combinations of X and N could never
+overflow a word, but some could.  When overflow could never happen,
+you'd see:
+
+	IMUL	X,N
+	IDIV	X,D	; (Remainder in X+1)
+
+When overflow could happen in the intermediate result, but not in the
+final value, you'd see:
+
+	MUL	X,N
+	DIV	X,D	; (Remainder in X+1)
+
+Sometime between fall '77 and spring '81, there was a run of edits like
+this one to OPSER:
+
+"
+SUBTTL	FRANK NATOLI/DAL/PFC/DAL/JE/RHR/CDO/CGN/DC/MRB 22-AUG-85
+...
+;COPYRIGHT (c) DIGITAL EQUIPMENT CORPORATION 1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1984,1985,1986. ALL RIGHTS RESERVED.
+...
+;111)	OVERFLOW OCCURS WHILE CONVERTING THE SYSTEM UP TIME TO
+;	MILLISECONDS IF THE SYSTEM HAS BEEN UP FOR 160
+;	CONSECUTIVE HOURS OR LONGER.
+;	[SPR 10-27243]
+...
+;GET THE UPTIME
+;USES T1 AND T2 ANSWER IN T1
+
+GETUPT:	MOVE	T1,[%CNSUP]		;GET SYSTEM UPTIME (7 SERIES)
+	GETTAB	T1,			;GET IT
+	 CAIA				;FAILED, MUST BE PRE 7 SERIES
+	JRST	GETUP1			;GOT TIME, CONVERT IT
+	MOVE	T1,[%NSUPT]		;THIS ROUTINE DOES
+	GETTAB	T1,			; THE OBVIOUS THING
+	  SETZ	T1,			; OF GETTING THE UPTIME
+GETUP1:	MULI	T1,^D1000		;THEN CONVERTING TO
+	DIV	T1,JIFSEC		;MILLISECONDS.
+	POPJ	P,			;RETURN
+"
+
+No one noticed this problem ("OPSER auto jobs don't fire when the
+system's been up a while(*) for perhaps 10 years.  Probably because it
+took over a decade for TOPS-10 systems to become reliable enough to stay
+*up* for more than a week.  (Or it took a decade for someone to become
+brave enough to blow off weekly preventative maintenance).
+
+(*) 159 hours (== 6 days, 15 hours), 4 minutes, 22 seconds,
+18 jiffies and 6 milliseconds.
+
+If people had been thinking straight, as soon as the first bug had been
+found, some poor slob should have been detailed to ferret out all the
+millisecond<=>jiffy conversions in the source pool and fix them,
+instead of letting them get fixed in dribs and drabs.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+

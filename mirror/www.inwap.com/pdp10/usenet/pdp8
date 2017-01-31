@@ -1,0 +1,443 @@
+Article 3217 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!ais.net!uunet!in5.uu.net!world!world!news
+From: a11is0n@see.sig (Allison)
+Subject: Re: Could I build a PDP-8?
+Sender: news@world.std.com (Mr Usenet Himself)
+Message-ID: <EFLv95.6Mq@world.std.com>
+Date: Thu, 28 Aug 1997 03:43:53 GMT
+References: <EF4JFG.LCA@world.std.com> <19970819210601.RAA08492@ladder01.news.aol.com> <EF867E.3zu@world.std.com> <33FB770D.7DB6@InfoMation.comm> <3402AC58.CFFDEB@stoneweb.com> <3402B490.5D06@cisco.com> <5u1j0o$amv@mars.hyperk.com>
+Nntp-Posting-Host: world.std.com
+Organization: The World @ Software Tool & Die
+X-Newsreader: Forte Free Agent 1.0.82
+Lines: 22
+Xref: nntp1.ba.best.com alt.sys.pdp8:2052 alt.sys.pdp10:3217
+
+kth@srv.net (Kevin Handy) wrote:
+
+
+>Isn't this the chip that was used in the DecMates? I don't think
+>that DEC ever made their own chip.
+>I've still got a couple of DecMate II bases laying around, but have no
+>monitors for them.
+
+Yes. The WS78 used the 6100 and the DECMate I,II,III used the 6120
+which was faster and higher integration.
+
+They (the 6100 chips etal) were widely available in the late 70s early
+80s and fairly cheap.  It didn't  take much to build a system using
+the 6100 and I still have mine(operational).
+
+Recently I brough up OS278 on a DMIII and its very interesting.
+
+Allison
+Real address is: Allisonp @ world DOT std DOT com
+++++BULK Email severely not wanted+++
+ 
+
+
+
+Article 3216 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!news.mathworks.com!uunet!in5.uu.net!world!world!news
+From: a11is0n@see.sig (Allison)
+Subject: Re: Could I build a PDP-8?
+Sender: news@world.std.com (Mr Usenet Himself)
+Message-ID: <EFLv3G.6AL@world.std.com>
+Date: Thu, 28 Aug 1997 03:40:27 GMT
+References: <EF4JFG.LCA@world.std.com> <19970819210601.RAA08492@ladder01.news.aol.com> <EF867E.3zu@world.std.com> <33FB770D.7DB6@InfoMation.comm> <3402AC58.CFFDEB@stoneweb.com> <3402B490.5D06@cisco.com>
+Nntp-Posting-Host: world.std.com
+Organization: The World @ Software Tool & Die
+X-Newsreader: Forte Free Agent 1.0.82
+Lines: 19
+Xref: nntp1.ba.best.com alt.sys.pdp8:2051 alt.sys.pdp10:3216
+
+"Henry W. Miller" <hmiller@cisco.com> wrote:
+
+>Getting back to the original topic of building a PDP-8, I
+>just recalled that Intersil, a semiconductor company that was based 
+>in Cupertino, CA, and which was purchased by GE in either the late
+>1980's or early 1990's, came out with a "PDP-8 on a chip" microprocessor
+>back in the 1980's, I believe.
+
+late 70s, 1976 was the introduction of the 6100 and 1981 was the
+introduction of the 6120 which integrated the 6100 and the 6101.
+
+I bought my first 6100 in early '79 for something like $12.
+
+
+Allison
+Real address is: Allisonp @ world DOT std DOT com
+++++BULK Email severely not wanted+++
+ 
+
+
+
+Article 3218 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!nntprelay.mathworks.com!howland.erols.net!infeed1.internetmci.com!newsfeed.internetmci.com!192.48.96.123!in1.uu.net!uucp3.uu.net!world!news
+From: a11is0n@see.sig (Allison)
+Subject: Re: Could I build a PDP-8?
+Sender: news@world.std.com (Mr Usenet Himself)
+Message-ID: <EFMwHC.Cn9@world.std.com>
+Date: Thu, 28 Aug 1997 17:08:12 GMT
+References: <EF4JFG.LCA@world.std.com> <19970819210601.RAA08492@ladder01.news.aol.com> <EF867E.3zu@world.std.com> <33FB770D.7DB6@InfoMation.comm> <3402AC58.CFFDEB@stoneweb.com> <3402B490.5D06@cisco.com> <EFLv3G.6AL@world.std.com>
+Nntp-Posting-Host: world.std.com
+Organization: The World @ Software Tool & Die
+X-Newsreader: Forte Free Agent 1.0.82
+Lines: 37
+Xref: nntp1.ba.best.com alt.sys.pdp8:2056 alt.sys.pdp10:3218
+
+a11is0n@see.sig (Allison) wrote:
+
+>"Henry W. Miller" <hmiller@cisco.com> wrote:
+
+>>Getting back to the original topic of building a PDP-8, I
+>>just recalled that Intersil, a semiconductor company that was based 
+>>in Cupertino, CA, and which was purchased by GE in either the late
+>>1980's or early 1990's, came out with a "PDP-8 on a chip" microprocessor
+>>back in the 1980's, I believe.
+
+>late 70s, 1976 was the introduction of the 6100 and 1981 was the
+>introduction of the 6120 which integrated the 6100 and the 6101.
+
+>I bought my first 6100 in early '79 for something like $12.
+
+The part wasy available and low cost.  It was second sourced by harris
+semi as well.  There are several other chips the PIE(Peripheral
+interface element), MEDIC (Extended memory, DMA and timer).  
+
+It was widely used for low power control systems in sealed cabs where
+heat was a concern and the 12 bit word made it more compatable with 10
+and 12bit A/D or D/A converters.  Another use was to replace larger
+and harder to maintian PDP-8 system in use.
+
+In Kilobaud Microcomputing december 1979 there was an article about
+the intersil CMOS sampler package. The $49 price got you CPU, 256words
+ram, 1k rom with ODT, a PIE and UART.  For $39 more an etched board it
+could be put on.
+
+I have one and I still play with it as it's extended to 3kw ram and a 
+bunch of parallel ports.
+
+Allison
+Real address is: Allisonp @ world DOT std DOT com
+++++BULK Email severely not wanted+++
+ 
+
+
+
+Article 3419 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!howland.erols.net!nntp.abs.net!news.abs.net!not-for-mail
+Message-ID: <3A84D116.5642636C@mail.bcpl.net>
+From: Ken McMonigal <kmcmonig@mail.bcpl.net>
+X-Mailer: Mozilla 4.61 [en] (Win98; I)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: possible pdp-8 good idea for projects here (posted from afc)
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 47
+Date: Sat, 10 Feb 2001 00:26:46 -0500
+NNTP-Posting-Host: 208.242.126.28
+X-Complaints-To: abuse@bcpl.net
+X-Trace: news.abs.net 981782622 208.242.126.28 (Sat, 10 Feb 2001 00:23:42 EST)
+NNTP-Posting-Date: Sat, 10 Feb 2001 00:23:42 EST
+Xref: nntp1.ba.best.com alt.sys.pdp10:3419
+
+> Subject: 
+>             Re: Oldest operating computer on the internet?
+>        Date: 
+>             Sat, 10 Feb 2001 02:18:47 GMT
+>        From: 
+>             djg@drs-esg.com (David Gesswein)
+>  Newsgroups: 
+>             alt.folklore.computers
+>   References: 
+>             1 , 2
+> 
+> 
+> 
+> 
+> In article <3A8392C3.294E9354@ev1.net>,
+>         Charles Richmond <richmond@ev1.net> writes:
+> > rhn@nicholson.com wrote:
+> >> 
+> >> What are some candidates for the oldest operating computer CPU running
+> >> and available (maybe only periodically) on the public internet (via
+> >> tcp/ip)?  Are there any '70's vintage minicomputers that will respond
+> >> to a ping?
+> >> 
+> > Someone had a PDP-8 that you could use via the internet...I think you had
+> > to telnet...do *not* know about the "ping". 
+> > 
+> That was me, http://www.pdp8.net.  The machine itself doesn't talk directly
+> to the internet, I have a 486 Linux machine that does that.  The PDP-8
+> has its serial ports connected to the 486 which are access via telnet.  
+> The front panel of the machine is controlled from the 486 parallel port
+> by a custom board I made.  A java interface is provided to allow you to 
+> see the lights and play with the switches.
+> 
+> The 8/E's were manufactured from end 1970 to 1978, I am not sure when mine 
+> was made, probably towards the latter part of the period.  At some point 
+> I will be putting the 8/I next to it online.  The 8/I's were made from 
+> 1968 to 1971. 
+> 
+> The PDP-8 never had TCP/IP support that I know of. They did have DECnet. 
+> The 8/E I have is fully configured with 32k 12 bit words but even
+> that doesn't leave much room for OS, applications, and TCP/IP.  They
+> did fit a multiuser operating system in that.  My 8/I have only 8k 12 
+> bit words.
+> 
+> David Gesswein
+> http://www.pdp8.net/  -- Run an old computer with blinkenlights
+>
+
+
+Article 6469 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!nycmny1-snh1.gtei.net!lsanca1-snf1!news.gtei.net!newsfeed2.earthlink.net!newsfeed.earthlink.net!news.mindspring.net!not-for-mail
+From: djg@pdp8.net (David Gesswein)
+Newsgroups: alt.sys.pdp10,alt.sys.pdp8
+Subject: Re: Local Connection Between one PDP-8 and one PDP-10 and TSS/8
+Date: 29 Oct 2001 00:15:49 GMT
+Organization: www.pdp8.net
+Lines: 60
+Message-ID: <9ri73l$55t$1@slb2.atl.mindspring.net>
+References: <c2551c25.0110240452.63df9bc4@posting.google.com> <9rbjpb$1p5$2@bob.news.rcn.net> <DheC7.1415$Fe5.17198@ord-read.news.verio.net> <c2551c25.0110270028.7f894b6d@posting.google.com>
+NNTP-Posting-Host: 42.95.66.5e
+X-Newsreader: trn 4.0-test76 (Apr 2, 2001)
+Originator: djg@pdp8.net (David Gesswein)
+Xref: nntp1.ba.best.com alt.sys.pdp10:6469 alt.sys.pdp8:1000
+
+In article <c2551c25.0110270028.7f894b6d@posting.google.com>,
+Sergio Pedraja <spedraja@ono.com> wrote:
+>
+>4) In the TSS/8 manual appears a reference to PT08's. That is the interface 
+>   for the ASR33 teletype. Right ?
+>
+Yes.  It also had a RS-232 option.
+
+>5) The manual says that can support up to 32 "teletype controls" (PT08's 
+>   or 680/I). It speak too about support for one DA10 Interface, and one 
+>   Bit Synchronous Communication Unit (Type 637). About the 680/I, 
+>   the manual says it's divided in one DL8/I Data Line Interface and 
+>   one Serial Line Multiplexer Unit 685.
+>   This is the description of the Hardware that could be used by the 
+>   TSS/8. With independence of the additional emulation possibilities 
+>   that it offers, here comes my question itself.
+>
+From my small computer handbook.
+The 685 is simply a switch which allows the 681 to be connected to any one
+of 64 teletype lines.  It has the IOT's for it, a little long to type
+right now, email if you need it.
+
+>6) In case of PT08's... How works this board ? How much boards 
+>   could be plugged in one PDP/8 ? What manner ? Must the boards plugged 
+>   in one additional cabinet with nothing special ? Are they only used 
+>   to manage the ASR33's ?
+>   Where can be located documentation about these units ?
+>
+
+Seems to have same IOT as standard console port.  Normally they were
+Line IOT
+1    40/41
+2    42/43
+3    44/45
+4    46/47
+5    11/12
+
+Special model for 8/S that went inside an ASR-33 (PT08A) used
+03/04 (normal console IOT).  
+
+I have print set but it does not have programming information other than
+table above.  It uses a W706/W707 which I assume is functionally the
+same as the M706/M707 in an 8/I but negative bus with RTL IC's.
+
+They were about a half row double high in a 19" rack mount.  Attached to
+the external negative bus on original 8, 8/S and 8/I.  I have one but
+have not tried it yet.  How many you can have is the external bus limit
+on number of devices/cable length.
+
+If you think the print set will be of use I can put it on the scan pile.
+
+>9) FInally, it's the Sync.Comm.Unit 637. What do exactly this unit ? How 
+>   treat it the TSS/8 ? Where can be located documentation ?
+>
+Didn't find it but the books aren't big on indexes.
+
+David Gesswein
+http://www.pdp8.net/  -- Run an old computer with blinkenlights
+                         Have any PDP-8 stuff you're willing to part with?
+
+
+
+Article: 114107 of alt.folklore.computers
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newspeer1.nwr.nac.net!news.astraweb.com!news-small.astraweb.com!newsfeed.news2me.com!newsfeed2.earthlink.net!newsfeed.earthlink.net!stamper.news.pas.earthlink.net!newsread1.prod.itd.earthlink.net.POSTED!not-for-mail
+From: John Everett <jeverett3@earthlink.DEFEAT.UCE.BOTS.net>
+Newsgroups: alt.folklore.computers
+Subject: Re: TSS/8 and RTS8 ?
+Message-ID: <qo8s5vg5g8bgjc49hm6p2p2njelqjf9rsq@4ax.com>
+References: <b3iso7$p45$1@lenny.tc.umn.edu>
+X-Newsreader: Forte Agent 1.9/32.560
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 66
+Date: Thu, 27 Feb 2003 15:24:58 GMT
+NNTP-Posting-Host: 209.86.101.145
+X-Complaints-To: abuse@earthlink.net
+X-Trace: newsread1.prod.itd.earthlink.net 1046359498 209.86.101.145 (Thu, 27 Feb 2003 07:24:58 PST)
+NNTP-Posting-Date: Thu, 27 Feb 2003 07:24:58 PST
+Organization: EarthLink Inc. -- http://www.EarthLink.net
+Xref: dfw-artgen alt.folklore.computers:114107
+
+On Wed, 26 Feb 2003 09:15:51 -0800, "George R. Gonzalez" <grg@umn.edu>
+wrote:
+
+>Way back, DEC came out with the "time share" option for the PDP-8.
+>This was an amazingly RISCy way to virtualize the PDP-8.
+>
+>Basically if you enabled "time sharing" mode, all the dangerous
+>instructions,
+>like HLT, read switch register, and all the I/O instructions, would
+>interrupt to the monitor, which would do the proper steps to make it look
+>like the instruction executed.  Since all the memory-bank switching
+>instructions had been shoehowned into the I/O instruction space, this also
+>allowed the monitor to do paging and virtual memory!
+>
+>Just like today, the basic DOS (OS/8) didnt do anything with this feature,
+>but TSS/8 and RTS8 did!
+>
+>Looking thru the RTS8 source code, there was a big section that looked like
+>it may have been bodily copied from TSS/8.
+>
+>I wonder if the cognoscenti in this NG can elaborate on what was the
+>relationship between TSS/8 and RTS8.  One might guess that they were pretty
+>close cousins.
+
+This cognoscente can't elaborate on the relationship between TSS/8 and
+RTS8, but as co-author of TSS/8 I can shed some light on the origins
+of that system and its supporting hardware.
+
+During the late '60s Gordon Bell had taken a "leave" from DEC and was
+a professor of computer science at Carnegie-Mellon. He had a Dutch
+grad student named Adrian Van Der Goor (sp?). Somehow between the two
+of them they came up with the idea that with some small hardware mods
+a time-sharing system could be built for the PDP-8. Gordon and Adrian
+visited Maynard sometime in 1967 or 1968 (I'm guessing) and made a
+presentation to some execs and also some of us in the (tiny) PDP-8
+programming group. Gordon sort of just oversaw the meeting; Adrian
+made the presentation.
+
+The proposal was to create a "time-sharing option" which would create
+"user mode" and "exec mode" run states. In user mode all I/O
+operations, HLT, switch register reads, etc. would cause an interrupt.
+Of course at interrupt the system would switch into exec mode.
+
+The proposed time-sharing monitor would reside in page 0, while user
+images and swappable parts of the monitor would reside in extended
+memory. It was proposed to give each user a 4k virtual (basic) PDP-8.
+The design of the monitor (as we then called operating systems) would
+be based upon a research system originally proposed (and perhaps
+actually built) for a PDP-4 or PDP-7. I can't now recall where the
+design came from, but it was described in detail in a computer science
+text of the period.
+
+The Time-Sharing Option was designed by a junior member of PDP-8
+engineering who's name I've long since forgotten. Don Witcraft, who
+had worked on the PDP-10 monitor (later to be called TOPS-10) and I
+wrote TSS/8 based upon the suggestions made by Gordon and Adrian.
+
+BTW, the system was initially to be called TS-8, a name which
+persisted during most of its development. We changed it to TSS/8 when
+IBM announced TSS/360. It just seemed so right!
+
+One of the catch phrases around DEC at the time, "Man is going to the
+moon, and time-sharing on the PDP-8."
+
+
+jeverett3<AT>earthlink<DOT>net   http://home.earthlink.net/~jeverett3
+
+
+Article: 19462 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!nntp-relay.ihug.net!ihug.co.nz!news.linkpendium.com!xuxa.iecc.com!not-for-mail
+From: johnl@iecc.com (John R. Levine)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Speed of APL on 360s, was Any DEC 340 Display System Doco ?
+Date: 10 Apr 2003 22:22:21 -0400
+Organization: I.E.C.C., Trumansburg NY USA
+Lines: 63
+Message-ID: <b758st$svu$1@xuxa.iecc.com>
+References: <3e8ae086.45754328@news.m.iinet.net.au> <Pine.WNT.4.55.0304091916040.2832@Tomobiki-Cho.CAC.Washington.EDU> <ui0a9vciulrivca6lvvsop7afjse31t94e@4ax.com> <Pine.LNX.4.55.0304092327270.4101@shiva0.cac.washington.edu>
+NNTP-Posting-Host: xuxa.iecc.com
+X-Trace: xuxa.iecc.com 1050027741 29695 208.31.42.42 (11 Apr 2003 02:22:21 GMT)
+X-Complaints-To: abuse@iecc.com
+NNTP-Posting-Date: 11 Apr 2003 02:22:21 GMT
+Xref: dfw-artgen alt.folklore.computers:119151 alt.sys.pdp10:19462
+
+>I think though that APL\360 itself was slow.  You didn't have all that
+>large a workspace -- I think 32K -- yet even memory primitives took
+>noticable time.
+
+It was pretty slow, since it just cranked away one operator at a time
+creating and discardit array temporaries.  The reason APL\360 gained
+popularity was that it was well designed for time-sharing with very
+efficient context switching and monitor that let you run dozens of
+users on a 360/50 with snappy response.
+
+In later years people started doing compilation with interesting
+optimizations like type and shape inference, but that wasn't until the
+mid 1970s.
+
+I wrote an APL subset to Basic compiler as a class project in 1972
+(written in Trac, believe it or not) that built up Basic expressions
+representing arbitrary elements of APL expressions and only generated
+loops when it needed to store an array or print a value. I later
+realized it was considerably ahead of the then state of the art in APL
+compilers.
+
+> On the other hand, I don't know how fast a 360/67 was.  It was
+> supposed to have been one of the faster models of 360s (this was
+> early 1970s) but I recall that a 360/30 was *very* slow.
+
+I'm SO GLAD you asked, since I happen to have the Functional
+Characteristics manuals for the 360/67 and 360/30 here.  (I bought
+them from IBM's web site a year or two ago.)
+
+The /67 was a pretty fast machine for the mid 1960s with 32 bit
+integer datapaths, 200ns cycle time, and a 60 bit adder for floating
+point.  Register to register integer load or add was 650 ns,
+memory-to-register load was 1.2us, add 1.4us.  Floating add from
+memory 2.43us single, 2.45us double.  Floating multiply 4.4us short,
+7.6us long.  Floating divide 7.3us short, 14.1us long.  Floating
+compare 1.98us, conditional branch 800ns not taken, 1.1us taken.  The
+dual processor machine was slightly slower, 690 ns load, to 14.33us
+floating divide.
+
+The /30, on the other hand, was really slow.  It was byte serial, 1us
+cycle time and 2us memory cycle on early machines, later sped up to
+750ns and 1.5us, and microcode did everything including simulating
+channel I/O.  Register to register integer load was 17us, add was
+22us, memory-to-register load was 24us, add 29us.  Floating add from
+memory 52us single, 69us double.  Floating multiply 208us short, 472us
+long.  Floating divide 301us short, 1665us long.  Floating compare
+65us, conditional branch 21us not taken, 22us taken.
+
+> The stupid prime number calculation program (check all odd numbers
+> from 3 to the square root to see if any are a factor) was faster in
+> interpreted FOCAL on a PDP-8/e than in compiled Fortran on the
+> 360/30.
+
+I'm not surprised.  The 8/e was a 12 bit machine with 1.2us memory and
+hard-wired instructions that ran the memory at full speed, giving it a
+head start over the /30's 1.5us memory and microcoded instruction set.
+Also, the floating point package around which Focal was built was
+quite well written.
+
+-- 
+John R. Levine, IECC, POB 727, Trumansburg NY 14886 +1 607 387 6869
+johnl@iecc.com, Village Trustee and Sewer Commissioner, http://iecc.com/johnl, 
+Member, Provisional board, Coalition Against Unsolicited Commercial E-mail
+
+

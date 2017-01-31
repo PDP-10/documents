@@ -1,0 +1,1424 @@
+Path: news.casema.net!not-for-mail
+Reply-To: "Insh_Allah" <i_a$:@:$wanadoo.nl>
+From: "Insh_Allah" <i_a$:@:$wanadoo.nl>
+Newsgroups: alt.folklore.computers
+Subject: TOPS-20 comnd jsys - questions about the interface and particular details
+Date: Sun, 6 Aug 2000 17:29:57 +0200
+Organization: Bermuda Triangle Services Ltd.
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Newsreader: Microsoft Outlook Express 5.00.3018.1300
+X-MimeOLE: Produced By Microsoft MimeOLE V5.00.3018.1300
+Lines: 175
+Message-ID: <398d83cf$0$26063@reader3>
+NNTP-Posting-Host: 4dyn36.dh.casema.net
+X-Trace: reader3 965575631 26063 212.64.4.36
+X-Complaints-To: http://www.casema.net/abuse 
+X-Abuse-Info: Please be sure to include a copy of ALL headers 
+X-Abuse-Info: Otherwise we will be unable to process your complaint properly 
+X-Server-Date: 06 Aug 2000 15:27:11 GMT
+Xref: news.casema.net alt.folklore.computers:12070
+
+Hi folks,
+
+Sorry, big message. All about tops-20 COMND JSYS details. Can't stop myself.
+
+
+
+<intro>
+
+Unfortunately I was still in diapers when the big machines ruled the earth
+;-) (was born in '69)
+
+To compensate I'm into 'commandline parsing' as some folks are into writing
+kernels. (Yup, I know. "Get a life" they say :-) )
+
+Looking for and thinking about the 'Ultimate Commandline I/F', I found
+descriptions (and C source emulating it) of the TOPS-20 COMND JSYS system
+call a while back. And I finally saw the light. Halelujah. Being a longtime
+C hacker, I've looked around for C sources emulating the COMND JSYS
+interface. I found 'ccmd' (which came with mm, a mail reader) and c-kermit
+7.0, which also has a C implementation of what looks like the majority of
+the comnd jsys features.
+
+I have searched the net for any texts and sample command entry sessions on
+tops-20 comnd jsys, found quite some global descriptions, but only very few
+things that showed some actual 'trace' of a command edit session, inclusing
+'noise words' (between brackets), online help/hinting using '?' at the
+start, middle or end of a command or option, etc.
+
+I've taken the CCMD source code, compared it's features, etc. against the
+Kermit 7 stuff (CCMD has more 'detail' it seems) and am porting this stuff
+to ANSI C (and my own environments (Win32+dos Console, linux, embedded)). It
+works... a bit. Busy debugging and all that ;-)
+
+CCMD is nice (it even has documentation. Wow! :-)) ) but I'd like to know
+how 'close' this thing emulates the real stuff...
+
+</intro>
+
+
+
+<the questions>
+
+As I have enjoyed this group for a while (why had history lessons at school
+to be so bloody boring? _this_ newsgroup is fun!), I would be interested to
+know if somebody out there can help me answer any of these:
+
+
+
+* help & hinting (the '?' key):
+
+- you enter just a '?'. Did you get a list of commands? (I assume 'yes')
+Were these simply listed or did they include a little description of what
+they actually did? (I assume 'no', but I could imagine you would like that
+if you were looking for a certain command you didn't know yet. For instance:
+I'd want to calculate some stuff as I've got to pay my taxes (it happens
+-( ). Now unix 'calc' would be a bit meager, but how would I find the proper
+tool on tops-20? Or should I _know_ (by asking the sysadmin) that the
+locally installed spreadsheet program would be named 'spreadsheet'? I know
+you need to know _some_ stuff before you can sit behind a computer a have it
+do something sensible; I'm curious how 'low' the tolerable 'expert level'
+could be when you sat down behind a tops-20 console the first time you'd do
+_something_ with these computers...)
+
+- you enter part of a command (still ambiguous) and hit '?': did you get a
+list of 'matching' commands? (I assume 'yes')
+
+- you enter a non-ambiguous command (or abbreviation) and hit '?', did you
+see the full name of the command (?) and a list or description of accepted
+options and parameters? (I've worked on VMS and it had 'help' that was quite
+extensive for saome of these things.)
+
+- I understand you could type a command word, hit enter and 'discover' it
+required parameters as it got reprinted with additional 'noise words' that
+hinted you in the proper direction:
+
+: copy[Enter]
+->
+: copy (from file) _
+
+This went on until you 'completed' the command. (I saw this in one of the
+texts I found on the net) This is correct? (oh, boy. This is _cool_ :-) )
+
+- if you entered a non-abiguous command and hit [esc] to trigger
+'completion' (ccmd uses [tab]) it is reprinted 'complete' _plus_ additional
+'noise words' to hint what should be next:
+
+: cop[esc]
+->
+: copy (from file) _
+
+This is true? (I assume 'yes') Any nifty 'caveats' here?
+
+- VMS has switches with mandatory or optional arguments a bit like this:
+'/option:arg'. I suppose tops-20 had the same. What happened if you hit '?'
+after typing the 'switch' character '/' (list of switches?) or part of a
+switch parameter ('/opt?' when you meant '/option')?
+
+
+
+* command and parameter completion:
+
+- CCMD supports (not easily portable to embedded systems :-( )  filename
+completion. c-kermit supports various flags that indicate that the command
+at hand accepts some of these:
+
++ input files (i.e. filename _must_ exist)
+
++ output filename (i.e. filename _may_ exist; you might be ok typing a
+non-exiting filename)
+
++ existing directory (i.e. it must be an existing directory name; this one I
+came up with myself so you'd be able to 'filter' input for a 'chdir' type
+command. I don't know if tops-20 could do this.)
+
++ non-existing directory (e.g. 'mkdir' type command support. )
+
+I know some unix shells (tcsh, bash) show a list of filenames if you hit the
+'completion key' twice [tab]; did you need to type '?' on tops-20? What if
+you typed [esc] completion once? (I assume your console beeped if the typed
+entry was ambiguous) and twice? (I don't have a clue. I hope it showed a
+list of 'matching' filenames?)
+
+
+
+* misc & general:
+
+- Any (weird or important) details I might need/like to know? (Whoops, I
+guess I'm asking too much of a 'good thing' now, but does someone have a
+comnd jsys 'programmers/users manual' in some digital format so I can check
+it out? (scanned, text, whatever))
+
+</the questions>
+
+
+
+<outro>
+
+I know I shouldn't blab so much in a single news message, it's not polite. I
+didn't know how to 'compress' it well, so I've tried to state my business in
+the header & subject line.
+
+If you feel like sharing some knowledge about tops-20 command line interface
+(or comnd jsys programmers interface) I'd appreciate it very much.
+
+My intention is to model my stuff as close to tops-20 as possible while
+adding 'selectable' additional features if I ever need any. As far as I read
+in the texts I found, comnd jsys was quite complete and properly thought
+through. (contrary to some incongruate commandline i/f's (e.g. dos))
+
+Thank you for your time and I hope to hear from you.
+
+I monitor this newgroup quite frequently so no 'reply to email please' plea
+here ;-)
+
+</outro>
+
+--
+Groetjes/Greetinx,
+
+  Ger
+
+----------------------------------------------------------------------------
+--
+Ger Hobbelt a.k.a. Insh_Allah   (remove all 'f' and 'g')
+ig_fa@fwanfadfoof.nl
+----------------------------------------------------------------------------
+--
+  You're a modern day Man,
+  You Chat, Email and ICQ whenever you can.
+  Me, I'm rather square,
+  I like to Talk to people anywhere.
+  'cause looking at her Eyes,
+  beats querty by far at 'Nice'.
+
+
+
+
+Reply-To: "Insh_Allah" <i_a$:@:$wanadoo.nl>
+From: "Insh_Allah" <i_a$:@:$wanadoo.nl>
+To: "Hans Liss" <Hans$:@:$Liss.pp.se>
+References: <Pine.LNX.4.21.0008061841050.256-200000@obygden.udac.se>
+Subject: Re: COMND
+Date: Sun, 6 Aug 2000 21:54:46 +0200
+Organization: Bermuda Triangle Services Ltd.
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 5.00.3018.1300
+X-MimeOLE: Produced By Microsoft MimeOLE V5.00.3018.1300
+
+Hi Hans,
+
+Ghee :-))) Thank you very much! This is lovely!
+
+Of course, if I got something that resembles reasonably working software,
+I'll give you a copy. (Care to... er... alpha-test some samples lateron?
+(say, next month?))
+
+(Please note: I'll probably kick out the ccmd setjmp/longjmp
+reparse/error-processing stuff and a couple of other details, so the final
+mechanism, as viewed by a programmer, might be different from the original
+CCMD in some detail. Objections? Comments?
+
+Extra question: do you think it 'bad practice' to replace the 5-7 letters
+define's and structure elements by longer names? (CMxOK I can understand,
+but it's a bit tough trying to remember what some of the flags mean. I'm
+thinking about providing 'mappings'.)
+
+Groetjes/Greetinx,
+
+  Ger
+
+PS: if you find time to scan or otherwise digitize that manual, I'd
+appreciate it. If I want to provide mappings of some sort, the true original
+is the only thing that's really interesting. ccmd is just an intermediate
+step, emulating the original. At least to me.
+
+----------------------------------------------------------------------------
+--
+Ger Hobbelt a.k.a. Insh_Allah                     mailto:i_a$:@:$wanadoo.nl
+----------------------------------------------------------------------------
+--
+  You're a modern day Man,
+  You Chat, Email and ICQ whenever you can.
+  Me, I'm rather square,
+  I like to Talk to people anywhere.
+  'cause looking at her Eyes,
+  beats querty by far at 'Nice'.
+
+----- Original Message -----
+From: "Hans Liss" <Hans$:@:$Liss.pp.se>
+To: <i_a$:@:$wanadoo.nl>
+Sent: Sunday, August 06, 2000 7:08 PM
+Subject: COMND
+
+
+> I didn't want to post this much to afc, but here you have the INFO section
+> on COMND as an attachment. There are some CR underlines in there which I
+> left in - I suppose you can remove them yourself if they cause trouble
+> with your text viewer.
+>
+> While I'm at it, here are some examples:
+[...]
+> If you port CCMD to ANSI C and get it to work, I would very much like to
+> have a copy! I have looked at it, but never found the energy to begin
+> porting it.
+>
+> If you want to know more about COMND I have the Monitor Calls Reference
+> Manual somewhere, too.
+>
+> /Hans
+
+
+
+Reply-To: "Insh_Allah" <i_a$:@:$wanadoo.nl>
+From: "Insh_Allah" <i_a$:@:$wanadoo.nl>
+To: "Hans Liss" <Hans$:@:$Liss.pp.se>
+References: <Pine.LNX.4.21.0008062156020.256-200000@obygden.udac.se>
+Subject: Re: COMND
+Date: Mon, 7 Aug 2000 22:57:38 +0200
+Organization: Bermuda Triangle Services Ltd.
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 5.00.3018.1300
+X-MimeOLE: Produced By Microsoft MimeOLE V5.00.3018.1300
+
+Hi Hans,
+
+Thanks for all your efforts. I've read the pages you sent me over the
+weekend. Great reference stuff. I found CCMD does a resonably good job at
+'emulating' but isn't 'conformant' to amny details (CMINI was a function
+code once; c-kermit 7 has CMIFO, CMIFI and CMFIL, while CCMD only has CMFIL
+but with quite a few extra flags to produce CMIFI/IFO compatible results
+(IFI: parse input file = existing file; OFI: parse output file = shouldn't
+exist; etc.) Etc,etc,etc.
+
+In other words: a VERY valuable reference to me. I now can see:
+
+1) the description of true original.
+
+2) the differences and enhancements CCMD (and c-kermit 7) have introduced.
+
+To me, this allows me to check the actual C code against the original
+documentation and think about its behaviour ("do I have good reasons do want
+it to act different?")
+
+
+> Hm. I have always been suspicious of setjmp/longjmp though I've never done
+> something that used them myself so far (I was taught strict functional
+> programming using LISP at university so I instinctively avoid any global
+> stuff now :-), but I'm not sure how they are used in CCMD, so I cannot
+> comment on that..
+
+setjmp/longjmp is used as a 'jump to calling routine and trigger
+reparse/re-entry-on-error' mechanism. Which, considering the documentation
+you sent me, is now a twice-as-ugly 'enhancement' to me.
+
+
+> Nope. If you want to keep the mappings, make extra defines or just
+> comments. That should be enough for anyone, I think. I agree that longer
+> names are preferable.
+
+Ok, I'll map them or document them. Also handy for myself so I can see what
+was 'true original' and what has become 'extra goodies'.
+
+> I just checked and found that I was wrong, unfortunately. The manual I
+> have is not the Ref Manual but the User's Guide and it doesn't touch COMND
+> at all. Too bad. I'll check if someone has the Reference Manual so I can
+> borrow it.
+
+Anyway, I guess the help pages you sent me are the best thing I could get my
+hands on.
+
+OTH, if you could find time to produce the GTJFN (filename parsing monitor
+call referenced in the comnd manpage) and IDTIM (parse time/date monitor
+call) helppages, I guess that'll be quite a big help. And the documentation
+is rather excellent so I should be able to check my stuff against that text.
+
+(Q: Ctrl/R is mentioned quite often; do I understand correctly that this
+keypress does:
+
+1) produce a new line, starting with a fresh prompt string (.CMRTY)
+
+2) (and this I'm not absolutely sure) print the commandline as you typed it,
+i.e. Ctrl-R == 'redraw command input'. Or does it only print the 'already
+parsed part' of your current entry.)
+
+
+> Don't forget alt.sys.pdp10, by the way! That's the best place to discuss 
+> this stuff!
+
+Ah! I didn't know that one. Checked my ISP and they carry that one too!
+Thanks for the tip! I'm busy marking up the CCMD sources as I have them now
+(ANSI-fied as far as possible) with the fields and flags as named in the
+helppage you sent me, so I can later check back while debugging.
+
+
+> COMND is written in PDP-10 assembler, obviously, but I'm sending you an
+> INFO file describing that, so I think you will be able to read it anyway.
+
+Thanks! :-) I've found some tops-20 related macro assembly on the net
+before, so this one comes in handy already.
+
+
+Groetjes/Greetinx,
+
+  Ger
+
+----------------------------------------------------------------------------
+--
+Ger Hobbelt a.k.a. Insh_Allah                     mailto:i_a$:@:$wanadoo.nl
+----------------------------------------------------------------------------
+--
+  You're a modern day Man,
+  You Chat, Email and ICQ whenever you can.
+  Me, I'm rather square,
+  I like to Talk to people anywhere.
+  'cause looking at her Eyes,
+  beats querty by far at 'Nice'.
+
+
+
+
+
+
+
+
+Return-Path: <hansl$:@:$obygden.udac.se>
+Date: Mon, 7 Aug 2000 23:22:48 +0200 (MET DST)
+From: Hans Liss <Hans$:@:$Liss.pp.se>
+To: Insh_Allah <i_a$:@:$wanadoo.nl>
+Subject: Re: COMND
+In-Reply-To: <021101c000b2$1f0788a0$0402a8c0@inshallah.mbh.org>
+Message-ID: <Pine.LNX.4.21.0008072301420.256-101000@obygden.udac.se>
+X-Ncc-Regid: se.udac
+MIME-Version: 1.0
+
+On Mon, 7 Aug 2000, Insh_Allah wrote:
+
+> Anyway, I guess the help pages you sent me are the best thing I could get my
+> hands on.
+>
+> OTH, if you could find time to produce the GTJFN (filename parsing monitor
+> call referenced in the comnd manpage) and IDTIM (parse time/date monitor
+> call) helppages, I guess that'll be quite a big help. And the documentation
+> is rather excellent so I should be able to check my stuff against that text.
+
+I'm sending you all the JSYS info files, to simplify things.
+
+By the way, I believe you can open 'jsysaf.info' in the 'info' system in
+emacs. You may have to rename all the files to uppercase in order to get
+the chaining to work properly, though.
+
+> (Q: Ctrl/R is mentioned quite often; do I understand correctly that this
+> keypress does:
+> 
+> 1) produce a new line, starting with a fresh prompt string (.CMRTY)
+> 
+> 2) (and this I'm not absolutely sure) print the commandline as you typed it,
+> i.e. Ctrl-R == 'redraw command input'. Or does it only print the 'already
+> parsed part' of your current entry.)
+
+It redraws the command line exactly as it is, on the current line (that
+is, it sends a CR followed (I think) by a Clear-To-End-Of-Line and then
+rewrites the command line). Useful when something garbles the screen.
+
+  [Editors note: jsysinfo.tar.gz decoded and stored as separate files.]
+  -rw-r--r--  1 inwap  best  158167 Aug  7 14:08 jsyssz.info
+  -rw-r--r--  1 inwap  best  113104 Aug  7 14:08 jsysnr.info
+  -rw-r--r--  1 inwap  best  218949 Aug  7 14:07 jsysgm.info
+  -rw-r--r--  1 inwap  best  221462 Aug  7 14:07 jsysaf.info
+
+  [Two other messages also stored as separate files.]
+  -rw-rw-r--  1 inwap  best   56197 Aug 11 16:18 comnd.info
+  -rw-rw-r--  1 inwap  best  103174 Aug 11 16:23 its-pdp10.info
+
+
+Return-Path: <kkt$:@:$itchy.serv.net>
+To: "Insh_Allah" <i_a$:@:$wanadoo.nl>
+Subject: Re: TOPS-20 comnd jsys - questions about the interface and particular details
+From: Patrick Scheible <kkt$:@:$serv.net>
+Date: 06 Aug 2000 17:40:56 -0700
+In-Reply-To: "Insh_Allah"'s message of Sun, 6 Aug 2000 17:29:57 +0200
+Message-ID: <ioaeepewdj.fsf@itchy.serv.net>
+Lines: 245
+X-Mailer: Gnus v5.3/Emacs 19.34
+
+Hi Ger,
+
+It's been a long time since I used TOPS-20, but I can confirm at least
+some of your questions.
+
+"Insh_Allah" <i_a$:@:$wanadoo.nl> writes:
+
+> 
+> Hi folks,
+> 
+> Sorry, big message. All about tops-20 COMND JSYS details. Can't stop myself.
+> 
+> 
+> 
+> <intro>
+> 
+> Unfortunately I was still in diapers when the big machines ruled the earth
+> ;-) (was born in '69)
+> 
+> To compensate I'm into 'commandline parsing' as some folks are into writing
+> kernels. (Yup, I know. "Get a life" they say :-) )
+> 
+> Looking for and thinking about the 'Ultimate Commandline I/F', I found
+> descriptions (and C source emulating it) of the TOPS-20 COMND JSYS system
+> call a while back. And I finally saw the light. Halelujah. Being a longtime
+> C hacker, I've looked around for C sources emulating the COMND JSYS
+> interface. I found 'ccmd' (which came with mm, a mail reader) and c-kermit
+> 7.0, which also has a C implementation of what looks like the majority of
+> the comnd jsys features.
+
+I haven't used ccmd, but the c-kermit interface is more than a little
+similar to TOPS-20's commandline.
+
+> I have searched the net for any texts and sample command entry sessions on
+> tops-20 comnd jsys, found quite some global descriptions, but only very few
+> things that showed some actual 'trace' of a command edit session, inclusing
+> 'noise words' (between brackets), online help/hinting using '?' at the
+> start, middle or end of a command or option, etc.
+> 
+> I've taken the CCMD source code, compared it's features, etc. against the
+> Kermit 7 stuff (CCMD has more 'detail' it seems) and am porting this stuff
+> to ANSI C (and my own environments (Win32+dos Console, linux, embedded)). It
+> works... a bit. Busy debugging and all that ;-)
+> 
+> CCMD is nice (it even has documentation. Wow! :-)) ) but I'd like to know
+> how 'close' this thing emulates the real stuff...
+> 
+> </intro>
+> 
+> 
+> 
+> <the questions>
+> 
+> As I have enjoyed this group for a while (why had history lessons at school
+> to be so bloody boring? _this_ newsgroup is fun!), I would be interested to
+> know if somebody out there can help me answer any of these:
+> 
+> 
+> 
+> * help & hinting (the '?' key):
+> 
+> - you enter just a '?'. Did you get a list of commands? (I assume 'yes')
+> Were these simply listed or did they include a little description of what
+> they actually did? (I assume 'no', but I could imagine you would like that
+> if you were looking for a certain command you didn't know yet. For instance:
+> I'd want to calculate some stuff as I've got to pay my taxes (it happens
+> -( ). Now unix 'calc' would be a bit meager, but how would I find the proper
+> tool on tops-20? Or should I _know_ (by asking the sysadmin) that the
+> locally installed spreadsheet program would be named 'spreadsheet'? I know
+> you need to know _some_ stuff before you can sit behind a computer a have it
+> do something sensible; I'm curious how 'low' the tolerable 'expert level'
+> could be when you sat down behind a tops-20 console the first time you'd do
+> _something_ with these computers...)
+
+It gave you a list of just the command names.  (But that was a
+starting point for using "help".)  TOPS-20 command names were usually
+more intuitive than, say, Unix (e.g. copy, not mv; directory, not
+ls).  
+
+> - you enter part of a command (still ambiguous) and hit '?': did you get a
+> list of 'matching' commands? (I assume 'yes')
+
+Yes.  Note that when you hit ? to get a list of matching commands,
+after showing you the match list it then filled in what you'd typed up
+to that point for you to continue where you left off before hitting ?.
+ 
+> - you enter a non-ambiguous command (or abbreviation) and hit '?', did you
+> see the full name of the command (?) and a list or description of accepted
+> options and parameters? (I've worked on VMS and it had 'help' that was quite
+> extensive for saome of these things.)
+
+I believe it showed you just a list of the one matching command at
+that point.  You could then hit escape to complete the command name
+and be prompted for the accepted parameters and options, hit space and
+give it the options and parameters without prompting, or backspace out
+and try a different command.  
+
+> - I understand you could type a command word, hit enter and 'discover' it
+> required parameters as it got reprinted with additional 'noise words' that
+> hinted you in the proper direction:
+> 
+> : copy[Enter]
+> ->
+> : copy (from file) _
+> 
+> This went on until you 'completed' the command. (I saw this in one of the
+> texts I found on the net) This is correct? (oh, boy. This is _cool_ :-) )
+
+I thought you had to hit [escape] at each point to get that prompting,
+and hitting [enter] would give the command as you typed it; if there
+were defaults set up they'd run with the defaults, if there weren't
+defaults set up you'd get an error message.
+
+> - if you entered a non-abiguous command and hit [esc] to trigger
+> 'completion' (ccmd uses [tab]) it is reprinted 'complete' _plus_ additional
+> 'noise words' to hint what should be next:
+> 
+> : cop[esc]
+> ->
+> : copy (from file) _
+> 
+> This is true? (I assume 'yes') Any nifty 'caveats' here?
+
+Yes, that's right.  On TOPS-20, the computer-supplied completion and
+noisewords were in all caps, while most users typed their input in
+lowercase, so it looked more like:
+
+@ cop[esc]Y (FROM FILE) foo.b[esc]AZ (TO FILE) bar.[esc]BAZ
+
+> - VMS has switches with mandatory or optional arguments a bit like this:
+> '/option:arg'. I suppose tops-20 had the same. What happened if you hit '?'
+> after typing the 'switch' character '/' (list of switches?) or part of a
+> switch parameter ('/opt?' when you meant '/option')?
+
+It'd give you the list of switches that'd match what you'd typed up
+to that point, and then rewrite them for you to complete which one you
+meant.  
+
+> * command and parameter completion:
+> 
+> - CCMD supports (not easily portable to embedded systems :-( )  filename
+> completion. c-kermit supports various flags that indicate that the command
+> at hand accepts some of these:
+> 
+> + input files (i.e. filename _must_ exist)
+> 
+> + output filename (i.e. filename _may_ exist; you might be ok typing a
+> non-exiting filename)
+> 
+> + existing directory (i.e. it must be an existing directory name; this one I
+> came up with myself so you'd be able to 'filter' input for a 'chdir' type
+> command. I don't know if tops-20 could do this.)
+> 
+> + non-existing directory (e.g. 'mkdir' type command support. )
+> 
+> I know some unix shells (tcsh, bash) show a list of filenames if you hit the
+> 'completion key' twice [tab]; did you need to type '?' on tops-20? What if
+> you typed [esc] completion once? (I assume your console beeped if the typed
+> entry was ambiguous) and twice? (I don't have a clue. I hope it showed a
+> list of 'matching' filenames?)
+
+Yep, it showed a list of matching filenames.  There were other
+categories it could match too, for instance there was a date & time
+specification that would automatically complete days of the week or
+names like "tomorrow", user names, etc.
+ 
+> * misc & general:
+> 
+> - Any (weird or important) details I might need/like to know? (Whoops, I
+> guess I'm asking too much of a 'good thing' now, but does someone have a
+> comnd jsys 'programmers/users manual' in some digital format so I can check
+> it out? (scanned, text, whatever))
+
+For some the fancier commands to work right, they had to be written
+and installed correctly.  For exec builtins it was already done, but
+if you ported or locally wrote some piece of software you'd probably
+need to run it with the RUN command rather than the command parser so
+you probably wouldn't get all the nice argument parsing.
+
+The sysadmin commands were prefixed with ^E (control-E) so they
+wouldn't clutter up the list of commands if you typed ? at the exec
+prompt.  You could list them by typing ^E?.
+
+I've got a jsys manual, but it's printed, not online.  I think there's
+one online somewhere.  The real name is Monitor Calls Reference Manual
+if you want to search.  It's not bad for documentation, but doesn't
+have fully worked out examples.  Ralph E. Gorin's textbook
+Introduction to DECSYSTEM-20 Assembly Language Programming (Digital
+Press, 1981) has a good discussion and example; maybe you can find it
+through interlibrary loan.
+
+The interface takes longer to describe than it does to learn to use.
+
+Sorry about sending e-mail rather than posting.  Gnus and my news
+server seem to be having a difference of opinion today.
+
+Good luck,
+
+-- Patrick Scheible
+
+
+> </the questions>
+> 
+> 
+> 
+> <outro>
+> 
+> I know I shouldn't blab so much in a single news message, it's not polite. I
+> didn't know how to 'compress' it well, so I've tried to state my business in
+> the header & subject line.
+> 
+> If you feel like sharing some knowledge about tops-20 command line interface
+> (or comnd jsys programmers interface) I'd appreciate it very much.
+> 
+> My intention is to model my stuff as close to tops-20 as possible while
+> adding 'selectable' additional features if I ever need any. As far as I read
+> in the texts I found, comnd jsys was quite complete and properly thought
+> through. (contrary to some incongruate commandline i/f's (e.g. dos))
+> 
+> Thank you for your time and I hope to hear from you.
+> 
+> I monitor this newgroup quite frequently so no 'reply to email please' plea
+> here ;-)
+> 
+> </outro>
+> 
+> --
+> Groetjes/Greetinx,
+> 
+>   Ger
+> 
+> ----------------------------------------------------------------------------
+> --
+> Ger Hobbelt a.k.a. Insh_Allah   (remove all 'f' and 'g')
+> ig_fa@fwanfadfoof.nl
+> ----------------------------------------------------------------------------
+> --
+>   You're a modern day Man,
+>   You Chat, Email and ICQ whenever you can.
+>   Me, I'm rather square,
+>   I like to Talk to people anywhere.
+>   'cause looking at her Eyes,
+>   beats querty by far at 'Nice'.
+> 
+> 
+
+
+
+
+
+Reply-To: "Insh_Allah" <i_a$:@:$wanadoo.nl>
+From: "Insh_Allah" <i_a$:@:$wanadoo.nl>
+To: "Patrick Scheible" <kkt$:@:$serv.net>
+References: <398d83cf$0$26063@reader3> <ioaeepewdj.fsf@itchy.serv.net>
+Subject: Re: TOPS-20 comnd jsys - questions about the interface and particular details
+Date: Mon, 7 Aug 2000 23:09:25 +0200
+Organization: Bermuda Triangle Services Ltd.
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 5.00.3018.1300
+X-MimeOLE: Produced By Microsoft MimeOLE V5.00.3018.1300
+
+Hi Patrick,
+
+Thank you very much for you reply!
+
+----- Original Message -----
+From: "Patrick Scheible" <kkt$:@:$serv.net>
+To: "Insh_Allah" <i_a$:@:$wanadoo.nl>
+Sent: Monday, August 07, 2000 2:40 AM
+Subject: Re: TOPS-20 comnd jsys - questions about the interface and
+particular details
+
+
+> Hi Ger,
+>
+> It's been a long time since I used TOPS-20, but I can confirm at least
+> some of your questions.
+[...]
+> Yep, it showed a list of matching filenames.  There were other
+> categories it could match too, for instance there was a date & time
+> specification that would automatically complete days of the week or
+> names like "tomorrow", user names, etc.
+
+Ah! I didn't know this. (Hans Liss was so kind to send me a digital copy of
+the comnd jsys reference pages. Which referenced the IDTIM call for
+'accepted date/time input'.)
+
+[...]
+> For some the fancier commands to work right, they had to be written
+> and installed correctly.  For exec builtins it was already done, but
+> if you ported or locally wrote some piece of software you'd probably
+> need to run it with the RUN command rather than the command parser so
+> you probably wouldn't get all the nice argument parsing.
+
+Sounds a bit like the VAX/VMS machies I've working on a few years ago. :-(
+
+> The sysadmin commands were prefixed with ^E (control-E) so they
+> wouldn't clutter up the list of commands if you typed ? at the exec
+> prompt.  You could list them by typing ^E?.
+>
+> I've got a jsys manual, but it's printed, not online.  I think there's
+> one online somewhere.  The real name is Monitor Calls Reference Manual
+> if you want to search.  It's not bad for documentation, but doesn't
+
+Thanks! I'll check this one out!
+
+> have fully worked out examples.  Ralph E. Gorin's textbook
+> Introduction to DECSYSTEM-20 Assembly Language Programming (Digital
+> Press, 1981) has a good discussion and example; maybe you can find it
+> through interlibrary loan.
+>
+> The interface takes longer to describe than it does to learn to use.
+>
+> Sorry about sending e-mail rather than posting.  Gnus and my news
+> server seem to be having a difference of opinion today.
+
+No problem. I'm grateful you took the time to help me out.
+
+As I have received other responses through email only, I'll compile a
+'response collection' of some sort later this week. To bad if someone else
+is interested too and doesn't see all this.
+
+>
+> Good luck,
+>
+> -- Patrick Scheible
+
+Thanks!
+
+Groetjes/Greetinx,
+
+  Ger
+
+----------------------------------------------------------------------------
+--
+Ger Hobbelt a.k.a. Insh_Allah                     mailto:i_a$:@:$wanadoo.nl
+----------------------------------------------------------------------------
+--
+  You're a modern day Man,
+  You Chat, Email and ICQ whenever you can.
+  Me, I'm rather square,
+  I like to Talk to people anywhere.
+  'cause looking at her Eyes,
+  beats querty by far at 'Nice'.
+
+
+
+
+
+
+
+Return-Path: <dlm-ia$:@:$weaselfish.com>
+From: dlm-ia$:@:$weaselfish.com
+Message-Id: <200008070657.e776vAn25713@green-dome.village.org>
+To: i_a$:@:$wanadoo.nl
+Subject: Re: TOPS-20 comnd jsys - questions about the interface and particular details
+In-reply-to: Your message of Sun, 06 Aug 2000 12:22:52 MDT
+Date: Mon, 07 Aug 2000 00:57:10 -0600
+Sender: dlm-ia$:@:$weaselfish.com
+
+
+i_a$:@:$wanadoo.nl wrote:
+:  interface. I found 'ccmd' (which came with mm, a mail reader) and c-kermit
+:  7.0, which also has a C implementation of what looks like the majority of
+:  the comnd jsys features.
+
+It's pretty good, but not an exact clone.  Mainly, this is because
+Unix and TOPS-20 had massively different feature sets in some areas
+(filesystem naming semantics, for example).  The code is generally
+pretty easy to port, but quite, umm, unaesthetic, as well as being
+quite cavalier about types and such.  This latter point is consistent
+with COMND%, since in MACRO-20, nothing has a type.
+
+The generally way of writing a parser was linear descent, with
+per-field processing done inline.  Not quite co-routines, but pretty
+close.  The authors of CCMD did a good job of getting the flavour
+right in that respect.  One thing they did in their example code that
+I don't really remember that much from actual MACRO-20 code was having
+the help parsing mixed in with the command parsing.  Could be just too
+long since I've looked.  Hold on a sec...(grabs a DUMPER.MAC listing)...
+nope, DUMPER just printed the contents of a file when you asked for
+help, instead of CCMD's suggested built-in help.  CCMD's approach
+could easily be argued to be a good thing.
+
+:  I have searched the net for any texts and sample command entry sessions on
+:  tops-20 comnd jsys, found quite some global descriptions, but only very few
+:  things that showed some actual 'trace' of a command edit session, inclusing
+:  'noise words' (between brackets), online help/hinting using '?' at the
+:  start, middle or end of a command or option, etc.
+
+Try "telnet xkleten.paulallen.com".  You won't be able to log in, but
+there are a handful of commands available to non-logged-in users.
+Btw, if help output is more than 24 lines, it'll pause.  You need to
+type ^Q to get it to continue.
+
+:  CCMD is nice (it even has documentation. Wow! :-)) ) but I'd like to know
+:  how 'close' this thing emulates the real stuff...
+
+Well, kind of.  It's a lot easier to do stuff if you have the original
+COMND% documentation available as well.  Although I have to admit that
+there are just enough differences that reading the source is often the
+best solution.
+
+:  - you enter just a '?'. Did you get a list of commands? (I assume 'yes')
+
+Commands, keywords, whatever's being requested.  If there are several
+different kinds of things (say, a keyword or a switch), you'll get
+separate listings for each, in the order that the parse table was set
+up.
+
+:  Were these simply listed or did they include a little description of what
+:  they actually did? (I assume 'no', but I could imagine you would like that
+
+Simple list.
+
+:  -( ). Now unix 'calc' would be a bit meager, but how would I find the proper
+:  tool on tops-20? Or should I _know_ (by asking the sysadmin) that the
+
+Type "?".  If that doesn't tell you what you want, try "HELP ?".  If
+you can't guess from the name, you're pretty much SOL without manuals
+or someone to ask.
+
+:  do something sensible; I'm curious how 'low' the tolerable 'expert level'
+:  could be when you sat down behind a tops-20 console the first time you'd do
+:  _something_ with these computers...)
+
+Typically a terminal, not the console.  This was a multi-user system,
+after all.  The user-cluefulness-factor was very low.  They had to
+understand some basic concepts (like logging in), but it could usually
+be covered in a two-hour intro class for freshmen, including covering
+the basics of using Emacs (which was, of course, far less bloated than
+what you'll see masquerading under that name today).  The handout, as
+I remember, was three or four typewritten pages, with lots of
+whitespace.  The online help was orders of magnitude better than what
+you get with, say, Unix or Windows.  Also, since there was a COMND%
+JSYS, most programs used it, so there was a consistency across most of
+the system that made learning it much easier.
+
+:  - you enter part of a command (still ambiguous) and hit '?': did you get a
+:  list of 'matching' commands? (I assume 'yes')
+
+Yes.
+
+:  - you enter a non-ambiguous command (or abbreviation) and hit '?', did you
+:  see the full name of the command (?) and a list or description of accepted
+:  options and parameters? (I've worked on VMS and it had 'help' that was quite
+:  extensive for saome of these things.)
+
+The VMS CLI was a very stripped-down and lobotomized third-hand
+version of COMND%.  To answer your specific query, you just get the
+list of acceptable input for the current field (i.e., the one command
+with that prefix, if only commands are accepted at that point).
+
+:  - I understand you could type a command word, hit enter and 'discover' it
+:  required parameters as it got reprinted with additional 'noise words' that
+:  hinted you in the proper direction:
+:  
+:  : copy[Enter]
+:  ->
+:  : copy (from file) _
+
+Nope.  That's what <escape> is for.
+
+:  - if you entered a non-abiguous command and hit [esc] to trigger
+:  'completion' (ccmd uses [tab]) it is reprinted 'complete' _plus_ additional
+:  'noise words' to hint what should be next:
+
+CCMD allows either <tab> or <escape>.  Try the "test" program provided
+with it.  Actually, you can control that, since it's just a character
+break table setting.
+
+:  This is true? (I assume 'yes') Any nifty 'caveats' here?
+
+If you've completed a field, and type "?" for the next one, the noise
+word parse entry doesn't get shown as a legitimate entry.  You can,
+however, type the noise words if you wish, and they'll be accepted
+(and discarded).  You can do <escape> completion in the middle of the
+noise word, though, and it works as expected.
+
+:  - VMS has switches with mandatory or optional arguments a bit like this:
+:  '/option:arg'. I suppose tops-20 had the same. What happened if you hit '?'
+:  after typing the 'switch' character '/' (list of switches?) or part of a
+:  switch parameter ('/opt?' when you meant '/option')?
+
+Exactly what you'd expect from the above - all COMND% really is is a
+table-driven string parser.  You give it one or more parse
+descriptors, and it figures out which one the user's input matches,
+does whatever implicit actions are required, and returns the results
+to the calling program.
+
+:  * command and parameter completion:
+:  
+:  - CCMD supports (not easily portable to embedded systems :-( )  filename
+:  completion.
+
+Depends on the embedded system.  Wouldn't be all that hard under QNX.
+
+:  c-kermit supports various flags that indicate that the command
+:  at hand accepts some of these:
+
+As does CCMD and COMND%.
+
+:  I know some unix shells (tcsh, bash) show a list of filenames if you hit the
+:  'completion key' twice [tab]; did you need to type '?' on tops-20? What if
+
+You get all the matching possibilities listed.
+
+:  you typed [esc] completion once? (I assume your console beeped if the typed
+:  entry was ambiguous) and twice? (I don't have a clue. I hope it showed a
+:  list of 'matching' filenames?)
+
+It will complete until it hits an ambiguity, or a unique filename is
+found.  In the latter case, you then progress on to the next field.
+In the former, you then need to type "?" to see what your options are.
+
+:  - Any (weird or important) details I might need/like to know? (Whoops, I
+:  guess I'm asking too much of a 'good thing' now, but does someone have a
+:  comnd jsys 'programmers/users manual' in some digital format so I can check
+:  it out? (scanned, text, whatever))
+
+Well, it's about twenty pages in the Monitor Calls Reference Manual.
+I don't know if anyone has that online anywhere (there were copyright
+issues last time I checked), but take a look at
+www.trailing-edge.com.  Also check out
+ftp://sunsite.unc.edu/pub/academic/computer-science/history.  Doesn't
+look like there's as much there as I remember, though.
+
+	Dworkin
+
+
+
+
+
+Reply-To: "Insh_Allah" <i_a$:@:$wanadoo.nl>
+From: "Insh_Allah" <i_a$:@:$wanadoo.nl>
+To: <dlm-ia$:@:$weaselfish.com>
+References: <200008070657.e776vAn25713@green-dome.village.org>
+Subject: Re: TOPS-20 comnd jsys - questions about the interface and particular details
+Date: Tue, 8 Aug 2000 00:00:01 +0200
+Organization: Bermuda Triangle Services Ltd.
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 5.00.3018.1300
+X-MimeOLE: Produced By Microsoft MimeOLE V5.00.3018.1300
+
+Hi Dworkin,
+
+----- Original Message -----
+From: <dlm-ia$:@:$weaselfish.com>
+To: <i_a$:@:$wanadoo.nl>
+Sent: Monday, August 07, 2000 8:57 AM
+Subject: Re: TOPS-20 comnd jsys - questions about the interface and
+particular details
+
+
+[...]
+> It's pretty good, but not an exact clone.  Mainly, this is because
+> Unix and TOPS-20 had massively different feature sets in some areas
+> (filesystem naming semantics, for example).  The code is generally
+> pretty easy to port, but quite, umm, unaesthetic, as well as being
+> quite cavalier about types and such.  This latter point is consistent
+> with COMND%, since in MACRO-20, nothing has a type.
+
+:-) Well, I'm a 'almost-zero-warnings-close-to-ANSI-C' nutcase. I've been
+busy porting CCMD to ANSI (getting at least important parts to compile,
+including prototypes, etc.) the last two weeks in my copious spare time.
+Finally, the converted code doesn't bomb out immediately on startup. :-)
+
+
+> The generally way of writing a parser was linear descent, with
+> per-field processing done inline.  Not quite co-routines, but pretty
+> close.  The authors of CCMD did a good job of getting the flavour
+> right in that respect.  One thing they did in their example code that
+> I don't really remember that much from actual MACRO-20 code was having
+> the help parsing mixed in with the command parsing.  Could be just too
+> long since I've looked.  Hold on a sec...(grabs a DUMPER.MAC listing)...
+> nope, DUMPER just printed the contents of a file when you asked for
+> help, instead of CCMD's suggested built-in help.  CCMD's approach
+> could easily be argued to be a good thing.
+
+Errr.... You mean the FDB-specific online help texts? But I got a copy of
+the comnd jsys helppages here (from another very kind soul) and it lists a
+.CMHLP field for the 'function descriptor block' so we're probably not
+talking about the same helptexts. Which ones do you mean?
+
+
+> Try "telnet xkleten.paulallen.com".  You won't be able to log in, but
+> there are a handful of commands available to non-logged-in users.
+> Btw, if help output is more than 24 lines, it'll pause.  You need to
+> type ^Q to get it to continue.
+
+Fabulous! :-))) did the 'telnet', never dreamed it would work. Super! :-)))
+
+NOTE: if I make a 'response compilation' of all the answers I got, is it OK
+if I mention the 'telnet line' (it's news, internet and all that: the wrong
+sort of people might abuse this site and it's way too cool to have shut down
+because some dumbo wanted to try a DoS attack...
+
+> Well, kind of.  It's a lot easier to do stuff if you have the original
+> COMND% documentation available as well.  Although I have to admit that
+> there are just enough differences that reading the source is often the
+> best solution.
+
+Got it! Hans Liss kindly sent me a copy of the helppages.
+
+> Type "?".  If that doesn't tell you what you want, try "HELP ?".  If
+> you can't guess from the name, you're pretty much SOL without manuals
+> or someone to ask.
+
+Sorry. SOL stands for? (I'm not native English speaking, I would expect
+'lost in the dark' here.)
+
+> Typically a terminal, not the console.  This was a multi-user system,
+> after all.  The user-cluefulness-factor was very low.  They had to
+
+Whoops. Got my names wrong. Of course I meant a terminal. console is
+strictly sysadmin only. In case of total disaster.
+
+[...]
+> Depends on the embedded system.  Wouldn't be all that hard under QNX.
+
+I'm looking at RTKernel32 and a few others, where I also have some very
+specific wishes (be able to (configurably) drive the whole thing from a
+VT320 connected through RS232, or simply a HGC or VGA display and PC
+keyboard). I guess I've got some very fancy desires ;-)
+
+Besides, CCMD does some stuff which isn't ever going to be ANSI compliant,
+like casting function pointers into data pointers, etc. Now I am not a ANSI
+'purist' but I've been burned to ashes for declaring this sort of stuff as
+'portable'. So I watch my type-conversions a little better these days ;-)
+And then you suddenly find CCMD is quite messy with its callback function
+argument lists.
+
+And then this loony is thinking about making it all 'thread-safe', i.e. kick
+the global CSB struct in the bollocks. Have each 'task' (or whatever) carry
+a personal copy around.
+
+Well, I digress. This'll probably happen when I'm old, retired and fed my
+morning porridge through a straw. "Ah, yes! Granddad finally finished his
+Ultimate Commandline Parser project for those antique display thingies in
+the attick he wouldn't want us to have scrapped! Look at him! He is
+perfectly happy now, isn't he?! ... Ok, kids, say 'Hi' to gramps! Bye! Let's
+jack back in and hack that big black ICE we saw yesterday in cyberspace!
+Last one in is a sissy!"
+
+
+>
+> :  c-kermit supports various flags that indicate that the command
+> :  at hand accepts some of these:
+>
+> As does CCMD and COMND%.
+>
+> :  I know some unix shells (tcsh, bash) show a list of filenames if you
+hit the
+> :  'completion key' twice [tab]; did you need to type '?' on tops-20? What
+if
+>
+> You get all the matching possibilities listed.
+>
+> :  you typed [esc] completion once? (I assume your console beeped if the
+typed
+> :  entry was ambiguous) and twice? (I don't have a clue. I hope it showed
+a
+> :  list of 'matching' filenames?)
+>
+> It will complete until it hits an ambiguity, or a unique filename is
+> found.  In the latter case, you then progress on to the next field.
+> In the former, you then need to type "?" to see what your options are.
+>
+> :  - Any (weird or important) details I might need/like to know? (Whoops,
+I
+> :  guess I'm asking too much of a 'good thing' now, but does someone have
+a
+> :  comnd jsys 'programmers/users manual' in some digital format so I can
+check
+> :  it out? (scanned, text, whatever))
+>
+> Well, it's about twenty pages in the Monitor Calls Reference Manual.
+> I don't know if anyone has that online anywhere (there were copyright
+> issues last time I checked), but take a look at
+> www.trailing-edge.com.  Also check out
+> ftp://sunsite.unc.edu/pub/academic/computer-science/history.  Doesn't
+> look like there's as much there as I remember, though.
+
+I've seen trailing-edge site before, but - since I didn't really know what I
+should look at precisely - was a bit overwhelming. So, if the comnd jsys
+description is in there, I didn't find it. Nevertheless, someone was so kind
+as to send me a copy of the helppages.
+
+I'm having a look at the ftp site.
+
+>
+> Dworkin
+>
+
+Thanks for your kind assistance. It is much appreciated!
+
+Groetjes/Greetinx,
+
+  Ger
+
+----------------------------------------------------------------------------
+--
+Ger Hobbelt a.k.a. Insh_Allah                     mailto:i_a$:@:$wanadoo.nl
+----------------------------------------------------------------------------
+--
+  You're a modern day Man,
+  You Chat, Email and ICQ whenever you can.
+  Me, I'm rather square,
+  I like to Talk to people anywhere.
+  'cause looking at her Eyes,
+  beats querty by far at 'Nice'.
+
+
+
+
+
+
+
+Reply-To: "Insh_Allah" <i_a$:@:$wanadoo.nl>
+From: "Insh_Allah" <i_a$:@:$wanadoo.nl>
+Newsgroups: alt.folklore.computers
+References: <398d83cf$0$26063@reader3>
+Subject: Re: TOPS-20 comnd jsys - questions about the interface and particular details
+Date: Tue, 8 Aug 2000 03:19:56 +0200
+Organization: Bermuda Triangle Services Ltd.
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Newsreader: Microsoft Outlook Express 5.00.3018.1300
+X-MimeOLE: Produced By Microsoft MimeOLE V5.00.3018.1300
+Lines: 48
+Message-ID: <398f5f8d$0$11890@reader2>
+NNTP-Posting-Host: 4dyn36.dh.casema.net
+X-Trace: reader2 965697421 11890 212.64.4.36
+X-Complaints-To: http://www.casema.net/abuse 
+X-Abuse-Info: Please be sure to include a copy of ALL headers 
+X-Abuse-Info: Otherwise we will be unable to process your complaint properly 
+X-Server-Date: 08 Aug 2000 01:17:01 GMT
+Xref: news.casema.net alt.folklore.computers:12189
+
+Hi folks,
+
+I am very happy to have received quite a few very helpful responses. Many
+thanks to:
+ Hans Liss,
+ Patrick Scheible   and
+ Dworkin.
+
+I was thinking about collating their responses and posting them here.
+However, after pondering the situation for a while I've decided not to do
+this. If you want to know more, I think it would save quite a bit of AFC
+bandwidth if you'd just email-ed me to inquire about the material.
+
+OTOH, here's a few links that proved invaluable in the end:
+
+ftp://ftp.biostat.washington.edu/pub/pdp-10/jsys/   -- contains info files
+with all the JSYS system call descriptions. Very much recommended!
+
+http://www.trailing-edge.com/    -- for all your software :-)
+
+http://www.columbia.edu/kermit/     -- the C-Kermit project. Which uses
+TOPS-20 style commandline editting/parsing.
+
+http://www.inwap.com/pdp10/   -- (especially note the Paul Allen link!)
+
+http://swallow.doc.ic.ac.uk/packages/mail/mm/   -- the CCMD (TOPS-20 alike
+commandline parser package) and MM (mail reader) package, which uses TOPS-20
+style command entry.
+
+
+Groetjes/Greetinx,
+
+  Ger
+
+----------------------------------------------------------------------------
+--
+Ger Hobbelt a.k.a. Insh_Allah   (remove all 'f' and 'g')
+ig_fa@fwanfadfoof.nl
+----------------------------------------------------------------------------
+--
+  You're a modern day Man,
+  You Chat, Email and ICQ whenever you can.
+  Me, I'm rather square,
+  I like to Talk to people anywhere.
+  'cause looking at her Eyes,
+  beats querty by far at 'Nice'.
+
+
+
+
+
+
+Return-Path: <dlm-ia$:@:$weaselfish.com>
+From: dlm-ia$:@:$weaselfish.com
+Message-Id: <200008081313.e78DD9n27810@green-dome.village.org>
+To: "Insh_Allah" <i_a$:@:$wanadoo.nl>
+Subject: Re: TOPS-20 comnd jsys - questions about the interface and particular details 
+In-reply-to: Your message of Tue, 08 Aug 2000 00:00:01 +0200
+Date: Tue, 08 Aug 2000 07:13:08 -0600
+Sender: dlm-ia$:@:$weaselfish.com
+
+
+"Insh_Allah" <i_a$:@:$wanadoo.nl> wrote:
+:  > right in that respect.  One thing they did in their example code that
+:  > I don't really remember that much from actual MACRO-20 code was having
+:  > the help parsing mixed in with the command parsing.  Could be just too
+:  
+:  Errr.... You mean the FDB-specific online help texts? But I got a copy of
+:  the comnd jsys helppages here (from another very kind soul) and it lists a
+:  .CMHLP field for the 'function descriptor block' so we're probably not
+:  talking about the same helptexts. Which ones do you mean?
+
+No.  .CMHLP is part of COMND%, and is how you specify the string to
+print instead of the generic one for whatever type of thing you're
+parsing at the moment when the user types a "?".  Using the "test"
+program with CCMD, an example of using .CMHLP is provided with the
+"person" command:
+
+Test> pers ? Name, one of the following:
+ andy                          dee
+ doug                          howie
+ mark                          tom.chow
+
+I was referring to the "help" command in that same program, which
+uses the command table to select its first argument, sets s a flag,
+and then calls the normal command routine to actually generate the
+description of the function.  It's completely independent of COMND%,
+other than the fact that it uses COMND% to parse its command line.
+
+:  NOTE: if I make a 'response compilation' of all the answers I got, is it OK
+:  if I mention the 'telnet line' (it's news, internet and all that: the wrong
+
+Yes, but since you've already made the post, it's pretty irrelevant
+at this point....
+
+As far as several people can tell, there's no one actually keeping
+track of the machine these days.  Mail requesting accounts, or
+reporting problems, has gone unanswered for several years now.
+
+:  sort of people might abuse this site and it's way too cool to have shut down
+:  because some dumbo wanted to try a DoS attack...
+
+It'd be kind of interesting to know how robust a TOAD-1 is in such a
+case, actually.  Of course, the above problem means we'd never
+actually find out.
+
+:  Sorry. SOL stands for? (I'm not native English speaking, I would expect
+:  'lost in the dark' here.)
+
+Close enough.  "Shit out of luck" is the colloquial expansion.  The
+acronym is used more commonly, though, as it doesn't sound as vulgar.
+
+:  Besides, CCMD does some stuff which isn't ever going to be ANSI compliant,
+:  like casting function pointers into data pointers, etc. Now I am not a ANSI
+:  'purist' but I've been burned to ashes for declaring this sort of stuff as
+:  'portable'. So I watch my type-conversions a little better these days ;-)
+:  And then you suddenly find CCMD is quite messy with its callback function
+:  argument lists.
+
+Yeah.  I tried to do a similar conversion back a few years ago, and
+decided it really just wasn't worth the effort at the time.  There are
+ways of making it all work (unions of pointers) enough to keep the
+compiler happy, that will actually function on most modern
+architectures, but it's never going to be pretty.  All part of the
+heritage of the original MACRO-20 code, where you really didn't have
+types at all.
+
+	Dworkin
+
+
+
+
+Article 414 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!diablo.theplanet.net!newspeer.highwayone.net!newspeer.clara.net!news.clara.net!fr.clara.net!cleanfeed.casema.net!news.casema.net!not-for-mail
+Reply-To: "Insh_Allah" <i_a@wanadoo.nl>
+From: "Insh_Allah" <i_a@wanadoo.nl>
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+References: <398d83cf$0$26063@reader3> <398f5f8d$0$11890@reader2>
+Subject: Re: TOPS-20 comnd jsys - questions about the interface and particular details
+Date: Fri, 11 Aug 2000 02:58:17 +0200
+Organization: Bermuda Triangle Services Ltd.
+MIME-Version: 1.0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: 7bit
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Newsreader: Microsoft Outlook Express 5.00.3018.1300
+X-MimeOLE: Produced By Microsoft MimeOLE V5.00.3018.1300
+Lines: 51
+Message-ID: <39934ee3$0$19456@reader2>
+NNTP-Posting-Host: 4dyn17.dh.casema.net
+X-Trace: reader2 965955299 19456 212.64.4.17
+X-Complaints-To: http://www.casema.net/abuse 
+X-Abuse-Info: Please be sure to include a copy of ALL headers 
+X-Abuse-Info: Otherwise we will be unable to process your complaint properly 
+X-Server-Date: 11 Aug 2000 00:54:59 GMT
+Xref: nntp1.ba.best.com alt.folklore.computers:3527 alt.sys.pdp10:414
+
+A few readers of a.f.c. have asked me to post the email-answers I got
+following my questions about TOPS-20 COMND% JSYS and the CCMD C library,
+posted there. (Subject line equal to this one)
+
+As the collated result, including attachments, is *huge* (a .txt.gz file of
+241KB) I'll only provide a pointer to my website where I've the stored the
+file:
+
+http://home.wanadoo.nl/i_a/tops-20/a.f.c.newsgroup/COMND.emails.txt.gz
+
+I think this is the best way of providing the information to 'the general
+public' without overloading a.f.c. with a single post.
+
+Note: Since the Wanadoo webserver is kinda backwards it reports the
+mime-type as 'text/plain', but I've test-downloaded the GZIPped file and it
+is OK.
+
+Maybe you might also wish to look at the page, listing all the stuff I've
+collected so far (and a very-very-alpha-stage partial port to ANSI C of
+CCMD) at:
+
+http://home.wanadoo.nl/i_a/tops-20/tops20index.html
+
+
+
+Note: I've cross-posted this to alt.sys.pdp10 as well as I've been hinted
+that there many people gather who might even still have running TOPS-20
+machines and/or might know a bit more about some details.
+
+(On request the mail-adresses in the collated text file on my website have
+been 'patched' to obstruct spammers in search of adresses to abuse.)
+
+--
+Groetjes/Greetinx,
+
+  Ger
+
+----------------------------------------------------------------------------
+--
+Ger Hobbelt a.k.a. Insh_Allah   (remove all 'f' and 'g')
+ig_fa@fwanfadfoof.nl
+----------------------------------------------------------------------------
+--
+  You're a modern day Man,
+  You Chat, Email and ICQ whenever you can.
+  Me, I'm rather square,
+  I like to Talk to people anywhere.
+  'cause looking at her Eyes,
+  beats querty by far at 'Nice'.
+
+
+
+

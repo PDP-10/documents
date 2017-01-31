@@ -1,0 +1,161 @@
+From eric-no-spam-for-me@brouhaha.com Thu Apr 20 17:57:01 PDT 2000
+Article: 8225 of alt.sys.pdp10
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.sys.pdp10,comp.sys.dec,alt.folklore.computers
+Subject: light bulbs for DEC front panels
+X-Disclaimer: Everything I write is false.
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 18 Apr 2000 16:39:21 -0700
+Message-ID: <qhk8hvj7x2.fsf@ruckus.brouhaha.com>
+Lines: 23
+X-Newsreader: Gnus v5.5/Emacs 20.3
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 18 Apr 2000 17:36:06 -0800, ruckus.brouhaha.com
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!enews.sgi.com!news.sgi.com!news.spies.com!ruckus.brouhaha.com
+Xref: news3.best.com alt.sys.pdp10:8225 comp.sys.dec:58791 alt.folklore.computers:155320
+
+Does anyone have information on light bulbs for DEC front panels
+circa 1968, in particular for a KA10 panel?
+
+The bulbs in question have two metal pins.  Some bear the legend
+"OL-1", and others have two rows of info, "PL10161" on above "1209169".
+
+There's temporarily a photo of one, next to a US penny for scale, at
+    http://www.36bit.org/dec/bulb.jpg
+
+Would these be the same bulbs used on the PDP-8, PDP-8/I, or PDP-8/e?
+
+I'd like to get a manufacturer and part number of a currently available
+replacement.  Or a source of old stock.
+
+I've been told that there were also plug-compatible LED lamps in red and
+green.  These obviously must have contained a series current limiting
+resistor.  Any info?
+
+Thanks!
+Eric
+
+[If you send a private reply, please demangle my email address in the
+obvious way.]
+
+
+From shoppa@trailing-edge.com Thu Apr 20 17:57:05 PDT 2000
+Article: 8227 of alt.sys.pdp10
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!feed2.onemain.com!feed1.onemain.com!uunet!ffx.uu.net!spool1.news.uu.net!spool0.news.uu.net!reader2.news.uu.net!not-for-mail
+Message-ID: <38FCD218.224193D1@trailing-edge.com>
+Date: Tue, 18 Apr 2000 21:22:32 -0400
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Organization: Trailing Edge Technology
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.0     DEC 3000 Model 300L)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10,comp.sys.dec,alt.folklore.computers
+Subject: Re: light bulbs for DEC front panels
+References: <qhk8hvj7x2.fsf@ruckus.brouhaha.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 23
+NNTP-Posting-Host: 63.73.218.130
+X-Trace: reader2.news.uu.net 956107353 17310 63.73.218.130
+Xref: news3.best.com alt.sys.pdp10:8227 comp.sys.dec:58792 alt.folklore.computers:155324
+
+Eric Smith wrote:
+> 
+> Does anyone have information on light bulbs for DEC front panels
+> circa 1968, in particular for a KA10 panel?
+>...
+> I've been told that there were also plug-compatible LED lamps in red and
+> green.  These obviously must have contained a series current limiting
+> resistor.  Any info?
+
+If they're anything like the -8 front panels, there is also a "warming"
+current through the bulb.  The aftermarket LED "upgrades" either had you
+snip the resistors that kept the prelight current flowing on the front
+panel drivers, or (more classy) they had divider networks in addition
+to current limiting to make sure the warming current didn't appreciably
+light the LED.
+
+It was about three years ago I posted an analysis of the divider method
+to alt.sys.pdp8.  I'd be glad to dredge up those calculations here if
+there is any interest.  The divider method is a little more complicated
+to solder up, but it's easier to go back to real light bulbs if/when you
+decide to go back to the "completely original" look.
+
+Tim.
+
+
+From terry@gate.tmk.com Thu Apr 20 17:58:01 PDT 2000
+Article: 8231 of alt.sys.pdp10
+Newsgroups: alt.sys.pdp10,comp.sys.dec,alt.folklore.computers
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newspeer1.nac.net!news.new-york.net!news.spc.edu!not-for-mail
+From: Terry Kennedy <terry@gate.tmk.com>
+Subject: Re: light bulbs for DEC front panels
+X-Complaints-To: Email abuse@spc.edu if this posting is inappropriate
+User-Agent: tin/1.4.2-20000205 ("Possession") (UNIX) (BSD/OS/4.1 (i386))
+Nntp-Posting-Host: gate.tmk.com
+Organization: St. Peter's College, US
+Message-ID: <Ft971q.Hs2@spcuna.spc.edu>
+References: <qhk8hvj7x2.fsf@ruckus.brouhaha.com>
+X-Trace: spcuna.spc.edu 956130541 22347 terry [204.141.35.61]
+Date: Wed, 19 Apr 2000 07:49:01 GMT
+Xref: news3.best.com alt.sys.pdp10:8231 comp.sys.dec:58798 alt.folklore.computers:155331
+
+In comp.sys.dec Eric Smith <eric-no-spam-for-me@brouhaha.com> wrote:
+> The bulbs in question have two metal pins.  Some bear the legend
+> "OL-1", and others have two rows of info, "PL10161" on above "1209169".
+
+  Lucky you - it's still an available part from 800-DIGITAL. P/N 12-09169-00
+is a "LAMP; 15V @ .040AMP MAX; .075". It's $2.00 with a 1 day lead time.
+
+	Terry Kennedy             http://www.tmk.com
+        terry@tmk.com             Jersey City, NJ USA
+
+
+From eric-no-spam-for-me@brouhaha.com Thu Apr 20 17:58:33 PDT 2000
+Article: 8235 of alt.sys.pdp10
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.sys.pdp10,comp.sys.dec,alt.folklore.computers
+Subject: Re: light bulbs for DEC front panels
+References: <qhk8hvj7x2.fsf@ruckus.brouhaha.com> <Ft971q.Hs2@spcuna.spc.edu>
+X-Disclaimer: Everything I write is false.
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 19 Apr 2000 11:17:33 -0700
+Message-ID: <qhln2a7y6a.fsf@ruckus.brouhaha.com>
+Lines: 26
+X-Newsreader: Gnus v5.5/Emacs 20.3
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 19 Apr 2000 12:14:40 -0800, ruckus.brouhaha.com
+Path: news3.best.com!news1.best.com!newsfeed.mathworks.com!news.sgi.com!news.spies.com!ruckus.brouhaha.com
+Xref: news3.best.com alt.sys.pdp10:8235 comp.sys.dec:58816 alt.folklore.computers:155358
+
+Terry Kennedy <terry@gate.tmk.com> writes:
+>   Lucky you - it's still an available part from 800-DIGITAL. P/N 12-09169-00
+> is a "LAMP; 15V @ .040AMP MAX; .075". It's $2.00 with a 1 day lead time.
+
+Thanks!  Without the dash after the 12, I didn't realize that the number
+marked on the lamp was a DEC part number.
+
+Based on those specs, it appears that an Oshino OL-6003BP should be a
+suitable replacement.  It's rated about .037A rather than 0.40, but it
+otherwise matches, including the .075 MSCP.  It's rated for 50,000 hours.
+They're available in the US from Wamco.
+
+http://www.oshino.com/
+http://www.wamcoinc.com/
+
+Next question:  anyone know what drive circuit DEC used?  Or at least
+what voltage they used for the warming current?
+
+Since I only have the front panel and not the rest of the computer
+(pardon me while I break down and cry for a moment...), I need to build
+my own circuit to drive it.  Eventually I plan to have a suitable blue
+metal box made to bolt the panel onto, and inside put a KA10 emulator.
+
+Of course, since the light boards in the front panel don't have any
+drive electronics, I could just plug in T-1 3/4 LEDs, but I'd prefer to
+use lamps for some small semblance of authenticity.
+
+

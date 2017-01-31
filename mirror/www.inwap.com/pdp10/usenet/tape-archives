@@ -1,0 +1,101 @@
+Article 7495 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newspeer.monmouth.com!uunet!ffx.uu.net!spool0.news.uu.net!reader2.news.uu.net!not-for-mail
+Message-ID: <38DBCE43.52D5273B@trailing-edge.com>
+Date: Fri, 24 Mar 2000 20:21:23 -0400
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Organization: Trailing Edge Technology
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.0     DEC 3000 Model 300L)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: TPC format specs?
+References: <i4UC4.30843$oc.618556@news5.giganews.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 41
+NNTP-Posting-Host: 63.73.218.130
+X-Trace: reader2.news.uu.net 953947284 26753 63.73.218.130
+Xref: news3.best.com alt.sys.pdp10:7495
+
+Timothy Stark wrote:
+> 
+> Hello Folks:
+> 
+> I downloaded them from pdp10.trailing-edge.com but I am looking for tools to
+> extract files from tpc files for Linux platform.  I found vmstpce software
+> but it is for OpenVMS system only.  Or I am looking for tpc format specs to
+> write a tpc utility to extract files out of tpc tape files.
+
+The TPC format is easy - it's a way of representing exactly what's
+stored on a magtape.  
+
+Two bytes give the length of the tape record, followed by the
+tape record.  Repeat until end-of-tape.
+
+A tape mark is represented as a record of zero length.  Two tape
+marks traditionally mark the logical end-of-tape.
+
+What's more complicated is the format used by TOPS-10 BACKUP or
+TOPS-20 DUMPER.  I decode these using the DECUS freeware tools
+10BACKUP and DUMPER, respectively, both available from ftp.decus.org,
+but these programs only run under VMS.  They both deal automatically
+with TPC format files, as well as with real physical tapes on tape
+drives.  The "individual files" on pdp-10.trailing-edge.com were
+extracted using these tools.
+
+For a Unixy box, Phil Budne has added TPC support to his
+10backup utility.  See
+
+  ftp://philbudne.ne.mediaone.net/backup10.tar.gz
+
+in particular, the -c option handles TPC tapes.
+
+For TOPS-20 DUMPER tapes, I don't know of a Unixy utility for reading
+them.  If anyone does know, I'm listening.
+
+-- 
+ Tim Shoppa                        Email: shoppa@trailing-edge.com
+ Trailing Edge Technology          WWW:   http://www.trailing-edge.com/
+ 7328 Bradley Blvd                 Voice: 301-767-5917
+ Bethesda, MD, USA 20817           Fax:   301-767-5927
+
+
+Article 7507 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!su-news-hub1.bbnplanet.com!news.gtei.net!logbridge.uoregon.edu!news3!budd
+From: budd@csa.bu.edu (Phil Budne)
+Newsgroups: alt.sys.pdp10
+Subject: Re: TPC format specs?
+Followup-To: alt.sys.pdp10
+Date: 25 Mar 2000 04:52:32 GMT
+Organization: Boston University Computer Science Dept.
+Lines: 23
+Message-ID: <8bhgmg$c3t$1@news3.bu.edu>
+References: <i4UC4.30843$oc.618556@news5.giganews.com> <38DBCE43.52D5273B@trailing-edge.com>
+X-Trace: news3.bu.edu 953959952 12413 128.197.12.3 (25 Mar 2000 04:52:32 GMT)
+X-Complaints-To: news@bu.edu
+Xref: news3.best.com alt.sys.pdp10:7507
+
+In article <38DBCE43.52D5273B@trailing-edge.com>,
+Tim Shoppa  <shoppa@trailing-edge.com> wrote:
+>For a Unixy box, Phil Budne has added TPC support to his
+>10backup utility.
+
+It's Johnny Eriksson's program, I just dressed it up a bit!
+
+>See
+>
+>  ftp://philbudne.ne.mediaone.net/backup10.tar.gz
+>in particular, the -c option handles TPC tapes.
+>
+>For TOPS-20 DUMPER tapes, I don't know of a Unixy utility for reading
+>them.  If anyone does know, I'm listening.
+
+I just added it to my version of read20 (by Jim Guyton at Rand, Jay
+Lepreau at Utah).  I merged in Stu Grossman's changes and added some
+options.
+
+Now available as;
+    ftp://philbudne.ne.mediaone.net/pdp10/read20.tar.gz
+
+-phil
+
+

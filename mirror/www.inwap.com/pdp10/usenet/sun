@@ -1,0 +1,134 @@
+Article 8076 of alt.sys.pdp10:
+From: westin*nospam@graphics.cornell.edu (Stephen H. Westin)
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10,alt.folklore.computers
+Subject: Re: ooh, a *real* flamewar :)
+Date: 12 Apr 2000 13:09:01 -0400
+Organization: Cornell University Program of Computer Graphics
+Lines: 33
+Sender: westin@DIESEL
+Message-ID: <un1mznt5e.fsf@graphics.cornell.edu>
+References: <AtP94.8925$7S.6211@news20.bellglobal.com> <8ce1l9$3q7$1@news.enteract.com> <8cfkp5$fp0$1@new-news.cc.brandeis.edu> <qhaej0thhc.fsf@ruckus.brouhaha.com> <8d289v$8s$1@agate.berkeley.edu>
+NNTP-Posting-Host: diesel.graphics.cornell.edu
+X-Newsreader: Gnus v5.5/Emacs 20.3
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!news.syr.edu!newsstand.cit.cornell.edu!news.graphics.cornell.edu!news
+Xref: news3.best.com alt.sys.pdp8:5257 alt.sys.pdp10:8076 alt.folklore.computers:154983
+
+korpela@islay.ssl.berkeley.edu (Eric J. Korpela) writes:
+
+> In article <qhaej0thhc.fsf@ruckus.brouhaha.com>,
+> Eric Smith  <eric-no-spam-for-me@brouhaha.com> wrote:
+> >I'm not aware of how Sun solved this problem on their 68000-based machines;
+> 
+> Did Sun have 68000-based machines?  I thought that the first Sun I
+> used (one of those old ugly Sun 1 systems (weren't they actually
+> called the Sun 100 at the time?)) was 68010 based.  It certainly had
+> /bin/mc68010 linked to /bin/true.
+
+There were SUN machines before there was a company called Sun. SUN
+stands for "Stanford University Network". As I understand it, there
+was a major effort to build lots of 68000-based workstations with
+bitmap displays, connected by a campus-wide Ethernet (which had just
+been souped up from 2MB/sec to 10MB/sec). This was all fit into a
+MULTIBUS backplane. There were a couple of manufacturers of the SUN/1
+processor board, which included some quantity of on-board memory. I
+don't know if these machines ever ran actual Unix.
+
+Anyway, the SUN/1 board became the nucleus of a startup company that
+called itself "Sun". I believe Bill Joy came from being a Unix honcho
+at Berkeley to be a founder, as well. There was another project to
+build a high-performance 3D graphics subsystem; this was called IRIS,
+for "Integrated Raster Imaging System". It spun off into Silicon
+Graphics.
+
+<snip>
+
+-- 
+-Stephen H. Westin
+Any information or opinions in this message are mine: they do not
+represent the position of Cornell University or any of its sponsors.
+
+
+Article 8086 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!cpk-news-hub1.bbnplanet.com!news.gtei.net!firehose.mindspring.com!news.mindspring.com!alderson
+From: alderson@netcom2.netcom.com (Richard M. Alderson III)
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10,alt.folklore.computers
+Subject: Re: ooh, a *real* flamewar :)
+Date: 12 Apr 2000 22:42:07 GMT
+Organization: NETCOM On-line services
+Lines: 29
+Message-ID: <ALDERSON.00Apr12154207@netcom2.netcom.com>
+References: <AtP94.8925$7S.6211@news20.bellglobal.com> <8ce1l9$3q7$1@news.enteract.com>
+	<8cfkp5$fp0$1@new-news.cc.brandeis.edu>
+	<qhaej0thhc.fsf@ruckus.brouhaha.com> <8d289v$8s$1@agate.berkeley.edu>
+	<un1mznt5e.fsf@graphics.cornell.edu>
+Reply-To: alderson@netcom.com
+NNTP-Posting-Host: c7.b7.09.66
+X-Server-Date: 12 Apr 2000 22:41:43 GMT
+In-reply-to: westin*nospam@graphics.cornell.edu's message of 12 Apr 2000 13:09:01 -0400
+Xref: news3.best.com alt.sys.pdp8:5260 alt.sys.pdp10:8086 alt.folklore.computers:155002
+
+In article <un1mznt5e.fsf@graphics.cornell.edu>
+westin*nospam@graphics.cornell.edu (Stephen H. Westin) writes:
+
+> korpela@islay.ssl.berkeley.edu (Eric J. Korpela) writes:
+
+>> Did Sun have 68000-based machines?
+
+> There were SUN machines before there was a company called Sun. SUN
+> stands for "Stanford University Network". As I understand it, there
+> was a major effort to build lots of 68000-based workstations with
+> bitmap displays, connected by a campus-wide Ethernet (which had just
+> been souped up from 2MB/sec to 10MB/sec). This was all fit into a
+> MULTIBUS backplane. There were a couple of manufacturers of the SUN/1
+> processor board, which included some quantity of on-board memory. I
+> don't know if these machines ever ran actual Unix.
+
+The SUN processor project predated 10Mbit Ethernet by quite some time; we were
+still installing 10Mb when I got to Stanford in 1984, and there was a *lot* of
+"yellow peril" 3Mb cable under the machine room floor at LOTS.
+
+The SUN processor was intended to be the CPU for a "3M" machine (1MIPS, 1MB of
+memory, and 1 million pixels on the display screen).  It was used by several
+Stanford-derived startups, such as Sun and 'cisco Systems (oldest spelling).
+
+Rich Alderson			Last LOTS Tops-20 Systems Programmer, 1984-1991
+				Current maintainer, MIT TECO EMACS (v. 170)
+				Customer Advocacy, XKL LLC, 1993-2000
+last name @ XKL dot COM		Chief systems administrator, XKL LLC, 1998-now
+
+
+
+Article 8092 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!europa.netcrusader.net!4.1.16.34!cpk-news-hub1.bbnplanet.com!crtntx1-snh1.gtei.net!denver-news-feed1.bbnplanet.com!news.gtei.net!namche.sun.com!ebaynews1.EBay.Sun.COM!news2me.EBay.Sun.COM!engnews1.eng.sun.com!engnews2.Eng.Sun.COM!not-for-mail
+From: Deborah Gronke Bennett <deborah.bennett@NOSPAMMERS.sun.com>
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10,alt.folklore.computers
+Subject: Re: ooh, a *real* flamewar :)
+Date: 12 Apr 2000 18:37:33 -0700
+Organization: Sun Microsystems, Microelectronics
+Lines: 18
+Message-ID: <vp3ya6isrvm.fsf@mayfield.i-did-not-set--mail-host-address--so-shoot-me>
+References: <AtP94.8925$7S.6211@news20.bellglobal.com> <8ce1l9$3q7$1@news.enteract.com> <8cfkp5$fp0$1@new-news.cc.brandeis.edu> <qhaej0thhc.fsf@ruckus.brouhaha.com> <8d289v$8s$1@agate.berkeley.edu>
+NNTP-Posting-Host: mayfield.eng.sun.com
+X-Newsreader: Gnus v5.5/Emacs 20.3
+Xref: news3.best.com alt.sys.pdp8:5262 alt.sys.pdp10:8092 alt.folklore.computers:155011
+
+korpela@islay.ssl.berkeley.edu (Eric J. Korpela) writes:
+
+> In article <qhaej0thhc.fsf@ruckus.brouhaha.com>,
+> Eric Smith  <eric-no-spam-for-me@brouhaha.com> wrote:
+> >I'm not aware of how Sun solved this problem on their 68000-based machines;
+> 
+> Did Sun have 68000-based machines?   I thought that the first Sun I used
+> (one of those old ugly Sun 1 systems (weren't they actually called the
+> Sun 100 at the time?)) was 68010 based.  It certainly had /bin/mc68010 linked
+> to /bin/true.  
+> 
+
+The Sun 100U had a Sun-2 (68010) CPU. The actual Sun-1 machines
+had 68000 CPU cards.
+
+I found a not-too-bad hardware history at this URL:
+
+http://www.ludd.luth.se/~bear/project/sun/sun.hardware.txt
+
+

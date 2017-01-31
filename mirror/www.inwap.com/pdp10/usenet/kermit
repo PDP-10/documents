@@ -1,0 +1,775 @@
+Article 2707 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!panix!newsmaster.cc.columbia.edu!watsun.cc.columbia.edu!fdc
+From: fdc@watsun.cc.columbia.edu (Frank da Cruz)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Good news! TOPS-20 v4.1 booted successfully
+Date: 20 Dec 2000 01:27:46 GMT
+Organization: Columbia University
+Lines: 88
+Message-ID: <91p1ui$qd7$1@newsmaster.cc.columbia.edu>
+References: <fsCZ5.55241$%j3.692480@news6.giganews.com> <853dfrpl0z.fsf@junk.nocrew.org> <91n7su$109j$1@nntp1.ba.best.com> <mdd3dfk87cd.fsf@panix2.panix.com>
+NNTP-Posting-Host: watsun.cc.columbia.edu
+X-Trace: newsmaster.cc.columbia.edu 977275666 27047 128.59.39.2 (20 Dec 2000 01:27:46 GMT)
+X-Complaints-To: postmaster@columbia.edu
+NNTP-Posting-Date: 20 Dec 2000 01:27:46 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2707
+
+In article <mdd3dfk87cd.fsf@panix2.panix.com>,
+Rich Alderson  <alderson+news@panix.com> wrote:
+: inwap@best.com (Joe Smith) writes:
+: > What command do I give to a Linux FTP client to get a verbose directory
+: > listing from TOPS20?  DIR, LIST and NLIST all return names only; no dates.
+: 
+: NONE of the above.
+: 
+: Verbose directory listings in the Tops-20 FTP server and client are
+: implemented via the STAT command, as follows:
+: 
+: 1.  The client issues "STAT *.*"
+: 2.  The server returns a list of all the files in the remote directory
+: 3.  The client CDRs down the list, issuing "STAT <name>.<typ>.<gen>" for each
+:     file on the list
+: 4.  The server returns verbose data for the file in question
+: 5.  The client formats the verbose data and outputs it to the user.
+: 
+: I don't know why it was done this way; it appears to be a holdover from TENEX
+: on the ARPANET.
+: 
+: Perhaps someone should smarten up the Unix ftp clients...
+: 
+Done:
+
+C-Kermit>ftp ? Hostname; or FTP command, one of the following:
+ account     chmod       help        open        rename      system
+ append      close       idle        options     reset       type
+ bye         delete      mget        put         rmdir       umask
+ cd          directory   mkdir       pwd         site        up
+ cdup        features    modtime     quote       size        user
+ check       get         mput        reget       status      vdirectory
+C-Kermit>help ftp vdirectory
+
+Syntax: FTP VDIRECTORY [ filespec ]
+  Asks the server to send a directory listing of the files that match
+  the given filespec, or if none is given, all the files in its current
+  directory.  VDIRECTORY is needed for getting verbose directory
+  listings from certain FTP servers, such as on TOPS-20.  Try it if
+  FTP DIRECTORY lists only filenames without details.
+
+C-Kermit>ftp cu20b.arpa  ; (not the real hostname)
+ Name (cu20b.arpa:fdc):
+331 User name ok. Password, please.
+ Password:
+230- User FDC, job 13, logged in at
+230- Tue, 19 Dec 2000 17:00:57 -0800 (PST).
+230
+Remote system type is TOPS20.
+Default transfer mode is TEXT ("ASCII")
+  C-Kermit>ftp dir
+  CU20B:<FDC>
+  CKERMIT.DIRECTORY.1
+  CKERMIT2.TXT.1
+  GNUEMACS.INIT.1
+  KERMIT.DIRECTORY.1
+  LOGIN.CMD.1
+  226 Transfer completed.
+C-Kermit>ftp vdir
+  CU20B:<FDC>CKERMIT.DIRECTORY.1;P20200;A,0,15-Jan-1999 13:41:26-PST,
+  15-Jan-1999 13:41:27-PST,14-Sep-1999 17:49:06-PDT,FDC,FDC
+  CU20B:<FDC>CKERMIT2.TXT.1;P775200;A,166,15-Jan-1999 13:43:17-PST,15-Jan-1999
+  13:43:17-PST,15-Jan-1999 14:35:06-PST,FDC,FDC
+  CU20B:<FDC>GNUEMACS.INIT.1;P775200;A,8,25-Jan-1997 10:46:54-PST,25-Jan-1997
+  10:46:54-PST,25-Jan-1997 10:49:34-PST,FDC,FDC
+  CU20B:<FDC>KERMIT.DIRECTORY.1;P20200;A,0,25-Jan-1997 10:45:59-PST,25-Jan-1997
+  10:45:59-PST,14-Sep-1999 17:49:07-PDT,FDC,FDC
+  CU20B:<FDC>LOGIN.CMD.1;P775200;A,1,25-Jan-1997 10:43:05-PST,25-Jan-1997
+  10:43:05-PST, 8-Sep-2000 16:15:37-PDT,FDC,FDC
+C-Kermit>
+
+Yes, C-Kermit now includes an FTP client:
+
+  http://www.columbia.edu/kermit/ck71.html
+
+The current test version (Alpha.01) pointed to by the URL above doesn't have
+the FTP VDIRECTORY command in it, but by working copy does, and so Alpha.02
+will have it.  I'll try to remember to post an announcement here.
+
+C-Kermit is available for UNIX (all kinds), VMS, and several other OS
+families.  The Windows version is called Kermit 95.  So far only the UNIX
+and Windows versions are getting FTP clients.
+
+(And no, it doesn't do TYPE TENEX -- does anybody care?)
+
+- Frank
+
+P.S. TOPS-20 users who try C-Kermit might notice a familiar look & feel.
+
+
+Article 2800 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!panix!newsmaster.cc.columbia.edu!watsun.cc.columbia.edu!fdc
+From: fdc@watsun.cc.columbia.edu (Frank da Cruz)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Good news! TOPS-20 v4.1 booted successfully
+Date: 21 Dec 2000 20:07:51 GMT
+Organization: Columbia University
+Lines: 33
+Message-ID: <91tnun$4rs$1@newsmaster.cc.columbia.edu>
+References: <fsCZ5.55241$%j3.692480@news6.giganews.com> <3A424950.301C6AB5@bartek.dontspamme.net> <7xae9pty56.fsf@ruckus.brouhaha.com> <3A42507C.AA5846B7@bartek.dontspamme.net>
+NNTP-Posting-Host: watsun.cc.columbia.edu
+X-Trace: newsmaster.cc.columbia.edu 977429271 4988 128.59.39.2 (21 Dec 2000 20:07:51 GMT)
+X-Complaints-To: postmaster@columbia.edu
+NNTP-Posting-Date: 21 Dec 2000 20:07:51 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2800
+
+In article <3A42507C.AA5846B7@bartek.dontspamme.net>,
+Arthur Krewat  <krewat@bartek.dontspamme.net> wrote:
+: Paul Rubin wrote:
+: > I thought there had already been a couple of C compilers written for
+: > the 10.  Anyway it seems more in the right spirit to use the old
+: > MACRO-10 implementation of kermit if possible.
+: 
+: Very true - got one in your pocket? :)
+: Does this exist anywhere anymore?
+: 
+Of course:
+
+  ftp://kermit.columbia.edu/kermit/d/k20*.*
+
+The one-and-only source file is:
+
+  ftp://kermit.columbia.edu/kermit/d/k20mit.mac
+
+The executable is here:
+
+  1. ftp://kermit.columbia.edu/kermit/bin/kermit20.exe
+  2. ftp://kermit.columbia.edu/kermit/bin/kermit20ftp.exe
+  3. ftp://kermit.columbia.edu/kermit/bin/kermit20bin.exe
+
+which is the same 36-bit binary in three different formats:
+
+  1. Kermit/DUMPER format
+  2. "SET TYPE IMAGE 36 LOCAL, SET TYPE IMAGE 8 REMOTE" TOPS-20 FTP PUT format
+  3. Binary-mode FTP format.
+
+- Frank
+
+
+
+
+Article 2740 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newshub.sdsu.edu!news-spur1.maxwell.syr.edu!news.maxwell.syr.edu!newsfeed.mathworks.com!panix!newsmaster.cc.columbia.edu!watsun.cc.columbia.edu!fdc
+From: fdc@watsun.cc.columbia.edu (Frank da Cruz)
+Newsgroups: alt.sys.pdp10
+Subject: Communicating with PDP-10 emulator
+Date: 20 Dec 2000 16:01:29 GMT
+Organization: Columbia University
+Lines: 82
+Message-ID: <91ql4p$m3k$1@newsmaster.cc.columbia.edu>
+References: <3A3A338C.8DE7FFA5@bartek.net> <91ocrp$81m$1@oslo-nntp.eunet.no> <Pine.LNX.4.10.10012191858240.261-100000@bony.umtec.com> <3A40150C.3C98C1F7@bartek.net>
+NNTP-Posting-Host: watsun.cc.columbia.edu
+X-Trace: newsmaster.cc.columbia.edu 977328089 22644 128.59.39.2 (20 Dec 2000 16:01:29 GMT)
+X-Complaints-To: postmaster@columbia.edu
+NNTP-Posting-Date: 20 Dec 2000 16:01:29 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2740
+
+In article <3A40150C.3C98C1F7@bartek.net>,
+Arthur Krewat  <krewat@bartek.net> wrote:
+: ...
+: Doing FTP into the [TOPS10] emulator would be easy (maybe) if something
+: were written to take the data and interface to a mounted disk structure.
+: No biggy. 
+: 
+: Looking at how things are going, and the TOPS-10 7.x monitors, I came
+: to realize that Ethernet emulation would only supply DECNET, at the most.
+: This helps, if I can contact it with my VAX, but I doubt it.
+: 
+It would seem somewhat impractical to require a VAX sitting next to your PC
+to make effective use of the PDP-10 emulator on the PC :-)  Anyway, although
+I confess I never tried Linux DECnet, most of the comments I've heard about
+it have not been reassuring.
+
+Anyway, maybe a LAT box would do just as nicely?
+
+: TCP/IP (Arpanet) seems to be beyond TOPS-10's scope, so the best I can
+: hope for is a terminal server interface for TELNET and some sort of
+: home-grown interface for FTP, or somehow mounting a structure under
+: TOPS-10 that points at a local filesystem. NFS ... I have the sources
+: around here somewhere for 4.3BSD, but Linux/FreeBSD/NetBSD should 
+: yield their NFS underbellies for me :)
+: 
+Remember: if you can get Telnet or serial port access into TOPS-10 (or -20),
+you can use Kermit to transfer files in and out:
+
+  http://www.columbia.edu/kermit/
+
+TOPS-20 Kermit is a plain old MACRO program:
+
+  ftp://kermit.columbia.edu/kermit/d/k20mit.mac
+
+that anybody can build on any TOPS-20 system.  I don't think it requires
+any "modern" JSYS's but who remembers.  Documentation is here:
+
+  ftp://kermit.columbia.edu/kermit/d/k20mit.doc <-- plain text (not Word!)
+  ftp://kermit.columbia.edu/kermit/d/k20mit.ps  <-- PostScript
+  ftp://kermit.columbia.edu/kermit/d/k20mit.mss <-- Scribe source
+
+There are also pre-built binaries here (1):
+
+  ftp://kermit.columbia.edu/kermit/bin/kermit20.exe
+  ftp://kermit.columbia.edu/kermit/bin/kermit20ftp.exe
+
+It's quite slow (2), but that's another matter -- if anybody was interested,
+development could be revived to add some of the modern performance features.
+At least it gets files in and out reliably.
+
+TOPS-10 Kermit is another matter, unfortunately.  It's written in the
+dreaded Bliss-36 because the same code was also used for VMS (Bliss-32) and
+P/OS (Bliss-16).  It was done at Stevens Institute of Technology, who were
+big on all three platforms at the time (circa 1984-86).
+
+Unfortunately I don't seem to have a copy of the TOPS-10 Kermit executable.
+Maybe there's one on a DECUS tape in Tim Shoppa's archives?  It would
+probably be called K10MIT.EXE.  Meanwhile the sources and docs are here:
+
+  ftp://kermit.columbia.edu/kermit/d/k10*.*
+
+(1) I really should remember this better, but as I recall there were several
+"standards" for storing 36-bit binaries on 8-bit-byte file systems.  The one
+that Kermit-20 uses is the same one DUMPER uses to put binary files on tape:
+the 36-bit word is divided into five 7-bit bytes, which are dealt into five
+8-bit bytes, with the last having its 8th bit set to the original word's
+leftover bit.  That's the format of the kermit20.exe file (which transferred
+itself Unix).
+
+The kermit20ftp.exe file was uploaded to Unix with TOPS-20 FTP using:
+
+  set type image 36 local
+  set type image 8 remote
+
+I ftp'd this one back to TOPS-20 using the same FTP settings and it starts
+up OK.  I'm not sure how you could FTP the kermit20.exe file -- probably
+you can't.
+
+(2) Remember, the RSX20F front end is the reason why original Kermit was
+so slow.  It was slow on purpose.  Modern Kermit is a fast as you want it be.
+
+- Frank
+
+
+Article 3083 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!howland.erols.net!panix!newsmaster.cc.columbia.edu!watsun.cc.columbia.edu!fdc
+From: fdc@watsun.cc.columbia.edu (Frank da Cruz)
+Newsgroups: alt.sys.pdp10
+Subject: New TOPS-20 aware FTP client
+Date: 7 Jan 2001 23:58:38 GMT
+Organization: Columbia University
+Lines: 11
+Message-ID: <93avre$goc$1@newsmaster.cc.columbia.edu>
+NNTP-Posting-Host: watsun.cc.columbia.edu
+X-Trace: newsmaster.cc.columbia.edu 978911918 17164 128.59.39.2 (7 Jan 2001 23:58:38 GMT)
+X-Complaints-To: postmaster@columbia.edu
+NNTP-Posting-Date: 7 Jan 2001 23:58:38 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:3083
+
+
+C-Kermit 7.1 Alpha.02:
+
+  http://www.columbia.edu/kermit/ck71.html
+
+was announced just now on comp.protocols.kermit.misc.  It includes
+TYPE TENEX support, as well as a VDIRECTORY command that gets verbose
+directory listings from the TOPS-20 FTP server.  And a lot of other
+stuff :-)
+
+- Frank
+
+
+Article 3346 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.sgi.com!news-peer-west.sprintlink.net!news.sprintlink.net!newsfeed.direct.ca!look.ca!newsfeed.mesh.ad.jp!sjc-peer.news.verio.net!phl-feed.news.verio.net!news.verio.net!newsmaster.cc.columbia.edu!watsun.cc.columbia.edu!fdc
+From: fdc@watsun.cc.columbia.edu (Frank da Cruz)
+Newsgroups: comp.protocols.kermit.misc,alt.sys.pdp10
+Subject: New release of DEC-20 Kermit
+Date: 29 Jan 2001 23:50:45 GMT
+Organization: Columbia University
+Lines: 47
+Message-ID: <954vkl$jf1$1@newsmaster.cc.columbia.edu>
+NNTP-Posting-Host: watsun.cc.columbia.edu
+X-Trace: newsmaster.cc.columbia.edu 980812245 19937 128.59.39.2 (29 Jan 2001 23:50:45 GMT)
+X-Complaints-To: postmaster@columbia.edu
+NNTP-Posting-Date: 29 Jan 2001 23:50:45 GMT
+Xref: nntp1.ba.best.com comp.protocols.kermit.misc:326 alt.sys.pdp10:3346
+
+
+This is to announce (no kidding) Version 5.1 of DECSYSTEM-20 KERMIT,
+replacing version 4.2 of September 1988.  Version 5.1 adds long packets,
+which were never done before because long packets would crash a real
+DEC-20.  But virtually no real DEC-20s exist any more; all current DEC-20s
+are either non-DEC clones, or else running on other hardware under
+emulation.  So now you can use DEC-20 Kermit to transfer files with packets
+up to 9K in length; the previous maximum was 94 bytes.  This gives speed
+improvements up to about a factor of 20 (i.e. 2000%).
+
+This update was made in anticipation of the release of publicly available
+KL10 emulators capable of running under Linux or other common platforms.
+Since any emulator will probably not include Internet support, a way is
+needed to import and export files: DEC-20 Kermit (the very first Kermit
+program (*)) lives again!  Now when you log in to the DEC-20 (or emulator)
+from a PC or other computer running a Kermit-capable terminal emulator, you
+can run DEC-20 Kermit to exchange files with your computer, and the
+transfers will not be as agonizingly slow as they would have been without
+this update.
+
+Installation instructions:
+
+  Download the new Kermit source (one file) in text mode from the
+  Kermit Project archive in text ("ASCII") mode:
+
+    ftp://kermit.columbia.edu/kermit/d/k20mit.mac
+
+  Note: this is a MACRO-20 source file; it is not any kind of "package",
+  tarball, ZIP archive, compressed, encrypted, or anything else.  It's
+  just PLAIN TEXT (if you use DEC-20s you know what plain text is).
+  Rename it to KERMIT.MAC, then:
+
+    load kermit
+    save
+
+This produces a KERMIT.EXE file, which is DEC-20 Kermit.  Install it
+somewhere in SYS:, or else redefine SYS: to include the directory where
+KERMIT.EXE is.  Give it execute permission, e.g. P775252.  Documentation
+for the update is here:
+
+    ftp://kermit.columbia.edu/kermit/d/k20mit.txt
+
+(*) The first Kermit file transfer occurred on April 29, 1981, between
+    two copies of DEC-20 Kermit over a loopback connection between two
+    serial ports on the Columbia University DEC-20.
+
+- Frank
+
+
+Article 3352 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!cpk-news-hub1.bbnplanet.com!nycmny1-snh1.gtei.net!news.gtei.net!panix!newsmaster.cc.columbia.edu!watsun.cc.columbia.edu!fdc
+From: fdc@watsun.cc.columbia.edu (Frank da Cruz)
+Newsgroups: comp.protocols.kermit.misc,alt.sys.pdp10
+Subject: Re: New release of DEC-20 Kermit
+Date: 30 Jan 2001 15:31:59 GMT
+Organization: Columbia University
+Lines: 27
+Message-ID: <956mpf$qhh$1@newsmaster.cc.columbia.edu>
+References: <954vkl$jf1$1@newsmaster.cc.columbia.edu> <3A762DDC.FBD6FB61@yk.rim.or.jp>
+NNTP-Posting-Host: watsun.cc.columbia.edu
+X-Trace: newsmaster.cc.columbia.edu 980868719 27185 128.59.39.2 (30 Jan 2001 15:31:59 GMT)
+X-Complaints-To: postmaster@columbia.edu
+NNTP-Posting-Date: 30 Jan 2001 15:31:59 GMT
+Xref: nntp1.ba.best.com comp.protocols.kermit.misc:329 alt.sys.pdp10:3352
+
+In article <3A762DDC.FBD6FB61@yk.rim.or.jp>,
+Ishikawa  <ishikawa@yk.rim.or.jp> wrote:
+: > This is to announce (no kidding) Version 5.1 of DECSYSTEM-20 KERMIT,
+: > replacing version 4.2 of September 1988.  Version 5.1 adds long packets,
+: > which were never done before because long packets would crash a real
+: > DEC-20.
+: 
+: I crashed the DEC-20 because of such long transfer until
+: a DEC engineer told me why after we sent them a crash dump tape.
+: 
+: Essentially I was told that the tty input queue was
+: very short since nobody was going type in very quickly and
+: I was overflowing it!  Oh, the joy of "mainframe" programming!
+: 
+Yes, this is the entire reason for the original 94-byte limit on the length
+of a Kermit packet.  The initial design of the Kermit protocol was very much
+a lowest-common-denominator affair -- a protocol that would not break the
+DEC-20 and would also work with the IBM mainframe.  But it was also
+deliberately extensible, and that's why we've been able to grow it over the
+years.  Unfortunately, many people have yet to see past the original design
+and still, after nearly 20 years, believe the protocol is intrinsically slow.
+
+: Care to comment where [the KL20] emulator will be available?.
+: 
+Tune in to alt.sys.pdp10 for fairly constant updates.
+
+- Frank
+
+
+Article 3510 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.voicenet.com!feed2.news.rcn.net!rcn!howland.erols.net!panix!newsmaster.cc.columbia.edu!watsun.cc.columbia.edu!fdc
+From: fdc@watsun.cc.columbia.edu (Frank da Cruz)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Kermit (Was: Barb, DSKB is not in catalog!)
+Date: 15 Feb 2001 16:09:45 GMT
+Organization: Columbia University
+Lines: 31
+Message-ID: <96gv09$hjs$1@newsmaster.cc.columbia.edu>
+References: <3A85706B.B4A96DC3@nospam.nospam> <uitmdafwq.fsf@nonews.net> <96e538$d0h$1@newsmaster.cc.columbia.edu> <96gff2$ltm$3@bob.news.rcn.net>
+NNTP-Posting-Host: watsun.cc.columbia.edu
+X-Trace: newsmaster.cc.columbia.edu 982253385 18044 128.59.39.2 (15 Feb 2001 16:09:45 GMT)
+X-Complaints-To: postmaster@columbia.edu
+NNTP-Posting-Date: 15 Feb 2001 16:09:45 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:3510
+
+In article <96gff2$ltm$3@bob.news.rcn.net>,  <jmfbahciv@aol.com> wrote:
+: But NFT could transfer foreign files to and from the -10.  Isn't
+: there a way that NFT and your KERMIT could commit a handshake?
+: (I don't recall what the file transfer program was on  the -20 side.)
+: 
+NFT.  NFT is like Kermit.  It's a file-transfer program.  The difference
+is that NFT is a DECnet client -- you need an NFT server on the other
+end, over a DECnet connection.  In other words, NFT works only within
+the DEC universe (yes, I too have heard that "DECnet is available for
+Linux" but I have yet to be convinced that it works).
+
+Kermit does not need DECnet.  It works over TCP/IP or serial ports
+and/or modems (and in some implementations also X.25 and other
+networking methods), and versions of Kermit are available for
+practically every computer and operating system that has ever existed.
+
+Kermit is available for the DECsystem-10 and the DECSYSTEM-20.  It's
+available for DOS and Windows.  It's available for every known variety
+of UNIX.  It's available for VMS, RSX, RT11, RSTS, TSX+, IAS, ...
+It's available for MVS, CMS, CICS, VOS, AOS/VS, ...  It's available
+for Plan 9, OS-9, QNX, ...
+
+So as you can see, it's both platform-independent AND works on
+different kinds of connections, AND does not require a proprietary
+networking method.  We've been working on it for 20 years so it shouldn't
+be surprising that it can be useful in certain situations.  Those
+who are not familiar with Kermit can get a brief overview here:
+
+  http://www.columbia.edu/kermit/kermit.html
+
+- Frank
+
+
+Article 5283 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!feeder.qis.net!news.maxwell.syr.edu!news.stealth.net!news-east.rr.com!news.rr.com!news01.optonline.net!news02.optonline.net.POSTED!not-for-mail
+From: Arthur Krewat <krewat@bartek.dontspamme.net>
+Newsgroups: alt.sys.pdp10
+Subject: Kermit-10 for TOPS-10 7.03
+Organization: Kilonet.net
+Lines: 41
+Message-ID: <3B2E69F6.A8EC10D2@bartek.dontspamme.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 4.7 [en] (X11; I; SunOS 5.8 i86pc)
+X-Accept-Language: en
+Date: Mon, 18 Jun 2001 20:56:44 GMT
+NNTP-Posting-Host: 24.186.100.134
+X-Trace: news02.optonline.net 992897804 24.186.100.134 (Mon, 18 Jun 2001 16:56:44 EDT)
+NNTP-Posting-Date: Mon, 18 Jun 2001 16:56:44 EDT
+Xref: nntp1.ba.best.com alt.sys.pdp10:5283
+
+
+Go here for the ".tap" image for Kermit-10 for TOPS-10 (and
+TOPS-20), complete with TOPS-10 7.03 .EXE and .REL/.UNV files.
+
+http://pdp10.kilonet.org/files/k10mit-135.tap.gz
+
+Frank, I incremented the edit level to 135, which involved the
+following:
+
+Changing CAXx macros to CAM and CAI where appropriate. This was
+to fix a bug somewhere in TOPS-10 GLXUNV(?) macros where it would
+use CAI where CAM was necessary.
+
+Created a K10MIT.MIC file so you can do "DO K10MIT" and it would
+compile correctly.
+
+I tested it with a shareable high-seg, but the above link only
+includes a private high-seg. Change "/SAVE" in k10mit.ccl to
+"/SSAVE" to enable shareable high-seg. Your mileage may vary.
+
+The default restore point for the above tape is [76,5,KERMIT].
+This was my account as a systems guy at LIRICS.
+
+Caveats:
+
+This was tested using simh-2.6 with the DZ11 support I mashed in.
+I got 2200 CPS from a Sparc-10 2x60Mhz w/Solaris 8 connecting
+into a Celeron 533 running simh.
+
+This should work with TS10 as a tape image, and using c-kermit
+to telnet into the console (or KLINIK) should work fine.
+
+The DZ11 support for simh does not work with C-Kermit 7.0, as 
+Kermit tries to do something strange with the telnet session
+on setup. C-kermit 6.0.192 works fine.
+
+A workaround for the C-kermit 7.0 problem is to telnet into
+your local machine, and then telnet into the simulator from
+a UNIX shell.
+
+aak
+
+
+Article 5306 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news2.best.com!news.maxwell.syr.edu!newsfeed.frii.net!cyclone-sjo1.usenetserver.com!news-out-sjo.usenetserver.com!news01.optonline.net!news02.optonline.net.POSTED!not-for-mail
+From: Arthur Krewat <krewat@bartek.dontspamme.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Kermit-10 for TOPS-10 7.03
+Organization: Kilonet.net
+Lines: 31
+Message-ID: <3B2F8E40.B5E1D85F@bartek.dontspamme.net>
+References: <3B2E69F6.A8EC10D2@bartek.dontspamme.net> <9gnd54$k2f$1@bob.news.rcn.net> <3B2F6044.42CA4210@bartek.dontspamme.net> <tiv1vve4puv600@corp.supernews.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 4.7 [en] (X11; I; SunOS 5.8 i86pc)
+X-Accept-Language: en
+Date: Tue, 19 Jun 2001 17:41:45 GMT
+NNTP-Posting-Host: 24.186.100.134
+X-Trace: news02.optonline.net 992972505 24.186.100.134 (Tue, 19 Jun 2001 13:41:45 EDT)
+NNTP-Posting-Date: Tue, 19 Jun 2001 13:41:45 EDT
+Xref: nntp1.ba.best.com alt.sys.pdp10:5306
+
+Timothy Stark wrote:
+> 
+> I downloaded your copy of k10mit-135.tap.gz but I tried to restore it
+> on my TS10 emulator, it attempted to restore k10misc.bli (or .mac),
+> it started to report record errors then my emulator crashed.  With
+> t10backup program, it resulted the same.  It said that it is
+> corrupted tape image.  Please check it.
+
+I tested it yesterday and had no problems, but today I saved the file
+and got only 500K of it. The original .tap image is 1.4megs, while the
+gzip'd file is 500K+. When I saved the file, it came across as
+uncompressed, but only 500K size. 
+
+I did it again, right-clicking on the file and this time got the full
+1.4megs and the tape image worked fine.
+
+I put it up with a different suffix so that Netscape doesn't try to
+un-gzip it on the fly. Try:
+
+http://pdp10.kilonet.org/files/k10mit-135.tap.gzip
+
+Again, right-click on the link above, and "save link as". It will
+come down gzip'd and you'll have to do:
+
+gzip -dc <k10mit-135.tap.gzip >k10mit-135.tap
+
+or,
+mv k10mit-135.tap.gzip k10mit-135.tap.gz
+gzip -d k10mit-135.tap.gz
+
+aak
+
+
+Article 5307 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!newsxfer.eecs.umich.edu!panix!newsmaster.cc.columbia.edu!watsun.cc.columbia.edu!fdc
+From: fdc@watsun.cc.columbia.edu (Frank da Cruz)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Kermit-10 for TOPS-10 7.03
+Date: 19 Jun 2001 19:01:41 GMT
+Organization: Columbia University
+Lines: 55
+Message-ID: <9go7il$1ni$1@newsmaster.cc.columbia.edu>
+References: <3B2E69F6.A8EC10D2@bartek.dontspamme.net>
+NNTP-Posting-Host: watsun.cc.columbia.edu
+X-Trace: newsmaster.cc.columbia.edu 992977301 1778 128.59.39.2 (19 Jun 2001 19:01:41 GMT)
+X-Complaints-To: postmaster@columbia.edu
+NNTP-Posting-Date: 19 Jun 2001 19:01:41 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:5307
+
+In article <3B2E69F6.A8EC10D2@bartek.dontspamme.net>,
+Arthur Krewat  <krewat@bartek.dontspamme.net> wrote:
+: 
+: Go here for the ".tap" image for Kermit-10 for TOPS-10 (and
+: TOPS-20), complete with TOPS-10 7.03 .EXE and .REL/.UNV files.
+: 
+: http://pdp10.kilonet.org/files/k10mit-135.tap.gz
+: 
+: Frank, I incremented the edit level to 135...
+:
+Thanks, I'll update the master copy.  Where's the new source?
+(If it's also in the .tap archive, I'm not set up to extract it.)
+Ditto for the .MIC file.  The /pub/ftp/files/ directory isn't
+open...
+
+: Changing CAXx macros to CAM and CAI where appropriate. This was
+: to fix a bug somewhere in TOPS-10 GLXUNV(?) macros where it would
+: use CAI where CAM was necessary.
+: 
+This I find a bit worrisome -- Kermit-10 was build and used all
+over the place in the 80s without complaint.  If the CAX macros
+are generating bad code, then (a) might it not be a problem in
+the emulator, and (b) wouldn't this affect a lot more programs
+that Kermit?  Has anybody tried building GALAXY components?
+
+: This was tested using simh-2.6 with the DZ11 support I mashed in.
+: I got 2200 CPS from a Sparc-10 2x60Mhz w/Solaris 8 connecting
+: into a Celeron 533 running simh.
+: 
+And long packets were being used, right?  (the main feature of
+Dan Norstedt's 3(134) edit from Sep 1989)  Yuk, just think what it
+would be without them...
+
+: This should work with TS10 as a tape image, and using c-kermit
+: to telnet into the console (or KLINIK) should work fine.
+: 
+: The DZ11 support for simh does not work with C-Kermit 7.0, as 
+: Kermit tries to do something strange with the telnet session
+: on setup. C-kermit 6.0.192 works fine.
+: 
+I would be interested in pursuing this.  Can you give details?
+You can tell C-Kermit 7.0 to "set telnet debug on" to watch the
+Telnet negotiations.  You can also change the Telnet policies
+of C-Kermit 7.0 with "set telopt" commands ("set telopt ?" for
+a list -- feel your way thru as with a TOPS-20 program).
+
+: A workaround for the C-kermit 7.0 problem is to telnet into
+: your local machine, and then telnet into the simulator from
+: a UNIX shell.
+: 
+I'm sure we can do better than that.  C-Kermit 7.0 works fine for
+Telnetting into a *real* DEC-20 and uploading or downloading files
+with long packets (using the recently updated Kermit-20).
+
+- Frank
+
+
+Article 5663 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc01.blue.aol.com!news.maxwell.syr.edu!newsfeed.frii.net!easynews!feed.news.qwest.net!dfw-peer.news.verio.net!phl-feed.news.verio.net!news.verio.net!newsmaster.cc.columbia.edu!watsun.cc.columbia.edu!fdc
+From: fdc@watsun.cc.columbia.edu (Frank da Cruz)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Tops-20, kermit and getting things in and out of simh
+Date: 21 Jul 2001 15:57:22 GMT
+Organization: Columbia University
+Lines: 77
+Message-ID: <9jc8p2$mtv$1@newsmaster.cc.columbia.edu>
+References: <8f576ee9.0107171324.50c57b2@posting.google.com> <9j4bfs$khd$1@newsmaster.cc.columbia.edu> <8f576ee9.0107190019.3fe17b7@posting.google.com>
+NNTP-Posting-Host: watsun.cc.columbia.edu
+X-Trace: newsmaster.cc.columbia.edu 995731042 23487 128.59.39.2 (21 Jul 2001 15:57:22 GMT)
+X-Complaints-To: postmaster@columbia.edu
+NNTP-Posting-Date: 21 Jul 2001 15:57:22 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:5663
+
+In article <8f576ee9.0107190019.3fe17b7@posting.google.com>,
+tom m <tom0565@yahoo.com> wrote:
+: > It's the classic bootstrap problem.  If you had Kermit in the first place,
+: > you wouldn't have trouble getting it :-)
+: 
+: Right.  Kermit is step one.  After that, everything else can flow from
+: there.
+: ...
+: > What kind of computer are you sending it from, using which Kermit program
+: > and version, over what kind of connection, with what settings?
+: 
+: This is all occuring on an intel redhat 7.1 linux system.  Kermit
+: version 7.0.197.  Telneting into the virtual dz11 interface. Settings,
+: no settings I've used seem to make a difference.  transmit /text
+: 
+It works for me (with toad.xkl.com).
+
+: I did have the same telnet negotiation problems that were posted
+: previously, so I actually kermit to localhost and telnet from there. 
+:
+The double hop is bound to cause trouble -- multiple levels of buffering,
+flow control, pty's, who knows what else.
+
+: I'm able to transmit files to the local unix host, but can't seem to
+: get kermit not to time out at 10th line or so when talking into the
+: emulator.
+: 
+If you can't make a telnet connection directly from Kermit to the TOPS-20
+emulator, that's a good indicator that other things won't work either.
+The DZ-11/Telnet-Server shim has to be fixed to implement Telnet protocol
+properly.  Perhaps more to the point, the underlying OS (Linux in this case)
+also has to have an adequate PTY driver.  Recent experience(*) has shown
+that quite a new UNIX-based OS's fall down flat when their ptys are stressed,
+e.g. by transferring files through them with Kermit.  Two examples are
+AIX and OpenBSD.
+
+In the meantime, C-Kermit has enough controls to let you work around almost
+any problem.  When a Telnet server misnegotiates Telnet protocol, you can
+use C-Kermit's SET TELNET and SET TELOPT commands to adapt Kermit's
+negotiation policies to practically any situation: "help set telnet",
+"help set telopt" for details.  If C-Kermit seems to stall making the
+initial connection, it is often sufficient to use (in C-Kermit):
+
+  telnet /nowait hostname
+
+Once you have a connection that works interactively, you might still have
+trouble with TRANSMIT.  This is to be expected, because TRANSMIT is not
+an error-detecting-and-correcting protocol.  Here again you have lots of
+adjustments available to work around almost any problem: "help transmit"
+and "help set transmit" explains them.
+
+Finally, when bootstrapping Kermit with TRANSMIT, it's better to have a
+short bootstrap file than a long one.  KERMIT.MAC is 12000 lines (407K).
+KERMIT.EXE, on the other hand, is 140K, but obviously you can't TRANSMIT
+it.  The trick would be to find a text-encoded compression method that
+can be used on the executable, similar to gzipping and uuencoding on Unix,
+but that is friendly to 36-bit binaries.
+
+I notice that gzip and uuencode are actually available on toad, but
+gzip doesn't handle 36-bit executables:
+
+  @ gzip kermit.exe
+  GZIP: kermit.exe has byte size > 8; bytes > 255 will be truncated
+   do you wish to proceed (y or n)? n
+	  skipped
+  @
+
+I'm probably not remembering some common technique from the 70s and 80s
+for shipping 36-bit binaries around...
+
+(*) C-Kermit 8.0 Beta includes a new SSH command, which works by starting
+    the external SSH program on a pty, thus allowing SSH to be the transport
+    for Kermit connections, and therefore allowing file transfer, scripting,
+    character-set translation, etc, over SSH.  This works great on some
+    UNIXes, not so great on others, and not at all on still others.
+
+- Frank
+
+
+Article 6044 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!panix!newsmaster.cc.columbia.edu!watsun.cc.columbia.edu!fdc
+From: fdc@watsun.cc.columbia.edu (Frank da Cruz)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 stuff, and hardware wanted...
+Date: 12 Sep 2001 16:01:24 GMT
+Organization: Columbia University
+Lines: 31
+Message-ID: <9no0sk$fj1$1@newsmaster.cc.columbia.edu>
+References: <Pine.LNX.4.21.0109100747410.470-100000@sakura.lunar-tokyo.net> <3B9E6D3F.2349DC9A@ins-msi.com>
+NNTP-Posting-Host: watsun.cc.columbia.edu
+X-Trace: newsmaster.cc.columbia.edu 1000310484 15969 128.59.39.2 (12 Sep 2001 16:01:24 GMT)
+X-Complaints-To: postmaster@columbia.edu
+NNTP-Posting-Date: 12 Sep 2001 16:01:24 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:6044
+
+In article <3B9E6D3F.2349DC9A@ins-msi.com>,
+Jeff Campbell  <jcampbell@ins-msi.com> wrote:
+: Can't help with the hardware, but you might try using kermit on the VAX
+: instead of SET HOST/DTE.
+: 
+It's here:
+
+  http://www.columbia.edu/kermit/ckermit.html
+
+The commands you would want are:
+
+  log session <filename>  ; To log everything to a file
+  set escape <number>     ; In case you need to change the escape char
+  set carrier-watch off   ; Don't require carrier -- stay connected
+  set port txa0:          ; Or whatever
+  set speed 1200          ; Or whatever
+  set flow xon/xoff       ; If the 2020 FPE supports it this should help
+  set parity none         ; (or use "even" if required)
+  connect
+
+Use Ctrl-\, then letter "c", to escape back to the C-Kermit prompt.
+
+You can also push stuff at the 2020 in a smarter way than you're doing
+now, with Kermit's TRANSMIT command.  At the C-Kermit> or K-95> prompt,
+type "help transmit" and "help set transmit" for info.
+
+If you have trouble, let me know; I'll be glad to help.  In particular,
+if you need to push arbitrary 8-bit data thru the connection, some
+additional setup (and precautions) will be needed.
+
+- Frank
+
+

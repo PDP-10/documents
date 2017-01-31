@@ -1,0 +1,283 @@
+Article: 21071 of alt.sys.pdp10
+Message-ID: <3F1A9FD8.240F@terrigal.net.au>
+Date: Sun, 20 Jul 2003 23:57:44 +1000
+From: ken <katie@terrigal.net.au>
+Reply-To: ken@terrigal.net.au
+Organization: Lauder Stargazers Oldboys
+X-Mailer: Mozilla 3.01 (Win95; I)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10,alt.sys.pdp11,comp.os.rsts,comp.os.vms
+Subject: Re: Does RT-11 run on the PDP-11/70?  (was Re: PDP-11 OS Release Dates)
+References: <behgbr047t@enews4.newsguy.com> <bf13le$8pa$1@news1.radix.net> <3F15858A.5799FC92@adldata.com> <saOdnVhUoNGSjYuiXTWJgA@comcast.com> <hMScnUEmnfu3UoqiXTWc-g@speakeasy.net> <4b2dndNoSs4WUYWiXTWJjQ@comcast.com> <3f19da65_1@news.iprimus.com.au> <4+Y7aD$kEX4p@elias.decus.ch>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+NNTP-Posting-Host: tofua.terrigal.net.au
+X-Trace: daisy.ans.com.au 1058709415 tofua.terrigal.net.au (20 Jul 2003 23:56:55 +1000)
+Lines: 38
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!news-out1.nntp.be!propagator2-sterling!news-in-sterling.newsfeed.com!/usr/lib/news!198.32.232.2.MISMATCH!news.syd.ausbone.net!198.32.232.8.MISMATCH!daisy.ans.com.au
+Xref: dfw-artgen alt.sys.pdp10:21071 alt.sys.pdp11:8161 comp.os.rsts:785 comp.os.vms:189652
+
+Paul Sture wrote:
+> 
+> In article <3f19da65_1@news.iprimus.com.au>, "Christine Ricketts/Andrew Stewart" <u1276a@uxnxixtxe.com.au> writes:
+> > "Douglas A. Gwyn" <DAGwyn@null.net> wrote in message
+> > news:4b2dndNoSs4WUYWiXTWJjQ@comcast.com...
+> >> Rob Warnock wrote:
+> >> > And OS-8 could even run with *only* DECtape as the "system disk", too!!
+> >>
+> >> I once ran RT-11 off DECtape on a PDP-11/70 in DEC's
+> >> Marlboro facility.  It was amusing.
+> >>
+> >
+> > Interesting.  The RT-11 V5.5 SPD does not mention the PDP-11/70
+> > yet p257 of the RT-11 V5.5 Mini Reference Manual has bit 14 of
+> > the Configuration Word 2 is set if it is a PDP-11/70 processor.
+> >
+> > Was this used for the RT-11 Emulation under RSTS/E and/or RSX,
+> > or did RT-11 run native on this beast?
+> >
+> > Thanks, Andy.
+> >
+> > PS.  I was told RT-11 runs on the VAX-11/780,
+> > very easily on the LSI-11 console processor,
+> > at least once in compatability mode for testing purposes.  :-)
+> >
+> 
+> The 11/780 console floppy was an RT-11 volume.
+
+RT11 runs fine on LSI/11's both in a standalone, but also in some third
+party networked applications. A company in the Netherlands, Techlan,
+made redundant token passing network cards for Unibus and Qbus, booting
+them of a central RT11 server. They went very well indeed in a diskless
+environment, used for process control by companies such as Outokumpu
+the Finish mining comglomerate and in conjuction with Gamma 11 systems
+from DEC/Philips.... so should have run fine on an console LSI-11
+
+Ken Kirkby
+K. J. Kirkby and Associates P/L
+
+
+Article: 21072 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!iad-feed.news.verio.net!phl-feed.news.verio.net!newsmaster.cc.columbia.edu!panix!newsfeed.mathworks.com!nntp.abs.net!newspeer.monmouth.com!news.monmouth.com!shell.monmouth.com!not-for-mail
+From: pechter@shell.monmouth.com (Bill/Carolyn Pechter)
+Newsgroups: alt.sys.pdp10,alt.sys.pdp11
+Subject: Re: Does RT-11 run on the PDP-11/70?  (was Re: PDP-11 OS Release Dates)
+Date: 20 Jul 2003 10:44:53 -0400
+Organization: Lakewood MicroSystems
+Lines: 66
+Message-ID: <bfe9t5$fdi$1@shell.monmouth.com>
+References: <behgbr047t@enews4.newsguy.com> <4b2dndNoSs4WUYWiXTWJjQ@comcast.com> <3f19da65_1@news.iprimus.com.au> <bfcn4j$fil$1@news3.bu.edu>
+NNTP-Posting-Host: shell.monmouth.com
+Xref: dfw-artgen alt.sys.pdp10:21072 alt.sys.pdp11:8163
+
+In article <bfcn4j$fil$1@news3.bu.edu>, Phil Budne <budd@csa.bu.edu> wrote:
+>
+>There was a package called "RTEM" that allowed you to boot RT-11 on a
+>VAXen that had PDP-11 compatibility mode.  It seemed very fast in
+>comparison to my PDT-11/50!
+
+I had them install it to play with in the Piscataway, NJ field office
+for me.
+
+The real reason to do it was so I could sysgen my PDT11/150.
+
+A little exchange or mcr flx and I'd have the floppy copied.
+
+My other method to do the sysgen involved getting sent to DEC training
+and bringing up an RK pack to do the sysgen with in the lab DEC used 
+for Field Service Training. I did it there for four years. 
+
+DEC security got too bitchy about it the last time and confiscated the
+pack so they could check I wasn't stealing VAX/VMS cluster sources on it
+(someone was caught doing this a couple of weeks earlier) and it 
+became policy that no media went in/out without inspection.
+
+Took them about 6 weeks to get me my pack back and the #@$%^& crashed it
+when they shipped it.  I took out the DEC Finance RK05 when I booted
+it on a PM.  The thing had a 1/4 inch bend in the platter where it
+contacted one of the screws that held the disk pack together in
+shipping.
+
+Damn, I miss the fun of RT11 on the PDT. Nothing like the sound of the
+Reset and seeks on the RX's.
+<click> <click-clack> <click-click-click> 
+
+RT11 ran great on the 11/70's  -- just that RT11 didn't support it
+officially.  I think they didn't deal with the Unibus map so it wasn't
+officially supported on the 11/70's.
+
+I used to lock down the best 11/70 in the lab by booting my RT11
+pack on Sunday evenings.
+
+I'd drive up from NJ a bit early playing adventure for a while and 
+run the RT11 light pattern on the best 11/70 in the lab (I'd use RT and
+the diags to find the machine least likely to be really broken before
+the Field Service class would whack at 'em).
+
+I'd spin down the drive leaving the light pattern from RT running
+and hang a sign on the box Sunday about 10pm saying Operating System
+Test in Progress Do Not Disturb.
+
+When class started the next morning my machine was tested, staked out
+and ready for me.
+
+I'd boot XXDP and off through the field service classes but reload the
+RT pack and rehang the sign every night.
+
+8-) <Really big grin>
+
+Bill
+
+
+Bill
+-- 
++---------------------------------------------------------------------------+
+| Bill and/or Carolyn Pechter    |        pechter@shell.monmouth.com        |
+|   Bill Gates is a Persian cat and a monocle away from being a villain in  |
+|   a James Bond movie              -- Dennis Miller                        | 
++---------------------------------------------------------------------------+
+
+
+Article: 21083 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!sjc-peer.news.verio.net!news.verio.net!newsfeed.cwix.com!news1.optus.net.au!optus!news.uwa.edu.au!nntp.waia.asn.au!nnrp.waia.asn.au!127.0.0.1!nobody
+From: Paul Repacholi <prep@prep.synonet.com>
+Newsgroups: alt.sys.pdp10,alt.sys.pdp11,vmsnet.pdp-11,comp.os.rsts,comp.os.vms
+Subject: Re: PDP-11 OS Release Dates
+Date: Mon, 21 Jul 2003 18:11:09 +0800
+Organization: none
+Lines: 33
+Message-ID: <87brvojiki.fsf@prep.synonet.com>
+References: <behgbr047t@enews4.newsguy.com> <bf13le$8pa$1@news1.radix.net>
+ <3F15858A.5799FC92@adldata.com> <saOdnVhUoNGSjYuiXTWJgA@comcast.com>
+ <hMScnUEmnfu3UoqiXTWc-g@speakeasy.net>
+ <4b2dndNoSs4WUYWiXTWJjQ@comcast.com>
+ <3YBAmkv22lwi@eisner.encompasserve.org>
+NNTP-Posting-Host: zion-a01.conceptual.net.au
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Trace: nnrp.waia.asn.au 1058792847 11159 203.190.192.4 (21 Jul 2003 13:07:27 GMT)
+X-Complaints-To: usenet@nnrp.waia.asn.au
+NNTP-Posting-Date: Mon, 21 Jul 2003 13:07:27 +0000 (UTC)
+User-Agent: Gnus/5.1001 (Gnus v5.10.1) Emacs/21.2 (gnu/linux)
+Cancel-Lock: sha1:pGaIQ5KHSjN9hfLfrY2eudo5TkM=
+Cache-Post-Path: grimiore.conceptual.net.au!unknown@dialup-194-67.conceptual.net.au
+X-Cache: nntpcache 2.3.3 (see http://www.nntpcache.org/)
+Xref: dfw-artgen alt.sys.pdp10:21083 alt.sys.pdp11:8180 vmsnet.pdp-11:22923 comp.os.rsts:795 comp.os.vms:189701
+
+kaplow_r@encompasserve.org.TRABoD (Bob Kaplow) writes:
+
+> In article <4b2dndNoSs4WUYWiXTWJjQ@comcast.com>, "Douglas A. Gwyn" <DAGwyn@null.net> writes:
+>> Rob Warnock wrote:
+
+>>> And OS-8 could even run with *only* DECtape as the "system disk",
+>>> too!!
+ 
+>> I once ran RT-11 off DECtape on a PDP-11/70 in DEC's Marlboro
+>> facility.  It was amusing.
+
+> REAL DecTape, or that hightmare that was TU58? I always wanted to
+> meet the engineer that came up with the TU58, with sharp impliments
+> in hand...
+
+We used to run the PDP-6 from DECtapes when the disks where scrod...
+That was real DECtapes though, and quite reasonable.
+
+I have also run a 11/44 from TU-58 as the system disk. I can promise
+you, it is something you never want to do. To init it I set it going,
+then went to the tavern across the road for lunch. I think that is the
+only way you can, other wise you will kill off the `failed' init...
+
+Light and blunt please, we want it to be *SLOOOOWWW* and painfull!
+Pity no one did a RSP disk or floppy for diags and the like...
+
+-- 
+Paul Repacholi                               1 Crescent Rd.,
++61 (08) 9257-1001                           Kalamunda.
+                                             West Australia 6076
+comp.os.vms,- The Older, Grumpier Slashdot
+Raw, Cooked or Well-done, it's all half baked.
+EPIC, The Architecture of the future, always has been, always will be.
+
+
+Article: 21076 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!sjc-peer.news.verio.net!news.verio.net!hammer.uoregon.edu!news.litech.org!news-feed.riddles.org.uk!sn-xit-09!supernews.com!sienna.impulse.net!azure.impulse.net!not-for-mail
+Message-ID: <3F1B2C23.6020809@beagle-ears.com>
+Date: Sun, 20 Jul 2003 16:56:19 -0700
+From: Lars Poulsen <lars@beagle-ears.com>
+User-Agent: Mozilla/5.0 (Windows; U; Win98; en-US; rv:1.0.2) Gecko/20030208 Netscape/7.02
+X-Accept-Language: en, da
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10,alt.sys.pdp11,vmsnet.pdp-11,comp.os.rsts,comp.os.vms
+To: "Douglas A. Gwyn" <DAGwyn@null.net>
+Subject: Re: PDP-11 OS Release Dates
+References: <behgbr047t@enews4.newsguy.com> <bf13le$8pa$1@news1.radix.net> <3F15858A.5799FC92@adldata.com> <saOdnVhUoNGSjYuiXTWJgA@comcast.com> <hMScnUEmnfu3UoqiXTWc-g@speakeasy.net> <4b2dndNoSs4WUYWiXTWJjQ@comcast.com>
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
+Lines: 20
+NNTP-Posting-Host: 207.154.106.6
+X-Trace: azure.impulse.net 1058745381 187 207.154.106.6
+Xref: dfw-artgen alt.sys.pdp10:21076 alt.sys.pdp11:8171 vmsnet.pdp-11:22916 comp.os.rsts:788 comp.os.vms:189669
+
+Rob Warnock wrote:
+>> And OS-8 could even run with *only* DECtape as the "system disk", too!!
+
+Douglas A. Gwyn wrote:
+> I once ran RT-11 off DECtape on a PDP-11/70 in DEC's
+> Marlboro facility.  It was amusing.
+
+Three phrases: VAX-11/730. TU-58. Microcode load.
+
+The TU-58 was a cassette tape (actually, a miniature QIC, IIRC)
+interfaced through a DL-11 UART, used as a block device, usually
+with an RT-11 file structure. It made a DECtape look good.
+
+I heard to my amazement, that the Soviet VAX-cloning group cloned
+the 730, TU-58 and all. That was so stupid. They should at least
+have replaced the TU-58 with an 8080 controlling a floppy disk.
+-- 
+/ Lars Poulsen        +1-805-569-5277   http://www.beagle-ears.com/lars/
+   125 South Ontare Rd, Santa Barbara, CA 93105 USA  lars@beagle-ears.com
+
+
+
+Article: 21076 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!sjc-peer.news.verio.net!news.verio.net!hammer.uoregon.edu!news.litech.org!news-feed.riddles.org.uk!sn-xit-09!supernews.com!sienna.impulse.net!azure.impulse.net!not-for-mail
+Message-ID: <3F1B2C23.6020809@beagle-ears.com>
+Date: Sun, 20 Jul 2003 16:56:19 -0700
+From: Lars Poulsen <lars@beagle-ears.com>
+User-Agent: Mozilla/5.0 (Windows; U; Win98; en-US; rv:1.0.2) Gecko/20030208 Netscape/7.02
+X-Accept-Language: en, da
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10,alt.sys.pdp11,vmsnet.pdp-11,comp.os.rsts,comp.os.vms
+To: "Douglas A. Gwyn" <DAGwyn@null.net>
+Subject: Re: PDP-11 OS Release Dates
+References: <behgbr047t@enews4.newsguy.com> <bf13le$8pa$1@news1.radix.net> <3F15858A.5799FC92@adldata.com> <saOdnVhUoNGSjYuiXTWJgA@comcast.com> <hMScnUEmnfu3UoqiXTWc-g@speakeasy.net> <4b2dndNoSs4WUYWiXTWJjQ@comcast.com>
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
+Lines: 20
+NNTP-Posting-Host: 207.154.106.6
+X-Trace: azure.impulse.net 1058745381 187 207.154.106.6
+Xref: dfw-artgen alt.sys.pdp10:21076 alt.sys.pdp11:8171 vmsnet.pdp-11:22916 comp.os.rsts:788 comp.os.vms:189669
+
+Rob Warnock wrote:
+>> And OS-8 could even run with *only* DECtape as the "system disk", too!!
+
+Douglas A. Gwyn wrote:
+> I once ran RT-11 off DECtape on a PDP-11/70 in DEC's
+> Marlboro facility.  It was amusing.
+
+Three phrases: VAX-11/730. TU-58. Microcode load.
+
+The TU-58 was a cassette tape (actually, a miniature QIC, IIRC)
+interfaced through a DL-11 UART, used as a block device, usually
+with an RT-11 file structure. It made a DECtape look good.
+
+I heard to my amazement, that the Soviet VAX-cloning group cloned
+the 730, TU-58 and all. That was so stupid. They should at least
+have replaced the TU-58 with an 8080 controlling a floppy disk.
+-- 
+/ Lars Poulsen        +1-805-569-5277   http://www.beagle-ears.com/lars/
+   125 South Ontare Rd, Santa Barbara, CA 93105 USA  lars@beagle-ears.com
+
+
+

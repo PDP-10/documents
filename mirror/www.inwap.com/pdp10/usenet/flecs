@@ -1,0 +1,84 @@
+Article 5920 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!wn3feed!wn2feed!worldnet.att.net!209.155.233.17!pln-w!spln!dex!extra.newsguy.com!newsp.newsguy.com!drn
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Newsgroups: alt.folklore.computers,vmsnet.pdp-11,alt.sys.pdp10
+Subject: FLECS (was Re: YKYGOW...)
+Date: 16 Aug 2001 11:27:14 -0700
+Organization: Newsguy News Service [http://newsguy.com]
+Lines: 68
+Message-ID: <9lh3a202cvv@drn.newsguy.com>
+References: <3B69B776.9F86D65A@ev1.net> <3b6acd1f.477012677@enews.newsguy.com> <dcsek9.8go.ln@amanda.reistad.priv.no> <9l29n9$g1m$1@saltmine.radix.net> <9l63f8$cfk$3@bob.news.rcn.net> <3B775F30.4BCE3757@ev1.net> <9l8g5q$dgr$7@bob.news.rcn.net> <3B7849BC.4CFE93DC@ev1.net> <3B7C04CA.3CE249F3@earthlink.net>
+NNTP-Posting-Host: p-312.newsdawg.com
+X-Newsreader: Direct Read News v2.80
+Xref: nntp1.ba.best.com alt.folklore.computers:25584 vmsnet.pdp-11:2925 alt.sys.pdp10:5920
+
+In article <3B7C04CA.3CE249F3@earthlink.net>, jchausler says...
+>
+>
+>
+>Charles Richmond wrote:
+>
+>> I may be *really* difficult for some of the *young* ones reading
+>> this group...but FORTRAN IV *did* contain many things that were
+>> great improvements over FORTRAN II. Computed GOTO's (a rudamentary
+>> form of "case" statement) and logical "if" statements were a couple
+>> of those improvements...added features, actually.
+>>
+>> I remember when I started programming with a structured language
+>> (PL/I), that the indention of code did *not* help me at all. It
+>> took me a few weeks to aclimate to this. Of course, now FORTRAN IV
+>> source code seems incredibly dense and hard to understand...
+>
+>In the late 70's I came across a FORTRAN preprocessor called FLECS
+>(FORTRAN Language with Extended Control Structures) which I believe
+>came from Univ. of Oregon which provided a structured front end to
+>FORTRAN.  The resulting FORTRAN code was obtuse as it used the
+>computed go to to implement its "procedure calls".  I came to like it
+>and
+>used it up till the late 80's for systems using both DEC and DG
+>FORTRAN's.
+>Anyone else experience it or can tell a little about its history?
+>I wonder if it is still available?
+
+An RT-11 port of FLECS is available in the flecs* directories at
+
+ftp://ftp.trailing-edge.com/pub/rt11freewarev2/split/sigtapes/tors84/
+
+The manual there mentions that:
+  
+        At Oregon, FLECS is implemented on both the DECsystem-10 and
+        the  IBM  S/360.   The manner of implementation is that of a
+        preprocessor that translates  FLECS  programs  into  FORTRAN
+        programs.   The  resulting FORTRAN program is then processed
+        in the usual way.  The translator  also  produces  a  nicely
+        formatted  listing  of  the  FLECS  program that graphically
+        presents the control structures used.
+
+It also references other versions:
+
+
+                           Versions 1 through 22
+                                Terry Beyer
+                            University of Oregon
+                              October 1, 1975
+
+
+                        Civil Aeromedical Institute
+                              January 17, 1979
+
+
+                          Version 22H(126), RT-11
+                               Robert Carter
+                            Princeton Gamma Tech
+                             February 16, 1981
+
+
+                       Version 22H(126), DECsystem-10
+                              Leland M. Bruns
+                             Johnson & Johnson
+                               March 2, 1981
+
+Tim. (shoppa@trailing-edge.com)
+
+
+

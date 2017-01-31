@@ -1,0 +1,66 @@
+Article 1235 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!howland.reston.ans.net!news.sprintlink.net!news1.cris.com!news
+From: Dick Maliska <Rmaliska@cris.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Home grown Hardware diags
+Date: 20 Oct 1995 12:06:57 GMT
+Organization: Countryside Software Services
+Lines: 48
+Message-ID: <4683d1$rpl@spectator.cris.com>
+References: <45hg1k$8q@www.uno.edu> <45j703$3qq@newsbf02.news.aol.com> <hedleyDGGD7J.99s@netcom.com> <1995Oct18.120931.19272@indyvax.iupui.edu>
+NNTP-Posting-Host: crc2-fddi.cris.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 1.2 (Windows; U; 16bit)
+
+mwood@indyvax.iupui.edu (Mark H. Wood) wrote:
+>In article <hedleyDGGD7J.99s@netcom.com>, hedley@netcom.com (Hedley Rainnie) writes:
+>> Eric Smith (eric@goonsquad.spies.com) wrote:
+>> : In article <45j703$3qq@newsbf02.news.aol.com> jmfbah@aol.com (JMFBAH) writes:
+>> : > That reminds me of  a fixed head disk that was used for swapping (could it
+>> : > have been a Burroughs?) on a 48K KA system.  There were ways to cause it
+>> : > to walk across the floor to the other side of the room.
+>> 
+>> : A *FIXED*HEAD* disk?  What could the software do to make it move?
+>> 
+>> Didn't the Illiac IV have fixed head disks? They would have a head
+>> dedicated to a track for fast roll in/roll out. 
+>
+>Yeah, we know how the FHx drives worked, but the question was how could
+>software make it walk across the floor if there was no moving access mechanism?
+>The disk spins, and the CPU selects a head to listen to, but the only moving
+>part is the platter itself, which just rotates.  Ditto the drum unit (was that
+>an RC10, or is my memory even worse than I imagine?).
+>-- 
+>Mark H. Wood, Lead Systems Programmer    +1 317 274 0749   [@disclaimer@]
+>Internet:  MWOOD@INDYVAX.IUPUI.EDU       BITNET:  MWOOD@INDYVAX
+>You are in a twisty little maze of hyperlinks, all useless.
+
+Mark, your memory is not THAT bad but a slight error.  The RC10 was the 
+the controller for the RD10 (Burroughs disk) and the RM10 (Bryant Drum),  
+The RC10 also required a data channel called the &*10 (DF10 - as my 
+failing memory recalls).  
+
+The RM10 had an interesting quirk about it that I have to share;  As the 
+drum would "spin up", that is actually what it did.  When it finally got 
+up to speed the drum (actually a cone) had moved up to the heads.  This 
+was not noticeable by anyone until the unit powered down.  When the drum 
+nearly stopped spinning there would be a noticeable "thud" when the drum 
+actually dropped away from the heads.  This first time this happened, it 
+was a bit scary because it was loud enough to sound serious.
+
+-- 
+
+                                                                Regards,
+  Dick Maliska (Rmaliska@cris.com) Ex Digitoid and Diagnostic Engineer
+                                            
+    COUNTRYSIDE SOFTWARE SERVICES. (508) 692-3124
+      Hardware/Software Support, Networking and Application Development.
+        (Snail Mail: 183 Concord Road; Westford, MA 01886)
+
+           "Rainbows are just to look at, not to really understand."
+
+
+
+

@@ -1,0 +1,118 @@
+Article 3273 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!xfer13.netnews.com!netnews.com!howland.erols.net!panix!news.panix.com!not-for-mail
+From: Rich Alderson <alderson+news@panix.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: TS-10 emulator status.
+Date: 24 Jan 2001 14:49:02 -0500
+Organization: Systems Administration, XKL LLC, Redmond WA 98052
+Lines: 98
+Sender: alderson+news@panix2.panix.com
+Message-ID: <mdd7l3k3f4h.fsf@panix2.panix.com>
+References: <DRBb6.57263$lV5.972389@news2.giganews.com>
+NNTP-Posting-Host: panix2.panix.com
+X-Trace: news.panix.com 980365742 785 166.84.0.227 (24 Jan 2001 19:49:02 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: 24 Jan 2001 19:49:02 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.7
+Xref: nntp1.ba.best.com alt.sys.pdp10:3273
+
+Tim,
+
+I don't have a 4.1 installation for Tops-20, but the contents did not change
+much if at all between 4.1 and 7.0 on the KL-10; I imagine that they were the
+same or similar on the KS-10.
+
+The Installation Tape contains 6 files:
+
+	MONITR.EXE
+	EXEC.EXE
+	DLUSER.EXE
+	DLUSER save set
+	DUMPER.EXE
+	DUMPER save sets (one long file, multiple sets internally)
+
+There was a bug in DLUSER that actually made the installation manual wrong at
+one point, so here's how to install a Tops-20 system once you are at the EXEC
+prompt ("@").  The indented comments are for your information; obviously, you
+should not type them.
+
+@enable
+	turns on OPERATOR privileges--you are logged in as OPERATOR at this
+	point--and changes prompt to "$"
+
+$rewind mta0:
+	to make your life easier should you need to re-boot
+
+$copy mta0: <system>monitr.exe
+$copy mta0: <system>exec.exe
+	now you can re-boot from disk and get an EXEC started
+
+$copy mta0: <SUBSYS>dluser.exe
+	NOTE THE DIRECTORY!
+
+$copy mta0: USERS.TXT
+	this is the DLUSER data file's default name, which makes life easier
+
+$copy mta0: <SUBSYS>dumper.exe
+	let's get all the copying out of the way now, and start the installa-
+	tion process
+
+$dluser
+DLUSER> structure ps:
+	default, but let's do everything by the book, as it were
+
+DLUSER> load users.txt
+	defines the directory layout of the public structure
+
+DLUSER> exit
+
+	The Installation Tape contains <SYSTEM>, <SUBSYS>, and <UETP.LIB> in
+	DUMPER save sets.  Repeat the RESTORE command below to load all sets.
+
+$dumper
+[Using MTA-DUMPER:]
+DUMPER> tape mta0:
+	must specify a tape, and MTA-DUMPER: is not (yet) defined
+
+DUMPER> restore ps:<*>*.*.*
+	This will get the <SYSTEM> files
+
+	I'm assuming that you have named the public structure "PS:", but if you
+	called it something else (e.g., "FOO:") the command should read
+		restore ps:<*>*.*.* foo:<*>*.*.*
+
+DUMPER> restore ps:<*>*.*.*
+	This gets the initial <SUBSYS> files
+
+DUMPER> restore ps:<*>*.*.*
+	This gets the GALAXY <SUBSYS> files
+
+DUMPER> restore ps:<*>*.*.*
+	This gets the <UETP.LIB> files
+
+DUMPER> exit
+
+$unload mta0:
+
+$information disk-usage ps:<*>
+	This will tell you how much disk space is taken up by each directory
+
+	The next step is optional:  If you want to catch the memory image of
+	the system in case of monitor crashes, you need to create a repository
+	file called <SYSTEM>DUMP.EXE of the memory size on your system.  For
+	example, if you have 4MW of memory, specify "4096" below.
+
+$run <subsys>makdmp.exe
+MAKDMP> create ps:<system>dump.exe 4096
+MAKDMP> exit
+
+Once you've gotten this far, we can explore the next things you need to do to
+set up a Tops-20 system.  And maybe in the mean time someone will find a KS-10
+Installation Guide.  It won't be me, since I've never worked with the little
+guys (except as a tourist at MIT).
+
+-- 
+Rich Alderson                                          alderson+news@panix.com
+  "You get what anybody gets.  You get a lifetime."  --Death, of the Endless
+
+

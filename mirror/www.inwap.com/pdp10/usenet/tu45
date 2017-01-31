@@ -1,0 +1,317 @@
+From inwap@best.com Thu Dec  7 03:32:23 PST 2000
+Article: 2186 of alt.sys.pdp10
+Path: nntp1.ba.best.com!inwap
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.sys.pdp10
+Subject: Re: TU45...
+Date: 7 Dec 2000 11:30:53 GMT
+Organization: Chez Inwap
+Lines: 67
+Message-ID: <90nsdd$24la$1@nntp1.ba.best.com>
+References: <Pine.LNX.4.10.10012030024490.3958-100000@bony.umtec.com> <Pine.LNX.4.10.10012041233550.5447-100000@bony.umtec.com> <3A2C05A9.EBB63F46@srv.net> <Pine.LNX.4.10.10012041501250.5447-100000@bony.umtec.com>
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 976188653 70314 206.184.139.134 (7 Dec 2000 11:30:53 GMT)
+X-Complaints-To: abuse@best.com
+NNTP-Posting-Date: 7 Dec 2000 11:30:53 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2186
+
+In article <Pine.LNX.4.10.10012041501250.5447-100000@bony.umtec.com>,
+Daniel Seagraves  <root@bony.umtec.com> wrote:
+>On Mon, 4 Dec 2000, Kevin Handy wrote:
+
+Nice drawing, let me add to it a bit.
+	+-----------------+
+        |  __      ___    |
+        | |  |\   /   \   |     1 > Source reel
+        | |3T| \ |  1  |  |	2 > Takeup reel
+        | |  |  \_\___/   |	3 > Vacuum columns. Open at top and bottom.
+        | |  |            |	4 > Heads.
+        | |==|     ___    |     5 > Capstan
+        | |  |    /   \   |
+        |*|  |  /|  2  |  |
+        |4|3B| /  \___/   |
+        | |__|/           |
+        |_*5______________| 
+
+3T and 3B are two independent vacuum columns (top and bottom), and "=="
+signifies the barrier between the two.  5 is the capstan that moved the tape.
+
+When mounting a tape, a few feet are pulled off of (1), placed over 3T,
+between the two halves of 4, underneath 5 and 3B, then onto (2).  There
+is no tape inside the vacuum at this point.
+
+When the LOAD sequence was started, the supply reel (1) would weakly
+attempt to rotate counterclockwise, taking up slack.  The takeup reel (2)
+would rotate slowly clockwise.  The voltage being fed into the takeup
+reel motor is higher than what is going into the supply reel motor.
+The supply reel loses the tug-of-war, and is forced to rotate clockwise
+slowly.  About 1 or 2 additional feet of tape are drawn out of the
+supply reel before vacuum is established.
+
+During this time, the blowers creating the vacuum get up to speed and
+suck the tape into the vacuum columns with a slurping sound.  Once the
+tape loops have stabilized inside the vacuum columns, the drive goes
+into search-forward-for-BOT mode.
+
+In this mode, the supply reel motor is still making a weak attempt to
+rotate counterclockwise, but is overpowered by the capstan moving the
+tape forward.  The takeup reel motor is weakly tying to rotate clockwise,
+and is succeeding, taking up all the tape that the capstan is pushing
+at it.  The tape moves quickly forward until BOT is reached.
+
+As you can imagine, this battle of weakly attempting to rotate one way
+while being forced to rotate the opposite direction by the other reel
+is something that has to be properly adjusted.  IIRC there are 6
+potentiometers on the TU45 that have to be adjusted.
+
+Daniel,
+  Just before pressing the LOAD button, is the tape taut?
+  Do the two reels rotate the right direction before vacuum is established?
+
+Here's what I did when loading a TU45:
+  Put tape on supply reel.
+  Unwind tape until the end was 2 inches off of the floor.
+  Put the tape over the top vacuum column, between the heads and the
+  head guide, under the capstan, over the top of the takeup reel.
+  Insert finger into hole in takeup reel to hold tape against the
+  hub, then turn the takeup reel two revolutions.  Extract finger.
+  Press LOAD.  Watch take-up reel win tug-of-war.
+  Hear the SLURP and watch tape run forward.
+  As soon as BOT/LOAD-POINT light came one, press ON-LINE.
+
+	-Joe
+--
+See http://www.inwap.com/ for PDP-10 and "ReBoot" pages.
+
+
+From pechter@i4got.pechter.dyndns.org Thu Dec  7 23:20:12 PST 2000
+Article: 2204 of alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!nntp-out.monmouth.com!newspeer.monmouth.com!news.monmouth.com!not-for-mail
+From: pechter@i4got.pechter.dyndns.org (Bill Pechter)
+Newsgroups: alt.sys.pdp10
+Subject: Re: TU45...
+Date: 7 Dec 2000 16:09:50 -0500
+Organization: Unknown
+Lines: 91
+Message-ID: <90ouau$cuv$1@i4got.pechter.dyndns.org>
+References: <Pine.LNX.4.10.10012030024490.3958-100000@bony.umtec.com> <3A2D0378.B5F07323@bartek.net> <dDvX5.38111$M51.13473697@typhoon.ne.mediaone.net> <90nnlk$932$2@bob.news.rcn.net>
+NNTP-Posting-Host: bg-tc-ppp592.monmouth.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:2204
+
+In article <90nnlk$932$2@bob.news.rcn.net>,  <jmfbahciv@aol.com> wrote:
+>   "D. R. Banks" <dawn@drbanks.nospamDOTcom> wrote:
+>>Out of respect for everything that's decent, let's not say "TU7n."
+>>
+>>TU70s TU71s and TU72s came from Storage Technology Corp.  TU78s came from
+>>garbage manufacturers.
+>
+>Yes, I did not mean to include the third shittiest magtape we made.
+>Thanks for the correction :-).
+><snip>
+>
+>/BAH
+
+
+Hate to disagree with you Barb, but hardware's my old expertise. (Mostly
+PDP11's and Vaxen -- but I got to fix TU45's and TU77's and TU78's on
+KLs when the LCG Field Service guys needed tape expertise.
+
+The worst magtape made by DEC was the Tape Stretcher-11.
+The second worst was the TU10 -- DEC's first 10 inch tape design.
+The next was the TU16.  The TE16 was reliable as hell and just as slow.
+
+DEC finally learned to buy decent tape drives with the Keystone drives
+they got from CDC/LaserMagnetics (LMSI).  These became the TU80/81/TA8x.
+They were cheap and reliable.
+
+The only drives that DEC should've considerd were the HP88700 (I think
+that's the name) series of front loading drives.
+
+The TU45/70/78's were bastard children.  Half DEC -- well, mostly Pertec.
+
+The TU45/77/78 tape transports were all Pertec designs (with some Dec 
+engineering mods to "increase" reliablility. Like they did on the
+DataProducts printers).
+
+The TU45 was originally coming out of special systems as a stopgap for
+the PDP10 line of machines which needed a limited number of drives in a
+price range between the TU/TE16's and the TU77's which were in design
+at Pertec.)
+
+According to my old DEC tape instructor -- Pertec had to pull almost all
+it's tape engineers off the TU77 to fix the 45.  I was told it was like
+two more years to get them fixed.  DEC planned to sell less than 200
+TU45's -- but they did thousands.  And fixed 'em, again and again.
+My two favorites caught fire on me while working on 'em.  The other two
+on the site were still running in '86 when I last heard of them.
+
+They were pretty much abandonned in place on line for the pair of dual
+ported TU77's and the TU78 at the site.
+
+The TU45's split vacuum column and the tricky tach designs and tape path
+caused no end of load problems and adjustment issues.
+
+Any defects and scallopped edges in the tape caused a vaccum drop.
+
+The TU45 was supposedly Pertec's first vacuum drive (it shows) and the
+prints are very closely based off their earlier tension arm designs.
+
+The TU77 and TU78 and TU45 had DEC designed formatters to allow them to
+interface to the Pattented DEC MassBus.  The formatter for the TU77 and
+TU45 was the TM03 (an ok device -- but nothing special...)
+
+The whiz bang toy was the TM78 which had more bells and whistles than
+almost any DEC controller I've ever seen.
+
+The Tape Stretcher-11  has the problem (in non-ECO'd versions) of being
+the worst DEC tape drive to load (it's brakes are on during the load
+sequence making it a bitch to load).
+
+It also used triacs in the motor control circuitry which could kick on
+by electrical noise on it's power lines.  
+
+This caused both motors to go on in full speed mode in
+opposite directions.  This stretched the tape -- destroying all
+data -- and leaving it wrapped around the reel with the strongest motor.
+
+Hence, the name.  By 1984 the ECO's (total new firmware -- about 10
+roms) a dead-bug glued chip on the back of the control board and some
+nice fat coils in line with the motors for noise rejection) removed the
+break effect at load time and eliminated the problem with the AC noise
+motor-on.
+
+I did a number of these ECO's...  The TS11 goes down as DEC's worst tape
+drive.  The DECtape was it's only real good one.
+
+Bill
+-- 
+-- 
+bpechter@monmouth.com    | FreeBSD since 1.0.2, Linux since 0.99.10  
+                         | Unix Sys Admin since Sys V/BSD 4.2
+                         | Windows System Administration: "Magical Misery Tour"
+
+
+From eric-no-spam-for-me@brouhaha.com Thu Dec  7 23:23:11 PST 2000
+Article: 2216 of alt.sys.pdp10
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: For Tim, 166 emulator please
+References: <satz-552DD0.09514406122000@cronkite.cisco.com> <90ltti$bub$1@spies.com> <satz-95E0D7.17045806122000@cronkite.cisco.com> <87n1e8bquq.fsf@k9.prep.synonet.com> <aek-0712001057050001@haxrus.apple.com> <satz-7F3322.15251807122000@cronkite.cisco.com>
+X-Disclaimer: Everything I write is false.
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 07 Dec 2000 14:45:35 -0800
+Message-ID: <qhd7f3etps.fsf@ruckus.brouhaha.com>
+Lines: 19
+X-Newsreader: Gnus v5.7/Emacs 20.7
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 7 Dec 2000 14:48:33 -0800, ruckus.brouhaha.com
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!HSNX.atgi.net!news.kjsl.com!news.spies.com!ruckus.brouhaha.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:2216
+
+Greg Satz <satz@sprynet.com> writes:
+> I have the HP 88780 on order including the SCSI adapter to use it. I 
+> also asked for any "programmers" documentation just in case as I am not 
+> sure what I will do if the tapes have errors on them.
+> 
+> What is the easiest way to make a TPC format file under Unix?
+
+TPC files are annoying because you can't efficiently backspace when
+using them on a simulator.
+
+I use John Wilson's format, which has a record length both before
+and after the record.  Supnik's simulators for other PDP's support
+this, and I've hacked it into Stu Grossman's KX10.
+
+A Linux program I use with an HP 88780 is available at:
+	http://www.36bit.org/dec/software/unix-util/
+
+It should be easy to convert Wilson format tape images to/from TPC,
+but I'm not aware of any existing code to do it.
+
+
+From shoppa@trailing-edge.com Thu Dec  7 23:23:25 PST 2000
+Article: 2219 of alt.sys.pdp10
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!wn4feed!worldnet.att.net!198.6.0.213!uunet!ffx.uu.net!spool1.news.uu.net!spool0.news.uu.net!reader3.news.uu.net!not-for-mail
+Message-ID: <3A2FD6BA.6DBA4FB1@trailing-edge.com>
+Date: Thu, 07 Dec 2000 18:28:10 -0400
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Organization: Trailing Edge Technology
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.2     AlphaServer 1200 5/533 4MB)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: For Tim, 166 emulator please
+References: <satz-552DD0.09514406122000@cronkite.cisco.com> <90ltti$bub$1@spies.com> <satz-95E0D7.17045806122000@cronkite.cisco.com> <87n1e8bquq.fsf@k9.prep.synonet.com> <aek-0712001057050001@haxrus.apple.com> <satz-7F3322.15251807122000@cronkite.cisco.com> <qhd7f3etps.fsf@ruckus.brouhaha.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 9
+NNTP-Posting-Host: 63.73.218.130
+X-Trace: reader3.news.uu.net 976231691 8962 63.73.218.130
+Xref: nntp1.ba.best.com alt.sys.pdp10:2219
+
+Eric Smith wrote:
+> It should be easy to convert Wilson format tape images to/from TPC,
+> but I'm not aware of any existing code to do it.
+
+The Supnik simulator package comes with such a tool, under the
+name "mtcvtv23" (so-called because the Supnik simulators prior
+to V2.3 used the far-more-common-in-archives TPC format.)
+
+Tim.
+
+
+From sword7@speakeasy.org Thu Dec  7 23:23:58 PST 2000
+Article: 2223 of alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc01.blue.aol.com!cyclone2.usenetserver.com!news-out.usenetserver.com!cyclone1.usenetserver.com!news-east.usenetserver.com.POSTED!not-for-mail
+Message-ID: <3A306031.62A67738@speakeasy.org>
+From: Timothy Stark <sword7@speakeasy.org>
+X-Mailer: Mozilla 4.75 [en] (X11; U; Linux 2.2.16-22 i686)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: For Tim, 166 emulator please
+References: <satz-552DD0.09514406122000@cronkite.cisco.com> <90ltti$bub$1@spies.com> <satz-95E0D7.17045806122000@cronkite.cisco.com> <87n1e8bquq.fsf@k9.prep.synonet.com> <aek-0712001057050001@haxrus.apple.com> <satz-7F3322.15251807122000@cronkite.cisco.com> <qhd7f3etps.fsf@ruckus.brouhaha.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 30
+X-Abuse-Info: Please be sure to forward a copy of ALL headers
+X-Abuse-Info: Otherwise we will be unable to process your complaint properly
+X-Complaints-To: abuse@webusenet.com
+NNTP-Posting-Date: Thu, 07 Dec 2000 23:09:49 EST
+Organization: WebUseNet Corp  http://www.usenetserver.com - Home of the fastest NNTP servers on the Net.
+Date: Thu, 07 Dec 2000 23:14:41 -0500
+Xref: nntp1.ba.best.com alt.sys.pdp10:2223
+
+Eric Smith wrote:
+
+> TPC files are annoying because you can't efficiently backspace when
+> using them on a simulator.
+>
+> I use John Wilson's format, which has a record length both before
+> and after the record.  Supnik's simulators for other PDP's support
+> this, and I've hacked it into Stu Grossman's KX10.
+>
+> A Linux program I use with an HP 88780 is available at:
+>         http://www.36bit.org/dec/software/unix-util/
+>
+> It should be easy to convert Wilson format tape images to/from TPC,
+> but I'm not aware of any existing code to do it.
+
+Eric:
+
+I looked into your archive site about tapeutils-0.6 stuffs.  I downloaded
+and tried it.   It worked so well for
+my Red Hat Linux 7 system!   I had older copies of read20 and 10backup that
+is designed for tpc format did
+not work so well.   Ok, I will convert my all tpc files that I downloaded
+>from  Tim Shoppa's archives (everything ) to Wilson's tape format after
+I added Wilson's tape format to my emulator so that it can read Wilson's
+tape format files.
+
+Thank you for new tape utilities.
+
+-- Tim Stark
+
+
+

@@ -1,0 +1,72 @@
+Article 1090 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!news3.net99.net!news.cais.net!news.sprintlink.net!in1.uu.net!info-server.bbn.com!news5.ner.bbnplanet.net!news3.near.net!news-server.bos.locus.com!not-for-mail
+From: paul@darkstar.bos.locus.com (Paul Cantrell)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10,alt.lang.teco
+Subject: Re: TECO on non DEC platforms
+Date: 18 Sep 1995 17:52:06 -0400
+Organization: Locus Computing Corp
+Lines: 57
+Message-ID: <43kpm6$nku@darkstar.bos.locus.com>
+References: <42ikac$e2p$1@sydney.DIALix.oz.au> <cliffrDEn9Hr.4JA@netcom.com> <42tc2p$l92@dns.plano.net> <431t93$6lc$1@perth.dialix.oz.au>
+NNTP-Posting-Host: darkstar.bos.locus.com
+Xref: shellx.best.com alt.folklore.computers:35373 alt.sys.pdp10:1090 alt.lang.teco:269
+
+In article <431t93$6lc$1@perth.dialix.oz.au>,
+Skipton Ryper <skipton@perth.DIALix.oz.au> wrote:
+>Did teco ever get ported to other platforms (no DEC)?
+>Is there a public domain version?
+
+My Video TECO runs on almost any Unix system you might care to name, plus
+VMS. It really needs virtual memory, so I've never ported it to personal
+computers. If you want to look at some documentation for it, look at the
+following url:
+
+	http://world.std.com/~paulc/teco.html
+
+This document is huge, I have not had the time to break it up into smaller
+web pages, so be aware that it will take a little time to load. But if you
+look at "1.4. Screen Layout" there is a GIF file showing you what the screen
+looks like when you are editing.
+
+Basically, this is a TECO optimized for screen editing, allowing you to edit
+multiple files at once, and files can be very large assuming you have the
+virtual memory to support that :-)
+
+The main characteristic that sets this editor apart is that you edit in
+TECO commands (which echo at the bottom of the screen) and you
+simultaneously see the changes to the file. For instance, if you are
+editing and you type the letters "h" and "k", you see "hk" echoed at the
+bottom of the screen, and you see the contents of the buffer dissappear.
+If you rubout the "k", the contents of the buffer re-appear. The level of
+undo is unlimited, back to the last double escape (and double escape is
+almost never required - I edit for many hours at a time without $$ so that
+in theory I can undo back through the entire session). It is not
+absolutely faithful to original TECO, so old macros are unlikely to run,
+but it is actually based on the DEC TECO manual, so most commands are 100%
+faithful. However, whenever it came to being faithful versus working the
+way I wanted, I changed it to work the way I wanted. That was the whole
+reason I wrote my own TECO in the first place - so I could make it work
+the way I wanted! The biggest change is that lines are terminated with a
+single <LF> rather than <CR><LF>. This made sense because I was writing
+this under unix. I like it that way, but some people may object.
+
+You can split the screen into multiple panes which can point into the same
+buffer, or different buffers (look at section 7.10 for an example). "n"
+searches cross buffer boundaries, so you can load the entire source of the
+unix kernel into the editor, and then a single "n" search will search
+through all the files until it finds your string. Q registers are
+implemented as normal edit buffers, so you can jump into them and edit the
+contents of the Q-registers.
+
+Anyway, if you are interested check out the www page. I plan on putting the
+source on the web server in the near future, it's currently available by
+anonymous ftp from ftp://ftp.wimsey.com/pub/teco/cantrell-teco
+
+Paul
+-- 
+                  THIS                  | Paul Cantrell paul@bos.locus.com
+                  BRAIN                 | URL: http://world.std.com/~paulc
+              INTENTIONALLY             | DoD #1144
+               LEFT BLANK               | HELO/ASEL/ZX10 Pilot
+
+

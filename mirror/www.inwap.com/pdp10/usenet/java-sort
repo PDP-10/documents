@@ -1,0 +1,86 @@
+Article 1079 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!feeder.qis.net!sn-xit-05!sn-xit-03!supernews.com!sn-inject-01!corp.supernews.com!not-for-mail
+From: John Ahlstrom <jahlstrom@cisco.com>
+Newsgroups: alt.folklore.computers,comp.arch,comp.os.vms,alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11,vmsnet.pdp-11
+Subject: Re: Preservation of the old [was: Re: Q: Why not (2^n)-bit?]
+Date: Wed, 06 Sep 2000 16:35:05 -0700
+Organization: Ye 'Ol Disorganized NNTPCache groupie
+Lines: 25
+Message-ID: <39B6D4A9.BF2B2AB3@cisco.com>
+References: <rpNl5.131549$lU5.898906@news1.rdc1.nj.home.com> <8negm6$3sg$1@pyrite.mv.net> <wzJnAQb3J0xT@eisner.decus.org> <8ojufh$rfb$1@murrow.corp.sgi.com> <8p6a0u$tqr$1@nntp1.ba.best.com>
+X-Complaints-To: newsabuse@supernews.com
+X-Mailer: Mozilla 4.72 [en] (WinNT; I)
+X-Accept-Language: en
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Cache-Post-Path: sj-nntpcache-3!unknown@dhcp-171-68-135-37.cisco.com
+X-Cache: nntpcache 2.4.0b2 (see http://www.nntpcache.org/)
+Xref: nntp1.ba.best.com alt.folklore.computers:5468 comp.arch:2699 comp.os.vms:6890 alt.sys.pdp8:533 alt.sys.pdp10:1079 alt.sys.pdp11:559 vmsnet.pdp-11:509
+
+>
+>
+> There is one beautiful Java class that I wish I could locate again.
+> It provided a visual display of the relative speeds of heap sort,
+> bubble sort, qsort, etc.  The input data, numbers from 0 to 100, were
+> represented as vertical black lines packed horizontally in a box.
+> It was fun watching the bubble sort go left-to-right, left-to-right,
+> left-to-right and the other sort algorithms selecting their pivot points.
+>
+
+http://java.sun.com/applets/jdk/1.1/demo/SortDemo/example1.html
+
+has Bubble Sort, Bi-Directional Bubble Sort and Quick Sort.
+
+Still looking for heapsort.
+
+
+JKA
+--
+Bandwidth problems can be cured with money.
+Latency problems are harder because the speed of light is
+fixed -- you can't bribe God.
+      David Clark, MIT
+
+
+
+
+Article 1082 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!pvdl
+From: pvdl@best.com (Peter van der Linden)
+Newsgroups: alt.folklore.computers,comp.arch,comp.os.vms,alt.sys.pdp8,alt.sys.pdp10,alt.sys.pdp11,vmsnet.pdp-11
+Subject: Re: visual interpretation of algorithms
+Date: 7 Sep 2000 16:19:39 GMT
+Organization: a
+Lines: 21
+Message-ID: <8p8f6r$js2$1@nntp1.ba.best.com>
+References: <rpNl5.131549$lU5.898906@news1.rdc1.nj.home.com> <8ojufh$rfb$1@murrow.corp.sgi.com> <8p6a0u$tqr$1@nntp1.ba.best.com> <39B6D4A9.BF2B2AB3@cisco.com>
+NNTP-Posting-Host: shell15.ba.best.com
+X-Trace: nntp1.ba.best.com 968343579 20354 206.184.139.147 (7 Sep 2000 16:19:39 GMT)
+X-Complaints-To: abuse@best.com
+NNTP-Posting-Date: 7 Sep 2000 16:19:39 GMT
+Xref: nntp1.ba.best.com alt.folklore.computers:5511 comp.arch:2717 comp.os.vms:6950 alt.sys.pdp8:536 alt.sys.pdp10:1082 alt.sys.pdp11:562 vmsnet.pdp-11:513
+
+> There is one beautiful Java class that I wish I could locate again.
+> It provided a visual display of the relative speeds of heap sort,
+> bubble sort, qsort, etc.  The input data, numbers from 0 to 100, were
+> represented as vertical black lines packed horizontally in a box.
+> It was fun watching the bubble sort go left-to-right, left-to-right,
+> left-to-right and the other sort algorithms selecting their pivot points.
+
+John Ahlstrom  <jahlstrom@cisco.com> wrote:
+>http://java.sun.com/applets/jdk/1.1/demo/SortDemo/example1.html
+>has Bubble Sort, Bi-Directional Bubble Sort and Quick Sort.
+>
+>Still looking for heapsort.
+
+The heapsort version of this is on the CD that comes with my text
+"Just Java 2", along with a bazillion other useful things.   It was
+not easy to write a visual interpretation of heapsort.   The sort itself
+was coded by Roedy Greene, and the visual part was done by ace Java
+programmer Roger Lindsjo.
+
+--
+The Java FAQ is at   http://www.afu.com
+
+

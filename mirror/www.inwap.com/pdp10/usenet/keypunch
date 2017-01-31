@@ -1,0 +1,120 @@
+Article 8516 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!demos!newsfeed.gamma.ru!Gamma.RU!netnews.com!howland.erols.net!news-out.transit.remarq.com.MISMATCH!sn-xit-01!sn-xit-03!supernews.com!novia!uunet!ffx.uu.net!hype.plano.sterling.com!news.plano.sterling.com!not-for-mail
+From: "Mike Yankus" <Mike_Yankus@itd.sterling.com>
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: write rings
+Date: Wed, 10 May 2000 09:59:00 -0500
+Organization: Sterling Software, Inc.
+Lines: 56
+Message-ID: <8fbt81$jf8$1@reuters.plano.sterling.com>
+References: <8dafrq$h1b$1@news.metronet.com> <8ds8ar$9qo$7@bob.news.rcn.net> <8F287092AbatemandNOSPAMbuckco@199.45.45.11> <957344480.989579@shelley.paradise.net.nz> <8f0ev0$b8q$1@polo.demon.co.uk> <39143CB9.A1C4BC00@prescienttech.com> <8f3kus$5gt$9@bob.news.rcn.net> <3917481B.C24A69DF@cfht.hawaii.edu> <8fbkub$6rd$1@bob.news.rcn.net>
+NNTP-Posting-Host: pc-504.itd.sterling.com
+X-Trace: reuters.plano.sterling.com 957970497 19944 10.1.27.104 (10 May 2000 14:54:56 GMT)
+X-Complaints-To: usenet@reuters.plano.sterling.com
+NNTP-Posting-Date: 10 May 2000 14:54:56 GMT
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Newsreader: Microsoft Outlook Express 5.00.2615.200
+X-MimeOLE: Produced By Microsoft MimeOLE V5.00.2615.200
+Xref: news3.best.com alt.sys.pdp10:8516 alt.folklore.computers:156568
+
+I dug around down in my basement to see if I still had any
+Fortran II decks for the 1620.  Didn't find any but I did
+find a lot more Macro-11 source on cards for the PDP-11 than
+I remembered punching up.
+
+IIRC, the 1st PDP 11/45 I used had one VT05, DECwriter, and
+CR11 reader.  There were a lot more 029s available than VT05s.
+
+We didn't have TECO and KED hadn't been released yet (1973).
+Using SLP as an interactive editor was not much fun.
+EDI was ok, but since the source was on cards anyway...
+
+The technique I used when editing card decks was
+
+  1. At my desk, with listing on one side and card deck on
+     the other, mark changes on the card with felt tip pen.
+     Cards to be added were sometimes written on scraps of
+     paper and stuck in the deck.  Cards to be changed were
+     turned upside down.  They stuck out from the notched
+     corners of the rest of the deck.
+
+  2. Take the deck over the the keypunch.  Small decks that
+     could fit in one hand needed only a rubber band.
+     Middle sized were put in the boxes that the blank cards
+     came in - sometime shortened or else the back of the box
+     stuffed with something to keep the cards from sliding
+     around.  Wadded up listings were common.  Large decks
+     had metal trays with sliders to hold the deck snug.
+     The largest were a yard long.  Some were drawers in a
+     dedicated card storage piece of furniture.  (Anyone
+     save old catalogs which featured this kind of stuff?)
+     Those large trays were a bother.  They didn't fit on
+     the keypunch's built in table.  They hung over the edges
+     and were prone to spilling.
+
+  3. Flip the deck open to the first card to be edited.  Take
+     it out and stick a pen or a blank card vertically in its
+     spot.  Stick the card in the reader station, feed a blank
+     into the punch station, duplicate up to the point of
+     correction, type correction, advance/backup the old card
+     if necessary, duplicate the remainder of the old card
+     onto the new.  (I was/am a terrible typist.  It was easier
+     and less error prone for me to do it this way than to
+     retype an entire card.)
+
+     I rarely took printout to the keypunch.  They were too
+     big (11x15) to spread open (to 22x15) on the keypunch table.
+
+Pardon my rambling.  You old farts already know all this and
+the PC generation probably doesn't give a darn.  Its just that
+I had the urge to tell about "walking to school barefoot, in
+the snow, umpteen miles, uphill both ways."  :-)
+
+Mike
+
+
+
+
+Article 8530 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!arclight.uoregon.edu!news.tufts.edu!blanket.mitre.org!news.mitre.org!jmorris-pc.MITRE.ORG!jcmorris
+From: jcmorris@jmorris-pc.MITRE.ORG (Joe Morris)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: write rings
+Date: 11 May 2000 13:43:03 GMT
+Organization: The MITRE Corporation
+Lines: 23
+Message-ID: <8fedd7$he3$1@top.mitre.org>
+References: <8dafrq$h1b$1@news.metronet.com> <8ds8ar$9qo$7@bob.news.rcn.net> <8F287092AbatemandNOSPAMbuckco@199.45.45.11> <957344480.989579@shelley.paradise.net.nz> <8f0ev0$b8q$1@polo.demon.co.uk> <39143CB9.A1C4BC00@prescienttech.com> <8f3kus$5gt$9@bob.news.rcn.net> <3917481B.C24A69DF@cfht.hawaii.edu> <8fbkub$6rd$1@bob.news.rcn.net> <8fbt81$jf8$1@reuters.plano.sterling.com> <3919D285.D355D761@earthlink.net>
+NNTP-Posting-Host: jmorris-pc.mitre.org
+X-Trace: top.mitre.org 958052583 17859 128.29.251.13 (11 May 2000 13:43:03 GMT)
+X-Complaints-To: usenet@news.mitre.org
+NNTP-Posting-Date: 11 May 2000 13:43:03 GMT
+X-Newsreader: NN version 6.5.0 (NOV)
+Xref: news3.best.com alt.sys.pdp10:8530 alt.folklore.computers:156679
+
+jchausler <jchausler@earthlink.net> writes:
+
+>I always marked the listings and took them to the keypunch.
+>For me they would fit on the left side of the punch to the
+>left of the keyboard module flipped open and covering the
+>card stacker (026, 029).  The card stacker seemed to be
+>able to stack cards even with the top portion of the paper
+>lying on it.  
+
+For readers who never used a card punch and are wondering about the
+above comment about the card stacker: on keypunches the output stacker
+was on the left side of the machine, was at an angle of perhaps 45 (?)
+degrees from vertical, and the newly-punched cards were added to it
+from the bottom.
+
+Cards exiting the read station would be driven to the far left end of
+the card bed, then grasped by two clamps along the top edge.  The clamps,
+mounted on a rotating shaft, would lift the card away from the bed,
+then pull it under the cards currently in the stacker and release it.
+The whole mechanism was something of a Rube Goldberg design, but
+it worked.  (Usually...)
+
+Joe Morris
+
+

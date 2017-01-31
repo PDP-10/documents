@@ -1,0 +1,104 @@
+Article 2859 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsxfer3.itd.umich.edu!newsfeed.internetmci.com!in1.uu.net!128.130.2.8!news.tuwien.ac.at!mail.zserv.tuwien.ac.at!nsteinma
+From: nsteinma@mail.zserv.tuwien.ac.at (Werner Steinmann)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Open VMS has a DATE75 problem?
+Date: 4 Jun 1997 20:11:39 GMT
+Organization: Vienna University of Technology, Austria
+Lines: 88
+Message-ID: <5n4i5r$3k6@news.tuwien.ac.at>
+References: <5lt28a$o03$1@shell3.ba.best.com> <3382ECA9.41C6@somehost.spamoff.com> <SWESTIN.97Jun2140454@dsg145.nad.ford.com>
+NNTP-Posting-Host: mail.zserv.tuwien.ac.at
+X-Newsreader: TIN [version 1.2 PL2]
+Xref: nntp1.ba.best.com alt.sys.pdp10:2859
+
+and so it is time again for one of the stories I like
+
+Werner.Steinmann@tuwien.ac.at
+
+====================  old text below =================================
+
+And here's the story from DEC.  This came off
+of DSIN some time ago and I'm not aware of any copyright protections on this
+article.
+------------
+
+ 38 Why Is Wednesday November 17, 1858 The Base Time For VAX/VMS?
+ 
+COMPONENT:  SYSTEM TIME                   OP/SYS:  VMS, Version 4.n
+ 
+LAST TECHNICAL REVIEW:  06-APR-1988
+ 
+SOURCE: Customer Support Center/Colorado Springs
+ 
+ 
+ 
+QUESTION:
+ 
+Why is Wednesday, November 17, 1858 the base time for VAX/VMS?
+ 
+ 
+ANSWER:
+ 
+November 17, 1858 is the base of the Modified Julian Day system.
+ 
+ 
+The original Julian Day (JD) is used by astronomers and expressed in days
+since noon January 1, 4713 B.C.  This measure of time was introduced by
+Joseph Scaliger in the 16th century.  It is named in honor of his father,
+Julius Caesar Scaliger (note that this Julian Day is different from the
+Julian calendar named for the Roman Emperor Julius Caesar!).
+ 
+Why 4713 BC?  Scaliger traced three time cycles and found that they were
+all in the first year of their cyle in 4713 B.C.  The three cycles are 15,
+19, and 28 years long.  By multiplying these three numbers (15 * 19 * 28
+= 7980), he was able to represent any date from 4713 B.C. through 3267 A.D.
+The starting year was before any historical event known to him.  In fact,
+the Jewish calendar marks the start of the world as 3761 B.C.  Today his
+numbering scheme is still used by astronomers to avoid the difficulties of
+converting the months of different calendars in use during different eras.
+ 
+So why 1858?  The Julian Day 2,400,000 just happens to be November 17, 1858.
+The Modified Julian Day uses the following formula:
+ 
+   MJD = JD - 2,400,000.5
+ 
+The .5 changed when the day starts.  Astronomers had considered it more
+convenient to have their day start at noon so that nighttime observation times
+fall in the middle.  But they changed to conform to the commercial day.
+ 
+The Modified Julian Day was adopted by the Smithsonian Astrophysical Obser-
+vatory (SAO) in 1957 for satellite tracking.  SAO started tracking satellites
+with an 8K (non-virtual) 36-bit IBM 704 computer in 1957, when Sputnik was
+launched.  The Julian day was 2,435,839 on January 1, 1957.  This is
+11,225,377 in octal notation, which was too big to fit into an 18-bit field
+(half of its standard 36-bit word).  And, with only 8K of memory, no one
+wanted to waste the 14 bits left over by keeping the Julian Day in its own
+36-bit word.  However, they also needed to track hours and minutes, for which
+18 bits gave enough accuracy.  So, they decided to keep the number of days in
+the left 18 bits and the hours and minutes in the right 18 bits of a word.
+
+Eighteen bits would allow the Modified Julian Day (the SAO day) to grow as
+large as 262,143 ((2 ** 18) - 1).  From Nov. 17, 1858, this allowed for seven
+centuries.  Using only 17 bits, the date could possibly grow only as large as
+131,071, but this still covers 3 centuries, as well as leaving the possibility
+of representing negative time.  The year 1858 preceded the oldest star catalog
+in use at SAO, which also avoided having to use negative time in any of the
+satellite tracking calculations.
+ 
+This base time of Nov. 17, 1858 has since been used by TOPS-10, TOPS-20, and
+VAX/VMS.  Given this base date, the 100 nanosecond granularity implemented
+within VAX/VMS, and the 63-bit absolute time representation (the sign bit must
+be clear), VMS should have no trouble with time until:
+ 
+   31-JUL-31086 02:48:05.47
+ 
+At this time, all clocks and time-keeping operations within VMS will suddenly
+stop, as system time values go negative.
+ 
+Note that all time display and manipulation routines within VMS allow for
+only 4 digits within the 'YEAR' field.  We expect this to be corrected in
+a future release of VAX/VMS sometime prior to 31-DEC-9999.
+
+
+

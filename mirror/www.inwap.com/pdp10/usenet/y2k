@@ -1,0 +1,405 @@
+Article 6225 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Is MM Y2K complient?
+Date: Mon, 3 Jan 2000 10:23:39 -0800
+Organization: Networks & Distributed Computing
+Lines: 21
+Message-ID: <Pine.NXT.4.30.0001031018520.10635-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <3870805a$0$204@nntp1.ba.best.com>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 946923821 49044 (None) 140.142.17.39
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: stein
+To: Joe Smith <inwap@best.com>
+In-Reply-To: <3870805a$0$204@nntp1.ba.best.com>
+Xref: news3.best.com alt.sys.pdp10:6225
+
+On 3 Jan 2000, Joe Smith wrote:
+> Someone was talking about MM (the mail reading program that started on
+> TOPS-20 and was ported to Unix), wondering if it was Y2K complient.
+> Anybody know?
+
+TOPS-20 MM shouldn't have any particular Y2K problems.  All date/time
+hacking is done by the operating system, and my 2020 went through midnight
+on Y2K night (I actually fired it up, while guzzling Dom Perignon and
+SPAM in our private sleazy Y2K party) without a hitch.
+
+Note that TOPS-20 treats all two-digit years as being in the 1900s (so
+don't use two-digit years!).  So, 1/3/00 is read as 1/3/1900 (however,
+1/3/2000 works just fine), and it always outputs a year outside of the
+1900s in 4-digit format.  Perhaps this should be handled better.
+
+-- Mark --
+
+* RCW 19.190 notice: This email address is located in Washington State.	*
+* Unsolicited commercial email may be billed $500 per message.		*
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+Article 6229 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!logbridge.uoregon.edu!panix!newsmaster.cc.columbia.edu!watsun.cc.columbia.edu!fdc
+From: fdc@watsun.cc.columbia.edu (Frank da Cruz)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Is MM Y2K complient?
+Date: 4 Jan 2000 19:26:44 GMT
+Organization: Columbia University
+Lines: 80
+Message-ID: <84thhk$oo0$1@newsmaster.cc.columbia.edu>
+References: <3870805a$0$204@nntp1.ba.best.com>
+NNTP-Posting-Host: watsun.cc.columbia.edu
+X-Trace: newsmaster.cc.columbia.edu 947014004 25344 128.59.39.2 (4 Jan 2000 19:26:44 GMT)
+X-Complaints-To: postmaster@columbia.edu
+NNTP-Posting-Date: 4 Jan 2000 19:26:44 GMT
+Xref: news3.best.com alt.sys.pdp10:6229
+
+In article <3870805a$0$204@nntp1.ba.best.com>,
+Joe Smith <inwap@best.com> wrote:
+: Someone was talking about MM (the mail reading program that started on
+: TOPS-20 and was ported to Unix), wondering if it was Y2K complient.
+: Anybody know?
+:
+Speaking for the Unix version: It is now :-)
+
+A couple days ago it was putting "2 Jan 100" in the Date: field.
+
+The official ftp site for MM-in-C is:
+
+  ftp://kermit.columbia.edu/mm/
+
+It hasn't been updated yet though; should be in a few days, so check
+back occasionally until you see recent dates.  In the meantime here
+are the patches:
+
+*** dates.c.~5~ Sun Jan  2 19:12:31 2000
+--- dates.c     Mon Jan  3 08:06:09 2000
+***************
+*** 84,91 ****
+      static char str[16];
+  
+      t = localtime(&it);
+!     sprintf(str, "%d %3.3s %d", t->tm_mday, month_names[t->tm_mon],
+!           (t->tm_year + ((t->tm_year < 70)?2000:(t->tm_year<100)?1900:0)));
+      return (char *) str;
+  }
+  
+--- 84,91 ----
+      static char str[16];
+  
+      t = localtime(&it);
+!     sprintf(str, "%d %3.3s %d", t->tm_mday, month_names[t->tm_mon], 
+!           t->tm_year + 1900);
+      return (char *) str;
+  }
+  
+***************
+*** 109,115 ****
+      t = localtime(&it);
+      sprintf(str,"%d %3.3s %d %d:%02d%s",
+            t->tm_mday, month_names[t->tm_mon],
+!           (t->tm_year + ((t->tm_year < 70)?2000:(t->tm_year<100)?1900:0)),
+            (((t->tm_hour % 12) == 0) ? 12 : (t->tm_hour % 12)),
+            t->tm_min, ((t->tm_hour < 12) ? "am" : "pm"));
+      return (char *) str;
+--- 109,115 ----
+      t = localtime(&it);
+      sprintf(str,"%d %3.3s %d %d:%02d%s",
+            t->tm_mday, month_names[t->tm_mon],
+!           (t->tm_year + 1900),
+            (((t->tm_hour % 12) == 0) ? 12 : (t->tm_hour % 12)),
+            t->tm_min, ((t->tm_hour < 12) ? "am" : "pm"));
+      return (char *) str;
+
+*** dtpat.h.~2~ Mon Aug  2 12:12:54 1999
+--- dtpat.h     Mon Jan  3 08:18:45 2000
+***************
+*** 681,686 ****
+--- 681,688 ----
+      dtnow(&curdt);                    /* get current date */
+      if (yr < 50 && (curdt._dtyr % 100 > 85))
+        yr += (curdt._dtyr/100+1)*100;  /* add in next century */
++     else if (yr > 70 && curdt._dtyr % 100 < 20)
++       yr += (curdt._dtyr/100-1)*100;  /* add in previous century */
+      else
+        yr += (curdt._dtyr/100)*100;    /* add in current century */
+    }
+
+(No, they're not mine, and neither was the original code :-)
+
+- Frank
+
+P.S. Yes, I still use MM -- I like it better than anything that came along
+since.  Why?  For the same reason I still use EMACS -- I'm a touch typist,
+I usually know what I'm doing, and I hate moving my hands away from the
+home keys to do mice or arrows -- I can go much faster without all the
+conveniences.
+
+
+Article 6233 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!newsfeed.wirehub.nl!news-FFM2.ecrc.net!news.mindspring.net!firehose.mindspring.com!207.69.128.199!alderson
+From: alderson@netcom2.netcom.com (Richard M. Alderson III)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Is MM Y2K complient?
+Date: 05 Jan 2000 18:44:40 GMT
+Organization: NETCOM On-line services
+Lines: 37
+Message-ID: <ALDERSON.00Jan5104440@netcom2.netcom.com>
+References: <3870805a$0$204@nntp1.ba.best.com>
+	<Pine.NXT.4.30.0001031018520.10635-100000@Tomobiki-Cho.CAC.Washington.EDU>
+Reply-To: alderson@netcom.com
+NNTP-Posting-Host: c7.b7.09.66
+X-Server-Date: 5 Jan 2000 18:45:17 GMT
+In-reply-to: Mark Crispin's message of Mon, 3 Jan 2000 10:23:39 -0800
+Xref: news3.best.com alt.sys.pdp10:6233
+
+In article
+<Pine.NXT.4.30.0001031018520.10635-100000@Tomobiki-Cho.CAC.Washington.EDU> 
+Mark Crispin <mrc@CAC.Washington.EDU> writes:
+
+>Note that TOPS-20 treats all two-digit years as being in the 1900s (so don't
+>use two-digit years!).  So, 1/3/00 is read as 1/3/1900 (however, 1/3/2000
+>works just fine), and it always outputs a year outside of the 1900s in 4-digit
+>format.  Perhaps this should be handled better.
+
+We've modified the XKL version of Tops-20 to output *all* years as 4 digits,
+so that directory listings (for example) are rational and consistent.
+
+In MDDT,
+
+	odb5+1/   TLNE Q2,10000   $w   trn<CRLF>
+	./   NOP   ^Z
+
+Use FILDDT to patch the .EXE file (other methods of patching .EXEs do not work
+on the XKL monitor):
+
+	FILDDT>get system:monitr/p
+	[Patching file <SYSTEM>MONITR.EXE.102560]
+	[40444 symbols loaded from file]
+	[ACs copied from BUGACS to 0-17]
+
+	odb5+1/   TLNE Q2,10000   trn<CRLF>
+	./   NOP   ^Z
+
+The patch removes the check for OT%4YR ("use 4-digit years") in the ODTIM%
+JSYS, treating *all* calls as if that bit were on.
+
+Similar patches should work for all other versions of Tops-20.
+
+Rich Alderson			Last LOTS Tops-20 Systems Programmer, 1984-1991
+				Current maintainer, MIT TECO EMACS (v. 170)
+				Customer Advocacy, XKL LLC, 1993-now
+last name @ XKL dot COM		Chief systems administrator, XKL LLC, 1998-now
+
+
+Article 6234 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newsfeed.tli.de!blackbush.xlink.net!news-MUC.ecrc.net!news-FFM2.ecrc.net!news.mindspring.net!firehose.mindspring.com!207.69.128.199!alderson
+From: alderson@netcom2.netcom.com (Richard M. Alderson III)
+Newsgroups: alt.lang.teco,comp.emacs,alt.sys.pdp10
+Subject: EMACS TIME library Y2K bug (MIT TECO 1220, EMACS 170, Tops-20 v 7.0)
+Followup-To: alt.lang.teco
+Date: 06 Jan 2000 01:39:26 GMT
+Organization: NETCOM On-line services
+Lines: 191
+Message-ID: <ALDERSON.00Jan5173926@netcom2.netcom.com>
+Reply-To: alderson@netcom.com
+NNTP-Posting-Host: c7.b7.09.66
+X-Server-Date: 6 Jan 2000 01:40:05 GMT
+Xref: news3.best.com alt.lang.teco:866 comp.emacs:36695 alt.sys.pdp10:6234
+
+We noticed a bug in the TIME library (KMPTIME) on Tops-20 v 7.0, after the
+start of the year, when dates began to print 4-digit years.  This affected,
+most noticeably, the fancy mode line libraries which put the time in the mode
+line.
+
+Since the XKL version of Tops-20 has been modified to print *only* 4-digit
+years, this bug affects the current monitor even if the date is set prior to
+1 Jan 2000, on those systems.
+
+As a courtesy to those using the KMPTIME library, I am including the revised
+source below:
+
+***************************** Start of code *****************************
+
+!* -*- TECO -*-		Library created and maintained by KMP@MC !
+!*			** The funny name comes from fact that   !
+!*			** there is more than one TIME library	 !
+
+!* [toed.xkl.com]DXX:<EMACS>TIME.EMACS.53,  3-Jan-2000 17:27:45, Edit by ALDERSON!
+!* Fix the date-and-time selection code in & Get Current Time to deal with the!
+!* fact that Tops-20 now uses only 4-digit years !
+!* Edits marked [RMA] !
+
+!~Filename~:! !Timely macros for EMACS !
+KMPTIME
+
+!& Setup KMPTIME Library:! !S Setup for using our winning macros!
+
+m.vOnly_Time_in_Modeline	    !* Make variables for user  !
+m.vTime_Only
+m.vSaved_Time
+0fo..QOld_FS_Clk_Macro"e	    !* Maybe remember old value !
+  fsclkmacrom.vOld_FS_Clk_Macro'
+13*5fs q vectorf([5) M.VMonths    !* get ourselves a Q-vector	!
+:i*Jan u:5(1)			    !* Jan			!
+:i*Feb u:5(2)			    !* Feb			!
+:i*Mar u:5(3)			    !* Mar			!
+:i*Apr u:5(4)			    !* Apr			!
+:i*May u:5(5)			    !* May			!
+:i*Jun u:5(6)			    !* Jun			!
+:i*Jul u:5(7)			    !* Jul			!
+:i*Aug u:5(8)			    !* Aug			!
+:i*Sep u:5(9)			    !* Sep			!
+:i*Oct u:5(10)		    !* Oct			!
+:i*Nov u:5(11)		    !* Nov			!
+:i*Dec u:5(12)		    !* Dec			!
+
+
+!& Kill KMPTIME Library:! !& Clean up on exit !
+
+qOld_FS_Clk_Macrofsclkmacro	    !* Reset clock interrupt thing !
+0fsclkint			    !* Turn off interrupts		!
+				    !* Return				!
+
+
+!& Get Current Time:! !S Gets string form of time 
+Time in 7 chars + <Space> + Date in 9 chars
+If qTime Only is nonzero, the just return time in 7 chars.!
+
+!* q0 = String to put in mode line	!
+!* q1 = full time (scrap)		!
+!* q5 = date				!
+
+[0[1[2[3[4[5[6
+
+:i5				    !* Initialize q5 to null string	!
+
+0fo..Q Time_Only u6		    !* Get time only?			!
+
+fsdate+1"e			    !* If system doesn't know the time	!
+ q6"n :i*No_Time '		    !*  Then say so			!
+   "# :i*No_Time_&_No_Date  ''   !*					!
+
+fsdate :fsfdconvertu1	    !* Save date/time as string in q1	!
+
+q6"n oSkipDate '
+3,5:g1 u2			    !* Get day in q2			!
+0,2:g1 u3			    !* Get month # in q3		!
+
+				    !* [RMA] Get year in q4		!
+fsOSTeco"e			    !* [RMA] If ITS, still 2-digit years, !
+				    !* [RMA] I guess			!
+   6,8:g1 u4'
+   "#				    !* [RMA] but on Tops-20, now 4-digit !
+   6,10:g1 u4'			    !* [RMA] years			!
+
+Q:Months(3) u3		    !* Get month string in q3		!
+0:g2-48"e			    !* Leading zero in Day?		!
+    0:F2_'			    !* Change to a space		!
+:i5_2_3_4		    !* q5: _Day_Month_Yr		!
+
+!SkipDate!			    !* Come here if no date wanted	!
+
+				    !* [RMA] Save minutes in q2		!
+				    !* [RMA] Save hour in q3		!
+fsOSTeco"e			    !* [RMA] ITS two-digit years need	!
+    12,14:g1 u2			    !* [RMA] these offsets		!
+     9,11:g1 u3'
+    "#				    !* [RMA] but Tops-20 4-digit years	!
+    14,16:g1 u2			    !* [RMA] need these			!
+    11,13:g1 u3'		    !* [RMA]				!
+
+0fo..QTime_Zone_Adjustmentf"n+3u3!* If time zone adjustment to do	!
+ q3"l				    !* If negative			!
+   q3+24u3			    !*  Correct the time		!
+   q6"e 1,fq5:g5u5 :i5<5 !>! ''  !*  Maybe invalidate date		!
+ q3-23"g			    !* If bigger than 23		!
+   q3-24u3			    !*  Correct the time		!
+   q6"e 1,fq5:g5u5 !<! :i5>5 ''  !*  Invalidate date		!
+ q3:\u3 fq3-1"e :i303' 'w	    !* Correct format of q3 to string	!
+
+F=200"e			    !* If its on the hour ...		!
+   F=300"e :i*Midnite_5 '	    !*  Hour = 0 means midnite	!
+   F=312"e :i*12_Noon_5 ''    !*  Hour = 12 means noon		!
+
+3/12"e			    !* If before noon, ...		!
+   :i4am'			    !*  Then Use am			!
+"# (3-12):\u3			    !*  Else put (Hour - 12) in q3	!
+   fq3-1"e :i3_3'		    !*   If only one digit, slide over	!
+   :i4pm'			    !*   Use pm				!
+
+F=3_0"e :i312'		    !* If Hour = _0, change to 12	!
+"# F=300"e :i312''		    !* (Else) If Hour = 00, change to 12!
+
+0:g3-48"e			    !* If Hour begins with a 0, ...	!
+  0:F3_'			    !*  Make it into a blank		!
+
+q6"e :i*3:24_5 '	    !* Return the Time and Date		!
+  "# :i*3:24     '	    !*  or maybe just the Time		!
+
+
+!& Start Realtime Modeline Clock:! !S Get the realtime clock interrupts going
+Postcomma arg is the number of seconds to wait between updates (Default 60).
+Precomma arg is time will only f^E the mode line when that macro is in 
+ fsmodemacro!
+
+ff&1"n ' "# 60' *30 fsClkInt
+
+ m.v Modeline_Safe_Macro	    !* Precomma arg (default 0) is safe to f^E!
+0 m.v Modeline_Full_Update_Time
+M.M &_Insert_Correct_Time_in_Mode_Linefs CLK Macro
+0
+
+!& Enable MODLIN AutoSave:! !& Set up to run AutoSave every 5 clock updates !
+
+0m.vAutoSaveFlag
+[0[1
+ :i* fo..QMM_&_Periodic_Actionu0
+ @:i1| %AutoSaveFlag-9"g 0uAutoSaveFlagw m(m.m&_Real-time_Interrupt)'|
+ :i*01m.vMM_&_Periodic_Action
+
+
+
+!& Insert Correct Time In Mode Line:! !S Updates modline display of time!
+
+1,M.M &_Periodic_Action"n
+   M(M.M &_Periodic_Action)'
+
+qModeline_Full_Update_Time"e
+  1 uModeline_Full_Update_Time 
+  0'
+"#
+  0 uModeline_Full_Update_Time'
+    
+f[inslen			    !* Bind insert length info		!
+qEditor_Name[0		    !* Put Editor name in q0		!
+f~..J0-1-FQ0"N oSet'	    !* If ..J is unknown, Set mode line	!
+FQ..J-(FQ0+18)"l oSet'		    !* If ..J is short, same thing !
+qModeline_Safe_Macrof"n[0	    !* If a mode safe macro was named	!
+ q0-(]0w fsmodemacro)"n oSet''    !*  do the f^E only if a match	!
+:i0..J			    !* Copy ..J into q0			!
+qTime_OnlyuSaved_time	    !* Push Time Only on q-reg 0        !   
+qOnly_Time_in_ModelineuTime_Only !* and temply set Time Only	!
+M(M.M &_Get_Current_Time)[1	    !* Get current time in q1		!
+qSaved_TimeuTime_Only	    !* restore old value of Time Only   !
+FQEditor_Name+1:F01	    !* Rplac time into mode line	!
+F=0..J"e 0'		    !* Exit if no change to make	!
+q0 u..J				    !* Put new mode line in ..J		!
+FR				    !* Redisplay the mode line		!
+0				    !* Return				!
+!Set!
+fs mode macrof"n[0 m0fr ]0'	    !* If a ModeMacro in effect, call it!
+0				    !* And return			!
+
+****************************** End of code ******************************
+
+Rich Alderson			Last LOTS Tops-20 Systems Programmer, 1984-1991
+				Current maintainer, MIT TECO EMACS (v. 170)
+				Customer Advocacy, XKL LLC, 1993-now
+last name @ XKL dot COM		Chief systems administrator, XKL LLC, 1998-now
+
+
+

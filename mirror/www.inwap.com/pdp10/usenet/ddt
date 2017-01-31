@@ -1,0 +1,66 @@
+Article 4998 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: 4 May 1999 05:18:25 -0700
+Organization: Chez Inwap
+Message-ID: <7gmoih$mgg$1@shell3.ba.best.com>
+References: <371be3e4.0@newsfeed.one.net> <7g9jj5$88h$2@antiochus.ultra.net> <37324689.4539727@news.kivex.com> <7gmjv5$aq5$1@antiochus.ultra.net>
+Lines: 50
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 925820308 226 inwap@206.184.139.134
+Xref: news3.best.com alt.folklore.computers:129493 alt.sys.pdp10:4998
+
+In article <7gmjv5$aq5$1@antiochus.ultra.net>,  <jmfbahciv@aol.com> wrote:
+>In article <37324689.4539727@news.kivex.com>,
+>   nospam-gagner@clark.net (Philip Gagner) wrote:
+>>Yes, this was the theory. In practice, if what one was debugging
+>>wasn't really VERY likely to halt the system, then you a user with
+>>appropriate privileges could load FILDDT and watch (as well as modify)
+>>memory directly, including monitor tables, etc.
+>
+>Nitpik here.  FILDDT was the program to patch the monitor file
+>that was one disk...not the code currently running--that's what
+>EDDT was for and could be invoked by that nefarious command
+><ctrl-D>.  Or am I misremembering?
+
+Incomplete memory.
+
+FILDDT could peek at the running monitor.  If write-enabled,
+FILDDT could poke at the running monitor.  You could not set
+breakpoints with FILDDT, but you could load the symbol table
+from SYSTEM.EXE and view locations and values symbolically.
+
+I would use EDDT to set a breakpoint on a dummy routine when the
+Monitor was loaded.  While the system was running, I would use
+FILDDT to patch some instruction to jump to the dummy routine under
+certain conditions.  When the system hit that condition, the Monitor
+would come to a screeching halt, with EDDT running on the console.
+
+>I should probaby point out that DDT.EXE, FILDDT.EXE and EDDT.REL
+>were all built from the same DDT.MAC source file with the 
+>appropriate feature test switches.
+
+Don't forget DDT.REL (statically loaded with user's program), VMDDT.EXE
+(dynamically merged in when DDT.REL was not loaded), and that FILDDT came in
+two flavors (TOPS-10 and TOPS-20) all from the same source.
+
+EDDT.REL, while designed to run in kernel mode, was capable of running in user
+mode as well, using UUOs or JSYS for I/O to the terminal.  This allowed
+for patching the Monitor by using
+	.GET SYS:SYSTEM
+	.DDT
+	* manually patch things or read in a file with DDT commands
+	^C
+	.SAVE SYS:SYSTEM
+
+
+		-Joe
+
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+

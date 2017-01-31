@@ -1,0 +1,4264 @@
+T
+File: JSYSSZ	Node: Top	Up: (DIR)
+
+This file contains chapter 3 of the Monitor Calls Reference Manual 
+(version 3A), JSYS'S S* to Z*, in INFO format.
+
+* Menu:
+
+* ACCES: (JSYSAF)ACCES, (552)  Specifies access to a directory
+* ADBRK: (JSYSAF)ADBRK, (570)  Controls address breaks
+* AIC: (JSYSAF)AIC, (131)  Activates software interrupt channels
+* ALLOC: (JSYSAF)ALLOC, (520)  Allocates a device
+* ASND: (JSYSAF)ASND, (70)  Assigns a device
+* ATACH: (JSYSAF)ATACH, (116)  Attachs a terminal to a job
+* ATI: (JSYSAF)ATI, (137)  Assigns a terminal code to an interrupt channel
+* BIN: (JSYSAF)BIN, (50)  Performs byte input
+* BKJFN: (JSYSAF)BKJFN, (42)  Backs up pointer by one byte
+* BOOT: (JSYSAF)BOOT, (562)  Performs functions required for loading front-end software
+* BOUT: (JSYSAF)BOUT, (51)  Performs byte output
+* CACCT: (JSYSAF)CACCT, (4)  Changes account designator
+* CFIBF: (JSYSAF)CFIBF, (100)  Clears the input buffer
+* CFOBF: (JSYSAF)CFOBF, (101)  Clears the output buffer
+* CFORK: (JSYSAF)CFORK, (152)  Creates an inferior process
+* CHFDB: (JSYSAF)CHFDB, (64)  Changes a File Descriptor Block
+* CHKAC: (JSYSAF)CHKAC, (521)  Checks access to a file
+* CIS: (JSYSAF)CIS, (141)  Clears the interrupt system
+* CLOSF: (JSYSAF)CLOSF, (22)  Closes a file
+* CLZFF: (JSYSAF)CLZFF, (34)  Closes the process' files
+* COMND: (JSYSAF)COMND, (544)  Parses a command
+* CRDIR: (JSYSAF)CRDIR, (240)  Creates, changes, or deletes a directory
+* CRJOB: (JSYSAF)CRJOB, (2)  Creates a job
+* CRLNM: (JSYSAF)CRLNM, (502)  Defines or deletes a logical name
+* DEBRK: (JSYSAF)DEBRK, (136)  Dismisses current software interrupt
+* DELDF: (JSYSAF)DELDF, (67)  Expunges deleted files
+* DELF: (JSYSAF)DELF, (26)  Deletes files
+* DELNF: (JSYSAF)DELNF, (317)  Retains specified number of generations of a file
+* DEQ: (JSYSAF)DEQ, (514)  Removes request from resource queue
+* DEVST: (JSYSAF)DEVST, (121)  Translates a device designator to a string
+* DFIN: (JSYSAF)DFIN, (234)  Inputs double-precision floating point number
+* DFOUT: (JSYSAF)DFOUT, (235)  Outputs double-precision floating point number
+* DIAG: (JSYSAF)DIAG, (530)  Reserves or releases hardware channels
+* DIBE: (JSYSAF)DIBE, (212)  Dismisses until input buffer is empty
+* DIC: (JSYSAF)DIC, (133)  Deactivates software interrupt channels
+* DIR: (JSYSAF)DIR, (130)  Disables software interrupt system
+* DIRST: (JSYSAF)DIRST, (41)  Translates a directory number to a string
+* DISMS: (JSYSAF)DISMS, (167)  Dismisses the process
+* DOBE: (JSYSAF)DOBE, (104)  Dismisses until output buffer is empty
+* DSKAS: (JSYSAF)DSKAS, (244)  Assigns disk addresses
+* DSKOP: (JSYSAF)DSKOP, (242)  Specifies disk transfers in hardware terms
+* DTACH: (JSYSAF)DTACH, (115)  Detaches a terminal from a job
+* DTI: (JSYSAF)DTI, (140)  Deassigns a terminal code
+* DUMPI: (JSYSAF)DUMPI, (65)  Reads data in unbuffered data mode
+* DUMPO: (JSYSAF)DUMPO, (66)  Writes data in unbuffered data mode
+* DVCHR: (JSYSAF)DVCHR, (117)  Retrieves device characteristics
+* EFACT: (JSYSAF)EFACT, (5)  Makes an entry in the FACT file
+* EIR: (JSYSAF)EIR, (126)  Enables  software interrupt system
+* ENQ: (JSYSAF)ENQ, (513)  Places request in resource queue
+* ENQC: (JSYSAF)ENQC, (515)  Obtains status of resource queue
+* EPCAP: (JSYSAF)EPCAP, (151)  Enables process capabilities
+* ERSTR: (JSYSAF)ERSTR, (11)  Converts error number to string
+* ESOUT: (JSYSAF)ESOUT, (313)  Outputs an error string
+* FFFFP: (JSYSAF)FFFFP, (31)  Finds first free page in file
+* FFORK: (JSYSAF)FFORK, (154)  Freezes processes
+* FFUFP: (JSYSAF)FFUFP, (211)  Finds first used page in file
+* FLIN: (JSYSAF)FLIN, (232)  Inputs floating-point number
+* FLOUT: (JSYSAF)FLOUT, (233)  Outputs floating-point number
+* GACCT: (JSYSGM)GACCT, (546)  Gets current account designator
+* GACTF: (JSYSGM)GACTF, (37)  Gets account designator of file
+* GCVEC: (JSYSGM)GCVEC, (300)  Gets entry vector of compatibility package
+* GDSKC: (JSYSGM)GDSKC, (214)  Gets disk count
+* GDSTS: (JSYSGM)GDSTS, (145)  Gets device's status
+* GDVEC: (JSYSGM)GDVEC, (542)  Gets entry vector of RMS
+* GET: (JSYSGM)GET, (200)  Gets a save file
+* GETAB: (JSYSGM)GETAB, (10)  Gets a word from a monitor table
+* GETER: (JSYSGM)GETER, (12)  Returns the last error in a process
+* GETJI: (JSYSGM)GETJI, (507)  Gets specified job information
+* GETNM: (JSYSGM)GETNM, (177)  Returns the program name currently being used
+* GEVEC: (JSYSGM)GEVEC, (205)  Gets entry vector
+* GFRKH: (JSYSGM)GFRKH, (164)  Gets process handle
+* GFRKS: (JSYSGM)GFRKS, (166)  Gets process structure
+* GFUST: (JSYSGM)GFUST, (550)  Returns author and last writer name strings
+* GJINF: (JSYSGM)GJINF, (13)  Gets current job information
+* GNJFN: (JSYSGM)GNJFN, (17)  Gets the next JFN
+* GPJFN: (JSYSGM)GPJFN, (206)  Gets the primary JFNs
+* GTAD: (JSYSGM)GTAD, (227)  Gets current date and time
+* GTDAL: (JSYSGM)GTDAL, (305)  Gets disk allocation of a directory
+* GTDIR: (JSYSGM)GTDIR, (241)  Gets information of directory entry
+* GTFDB: (JSYSGM)GTFDB, (63)  Gets a File Descriptor Block
+* GTJFN: (JSYSGM)GTJFN-SHORT, (20)  Gets a JFN Short Form
+* Long: (JSYSGM)GTJFN-Long, (20)  Gets a JFN Long Form
+* GTRPI: (JSYSGM)GTRPI, (172)  Get trap information
+* GTRPW: (JSYSGM)GTRPW, (171)  Gets trap words
+* GTSTS: (JSYSGM)GTSTS, (24)  Gets a file's status
+* GTTYP: (JSYSGM)GTTYP, (303)  Gets the terminal type number
+* HALTF: (JSYSGM)HALTF, (170)  Halts the current process
+* HFORK: (JSYSGM)HFORK, (162)  Halts a process
+* HPTIM: (JSYSGM)HPTIM, (501)  Returns values of high precision clocks
+* HSYS: (JSYSGM)HSYS, (307)  Halts the system
+* IDCNV: (JSYSGM)IDCNV, (223)  Inputs date and time conversion
+* IDTIM: (JSYSGM)IDTIM, (221)  Inputs date and time
+* IDTNC: (JSYSGM)IDTNC, (231)  Inputs date/time without converting
+* IIC: (JSYSGM)IIC, (132)  Initiates software interrupts on specified channels
+* INLNM: (JSYSGM)INLNM, (503)  Lists job's logical names
+* JFNS: (JSYSGM)JFNS, (30)  Translates a JFN to a string
+* KFORK: (JSYSGM)KFORK, (153)  Kills a process
+* LGOUT: (JSYSGM)LGOUT, (3)  Kills a job
+* LNMST: (JSYSGM)LNMST, (504)  Converts a logical name to a string
+* LOGIN: (JSYSGM)LOGIN, (1)  Logs in a job
+* LPINI: (JSYSGM)LPINI, (547)  Loads VFU or translation RAM
+* MRECV: (JSYSGM)MRECV, (511)  Receives an IPCF message
+* MSEND: (JSYSGM)MSEND, (510)  Sends an IPCF message
+* MSFRK: (JSYSGM)MSFRK, (312)  Starts a process in monitor mode
+* MSTR: (JSYSGM)MSTR, (555)  Performs structure-dependent functions
+* MTALN: (JSYSGM)MTALN, (774)  Associates magnetic tape drive with logical unit number
+* MTOPR: (JSYSGM)MTOPR, (77)  Performs device-dependent functions
+* MUTIL: (JSYSGM)MUTIL, (512)  Performs IPCF control functions
+* NIN: (JSYSNR)NIN, (225)  Inputs an integer number
+* NODE: (JSYSNR)NODE, (567)  Performs network utility functions
+* NOUT: (JSYSNR)NOUT, (224)  Outputs an integer number
+* ODCNV: (JSYSNR)ODCNV, (222)  Outputs date and time conversion
+* ODTIM: (JSYSNR)ODTIM, (220)  Outputs date and time
+* ODTNC: (JSYSNR)ODTNC, (230)  Outputs date/time without converting
+* OPENF: (JSYSNR)OPENF, (21)  Opens a file
+* PBIN: (JSYSNR)PBIN, (73)  Inputs the next byte
+* PBOUT: (JSYSNR)PBOUT, (74)  Outputs the next byte
+* PEEK: (JSYSNR)PEEK, (311)  Obtains monitor data
+* PLOCK: (JSYSNR)PLOCK, (561)  Locks physical pages
+* PMAP: (JSYSNR)PMAP, (56)  Maps pages
+* PMCTL: (JSYSNR)PMCTL, (560)  Controls physical memory
+* PPNST: (JSYSNR)PPNST, (557)  Translates project-programmer number to string
+* PRARG: (JSYSNR)PRARG, (545)  Reads/sets process argument block
+* PSOUT: (JSYSNR)PSOUT, (76)  Outputs a string
+* RCDIR: (JSYSNR)RCDIR, (553)  Translates string to directory number
+* RCM: (JSYSNR)RCM, (134)  Reads the channel word mask
+* RCUSR: (JSYSNR)RCUSR, (554)  Translates string to user number
+* RDTTY: (JSYSNR)RDTTY, (523)  Reads data from primary input designator
+* RELD: (JSYSNR)RELD, (71)  Releases a device
+* RESET: (JSYSNR)RESET, (147)  Resets/initializes the current process
+* RFACS: (JSYSNR)RFACS, (161)  Reads process' ACs
+* RFBSZ: (JSYSNR)RFBSZ, (45)  Reads files's byte size
+* RFCOC: (JSYSNR)RFCOC, (112)  Reads file's control character output
+* RFMOD: (JSYSNR)RFMOD, (107)  Reads a file's mode
+* RFORK: (JSYSNR)RFORK, (155)  Resumes a process
+* RFPOS: (JSYSNR)RFPOS, (111)  Reads terminal's position
+* RFPTR: (JSYSNR)RFPTR, (43)  Reads file's pointer position
+* RFRKH: (JSYSNR)RFRKH, (165)  Releases a process handle
+* RFSTS: (JSYSNR)RFSTS, (156)  Reads a process' status
+* RFTAD: (JSYSNR)RFTAD, (533)  Reads file's time and dates
+* RIN: (JSYSNR)RIN, (54)  Performs random input
+* RIR: (JSYSNR)RIR, (144)  Reads software interrupt table addresses
+* RIRCM: (JSYSNR)RIRCM, (143)  Reads inferior reserved channel mask
+* RLJFN: (JSYSNR)RLJFN, (23)  Releases JFNs
+* RMAP: (JSYSNR)RMAP, (61)  Obtains a handle on a page
+* RNAMF: (JSYSNR)RNAMF, (35)  Renames a file
+* ROUT: (JSYSNR)ROUT, (55)  Performs random output
+* RPACS: (JSYSNR)RPACS, (57)  Reads a page's accessibility
+* RPCAP: (JSYSNR)RPCAP, (150)  Reads process capabilities
+* RSCAN: (JSYSNR)RSCAN, (500)  Accepts a new string or uses the last string as input
+* RTFRK: (JSYSNR)RTFRK, (322)  Returns the handle of a process suspended because of a monitor call intercept
+* RTIW: (JSYSNR)RTIW, (173)  Reads terminal interrupt word
+* RUNTM: (JSYSNR)RUNTM, (15)  Returns runtime of process or job
+* RWM: (JSYSNR)RWM, (135)  Reads waiting channel interrupt word mask
+* RWSET: (JSYSNR)RWSET, (176)  Releases the working set
+* SACTF: (JSYSSZ)SACTF, (62)  Sets account designator of file
+* SAVE: (JSYSSZ)SAVE, (202)  Saves a file as nonsharable
+* SCTTY: (JSYSSZ)SCTTY, (324)  Changes controlling terminal
+* SCVEC: (JSYSSZ)SCVEC, (301)  Sets entry vector of compatibility package
+* SDSTS: (JSYSSZ)SDSTS, (146)  Sets device's status
+* SDVEC: (JSYSSZ)SDVEC, (543)  Sets entry vector of RMS
+* SETER: (JSYSSZ)SETER, (336)  Sets the last error in a process
+* SETJB: (JSYSSZ)SETJB, (541)  Sets job parameters
+* SETNM: (JSYSSZ)SETNM, (210)  Sets program name
+* SETSN: (JSYSSZ)SETSN, (506)  Sets system name for a process
+* SEVEC: (JSYSSZ)SEVEC, (204)  Sets entry vector
+* SFACS: (JSYSSZ)SFACS, (160)  Sets process' ACs
+* SFBSZ: (JSYSSZ)SFBSZ, (46)  Sets file's byte size
+* SFCOC: (JSYSSZ)SFCOC, (113)  Sets file's control character output
+* SFMOD: (JSYSSZ)SFMOD, (110)  Sets a file's mode
+* SFORK: (JSYSSZ)SFORK, (157)  Starts a process
+* SFPOS: (JSYSSZ)SFPOS, (526)  Sets terminal's position
+* SFPTR: (JSYSSZ)SFPTR, (27)  Sets file's pointer position
+* SFRKV: (JSYSSZ)SFRKV, (201)  Starts process using its entry vector
+* SFTAD: (JSYSSZ)SFTAD, (534)  Sets file's time and dates
+* SFUST: (JSYSSZ)SFUST, (551)  Sets author and last writer name strings
+* SIBE: (JSYSSZ)SIBE, (102)  Skips if input buffer is empty
+* SIN: (JSYSSZ)SIN, (52)  Performs string input
+* SINR: (JSYSSZ)SINR, (531)  Performs record input
+* SIR: (JSYSSZ)SIR, (125)  Sets software interrupt table addresses
+* SIRCM: (JSYSSZ)SIRCM, (142)  Sets inferior reserved channel mask
+* SIZEF: (JSYSSZ)SIZEF, (36)  Gets the size of a file
+* SJPRI: (JSYSSZ)SJPRI, (245)  Sets job's priority
+* SKPIR: (JSYSSZ)SKPIR, (127)  Tests the state of the software interrupt system
+* SMON: (JSYSSZ)SMON, (6)  Sets monitor flags
+* SNOOP: (JSYSSZ)SNOOP, (516)  Performs system analysis
+* SOBE: (JSYSSZ)SOBE, (103)  Skips if output buffer is empty
+* SOBF: (JSYSSZ)SOBF, (175)  Skips if output buffer is full
+* SOUT: (JSYSSZ)SOUT, (53)  Performs string output
+* SOUTR: (JSYSSZ)SOUTR, (532)  Performs record output
+* SPACS: (JSYSSZ)SPACS, (60)  Sets a page's accessibility
+* SPJFN: (JSYSSZ)SPJFN, (207)  Sets the primary JFNs
+* SPLFK: (JSYSSZ)SPLFK, (314)  Splices a process structure
+* SPOOL: (JSYSSZ)SPOOL, (517)  Defines and initializes input spooling
+* SPRIW: (JSYSSZ)SPRIW, (243)  Sets the priority word
+* SSAVE: (JSYSSZ)SSAVE, (203)  Saves a file as sharable
+* STAD: (JSYSSZ)STAD, (226)  Sets system date and time
+* STCMP: (JSYSSZ)STCMP, (540)  Compares two strings
+* STDEV: (JSYSSZ)STDEV, (120)  Translates string to device designator
+* STI: (JSYSSZ)STI, (114)  Simulates terminal input
+* STIW: (JSYSSZ)STIW, (174)  Sets terminal interrupt word
+* STO: (JSYSSZ)STO, (246)  Simulates terminal output
+* STPAR: (JSYSSZ)STPAR, (217)  Sets terminal parameters
+* STPPN: (JSYSSZ)STPPN, (556)  Translates string to project-programmer number
+* STSTS: (JSYSSZ)STSTS, (25)  Sets a file's status
+* STTYP: (JSYSSZ)STTYP, (302)  Sets the terminal type number
+* SWJFN: (JSYSSZ)SWJFN, (47)  Swaps two JFNs
+* SYERR: (JSYSSZ)SYERR, (527)  Writes data to the system error file
+* SYSGT: (JSYSSZ)SYSGT, (16)  Returns information for a system table
+* TBADD: (JSYSSZ)TBADD, (536)  Adds entry to command table
+* TBDEL: (JSYSSZ)TBDEL, (535)  Deletes entry from command table
+* TBLUK: (JSYSSZ)TBLUK, (537)  Looks up entry in command table
+* TEXTI: (JSYSSZ)TEXTI, (524)  Reads input from a terminal or a file
+* TFORK: (JSYSSZ)TFORK, (321)  Sets and removes monitor call intercepts
+* THIBR: (JSYSSZ)THIBR, (770)  Blocks the current job
+* TIME: (JSYSSZ)TIME, (14)  Returns time system has been up
+* TIMER: (JSYSSZ)TIMER, (522)  Sets time limit for a job
+* TLINK: (JSYSSZ)TLINK, (216)  Controls terminal linking
+* TMON: (JSYSSZ)TMON, (7)  Tests monitor flags
+* TTMSG: (JSYSSZ)TTMSG, (775)  Sends a message to a terminal
+* TWAKE: (JSYSSZ)TWAKE, (771)  Wakes a specified job
+* UFPGS: (JSYSSZ)UFPGS, (525)  Updates file's pages
+* USAGE: (JSYSSZ)USAGE, (564)  Writes entries into the accounting data file
+* USRIO: (JSYSSZ)USRIO, (310)  Places program in user I/O mode
+* UTEST: (JSYSSZ)UTEST, (563)  Test monitor routines
+* UTFRK: (JSYSSZ)UTFRK, (323)  Resumes a process suspended because of a monitor call intercept
+* VACCT: (JSYSSZ)VACCT, (566)  Validates an account
+* WAIT: (JSYSSZ)WAIT, (306)  Dismisses process until interrupt occurs
+* WFORK: (JSYSSZ)WFORK, (163)  Waits for processes to terminate
+
+File: JSYSSZ	Node: SACTF	Previous: (JSYSNR)RWSET	Next: SAVE	Up: Top
+
+                             SACTF     JSYS 62
+
+
+   Sets the account to which the specified file is to be charged.
+
+   ACCEPTS IN AC1:  JFN
+
+              AC2:  account number in  bits  3-35  if  bits  0-2  are  5.
+                    Otherwise  contains a pointer to an account string in
+                    the address space of caller.  If a null byte  is  not
+                    seen,  the  string  is terminated after 39 characters
+                    are processed.
+
+   RETURNS     +1:  failure, error code in AC1
+
+               +2:  success, updated string pointer in AC2
+
+   If the account validation facility is enabled, the SACTF call verifies
+   the  account  given  and  returns  an error if it is not valid for the
+   caller.
+
+   The GACTF monitor call can be used to obtain the account designator to
+   which a file is being charged.
+
+   SACTF ERROR MNEMONICS:
+
+   DESX1:    invalid source/destination designator
+
+   DESX3:    JFN is not assigned
+
+   DESX4:    invalid use of terminal designator or string pointer
+
+   SACTX1:   file is not on multiple-directory device
+
+   SACTX2:   insufficient system resources (Job Storage Block full)
+
+
+   SACTX3:   directory requires numeric account
+
+   SACTX4:   write or owner access required
+
+   VACCX0:   invalid account
+
+   VACCX1:   account string exceeds 39 characters
+
+   VACCX2:   account has expired
+
+
+File: JSYSSZ	Node: SAVE	Previous: SACTF	Next: SCTTY	Up: Top
+
+                             SAVE     JSYS 202
+
+
+   Saves, in nonsharable format, pages of a process  into  the  specified
+   file.   (Refer  to  Section 2.7.1 for the format of a nonsharable save
+   file.) This file can then be copied into a given process with the  GET
+   monitor call.
+
+   ACCEPTS IN AC1:  process handle in the left half, and JFN in the right
+                    half
+
+              AC2:  one table entry, or 0 in the left half and pointer to
+                    the table in the right half (see below)
+
+   RETURNS     +1:  always
+
+   The table has words in the format:  length of the area to save in  the
+   left  half  and  address  of the first word to save in the right half.
+   The table is terminated by a 0 word.
+
+   Nonexistent pages are not saved.  The SAVE call also does not save the
+   accumulators.   Thus,  it  is  possible  to  save all assigned nonzero
+   memory with the one table entry 777760,,20 in AC2.
+
+   The SAVE call closes and releases the given JFN.
+
+   Can cause several  software  interrupts  or  process  terminations  on
+   certain file conditions.
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   SAVE ERROR MNEMONICS:
+
+   FRKHX1:   invalid process handle
+
+   FRKHX2:   illegal to manipulate a superior process
+
+   FRKHX3:   invalid use of multiple process handle
+
+   SAVX1:    illegal to save files on this device
+
+   IOX11:    quota exceeded or disk full
+
+   All file errors can also occur.
+
+
+File: JSYSSZ	Node: SCTTY	Previous: SAVE	Next: SCVEC	Up: Top
+
+                             SCTTY     JSYS 324
+
+
+   Redefines the controlling terminal for the specified process  and  all
+   of  its  inferiors.   The controlling terminal can be redefined at any
+   level in the job's process structure;  inferior processes  below  this
+   level will use this terminal by default as their controlling terminal.
+   Therefore, the controlling terminal of a process is defined to be:
+
+        1.  The one that has been explicitly defined for it via  a  SCTTY
+            call.
+
+        2.  If no terminal has been explicitly defined for  the  process,
+            the terminal that has been explicitly defined for its closest
+            superior via a SCTTY call.
+
+        3.  If no SCTTY call has been executed for  a  superior  process,
+            the job's controlling terminal.
+
+   The effect of terminal interrupts on a  process  is  dictated  by  the
+   controlling  terminal for the process.  This means that processes that
+   have enabled specific terminal characters will  receive  an  interrupt
+   when  those  characters  are typed on the controlling terminal.  If no
+   SCTTY call  has  been  executed  for  any  process  in  the  job,  the
+   controlling  terminal  for  all  processes within the job is the job's
+   controlling terminal.  (The job's controlling terminal is usually  the
+   one  used  to  log  in and control the job.)  In addition to being the
+   source of all terminal  interrupts,  the  job's  controlling  terminal
+   serves  as  the primary I/O designators (refer to Section 1.1) for all
+   processes in the job, unless these designators have been changed for a
+   process.
+
+   When a SCTTY call  is  executed  for  a  process  within  a  job,  the
+   controlling terminal and the source of terminal interrupts are changed
+   for that process and all of its inferiors.  This  group  of  processes
+   will  receive interrupts only from the new controlling terminal and no
+   longer from the job's controlling terminal.   These  processes  cannot
+   receive  or  change  terminal  interrupts  from  any other controlling
+   terminals.  However, primary I/O will continue to be received from and
+   sent  to the job's controlling terminal if the primary I/O designators
+   have not  been  changed.   For  most  applications,  the  primary  I/O
+   designators should be changed with the SPJFN call to correspond to the
+   new controlling terminal.
+
+   ACCEPTS IN AC1:  function code in the left half, and process handle in
+                    the right half
+
+              AC2:  terminal designator
+
+   RETURNS     +1:  always
+
+   The available functions are as follows:
+
+      Code   Symbol                        Meaning
+
+       0     .SCRET         Return the designator of the  given  process'
+                            controlling   terminal.   The  designator  is
+                            returned in AC2.
+
+       1     .SCSET         Change   the   given   process'   controlling
+                            terminal  to  the terminal designated in AC2.
+                            The terminal designator cannot refer  to  the
+                            job's  controlling  terminal.   This function
+
+
+                            also changes the controlling terminal of  all
+                            processes inferior to the given process.
+
+       2     .SCRST         Reset the given process' controlling terminal
+                            to  the  job's  controlling  terminal.   This
+                            function also resets the controlling terminal
+                            of   all  processes  inferior  to  the  given
+                            process.
+
+   Functions .SCSET and .SCRST require the process  to  have  the  SC%SCT
+   capability (refer to Section 2.6.1) enabled in its capability word.
+
+   The SCTTY monitor call  cannot  be  used  to  change  the  controlling
+   terminal  for  the  current process or for any process superior to the
+   current process.
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   SCTTY ERROR MNEMONICS:
+
+   SCTX1:    invalid function code
+
+   SCTX2:    terminal already in use as controlling terminal
+
+   SCTX3:    illegal to redefine the job's controlling terminal
+
+   SCTX4:    SC%SCT capability required
+
+   FRKHX1:   invalid process handle
+
+   FRKHX2:   illegal to manipulate a superior process
+
+   DESX1:    invalid source/destination designator
+
+   DEVX2:    device already assigned to another job
+
+
+File: JSYSSZ	Node: SCVEC	Previous: SCTTY	Next: SDSTS	Up: Top
+
+                             SCVEC     JSYS 301
+
+
+   Sets the entry vector and the  UUO  locations  for  the  compatibility
+   package.
+
+   ACCEPTS IN AC1:  process handle
+
+              AC2:  entry vector length  in  the  left  half,  and  entry
+                    vector address in the right half
+
+              AC3:  UUO location in the left half, and PC location in the
+                    right half
+
+   RETURNS     +1:  always
+
+   The compatibility package's entry vector is as follows:
+
+        Word      Symbol              Meaning
+
+          0       .SVEAD    Entry address for interpreting UUO's
+
+          1       .SVINE    Initial entry for setup and first UUO
+
+
+          2       .SVGET    Entry for GET share file routine (obsolete)
+
+          3       .SV40     Address to receive contents of location 40 on
+                            the UUO call
+
+          4       .SVRPC    Address to receive the return PC word on  the
+                            UUO call
+
+          5       .SVMAK    Entry for MAKE share file routine (obsolete)
+
+        6 and 7   .SVCST    Communication  for  handling  CTRL/C,   START
+                            sequences  between  the compatibility package
+                            and the TOPS-20 Command Language
+
+   The monitor transfers to the address specified in the  right  half  of
+   AC2 on any monitor call whose operation code is 040-077 (i.e., monitor
+   UUO).  This transfer occurs after the monitor stores the  contents  of
+   location  40  and the return PC in the locations specified by the left
+   half and right  half  of  AC3,  respectively.   The  entry  vector  is
+   retained but is not used by the monitor.
+
+   If AC2 is 0, the next UUO  causes  the  compatibility  package  to  be
+   merged  into the caller's address space.  In this case, the UUO and PC
+   locations  are  set  from  words  3  and  4,  respectively,   of   the
+   compatibility package's entry vector.
+
+   If AC2 is -1, UUO simulation is disabled, and an occurrence of  a  UUO
+   is  considered an illegal instruction.  This action is useful when the
+   user is removing UUO's from a program.
+
+   The GCVEC monitor call can be used to obtain the entry vector for  the
+   compatibility package.
+
+   SCVEC ERROR MNEMONICS:
+
+   FRKHX1:   invalid process handle
+
+   FRKHX2:   illegal to manipulate superior process
+
+   FRKHX3:   invalid use of multiple process handle
+
+   FRKHX4:   process is running
+
+
+File: JSYSSZ	Node: SDSTS	Previous: SCVEC	Next: SDVEC	Up: Top
+
+                             SDSTS     JSYS 146
+
+
+   Sets  the  status  of  a  device.   (Refer  to  Section  2.4  for  the
+   descriptions  of  the status bits.) This call requires that the device
+   be opened.
+
+   ACCEPTS IN AC1:  JFN
+
+              AC2:  mask indicating status bits to be changed
+
+   RETURNS     +1:  always
+
+   The  SDSTS  call  is  a  no-op  for   devices   that   do   not   have
+   device-dependent status bits.
+
+
+   The GDSTS monitor call can be used to obtain the  status  bits  for  a
+   particular device.
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   SDSTS ERROR MNEMONICS:
+
+   DESX1:    invalid source/destination designator
+
+   DESX2:    terminal is not available to this job
+
+   DESX3:    JFN is not assigned
+
+   DESX4:    invalid use of terminal designator or string pointer
+
+   DESX5:    file is not open
+
+
+File: JSYSSZ	Node: SDVEC	Previous: SDSTS	Next: SETER	Up: Top
+
+                             SDVEC     JSYS 543
+
+
+   Sets the entry vector for the Record Management System (RMS).
+
+   ACCEPTS IN AC1:  process handle
+
+              AC2:  entry vector length  in  the  left  half,  and  entry
+                    vector address in the right half
+
+   RETURNS     +1:  always
+
+   The Record Management System's entry vector is as follows:
+
+        Word      Symbol              Meaning
+
+         0        .SDEAD    Entry address for the RMS calls
+         1        .SDINE    Inital entry for the first RMS call
+         2        .SDVER    Pointer to RMS version block
+         3        .SDDMS    Address in which to store the RMS call
+         4        .SDRPC    Address in which to store return PC word
+
+   The GDVEC monitor call can be used to obtain the entry vector for RMS.
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   SDVEC ERROR MNEMONICS:
+
+   ILINS5:   RMS facility is not available
+
+
+File: JSYSSZ	Node: SETER	Previous: SDVEC	Next: SETJB	Up: Top
+
+                             SETER     JSYS 336
+
+
+   Sets the most recent error condition encountered by a  process.   This
+   error condition is stored in the process' Process Storage Block.
+
+   ACCEPTS IN AC1:  process handle
+
+              AC2:  error code that is to be set
+
+   RETURNS     +1:  always
+
+   The GETER monitor call can be used to obtain  the  most  recent  error
+   condition encountered by a process.
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   SETER ERROR MNEMONICS:
+
+   FRKHX1:   invalid process handle
+
+   FRKHX2:   illegal to manipulate a superior process
+
+   FRKHX3:   process is running
+
+
+File: JSYSSZ	Node: SETJB	Previous: SETER	Next: SETNM	Up: Top
+
+                             SETJB     JSYS 541
+
+
+   Sets job parameters for the specified job.
+
+   ACCEPTS IN AC1:  job number, or -1 for the current job
+
+              AC2:  function code
+
+              AC3:  value for function
+
+   RETURNS     +1:  always
+
+   The available  functions,  along  with  the  legal  values  for  these
+   functions, are described below.
+
+   Function        Values                  Meaning
+
+   .SJDEN(0)                     Set default for magnetic tape density.
+                  .SJDDN(0)        System default density
+                  .SJDN2(1)        200 bits/inch (8.1 rows/mm)
+                  .SJDN5(2)        556 bits/inch (22.5 rows/mm)
+                  .SJDN8(3)        800 bits/inch (32.2 rows/mm)
+                  .SJD16(4)        1600 bits/inch (65.3 rows/mm)
+
+   .SJPAR(1)                     Set default for magnetic tape parity.
+                  .SJPRO(0)        Odd parity
+                  .SJPRE(1)        Even parity
+
+
+   .SJDM(2)                      Set default for magnetic tape data mode.
+                  .SJDDM(0)        System default data mode
+                  .SJDMC(1)        Dump mode
+                  .SJDM6(2)        SIXBIT byte mode (7-track drives)
+                  .SJDMA(3)        ANSI  ASCII  mode  (7  bits  in  8-bit
+                                   bytes)
+|                 .SJDM8(4)        Industry compatible mode
+|  
+|  .SJRS(3)                      Set default  for  magnetic  tape  record
+|                                size in words.
+
+   .SJDFS(4)                     Set spooling mode.
+                  .SJSPI(0)        Immediate mode spooling
+                  .SJSPD(1)        Deferred mode spooling
+
+   .SJSRM(5)                     Set remark for current job session.  AC3
+                                 contains   a   pointer  to  the  session
+                                 remark, which is updated on a successful
+                                 return.   The first 39 characters of the
+                                 session remark are placed in  the  job's
+                                 Job Storage Block.
+
+   The SETJB monitor call requires the process to have WHEEL or  OPERATOR
+   capability  enabled to set parameters for a job other than the current
+   job.
+
+   The GETJI monitor call can be used to obtain the job parameters for  a
+   specified job.
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   SETJB ERROR MNEMONICS:
+
+   SJBX1:    invalid function
+
+   SJBX2:    invalid magnetic tape density
+
+   SJBX3:    invalid magnetic tape data mode
+
+   SJBX4:    invalid job number
+
+   SJBX5:    job is not logged in
+
+   SJBX6:    WHEEL or OPERATOR capability required
+
+   SJBX7:    remark exceeds 39 characters
+
+   SJBX8:    illegal to perform this function
+
+
+File: JSYSSZ	Node: SETNM	Previous: SETJB	Next: SETSN	Up: Top
+
+                             SETNM     JSYS 210
+
+
+   Sets the private name of the program being used by  the  current  job.
+   This name is the one printed on SYSTAT listings.
+
+   ACCEPTS IN AC1:  SIXBIT name used to identify program
+
+   RETURNS     +1:  always
+
+   The GETNM monitor call can be used to obtain the name of  the  program
+   currently being used.
+
+
+File: JSYSSZ	Node: SETSN	Previous: SETNM	Next: SEVEC	Up: Top
+
+                             SETSN     JSYS 506
+
+
+   Sets either the system name or the private name of the  program  being
+   used by the current job.
+
+   ACCEPTS IN AC1:  SIXBIT name to be used as the system name.  This name
+                    is the one used for system statistics.
+
+              AC2:  SIXBIT name to be used as  the  private  name.   This
+                    name is the same as the one set with the SETNM call.
+
+   RETURNS     +1:  failure.  (Currently, there are  no  failure  returns
+                    defined.)
+
+               +2:  success
+
+   System program usage statistics are accumulated in the  system  tables
+   SNAMES,  STIMES,  and  SPFLTS.  (Refer to Section 2.3.2.) To make this
+   possible, the SETSN call must be executed by  each  job  whenever  the
+   system  program  name  is  changed.   In  the  usual case, the TOPS-20
+   Command Language handles this.  The argument to SETSN should be:   for
+   system  programs  (programs  from  directory  <SUBSYS>), the filename,
+   truncated to six characters and  converted  to  SIXBIT;   for  private
+   programs, "(PRIV)."
+
+
+File: JSYSSZ	Node: SEVEC	Previous: SETSN	Next: SFACS	Up: Top
+
+                             SEVEC     JSYS 204
+
+
+   Sets the entry vector of the specified  process.   (Refer  to  Section
+   2.7.3.)
+
+   ACCEPTS IN AC1:  process handle
+
+              AC2:  entry vector  word  (length  in  the  left  half  and
+                    address of first word in the right half), or 0
+
+   RETURNS     +1:  always
+
+   The GEVEC monitor call can  be  used  to  obtain  the  process'  entry
+   vector.
+
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   SEVEC ERROR MNEMONICS:
+
+   FRKHX1:   invalid process handle
+
+   FRKHX2:   illegal to manipulate superior process
+
+   FRKHX3:   invalid use of multiple process handle
+
+   SEVEX1:   entry vector is not less than 1000
+
+
+File: JSYSSZ	Node: SFACS	Previous: SEVEC	Next: SFBSZ	Up: Top
+
+                             SFACS     JSYS 160
+
+
+   Sets the ACs of the specified process.
+
+   ACCEPTS IN AC1:  process handle
+
+              AC2:  address of the beginning of a 20(octal) word table in
+                    the  caller's address space.  This table contains the
+                    values to be placed into the  ACs  of  the  specified
+                    process.
+
+   RETURNS     +1:  always
+
+   The specified process must not be running.
+
+   The RFACS call can be used to obtain the ACs for a specified process.
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   SFACS ERROR MNEMONICS:
+
+   FRKHX1:   invalid process handle
+
+   FRKHX2:   illegal to manipulate a superior process
+
+   FRKHX3:   invalid use of multiple process handle
+
+   FRKHX4:   process is running
+
+
+File: JSYSSZ	Node: SFBSZ	Previous: SFACS	Next: SFCOC	Up: Top
+
+                             SFBSZ     JSYS 46
+
+
+   Resets the byte size for a specific opening of a file.  (Refer to  the
+   OPENF and RFBSZ calls descriptions.)
+
+   ACCEPTS IN AC1:  JFN
+
+              AC2:  byte size, right-justified
+
+   RETURNS     +1:  failure, error code in AC1
+
+               +2:  success
+
+
+   The SFBSZ monitor call recomputes the EOF limit and the file's pointer
+   based on the new byte size given.
+
+   SFBSZ ERROR MNEMONICS:
+
+   DESX1:    invalid source/destination designator
+
+   DESX2:    terminal is not available to this job
+
+   DESX3:    JFN is not assigned
+
+   DESX4:    invalid use of terminal designator or string pointer
+
+   DESX5:    file is not open
+
+   DESX8:    file is not on disk
+
+   SFBSX1:   illegal to change byte size for this opening of file
+
+   SFBX2:    invalid byte size
+
+
+File: JSYSSZ	Node: SFCOC	Previous: SFBSZ	Next: SFMOD	Up: Top
+
+                             SFCOC     JSYS 113
+
+
+   Sets the control character output control  (CCOC)  for  the  specified
+   terminal.  (Refer to Section 2.4.3.2 and the RFCOC call description.)
+
+   ACCEPTS IN AC1:  file designator
+
+              AC2:  control character output control word
+
+              AC3:  control character output control word
+
+   RETURNS     +1:  always
+
+   The CCOC words consist of 2-bit  bytes,  each  byte  representing  the
+   output control for one of the ASCII codes 0-37.
+
+   The SFCOC call is a no-op if the designator is not associated  with  a
+   terminal.
+
+   The RFCOC monitor call can be used to obtain  the  CCOC  words  for  a
+   specified terminal.
+
+   SFCOC ERROR MNEMONICS:
+
+   DESX1:    invalid source/destination designator
+
+   DESX2:    terminal is not available to this job
+
+   DESX3:    JFN is not assigned
+
+   DESX5:    file is not open
+
+   DEVX2:    device already assigned to another job
+
+   TTYX01:   line is not active
+
+
+File: JSYSSZ	Node: SFMOD	Previous: SFCOC	Next: SFORK	Up: Top
+
+                             SFMOD     JSYS 110
+
+
+   Sets the program-related modes for the specified terminal.  The  modes
+   that can be set by this call are in the following bits of the JFN mode
+   word.  (Refer to Section 2.4.3.1.)
+
+        B0(TT%OSP)      output suppression control
+        B18-B23(TT%WAK) wakeup control
+        B24(TT%ECO)     echoes on
+        B28-B29(TT%DAM) data mode
+
+   ACCEPTS IN AC1:  file designator 
+
+              AC2:  JFN mode word
+
+   RETURNS     +1:  always
+
+   The SFMOD call is a no-op if the designator is not associated  with  a
+   terminal.  
+
+   The STPAR monitor call can be used to set device-related modes of  the
+   JFN  mode  word,  and the RFMOD monitor call can be used to obtain the
+   JFN mode word.
+
+   SFMOD ERROR MNEMONICS:
+
+   DESX1:    invalid source/destination designator
+
+   DESX3:    JFN is not assigned
+
+   DESX5:    file is not open
+
+   DEVX2:    device already assigned to another job
+
+   TTYX01:   line is not active
+
+
+File: JSYSSZ	Node: SFORK	Previous: SFMOD	Next: SFPOS	Up: Top
+
+                             SFORK     JSYS 157
+
+
+   Starts the specified process.  If the process  is  frozen,  the  SFORK
+   call  changes  the PC but does not resume the process.  The RFORK call
+   must be used to resume the process.
+
+|  ACCEPTS IN AC1:  process handle
+|  
+|             AC2:  the PC of the process being started.
+
+   RETURNS     +1:  always
+
+   The SFRKV monitor call can be used to  start  a  process  at  a  given
+   position in its entry vector.
+
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   SFORK ERROR MNEMONICS:
+
+   FRKHX1:   invalid process handle
+
+   FRKHX2:   illegal to manipulate a superior process
+
+   FRKHX3:   invalid use of multiple process handle
+
+
+File: JSYSSZ	Node: SFPOS	Previous: SFORK	Next: SFPTR	Up: Top
+
+                             SFPOS     JSYS 526
+
+
+   Sets the position of the  specified  terminal's  pointer.   (Refer  to
+   Section  2.4.3.4  for  information  on  page  lengths  and  widths  of
+   terminals.)
+
+   ACCEPTS IN AC1:  file designator
+
+              AC2:  position within a page (i.e.,  line  number)  in  the
+                    left  half,  and  position  with a line (i.e., column
+                    number) in the right half
+
+   RETURNS     +1:  always
+
+   The SFPOS monitor call is a no-op if the designator is not  associated
+   with a terminal or is in any way illegal.
+
+   The RFPOS monitor call can be used to obtain the current  position  of
+   the terminal's pointer.
+
+   SFPOS ERROR MNEMONICS:
+
+   TTYX01:   line is not active
+
+
+File: JSYSSZ	Node: SFPTR	Previous: SFPOS	Next: SFRKV	Up: Top
+
+                             SFPTR     JSYS 27
+
+
+   Sets the position of the specified file's pointer for  subsequent  I/O
+   to  the  file.   The  SFPTR  call  specifying  a  certain byte number,
+   followed by a BIN call, has the same effect as a RIN  call  specifying
+   the same byte number.
+
+   ACCEPTS IN AC1:  JFN
+
+              AC2:  byte number to which the pointer is to be set, or  -1
+                    to set the pointer to the current end of the file
+
+   RETURNS     +1:  failure, error code in AC1
+
+               +2:  success
+
+   The RFPTR monitor call can be used to obtain the current  position  of
+   the file's pointer.
+
+
+   SFPTR ERROR MNEMONICS:
+
+   DESX1:    invalid source/destination designator
+
+   DESX2:    terminal is not available to this job
+
+   DESX3:    JFN is not assigned
+
+   DESX4:    invalid use of terminal designator or string pointer
+
+   DESX8:    file is not on disk
+
+   SFPTX1:   file is not open
+
+   SFPTX2:   illegal to reset pointer for this file
+
+   SFPTX3:   invalid byte number
+
+
+File: JSYSSZ	Node: SFRKV	Previous: SFPTR	Next: SFTAD	Up: Top
+
+                             SFRKV     JSYS 201
+
+
+   Starts the specified process using the given  position  in  its  entry
+   vector.
+
+   ACCEPTS IN AC1:  process handle
+
+              AC2:  position (0-n) in the entry vector  to  use  for  the
+                    start  address.   Position  0  is  always the primary
+                    start address, and position 1 is the reenter address.
+
+   RETURNS     +1:  always
+
+   The process is started at the specified position in the entry  vector,
+   not at the location pointed to by the entry vector word.
+
+   If the process has a TOPS-10 format entry vector  (JRST  in  the  left
+   half)  (for  example,  it was obtained from a TOPS-10 format save file
+   via a GET call), the entry vector position 0 means "use  the  contents
+   of  .JBSA=120  as  the  start  address," and position 1 means "use the
+   contents of .JBREN=124 as the reenter address."
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   SFRKV ERROR MNEMONICS:
+
+   FRKHX1:   invalid process handle
+
+   FRKHX2:   illegal to manipulate a superior process
+
+   FRKHX3:   invalid use of multiple process handle
+
+   FRKHX4:   process is running
+
+   SFRVX1:   invalid position in entry vector
+
+
+File: JSYSSZ	Node: SFTAD	Previous: SFRKV	Next: SFUST	Up: Top
+
+                             SFTAD     JSYS 534
+
+
+   Sets the dates and times associated with the specified file.
+
+   ACCEPTS IN AC1:  source designator
+
+              AC2:  address of argument block
+
+              AC3:  length of argument block
+
+   RETURNS     +1:  always
+
+   The format of the argument block is as follows:
+
+      Word   Symbol              Meaning
+
+       0     .RSWRT    Internal date and time file was last written.
+
+       1     .RSCRV    Internal date and time file was created.
+
+       2     .RSREF    Internal date and time file was last referenced.
+
+       3     .RSCRE    Internal system date and time of last write.
+
+   The values in the argument  block  for  the  number  of  words  (i.e.,
+   length)  given  in AC3 are set for the file.  These values are checked
+   against the current date and time.  Values greater  than  the  current
+   date  and  time  can  be set only if the process has WHEEL or OPERATOR
+   capability enabled.  In addition,  the  process  must  have  WHEEL  or
+   OPERATOR capability enabled to set the internal system date (.RSCRE).
+
+   If the designator represents a device for which dates are  meaningless
+   (e.g.,  dates  for  terminals), or if any value given is -1, the given
+   value is ignored, and the current date, if pertinent, is not  changed.
+   If the argument block has more than four words, given values for these
+   words are checked to be in valid format and then ignored, if valid.
+
+   To set dates for disk files, the process  must  have  write  or  owner
+   access to the file.
+
+   The RFTAD monitor call can be used  to  obtain  the  dates  and  times
+   associated with a specified file.
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   SFTAD ERROR MNEMONICS:
+
+   DESX1:    invalid source/destination designator
+
+   DESX3:    JFN is not assigned
+
+   DESX7:    JFN cannot refer to output wildcard designators
+
+   DATE6:    system date and time not set
+
+   STADX2:   invalid date or time
+
+   CFDBX2:   illegal to change specified bits
+
+   OPNX25:   device is write locked
+
+   CAPX1:    WHEEL or OPERATOR capability required
+
+
+File: JSYSSZ	Node: SFUST	Previous: SFTAD	Next: SIBE	Up: Top
+
+                             SFUST     JSYS 551
+
+
+   Sets the name of either the author of the file or the  user  who  last
+   wrote  to  the  file.   This monitor call requires the process to have
+   WHEEL or OPERATOR capability enabled to set the writer's  name  or  to
+   have write or owner access to the file to set the author's name.
+
+   ACCEPTS IN AC1:  function code in the left half, and JFN of  the  file
+                    in the right half
+
+              AC2:  pointer to ASCIZ string containing the name
+
+   RETURNS     +1:  always, with an updated string pointer in AC2
+
+   The defined functions are as follows:
+
+      Code   Symbol                        Meaning
+
+       0     .SFAUT         Set the name of the author of the file.
+
+       1     .SFLWR         Set the name of the user who last  wrote  the
+                            file.
+
+   The GFUST monitor call can be used to return the name  of  either  the
+   author of the file or the user who last wrote the file.
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   SFUST ERROR MNEMONICS:
+
+   SFUSX1:   invalid function
+
+   SFUSX2:   insufficient system resources
+
+   SFUSX4:   file expunged
+
+   SFUSX5:   write or owner access required
+
+   SFUSX6:   no such user name
+
+   DESX1:    invalid source/destination designator
+
+   DESX2:    terminal is not available to this job
+
+   DESX3:    JFN is not assigned
+
+   DESX4:    invalid use of terminal designator or string pointer
+
+   DESX7:    JFN cannot refer to output wildcard designators
+
+   DESX8:    file is not on disk
+
+   DESX10:   structure is dismounted
+
+   CAPX1:    WHEEL or OPERATOR capability required
+
+
+File: JSYSSZ	Node: SIBE	Previous: SFUST	Next: SIN	Up: Top
+
+                             SIBE     JSYS 102
+
+
+   Tests to see if the designated file input buffer is empty.
+
+   ACCEPTS IN AC1:  source designator
+
+   RETURNS     +1:  input buffer is not empty.  Number of bytes remaining
+                    in  input  buffer  is  returned  in AC2 if designator
+                    refers either to a JFN opened for read access  or  to
+                    an active terminal.
+
+               +2:  input buffer is empty if designator refers either  to
+                    a  JFN  opened  for  read  access  or  to  an  active
+                    terminal.   This  return  is  also   taken   if   the
+                    designator refers either to a JFN not opened for read
+                    access (AC2 contains 0) or to  an  inactive  terminal
+                    (AC2 contains the appropriate error code).
+
+   The SOBE monitor call can be used to determine if the output buffer is
+   empty,  and  the  SOBF  monitor  call  can be used to determine if the
+   output buffer is full.
+
+   SIBE ERROR MNEMONICS:
+
+   DESX1:    invalid source/destination designator
+
+   DESX3:    JFN is not assigned
+
+   DESX5:    file is not open
+
+   DEVX2:    device already assigned to another job
+
+   TTYX01:   line is not active
+
+
+File: JSYSSZ	Node: SIN	Previous: SIBE	Next: SINR	Up: Top
+
+                              SIN     JSYS 52
+
+
+   Reads a string from the specified source  into  the  caller's  address
+   space.   The  string  can be a specified number of bytes or terminated
+   with a specified byte.
+
+   ACCEPTS IN AC1:  source designator
+
+              AC2:  pointer to string in the caller's address space
+
+              AC3:  count of number of bytes in string, or 0
+
+              AC4:  byte (right-justified) on which  to  terminate  input
+                    (optional)
+
+   RETURNS     +1:  always, updated string pointers in AC2  and  AC1,  if
+                    pertinent, and updated count in AC3, if pertinent
+
+
+   The contents of AC3 controls the number of bytes to read.
+
+        AC3=0     The string being read is terminated with a 0 byte.
+
+        AC3>0     A string of the specified number of bytes is to be read
+                  or a string terminated with the byte given in AC4 is to
+                  be read, whichever occurs first.
+
+        AC3<0     A string of minus the specified number of bytes  is  to
+                  be read.
+
+   The contents of AC4 is  ignored  unless  the  contents  of  AC3  is  a
+   positive number.
+
+   The input is terminated when the byte count becomes 0,  the  specified
+   terminating  byte  is  reached,  the end of the file is reached, or an
+   error  occurs  during  the  transfer.   The  program  can  process  an
+   end-of-file  condition  if  an  ERJMP or ERCAL is the next instruction
+   following the SIN call.
+
+   After execution of  the  call,  the  file's  pointer  is  updated  for
+   subsequent  I/O to the file.  AC2 is updated to point to the last byte
+   read or, if AC3 contained 0, the last nonzero byte read.  The count in
+   AC3  is  updated  toward  zero by subtracting the number of bytes read
+   from the number of bytes requested to  be  read.   If  the  input  was
+   terminated  by  an  end-of-file interrupt, AC1 through AC3 are updated
+   (where pertinent) to reflect the number of  bytes  transferred  before
+   the end of the file was reached.
+
+   When the SIN call is used to read data from a magnetic tape, the  size
+   of  the  records  to  read  is  specified  with  either  the  SET TAPE
+   RECORD-LENGTH command or the .MOSRS function of the MTOPR  call.   The
+   default  record size is 1000(octal) words.  The record size must be at
+   least as large as the largest record being read from  the  tape.   The
+   SIN call will read across record boundaries on the tape until it reads
+   the number of bytes requested by the contents of AC3.  The call  gives
+   the  data  to  the program with no indication of tape marks.  Thus, if
+   the record is 1000 bytes and a  SIN  call  is  given  requesting  2000
+   bytes, it would return two full records to the program.
+
+   When reading in reverse, the number  of  bytes  requested  (i.e.,  the
+   count  in AC3) and the record size should equal the actual size of the
+   record on the tape.  (Refer to Section 2.4.2.1  for  more  information
+   about magnetic tape I/O.)
+
+   Can cause several  software  interrupts  or  process  terminations  on
+   certain  file  conditions.   (Refer  to  bit  OF%HER of the OPENF call
+   description.)
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   SIN ERROR MNEMONICS:
+
+   DESX1:    invalid source/destination designator
+
+   DESX2:    terminal is not available to this job
+
+   DESX3:    JFN is not assigned
+
+   DESX5:    file is not open
+
+   IOX1:     file is not open for reading
+
+
+   IOX4:     end of file reached
+
+   IOX5:     device or data error
+
+   IOX7:     insufficient system resources (Job Storage Block full)
+
+   IOX8:     monitor internal error
+
+
+File: JSYSSZ	Node: SINR	Previous: SIN	Next: SIR	Up: Top
+
+                             SINR     JSYS 531
+
+
+   Reads a record from the specified  magnetic  tape  into  the  caller's
+   address  space.   The  maximum size of the record to read is specified
+   with either the SET TAPE RECORD-LENGTH command or the .MOSRS  function
+   of  the  MTOPR  call.   The  default record size is 1000(octal) words.
+   Refer to Section 2.4.2.1 for more information about magnetic tape I/O.
+
+   ACCEPTS IN AC1:  source designator
+
+              AC2:  pointer to string in the caller's address space
+
+              AC3:  count of number of bytes in string, or 0
+
+              AC4:  byte (right-justified) on which  to  terminate  input
+                    (optional)
+
+   RETURNS     +1:  always, updated string pointers in AC2  and  AC1,  if
+                    pertinent, and updated count in AC3, if pertinent
+
+   The contents of AC3 and AC4 are interpreted in the same manner as they
+   are in the SIN monitor call.
+
+   Each SINR call returns one record to the caller.  Thus, the caller can
+   read  variable-length records by indicating in AC3 the number of bytes
+   to read.  Upon execution of the call, AC3 is updated  to  reflect  the
+   number of bytes read (i.e., the number of bytes in the record).
+
+   The number of bytes read depends on the number of bytes requested  and
+   the  record  size.   When  using SINR, the program must set the record
+   size to a value greater than or  equal  to  the  actual  size  of  the
+   largest  record  being  read from the tape, or an error (IOX5) will be
+   returned.  If the SINR call requests the same number of bytes  as  the
+   record  size,  the  requested number is given to the caller.  When the
+   record size equals the size of the actual record,  all  bytes  in  the
+   record  are  read, and AC3 contains 0 on return.  When the record size
+   is larger than the actual record, all bytes of the  record  are  read,
+   but AC3 contains the difference of the number requested and the number
+   read.  If the SINR call  requests  fewer  bytes  than  in  the  actual
+   record,  the  requested  number  is given to the caller, the remaining
+   bytes are discarded, and an error (IOX10) is returned.  In all  cases,
+   the  next  request  for  input begins reading at the first byte of the
+   next record on the tape because a SINR call never reads across  record
+   boundaries.
+
+   When reading in reverse, the number  of  bytes  requested  (i.e.,  the
+   count in AC3) should be at least as large as the size of the record on
+   the tape.  If the requested number is smaller, the remaining bytes  in
+   the record are discarded from the beginning of the record.
+
+
+   The action taken on a SINR call differs from the action taken on a SIN
+   call.   The  SIN  call  reads across record boundaries to read all the
+   bytes in a file.  The SINR call does not read across record boundaries
+   and  will  discard  some  bytes in the file if the requested number is
+   smaller than the actual record.
+
+   Can cause several  software  interrupts  or  process  terminations  on
+   certain  file  conditions.   (Refer  to  bit  OF%HER of the OPENF call
+   description.)
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   SINR ERROR MNEMONICS:
+
+   DESX1:    invalid source/destination designator
+
+   DESX3:    JFN is not assigned
+
+   DESX5:    file is not open
+
+   IOX1:     file is not open for reading
+
+   IOX4:     end of file reached
+
+   IOX5:     device or data error
+
+   IOX7:     insufficient system resources (Job Storage Block full)
+
+   IOX8:     monitor internal error
+
+   IOX10:    record is longer than user requested
+
+
+File: JSYSSZ	Node: SIR	Previous: SINR	Next: SIRCM	Up: Top
+
+                              SIR     JSYS 125
+
+
+   Sets the channel and priority level table addresses for the  specified
+   process.   (Refer  to  Section  2.5.3.)  These  addresses  are  in the
+   specified process' address space.
+
+   ACCEPTS IN AC1:  process handle
+
+              AC2:  address of the priority level table in the left half,
+                    and address of the channel table in the right half
+
+   RETURNS     +1:  always.  The addresses  in  AC2  are  stored  in  the
+                    Process Storage Block.
+
+   If the contents of the tables are changed after execution of  the  SIR
+   call, the new contents will be used on the next interrupt.
+
+   The RIR monitor call can be used to obtain the table addresses  for  a
+   specified process.
+
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   SIR ERROR MNEMONICS:
+
+   SIRX1:    table address is not greater than 20
+
+   FRKHX1:   invalid process handle
+
+   FRKHX2:   illegal to manipulate a superior process
+
+   FRKHX3:   invalid use of multiple process handle
+
+
+File: JSYSSZ	Node: SIRCM	Previous: SIR	Next: SIZEF	Up: Top
+
+                             SIRCM     JSYS 142
+
+
+   Sets the  mask  for  reserved  software  interrupt  channels  for  the
+   specified inferior process.  Conditions occurring on software channels
+   that have the corresponding mask bit set do not generate an  interrupt
+   to the inferior process.  Instead, the conditions cause the process to
+   terminate or freeze.
+
+   ACCEPTS IN AC1:  inferior process handle
+
+              AC2:  channel mask with bits set for reserved channels
+
+              AC3:  deferred terminal interrupt word
+
+   RETURNS     +1:  always
+
+   The RIRCM monitor call can be used to obtain  the  mask  for  reserved
+   software  interrupt  channels.   Although  a  process can read its own
+   channel mask, it cannot set its own;  the SIRCM call can be given only
+   for  inferior processes.  This call provides a facility for a superior
+   process to monitor an inferior one (e.g., illegal instructions, memory
+   traps).   However,  if the inferior process contains an ERJMP or ERCAL
+   symbol after instructions that generate an interrupt on  failure,  the
+   ERJMP  or  ERCAL  will prevent the generation of the interrupt.  Thus,
+   the superior will not be able to monitor the inferior with  the  SIRCM
+   call.
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   SIRCM ERROR MNEMONICS:
+
+   FRKHX1:   invalid process handle
+
+   FRKHX2:   illegal to manipulate a superior process
+
+   FRKHX3:   invalid use of multiple process handle
+
+
+File: JSYSSZ	Node: SIZEF	Previous: SIRCM	Next: SJPRI	Up: Top
+
+                             SIZEF     JSYS 36
+
+
+   Returns the length of an existing file.
+
+   ACCEPTS IN AC1:  JFN 
+
+   RETURNS     +1:  failure, error code in AC1
+
+               +2:  success, byte count that  referenced  the  last  byte
+                    written  into  the  file  in AC2, and number of pages
+                    (512 words) in file in AC3.  The byte count  returned
+                    depends  on the byte size recorded in the FDB and not
+                    on the byte size specified in the OPENF call.
+
+   For a file with holes, the byte count in  AC2  does  not  reflect  the
+   file's actual size.
+
+   The GTFDB monitor call can be used to obtain the byte  size  in  which
+   the file was written.
+
+   SIZEF ERROR MNEMONICS:
+
+   DESX1:    invalid source/destination designator
+
+   DESX2:    terminal is not available to this job
+
+   DESX3:    JFN is not assigned
+
+   DESX4:    invalid use of terminal designator or string pointer
+
+
+File: JSYSSZ	Node: SJPRI	Previous: SIZEF	Next: SKPIR	Up: Top
+
+                             SJPRI     JSYS 245
+
+
+   Sets the job priority by specifying  the  scheduler  priority  control
+   word  for any job.  The priority word is set in the top process of the
+   designated job, but not in any existing inferior processes.   However,
+   it  is  passed down when a new inferior process is created.  This call
+   requires the process to have WHEEL or OPERATOR capability enabled.
+
+   ACCEPTS IN AC1:  job number
+
+              AC2:  priority word
+
+   RETURNS     +1:  always
+
+   The priority word contains a percentage of CPU resources in  the  left
+   half  and  0  in  the  right  half.  By placing the desired percentage
+   (1-99) in the left half, a job can be guaranteed a certain  percentage
+   of CPU time.  A priority word of 0 indicates no special priority.
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   SJPRI ERROR MNEMONICS:
+
+   WHELX1:   WHEEL or OPERATOR capability required
+
+   SJPRX1:   job is not logged in
+
+
+File: JSYSSZ	Node: SKPIR	Previous: SJPRI	Next: SMON	Up: Top
+
+                             SKPIR     JSYS 127
+
+
+   Tests to see if the software  interrupt  system  is  enabled  for  the
+   specified process.
+
+   ACCEPTS IN AC1:  process handle
+
+   RETURNS     +1:  failure, software interrupt system is off
+
+               +2:  success, software interrupt system is on
+
+   The EIR monitor call is used to enable the software interrupt  system,
+   and the DIR monitor call is used to disable the system.
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   SKPIR ERROR MNEMONICS:
+
+   FRKHX1:   invalid process handle
+
+   FRKHX2:   illegal to manipulate a superior process
+
+   FRKHX3:   invalid use of multiple process handle
+
+
+File: JSYSSZ	Node: SMON	Previous: SKPIR	Next: SNOOP	Up: Top
+
+                              SMON     JSYS 6
+
+
+   Sets various monitor  flags.   The  SMON  monitor  call  requires  the
+   process to have WHEEL or OPERATOR capability enabled.
+
+   ACCEPTS IN AC1:  function code
+
+              AC2:  new value for the indicated function
+
+   RETURNS     +1:  always
+
+   The codes for the functions are as follows:
+
+     Code  Symbol                Meaning
+
+      0    .SFFAC      FACT file entries are allowed.
+
+      1    .SFCDE      CHECKD found errors.
+
+      2    .SFCDR      CHECKD is running.
+
+      3    .SFMST      Manual start is in progress.
+
+      4    .SFRMT      Remote LOGINs (dataset lines) are allowed.
+
+      5    .SFPTY      PTY LOGINs are allowed.
+
+      6    .SFCTY      CTY LOGINs are allowed.
+
+      7    .SFOPR      Operator is in attendance.
+
+     10    .SFLCL      Local LOGINs (hardwired lines) are allowed.
+
+
+     11    .SFBTE      Bit table errors found on startup.
+
+     12    .SFCRD      Users   can   change    nonprivileged    directory
+                       parameters with the CRDIR monitor call.
+
+     13    .SFNVT      ARPANET terminal LOGINs are allowed.
+
+     21    .SFUSG      USAGE file entries are allowed.
+
+     22    .SFFLO      Disk latency optimization using  the  RH20  backup
+                       register  is  enabled.   This feature is not to be
+                       enabled unless the M8555 board of the RH20  is  at
+                       Revision   Level   D  AND  either  of  the  KL10-C
+                       processor  is  at  Revision  Level  10  or  KL10-E
+                       processor is at Revision Level 2.
+
+     44    .SFNTN      Turn ARPANET on.
+
+     45    .SFNDU      Reinitialize ARPANET if it is down.
+
+     46    .SFNHI      Initialize ARPANET host table.
+
+     47    .SFTMZ      Set the local time zone to the value given in AC2.
+
+     50    .SFLHN      Set the local ARPANET host  number  to  the  value
+                       given in AC2.
+
+     51    .SFAVR      Account validation will be running on this system.
+
+|    52    .SFSTS      Enable/disable status reporting.
+
+   Function codes 0 through 22 represent a  specific  monitor  flag  bit.
+   When  the value of the function is 1 (i.e., AC2 contains the value 1),
+   the bit corresponding to the function is set.  When the  value  is  0,
+   the bit is cleared.
+
+   The TMON monitor call can be  used  to  obtain  the  settings  of  the
+   various monitor flags.
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   SMON ERROR MNEMONICS:
+
+   SMONX1:   WHEEL or OPERATOR capability required
+
+   SMONX2:   invalid SMON function
+
+
+File: JSYSSZ	Node: SNOOP	Previous: SMON	Next: SOBE	Up: Top
+
+                             SNOOP     JSYS 516
+
+
+   Performs system performance analysis.  The  SNOOP  call  requires  the
+   process  to  have  WHEEL  or  OPERATOR capability enabled, because the
+   process can patch any instruction in the monitor with this call.   For
+   example,  the  user  program  can  build a PC histogram by patching an
+   instruction in the code for the 1.0-millisecond clock.
+
+
+   The general procedure for using the SNOOP call is as follows:
+
+        1.  The user program supplies a set of breakpoint  routines  that
+            are  called  by  the  monitor when control reaches one of the
+            patched instructions.  These routines  are  mapped  into  the
+            monitor's address space into an area selected by the monitor.
+            Thus, the routines must have self-relocating code or must  be
+            relocated  by  the  user  program  to where they will be run,
+            based on the monitor address supplied by the monitor.
+
+        2.  The user program defines a number of  breakpoints,  analogous
+            to DDT breakpoints.
+
+        3.  The   user   program   inserts   all   of   the   breakpoints
+            simultaneously.
+
+        4.  The user program goes to "sleep" or waits for terminal  input
+            while its breakpoint routines obtain control.
+
+        5.  When the user  program  determines  that  the  routines  have
+            completed, it removes the breakpoints.
+
+   The user program breakpoint routines run in the monitor address space,
+   which  means  that  the addresses of the code and the data are monitor
+   addresses.  The user program must modify these addresses, based on the
+   values  returned  by  the monitor, after the initialization but before
+   the  "snooping."   The   breakpoint   routines   must   preserve   any
+   accumulators  they  use.  Also, they must not cause a page fault if at
+   interrupt level or if a patch has been made in the page fault  handler
+   or  in  the  scheduler.  Thus, the breakpoint routines should test for
+   swappable code being in memory before referencing  it.   If  swappable
+   code  needs  to  be referenced, the swappable monitor can be locked in
+   memory, if desired.  When a patch is made to a routine called at  many
+   interrupt  levels, the program must specify a reentrant instruction to
+   be used for patching.
+
+   ACCEPTS IN AC1:  function code
+
+              AC2:  arguments for
+
+              AC3:  the specified
+
+              AC4:  function
+
+   RETURNS     +1:  failure, error code in AC1
+
+               +2:  success
+
+   The following functions are available:
+
+        Function  Symbol                   Meaning
+         Code
+
+           0      .SNPLC    Declare and  lock  code  into  the  monitor's
+                            address space.
+
+                            AC2:  number of pages desired
+
+                            AC3:  page number in user space of start of 
+                                  breakpoint routines to be locked
+
+
+                            On return, the pages are locked  contiguously
+                            in  the  monitor's  address  space,  and  AC2
+                            contains    the    monitor    page    numbers
+                            corresponding to the given user page number.
+
+           1      .SNPLS    Lock the swappable monitor.  This function is
+                            useful   for   analyzing  swappable  data  at
+                            interrupt  level.   On  return,  the   entire
+                            swappable monitor is locked.
+
+           2      .SNPDB    Define a breakpoint
+
+                            AC2:  number of breakpoint
+
+                            AC3:  address in monitor space to be patched.
+                                  The  patched  instruction can be a skip
+                                  type    instruction    or    a    PUSHJ
+                                  instruction,   and   the   patching  is
+                                  similar to that in DDT.   The  routines
+                                  will receive control before the patched
+                                  instruction is executed.
+
+                            AC4:  instuction to be  executed  before  the
+                                  patched  instruction  is executed.  The
+                                  instruction can be:
+
+                                  JSR LOC where  LOC  is  an  address  in
+                                  monitor space of the user's routine.
+
+                                  PUSHJ P,LOC when reentrant or recursive
+                                  code is patched.
+
+                                  AOS LOC to count frequency  of  monitor
+                                  execution points.
+
+                                  The   error   return   is   given    if
+                                  breakpoints have already been inserted.
+
+           3      .SNPIB    Insert all breakpoints and start analyzing.
+
+           4      .SNPRB    Remove all breakpoints and stop analyzing.
+
+           5      .SNPUL    Unlock and release all storage, and  undefine
+                            and remove all breakpoints.
+
+           6      .SNPSY    Obtain the address of a monitor symbol.
+
+                            AC2:  radix-50 symbol
+
+                            AC3:  radix-50  program  name  if   a   local
+                                  address  is  desired.  If AC3 is 0, the
+                                  entire symbol table is searched.
+
+                            On return, AC2 contains the  monitor  address
+                            or value of the symbol.
+
+
+           7      .SNPAD    Obtain a monitor symbol.
+
+                            AC2:  36-bit value of symbol that  is  to  be
+                                  looked   up  in  the  monitor's  symbol
+                                  table.
+
+                            AC3:  radix-50 program name if a local  value
+                                  is  desired.   If  AC3 is 0, the entire
+                                  symbol table is searched.
+
+                            On return, AC2 contains  the  first  radix-50
+                            monitor  symbol  that is closest to and has a
+                            value less than the specified value, and  AC3
+                            contains  the difference between the value of
+                            the symbol returned and the specified value.
+
+   SNOOP ERROR MNEMONICS:
+
+   SNOPX1:   WHEEL or OPERATOR capability required
+
+   SNOPX2:   invalid function
+
+   SNOPX3:   .SNPLC function must be first
+
+   SNOPX4:   only one .SNPLC function allowed
+
+   SNOPX5:   invalid page number
+
+   SNOPX6:   invalid number of pages to lock
+
+   SNOPX7:   illegal to define breakpoints after inserting them
+
+   SNOPX8:   breakpoint is not set on instruction
+
+|  SNOPX9:   no more breakpoints allowed
+|  
+|  SNOP10:   breakpoints already inserted
+|  
+|  SNOP11:   breakpoints not inserted
+|  
+|  SNOP12:   invalid format for program name symbol
+|  
+|  SNOP13:   no such program name symbol
+|  
+|  SNOP14:   no such symbol
+|  
+|  SNOP15:   not enough free pages for snooping
+|  
+|  SNOP16:   multiply-defined symbol
+|  
+|  SNOP17:   breakpoint already defined
+|  
+|  SNOP18:   data page is not private or copy-or-write
+
+
+File: JSYSSZ	Node: SOBE	Previous: SNOOP	Next: SOBF	Up: Top
+
+                             SOBE     JSYS 103
+
+
+   Tests to see if the designated file output buffer is empty.
+
+   ACCEPTS IN AC1:  destination designator
+
+   RETURNS     +1:  output  buffer  is  not  empty.   Number   of   bytes
+                    remaining in output buffer is returned in AC2.
+
+               +2:  output buffer is empty;  AC2 contains 0.  This return
+                    is  given  if  an  error  occurs  on  the  call;  AC2
+                    contains the appropriate error code.
+
+   If the designator is not associated with a terminal, the +2 return  is
+   given.
+
+   The SIBE call can be used to determine if the input buffer is empty.
+
+   SOBE ERROR MNEMONICS:
+
+   DESX1:    invalid source/destination designator
+
+   DESX3:    JFN is not assigned
+
+   DESX5:    file is not open
+
+   DEVX2:    device already assigned to another job
+
+   TTYX01:   line is not active
+
+
+File: JSYSSZ	Node: SOBF	Previous: SOBE	Next: SOUT	Up: Top
+
+                             SOBF     JSYS 175
+
+
+   Tests to see if the designated file output buffer is full.
+
+   ACCEPTS IN AC1:  file designator
+
+   RETURNS     +1:  output buffer is not full.  This return is  given  if
+                    an error occurs on the call;  AC2 will contain 0.
+
+               +2:  output buffer is full
+
+   On either return, the number of bytes remaining in the  output  buffer
+   is returned in AC2 (if no error occurred on the call).
+
+   SOBF ERROR MNEMONICS:
+
+   DESX1:    invalid source/destination designator
+
+   DESX3:    JFN is not assigned
+
+   DESX5:    file is not open
+
+   DESX6:    file must be a terminal
+
+   DEVX2:    device already assigned to another job
+
+   TTYX01:   line is not active
+
+
+File: JSYSSZ	Node: SOUT	Previous: SOBF	Next: SOUTR	Up: Top
+
+                              SOUT     JSYS 53
+
+
+   Writes a string from the  caller's  address  space  to  the  specified
+   destination.   The  string  can  be  a  specified  number  of bytes or
+   terminated with a specified byte.
+
+   ACCEPTS IN AC1:  destination designator
+
+              AC2:  pointer to string to be written
+
+              AC3:  count of the number of bytes in string, or 0
+
+              AC4:  byte (right-justified) on which to terminate output
+
+   RETURNS     +1:  always, updated string pointers in AC2  and  AC1,  if
+                    pertinent, and updated count in AC3, if pertinent
+
+   The contents of AC3 controls the number of bytes to write.
+
+        AC3=0     The string being written is terminated with a 0 byte.
+
+        AC3>0     A string of the specified number  of  bytes  is  to  be
+                  written  or  a string terminated with the byte given in
+                  AC4 is to be written, whichever occurs first.
+
+        AC3<0     A string of minus the specified number of bytes  is  to
+                  be written.
+
+   The contents of AC4 is  ignored  unless  the  contents  of  AC3  is  a
+   positive number.
+
+   The output is terminated when the byte count becomes 0, the  specified
+   terminating  byte  is reached, or an error occurs during the transfer.
+   The specified terminating byte is copied to the destination.
+
+   After execution of  the  call,  the  file's  pointer  is  updated  for
+   subsequent  I/O to the file.  AC2 is updated to point to the last byte
+   written or, if AC3 contained 0, the last nonzero  byte  written.   The
+   count in AC3 is updated toward zero by subtracting the number of bytes
+   written from the number of bytes requested to be written.
+
+   When the SOUT call is used to write data to a magnetic tape, it  sends
+   a  series  of  bytes packed into records of the specified record size.
+   The size of the records to write is specified with either the SET TAPE
+   RECORD-LENGTH  command  or the .MOSRS function of the MTOPR call.  The
+   default record size is 1000(octal) words.  Thus, if the record size is
+   1000  bytes,  two  SOUT calls, each writing 500 bytes, would write one
+   record.  If during the writing, the end of tape mark  was  passed,  an
+   error  (IOX5)  is  given.   However,  the  data  has been successfully
+   written and the device status word has the MT%EOT bit set to  indicate
+   this  condition.   Refer to Section 2.4.2.1 for more information about
+   magnetic tape I/O.
+
+   Can cause several  software  interrupts  or  process  terminations  on
+   certain  file  conditions.   (Refer  to  bit  OF%HER of the OPENF call
+   description.)
+
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   SOUT ERROR MNEMONICS:
+
+   DESX1:    invalid source/destination designator
+
+   DESX2:    terminal is not available to this job
+
+   DESX3:    JFN is not assigned
+
+   DESX5:    file is not open
+
+   IOX2:     file is not opened for writing
+
+   IOX5:     device or data error
+
+   IOX6:     illegal to write beyond absolute end of file
+
+   IOX7:     insufficient system resources (Job Storage Block full)
+
+   IOX8:     monitor internal error
+
+   IOX11:    quota exceeded or disk full
+
+
+File: JSYSSZ	Node: SOUTR	Previous: SOUT	Next: SPACS	Up: Top
+
+                             SOUTR     JSYS 532
+
+
+   Writes a variable-length record from the caller's address space to the
+   specified  magnetic  tape.  The maximum size of the record to write is
+   specified with either the SET TAPE RECORD-LENGTH command or the .MOSRS
+   function  of  the  MTOPR call.  The default record size is 1000(octal)
+   words.  (Refer to Section 2.4.2.1 for more information about  magnetic
+   tape I/O.)
+
+   ACCEPTS IN AC1:  destination designator
+
+              AC2:  pointer to string to be written
+
+              AC3:  count of number of bytes in string, or 0
+
+              AC4:  byte (right-justified) on which to  terminate  output
+                    (optional)
+
+   RETURNS     +1:  always, updated string pointers in AC2  and  AC1,  if
+                    pertinent, and updated count in AC3, if pertinent
+
+   The contents of AC3 and AC4 are interpreted in the same manner as they
+   are in the SOUT monitor call.
+
+   Each SOUTR call writes at least one  record.   Thus,  the  caller  can
+   write variable-length records by indicating in AC3 the number of bytes
+   to write in the record.  If the SOUTR call requests more bytes  to  be
+   written than the maximum record size, then records of the maximum size
+   are written, plus another record containing the remaining  bytes.   If
+   the  SOUTR  call  requests  fewer  bytes than the maximum, or a number
+   equal to the maximum, to be written, then  records  of  the  requested
+   size are written.
+
+
+   The SOUTR call differs from the SOUT  call  in  that  the  SOUTR  call
+   writes  records on the tape upon execution of the call.  The SOUT call
+   does not write a record on the tape until the number of bytes equal to
+   the  record  size  have been written.  Thus, if a record is being made
+   from several strings in the caller's address space, the SOUT call  can
+   be used for the first strings and the SOUTR call for the last string.
+
+   Can cause several  software  interrupts  or  process  terminations  on
+   certain  file  conditions.   (Refer  to  bit  OF%HER of the OPENF call
+   description.)
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   SOUTR ERROR MNEMONICS:
+
+   DESX1:    invalid source/destination designator
+
+   DESX3:    JFN is not assigned
+
+   DESX5:    file is not open
+
+   IOX2:     file is not open for writing
+
+   IOX6:     illegal to write beyond absolute end of file
+
+   IOX7:     insufficient system resources (Job Storage Block full)
+
+   IOX8:     monitor internal error
+
+   IOX9:     function legal for sequential write only
+
+   IOX11:    quota exceeded or disk full
+
+
+File: JSYSSZ	Node: SPACS	Previous: SOUTR	Next: SPJFN	Up: Top
+
+                             SPACS     JSYS 60
+
+
+   Sets the accessibility of a page.  This  call  affects  the  map  word
+   directly  indicated  by  the  argument (i.e., no indirect pointers are
+   allowed).
+
+   ACCEPTS IN AC1:  process/file designator in the left  half,  and  page
+                    number within the file in the right half
+
+              AC2:  access information
+
+                    B2(PA%RD)  permit read access
+
+                    B3(PA%WT)  permit write access
+
+                    B4(PA%EX)  permit execute access
+
+                    B9(PA%CPY) copy-on-write
+
+   RETURNS     +1:  always
+
+   When used to modify a process page, the SPACS call does not allow  any
+   greater  access  than  can  be  obtained with the PMAP call (i.e., the
+   access specified on the OPENF call  is  applied  to  SPACS  operations
+   involving file pointers).
+
+
+   The SPACS call does not allow bits to be set in a page that  does  not
+   already exist.
+
+   The RPACS monitor call can be used to obtain the  accessibility  of  a
+   page.
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   SPACS ERROR MNEMONICS:
+
+   DESX1:    invalid source/destination designator
+
+   DESX2:    terminal is not available to this job
+
+   DESX3:    JFN is not assigned
+
+   DESX4:    invalid use of terminal designator or string pointer
+
+   DESX5:    file is not open
+
+   DESX8:    file is not on disk
+
+   SPACX1:   invalid access requested
+
+   FRKHX1:   invalid process handle
+
+   FRKHX2:   illegal to manipulate a superior process
+
+   FRKHX3:   invalid use of multiple process handle
+
+
+File: JSYSSZ	Node: SPJFN	Previous: SPACS	Next: SPLFK	Up: Top
+
+                             SPJFN     JSYS 207
+
+
+   Sets the primary JFNs of the specified process.
+
+   ACCEPTS IN AC1:  process handle
+
+              AC2:  primary input JFN  in  the  left  half,  and  primary
+                    output JFN in the right half
+
+   RETURNS     +1:  always
+
+   The JFNs given cannot be either 100 or  101.   These  JFNs  cause  the
+   specified process to receive an error on any primary I/O operation.
+
+   The GPJFN monitor call can be used to obtain the primary JFNs.
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   SPJFN ERROR MNEMONICS:
+
+   FRKHX1:   invalid process handle
+
+   FRKHX2:   illegal to manipulate a superior process
+
+   FRKHX3:   invalid use of multiple process handle
+
+   DESX3:    JFN is not assigned
+
+
+File: JSYSSZ	Node: SPLFK	Previous: SPJFN	Next: SPOOL	Up: Top
+
+                             SPLFK     JSYS 314
+
+
+   Splices a  process  structure.   The  process  that  becomes  the  new
+   superior must be either the one executing the SPLFK monitor call or an
+   inferior of it.  The new inferior process must be an inferior  of  the
+   executing  process.   The  new  superior  process must not be the same
+   process as the new inferior process and must not be  inferior  to  the
+   new  inferior  process.   The  new  inferior  process  and  all of its
+   inferiors will be frozen after execution of the SPLFK call.
+
+   ACCEPTS IN AC1:  process handle of the new superior process
+
+              AC2:  process handle of the new inferior process
+
+   RETURNS     +1:  failure, error code in AC1
+
+               +2:  success, a process handle in AC1.  This handle may be
+                    used by the new superior process (in AC1) to refer to
+                    its new inferior (in AC2).
+
+   SPLFK ERROR MNEMONICS:
+
+   SPLFX1:   process is not inferior or equal to self
+
+   SPLFX2:   process is not inferior to self
+
+   SPLFX3:   new superior process is inferior to intended inferior
+
+   FRKHX1:   invalid process handle
+
+
+File: JSYSSZ	Node: SPOOL	Previous: SPLFK	Next: SPRIW	Up: Top
+
+                             SPOOL     JSYS 517
+
+
+   Defines and initializes a device to be used for input spooling or sets
+   and reads the directory for a spooled device.
+
+   ACCEPTS IN AC1:  length of  argument  block  in  the  left  half,  and
+                    function code in the right half
+
+              AC2:  address of argument block
+
+   RETURNS     +1:  failure, error code in AC1
+
+               +2:  success
+
+   The format of the argument  block  is  different  depending  upon  the
+   particular  function  desired.   The  available  functions, along with
+   their argument block formats, are as follows:
+
+
+        Code      Symbol              Meaning
+
+         0        .SPLDI    Define  an  input   spooling   device.    The
+                            argument block is:
+
+                            Word  Symbol            Meaning
+
+                            0     .SPLDV  Device  designator   of   input
+                                          device.
+
+                            1     .SPLNA  Pointer    to    name    string
+                                          comprising  the set of files to
+                                          be input.
+
+                            2     .SPLGN  Generation  number   of   first
+                                          file.      This    number    is
+                                          incremented by 1 each time  the
+                                          spooled device is opened.
+
+         1        .SPLSD    Set the directory of the spooled device.  The
+                            argument block is:
+
+                            Word  Symbol            Meaning
+
+                            0     .SPLDV  Device  designator  of  spooled
+                                          device.
+
+                            1     .SPLDR  Directory number.  This  number
+                                          is   the   logged-in  directory
+                                          number of the user  who  opened
+                                          the spooled device.
+
+                            This function requires the  process  to  have
+                            WHEEL or OPERATOR capability enabled.
+
+         2        .SPLRD    Read the directory  of  the  spooled  device.
+                            The argument block is:
+
+                            Word  Symbol            Meaning
+
+                            0     .SPLDV  Designator of spooled device.
+
+                            The directory number of the spooled device is
+                            returned in word 1 of the argument block.
+
+   To read from a spooled input device, the user first defines  the  name
+   of  the  files  comprising  his set of spooled input files.  The files
+   have names in the format:
+
+        STR:<SPOOLED-DIRECTORY>DEVICE-DIR#.NAME.1,2,3,...
+
+   The spooled directory is the directory to receive  any  spooled  input
+   from  the  device.   The  .SPLSD  function can be used by a privileged
+   process to set the directory.  The default directory for  all  of  the
+   spooled devices is <SPOOL>.
+
+   The device is the name of the device being used for spooled input.  It
+   is the same name that was given on the original GTJFN call.
+
+   The directory number is the logged-in directory  number  of  the  user
+   that opened the spooled device.
+
+
+   The name is the name of the set of files  to  be  input.   The  .SPLDI
+   function is used to define this name.
+
+   The generation number begins with the value specified  by  the  .SPLDI
+   function and increments by one each time the spooled device is opened.
+
+   Thus, if the input spooler for the card reader (CDR) is reading  files
+   for  a  user  whose  directory number is 23, then the files might have
+   names like
+
+        <SPOOL>CDR-23.BATCH-SEQUENCE-37.1,2,3,...
+
+   To initialize the spooled card reader, the user would then execute the
+   SPOOL  call giving "BATCH-SEQUENCE-37" as the name of the set of files
+   to be input and "1" as the beginning generation number.
+
+   SPOOL ERROR MNEMONICS:
+
+   SPLX1:    invalid function
+
+   SPLX2:    argument block too small
+
+   SPLX3:    invalid device designator
+
+   SPLX4:    WHEEL or OPERATOR capability required
+
+   SPLX5:    illegal to specify 0 as generation number for first file
+
+   SPLX6:    no directory to write spooled files into
+
+
+File: JSYSSZ	Node: SPRIW	Previous: SPOOL	Next: SSAVE	Up: Top
+
+                             SPRIW     JSYS 243
+
+
+   Sets the priority word for the specified process.  This call  requires
+   the process to have WHEEL or OPERATOR capability enabled.
+
+   ACCEPTS IN AC1:  process handle
+
+              AC2:  priority word
+
+   RETURNS     +1:  always
+
+   Refer to the SJPRI monitor call description  for  the  format  of  the
+   priority word.
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   SPRIW ERROR MNEMONICS:
+
+   WHELX1:   WHEEL or OPERATOR capability required
+
+
+File: JSYSSZ	Node: SSAVE	Previous: SPRIW	Next: STAD	Up: Top
+
+                             SSAVE     JSYS 203
+
+
+   Creates a sharable save format file for the given JFN by copying  (not
+   sharing)  pages  from  the given process.  (Refer to Section 2.7.2 for
+   the format of a sharable save file.) This monitor  call  is  used  for
+   creating  shared  programs.  It saves the file in groups of contiguous
+   pages for which the same access is desired.
+
+   ACCEPTS IN AC1:  process handle in the left half, and JFN in the right
+                    half
+
+              AC2:  one table entry, or  0  in  the  left  half  and  the
+                    address of the table in the right half (see below)
+
+              AC3:  flag bits (not yet implemented;  AC3 should be 0)
+
+   RETURNS     +1:  always
+
+   The table has a  one-word  entry  for  each  group  of  pages  and  is
+   terminated by a zero word.  Each word has the following format:
+
+        Bit       Symbol              Meaning
+
+        0-17      SS%NNP    Negative of the number of pages in each group
+                            (right-justified).
+
+        18        SS%CPY    Allow copy-on-write access to  the  group  of
+                            pages.
+
+        19        SS%UCA    Limit the access  according  to  the  current
+                            access of the user's page.  (See below.)
+
+        20        SS%RD     Allow read access to the group of pages.
+
+        21        SS%WR     Allow write access to the group of pages.
+
+        22        SS%EXE    Allow execute access to the group of pages.
+
+        27-35     SS%FPN    Number  of  the  first  page  in  the   group
+                            (right-justified).
+
+   When B19(SS%UCA)  is  set,  the  access  to  the  group  of  pages  is
+   determined  by ANDing the access bits specified in the table word with
+   the corresponding access bits for the user's pages (as  determined  by
+   the  RPACS  call).   This means that a given access is allowed only if
+   both the SSAVE call indicates it and the page currently  has  it.   If
+   B19(SS%UCA)  is  not  set, the access granted to the group of pages is
+   that indicated by the bits set in the table word.
+
+   The SSAVE call does  not  save  the  accumulators  nor  does  it  save
+   nonexistent pages.
+
+   The GET monitor call is used to map a file saved with the  SSAVE  call
+   back into a given process.
+
+   Can cause several  software  interrupts  or  process  terminations  on
+   certain file conditions.
+
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   SSAVE ERROR MNEMONICS:
+
+   FRKHX1:   invalid process handle
+
+   FRKHX2:   illegal to manipulate a superior process
+
+   FRKHX3:   invalid use of multiple process handle
+
+   SSAVX1:   illegal to save files on this device
+
+   SSAVX2:   page count is not less than or equal to 1000
+
+   SSAVX3:   insufficient system resources (Job Storage Block full)
+
+   SSAVX4:   directory area of EXE file is more than one page
+
+   IOX11:    quota exceeded or disk full
+
+   All I/O errors can also occur.
+
+
+File: JSYSSZ	Node: STAD	Previous: SSAVE	Next: STCMP	Up: Top
+
+                             STAD     JSYS 226
+
+
+   Sets the system's date.  (Refer to Section 2.8.2.)
+
+   ACCEPTS IN AC1:  day in the left half, and fraction of the day in  the
+                    right half
+
+   RETURNS     +1:  failure, error code in AC1
+
+               +2:  success
+
+   The  STAD  call  requires  the  process  to  have  WHEEL  or  OPERATOR
+   capability enabled if the system's date is already set.
+
+   The GTAD monitor call can be used to obtain the system's date.
+
+   STAD ERROR MNEMONICS:
+
+   STADX1:   WHEEL or OPERATOR capability required
+
+   STADX2:   invalid date or time
+
+
+File: JSYSSZ	Node: STCMP	Previous: STAD	Next: STDEV	Up: Top
+
+                             STCMP     JSYS 540
+
+
+   Compares two ASCIZ strings in the caller's address space.   Note  that
+   letters  are always considered as upper case, regardless of their case
+   within the string.  Therefore, the strings ABC and abc are  considered
+   an exact match.
+
+   ACCEPTS IN AC1:  pointer to test string
+
+              AC2:  pointer to base string
+
+   RETURNS     +1:  always, with
+
+                    AC1 containing the compare code:
+
+                        B0(SC%LSS) Test string is less than base string.
+
+                        B1(SC%SUB) Test  string  is  a  subset  of   base
+                                   string.
+
+                        B2(SC%GTR) Test  string  is  greater  than   base
+                                   string.
+
+                    AC2 containing base string pointer, updated such that
+                    an   ILDB   instruction   will  reference  the  first
+                    nonmatching byte.
+
+   One string is considered less than another string if the  ASCII  value
+   of  the  first  nonmatching character in the first string is less than
+   the ASCII value of the character in the same position  in  the  second
+   string.
+
+   One string is considered a subset of another string  if  both  of  the
+   following conditions are true:
+
+        1.  From left to right, the ASCII values  of  the  characters  in
+            corresponding positions are the same.
+
+        2.  The test string is shorter than the base string.
+
+   Two strings are considered equal if the ASCII values of the characters
+   in  corresponding  positions  are the same and the two strings are the
+   same size.  In this case, the contents of AC1 is 0 on return.
+
+
+File: JSYSSZ	Node: STDEV	Previous: STCMP	Next: STI	Up: Top
+
+                             STDEV     JSYS 120
+
+
+   Translates the given string to its corresponding device designator.
+
+   ACCEPTS IN AC1:  pointer to the string to be translated
+
+   RETURNS     +1:  failure, error code in AC2
+
+               +2:  success, device designator (refer to Section 2.4)  in
+                    AC2
+
+   The string to be translated is terminated by the  first  space  (ASCII
+   code 40), null (ASCII code 0), or colon (ASCII code 72).
+
+
+   The DEVST monitor call can be used to translate a device designator to
+   its corresponding string.
+
+   STDEV ERROR MNEMONICS:
+
+   STDVX1:   no such device
+
+
+File: JSYSSZ	Node: STI	Previous: STDEV	Next: STIW	Up: Top
+
+                              STI     JSYS 114
+
+
+   Simulates terminal input.
+
+   ACCEPTS IN AC1:  file designator (only terminal designators are legal)
+
+              AC2:  character to be input, right-justified
+
+   RETURNS     +1:  always
+
+   The character is taken  from  the  accumulator  and  placed  into  the
+   specified  terminal's input buffer whether or not the buffer is empty.
+   The DIBE call can be used to prevent sending  an  interrupt  character
+   (e.g.,  CTRL/C)  before  the program has processed all of the previous
+   input.
+
+   The STI monitor call requires the process to have  WHEEL  or  OPERATOR
+   capability enabled if the specified terminal either is not assigned or
+   opened by the process or is not accepting advice.  (Refer to the TLINK
+   bit TT%AAD.)
+
+   The use of this monitor call is not recommended  for  pseudo-terminals
+   (PTYs).   The recommended procedure for placing a character in the PTY
+   input buffer is to open the PTY for output with OPENF and then perform
+   output with the BOUT call.
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   STI ERROR MNEMONICS:
+
+   TTYX1:    device is not a terminal
+
+   DESX2:    terminal is not available to this job
+
+   DEVX2:    device already assigned to another job
+
+   WHELX1:   WHEEL or OPERATOR capability required
+
+   TTYX01:   line is not active
+
+
+File: JSYSSZ	Node: STIW	Previous: STI	Next: STO	Up: Top
+
+                             STIW     JSYS 174
+
+
+   Sets the terminal interrupt word (refer  to  Section  2.5.6)  for  the
+   entire  job  or  a specific process.  This call declares that terminal
+   characters that usually cause an interrupt are instead to be passed to
+   the  program as input.  In actuality, the STIW call sets the interrupt
+   word mask, thus determining for each of the 36 terminal codes  if  the
+   job  or  process  should  receive  an interrupt.  The call's effect is
+   different, depending on whether the call is  being  executed  for  the
+   entire job or for a specific process in the job.
+
+   When the STIW call is executed for the entire job, codes corresponding
+   to the bits on in the mask will cause an interrupt if a process in the
+   job has enabled for an interrupt on that code.  If multiple  processes
+   have  enable  that  code,  the  lowest  inferior  process receives the
+   interrupt.  (If several  processes  at  the  same  lowest  level  have
+   enabled   the  code,  the  process  that  receives  the  interrupt  is
+   determined by the system.)  If no process has enabled that  code,  the
+   character  corresponding  to the code is passed to the program.  Also,
+   characters are passed to the program when their corresponding bits are
+   off  in the mask, even if a process has enabled that code.  Initially,
+   all codes are declared to cause an interrupt (i.e., all  bits  in  the
+   mask  are  on), and the program can execute the RTIW call to determine
+   the current status.  Thus if the program wishes  to  read  a  terminal
+   interrupt character as input, it executes the STIW call for the entire
+   job and turns off the mask bit corresponding to the character.
+
+   When the STIW call is executed for a  specific  process  in  the  job,
+   codes  corresponding  to  the  bits  on  in the mask are assumed to be
+   enabled by the specific process and cause an interrupt if in fact they
+   are  enabled.   If  the  process  has  not  enabled  for the code, the
+   character corresponding to the  code  is  ignored,  if  it  is  typed.
+   Characters  corresponding  to the bits off in the mask are assumed not
+   to be enabled by the process.  This use of the STIW call is implicitly
+   executed on an ATI call.
+
+   Each time the STIW call is executed for a specific process,  the  mask
+   is changed to reflect the bits changed in that process.
+
+   The STIW call sets or clears specific terminal codes for a  particular
+   process  without  actually  changing  the channel assignment that each
+   code has.  The ATI call is used to set the channel assignment, and the
+   DTI call is used to clear the assignment.
+
+   The STIW call requires the process to have SC%CTC  capability  enabled
+   to  disable  the  code  for  CTRL/C  interrupts  or  to  give -5 as an
+   argument.
+
+   ACCEPTS IN AC1:  B0(ST%DIM) set the deferred terminal  interrupt  mask
+                               given in AC3
+
+                    B18-B35    process handle, or -5 for entire job
+                    (ST%PRH)
+
+              AC2:  terminal interrupt word mask.
+                    Bit n on means terminal code n is enabled.
+
+              AC3:  deferred terminal interrupt word mask.
+                    Bit n on means terminal code n is deferred.
+
+   RETURNS     +1:  always
+
+
+   The argument in AC3 is ignored, and no change is made to the  deferred
+   interrupt word mask, if B0(ST%DIM) is not set or if the process handle
+   in AC1 does not indicate a specific process.
+
+   If multiple processes enable the same interrupt character and any  one
+   of  the  processes declares it deferred, the character is deferred for
+   all the processes that enabled it.
+
+   The RTIW call can be used to obtain the terminal interrupt word masks.
+
+   STIW ERROR MNEMONICS:
+
+   FRKHX1:   invalid process handle
+
+   FRKHX2:   illegal to manipulate a superior process
+
+   FRKHX3:   invalid use of multiple process handle
+
+
+File: JSYSSZ	Node: STO	Previous: STIW	Next: STPAR	Up: Top
+
+                              STO     JSYS 246
+
+
+   Simulates terminal output.
+
+   ACCEPTS IN AC1:  file designator (only terminal designators are legal)
+
+   RETURNS     +1:  always, with the character right-justified in AC2
+
+   The character is taken from the specified terminal's output buffer and
+   placed in the accumulator.  The process is blocked until the character
+   is in the accumulator.
+
+   The use of this monitor call is not recommended  for  pseudo-terminals
+   (PTYs).   The  recommended  procedure for reading a character from the
+   PTY output buffer is to open the PTY for input  with  OPENF  and  then
+   perform input with the BIN call.
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   STO ERROR MNEMONICS:
+
+   TTYX1:    device is not a terminal
+
+   DESX2:    terminal is not available to this job
+
+   DEVX2:    device already assigned to another job
+
+   TTYX01:   line is not active
+
+
+File: JSYSSZ	Node: STPAR	Previous: STO	Next: STPPN	Up: Top
+
+                             STPAR     JSYS 217
+
+
+   Sets the device-related modes for the specified terminal.   The  modes
+   that can be set by this call are in the following bits of the JFN mode
+   word.  (Refer to Section 2.4.3.1.)
+
+      B1(TT%MFF)      mechanical form feed
+      B2(TT%TAB)      mechanical tab
+      B3(TT%LCA)      lower case
+      B4-B10(TT%LEN)  page length
+      B11-B17(TT%WID) page width
+      B25(TT%ECM)     echo control
+      B30(TT%UOC)     upper-case output control
+      B31(TT%LIC)     lower-case input control
+      B32-B33(TT%DUM) duplex mode
+      B34(TT%PGM)     output page mode
+
+   ACCEPTS IN AC1:  file designator
+
+              AC2:  JFN mode word
+
+   RETURNS     +1:  always
+
+   The STPAR monitor call is a no-op if the designator is not  associated
+   with a terminal.
+
+   The SFMOD monitor call can be used to set program-related modes of the
+   JFN  mode  word,  and the RFMOD monitor call can be used to obtain the
+   JFN mode word.
+
+   When the page length and width fields are set  with  the  STPAR  call,
+   they  have  a maximum range of 127.  The MTOPR call can be used to set
+   these fields to values greater than 127.  A nonzero value of less than
+   2  for  the length or less than 10 for the width causes STPAR to leave
+   the field unchanged.
+
+   STPAR ERROR MNEMONICS:
+
+   DESX1:    invalid source/destination designator
+
+   DESX3:    JFN is not assigned
+
+   DESX5:    file is not open
+
+   DEVX2:    device already assigned to another job
+
+   TTYX01:   line is not active
+
+
+File: JSYSSZ	Node: STPPN	Previous: STPAR	Next: STSTS	Up: Top
+
+                             STPPN     JSYS 556
+
+
+   Translates the  given  directory  name  string  to  its  corresponding
+   project-programmer  number  (a  TOPS-10  36-bit directory designator).
+   This  project-programmer  number  is  associated  with  the  structure
+   containing  the  given  directory  and  is  valid only for the current
+   mounting of that structure.  The STPPN  monitor  call  and  the  PPNST
+   monitor  call should appear only in programs that require translations
+   of project-programmer numbers.  Both calls are temporary calls and may
+   not be defined in future releases.
+
+   ACCEPTS IN AC1:  pointer to  ASCIZ  string  containing  the  directory
+                    name, a JFN, or a 36-bit directory number
+
+   RETURNS     +1:  always,  with  the  corresponding  project-programmer
+                    number in AC2
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   STPPN ERROR MNEMONICS:
+
+   STRX02:   insufficient system resources
+
+   STRX03:   no such directory name
+
+   STRX04:   ambiguous directory specification
+
+   DESX1:    invalid source/destination designator
+
+   DESX2:    terminal is not available to this job
+
+   DESX3:    JFN is not assigned
+
+   DESX4:    invalid use of terminal designator or string pointer
+
+   DESX7:    JFN cannot refer to output wildcard designators
+
+   DESX8:    file is not on disk
+
+   DESX10:   structure is dismounted
+
+
+File: JSYSSZ	Node: STSTS	Previous: STPPN	Next: STTYP	Up: Top
+
+                             STSTS     JSYS 25
+
+
+   Sets the status of a file.  (Refer to the GTSTS monitor call  for  the
+   format of the JFN status word.)
+
+   ACCEPTS IN AC1:  JFN in the right half
+
+              AC2:  status word
+
+   RETURNS     +1:  failure, error code in AC1
+
+               +2:  success
+
+
+   The STSTS call is used to set the following bits of the status word:
+
+      B9(GS%ERR)  file may be in error
+      B13(GS%HLT) I/O errors are terminating conditions
+      B17(GS%FRK) file, if opened, is opened for restricted access
+
+   STSTS ERROR MNEMONICS:
+
+   DESX1:    invalid source/destination designator
+
+   DESX2:    terminal is not available to this job
+
+   DESX3:    JFN is not assigned
+
+   DESX4:    invalid use of terminal designator or string pointer
+
+
+File: JSYSSZ	Node: STTYP	Previous: STSTS	Next: SWJFN	Up: Top
+
+                             STTYP     JSYS 302
+
+
+   Sets the terminal type number for the specified terminal line.  (Refer
+   to Section 2.4.3.4.)
+
+   ACCEPTS IN AC1:  file designator (only terminal designators are legal)
+
+              AC2:  terminal type number
+
+   RETURNS     +1:  always
+
+   The STTYP call sets the bits in the JFN mode word for mechanical  form
+   feed and tab, lower case, and page length and width according to their
+   settings  in  the  device  characteristics  word.   These   bits   can
+   subsequently be changed with the STPAR monitor call.
+
+   The GTTYP monitor call can be used to obtain the terminal type  number
+   for a specified line.
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   STTYP ERROR MNEMONICS:
+
+   DESX1:    invalid source/destination designator
+
+   DESX2:    terminal is not available to this job
+
+   STYPX1:   invalid terminal type
+
+   TTYX01:   line is not active
+
+
+File: JSYSSZ	Node: SWJFN	Previous: STTYP	Next: SYERR	Up: Top
+
+                             SWJFN     JSYS 47
+
+
+   Swaps  the  association  of  two  JFNs  by  literally  exchanging  all
+   information cells of each JFN.
+
+   ACCEPTS IN AC1:  JFN
+
+              AC2:  another JFN
+
+   RETURNS     +1:  always
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   SWJFN ERROR MNEMONICS:
+
+   DESX1:    invalid source/destination designator
+
+   DESX2:    terminal is not available to this job
+
+   DESX3:    JFN is not assigned
+
+   DESX4:    invalid use of terminal designator or string pointer
+
+   SWJFX1:   illegal to swap same JFN
+
+
+File: JSYSSZ	Node: SYERR	Previous: SWJFN	Next: SYSGT	Up: Top
+
+                             SYERR     JSYS 527
+
+
+   Places information in the System Error (SYSERR) file.  (Refer  to  the
+   DECsystem-20 Operator's Guide for information on the SYSERR file.) The
+   SYERR monitor call requires the process to have  WHEEL,  OPERATOR,  or
+   MAINTENANCE capability enabled.
+
+   ACCEPTS IN AC1:  address of argument block
+
+              AC2:  length of argument block
+
+   RETURNS     +1:  always
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   SYERR ERROR MNEMONICS:
+
+   CAPX1:    WHEEL or OPERATOR capability required
+
+   SYEX1:    unreasonable SYSERR block size
+
+   SYEX2:    no buffer space available for SYSERR
+
+
+File: JSYSSZ	Node: SYSGT	Previous: SYERR	Next: TBADD	Up: Top
+
+                             SYSGT     JSYS 16
+
+
+   Returns the table number, table length, and word 0  of  the  specified
+   system  table.   (Refer  to  Section 2.3.2 for the names of the system
+   tables.)
+
+   ACCEPTS IN AC1:  SIXBIT table name
+
+   RETURNS     +1:  always, with
+
+                    AC1 containing word 0 of the table
+
+                    AC2 containing the negative of the number of words in
+                        the  table in the left half, and the table number
+                        in the right half
+
+   The table number returned can be given to the GETAB monitor call as an
+   argument.    However,   because   the   MONSYM  file  includes  symbol
+   definitions for the system tables, execution of the SYSGT call is  not
+   required to obtain the table number for the GETAB call.
+
+   The contents of AC2 is 0 on return if  the  specified  table  was  not
+   found.
+
+
+File: JSYSSZ	Node: TBADD	Previous: SYSGT	Next: TBDEL	Up: Top
+
+                             TBADD     JSYS 536
+
+
+   Adds an entry to a standard-formatted  command  table  used  for  user
+   program command recognition.  (Refer to the TBLUK call description for
+   the format of the command table.)
+
+   ACCEPTS IN AC1:  address of word 0 (header word) of table
+
+              AC2:  entry to be added to table.  (Refer to the TBLUK call
+                    for the format of a table entry.)
+
+   RETURNS     +1:  always, address in the table of the new entry in AC1
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   TBADD ERROR MNEMONICS:
+
+   TADDX1:   table is full
+
+   TADDX2:   entry is already in table
+
+
+File: JSYSSZ	Node: TBDEL	Previous: TBADD	Next: TBLUK	Up: Top
+
+                             TBDEL     JSYS 535
+
+
+   Deletes an entry from a standard-formatted command table used for user
+   program command recognition.  (Refer to the TBLUK call description for
+   the format of the command table.)
+
+   ACCEPTS IN AC1:  address of word 0 (header word) of table
+
+              AC2:  address of entry to  be  deleted.   This  address  is
+                    returned in AC1 on a TBLUK call.
+
+   RETURNS     +1:  always
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   TBDEL ERROR MNEMONICS:
+
+   TDELX1:   table is empty
+
+   TDELX2:   invalid table entry location
+
+
+File: JSYSSZ	Node: TBLUK	Previous: TBDEL	Next: TEXTI	Up: Top
+
+                             TBLUK     JSYS 537
+
+
+   Compares the specified string  in  the  caller's  address  space  with
+   strings indicated by a standard-formatted command table.  This call is
+   used  to  implement  a  consistent  style  of  user  program   command
+   recognition and abbreviation.  The TBLUK call performs the function of
+   string lookup in the table, and the TBADD and TBDEL calls perform  the
+   functions of adding to and deleting from the table.
+
+   The command table has the following format:
+
+        Word                               Meaning
+
+        0              Number  of  actual  entries  (not  including  this
+                       entry)  in the table in the left half, and maximum
+                       number of entries in the table (not including this
+                       entry) in the right half.
+
+        1 through n    Address of an argument in  the  left  half.   This
+                       argument  contains  optional bits pertinent to the
+                       string followed by the ASCIZ string  itself.   The
+                       right  half  of  each table entry is available for
+                       use by the user program.
+
+   The argument pointed to by the left half of each table entry can  have
+   one  of two formats, depending on the setting of bits 0-7 of the first
+   word of the argument.  If bits 0-6 are all off and  B7(CM%FW)  is  on,
+   the  string  actually begins in the next word of the argument, and the
+   remainder of this word contains data bits relevant to the string.
+
+
+   Table Entry
+
+
+              0                        17 18                         35 
+              !=======================================================!
+              !           ADR            !      for use by program    !  
+              !=======================================================!
+
+   Argument
+
+
+              0            6 7                                       35
+              !=======================================================!
+        ADR   !      0     !1!               data bits                !
+              !-------------------------------------------------------!
+              !                    start of string                    !
+              !=======================================================!
+
+
+   The following bits are currently defined:
+
+      Bit    Symbol                        Meaning
+
+      34     CM%NOR    Do not recognize this string, even if a string  is
+                       specified  that  matches  exactly, and consider an
+                       exact match as ambiguous.  A program can set  this
+                       bit to include entries that are initial substrings
+                       of other entries in the table to enforce a minimum
+                       abbreviation  of  these  other  entries  (e.g., to
+                       include D and DE in the table to  enforce  DEL  as
+                       the minimum abbreviation of DELETE).
+
+       7     CM%FW     Indicate that the remainder of this word is a flag
+                       word  containing data bits relevant to the string.
+                       This bit must be on to  distinguish  a  flag  word
+                       from a null string.
+
+   If any bit of bits 0-6 of the first word of the argument is on  or  if
+   B7(CM%FW)  is  off, the string begins in that word.  In this case, the
+   data bits do not apply and are assumed to be off.
+
+   Table Entry
+
+
+              0                        17 18                         35
+              !=======================================================!
+              !           ADR            !                            !
+              !=======================================================!
+
+
+   Argument
+
+
+              0                                                      35
+              !=======================================================!
+        ADR   !                    start of string                    !
+              !=======================================================!
+
+   The addresses in the command table must be  sorted  according  to  the
+   alphabetical  order  of  the  strings.   Note  that letters are always
+   considered as uppercase.  Therefore,  the  strings  ABC  and  abc  are
+   considered  equivalent  strings.   This  order  results  in  efficient
+   searching of strings and determination of ambiguous strings.
+
+
+   The right half of each table entry can be used by the program  for  an
+   address  to  a  dispatch  table  for the command or for a pointer to a
+   parameter block  for  additional  information  about  the  call.   The
+   contents of this half word is ignored by the three table calls.
+
+   ACCEPTS IN AC1:  address of word 0 (header word) of table
+
+              AC2:  pointer to string in caller's address space  that  is
+                    to be compared with the string in the table
+
+   RETURNS     +1:  always, with
+
+                    AC1 containing the address of the entry that  matches
+                        the input string or address where the entry would
+                        be if it were in the table.
+
+                    AC2 containing recognition bits:
+
+                        B0(TL%NOM) The input string does  not  match  any
+                                   string in the table.
+                        B1(TL%AMB) The input string matches more than one
+                                   string   in   the   table   (i.e.,  is
+                                   ambiguous).
+                        B2(TL%ABR) The   input   string   is   a    valid
+                                   abbreviation of a string in the table.
+                        B3(TL%EXM) The input string  is  an  exact  match
+                                   with a string in the table.
+
+                    AC3 containing a pointer  to  the  remainder  of  the
+                        string  in  the  table  if  the  match  was on an
+                        abbreviation (TL%ABR is  on).   This  string  can
+                        then be output to complete the command.
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   TBLUK ERROR MNEMONICS:
+
+   TLUKX1:   internal format of table is incorrect
+
+
+File: JSYSSZ	Node: TEXTI	Previous: TBLUK	Next: TFORK	Up: Top
+
+                             TEXTI     JSYS 524
+
+
+   Reads input from a terminal or a file into a string  in  the  caller's
+   address space.  Input is read until either a specified break character
+   is encountered or the byte count is exhausted, whichever occurs first.
+
+   When used for terminal input, the TEXTI  call  handles  the  following
+   editing functions:
+
+        1.  Delete the last character input (DELETE).
+
+        2.  Delete back to the last punctuation character (CTRL/W).
+
+        3.  Delete back to the beginning of the current line or,  if  the
+            current  line is empty, back to the beginning of the previous
+            line (CTRL/U).
+
+
+        4.  Retype the current line from its  beginning  or,  if  current
+            line is empty, retype the previous line (CTRL/R).
+
+        5.  Accept the next character without regard to its usual meaning
+            (CTRL/V).
+
+   ACCEPTS IN AC1:  address of argument block
+
+   RETURNS     +1:  failure, error code in AC1
+
+               +2:  success, updated pointer in word .RDDBP,  appropriate
+                    bits set in the left half of word .RDFLG, and updated
+                    count in word .RDDBC of the argument block
+
+   The format of the argument block is as follows:
+
+        Word      Symbol                   Meaning
+
+         0        .RDCWB    Count of words following  this  word  in  the
+                            argument block.
+
+         1        .RDFLG    Flag bits.  (See below.)
+
+         2        .RDIOJ    Pointer to string, or input JFN in  the  left
+                            half  and  output  JFN  in the right half (if
+                            RD%JFN is on in the flag word  .RDFLG).   The
+                            input  JFN  is  where the input is being read
+                            from, and the output JFN is where any  output
+                            generated from character editing is placed.
+
+         3        .RDDBP    Pointer to string in caller's  address  space
+                            where  input  is  to  be  placed (destination
+                            string pointer).
+
+         4        .RDDBC    Number of bytes available in the  destination
+                            string.
+
+         5        .RDBFP    Pointer to the beginning of  the  destination
+                            buffer.   This  pointer indicates the maximum
+                            limit to which the user can  edit  back  into
+                            the  buffer  with  DELETE, CTRL/W, or CTRL/U.
+                            This buffer is not  separate  (i.e.,  is  not
+                            disjoint)  from  the  destination string.  On
+                            the first TEXTI, this pointer is normally the
+                            same   as   the  destination  string  pointer
+                            (.RDDBP), but does not have to be the same.
+
+         6        .RDRTY    Pointer   to    the    beginning    of    the
+                            prompting-text  (CTRL/R) buffer.  The text in
+                            this buffer,  along  with  any  text  in  the
+                            destination  buffer,  is  output  if the user
+                            types CTRL/R on his first line of input.   If
+                            this  buffer  is not set up or the user types
+                            CTRL/R on other than the first line of input,
+                            only  the text in the destination buffer will
+                            be output.
+
+
+         6        .RDRTY    The CTRL/R  buffer  is  useful  for  retyping
+                  (Cont.)   characters that preceded  the  user's  input,
+                            such  as a prompt from the program.  The text
+                            in this buffer cannot be edited by the  user,
+                            and  if  the  user deletes back to the end of
+                            this buffer, his action is treated as  if  he
+                            has deleted all of his input.  This buffer is
+                            logically adjacent to the destination buffer,
+                            but may be physically disjoint from it.  When
+                            the CTRL/R buffer is  disjoint,  it  must  be
+                            terminated with a null byte.
+
+         7        .RDBRK    Address of a 4-word block of break  character
+                            mask  bits.  If a bit is on in the mask, then
+                            the corresponding character is  considered  a
+                            break  character.   Any bits set in this mask
+                            override break characters  set  in  the  flag
+                            word.
+
+                            The mask occupies the  leftmost  32  bits  of
+                            each  word,  thereby  allowing  a mask of 128
+                            bits.  The rightmost 4 bits of each word  are
+                            ignored.   The mapping is from left to right.
+                            The  ASCII  character  set  maps  into   this
+                            128-bit mask.
+
+                            If this word  is  zero,  there  is  no  break
+                            character set mask defined.
+
+         10       .RDBKL    Pointer  to   the   backup   limit   in   the
+                            destination  buffer.   This pointer indicates
+                            the position in  the  destination  buffer  to
+                            which  the  user  can edit back without being
+                            informed.  This pointer is used  to  indicate
+                            to  the  program  that previously parsed text
+                            has been edited and may need to  be  reparsed
+                            by  the  program.   The pointer can either be
+                            equal to the  start  of  the  buffer  pointer
+                            (.RDBFP) or to the destination string pointer
+                            (.RDDBP) or be between these two pointers.
+
+   Words 5 through 10 (.RDBFP through .RDBKL) in the argument  block  are
+   optional.   A  zero in any of the words means that no pointer has been
+   given.
+
+   The illustration below is a logical  arrangement  of  the  CTRL/R  and
+   destination  buffers, with the placement of the pointers when they are
+   given as not being equal.  Remember that the CTRL/R  buffer  does  not
+   have  to be adjacent to the destination buffer and that two or more of
+   these pointers can be equal.
+
+
+                                 destination buffer
+
+                                           can be edited
+
+   !=======================================================!
+   !  CTRL/R buffer;      !   Cannot be    !      !        !
+   !  cannot be edited,   !   edited       !      !        !
+   !  but will be output  !                !      !        !
+   !  on a CTRL/R         !                !      !        !
+   !=======================================================!
+
+
+
+
+   CTRL/R         Beginning of        Backup       Destination
+   buffer         destination         limit        string
+   pointer        buffer pointer      pointer      pointer
+   (.RDRTY)       (.RDBFP)            (.RDBKL)     (.RDDBP)
+
+
+   The flag bits that can be set in word 1 (.RDFLG) of the argument block
+   are as follows:
+
+        Bit       Symbol              Meaning
+
+         0        RD%BRK    Break on CTRL/Z or ESC.
+
+         1        RD%TOP    Break  on  CTRL/G,   CTRL/L,   CTRL/Z,   ESC,
+                            carriage return, line feed.
+
+         2        RD%PUN    Break on punctuation:
+                            CTRL/A-CTRL/F     ASCII codes 34-37
+                            CTRL/H-CTRL/I     ASCII codes 40-57
+                            CTRL/K            ASCII codes 72-100
+                            CTRL/N-CTRL/Q     ASCII codes 133-140
+                            CTRL/S-CTRL/T     ASCII codes 173-176
+                            CTRL/X-CTRL/Y
+
+         3        RD%BEL    Break on end of  line  (carriage  return  and
+                            line feed, or line feed only).
+
+         4        RD%CRF    Suppress a carriage return and return a  line
+                            feed only.
+
+         5        RD%RND    Return to user program if the user  tries  to
+                            delete    beyond   the   beginning   of   the
+                            destination buffer.  If this bit is not  set,
+                            the  TEXTI call causes the terminal's bell to
+                            ring and waits for more input.
+
+         6        RD%JFN    JFNs  have  been   given   for   the   source
+                            designator   (word  .RDIOJ  of  the  argument
+                            block).  If this bit is not set,  the  source
+                            designator is a pointer to a string.
+
+         7        RD%RIE    Return to user program if the input buffer is
+                            empty.   If  this  bit  is not set, the TEXTI
+                            call waits for more input.
+
+         8        RD%BBG    Pointer to the beginning of  the  destination
+                            buffer  has  been given in word .RDBFP in the
+                            argument block.
+
+
+         10       RD%RAI    Convert lower-case input to upper-case input.
+
+         11       RD%SUI    Suppress the CTRL/U indication if user  types
+                            a  CTRL/U  (i.e.,  do  not  print  XXX and on
+                            display  terminals,   do   not   delete   the
+                            characters from the screen).
+
+   On a successful return, the following  bits  can  be  set  in  word  1
+   (.RDFLG) of the argument block:
+
+        Bit       Symbol                   Meaning
+
+         12       RD%BTM    A break character terminated the  input.   If
+                            this bit is not set, the input was terminated
+                            because the byte count was exhausted.
+
+         13       RD%BFE    Control was  returned  to  the  user  program
+                            because  the  user tried to delete beyond the
+                            beginning  of  the  destination  buffer   and
+                            RD%RND was on in the call.
+
+         14       RD%BLR    The backup limit for editing was reached.
+
+   TEXTI ERROR MNEMONICS:
+
+   RDTX1:    invalid string pointer
+
+   IOX11:    quota exceeded or disk full
+
+
+File: JSYSSZ	Node: TFORK	Previous: TEXTI	Next: THIBR	Up: Top
+
+                             TFORK     JSYS 321
+
+   Sets and removes monitor call intercepts (JSYS traps)  for  the  given
+   inferior  processes.   When  the process attempts to execute a call on
+   which an intercept has been set, it is suspended  before  it  executes
+   the  call.   Control is passed to the closest superior process that is
+   monitoring the execution of that call.  This control is passed by  the
+   superior   receiving   an  interrupt  when  the  inferior  process  is
+   suspended.  The superior process can then determine via the RTFRK call
+   which  process  caused  the interrupt and how to handle the interrupt.
+   It can use any of the process manipulation  calls  and  then  use  the
+   UTFRK  call  to resume the suspended inferior process.  Alternatively,
+   the superior can simply decide to resume the inferior and allow it  to
+   execute  the  call.   If  this  is  the case, the next higher superior
+   process monitoring the intercepted call  receives  an  interrupt,  and
+   control  is  passed  to  that  superior.   If  each  superior  process
+   monitoring the call decides to resume the  suspended  process  without
+   changing its PC word, then the suspended process is allowed to execute
+   the monitor call as it normally would.
+
+   ACCEPTS IN AC1:  function code in the left half, and process handle in
+                    the right half
+
+              AC2:  software interrupt channel number in the  left  half,
+                    and size (in bits) of the monitor call bit table
+
+              AC3:  address of monitor call bit table
+
+   RETURN     +1:   always
+
+
+   The available functions are as follows:
+
+        Code      Symbol                   Meaning
+
+         0        .TFSET    Set monitor call  intercepts  for  the  given
+                            process.   The calls that will be intercepted
+                            are indicated in the monitor call bit  table.
+                            The given process must be frozen.
+
+         1        .TFRAL    Remove all monitor call  intercepts  for  the
+                            given process.  The process must be frozen.
+
+         2        .TFRTP    Remove for the given process only the monitor
+                            call  intercepts  that  are  indicated in the
+                            monitor call bit table.   The  given  process
+                            must be frozen.
+
+         3        .TFSPS    Set the given software channel as the channel
+                            on which to generate the interrupt.
+
+         4        .TFRPS    Return in the left half of AC2  the  software
+                            channel   on  which  the  interrupt  will  be
+                            generated.
+
+         5        .TFTST    Test if the caller is to be intercepted  when
+                            it  attempts  to  execute  monitor calls.  On
+                            successful return AC2 contains -1 if it is to
+                            be  intercepted  or  0  if  it  is  not to be
+                            intercepted.
+
+         6        .TFRES    Remove intercepts set for all  inferiors  and
+                            clear  the  software  channel assigned to the
+                            interrupt for monitor call intercepts.
+
+         7        .TFUUO    Set  monitor  call  intercepts  for   TOPS-10
+                            monitor  calls  (UUOs) for the given process.
+                            The process must be frozen.
+
+         8        .TFSJU    Set monitor  call  intercepts  for  both  the
+                            calls indicated in the monitor call bit table
+                            and the TOPS-10 monitor calls.  This function
+                            is  a  combination  of  functions  .TFSET and
+                            .TFUUO.  The given process must be frozen.
+
+         9        .TFRUU    Remove  monitor  call  intercepts   for   the
+                            TOPS-10  monitor  calls.   The  given process
+                            must be frozen.
+
+   The process handle in the right half of AC1 must refer to an  inferior
+   process  or must be -4 to refer to all inferiors.  When intercepts are
+   set for a given process, they also apply to all processes inferior  to
+   the  given  process.   When a process is created, it is subject to the
+   same intercepts as the process that created it.
+
+   If the software channel is given as  77,  any  intercepts  bypass  the
+   given process without causing either an interrupt to its superior or a
+   suspended state of the process.
+
+   The monitor call bit table contains a bit  for  each  of  the  TOPS-20
+   monitor  calls.   When  a  bit  in  the table is on, the corresponding
+   monitor call is to be intercepted when the given process  attempts  to
+   execute  it.   If  the bit is off, the corresponding monitor call will
+   not be intercepted.  The size of the bit table is 1000(octal) words.
+
+
+   A process can remove only the intercepts it previously set;  it cannot
+   remove intercepts that other processes set.
+
+   Refer to the TOPS-20AN Monitor Calls User's Guide for an overview  and
+   description of the monitor call intercept facility.
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   TFORK ERROR MNEMONICS:
+
+   TFRKX1:   invalid function code
+
+   TFRKX2:   unassigned process handle or not immediate inferior
+
+   TFRKX3:   process not frozen
+
+
+File: JSYSSZ	Node: THIBR	Previous: TFORK	Next: TIME	Up: Top
+
+                             THIBR     JSYS 770
+
+
+   Blocks the current process for the specified  elapsed  time  or  until
+   awakened  by  a TWAKE monitor call, whichever occurs first.  The THIBR
+   call is a temporary call and may not be defined in future releases.
+
+   ACCEPTS IN AC1:  0 in the left half, and maximum number of seconds  to
+                    block in the right half
+
+   RETURNS     +1:  never
+
+               +2:  always, time expired or TWAKE call occurred
+
+
+File: JSYSSZ	Node: TIME	Previous: THIBR	Next: TIMER	Up: Top
+
+                              TIME     JSYS 14
+
+
+   Returns the amount of time since the system was last restarted.
+
+   RETURNS     +1:  always, time  (in  milliseconds)  right-justified  in
+                    AC1,  and  divisor  to convert the time to seconds in
+                    AC2.  AC2 always contains  1000;   thus,  it  is  not
+                    necessary to examine its contents.
+
+   This is a monotonically increasing number (when the system is running)
+   independent of any resets of the time and date.
+
+
+File: JSYSSZ	Node: TIMER	Previous: TIME	Next: TLINK	Up: Top
+
+                             TIMER     JSYS 522
+
+
+   Controls the amount of time either a  process  within  a  job  or  the
+   entire  job  can  run.   An  interrupt  is generated when the time has
+   elapsed.
+
+   Only one process in the job is allowed to time the entire job.  If the
+   job  is  already  being  timed,  an  error is given if another process
+   attempts to time the job.  An error is also given if a  process  other
+   than  the one that set the runtime limit of the job attempts to remove
+   that limit.
+
+   ACCEPTS IN AC1:  process handle in the left half, and function code in
+                    the right half.
+
+              AC2:  time at which to generate an interrupt.  Refer to the
+                    individual  function  descriptions  for  the specific
+                    arguments.
+
+              AC3:  number of the software channel on which  to  generate
+                    an interrupt when the time has expired.
+
+   RETURNS     +1:  failure, error code in AC1
+
+               +2:  success
+
+   The available functions are as follows:
+
+        Code      Symbol                        Meaning
+
+         0        .TIMRT    Specify the total runtime of the entire  job.
+                            This function allows one process within a job
+                            to time the entire  job.   AC2  contains  the
+                            total  runtime  in  milliseconds that the job
+                            can  accumulate  before   an   interrupt   is
+                            generated  on  the specified channel.  If AC2
+                            contains 0, the limit on the runtime  of  the
+                            job  is removed.  The process handle given in
+                            AC1 must be .FHJOB (-5).
+
+         1        .TIMEL    Specify  an  elapsed  time  after  which   an
+                            interrupt is generated for the given process.
+                            AC2 contains the number of milliseconds  that
+                            can   now  elapse  before  the  interrupt  is
+                            generated on the specified channel.
+
+         2        .TIMDT    Specify an exact time at which  an  interrupt
+                            is  generated  for  the  given  process.  AC2
+                            contains  the  intermal  format   (refer   to
+                            section  2.8.2) of the date and time when the
+                            interrupt is to be generated.
+
+         3        .TIMDD    Remove any pending  interrupt  requests  that
+                            are  to  occur  for  the process at the given
+                            time.   AC2  contains  the  internal   format
+                            (refer to section 2.8.2) of the date and time
+                            of the interrupt request to be removed.
+
+
+         4        .TIMBF    Remove any pending  interrupt  requests  that
+                            are to occur for the process before the given
+                            time.   AC2  contains  the  internal   format
+                            (refer  to  section  2.8.2)  of  the date and
+                            time.
+
+         5        .TIMAL    Remove all pending  requests  for  the  given
+                            process  including  the  runtime limit on the
+                            entire job.
+
+   The runtime limit for a job can be obtained via the GETJI monitor call
+   (contents  of word .JIRT on return).  If the job's time limit has been
+   exceeded, the value returned by the GETJI call will be zero.
+
+   TIMER ERROR MNEMONICS:
+
+   TIMX1:    invalid function
+
+   TIMX2:    invalid process handle
+
+   TIMX3:    time limit already set
+
+   TIMX4:    illegal to clear time limit
+
+   TIMX5:    invalid software interrupt channel number
+
+   TIMX6:    time has already passed
+
+   TIMX7:    no space available for a clock
+
+   TIMX8:    user clock allocation exceeded
+
+   TIMX9:    no such clock entry found
+
+   TIMX10:   no system date and time
+
+
+File: JSYSSZ	Node: TLINK	Previous: TIMER	Next: TMON	Up: Top
+
+                             TLINK     JSYS 216
+
+
+   Controls  terminal  linking.   (Refer  to  Section  2.4.3.5  for  more
+   information.)
+
+   ACCEPTS IN AC1:  B0(TL%CRO)  Clear  link   from   remote   to   object
+                                designator.   If the remote designator is
+                                -1,  all  remote  links  to  the   object
+                                designator are cleared.
+
+                    B1(TL%COR)  Clear  link   from   object   to   remote
+                                designator.   If the remote designator is
+                                -1, links from the object to  all  remote
+                                designators are cleared.
+
+                    B2(TL%EOR)  Establish  link  from  object  to  remote
+                                designator.
+
+                    B3(TL%ERO)  Establish  link  from  remote  to  object
+                                designator.
+
+
+                    B4(TL%SAB)  Examine  B5(TL%ABS)  to   determine   the
+                                setting of the object designator's accept
+                                link bit.  If this  bit  is  off,  B5  is
+                                ignored.
+
+                    B5(TL%ABS)  Set the object designator's  accept  link
+                                bit.   When  B4(TL%SAB) is on, the object
+                                designator is accepting links  if  TL%ABS
+                                is  on  and  refusing  links if TL%ABS is
+                                off.
+
+                    B6(TL%STA)  Examine  B7(TL%AAD)  to   determine   the
+                                setting of the object designator's accept
+                                advice bit.  If this bit is  off,  B7  is
+                                ignored.
+
+                    B7(TL%AAD)  Set the object designator's accept advice
+                                bit.   When  B6(TL%STA) is on, the object
+                                designator is accepting advice if  TL%AAD
+                                is  on  and  refusing advice if TL%ADD is
+                                off.
+
+                    B18-B35     Object designator
+                    (TL%OBJ)
+
+              AC2:  remote designator
+
+   RETURNS     +1:  failure, error code in AC1
+
+               +2:  success
+
+   The object and remote designators must be either  4xxxxx  or  -1.   An
+   object designator of -1 indicates the controlling terminal.
+
+   The following restrictions apply if the process does  not  have  WHEEL
+   capability enabled:
+
+        1.  The object designator must specify  a  terminal  assigned  to
+            this job.
+
+        2.  The object-to-remote link must be specified before or at  the
+            same time as the remote-to-object link.
+
+   If the accept bit of the remote designator is not set, a link from the
+   object-to-remote  designator  causes  the  remote designator's bell to
+   ring.  If the remote designator does not set the accept bit within  15
+   seconds, the TLINK call returns an error.
+
+   When terminals are linked together and a character  is  typed  on  one
+   terminal,  the  same  ASCII character code is sent to all terminals in
+   the link.  The character always appears in the output buffers  of  all
+   terminals  regardless of the current mode of each individual terminal.
+   The character is sent according to the data mode and terminal type  of
+   the  terminal  that  originates  the  character.   For example, if one
+   terminal originates a TAB and has mechanical tabs set,  all  terminals
+   in the link receive the ASCII code for a TAB in their output buffers.
+
+   TLINK ERROR MNEMONICS:
+
+   DESX1:    invalid source/destination designator
+
+   TLNKX1:   illegal to set remote to object before object to remote
+
+
+   TLNKX2:   link was not received within 15 seconds 
+
+   TLNKX3:   links full
+
+   TTYX01:   line is not active
+
+
+File: JSYSSZ	Node: TMON	Previous: TLINK	Next: TTMSG	Up: Top
+
+                              TMON     JSYS 7
+
+
+   Tests various monitor flags.
+
+   ACCEPTS IN AC1:  function code
+
+   RETURNS     +1:  always, value of the function in AC2
+
+   The codes for the functions are as follows:
+
+        Code      Symbol              Meaning
+
+         0        .SFFAC    FACT files entries are allowed.
+         1        .SFCDE    CHECKD found errors.
+         2        .SFCDR    CHECKD is running.
+         3        .SFMST    Manual start is in progress.
+         4        .SFRMT    Remote LOGINS (dataset lines) are allowed.
+         5        .SFPTY    PTY LOGINS are allowed.
+         6        .SFCTY    CTY LOGINS are allowed.
+         7        .SFOPR    Operator is in attendance.
+        10        .SFLCL    Local LOGINS (hardwired lines) are allowed.
+        11        .SFBTE    Bit table errors found on startup.
+        12        .SFCRD    Users  can  change  nonprivileged   directory
+                            parameters with the CRDIR monitor call.
+        13        .SFNVT    ARPANET terminal LOGINs are allowed.
+        21        .SFUSG    USAGE file entries are allowed.
+        22        .SFFLO    Disk  latency  optimization  using  the  RH20
+                            backup register is enabled.
+        44        .SFNTN    ARPANET is on.
+        45        .SFNDU    ARPANET will be reinitialized if it is down.
+        46        .SFNHI    ARPANET host table will be initialized.
+        47        .SFTMZ    Local time zone is set.
+        50        .SFLHN    Local ARPANET host number is set.
+|       51        .SFAVR    Account validation is running on this system.
+|       52        .SFSTS    Status reporting is enabled
+
+   Functions 0 through 22 represent a specific monitor  flag  bit.   When
+   the value of the function returned in AC2 is 1, the flag corresponding
+   to the function is set.  When the value returned is 0, the flag is not
+   set.
+
+   The SMON monitor call can be used to set various monitor flags.
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   TMON ERROR MNEMONICS:
+
+   TMONX1:   invalid TMON function
+
+
+File: JSYSSZ	Node: TTMSG	Previous: TMON	Next: TWAKE	Up: Top
+
+                             TTMSG     JSYS 775
+
+
+   Sends a message to a specified terminal or  to  all  terminals.   This
+   monitor call requires the process to have WHEEL or OPERATOR capability
+   enabled.  The TTMSG call is a temporary call and may not be defined in
+   future releases.
+
+   ACCEPTS IN AC1:  400000 + TTY number, or -1 to send to all terminals
+
+              AC2:  pointer to string in caller's  address  space  to  be
+                    sent
+
+   RETURNS     +1:  always
+
+   The TTMSG monitor call is a no-op if the specified terminal  does  not
+   exist.
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   TTMSG ERROR MNEMONICS:
+
+   GTDIX1:   WHEEL or OPERATOR capability required
+
+
+File: JSYSSZ	Node: TWAKE	Previous: TTMSG	Next: UFPGS	Up: Top
+
+                             TWAKE     JSYS 771
+
+
+   Wakes the specified job that is blocked because of the execution of  a
+   THIBR call.  If more than one process in a job is blocked because of a
+   THIBR call, execution  of  the  TWAKE  call  causes  any  one  of  the
+   processes  to be awakened.  The TWAKE call is a temporary call and may
+   not be defined in future releases.
+
+   ACCEPTS IN AC1:  0 in the left half, and number of job to be  awakened
+                    in the right half
+
+   RETURNS     +1:  failure, error code in AC1
+
+               +2:  success,  signal  sent.    Job   will   be   awakened
+                    immediately  if blocked by a THIBR call or as soon as
+                    next THIBR call is executed.
+
+   TWAKE ERROR MNEMONICS:
+
+   ATACX1:   invalid job number
+
+
+File: JSYSSZ	Node: UFPGS	Previous: TWAKE	Next: USAGE	Up: Top
+
+                             UFPGS     JSYS 525
+
+
+   Updates pages of the specified file.  This monitor  call  is  used  to
+   guarantee  that  a  certain sequence of file pages has been written to
+   the disk before any other operation is performed.
+
+   ACCEPTS IN AC1:  JFN in the left half, and file  page  number  of  the
+                    first page to be updated in the right half
+
+              AC2:  count of number of sequential pages to update
+
+   RETURNS     +1:  failure, error code in AC1
+
+               +2:  success, all modified pages are written to disk.  The
+                    FDB is updated, if necessary.
+
+   The UFPGS call causes the process to block until  all  writes  to  the
+   disk are completed.
+
+   UFPGS ERROR MNEMONICS:
+
+   UFPGX1:   file is not opened for write
+
+   DESX3:    JFN is not assigned
+
+   DESX4:    invalid use of terminal designator or string pointer
+
+   DESX7:    JFN cannot refer to output wildcard designators
+
+   DESX8:    file is not on disk
+
+   LNGFX1:   page table does not exist and file not open for write
+
+   IOX11:    quota exceeded or disk full
+
+
+File: JSYSSZ	Node: USAGE	Previous: UFPGS	Next: USRIO	Up: Top
+
+                             USAGE     JSYS 564
+
+
+   Controls accounting on the system by writing entries into the system's
+   data  file.   All  entries  to  the data file are made with this call.
+   Examples of the types of entries entered into the data file  are  disk
+   storage  usage, input and output spooler usage, job session entry, and
+   date and time changes.
+
+   The file written by the USAGE call is  an  intermediate  binary  file,
+   which  is converted by a system program to the final ASCII file.  Each
+   entry in the final file is at least  two  records  long,  each  record
+   being  defined  as  a  string  of  ASCII  characters terminated with a
+   line-feed character.   The  first  record  contains  system  and  file
+   information;   its  format  is  the  same for all entries.  Subsequent
+   records contain data pertaining to  the  entry;   their  formats  vary
+   according to the particular data being entered.
+
+   The USAGE monitor call requires the process to have WHEEL or  OPERATOR
+   capability enabled.
+
+   Refer to the DECSYSTEM-20  USAGE  File  Specification  for  additional
+   information on the system's data file.
+
+
+   ACCEPTS IN AC1:  function code
+
+              AC2:  function argument or  address  of  record  descriptor
+                    block
+
+   RETURNS     +1:  always
+
+   The available functions are as follows:
+
+        Code    Symbol                   Meaning
+
+         0      .USENT    Write an entry into  the  system's  data  file.
+                          AC2   contains   the   address  of  the  record
+                          descriptor block.
+
+         1      .USCLS    Close the system's data file,  which  is  named
+                          PS:<ACCOUNTS>SYSTEM-DATA.BIN.    No  additional
+                          entires are recorded into this file and  a  new
+                          SYSTEM-DATA.BIN   is   opened   for  subsequent
+                          entries.
+
+         2      .USCKP    Perform  a  checkpoint  of  all   jobs.    Data
+                          recorded   during  a  checkpoint  includes  the
+                          billable data  (e.g.,  connect  time,  runtime)
+                          accumulated  during  the  job session, starting
+                          from time of login  or  the  last  SET  ACCOUNT
+                          command and ending at the time this function is
+                          performed.  The data collected on  a  LOGIN  or
+                          SET ACCOUNT command is entered into the session
+                          entry in the data file.  The default checkpoint
+                          time interval is 10 minutes.
+
+         3      .USLGI    Initialize a  checkpoint  entry  for  the  job.
+                          This  function  is used internally by the LOGIN
+                          monitor call.  AC2 contains the address of  the
+                          record descriptor block.
+
+         4      .USLGO    Terminate the checkpoint entry for the job  and
+                          write  an  entry  into  the system's data file,
+                          which  is  named  PS:<ACCOUNTS>SYSTEM-DATA.BIN.
+                          This  function  is used internally by the LGOUT
+                          monitor call.  AC2 contains the address of  the
+                          record descriptor block.
+
+         5      .USSEN    Terminate the current session, write  an  entry
+                          into  the  system's  data  file, which is named
+                          PS:<ACCOUNTS>SYSTEM-DATA.BIN, and initialize  a
+                          new   checkpoint   entry  for  the  job.   This
+                          function  is  used  internally  by  the   CACCT
+                          monitor  call.  AC2 contains the address of the
+                          record descriptor block.
+
+         6      .USCKI    Set the checkpoint time interval.  AC2 contains
+                          the interval in minutes.
+
+         7      .USENA    Install the accounting data base from the  file
+                          named  PS:<SYSTEM>ACCOUNTS-TABLE.BIN  into  the
+                          running monitor.  The ACTGEN program uses  this
+                          file to generate the list of valid accounts.
+
+
+   The record descriptor block, whose address is given in AC2, is set  up
+   by  the  UITEM. macro defined in ACTSYM.MAC.  (Refer to Appendix B for
+   the definition of the UITEM. macro.)  The names of  all  data  entries
+   are generated by this macro.  The USENT. macro is used to generate the
+   header of the record descriptor block.
+
+   The format of the data generated by the USAGE call is a list of  items
+   describing  the  entries  in  a single record.  This list has a header
+   word containing the version numbers and the type of entry.   The  data
+   words  follow  this  header with two words per data item.  The list is
+   terminated with a zero word.
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   USAGE ERROR MNEMONICS:
+
+   CAPX1:    WHEEL or OPERATOR capability required
+
+   ARGX02:   invalid function
+
+   USGX01:   invalid USAGE entry type code
+
+   USGX02:   item not found in argument list
+
+   USGX03:   default item not allowed
+
+
+File: JSYSSZ	Node: USRIO	Previous: USAGE	Next: UTEST	Up: Top
+
+                             USRIO     JSYS 310
+
+
+   Places the user program into user  I/O  mode  in  order  that  it  can
+   execute  various  hardware  I/O  instructions.   The  user IOT flag is
+   turned on in the PC of the running process.   The  program  can  leave
+   user I/O mode by executing a JRSTF (e.g., JRSTF @[.+1]).
+
+   RETURNS     +1:  failure, error code in AC1
+
+               +2:  success, user IOT flag is set
+
+   The USRIO monitor call requires that the process have WHEEL, OPERATOR,
+   or MAINTENANCE capability enabled.
+
+   USRIO ERROR MNEMONICS:
+
+   CAPX2:    WHEEL, OPERATOR, or MAINTENANCE capability required
+
+
+File: JSYSSZ	Node: UTEST	Previous: USRIO	Next: UTFRK	Up: Top
+
+                             UTEST     JSYS 563
+
+
+   Provides a method for determining if every instruction in a section of
+   monitor  code actually gets executed.  This monitor call does not test
+   the code by executing it;  it confirms that a  test  of  the  code  is
+   complete  by  reporting the instructions that were executed during the
+   test.
+
+   This monitor call  requires  the  process  to  have  WHEEL  capability
+   enabled.
+
+   ACCEPTS IN AC1:  function code in the left half,  and  length  of  the
+                    argument block in the right half.
+
+              AC2:  address of the argument block
+
+   RETURNS     +1:  always
+
+   The available functions are as follows:
+
+        Code    Symbol                   Meaning
+
+         0      .UTSET    Start testing of the code.
+
+         1      .UTCLR    Stop testing of the code and update the bit map
+                          in the argument block.
+
+   The format of the argument block is as follows:
+
+        Word    Symbol                   Meaning
+
+         0      .UTADR    Address of the beginning of the section of code
+                          that is to be tested.
+
+         1      .UTLEN    Length of section of code that is to be tested.
+
+         2      .UTMAP    Start of bit map representing the  instructions
+                          that  are  to be tested in the section of code.
+                          This map contains one bit for each location  in
+                          the  section.   If  a bit is on in the map, the
+                          corresponding instruction is to be tested.   If
+                          a  bit is off, the corresponding instruction is
+                          not to be tested.
+
+                          Locations that  contain  data  and  that  would
+                          cause the section of code to execute improperly
+                          if that data were changed should not be tested.
+
+
+   Internally, a copy of the code being tested is  placed  in  a  buffer,
+   which  is  dynamically locked down during execution of the UTEST call.
+   The system allows any monitor routine  to  be  tested  as  long  as  a
+   pushdown  stack  pointed  to by AC P (i.e., 17) is set up whenever the
+   routine is called.
+
+   After execution of the .UTCLR function, the  bit  map  is  changed  to
+   reflect  the instructions that were actually executed during the test.
+   If a bit is on in the map, the corresponding instruction was executed.
+   If a bit is off, the corresponding instruction was not executed.
+
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   UTEST ERROR MNEMONICS:
+
+   CAPX3:    WHEEL capability required
+
+   UTSTX1:   invalid function code
+
+   UTSTX2:   area of code too large to test
+
+   UTSTX3:   UTEST facility in use by another process
+
+
+File: JSYSSZ	Node: UTFRK	Previous: UTEST	Next: VACCT	Up: Top
+
+                             UTFRK     JSYS 323
+
+
+   Resumes the execution of a process that  is  suspended  because  of  a
+   monitor  call  intercept.  The instruction where the execution resumes
+   depends on the current PC word of the suspended process.   To  prevent
+   the  suspended  process  from executing the call, the superior process
+   handling the intercept can change the PC word (via the SFORK or  SFRKV
+   call).   Then  on  execution  of the UTFRK call, the suspended process
+   continues at the  new  PC.   If  the  superior  process  handling  the
+   intercept  does  not change the PC word of the suspended process, then
+   the next superior process intercepting that  particular  monitor  call
+   will receive the interrupt.
+
+   Refer to the TOPS-20AN Monitor Calls User's Guide for an overview  and
+   description of the monitor call intercept facility.
+
+   ACCEPTS IN AC1:  flag bits in the left half, and process handle in the
+                    right half
+
+   RETURNS     +1:  always
+
+   The flag bit that can be given in AC1 is as follows:
+
+        Bit     Symbol                   Meaning
+
+         0      UT%TRP    Cause  a  failure  return  for  the   suspended
+                          process.    This  return  will  be  either  the
+                          generation of an illegal instruction  interrupt
+                          or   the   processing  of  an  ERJMP  or  ERCAL
+                          instruction.
+
+   The UTFRK monitor call is a no-op if
+
+        1.  The process handle given is valid but the  process  specified
+            is not suspended because of a monitor call intercept.
+
+        2.  The caller  is  not  one  of  the  processes  monitoring  the
+            suspended  process  and  therefore is not permitted to resume
+            the process.
+
+
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   UTFRK ERROR MNEMONICS:
+
+   FRKHX1:   invalid process handle
+
+   FRKHX2:   illegal to manipulate a superior process
+
+   FRKHX3:   invalid use of multiple process handle
+
+
+File: JSYSSZ	Node: VACCT	Previous: UTFRK	Next: WAIT	Up: Top
+
+                             VACCT     JSYS 566
+
+
+   Verifies accounts by validating the supplied  account  for  the  given
+   user.
+
+   ACCEPTS IN AC1:  36-bit user number, 36-bit directory number, or -1 to
+                    validate the account for the current user
+
+              AC2:  pointer to account string
+
+   RETURNS     +1:  always, with updated pointer in AC2
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   VACCT ERROR MNEMONICS:
+
+   VACCX0:   invalid account
+
+   VACCX1:   account string exceeds 39 characters
+
+   VACCX2:   account has expired
+
+   MONX02:   insufficient system resources (JSB full)
+
+   DELFX6:   internal format of directory is incorrect
+
+   DIRX1:    invalid directory number
+
+   DIRX3:    internal format of directory is incorrect
+
+   STRX01:   structure is not mounted
+
+   OPNX9:    invalid simultaneous access
+
+   OPNX16:   file has bad index block
+
+
+File: JSYSSZ	Node: WAIT	Previous: VACCT	Next: WFORK	Up: Top
+
+                             WAIT     JSYS 306
+
+
+   Dismisses the current process indefinitely and does  not  return.   If
+   the software interrupt system is enabled for this process, the process
+   can be interrupted out of the wait state.  Upon execution of  a  DEBRK
+   call,  the  process  continues to wait until the next interrupt unless
+   the interrupt routine changes the PC word.  In this case, the  process
+   resumes  execution  at  the new PC location.  If the interrupt routine
+   changes the PC word, it must set the user-mode bit (bit 5) of  the  PC
+   word.  (Refer to Section 2.5.7.)
+1
+File: JSYSSZ	Node: WFORK	Previous: WAIT	Up: Top
+
+                             WFORK     JSYS 163
+
+
+   Causes the  current  process  to  wait  for  an  inferior  process  to
+   terminate (voluntarily or involuntarily).
+
+   ACCEPTS IN AC1:  process handle, or -4 in the right half to  wait  for
+                    any one of the inferior processes to terminate
+
+   RETURNS     +1:  always,  when  one   of   the   specified   processes
+                    terminates
+
+   This call returns immediately if the specified process or one  of  the
+   inferior processes has already terminated.
+
+   Generates an illegal instruction interrupt on error conditions below.
+
+   WFORK ERROR MNEMONICS:
+
+   FRKHX1:   invalid process handle
+
+   FRKHX2:   illegal to manipulate a superior process
+
+TAG TABLE:
+File: JSYSSZ	Node: Top26
+File: JSYSSZ	Node: SACTF14030
+File: JSYSSZ	Node: SAVE15515
+File: JSYSSZ	Node: SCTTY17102
+File: JSYSSZ	Node: SCVEC21746
+File: JSYSSZ	Node: SDSTS24317
+File: JSYSSZ	Node: SDVEC25291
+File: JSYSSZ	Node: SETER26345
+File: JSYSSZ	Node: SETJB27085
+File: JSYSSZ	Node: SETNM30032
+File: JSYSSZ	Node: SETSN30476
+File: JSYSSZ	Node: SEVEC31681
+File: JSYSSZ	Node: SFACS32500
+File: JSYSSZ	Node: SFBSZ33407
+File: JSYSSZ	Node: SFCOC34334
+File: JSYSSZ	Node: SFMOD35414
+File: JSYSSZ	Node: SFORK36503
+File: JSYSSZ	Node: SFPOS37316
+File: JSYSSZ	Node: SFPTR38165
+File: JSYSSZ	Node: SFRKV39299
+File: JSYSSZ	Node: SFTAD40636
+File: JSYSSZ	Node: SFUST42899
+File: JSYSSZ	Node: SIBE44686
+File: JSYSSZ	Node: SIN46037
+File: JSYSSZ	Node: SINR49878
+File: JSYSSZ	Node: SIR53658
+File: JSYSSZ	Node: SIRCM54824
+File: JSYSSZ	Node: SIZEF56418
+File: JSYSSZ	Node: SJPRI57477
+File: JSYSSZ	Node: SKPIR58565
+File: JSYSSZ	Node: SMON59344
+File: JSYSSZ	Node: SNOOP62116
+File: JSYSSZ	Node: SOBE69725
+File: JSYSSZ	Node: SOBF70714
+File: JSYSSZ	Node: SOUT71545
+File: JSYSSZ	Node: SOUTR74917
+File: JSYSSZ	Node: SPACS77679
+File: JSYSSZ	Node: SPJFN79408
+File: JSYSSZ	Node: SPLFK80288
+File: JSYSSZ	Node: SPOOL81550
+File: JSYSSZ	Node: SPRIW86083
+File: JSYSSZ	Node: SSAVE86703
+File: JSYSSZ	Node: STAD89860
+File: JSYSSZ	Node: STCMP90552
+File: JSYSSZ	Node: STDEV92373
+File: JSYSSZ	Node: STI93085
+File: JSYSSZ	Node: STIW94561
+File: JSYSSZ	Node: STO98653
+File: JSYSSZ	Node: STPAR99686
+File: JSYSSZ	Node: STPPN101335
+File: JSYSSZ	Node: STSTS102867
+File: JSYSSZ	Node: STTYP103747
+File: JSYSSZ	Node: SWJFN104794
+File: JSYSSZ	Node: SYERR105477
+File: JSYSSZ	Node: SYSGT106247
+File: JSYSSZ	Node: TBADD107237
+File: JSYSSZ	Node: TBDEL107997
+File: JSYSSZ	Node: TBLUK108714
+File: JSYSSZ	Node: TEXTI115183
+File: JSYSSZ	Node: TFORK125999
+File: JSYSSZ	Node: THIBR131625
+File: JSYSSZ	Node: TIME132186
+File: JSYSSZ	Node: TIMER132788
+File: JSYSSZ	Node: TLINK136975
+File: JSYSSZ	Node: TMON141049
+File: JSYSSZ	Node: TTMSG143275
+File: JSYSSZ	Node: TWAKE144098
+File: JSYSSZ	Node: UFPGS144992
+File: JSYSSZ	Node: USAGE146201
+File: JSYSSZ	Node: USRIO151639
+File: JSYSSZ	Node: UTEST152364
+File: JSYSSZ	Node: UTFRK155330
+File: JSYSSZ	Node: VACCT157510
+File: JSYSSZ	Node: WAIT158530
+File: JSYSSZ	Node: WFORK159213
+
+END OF TAG TABLE

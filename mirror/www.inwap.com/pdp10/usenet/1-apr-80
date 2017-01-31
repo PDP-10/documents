@@ -1,0 +1,69 @@
+Article 4735 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!news-xfer.newsread.com!netaxs.com!newsread.com!netaxs.newsread.com!usenet
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: April 1, 1980
+Date: Thu, 01 Apr 1999 13:52:56 -0400
+Organization: Trailing Edge Technology
+Lines: 16
+Message-ID: <37037A38.4977B622@trailing-edge.com>
+NNTP-Posting-Host: trailing-edge.wdn.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.0     DEC 3000 Model 300L)
+Xref: news3.best.com alt.folklore.computers:127314 alt.sys.pdp10:4735
+
+XX ITS.1168. PWORD.1733.
+TTY 116
+3. Lusers, Fair Share = 23%
+Due to popular demand, TWENEX has been flushed in favor of
+ITS.  Please update your programs.
+
+*kmp
+*login
+You must type a ":" before commands
+*:login kmp
+Password:
+April Fool!
+ Job 24 on TTY116 1-Apr-80 13:12
+ Previous login: 1-Apr-80 12:19 from host MIT-MC
+ End of LOGIN.CMD.4
+@
+
+
+Article 4736 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!141.211.144.13.MISMATCH!cliffs.rs.itd.umich.edu!cpk-news-hub1.bbnplanet.com!news.gtei.net!firehose.mindspring.com!fbi.gov
+From: fbi.gov@orion-com.com (Joe Thompson)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: April 1, 1980
+Date: Thu, 01 Apr 1999 22:42:37 -0500
+Organization: Orion Computer Consulting
+Lines: 18
+Message-ID: <fbi.gov-0104992242380001@user-37ka4hq.dialup.mindspring.com>
+References: <37037A38.4977B622@trailing-edge.com>
+NNTP-Posting-Host: cf.45.12.3a
+X-Server-Date: 2 Apr 1999 03:42:32 GMT
+X-Newsreader: MT-NewsWatcher 2.4.4
+Xref: news3.best.com alt.folklore.computers:127361 alt.sys.pdp10:4736
+
+In article <37037A38.4977B622@trailing-edge.com>, Tim Shoppa
+<shoppa@trailing-edge.com> wrote:
+
+> XX ITS.1168. PWORD.1733.
+> TTY 116
+> 3. Lusers, Fair Share = 23%
+> Due to popular demand, TWENEX has been flushed in favor of
+> ITS.  Please update your programs.
+
+One of the fortune entries on a Linux box I have an account on says "Unix
+is being flushed in favor of TOPS-20.  Please update your programs." --
+Joe
+-- 
+         Joe Thompson | http://kensey.home.mindspring.com/
+fbi.gov@orion-com.com | PGP key: Finger joe-jobs@mindspring.com
+ AFU Axolotl of Scorn | 0- He-Who-Grinds-the-Unworthy
+"[W]here are we going to get 100,000 pairs of lederhosen at this
+ hour?" -- ptomblin
+
+

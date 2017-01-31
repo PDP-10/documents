@@ -1,0 +1,57 @@
+Article 5041 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!newsfeed.enteract.com!news.enteract.com!not-for-mail
+From: David Scheidt <dscheidt@enteract.com>
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: 6 May 1999 02:52:37 GMT
+Organization: EnterAct L.L.C. Turbo-Elite News Server
+Lines: 42
+Message-ID: <7gr05l$6o1$1@eve.enteract.com>
+References: <371be3e4.0@newsfeed.one.net> <7gn06k$7hn$1@eve.enteract.com> <7gqle7$h6j$1@shell3.ba.best.com> <7gqmbp$r3s$1@eve.enteract.com> <7gqtu5$s3j@weyl.math.psu.edu>
+NNTP-Posting-Host: 207.229.143.42
+User-Agent: tin/pre-1.4-19990216 ("Styrofoam") (UNIX) (FreeBSD/3.1-STABLE (i386))
+Xref: news3.best.com alt.folklore.computers:129606 alt.sys.pdp10:5041
+
+In alt.folklore.computers Alexander Viro <viro@weyl.math.psu.edu> wrote:
+: In article <7gqmbp$r3s$1@eve.enteract.com>,
+: David Scheidt  <dscheidt@enteract.com> wrote:
+:>
+:>No.  You clearly missed mine.  I have never needed an ext2ed like utility on 
+:>a FFS-like filesystem.  
+
+: Then do your friggin' homework and find the papers describing the design of
+: ext2. It is derived from FFS. Or do the same homework by getting *any*
+: *BSD and comparing UFS and EXT2 drivers. Ferchrissake, they share 3/4 of
+: code. Differences between EXT2 and UFS being:
+: 	a) EXT2 doesn't use fragments
+: 	b) EXT2 keeps names in directory entries without '\0'
+: 	c) EXT2 has slightly different order of fields in on-disk inodes
+: and superblock.
+
+I didn't think EXT2 used cylinder groups, either.
+`
+: Sheesh... If you want to start old sync vs. async flamewar - at least take
+: care to RTFDejaNews and learn WTF it is about.
+
+The syncronous metadata writing are a very important part of FFS stability.[1]
+I have spent much too much time fixing ext2fs filesystems that have died 
+while doing huge amounts of file creation and deletion to be convinced 
+otherwise.  I have never seen the behavior on FFS FSes mounted sync, and have 
+with ext2fs, and ffs mounted async.
+
+David
+
+[1] Gregory R. Ganger and Yale N. Patt wrote a paper a couple of years ago
+which explained that you needn't actually do the metadata syncronously, but
+merely in dependent order.  Their paper is available at 
+http://www.ece.cmu.edu/~ganger/papers/CSE-TR-254-95/.  An implementation of 
+this by Kirk McKusick is available in FreeBSD 3.0 and later (and probably 
+elsewhere).  I haven't had any spectacular system failures since I started 
+to use it, haven't heard of many problems with it. 
+
+-- 
+David Scheidt <dscheidt@enteract.com>
+Large fibreglass fruits are much the same the world over.
+                                                    -- Vicki Parslow Stafford
+
+

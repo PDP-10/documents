@@ -1,0 +1,259 @@
+Article 4282 of alt.sys.pdp10:
+Subject: Re: An illuminated PDP10 needed for a movie project.
+From: aek@spies.com (Al Kossow)
+Newsgroups: alt.sys.pdp10
+References: <7081a1$pvi$1@shell3.ba.best.com>
+Originator: aek@spies.com
+NNTP-Posting-Host: goonsquad.spies.com
+Message-ID: <36278b11.0@news.spies.com>
+Date: 16 Oct 1998 11:06:09 -0800
+X-Trace: 16 Oct 1998 11:06:09 -0800, goonsquad.spies.com
+Lines: 25
+Path: news3.best.com!news1.best.com!nntprelay.mathworks.com!news.sgi.com!news.spies.com!spies.com!aek
+Xref: news3.best.com alt.sys.pdp10:4282
+
+From article <7081a1$pvi$1@shell3.ba.best.com>, by inwap@best.com (Smith and O'Halloran):
+> I received this message today.  Can anyone help?
+> 
+>>From: "David A. Nelson" <davidn@lexsyscorp.com>
+>>To: <js-cgi@inwap.com>
+>>Subject: Need to buy or rent a PDP10
+>>Date: Tue, 13 Oct 1998 19:49:24 -0700
+>>
+>>I need a PDP10  for a movie project.  Doesn't need to work, but needs
+>>to light up...  Can you help?
+>>David Nelson
+>>Lexsys Corporation
+>>425-844-3898
+> 
+
+FWIW, I was contacted by this person about buying or renting one of my Altos.
+I said I'd do it gratis for screen credit, and they wouldn't do it.
+
+I think they would be better off building a wooden box with blinking lights
+in it if all they want is a movie prop. I doubt they are going to find anyone
+willing to sell or rent them a KA or KI for this purpose.
+
+I wonder what kind of movie needs an Alto, DG Nova, and a 10..
+
+
+
+
+Article 1552 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc03.blue.aol.com!newsfeed.skycache.com!Cidera!cyclone-0.nyroc.rr.com!chnws02.mediaone.net!chnws05.ne.mediaone.net!24.128.8.70!typhoon.ne.mediaone.net.POSTED!not-for-mail
+Newsgroups: alt.sys.pdp10
+Subject: Re: 72-bit pdp-10
+References: <39E39DFA.7C0D8344@bartek.net> <8se2mv$2dv8$1@nntp1.ba.best.com>
+From: Ric Werme <werme@nospam.mediaone.net>
+X-Newsreader: NN version 6.5.0 CURRENT #119
+Lines: 32
+Message-ID: <rGPG5.44510$pu4.4844129@typhoon.ne.mediaone.net>
+Date: Tue, 17 Oct 2000 03:27:19 GMT
+NNTP-Posting-Host: 24.91.12.32
+X-Complaints-To: abuse@mediaone.net
+X-Trace: typhoon.ne.mediaone.net 971753239 24.91.12.32 (Mon, 16 Oct 2000 23:27:19 EDT)
+NNTP-Posting-Date: Mon, 16 Oct 2000 23:27:19 EDT
+Organization: Road Runner
+Xref: nntp1.ba.best.com alt.sys.pdp10:1552
+
+inwap@best.com (Joe Smith) writes:
+
+>In article <39E39DFA.7C0D8344@bartek.net>,
+>Arthur Krewat  <krewat@bartek.net> wrote:
+>>	What would it take to make a 72-bit pdp-10, that would be able to run
+>>36-bit code and have the extended addressing of 72-bits of address?
+>>
+>>	This might be a pipe dream, but please, let's hash this out, at least
+>>as a mental exercise...
+>>	Imagine 72-bits of virtual addressing... blows away the Alpha, Merced,
+>>Ultra Sparc, PA-RISC, etc. etc
+
+>It would probably be more practical to implement 36-bit word addressing.
+>This would be the equivalent of 38-bit byte addressing.  From what I've
+>seen, the majority of CPUs using more than 32 bits today are really
+>utilizing only about 34 bits of virtual address space.
+
+I'd have to check the Alpha architecture book, but I think current Alphas
+with their 8 KB page size only have a 43 bit virtual space.  Doubling
+the page size means doubling the # pointers in a page table and an
+extra bit for each of the three page tables an address traverses.
+So when Alpha has a 64 KB page, it will have a 55 bit virtual
+address space.
+
+Celera Genomics has a system with 64 GB of RAM, that's 36 bits of
+bytes, a -10 would only need about 34 address bits to cover 64 GB.
+
+	-Ric Werme
+--
+Ric Werme                            | werme@nospam.mediaone.net
+http://people.ne.mediaone.net/werme  |       ^^^^^^^ delete
+             Vote www.harrybrowne.com for President!
+
+
+Article 1555 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!feeder.via.net!enews.sgi.com!fido.engr.sgi.com!rigden.engr.sgi.com!rpw3
+From: rpw3@rigden.engr.sgi.com (Rob Warnock)
+Newsgroups: alt.sys.pdp10
+Subject: Re: 72-bit pdp-10
+Date: 17 Oct 2000 11:07:59 GMT
+Organization: Silicon Graphics Inc., Mountain View, CA
+Lines: 30
+Message-ID: <8shbuf$ade88$1@fido.engr.sgi.com>
+References: <39E39DFA.7C0D8344@bartek.net> <8se2mv$2dv8$1@nntp1.ba.best.com> <rGPG5.44510$pu4.4844129@typhoon.ne.mediaone.net>
+NNTP-Posting-Host: rigden.engr.sgi.com
+X-Trace: fido.engr.sgi.com 971780879 10926344 163.154.34.115 (17 Oct 2000 11:07:59 GMT)
+X-Complaints-To: news@fido.engr.sgi.com
+NNTP-Posting-Date: 17 Oct 2000 11:07:59 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:1555
+
+Ric Werme  <werme@nospam.mediaone.net> wrote:
++---------------
+| >the majority of CPUs using more than 32 bits today are really
+| >utilizing only about 34 bits of virtual address space.
+...
+| Celera Genomics has a system with 64 GB of RAM, that's 36 bits of
+| bytes, a -10 would only need about 34 address bits to cover 64 GB.
++---------------
+
+Current-generation SGI ccNUMA systems support up to a terabyte of main RAM
+<URL:http://www.sgi.com/origin/3000/overview.html>, which is 40 bits of
+real memory address. [The R10k CPU chip provides 64 bits of virtual address
+(well, 63 bits usable in user mode) and 48(?) bits of useful physical
+address out to the pins, and the Origin 3000 architecture can use up to
+44(?) of them with the current support ASICs.]  And, yes, we've shipped
+systems that big (512 CPU, 1TB RAM) already, and have promised NASA one
+twice as big <URL:http://www.ecnmag.com/ecnmag/news/4384-236NewsDetail.asp>.
+
+So 36 bits of byte address for physical memory definitely sounds too small,
+to me at least...  [And *way* too small for virtual addresses!!]
+
+
+-Rob
+
+-----
+Rob Warnock, 31-2-510		rpw3@sgi.com
+Network Engineering		http://reality.sgi.com/rpw3/
+Silicon Graphics, Inc.		Phone: 650-933-1673
+1600 Amphitheatre Pkwy.		PP-ASEL-IA
+Mountain View, CA  94043
+
+
+Article 1602 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!feeder.qis.net!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: 72-bit pdp-10
+Date: Sun, 22 Oct 2000 09:21:48 -0400
+Lines: 18
+Message-ID: <39F2E9EC.CC72F65B@MA.UltraNet.Com>
+References: <39E39DFA.7C0D8344@bartek.net> <8s0e87$f37$1@slb0.atl.mindspring.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: 60KDaetS+1vfavBmLQ2dYHBGWuu1YBPbuw0mZ9TlWvs=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 22 Oct 2000 13:22:38 GMT
+X-Accept-Language:  en,en-US,en-GB,es
+X-Mailer:  Mozilla 4.7 [en] (Win95; U)
+Xref: nntp1.ba.best.com alt.sys.pdp10:1602
+
+Mark Hittinger wrote:
+> 
+> Arthur Krewat <krewat@bartek.net> writes:
+> >       What would it take to make a 72-bit pdp-10, that would be able to run
+> >36-bit code and have the extended addressing of 72-bits of address?
+> >       This might be a pipe dream, but please, let's hash this out, at least
+> >as a mental exercise...
+...
+> I think a slick little 64 bit machine with a -10 like instruction set,
+> suitably widened up, would make a good box to teach assembly language
+> programming on.  Would 72 or 64 make more sense now?  Be honest! :-)
+
+If you want a pedagogical RISC system, see:
+
+http://www-cs-faculty.stanford.edu/~knuth/mmix.html
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 1785 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news2.best.com!news-hog.berkeley.edu!ucberkeley!nntp.cs.ubc.ca!news.vas-net.net!server2.netnews.ja.net!ukc!not-for-mail
+From: Adam Sampson <ats1@ukc.ac.uk>
+Newsgroups: alt.sys.pdp10
+Subject: ITS archaelogy
+Date: 29 Oct 2000 17:49:45 +0000
+Organization: University of Kent at Canterbury
+Lines: 19
+Message-ID: <87vgubbkqu.fsf@cartman.azz.net>
+NNTP-Posting-Host: stue407.ukc.ac.uk
+X-Trace: spruce.ukc.ac.uk 972841785 28267 129.12.228.7 (29 Oct 2000 17:49:45 GMT)
+X-Complaints-To: news@ukc.ac.uk
+NNTP-Posting-Date: 29 Oct 2000 17:49:45 GMT
+X-Newsreader: Gnus v5.6.45/XEmacs 21.1 - "Carlsbad Caverns"
+Xref: nntp1.ba.best.com alt.sys.pdp10:1785
+
+
+Hiya.
+
+Having downloaded the GPL release of the ITS kernel source code from
+http://pdp10.nocrew.org/its/swiss/, I noticed that the sysdoc archive
+included some mail archives in an old babyl-ish format. I therefore
+wrote a Python 2.0 script to read these in and convert them to Unix
+mbox format, attempting to preserve the original data as much as
+possible. The script's at http://pils.us-lot.org/~azz/itsmailbox.py;
+mail me if you'd prefer me to make the converted files available
+somewhere (the original files are under the GPL, so I assume it'd be
+OK).
+
+Reading email older than me is scary.
+
+-- 
+
+Adam Sampson
+azz@gnu.org
+
+
+Article 5400 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!feed.textport.net!cyclone2.usenetserver.com!telocity-west!TELOCITY!newsrump.sjc.telocity.net!parag
+Newsgroups: alt.sys.pdp10
+From: parag@pinhead.parag.codegen.com (Parag Patel)
+Subject: Re: CARDIAC machine language
+References: <XseY6.90105$F6.28079@typhoon.aracnet.com> <slrn9j5ddt.76k.parag@pinhead.parag.codegen.com> <67zY6.90155$F6.29600@typhoon.aracnet.com>
+Organization: CodeGen, Inc.
+Message-ID: <slrn9j82os.a4f.parag@pinhead.parag.codegen.com>
+User-Agent: slrn/0.9.7.0 (FreeBSD)
+Lines: 24
+X-Trace: MjQgTm9BdXRoVXNlciBURUxPQ0lUWS1SRUFERVJTIDY0LjE5NS4xOTIuMTMzICBGcmksIDIyIEp1!biAyMDAxIDIwOjIxOjAwIFBEVA==
+X-Abuse-Info: Please forward ALL headers when reporting abuse.
+X-Complaints-To: abuse@bb.directv.com
+NNTP-Posting-Date: Fri, 22 Jun 2001 20:21:00 PDT
+Date: Sat, 23 Jun 2001 03:21:00 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:5400
+
+In article <67zY6.90155$F6.29600@typhoon.aracnet.com>, Zane H. Healy wrote:
+> 
+> Interesting, I did some more searching for info.  It looks like it stood for
+> "CARDboard Illustrative Aid to Computing".  Still that's the only other
+> thing I was able to turn up.
+
+I found this link using Google: <http://www.larkfarm.com/cardiac_answers.htm>
+
+There's a list of opcodes there too (appended below), along with
+pictures of the computer itself, and an address to order one.
+
+0 INP Input
+1 CLA Clear and Add
+2 ADD Add
+3 TAC Test Accumulator contents
+4 SFT Shift
+5 OUT Output
+6 STO Store
+7 SUB Subtract
+8 JMP Jump
+9 HRS Halt and Reset
+
+
+	-- Parag Patel
+
+

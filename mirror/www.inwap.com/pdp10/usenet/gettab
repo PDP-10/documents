@@ -1,0 +1,239 @@
+Article 7962 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10,alt.folklore.computers
+Subject: Re: ooh, a *real* flamewar :)
+Date: Sun, 09 Apr 2000 09:12:59 -0400
+Lines: 52
+Message-ID: <38F081DB.F25A9D52@MA.UltraNet.Com>
+References: <AtP94.8925$7S.6211@news20.bellglobal.com> <u7lesccvn.fsf@graphics.cornell.edu> <8bjmjp$jc1$1@agate.berkeley.edu> <uya74biy8.fsf@graphics.cornell.edu> <8bo6kb$4qv$1@agate.berkeley.edu> <38E0545F.3CA21138@netinsight.se> <38E767FD.D3D0BBE8@MA.UltraNet.Com> <x8l7lefvdnv.fsf@world.std.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: 7BmXvpV7p7l5SUB2ZkMsXpGi2ELDQ0EwbQK6LottfLk=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 9 Apr 2000 13:13:09 GMT
+X-Accept-Language:  en,en-US,en-GB,es
+X-Mailer:  Mozilla 4.7 [en] (Win95; U)
+Xref: news3.best.com alt.sys.pdp8:5196 alt.sys.pdp10:7962 alt.folklore.computers:154776
+
+Christopher C Stacy wrote:
+> 
+> >>>>> On Sun, 02 Apr 2000 11:32:13 -0400, Alan H Martin ("Alan") writes:
+>  Alan> Johnny Billquist wrote:
+>  >> TOPS-20 and ITS has nothing more in common than that they run on
+>  >> more or less the same hardware. They are two different operating systems.
+>  Alan> Well, there was a *little* bit of overlap:
+>  Alan>  MOVSI   0,112
+>  Alan>  HRRI    0,11
+>  Alan>  CALLI   0,41
+>  Alan>   HALT   .
+> 
+> I am not sure what that's supposed to be about.
+> The assembler used on ITS did not define symbols named CALLI or HALT.
+
+Well, that's interesting.
+
+"
+     7) Midas does not know about any LISP symbols or
+	UUOs specially. Use them as globals until someone
+	gets around to fixing up a .INSRT file with the
+	appropriate defs.
+"
+
+> What is that supposed to decode into, and what's it do?
+
+140/	201000000112
+141/	541000000011
+142/	047000000041	; GETTAB
+143/	254200000143
+
+Returns the operating system type, encoded like this:
+
+"
+	%CNMNT==112,,11	;MONITOR TYPE
+		CN%MNX==1B0	;STRANGE MONITOR
+		CN%MNT==77B23	;DEC-KNOWN TYPE
+			.CNT10==1	;TOPS-10
+			.CNITS==2	;ITS
+			.CNTNX==3	;TENEX
+			.CNT20==4	;TOPS-20
+			.CNTCX==5	;TYMCOM-X
+		CN%MNS==77B29	;DEC SUB TYPE
+		CN%MNC==77	;CUSTOMER SUBSUB TYPE
+"
+
+Toad does indeed return 40000, which is nice.
+
+BTW, TOPS-10's sources don't mention the values 4 or 5.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 7966 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!newsfeed.mathworks.com!news!netnews.com!feed1.news.rcn.net!rcn!216-164-248-215
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10,alt.folklore.computers
+Subject: Re: ooh, a *real* flamewar :)
+Date: Sun, 09 Apr 00 12:17:22 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 27
+Message-ID: <8cq5of$8pe$4@bob.news.rcn.net>
+References: <AtP94.8925$7S.6211@news20.bellglobal.com> <u7lesccvn.fsf@graphics.cornell.edu> <8bjmjp$jc1$1@agate.berkeley.edu> <uya74biy8.fsf@graphics.cornell.edu> <8bo6kb$4qv$1@agate.berkeley.edu> <38E0545F.3CA21138@netinsight.se> <38E767FD.D3D0BBE8@MA.UltraNet.Com> <x8l7lefvdnv.fsf@world.std.com> <38F081DB.F25A9D52@MA.UltraNet.Com> <8cq353$8pe$1@bob.news.rcn.net> <38F059A4.181B050F@trailing-edge.com>
+X-Trace: s1i8mskS246bK6fFYh1crAJ5kejLmOtfpuMZj7F3TcY=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 9 Apr 2000 14:57:19 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: news3.best.com alt.sys.pdp8:5199 alt.sys.pdp10:7966 alt.folklore.computers:154782
+
+In article <38F059A4.181B050F@trailing-edge.com>,
+   Tim Shoppa <shoppa@trailing-edge.com> wrote:
+>jmfbahciv@aol.com wrote:
+>> 
+>> In article <38F081DB.F25A9D52@MA.UltraNet.Com>,
+>>    "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+<snip>
+
+>> >BTW, TOPS-10's sources don't mention the values 4 or 5.
+>> 
+>> I'm sure I put the TOPS20 value in UUOSYM.  Did you check that?
+>
+>It's in there, at least as of a TOPS-10 7.03 revision:
+>
+>http://pdp-10.trailing-edge.com/www/pdp-10/TOPS10_703A_SYS_ATPCH16_BB-FR67
+F-BB/uuosym.mac
+
+Ah, good.  For a second there I thought I was going nuts.  I
+keep forgetting that Alan isn't TOPS10 wise and keeps looking
+at wrong stuff.  I spent man-years making sure that UUOSYM
+was _up to date_ and it wasn't easy getting those monitor
+critters to cooperate :-).
+  
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 7969 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10,alt.folklore.computers
+Subject: Re: ooh, a *real* flamewar :)
+Date: Sun, 09 Apr 2000 11:35:55 -0400
+Lines: 34
+Message-ID: <38F0A35B.CC63E060@MA.UltraNet.Com>
+References: <AtP94.8925$7S.6211@news20.bellglobal.com> <u7lesccvn.fsf@graphics.cornell.edu> <8bjmjp$jc1$1@agate.berkeley.edu> <uya74biy8.fsf@graphics.cornell.edu> <8bo6kb$4qv$1@agate.berkeley.edu> <38E0545F.3CA21138@netinsight.se> <38E767FD.D3D0BBE8@MA.UltraNet.Com> <x8l7lefvdnv.fsf@world.std.com> <38F081DB.F25A9D52@MA.UltraNet.Com> <8cq353$8pe$1@bob.news.rcn.net> <38F059A4.181B050F@trailing-edge.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: TFnDtzvHARiQ9S6++wS0V6jWBSWRNHNacn6cjBpCGfk=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 9 Apr 2000 15:36:03 GMT
+X-Accept-Language:  en,en-US,en-GB,es
+X-Mailer:  Mozilla 4.7 [en] (Win95; U)
+Xref: news3.best.com alt.sys.pdp8:5202 alt.sys.pdp10:7969 alt.folklore.computers:154785
+
+Tim Shoppa wrote:
+> 
+> jmfbahciv@aol.com wrote:
+> >
+> > In article <38F081DB.F25A9D52@MA.UltraNet.Com>,
+> >    "Alan H. Martin" <AMartin@MA.UltraNet.Com> wrote:
+...
+> > >BTW, TOPS-10's sources don't mention the values 4 or 5.
+> >
+> > I'm sure I put the TOPS20 value in UUOSYM.  Did you check that?
+> 
+> It's in there, at least as of a TOPS-10 7.03 revision:
+> 
+> http://pdp-10.trailing-edge.com/www/pdp-10/TOPS10_703A_SYS_ATPCH16_BB-FR67F-BB/uuosym.mac
+
+But it's not in COMMON, which is where I didn't find it when I looked
+at the TOPS-10 sources:
+
+http://pdp-10.trailing-edge.com/pdp-10/TOPS10_704_MONITORANF_BB-X140C-SB/COMMON.MAC
+
+"
+%CNMNT: BYTE    (1)0(17)0(6)1(6)0(6)0   ;(112) TYPE OF MONITOR
+                                        ;    (1)=STRANGE
+                                        ;    (17)=RESERVED TO DEC
+                                        ;    (6)=TYPE:  1=TOPS-10
+                                        ;               2=I.T.S.
+                                        ;               3=TENEX
+                                        ;               REST RESERVED TO DEC
+                                        ;    (6)=SUBTYPE (RESERVED TO DEC)
+                                        ;    (6)=RESERVED TO CUSTOMERS
+"
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 7976 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!logbridge.uoregon.edu!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10,alt.folklore.computers
+Subject: Re: ooh, a *real* flamewar :)
+Date: Sun, 9 Apr 2000 12:56:52 -0700
+Organization: Networks & Distributed Computing
+Lines: 45
+Message-ID: <Pine.NXT.4.30.0004091233330.6017-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <AtP94.8925$7S.6211@news20.bellglobal.com> <u7lesccvn.fsf@graphics.cornell.edu> <8bjmjp$jc1$1@agate.berkeley.edu> <uya74biy8.fsf@graphics.cornell.edu> <8bo6kb$4qv$1@agate.berkeley.edu> <38E0545F.3CA21138@netinsight.se> <38E767FD.D3D0BBE8@MA.UltraNet.Com> <x8l7lefvdnv.fsf@world.std.com> <38F081DB.F25A9D52@MA.UltraNet.Com>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 955310215 28188 (None) 140.142.17.35
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: neil
+In-Reply-To: <38F081DB.F25A9D52@MA.UltraNet.Com>
+Xref: news3.best.com alt.sys.pdp8:5207 alt.sys.pdp10:7976 alt.folklore.computers:154804
+
+OK.  Here are the facts with respect to the CALLI system call, operation
+41 (also called GETTAB), argument 112,,11:
+
+TOPS-10 implements this system call, a native TOPS-10 system call, in the
+kernel.
+
+TOPS-20 implements this system call in the TOPS-10 compatibility package
+(PA1050).  PA1050 is loaded automatically when a TOPS-10 system call is
+attempted; the machine instructions for the two sets of system calls do
+not overlap.  HOWEVER, as a special case check, CALLI 41 argument 112,,11
+is implemented by the kernel (routine GETPAT in FORK.MAC or MEXEC.MAC in
+older versions) to return the .CNT20 return; and the kernel will return
+this without loading PA1050.  This is the only TOPS-10 system call
+implemented by the TOPS-20 kernel.
+
+ITS implements this system call in the TOPS-20 compatibility package
+(DECUUO).  DECUUO is not loaded automatically, because TOPS-10 and ITS
+system calls have an overlap: TOPS-10 CALL overlaps with ITS .IOT, TOPS-10
+INIT overlaps with ITS .OPEN, and TOPS-10 CALLI overlaps with ITS .ACCESS.
+Fortunately, there are equivalents in the non-overlapping ITS .CALL UUO
+for .IOT, .OPEN, and .ACCESS so DECUUO can safely steal these without
+impacting its own function.  ITS has no special case check in the kernel's
+support code for .ACCESS for this GETTAB.  DECUUO, of course, supports it,
+but a program that wants to switch system call suites based upon this will
+probably lose on ITS.
+
+On Sun, 9 Apr 2000, Alan H. Martin wrote:
+> 	%CNMNT==112,,11	;MONITOR TYPE
+> 		CN%MNX==1B0	;STRANGE MONITOR
+> 		CN%MNT==77B23	;DEC-KNOWN TYPE
+> 			.CNT10==1	;TOPS-10
+> 			.CNITS==2	;ITS
+> 			.CNTNX==3	;TENEX
+> 			.CNT20==4	;TOPS-20
+> 			.CNTCX==5	;TYMCOM-X
+> 		CN%MNS==77B29	;DEC SUB TYPE
+> 		CN%MNC==77	;CUSTOMER SUBSUB TYPE
+
+-- Mark --
+
+* RCW 19.190 notice: This email address is located in Washington State.	*
+* Unsolicited commercial email may be billed $500 per message.		*
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+

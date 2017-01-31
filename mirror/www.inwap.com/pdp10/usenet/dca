@@ -1,0 +1,747 @@
+Article 1979 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news-hog.berkeley.edu!ucberkeley!enews.sgi.com!fido.engr.sgi.com!rigden.engr.sgi.com!rpw3
+From: rpw3@rigden.engr.sgi.com (Rob Warnock)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Q: Why not (2^n)-bit?
+Date: 16 Nov 2000 12:33:13 GMT
+Organization: Silicon Graphics Inc., Mountain View, CA
+Lines: 141
+Message-ID: <8v0k69$hveg7$1@fido.engr.sgi.com>
+References: <rpNl5.131549$lU5.898906@news1.rdc1.nj.home.com> <8ti24q$rks$1@nntp1.ba.best.com> <tE6L5.1447$ml4.123503@typhoon.ne.mediaone.net> <8tsb1f$1c9s$1@nntp1.ba.best.com>
+NNTP-Posting-Host: rigden.engr.sgi.com
+X-Trace: fido.engr.sgi.com 974377993 18856455 163.154.34.115 (16 Nov 2000 12:33:13 GMT)
+X-Complaints-To: news@fido.engr.sgi.com
+NNTP-Posting-Date: 16 Nov 2000 12:33:13 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:1979
+
+Joe Smith <inwap@best.com> wrote:
++---------------
+| Toots Mutant <toots@drbanks.nospamDOTcom> wrote:
+| >...misfortune of writing a DZ-11 driver for 20F...[bad] the way a DZ-11
+| >worked. It was made even worse when that software was marketed by a company
+| >that liked to blame the software for hardware problems in their DZ
+| >emulators.
+| 
+| DCA - Digitial Communications Associates of Alpharetta, Georgia.
+| 
+| We used their terminal multiplexors on the Colorado School of Mines
+| campus.  Clusters of 4 to 8 terminals in the various buildings were
+| connected to a single box, that in turn connected the terminal to either
+| our KS-2020 or our KL-1091.  The hardware that plugged into the KS's
+| Unibus emulated a DZ11.
++---------------
+
+Yes, indeed. Actually, it emulated up to *16* DZ-11's!! (128 serial ports)
+
+I should know, since I designed that board! Or rather, I architected it
+and managed the 3-person team that designed/built it. It was basically
+a Zilog Z-80 8-bit microprocessor, with a portion of its main RAM
+used as 16 sets of emulated DZ-11 registers. Unibus PIO reads or writes
+to "DZ-11 registers" caused a DMA on the Z-80's bus into the corresponding
+portion of the Z-80's RAM, as well as an interrupt to the Z-80, which
+then compared the emulated-register portion of RAM with a backup shadow
+copy to see what had changed.
+
+Most of the "DZ-11 register" state transitions could be emulated in
+software by the Z-80, but a few things had to be handled "RIGHT NOW!"
+during the Unibus PIO (a.k.a. Z-80 DMA). Those were done with a small
+amount of external "hard" logic that masked the RAM data. That is,
+we didn't bother doing a read-modify-write DMA cycle to the RAM, we
+just stored an external hint in hard logic that modified the next
+Unibus PIO read or write.
+
+For example, it is an absolute requirement that if one Unibus read
+gets the last character in the receive FIFO, then another immediately
+following Unibus read of the receive FIFO location must *NOT* return
+the "valid" bit (bit <15>). So any such read had bit <15> AND'd with
+an external hard-logic "receive FIFO ready bit" for that DZ-11, turned
+off the "ready" bit at the end of the DMA... and also interrupted the
+Z-80. After processing the interrupt, dequeueing the next input byte
+(if any) and putting it in the "receive FIFO" offset in RAM, the Z-80
+would turn on the external "receive FIFO ready bit" for that DZ-11 again
+(which was, of course, also coupled to the DZ-11 command/status word
+and the Unibus interrupt request).
+
+That was the DCA "SmartMux/205", if I recall the model number correctly.
+A single quad-connector Unibus card, which emulated 16 DZ-11's (128 ports),
+and which connected with the outside world through a single RS-232c
+synchronous serial cable running DCA's proprietary terminal multiplexing
+protocol. [Which, note, was based on DEC's DDCMP protocol, which we had
+implemented from the public spec and shipped to customers before DEC did!
+(*Tee-hee!*)  And by the way, a tip-o'-the-hat to DEC's Stu Wecker for
+writing a *great* protocol document!!]
+
+We sold a whole bunch of those to DEC-20 and VAX customers, and later,
+to a few TOPS-10 KL customers as well (after "PDP-10" I/O busses stopped
+being available on KLs).
+
+Other miscellaneous trivia:
+
+- It was the first board DCA had ever built using the then-brand-new
+  "Multiwire" technology, wherein you gave a chip layout and a netlist
+  to the board vendor, and an automated machine laid insulated *wires*
+  down on the board (pushed into an adhesive coat). Since they were
+  insulated, wires could cross over/under each other. After all the
+  wires were laid down, some more glue was spread on, baked hard,
+  and then the holes for the chip pins and other discrete components
+  were drilled *through* the board, the glue (epoxy), and the wires,
+  and copper was additively plated onto the inside of the holes (thus
+  connecting to the wire ends exposed by the drilling). Finally, parts
+  were stuffed, and the board was wave-soldered.
+
+  Anyway, it was a new (to us) technology, and the schedule was tight,
+  so we were *very* careful about checking the design and the netlist
+  we gave them. Wonder of wonders, the very first board we got back
+  worked the first time!!! (The 2nd failed, but it was a Multiwire
+  process glitch.) All in all, some 11 or 12 of the first 15 just worked!
+
+- At the time we designed the /205, DEC had a patent on the Unibus bus
+  arbitration logic, and if you wanted to build a Unibus device, you *had*
+  to infringe on the patent -- it was fundamental to Unibus arbitration.
+  But the per-instance (or per-item) license fee they wanted was simply
+  *outrageous* [we thought], $100 or 10% of the item's retail price,
+  whichever was higher (IIRC). However...
+
+  At the same time, the DECdirect catalog openly sold DEC's own Unibus
+  arbitration chip -- which contained the patented circuitry inside it --
+  as a "spare part" to anyone who wanted to buy it. And it was cheap,
+  just a few bucks each. Since patents cover *manufacture* of the patented
+  item, by buying DEC's own chip to use in the SmartMux/205, we could
+  completely legally avoid paying the outrageous patent fee. [Or to look
+  at it another way, we really "paid the fee", and got the chip for free!]
+
+  Oh, and AFAIK, DEC's catalog sales people never bothered to ask why
+  we kept buying so many of those "spares"...  ;-}  ;-}
+
++---------------
+| But for the KL connection, we were still using the 680I, a PDP-8 based
+| solution that was the successor to the DC68.
++---------------
+
+A real DEC 680I? ...or a DCA "SmartMux/250", which used an OEM'd PDP-8
+all right, but with DCA-designed UART-based serial ports instead of the
+680I's "software bit banging", and as a result could be populated with
+up to 128 9600-baud lines!  That was DCA's first product, and the mainstay
+of the business for a long time. It interfaced to the PDP-10 I/O bus
+through a "bus converter" I had designed while I was working at Emory
+University, which design DCA picked up (along with me, as it happened).
+
+Originally we used the normal DC68 driver on the host, but as we got
+asked for more features, I wrote a new driver from scratch that made
+SCNSER think we were a DC76. Well, sort of a DC76/DC68 hybrid, actually.
+Anyway, close enough that we were able to support "remote echo" on
+terminals at the other end of our synchronous multiplexer links...
+
++---------------
+| If I remember correctly, DCA did not have a functional DH11 emulator
+| suitable for plugging in to the KL's console front end.
++---------------
+
+Kee-rect. The DZ-11 emulator was the only Unibus device we ever built
+(AFAIK, but I left in '79, so they might have done something later).
+
++---------------
+| The kludge of putting a DZ11 equivalent into RSX-20F was not satisfactory.
++---------------
+
+Perhaps not for you (sorry!), but some customers found it quite acceptable.
+
+
+-Rob
+
+-----
+Rob Warnock, 31-2-510		rpw3@sgi.com
+Network Engineering		http://reality.sgi.com/rpw3/
+Silicon Graphics, Inc.		Phone: 650-933-1673
+1600 Amphitheatre Pkwy.		PP-ASEL-IA
+Mountain View, CA  94043
+
+
+Article 1980 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc03.blue.aol.com!cyclone2.usenetserver.com!news-out.usenetserver.com!news01.optonline.net!news02.optonline.net.POSTED!not-for-mail
+Message-ID: <3A15842A.5CE3FCFC@bartek.net>
+From: Arthur Krewat <krewat@bartek.net>
+X-Mailer: Mozilla 4.7 [en] (X11; I; SunOS 5.8 i86pc)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: Q: Why not (2^n)-bit?
+References: <rpNl5.131549$lU5.898906@news1.rdc1.nj.home.com> <8ti24q$rks$1@nntp1.ba.best.com> <tE6L5.1447$ml4.123503@typhoon.ne.mediaone.net> <8tsb1f$1c9s$1@nntp1.ba.best.com> <8v0k69$hveg7$1@fido.engr.sgi.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 58
+Date: Fri, 17 Nov 2000 19:21:36 GMT
+NNTP-Posting-Host: 24.190.213.53
+X-Trace: news02.optonline.net 974488896 24.190.213.53 (Fri, 17 Nov 2000 14:21:36 EST)
+NNTP-Posting-Date: Fri, 17 Nov 2000 14:21:36 EST
+Organization: Optimum Online
+Xref: nntp1.ba.best.com alt.sys.pdp10:1980
+
+Rob Warnock wrote:
+
+> That was the DCA "SmartMux/205", if I recall the model number correctly.
+
+At BOCES III in Dix Hills, NY, I worked on five KS10's, each with a DCA 305.
+Like you said, capable of 128 ports, Unibus based. 
+
+> A single quad-connector Unibus card, which emulated 16 DZ-11's (128 ports),
+> and which connected with the outside world through a single RS-232c
+> synchronous serial cable running DCA's proprietary terminal multiplexing
+> protocol. [Which, note, was based on DEC's DDCMP protocol, which we had
+> implemented from the public spec and shipped to customers before DEC did!
+> (*Tee-hee!*)  And by the way, a tip-o'-the-hat to DEC's Stu Wecker for
+> writing a *great* protocol document!!]
+
+What speed was that serial link running at? We had setup 10 cross-over ports
+at 19200 between the 5 systems (4+3+2+1). I wrote a file transfer protocol
+and away she went! We never noticed any degradation of performance (of
+our 9600 baud video terminals). The file transfer daemon did a dance, though boy!
+
+> Other miscellaneous trivia:
+> 
+> +---------------
+> | But for the KL connection, we were still using the 680I, a PDP-8 based
+> | solution that was the successor to the DC68.
+> +---------------
+> 
+> A real DEC 680I? ...or a DCA "SmartMux/250", which used an OEM'd PDP-8
+> all right, but with DCA-designed UART-based serial ports instead of the
+> 680I's "software bit banging", and as a result could be populated with
+> up to 128 9600-baud lines!  That was DCA's first product, and the mainstay
+> of the business for a long time. It interfaced to the PDP-10 I/O bus
+> through a "bus converter" I had designed while I was working at Emory
+> University, which design DCA picked up (along with me, as it happened).
+
+My first experience with a PDP-10 was with a KA10 with a DCA/PDP-8 front-end.
+I am told that it had 128 ports in it, and says DCA on the front (my friend
+still has it in his basement). Based on a PDP-8/i? It's serial # 45.
+Interesting to learn that the UARTs in it are not standard DEC equipment :)
+
+> +---------------
+> | The kludge of putting a DZ11 equivalent into RSX-20F was not satisfactory.
+> +---------------
+> 
+> Perhaps not for you (sorry!), but some customers found it quite acceptable.
+
+I found the DCA equipment quite revolutionary in terms of mux'ing the serial
+lines. When all the bugs were worked out of the OS, it was rock-solid.
+There were many problems at first, but I think it was mainly the Z80
+rebooting itself for no reason. Eventually, field service decided to 
+replace the CPU and it worked flawlessly ever-after. I don't remember
+the model # of the base unit, but the boards in the KS10's were definitly
+305's (I think). 
+
+IIRC, TOPS-10 6.03 had to be modified to recognize the 305's, or otherwise
+clear up some conflict.
+
+ak
+
+
+Article 2000 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntp.primenet.com!nntp.gblx.net!enews.sgi.com!fido.engr.sgi.com!rigden.engr.sgi.com!rpw3
+From: rpw3@rigden.engr.sgi.com (Rob Warnock)
+Newsgroups: alt.sys.pdp10
+Subject: DCA muxes  [was: Re: Q: Why not (2^n)-bit? ]
+Date: 19 Nov 2000 08:49:08 GMT
+Organization: Silicon Graphics Inc., Mountain View, CA
+Lines: 90
+Message-ID: <8v8464$5dtco$1@fido.engr.sgi.com>
+References: <rpNl5.131549$lU5.898906@news1.rdc1.nj.home.com> <8tsb1f$1c9s$1@nntp1.ba.best.com> <8v0k69$hveg7$1@fido.engr.sgi.com> <gbpR5.10287$M51.2952314@typhoon.ne.mediaone.net>
+NNTP-Posting-Host: rigden.engr.sgi.com
+X-Trace: fido.engr.sgi.com 974623748 5698968 163.154.34.115 (19 Nov 2000 08:49:08 GMT)
+X-Complaints-To: news@fido.engr.sgi.com
+NNTP-Posting-Date: 19 Nov 2000 08:49:08 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2000
+
+D. R. Banks <dawn@drbanks.nospamDOTcom> wrote:
++---------------
+| "Rob Warnock" <rpw3@rigden.engr.sgi.com> wrote:
+| > Joe Smith <inwap@best.com> wrote:
+| > +---------------
+| > | The kludge of putting a DZ11 equivalent into RSX-20F was not
+| satisfactory.
+| > +---------------
+| >
+| > Perhaps not for you (sorry!), but some customers found it quite
+| acceptable.
+| 
+| No, it wasn't satisfactory, and I wrote the driver to enable people
+| to do it.
+| 
+| There were severe memory limitations in the RSX-20F front end that forced
+| some pretty unacceptable tradeoffs.
++---------------
+
+As I said, I'm sorry you had trouble with it. As another posted said,
+some *did* find it useful, though.
+
++---------------
+| The 205 board also had this maddening little habit of hanging, particularly
+| if you put two or more of them in adjacent slots on a unibus.  Believe it or
+| not, many (most?) problems with these boards were solved by putting physical
+| space between the boards on the unibus.
++---------------
+
+I could easily believe it. IIRC, there was some sort of metastability
+problem with some versions of the DEC Unibus arbitration chip that we used
+(that we bought as "spares", as I mentioned in my previous article). I had
+thought it eventually had gotten worked out, but maybe not. The symptom
+*would* have been a "hang", and, yes, it would have been *very* sensitive
+to where you placed the card in the system.
+
+[If my vague memory is correct -- and apologies to DEC if it's not!! --
+the problem was a synchronizer metastability issue in the Unibus interrupt
+grant logic, and such things were just barely beginning to be generally
+understood in those days, with a lot of misinfomation & myth floating
+around. We had a *bear* of a time figuring out what the problem was, and
+an even worse problem getting DEC to admit anything. IIRC, the later,
+better version of the chip had a "metastability-hardened" flop in the
+synchronizer role.]
+
++---------------
+| Why put more than one 205 board into a CFE when the board would emulate up
+| to 128 lines, while the (hacked) RSX-20F only supported 80?  The link coming
+| out of the 205 would run, at best, 19.2K.
++---------------
+
+Actually, IIRC the original 205 could only do 9600 on the sync port, but
+another poster said the "305"(?) could do 19,200. I don't remember the
+latter, so I don't know when the speed bump occurred (in the 205 or 305).
+
++---------------
+| Try muxing 32 active terminal sessions across one 19.2K line and you'll
+| know why multiple boards were common.
++---------------
+
+Well, you certainly have a valid point, but application loads do vary.
+The "data entry clerks + line printer" I mentioned in my other reply ran
+a dozen 2400-baud terminals and a line printer on a single 2400-baud sync
+line, and they were perfectly happy with it.  Whereas I'm more like you,
+I suspect. I wouldn't be happy sharing a 19,200-baud line with more than
+one or two other people, if I was doing heavy editing. Go figure...
+
++---------------
+| I wrote the DZ driver for the service bureau I worked for at the time. 
+| We went into it with our eyes open, and were able to work around the
+| restrictions, the two worst being that the front end would only support 80
+| lines (rather than the original 128), and that "Send all" support would be
+| broken.  Unfortunately, a decision was made to recoup some of our costs by
+| selling the driver back to DCA, who in turn resold the software to others.
+| Full disclosure of the limitations was not always made, and there was a
+| pattern of DCA support people blaming faulty boards on the 11's DZ driver.
++---------------
+
+Was that after Sept.'79?  If so, I was long gone. But I'll still apologize
+for my former co-workers if they treated you badly. (*sigh*)
+
+
+-Rob
+
+-----
+Rob Warnock, 31-2-510		rpw3@sgi.com
+Network Engineering		http://reality.sgi.com/rpw3/
+Silicon Graphics, Inc.		Phone: 650-933-1673
+1600 Amphitheatre Pkwy.		PP-ASEL-IA
+Mountain View, CA  94043
+
+
+Article 1998 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!newsxfer.eecs.umich.edu!logbridge.uoregon.edu!news.indiana.edu!news.iupui.edu!haystack!mhwood
+From: "Mark H. Wood" <mhwood@haystack.Wood.Net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Q: Why not (2^n)-bit?
+Date: Tue, 21 Nov 2000 02:27:25 GMT
+Organization: La Petite Hackerie
+Lines: 23
+Message-ID: <G4Cs5p.5Bo@Ameritech.net>
+References: <rpNl5.131549$lU5.898906@news1.rdc1.nj.home.com> <8ti24q$rks$1@nntp1.ba.best.com> <tE6L5.1447$ml4.123503@typhoon.ne.mediaone.net> <8tsb1f$1c9s$1@nntp1.ba.best.com> <8v0k69$hveg7$1@fido.engr.sgi.com>
+NNTP-Posting-Host: mhw.ulib.iupui.edu
+User-Agent: tin/1.4-19991113 ("No Labels") (UNIX) (Linux/2.2.14 (i586))
+Xref: nntp1.ba.best.com alt.sys.pdp10:1998
+
+Rob Warnock <rpw3@rigden.engr.sgi.com> wrote:
+[lots of interesting stuff about DCA 205s]
+
+For what it's worth, we used to have quite a large herd of DCA gear,
+tying terminal clusters all over campus back to 355 switches in the
+machine room.  Then it gets weird: we switched the traffic onto
+individual serial ports, 128 of which were cabled to cabinets full of
+DH11s to feed a pair of 2060s (and later to sixteen DECserver 100s
+feeding a VAX 8800, later still a 7000-620).  (Other ports were hooked
+to a bank of IBM 7171 ADACUs to provide pseudo-3270 access to a 4381,
+later a 3090.)  I've never again seen so much cable in so little space.
+
+I had actually wanted to condense all of those sessions onto two X.25
+lines run into a pair of DMP11s, but the plan was vetoed as having too
+many things in it with which we had no experience.  What we wound up
+with greatly resembled what we'd done earlier with Computer
+Transmission Corporation equipment (the "TRAN gear") and those same
+DH11s.
+-- 
+-- 
+Mark H. Wood, radical centrist     OpenPGP ID 876A8B75     mhwood@ameritech.net
+Why is it that, of all the species on Earth, only the presence of Man
+is considered an intrusion?
+
+
+Article: 15371 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!crtntx1-snh1.gtei.net!paloalto-snf1.gtei.net!news.gtei.net!newsfeed.stanford.edu!logbridge.uoregon.edu!gestalt.direcpc.com!cyclone2.usenetserver.com!usenetserver.com!news01.optonline.net!news02.optonline.net.POSTED!not-for-mail
+From: Arthur Krewat <krewat@bartek.dontspamme.net>
+Newsgroups: alt.sys.pdp10,alt.sys.pdp.11,alt.sys.pdp8
+Subject: Re: SIMH 2.9 beta release
+Organization: Kilonet.net
+Lines: 17
+Message-ID: <3C4DFC9E.1BF0C88E@bartek.dontspamme.net>
+References: <ob9o4us5m9t6rasq1tca9vjjrvbbj0u3l2@4ax.com> <c2551c25.0201220443.44c7900b@posting.google.com> <60rr4ugmk9ubv7mfnk4tuiu85li24u4j0k@4ax.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 4.78 [en] (X11; U; SunOS 5.8 i86pc)
+X-Accept-Language: en
+Date: Wed, 23 Jan 2002 00:02:40 GMT
+NNTP-Posting-Host: 24.186.100.134
+X-Trace: news02.optonline.net 1011744160 24.186.100.134 (Tue, 22 Jan 2002 19:02:40 EST)
+NNTP-Posting-Date: Tue, 22 Jan 2002 19:02:40 EST
+Xref: dfw-artgen.news.verio.net alt.sys.pdp10:15371 alt.sys.pdp8:5225
+
+Bob Supnik wrote:
+> 
+> Some number of additional terminals won't be a problem, but the PDP-8
+> only has 64 device numbers, each discrete terminal interface takes 2,
+> so 32 individual interfaces aren't possible.  I thought the maximum
+> number supported was 19.
+
+Not to argue, but somehow DCA got at least 128 terminals in a PDP-8/i
+(serial # 45 - probably DCA's serial #) I understand that the UART's
+or whatever equivalent were custom on this box.
+
+This was used as a front end to a KA10 - BOCES/LIRICS - my friend
+still has the PDP-8/i in his father's basement. And that PDP-8/i
+combined with the KA10 was faster for terminal I/O than a KS10
+ever was. And our KS10's used DCA 355's (?)
+
+aak
+
+
+Article: 15384 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!crtntx1-snh1.gtei.net!nycmny1-snh1.gtei.net!news.gtei.net!news-out.visi.com!hermes.visi.com!feed2.news.rcn.net!feed1.news.rcn.net!rcn!207-172-245-9
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10,alt.sys.pdp.11,alt.sys.pdp8
+Subject: Re: SIMH 2.9 beta release
+Date: Wed, 23 Jan 02 10:55:26 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 30
+Message-ID: <a2mcfa$o3i$2@bob.news.rcn.net>
+References: <ob9o4us5m9t6rasq1tca9vjjrvbbj0u3l2@4ax.com> <c2551c25.0201220443.44c7900b@posting.google.com> <60rr4ugmk9ubv7mfnk4tuiu85li24u4j0k@4ax.com> <3C4DFC9E.1BF0C88E@bartek.dontspamme.net>
+X-Trace: UmFuZG9tSVaOCWTivgWBanNC3rnfZiKuQ8dCJih+oC+QXxiHuq9ySvFAIfYAyVsU
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 23 Jan 2002 13:05:46 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: dfw-artgen.news.verio.net alt.sys.pdp10:15384 alt.sys.pdp8:5229
+
+In article <3C4DFC9E.1BF0C88E@bartek.dontspamme.net>,
+   Arthur Krewat <krewat@bartek.dontspamme.net> wrote:
+>Bob Supnik wrote:
+>> 
+>> Some number of additional terminals won't be a problem, but the PDP-8
+>> only has 64 device numbers, each discrete terminal interface takes 2,
+>> so 32 individual interfaces aren't possible.  I thought the maximum
+>> number supported was 19.
+>
+>Not to argue, but somehow DCA got at least 128 terminals in a PDP-8/i
+>(serial # 45 - probably DCA's serial #) I understand that the UART's
+>or whatever equivalent were custom on this box.
+>
+>This was used as a front end to a KA10 - BOCES/LIRICS - my friend
+>still has the PDP-8/i in his father's basement. And that PDP-8/i
+>combined with the KA10 was faster for terminal I/O than a KS10
+>ever was. And our KS10's used DCA 355's (?)
+>
+
+<ahem>  What was LOGMAX for that KA system?  I bet it wasn't
+128.  My guess is that it may have been built for 40..maybe
+60 jobs.  That only "allows" 15-30 connections through that
+8/I.  If you want to look at the code that we shipped for
+PDP-8s, look for DC72s.  I can't remember is we put the 680I
+stuff on the Customer Supported tape.  Looking for PAL8.EXE
+would help, too.
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article: 15418 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!crtntx1-snh1.gtei.net!washdc3-snh1.gtei.net!news.gtei.net!feeder.qis.net!sunqbc.risq.qc.ca!falcon.america.net!cyclone2.usenetserver.com!usenetserver.com!news01.optonline.net!news02.optonline.net.POSTED!not-for-mail
+From: Arthur Krewat <krewat@bartek.dontspamme.net>
+Newsgroups: alt.sys.pdp10,alt.sys.pdp8
+Subject: Re: SIMH 2.9 beta release
+Organization: Kilonet.net
+Lines: 42
+Message-ID: <3C4F5576.475D89BD@bartek.dontspamme.net>
+References: <ob9o4us5m9t6rasq1tca9vjjrvbbj0u3l2@4ax.com> <c2551c25.0201220443.44c7900b@posting.google.com> <60rr4ugmk9ubv7mfnk4tuiu85li24u4j0k@4ax.com> <3C4DFC9E.1BF0C88E@bartek.dontspamme.net> <wwlmeomzsj.fsf@atlas.cfht.hawaii.edu>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 4.78 [en] (X11; U; SunOS 5.8 i86pc)
+X-Accept-Language: en
+Date: Thu, 24 Jan 2002 00:37:40 GMT
+NNTP-Posting-Host: 24.186.100.134
+X-Trace: news02.optonline.net 1011832660 24.186.100.134 (Wed, 23 Jan 2002 19:37:40 EST)
+NNTP-Posting-Date: Wed, 23 Jan 2002 19:37:40 EST
+Xref: dfw-artgen.news.verio.net alt.sys.pdp10:15418 alt.sys.pdp8:5235
+
+Jim Thomas wrote:
+> 
+> >>>>> "Arthur" == Arthur Krewat <krewat@bartek.dontspamme.net> writes:
+> 
+>  Arthur> Bob Supnik wrote:
+>  >>
+>  >> Some number of additional terminals won't be a problem, but the PDP-8
+>  >> only has 64 device numbers, each discrete terminal interface takes 2,
+>  >> so 32 individual interfaces aren't possible.  I thought the maximum
+>  >> number supported was 19.
+> 
+>  Arthur> Not to argue, but somehow DCA got at least 128 terminals in a PDP-8/i
+>  Arthur> (serial # 45 - probably DCA's serial #) I understand that the UART's
+>  Arthur> or whatever equivalent were custom on this box.
+> 
+> But those were multiple line boards, right?  Each DCA board would have used
+> a few device numbers.
+
+Yes, exactly, the DCA serial ports were muxed somehow. The setup was:
+
+A High School on Long Island would "pay" a certain amount of money per terminal
+per year. The school could get state money (NY BOCES) to "pay" for this, so
+in the end, the school really never wrote a check to anybody.
+
+Anyway, on average, there would be at least 4 terminals muxed over a point-to-point
+line which was usually 4800 baud from the high school to BOCES III in Dix Hills.
+If you were lucky they would give you an LA120 that could run at 1200 baud and it
+would be the quickest thing you ever saw. And, I do remember that the LA120 was
+available when the KA10 was still "the" machine. 
+
+Originally BOCES had all these high schools (I am unsure of the number, but at least
+30 w/4 terminals each) connected through the PDP-8i my friend has in his father's
+basement, into a KA10, apparently bought used and had 256Kw of core.
+
+At the height of it's usage, there were more than 120 jobs logged in on any given
+day. I learned MACRO that year ('80?). At that time, it seems that they had
+already been using KS10's for a little while, and eventually moved the schools
+over to any of four KS10's with a fifth being used for the BOCES Business Office.
+
+And, the 8i was used to boot the KA10, so it really was a front-end.
+
+aak
+
+
+Article: 15448 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!crtntx1-snh1.gtei.net!cambridge1-snf1.gtei.net!news.gtei.net!bos-service1.ext.raytheon.com!cyclone.swbell.net!cyclone-sf.pbi.net!209.10.34.151!newsfeed.sjc.globix.net!hub1.meganetnews.com!hub1.nntpserver.com!xmission!logbridge.uoregon.edu!news.u.washington.edu!140.142.17.34.MISMATCH!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10,alt.sys.pdp8
+Subject: Re: booting a KA10 from a PDP-8/i?
+Date: Thu, 24 Jan 2002 12:59:30 -0800
+Organization: Pandamonium Reigns
+Lines: 20
+Message-ID: <Pine.NXT.4.50.0201241255280.4084-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <c2551c25.0201220443.44c7900b@posting.google.com>
+ <60rr4ugmk9ubv7mfnk4tuiu85li24u4j0k@4ax.com> <3C4DFC9E.1BF0C88E@bartek.dontspamme.net>
+ <wwlmeomzsj.fsf@atlas.cfht.hawaii.edu> <3C4F5576.475D89BD@bartek.dontspamme.net>
+ <3C4F7247.FDE5224F@Empire.Net> <3C4F7869.6451C4F8@bartek.dontspamme.net>
+ <gm1v4ukgl433n96fkcc028h9cbr5ijl17h@4ax.com> <3C500360.A00B8C00@bartek.dontspamme.net>
+ <a2p6t4$nm5$3@bob.news.rcn.net> <3C502D04.73678C85@bartek.dontspamme.net>
+ <51f05u01lldtscr5v4pfgv5j58c18oe8cu@4ax.com> <3C503F7C.CF01F739@bartek.dontspamme.net>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 1011905972 20422 (None) 140.142.17.39
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: btik
+In-Reply-To: <3C503F7C.CF01F739@bartek.dontspamme.net>
+Content-Length: 314159 (believe this at your own risk)
+Xref: dfw-artgen.news.verio.net alt.sys.pdp10:15448 alt.sys.pdp8:5258
+
+On Thu, 24 Jan 2002, Arthur Krewat wrote:
+> From what I've heard, it was a DMA device. This may be how the 8i got the
+> bootstrap into the KA10. Remember, this was a DCA device - the mentality
+> was one of "do everything from the 8i".
+
+I once knew the people at DCA fairly well, but I have never heard of them
+doing such a thing.  The issue at hand is that it's pointless.  The thing
+that is bootstraped into the KA10 is not the operating system, it's the
+disk bootstrap that will load the operating system.  Since every KA10 had
+a paper tape reader and bootstrap built in, it's pointless to do it any
+other way.
+
+I also don't think that even a DCA device was able to write into KA10
+memory unilaterally.  The KA10 set the DMA addresses, not the 8/i.
+
+-- Mark --
+
+http://staff.washington.edu/mrc
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+Article: 15445 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!crtntx1-snh1.gtei.net!washdc3-snh1.gtei.net!news.gtei.net!feeder.qis.net!news.maxwell.syr.edu!cyclone2.usenetserver.com!usenetserver.com!news01.optonline.net!news02.optonline.net.POSTED!not-for-mail
+From: Arthur Krewat <krewat@bartek.dontspamme.net>
+Newsgroups: alt.sys.pdp10,alt.sys.pdp8
+Subject: Re: booting a KA10 from a PDP-8/i?
+Organization: Kilonet.net
+Lines: 15
+Message-ID: <3C50682A.FE561B12@bartek.dontspamme.net>
+References: <ob9o4us5m9t6rasq1tca9vjjrvbbj0u3l2@4ax.com> <c2551c25.0201220443.44c7900b@posting.google.com> <60rr4ugmk9ubv7mfnk4tuiu85li24u4j0k@4ax.com> <3C4DFC9E.1BF0C88E@bartek.dontspamme.net> <wwlmeomzsj.fsf@atlas.cfht.hawaii.edu> <3C4F5576.475D89BD@bartek.dontspamme.net> <3C4F7247.FDE5224F@Empire.Net> <3C4F7869.6451C4F8@bartek.dontspamme.net> <gm1v4ukgl433n96fkcc028h9cbr5ijl17h@4ax.com> <3C500360.A00B8C00@bartek.dontspamme.net> <uk7u7pm3i.fsf@swingandcircle.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 4.78 [en] (X11; U; SunOS 5.8 i86pc)
+X-Accept-Language: en
+Date: Thu, 24 Jan 2002 20:07:38 GMT
+NNTP-Posting-Host: 24.186.100.134
+X-Trace: news02.optonline.net 1011902858 24.186.100.134 (Thu, 24 Jan 2002 15:07:38 EST)
+NNTP-Posting-Date: Thu, 24 Jan 2002 15:07:38 EST
+Xref: dfw-artgen.news.verio.net alt.sys.pdp10:15445 alt.sys.pdp8:5256
+
+Christopher Stacy wrote:
+> 
+> 
+> I agree with "Ms 4.88's" that a normal stock KA10 certainly did not
+> have a PDP-8 front-end, but that doesn't mean yours didn't!
+> You boot a KA10 by pressing a console switch that reads from the
+> directly attached paper tape reader.  But your site could have hacked
+> up their system to use a PDP-8 to replace the bootload function;
+> I don't see anything technically difficult about that at all.
+
+I keep mentioning it, but I have to again - this PDP-8/I was a piece
+of DCA equipment. I have no idea what the original intent of DCA was 
+in designing this thing - it's possible they meant it to boot the KA10.
+
+aak
+
+
+Article: 16621 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!iad-read.news.verio.net.POSTED!not-for-mail
+Newsgroups: alt.sys.pdp10,alt.sys.pdp8
+Subject: Re: booting a KA10 from a PDP-8/i?
+References: <ob9o4us5m9t6rasq1tca9vjjrvbbj0u3l2@4ax.com> <wwlmeomzsj.fsf@atlas.cfht.hawaii.edu> <3C4F5576.475D89BD@bartek.dontspamme.net> <3C4F7247.FDE5224F@Empire.Net>
+Organization: Chez Inwap
+X-Newsreader: trn 4.0-test76 (Apr 2, 2001)
+From: inwap@inwap.com (Joe Smith)
+Originator: inwap@inwap.com (Joe Smith)
+Lines: 44
+Message-ID: <6tCn8.4749$T_.95368@iad-read.news.verio.net>
+Date: Mon, 25 Mar 2002 09:54:10 GMT
+NNTP-Posting-Host: 130.94.177.175
+X-Complaints-To: abuse@verio.net
+X-Trace: iad-read.news.verio.net 1017050050 130.94.177.175 (Mon, 25 Mar 2002 09:54:10 GMT)
+NNTP-Posting-Date: Mon, 25 Mar 2002 09:54:10 GMT
+Xref: dfw-artgen alt.sys.pdp10:16621 alt.sys.pdp8:5345
+
+In article <3C4F7247.FDE5224F@Empire.Net>,
+John Sauter  <J_Sauter@Empire.Net> wrote:
+>Arthur Krewat wrote (excerpted):
+>
+>And, the 8i was used to boot the KA10, so it really was 
+>a front-end.
+>
+>Huh?  At Sanders we had a KA10 with a PDP-8/i terminal
+>multiplexor on the I/O bus, but it had nothing to do 
+>with booting the KA10.  The KA10 had a hard console 
+>with lots of lights and switches, and booting was done 
+>from its paper tape reader.
+>    John Sauter (J_Sauter@Empire.Net)
+
+The 8i was not a front-end.
+
+It was merely a device that could respond to RIM (Read-In Mode)
+which allowed the disk bootstrap program to be loaded from PDP-8 memory
+instead of from paper tape.
+
+Traditional boot:
+  Set RIM device switches to the code for PTR.
+  Put bootstrap tape into the paper tape reader.  The first segment
+    on the tape is the RIM10B loader.  The second segment can be either
+    a full-fledged BOOTS (a rather long paper tape with code that can
+    accept a file name from the TTY and load the specified file from
+    disk) or a short pre-boot that simply reads raw bootstrap blocks off
+    of a reserved area of disk unit zero.
+  Press the Read-In-Mode switch.
+
+Non-paper boot:
+  Set RIM device switches to the code for PDP-8 interface.
+  The disk pre-boot has already been put into the PDP-8's core memory.
+  Press the Read-In-Mode switch.
+    1) Short read-the-boot-blocks routine gets sent to the KA with
+       the PDP-8 acting like a virtual paper-tape reader.
+    2) Said routine locates logical disk 0, reads in the first part
+       of the disk bootstrap, executes it (which reads in the rest of
+       the full disk bootstrap code).
+
+This method simply saved wear-and-tear on the KA's paper tape reader.
+	-Joe
+-- 
+See http://www.inwap.com/ for PDP-10 and "ReBoot" pages.
+
+
+Article: 15392 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!crtntx1-snh1.gtei.net!cpk-news-hub1.bbnplanet.com!news.gtei.net!nntp.abs.net!feeder.qis.net!sn-xit-02!sn-post-01!supernews.com!corp.supernews.com!not-for-mail
+From: Bob Supnik <bsupnik@nauticusnet.com>
+Newsgroups: alt.sys.pdp10,alt.sys.pdp.11,alt.sys.pdp8
+Subject: Re: SIMH 2.9 beta release
+Date: Wed, 23 Jan 2002 10:03:28 -0500
+Organization: Posted via Supernews, http://www.supernews.com
+Message-ID: <dgjt4u89ujd1muhjg82tl888f60jr3h60n@4ax.com>
+References: <ob9o4us5m9t6rasq1tca9vjjrvbbj0u3l2@4ax.com> <c2551c25.0201220443.44c7900b@posting.google.com> <60rr4ugmk9ubv7mfnk4tuiu85li24u4j0k@4ax.com> <c2551c25.0201230028.5463cc75@posting.google.com>
+X-Newsreader: Forte Agent 1.8/32.548
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Complaints-To: newsabuse@supernews.com
+Lines: 42
+Xref: dfw-artgen.news.verio.net alt.sys.pdp10:15392 alt.sys.pdp8:5232
+
+My bad, I didn't realize Peter had used Telnet for the console.
+
+Re PDP-8 terminal counts - the TSS/8 manuals (for the 8/I) offer
+different maximum terminal counts.  The system operators guide says up
+to 4 PT08s (dual interfaces), and the rest on DL8/Is, to a maximum of
+32 users.  The monitor manuals says a mixture of PT08s and 680/Is, to
+a maximum of 32 users.
+
+A later version of the source (EDUSYSTEM-50) says maximum 20 users,
+with one on the console, and 19 on either a terminal multiplexor, or
+PT08/KL8's, or a mixture.
+
+In any case, PT08s/KL8s consume device numbers at a rate of 2 per
+line, so the system would be limited by device numbers.  Terminal
+mux's like the DC08 would use only a few device numbers for multiple
+lines.  The 680/I, which was a front end on early -10s, used the DL8/I
+terminal multiplexor to achieve high line counts.
+
+/Bob
+
+On 23 Jan 2002 00:28:41 -0800, spedraja@ono.com (Sergio Pedraja)
+wrote:
+
+>Hi again: 
+>
+>> >> 7. Altair Z80.  Compilation problems on Windoze fixed (thanks to Peter
+>> >> Schorn).
+>> >
+>> >I had some problems with this compiling below MINGW. In appeareance 
+>> >it does reference to some wrong/changed library or so.
+>
+>I've dicovered the problem under Mingw. Is needed to modify the compilation 
+>line of the AltairZ80 smulator in this way:
+>
+>gcc -o ..\bin\altairz80 -I.. ..\scp*.c ..\sim*.c altair*.c -lm -lwsock32
+>
+>It appears to work.
+>
+>Greetings
+>
+>Sergio
+
+
+

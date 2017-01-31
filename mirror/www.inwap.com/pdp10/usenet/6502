@@ -1,0 +1,383 @@
+Article 4975 of alt.sys.pdp10:
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Code the 6502?? Shoot me first!
+References: <GE9Gqn.FKn@world.std.com> <3B17DD72.7BDA421B@bartek.dontspamme.net>
+X-Disclaimer: Everything I write is false.
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 01 Jun 2001 12:32:36 -0700
+Message-ID: <qhitighu7f.fsf@ruckus.brouhaha.com>
+Lines: 19
+User-Agent: Gnus/5.0807 (Gnus v5.8.7) Emacs/20.7
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 1 Jun 2001 12:49:37 -0700, ruckus.brouhaha.com
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!feeder.qis.net!feed2.onemain.com!feed1.onemain.com!out.nntp.be!propagator-dallas!news-in-dallas.newsfeeds.com!in.nntp.be!easynews!news.he.net!news.kjsl.com!news.spies.com!ruckus.brouhaha.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:4975
+
+Arthur Krewat <krewat@bartek.dontspamme.net> writes:
+> And how many cycles did it require to do a move from memory in one instruction?
+> 8080 took 5 for the LHLD and 2 for the move. Forgive me, I can't find my
+> 6502 book :)
+
+The 8080 can't do *anything* in two cycles.
+
+On the 6502, if you have a pointer to a memory location in a zero-page
+address, you can load the contents of that location into the accumulator
+in four cycles.
+
+The 6502 may not have had a very friendly instruction set, but it could
+do more work in fewer clock cycles than any 8-bitter of its time except
+the 6809.  For most purposes a 1 MHz 6502 was about as fast as a 4 MHz
+Z-80.  But back in 1977 you could buy 3 MHz 6502s, whereas 4 MHz was the
+fastest Z-80 of the time.
+
+Later they introduced the 6 MHz Z-80, and much later 8 MHz.  They didn't
+get much faster until Hitachi redesigned the core in CMOS.
+
+
+Article 4978 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!enews.sgi.com!pln-w!spln!dex!extra.newsguy.com!newsp.newsguy.com!drn
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Code the 6502?? Shoot me first!
+Date: 1 Jun 2001 13:37:50 -0700
+Organization: Newsguy News Service [http://newsguy.com]
+Lines: 26
+Message-ID: <9f8ueu019kd@drn.newsguy.com>
+References: <GE9Gqn.FKn@world.std.com> <3B17DD72.7BDA421B@bartek.dontspamme.net> <qhitighu7f.fsf@ruckus.brouhaha.com> <aek-0106011252150001@il0502a-dhcp38.apple.com>
+NNTP-Posting-Host: p-535.newsdawg.com
+X-Newsreader: Direct Read News v2.65
+Xref: nntp1.ba.best.com alt.sys.pdp10:4978
+
+In article <aek-0106011252150001@il0502a-dhcp38.apple.com>, aek@spies.com
+says...
+>
+>In article <qhitighu7f.fsf@ruckus.brouhaha.com>, Eric Smith
+><eric-no-spam-for-me@brouhaha.com> wrote:
+>
+>> 
+>> Later they introduced the 6 MHz Z-80, and much later 8 MHz.  They didn't
+>> get much faster until Hitachi redesigned the core in CMOS.
+>
+>Hitachi did a CMOS Z80? I thought they were in the Moto camp (6309)
+
+From the comp.os.cpm FAQ:
+
+   The Z180 was not an outgrowth of the Z800.  It was a joint effort
+   between Zilog and Hitachi.  The first two versions of the HD64180
+   were slightly different from the current Z180.  The current HD64180
+   and Z180 are identical, and both have flags in one of the control
+   registers to emulate the earlier versions.  The changes are mostly
+   bus timing, as the HD64180 was designed to interface with Motorola
+   6800 style peripherals as well as Intel and Zilog, which wasn't too
+   strange since Hitachi second sources some Motorola 6800 series
+   products.
+
+Tim.
+
+
+
+Article 4983 of alt.sys.pdp10:
+From: aek@spies.com (Al Kossow)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Code the 6502?? Shoot me first!
+Date: 1 Jun 2001 16:28:20 -0700
+Organization: Spies In The Wire
+Lines: 11
+Message-ID: <9f98ek$2pd$1@spies.com>
+References: <3B1820ED.44F8F3E8@bartek.dontspamme.net>
+NNTP-Posting-Host: spies.com
+X-Trace: 1 Jun 2001 16:46:28 -0700, spies.com
+Path: nntp1.ba.best.com!news1.best.com!feed.textport.net!out.nntp.be!propagator-dallas!news-in-dallas.newsfeeds.com!in.nntp.be!news.kjsl.com!news.spies.com!localhost!not-for-mail
+Xref: nntp1.ba.best.com alt.sys.pdp10:4983
+
+From article <3B1820ED.44F8F3E8@bartek.dontspamme.net>, by Arthur Krewat <krewat@bartek.dontspamme.net>:
+> 
+> What did the fastest 6502 run at, 2 MHZ? My VAX-11/750 runs 8Mhz with 32 bits.
+       ^^
+       does
+
+14MHz 
+
+http://www.westerndesigncenter.com/distribution.html
+
+
+
+
+Article 4992 of alt.sys.pdp10:
+From: Neil Franklin <neil@franklin.ch.remove>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Code the 6502?? Shoot me first!
+Date: 02 Jun 2001 21:57:11 +0200
+Organization: My own Private Self
+Lines: 43
+Message-ID: <6ubso6irjc.fsf@chonsp.franklin.ch>
+References: <GE9Gqn.FKn@world.std.com> <3B17DD72.7BDA421B@bartek.dontspamme.net> <qhitighu7f.fsf@ruckus.brouhaha.com> <3B1820ED.44F8F3E8@bartek.dontspamme.net> <qhd78ng0gt.fsf@ruckus.brouhaha.com>
+X-Complaints-To: news@chonsp.franklin.ch
+NNTP-Posting-Date: 2 Jun 2001 19:57:11 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.4
+NNTP-Posting-Host: ascension.ethz.ch
+X-Trace: 2 Jun 2001 21:57:41 +0200, ascension.ethz.ch
+Path: nntp1.ba.best.com!news1.best.com!feed.textport.net!hammer.uoregon.edu!enews.sgi.com!news-zh.switch.ch!pfaff.ethz.ch!chonsp.franklin.ch!not-for-mail
+Xref: nntp1.ba.best.com alt.sys.pdp10:4992
+
+10 posts in alt.sys.pdp10 today. All in the 6502 thread. Spooky. :-)
+
+Eric Smith <eric-no-spam-for-me@brouhaha.com> writes:
+
+> I wrote:
+> > The 8080 can't do *anything* in two cycles.
+>
+> Arthur Krewat <krewat@bartek.dontspamme.net> writes:
+> > Interesting, my Intel 8080 said that move from memory was 2 cycles -
+> > of course, there was probably the instruction fetch itself.
+>
+> Terminology problem.  I should have said that the 8080 can't do anything
+> in two clocks.  Intel talks about cycles that are each 3 or 4 clocks, IIRC.
+
+8080 and Z80 cycles are 4 or 5 clocks. 5 clocks for instruction
+fetches, 4 for all others. The first processor I ever programmed was
+a Z80.
+
+
+> > What did the fastest 6502 run at, 2 MHZ? My VAX-11/750 runs 8Mhz with
+> > 32 bits.
+
+6502 was introduced 1976 at 1MHz, later (first half 1980s) there were
+2 and 4MHz around.
+
+8080 AFAIK started somewhere 1-2MHz in 1984. Went up to about 5MHz (or
+was that already its 8085 version?).
+
+Z80 started with 2.5MHz in 1976, then 4MHz (Z80A), then 6MHz (Z80B),
+then 8MHz (Z80H) in the same time frame.
+
+
+> Apples and oranges.  The VAX-11/750 is a 32-bit minicomputer, not a
+> microprocessor.  And it was introduced years later than the 8080, 6502,
+> or Z-80.
+
+About 1978 for the first VAX (11/780).
+
+
+--
+Neil Franklin, neil@franklin.ch.remove http://neil.franklin.ch/
+Hacker, Unix Guru, El Eng HTL/BSc, Sysadmin, Archer, Roleplayer
+- Intellectual Property is Intellectual Robbery
+
+
+Article 5006 of alt.sys.pdp10:
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Code the 6502?? Shoot me first!
+References: <GE9Gqn.FKn@world.std.com> <3B17DD72.7BDA421B@bartek.dontspamme.net> <qhitighu7f.fsf@ruckus.brouhaha.com> <3B1820ED.44F8F3E8@bartek.dontspamme.net> <qhd78ng0gt.fsf@ruckus.brouhaha.com> <6ubso6irjc.fsf@chonsp.franklin.ch>
+X-Disclaimer: Everything I write is false.
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 04 Jun 2001 15:22:23 -0700
+Message-ID: <qhwv6r51i8.fsf@ruckus.brouhaha.com>
+Lines: 5
+User-Agent: Gnus/5.0807 (Gnus v5.8.7) Emacs/20.7
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 4 Jun 2001 15:39:58 -0700, ruckus.brouhaha.com
+Path: nntp1.ba.best.com!news1.best.com!feed.textport.net!out.nntp.be!propagator-dallas!news-in-dallas.newsfeeds.com!in.nntp.be!news.kjsl.com!news.spies.com!ruckus.brouhaha.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:5006
+
+Neil Franklin <neil@franklin.ch.remove> writes:
+> 6502 was introduced 1976 at 1MHz, later (first half 1980s) there were
+> 2 and 4MHz around.
+
+2 and 3 MHz were readily available in 1977.  4 MHz was scarce until 1979.
+
+
+Article 4981 of alt.sys.pdp10:
+From: Neil Franklin <neil@franklin.ch.remove>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Code the 6502?? Shoot me first!
+Date: 02 Jun 2001 00:52:08 +0200
+Organization: My own Private Self
+Lines: 55
+Message-ID: <6ulmnbke3r.fsf@chonsp.franklin.ch>
+References: <GE9Gqn.FKn@world.std.com>
+X-Complaints-To: news@chonsp.franklin.ch
+NNTP-Posting-Date: 1 Jun 2001 22:52:09 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.4
+NNTP-Posting-Host: ascension.ethz.ch
+X-Trace: 2 Jun 2001 00:52:41 +0200, ascension.ethz.ch
+Path: nntp1.ba.best.com!news1.best.com!newshub.sdsu.edu!news-hog.berkeley.edu!ucberkeley!enews.sgi.com!news-zh.switch.ch!pfaff.ethz.ch!chonsp.franklin.ch!not-for-mail
+Xref: nntp1.ba.best.com alt.sys.pdp10:4981
+
+pwilson@world.std.com (Pete Wilson) writes:
+
+> Ben Franchuk <bfranchuk@jetnet.ab.ca> wrote, speaking of the 6502:
+>
+> > Well no more dread full than any 8 bit uP made - 6800 8080 z80 8088
+> > and the few other chips left out are simply not general purpose computers.
+>
+> Oh, now, really! History asks me to defend the Z80 which, after all,
+> could do a load of a register from memory without a preceding explicit
+> load of H&L! I mean -- get serious :-)
+
+> Code the 6502?? Shoot me first!
+
+Bang!
+
+
+Z80: LD A,(1234)     3A 34 12    13 Tstates, 3.25us @ 4MHz
+Actually 8080 could also do that.
+
+6502: LDA 1234       AD 34 12    4 clocks, 2us @ 2HMz
+Seems to be the same thing, just a bit faster.
+
+Direct loads from memory were actually one of the 6502s strenghts.
+
+Now anything that required address registers... [1]
+
+
+[1] For non-6502-programmers: it had no address registers. You had to
+use pairs of 8bit memory words in the bottom 256 bytes of memory,
+addresed by an 8bit constant in the instruction. A bit like PDP-8
+needing to used its in-instruction constant to address an low-memory
+word with the actual address in it.
+
+
+And yes, Z80 and 6502 are both little-endian, not just bit numbering,
+but actual memory arrangement of 16 data. Read low 8 bits first,
+process, then get high 8 bits. Done so because of address calculation
+carry.
+
+
+> -- Pete Wilson
+>    6502 .eqv. 8080? Pshaw! 8008, more like.
+
+Actually fairly equivlent in effect. Missing instruction power made up
+with efficent memory access and so less clock cycles.
+
+
+P.S. I learned Assembler in the row: Z80, 6809, 6502, 68000, 8088
+Of all the 8bit ones 6809 was the nicest, roughly PDP-11 level.
+
+
+--
+Neil Franklin, neil@franklin.ch.remove http://neil.franklin.ch/
+Hacker, Unix Guru, El Eng HTL/BSc, Sysadmin, Archer, Roleplayer
+- Intellectual Property is Intellectual Robbery
+
+
+Article 5080 of alt.sys.pdp10:
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Code the 6502?? Shoot me first!
+References: <GE9Gqn.FKn@world.std.com> <6ulmnbke3r.fsf@chonsp.franklin.ch> <B74504FA.184F1%Mark.Garrett@wedontwantyourspam.com.au> <6ubsnyobp2.fsf@chonsp.franklin.ch>
+X-Disclaimer: Everything I write is false.
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 08 Jun 2001 16:37:26 -0700
+Message-ID: <qhu21qmtl5.fsf@ruckus.brouhaha.com>
+Lines: 44
+User-Agent: Gnus/5.0807 (Gnus v5.8.7) Emacs/20.7
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 8 Jun 2001 16:55:45 -0700, ruckus.brouhaha.com
+Path: nntp1.ba.best.com!news1.best.com!news2.best.com!news.maxwell.syr.edu!news.he.net!news.kjsl.com!news.spies.com!ruckus.brouhaha.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:5080
+
+Mark Garrett <Mark.Garrett@wedontwantyourspam.com.au> wrote:
+>> the 6502 has a special addressing mode referred to
+>> as zero page addressing
+
+Neil Franklin <neil@franklin.ch.remove> writes:
+> Above was actually "zero page indirect non indexed" mode. A processor
+> with over 10 address modes...
+
+The 6502 (NMOS) did NOT have a zero page indirect non-indexed mode.
+It had:
+
+   zero page (non-indirect, non-indexed)       LDA VAR
+   zero page indexed                           LDA VAR,X  or  LDA VAR,Y
+   zero page indexed indirect                  LDA (VAR,X)
+   zero page indirect indexed                  LDA (VAR),Y
+
+The CMOS 6502 added:
+
+   zero page indirect                          LDA (VAR)
+
+All above examples requiring that the address of VAR be in the range
+$0000..$00ff.  Also, note that with ZP indexed and ZP indexed indirect,
+the indexing will not wrap to the high byte of the address.  In other
+words, for "LDA VAR,X" if VAR is $CA and X contains $7E, the effective
+address is $0048, not $0148.  Similarly, for "LDA (VAR,X) under the
+same circumstances, the effective address is the contents of locations
+$0048 and $0049.
+
+Also, for all ZP indirect modes, if the base ZP address is $00FF, the
+indirect address comes from $00FF and $0000, not $00FF and $0100.
+
+On the NMOS 6502, the same problem (no carry from low to high byte of
+address) also happens for the absolute indirect address mode, e.g.,
+LDA ($45FF) will fetch the EA from $45FF and $4500.  On the CMOS 6502
+this was changed for absolute indirect (but not ZP indirect), so that
+example would fetch the EA from $45FF and $4600.
+
+>> The was a follow-on from the 6502, it didn't go
+>> far and I never programmed one.
+> 
+> 65816.
+
+And it did go far, if you count embedded variants including
+the Super Nintendo game system.
+
+
+Article: 116014 of alt.folklore.computers
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newsfeed.icl.net!newsfeed.fjserv.net!skynet.be!skynet.be!213.51.129.3.MISMATCH!newshub1.home.nl!home.nl!amsnews01.chello.com!news-hub.cableinet.net!blueyonder!newspeer1-gui.server.ntli.net!ntli.net!cox.net!p01!news2.west.cox.net.POSTED!53ab2750!not-for-mail
+From: Kevin Savetz <usenet-DELETEthisPART@savetz-DELETEthisPART.com>
+Newsgroups: comp.lang.asm,alt.folklore.computers
+Mail-Copies-To: poster
+Subject: Machine Language For Beginners book on the Web
+User-Agent: MT-NewsWatcher/3.3b1 (PPC Mac OS X)
+Message-ID: <usenet-DELETEthisPART-E2EB88.10304716032003@news.west.cox.net>
+Lines: 25
+Date: Sun, 16 Mar 2003 18:30:45 GMT
+NNTP-Posting-Host: 68.6.31.103
+X-Complaints-To: abuse@cox.net
+X-Trace: news2.west.cox.net 1047839445 68.6.31.103 (Sun, 16 Mar 2003 13:30:45 EST)
+NNTP-Posting-Date: Sun, 16 Mar 2003 13:30:45 EST
+Organization: Cox Communications
+Xref: dfw-artgen alt.folklore.computers:116014
+
+The team at AtariArchives.org is pleased to announce that the full text of the 
+best-selling book _Machine Language For Beginners_ by Richard Mansfield is now 
+online at 
+
+    http://www.atariarchives.org/mlb/ 
+
+Published in 1983 by Compute! Books, this classic book shows BASIC programmers 
+how to program in 6502 machine language. It includes examples and program code 
+for Atari, Apple 2, PET/CBM, VIC-20, and Commodore 64 computers.
+
+This is the 12th classic computing book available at AtariArchives.org. Like 
+all books at the site, it has been made available by permission of the 
+copyright holder.
+
+--Kevin Savetz
+--
+Kevin Savetz  <kevin@savetz.com> 
+Curator of Classic Computer Magazine Archive - http://www.atarimagazines.com
+& Atariarchives.org                          - http://www.atariarchives.org
+Moderator of news:comp.sys.atari.announce    - Atari computer news
+-- 
+Kevin Savetz - http://www.savetz.com/contact/
+Curator of Classic Computer Magazine Archive - www.atarimagazines.com
+& Atariarchives.org                          - www.atariarchives.org
+Moderator of news:comp.sys.atari.announce    - Atari computer news
+
+

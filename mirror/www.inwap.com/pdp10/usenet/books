@@ -1,0 +1,189 @@
+Article 7501 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!sn-xit-01!supernews.com!207.126.101.66.MISMATCH!rQ66!corp.supernews.com!not-for-mail
+From: Charles Richmond <richmond@plano.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP10 Assembly Language learning books?
+Date: Fri, 24 Mar 2000 22:19:27 -0600
+Organization: Cannine Computer Center
+Lines: 25
+Message-ID: <38DC3E4F.1D51F2F2@plano.net>
+References: <O_TC4.30838$oc.618328@news5.giganews.com>
+Reply-To: richmond@plano.net
+X-Complaints-To: newsabuse@supernews.com
+X-Mailer: Mozilla 4.03 (Macintosh; I; 68K)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Xref: news3.best.com alt.sys.pdp10:7501
+
+Timothy Stark wrote:
+> 
+> Hello Folks:
+> 
+> I am looking for books that teach how to write PDP10 assembly language
+> programs.  I looked through Amazon, etc. but I can't find them.  I only
+> found PDP10 assembly language reference on www.36bit.org web site.  I
+> recently started to write my own PDP10 emulator but PDP10 assembly language
+> is new to me.  On my developement, I was able to port a flow chart on PDP10
+> reference manual (page 1-30) about effective address calcuation to my C
+> routine.  Now I am figuring out about instruction codes.  I was so
+> impressive that effective address calculation is rescurive function. :-)
+> 
+I have found *one* such book, but it is *not* very large:
+
+_Introduction to DECsystem-10 Assembler Language Programming_,
+by Michael Singer, John Wiley & Sons, New York, NY, 1978,
+ISBN:  0-471-03458-4
+
+This same man wrote a book on PDP-11 assembler language programming.
+
+--
++-------------------------------------------------------------+
+|     Charles and Francis Richmond     <richmond@plano.net>   |
++-------------------------------------------------------------+
+
+
+Article 7530 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!newsfeed.mathworks.com!howland.erols.net!news.alt.net!serv.net!usenet
+From: Patrick Scheible <kkt@itchy.serv.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP10 Assembly Language learning books?
+Date: 25 Mar 2000 23:20:40 GMT
+Organization: Ye 'Ol Disorganized NNTPCache groupie
+Lines: 26
+Message-ID: <8bjhk8$1bk$2@199.201.191.2>
+References: <O_TC4.30838$oc.618328@news5.giganews.com>
+	<K86D4.1067$DY4.139487@typhoon1.gnilink.net>
+	<aek-2503001155580001@haxrus.apple.com>
+NNTP-Posting-Host: 199.201.191.2
+X-Newsreader: Gnus v5.3/Emacs 19.34
+Cache-Post-Path: dns2.serv.net!unknown@itchy.serv.net
+X-Cache: nntpcache 2.4.0b2 (see http://www.nntpcache.org/)
+Xref: news3.best.com alt.sys.pdp10:7530
+
+aek@spies.com (Al Kossow) writes:
+
+> 
+> In article <K86D4.1067$DY4.139487@typhoon1.gnilink.net>, "Chris Ward"
+> <ccward@bellatlantic.net> wrote:
+> 
+> > > I am looking for books that teach how to write PDP10 assembly
+> > language
+> > > programs. 
+> 
+> Eric Smith has been given permission to put Gorin's book
+> on line. You might check over there to see how the project is
+> progressing.
+
+The full cite is: Gorin, Ralph E.  Introduction to DECSYSTEM-20
+Assembly Language Programming.  Bedford, Mass. : Digital Press, c1981.
+This is an excellent text.
+
+For out of print books, bookfinder.com is even better than ABE.
+Bookfinder searches several networks of OP dealers, including ABE but
+others as well.  Do not use amazon for OP books; they search the same
+databases as Bookfinder but triple the price.
+
+Good luck,
+
+-- Patrick Scheible
+
+
+Article 7561 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!hermes.visi.com!news-out.visi.com!uunet!ffx.uu.net!spool1.news.uu.net!spool0.news.uu.net!reader2.news.uu.net!not-for-mail
+Message-ID: <38DDC9CB.50C64822@trailing-edge.com>
+Date: Sun, 26 Mar 2000 08:26:51 -0400
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Organization: Trailing Edge Technology
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.0     DEC 3000 Model 300L)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP10 Assembly Language learning books?
+References: <O_TC4.30838$oc.618328@news5.giganews.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 25
+NNTP-Posting-Host: 63.73.218.130
+X-Trace: reader2.news.uu.net 954077212 8546 63.73.218.130
+Xref: news3.best.com alt.sys.pdp10:7561
+
+Timothy Stark wrote:
+> 
+> Hello Folks:
+> 
+> I am looking for books that teach how to write PDP10 assembly language
+> programs.  I looked through Amazon, etc. but I can't find them.  I only
+> found PDP10 assembly language reference on www.36bit.org web site.
+
+Actually, between that reference and the DECUS PDP-10 freeware
+at http://pdp-10.trailing-edge.com/ I think you'd be doing pretty
+well.
+
+In addition to the hundreds of megabytes of sources available there,
+you'll probably be particularly interested in the 10-65 package,
+
+  http://pdp-10.trailing-edge.com/www/lib10/0101/index.html
+
+which is a interpretive-type assembler that is specifically for
+those learning the PDP-10 instruction set.
+
+-- 
+ Tim Shoppa                        Email: shoppa@trailing-edge.com
+ Trailing Edge Technology          WWW:   http://www.trailing-edge.com/
+ 7328 Bradley Blvd                 Voice: 301-767-5917
+ Bethesda, MD, USA 20817           Fax:   301-767-5927
+
+
+Article 7517 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!triton.skycache.com!cyclone2.gnilink.net!cyclone1.gnilink.net!typhoon1.gnilink.net.POSTED!not-for-mail
+From: "Chris Ward" <ccward@bellatlantic.net>
+Newsgroups: alt.sys.pdp10
+References: <O_TC4.30838$oc.618328@news5.giganews.com>
+Subject: Re: PDP10 Assembly Language learning books?
+Lines: 33
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Newsreader: Microsoft Outlook Express 5.00.2919.6600
+X-MimeOLE: Produced By Microsoft MimeOLE V5.00.2919.6600
+Message-ID: <K86D4.1067$DY4.139487@typhoon1.gnilink.net>
+Date: Sat, 25 Mar 2000 16:51:54 GMT
+NNTP-Posting-Host: 138.89.13.111
+X-Trace: typhoon1.gnilink.net 954003114 138.89.13.111 (Sat, 25 Mar 2000 11:51:54 EST)
+NNTP-Posting-Date: Sat, 25 Mar 2000 11:51:54 EST
+Xref: news3.best.com alt.sys.pdp10:7517
+
+There was a book called "Meet Macro-10" by Dr. Myron E. White.  The
+editions I saw had several inaccuracies in it, and I do not know if
+a later (post 1977) version was published that corrected those.
+
+Chris Ward
+
+"Timothy Stark" <sword7@speakeasy.org> wrote in message
+news:O_TC4.30838$oc.618328@news5.giganews.com...
+> Hello Folks:
+>
+> I am looking for books that teach how to write PDP10 assembly
+language
+> programs.  I looked through Amazon, etc. but I can't find them.  I
+only
+> found PDP10 assembly language reference on www.36bit.org web site.
+I
+> recently started to write my own PDP10 emulator but PDP10 assembly
+language
+> is new to me.  On my developement, I was able to port a flow chart
+on PDP10
+> reference manual (page 1-30) about effective address calcuation to
+my C
+> routine.  Now I am figuring out about instruction codes.  I was so
+> impressive that effective address calculation is rescurive
+function. :-)
+>
+> Thank you!
+>
+> -- Tim Stark
+>
+>
+
+
+
+

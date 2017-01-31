@@ -1,0 +1,570 @@
+Article: 18462 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!dfw-peer!news.verio.net!newsfeed.mathworks.com!wn13feed!wn11feed!wn12feed!worldnet.att.net!24.30.200.11!news-east.rr.com!news01.optonline.net!rcache2.srv.hcvlny.cv.net.POSTED!not-for-mail
+Message-ID: <3DD5C367.1040503@bartek.dontspamme.net>
+From: Arthur Krewat <krewat@bartek.dontspamme.net>
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.0; en-US; rv:1.0.1) Gecko/20020823 Netscape/7.0
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: Seeking PDP-10 Adventure from DECUS
+References: <3DD47BED.7CB3867A@ev1.net>
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
+Lines: 37
+Date: Fri, 15 Nov 2002 23:02:47 -0500
+NNTP-Posting-Host: 24.186.100.134
+X-Trace: rcache2.srv.hcvlny.cv.net 1037419637 24.186.100.134 (Fri, 15 Nov 2002 23:07:17 EST)
+NNTP-Posting-Date: Fri, 15 Nov 2002 23:07:17 EST
+Xref: dfw-artgen alt.sys.pdp10:18462
+
+Charles Richmond wrote:
+> Is there any way on Tim Shoppa's site <http://www.trailingedge.com>,
+> to do a search for the Adventure package distributed by DECUS???
+> I went to the site, but it seems unless I know which distro it
+> was part of, I may be out of luck... I want to get the original
+> FORTRAN sources and installation instructions for the PDP-10
+> that were distributed by DECUS.
+> 
+
+I have a fortran version for TOPS-10, from my days at BOCES III/
+DIX HILLS. Let me know where to email it if you want it.
+
+WELCOME TO ADVENTURE!!  WOULD YOU LIKE INSTRUCTIONS?
+
+y
+
+SOMEWHERE NEARBY IS COLOSSAL CAVE, WHERE OTHERS HAVE FOUND FORTUNES IN
+TREASURE AND GOLD, THOUGH IT IS RUMORED THAT SOME WHO ENTER ARE NEVER
+SEEN AGAIN.  MAGIC IS SAID TO WORK IN THE CAVE.  I WILL BE YOUR EYES
+AND HANDS.  DIRECT ME WITH COMMANDS OF 1 OR 2 WORDS.  I SHOULD WARN
+YOU THAT I LOOK AT ONLY THE FIRST FIVE LETTERS OF EACH WORD, SO YOU'LL
+HAVE TO ENTER "NORTHEAST" AS "NE" TO DISTINGUISH IT FROM "NORTH".
+(SHOULD YOU GET STUCK, TYPE "HELP" FOR SOME GENERAL HINTS.  FOR INFOR-
+MATION ON HOW TO END YOUR ADVENTURE, ETC., TYPE "INFO".)
+- - -
+THIS PROGRAM WAS ORIGINALLY DEVELOPED BY WILLIE CROWTHER.  MOST OF THE
+FEATURES OF THE CURRENT PROGRAM WERE ADDED BY DON WOODS (DON @ SU-AI).
+CONTACT DON IF YOU HAVE ANY QUESTIONS, COMMENTS, ETC.
+
+YOU ARE STANDING AT THE END OF A ROAD BEFORE A SMALL BRICK BUILDING.
+AROUND YOU IS A FOREST.  A SMALL STREAM FLOWS OUT OF THE BUILDING AND
+DOWN A GULLY.
+
+
+
+aak
+
+
+
+Article: 18462 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!dfw-peer!news.verio.net!newsfeed.mathworks.com!wn13feed!wn11feed!wn12feed!worldnet.att.net!24.30.200.11!news-east.rr.com!news01.optonline.net!rcache2.srv.hcvlny.cv.net.POSTED!not-for-mail
+Message-ID: <3DD5C367.1040503@bartek.dontspamme.net>
+From: Arthur Krewat <krewat@bartek.dontspamme.net>
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.0; en-US; rv:1.0.1) Gecko/20020823 Netscape/7.0
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: Seeking PDP-10 Adventure from DECUS
+References: <3DD47BED.7CB3867A@ev1.net>
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
+Lines: 37
+Date: Fri, 15 Nov 2002 23:02:47 -0500
+NNTP-Posting-Host: 24.186.100.134
+X-Trace: rcache2.srv.hcvlny.cv.net 1037419637 24.186.100.134 (Fri, 15 Nov 2002 23:07:17 EST)
+NNTP-Posting-Date: Fri, 15 Nov 2002 23:07:17 EST
+Xref: dfw-artgen alt.sys.pdp10:18462
+
+Charles Richmond wrote:
+> Is there any way on Tim Shoppa's site <http://www.trailingedge.com>,
+> to do a search for the Adventure package distributed by DECUS???
+> I went to the site, but it seems unless I know which distro it
+> was part of, I may be out of luck... I want to get the original
+> FORTRAN sources and installation instructions for the PDP-10
+> that were distributed by DECUS.
+> 
+
+I have a fortran version for TOPS-10, from my days at BOCES III/
+DIX HILLS. Let me know where to email it if you want it.
+
+WELCOME TO ADVENTURE!!  WOULD YOU LIKE INSTRUCTIONS?
+
+y
+
+SOMEWHERE NEARBY IS COLOSSAL CAVE, WHERE OTHERS HAVE FOUND FORTUNES IN
+TREASURE AND GOLD, THOUGH IT IS RUMORED THAT SOME WHO ENTER ARE NEVER
+SEEN AGAIN.  MAGIC IS SAID TO WORK IN THE CAVE.  I WILL BE YOUR EYES
+AND HANDS.  DIRECT ME WITH COMMANDS OF 1 OR 2 WORDS.  I SHOULD WARN
+YOU THAT I LOOK AT ONLY THE FIRST FIVE LETTERS OF EACH WORD, SO YOU'LL
+HAVE TO ENTER "NORTHEAST" AS "NE" TO DISTINGUISH IT FROM "NORTH".
+(SHOULD YOU GET STUCK, TYPE "HELP" FOR SOME GENERAL HINTS.  FOR INFOR-
+MATION ON HOW TO END YOUR ADVENTURE, ETC., TYPE "INFO".)
+- - -
+THIS PROGRAM WAS ORIGINALLY DEVELOPED BY WILLIE CROWTHER.  MOST OF THE
+FEATURES OF THE CURRENT PROGRAM WERE ADDED BY DON WOODS (DON @ SU-AI).
+CONTACT DON IF YOU HAVE ANY QUESTIONS, COMMENTS, ETC.
+
+YOU ARE STANDING AT THE END OF A ROAD BEFORE A SMALL BRICK BUILDING.
+AROUND YOU IS A FOREST.  A SMALL STREAM FLOWS OUT OF THE BUILDING AND
+DOWN A GULLY.
+
+
+
+aak
+
+
+
+Article: 18498 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!nntp1.roc.gblx.net!nntp.gblx.net!nntp1.phx1.gblx.net!nntp.gblx.net!nntp.gblx.net!newsfeed.news2me.com!border1.nntp.aus1.giganews.com!nntp.giganews.com!nntp3.aus1.giganews.com!nntp.comcast.com!news.comcast.com.POSTED!not-for-mail
+NNTP-Posting-Date: Tue, 19 Nov 2002 15:27:22 -0600
+Message-ID: <3DDAACB5.7000806@XX-noemail-XX.com>
+Date: Tue, 19 Nov 2002 16:27:17 -0500
+From: xs <no.email@XX-noemail-XX.com>
+User-Agent: Mozilla/5.0 (Windows; U; WinNT4.0; en-US; rv:1.0.1) Gecko/20020823 Netscape/7.0
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: Seeking PDP-10 Adventure from DECUS
+References: <3DD47BED.7CB3867A@ev1.net>
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
+Lines: 24
+NNTP-Posting-Host: 68.39.104.111
+X-Trace: sv3-dMM8xEHMH4tPZ+eFRKsYJ8nO5ZccAKMs4IZFlEk+Zt0YUjKrlxANRvWmrF8SyO+k8K5JCVP8V0el+FQ!Iw5cLDG565fI3m3ZhoeZt9EsNLaBonUFjjJ6PrZ0hgwbuuE8XfWTNBgaAx3deQ==
+X-Complaints-To: abuse@comcast.com
+X-DMCA-Complaints-To: dmca@comcast.net
+X-Abuse-and-DMCA-Info: Please be sure to forward a copy of ALL headers
+X-Abuse-and-DMCA-Info: Otherwise we will be unable to process your complaint properly
+X-Postfilter: 1.1
+Xref: dfw-artgen alt.sys.pdp10:18498
+
+
+I wasn't able to locate the PDP-10 fortran ADVENT in DECUS,
+while looking many years ago. Though I vaguely recall there might be
+one for the PDP-11.
+
+There are multiple versions of the original PDP-10 code available
+on the Internet.
+
+An earlier version (tainted I believe):
+  ftp://ftp.ifarchive.org/if-archive/games/source/advent-original.tar.gz
+Also see (as noted earlier)
+  http://www.spies.com/~aek/36bit/games/
+
+and a slightly later one: 
+ftp://ftp.ifarchive.org/if-archive/games/source/adv350-pdp10.tar.gz
+Also see
+  http://forums.delphiforums.com/n/mb/message.asp?webtag=xyzzy&msg=175.1
+
+Compile and install instructions were posted here in this newsgroup
+earlier this year. See article thread
+  ".run advent, adventure fanatic build procedures."
+which should still be retrievable in the groups.google.com archives.
+
+
+
+
+Article: 18519 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newsfeed.cwix.com!nntp.abs.net!newsxfer.visi.net!sydney.visi.net!not-for-mail
+From: "boojum" <noone@microserf.com>
+Newsgroups: alt.sys.pdp10
+References: <3DD47BED.7CB3867A@ev1.net>
+Subject: Re: Seeking PDP-10 Adventure from DECUS
+Lines: 28
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Newsreader: Microsoft Outlook Express 6.00.2600.0000
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2600.0000
+Message-ID: <C5oD9.88$b_4.8024@sydney.visi.net>
+Date: Fri, 22 Nov 2002 05:35:17 -0500
+NNTP-Posting-Host: 65.120.51.16
+X-Trace: sydney.visi.net 1037962722 65.120.51.16 (Fri, 22 Nov 2002 05:58:42 EST)
+NNTP-Posting-Date: Fri, 22 Nov 2002 05:58:42 EST
+Xref: dfw-artgen alt.sys.pdp10:18519
+
+You can get the FORTRAN source from http://www.rickadams.org/adventure/
+scroll down to 'adventure downloads'.
+
+If your using the simh pdp10 you'll need a small utility to put that in a
+backup tape,
+then extract it IN tops10, and of course you need fortran compiler. I got it
+running
+last January and knowing little about dec it took a while to figure out
+mounting
+tapes etc. But it can be done!
+
+    Chuck
+
+"Charles Richmond" <richmond@ev1.net> wrote in message
+news:3DD47BED.7CB3867A@ev1.net...
+> Is there any way on Tim Shoppa's site <http://www.trailingedge.com>,
+> to do a search for the Adventure package distributed by DECUS???
+> I went to the site, but it seems unless I know which distro it
+> was part of, I may be out of luck... I want to get the original
+> FORTRAN sources and installation instructions for the PDP-10
+> that were distributed by DECUS.
+>
+> --
+> +-------------------------------------------------------------+
+> |     Charles and Francis Richmond     <richmond@plano.net>   |
+> +-------------------------------------------------------------+
+
+
+
+
+Article: 18528 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!dfw-peer!news.verio.net!newsfeed.mathworks.com!wn13feed!wn14feed!worldnet.att.net!204.127.198.203!attbi_feed3!attbi.com!rwcrnsc51.ops.asp.att.net.POSTED!not-for-mail
+Message-ID: <3DDEA4A5.FC72A989@ev1.net>
+From: Charles Richmond <richmond@ev1.net>
+Reply-To: richmond@ev1.net
+Organization: Canine Computer Center
+X-Mailer: Mozilla 4.7C-CCK-MCD {C-UDP; EBM-APPLE} (Macintosh; I; PPC)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: Seeking PDP-10 Adventure from DECUS
+References: <3DD47BED.7CB3867A@ev1.net> <C5oD9.88$b_4.8024@sydney.visi.net>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 21
+NNTP-Posting-Host: 12.237.69.162
+X-Complaints-To: abuse@attbi.com
+X-Trace: rwcrnsc51.ops.asp.att.net 1037994317 12.237.69.162 (Fri, 22 Nov 2002 19:45:17 GMT)
+NNTP-Posting-Date: Fri, 22 Nov 2002 19:45:17 GMT
+Date: Fri, 22 Nov 2002 19:45:17 GMT
+Xref: dfw-artgen alt.sys.pdp10:18528
+
+boojum wrote:
+> 
+> You can get the FORTRAN source from http://www.rickadams.org/adventure/
+> scroll down to 'adventure downloads'.
+> 
+> If your using the simh pdp10 you'll need a small utility to put that in a
+> backup tape, then extract it IN tops10, and of course you need fortran 
+> compiler. I got it running last January and knowing little about dec it 
+> took a while to figure out mounting tapes etc. But it can be done!
+> 
+Yes, I have downloaded this Adventure source before. But IIRC, it
+does *not* contain anything that looks like the *original* instructions
+for installing the program on a -10. I was looking for the original
+-10 distribution documentation along with the source... This is 
+more for my own morbid curiosity, rather than for help in installing
+the Adventure game.
+
+-- 
++-------------------------------------------------------------+
+|     Charles and Francis Richmond     <richmond@plano.net>   |
++-------------------------------------------------------------+
+
+
+Article: 19552 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!sn-xit-03!sn-xit-06!sn-post-01!supernews.com!corp.supernews.com!not-for-mail
+From: m_thompson@ids.net (Michael Thompson)
+Newsgroups: alt.sys.pdp10
+Subject: TOPS10 Adventure
+Date: Fri, 18 Apr 2003 00:56:26 -0000
+Organization: Posted via Supernews, http://www.supernews.com
+Message-ID: <v9uj9qird00vde@corp.supernews.com>
+X-Newsreader: WinVN 0.99.9 (Released Version) (x86 32bit)
+MIME-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Complaints-To: abuse@supernews.com
+Lines: 257
+Xref: dfw-artgen alt.sys.pdp10:19552
+
+Tonight I used KERMIT to move the ADVENT source and database files onto the 
+real KS10. I installed Fortran with the help of Tim Shoppa's archive and 
+instructions I found on the Web. It compiled without an error and runs just 
+fine. I can make a backup tape image if anyone is interested.
+
+.run advent
+
+Initializing...
+Table space used:
+  9612 OF   9650 words of messages
+   742 OF    750 travel options
+   296 OF    300 vocabulary words
+   140 OF    150 locations
+    53 OF    100 objects
+    31 OF     35 action verbs
+   201 OF    205 RTEXT messages
+    10 OF     12 CLASS messages
+     9 OF     20 hints
+    32 OF     35 MAGIC messages
+
+PAUSE
+INIT Done 
+Type G to Continue, X to Exit, T To Trace.
+*g
+
+WELCOME TO ADVENTURE!!	WOULD YOU LIKE INSTRUCTIONS?    
+
+n
+
+YOU ARE STANDING AT THE END OF A ROAD BEFORE A SMALL BRICK BUILDING.  
+AROUND YOU IS A FOREST.  A SMALL STREAM FLOWS OUT OF THE BUILDING AND 
+DOWN A GULLY.  
+
+e
+
+YOU ARE INSIDE A BUILDING, A WELL HOUSE FOR A LARGE SPRING. 
+
+THERE ARE SOME KEYS ON THE GROUND HERE. 
+
+THERE IS A SHINY BRASS LAMP NEARBY.
+
+THERE IS FOOD HERE. 
+
+THERE IS A BOTTLE OF WATER HERE.   
+
+get lamp
+
+OK   
+
+xyzzy
+
+IT IS NOW PITCH DARK.  IF YOU PROCEED YOU WILL LIKELY FALL INTO A PIT.
+
+on lamp
+
+YOUR LAMP IS NOW ON.
+
+YOU ARE IN A DEBRIS ROOM FILLED WITH STUFF WASHED IN FROM THE SURFACE.
+A LOW WIDE PASSAGE WITH COBBLES BECOMES PLUGGED WITH MUD AND DEBRIS   
+HERE, BUT AN AWKWARD CANYON LEADS UPWARD AND WEST.  A NOTE ON THE WALL
+SAYS "MAGIC WORD XYZZY". 
+
+A THREE FOOT BLACK ROD WITH A RUSTY STAR ON AN END LIES NEARBY.  
+
+e
+
+YOU ARE CRAWLING OVER COBBLES IN A LOW PASSAGE.  THERE IS A DIM LIGHT 
+AT THE EAST END OF THE PASSAGE.    
+
+THERE IS A SMALL WICKER CAGE DISCARDED NEARBY.    
+
+get cage
+
+OK   
+
+pit
+
+AT YOUR FEET IS A SMALL PIT BREATHING TRACES OF WHITE MIST.  AN EAST  
+PASSAGE ENDS HERE EXCEPT FOR A SMALL CRACK LEADING ON. 
+
+ROUGH STONE STEPS LEAD DOWN THE PIT.    
+
+e
+
+YOU ARE IN A SPLENDID CHAMBER THIRTY FEET HIGH.  THE WALLS ARE FROZEN 
+RIVERS OF ORANGE STONE.  AN AWKWARD CANYON AND A GOOD PASSAGE EXIT    
+FROM EAST AND WEST SIDES OF THE CHAMBER.
+
+A CHEERFUL LITTLE BIRD IS SITTING HERE SINGING.   
+
+get bird
+
+OK   
+
+w
+
+YOU'RE AT TOP OF SMALL PIT.   
+
+ROUGH STONE STEPS LEAD DOWN THE PIT.    
+
+d
+
+YOU ARE AT ONE END OF A VAST HALL STRETCHING FORWARD OUT OF SIGHT TO  
+THE WEST.  THERE ARE OPENINGS TO EITHER SIDE.  NEARBY, A WIDE STONE   
+STAIRCASE LEADS DOWNWARD.  THE HALL IS FILLED WITH WISPS OF WHITE MIST
+SWAYING TO AND FRO ALMOST AS IF ALIVE.	A COLD WIND BLOWS UP THE  
+STAIRCASE.  THERE IS A PASSAGE AT THE TOP OF A DOME BEHIND YOU.  
+
+ROUGH STONE STEPS LEAD UP THE DOME.
+
+s
+
+THIS IS A LOW ROOM WITH A CRUDE NOTE ON THE WALL.  THE NOTE SAYS,
+"YOU WON'T GET IT UP THE STEPS".   
+
+THERE IS A LARGE SPARKLING NUGGET OF GOLD HERE!   
+
+get gold
+
+OK   
+
+n
+
+YOU'RE IN HALL OF MISTS. 
+
+n
+
+YOU ARE IN THE HALL OF THE MOUNTAIN KING, WITH PASSAGES OFF IN ALL    
+DIRECTIONS.    
+
+A HUGE GREEN FIERCE SNAKE BARS THE WAY! 
+
+free bird
+
+THE LITTLE BIRD ATTACKS THE GREEN SNAKE, AND IN AN ASTOUNDING FLURRY  
+DRIVES THE SNAKE AWAY.   
+
+drop cage
+
+OK   
+
+s
+
+YOU ARE IN THE SOUTH SIDE CHAMBER. 
+
+THERE IS PRECIOUS JEWELRY HERE!    
+
+get jewel
+
+OK   
+
+n
+
+YOU'RE IN HALL OF MT KING
+
+THERE IS A SMALL WICKER CAGE DISCARDED NEARBY.    
+
+A CHEERFUL LITTLE BIRD IS SITTING HERE SINGING.   
+
+w
+
+YOU ARE IN THE WEST SIDE CHAMBER OF THE HALL OF THE MOUNTAIN KING.    
+A PASSAGE CONTINUES WEST AND UP HERE.   
+
+THERE ARE MANY COINS HERE!    
+
+get coins
+
+OK   
+
+e
+
+YOU'RE IN HALL OF MT KING
+
+THERE IS A SMALL WICKER CAGE DISCARDED NEARBY.    
+
+A CHEERFUL LITTLE BIRD IS SITTING HERE SINGING.   
+
+n
+
+YOU ARE IN A LOW N/S PASSAGE AT A HOLE IN THE FLOOR.  THE HOLE GOES   
+DOWN TO AN E/W PASSAGE.  
+
+THERE ARE BARS OF SILVER HERE!
+
+get silver
+
+OK   
+
+n
+
+YOU ARE IN A LARGE ROOM, WITH A PASSAGE TO THE SOUTH, A PASSAGE TO THE
+WEST, AND A WALL OF BROKEN ROCK TO THE EAST.  THERE IS A LARGE "Y2" ON
+A ROCK IN THE ROOM'S CENTER.  
+
+plover
+
+YOU'RE IN A SMALL CHAMBER LIT BY AN EERIE GREEN LIGHT.	AN EXTREMELY   
+NARROW TUNNEL EXITS TO THE WEST.  A DARK CORRIDOR LEADS NE. 
+
+THERE IS AN EMERALD HERE THE SIZE OF A PLOVER'S EGG!   
+
+ne
+
+YOU'RE IN THE DARK-ROOM.  A CORRIDOR LEADING SOUTH IS THE ONLY EXIT.  
+
+A MASSIVE STONE TABLET IMBEDDED IN THE WALL READS:
+"CONGRATULATIONS ON BRINGING LIGHT INTO THE DARK-ROOM!"
+
+THERE IS A PLATINUM PYRAMID HERE, 8 INCHES ON A SIDE!  
+
+get pyramid
+
+OK   
+
+s
+
+YOU'RE IN PLOVER ROOM.   
+
+THERE IS AN EMERALD HERE THE SIZE OF A PLOVER'S EGG!   
+
+plover
+
+YOU'RE AT "Y2".
+
+plugh
+
+YOU'RE INSIDE BUILDING.  
+
+THERE ARE SOME KEYS ON THE GROUND HERE. 
+
+THERE IS FOOD HERE. 
+
+THERE IS A BOTTLE OF WATER HERE.   
+
+quit
+
+DO YOU REALLY WANT TO QUIT NOW?    
+
+yes
+
+OK   
+
+
+
+You scored  69 out of a possible 350, using   33 turns.
+
+YOUR SCORE QUALIFIES YOU AS A NOVICE CLASS ADVENTURER. 
+
+To achieve the next higher rating, you need 32 more points.
+
+CPU time 25.38   Elapsed time 3:32.98
+
+EXIT
+
+.
+
+
+
+Article: 19555 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!nntp1.roc.gblx.net!nntp.gblx.net!nntp.gblx.net!hermes.visi.com!news-out.visi.com!petbe.visi.com!out.nntp.be!propagator2-sterling!news-in-sterling.newsfeed.com!newsfeed!wn13feed!worldnet.att.net!204.127.198.203!attbi_feed3!attbi.com!rwcrnsc51.ops.asp.att.net.POSTED!not-for-mail
+Message-ID: <3E9FBD84.22659A17@ev1.net>
+From: Charles Richmond <richmond@ev1.net>
+Reply-To: richmond@ev1.net
+Organization: Canine Computer Center
+X-Mailer: Mozilla 4.7C-CCK-MCD {C-UDP; EBM-APPLE} (Macintosh; I; PPC)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS10 Adventure
+References: <v9uj9qird00vde@corp.supernews.com> <mddsmsg1pqh.fsf@panix5.panix.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 13
+NNTP-Posting-Host: 12.241.15.59
+X-Complaints-To: abuse@attbi.com
+X-Trace: rwcrnsc51.ops.asp.att.net 1050649067 12.241.15.59 (Fri, 18 Apr 2003 06:57:47 GMT)
+NNTP-Posting-Date: Fri, 18 Apr 2003 06:57:47 GMT
+Date: Fri, 18 Apr 2003 06:57:47 GMT
+Xref: dfw-artgen alt.sys.pdp10:19555
+
+Rich Alderson wrote:
+> 
+> Hmm.  Now I have to dig up my copy of Dave Long's 501 point version (UofChicago
+> Graduate School of Business computer facility, via LOTS).
+> 
+You can get a new copy of the Advent 501 source code at:
+
+	<ftp://ftp.gmd.de/if-archive/games/source/advent.tar.Z>
+
+--
++----------------------------------------------------------------+
+|   Charles and Francis Richmond     richmond at plano dot net   |
++----------------------------------------------------------------+
+
+

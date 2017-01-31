@@ -1,0 +1,224 @@
+Article 4163 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Smith and O'Halloran)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: 5 Oct 1998 11:29:58 -0700
+Organization: Chez INWAP (people, computers, cats)
+Message-ID: <6vb376$a8n$1@shell3.ba.best.com>
+References: <6v7mi0$evr$1@strato.ultra.net> <19981004080826.18858.00003043@ng30.aol.com> <6vacmp$bni$1@strato.ultra.net>
+Lines: 29
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: 907612205 26087 inwap 206.184.139.134
+Xref: news3.best.com alt.sys.pdp10:4163
+
+In article <6vacmp$bni$1@strato.ultra.net>,  <jmfbahciv@aol.com> wrote:
+>TOPS-20 had a card reader driver?  Not even the -10 had that
+>(we had moved the card stuff to the Customer Supported Tape).
+>I didn't spend much time on packaging TOPS-20 so I can't say
+>what the -20 monitor group (this does not include spoolers)
+>supported.  I also didn't review the TOPS-20 SPDs so I can't
+>say what configurations were sold.
+
+TOPS-10/TOPS-20 RSX-20F System Reference Manual, AA-BS94A-TK, AD-BS94A-T1
+(TOPS-10 version 7.03, TOPS-20 release 6.1, RSX20F version 15-15)
+Page 10-24: DH11 DATA BASE, status of up to 128 TTY lines.
+Page 10-29: CD-11 DRIVER DATA BASE, status bits for CD-11 card reader.
+Page 10-30: LP-20 DRIVER DATA BASE, status of line printer.
+
+I need to clear up a misstatement on my previous post: there was no
+plotter or card punch connected to our 1091.  I was, indeed, confused.
+
+We had upgraded the plotter to a Calcomp unit that had an RS-232 interface.
+The card punch was a device that had a keyboard and an RS-232 interface. I had
+to modify SPROUT to talk to these devices.
+
+We had two Data Products printers; one connected to the KL's BA-10 (left-over
+lineprinter controller from the KA), the other had an A/B switch so that it
+could connect to the KL's LP-20 or to the KS's LP-11.  The high-speed card
+reader was a CD20 connected to the KL's CR-11.
+	-Joe
+-- 
+INWAP.COM is Joe and Sally Smith, John and Chris O'Halloran and our cats
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 4174 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!feed1.news.rcn.net!rcn!news.ultranet.com!d3
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: Wed, 07 Oct 98 10:40:13 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 19
+Message-ID: <6vfkn8$lh5$2@strato.ultra.net>
+References: <6v7mi0$evr$1@strato.ultra.net> <19981004080826.18858.00003043@ng30.aol.com> <6vacmp$bni$1@strato.ultra.net> <6vb376$a8n$1@shell3.ba.best.com> <6vdelk$o1e$3@hirame.wwa.com>
+NNTP-Posting-Host: d3.dial-16.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 7 Oct 1998 11:53:12 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: news3.best.com alt.sys.pdp10:4174
+
+In article <6vdelk$o1e$3@hirame.wwa.com>,
+   jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) wrote:
+<snip>
+
+>Once we (ADP) took delivery of our first KS, we installed an LP-11 and I 
+>modified LPTSER to support it. I don't recall if we ever gave that code (I 
+>think I called it LP1SER) back to DEC.
+>
+
+This isn't the first time that I wish somebody had preserved the 
+MCO files (not the ones we shipped on the monitor tape) but the 
+ones that contained all the MCOs written.  There's a hell of a
+lot of documentation and information that's been lost because
+somebody dumped "old" stuff.
+
+/BAH
+
+
+Sigh! - Subtract a hundred and four for e-mail.
+
+
+Article 4210 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Smith and O'Halloran)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: 8 Oct 1998 16:47:01 -0700
+Organization: Chez INWAP (people, computers, cats)
+Message-ID: <6vjitl$p9b$1@shell3.ba.best.com>
+References: <6v7mi0$evr$1@strato.ultra.net> <6vacmp$bni$1@strato.ultra.net> <6vb376$a8n$1@shell3.ba.best.com> <6vdelk$o1e$3@hirame.wwa.com>
+Lines: 26
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: 907890425 4680 inwap 206.184.139.134
+Xref: news3.best.com alt.sys.pdp10:4210
+
+In article <6vdelk$o1e$3@hirame.wwa.com>,
+John Everett <jeverett@wwa.DEFEAT.UCE.BOTS.com> wrote:
+>In article <6vb376$a8n$1@shell3.ba.best.com>, inwap@best.com says...
+>>
+>>We had two Data Products printers; one connected to the KL's BA-10 (left-over
+>>lineprinter controller from the KA), the other had an A/B switch so that it
+>>could connect to the KL's LP-20 or to the KS's LP-11.
+>
+>Did your KS really have an LP-11? The reason I ask is because the DEC
+>standard KS configuration included an LP-20.
+
+Yeah, but the LP-20 was too expensive.  What we had was a board from
+DCA that was an LP-11 clone.  They provided the device driver for it;
+I'm not sure, but I think it was called LP1SER.
+
+>Once we (ADP) took delivery of our first KS, we installed an LP-11 and I 
+>modified LPTSER to support it. I don't recall if we ever gave that code (I 
+>think I called it LP1SER) back to DEC.
+
+I cannot say whether DCA got your code or they re-invented the driver.
+It just worked.
+	-Joe
+
+-- 
+INWAP.COM is Joe and Sally Smith, John and Chris O'Halloran and our cats
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 4178 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!feed1.news.rcn.net!rcn!europa.clark.net!206.55.3.15!news.clark.net!not-for-mail
+From: gagner@clark.net (Philip Gagner)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: Wed, 07 Oct 1998 13:13:31 GMT
+Organization: TWLG
+Lines: 30
+Message-ID: <361d6717.72552781@news.clark.net>
+References: <Pine.LNX.3.96.980928112124.10870D-100000@bony.umtec.com> <3613e9a8.18494117@news.clark.net> <6uvli1$o2j$1@strato.ultra.net> <3615172c.19558816@news.clark.net> <6v33qo$mr1$1@shell3.ba.best.com> <6v5edo$lrf$1@hirame.wwa.com>
+Reply-To: gagner@clark.net
+NNTP-Posting-Host: gagner-ppp.clark.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Newsreader: Forte Agent 1.5/32.451
+Xref: news3.best.com alt.sys.pdp10:4178
+
+jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) wrote:
+
+>In article <6v33qo$mr1$1@shell3.ba.best.com>, inwap@best.com says...
+>>
+>>Just about every peripheral that was not a disk, tape or network was on the
+>>console front-end.  Lineprinter.  Card Reader and Card Punch.  Hardwired
+>>TTYs.  (Excluding, for the moment, devices connected to a KA-compatible
+>>I/O bus, such as the BA10 lineprinter and Calcomp plotter interface.)
+>
+>Okay, maybe I'm just losing my mind, but I was responsible for ALL of the 
+>TOPS-10 "unit record" device service routines during the period in which the 
+>KL was being introduced. I don't recall ever having to rewrite/modify CDPSRX, 
+>CDRSRX, LPTSER, etc., because of any KL specific changes to their 
+>interfaces/controllers. Seems to me they responded to the same CONOs/CONIs and 
+>DATAOs/DATAIs they did on the KA and KI. Did TOPS-20 do things differently?
+
+Well, you're not losing your mind (at least the above message isn't
+sufficent evidence of the hypothesis to make a conclusive judgment)
+but the answer is still no. That is, the FE-connected devices did not
+(and logically could not) respond to CONO, CONI, DATAO, and DATAI.
+What happened was that the pseudo-device trapped through the device
+dispatch table into the front end driver (what was it called, FESER
+doesn't sound right--DTESER?) and the front end driver pushed it onto
+the DTE queue, where eventually it got eaten by RSX20F and later a
+successful return was pushed back over the FE, resolving the system
+call. So LPTSER, etc, did not have to be rewritten or modified any
+more for the FE than they had to be for remote (DC72) lineprinters,
+etc. Since the networked devices (DC72/DN8x) were introduced before
+the -KL, I don't recall any modifications which were required. Lots of
+modifications were required to make the FE code work, though.
+
+
+Article 4178 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!feed1.news.rcn.net!rcn!europa.clark.net!206.55.3.15!news.clark.net!not-for-mail
+From: gagner@clark.net (Philip Gagner)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: Wed, 07 Oct 1998 13:13:31 GMT
+Organization: TWLG
+Lines: 30
+Message-ID: <361d6717.72552781@news.clark.net>
+References: <Pine.LNX.3.96.980928112124.10870D-100000@bony.umtec.com> <3613e9a8.18494117@news.clark.net> <6uvli1$o2j$1@strato.ultra.net> <3615172c.19558816@news.clark.net> <6v33qo$mr1$1@shell3.ba.best.com> <6v5edo$lrf$1@hirame.wwa.com>
+Reply-To: gagner@clark.net
+NNTP-Posting-Host: gagner-ppp.clark.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Newsreader: Forte Agent 1.5/32.451
+Xref: news3.best.com alt.sys.pdp10:4178
+
+jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) wrote:
+
+>In article <6v33qo$mr1$1@shell3.ba.best.com>, inwap@best.com says...
+>>
+>>Just about every peripheral that was not a disk, tape or network was on the
+>>console front-end.  Lineprinter.  Card Reader and Card Punch.  Hardwired
+>>TTYs.  (Excluding, for the moment, devices connected to a KA-compatible
+>>I/O bus, such as the BA10 lineprinter and Calcomp plotter interface.)
+>
+>Okay, maybe I'm just losing my mind, but I was responsible for ALL of the 
+>TOPS-10 "unit record" device service routines during the period in which the 
+>KL was being introduced. I don't recall ever having to rewrite/modify CDPSRX, 
+>CDRSRX, LPTSER, etc., because of any KL specific changes to their 
+>interfaces/controllers. Seems to me they responded to the same CONOs/CONIs and 
+>DATAOs/DATAIs they did on the KA and KI. Did TOPS-20 do things differently?
+
+Well, you're not losing your mind (at least the above message isn't
+sufficent evidence of the hypothesis to make a conclusive judgment)
+but the answer is still no. That is, the FE-connected devices did not
+(and logically could not) respond to CONO, CONI, DATAO, and DATAI.
+What happened was that the pseudo-device trapped through the device
+dispatch table into the front end driver (what was it called, FESER
+doesn't sound right--DTESER?) and the front end driver pushed it onto
+the DTE queue, where eventually it got eaten by RSX20F and later a
+successful return was pushed back over the FE, resolving the system
+call. So LPTSER, etc, did not have to be rewritten or modified any
+more for the FE than they had to be for remote (DC72) lineprinters,
+etc. Since the networked devices (DC72/DN8x) were introduced before
+the -KL, I don't recall any modifications which were required. Lots of
+modifications were required to make the FE code work, though.
+
+

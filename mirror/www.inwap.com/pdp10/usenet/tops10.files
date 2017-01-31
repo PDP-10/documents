@@ -1,0 +1,2389 @@
+Article 4888 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: 29 Apr 1999 19:32:06 -0700
+Organization: Chez Inwap
+Message-ID: <7gb4n6$795$1@shell3.ba.best.com>
+References: <371be3e4.0@newsfeed.one.net> <7g1sdl$4vs@weyl.math.psu.edu> <7g7hut$nnt$1@shell3.ba.best.com> <7g8sbh$e88@weyl.math.psu.edu>
+Lines: 257
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 925439530 220 inwap@206.184.139.134
+Xref: news3.best.com alt.folklore.computers:129168 alt.sys.pdp10:4888
+
+In article <7g8sbh$e88@weyl.math.psu.edu>,
+Alexander Viro <viro@weyl.math.psu.edu> wrote:
+>	Umm... That is, in original implementation PTY == something similar
+>to bidirectional pipe (socketpair in AF_UNIX, actually), right?
+
+Not really.  The PTY setup is extremely asymmetric.  On a Monitor configured
+for 64 terminals and 32 PTYs, the names TTY0 through TTY77 corresponded to
+real terminals, and TTY100 through TTY137 corresponded to the slave half of
+PTY0 through PTY37.
+
+After a program did an OPEN on a PTY, writing to the PTY via an OUT UUO
+caused characters to appear in the input buffer on the slave terminal.
+Doing an IN UUO performed a non-blocking read of the slave terminal's output
+buffer.  There was a special UUO to read the condition of the PTY.
+Conditions included "output available for reading", "slave job is waiting for
+input (user mode)" and "slave job is waiting for input (Monitor mode)".
+
+>signal delivery to group. Was there an equivalent mechanism?
+
+There are no groups.  TOPS-10 did not have pipelines.  There was no concept of
+STDIN or STDOUT.  Programs had two ways of doing I/O to the terminal: it could
+do an OPEN on device 'TTY' and use normal IN, INPUT, OUT, or OUTPUT UUOs, or
+it do TTCALLs.  The most common TTCALLs were: output one 7-bit character,
+output a string of characters (first character had to start on a word
+boundary, the string was terminated by a null character), input one character
+(cbreak), and input one character after waiting for a full line (to allow the
+user a chance to use backspace, delete, Control-U, etc).  If you wanted to
+turn off echo, or to be able to read all possible characters (including
+Control-C and/or parity), you had to use the OPEN call.  But that used up a
+software I/O channel, and there were only 16 of those available.
+
+>implied one terminal - one process relation (BTW, were there unattached
+>processes?)
+
+Each device on the system had a DDB (Device Data Block).  In the DDB,
+there was a 9-bit number indicating which job owned the device.  There
+was a separate bit for TTY DDBs to indicate that the job was owning the device
+was using it as the controlling terminal.  Each job had an entry in a table
+pointing to its TTY.
+
+The implications were this:
+  *) A job could have control over more than one TTY.  For an example,
+  a job running on a VT52 that emulated a lineprinter by sending characters
+  to an LA36 that no-one was logged in on at the time.
+
+  *) If Control-C was seen arriving on a TTY, and that was controlling
+  a job, then said job would get an interrupt condition.  (Control-C
+  on TOPS-10 was like Control-Z on Unix; the stopped process could be
+  continued by entering the CONTINUE or CCONTINUE commands.)
+
+  *) The DETACH command and DETACH system call would disassociate a job
+  from its terminal.  A properly written program could continue running
+  even when the job no longer had a controlling terminal.
+
+>	Aha... I'm not completely sure how it translates to UNIX terms. Let's
+>see... There are hardware interrupt handlers (normally most urgent stuff +
+>planning a software interrupt for less time-critical parts) and there are
+>software interrupts (normally planned by something else (including prior
+>invocations of themselves) and run with hardware interrupts enabled at
+>reasonable frequency). Both types are in bottom half (async to process, have
+>no context, can preempt upper half, can't call scheduler). Do you mean that
+>SCNSER was in the equivalent of hardware interrupt? Or just that it sat in
+>the software interrupt and didn't use continuation mechanisms?
+
+SCNSER was the name of the module (assembly language source file) that had the
+TTY interrupt routines and the TTY UUO routines.  COMMON was the name of
+the module that set up the interrupt vectors, determined which physical
+device caused the interrupt, then passed control to the device-specific
+interrupt handler via the device's dispatch table.
+
+To output "Hello world!", the job would execute a UUO which did a context
+switch into the UUOCON module.  UUOCON would locate the terminal device's
+DDB, then use the DDB's dispatch table to jump to the routine that handled
+the OUT UUO.  This routine lived in SCNSER's "top half".  It would disable
+TTY interrupts, copy the characters from user address space to kernel
+address space, then update the count of characters in the device's output
+buffer.  Then it would jump to a routine in SCNSER's "bottom half" to
+start the device driver (if it was not already running) and re-enable
+TTY interrupts.
+
+Also involved were LDBs (Line Data Blocks).  They were adjuncts to the
+TTY DDBs and held the TTY input and output buffer chunks.
+
+
+
+
+>>UUO level was in the context of a job, meaning that it had a
+>>address space, could be delayed if needed, and the Monitor could execute
+>>UUOs on behalf of the user process. 
+>	Aha, so UUO level == normal upper half. Wait... Do you mean that
+>in some cases COMCON ran in the context of some job? Could you elaborate?
+
+COMCON had to deal with many types of commands.
+  *) Quick, no output (such as SET TERMINAL WIDTH 80).
+
+  *) Quick, with output from the Monitor.  Such as PJOB (print job number),
+     DAYTIME (print time of day), Control-T (print name of program currently
+     in core, whether it is running or blocked on I/O).  If the terminal's
+     output buffer was already full, the characters from the Monitor were
+     thrown into the bit bucket, because COMCON was not in a situation
+     where it could afford to wait for the output buffer to empty.
+
+  *) Slow - anything a file into the user's address space or writing
+     a core image to a file.  (Note: the terms "user address space" and
+     "core image" are synonymous in this context.)
+
+Take, for example, the case where someone types SYSTAT and hits the RETURN
+key.
+
+  *) First character arrives from device driver.  It is stored in the
+     input buffer for that terminal line.  The input buffer count is
+     incremented and the LDB is marked as having at least one character.
+     Unless SET TERMINAL NO ECHO is in effect, the character is copied to
+     the output buffer and echoed back to the user.
+
+  *) Additional characters arrive.  The user can edit the input by using
+     RUBOUT (DEL), Control-H (backspace) or Control-U.
+
+  *) The user hits the RETURN key.  The device driver pretends that the
+     user has entered both carriage-return and line-feed.  Both characters
+     go into the input buffer, and both get echoed to the output buffer.
+
+  *) Line-feed is one of several characters that TOPS-10 takes as an
+     end-of-line condition.  The LDB is marked as having a line of input
+     available.  Since the terminal is in Monitor mode (instead of user
+     mode), SCNSER marks a bit saying that this line needs attention from
+     COMCON.
+
+  Everything described above was done at Priority Interrupt level 3, the
+  one usually assigned to SCNSER and other device drivers.
+
+  *) An interrupt comes in a PI level 1 from the line-frequency clock.
+     This happens 60 times per second in North America, 50 Hz elsewhere.
+     It increments the time-of-day counters, and causes a software
+     initiated interrupt at PI level 7.
+
+  *) If no other interrupts are in progress, the interrupt handler for PI
+     level 7 runs.  This is clock-level, where scheduling and CPU usage
+     accounting is done.  COMCON runs at clock-level, and is expected to
+     complete all its tasks before the next clock tick that will arrive
+     in 16.67 or 20 milliseconds.
+
+  *) COMCON locates the terminal line that has a line of input waiting.
+     It looks for a command, skipping leading blanks and stopping at
+     a semicolon, exclaimation mark, or line-feed.  The first word of
+     the line is converted to uppercase, truncated to 6 characters max,
+     then searched for in the table of legal Monitor commands.
+
+  *) The command dispatch table entry for SYSTAT says that this command
+     destroys the current core image (the current job's physical and
+     virtual memory resources have to be released), is legal even when
+     no one is logged in on that terminal, requires a job number (the next
+     available job number is assigned if no one is logged in on that
+     terminal), will put the terminal in user mode, requires the running
+     of a program, and the name of the program to run is SYS:SYSTAT.EXE.
+
+  *) The process of reading SYS:SYSTAT.EXE from disk may take around one
+     hundred milliseconds.  (Back in the days when TOPS-10 ran from
+     DECtapes, reading a file from tape could take 2 to 50 seconds).
+
+COMCON can't afford to wait around while that happens; it has other lines
+that need to be monitored for commands.  Besides, reading a program into
+user's address space requires that physical and virtual core be assigned
+and a page map created.  The job is marked as needing attention, and COMCON
+continues with its clock-level tasks.
+
+  *) The scheduler also runs at clock-level.  It notices that there is
+     a job that needs to run.  The job that was running before clock-level
+     interrupt came in is examined.  If it had used up its time slice,
+     the scheduler finishes the context switch by storing the job's
+     registers and PC in the job's process table.  The scheduler changes
+     the user page map for the new job, loads its registers and PC.
+     The flag bits in the PC indicate that the job will be run in kernel
+     mode and the PC points to the routine in COMCON that will resume
+     loading SYS:SYSTAT.EXE into memory.
+
+  *) The last instruction in the clock-level routine is one that restores
+     the jobs PC and PC flags, and dismisses the current (level 7) interrupt.
+
+Now COMCON is running on the behalf of a particular job, at UUO level.
+It pretends that the job had executed a RUN UUO to get here.  TOPS-10
+allows a UUO handling routine to execute another UUO.  The RUN UUO
+does an OPEN on logical device SYS (which typically translated to
+DSKB:[1,4]), a LOOKUP on SYSTAT.EXE, and then as many IN UUOs as needed
+to read the program into core.  (Later versions of TOPS-10 allowed on-demand
+paging, where pages of the EXE file would be read in as needed by the page
+fault handler, but that's a different topic.)
+
+>>Device drivers had dispatch tables.  A device was selected by name using
+>>the OPEN UUO.  When a job went to perform an operation (such as IN, OUT,
+>>LOOKUP, ENTER, etc) on an open device, the Monitor would jump to the routine
+>>pointed to by the appropriate entry in the dispatch table.  Operations
+>	I.e. the same setup as in UNIX, modulo different set of methods.
+><chuckle> Always fine to watch C++ fanatics claiming that OOP is impossible
+>in C. Wonder how do they react on OOP in assembler...
+
+Say "amen!" brother.  New grad students are re-inventing stuff 30 years old.
+
+>>that were not applicable (such as file name selection on non-disk devices)
+>				   ^^^^^^^^^^^^^^^^^^^
+>					What???
+>>were dispatched to a dummy subroutine.
+
+To create a file on disk, the program would OPEN device DSK, do an ENTER UUO
+to specify a 6-character file name and a 3-character extension.  The fourth
+word of the ENTER UUO would be zero to specify the current directory,
+nonzero in both halves to specify a particular user's top-level directory,
+or zero in the left half and nonzero in the right to point to a path block
+(directory and up to five levels of subdirectory).  Then the file could
+be written to with OUT UUOs.
+
+To create a file on DECtape, OPEN and ENTER were mandatory before OUT.
+
+To send output to a lineprinter, paper tape punch, card punch, plotter,
+magnetic tape, or terminal, only the OPEN was required.  The ENTER UUO was a
+no-op.  (Although with printer spooling, the name from the ENTER would be used
+in the print queue.  And an ENTER was significant on ANSI-labled tapes.)
+
+Well written programs would do an ENTER even if they did an OPEN to device
+TTY.  This allowed for
+	.ASSIGN DSK TTY
+	.RUN PROGRA.EXE
+	.DEASSIGN TTY
+to redirect the output of the program to a file on the disk.	
+
+>	No questions wrt to N/A methods, but... do you imply that filesystem
+>was folded into the disk driver?
+
+Not at all.  The entry points to the filesystem were stored in a "struct"
+that was accessable to the file system, the disk driver, and the UUO
+handling routines.
+all devices that were file oriented.  The filesystem itself was stored
+
+When an ENTER UUO was done, UUOCON would get the arguments to the ENTER and
+copy them to the device DDB.  Then it would use the device's dispatch table to
+locate the device-specific routine to handle an ENTER and call it.
+
+For devices that were not file-oriented, the routine was nothing but a simple
+return-from-subroutine.  For devices that were read-only, the routine would
+cause the UUO to return with an "invalid operation" error code.
+
+For DECtapes, the routine for ENTER was in DTASER, the same module that
+had the DECtape device driver.  (The file system semantics for DECtapes
+was similar to MSDOS version 1; a limited number of directory entries,
+6.3 naming convention, no subdirectories.)
+
+For disk devices, the routine for ENTER was in FILUUO.  That was the
+device-independent module for doing LOOKUP, ENTER, RENAME and other file
+related operations.  That module implemented the disk directory structure,
+mandatory file locks and the ability to read the old contents of a file that
+was being superseded.
+	-Joe
+
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 4898 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: 30 Apr 1999 10:17:04 -0700
+Organization: Chez Inwap
+Message-ID: <7gcoig$63f$1@shell3.ba.best.com>
+References: <371be3e4.0@newsfeed.one.net> <7g8sbh$e88@weyl.math.psu.edu> <7gb4n6$795$1@shell3.ba.best.com> <7gc02r$go9@weyl.math.psu.edu>
+Lines: 70
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 925492631 223 inwap@206.184.139.134
+Xref: news3.best.com alt.folklore.computers:129223 alt.sys.pdp10:4898
+
+In article <7gc02r$go9@weyl.math.psu.edu>,
+Alexander Viro <viro@weyl.math.psu.edu> wrote:
+>In article <7gb4n6$795$1@shell3.ba.best.com>, Joe Smith <inwap@best.com> wrote:
+>>For disk devices, the routine for ENTER was in FILUUO.  That was the
+>>device-independent module for doing LOOKUP, ENTER, RENAME and other file
+>>related operations.  That module implemented the disk directory structure,
+>>mandatory file locks and the ability to read the old contents of a file that
+>>was being superseded.
+>
+>So you did sequence of lookups, followed by the operation. All from the
+>userspace. Either you had damn good namespace locking available to processes
+>or there should be a helluva lot of races... BTW, what happened if one
+>process tried to remove or rename a file opened by another one?
+
+The process of loading a program into memory was in userspace.  File
+manipulation was done by the kernel.  No problems, no races.
+
+Here is one command on TOPS-10 that cannot done the same way on Unix:
+	COPY RESUME.TXT=HEADER.TXT,RESUME.TXT,FOOTER.TXT
+
+*) Open channel 1 to disk.
+
+*) Do an ENTER on channel 1 to RESUME.TXT.  If the file is already open for
+   output by another job, return error code 3 (File Being Modified). Since the
+   file name already exists, this will be a superceding enter.  Copy the file
+   permissions for the existing file into the DDB.  (The old file remains on
+   disk, and can still be read.)
+
+*) Open channel 2 to disk.
+
+*) LOOKUP HEADER.TXT on channel 2. Do a series of IN UUOs on channel 2 and OUT
+   UUOs on channel 1.  CLOSE open file on channel 2 at EOF.
+
+*) LOOKUP RESUME.TXT on channel 2.  This locates the original file; the new
+   version being written channel 1 is known only to the Monitor and is not
+   pointed to by any directory.  Do a series of IN UUOs on channel 2 and OUT
+   UUOs on channel 1.  CLOSE open file on channel 2 at EOF.
+
+*) LOOKUP FOOTER.TXT on channel 2. Do a series of IN UUOs on channel 2 and OUT
+   UUOs on channel 1.  CLOSE open file on channel 2 at EOF.
+
+*) RELEASE channel 2.  Free up the DDB.
+
+*) CLOSE channel 1.  Update the RIB (Retrieval Information Block, much
+   like an inode).  Update the directory entry to point to the new RIB.
+
+*) If no job had the old RESUME.TXT open, free up the disk blocks belonging
+   to the old file, including the old RIB.
+
+*) If RESUME.TXT is open for reading on another channel or by another job,
+   the old RIB is still accessable via the open DDBs.  There can be any
+   number of superseded versions of the file still open for reading.
+
+*) RELEASE channel 1 and terminate the COPY program (SYS:PIP.EXE).
+
+TOPS-20 has explicit version numbers.  It would create RESUME.TXT.2 while
+reading RESUME.TXT.1; both file names would exist in the directory when
+the output file was closed.
+
+This is in contrast to Unix and other operating systems which truncate
+the file to zero bytes when it is openned for output.
+
+The down side was that, in general, it was not possible to watch the progress
+of a slowly growing file.  Programs that wanted to make their log files
+visible in real time would need to open+append+close for each block written.
+	-Joe
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 4922 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: 1 May 1999 13:22:04 -0700
+Organization: Chez Inwap
+Message-ID: <7gfnpc$3in$1@shell3.ba.best.com>
+References: <371be3e4.0@newsfeed.one.net> <7gcr9l$hn5@weyl.math.psu.edu> <3729fa95.0@news.wizvax.net> <7gdk1j$ilu@weyl.math.psu.edu>
+Lines: 43
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 925590128 226 inwap@206.184.139.134
+Xref: news3.best.com alt.folklore.computers:129300 alt.sys.pdp10:4922
+
+In article <7gdk1j$ilu@weyl.math.psu.edu>,
+Alexander Viro <viro@weyl.math.psu.edu> wrote:
+>>any case I strongly doubt it was possible to change the PPN of a UFD in-place
+>							^^^^^
+>	Excuse me? Do you imply that user could have only one directory?
+>AFAICS PPN == UID+GID and it looks like per-user thing, not per-directory one.
+
+Each user could have only one top-level directory per disk.
+
+If LOGIN determined that my PPN was 13,17 and that I was allowed to use
+DSKA and DSKB, then the logical name "DSK:" refered to both
+DSKA:[13,17] and DSKB:[13,17].  When I typed the DIR command, SYS:DIRECT.EXE
+would read DSKA:[1,1]#000013000017.UFD and DSKB:[1,1]#000013000017.UFD.
+
+(The poundsign notation says to take the 12 octal digits which follow and
+convert them to a 36-bit quantity.  In the example above, the first 6
+digits are the project number, and the next 6 digits are the programmer
+number; combined, they are the PPN.)
+
+The ersatz device name "MFD" was an alias for "DSK:[1,1]".  The only entries
+in the Master File Directory were the UFDs (User File Directories).
+UFDs were the login directorys, and could contain files or SFDs (Sub File
+Directories).  The limit was 5 levels if SFDs.
+
+If I said "DIR [,,TECO,SRC]", it would read DSKA:[13,17,TECO]SRC.SFD and/or
+DSKB:[13,17,TECO]SRC.SFD.
+
+Like Unix, TOPS-10 had file permissions specified as three octal digits,
+one each for owner, project(group) and other.  But it had a different
+method of determining the owner.  If you created a directory that was
+writeable by world, then any new files created there belonged to you
+(the owner of the directory) and not to the PPN of the creator.
+
+You were a member of the group owning the file if the project part of the
+file's directory matched the left half of your PPN.  You were the owner of a
+file if the programmer part of the file's directory matched the right half
+PPN.
+
+	-Joe
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 4925 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!cliffs.rs.itd.umich.edu!cloudbreak.rs.itd.umich.edu!srvr1.engin.umich.edu!news.tc.cornell.edu!news3.cac.psu.edu!not-for-mail
+From: viro@weyl.math.psu.edu (Alexander Viro)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: 1 May 1999 17:50:17 -0400
+Organization: -ENOENT
+Lines: 22
+Message-ID: <7gfsup$jmk@weyl.math.psu.edu>
+References: <371be3e4.0@newsfeed.one.net> <3729fa95.0@news.wizvax.net> <7gdk1j$ilu@weyl.math.psu.edu> <7gfnpc$3in$1@shell3.ba.best.com>
+NNTP-Posting-Host: weyl.math.psu.edu
+Xref: news3.best.com alt.folklore.computers:129307 alt.sys.pdp10:4925
+
+In article <7gfnpc$3in$1@shell3.ba.best.com>, Joe Smith <inwap@best.com> wrote:
+>In article <7gdk1j$ilu@weyl.math.psu.edu>,
+>Alexander Viro <viro@weyl.math.psu.edu> wrote:
+>>>any case I strongly doubt it was possible to change the PPN of a UFD in-place
+>>							^^^^^
+>>	Excuse me? Do you imply that user could have only one directory?
+>>AFAICS PPN == UID+GID and it looks like per-user thing, not per-directory one.
+>
+[namespace wasn't flat, homedirs were all in root]
+[disks were kinda-sorta unionfs'ed]
+[2^18 possible UIDs and 2^18 possible GIDs]
+[maximal depth was 5 (or 6?)]
+[for UID it had the same policy as BSD has for GID in SGID directories]
+(BTW, what about GID (== project) part?)
+
+D'oh. It's much nicer than the picture implied by John. Was there a notion
+of current working directory? And how did one open [42,6,FOO,BAR]BAZ (if
+I didn't mess the notation) for write?
+
+-- 
+"You're one of those condescending Unix computer users!"
+"Here's a nickel, kid.  Get yourself a better computer" - Dilbert.
+
+
+Article 4930 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: 1 May 1999 23:17:25 -0700
+Organization: Chez Inwap
+Message-ID: <7ggqll$u0$1@shell3.ba.best.com>
+References: <371be3e4.0@newsfeed.one.net> <7geldj$j3t$2@antiochus.ultra.net> <372b2c32.0@news.wizvax.net> <7gfg5m$jen@weyl.math.psu.edu>
+Lines: 81
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 925625850 215 inwap@206.184.139.134
+Xref: news3.best.com alt.folklore.computers:129331 alt.sys.pdp10:4930
+
+In article <7gfg5m$jen@weyl.math.psu.edu>,
+Alexander Viro <viro@weyl.math.psu.edu> wrote:
+>	But you really left me puzzled - earlier posting mentioned passing
+>a subdirectory as an argument to ENTER. So, was it really flat namespace?
+>What about TOPS-20 and ITS?
+
+Format of the four-word LOOKUP/ENTER block:
+  E+0: Filename; 6 SIXBIT characters for file names, PPN for UFDs.
+  E+1: Extension; 3 SIXBIT characters in LH, access date in RH.
+  E+2: File protection, modify date and time
+  E+3: Directory, one of:
+	P,,PN - file will be looked for or created in specified UFD.
+	0,,E2 - E2 is address of PATH block, which contains PPN and
+		up to 5 levels of SFD.
+	0,,0  - current working directory.
+
+The current working directory was changed via the PATH. UUO and/or the PATH
+command.  The PATH. UUO also was used to enable something that predates Sun's
+"translucent file system".  On LOOKUP, if the file is not found in the
+current SFD, scan higher-level SFDs until a UFD is reached.  If still not
+found, search the directory declared as the LIB: PPN.  If still not found,
+search SYS: and/or NEW:.  These features can be enabled and disabled
+separately.
+
+This was quite handy for experimental sources.  If the sources for
+TECO were in [,,SOURCE,TECO] and your current path was
+[,,SOURCE,TECO,NEW]/SCAN, then only the modified sources need be copied
+to [,,SOURCE,TECO,NEW] and the compiler would find all the unmodified
+files in [,,SOURCE,TECO].
+
+TOPS-20 uses different punctuation than TOPS-10 to indicate directories.
+
+>	Another question: exact semantics of ENTER and LOOKUP. How did it
+>actually work? As far as I understood second ENTER was impossible until the
+>file was closed.
+
+Yep.
+
+>Was it done via creation of temporary entry for a new
+>version and "upgrading' it to the normal upon close?
+
+Yep.
+
+>If it was kept
+>in core and written on disk only upon close - what happened in case of crash?
+
+It's gone.  That's why programs that want to be sure that their log file
+survives a crash uses the open-append-close method instead of keeping the
+file open.
+
+>Another question being: suppose FOO.BAR is a large file and I want to change
+>10 words in the middle. How it would be done?
+
+That is a topic I was holding back until explictly asked.
+
+If a program does an OPEN and LOOKUP, and then does an ENTER on the same
+channel using the same four-word LOOKUP/ENTER/RENAME block, then the file
+would be in update mode.  Use USETI to set the input pointer to the desired
+block in the file.  Use the IN UUO to read the current block.
+
+  1 block = 128 36-bit words = 256 halfwords = 512 9-bit bytes = 640 7-bit
+  ASCII characters = 768 SIXBIT bytes = 1152 4-bit nybbles (576 8-bit bytes @
+  2 nybbles per byte).
+
+Update the copy of the block in memory.  Use USETO to set the output pointer
+back to the specified block number.  Use OUTPUT to rewrite the block.
+ 
+>suppose you want to add something to the end of file. What would it take?
+
+Use -1 as the argument to USETI to select the end of the file.  The
+next OUTPUT will append to the file.
+
+One of the file protection codes was for append-only.  Set properly, other
+people could append to your file (until your disk quota was used up) but could
+not delete, supersede or update your file.
+
+	-Joe
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 4931 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: 1 May 1999 23:42:51 -0700
+Organization: Chez Inwap
+Message-ID: <7ggs5b$7vc$1@shell3.ba.best.com>
+References: <371be3e4.0@newsfeed.one.net> <7gdk1j$ilu@weyl.math.psu.edu> <7gfnpc$3in$1@shell3.ba.best.com> <7gfsup$jmk@weyl.math.psu.edu>
+Lines: 41
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 925627377 205 inwap@206.184.139.134
+Xref: news3.best.com alt.folklore.computers:129332 alt.sys.pdp10:4931
+
+In article <7gfsup$jmk@weyl.math.psu.edu>,
+Alexander Viro <viro@weyl.math.psu.edu> wrote:
+>D'oh. It's much nicer than the picture implied by John. Was there a notion
+>of current working directory? And how did one open [42,6,FOO,BAR]BAZ (if
+>I didn't mess the notation) for write?
+
+OPNBLK:	0			; Mode, 0=ASCII, 10-17=binary
+	SIXBIT	/DSK/		; Device
+	OBUF,,0			; Addr of output buffer header
+
+OBUF:	BLOCK	3		; Will point to start of buffer ring
+
+FILBLK:	SIXBIT	/BAZ/		; File name
+	SIXBIT	//		; Extension
+	0			; Use default file permissions
+	0,,PTHBLK		; Pointer to PATH block
+
+PTHBLK:	0			; For compatibility with PATH. UUO (device)
+	0			; For compatibility with PATH. UUO (flags)
+	42,,6			; Directory
+	SIXBIT	/FOO/		; 1st SFD
+	SIXBIT	/BAR/		; 2nd SFD
+	EXP	0,0,0		; 3rd, 4th, 5th SFDs
+
+START:	OPEN	1,OPNBLK	; Open channel 1 to disk
+	  HALT			; Can never fail
+	ENTER	1,FILBLK	; Create or supersede output file
+	  HALT			; Should check error code in RH of FILBLK+1
+	JFCL			; Insert code here to write to file
+	CLOSE	1,		; Close file, update directory entry
+	RELEAS	1,		; Done with channel
+	EXIT			; Exit to monitor
+
+	END	START		; This tells the assembler our start address
+
+
+		-Joe
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 4933 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: 1 May 1999 23:59:18 -0700
+Organization: Chez Inwap
+Message-ID: <7ggt46$cv3$1@shell3.ba.best.com>
+References: <371be3e4.0@newsfeed.one.net> <7fs7mv$hii$1@ligarius.ultra.net> <7fsjbg$91o$1@zingo.tninet.se> <3723DBA5.E5B2FF0@MA.UltraNet.Com>
+Lines: 27
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 925628362 227 inwap@206.184.139.134
+Xref: news3.best.com alt.folklore.computers:129334 alt.sys.pdp10:4933
+
+In article <3723DBA5.E5B2FF0@MA.UltraNet.Com>,
+Alan H. Martin <AMartin@MA.UltraNet.Com> wrote:
+>On the one hand, I don't know how fast PA1050-simulated buffered I/O went
+>compared to PMAP.  However, I definitely recall hearing that the DUMPI and
+>DUMPO JSY' that were intended for simulation of unbuffered I/O were *the*
+>fastest form of I/O on Tops-20.
+
+TOPS-20 allowed the use of SIN and SOUT and BIN and BOUT to do I/O as a string
+of bytes or individual bytes.  Very convenient for lazy programmers.  TOPS-10
+did I/O in blocks only.
+
+One of the programmers in Colorado noticed that a particular file copy
+program, highly optimized for TOPS-10 (doing unbuffered I/O in large chunks),
+was quicker than the standard TOPS-20 programs for copying files on TOPS-20.
+
+In spite of the overhead of the TOPS-10 program running under PA1050, it
+was more efficient than the TOPS-20 native programs using SIN and SOUT.
+
+Changing the TOPS-10 program to detect when it was running under TOPS-20
+and use DUMPI/DUMPO made it faster.  And using PMAP to map file pages
+into user address space was even faster.
+	-Joe
+
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 4955 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: 2 May 1999 17:10:43 -0700
+Organization: Chez Inwap
+Message-ID: <7gipi3$sn6$1@shell3.ba.best.com>
+References: <371be3e4.0@newsfeed.one.net> <7g8sbh$e88@weyl.math.psu.edu> <7gb4n6$795$1@shell3.ba.best.com> <372CA8A3.C1DE2BBD@MA.UltraNet.Com>
+Lines: 40
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 925690247 218 inwap@206.184.139.134
+Xref: news3.best.com alt.folklore.computers:129394 alt.sys.pdp10:4955
+
+>>...  There was no concept of
+>> STDIN or STDOUT.  ...
+>
+>Sure there was - every (attached) job had a device TTY: which referred to the
+>job's controlling terminal.  Reassign TTY: to point elsewhere, and that's
+>where the primary I/O went.
+
+Not true.  Assigning TTY to DSK had no affect on the TTCALLs.  For many
+programs, the primary input was via INCHWL and the primary output was via
+OUTCHR and OUTSTR.  Those programs did I/O to the controlling terminal
+and could not be redirected.  That's why I say there was no concept to
+STDIN or STDOUT - no pre-opened I/O channels ala Unix and TOPS-20.
+
+>>... Programs had two ways of doing I/O to the terminal: it could
+>> do an OPEN on device 'TTY' and use normal IN, INPUT, OUT, or OUTPUT UUOs, or
+>> it do TTCALLs.  ...  If you wanted to
+>> turn off echo, or to be able to read all possible characters (including
+>> Control-C and/or parity), you had to use the OPEN call.  ...
+>
+>Nope, you may have enjoyed turning off echo by setting IO.SUP on an opened
+>TTY's device status, but I always did it by setting GL.NEC in the line
+>characteristics with SETLCH TTCALL.  Other people might have preferred using
+>the .TOLCP function of the TRMOP. terminal operation UUO.
+>				/AHM
+
+Yeah, but if your program bombed out with ?ILLEGAL MEMORY REFERENCE, the poor
+user would be stuck at the Monitor prompt with echo disabled.  This behaviour
+was distressing to users that did not know that they had to type "SET TTY
+ECHO" to see what they were typing.  SETLCH and TRMOP. were two ways of
+semipermenantly changing the terminal's line characteristics.
+
+The temporary echo suppression via the OPEN call was automatically cleared
+when the job returned to Monitor mode.  This was a great feature not
+duplicated elsewhere.
+	-Joe
+
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 4950 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: 2 May 1999 16:01:28 -0700
+Organization: Chez Inwap
+Message-ID: <7gilg8$pvp$1@shell3.ba.best.com>
+References: <371be3e4.0@newsfeed.one.net> <7gfg5m$jen@weyl.math.psu.edu> <7ggqll$u0$1@shell3.ba.best.com> <7gh5mj$kb3@weyl.math.psu.edu>
+Lines: 110
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 925686093 201 inwap@206.184.139.134
+Xref: news3.best.com alt.folklore.computers:129387 alt.sys.pdp10:4950
+
+In article <7gh5mj$kb3@weyl.math.psu.edu>,
+Alexander Viro <viro@weyl.math.psu.edu> wrote:
+>Aha. What about relative names (a/b/c)?
+
+The concept did not exist, unfortunatly.
+
+>Was the temporary entry written on disk or was it in-core only beast?
+
+It was written to disk.  The bits in the SAT (Storate Allocation Table)
+corresponding to the block containing the RIB and to the data blocks written
+thus far were marked as being in use.  The Monitor was very paranoid at
+making sure the disk structure was not damaged if a crash occurred at any
+time.  To create a new file:
+
+  *) Allocate blocks by find free bits in the SAT.  Mark 16 consecutive
+     blocks in use for the RIB and the first 15 data blocks.
+
+  *) Write the modified SAT to disk.  Wait for disk I/O to complete.
+
+  *) Mark the RIB has having 16 blocks; itself and the contiguous
+     data blocks.  Set the file's size to be 0 words.  Set the file's
+     allocated size to 16 blocks.  Write the RIB to disk, wait for I/O.
+
+  *) When the program does an OUT UUO, update the RIB and write the user's
+     data to disk.  Do not return to the user program until I/O is done.
+
+If the system crashed before the file was closed, there would not be any
+pointer in any directory for the RIB.  The RIB and its data blocks would
+become "lost blocks", and not reclaimed until CHKDSK was run with the
+system in single-user mode.
+
+>Grrrmmm... So you could upgrade read-only channel to rw one. What happened in
+>case of the following sequence: process A does LOOKUP on foo; process B does
+>LOOKUP on foo; process A does ENTER on the same channel;?
+
+Process A has update/write access.  Process B still has read access.
+If process A modifies blocks that process B has not yet read, then B will
+see the modified contents when it gets around to reading them.
+
+>Another thing being: was there an equivalent of buffer cache?
+
+No.  TOPS-10 definitely had many ad-hoc features.  It's basic design
+philosophy was rooted back in the days when it could run in 64 K words.
+
+The KA-10 I grew up on had 192 K words (3 boxes of 64 K by 36-bit core
+stacks).  By the time TOPS-10 version 6.01 came around, the Monitor took up
+about 92 K words.  The remaining 100 K words were shared by all the
+timesharing users.  Since programs had to be completely resident in physical
+memory in order to run, CORMAX was set to 40 K.  This allowed up to two
+programs at 40 K words each to fit into memory with enough core left over for
+several small jobs.  That small system could handle 30 timesharing users in
+100 K.  This was back before GUIs, back before curses even.  Editing was
+done on hardcopy terminals (LA36 at 300 baud) or glass TTYs (ADM3A
+running at 1200 baud) - a vast improvement over Teletypes (at 110 baud)
+or punched cards.
+
+>IOW: how many disk reads would happen if two processes had the same file
+>opened for read and both requested read on the same block?
+
+Each one went to the disk for its data.
+
+TYMCOM-X, a highly modified descendent of TOPS-10 that Tymshare ran on its
+PDP-10s, was page oriented.  It simulated TOPS-10 I/O by mapping file
+pages into kernel address space and BLTing data to or from user space.
+TYMCOM-X (like TOPS-20) did what you are talking about; the second process
+would get shared access to the physical page holding the file data, or it
+would get a copy of the data already in core.
+
+TYMCOM-X also elminated the idea of dedicated swap space.  Any unused
+page on the disk could be used as backing store for pages in user address
+space.
+
+>>people could append to your file (until your disk quota was used up) but
+>>could not delete, supersede or update your file.
+>	Erm... I hope it does include protection from rename() too.
+
+Permissions for directories were like many other operating systems;
+three independent bits for read access (get a list of all files in
+the directory), write access (create new files in the directory) and
+transit the directory (to read or update an existing file therein).
+
+Permissions for files, however, were numbers from 0 to 7.
+
+    7	Greatest protection, which means no access privileges.  However,
+	the owner may LOOKUP the file so that (s)he can rename the
+	protection to a less restrictive code via RENAME.
+
+    6	Execute-only.  This disables user meddling and examining
+	(DUMP, DCORE, D, E, SAVE, SSAVE, START n, CSTART n,
+	DDT, CORE n) with the error message ?ILLEGAL WHEN EXECUTE ONLY.
+
+    5	Append, read, execute.
+
+    4	Read, execute.
+
+    3	Update, append, read, execute.
+
+    2	Write, update, append, read, execute.
+
+    1	Rename, write, update, append, read, execute.
+
+    0	Change protection, rename, write, update, append, read, execute.
+
+Later on there was FILDAE, the file daemon that allowed for user customized
+access control lists, but that is a completely different story.
+	-Joe
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 4952 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: 2 May 1999 16:37:57 -0700
+Organization: Chez Inwap
+Message-ID: <7ginkl$9of$1@shell3.ba.best.com>
+References: <371be3e4.0@newsfeed.one.net> <7gc02r$go9@weyl.math.psu.edu> <7gcoig$63f$1@shell3.ba.best.com> <372C9BBC.FDC22D8D@MA.UltraNet.Com>
+Lines: 53
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 925688282 209 inwap@206.184.139.134
+Xref: news3.best.com alt.folklore.computers:129390 alt.sys.pdp10:4952
+
+In article <372C9BBC.FDC22D8D@MA.UltraNet.Com>,
+Alan H. Martin <AMartin@MA.UltraNet.Com> wrote:
+>Joe Smith wrote:
+>
+>> The down side was that, in general, it was not possible to watch the progress
+>> of a slowly growing file.  Programs that wanted to make their log files
+>> visible in real time would need to open+append+close for each block written.
+>
+>(Unless you watched the disk's free blocks decrease (and knew no one else was
+>writing).
+>
+>I accidentally discovered in high school that the disk space consumed by the
+>prime and spare RIBs, and perhaps the first data block, were debited upon
+>ENTER, not OUT (let alone CLOSE).  It made sense to me in retrospect, though.
+>				/AHM
+
+When a file grew, it did so by one or more clusters instead of a block at a
+time.  One of the file system parameters was the number of clusters to
+allocate on initial creation.
+
+In addition to the four-word LOOKUP/ENTER/RENAME block, TOPS-10 had an
+extended LOOKUP/ENTER/RENAME block, signified by a zero in the left half
+of the first word (where the file name usually goes) and a number greater
+than 3 in the right half.  Word 10 of the extended block is the estimated
+size of the file.  If nonzero on an ENTER, the Monitor would attempt to
+allocate that many contiguous data blocks for the file.  A file that had
+become fragmented could be made contiguous by simply copying it using a
+program that set .RBEST in the extend ENTER block.  (BACKUP, the program
+that dumped files to tape, did this.)
+
+If a file outgrew its initial allocation of blocks, another cluster of
+blocks would be allocated.  The SATs actually kept track of clusters, not
+individual blocks.  A cluster size of 5 blocks was typical, although small
+sites tended to define DSKB with a cluster size of 3.  Three was the
+practical minimum since a one-word file needed 3 blocks: 1 for the RIB,
+1 for the data, 1 for the redundant copy of the RIB.
+
+The RIB consisted of three types of entries:
+1) Change of unit - specifies the disk unit for succeeding group pointers.
+2) Group pointer - starting cluster number and repeat count.
+3) End of file = word of zero.
+
+A disk structure consisted of 1 to 64 disk units.  The logical size of
+the disk structure was the concatination of the disk units, which could
+be of varying size.  It meant that the disk structure could be much larger
+than a single IBM 3330-I, but a head crash on one disk pack would wipe
+out the entire structure.  Some of the hassles of this form of disk
+structure were the impetus behind the creation of RAID.
+	-Joe
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 4956 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: 2 May 1999 17:18:01 -0700
+Organization: Chez Inwap
+Message-ID: <7gipvp$2l8$1@shell3.ba.best.com>
+References: <371be3e4.0@newsfeed.one.net> <7gdk1j$ilu@weyl.math.psu.edu> <7gfnpc$3in$1@shell3.ba.best.com> <RLDFmCAC+NL3EwuU@museltd.demon.co.uk>
+Lines: 19
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 925690687 210 inwap@206.184.139.134
+Xref: news3.best.com alt.folklore.computers:129395 alt.sys.pdp10:4956
+
+In article <RLDFmCAC+NL3EwuU@museltd.demon.co.uk>,
+Roy Trubshaw  <Roy@museltd.demon.co.uk> wrote:
+>5 levels explicitly, our favourite way of exceeding disk quota was to
+>"bury" the offending files in SFDs greater than 5 levels deep! (You have
+>to rename the SFDs into another SFD, thus "pushing" the contents of the
+>first SFD one level deeper.
+
+Yep.  After 6 levels, LOGOUT couldn't find your files when recalculating
+your disk quota.  But neither could BACKUP.  So, if you were at a school
+that did a periodic refresh and restore (to defragment the disk), then
+all of your hidden files would disappear.
+
+The cure to this was a change in the Monitor which disallowed a RENAME
+of an SFD to a level deeper than it currently was.
+	-Joe
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 4957 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!news.ultranet.com!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: Sun, 02 May 1999 21:09:34 -0400
+Organization: UltraNet Communications , an RCN Company http://www.ultranet.com/
+Lines: 19
+Message-ID: <372CF74E.BFEFD131@MA.UltraNet.Com>
+References: <371be3e4.0@newsfeed.one.net> <7gc02r$go9@weyl.math.psu.edu> <7gcoig$63f$1@shell3.ba.best.com> <372C9BBC.FDC22D8D@MA.UltraNet.Com> <7ginkl$9of$1@shell3.ba.best.com>
+NNTP-Posting-Host: 209-122-232-243.s497.tnt4.sbo.ma.dialup.rcn.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 3 May 1999 01:10:19 GMT
+X-Mailer: Mozilla 4.51 [en] (Win95; U)
+X-Accept-Language: en,en-US,en-GB,es
+Xref: news3.best.com alt.folklore.computers:129396 alt.sys.pdp10:4957
+
+Joe Smith wrote:
+> 
+> In article <372C9BBC.FDC22D8D@MA.UltraNet.Com>,
+> Alan H. Martin <AMartin@MA.UltraNet.Com> wrote:
+> >Joe Smith wrote:
+...
+> If a file outgrew its initial allocation of blocks, another cluster of
+> blocks would be allocated.  The SATs actually kept track of clusters, not
+> individual blocks.  A cluster size of 5 blocks was typical, although small
+> sites tended to define DSKB with a cluster size of 3.  Three was the
+> practical minimum since a one-word file needed 3 blocks: 1 for the RIB,
+> 1 for the data, 1 for the redundant copy of the RIB.
+
+Yep, but I never observed a disk with a cluster size larger than 3 in high
+school or college.  At MR, I don't recall how things were sized; we developed
+Fortran on the -20's by then.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 4963 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: 2 May 1999 20:56:34 -0700
+Organization: Chez Inwap
+Message-ID: <7gj6pi$12g$1@shell3.ba.best.com>
+References: <371be3e4.0@newsfeed.one.net> <7gh5mj$kb3@weyl.math.psu.edu> <7gilg8$pvp$1@shell3.ba.best.com> <372CFA63.DFDEE636@MA.UltraNet.Com>
+Lines: 34
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 925703798 198 inwap@206.184.139.134
+Xref: news3.best.com alt.folklore.computers:129403 alt.sys.pdp10:4963
+
+In article <372CFA63.DFDEE636@MA.UltraNet.Com>,
+Alan H. Martin <AMartin@MA.UltraNet.Com> wrote:
+>Joe Smith wrote:
+>
+>>     5   Append, read, execute.
+>> 
+>>     4   Read, execute.
+>
+>(Twiddle).
+
+You're absolutely correct, I made a typo.
+
+I can take this opportunity to mention that TYMCOM-X changed the definition
+of the permission modes slightly.  The difference between 0 and 1 on TOPS-10
+was of hardly any use, so Tymshare shifted everything down one and defined
+a new code 7.
+
+    7	No access.  Can't even do a LOOKUP to read file's attributes.
+    6	Attributes only.  LOOKUP returns file's size, etc.  Cannot read.
+    5   Execute only.
+    4   Read and execute.
+    3   Append, read, execute
+    2   Update, append, read, execute
+    1   Write, update, append, read, execute
+    0   Rename, write, update, append, read, execute.
+
+One nice thing about the TYMCOM-X definition is that if the high order
+bit is set, the file is read-only.
+	-Joe
+
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 4964 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: 2 May 1999 21:12:29 -0700
+Organization: Chez Inwap
+Message-ID: <7gj7nd$c1v$1@shell3.ba.best.com>
+References: <371be3e4.0@newsfeed.one.net> <7g8sbh$e88@weyl.math.psu.edu> <7gb4n6$795$1@shell3.ba.best.com> <372CA8A3.C1DE2BBD@MA.UltraNet.Com>
+Lines: 38
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 925704755 200 inwap@206.184.139.134
+Xref: news3.best.com alt.folklore.computers:129404 alt.sys.pdp10:4964
+
+In article <372CA8A3.C1DE2BBD@MA.UltraNet.Com>,
+Alan H. Martin <AMartin@MA.UltraNet.Com> wrote:
+>Joe Smith wrote:
+>>...  There was no concept of
+>> STDIN or STDOUT.  ...
+>
+>Sure there was - every (attached) job had a device TTY: which referred to the
+>job's controlling terminal.  Reassign TTY: to point elsewhere, and that's
+>where the primary I/O went.
+
+Here's a failure mode that I reported (and got a patch for):
+	.ASSIGN DSK TTY
+	.R BASIC
+	^C
+	^C
+
+BASIC opened logical device TTY for input and output.  It then began to
+immediatly use IN and OUT UUOs without doing a LOOKUP or ENTER, since the
+program always talks to TTY:, right?
+
+The IN fails because the unprivileged program had done an OPEN and IN without
+an intervening LOOKUP.  It tried to output "I/O error reading from device TTY"
+to device TTY.  But because it is doing an OUT without an intervening ENTER,
+that UUO fails.  The output routine goes into an infinite loop trying to
+output error messages.  In the mean time, the Control-C intercept routine
+was doing its job, preventing Control-C from stopping execution.
+
+The patch was to exit quietly if TTY was not assigned to a terminal device.
+
+Given that STDOUT is the concept of "output that usually goes to the
+terminal could be redirected to any arbitrary file instead", most DEC
+CUSPs did not understand the concept of STDOUT.
+	-Joe
+
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 4986 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: 4 May 1999 03:55:33 -0700
+Organization: Chez Inwap
+Message-ID: <7gmjn5$lo2$1@shell3.ba.best.com>
+References: <371be3e4.0@newsfeed.one.net> <7gh5mj$kb3@weyl.math.psu.edu> <7gilg8$pvp$1@shell3.ba.best.com> <7gjhrh$lrk@weyl.math.psu.edu>
+Lines: 46
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 925815338 210 inwap@206.184.139.134
+Xref: news3.best.com alt.folklore.computers:129480 alt.sys.pdp10:4986
+
+In article <7gjhrh$lrk@weyl.math.psu.edu>,
+Alexander Viro <viro@weyl.math.psu.edu> wrote:
+>Possible failure mode: directory getting full before CLOSE. How do you handle
+>that?
+
+Directories don't get full.  There was no limit to the number of file names
+that could be stored in a directory.
+
+>How does TOPS-10 implementation handle renaming/removing in presense of
+>still not closed new version?
+
+The RENAME UUO would fail with file-being-modified.
+A RENAME on a file that had no writers was allowed - jobs that already
+had the file open for reading would continue unaffected.
+
+To rename a file, the program had to do a LOOKUP first, then do a RENAME
+on the same channel.  If the file name portion of the LOOKUP/ENTER/RENAME
+block was zero, the file would be deleted.
+
+Directories were created by doing a LOOKUP and CLOSE with no OUTPUT.
+A common method of creating SFDs was
+	.MAKE FOOBAR.SFD
+	*EX$$
+which used the TECO text editor to create the directory.  Removing
+a directory was usually done by using the regular DELETE command on
+the empty directory.
+
+>>If the system crashed before the file was closed, there would not be any
+>>pointer in any directory for the RIB.  The RIB and its data blocks would
+>>become "lost blocks", and not reclaimed until CHKDSK was run with the
+>>system in single-user mode.
+>
+>Was there any regular way to determine that block is a RIB?
+
+RIBs had a special code in the right half of the first word of the
+first block of a cluster.  The left half was zero, something that
+does not happen in ASCII files or system binary files.  CHKDSK did
+several consistency checks, including looking at the block after the
+end-of-file.  In addition to the block pointers, the RIB had the file's
+name, extension, protection, and PPN.  There was no SFD info in the
+RIB, so recovered files were written to the owner's UFD.
+	-Joe
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 4996 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!news.idt.net!nntp.farm.idt.net!news
+From: "Chris Ward" <ccw@idt.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: Tue, 4 May 1999 07:47:45 -0400
+Organization: IDT (Best News In The World)
+Lines: 31
+Message-ID: <7gmn0p$sqs@nnrp3.farm.idt.net>
+References: <371be3e4.0@newsfeed.one.net> <7gh5mj$kb3@weyl.math.psu.edu> <7gilg8$pvp$1@shell3.ba.best.com> <7gjhrh$lrk@weyl.math.psu.edu> <7gmjn5$lo2$1@shell3.ba.best.com> <7gmko2$aq5$3@antiochus.ultra.net>
+NNTP-Posting-Host: ppp-29.ts-2-bay.hck.idt.net
+X-Newsreader: Microsoft Outlook Express 4.72.3612.1700
+X-MimeOLE: Produced By Microsoft MimeOLE V4.72.3612.1700
+Xref: news3.best.com alt.sys.pdp10:4996
+
+
+jmfbahciv@aol.com wrote in message <7gmko2$aq5$3@antiochus.ultra.net>...
+>In article <7gmjn5$lo2$1@shell3.ba.best.com>,
+>   inwap@best.com (Joe Smith) wrote:
+>>In article <7gjhrh$lrk@weyl.math.psu.edu>,
+>>Alexander Viro <viro@weyl.math.psu.edu> wrote:
+>>>Possible failure mode: directory getting full before CLOSE. How do you
+>handle
+>>>that?
+>>
+>>Directories don't get full.  There was no limit to the
+>>number of file names that could be stored in a directory.
+>
+>Well, there were practical limits.  One couldn't have a disk full
+>of one RIB...hmm...I wonder what would have happened if we had
+>tried to fill the disk with just a RIB and then modified a file?
+>To make the file organization extensible there was the notion of
+>a RIB...and then there was the spare RIB.
+>
+
+
+You also had the normal disk quota.  Say the cluster size was 5, and you had
+a 100 block quota.  If you had a file, the space taken up be the size plus
+two blocks, and then rounded up to 5 for allocation purposes.  So a 3 block
+file would take up 5 blocks, and a 4 block file would take up 10 blocks of
+your quota.
+
+It was also a major reason why people liked to make .SAV files rather than
+.EXE files when you had both on the system - .SAV files were smaller.
+
+
+
+
+Article 4999 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: 4 May 1999 05:27:15 -0700
+Organization: Chez Inwap
+Message-ID: <7gmp33$p17$1@shell3.ba.best.com>
+References: <371be3e4.0@newsfeed.one.net> <7gjhrh$lrk@weyl.math.psu.edu> <7gmjn5$lo2$1@shell3.ba.best.com> <7gmko2$aq5$3@antiochus.ultra.net>
+Lines: 20
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 925820839 225 inwap@206.184.139.134
+Xref: news3.best.com alt.folklore.computers:129497 alt.sys.pdp10:4999
+
+In article <7gmko2$aq5$3@antiochus.ultra.net>,  <jmfbahciv@aol.com> wrote:
+>In article <7gmjn5$lo2$1@shell3.ba.best.com>,
+>But this is from the user point of view, Joe.  Tony would just 
+>modify the UFD entry WITHOUT moving any bits of the file to
+>be renamed.  The addresses changed...not the position.
+
+One thing we forgot to mention about the features of FILDDT:
+In addition to patching a file or modifying the running Monitor,
+FILDDT was capable of modifying the disk structure directly.
+
+You could use it to fix bad values in the HOME block, undo a
+bad retrieval pointer, or obliterate an undeletable SFD.
+
+The only thing I've seen vaguely like this function is 'ext2ed' on Linux.
+	-Joe
+
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 4987 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: 4 May 1999 04:02:59 -0700
+Organization: Chez Inwap
+Message-ID: <7gmk53$nnv$1@shell3.ba.best.com>
+References: <371be3e4.0@newsfeed.one.net> <7gfg5m$jen@weyl.math.psu.edu> <7ggqll$u0$1@shell3.ba.best.com> <u90b6mxng.fsf@infostream.no>
+Lines: 30
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 925815782 225 inwap@206.184.139.134
+Xref: news3.best.com alt.folklore.computers:129482 alt.sys.pdp10:4987
+
+In article <u90b6mxng.fsf@infostream.no>,
+Bjørn Hell Larsen <blarsen@infostream.no> wrote:
+>
+>inwap@best.com (Joe Smith) writes:
+>
+>> One of the file protection codes was for append-only.  Set properly,
+>> other people could append to your file (until your disk quota was
+>> used up) but could not delete, supersede or update your file.
+>
+>Darn. I seem to have forgotten the semantics of the file protection codes.
+>Was this something that you could set by regular protection, or did
+>you have to start messing about with FILDAE in order to achieve it?
+
+That was a standard feature, available pre-FILDAE.
+"PROTECT <244> FILE.DAT" made it append-only and protected yourself
+from an accidental "DELETE *.DAT".
+
+>(I once wrote a game that maintained a high-score list, and had to
+>use FILDAE protection to enable my program to write the list
+>while still not making it world-writable, but I cannot recall if
+>this entailed append or update access to the file.)
+
+Something like putting "FILE.DAT/APPEND/PROGRAM:[12,14]GAME.EXE"
+inside of ACCESS.INI to allow any PPN to append to the file, but only
+if they were running GAME.EXE from directory [12,14].
+	-Joe
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 4989 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: 4 May 1999 04:15:04 -0700
+Organization: Chez Inwap
+Message-ID: <7gmkro$qvn$1@shell3.ba.best.com>
+References: <371be3e4.0@newsfeed.one.net> <3729fa95.0@news.wizvax.net> <7gdk1j$ilu@weyl.math.psu.edu> <uogk21g17.fsf@graphics.cornell.edu>
+Lines: 44
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 925816508 226 inwap@206.184.139.134
+Xref: news3.best.com alt.folklore.computers:129484 alt.sys.pdp10:4989
+
+In article <uogk21g17.fsf@graphics.cornell.edu>,
+Stephen H. Westin <westin*nospam@graphics.cornell.edu> wrote:
+>viro@weyl.math.psu.edu (Alexander Viro) writes:
+>
+>> In article <3729fa95.0@news.wizvax.net>, John Wilson <wilson@dbit.com> wrote:
+>
+><snip>
+>
+>> >any case I strongly doubt it was possible to change the PPN of a UFD in-place
+>> 							^^^^^
+>> 	Excuse me? Do you imply that user could have only one directory?
+>
+>No. Just that changing the owner of a given directory was not
+>supported. If you created it, you own it. Can't give it away.
+
+UFDs were created by LOGIN and MOUNT.
+UFDs were deleted by LOGOUT and DISMOUNT if empty.
+UFDs belonged to [1,1] but the files inside them belonged to the PPN
+matching the UFD's name.
+UFDs could not be renamed.
+
+Files could be renamed from one UFD to another, but ownership was
+transfered to the destination PPN.
+
+As far as I remember, SFDs could not be renamed from one UFD to another.
+
+>> AFAICS PPN == UID+GID and it looks like per-user thing, not
+>> per-directory one.
+
+It's both.
+
+TOPS-10 people being introduced to Unix had to learn a new concept.  With
+Unix, even though you renamed a file out of your directory and into another
+user's directory, you still had ownership of the file and it was still counted
+against your disk quota.  With TOPS-10, files belonged to you only if they
+were in your directory tree.  If you created a directory protected <777>
+(writable by world), then any files created in it belonged to you and were
+charged against your disk quota regardless of who created them.
+	-Joe
+
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 4990 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: 4 May 1999 04:19:57 -0700
+Organization: Chez Inwap
+Message-ID: <7gml4t$s3v$1@shell3.ba.best.com>
+References: <371be3e4.0@newsfeed.one.net> <7gcr9l$hn5@weyl.math.psu.edu> <3729fa95.0@news.wizvax.net> <un1zm1fv8.fsf@graphics.cornell.edu>
+Lines: 23
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 925816800 226 inwap@206.184.139.134
+Xref: news3.best.com alt.folklore.computers:129485 alt.sys.pdp10:4990
+
+In article <un1zm1fv8.fsf@graphics.cornell.edu>,
+Stephen H. Westin <westin*nospam@graphics.cornell.edu> wrote:
+>Another subtlety that seems to have been lost in the discussion is
+>file locking: that it's possible in many systems (but not Unix) to
+>open a file for write, preventing others from doing the same. In
+>Apollo's DOMAIN/OS, for example, this was the default mode; if you're
+>writing a file, no one else can clobber it by blindly writing it at
+>the same time. My impression is that TOPS-10/TOPS-20 had similar
+>design.
+
+Yep.  Mandatory file locking.  No one, not even [1,2] (the equivalent of
+'root') could write to a file that was currently open for writing.  The only
+exception was when owner of the write lock performed a special UUO to set the
+file to simultaneous update mode.
+
+One paper I saw on the development of Unix stated that they chose not
+to implement mandatory file locking because then 'root' would not be
+all powerful.  Hooey.
+	-Joe
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 4995 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: 4 May 1999 05:00:21 -0700
+Organization: Chez Inwap
+Message-ID: <7gmngl$dvf$1@shell3.ba.best.com>
+References: <371be3e4.0@newsfeed.one.net> <7ginkl$9of$1@shell3.ba.best.com> <372CF74E.BFEFD131@MA.UltraNet.Com> <7gjud1$6vm@nnrp3.farm.idt.net>
+Lines: 49
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 925819227 226 inwap@206.184.139.134
+Xref: news3.best.com alt.sys.pdp10:4995
+
+In article <7gjud1$6vm@nnrp3.farm.idt.net>, Chris Ward <ccw@idt.net> wrote:
+>
+>Alan H. Martin wrote in message <372CF74E.BFEFD131@MA.UltraNet.Com>...
+>>Yep, but I never observed a disk with a cluster size larger than 3 in high
+>>school or college.  At MR, I don't recall how things were sized; we
+>developed
+>>Fortran on the -20's by then.
+>> /AHM
+>>--
+>>Alan Howard Martin AMartin@MA.UltraNet.Com
+>
+>Actually, wasn't the Snevets KA (the ifamous SN 101) set to a cluster size
+>of 5, and then the KL set to a cluster size of 10?  Or was that some other
+>parameter (I remember it had to do with the"round up" factor on the disk
+>quota...
+
+Disk quotas were calculated on allocated file size.  The allocated size
+was the file size in blocks, plus 2 blocks for the RIB and its copy,
+rounded up to the cluster size.
+
+The RP06 had 20 blocks per track.  Therefore cluster sizes of 4, 5, 10
+and 20 were optimal.
+
+One problem was that entries in directories were one and two half words;
+36 bits for the file name (6 characters), 18 bits for the extension
+(3 characters) and 18 bits for the cluster (or supercluster) pointer
+to the file's RIB.  (18 bits = 256K = 262,144 maximum superclusers)
+  cluster size 3 =   786,432 blocks
+  cluster size 4 = 1,048,576 blocks
+  cluster size 5 = 1,310,720 blocks
+
+A single-pack RP06 file structure had 128 words/sector, 20 sectors/track,
+19 tracks/cylinder, 815 cylinders/pack, for a total of 309,700 blocks.
+(178,387,200 bytes @ 4.5 bytes per word or 576 8-bit bytes per sector.)
+
+  1 * RP06 =   309,700 (cluster size 3 = OK)
+  2 * RP06 =   619,400 (cluster size 3 = OK)
+  3 * RP06 =   929,100 (cluster size 4)
+  4 * RP06 = 1,238,800 (cluster size 5)
+  5 * RP06 = 1,548,500 (cluster size 10 = 6400 7-bit bytes)
+
+For larger disk structures, there were N clusters to a supercluster.
+The RIB had to start on a supercluster boundary, so that the cluster
+number divided by N would fit into 18 bits.
+	-Joe
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 5000 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: 4 May 1999 05:31:26 -0700
+Organization: Chez Inwap
+Message-ID: <7gmpau$qfg$1@shell3.ba.best.com>
+References: <371be3e4.0@newsfeed.one.net> <7gjhrh$lrk@weyl.math.psu.edu> <7gmjn5$lo2$1@shell3.ba.best.com> <7gmknh$nol@weyl.math.psu.edu>
+Lines: 19
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 925821092 198 inwap@206.184.139.134
+Xref: news3.best.com alt.folklore.computers:129498 alt.sys.pdp10:5000
+
+In article <7gmknh$nol@weyl.math.psu.edu>,
+Alexander Viro <viro@weyl.math.psu.edu> wrote:
+>>Directories don't get full.  There was no limit to the number of file names
+>>that could be stored in a directory.
+>
+>Where did you get infinite disks?
+
+I was referring to there not being a hard limit, such as 256 entries
+in C:\ on MS-DOS.
+
+>What happened if the target of rename already existed?
+
+Error code 4 (ERAEF%) = Already Existing Filename.
+	-Joe
+
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 5007 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newshub.northeast.verio.net!logbridge.uoregon.edu!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: Tue, 4 May 1999 12:28:40 -0700
+Organization: Networks & Distributed Computing
+Lines: 17
+Message-ID: <Pine.NXT.4.20.9905041226160.25285-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <371be3e4.0@newsfeed.one.net> <7gcr9l$hn5@weyl.math.psu.edu> <3729fa95.0@news.wizvax.net> <un1zm1fv8.fsf@graphics.cornell.edu> <7gml4t$s3v$1@shell3.ba.best.com>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 925846123 31308 (None) 140.142.17.40
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: brit
+In-Reply-To: <7gml4t$s3v$1@shell3.ba.best.com>
+Xref: news3.best.com alt.folklore.computers:129520 alt.sys.pdp10:5007
+
+On 4 May 1999, Joe Smith wrote:
+> One paper I saw on the development of Unix stated that they chose not
+> to implement mandatory file locking because then 'root' would not be
+> all powerful.  Hooey.
+
+Yup, and it's one of the biggest reasons that UNIX sucks.  Because of
+this, it is much more complicated to do database semantics on UNIX.
+Sheesh, even NT gets this right.
+
+By the way, TOPS-20 had both modes available to the programmer.
+
+-- Mark --
+
+* RCW 19.190 notice: This email address is located in Washington State.	*
+* Unsolicited commercial email may be billed $500 per message.		*
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+Article 5022 of alt.sys.pdp10:
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+References: <371be3e4.0@newsfeed.one.net> <7gml4t$s3v$1@shell3.ba.best.com> <Pine.NXT.4.20.9905041226160.25285-100000@Tomobiki-Cho.CAC.Washington.EDU> <7gnip9$ok2@weyl.math.psu.edu> <7go61e$l6r$1@shell3.ba.best.com>
+X-Disclaimer: Everything I write is false.
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 05 May 1999 02:56:42 -0700
+Message-ID: <qhpv4f4z6t.fsf@ruckus.brouhaha.com>
+Lines: 16
+X-Newsreader: Gnus v5.5/Emacs 20.2
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 5 May 1999 02:01:15 -0700, ruckus.brouhaha.com
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!enews.sgi.com!news.sgi.com!news.spies.com!ruckus.brouhaha.com
+Xref: news3.best.com alt.folklore.computers:129552 alt.sys.pdp10:5022
+
+inwap@best.com (Joe Smith) writes about the apparently lack of mandatory
+file locks in Unix variants:
+> Oh, really?  Let me look....
+> Not in the man pages for Linux 2.0.36 (just a comment that says to see
+>      /usr/src/linux-2.0.36/Documentation/mandatory.txt).
+
+And that comment wasn't sufficient to suggest to you that Linux may in
+fact support mandatory file locks?
+
+The man page for fcntl(2) is admittedly rather cryptic, but it does
+document the mandatory lock facilities.  In particular, note the return
+value "EACCES  Operation is prohibited by locks held by other processes."
+
+Although POSIX.1 doesn't define mandatory locking, it is part of the SVID,
+so any Unix variants derived from System V (such as Solaris) presumably
+support it.
+
+
+Article 5037 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: 5 May 1999 18:38:41 -0700
+Organization: Chez Inwap
+Message-ID: <7gqrr1$b0o$1@shell3.ba.best.com>
+References: <371be3e4.0@newsfeed.one.net> <Pine.NXT.4.20.9905041226160.25285-100000@Tomobiki-Cho.CAC.Washington.EDU> <7gnip9$ok2@weyl.math.psu.edu> <Pine.WNT.4.10.9905042324390.-3960447-100000@MRC>
+Lines: 78
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 925954726 216 inwap@206.184.139.134
+Xref: news3.best.com alt.folklore.computers:129598 alt.sys.pdp10:5037
+
+In article <Pine.WNT.4.10.9905042324390.-3960447-100000@MRC>,
+Mark Crispin  <MRC@CAC.Washington.EDU> wrote:
+>On 4 May 1999, Alexander Viro wrote:
+>> >By the way, TOPS-20 had both modes available to the programmer.
+>> So does BSD (and derivatives). And Linux. And Solaris. Your point being? v7?
+>
+>Wrong.  BSD, Linux, and Solaris do *NOT* have mandatory locking.
+
+That's what I thought until yesterday.  Solaris does claim mandatory locking.
+As does any Unix conforming to version 3 of the SVID that AT&T wrote.
+
+>Mandatory locking is an open mode that prevents any other programs from
+>opening the file.  It also prevents opening if any other program has the
+>file open.
+
+According to the man pages for Solaris, that is what is implemented.
+	-Joe
+
+=========================
+
+chmod(1)                  User Commands                  chmod(1)
+SunOS 5.5.1          Last change: 1 Feb 1995                    1
+
+NAME
+     chmod - change the permissions mode of a file
+
+        4000      Set user ID on execution.
+        20#0      Set group ID on execution if # is 7, 5, 3, or 1.
+                  Enable mandatory locking  if # is 6, 4, 2, or 0.
+        1000      Turn on sticky bit. See chmod(2).
+        0400      Allow read by owner.
+        0200      Allow write by owner.
+        0100      Allow execute (search in directory) by owner.
+        0700      Allow  read,  write,  and   execute (search) by owner.
+        0040      Allow read by group.
+        0020      Allow write by group.
+        0010      Allow execute (search in directory) by group.
+        0070      Allow  read,  write,  and   execute (search) by group.
+        0004      Allow read by others.
+        0002      Allow write by others.
+        0001      Allow execute (search in directory) by others.
+        0007      Allow  read,  write,  and   execute (search) by others.
+
+...
+            permission
+                    any compatible combination of  the  following letters:
+
+                    r         read permission
+                    w         write permission
+                    x         execute permission
+                    l         mandatory locking
+                    s         user or group set-ID
+                    t         sticky bit
+...
+                    Mandatory file and record locking (l)  refers
+                    to  a  file's  ability to have its reading or
+                    writing permissions locked while a program is
+                    accessing that file.
+
+=========================
+
+lockf(3C)              C Library Functions              lockf(3C)
+SunOS 5.5.1          Last change: 3 May 1994                    1
+
+NAME
+     lockf - record locking on files
+
+DESCRIPTION
+     lockf() allows sections of a file to be locked; advisory  or
+     mandatory write locks depending on the mode bits of the file
+     (see chmod(2)).  Locking calls  from  other  processes  that
+     attempt  to  lock the locked file section will either return
+     an error value or be put to sleep until the resource becomes
+     unlocked.
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 5040 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: 5 May 1999 19:59:39 -0700
+Organization: Chez Inwap
+Message-ID: <7gr0ir$bvf$1@shell3.ba.best.com>
+References: <371be3e4.0@newsfeed.one.net> <87pv4g9bv4.fsf@slip-32-101-160-211.ma.us.ibm.net> <Pine.NXT.4.20.9905051403480.26122-100000@Tomobiki-Cho.CAC.Washington.EDU> <Pine.NXT.4.20.9905051426050.26122-100000@Tomobiki-Cho.CAC.Washington.EDU>
+Lines: 92
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 925959585 208 inwap@206.184.139.134
+Xref: news3.best.com alt.folklore.computers:129605 alt.sys.pdp10:5040
+
+In article <Pine.NXT.4.20.9905051426050.26122-100000@Tomobiki-Cho.CAC.Washington.EDU>,
+Mark Crispin  <mrc@CAC.Washington.EDU> wrote:
+> "Mandatory locking" in the context of this discussion is an open mode
+> which specifies that the file is to be opened in a "frozen" (vs.
+> UNIX-style "thawed") mode, and whether the "frozen" mode is shared or
+> exclusive.  This is *separate* and *independent* of advisory locking (e.g.
+> via flock() or fcntl() system calls).
+> 
+> Thawed opens preclude any frozen opens, and vice-versa.
+> 
+> Shared frozen opens preclude exclusive frozen opens.
+> 
+> Exclusive frozen opens preclude other frozen opens.
+>
+>I almost forgot.  There's another important mode; exclusive opens which
+>only interact against other exclusive opens but not against shared opens.
+
+You lost me there.  Thawed and frozen are part of the TOPS-20 vocabulary,
+not TOPS-10.
+
+What is the practical difference between thawed and frozen?
+What is the difference between a mandatory thawed lock and an exclusive
+frozen lock?  Does frozen imply a lock against reading?
+How do those modes compare with what TOPS-10 had?  
+
+TOPS-10:
+  unlocked, one generation: Multiple readers, all reading same file.
+
+  create: One job is creating a new file.  There are no readers because
+	the file does not exist yet.
+
+  supersede: On job is in the process of superseding an existing file.
+	There can be any number of readers; they can read the old
+	(existing) generation of the file, including readers that started
+	after the single writer did its open.  No other job can open
+	the file for writing.
+
+  unlocked, multiple generations: Any job that opened the old file before
+	it was superseded can continue to read the old data.  Any reader
+	that opened the file after the supersede was finished sees the
+	new data.  There can be any number of old superseded files still
+	open for input - the RIB and file data hangs around until the
+	use count goes to zero.
+
+  single-writer update: One job has the write lock and can do random access
+	I/O to the file.  Other jobs can read the file, but it is very
+	easy for them to read inconsistent data.  Typically software
+	would use some sort of semaphore in the first block of the file
+	to indicate "update in progress; do not read".
+
+  simultaneous update: Any job that wants to update the file has to open the
+	file with FILOP. function .FOMAU and no other job can have the file
+	open via ENTER or via FILOP. function .FOSAU.  Any number of jobs can
+	be reading the file before and after the file is put into
+	multiple-access update mode.
+
+The Monitor imposed no restrictions or interlocks when a file was being
+simultaneously updated.  It was up to the individual programs to use a common
+method of working out advisory locks between themselves.  The ENQ/DEQ facility
+allowed a single job to request an advisory lock on multiple blocks in
+multiple files using a single ENQ request.  That was the proper way to avoid
+deadlocks when dealing with multi-file databases.
+
+Note that there was no such thing as a mandatory read lock under TOPS-10.
+If the file permissions allowed reading, then the file could be read
+regardless of any mandatory write lock.
+
+This contrasts with the behavior documented in the man page for lockf for
+SunOS-4.1.x:
+
+     The lock is mandatory if the set-GID bit (S_ISGID) is set and the
+     group execute bit (S_IXGRP) is clear.
+
+     If a process holds a mandatory exclusive lock on  a  segment
+     of  a  file,  both read and write operations block until the
+     lock is removed (see WARNINGS).
+
+   WARNINGS
+     Mandatory record locks are dangerous.  If a runaway or  oth-
+     erwise  out-of-control  process should hold a mandatory lock
+     on a file critical to the system and fail  to  release  that
+     lock,  the entire system could hang or crash.  For this rea-
+     son, mandatory record locks may be removed in a future SunOS
+     release.  Use advisory record locking whenever possible.
+
+Mandatory write locks are good.  Mandatory read locks are bad.
+	-Joe
+
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 5049 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: 6 May 1999 11:27:42 -0700
+Organization: Chez Inwap
+Message-ID: <7gsmuu$635$1@shell3.ba.best.com>
+References: <371be3e4.0@newsfeed.one.net> <Pine.WNT.4.10.9905042324390.-3960447-100000@MRC> <7gqrr1$b0o$1@shell3.ba.best.com> <Pine.NXT.4.20.9905052105420.26847-100000@Tomobiki-Cho.CAC.Washington.EDU>
+Lines: 38
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 926015267 216 inwap@206.184.139.134
+Xref: news3.best.com alt.folklore.computers:129628 alt.sys.pdp10:5049
+
+In article <Pine.NXT.4.20.9905052105420.26847-100000@Tomobiki-Cho.CAC.Washington.EDU>,
+Mark Crispin  <mrc@CAC.Washington.EDU> wrote:
+>On 5 May 1999, Joe Smith wrote:
+>> >Mandatory locking is an open mode that prevents any other programs from
+>> >opening the file.  It also prevents opening if any other program has the
+>> >file open.
+>> 
+>> According to the man pages for Solaris, that is what is implemented.
+>
+>No it's not.  Solaris has a file protection mode that changes advisory
+>locking to mandatory locking.
+>
+>That is not the same as mandatory locking in PDP-10 operating systems.
+
+There must be some subtle difference that I am just not getting.
+
+TOPS10: Doing an open for write automatically prevents any other
+	process from doing an open for write.
+
+Unix: Doing an open for write and lockf() on a file with correct
+	permissions prevents any other process from doing an open for write.
+
+>Joe, you should have known better.  Think of it as a file protection bit
+>that changes how the ENQ. UUO works.
+
+As I see it, "think of a file protection bit that changes how open() works".
+
+The second process does not get a chance to do a lockf(), flock() or fcntl().
+Instead, the open() call goes to sleep until the first process is done.
+TOPS-10 returns an immediate error code if a mandatory lock is in force,
+Unix sleeps in the middle of open() if the mandatory lock is in force.
+
+What is your interpretation of how the Unix mandatory lock works?
+	-Joe
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 5052 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!su-news-hub1.bbnplanet.com!cpk-news-hub1.bbnplanet.com!news.gtei.net!newsfeed.cwix.com!192.220.250.21!netnews1.nw.verio.net!netnews.nwnet.net!news.verio.net!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: Thu, 6 May 1999 14:34:51 -0700
+Organization: Networks & Distributed Computing
+Lines: 65
+Message-ID: <Pine.NXT.4.20.9905061408560.27405-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <371be3e4.0@newsfeed.one.net> <Pine.WNT.4.10.9905042324390.-3960447-100000@MRC> <7gqrr1$b0o$1@shell3.ba.best.com> <Pine.NXT.4.20.9905052105420.26847-100000@Tomobiki-Cho.CAC.Washington.EDU> <7gsmuu$635$1@shell3.ba.best.com>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 926026499 26990 (None) 140.142.17.39
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: pao
+To: Joe Smith <inwap@best.com>
+In-Reply-To: <7gsmuu$635$1@shell3.ba.best.com>
+Xref: news3.best.com alt.folklore.computers:129637 alt.sys.pdp10:5052
+
+On 6 May 1999, Joe Smith wrote:
+> There must be some subtle difference that I am just not getting.
+
+What you're not getting is there is a big difference between:
+ 1) all opens are frozen (TOPS-10).  An independent advisory
+    locking mechanism exists.  (ENQ. UUO)
+ 2) the programmer can decide whether to do a frozen or thawed
+    open (TOPS-20).  An independent advisory locking mechanism
+    exists.  (ENQ% JSYS)
+ 3) all opens are thawed, except on some variants of the OS in
+    which, by setting the file protection code properly, the
+    advisory lock system call on an open file will cause the
+    file open to become frozen (UNIX).  Advisory locking is
+    unavailable except in thawed mode.
+
+In particular, note the following characteristics of (3):
+ a) the default is thawed, and on many UNIX variants (including
+    all traditional UNIX) that is the only mode.
+ b) only the owner of the file can decide thawed vs. frozen; an
+    application which wishes a frozen open must be the owner (as
+    opposed to merely having write permission) if the file
+    protection was not set in advance.  The same is true for an
+    application which wishes a thawed open with advisory locking.
+ c) freezing is not atomic; it requires a separate system call.
+ d) a frozen-out open blocks, instead of failing.
+ e) use of frozen mode precludes the use of advisory locking.
+
+These are all undesirable characteristics.  (a) and (d) would be
+acceptable as defaults if there was an always-available (none of this
+"lock yourself into my super-duper variant" crap) way to choose the
+non-default behavior.  (b), (c), and (e) are design bugs, plain and
+simple.
+
+Then there's the other bug in UNIX locking, which is that there is no such
+thing as lock promotion and demotion!  Don't believe me?  Real the man
+page, really carefully.  Have a barf bag handy.
+
+Then there's the designers of SVR4, who think that locks are a global
+resource in a process; specifically if a process touches a lock in one
+open file descriptor, obviously any other open file descriptors on that
+file in that process should be changed.
+
+The less said about NFS and locking, the better.
+
+The designers of UNIX apparently never talked to any database guys.  This
+is typical of OS developers who think that the kernel is the only project
+for a Real Programmer.
+
+As much as I liked to badmouth TOPS-10's design, the fact remains that the
+TOPS-10 guys did pay attention to applications.  It's unfortunate that the
+ENQ. UUO entered TOPS-10 so late in its life (6.01?) but the fact is that
+ENQ. worked and worked well.  TOPS-20's ENQ% was almost identical.  It
+would be horrendous to try to emulate ENQ on UNIX.  Even the simple cases
+are horrendous.
+
+NT gets locking right.  I predict that, if the UNIX community continues to
+bury its head in the sand about locking, this will start becoming an
+issue.  The Evil Empire is certainly doing its best to make it one.
+
+-- Mark --
+
+* RCW 19.190 notice: This email address is located in Washington State.	*
+* Unsolicited commercial email may be billed $500 per message.		*
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+Article 5057 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Mandatory vs. advisory file locking
+Date: 7 May 1999 10:45:34 -0700
+Organization: Chez Inwap
+Message-ID: <7gv8ru$q6t$1@shell3.ba.best.com>
+References: <371be3e4.0@newsfeed.one.net> <qhr9ov4zji.fsf_-_@ruckus.brouhaha.com> <Pine.NXT.4.20.9905051409000.26122-100000@Tomobiki-Cho.CAC.Washington.EDU> <wkogjyosx4.fsf@erols.com>
+Lines: 31
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 926099138 215 inwap@206.184.139.134
+Xref: news3.best.com alt.folklore.computers:129679 alt.sys.pdp10:5057
+
+In article <wkogjyosx4.fsf@erols.com>, Greg Menke  <nospam@erols.com> wrote:
+>Mark Crispin <mrc@CAC.Washington.EDU> writes:
+>> database locking
+>
+>I approached the problem by not using locking per se, but set up a
+>"lock" server.  Each routine which wanted to query/update the database
+>formed a key which it submitted to the lock server with the lock
+>request.  If an exclusive lock to the same key was already present,
+>the request is failed, otherwise it succeeds and the server increments
+>a lock count.  This requires each client program use an identical key
+>forumula, but in practice that isn't a problem.
+
+That sounds very much like the ENQ/DEQ functionality TOPS-10 used to
+mediate simultaneeous updates.
+
+The argument to the ENQ request was an ASCII string that describes a resource.
+For instance, "ORDERS.DAT/9-123" to indicate that blocks 9 through 123 of the
+file ORDERS.DAT.  A range of bytes in a file is not the only sort of resource
+that can be locked.  A job wanting to add a new customer ID could request the
+exclusive lock adding and deleting IDs by name, instead of an obscure number
+of bytes in some file.
+
+Another significant point of ENQ was that multiple resources could be
+requested in a single syscall.  The locks could be granted in an
+all-or-nothing mode, to avoid deadlocks.
+	-Joe
+
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 5072 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!news.idt.net!nntp.farm.idt.net!news
+From: "Chris Ward" <ccw@idt.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: Sun, 9 May 1999 20:05:16 -0400
+Organization: IDT (Best News In The World)
+Lines: 44
+Message-ID: <7h5856$6h5@nnrp3.farm.idt.net>
+References: <371be3e4.0@newsfeed.one.net> <7gc02r$go9@weyl.math.psu.edu> <7gcoig$63f$1@shell3.ba.best.com> <372C9BBC.FDC22D8D@MA.UltraNet.Com> <7ginkl$9of$1@shell3.ba.best.com> <372CF74E.BFEFD131@MA.UltraNet.Com> <7gjud1$6vm@nnrp3.farm.idt.net> <37359A5F.59212B32@MA.UltraNet.Com>
+NNTP-Posting-Host: ppp-4.ts-4-bay.hck.idt.net
+X-Newsreader: Microsoft Outlook Express 4.72.3612.1700
+X-MimeOLE: Produced By Microsoft MimeOLE V4.72.3612.1700
+Xref: news3.best.com alt.sys.pdp10:5072
+
+That was also the origin of how I figured out how much disk the computer
+center was using on that fateful day.  Since when they went from the KA (2
+RP03s for users) to the KL (A single RP06) and there was still no disk
+storage left on the system.  They had changed the default protections from
+an open (anyone could read a directory outside a project by default) to a
+more closed system where UFD's were protected from outside the project by
+default.  The assistant Dean had developed the habit of using work study
+students to store all the grades and SAT scores of students and applicants,
+and it was always awhile before they learned how to use file protections,
+and while I think the Comp Center liked an open system, the Dean needed to
+be accomodated - they eventually got wise and got themselves a 2020 which
+was shared with the business office).  Given that the cluster size went from
+5 to 10, and we knew how much disk was left on the old system, (basically
+none) and then since I could tell from a logged in console what was left on
+the system (I think the DSK command gave you that) (something like 20%) and
+because disk quotas had not gone up, I was able to assign (in a petulant
+frenzy) the new useage to the computer center.
+
+Turns out I hit it on the button.  Dr. V. had a talk with the powers that
+be, and it turned out a day later that I had given a very good (1%) figure,
+and he asked me how I did it.  He then hand presented my calculations, which
+got me off the hook, because they thought I had hacked the system somehow.
+While I would have liked to have been able to, my skills had developed in
+the areas of Fortran and PDP-11 (MACDLX and MACY11) assembler, neither of
+which would have been particulary useful in programming system functions on
+the 10.
+
+I think Dr. V. may have directed me in that direction, in part to keep me
+out of trouble.  (Keep 'em busy!)
+
+Alan H. Martin wrote in message <37359A5F.59212B32@MA.UltraNet.Com>...
+>Chris Ward wrote:
+>
+>> Actually, wasn't the Snevets KA (the infamous SN 101) set to a cluster
+size
+>> of 5, and then the KL set to a cluster size of 10?  ...
+>
+>I don't remember.  Then again, I didn't have to worry as much about disk
+>quotas as you did.
+> /AHM
+>--
+>Alan Howard Martin AMartin@MA.UltraNet.Com
+
+
+
+
+Article 5070 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newsswitch.lcs.mit.edu!news.ultranet.com!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: Sun, 09 May 1999 11:10:03 -0400
+Organization: UltraNet Communications , an RCN Company http://www.ultranet.com/
+Lines: 104
+Message-ID: <3735A54B.E72F6D38@MA.UltraNet.Com>
+References: <371be3e4.0@newsfeed.one.net> <7g8sbh$e88@weyl.math.psu.edu> <7gb4n6$795$1@shell3.ba.best.com> <372CA8A3.C1DE2BBD@MA.UltraNet.Com> <7gj7nd$c1v$1@shell3.ba.best.com>
+NNTP-Posting-Host: 209-122-232-202.s456.tnt4.sbo.ma.dialup.rcn.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 9 May 1999 15:11:02 GMT
+X-Mailer: Mozilla 4.51 [en] (Win95; U)
+X-Accept-Language: en,en-US,en-GB,es
+Xref: news3.best.com alt.folklore.computers:129781 alt.sys.pdp10:5070
+
+Joe Smith wrote:
+
+> Here's a failure mode that I reported (and got a patch for):
+>         .ASSIGN DSK TTY
+>         .R BASIC
+>         ^C
+>         ^C
+> 
+> BASIC opened logical device TTY for input and output.  It then began to
+> immediatly use IN and OUT UUOs without doing a LOOKUP or ENTER, since the
+> program always talks to TTY:, right?
+> 
+> The IN fails because the unprivileged program had done an OPEN and IN without
+> an intervening LOOKUP.  It tried to output "I/O error reading from device TTY"
+> to device TTY.  But because it is doing an OUT without an intervening ENTER,
+> that UUO fails.  The output routine goes into an infinite loop trying to
+> output error messages.  In the mean time, the Control-C intercept routine
+> was doing its job, preventing Control-C from stopping execution.
+> 
+> The patch was to exit quietly if TTY was not assigned to a terminal device.
+
+I remember seeing that SPR go by in college.  That was you eh?  That's only
+half the story.  (Actually, I just discovered it's only a third of the story).
+
+The original code OPENed TTY:
+
+	MOVEI	T,TTYBUF	;SET UP TTY BUFFS
+	MOVEM	T,.JBFF
+	INIT	1
+	SIXBIT	/TTY/
+	XWD	TYO,TYI
+	HALT	.-3
+	INBUF	1
+	OUTBUF	1
+
+You reported BASIC would loop if TTY referred to DSK.  Instead of solving the
+problem by requiring that TTY be a TTY, the maintainer "solved" the problem by
+requiring that it not be a disk.  The fix would have looked something like:
+
+
+;	206	16982	IF THE TTY IS ASSIGNED DSK THE TTYIN ROUTINE OPENS
+;			TTY  NO CHECK IS MADE FOR VALID DEVICE AND WILL 
+;			REMAIN IN A RUN STATE.
+...
+	SETZ	T,		;[206]SET UP TO CHECK FOR
+	DEVCHR	T,		;[206]A TTY DEVICE
+	TLNN	T,(DV.TTY)	;[206]MUST BE A TTY DEVICE
+	JRST	[OUTSTR	[ASCIZ /?COMMAND DEVICE NOT A TTY - ABORT -
+/]
+		EXIT]		;[206]DEVICE NOT LEGAL SO ERROR AND EXIT
+
+(Note the trailing space in the middle line of the revision history entry. 
+This is a portent of things to come).
+
+
+20 years later, I now see that someone at DEC apparently then complained that
+they couldn't type:
+
+.DEASSIGN DSK
+.CONTINUE
+
+to recover from the problem.  So they tried again:
+
+;	212	NONE	EDIT 206 DOES NOT RETURN CORRECTLY TO THE MONITOR
+;			DOESNT ALLOW FOR A CONTINUE
+...
+	SETZ	T,		;[206]SET UP TO CHECK FOR
+	DEVCHR	T,		;[206]A TTY DEVICE
+	TLNN	T,(DV.TTY)	;[206]MUST BE A TTY DEVICE
+	JRST	[OUTSTR	[ASCIZ /?COMMAND DEVICE NOT A TTY - ABORT -
+/]
+		EXIT	1,	;[206]DEVICE NOT LEGAL SO ERROR AND EXIT
+		JRST	BASIC]	;[212]RETURN TO COLD START FOR CONTINUE'S
+
+
+Whether or not the second fix was published, someone in the field (perhaps
+Tony Rizzolo at Stevens) saw the first fix and kicked it in the shins:
+
+.ASSIGN NUL TTY
+.R BASIC
+
+Since the null device is all things to all people, DEVCHR says it is
+simultaneously a card punch, card reader, line printer, display, paper tape
+punch, paper tape reader, DECtape, magtape, TTY and disk.  The TLNN skips,
+BASIC sends "READY, FOR HELP TYPE HELP." to the bit bucket, waits for input,
+gets EOF and restarts.  It opens TTY: (NUL:), sends "READY, FOR HELP TYPE
+HELP." to the bit bucket, waits for input, ...  You can't halt it (because of
+the ^C intercept).
+
+This is SPRed.  The third try's the charm:
+
+;	235	27382	ASSIGNING "NUL: TTY:" CAUSES BASIC TO LOOP AT STARTUP.
+...
+	SETZ	T,		;[206]SET UP TO CHECK FOR
+	DEVCHR	T,		;[206]A TTY DEVICE
+	TLNE	T,(DV.TTY)	;[206][235]MUST BE A TTY DEVICE
+	TLNE	T,(DV.DSK!DV.DTA);[235]AND NO OTHERS (IE. NUL)
+	JRST	[OUTSTR	[ASCIZ /?COMMAND DEVICE NOT A TTY - ABORT -
+/]
+		EXIT	1,	;[206]DEVICE NOT LEGAL SO ERROR AND EXIT
+		JRST	BASIC]	;[212]RETURN TO COLD START FOR CONTINUE'S
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 5071 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!141.211.144.13.MISMATCH!cliffs.rs.itd.umich.edu!news.itd.umich.edu!sarr
+Newsgroups: alt.sys.pdp10
+References: <u7lqpmcr7.fsf@infostream.no> <7gmhrs$ans$1@shell3.ba.best.com> <3735973C.40A7B897@MA.UltraNet.Com>
+Reply-To: sarr@umich.edu
+Organization: University of Michigan
+Subject: Re: TOPS-10 PPN and ownership
+From: sarr@pacman.rs.itd.umich.edu (Sarr J. Blumson)
+Lines: 24
+Message-ID: <k0iZ2.276$Ce.9026@news.itd.umich.edu>
+Date: Sun, 09 May 1999 15:41:04 GMT
+NNTP-Posting-Host: 141.211.63.80
+X-Trace: news.itd.umich.edu 926264464 141.211.63.80 (Sun, 09 May 1999 11:41:04 EDT)
+NNTP-Posting-Date: Sun, 09 May 1999 11:41:04 EDT
+Xref: news3.best.com alt.sys.pdp10:5071
+
+In article <3735973C.40A7B897@MA.UltraNet.Com>,
+Alan H. Martin <AMartin@MA.UltraNet.Com> wrote:
+>Joe Smith wrote:
+>
+>> The default MONGEN settings is that the owner is the programmer half
+>> of the PPN.  [25,100] and [26,100] belong to the same programmer (100)
+>> but two different projects.  This was true for programmer numbers
+>> greater than 7; [2,5] did not own the files in [1,5].
+>> 
+>> There was a feature-test setting that would require all 36 bits to
+>> match for ownership, but it was not the default setting.
+>
+>[FT?]INDPPN.  I never knowingly used a system with it set.
+
+We (ADP) translated [project,programmer] as [customer,individual] so we always
+ran with 36 bit matching; user 234 at Ford was definitely _not_ the same
+person as user 234 at GM!  In fact the first change I made was to make
+4s72 work that way, before it became a configuration option.
+
+-- 
+--------
+Sarr Blumson                    sarr@umich.edu
+voice: +1 734 764 0253          home: +1 734 665 9591
+ITD, University of Michigan     http://www-personal.umich.edu/~sarr/
+
+
+Article 5073 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newsfeed.enteract.com!news.wwa.com!not-for-mail
+From: jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett)
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 PPN and ownership
+Date: 10 May 1999 00:25:06 GMT
+Organization: Everett Associates
+Lines: 18
+Message-ID: <7h5912$gks$1@hirame.wwa.com>
+References: <u7lqpmcr7.fsf@infostream.no> <7gmhrs$ans$1@shell3.ba.best.com> <3735973C.40A7B897@MA.UltraNet.Com> <k0iZ2.276$Ce.9026@news.itd.umich.edu>
+NNTP-Posting-Host: poolf6-049.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.8 (x86 32bit)
+Xref: news3.best.com alt.sys.pdp10:5073
+
+In article <k0iZ2.276$Ce.9026@news.itd.umich.edu>, 
+sarr@pacman.rs.itd.umich.edu says...
+>
+>We (ADP) translated [project,programmer] as [customer,individual]
+
+Yes, but that's not what we called them. PPNs became AUNs (for [Account,User] 
+number) not CINs.
+
+One of the other "enhancements" we made at ADP (and perhaps my last 
+programming job) was the implementation of Group Quotas, based upon the 
+Account (Project) number. Althought I tried on numerous occasions to get DEC 
+(well, TW really) to incorporate the changes into the production version of 
+TOPS-10, they (he) always politely refused. Getting DEC to support it would 
+have eliminated yet another SOUPing job.
+
+-- 
+jeverett(at)wwa(dot)com (John Everett)    http://www.wwa.com/~jeverett
+
+
+
+Article 5074 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!144.212.100.101.MISMATCH!newsfeed.mathworks.com!howland.erols.net!netnews.com!chnws02.mediaone.net!24.128.1.101!chnws05.ne.mediaone.net!24.128.44.7!wbnws01.ne.mediaone.net.POSTED!not-for-mail
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 PPN and ownership
+References: <u7lqpmcr7.fsf@infostream.no> <7gmhrs$ans$1@shell3.ba.best.com>
+     <3735973C.40A7B897@MA.UltraNet.Com> <k0iZ2.276$Ce.9026@news.itd.umich.edu> <7h5912$gks$1@hirame.wwa.com>
+X-Newsreader: NN version 6.5.0 CURRENT #119
+From: werme@werme.ne.mediaone.net (Ric Werme)
+Lines: 23
+Message-ID: <01uZ2.5301$kE6.4364@wbnws01.ne.mediaone.net>
+Date: Mon, 10 May 1999 05:21:00 GMT
+NNTP-Posting-Host: 24.128.109.10
+X-Complaints-To: abuse@rr.com
+X-Trace: wbnws01.ne.mediaone.net 926313660 24.128.109.10 (Mon, 10 May 1999 01:21:00 EDT)
+NNTP-Posting-Date: Mon, 10 May 1999 01:21:00 EDT
+Organization: Road Runner
+Xref: news3.best.com alt.sys.pdp10:5074
+
+jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) writes:
+
+>In article <k0iZ2.276$Ce.9026@news.itd.umich.edu>, 
+>sarr@pacman.rs.itd.umich.edu says...
+>>
+>>We (ADP) translated [project,programmer] as [customer,individual]
+
+>Yes, but that's not what we called them. PPNs became AUNs (for [Account,User] 
+>number) not CINs.
+
+And at CMU, well, I forget what we called them, I guess account number
+for the whole thing and man number for the low half.  The 1108 and 360
+used a format (in regular expression code of
+[A-Z][0-9][0-9][0-9][A-Z][A-Z][0-9][0-9A-Z].  My first account number was
+S600EW13 (I was the 13th EW to come along.  Appropriately enough, I was born
+on Friday the 13th.)  S was for the Comp Sci dept, 600 for the course or
+something like that.  It turns out that the four character halves could be
+encoded in 18 bits.  On of my first programming jobs was to change SYSTAT
+to print the CMU form.
+--
+Ric Werme                  | http://people.ne.mediaone.net/werme
+werme@nospam.mediaone.net  | http://www.cyberportal.net/werme
+      ^^^^^^^ delete
+
+
+Article 5084 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: 11 May 1999 02:24:02 -0700
+Organization: Chez Inwap
+Message-ID: <7h8svi$rnb$1@shell3.ba.best.com>
+References: <371be3e4.0@newsfeed.one.net> <7gjhrh$lrk@weyl.math.psu.edu> <7gmjn5$lo2$1@shell3.ba.best.com> <7gmko2$aq5$3@antiochus.ultra.net>
+Lines: 44
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 926414647 224 inwap@206.184.139.134
+Xref: news3.best.com alt.folklore.computers:129904 alt.sys.pdp10:5084
+
+In article <7gmko2$aq5$3@antiochus.ultra.net>,  <jmfbahciv@aol.com> wrote:
+>In article <7gmjn5$lo2$1@shell3.ba.best.com>,
+>   inwap@best.com (Joe Smith) wrote:
+>>In article <7gjhrh$lrk@weyl.math.psu.edu>,
+>>Alexander Viro <viro@weyl.math.psu.edu> wrote:
+>>>Possible failure mode: directory getting full before CLOSE. How do you 
+>>>handle that?
+>>
+>>Directories don't get full.  There was no limit to the 
+>>number of file names that could be stored in a directory.
+>
+>Well, there were practical limits.  One couldn't have a disk full
+>of one RIB...hmm...I wonder what would have happened if we had
+>tried to fill the disk with just a RIB and then modified a file?
+>To make the file organization extensible there was the notion of
+>a RIB...and then there was the spare RIB.
+
+From another message:
+
+> Not strictly true; if the RIB itself filled up, you lose. The monitor
+> would not use extended RIBs for directories. I (and others) tried to
+> shame TW into fixing that, but he would just snort... Only saw it
+> happen once, and that was only because the directory blocks were full
+> of zeros from deleted files...
+
+That must have been before they added UFD compression.
+
+The directory would get shorter if there were 64 consecutive deleted
+file slots.  The first implementation had a bug on "DELETE *.*" on a
+very big directory:  The first 64 files would be deleted, then the
+UFD was compressed by removing the first block, shifting all the other
+file names forward one block.  The program reading the UFD would continue
+where it thought it had left off, and go after the third batch of 64 names
+now residing in the second block of the UFD.  The end result was that only
+half of the names got deleted on the first pass.  A directory N blocks
+long needed log2(N) delete operations.
+
+The fix was to defer UFD compression if the UFD was open for reading by
+a program, and to delay an OPEN of the UFD if compression was in progress.
+        -Joe
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 5158 of alt.sys.pdp10:
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Multiple stupid TOPS-10 questions...
+References: <Pine.LNX.4.10.9905171202310.15552-100000@bony.umtec.com> <ALDERSON.99May17174748@netcom2.netcom.com> <7hr9ec$prs$1@shell3.ba.best.com> <3744B3B1.7B84519@stoneweb.com> <7i4nm3$msg$1@shell3.ba.best.com>
+X-Disclaimer: Everything I write is false.
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 22 May 1999 00:08:39 -0700
+Message-ID: <qh90ahfuo8.fsf@ruckus.brouhaha.com>
+Lines: 16
+X-Newsreader: Gnus v5.5/Emacs 20.2
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 22 May 1999 07:09:24 GMT, ruckus.brouhaha.com
+Path: news3.best.com!news1.best.com!nntp.primenet.com!enews.sgi.com!news.sgi.com!news.spies.com!ruckus.brouhaha.com
+Xref: news3.best.com alt.sys.pdp10:5158
+
+Joe Smith <inwap@best.com> wrote:
+> Tymshare had 13 KL's, 13 SA-10 PDP-10 to IBM channel adaptors, and a large
+> disk farm of IBM-compatible disks.
+> 
+> There was also 3 sets of RH20 boards, and one RP06.
+...
+> Under extremely rare conditions, the RH-20 boards would be installed so
+> that the KL could be booted with TOPS-10 or TOPS-20 instead of TYMCOM-X.
+
+Did you guys actually get DEC to sell you KL10s without even a single RH20
+installed?  I didn't expect that they'd offer such a configuration, and it
+seems unlikely that they would have given much of a discount (if any) for
+dropping the RH20.
+
+Why did Tymshare go with IBM-style disk drives?  Cost?  Performance?
+Interchange?  Some other reason?
+
+
+Article 5165 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Multiple stupid TOPS-10 questions...
+Date: 23 May 1999 18:02:26 -0700
+Organization: Chez Inwap
+Message-ID: <7ia8f2$6qp$1@shell3.ba.best.com>
+References: <Pine.LNX.4.10.9905171202310.15552-100000@bony.umtec.com> <3744B3B1.7B84519@stoneweb.com> <7i4nm3$msg$1@shell3.ba.best.com> <qh90ahfuo8.fsf@ruckus.brouhaha.com>
+Lines: 31
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 927507751 204 inwap@206.184.139.134
+Xref: news3.best.com alt.sys.pdp10:5165
+
+In article <qh90ahfuo8.fsf@ruckus.brouhaha.com>,
+Eric Smith  <eric-no-spam-for-me@brouhaha.com> wrote:
+>Joe Smith <inwap@best.com> wrote:
+>> Tymshare had 13 KL's, 13 SA-10 PDP-10 to IBM channel adaptors, and a large
+>> disk farm of IBM-compatible disks.
+>> 
+>> There was also 3 sets of RH20 boards, and one RP06.
+>...
+>> Under extremely rare conditions, the RH-20 boards would be installed so
+>> that the KL could be booted with TOPS-10 or TOPS-20 instead of TYMCOM-X.
+>
+>Did you guys actually get DEC to sell you KL10s without even a single RH20
+>installed?  I didn't expect that they'd offer such a configuration...
+
+They all came with RH20s, but some idiot manager decided to make some
+money bo selling the "unused" hardware.
+
+>Why did Tymshare go with IBM-style disk drives?  Cost?  Performance?
+
+The PDP-10s got hand-me-down disks and tapes from the IBM/MVS systems.
+Fully functional disks at zero cost and the hardware maintenance guys
+were already familiar with the devices.
+
+Only the St. Louis data center inside of McDonnell Douglas had real
+IBM disks.  All the others had Calcomp or Memorex plug-compatible disks.
+	-Joe
+
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+

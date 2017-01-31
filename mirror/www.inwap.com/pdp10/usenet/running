@@ -1,0 +1,814 @@
+Article 1602 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!newsfeed.internetmci.com!news.wwa.com!news
+From: jeverett@wwa.com (John Everett)
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 Sighting
+Date: 11 Feb 1996 15:59:09 GMT
+Organization: WorldWide Access (tm) - Chicagoland Internet Services (http://www.wwa.com)
+Lines: 26
+Message-ID: <4fl3od$bah@kirin.wwa.com>
+References: <4fjslb$c77$1@mhade.production.compuserve.com>
+NNTP-Posting-Host: pool1-055.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.7
+
+In article <4fjslb$c77$1@mhade.production.compuserve.com>, 
+73541.3045@CompuServe.COM says...
+>
+>   I have recently (4 months ago) had seen a real live 10 system 
+>at a govt surplus auction. I would have bid on it but I had no 
+>possible way to move the thing. It would have looked pretty good 
+>in my garage next to all my VAX stuff though..
+>
+>   Are there any more around still in use ?
+>
+>Brian.
+>
+>-- 
+>****************************************************************************
+*
+>Mail all responses to Brian Roth    ai022@freenet.cc.buffalo.edu
+>****************************************************************************
+*
+
+It shouldn't be a real surprise, but yes there are -10s still earning their 
+keep. One place is at ADP's Ann Arbor facility, if they haven't all been 
+replaced with SC boxes. Also, I just heard that SPI in Cambridge, MA is still 
+running a KS-10. 
+-- 
+jeverett@wwa.com (John V. Everett)
+
+
+
+Article 1603 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sdd.hp.com!usc!chi-news.cic.net!nntp.coast.net!news.sprintlink.net!news.zoomnet.net!news
+From: pdonini@zoomnet.net (Patrick Donini)
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 Sighting
+Date: Sun, 11 Feb 1996 20:50:12 GMT
+Organization: ZoomNet News
+Lines: 48
+Message-ID: <4flkr1$h9e@news.zoomnet.net>
+References: <4fjslb$c77$1@mhade.production.compuserve.com> <4fl3od$bah@kirin.wwa.com>
+NNTP-Posting-Host: port-1-01.portsmouth.zoomnet.net
+
+jeverett@wwa.com (John Everett) wrote:
+
+>In article <4fjslb$c77$1@mhade.production.compuserve.com>, 
+>73541.3045@CompuServe.COM says...
+>>
+>>   I have recently (4 months ago) had seen a real live 10 system 
+>>at a govt surplus auction. I would have bid on it but I had no 
+>>possible way to move the thing. It would have looked pretty good 
+>>in my garage next to all my VAX stuff though..
+>>
+>>   Are there any more around still in use ?
+>>
+>>Brian.
+>>
+>>-- 
+>>****************************************************************************
+>*
+>>Mail all responses to Brian Roth    ai022@freenet.cc.buffalo.edu
+>>****************************************************************************
+>*
+
+>It shouldn't be a real surprise, but yes there are -10s still earning their 
+>keep. One place is at ADP's Ann Arbor facility, if they haven't all been 
+>replaced with SC boxes. Also, I just heard that SPI in Cambridge, MA is still 
+>running a KS-10. 
+>-- 
+>jeverett@wwa.com (John V. Everett)
+
+We Still have 12 KL-10 CPUs running at Lockheed Martin in Piketon, Oh,
+in different configurations from Single System to a Quad SMP System.
+
+We have been using tem since the late 70's, we have made modifications
+to them cutting them from three cabinets to three. We have some very
+special software which would take a long time to re-write so we have
+looked at several "Binary" compatable systems from the SC Boxes and a
+KL-emulator running on an Alpha, and several other systems which are
+still in development.
+
+PM Donini
+pdonini@zoomnet.net
+
+!====================================!
+!                                    !
+!   Patrick Donini                   !
+!   ------ pdonini@zoomnet.net ----- !
+!                                    !
+!====================================!
+
+
+
+Article 2114 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!howland.erols.net!newsfeed.internetmci.com!news.computer.org!usenet
+From: cz@alembic.crystel.com (Chris Zach)
+Newsgroups: alt.sys.pdp10
+Subject: KS10 and third party Massbuss boards
+Date: 8 Sep 1996 14:10:21 GMT
+Organization: IEEE Computer Society
+Lines: 30
+Distribution: world
+Message-ID: <50uk4d$dpp@student.computer.org>
+NNTP-Posting-Host: alembic.crystel.com
+X-Newsreader: RadicalNews (TM) 0.8.8 Beta(n)
+
+Morning all!
+
+In my continuing quest to make a KS10 that one can plug into house current 
+(without causing the power meter to spin like a top), I came across a bit of 
+a problem.
+
+The "official" drives for the KS series seem to be either RM03's, or RP06's. 
+RM03's pull at least 8 amps and only offer 70mb of storage. RP's pull way too 
+much, and at 220 volts to boot.
+
+Then I got to thinking. Here I have a few PDP11's running Fujitsu 2322 SMD 
+drives with Emulex SC03 type controllers. Fujitsu's take almost no current, 
+relatively, and can offer 160//320 mb per spindle with perfect RM02 
+emulation...
+
+Hm.......
+
+So, does anyone know if it is possible to put a Unibus SC1x type controller 
+in a KS10 and have it do the disk I/O to a 2322? If this is doable, it would 
+elliminate one power hungry RH11, and several RM03's in my life. It would 
+also allow me to slide 640Mb of disk into the KS10's cabinet, and make this 
+thing a single box computer :-)
+
+CZ
+
+--
+Time to take time
+For Spring will turn to Fall
+In just no time at all...
+
+
+
+Article 4280 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Subject: Re: An illuminated PDP10 needed for a movie project.
+References: <7081a1$pvi$1@shell3.ba.best.com>
+Organization: D Bit, Troy, NY
+From: wilson@dbit.com (John Wilson)
+NNTP-Posting-Host: dbit.dbit.com
+Message-ID: <36279fa8.0@news.wizvax.net>
+Date: 16 Oct 1998 15:34:00 -0500
+X-Trace: 16 Oct 1998 15:34:00 -0500, dbit.dbit.com
+Lines: 16
+Path: news3.best.com!news1.best.com!newsfeed.dacom.co.kr!howland.erols.net!netnews.com!newspeer.monmouth.com!newsfeed.wizvax.net!news.wizvax.net!dbit.com!wilson
+Xref: news3.best.com alt.sys.pdp10:4280
+
+In article <7081a1$pvi$1@shell3.ba.best.com>,
+Smith and O'Halloran <inwap@best.com> wrote:
+>I'd also like to take this opportunity to take inventory of the PDP10s
+>out there.  Model, Location, Contact Name, Status (up, was running,
+>handsome display, pile of parts).
+
+One KL-2065 and approximately eleven KS10s, D Bit Troy NY, John Wilson.
+   KL-2065 status:  complete, supposedly working before move, no 3-phase here
+     (hopefully will be donated to a better home soon)
+   KS10 status:  mostly in various states of having been raped for parts
+     and/or painted brown, a couple are basically complete.  One of the RM80
+     disk drives has ITS installed on it which was run on another KS10 a few
+     years ago.
+
+John Wilson
+D Bit
+
+
+Article 4278 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Smith and O'Halloran)
+Newsgroups: alt.sys.pdp10
+Subject: An illuminated PDP10 needed for a movie project.
+Date: 16 Oct 1998 10:55:13 -0700
+Organization: Chez INWAP (people, computers, cats)
+Message-ID: <7081a1$pvi$1@shell3.ba.best.com>
+Lines: 29
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: 908560519 20620 inwap 206.184.139.134
+Xref: news3.best.com alt.sys.pdp10:4278
+
+I received this message today.  Can anyone help?
+
+>From: "David A. Nelson" <davidn@lexsyscorp.com>
+>To: <js-cgi@inwap.com>
+>Subject: Need to buy or rent a PDP10
+>Date: Tue, 13 Oct 1998 19:49:24 -0700
+>
+>I need a PDP10  for a movie project.  Doesn't need to work, but needs
+>to light up...  Can you help?
+>David Nelson
+>Lexsys Corporation
+>425-844-3898
+
+I'd also like to take this opportunity to take inventory of the PDP10s
+out there.  Model, Location, Contact Name, Status (up, was running,
+handsome display, pile of parts).
+
+Two systems running Tymshare applications as of 16-Oct-98
+  Model XKL, Fremont CA, Joe Smith (408)922-6220 or Carl Baltrunas
+  (408)922-6206, running TOPS-20, up in our intranet.
+
+One system donated to the Computer History Museum
+  Model KL-1090, Mountain View CA, (I need to get their contact info),
+  was running TYMCOM-X when decommissioned, may be missing disk subsystem.
+
+	-Joe
+-- 
+INWAP.COM is Joe and Sally Smith, John and Chris O'Halloran and our cats
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 4605 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!howland.erols.net!master.news.rcn.net!not-for-mail
+From: abaddon@ibm.net (Michael Ross)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Any working -10s today? (not clones)
+Date: Mon, 21 Dec 1998 08:17:04 GMT
+Lines: 17
+Message-ID: <367e0359.46354176@news.erols.com>
+References: <lgreenwa-1812982339570001@putc10157253.cts.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: IGbIqcxVBOEUwbGZ+wI9VvOfrzgBv7leGodH6oOn8dA=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 21 Dec 1998 13:17:16 GMT
+X-Newsreader:  Forte Agent 1.01/16.397
+Xref: news3.best.com alt.sys.pdp10:4605
+
+On Fri, 18 Dec 1998 23:39:56 -0800, lgreenwa@cts.com (Lawrence H
+Greenwald) wrote:
+
+>Any real (genuine DEC, not a clone box) -10s or -20s still running today?
+>For what purpose? How do you keep the powers that be from turning 'em off?
+>
+I'm one with a KS; I also have a KL but not complete or working. I
+have heard reports that there is a working large system (probably KL)
+in private hands in Sweden - can anyone confirm? I'd also be
+interested to hear if anyone has knowledge of KA or KI systems that
+have been preserved - working or not, in museum or private collection.
+
+Mike
+
+Rangers Catering Corps - 'We boil for the One, we fry for the One'
+
+
+
+
+Article 4619 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!news2.best.com!news.maxwell.syr.edu!howland.erols.net!master.news.rcn.net!not-for-mail
+From: abaddon@ibm.net (Michael Ross)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Any working -10s today? (not clones)
+Date: Tue, 22 Dec 1998 08:09:38 GMT
+Lines: 21
+Message-ID: <367f5334.35793536@news.erols.com>
+References: <lgreenwa-1812982339570001@putc10157253.cts.com> <367e0359.46354176@news.erols.com> <75nri0$hrp$1@strato.ultra.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: 9jqFZGKUlGpr1mfYQD5WdWVwSu5rMrFtH+QJS5xEnDE=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 22 Dec 1998 13:09:57 GMT
+X-Newsreader:  Forte Agent 1.01/16.397
+Xref: news3.best.com alt.sys.pdp10:4619
+
+On Tue, 22 Dec 98 09:51:26 GMT, jmfbahciv@aol.com wrote:
+
+
+>>I'm one with a KS; I also have a KL but not complete or working. I
+>>have heard reports that there is a working large system (probably KL)
+>>in private hands in Sweden - can anyone confirm? 
+><snip>
+>
+>Is that the one that's in a parking lot?
+>
+
+Confused.
+
+I'd heard ???Uppsala University??? had a KL/KI/KA up and running - or
+rather their computer club did - something of that nature.
+
+Mike
+
+Rangers Catering Corps - 'We boil for the One, we fry for the One'
+
+
+
+
+Article 4622 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!newsxfer3.itd.umich.edu!news-peer.gip.net!news.gsl.net!gip.net!newsfeed.cwix.com!209.95.128.196!news-nyc.telia.net!masternews.telia.net!news.algonet.se!pepsi.tninet.se!not-for-mail
+From: "Peter Hendén" <phenden@algonet.se>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Any working -10s today? (not clones)
+Date: Tue, 22 Dec 1998 23:32:09 +0100
+Organization: Teknisk Dokumentation AB
+Lines: 37
+Message-ID: <75p6li$cbc$1@cubacola.tninet.se>
+References: <lgreenwa-1812982339570001@putc10157253.cts.com> <367e0359.46354176@news.erols.com> <75nri0$hrp$1@strato.ultra.net> <367f5334.35793536@news.erols.com>
+NNTP-Posting-Host: du127-147.ppp.algonet.se
+X-Trace: cubacola.tninet.se 914365938 12652 195.100.147.127 (22 Dec 1998 22:32:18 GMT)
+X-Complaints-To: abuse@algo.net
+NNTP-Posting-Date: 22 Dec 1998 22:32:18 GMT
+X-Newsreader: Microsoft Outlook Express 4.72.3155.0
+X-MimeOLE: Produced By Microsoft MimeOLE V4.72.3155.0
+Xref: news3.best.com alt.sys.pdp10:4622
+
+Michael Ross wrote:
+>On Tue, 22 Dec 98 09:51:26 GMT, jmfbahciv@aol.com wrote:
+>>>I'm one with a KS; I also have a KL but not complete or working. I
+>>>have heard reports that there is a working large system (probably KL)
+>>>in private hands in Sweden - can anyone confirm?
+>><snip>
+>>
+>>Is that the one that's in a parking lot?
+>>
+>Confused.
+>
+>I'd heard ???Uppsala University??? had a KL/KI/KA up and running - or
+>rather their computer club did - something of that nature.
+
+In their member newsletter Uptime (Issue 1) from 1995, the Computer
+society of Upsala University - Update - claims to have two DEC-2060s.
+That would be KL-20s. Their names were AIDA and CARMEN. The url
+is http://www.update.uu.se/uptime/1995/1/ . (It's in Swedish). Their
+website contains a map claiming that these are still there - crammed
+into a corner of their terminal room. URL of map:
+http://www.update.uu.se/admin/maps/Termrum.html. That page was
+last updated in Feb of 1997.
+
+Something tells me - don't ask what - that at least one of those beasts
+is actually a 2065.
+
+It's a pity they haven't the resourses to keep them running, though.
+
+Regards,
+Peter
+--
+Peter Hendén           http://www.algonet.se/~phenden
+ICQ: 14672398
+Teknisk Dokumentation AB          http://www.tdab.com
+
+
+
+
+
+Article 4634 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newsfeed1.swip.net!swipnet!tfl450.tfl.hk-r.se!news.ifm.liu.se!lien
+From: lien@lysator.liu.se (Jan Lien)
+Newsgroups: alt.sys.pdp10
+Subject: No swedish PDP10 running
+Date: 25 Dec 1998 19:10:57 GMT
+Organization: Linköping University, Sweden
+Lines: 9
+Message-ID: <760o01$5ra$1@newsy.ifm.liu.se>
+NNTP-Posting-Host: tintin.lysator.liu.se
+Mime-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+X-Newsreader: NN version 6.5.1 (NOV)
+Xref: news3.best.com alt.sys.pdp10:4634
+
+There is currently no PDP10 system running in Sweden.  However,
+some old systems, like a KA-10, 3 x KI-10, and various KL and
+KS 10 systems are "preserved" (read: in storage).
+
+There is a KS-10 system runnable (but not running) at the Stacken
+computer club.   
+
+Jan Lien
+
+
+
+Article 4641 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!newsfeed1.swip.net!swipnet!news-peer-europe.sprintlink.net!news.sprintlink.net!Sprint!news.netg.se!uio.no!news.kth.se!not-for-mail
+From: Mårten Zimmerman <mzi@stacken.kth.se>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Any working -10s today? (not clones)
+Date: 30 Dec 1998 10:42:54 +0100
+Organization: Stacken Computer Club
+Lines: 14
+Sender: e96_mzi@zafir.e.kth.se
+Message-ID: <yx6hiueuezj5.fsf@zafir.e.kth.se>
+References: <lgreenwa-1812982339570001@putc10157253.cts.com>
+	<367e0359.46354176@news.erols.com> <75nri0$hrp$1@strato.ultra.net>
+	<367f5334.35793536@news.erols.com> <75p6li$cbc$1@cubacola.tninet.se>
+NNTP-Posting-Host: zafir.e.kth.se
+Mime-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+X-didu: didu-didam-didej
+X-Newsreader: Gnus v5.3/Emacs 19.34
+Xref: news3.best.com alt.sys.pdp10:4641
+
+>>>>> "PH" == Peter Hendén <phenden@algonet.se> writes:
+
+    PH> It's a pity they haven't the resourses to keep them running,
+    PH> though.
+
+It isn't a matter of resources it's a matter of time. We have a 2020
+and a PDP 11/70. They run, but you have arrange some more cooling and
+some time. 
+
+/Mårten
+
+--
+Justice separated from love is revenge
+			  Henry Miller
+
+
+Article 4642 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newshub.northeast.verio.net!newsfeed1.swip.net!swipnet!news-peer-europe.sprintlink.net!news.sprintlink.net!Sprint!news.netg.se!uio.no!news.kth.se!not-for-mail
+From: Mårten Zimmerman <mzi@stacken.kth.se>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Any working -10s today? (not clones)
+Date: 30 Dec 1998 10:38:42 +0100
+Organization: Stacken Computer Club
+Lines: 17
+Sender: e96_mzi@zafir.e.kth.se
+Message-ID: <yx6hk8zaezq5.fsf@zafir.e.kth.se>
+References: <lgreenwa-1812982339570001@putc10157253.cts.com>
+	<367e0359.46354176@news.erols.com> <75nri0$hrp$1@strato.ultra.net>
+NNTP-Posting-Host: zafir.e.kth.se
+Mime-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+X-didu: didu-didam-didej
+X-Newsreader: Gnus v5.3/Emacs 19.34
+Xref: news3.best.com alt.sys.pdp10:4642
+
+>>>>> "j" == jmfbahciv  <jmfbahciv@aol.com> writes:
+
+    >> I'm one with a KS; I also have a KL but not complete or
+    >> working. I have heard reports that there is a working large
+    >> system (probably KL) in private hands in Sweden - can anyone
+    >> confirm?
+
+There is a 3-CPU KI10 that still runs if you put your hands on the
+right spots. That is the only working system to my knowledge in
+Sweden. And yes, it has seen some days at parkinglots. But that was a
+while ago.
+
+/Mårten
+
+--
+Justice separated from love is revenge
+			  Henry Miller
+
+
+Article 4649 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!newsfeed1.earthlink.net!newsfeed.concentric.net!207.155.183.80.MISMATCH!global-news-master
+From: Christopher G. Petrilli <petrilli@dworkin.amber.org>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Any working -10s today? (not clones)
+Date: 31 Dec 1998 08:05:29 PST
+Organization: Concentric Internet Services
+Lines: 16
+Message-ID: <76g7c9$na9@chronicle.concentric.net>
+References: <lgreenwa-1812982339570001@putc10157253.cts.com> <367e0359.46354176@news.erols.com> <75nri0$hrp$1@strato.ultra.net> <yx6hk8zaezq5.fsf@zafir.e.kth.se>
+NNTP-Posting-Host: dworkin.amber.org
+Mime-Version: 1.0
+Content-Type: text/plain; charset=US-ASCII
+Content-Transfer-Encoding: 8bit
+X-Newsreader: TIN [UNIX 1.3 unoff BETA 970424; i386 FreeBSD 2.2.2-RELEASE]
+Xref: news3.best.com alt.sys.pdp10:4649
+
+Mårten Zimmerman <mzi@stacken.kth.se> wrote:
+> >>>>> "j" == jmfbahciv  <jmfbahciv@aol.com> writes:
+
+> There is a 3-CPU KI10 that still runs if you put your hands on the
+> right spots. That is the only working system to my knowledge in
+> Sweden. And yes, it has seen some days at parkinglots. But that was a
+> while ago.
+
+When I worked iwth him, I believe Peter Lothberg (add your own
+diacriticals ;-) had a KL-10 running at his house, but perhaps it was
+only a KS-10... 
+
+Chris
+-- 
+| Christopher Petrilli
+| petrilli@amber.org
+
+
+Article 4652 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newsfeed1.swip.net!swipnet!tfl450.tfl.hk-r.se!news.ifm.liu.se!lien
+From: lien@lysator.liu.se (Jan Lien)
+Newsgroups: alt.sys.pdp10
+Subject: No Swedish machines
+Date: 2 Jan 1999 19:05:14 GMT
+Organization: Linköping University, Sweden
+Lines: 12
+Message-ID: <76lqla$idi$1@newsy.ifm.liu.se>
+NNTP-Posting-Host: tintin.lysator.liu.se
+Mime-Version: 1.0
+Content-Type: text/plain; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+X-Newsreader: NN version 6.5.1 (NOV)
+Xref: news3.best.com alt.sys.pdp10:4652
+
+Zimmerman just stated that KI-10 was runnable in Sweden.  He
+does not understand the fact that these machines are STORED
+in a warehouse.  There is a lot of shitty work to be carried 
+out just to get them out, find the parts, and that does not
+even include building a computer room, or finding the power.
+
+Facts:  ONE runnable KS-10 in Sweden.   1 x KA, 3 x KI,
+many x KL, some KS symstems in storage in Sweden.  The ones
+in storage are NOT runnable right now.  They can be fixed
+if anyone has much money.
+
+
+
+
+Article 4653 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!su-news-hub1.bbnplanet.com!cam-news-feed2.bbnplanet.com!news.gtei.net!news.shore.net!news.ultranet.com!not-for-mail
+From: "Carl R. Friend" <carl.friend@stoneweb.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: No Swedish machines
+Date: Sun, 03 Jan 1999 12:29:04 -0500
+Organization: as little as possible!
+Lines: 48
+Message-ID: <368FA8E0.7AE2BD34@stoneweb.com>
+References: <76lqla$idi$1@newsy.ifm.liu.se>
+NNTP-Posting-Host: zephyr.ultranet.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 3 Jan 1999 17:28:40 GMT
+X-Mailer: Mozilla 2.0 (X11; I; Linux 2.0.29 i586)
+Xref: news3.best.com alt.sys.pdp10:4653
+
+Jan Lien, in article nr.<76lqla$idi$1@newsy.ifm.liu.se>,  wrote:
+> 
+> Zimmerman just stated that KI-10 was runnable in Sweden.  He
+> does not understand the fact that these machines are STORED
+> in a warehouse.  There is a lot of shitty work to be carried
+> out just to get them out, find the parts, and that does not
+> even include building a computer room, or finding the power.
+
+   As someone who restores old iron for a hobby, I can state with some
+degree of authority that it can be a real crapshoot trying to get a
+machine running that has been "stored" for many years. My most recent
+project was a PDP-12 which sat idle for about 8 years; I'm still
+kicking bugs out of it, but overall it's surprisingly healthy.
+
+   For comparison, the PDP-12 has a single backlane about 2/3 the
+size of the KI backplane (of which there are two). In the case of
+the KIs, the power supply filter capacitors may have deteriorated
+by now and might require replacement (linear supplies - no switchers).
+There's a lot of work to be done even before you try to put power
+to a system, too. Just verifying that a machine is "all there" can
+take several hours, especially in the case of a machine like a KI-10
+which has close to a thousand boards it it. Then there are the "fun"
+things that can happen over time (and movement) to wire-wrap panels.
+And the jumper cables between the two backplanes. And trying to
+find memory and peripherals.... You get the drift.
+
+   Getting a -10 into runnable condition (leaving out the little
+KS-10) is a major undertaking - much more that plugging it in and
+flipping the power switch.
+
+> Facts:  ONE runnable KS-10 in Sweden.   1 x KA, 3 x KI,
+> many x KL, some KS symstems in storage in Sweden.  The ones
+> in storage are NOT runnable right now.  They can be fixed
+> if anyone has much money.
+
+   The important thing is that they are safe and preserved in a
+state which will allow them to be restored in the future. That is
+the all-important "first step" -- that they not go for scrap the
+way so many of their brethren did.
+
+-- 
+ ______________________________________________________________________
+|                                                |                     |
+| Carl Richard Friend (UNIX Sysadmin)            | West Boylston       |
+| Minicomputer Collector / Enthusiast            | Massachusetts, USA  |
+| mailto:carl.friend@stoneweb.com                |                     |
+| http://www.ultranet.com/~crfriend/museum       | ICBM: N42:22 W71:47 |
+|________________________________________________|_____________________|
+
+
+Article 6161 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!news.new-york.net!news.decus.org!eisner!umbricht
+From: umbricht@eisner.decus.org (Michael Umbricht)
+Subject: RCS open house (DECSYSTEM-20)
+Nntp-Posting-Host: eisner.decus.org
+Lines: 18
+Organization: DECUServe
+Message-ID: <1999Nov5.194100.1@eisner>
+X-Trace: news.decus.org 941848895 4110 UMBRICHT [216.44.122.34]
+Date: Sat, 6 Nov 1999 00:41:00 GMT
+Xref: news3.best.com alt.sys.pdp10:6161
+
+The Retro-Computing Society of RI will be featuring the DECSYSTEM-20 as the
+topic of our November open house.  We will be doing some work on our 2020 and
+2065 which we recently acquired.  Both systems are in need of much work.  It is
+our goal to restore these machines to functional condition.
+
+We are in need of the entire board set for the pdp-11/40 console on the 2065. 
+Please contact us if you know where we might obtains one or more of these
+boards.
+
+RCS is located in Providence, Rhode Island.  
+The open house is Saturday, November 20th from 10am - 4:30pm.
+The event is free, and open to the public.
+
+For more information and directions, 
+see http://www.osfn.org/rcs/ 
+or send email to rcs@osfn.org
+
+-mikeu
+
+
+Article 7879 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!cyclone.swbell.net!news.pacbell.net.POSTED!panaflex
+From: panaflex@fitzharris.com (Sean Weitzel)
+Newsgroups: alt.sys.pdp10
+Subject: need help locating L0072 super hex module
+Message-ID: <panaflex-3103001519490001@news.pacbell.net>
+Organization: lffltd
+Mime-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-transfer-encoding: 8bit
+X-Newsreader: Yet Another NewsWatcher 2.2.0
+Lines: 7
+Date: Fri, 31 Mar 2000 15:19:49 -0800
+NNTP-Posting-Host: 63.192.47.85
+X-Complaints-To: abuse@pacbell.net
+X-Trace: news.pacbell.net 954544775 63.192.47.85 (Fri, 31 Mar 2000 15:19:35 PST)
+NNTP-Posting-Date: Fri, 31 Mar 2000 15:19:35 PST
+Xref: news3.best.com alt.sys.pdp10:7879
+
+
+I still maintain one of these machines... a KL-10.. we are in dire need of
+an L0072 super hex module... if anyone can provide any leads to one, it
+would be GREATLY appreciated..
+
+thanks
+-sean weitzel
+
+
+Article 8302 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newsswitch.lcs.mit.edu!uchinews!newsfeed.stanford.edu!news.ems.psu.edu!news3.cac.psu.edu!usenet
+From: bjj@arlvax.arl.psu.edu
+Newsgroups: alt.sys.pdp10,comp.sys.dec,alt.folklore.computers
+Subject: Re: light bulbs for DEC front panels
+Date: Tuesday, 25 APR 2000 21:27 EDT
+Organization: Applied Research Lab
+Lines: 12
+Message-ID: <8e5h88$1bd0@r02n01.cac.psu.edu>
+References: <qhk8hvj7x2.fsf@ruckus.brouhaha.com> <Ft971q.Hs2@spcuna.spc.edu> <qhln2a7y6a.fsf@ruckus.brouhaha.com> <8dtj3n$fse@r02n01.cac.psu.edu> <eGsM4.28623$fV.1682542@bgtnsc05-news.ops.worldnet.att.net>
+NNTP-Posting-Host: netmon.arl.psu.edu
+X-Newsreader: VMS TPU/News
+Xref: news3.best.com alt.sys.pdp10:8302 comp.sys.dec:58897 alt.folklore.computers:155703
+
+In article <eGsM4.28623$fV.1682542@bgtnsc05-news.ops.worldnet.att.net>,
+   "The Bakers" <nospam@att.net> writes:
+>Whatever happened to the PSU HCL/ECL PDP-10 ?
+>
+>Did it end up at Salvage ?  Is it still in the basement of EEW ?
+
+The KA10 was still running perfectly in 1994 with many years of spare parts
+remaining.  Unfortunately it was an embarrassment to management.  It was
+torn apart.  The wirewrap backplane from one of the two CPU cabinets went
+to a DEC serviceman's garage wall.  The rest was just disposed of.  All I
+have left is an image copy of its disk packs, but that's all I need to bring
+it back to life some day (given a softare KA10 emulater).
+
+
+Article 1874 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!panix!news.panix.com!panix3.panix.com!not-for-mail
+From: n1ist@panix.com (Michael Ardai)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Shutdown of *nearly* last DECSYSTEM-20 (was Re: Shutdown of last Multics site)
+Date: 2 Nov 2000 15:11:53 -0500
+Organization: Utopia Planetia Shipyards - Mars
+Lines: 16
+Message-ID: <8tshq9$h65$1@panix3.panix.com>
+References: <3A003D27.543451A3@multicians.org> <8tpfdv$7hs$3@bob.news.rcn.net> <qhk8aml0az.fsf_-_@ruckus.brouhaha.com>
+NNTP-Posting-Host: panix3.panix.com
+X-Trace: news.panix.com 973195914 346 166.84.0.228 (2 Nov 2000 20:11:54 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: 2 Nov 2000 20:11:54 GMT
+Xref: nntp1.ba.best.com alt.folklore.computers:9574 alt.sys.pdp10:1874
+
+In article <qhk8aml0az.fsf_-_@ruckus.brouhaha.com>,
+Eric Smith  <eric-no-spam-for-me@brouhaha.com> wrote:
+-I met someone at a site that shut down their DECSYSTEM-20 within the
+-last 60 days.  Now I only know of one system still running (not counting
+-XKL machines, which run TOPS-20 but are not DECSYSTEM-20s).
+-
+
+Possibly the Cambridge MA school system.  I know we gave ours to them
+as a spare when we decommisioned it.
+
+Actually, the story I have heard is that we traded it in for a VAX 780
+years ago, and DEC let us keep it until we migrated our software off of 
+it *if* we kept up our service contract.  It took us at least 10 years
+to do so :-)
+
+/mike
+
+
+Article 1934 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc01.blue.aol.com!news.maxwell.syr.edu!sn-xit-03!sn-post-01!supernews.com!corp.supernews.com!not-for-mail
+From: Michael Umbricht <mikeu@shrimp.osfn.org>
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Emergency Power Off on an S/360
+Date: Wed, 08 Nov 2000 19:54:54 -0500
+Organization: Ocean State Free-Net
+Message-ID: <3A09F5DE.82F5D262@shrimp.osfn.org>
+X-Mailer: Mozilla 4.61 [en] (X11; U; SunOS 5.7 sun4c)
+X-Accept-Language: en
+MIME-Version: 1.0
+References: <8prklv$epu$1@thoth.cts.com> <slrn8s2le7.v6i.TheCentralScrutinizer@C298344-A.arvada1.co.home.com> <968973386.377877@elaine.furryape.com> <49fedb9f89a__fake__address@127.0.0.1> <8qaemc$fh6$1@top.mitre.org> <39F2EF44.729EBE1B@MA.UltraNet.Com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Complaints-To: newsabuse@supernews.com
+Lines: 37
+Xref: nntp1.ba.best.com alt.folklore.computers:10120 alt.sys.pdp10:1934
+
+
+At the Retro-Computing Society of RI we are restoring DECsystem 2065
+(KL-10E)  
+See http://www.osfn.org/rcs/ for more info about the group.
+
+On the front is a black switch labeled "SYSTEM" on/off and a red switch
+labeled "SYSTEM LOCK" off/on.  The red switch does indeed have a U
+shaped piece of metal that drops down when you press the switch up (to
+the off position) which prevents the switch from being pressed back to
+the down position.
+
+But, if you open the door to the cabinet and reach behind the switch
+there is a slim rectangular gap on the lower right side toward the back
+of the switch enclosure.  By inserting a paper clip you can lift the
+piece of metal while reseting the switch to on.
+
+(I only discovered this just now after I had already removed the switch
+and held it upside-down...)
+
+-mikeu
+
+"Alan H. Martin" wrote:
+> 
+> Joe Morris wrote:
+> 
+> > The EPO switches on the S/370 and beyond tended to be toggle switches,
+> > in a recessed holder so that the handles don't protrude beyond the
+> > surface of the cabinet.  The design includes a flat steel spring
+> > that locks the switch in the OFF position when someone uses it, but
+> > all that's required to release it is a small screwdriver.
+> 
+> That reminds me: the emergency power off for the PDP-10 KL processor was
+> a slightly recessed rectangular rocker switch.  Someone can correct me,
+> but it was rumored to conceal a horizontal pin which would drop and
+> prevent the switch from being turned on again without field service
+> first having reset the pin.  The rumor was that this was done by holding
+> the switch or its panel upside-down and shaking...
+
+
+Article 2016 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntp.primenet.com!nntp.gblx.net!news.maxwell.syr.edu!newsfeed.slurp.net!bony.umtec.com!root
+Newsgroups: alt.sys.pdp10
+From: Daniel Seagraves <root@bony.umtec.com>
+Subject: I have a KS10 now! ^_^
+Message-ID: <Pine.LNX.4.10.10011261648260.27698-100000@bony.umtec.com>
+Approved: Why bother?
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+Lines: 18
+Date: Sun, 26 Nov 2000 16:51:18 -0600
+NNTP-Posting-Host: 198.199.189.6
+X-Trace: newsfeed.slurp.net 975278172 198.199.189.6 (Sun, 26 Nov 2000 16:36:12 CDT)
+NNTP-Posting-Date: Sun, 26 Nov 2000 16:36:12 CDT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2016
+
+
+KS10 serial number 4469.  I don't know if it's alive or dead yet.
+I also got a TU45, and a spare formatter for it.  (Can I plug any Pertec
+Unformatted device into that formatter and use it, or just special
+devices?)
+
+I am now in the market for a Massbus harddisk of some kind, within
+semi-resonable distance of Peoria, IL.  Will trade PDP-11 stuff...
+
+"Confuse, annoy, and DEE-STROY!" -- Jet Wolf | "Nothing Happens." -- ADVENT
+"You'd be surprised what you can live through..." -- Anonymous
+"...A man can pass his family and his name down through his sons, but it's
+his honour that gets passed through his daughters.  He can see the best
+and worst of life in his girls.  A daughter is something far too precious,
+and he'll do anything to protect her."
+	-- Reichsfuehrer Siegfried Koenig, _Matrose_Mond_, David Oliver
+
+
+
+

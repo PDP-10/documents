@@ -1,0 +1,184 @@
+Article 4238 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!news.maxwell.syr.edu!logbridge.uoregon.edu!Supernews73!supernews.com!Supernews69!10.0.0.1!10.0.0.1
+From: racerdave@net1plus.com (Dave Lyons)
+Newsgroups: alt.sys.pdp10
+Subject: KI Small User
+Date: Sun, 11 Oct 1998 23:39:17 GMT
+Organization: http://www.supernews.com, The World's Usenet: Discussions Start Here
+Lines: 9
+Message-ID: <36213e9f.1600928656@10.0.0.1>
+NNTP-Posting-Host: 208.200.157.92
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: 908149128 P0XQBQRYN9D5CD0C8C usenet57.supernews.com
+X-Complaints-To: newsabuse@supernews.com
+X-Newsreader: Forte Agent 1.5/32.452
+X-No-Archive: yes
+Xref: news3.best.com alt.sys.pdp10:4238
+
+We used to joke that the "Small User" bit on the KI was for short
+people.  I know what it does, I know how it did it, the only question
+is did anyone EVER come up with a real use for it?  The code it took
+to support it on the -10 would have been larger than the memory it
+saved you, so it never got supported.
+
+DRL
+
+DATAO PAG,[440000,,0]
+
+
+Article 2656 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!howland.erols.net!feed2.news.rcn.net!feed1.news.rcn.net!rcn!not-for-mail
+From: "Carl R. Friend" <carl.friend@prescienttech.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: I have a KS10 now! ^_^
+Date: Mon, 18 Dec 2000 20:38:02 -0500
+Organization: as little as possible!
+Lines: 26
+Message-ID: <3A3EBBFA.697CC1D5@prescienttech.com>
+References: <Pine.LNX.4.10.10011261648260.27698-100000@bony.umtec.com> <8vtt5l$gd1$6@bob.news.rcn.net> <3A2292EF.F4884A20@bartek.net> <Pine.LNX.4.10.10011271143450.28766-100000@bony.umtec.com> <3A22A86A.D64FC5CA@bartek.net> <Pine.LNX.4.10.10011271250380.28766-100000@bony.umtec.com> <3A22BB9B.202BF87F@bartek.net> <Pine.LNX.4.10.10011271551170.28766-100000@bony.umtec.com> <tnt62t80gl8usc01iilph012vk6ffqh8os@4ax.com> <qhd7ff6g4m.fsf@ruckus.brouhaha.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: UmFuZG9tSVavunZNzmpOfIuz69F/OD5S3pNX7qzdejVfcuSPYuH15EgHVUA7Cug6
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 19 Dec 2000 01:38:03 GMT
+X-Mailer:  Mozilla 4.5 [en] (X11; I; Linux 2.0.29 i586)
+X-Accept-Language:  en
+Xref: nntp1.ba.best.com alt.sys.pdp10:2656
+
+Eric Smith wrote:
+> 
+> The RH10 is a large box that attaches to the KA10/KI10 I/O bus and
+> memory busses.  It can also be used on KL10s that have a DIA20 I/O
+> bus interface and a DMA20 external memory interface, such as the
+> 1080 and 1090.
+
+   To be absolutely correct, one must state that the RH-10 required
+a DF-10 data-channel to do the "dirty work" of getting the disk data
+to main memory.
+
+   The RH-10 passed the initial channel-control-word address to the
+DF-10 when a transfer was setting up, and the DF-10 took care of the
+DMA bits.
+
+   I believe that multiple RH-10s could share a DF-10 (a wonderful
+old box based on R, S, and B- series DEC logic), but never saw such
+an implementation.
+
+-- 
++------------------------------------------------+---------------------+
+| Carl Richard Friend (UNIX Sysadmin)            | West Boylston       |
+| Minicomputer Collector / Enthusiast            | Massachusetts, USA  |
+| mailto:crfriend@ma.ultranet.com                +---------------------+
+| http://www.ultranet.com/~crfriend/museum       | ICBM: 42:22N 71:47W |
++------------------------------------------------+---------------------+
+
+
+Article 2661 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!207.172.3.44!feed2.news.rcn.net!feed1.news.rcn.net!rcn!not-for-mail
+From: "Carl R. Friend" <carl.friend@prescienttech.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Desperately seeking DF10-C information!
+Date: Mon, 18 Dec 2000 21:21:56 -0500
+Organization: as little as possible!
+Lines: 17
+Message-ID: <3A3EC644.929CC13D@prescienttech.com>
+References: <Pine.LNX.4.10.10012101450520.16662-100000@bony.umtec.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: UmFuZG9tSVYf1iPBEn/DS5s9+RL+rHamg0HXEnDzivci4JbGG9AFZXjP4+Duzcri
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 19 Dec 2000 02:21:56 GMT
+X-Mailer:  Mozilla 4.5 [en] (X11; I; Linux 2.0.29 i586)
+X-Accept-Language:  en
+Xref: nntp1.ba.best.com alt.sys.pdp10:2661
+
+Daniel Seagraves wrote:
+> 
+> I figured it out!  ITS wants a DF10-C, as opposed to a normal DF10,
+> and they're different somehow, 'cause TOPS-10 has them as seperate
+> config options.  Can someone esplain how they're different?
+
+   I think the DF-10C had the extra four address bits available so it
+could address the full 4 MW capacity of the KI systems.  At the moment,
+I cannot provide verification or a cite, however.
+
+-- 
++------------------------------------------------+---------------------+
+| Carl Richard Friend (UNIX Sysadmin)            | West Boylston       |
+| Minicomputer Collector / Enthusiast            | Massachusetts, USA  |
+| mailto:crfriend@ma.ultranet.com                +---------------------+
+| http://www.ultranet.com/~crfriend/museum       | ICBM: 42:22N 71:47W |
++------------------------------------------------+---------------------+
+
+
+Article 3646 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!feed2.news.rcn.net!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Help understanding interrupt processing
+Date: Sun, 25 Feb 2001 23:03:14 -0500
+Lines: 46
+Message-ID: <3A99D582.66A1F382@MA.UltraNet.Com>
+References: <3A764A09.8FEE136B@digiweb.com> <3A78E586.8864B7C7@MA.UltraNet.Com> <3A7D0848.29678A56@mail.bcpl.net> <95lkti$15d3$1@nntp1.ba.best.com> <95lun5$204$1@bob.news.rcn.net> <3A7EAB71.58EC9F5A@mail.bcpl.net> <3A7F3031.EC5A10F8@prescienttech.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: UmFuZG9tSVaEujsmiiJivbyIEdlqF9nxAk9Hfua1aeq6mQaKJ97OyptWxxf2c9v+
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 26 Feb 2001 04:03:57 GMT
+X-Mailer:  Mozilla 4.76 [en] (Win95; U)
+X-Accept-Language:  en,en-US,en-GB,es
+Xref: nntp1.ba.best.com alt.sys.pdp10:3646
+
+"Carl R. Friend" wrote:
+...
+>    On pipelining in the KI-10:  the KI did provide very limited
+> facilities for setting up the address of the next instruction on
+> the memory bus, but did not (IIRC) initiate the actual fetch (the
+> iron is, technically, capable of it, but the capacity was never
+> used (how do you do guaranteed-atomic test-and-jumps with a pre-
+> fetch unless you can toss the pre-fetch without losing a beat?).
+
+By making stores defer prefetch?  (Cute, eh?)
+
+From the _DECsystem-10 System Reference Manual_ (DEC-10-XSRMA-A-D),3rd
+Edition, August 1974 (copyright 1975):
+
+"
+		KI10 Instruction Times
+
+The table on the next two pages lists the processor execution time in
+microseconds for each instruction beginning with its address
+calculation.  The times do not include the instruction fetch (.89
+microseconds), as this is overlapped with the preceding instruction
+execution; in each case the processor time needed to complete the
+instruction fetch depends on the extent of the overlap, a factor that
+varies from one instruction to another.  ...
+...
+Memory access by the processor is divided into three parts: page check,
+request setup, and the actual address cycle over the memory bus.  In an
+instruction fetch, the first two of these can be overlapped with operand
+storage, but not the third.  The effect of this on instruction fetch
+time is as follows.  If an instruction does not store a memory operand
+(either because it has no operand or stores its result in an
+accumulator), probably the next instruction fetch will be overlapped
+entirely: hence the second instruction will be ready by the time the
+first is done.  If an instruction stores a memory operand, there is no
+overlap on the bus, but most likely the page check and request setup
+will have been performed (these show up as the 175 preceding each read
+access in the chart).  After the write access is complete an instruction
+has 147 nanoseconds to go, during which period the read access for the
+next instruction can begin.  Finally, some instructions put off
+triggering instruction fetch until near the very end, but even in the
+worst case (BLT) there is a minimum overlap of 87 nanoseconds, which is
+enough for the page check (81).
+"
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+

@@ -1,0 +1,420 @@
+Article 5391 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!144.212.100.101.MISMATCH!newsfeed.mathworks.com!newshub.northeast.verio.net!ix.netcom.com!nntp.ix.netcom.com!alderson
+From: alderson@netcom16.netcom.com (Richard M. Alderson III)
+Newsgroups: alt.sys.pdp10
+Subject: Re: BLISS-10
+Date: 08 Jul 1999 01:26:32 GMT
+Organization: NETCOM On-line services
+Lines: 14
+Message-ID: <ALDERSON.99Jul7182632@netcom16.netcom.com>
+References: <7kg08v$iht$1@news.latrobe.edu.au> <7legom$blq$1@news.latrobe.edu.au>
+	<7lic3a$m90@bonkers.taronga.com>
+	<ALDERSON.99Jul6105133@netcom11.netcom.com>
+	<7lvbus$ol9@bonkers.taronga.com>
+Reply-To: alderson@netcom.com
+NNTP-Posting-Host: netcom16.netcom.com
+X-NETCOM-Date: Wed Jul 07  8:26:32 PM CDT 1999
+NNTP-Posting-User: alderson
+In-reply-to: peter@taronga.com's message of 7 Jul 1999 05:59:40 -0500
+Xref: news3.best.com alt.sys.pdp10:5391
+
+In article <7lvbus$ol9@bonkers.taronga.com> peter@taronga.com (Peter da Silva)
+writes:
+
+>GNU Emacs was hard to port to TOPS-20? Oh, the Irony! But why not use the real
+>thing... TOPS-20 is one of the few places it's available...
+
+Because the Real Thing is still a single-section program which can only edit a
+file that will map into its memory space.  From time to time, I think about the
+project of making it use extended addressing, then I lie down till the feeling
+goes away...
+--
+Rich Alderson			Last LOTS Tops-20 Systems Programmer, 1984-1991
+				Current maintainer, MIT TECO EMACS (v. 170)
+last name @ XKL dot COM		Chief systems administrator, XKL LLC, 1998-now
+
+
+Article 4551 of alt.sys.pdp10:
+Sender: phr2001-nospam@ruckus.brouhaha.com
+From: Paul Rubin <phr-n2001@nightsong.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Emacs for TOPS-10/TOPS-20?
+References: <tdmc1bbrm4btfa@corp.supernews.com> <87vgo4mv6n.fsf@prep.synonet.com> <wwitk3m7xx.fsf@atlas.cfht.hawaii.edu>
+Date: 17 Apr 2001 16:54:05 -0700
+Message-ID: <7xsnj7f5gi.fsf@ruckus.brouhaha.com>
+Organization: Nightsong/Fort GNOX
+Lines: 13
+User-Agent: Gnus/5.0807 (Gnus v5.8.7) Emacs/20.7
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 17 Apr 2001 17:02:52 -0700, ruckus.brouhaha.com
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!enews.sgi.com!news.spies.com!ruckus.brouhaha.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:4551
+
+Jim Thomas <thomas@atlas.cfht.hawaii.edu> writes:
+> As one of the, I'm sure, many people who looked at this, I'd say it was
+> more the lack of a MIDAS assembler.  EMACS itself was not too big.  The
+> minimum macros needed to get started weren't all that big.  But it wanted
+> the whole file in memory so there would have been a file size limit.  Since
+> we had (well, still do :-) all sorts of limits anyway, I didn't see where
+> that was a real problem.  But I never got around to writing my SPITBOL
+> program to convert the sources.
+
+I remember there was a doc file in the distribution that explained
+that getting emacs to run under bottoms-10 (as RMS liked to call it)
+would be very difficult.  I don't remember specifics.
+
+
+
+Article 4560 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newshub.sdsu.edu!news-spur1.maxwell.syr.edu!news.maxwell.syr.edu!newsswitch.lcs.mit.edu!micro-heart-of-gold.mit.edu!news.bu.edu!budd
+From: budd@csa.bu.edu (Phil Budne)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Emacs for TOPS-10/TOPS-20?
+Followup-To: alt.sys.pdp10
+Date: 18 Apr 2001 16:40:12 GMT
+Organization: Boston University Computer Science Dept.
+Lines: 30
+Message-ID: <9bkg1c$n8a$1@news3.bu.edu>
+References: <tdmc1bbrm4btfa@corp.supernews.com> <87vgo4mv6n.fsf@prep.synonet.com> <wwitk3m7xx.fsf@atlas.cfht.hawaii.edu>
+X-Trace: news3.bu.edu 987612012 23818 128.197.12.3 (18 Apr 2001 16:40:12 GMT)
+X-Complaints-To: news@bu.edu
+Xref: nntp1.ba.best.com alt.sys.pdp10:4560
+
+In article <wwitk3m7xx.fsf@atlas.cfht.hawaii.edu>,
+Jim Thomas  <thomas@atlas.cfht.hawaii.edu> wrote:
+>As one of the, I'm sure, many people who looked at this, I'd say it was
+>more the lack of a MIDAS assembler.
+
+MIDAS ran on TOPS-10, it was used for MACLISP. I frequently used MIDAS
+on TOPS-10 (it would output .SAV files directly, as well as .REL files).
+
+I borrowed ITS TECO's terminal handling code for my version of FINE.
+A *REALLY* fun part was that in MIDAS you could XCT an arbitrary
+instruction using a pseudo-op.  I used it to do GETTABs to scan the
+monitor's table of known SIXBIT terminal types to decide which
+terminals to build in support for!
+
+>EMACS itself was not too big.  The minimum macros needed to get
+>started weren't all that big.  But it wanted the whole file in memory
+>so there would have been a file size limit.  Since we had (well,
+>still do :-) all sorts of limits anyway, I didn't see where that was
+>a real problem.  But I never got around to writing my SPITBOL program
+>to convert the sources.
+>Nothead
+>ps - anyone have a copy of SPITBOL ??
+
+Commercial versions of SPITBOL are available from Catspaw.  I've done
+a free C port of Macro SNOBOL4, with SPITBOL and SITBOL extensions.
+
+See http://people.ne.mediaone.net/philbudne/snobol.html for
+information on both.
+
+-phil
+
+
+Article 4508 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!panix!news.panix.com!not-for-mail
+From: Rich Alderson <alderson+news@panix.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Emacs for TOPS-10/TOPS-20?
+Date: 16 Apr 2001 20:36:05 -0400
+Organization: Systems Administration, XKL LLC, Redmond WA 98052
+Lines: 18
+Sender: alderson+news@panix2.panix.com
+Message-ID: <mddlmp0icqy.fsf@panix2.panix.com>
+References: <tdmc1bbrm4btfa@corp.supernews.com>
+NNTP-Posting-Host: panix2.panix.com
+X-Trace: news.panix.com 987467773 5785 166.84.0.227 (17 Apr 2001 00:36:13 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: 17 Apr 2001 00:36:13 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.7
+Xref: nntp1.ba.best.com alt.sys.pdp10:4508
+
+Timothy Stark <sword7@grace.speakeasy.org> writes:
+
+> Some time ago, I had access to the real KL10 system at Galladet University.
+> It provide Emacs program for full-screen editing.  I remember that command
+> was 'em; <file>' on a dot prompt.  I was looking for Emacs for
+> TOPS-10/TOPS-20 but can't find it.
+
+TECO EMACS did not run on Tops-10, only on ITS and Tops-20.  There was an EMACS
+lookalike called FINE ("FINE Is Not EMACS") for Tops-10.
+
+> Does anyone have a copy of Emacs (w/ sources as preferred)?
+
+That would be me.  Even RMS agrees!
+
+-- 
+Rich Alderson			Last LOTS Tops-20 Systems Programmer, 1984-1991
+				Current maintainer, MIT TECO EMACS (v. 170)
+last name @ XKL dot COM		Chief systems administrator, XKL LLC
+
+
+Article 4559 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!bloom-beacon.mit.edu!news.bu.edu!budd
+From: budd@csa.bu.edu (Phil Budne)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Emacs for TOPS-10/TOPS-20?
+Followup-To: alt.sys.pdp10
+Date: 18 Apr 2001 16:30:02 GMT
+Organization: Boston University Computer Science Dept.
+Lines: 140
+Message-ID: <9bkfea$mt6$1@news3.bu.edu>
+References: <tdmc1bbrm4btfa@corp.supernews.com>
+X-Trace: news3.bu.edu 987611402 23462 128.197.12.3 (18 Apr 2001 16:30:02 GMT)
+X-Complaints-To: news@bu.edu
+Xref: nntp1.ba.best.com alt.sys.pdp10:4559
+
+In article <tdmc1bbrm4btfa@corp.supernews.com>,
+Timothy Stark  <sword7@grace.speakeasy.org> wrote:
+>Hello folks:
+>
+>Some time ago, I had access to the real KL10 system at Galladet
+>University.  It provide Emacs program for full-screen editing.
+>I remember that command was 'em; <file>' on a dot prompt.
+>I was looking for Emacs for TOPS-10/TOPS-20 but can't find it.
+>
+>Does anyone have a copy of Emacs (w/ sources as preferred)?
+
+Full EMACS never ran on TOPS-10 -- It depended on memory mapping of
+files, which even in latter days, TOPS-10 never had (although it did
+get multiple GETSEG's at some point, which might have served).
+
+EMACS clones that did run on TOPS-10 were "FINE" (FINE Is Not Emacs),
+by Mike Kazar at C-MU.  It was written in BLISS-10, and later sold to
+Unilogic, purveyors of Scribe.  I have sources (I used to hack on it
+when I was at Stevens, my exposure to BLISS-10 made it possible for me
+to get a job at DEC, working on FORTRAN-10/20 when I dropped out of
+SIT), but the legal status of the sources is unclear.
+
+A closer clone of real EMACS was "Amis", written in Pascal in Sweden.
+Never saw sources to it.  I have an .EXE of it from a tape image of
+KL1026's PUB: directory:
+
+     36352(36) <455> 1,2      27-Aug-82 pub:[1,6]amis.exe
+
+Ken Harrenstein (KLH, author of KLH10) wrote a portable emacs clone
+named "Elle" (Elle Looks Like Emacs) in C which indeed looked a lot
+like PDP10 EMACS.  It's alleged to have worked on TOPS10 (under KCC?).
+I have sources, with conditionals for TOPS20 (under KCC), but none for
+TOPS10.
+
+************ Does anyone have a clean, full, free distribution of KCC?
+The only one I've seen was butchered to run on Windoze, and missing stuff.
+
+Craig Finseth's list of EMACS implementations
+(http://www.finseth.com/~fin/emacs.html) has this;
+
+AMIS [toc]
+
+      name: AMIS
+      last changed/verified: 1994-12-20
+      original distribution: ?
+      version:
+      base language: Pascal
+      implementation language: Pascal
+      extension language: none
+      scope of implementation: command set
+      hardware/software requirements: VMS, Norsk Data, Tops10, RSTS
+      organization/author:
+              Stacken Computer Club
+              c/o NADA
+              S-100 44 Stockholm
+              Sweden
+              stacken@stacken.kth.se
+
+     Note: the name is an abbreviation of "Anti-MISAER" (where "AE" is
+     the "ae" glyph). "Misaer" is Swedish (svenska) for "piece of junk,
+     or deep shit functionality" (translation provided by the person who
+     told me about this) The name thus means "not a piece of junk."
+     Tops10, RSTS, Norsk Data versions are free, send them a 1/2 inch,
+     2400-foot magnetic tape and return postage VMS version is $1000 US
+     (the money supports their DEC10 museum)
+     
+     Addendum from Jesper Larsson Jesper.Larsson@dna.lth.se: This is not
+     quite correct. First, if "misAEr" is the Swedish word, "AE" should
+     not be the "ae" glyph (not used in Swedish -- maybe it's spelled
+     that way in Norwegian), but an "a" with two dots above it.
+     Secondly, this word actually means "destitution" or "penury". It is
+     closely related to the English word "misery". [ I am not going to
+     get in the middle of a how to translate Swedish to English issue
+     here -- Craig ]
+
+.....
+
+Elle [toc]
+
+      name: Elle (Elle Looks Like Emacs)
+      last changed/verified: 1994-12-20
+      original distribution: ?
+      version: 4.1g
+      base language: C
+      implementation language: C
+      extension language: none
+      scope of implementation: command set
+      hardware/software requirements: UNIX, MINIX, TOPS-20, TOPS-10 (!)
+      organization/author:
+              Ken Harrenstein
+              c/o SRI International
+              333 Ravenswood Ave
+              Menlo Park CA  94025
+              USA
+              klh@nisc.sri.com
+      free, anonymous FTP from
+              nisc.sri.com in pub/klh/elle.tar (or elle.tar.Z)
+
+....
+
+Elle [toc]
+
+      name: Elle (Elle Looks Like Emacs)
+      last changed/verified: 1994-12-20
+      original distribution: ?
+      version: 4.1g
+      base language: C
+      implementation language: C
+      extension language: none
+      scope of implementation: command set
+      hardware/software requirements: UNIX, MINIX, TOPS-20, TOPS-10 (!)
+      organization/author:
+              Ken Harrenstein
+              c/o SRI International
+              333 Ravenswood Ave
+              Menlo Park CA  94025
+              USA
+              klh@nisc.sri.com
+      free, anonymous FTP from
+              nisc.sri.com in pub/klh/elle.tar (or elle.tar.Z)
+
+....
+
+FINE [toc]
+
+      name: FINE (Fine Is Not Emacs)
+      last changed/verified: 2000-11-22
+      original distribution: 1980?
+      version:
+      base language: BLISS-10
+      implementation language: BLISS-10
+      extension language: none
+      scope of implementation: command set
+      hardware/software requirements: PDP-10
+      organization/author:
+              Mike Kazar
+              Carnegie Mellon University
+              USA
+      no longer available
+
+
+
+Article 4563 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newshub.sdsu.edu!news-spur1.maxwell.syr.edu!news.maxwell.syr.edu!newsfeed.icl.net!news.tele.dk!195.54.122.107!newsfeed1.bredband.com!bredband!uio.no!news.kth.se!not-for-mail
+From: Johnny Eriksson <bygg@stacken.kth.se>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Emacs for TOPS-10/TOPS-20?
+Date: 18 Apr 2001 19:00:32 +0200
+Lines: 13
+Sender: bygg@chicken.stacken.kth.se
+Message-ID: <m3y1yqqi1n3.fsf@chicken.stacken.kth.se>
+References: <tdmc1bbrm4btfa@corp.supernews.com> <9bkfea$mt6$1@news3.bu.edu>
+NNTP-Posting-Host: chicken.stacken.kth.se
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+User-Agent: Gnus/5.0803 (Gnus v5.8.3) Emacs/20.6
+Xref: nntp1.ba.best.com alt.sys.pdp10:4563
+
+budd@csa.bu.edu (Phil Budne) writes:
+
+> A closer clone of real EMACS was "Amis", written in Pascal in Sweden.
+> Never saw sources to it.  I have an .EXE of it from a tape image of
+> KL1026's PUB: directory:
+> 
+>      36352(36) <455> 1,2      27-Aug-82 pub:[1,6]amis.exe
+
+It is on one of the 7.04 tapes, complete with sources.
+
+I'm one of the offenders that wrote the thing in the first place.
+
+--Johnny
+
+
+Article 4566 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!nntp-out.monmouth.com!newspeer.monmouth.com!newsfeed.icl.net!news.algonet.se!newsfeed1.telenordia.se!algonet!uab.ericsson.se!news.sics.se!not-for-mail
+From: Per Danielsson <pd@nospam.nospam>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Emacs for TOPS-10/TOPS-20?
+Date: Wed, 18 Apr 2001 19:45:24 +0200
+Organization: Swedish Institute of Computer Science
+Lines: 17
+Message-ID: <3ADDD2B4.27E81445@nospam.nospam>
+References: <tdmc1bbrm4btfa@corp.supernews.com> <9bkfea$mt6$1@news3.bu.edu>
+NNTP-Posting-Host: titan.sics.se
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: not.sics.se 987615929 10553 193.10.66.218 (18 Apr 2001 17:45:29 GMT)
+X-Complaints-To: usenet@not.sics.se
+NNTP-Posting-Date: 18 Apr 2001 17:45:29 GMT
+X-Mailer: Mozilla 4.72 [en] (X11; U; Linux 2.2.14-5.0 i686)
+X-Accept-Language: en
+Xref: nntp1.ba.best.com alt.sys.pdp10:4566
+
+Phil Budne wrote:
+> 
+> A closer clone of real EMACS was "Amis", written in Pascal in Sweden.
+
+A design goal was to emulate EMACS as closely as possible (given the
+constraints TOPS-10 and PASCAL, although a small part of it was
+written in MACRO-10).
+Whenever one of us questioned a design decision, the rest of us replied
+"Because EMACS does it that way!". We even made a small sign with that
+text to wave in order to save talking ...
+
+PD
+-- 
+Per Danielsson                          pd (at) sics.se
+Swedish Institute of Computer Science, PO Box 1263, SE-164 29 KISTA,
+SWEDEN
+N59.24.20, E17.56.53                    "Why not? Yeah."
+
+
+Article 4582 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!nycmny1-snh1.gtei.net!cpk-news-hub1.bbnplanet.com!news.gtei.net!feed2.news.rcn.net!feed1.news.rcn.net!rcn!207-172-245-191
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: Emacs for TOPS-10/TOPS-20?
+Date: Thu, 19 Apr 01 07:58:48 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 20
+Message-ID: <9bmee7$jjk$1@bob.news.rcn.net>
+References: <tdmc1bbrm4btfa@corp.supernews.com> <9bkfea$mt6$1@news3.bu.edu> <3ADDD2B4.27E81445@nospam.nospam>
+X-Trace: UmFuZG9tSVYCpCUoBrHlF4X+cXEftfmqOM49cbZ7V1NKv92inD6HyuZbGFAS/9Lf
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 19 Apr 2001 10:25:11 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:4582
+
+In article <3ADDD2B4.27E81445@nospam.nospam>,
+   Per Danielsson <pd@nospam.nospam> wrote:
+>Phil Budne wrote:
+>> 
+>> A closer clone of real EMACS was "Amis", written in Pascal in Sweden.
+>
+>A design goal was to emulate EMACS as closely as possible (given the
+>constraints TOPS-10 and PASCAL, although a small part of it was
+>written in MACRO-10).
+>Whenever one of us questioned a design decision, the rest of us replied
+>"Because EMACS does it that way!". We even made a small sign with that
+>text to wave in order to save talking ...
+
+ROTFLMAO.
+
+What a wonderful idea!!!
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+

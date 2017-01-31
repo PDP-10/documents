@@ -1,0 +1,193 @@
+Subject:      Re: Coroutines (was: Compiler.)
+From:         nobody@zk3.dec.com (Eric Werme - replace nobody with werme)
+Date:         1998/05/05
+Message-ID:   <6ilsj1$d3q$1@nntpd.lkg.dec.com>
+Newsgroups:   alt.folklore.computers,alt.sys.pdp10
+
+atbowler@thinkage.on.ca (Alan Bowler) writes in a.f.c:
+
+>In article <6i72h2$hhh$1@strato.ultra.net> [20]jmfbahxx@ma.ultranet.com writes
+:
+>>
+>>Another neat thing that was used was the notion of co-routines.
+>>Perhaps somebody more qualified would talk about this?
+
+>You mean "co-operative multitasking with threads" :-)
+
+Well, there are coroutines that take many instructions to switch between
+and there are coroutines that take one instruction.  Barbara was talking
+about the latter.  The definition of a coroutine as I heard it is that
+the two code paths use the same mechanism to transfer control back and
+forth.  Of the many styles of subroutine calls on the PDP-10, JSP ac,addr
+is the fastest, as it's the only one that doesn't require a memory store.
+Its ISP is something like:
+
+        ac = PC
+        PC = effective address [addr in the usual case]
+
+The subroutine return, of course, is:
+
+        JRST (ac)
+
+Here, the efective address is the contents of the register.
+
+The coroutine instruction combined the two:
+
+        JSP ac,(ac)
+
+This essentially exchanged the PC with ac.
+
+There's one big catch here - there can't be unanswered pushes or pops in either
+piece of code, this is one reason why many people equate coroutines with
+context switches and the exchange of many registers.
+
+I have two good examples to describe.  I'll put the second one in a
+separate posting.
+
+I wrote the client side of TOPS-10 TELNET for the Arpanet that ran at
+Carnegie Mellon, Harvard, and Rutgers.  Telnet has several multi character
+sequences and they can be split across message boundaries.  TOPS-10 made
+it easiest for use to get a message at interrupt level, and step through
+each octet in sequence, calling the TTY input code as necessary.  However,
+parsing the Telnet options is more easily done by code that can call a
+subroutine to fetch one character at a time.
+
+So I compromised.  The network side looked something like:
+
+prcmsg: PUSHJ   P,SAVE1         ;Save P1
+        MOVE    P1,LAST_PC(F)   ;Get PC where telnet left off
+        PUSHJ   P,GET_CH        ;Get next byte from message
+         JRST   DONE            ;None left
+        JSP     P1,(P1)         ;call telnet processor
+        JRST    LOOP
+
+DONE:   MOVEM P1,LAST_PC(F)
+         POPJ   P,
+
+Not too exciting.
+
+The telnet side looked something like:
+
+PRCTEL: CAIN    T1,IAC          ;Telnet escape?
+         JRST   NORMCH          ;just text
+        JSP     P1,(P1)         ;get next character
+        CAIGE   T1,MINTEL       ;command in range 240 - 255
+         JRST   BAD             ;Out of range
+        JRST    DISPTBL-MINTEL(T1) ; Dispatch
+
+        ...
+
+WONT:   JSP     P1,(P1)         ;Get option code
+        ...
+
+The nice thing about all this was that the telnet processor had no
+idea that some of its coroutine calls actually resulted in dismissing
+an interrupt.
+
+Another way of looking at this code is to see a state machine where
+the PC is the state variable.
+
+A decade later when I was at Alliant, I fielded a phone call from a customer
+with a Macintosh machine that was sometimes having trouble with its
+Telnet link.  The customer had managed to trace it to telnet commands
+split between two TCP messages.  I really tried to be sympathetic, but
+I was firm that Alliant's system, while perhaps not being Mac-friendly,
+was compliant with the protocols and that I was sure a Macintosh should
+be able to handle split telnet commands.
+
+Other architectures have coroutine instructions too.  On the PDP-11:
+
+        JSR Rx,@Rx
+
+The Intel 860 _almost_ has one:
+
+        calli r1
+
+(Calli is like jsp r1,ea in that the return pc is stored in r1.)  However,
+the i860 manual says this is a no-no.
+
+I should know if Alpha has one, but I just don't do enough assembly language
+here.
+--
+<>    Eric (Ric) Werme     <> The above is unlikely to contain   <>
+<>    ROT-13 addresses:    <> official claims or policies of     <>
+<>   <jrezr@mx3.qrp.pbz>   <> Digital Equipment Corp.            <>
+<> <jrezr@plorecbegny.arg> <>  http://www.cyberportal.net/werme  <>
+Article 943 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntp.primenet.com!nntp.gblx.net!cpk-news-hub1.bbnplanet.com!crtntx1-snh1.gtei.net!news.gtei.net!dfw-peer.news.verio.net!sea-feed.news.verio.net!news.verio.net!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Coroutines was Re: Assembly language formatting
+Date: Sat, 26 Aug 2000 01:05:37 -0700
+Organization: Networks & Distributed Computing
+Lines: 56
+Message-ID: <Pine.NXT.4.30.0008260047450.5281-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <399D6284.9F8205F3@thinkage.ca> <399ECBA8.C550BA4A@ev1.net> <8npiu1$sm8$1@top.mitre.org> <Pine.NXT.4.30.0008211143340.15533-100000@Tomobiki-Cho.CAC.Washington.EDU> <39A2AE84.1DD6FCFA@thinkage.ca> <39A3CD0B.53FFECD9@netinsight.se> <39A3FC86.71A8DD95@thinkage.ca> <eppstein-09021C.10554523082000@news.service.uci.edu> <Pine.NXT.4.30.0008231259150.2454-100000@Tomobiki-Cho.CAC.Washington.EDU> <39A511D8.BB02BDAC@netinsight.se> <eppstein-D2DE5A.08474524082000@news.service.uci.edu>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 967277141 97312 (None) 140.142.17.40
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: jgr
+To: David Eppstein <eppstein@ics.uci.edu>
+In-Reply-To: <eppstein-D2DE5A.08474524082000@news.service.uci.edu>
+Xref: nntp1.ba.best.com alt.sys.pdp10:943
+
+On Thu, 24 Aug 2000, David Eppstein wrote:
+> > > That does without saying.  The JSR, JSP, and XPCW instructions were the
+> > > coroutine instructions.  There was also JSA/JRA and user-mode JSYS, but
+> > > those fell by the wayside.
+> So why were there so many different subroutine call instructions,
+> anyway?  I only ever used PUSHJ and one of the coroutine ones, I forget
+> which one.
+
+PUSHJ/POPJ was the most commonly used subroutine instruction.  However, it
+requires an AC and a stack, so it could not be used in interrupt
+instructions.  Only PUSHJ permitted recursive calls.
+
+JSP was the most commonly used user-mode coroutine instruction.  However,
+it requires an AC, so it could not be used in interrupt instructions.  You
+couldn't call nested subroutines without using another AC.
+
+JSR could be used in interrupt instructions, but it requires that the
+first location of the routine be used for the return PC.  You could call
+nested subroutines, as long as you didn't recurse.
+
+JSA/JRA was the PDP-6 attempt to create a compromise between JSP and JSR.
+Its problem was that it clobbered PC flags, and needed an AC during the
+subroutine (however the AC was restored at return).  You could call nested
+subroutines as long as you didn't recurse.  It had already fallen out of
+favor by KA10 days, although the F40 compiler generated it as subroutine
+calls.  Some KL microcodes didn't implement it, and it had to be emulated
+as a UUO.  No loss.  Maybe JSA could have been used as an interrupt
+instruction, I'm not sure.
+
+User mode JSYS was BBN's attempt to do a pure code JSR on the KA10.  For
+any JSYS greater than 1000, it pointed to a memory location which had two
+18-bit address pointers, one of which was the location for the saved
+return PC and the other of which was the location to jump to.  It worked
+great as an interrupt instruction, but was tied hopelessly to 18-bit
+addresses.
+
+XPCW was JSYS for extended addressing.  It pointed to a 4-word block, the
+first two getting the return PC and flags and the last two holding the PC
+and flags to jump to.  It had one unfortunate design flaw compared to JSYS
+in that the PC and flags to jump to were likely to be in impure code
+(unless the block crossed a page boundary).  It was definitely used as an
+interrupt instruction.  I forget if it could be executed in user code.
+
+In the end, the winners were:
+
+PUSHJ/POPJ	most subroutines, user and kernel
+JSP		coroutines, user and kernel
+JSR		interrupt instruction, limited user use
+XPCW		interrupt instruction
+
+-- Mark --
+
+* RCW 19.190 notice: This email address is located in Washington State.	*
+* Unsolicited commercial email may be billed $500 per message.		*
+Science does not emerge from voting, party politics, or public debate.
+
+
+

@@ -1,0 +1,3995 @@
+Article 4198 of alt.sys.pdp10:
+From: abaddon@ibm.net (Michael Ross)
+Newsgroups: alt.sys.pdp10
+Subject: Re: A -10/-20 in your house
+Date: Thu, 08 Oct 1998 09:15:05 GMT
+Message-ID: <3622818d.261510380@news1.ibm.net>
+References: <lgreenwa-0710981708070001@psc21221230.cts.com>
+X-Newsreader: Forte Agent 1.01/16.397
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+NNTP-Posting-Host: 139.92.192.241
+X-Trace: 8 Oct 1998 09:15:05 GMT, 139.92.192.241
+Organization: IBM.NET
+Lines: 24
+X-Notice: Items posted that violate the IBM.NET Acceptable Use Policy
+X-Notice: should be reported to postmaster@ibm.net
+X-Complaints-To: postmaster@ibm.net
+Path: news3.best.com!news1.best.com!nntprelay.mathworks.com!howland.erols.net!news-peer.gip.net!news.gsl.net!gip.net!newsm2.ibm.net!ibm.net!news1.ibm.net!139.92.192.241
+Xref: news3.best.com alt.sys.pdp10:4198
+
+On Wed, 07 Oct 1998 17:08:06 -0700, lgreenwa@cts.com (Lawrence H
+Greenwald) wrote:
+
+>A while ago, some people were trying to save what may have been working
+>DEC-10/DEC-20 boxes that were about to go away. Some proposed to take it
+>their homes and get them up and running there.
+>
+>Did anybody ever get a system up and running at their home? Is it up now?
+>What kind of problems did you run into trying to get it to run, if you
+>ever did get it to run?
+>
+Well, I have a complete 2020 which is theoretically operational, but I
+can't boot from distribution tape. Console commands work ok! It's over
+a year since I spent any time on it, at some point I'll get back into
+it and perhaps ask for advice here. I also have a partial KL, the CPU
+and console (11/40) - I also had the I/O box, but it was lost, along
+with another 2020, when the site I was storing them on was cleared
+without anyone telling me!
+
+Mike
+
+Rangers Catering Corps - 'We boil for the One, we fry for the One'
+
+
+
+
+Article 4199 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!news.voicenet.com!news.idt.net!newsfeed.cwix.com!192.220.250.21!netnews1.nw.verio.net!netnews.nwnet.net!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: A -10/-20 in your house
+Date: Thu, 8 Oct 1998 02:47:07 -0700
+Organization: Networks & Distributed Computing
+Lines: 19
+Message-ID: <Pine.NXT.4.10.9810080242360.14285-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <lgreenwa-0710981708070001@psc21221230.cts.com>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 907840033 22792 (None) 140.142.17.40
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: dlg
+To: Lawrence H  Greenwald <lgreenwa@cts.com>
+In-Reply-To: <lgreenwa-0710981708070001@psc21221230.cts.com>
+Xref: news3.best.com alt.sys.pdp10:4199
+
+On Wed, 7 Oct 1998, Lawrence H  Greenwald wrote:
+> Did anybody ever get a system up and running at their home?
+
+I have had running 2020s at home since 1985.
+
+I have my original machine (s/n 4664, possibly the highest serial number
+assigned on 2020s?) plus the old SUMEX 2020 in running condition.  One
+TU45 isn't working, and the LP05 didn't survive my move so got retired.  
+But what I have is two 2020 systems, each with its own TU45, each dual
+ported to two RM03s and two RM05 disks.
+
+My best advice is; it is not for the faint of heart.
+
+-- Mark --
+
+* RCW 19.149 notice: This email address is located in Washington State.	*
+* Unsolicited commercial email may be billed $500 per message.		*
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+Article 4710 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!europa.clark.net!206.55.3.15!news.clark.net!not-for-mail
+From: cz@alembic.crystel.com (Chris Zach)
+Newsgroups: alt.sys.pdp10
+Subject: AI.AI.MIT.EDU is coming back online
+Date: 23 Feb 1999 01:49:07 GMT
+Organization: IEEE Computer Society
+Lines: 38
+Distribution: world
+Message-ID: <7at1ej$ioj$1@callisto.clark.net>
+NNTP-Posting-Host: alembic.crystel.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Newsreader: RadicalNews (TM) 0.9.8 Beta(n)
+Xref: news3.best.com alt.sys.pdp10:4710
+
+Ok. As they say: To everything, there is a time....
+
+I just got the new power lines run into my spare bedroom//computer room. Two 
+20amp 120 volt circuits, and a 20amp 240 volt circuit. Enough power to fire 
+up my 2020 (AI), a pair of RM03's, an RM80 (totally unformatted) and a TU77 
+(condition: Odd)
+
+Now, a question: When I try to boot off the TU77, I get a console error. 
+Checking the Massbus registers, it appears that the 20 is setting an "Invalid 
+density value" in the drive density CSR. Odd thing is I can't clear the error 
+by poking INIT commands into CSR1.
+
+Does the 20 support the TU77 as a boot device, or am I going to have to roll 
+a TU45 in here to get things up.
+
+Also does anyone have any diagnostics on RM03 packs (or even better, TOPS20)? 
+I ate one of my T20 packs in a head crash a few years ago.
+
+Speaking of which: The pack failed as follows: Years ago I tried to clean the 
+heads on an RM03 with 97% isopropyl alcohol and lintless swabs. Bad idea; 
+just touching the heads must have screwed the flying geometry. When I put the 
+pack in, and fired the drive up, the heads marched out and promptly gouged 
+scores into the media. Didn't do any seeks, just plugged the outside track.
+
+Would it be suicide to put this pack into another RM03? Anyplace left out 
+there that might be able to recondition a pack? Or was the outside track 
+track zero?
+
+Thanks
+Chris Zach
+(PS: Once the TU77 is running, ITS goes up)
+
+
+--
+Time to take time
+For Spring will turn to Fall
+In just no time at all...
+
+
+
+Article 4711 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!europa.clark.net!206.55.3.15!news.clark.net!not-for-mail
+From: cz@alembic.crystel.com (Chris Zach)
+Newsgroups: alt.sys.pdp10
+Subject: Re: AI.AI.MIT.EDU is coming back online
+Date: 23 Feb 1999 04:24:03 GMT
+Organization: IEEE Computer Society
+Lines: 31
+Distribution: world
+Message-ID: <7atah3$3m$1@clarknet.clark.net>
+References: <7at1ej$ioj$1@callisto.clark.net>
+NNTP-Posting-Host: alembic.crystel.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Newsreader: RadicalNews (TM) 0.9.8 Beta(n)
+Cc: cz@alembic.crystel.com
+Xref: news3.best.com alt.sys.pdp10:4711
+
+> Now, a question: When I try to boot off the TU77, I get a console error. 
+> Checking the Massbus registers, it appears that the 20 is setting an 
+"Invalid 
+> density value" in the drive density CSR. Odd thing is I can't clear the 
+error 
+> by poking INIT commands into CSR1.
+> 
+
+Checking the books, I found that this error (Invalid Density) can be caused 
+by a microcode failure in the 8915 bit fiddler board (the formatter on 18 bit 
+TU77's). Now, the questions:
+
+Is it possible to find a new 8915-YA board? The one that I have will 
+sometimes light it's red LED upon fireup. The light goes out in about 30 
+seconds. Other times it flickers upon power up, and that's all. Is it 
+possible that the problem is in the 8905-YB Maint register? According to the 
+basic block diagram, these two are linked at the hip somehow.
+
+I suppose I could pull the 8915 out of my TU45 (deep in storage) however I 
+don't know if that's a YA, and if not, it won't work in a 125IPS tape drive 
+(like the 77). And no, I don't want to try and fix the 45; it's a pneumatic 
+nightmare...
+
+Or I could try swapping in a 8906 and see if I can get the drive to do 
+anything. 8906's are a dime a dozen; are there any backplane changes between 
+the TM03 16 bits and the TM03 18 bits?
+
+Any help appreciated. Getting this drive up is crucial.
+
+Chris
+
+
+
+Article 4739 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: news3.best.com!news1.best.com!newshub.northeast.verio.net!iad-peer.news.verio.net!peer.news.verio.net!uunet!ffx.uu.net!in1.uu.net!world!mbg
+From: mbg@world.std.com (Megan)
+Subject: KS10 knowledge needed
+Message-ID: <F9qJHE.93y@world.std.com>
+Date: Mon, 5 Apr 1999 21:24:50 GMT
+Organization: The World Public Access UNIX, Brookline, MA
+Lines: 27
+Xref: news3.best.com alt.sys.pdp10:4739
+
+
+It appears that I have a chance at getting a decsystem-10 of
+my own... what is available is a KS10, with TM03 tape, TU77
+tape and RP06 disks...  oh yeah, it also has a DZ11 and a
+UBA...
+
+Is the KS10 cabinet a single rack or more than one?  Would
+there be other racks for the tape and disk controllers?
+
+It's been a long time since I last even saw a -10, so I
+need to know dimensions of the above devices...
+
+Finally, if anyone is interested in helping dismantle this
+machine, please contact me off-line...
+
+					Megan Gentry
+					Former RT-11 Developer
+
++--------------------------------+-------------------------------------+
+| Megan Gentry, EMT/B, PP-ASEL   | Internet (work): gentry!zk3.dec.com |
+| Unix Support Engineering Group |          (home):  mbg!world.std.com |
+| Compaq Computer Corporation    | addresses need '@' in place of '!'  |
+| 110 Spitbrook Rd. ZK03-2/T43   | URL:     http://world.std.com/~mbg/ | 
+| Nashua, NH 03062               | "pdp-11 programmer - some assembler |
+| (603) 884 1055                 |  required." - mbg                   |
++--------------------------------+-------------------------------------+
+
+
+
+Article 4740 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!news.shore.net!news.ultranet.com!not-for-mail
+From: "Carl R. Friend" <carl.friend@stoneweb.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 knowledge needed
+Date: Mon, 05 Apr 1999 18:14:09 -0400
+Organization: as little as possible!
+Lines: 43
+Message-ID: <370935B1.53AF4459@stoneweb.com>
+References: <F9qJHE.93y@world.std.com>
+NNTP-Posting-Host: zephyr.ultranet.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 5 Apr 1999 22:14:11 GMT
+X-Mailer: Mozilla 4.5 [en] (X11; I; Linux 2.0.29 i586)
+X-Accept-Language: en
+Xref: news3.best.com alt.sys.pdp10:4740
+
+Megan wrote:
+> 
+> Is the KS10 cabinet a single rack or more than one?  Would
+> there be other racks for the tape and disk controllers?
+
+   The KS-10 itself is a single cabinet about three feet on a side and
+standing 4 or 5 feet tall. More or less. This includes the controllers
+but none of the peripherals, especially disk.
+
+   Did the KS-10 support any disks _other_ than Massbuss-based ones
+(e.g. RP06)?
+
+> It's been a long time since I last even saw a -10, so I
+> need to know dimensions of the above devices...
+
+   RP devices (with the attached DCL - Device Control Logic - "side-
+pack") were typically about two and a half feet wide and about three
+feet deep. If I recall correctly, they require three-phase power (or
+a good fake thereof) for operation.
+
+> Finally, if anyone is interested in helping dismantle this
+> machine, please contact me off-line...
+
+   I have it on good authority that you'll not need to disassemble it
+if all you have is the processor -- two of them fit in the back of a
+Plymouth Voyager minivan. One belongs to a fellow at the RCS/RI; the
+other one is mine, and is currently in his care.
+
+   Disks seem to be the bugaboo with these machines. If a substitute
+for the large/heavy/power-hungry/hard-to-maintain/etc disks could be
+found a KS would most likely make a wonderful little system. (I
+remember RP-series drives, especially the RP04, with loathing from my
+first job.)
+
+   TOPS-10 anyone?
+
+-- 
++------------------------------------------------+---------------------+
+| Carl Richard Friend (UNIX Sysadmin)            | West Boylston       |
+| Minicomputer Collector / Enthusiast            | Massachusetts, USA  |
+| mailto:crfriend@ma.ultranet.com                |                     |
+| http://www.ultranet.com/~crfriend/museum       | ICBM: N42:22 W71:47 |
++------------------------------------------------+---------------------+
+
+
+Article 4743 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!news-xfer.newsread.com!netaxs.com!newsread.com!netaxs.newsread.com!usenet
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 knowledge needed
+Date: Mon, 05 Apr 1999 22:05:32 -0400
+Organization: Trailing Edge Technology
+Lines: 25
+Message-ID: <370933AC.223C93C1@trailing-edge.com>
+References: <F9qJHE.93y@world.std.com> <370935B1.53AF4459@stoneweb.com>
+NNTP-Posting-Host: trailing-edge.wdn.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.0     DEC 3000 Model 300L)
+Xref: news3.best.com alt.sys.pdp10:4743
+
+Carl R. Friend wrote:
+> 
+> Megan wrote:
+> > It's been a long time since I last even saw a -10, so I
+> > need to know dimensions of the above devices...
+> 
+>    RP devices (with the attached DCL - Device Control Logic - "side-
+> pack") were typically about two and a half feet wide and about three
+> feet deep.
+
+Official spec is 40"H x 31"W x 32"D, 600 lbs.  For comparison, washing
+machines are about the same size, but have a density so much lighter
+they may as well be styrofoam rocks you find falling on red shirts
+in old episodes of _Star Trek_.
+
+> If I recall correctly, they require three-phase power (or
+> a good fake thereof) for operation.
+
+You can, indeed, run two of them from one 120V 30A circuit with
+a three-phase converter on it, as long as you're careful about
+not spinning them both up at the same time.  See the
+rec.crafts.metalworking FAQ for some good references about
+the different varieties of three-phase converters available.
+
+Tim.
+
+
+Article 4742 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 knowledge needed
+References: <F9qJHE.93y@world.std.com> <370935B1.53AF4459@stoneweb.com>
+Organization: D Bit, Troy, NY
+From: wilson@dbit.com (John Wilson)
+NNTP-Posting-Host: dbit.dbit.com
+Message-ID: <370964b9.0@news.wizvax.net>
+Date: 5 Apr 1999 21:34:49 -0500
+X-Trace: 5 Apr 1999 21:34:49 -0500, dbit.dbit.com
+Lines: 18
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newsswitch.lcs.mit.edu!newspump.monmouth.com!newspeer.monmouth.com!newsfeed.wizvax.net!news.wizvax.net!dbit.com!wilson
+Xref: news3.best.com alt.sys.pdp10:4742
+
+In article <370935B1.53AF4459@stoneweb.com>,
+Carl R. Friend <carl.friend@stoneweb.com> wrote:
+>   Did the KS-10 support any disks _other_ than Massbuss-based ones
+>(e.g. RP06)?
+
+No, and officially it was only the RP06 and RM03 that were supported.
+RM80 worked fine though...
+
+>   I have it on good authority that you'll not need to disassemble it
+>if all you have is the processor -- two of them fit in the back of a
+>Plymouth Voyager minivan.
+
+That was one of the fancy enormous newer Voyagers with the dual sliding
+doors though, the older ones can only hold one KS at a time.  An open-top
+trailer is great because you can stand racks up.
+
+John Wilson
+D Bit
+
+
+Article 4741 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!master.news.rcn.net!not-for-mail
+From: abaddon@ibm.net (Michael Ross)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 knowledge needed
+Date: Tue, 06 Apr 1999 02:40:00 GMT
+Lines: 30
+Message-ID: <370a731b.244791437@news.erols.com>
+References: <F9qJHE.93y@world.std.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: BatDXMlxjIQnZs/XvuPlVjCgy8x9ll9b7yZExdXXVVw=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 6 Apr 1999 00:41:14 GMT
+X-Newsreader:  Forte Agent 1.5/32.452
+Xref: news3.best.com alt.sys.pdp10:4741
+
+On Mon, 5 Apr 1999 21:24:50 GMT, mbg@world.std.com (Megan) wrote:
+
+>
+>It appears that I have a chance at getting a decsystem-10 of
+>my own... what is available is a KS10, with TM03 tape, TU77
+>tape and RP06 disks...  oh yeah, it also has a DZ11 and a
+>UBA...
+>
+>Is the KS10 cabinet a single rack or more than one?  Would
+>there be other racks for the tape and disk controllers?
+>
+snip...
+
+pic on my webpage..
+
+http://www.geocities.com/SiliconValley/Orchard/1200/default.html
+
+KS and all controllers 1 5' rack IIRC, TU77 1 full rack, the TM03 is
+IIRC the formatter/contoller fits in same rack (an 11/04 sized box)
+and the RP06 is a large washing machine.
+
+enjoy!
+
+If you need s/w or docs please get in touch.
+
+Mike
+
+Rangers Catering Corps - 'We boil for the One, we fry for the One'
+
+
+
+
+Article 4746 of alt.sys.pdp10:
+Newsgroups: comp.sys.dec,alt.sys.pdp10
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!newsfeed.cwix.com!192.26.210.166!sunqbc.risq.qc.ca!cloudbreak.rs.itd.umich.edu!srvr1.engin.umich.edu!news.primate.wisc.edu!oanews!nntp!news
+From: "A. J. Corda" <acorda@nswc.navy.mil>
+Subject: Needed: RM80 (for KS10 restoration project)
+Content-Type: text/plain; charset=us-ascii
+Message-ID: <370A49A8.41C6@nswc.navy.mil>
+Sender: news@relay.nswc.navy.mil (NNTP NEWS)
+Reply-To: acorda@geocities.com
+Content-Transfer-Encoding: 7bit
+Cc: classiccmp@u.washington.edu
+Organization: Naval Surface Warfare Center - Dahlgren Div.
+Mime-Version: 1.0
+Date: Tue, 6 Apr 1999 17:51:36 GMT
+X-Mailer: Mozilla 3.01Gold (X11; I; IRIX 5.2 IP22)
+Lines: 47
+Xref: news3.best.com comp.sys.dec:49778 alt.sys.pdp10:4746
+
+I've finally managed to partially satisfy
+my nostalgic obsession to resurrect a PDP-10.
+
+I just recently located a KS10, and, after a 480
+mile mile trip in the back of my poor little
+pickup truck, it is now safely sitting in front
+of my garage (still in the truck... It will
+be _in_ the garage as soon as I can con a couple
+of my friends into giving me a hand. This is not
+a light load :-)
+
+The next thing I'm going to need is a Massbus
+drive (preferably, an RM80) If anyone has one of
+these that they would be willing to part with,
+please drop me an email note. I'm located in
+Virginia, but I'm willing to drive a reasonable
+distance to pick one of these critters up (the
+closer the better, of course :-) Shipping would
+be impractical.
+
+The other possibility is to build an adapter
+that I could stick in a PC which would emulate
+a Massbus device, but to do this, I'd need pretty
+complete specs on the Massbus (i.e. pinouts,
+timing, etc.) Does anyone happen to have this
+info? I've done a dejanews search, but nothing
+really useful turned up.
+
+If I can locate a partially complete RM80 (i.e.
+one with the Massbus to modified-SMD adapter
+still present and intact in the drive pedistal,
+then I might try to build an adapter to emulate
+the modified-SMD interface supported by the
+massbus adapter cardset. I suspect this might
+be a simpler emulation, but it would still
+require info on the modified-SMD interface 
+supported by the RM80. If anyone has details
+on this interface, please let me know!
+  
+BTW, I'm also on the lookout for TOPS-10 and/or
+TOPS-20 load tapes (or images thereof, or bits
+and pieces... whatever I can find that will get
+me closer to bringing this critter back to life!
+
+			-Thanks in advance...
+			-al
+			-acorda@geocities.com
+
+
+Article 4748 of alt.sys.pdp10:
+Newsgroups: comp.sys.dec,alt.sys.pdp10
+Subject: Re: Needed: RM80 (for KS10 restoration project)
+References: <370A49A8.41C6@nswc.navy.mil>
+Organization: D Bit, Troy, NY
+From: wilson@dbit.com (John Wilson)
+NNTP-Posting-Host: dbit.dbit.com
+Message-ID: <370ad1f8.0@news.wizvax.net>
+Date: 6 Apr 1999 23:33:12 -0500
+X-Trace: 6 Apr 1999 23:33:12 -0500, dbit.dbit.com
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!dispose.news.demon.net!demon!newspeer.clara.net!news.clara.net!baron.netcom.net.uk!netcom.net.uk!newsfeed.wizvax.net!news.wizvax.net!dbit.com!wilson
+Lines: 33
+Xref: news3.best.com comp.sys.dec:49792 alt.sys.pdp10:4748
+
+In article <370A49A8.41C6@nswc.navy.mil>,
+A. J. Corda <acorda@geocities.com> wrote:
+>The next thing I'm going to need is a Massbus
+>drive (preferably, an RM80) If anyone has one of
+>these that they would be willing to part with,
+>please drop me an email note. I'm located in
+>Virginia, but I'm willing to drive a reasonable
+>distance to pick one of these critters up (the
+>closer the better, of course :-) Shipping would
+>be impractical.
+
+Actually it might not be 100% impossible, just a little expensive.  I bought
+my first RM80 (the *working* one) from JT Computer Marketing in Texas, and
+IIRC the shipping (to upstate NY) was something like $200.  Which of course
+is a whole lot but less than half what it cost to drive to Houston for the
+KSes themselves.
+
+>I suspect this might
+>be a simpler emulation, but it would still
+>require info on the modified-SMD interface 
+>supported by the RM80. If anyone has details
+>on this interface, please let me know!
+
+I've got pinouts for both DEC SMD (for a while) and Massbus (as of just now)
+on my FTP/HTTP site.  No timing diagrams of course, so it's not all that
+useful, slightly better than nothing though.
+
+	http://www.dbit.com/pub/pdp10/info/massbus.txt
+	http://www.dbit.com/pub/pdp10/info/smd.dec
+or:	 ftp://ftp....
+
+John Wilson
+D Bit
+
+
+Article 4747 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: news3.best.com!news1.best.com!newshub.northeast.verio.net!iad-peer.news.verio.net!peer.news.verio.net!uunet!ffx.uu.net!in4.uu.net!world!mbg
+From: mbg@world.std.com (Megan)
+Subject: Several KS10s becoming available in Massachussetts
+Message-ID: <F9sEnt.HKo@world.std.com>
+Date: Tue, 6 Apr 1999 21:35:53 GMT
+Organization: The World Public Access UNIX, Brookline, MA
+Lines: 52
+Xref: news3.best.com alt.sys.pdp10:4747
+
+[Already sent to the classic computer collectors mailing list]
+
+Just wanted to let eveyone know that I have been contacted by someone
+who works for a company where they have three (3) KS10s.  One of the
+machines is *CURRENTLY OPERATIONAL*.  One was shut down several months
+ago, and the person who wrote to me doesn't know about the third.
+
+There are nine (9) RP06 disk drives distributed between the three
+systems, two additional ones are broken.  Two tape drives are on
+line (with problems) and one is broken (one TM03 and two TU77s).
+
+The computers are in a room without a raised floor, so the cables
+are simply laying around.
+
+The terms are that we (whoever) takes the equipment must do so at
+their own cost, and must take everything, including cables and
+non-working units.
+
+Dismantling can start April 21st, removal has to be by April
+27th.  No later than this.
+
+The KS10s take up about 6sqft of floor space each, and are about 600 lbs.,
+the RP06s apparently take up about 7-9 sqft and I don't know how much they
+weight.  I don't know about the tape drives.
+
+Someone told me it may be between 6000 and 8000 lbs all together...
+
+Systems are located in Cambridge, Massachussetts.
+
+We need to give an answer by April 13th at the latest.
+
+I suspect that if it isn't saved, it will go to the scrapheap,
+landfill, crusher, <fill_in_your_own_worst_nightmare_here>.
+
+So, is anyone game?  Please contact me off-list.  I'll *try* to
+coordinate this.
+
+This is a chance to handle some *REAL IRON*...
+
+					Megan Gentry
+					Former RT-11 Developer
+
++--------------------------------+-------------------------------------+
+| Megan Gentry, EMT/B, PP-ASEL   | Internet (work): gentry!zk3.dec.com |
+| Unix Support Engineering Group |          (home):  mbg!world.std.com |
+| Compaq Computer Corporation    | addresses need '@' in place of '!'  |
+| 110 Spitbrook Rd. ZK03-2/T43   | URL:     http://world.std.com/~mbg/ | 
+| Nashua, NH 03062               | "pdp-11 programmer - some assembler |
+| (603) 884 1055                 |  required." - mbg                   |
++--------------------------------+-------------------------------------+
+
+
+
+
+Article 4749 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 knowledge needed
+Date: 7 Apr 1999 12:24:33 -0700
+Organization: Chez Inwap
+Message-ID: <7egbdh$grf$1@shell3.ba.best.com>
+References: <F9qJHE.93y@world.std.com> <370935B1.53AF4459@stoneweb.com> <hbpO2.1487$9Y5.7334711@news.itd.umich.edu>
+Lines: 27
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 923513079 202 inwap@206.184.139.134
+Xref: news3.best.com alt.sys.pdp10:4749
+
+In article <hbpO2.1487$9Y5.7334711@news.itd.umich.edu>,
+Sarr J. Blumson <sarr@umich.edu> wrote:
+>In article <370935B1.53AF4459@stoneweb.com>,
+>Carl R. Friend <carl.friend@stoneweb.com> wrote:
+>>
+>>   TOPS-10 anyone?
+>
+>My recollection is that running TOPS-10 on a KS10 required some non standard
+>microcode, and maybe some hardware hacks as well; I know that they passed
+>through System Concepts on the way to becoming "ADP OnSites".
+
+DEC turned that into a fully supported product.  The microcode is not
+nonstandard, it is merely "KS-10 microcode with KI-style paging" instead of
+"KS-10 microcode with KL-style paging".  There are no hardware hacks at all.
+
+The boot tape (1600 bpi, 1/2-inch) has the KS-10 microcode for TOPS-10 and
+SYSTEM.EXE for KS.  On the same tape you would usually have BACKUP.EXE
+and then the full-save of DSKB.
+
+After reformatting the system RP06, we would restore [1,*] from the boot
+tape, then get the most recent all-files save to restore the rest of the UFDs.
+	-Joe
+
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 4750 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 knowledge needed
+References: <F9qJHE.93y@world.std.com> <370935B1.53AF4459@stoneweb.com> <hbpO2.1487$9Y5.7334711@news.itd.umich.edu> <7egbdh$grf$1@shell3.ba.best.com>
+Organization: D Bit, Troy, NY
+From: wilson@dbit.com (John Wilson)
+NNTP-Posting-Host: dbit.dbit.com
+Message-ID: <370c1022.0@news.wizvax.net>
+Date: 7 Apr 1999 22:10:42 -0500
+X-Trace: 7 Apr 1999 22:10:42 -0500, dbit.dbit.com
+Path: news3.best.com!news1.best.com!newsfeed.nacamar.de!newsfeed.nacamar.de!dispose.news.demon.net!demon!newspeer.clara.net!news.clara.net!baron.netcom.net.uk!netcom.net.uk!newsfeed.wizvax.net!news.wizvax.net!dbit.com!wilson
+Lines: 20
+Xref: news3.best.com alt.sys.pdp10:4750
+
+In article <7egbdh$grf$1@shell3.ba.best.com>, Joe Smith <inwap@best.com> wrote:
+>In article <hbpO2.1487$9Y5.7334711@news.itd.umich.edu>,
+>Sarr J. Blumson <sarr@umich.edu> wrote:
+>>My recollection is that running TOPS-10 on a KS10 required some non standard
+>>microcode, and maybe some hardware hacks as well; I know that they passed
+>>through System Concepts on the way to becoming "ADP OnSites".
+>
+>DEC turned that into a fully supported product.  The microcode is not
+>nonstandard, it is merely "KS-10 microcode with KI-style paging" instead of
+>"KS-10 microcode with KL-style paging".  There are no hardware hacks at all.
+
+Nitpick:  it appears that ADP wasn't shy at all about making hardware
+hacks on their OnSite KS10s (mine all have hacked CSL boards with special
+firmware, and they substituted a different tape controller, plus I have
+what appears to be a totally custom memory controller built by SC which I
+believe was for the OnSites, 1024KW memory addressing or something).  But
+those don't have anything to do with the ability to run TOPS-10.
+
+John Wilson
+D Bit
+
+
+Article 4753 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!su-news-hub1.bbnplanet.com!news.gtei.net!newsfeed.berkeley.edu!newsfeed.enteract.com!news.wwa.com!not-for-mail
+From: jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 knowledge needed
+Date: 11 Apr 1999 13:52:28 GMT
+Organization: Everett Associates
+Lines: 32
+Message-ID: <7eq9es$lvs$1@hirame.wwa.com>
+References: <F9qJHE.93y@world.std.com> <370935B1.53AF4459@stoneweb.com> <hbpO2.1487$9Y5.7334711@news.itd.umich.edu> <7eq0ti$qkn$1@ligarius.ultra.net>
+NNTP-Posting-Host: poolf1-023.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.8 (x86 32bit)
+Xref: news3.best.com alt.sys.pdp10:4753
+
+In article <7eq0ti$qkn$1@ligarius.ultra.net>, jmfbahciv@aol.com says...
+>
+>In article <hbpO2.1487$9Y5.7334711@news.itd.umich.edu>,
+>   sarr@qix.rs.itd.umich.edu (Sarr J. Blumson) wrote:
+>>In article <370935B1.53AF4459@stoneweb.com>,
+>>Carl R. Friend <carl.friend@stoneweb.com> wrote:
+>>>
+>>>   TOPS-10 anyone?
+>>
+>>My recollection is that running TOPS-10 on a KS10 required some non 
+>standard
+>>microcode, and maybe some hardware hacks as well; I know that they passed
+>>through System Concepts on the way to becoming "ADP OnSites".
+>>
+>Phooey.  TOPS-10 ran just fine.  We supported it from the beginning
+>of its questionable life.
+
+As the person who ported TOPS-10 to the KS, and an ADP employee at the time, 
+let me state that 1) Barb is correct, there were no special hacks required to 
+run TOPS-10 on the KS, and 2) they did NOT pass through SC on their way to 
+becoming ADP/Onsites.
+
+As a "late life kicker" we contracted SC to do some hardware mods so that we 
+could offer SMP Onsites. This project was code named "SuperSite", and wasn't a 
+screaming success.
+
+-- 
+jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) http://www.wwa.com/~jeverett
+             ^^^^^^^^^^^^^^^
+Things have gotten so bad I feel the need to disguise my email address.
+And I don't like this explanation because I just hate long signatures.
+
+
+
+Article 4796 of alt.sys.pdp10:
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newspeer1.nac.net!news.new-york.net!uunet!ffx.uu.net!in2.uu.net!world!mbg
+From: mbg@world.std.com (Megan)
+Subject: Re: The Computer Museum did WHAT???? [was Re: YKYBHTLW]
+Message-ID: <FAq7Fu.Fo8@world.std.com>
+Date: Sun, 25 Apr 1999 03:38:18 GMT
+References: <160419991655286030%drissman@acm.org> <7f9rhv$al3$3@ligarius.ultra.net> 	<3719f951.76285607@news.cadvision.com> <7fgd03$3sv$1@nntpd.lkg.dec.com> 	<dBkT2.1867$hl6.69133@news.itd.umich.edu> 	<371E7EB5.8123AF06@stoneweb.com> <7fn7kh$g42@nnrp4.far
+Organization: The World Public Access UNIX, Brookline, MA
+Lines: 33
+Xref: news3.best.com alt.folklore.computers:128776 alt.sys.pdp10:4796
+
+alderson@netcom.netcom.com (Richard M. Alderson III) writes:
+
+>In article <371FFFCF.91181191@MA.UltraNet.Com> "Alan H. Martin"
+><AMartin@MA.UltraNet.Com> writes:
+
+>>When the Computer Museum was selling off PDP-6 boards at the MR cafeteria
+>>garage sale
+
+>My blood pressure just went through the roof.  Please, tell me you were joking!
+
+Well, that won't be the fate of the three KS10s a team of people
+worked at moving today... a company in cambridge was getting
+rid of them, and if we hadn't come along, they would have ended
+up as landfill or in a crusher...
+
+From what I understand, they were the last decsystem-10s in
+commercial use in the new england region.  One is finding a
+new home in New Hampshire... the other two will be at the
+Rhode Island Computer Museum... we'll be unloading the
+trucks tomorrow.
+
+					Megan Gentry
+					Former RT-11 Developer
+
++--------------------------------+-------------------------------------+
+| Megan Gentry, EMT/B, PP-ASEL   | Internet (work): gentry!zk3.dec.com |
+| Unix Support Engineering Group |          (home):  mbg!world.std.com |
+| Compaq Computer Corporation    | addresses need '@' in place of '!'  |
+| 110 Spitbrook Rd. ZK03-2/T43   | URL:     http://world.std.com/~mbg/ | 
+| Nashua, NH 03062               | "pdp-11 programmer - some assembler |
+| (603) 884 1055                 |  required." - mbg                   |
++--------------------------------+-------------------------------------+
+
+
+
+Article 4813 of alt.sys.pdp10:
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Path: news3.best.com!news1.best.com!newshub.northeast.verio.net!news.new-york.net!uunet!ffx.uu.net!in2.uu.net!world!mbg
+From: mbg@world.std.com (Megan)
+Subject: Re: The Computer Museum did WHAT???? [was Re: YKYBHTLW]
+Message-ID: <FArqG7.1ts@world.std.com>
+Date: Sun, 25 Apr 1999 23:26:30 GMT
+References: <160419991655286030%drissman@acm.org> <7f9rhv$al3$3@ligarius.ultra.net> 	<3719f951.76285607@news.cadvision.com> <7fgd03$3sv$1@nntpd.lkg.dec.com> 	<dBkT2.1867$hl6.69133@news.itd.umich.edu> 	<371E7EB5.8123AF06@stoneweb.com> <7fn7kh$g42@nnrp4.far
+ <FAq7Fu.Fo8@world.std.com> <7futjl$um6$1@antiochus.ultra.net>
+Organization: The World Public Access UNIX, Brookline, MA
+Lines: 28
+Xref: news3.best.com alt.folklore.computers:128822 alt.sys.pdp10:4813
+
+jmfbahciv@aol.com writes:
+
+>Megan, where is the R.I. museum?
+
+I have to admit that I don't know what city/town it is in... I followed
+someone's badly hand-drawn map to it today, but it took me 2.5+ hours from
+Framingham to find it.  It only took me 73 minutes to return.  I plan
+on returning in the near future to help setup the machines.  It may
+be awhile before they have the three-phase that the RP06s require,
+but we can at least power up the system box and see if the console
+works.
+
+I have listings of the KS uCode (Version 101) and the KS10 console
+code (with ADP modifications) as well as a KS10 printset (for KS10A
+and KS10B -- what is the difference?).
+
+					Megan Gentry
+					Former RT-11 Developer
+
++--------------------------------+-------------------------------------+
+| Megan Gentry, EMT/B, PP-ASEL   | Internet (work): gentry!zk3.dec.com |
+| Unix Support Engineering Group |          (home):  mbg!world.std.com |
+| Compaq Computer Corporation    | addresses need '@' in place of '!'  |
+| 110 Spitbrook Rd. ZK03-2/T43   | URL:     http://world.std.com/~mbg/ | 
+| Nashua, NH 03062               | "pdp-11 programmer - some assembler |
+| (603) 884 1055                 |  required." - mbg                   |
++--------------------------------+-------------------------------------+
+
+
+
+Article 4848 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Re: PDP-6
+Date: 27 Apr 1999 02:00:55 -0700
+Organization: Chez Inwap
+Message-ID: <7g3uc7$4ft$1@shell3.ba.best.com>
+References: <37200ACD.896E0BCE@watson.ibm.com> <3721f08d.0@news.wizvax.net> <7futp4$um6$2@antiochus.ultra.net> <FAtr7B.KK8@world.std.com>
+Lines: 13
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 925203660 238 inwap@206.184.139.134
+Xref: news3.best.com alt.sys.pdp10:4848
+
+In article <FAtr7B.KK8@world.std.com>, Sam Weiner <weiner@world.std.com> wrote:
+>The ability for most software (both user and system) to run unchanged
+>on most models was a great feature but even FORTRAN programs if they
+>used extended addressing would not run on the KS.
+
+Well, FORTRAN programs that used extended addressing would not run
+on the KL.  Single-section KLs, that is.  A KS was very much like
+a single-section KL, and there were a lot of single-section KLs out there.
+	-Joe
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 4885 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: vmsnet.pdp-11,alt.sys.pdp10
+Subject: Re: [cz@bronze.lcs.mit.edu (Christopher R. Zach)] RH11's and SMD Disks
+Date: 29 Apr 1999 17:11:23 -0700
+Organization: Chez Inwap
+Message-ID: <7gasfb$3qa$1@shell3.ba.best.com>
+References: <871zh3z08g.fsf@valhalla.seastrom.com> <3728A248.563A870D@trailing-edge.com>
+Lines: 41
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 925431090 215 inwap@206.184.139.134
+Xref: news3.best.com vmsnet.pdp-11:8431 alt.sys.pdp10:4885
+
+> >The disk controller in the KS10 is not an RH10/RH20; it's an RH11
+> >(RH11C to be exact if my memory is not faulty) with a couple of extra
+> >bits.  It uses the parity or somesuch.
+> 
+> The RH11-C is a bit different than the RH11, but not in having extra support
+> for 18 bits per se. What the RH11-C appears to be is a straight RH11 that is
+> jumpered for massive (like 32 words at a shot) Hog mode DMA.
+
+Just to make things clear, both quotes are right.  The RH11-C differed
+from the vanilla RH11 in two respects:
+
+1) It used the parity lines as data lines in order to read and write
+   18-bit quantities instead of 16-bit quantities.
+
+2) It was jumpered to hog the bus for 16 memory cycles (32 halfwords).
+
+There is a paragraph on page A-1 of the KS10-BASED DECSYSTEM-2020
+TECHNICAL MANUAL that says:
+
+	An NPR device cannot hog the bus for more than two memory
+	cycles unless it is the only device connected to a UBA.
+	(The RH11 disk controller in the standard 2020 configuration
+	is jumpered to hog the bus for 16 memory cycles, however,
+	it has a dedicated UBA.)
+
+In addition to hog mode (as set by jumper on the RH11), the UBA had to be
+programmed to operate in Fast Mode.  Only one UBA at a time could be run in
+Fast Mode, and that was the UBA that served the RH11-C disk interface.
+
+  Fast Mode write to memory:
+    even word: accept 18-bit word from devices, store in buffer on UBA.
+     odd word: combine new 18-bit word with previous, write 36 bits to mem.
+  Fast Mode read from memory:
+    even word: fetch 36 bit from memory, deliver 18 bit, keep other 18 in UBA.
+     odd word: take 18-bit word from UBA buffer, deliver to device.
+
+		-Joe
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+
+Article 4895 of alt.sys.pdp10:
+Newsgroups: vmsnet.pdp-11,alt.sys.pdp10
+Subject: Re: [cz@bronze.lcs.mit.edu (Christopher R. Zach)] RH11's and SMD Disks
+References: <871zh3z08g.fsf@valhalla.seastrom.com> <3728A248.563A870D@trailing-edge.com> <7gasfb$3qa$1@shell3.ba.best.com>
+Organization: D Bit, Troy, NY
+From: wilson@dbit.com (John Wilson)
+NNTP-Posting-Host: dbit.dbit.com
+Message-ID: <3729c48f.0@news.wizvax.net>
+Date: 30 Apr 1999 10:56:15 -0500
+X-Trace: 30 Apr 1999 10:56:15 -0500, dbit.dbit.com
+Lines: 16
+Path: news3.best.com!news1.best.com!144.212.100.101.MISMATCH!newsfeed.mathworks.com!nntp-out.monmouth.com!newspeer.monmouth.com!newsfeed.wizvax.net!news.wizvax.net!dbit.com!wilson
+Xref: news3.best.com vmsnet.pdp-11:8438 alt.sys.pdp10:4895
+
+In article <7gasfb$3qa$1@shell3.ba.best.com>, Joe Smith <inwap@best.com> wrote:
+>Just to make things clear, both quotes are right.  The RH11-C differed
+>from the vanilla RH11 in two respects:
+>
+>1) It used the parity lines as data lines in order to read and write
+>   18-bit quantities instead of 16-bit quantities.
+
+Nitpick:  looking at the RH11AB prints, it appears that it too had 18-bit
+data paths (I think using PA/PB just like the RH11C).
+
+Anyway I agree that the M7294-M7294YA substitution appears to be the only
+(non-jumper) difference between the AB and the C.  The other boards seem
+to all be vanilla...
+
+John Wilson
+D Bit
+
+
+Article 5111 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newsfeed.enteract.com!news.wwa.com!not-for-mail
+From: jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Re(12): Living legends
+Date: 15 May 1999 15:01:20 GMT
+Organization: Everett Associates
+Lines: 30
+Message-ID: <7hk280$ju5$1@hirame.wwa.com>
+References: <fc.1dcede5a616700001dcede5a4acde365.401481a@city.magnet.at> <373866b7.703033408@news.supernews.com> <7hbsf3$b7t$10@antiochus.ultra.net> <3739aa93.74960537@news.supernews.com> <7hef4n$eic$3@antiochus.ultra.net> <373b217a.170935392@news.supernews.com> <7hh2ic$qqn$4@antiochus.ultra.net>
+NNTP-Posting-Host: poolf8-034.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.8 (x86 32bit)
+Xref: news3.best.com alt.folklore.computers:130261 alt.sys.pdp10:5111
+
+In article <7hh2ic$qqn$4@antiochus.ultra.net>, jmfbahciv@aol.com says...
+>
+>It was an age-old tradition in TOPS10 (remember that
+>we shipped the sources to our customers) that the original
+>author of the source could put his/her full name in the
+>TITLE statement.  After that, in the SUBTTL statement, anybody
+>who modified the source put their initials to document an edit
+>trace.  So, it was not unusual for customers to see a long
+>string of /XXX/YYY/ZZZ.  Some people yearned to have their
+>initials in that line and others played the game of trying
+>to guess who's who.  Just about everything that I've done
+>at DEC since I started working there was indicated with 
+>my initials.  It's a long time habit.
+
+Not quite everyone yearned to have their initials in that SUBTTL line. Very 
+few of the sources I mucked about in got a "/JE" appended. I figured it was 
+just another way customers could find out who to pester about their favorite 
+bugs/dreams.
+
+When I had left DEC and came back as an ADP employee to port TOPS-10 to the 
+KS10, I put my initials in every module I touched. I figured as an ADP 
+employee I was safe from the entreaties of DEC customers, so I'd make up for 
+all those years of hiding my identity. Unfortunately, when the KS10 line of 
+development was SOUPed back into the mainstream development sources (perhaps 
+by you, Barb?) the person who resolved the conflicts didn't chose to preserve 
+my initials. Sigh! ;-)
+
+-- 
+jeverett(at)wwa(dot)com (John Everett)    http://www.wwa.com/~jeverett
+
+
+
+Article 6191 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!144.212.100.101.MISMATCH!newsfeed.mathworks.com!newshub.northeast.verio.net!verio!iad-peer.news.verio.net!news.verio.net!ord-read.news.verio.net.POSTED!not-for-mail
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 Unibus Map
+From: jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett)
+Organization: Everett Associates
+X-Newsreader: WinVN 0.99.8 (x86 32bit)
+Distribution: world
+References: <PAT.99Nov30124942@smithfield.transarc.ibm.com> <PAT.99Dec3151434@smithfield.transarc.ibm.com>
+MIME-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+Lines: 21
+Message-ID: <s4b24.6050$tI2.116001@ord-read.news.verio.net>
+Date: Sat, 04 Dec 1999 16:13:12 GMT
+NNTP-Posting-Host: 157.238.73.229
+X-Complaints-To: abuse@verio.net
+X-Trace: ord-read.news.verio.net 944323992 157.238.73.229 (Sat, 04 Dec 1999 16:13:12 GMT)
+NNTP-Posting-Date: Sat, 04 Dec 1999 16:13:12 GMT
+Xref: news3.best.com alt.sys.pdp10:6191
+
+In article <PAT.99Dec3151434@smithfield.transarc.ibm.com>, pat@transarc.com 
+says...
+>
+>Yes, I am following up to my own message ...
+>
+>I've located a copy of the KS10 Hardware Reference, which has actually
+>answered most of the questions I've asked here over the past couple of
+>weeks (yay!).
+>
+>I'm still looking, though, for a reasonably detailed reference for the
+>RH11 Massbus adapter - there is an abbreviated description in the KS10
+>Hardware Reference, but even between that and code examples I have, I
+>don't know that it's enough info to program against.
+
+I've just emailed Pat offering to help, since I wrote the MBA/RH11/RM03-RP06 
+code for TOPS-10. As I said in my email to him, it might help if I had access 
+to a set of CREF listings of the monitor. Are they available anywhere still??
+
+-- 
+jeverett<AT>wwa<DOT>com (John Everett)    http://www.wwa.com/~jeverett
+
+
+
+Article 6192 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 Unibus Map
+References: <PAT.99Nov30124942@smithfield.transarc.ibm.com> <PAT.99Dec3151434@smithfield.transarc.ibm.com>
+Organization: D Bit, Troy, NY
+From: wilson@dbit.com (John Wilson)
+NNTP-Posting-Host: dbit.dbit.com
+Message-ID: <384999a7_2@news.wizvax.net>
+Date: 4 Dec 1999 17:45:59 -0500
+X-Trace: 4 Dec 1999 17:45:59 -0500, dbit.dbit.com
+Lines: 189
+XPident:  wilson
+XPident: Unknown
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!howland.erols.net!newspeer.monmouth.com!newsfeed.wizvax.net!news.wizvax.net!dbit.com!wilson
+Xref: news3.best.com alt.sys.pdp10:6192
+
+In article <PAT.99Dec3151434@smithfield.transarc.ibm.com>,
+Pat Barron  <pat@transarc.com> wrote:
+>I'm still looking, though, for a reasonably detailed reference for the
+>RH11 Massbus adapter - there is an abbreviated description in the KS10
+>Hardware Reference, but even between that and code examples I have, I
+>don't know that it's enough info to program against.
+
+There's not much to the RH11 itself, since most of the time its job is
+just to pass register accesses through to the selected drive (naturally the
+address bits go through a ROM so the device registers come out in somewhat
+scrambled order).  The only description I found of an RH that wasn't full
+of inaccuracies is the one in the PDP-11/70 Processor Handbook (which of
+course is actually for the RH70, but from a software point of view the only
+difference there is the extra BAE register and the fact that DMA is direct
+to memory and doesn't go through the Unibus map).
+
+The most annoying thing I ran into (in doing the RH11/RH70 emulation in E11)
+was in the fact that the interrupt behavior isn't documented correctly, I
+had to go to the prints to understand it.  I'm not sure they did what they
+did on purpose, since it acts differently from almost all other PDP-11
+peripherals.
+
+I might as well just clip out the comment block from E11's CS1 handler since
+it explains what I figured out:
+
+;+
+;
+; CS1 776700/772440	Massbus reg 00
+;
+;  15 14   13 12 11   10  9   8  7  6  5   1  0
+; +--+---+----+-+---+----+-----+---+--+-----+--+
+; |SC|TRE|MCPE|X|DVA|PSEL| BAE |RDY|IE| FUN |GO|
+; +--+---+----+-+---+----+-----+---+--+-----+--+
+;
+; SC	RO	Special condition (OR of TRE, MCP, or ATA), causes int if IE
+;		and RDY are both also set.
+; TRE	RCL	Transfer error (set by leading edge on OR of DLT, UPE, NXD/NXF,
+;		NXM, PGE, MSX, MDP).  Writing 1 clears all RH errors (TRE, MCP,
+;		bits 8-15 of RHCS2), as does writing a data xfr cmd (5X, 6X,
+;		7X) and GO to RHCS1, or writing 1 to CCLR.
+; MCPE	RO	Massbus control bus parity error (while reading drive reg).
+; X*	RO	Not used, but comes from drive (0 in practice).
+; DVA*	RO	Drive available, unit selected by CS2 exists and is powered on.
+;		(Dual-ported drives or single-port drives converted to dual-
+;		port by an RH01 can turn it off when not available, single-port
+;		drives have it wired high).
+; PSEL	RW*	Port select (0=Unibus A, 1=Unibus B).  RO while RDY clear.
+;		We have only one Unibus so this bit does nothing.
+; BAE	RW*	Unibus address extension.  Cleared by CCLR.
+;		*Locked against writes when RDY=0.
+; RDY	RO	Ready for next data transfer cmd, causes int if IE=1.
+; or,	WO	Causes immediate int if ones are written to both RDY and IE in
+;		the same xfr, but doesn't actually change RDY and causes no
+;		further action.
+; IE	RW	Interrupt enable, cleared when int is acknowledged (really!).
+; FUN*	RW	Function code, drive-specific.
+; GO*	RW	Start function, cleared on completion.
+; 
+; *X, DVA, FUN, and GO bits are in drive, others are in RH.
+;
+; If a DATOB writes only the high byte, no Massbus register access occurs.
+;
+; The RH only gets personally involved in data transfer commands, i.e. opcodes
+; 5X (write checks), 6X (writes), and 7X (reads).  Writing one of these clears
+; RDY until it completes (I think this means when the drive drops OCC, the
+; Massbus "data bus occupied" signal).  Opcodes 0X-4X pass through the RH to
+; the drive regardless of whether RDY is set (for overlapped seeks, rewinds,
+; etc.).
+;
+; If a data transfer command is written to RHCS1 when RDY=0 already, PGE, TRE,
+; and SC are set and the command is not written over the Massbus.
+;
+; The interrupts are a little odd.  IE is the interrupt enable as usual, but it
+; is automatically cleared each time the interrupt is acknowledged.  The
+; leading edge of RDY copies IE to the INTR (int request) flip flop, which is
+; also set by writing ones to both RDY and IE in the same write (note that this
+; doesn't really alter RDY though), while the AND of SC, RDY, and IE drives the
+; INTR REQ line directly, bypassing the flip flop.  Clearing IE doesn't clear
+; the flip flop, but clearing SC will cancel a pending int if INTR wasn't also
+; set.  Unlike other devices, setting IE when RDY is already set does not cause
+; an immediate int.  How much of this behavior was actually intended?
+;
+;-
+	regnam	rh11,<CS1>
+mbcs1:	xor	dx,dx		;reg 0
+[...]
+
+Careful with the thing about writing ones to RDY and IE to force an interrupt;
+some of the documentation makes it sound like this writes to RDY, but it
+really is a read-only bit, this thing about writing ones is a special case
+(an AND gate checks out the data written but doesn't store RDY) for forcing
+an interrupt on an idle RH, RSTS uses it to auto-detect the RH vector and
+I'm sure other OSes do too.
+
+In E11 I chose to untangle the Massbus register numbers to get their real
+values so the code would be easily reusable in case I ever get around to doing
+a VAX-11/780 or KL10 emulator, where (unless I misunderstand) the registers
+aren't gratuitously moved around like in the RH11.  I guess there's no need to
+do that in a KS emulator, but in case you care, here's the little chart I made
+for myself that shows the RH11 Unibus-CSR-to-Massbus-register relationships.
+BTW, the register select is 5 signals (pairs really) on the Massbus, I don't
+know of anything that uses more than 4 bits' worth (maybe the TU78?).
+
+comment _
+;
+; Massbus registers:
+;
+; Register is located in: *=RH, ^=mixed, nothing=drive/formatter
+;
+; addr	reg #	name	RMxx		RP04/05/06/07		RS03/04
+776700	00	CS1^	CSR #1
+776702	--	WC*	word count
+776704	--	BA*	bus addr
+776706	05	DA	desired addr
+776710	--	CS2*	CSR #2
+776712	01	DS	drive status
+776714	02	ER1	err #1					ER (err reg)
+776716	04	AS	attn summary
+776720	07	LA	look ahead
+776722	--	DB*	maint data buf
+776724	03	MR1	maint reg 1	MR (maint reg)		MR (maint reg)
+776726	06	DT	drive type
+;; RMxx/RPxx only:  (not RS0x)
+776730	10	SN	serial #
+776732	11	OF	offset
+776734	12	DC	desired cyl
+776736	13	HR	maint hldg reg	CC (current cyl)
+776740	14	MR2	maint reg 2	ER2 (err #2)
+776742	15	ER2	err #2		ER3 (err #3)
+776744	16	EC1	ECC posn
+776746	17	EC2	ECC pattern
+;; end of disk-only stuff
+776750	--	BAE*	bus addr ext
+776752	--	CS3*	CSR #3
+;
+; TU77:
+; addr	reg #	reg #
+772440	00	CS1^	CSR #1
+772442	--	WC*	word count
+772444	--	BA*	bus addr
+772446	05	FC	frame count
+772450	--	CS2*	CSR #2
+772452	01	FS	formatter status
+772454	02	ER	err reg
+772456	04	AS	attn summary
+772460	07	CC	check character
+772462	--	DB*	maint data buf
+772464	03	MR	maint reg
+772466	06	DT	drive type
+772470	10	SN	serial #
+772472	11	TC	tape control
+772474	--	BAE*	bus addr ext
+772476	--	CS3*	CSR #3
+
+00	CS1	RW, action
+01	DS/FS	RO
+02	ER/ER1	RO
+03	MR/MR1	RW, action
+04	AS	RW, action
+05	DA/FC	RW, action (right?)
+06	DT	RO
+07	LA/CC	RO
+;; tape and moving head disk only:
+10	SN	RO
+11	OF/TC	RW
+;; disk only:
+12	DC	RW
+13	HR/CC	RO?
+14	MR2/ER2	RW/RO
+15	ER2/ER3	RO
+16	EC1	RO
+17	EC2	RO
+_
+
+As I'm sure your documentation explains, the CS1 register is a mess because
+bits 12 and 5:0 are on the drive but the other bits are in the RH11.  Other
+registers are either one or the other.  BAE/CS3 are only on the RH70 so don't
+worry about them.  Massbus has a 16-bit control bus and an 18-bit data bus,
+which are completely separate (no wonder the cable is so thick!), so while
+only one device can be doing a data transfer at any one time, drive register
+accesses to any device are possible any time so any other drive(s) can be
+doing non-data things (like spacing magtapes or seeking disks or whatever).
+The RDY bit in CS1 only has to do with the current data transfer command,
+other stuff is none of the RH's business, the drives report completion of
+non-data commands using ATTN.  The TE16/TU45/TU77 in particular is unusually
+ATTN-happy...
+
+John Wilson
+D Bit
+
+
+Article 6194 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10,alt.sys.pdp11
+Subject: Re: FA: M8629 HUGE memory board for collector, from PDP-11 machine
+References: <Fjb24.1125$A83.6112422@nnrp1.proxad.net>
+Organization: D Bit, Troy, NY
+From: wilson@dbit.com (John Wilson)
+NNTP-Posting-Host: dbit.dbit.com
+Message-ID: <38499ddf_1@news.wizvax.net>
+Date: 4 Dec 1999 18:03:59 -0500
+X-Trace: 4 Dec 1999 18:03:59 -0500, dbit.dbit.com
+Lines: 25
+XPident:  wilson
+XPident: Unknown
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!newspeer.monmouth.com!newsfeed.wizvax.net!news.wizvax.net!dbit.com!wilson
+Xref: news3.best.com alt.sys.pdp10:6194 alt.sys.pdp11:6177
+
+In article <Fjb24.1125$A83.6112422@nnrp1.proxad.net>,
+News <winter@worldnet.net> wrote:
+>Here I have for auction an old and HUGE memory board from a PDP-11 computer,
+>dated 1978. Look at this very nice piece of memory !!! Gold plated chips
+>(hundreds of 2K ICs, all C2117-3, predecessors of the well known 4116
+>chips).
+
+Actually, the M8629 comes from a DEC KS10 36-bit computer, not a PDP-11 at all.
+Which actually makes it rarer, except that that particular board is one of
+the easier ones to find (I've got piles of them, and aftermarket clones too,
+in case anyone is reviving a KS and needs some), but some of the other CPU
+boards (all of which are in the M861x and M862x range) are less common,
+if you can find any of those please post and I'm sure you'll find a buyer.
+
+I've been told that the KS10 memory system was actually designed before
+the 16K DRAMs were available, they built the prototypes using 4K DRAMs and
+trusted that the 16K ones would be out in time for the product release.
+Nice move, they were right!  Another nice thing is that the memory controller
+(MMC) is separate from the memory arrays (MMA), so all the ECC and refresh
+stuff only had to be done once rather than duplicated for each board.  So
+it could be very cheap to add memory (although I don't whether DEC passed the
+cost savings on to customers)
+
+John Wilson
+D Bit
+
+
+Article 6195 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!enews.sgi.com!newsfeed.nettuno.it!server-b.cs.interbusiness.it!not-for-mail
+From: Enrico Badella <enrico.badella@softstar.it>
+Newsgroups: alt.sys.pdp10,alt.sys.pdp11
+Subject: Re: FA: M8629 HUGE memory board for collector, from PDP-11 machine
+Date: Tue, 07 Dec 1999 15:32:19 +0100
+Organization: SoftStar
+Lines: 24
+Message-ID: <384D1A73.2913B449@softstar.it>
+References: <Fjb24.1125$A83.6112422@nnrp1.proxad.net> <38499ddf_1@news.wizvax.net>
+NNTP-Posting-Host: ns.softstar.it
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 4.7 [en] (WinNT; I)
+X-Accept-Language: en,it
+Xref: news3.best.com alt.sys.pdp10:6195 alt.sys.pdp11:6184
+
+
+
+John Wilson wrote:
+> 
+> Nice move, they were right!  Another nice thing is that the memory controller
+> (MMC) is separate from the memory arrays (MMA), so all the ECC and refresh
+> stuff only had to be done once rather than duplicated for each board.  So
+
+This is certainly a nice feature I never though of. How were the refresh signals
+passed from board to board? Just a normal flat cable? Mabye this is a dumb
+question, but I've never seen one of these boards 8-(
+
+e.
+
+========================================================================
+Enrico Badella                       email:   enrico.badella@softstar.it
+Soft*Star srl                                 eb@vax.cnuce.cnr.it
+InterNetworking Specialists          tel:     +39-011-746092            
+Via Camburzano 9                     fax:     +39-011-746487
+10143 Torino, Italy
+
+  Wanted, for hobbyist use, any type of PDP and microVAX hardware,software,
+  manuals,schematics,etc. and DEC-10 docs or manuals
+==========================================================================
+
+
+Article 6196 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10,alt.sys.pdp11
+Subject: Re: FA: M8629 HUGE memory board for collector, from PDP-11 machine
+References: <Fjb24.1125$A83.6112422@nnrp1.proxad.net> <38499ddf_1@news.wizvax.net> <384D1A73.2913B449@softstar.it>
+Organization: D Bit, Troy, NY
+From: wilson@dbit.com (John Wilson)
+NNTP-Posting-Host: dbit.dbit.com
+Message-ID: <384d5fe8_3@news.wizvax.net>
+Date: 7 Dec 1999 14:28:40 -0500
+X-Trace: 7 Dec 1999 14:28:40 -0500, dbit.dbit.com
+Lines: 24
+XPident:  wilson
+XPident: Unknown
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!newspeer.monmouth.com!newsfeed.wizvax.net!news.wizvax.net!dbit.com!wilson
+Xref: news3.best.com alt.sys.pdp10:6196 alt.sys.pdp11:6185
+
+In article <384D1A73.2913B449@softstar.it>,
+Enrico Badella  <enrico.badella@softstar.it> wrote:
+>> Nice move, they were right!  Another nice thing is that the memory controller
+>> (MMC) is separate from the memory arrays (MMA), so all the ECC and refresh
+>> stuff only had to be done once rather than duplicated for each board.  So
+>
+>This is certainly a nice feature I never though of. How were the refresh signals
+>passed from board to board? Just a normal flat cable? Mabye this is a dumb
+>question, but I've never seen one of these boards 8-(
+
+The whole mess goes in a special card cage so the backplane is specially
+wired to distribute everything properly.  The MMC goes in the left-most slot,
+and you fill in MMAs towards the right (up to 8 total).  I guess DEC only
+got into the "all slots are created equal" thing on their smaller machines,
+like Omnibus PDP-8s, and MicroVAXen (where non-standard signals have to be
+passed over the top of the boards using jumper blocks or ribbon cables).
+They weren't at all shy about having wire wrap rat's nests in the backplanes
+of their bigger machines, where each slot was made for one particular board.
+Well it's certainly convenient having your UBAs and MMAs automatically fall
+at the right addresses (because of per-slot device selects) w/o having to
+mess with links or DIP switches or anything...
+
+John Wilson
+D Bit
+
+
+Article 8134 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!cpk-news-hub1.bbnplanet.com!news.gtei.net!newspeer.monmouth.com!uunet!ffx.uu.net!lax.uu.net!pao.uu.net!fox.almaden.ibm.com!newsfeed.btv.ibm.com!newshost.transarc.com!pat
+From: Pat Barron <pat@transarc.com>
+Newsgroups: alt.sys.pdp10
+Subject: A few questions about the KS10 micromachine ...
+Followup-To: alt.sys.pdp10
+Date: 14 Apr 2000 20:56:42 GMT
+Organization: Transarc Corporation
+Lines: 27
+Distribution: world
+Message-ID: <PAT.00Apr14165642@smithfield.transarc.ibm.com>
+NNTP-Posting-Host: smithfield.transarc.ibm.com
+Xref: news3.best.com alt.sys.pdp10:8134
+
+So, I'm going though the KS10 microcode sources, trying to figure out
+how the micromachine works.  There are a few things I'm just not clear
+on from what I have seen so far.
+
+1)  What is the SCAD?  From what I've read to this point, it appears to
+    be some type of ALU-like thing, with floating point?
+
+2)  What do the SC and FE fields do?  They seem to have something to do
+    with the SCAD?
+
+3)  Is the representation of floating-point numbers in the microcode the
+    same as the PDP-10 representation?  If not, then what do floating-
+    point numbers look like in the microcode?
+
+4)  How wide are the registers in the register file.  They seem to have
+    bits numbered from -3 thru 36 - that would make them 40 bits wide?
+
+5)  Does anyone have a data sheet for the AMD 2901?  I can't seem to
+    find such a thing on-line.
+
+Before you ask, yes, I am toying with the idea of emulating a KS10
+at the microcode level - I figure a 500 MHz Athlon ought to be able
+to run PDP-10 code that way at least as fast as a real KS10.  And
+yes, I am somewhat insane, thanks for asking ... :-)
+
+Thanks,
+--Pat.
+
+
+Article 8137 of alt.sys.pdp10:
+Message-ID: <38F79F3E.FBD9B95A@jetnet.ab.ca>
+Date: Fri, 14 Apr 2000 16:44:14 -0600
+From: Ben Franchuk <bfranchuk@jetnet.ab.ca>
+X-Mailer: Mozilla 4.72 [en] (X11; I; Linux 2.2.14 i586)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: A few questions about the KS10 micromachine ...
+References: <PAT.00Apr14165642@smithfield.transarc.ibm.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+NNTP-Posting-Host: 207.153.6.46
+X-Trace: 14 Apr 2000 15:18:59 -0700, 207.153.6.46
+Organization: OA Internet
+Lines: 23
+Path: news3.best.com!news1.best.com!news.dra.com!newsxfer.visi.net!newsfeed.direct.ca!news.oanet.com!207.153.6.46
+Xref: news3.best.com alt.sys.pdp10:8137
+
+
+> So, I'm going though the KS10 microcode sources, trying to figure out
+> how the micromachine works.  There are a few things I'm just not clear
+> on from what I have seen so far.
+> 
+> 5)  Does anyone have a data sheet for the AMD 2901?  I can't seem to
+>     find such a thing on-line.
+
+The 2901 chips 2901-2901A-2901B-2901C are a obsolete product.
+I do have the data sheets on the 2901C version of the chip, but
+only in paper form. The 2901 is 4 bit register/alu block. There
+is 16 general registers as well as a Q register used as extension
+register for bit shifting. There may be data sheets still on the
+web for 16bit versions of the 2901 chip, but nobody uses bit slice any
+more.
+
+Ben.  
+
+-- 
+"We do not inherit our time on this planet from our parents...
+ We borrow it from our children."
+The Lagging edge of technology:
+http://www.jetnet.ab.ca/users/bfranchuk/woodelf/index.html
+
+
+Article 8172 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!europa.netcrusader.net!194.176.220.129!newsfeed.icl.net!newsfeed1.news.nl.uu.net!sun4nl!ams.uu.net!ffx.uu.net!news.kersur.net!not-for-mail
+From: "Geoffrey G. Rochat" <geoff@pkworks.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: A few questions about the KS10 micromachine ...
+Date: Sat, 15 Apr 2000 18:46:09 -0400
+Organization: Kersur Technologies
+Lines: 26
+Message-ID: <8dasj0$ve$1@news.kersur.net>
+References: <PAT.00Apr14165642@smithfield.transarc.ibm.com> <38F79F3E.FBD9B95A@jetnet.ab.ca>
+NNTP-Posting-Host: nas-2-162.boston.navipath.net
+X-Trace: news.kersur.net 955839904 1006 216.67.2.162 (15 Apr 2000 23:05:04 GMT)
+X-Complaints-To: usenet@kersur.net
+NNTP-Posting-Date: 15 Apr 2000 23:05:04 GMT
+X-Newsreader: Microsoft Outlook Express 4.72.3110.1
+X-MimeOLE: Produced By Microsoft MimeOLE V4.72.3110.3
+Xref: news3.best.com alt.sys.pdp10:8172
+
+Short of getting a copy of any of several editions of AMD's long-gone
+"Bipolar Microprocessors Databook", the best way to learn about the 2901
+and its companion family is to get a copy of the book, "Bit-Slice
+Microprocessor Design" by John Mick and James Brick, published by
+McGraw-Hill in 1980, ISBN 0-07-041781-4.  Mick and Brick were 2900
+family application engineering managers at AMD, and they collected and
+edited all the 2900 family application notes into a 398 page book that
+is an excellent tutorial, not only for the 2900 family, but for
+bit-sliced and microprogrammed computer design in general.  The book
+includes the complete designs for two 16-bit minicomputers, and is
+fascinating reading.  New-old-stock 2901 chips are still available,
+should anyone want 'em, from surplus places such as Alltronics, BG Micro
+and Unicorn Electronics.
+
+Ben Franchuk wrote in message <38F79F3E.FBD9B95A@jetnet.ab.ca>...
+>
+>> So, I'm going though the KS10 microcode sources, trying to figure out
+>> how the micromachine works.  There are a few things I'm just not
+clear
+>> on from what I have seen so far.
+>>
+>> 5)  Does anyone have a data sheet for the AMD 2901?  I can't seem to
+>>     find such a thing on-line.
+
+
+
+
+
+Article 8145 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!logbridge.uoregon.edu!sn-xit-01!supernews.com!sn-inject-01!corp.supernews.com!not-for-mail
+From: Bill Westfield <billw@flipper.cisco.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: A few questions about the KS10 micromachine ...
+Date: 14 Apr 2000 23:27:36 -0700
+Organization: Ye 'Ol Disorganized NNTPCache groupie
+Lines: 13
+Message-ID: <54hfd3najr.fsf@flipper.cisco.com>
+References: <PAT.00Apr14165642@smithfield.transarc.ibm.com>
+X-Complaints-To: newsabuse@supernews.com
+X-Newsreader: Gnus v5.3/Emacs 19.34
+Cache-Post-Path: sj-nntpcache-3!unknown@flipper.cisco.com
+X-Cache: nntpcache 2.4.0b2 (see http://www.nntpcache.org/)
+Xref: news3.best.com alt.sys.pdp10:8145
+
+Xilinx offers an "Intellectual Property" product that builds a 2901 in one
+of their FPGAs - they might have enough of a datasheet to get a reasonable
+understanding of the parts.
+
+Cypress and IDT (I think) both did 16bit wide versions of the 2901 (eg
+cy7c9101) that were used fairly widely in bitslice controlled interface
+board of cisco routers, relatively recently (say, up though a cisco-7000.)
+(I'm not sure whether any of those are still sold, though, and I couldn't
+find any online datasheets for them either...)
+
+BillW
+-- 
+(remove spam food from return address)
+
+
+Article 8186 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!news.new-york.net!news.kjsl.com!news.usenet2.org!news-proxy.baileynm.com!citadel.in.taronga.com!not-for-mail
+From: peter@taronga.com (Peter da Silva)
+Newsgroups: alt.sys.pdp10
+Subject: Re: A few questions about the KS10 micromachine ...
+Date: 16 Apr 2000 12:06:37 GMT
+Organization: TSS Inc.
+Lines: 18
+Message-ID: <8dcacd$30mh$1@citadel.in.taronga.com>
+References: <PAT.00Apr14165642@smithfield.transarc.ibm.com> <38F79F3E.FBD9B95A@jetnet.ab.ca> <8dasj0$ve$1@news.kersur.net>
+NNTP-Posting-Host: citadel.in.taronga.com
+X-Trace: citadel.in.taronga.com 955886797 99025 10.0.0.43 (16 Apr 2000 12:06:37 GMT)
+X-Complaints-To: usenet@taronga.com
+NNTP-Posting-Date: 16 Apr 2000 12:06:37 GMT
+X-Newsreader: trn 4.0-test72 (19 April 1999)
+Xref: news3.best.com alt.sys.pdp10:8186
+
+In article <8dasj0$ve$1@news.kersur.net>,
+Geoffrey G. Rochat <geoff@pkworks.com> wrote:
+>Short of getting a copy of any of several editions of AMD's long-gone
+>"Bipolar Microprocessors Databook", the best way to learn about the 2901
+>and its companion family is to get a copy of the book, "Bit-Slice
+>Microprocessor Design" by John Mick and James Brick, published by
+>McGraw-Hill in 1980, ISBN 0-07-041781-4.
+
+Also, if you can find it, the last fifth of "OSBORNE 16-Bit Microprocessor
+Handbook" is about the 2900 series.
+
+McGraw-Hill (again) 1981 ISBN 0-931988-43-8.
+
+-- 
+This is The Reverend Peter da Silva's Boring Sig File - there are no references
+to Wolves, Kibo, Discordianism, or The Church of the Subgenius in this document
+Executive Vice President, Corporate Communications, Entropy Gradient Reversals.
+"[Deep Impact]: the tragedy of Bad Science hitting the planet." -- David Jacoby
+
+
+Article 8336 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!207-172-245-102
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: Looking for EXE/RDI specifications
+Date: Fri, 28 Apr 00 07:21:28 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 46
+Message-ID: <8ebnna$bh1$3@bob.news.rcn.net>
+References: <D8rN4.23825$MB.494446@news6.giganews.com> <0m4O4.1251$F.33163@news4.giganews.com>
+X-Trace: Tp8rhyGA973UzKEQzJM73HBmZ+M6cd9ipy/jlYMTgxI=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 28 Apr 2000 10:04:26 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: news3.best.com alt.sys.pdp10:8336
+
+In article <0m4O4.1251$F.33163@news4.giganews.com>,
+   Timothy Stark <sword7@grace.speakeasy.org> wrote:
+>Timothy Stark <sword7@grace.speakeasy.org> wrote:
+>> I am looking for EXE/RDI file specification.  Does anyone have any
+>> information about that?  Please let me know.  I need specs to implement
+>> EXE/RDI loading routines into my emulator.
+>
+>Well, I resolved a problem with exe loading routines.  Today I implemented
+>the exe loading routines into my emulator.   Now it loaded and ran
+>'ksboot.exe' successfully.  Now I saw 'BOOT V4(76)' message on my 
+>emulator after it initilized and turned paging mode on.  It seems worked
+>so well for printing characters in paging mode!
+
+Wow!  You're working fast.  Are you for real?  :-)
+>
+>However, somewhere messed up EPT mapping cause 'ksboot.exe' crashed after
+>print "BOOT V4(76)".  I am debugging my emulator to find a hidden bug
+>right now...
+
+Note that the BOOT that displays V4 (KSBOOT.EXE) is not the
+same as BOOTM.  They're completely different critters.  The
+BOOT is a rewrite of the old boot and should be doing things
+more sensible (but the developer was not thinking about
+emulation at the time).
+
+So, if you need to take a look at its source, you need
+to find the files that were shipped in the BOOT subdirectory
+rather than the BOOTM subdirectory on the CUSP tape.  
+
+However, Tim's areas have some consistency problems (not
+Tim's fault, merely an effect of not ever having a complete
+product ship) so I believe that anything taken before 7.03
+will have to use the old BOOT (we called it BOOTS) rather
+than that new BOOT.  
+
+Spelling, including capitalization on TOPS10 was very 
+important, so you really do need to pay attention to
+files and docs that refer to stuff that is spelt slightly
+different.
+
+/BAH
+
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 8413 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10,alt.folklore.computers,comp.org.decus,comp.emulators.misc
+Subject: Re: PDP-10 Emulator
+References: <sgs33e14oog147@corp.supernews.com> <slrn8h0j5g.641.jmaynard@thebrain.conmicro.cx> <8epvur$rep$1@ssauraab-i-1.production.compuserve.com> <39108b99$0$206@nntp1.ba.best.com>
+Organization: D Bit, Troy, NY
+From: wilson@dbit.com (John Wilson)
+NNTP-Posting-Host: dbit.dbit.com
+X-Original-NNTP-Posting-Host: dbit.dbit.com
+Message-ID: <3910d117_1@news.wizvax.net>
+Date: 3 May 2000 21:23:35 -0400
+X-Trace: 3 May 2000 21:23:35 -0400, dbit.dbit.com
+Lines: 53
+XPident:  wilson
+X-Original-NNTP-Posting-Host: 199.181.141.3
+XPident: news
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!europa.netcrusader.net!194.176.220.129!newsfeed.icl.net!colt.net!diablo.netcom.net.uk!netcom.net.uk!newsfeed.wizvax.net!news.wizvax.net!dbit.com!wilson
+Xref: news3.best.com alt.sys.pdp10:8413 alt.folklore.computers:156291 comp.org.decus:6109 comp.emulators.misc:62645
+
+In article <39108b99$0$206@nntp1.ba.best.com>,
+Edward A. Falk <falconer@best.com> wrote:
+>Timing is another problem.  I've heard that there was an early
+>version of a PDP-10 emulator that was failing under Tops-10 because
+>emulated disk I/O was happening too fast.
+
+IIRC, this was a spot in ITS (in DSKDMP I think?) under KLH's KS10 emulator
+(I heard about it but didn't see it), where it would start a disk I/O
+transfer using a buffer which included the code currently being executed,
+and then it would jump out of the way before the disk had a chance to start
+DMAing stuff in.  But on an emulator, the easiest way to emulate disk I/O
+is to suspend instruction execution do the entire I/O "instantaneously"
+between instructions, so it would fill the whole buffer before the next
+instruction was fetched.
+
+Since it worked fine on real KS10s, this bug is the emulator's problem,
+just like the thing you described with executing random data and living
+to tell about it.  I had similar problems with my PDP-11 emulator, and
+worked around them by putting in a queueing system so that most operations
+of most devices can be delayed by a configurable # of instruction fetches
+before that operation is begun (at which point it still may happen in a
+flash, if it's to a file or device that's accessed using blocking I/O).
+It's a big pain but this makes it possible to address the actual problem,
+that the user code assumes it can always finish the last N instructions
+before a particular spot, before there's any possibility that the device
+will have completed (or even begun) the operation.
+
+Anyway, although I've never finished a KS10 emulator, I've done plenty of work
+on one and I really think that the instruction set *is* the main concern.
+It's freakin' huge!!!  The paging and UMR and interrupt systems have to be
+done right too, but they aren't all *that* complicated, at least on the KS.
+Some of the devices will be tricky, especially the TU77 since the TM03
+documentation is so full of nasty little omissions etc., but generally the
+device support in the OSes for the KS10 is terrible so there just aren't
+that many devices to worry about in the first place.
+
+Do a TU77 and an RP06 and a DZ and you're practically there!  The KS10 OSes
+don't support many of the other zillions of older PDP-11 disk/tape devices
+that *would* have worked (the RK611 even has an 18-bit mode, and the RK11D
+can be ECOed into an RK11E too), so you can skip all of those, and the KS10
+didn't live long enough to really overlap with the newer PDP-11/VAX stuff
+(no MSCP at all, and no DELUA, the DEUNA was around but drew too much current
+to actually install one).  So you're off the hook for all that stuff too.
+
+AFAIK no serial mux besides the DZ11 was ever officially supported on the KS10
+(which is ironic because the KS10 CPU's backplane is actually made from a
+DH11 PCB with different wire wrap!), there was the DUP11/KMC11 set that was
+used for sync serial I/O but you're probably not going to get much call for
+that on a Unix or Windows based emulator.  The DZ is dead easy, so really,
+serial I/O is no biggie either.
+
+John Wilson
+D Bit
+
+
+Article 8411 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!europa.netcrusader.net!152.163.239.129!portc01.blue.aol.com!portc03.blue.aol.com!nntp2.giganews.com!nntp3.giganews.com!news4.giganews.com.POSTED!not-for-mail
+From: "Timothy Stark" <sword7@speakeasy.org>
+Newsgroups: alt.sys.pdp10
+References: <sgs33e14oog147@corp.supernews.com>
+Subject: Re: PDP-10 Emulator
+Lines: 25
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Newsreader: Microsoft Outlook Express 5.00.2615.200
+X-MimeOLE: Produced By Microsoft MimeOLE V5.00.2615.200
+Message-ID: <G93Q4.1071$Fr.31187@news4.giganews.com>
+NNTP-Posting-Date: Wed, 03 May 2000 19:05:58 CDT
+Organization: Giganews.Com - Premium News Outsourcing
+X-Trace: sv2-O1ketSx3KOc+F7NeYLYgG+XHaxF6MAdBWn8DVdR1nU9lwVTfBHqOhryGwPgurDxdDKjg/V52sIiV+2K!rV5SnovQdLmr/KrzKIcYS8wmowDPt/8=
+X-Complaints-To: abuse@GigaNews.Com
+X-Abuse-Info: Please be sure to forward a copy of ALL headers
+X-Abuse-Info: Otherwise we will be unable to process your complaint properly
+Date: Wed, 3 May 2000 20:07:52 -0400
+Xref: news3.best.com alt.sys.pdp10:8411
+
+Hello Folks:
+
+I read all articles about this subject "PDP-10 Emulator".  Well, there are
+existing PDP-10 emulators.   I was able to get my emulator to print "BOOT>"
+prompt with KL paging system mode turned on.   My goal is print a dot.
+
+I am writing my KS-10 emulator in progress and am implementing
+RH11/TM02/TM03 interface and testing it.   I played with KSBOOT.EXE and it
+worked so well and did not crash my emulator. :-)   I entered '/tm02' at a
+BOOT> prompt and got result message - "No TM02 or TM03 drive" before I
+started to implement my RH11 interface.
+
+Yes, I will release my KS10 emulator under GPL license soon but I do not
+know when yet.  Then, I will work on it to expand to KL10 emulator then
+PDP6/KA10/KI10 later.   I learned that my monitor sources support KL10 too
+but was compiled with KS10 default.  I got them from Tim's archives.  I know
+that a sin (fear) controls some authors keep their emulators from people's
+hands.
+
+Indeed, my KS10 microcode sources, monitor sources, TOPS-10 sources and
+other resources do help my KS10 emulator development so much.
+
+-- Tim Stark
+
+
+
+
+Article 8575 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!cpk-news-hub1.bbnplanet.com!news.gtei.net!portc03.blue.aol.com!verio.MISMATCH!iad-peer.news.verio.net!news.verio.net!ord-read.news.verio.net.POSTED!not-for-mail
+Newsgroups: alt.sys.pdp10
+Subject: Re: RH11 Interface - disk access - need more information...
+From: jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett)
+Organization: Everett Associates
+X-Newsreader: WinVN 0.99.8 (x86 32bit)
+References: <FVmS4.15639$701.249121@news4.giganews.com> <PeAS4.8710$ZE4.163949@ord-read.news.verio.net> <391AB9B3.3039ECD7@trailing-edge.com>
+MIME-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+Lines: 69
+Message-ID: <JyUS4.8760$ZE4.165687@ord-read.news.verio.net>
+Date: Fri, 12 May 2000 14:28:57 GMT
+NNTP-Posting-Host: 157.238.70.118
+X-Complaints-To: abuse@verio.net
+X-Trace: ord-read.news.verio.net 958141737 157.238.70.118 (Fri, 12 May 2000 14:28:57 GMT)
+NNTP-Posting-Date: Fri, 12 May 2000 14:28:57 GMT
+Xref: news3.best.com alt.sys.pdp10:8575
+
+In article <391AB9B3.3039ECD7@trailing-edge.com>, shoppa@trailing-edge.com 
+says...
+>
+>John Everett wrote:
+>> 
+>> In article <FVmS4.15639$701.249121@news4.giganews.com>, 
+sword7@speakeasy.org
+>> says...
+>> >
+>> >I am implementing the RP/RM routines for RH11 interface in my emulator.  
+It
+>> >was almost done but.... I was looking for RP/RM disk drives information 
+but
+>> >I found much documentation from Bob's PDP-11 emulator (pdp11_rp.c and
+>> >pdp11_rp.h).   However, I learned that RP/RM interface uses 16-bit words 
+fo
+>r
+>> >disk access but.. I learned that TM02/03 interface uses 18-bit word
+>> >addressing for word count.  Frame count uses 8-bit byte addressing.   The
+>> >TM02/03 interface worked so well with my emulator...
+>> >
+>> >With RP/RM interface, should I use 18-bit word addressing or 16-bit word
+>> >addressing?  If 16-but word addressing, how convert 16-bit word to 36-bit
+>> >word and via?
+>> 
+>> Since I wrote the TOPS-10 RH11 interface code, you'd think I could be more
+>> help than this; but that was 22 years ago and the memory fades. However, 
+one
+>> thing I do remember is that the key to this can be found in a global
+>> subroutine called MAPIO. If someone can provide you with a copy of the 
+sourc
+>e
+>> with the FTKS10 conditionals present, you should be able to figure it out.
+>
+>I believe the routine in question is at
+>
+>http://pdp-10.trailing-edge.com/pdp-10/TOPS10_703_DISTR_BB-X140B-SB/KSSER.MAC
+>
+>The relevant section starts:
+>
+>;ROUTINE TO SET UP UNIBUS ADAPTER MAPPING REGISTERS FOR A GIVEN
+>;IOWD FOLLOWING THE PAGING OF A JOB.  PRESERVES T1-T4, P3, P4.
+>;
+>;CALL   MOVE    T2,IOWD
+>;       MOVEI   P1,0            ;FIRST CALL
+>;       MOVE    P3,LOC OF CHANNEL DATA BLOCK
+>;       MOVE    P4,FRAME-COUNT,,CHARS/WD IF TU45
+>;       PUSHJ   P,MAPIO
+>;RETURN CPOPJ   IF IOWD EXCEEDS AVAILABLE PAGING REGISTERS
+>;       CPOPJ1  P2=ADDRESS OF FIRST PAGING REGISTER USED
+>;               P1=ADDRESS OF NEXT PAGING REGISTER TO BE USED
+>
+>MAPIO:: TLNN    T2,-1           ;0 OR CHANNEL JUMPS ARE ILLEGAL
+>        STOPCD  CPOPJ##,DEBUG,IEZ,  ;++IOWD EQUALS ZERO
+>        PUSHJ   P,SVEUB         ;SAVE AND SETUP UBR
+>
+
+While it's kind of fun to read my own code after all these years, now I'm not 
+so sure MAPIO is the right place to find the relevant information. Perhaps I'm 
+thinking about a routine originally written for the DC10 that I modified for 
+the KS. :-)
+
+Also went to the referenced web site and looked at the source. I noticed 
+someone edited my name from the SUBTTL line in KSSER. Instead it reads DMCC 
+(Dave McClure?) and DBD (Doug Detroy?). Sigh! :-(
+
+-- 
+jeverett<AT>wwa<DOT>com (John Everett)    http://www.wwa.com/~jeverett
+
+
+
+Article 8542 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Subject: Re: RH11 Interface - disk access - need more information...
+References: <FVmS4.15639$701.249121@news4.giganews.com>
+Organization: D Bit, Troy, NY
+From: wilson@dbit.com (John Wilson)
+NNTP-Posting-Host: dbit.dbit.com
+X-Original-NNTP-Posting-Host: dbit.dbit.com
+Message-ID: <391afb37_1@news.wizvax.net>
+Date: 11 May 2000 14:25:59 -0400
+X-Trace: 11 May 2000 14:25:59 -0400, dbit.dbit.com
+Lines: 43
+XPident:  wilson
+X-Original-NNTP-Posting-Host: 199.181.141.3
+XPident: news
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newspeer.phoen-x.net!news.wizvax.net!dbit.com!wilson
+Xref: news3.best.com alt.sys.pdp10:8542
+
+In article <FVmS4.15639$701.249121@news4.giganews.com>,
+Timothy Stark <sword7@speakeasy.org> wrote:
+>I am implementing the RP/RM routines for RH11 interface in my emulator.  It
+>was almost done but.... I was looking for RP/RM disk drives information but
+>I found much documentation from Bob's PDP-11 emulator (pdp11_rp.c and
+>pdp11_rp.h).   However, I learned that RP/RM interface uses 16-bit words for
+>disk access but.. I learned that TM02/03 interface uses 18-bit word
+>addressing for word count.  Frame count uses 8-bit byte addressing.   The
+>TM02/03 interface worked so well with my emulator...
+>
+>With RP/RM interface, should I use 18-bit word addressing or 16-bit word
+>addressing?  If 16-but word addressing, how convert 16-bit word to 36-bit
+>word and via?
+
+Not sure quite what you mean by "addressing" here, but I'll blab a bit and
+hopefully cover what you're really asking.
+
+The Massbus is effectively in two pieces, one side does register accesses and
+the other side is used for data transfer.  They're basically separate, even
+though they run through the same big honking cable.  The register access side
+is 16 bits wide (for compatibility with PDP-11s etc., you don't want to have
+bits that some hosts can't reach), and the data transfer side is 18 bits wide
+(only 16 of which are used in the 16-bit modes, again to make PDP-11s happy).
+
+So, the frame count register is 16 bits wide, and so are all the other
+visible registers in the TM02/03 or the RP06 DCL or the RMxx "RM adapter".
+The RH11C is *almost* a standard PDP-11 controller, I can't find my printset
+and don't have a machine set up to test but I'm 99% sure that even when used
+with 18-bit Unibus, the RHBA and RHWC registers are still 16 bits wide and you
+have to use the BA extension bits in RHCS1 (or anyway, *one* of the extension
+bits, since the UBA's map covers only the low half of the Unibus space).
+
+The disk data are transferred via DMA and since the disks are formatted
+with 18-bit data, there's no re-packing required as with 8-bit tape data,
+so the 18-bit words come across the Massbus and through the Unibus w/o
+being messed up.  Then the UBA handles the KS10 memory transfer, optionally
+collecting two halfwords into an entire word before performing DMA (for
+"fast" mode), but it can do them individually (it looks like writing to
+memory destroys the whole word for the first byte/halfword in a word, but
+the others are done using read-modify-write).
+
+John Wilson
+D Bit
+
+
+Article 8862 of alt.sys.pdp10:
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: More about RH11 interface...
+References: <UHEZ4.118589$701.1453501@news4.giganews.com>
+X-Disclaimer: Everything I write is false.
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 01 Jun 2000 23:17:57 -0700
+Message-ID: <qhln0obo8a.fsf@ruckus.brouhaha.com>
+Lines: 53
+X-Newsreader: Gnus v5.5/Emacs 20.3
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 1 Jun 2000 23:17:57 -0700, ruckus.brouhaha.com
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newsfeed.cwix.com!newsfeed.mathworks.com!news.sgi.com!news.spies.com!ruckus.brouhaha.com
+Xref: news3.best.com alt.sys.pdp10:8862
+
+"Timothy Stark" <sword7@speakeasy.org> writes:
+> I learned that TM02 and TM03
+> controllers supports up to 64 tape drives per RH11 controller.
+
+Up to eight tape formatters (TM02, TM03, ?TM78?) on a Massbus.
+Up to eight tape transports on a formatter.
+
+> What is difference between TM02 and TM03 tape controllers?
+
+I think the TM02 only supports 800 bpi (and perhaps 200 and 556 on 7-track?),
+whereas the TM03 supports 800 and 1600.  But I don't know for sure because
+all my drives are on TM03s, and I don't have TM02 docs.
+
+> Someone said that all registers on each drive.  However, RH11 documents said
+> that there are 6 local registers in controller but 16 remote registers are
+> in each drive.  When change a unit in CS2,  all drive registers are
+> automatically located to the new desired drive.
+
+Yes.
+
+> I believe that tape and
+> disk units can be mixed on same MASSBUS controller.
+
+Theoretically possible.  Not done in practice.  Might work on some
+operating systems, but most don't support it.  It certainly isn't
+supported on the KS10.
+
+> However, I found out
+> that tape's registers are very different from disk's registers.
+
+Yup.
+
+> Yes, CS3
+> and BAE registers have different addresses between tape and disk drives but
+> are local registrers in MASSBUS controller.  Hmm.
+
+I don't have my RH11, RH20, RH70, or RH780 prints handy, but it's certainly
+the case that the registers that are local to the Massbus interface
+have basically the same function for both discs and tapes.  This follows
+logically from the fact that the Massbus interface doesn't really *know*
+which kind of device it's talking to.
+
+Note that the Massbus controllers present the registers to the host
+computer at relative addresses that are almost unrelated to the
+address on the bus.  So if you compare the addresses in a device manual
+with those used by software, you'll certainly get confused.  I've
+never figured out why they did this; it seems completely arbitrary
+and unhelpful.
+
+If memory serves, the register addressing/mapping is done by a PROM
+on some of the Massbus interfaces, and by hardwired logic in others.
+
+
+
+
+Article 8864 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Subject: Re: More about RH11 interface...
+References: <UHEZ4.118589$701.1453501@news4.giganews.com> <qhln0obo8a.fsf@ruckus.brouhaha.com>
+Organization: D Bit, Troy, NY
+From: wilson@dbit.com (John Wilson)
+NNTP-Posting-Host: dbit.dbit.com
+X-Original-NNTP-Posting-Host: dbit.dbit.com
+Message-ID: <393764f8_1@news.wizvax.net>
+Date: 2 Jun 2000 03:40:40 -0400
+X-Trace: 2 Jun 2000 03:40:40 -0400, dbit.dbit.com
+Lines: 52
+XPident:  wilson
+X-Original-NNTP-Posting-Host: 199.181.141.3
+XPident: news
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!colt.net!newspeer.clara.net!news.clara.net!diablo.netcom.net.uk!netcom.net.uk!newsfeed.wizvax.net!news.wizvax.net!dbit.com!wilson
+Xref: news3.best.com alt.sys.pdp10:8864
+
+In article <qhln0obo8a.fsf@ruckus.brouhaha.com>,
+Eric Smith  <eric-no-spam-for-me@brouhaha.com> wrote:
+>Note that the Massbus controllers present the registers to the host
+>computer at relative addresses that are almost unrelated to the
+>address on the bus.  So if you compare the addresses in a device manual
+>with those used by software, you'll certainly get confused.  I've
+>never figured out why they did this; it seems completely arbitrary
+>and unhelpful.
+
+Seems crazy to me too.  However, I don't think this happens all the time;
+IIRC, on the RH780, the registers appear in actual physical order, and I
+think maybe on the RH20 too (picked through the prints at one point).  The
+RH11 and RH70 mix it all up (fortunately the same as each other at least),
+in case anyone cares, this is the mapping (using 776700 as the base addr):
+
+Unibus	Massbus	Name(s)
+======	=======	=======
+776700	00	CS1
+776706	05	DA/FC
+776712	01	DS/FS (RO)
+776714	02	ER/ER1 (RO)
+776716	04	AS (shared in all drives, presumably parity is ignored)
+776720	07	LA/CC (RO)
+776724	03	MR/MR1
+776726	06	DT (RO)
+776730	10	SN (RO)
+776732	11	OF/TC
+776734	12	DC
+776736	13	HR/CC
+776740	14	MR2/ER2 (RO if ER2)
+776742	15	ER2/ER3 (RO)
+776744	16	EC1 (RO)
+776746	17	EC2 (RO)
+776750	20	IA
+776752	21	ID
+
+Note that Massbus has 5 address bits but most devices fit in 4.  Naturally
+there has to be an exception -- the TU78 has 18 regs.  ILR sets if you touch
+a nonexistent reg.
+
+Also, before I forget -- the RH11 works very differently with data transfer
+vs. non-data-transfer commands.  The READY bit in RHCS1 only has to do with
+data transfer commands, which are opcodes 51-77, and are assumed to use the
+data half of the bus (and thus DMA through BA and WC).  Only one of those
+can be outstanding at a time, which is why the controller has a centralized
+READY bit to cover it.  But the register half of the Massbus is never tied
+up, so you can poke drive regs any time (although you'll get an RMR error
+from the drive if you write one of its regs while it's busy with something).
+The non-data-transfer commands all indicate completion with attentions.
+
+John Wilson
+D Bit
+
+
+Article 8863 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Subject: Re: More about RH11 interface...
+References: <UHEZ4.118589$701.1453501@news4.giganews.com>
+Organization: D Bit, Troy, NY
+From: wilson@dbit.com (John Wilson)
+NNTP-Posting-Host: dbit.dbit.com
+X-Original-NNTP-Posting-Host: dbit.dbit.com
+Message-ID: <393760ed_1@news.wizvax.net>
+Date: 2 Jun 2000 03:23:25 -0400
+X-Trace: 2 Jun 2000 03:23:25 -0400, dbit.dbit.com
+Lines: 50
+XPident:  wilson
+X-Original-NNTP-Posting-Host: 199.181.141.3
+XPident: news
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newsfeed.icl.net!diablo.netcom.net.uk!netcom.net.uk!newsfeed.wizvax.net!news.wizvax.net!dbit.com!wilson
+Xref: news3.best.com alt.sys.pdp10:8863
+
+In article <UHEZ4.118589$701.1453501@news4.giganews.com>,
+Timothy Stark <sword7@speakeasy.org> wrote:
+>I am re-writing my RH11 routines half-way..  I learned that TM02 and TM03
+>controllers supports up to 64 tape drives per RH11 controller.  I have a
+>question for you.  What is difference between TM02 and TM03 tape
+>controllers?
+
+I'm not sure about *all* the differences, but the two I have noted down are:
+
+* bit 5 of drive type register is 1 on TM03, 0 on TM02 (just for ID)
+
+* bit 13 of TC reg is "SAC" (slave address change) on TM03, and it's set
+  any time the slave select bits change.  but it's TCW (tape control write)
+  on TM03, and sets any time the reg is written (even if the slave select
+  bits are unchanged).  I kind of think I remember this having some side-effect
+  on some delay somewhere, which doesn't need to be restarted if it's the
+  same slave, but IIRC that's the formatter's business and nothing that
+  you need to emulate.
+
+>I believe that tape and
+>disk units can be mixed on same MASSBUS controller.   However, I found out
+>that tape's registers are very different from disk's registers.
+
+Definitely true.
+
+>Yes, CS3
+>and BAE registers have different addresses between tape and disk drives but
+>are local registrers in MASSBUS controller.
+
+The CS3 and BAE registers appear only on the RH70, not the RH11, so don't
+worry about this.  And it's not exactly a tape vs. disk distinction;  the
+rule is, CS3 and BAE are jumpered to immediately follow the *last* existing
+Massbus register, so it differs between disks and tapes only because they
+have a different number of registers.  But it also differs between RS03/04
+fixed-head disks (which have only 8 regs in the drive) and the RPxx/RMxx
+pack drives (which have 16).
+
+>That's why I am figuring out to implement routines to access local and drive
+>registers for mixed tape and disk drives per same MASSBUS controller.
+
+Yeah, you just need to split out which regs are in the RH and which are
+in the formatter or drive.  CS2, WC, BA, and the maintenance data buffer
+register are on the RH, so you don't have to mess with per-drive data there
+(it's OK if the currently selected drive doesn't even exist).  CS1 is
+half-and-half so you OR together the values on reads, and distribute the
+bits accordingly on writes.  Everything else goes to Massbus regs in the
+currently selected drive.
+
+John Wilson
+D Bit
+
+
+Article 4312 of alt.sys.pdp10:
+Path: nuq-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!crtntx1-snh1.gtei.net!cpk-news-hub1.bbnplanet.com!news.gtei.net!znr.news.ans.net!news.chips.ibm.com!newsfeed.btv.ibm.com!newshost.transarc.com!pat
+From: Pat Barron <pat@transarc.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Do KS10 support Ethernet?
+Date: 15 Jun 2000 20:43:29 GMT
+Organization: Transarc Corporation
+Lines: 12
+Distribution: world
+Message-ID: <PAT.00Jun15164329@smithfield.transarc.ibm.com>
+References: <4J925.173295$701.2240811@news4.giganews.com>
+NNTP-Posting-Host: smithfield.transarc.ibm.com
+In-reply-to: Timothy Stark's message of Thu, 15 Jun 2000 19:00:16 GMT
+Xref: dfw-artgen.news.verio.net alt.sys.pdp10:4312
+
+In article <4J925.173295$701.2240811@news4.giganews.com> Timothy Stark <sword7@grace.speakeasy.org> writes:
+>  [...] I know DZ-11 for
+>   terminals.  I never heard of CD11 before.  What is that?
+
+I'd forgot to mention - I think the CD11 is a card reader?  I don't
+know how something like that would get into a network module, or
+if you found it in a different place ... the PDP-11 Field Guide
+lists an M7249 module as "CD11 Hollerith Check (Multiple ones
+error detector)", which gives me even more confidence that it
+is, in fact, a card reader.
+
+--Pat.
+
+
+Article 4318 of alt.sys.pdp10:
+Path: nuq-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!newsfeed.mathworks.com!portc03.blue.aol.com!logbridge.uoregon.edu!hammer.uoregon.edu!news.hawaii.edu!not-for-mail
+From: Jim Thomas <thomas@atlas.cfht.hawaii.edu>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Do KS10 support Ethernet?
+Date: 15 Jun 2000 13:13:56 -1000
+Organization: Canada France Hawai`i Telescope
+Lines: 7
+Message-ID: <wwk8fqmtaj.fsf@atlas.cfht.hawaii.edu>
+References: <4J925.173295$701.2240811@news4.giganews.com>
+NNTP-Posting-Host: atlas.cfht.hawaii.edu
+X-Trace: news.hawaii.edu 961110837 6562 128.171.80.135 (15 Jun 2000 23:13:57 GMT)
+X-Complaints-To: usenet@hawaii.edu
+NNTP-Posting-Date: 15 Jun 2000 23:13:57 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.6
+Xref: dfw-artgen.news.verio.net alt.sys.pdp10:4318
+
+>>>>> "Timothy" == Timothy Stark <sword7@grace.speakeasy.org> writes:
+
+    Timothy> I never heard of CD11 before.  What is that?
+
+IIRC it was a 1200 CPM card reader :-)  It's older than the manuals I have
+handy :-(
+
+
+
+Article 4320 of alt.sys.pdp10:
+Path: nuq-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!newsfeed.mathworks.com!europa.netcrusader.net!199.45.45.8!cyclone1.ba-dsg.net!typhoon1.ba-dsg.net.POSTED!not-for-mail
+Message-ID: <394985AC.8FEA17F3@bellatlantic.net>
+From: hg/jb <shsrms@bellatlantic.net>
+Reply-To: shsrms@bellatlantic.net
+Organization: The Keltic League
+X-Mailer: Mozilla 4.73 [en]C-CCK-MCD BA45DSL  (WinNT; U)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: Do KS10 support Ethernet?
+References: <4J925.173295$701.2240811@news4.giganews.com> <wwk8fqmtaj.fsf@atlas.cfht.hawaii.edu>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 14
+Date: Fri, 16 Jun 2000 01:36:58 GMT
+NNTP-Posting-Host: 138.88.35.169
+X-Complaints-To: newsadmin@bellatlantic.net
+X-Trace: typhoon1.ba-dsg.net 961119418 138.88.35.169 (Thu, 15 Jun 2000 21:36:58 EDT)
+NNTP-Posting-Date: Thu, 15 Jun 2000 21:36:58 EDT
+Xref: dfw-artgen.news.verio.net alt.sys.pdp10:4320
+
+there was a cr11, like the cr8e, program interrupt device.
+there was a KG11, prior to the 2652 and SMC5025 chips with CRC check
+built in.
+bob
+
+
+Jim Thomas wrote:
+> 
+> >>>>> "Timothy" == Timothy Stark <sword7@grace.speakeasy.org> writes:
+> 
+>     Timothy> I never heard of CD11 before.  What is that?
+> 
+> IIRC it was a 1200 CPM card reader :-)  It's older than the manuals I have
+> handy :-(
+
+
+Article 1426 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc03.blue.aol.com!news.maxwell.syr.edu!feed1.news.rcn.net!rcn!207-172-255-83
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: A bug in MTBOOT.RDI (TOPS-20 v4.1)
+Date: Wed, 04 Oct 00 07:19:18 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 61
+Message-ID: <8rf0of$5m4$1@bob.news.rcn.net>
+References: <AT5B5.1221$i4.58981@news2.giganews.com> <8r71ms$lor$1@nntp1.ba.best.com> <ap8C5.483$UP5.11020@news6.giganews.com> <Pine.NXT.4.30.0010022034270.17059-100000@Tomobiki-Cho.CAC.Washington.EDU> <sWlC5.2724$UP5.31794@news6.giganews.com>
+X-Trace: CMtcCVVwd43H4Jn51YDmYbhpXea9I0b75IQZjNUtp4o=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 4 Oct 2000 10:28:31 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:1426
+
+In article <sWlC5.2724$UP5.31794@news6.giganews.com>,
+   Timothy Stark <sword7@grace.speakeasy.org> wrote:
+>Mark Crispin <mrc@cac.washington.edu> wrote:
+>> Yup.  It's a known bug.  At J3+6, there is a
+>> 	WRCSTM [77B5]
+>> that should be
+>> 	MOVX T1,77B5
+>> 	WRCSTM T1
+>> or possibly
+>> 	WRCSTM [77B5]-ENT(16)
+>
+>> I'm not sure why/how this worked on a real KS.
+>
+>> There is another bug.  At CHKCHN (under IFN SMFLG), there is a
+>> 	CAIG P,MAXCHN1
+>> that should be
+>> 	CAIG P,1
+>
+>Mark:
+<snip bug description>
+
+> ... Yes, that is another programming error.
+>MTBOOT.RDI indeed is buggy. :-(  I can't believe that it works fine on a
+>real KS10...
+
+You have to remember that the KS10 was designed for ADP to run
+TOPS10.  It is quite possible that an installation from scratch
+was never done for the V4.0 release.  The KS that we had was
+rarely used by the -20 monitor group so any work done on the
+KS part of TOPS-20 probably started with a disk pack that 
+was ready to run rather than a blank one.  Somehow a niggle
+in my head is saying that a new KS system that was shipped
+to a customer came with a disk that was ready made for 
+running.  If that was the case, then the manufacturing guys
+were the ones who built it.  And I can tell you from experience
+that those guys were not methodical _at all_.  My last triumph
+was getting the contents of the KLAD pack out of their hands.
+
+>
+>TOPS-20 v4.1 for my emulator is not supported at this time. I believe
+>that TOPS-20 distribution without source code is much difficult to debug
+>than TOPS-10 with source code.  That's why I can't fix them. :-( I gave
+>up.  If its source code is released into Tim Shoppa's archives or so, I
+>will resume.
+
+One of the side effects of not shipping sources is that the
+source tape will not match the general distribution tape.
+That was true with the -20 ships until management finally
+figured out that an engineer should be designing the build
+and packaging procedures.  That was another accomplishment
+of mine.  There was a gap after Alan Frantz left that 
+non-engineer types did all the decision making for the
+packaging on both the -10 and -20.
+
+/BAH
+
+<snip>
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 1790 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!inwap
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP10 (KS10) Emulator status.
+Date: 29 Oct 2000 20:53:07 GMT
+Organization: Chez Inwap
+Lines: 33
+Message-ID: <8ti2nj$sga$1@nntp1.ba.best.com>
+References: <Q96J5.37434$YX4.1183868@news2.giganews.com> <8t3v2j$j87$3@bob.news.rcn.net> <6EhJ5.86142$bI6.2817650@news1.giganews.com> <8t6qvc$cgo$3@bob.news.rcn.net>
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 972852787 29194 206.184.139.134 (29 Oct 2000 20:53:07 GMT)
+X-Complaints-To: abuse@best.com
+NNTP-Posting-Date: 29 Oct 2000 20:53:07 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:1790
+
+In article <8t6qvc$cgo$3@bob.news.rcn.net>,  <jmfbahciv@aol.com> wrote:
+>In article <6EhJ5.86142$bI6.2817650@news1.giganews.com>,
+>   Timothy Stark <sword7@grace.speakeasy.org> wrote:
+>>Hehe.  Yeah. I agree with you.  I have not implemented DZ-11 devices yet
+>>because I need DZ-11 functional specs.  However, I can implement KLINIK
+>>for second terminal soon.
+>
+>I didn't know that KLINIK could have two terminals.
+>As far as I knew the KLINIK line was to pretend that
+>the especially blessed person dialing in should have
+>all the privs as if he were physically at the console.
+>And I thought the console was limited to one line.
+>The CTY had power, even more than [1,2] jobs.
+><snip two "I know that"s>
+
+Remember, Barb, that the KS10 had a REMOTE DIAGNOSIS switch with three
+positions:
+  DISABLE = Ignore RD, CD, RI and all other signals from the KLINIK line.
+  ENABLE  = Allows free acces to the system without password protection.
+	    This is like the KL KLINIK; the lines wired in parallel.
+  PROTECT = Allows access to the system with a password.
+	There was a separate command you had to type on the console
+	to tell the 8080 front end what the password was.  When the FE
+	called up the modem connected to the KLINIK line, he would be
+	asked for the password.  If it matched, the KLINIK line would
+	be connected to the console.  If it did not match the line would
+	be an ordinary terminal line.
+
+I forget now whether the line was CTY+1 or CTY-1, but it did allow
+logging in as a "normal" user (such as [6,6] or [6,10]).
+	-Joe
+--
+See http://www.inwap.com/ for PDP-10 and "ReBoot" pages.
+
+
+Article 2099 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!cpk-news-hub1.bbnplanet.com!paloalto-snf1.gtei.net!news.gtei.net!forum.apple.com!news.apple.com!haxrus.apple.com!user
+From: aek@spies.com (Al Kossow)
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 System Reference?
+Date: Fri, 01 Dec 2000 21:44:10 -0800
+Organization: Apple Computer, Inc.
+Lines: 20
+Message-ID: <aek-0112002144100001@haxrus.apple.com>
+References: <aek-0112001223470001@haxrus.apple.com>
+NNTP-Posting-Host: haxrus.apple.com
+X-Trace: news.apple.com 975735850 17206 17.205.21.66 (2 Dec 2000 05:44:10 GMT)
+X-Complaints-To: usenet@news.apple.com
+NNTP-Posting-Date: 2 Dec 2000 05:44:10 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2099
+
+In article <aek-0112001223470001@haxrus.apple.com>, aek@spies.com (Al
+Kossow) wrote:
+
+> A long time ago, Pat Barron wrote:
+> 
+> >I'm working on a similar project (though I haven't touched it in some
+> >time).  The only System Reference I can help with is the KS10 reference.
+> 
+> Eric Smith scanned in the '82 processor reference manual, and I just
+> finshed scanning the '70 reference 'phone book' on the KA. Both are up at
+> www.spies.com/aek/pdf/pdp10
+> 
+
+typo on my part. the correct url should be
+
+http://www.spies.com/aek/pdf/dec/pdp10/
+
+-- 
+The eBay Curse:
+"May you find everything you're looking for.."
+
+
+Article 2244 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!howland.erols.net!cyclone2.usenetserver.com!news-out.usenetserver.com!news01.optonline.net!news02.optonline.net.POSTED!not-for-mail
+Message-ID: <3A3100C0.B4F570B4@bartek.net>
+From: Arthur Krewat <krewat@bartek.net>
+X-Mailer: Mozilla 4.7 [en] (X11; I; SunOS 5.8 i86pc)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: Debugging GALAXY
+References: <_bDV5.29294$IP1.861987@news1.giganews.com> <90nt27$2590$1@nntp1.ba.best.com> <z5RX5.54977$IP1.1812271@news1.giganews.com> <7ZUX5.43925$%j3.481457@news6.giganews.com> <90q2s5$1o0a$1@nntp1.ba.best.com> <3A30E2C7.47025F46@bartek.net> <90qq1b$a5m$2@bob.news.rcn.net>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 39
+Date: Fri, 08 Dec 2000 15:44:44 GMT
+NNTP-Posting-Host: 24.190.213.53
+X-Trace: news02.optonline.net 976290284 24.190.213.53 (Fri, 08 Dec 2000 10:44:44 EST)
+NNTP-Posting-Date: Fri, 08 Dec 2000 10:44:44 EST
+Organization: Optimum Online
+Xref: nntp1.ba.best.com alt.sys.pdp10:2244
+
+jmfbahciv@aol.com wrote:
+> 
+> >6.03a has support for the 1091, but looking at SYSINI.MAC, I find
+> >nothing for the KS10, just a lot of KA/KI/KL stuff...
+> >
+> >Now, that has me wondering... how the HELL did we run 6.03 (not 6.03A!)
+> >on a KS10?
+> 
+> It shouldn't have been hard to tweak it.  6.03A was only a maintenance
+> release.
+
+I'm wondering...
+
+> I seem to recall a 1091 LIR.  So that means that the 1091 did
+> run under 6.03.  I simply cannot recall who did the packaging
+> for the KS.  Can somebody give John Everett a kick and ask him
+> to lurk the weekend?  I know he wrote about the KS project
+> quite a while back.
+
+Now that I'm thinking about it, I recall that when we got the KS10's,
+the only thing that ran on them was TOPS-20. (this was before I
+worked there by a year or two). Of course, we were a TOPS-10
+shop, so that was unacceptable.
+
+I asked a co-worker, and learned that my future boss used the 
+existing KA10 to hack the 6.03 binaries so they would boot on a KS10. 
+
+As soon as he could boot 6.03, he altered the sources accordingly and
+recompiled.
+
+I don't think we ever had a "real" distribution tape for 6.03...
+
+I'm not sure how much he had to do to get it working, but I seem to
+remember a "KSSER.MAC", which doesn't exist in the 6.03 archives.
+I believe he stole the KLSER.MAC and modified to fit... how hard
+would it be to get a KS10 running hacked KL sources? Would you
+need "tops-10" paging? :)
+
+art k.
+
+
+Article 2279 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc03.blue.aol.com!cyclone2.usenetserver.com!news-out.usenetserver.com!news01.optonline.net!news02.optonline.net.POSTED!not-for-mail
+Message-ID: <3A3247FE.CE2B9607@bartek.net>
+From: Arthur Krewat <krewat@bartek.net>
+X-Mailer: Mozilla 4.7 [en] (X11; I; SunOS 5.8 i86pc)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: Debugging GALAXY
+References: <_bDV5.29294$IP1.861987@news1.giganews.com> <90nt27$2590$1@nntp1.ba.best.com> <z5RX5.54977$IP1.1812271@news1.giganews.com> <7ZUX5.43925$%j3.481457@news6.giganews.com> <90q2s5$1o0a$1@nntp1.ba.best.com> <3A30E2C7.47025F46@bartek.net> <90qq1b$a5m$2@bob.news.rcn.net> <3A3100C0.B4F570B4@bartek.net> <90tcm3$ops$1@bob.news.rcn.net>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 66
+Date: Sat, 09 Dec 2000 15:01:00 GMT
+NNTP-Posting-Host: 24.190.213.53
+X-Trace: news02.optonline.net 976374060 24.190.213.53 (Sat, 09 Dec 2000 10:01:00 EST)
+NNTP-Posting-Date: Sat, 09 Dec 2000 10:01:00 EST
+Organization: Optimum Online
+Xref: nntp1.ba.best.com alt.sys.pdp10:2279
+
+jmfbahciv@aol.com wrote:
+> 
+> >
+> >Now that I'm thinking about it, I recall that when we got the KS10's,
+> >the only thing that ran on them was TOPS-20. (this was before I
+> >worked there by a year or two).
+> 
+> Well, that sounds screwier still since the KS was built for
+> ADP.
+
+That's the way it happened at BOCES III in Dix Hills... the Ks10's
+would run TOPS-20, not -10, and they had to MAKE it work.
+
+> >As soon as he could boot 6.03, he altered the sources accordingly and
+> >recompiled.
+> 
+> He might have taken the -20 equivalent of KSSER and hacked it
+> into 6.03 but I have no idea why he would have had such a mess.
+
+I doubt it - the only TOPS-20 we had was the "red" diagnostic pack.
+
+> >I don't think we ever had a "real" distribution tape for 6.03...
+> 
+> You would have never had 6.03 without a "real" distribution.  You're
+> confused because we didn't begin to ship the CUSP tape with the
+> monitor tape until 7.01.  Before that, customers got 23 "cusp tapes"
+> with one monitor tape as the installation set.  Old customers
+> only got dribbles of tapes getting sent to them as somebody inhouse
+> put out a release of _a single piece of software_.   We were not
+> coordinated at all.  The -20 group "fixed" this in their procedures
+> by making it impossible to ship single products.  We had two
+> extremes back then and nobody paid any attention to packaging
+> from an engineering point of view until I started rattling the
+> cages.
+
+I did a complete inventory of all tapes around 5 years after the KS10's
+came in - I never found the 6.03 monitor tapes, nor anything else, but
+a copy of the KS10 Diagnostics - which I think is the same as the one
+on Tim Shoppa's site.
+
+We did have an RP06 that came straight from DEC with the 6.03 monitor
+on it. Boy, did we protect that pack with our lives!
+
+> > Would you
+> >need "tops-10" paging? :)
+> 
+> Define paging.  I think you're confusing the hardware stuff
+> with the way JMF moved things around for the user.
+
+There was a discussion when Tim Stark first started his emulator,
+about the need for TOPS-10 paging vs TOPS-20 paging. Apparently
+there are versions of KS10 microcode for each.
+
+Maybe since ADP needed to run TOPS-10 on them, they needed TOPS-10
+paging - 7.0x TOPS-10 (I think) uses TOPS-20 paging. (whatever
+that means!). 
+
+For all I know, ADP helped my boss to fix up 6.03 to run...
+Office gossip/history is a misleading mother... 
+
+And, back to my original question... how much hacking would it 
+really take to get 6.03 running on a KS10? If you had to choose
+KA, KI or KL, which platform is closest to the KS and what would
+you steal to make it work?
+
+art k.
+
+
+Article 2292 of alt.sys.pdp10:
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.sys.pdp10
+Subject: KS10 TOPS-10 vs. TOPS-20 (was Re: Debugging GALAXY)
+References: <_bDV5.29294$IP1.861987@news1.giganews.com> <90nt27$2590$1@nntp1.ba.best.com> <z5RX5.54977$IP1.1812271@news1.giganews.com> <7ZUX5.43925$%j3.481457@news6.giganews.com> <90q2s5$1o0a$1@nntp1.ba.best.com> <3A30E2C7.47025F46@bartek.net> <90qq1b$a5m$2@bob.news.rcn.net> <3A3100C0.B4F570B4@bartek.net> <90tcm3$ops$1@bob.news.rcn.net>
+X-Disclaimer: Everything I write is false.
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 09 Dec 2000 18:01:45 -0800
+Message-ID: <qhn1e5m3ue.fsf_-_@ruckus.brouhaha.com>
+Lines: 20
+X-Newsreader: Gnus v5.7/Emacs 20.7
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 9 Dec 2000 18:05:06 -0800, ruckus.brouhaha.com
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!news.sgi.com!news.spies.com!ruckus.brouhaha.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:2292
+
+In article <3A3100C0.B4F570B4@bartek.net>,
+Arthur Krewat <krewat@bartek.net> wrote:
+> Now that I'm thinking about it, I recall that when we got the KS10's,
+> the only thing that ran on them was TOPS-20. (this was before I
+> worked there by a year or two). 
+
+jmfbahciv@aol.com writes:
+> Well, that sounds screwier still since the KS was built for
+> ADP.
+
+You were there and I wasn't, but I never heard that the KS was "built for
+ADP".  What I heard was that it was ONLY going to support TOPS-20, until
+ADP insisted that it must run TOPS-10 (and did the port, IIRC).
+
+After all, the KS10 is part of a DECSYSTEM-2020.  It's not part of
+a DECsystem-10xx for any value of xx.  This suggests that it was not
+planned to run TOPS-10.
+
+I recently learned that SC built a custom replacement memory system
+for the KS10, in order to build SMP systems!
+
+
+Article 2316 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newshub.sdsu.edu!newshub.csu.net!nntp.primenet.com!nntp.gblx.net!news.maxwell.syr.edu!cpk-news-hub1.bbnplanet.com!news.gtei.net!feed2.news.rcn.net!feed1.news.rcn.net!rcn!207-172-245-71
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: Debugging GALAXY
+Date: Sun, 10 Dec 00 12:21:49 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 93
+Message-ID: <9100co$6vd$1@bob.news.rcn.net>
+References: <_bDV5.29294$IP1.861987@news1.giganews.com> <90nt27$2590$1@nntp1.ba.best.com> <z5RX5.54977$IP1.1812271@news1.giganews.com> <7ZUX5.43925$%j3.481457@news6.giganews.com> <90q2s5$1o0a$1@nntp1.ba.best.com> <3A30E2C7.47025F46@bartek.net> <90qq1b$a5m$2@bob.news.rcn.net> <3A3100C0.B4F570B4@bartek.net> <90tcm3$ops$1@bob.news.rcn.net> <3A3247FE.CE2B9607@bartek.net>
+X-Trace: 25LewqqtRUI/JYCtvBA9/kGa/gSUMLx355k4bIRqgck=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 10 Dec 2000 13:27:52 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:2316
+
+In article <3A3247FE.CE2B9607@bartek.net>,
+   Arthur Krewat <krewat@bartek.net> wrote:
+>jmfbahciv@aol.com wrote:
+>> 
+>> >
+>> >Now that I'm thinking about it, I recall that when we got the KS10's,
+>> >the only thing that ran on them was TOPS-20. (this was before I
+>> >worked there by a year or two).
+>> 
+>> Well, that sounds screwier still since the KS was built for
+>> ADP.
+>
+>That's the way it happened at BOCES III in Dix Hills... the Ks10's
+>would run TOPS-20, not -10, and they had to MAKE it work.
+
+What year was this?  Is it possible that you bought somebody
+else's installation without going through DEC?
+
+>
+>> >As soon as he could boot 6.03, he altered the sources accordingly and
+>> >recompiled.
+>> 
+>> He might have taken the -20 equivalent of KSSER and hacked it
+>> into 6.03 but I have no idea why he would have had such a mess.
+>
+>I doubt it - the only TOPS-20 we had was the "red" diagnostic pack.
+
+I have no idea what a red pack looked liked.  That was down on
+my list of "Things to examine".
+
+>
+>> >I don't think we ever had a "real" distribution tape for 6.03...
+>> 
+>> You would have never had 6.03 without a "real" distribution.  You're
+>> confused because we didn't begin to ship the CUSP tape with the
+>> monitor tape until 7.01.  Before that, customers got 23 "cusp tapes"
+>> with one monitor tape as the installation set.  Old customers
+>> only got dribbles of tapes getting sent to them as somebody inhouse
+>> put out a release of _a single piece of software_.   We were not
+>> coordinated at all.  The -20 group "fixed" this in their procedures
+>> by making it impossible to ship single products.  We had two
+>> extremes back then and nobody paid any attention to packaging
+>> from an engineering point of view until I started rattling the
+>> cages.
+>
+>I did a complete inventory of all tapes around 5 years after the KS10's
+>came in - I never found the 6.03 monitor tapes,
+
+Right.  If anything it would have been 6.03A.  You must not have
+paid a maintenance fee.
+
+
+> ... nor anything else, but
+>a copy of the KS10 Diagnostics - which I think is the same as the one
+>on Tim Shoppa's site.
+>
+>We did have an RP06 that came straight from DEC with the 6.03 monitor
+>on it. Boy, did we protect that pack with our lives!
+
+And that sounds like a KLAD.  The only RP06 disk pack we shipped
+was a KLAD and it didn't have "modern" software until I stamped
+my foot at manufacturing.
+
+<snip paging...that's a guy thing>
+
+>For all I know, ADP helped my boss to fix up 6.03 to run...
+>Office gossip/history is a misleading mother... 
+
+And, from what you tell me, your site got everything from under
+the table.  That's why you never had a complete set of anything.
+
+>
+>And, back to my original question... how much hacking would it 
+>really take to get 6.03 running on a KS10? 
+
+I thought I did answer it.  My manpower estimate (which was always
+shy by 300%) is 3 man years to hack; 2 man years for monitor
+debugging; 5 man years to retrofit the CUSPs.
+
+
+>If you had to choose
+>KA, KI or KL, which platform is closest to the KS and what would
+>you steal to make it work?
+
+I wouldn't steal any.  I would copy a KS save set from Shoppa's
+archive.  6.03 had great problems.  That why we made 7.01.  And
+I certainly wouldn't want to have to deal with FAILSA <yech>,
+MPB <ptui> and the absence of VTTECO, MIC, SET W F, PATH, and
+the FILDAE.
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 3270 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!sjc-peer.news.verio.net!news.verio.net!ord-read.news.verio.net.POSTED!not-for-mail
+Newsgroups: alt.sys.pdp10
+Subject: Re: TS-10 emulator status.
+From: jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett)
+Organization: Everett Associates
+X-Newsreader: WinVN 0.99.8 (x86 32bit)
+References: <DRBb6.57263$lV5.972389@news2.giganews.com>
+MIME-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+Lines: 29
+Message-ID: <3xDb6.1405$ws2.91181@ord-read.news.verio.net>
+Date: Wed, 24 Jan 2001 16:37:19 GMT
+NNTP-Posting-Host: 157.238.71.25
+X-Complaints-To: abuse@verio.net
+X-Trace: ord-read.news.verio.net 980354239 157.238.71.25 (Wed, 24 Jan 2001 16:37:19 GMT)
+NNTP-Posting-Date: Wed, 24 Jan 2001 16:37:19 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:3270
+
+In article <DRBb6.57263$lV5.972389@news2.giganews.com>, 
+sword7@grace.speakeasy.org says...
+>
+
+>However, I still am not finishing my TS-10 emulator project because
+>LP20, DZ11, and other few devices had not implemented yet.
+
+Tim, are you just trying to get LPT output routed to a printer, or are you 
+committed to emulating devices as originally configured by DEC? I'm asking, 
+because it seems to me emulating an LP11 would be easier than an LP20. While 
+DEC never released a KS-10 with an LP11, while I was with ADP all of our LPT 
+support was via LP11s. The LP11 device service routine, while not on any DEC 
+release tapes, may still be available from sources I am still in touch with.
+
+BTW, even while I was porting TOPS-10 to the KS, using an LP20 never made any 
+sense to me. Because of the "NUXI problem" one had to manipulate the output 
+stream a byte at a time to get it into an order that made sense to the UBA for 
+a DMA transfer to the LP20. I seemed to me that if you had to handle the data 
+a byte at a time anyway it was just as efficient (more efficient?) to simply 
+ship it to a "byte at a time" device like the LP11. Besides, the LP11 was a 
+lot cheaper than an LP20.
+
+For this reason, the LP20 service routine was one of the few pieces of the 
+KS-10 implentation I wasn't responsible for. Doug Detroy implemented that 
+module.
+
+-- 
+jeverett<AT>wwa<DOT>com (John Everett)    http://www.wwa.com/~jeverett
+
+
+
+Article 3388 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!newsfeed.cwix.com!news.idt.net!feed2.news.rcn.net!feed1.news.rcn.net!rcn!not-for-mail
+From: "Carl R. Friend" <carl.friend@prescienttech.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 micromachine...
+Date: Mon, 05 Feb 2001 18:05:23 -0500
+Organization: as little as possible!
+Lines: 28
+Message-ID: <3A7F31B3.42BAE145@prescienttech.com>
+References: <Pine.LNX.4.21.0102040553460.399-100000@sakura.lunar-tokyo.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: UmFuZG9tSVZeDGzG3O4uiFYkZ8kZKeWlohjGM0LCgoNYh5H+LX+G0F04BIBae9Br
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 5 Feb 2001 23:05:22 GMT
+X-Mailer:  Mozilla 4.5 [en] (X11; I; Linux 2.0.29 i586)
+X-Accept-Language:  en
+Xref: nntp1.ba.best.com alt.sys.pdp10:3388
+
+Daniel Seagraves wrote:
+> 
+> Possibly stupid questions...
+> 
+> Given a working KS10 and the microcode for it, is there a way to read
+> the contents of the microcode dispatch ROM from the console?
+
+   Didn't the dispatch table get loaded with the standard microcode?
+Have a look at the microcode on Tim Shoppa's site to see it that's
+the case.  I suspect, but cannot prove, it is.
+
+> What is the 1-microsecond clock used for?  What happens if I turn it
+> off? What happens if the clock is "off" (I.E. not exactly a
+> microsecond?)
+
+   This was probably used for process accounting.  If I recall it
+correctly, the actual job scheduler used the line-clock.
+
+   I'll see if I can scrape up enough time between shovelling
+excursions to take a gander at the KS u-code.
+
+-- 
++------------------------------------------------+---------------------+
+| Carl Richard Friend (UNIX Sysadmin)            | West Boylston       |
+| Minicomputer Collector / Enthusiast            | Massachusetts, USA  |
+| mailto:crfriend@ma.ultranet.com                +---------------------+
+| http://www.ultranet.com/~crfriend/museum       | ICBM: 42:22N 71:47W |
++------------------------------------------------+---------------------+
+
+
+Article 3389 of alt.sys.pdp10:
+From: wilson@dbit.com (John Wilson)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 micromachine...
+Date: 5 Feb 2001 18:12:32 -0500
+Organization: D Bit, Troy, NY
+Lines: 13
+Message-ID: <95nc10$l1a$1@dbit.dbit.com>
+References: <Pine.LNX.4.21.0102040553460.399-100000@sakura.lunar-tokyo.net> <3A7F31B3.42BAE145@prescienttech.com>
+NNTP-Posting-Host: dbit.dbit.com
+X-Original-NNTP-Posting-Host: dbit.dbit.com
+X-Trace: 5 Feb 2001 18:12:30 -0500, dbit.dbit.com
+XPident: wilson
+X-Original-NNTP-Posting-Host: 208.171.236.116
+XPident: Unknown
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc01.blue.aol.com!newsfeed.skycache.com!Cidera!news.wizvax.net!dbit.com!not-for-mail
+Xref: nntp1.ba.best.com alt.sys.pdp10:3389
+
+In article <3A7F31B3.42BAE145@prescienttech.com>,
+Carl R. Friend <carl.friend@prescienttech.com> wrote:
+>   Didn't the dispatch table get loaded with the standard microcode?
+>Have a look at the microcode on Tim Shoppa's site to see it that's
+>the case.  I suspect, but cannot prove, it is.
+
+IIRC, the KS10 DROM is an honest-to-god ROM.  Which is one of the problems
+if you want to have fun with hacked microcode, I think a bunch of invalid
+opcodes all point to the same address so there's no way to tell them apart
+w/o requiring a different DROM.
+
+John Wilson
+D Bit
+
+
+Article 3391 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!feed2.news.rcn.net!rcn!howland.erols.net!portc.blue.aol.com.MISMATCH!portc01.blue.aol.com!news.maxwell.syr.edu!newsfeed.slurp.net!sakura.lunar-tokyo.net!dseagrav
+Newsgroups: alt.sys.pdp10
+From: Daniel Seagraves <dseagrav@sakura.lunar-tokyo.net>
+Subject: Re: KS10 micromachine...
+In-Reply-To: <3A7F31B3.42BAE145@prescienttech.com>
+Message-ID: <Pine.LNX.4.21.0102051754370.5811-100000@sakura.lunar-tokyo.net>
+References: <Pine.LNX.4.21.0102040553460.399-100000@sakura.lunar-tokyo.net> <3A7F31B3.42BAE145@prescienttech.com>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+Lines: 26
+Date: Mon, 5 Feb 2001 17:56:42 -0600
+NNTP-Posting-Host: 209.251.101.202
+X-Trace: newsfeed.slurp.net 981417359 209.251.101.202 (Mon, 05 Feb 2001 17:55:59 CDT)
+NNTP-Posting-Date: Mon, 05 Feb 2001 17:55:59 CDT
+Xref: nntp1.ba.best.com alt.sys.pdp10:3391
+
+On Mon, 5 Feb 2001, Carl R. Friend wrote:
+
+> Daniel Seagraves wrote:
+> > 
+> > Possibly stupid questions...
+> > 
+> > Given a working KS10 and the microcode for it, is there a way to read
+> > the contents of the microcode dispatch ROM from the console?
+> 
+>    Didn't the dispatch table get loaded with the standard microcode?
+> Have a look at the microcode on Tim Shoppa's site to see it that's
+> the case.  I suspect, but cannot prove, it is.
+
+That can't be right, unless the dispatch table is in the CRAM.  When I
+microcoded my KS, it was done entirely with DC commands.
+
+> > What is the 1-microsecond clock used for?  What happens if I turn it
+> > off? What happens if the clock is "off" (I.E. not exactly a
+> > microsecond?)
+> 
+>    This was probably used for process accounting.  If I recall it
+> correctly, the actual job scheduler used the line-clock.
+
+Oooh, goody.
+
+
+
+
+Article 3465 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntp.primenet.com!nntp.gblx.net!newsfeed.icl.net!newsfeed.slurp.net!sakura.lunar-tokyo.net!dseagrav
+Newsgroups: alt.sys.pdp10
+From: Daniel Seagraves <dseagrav@sakura.lunar-tokyo.net>
+Subject: KS10 ucode vs. the 2901...
+Message-ID: <Pine.LNX.4.21.0102131051420.18014-100000@sakura.lunar-tokyo.net>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+Lines: 19
+Date: Tue, 13 Feb 2001 11:05:33 -0600
+NNTP-Posting-Host: 209.251.101.202
+X-Trace: newsfeed.slurp.net 982083871 209.251.101.202 (Tue, 13 Feb 2001 11:04:31 CDT)
+NNTP-Posting-Date: Tue, 13 Feb 2001 11:04:31 CDT
+Xref: nntp1.ba.best.com alt.sys.pdp10:3465
+
+The KS10 ucode destination control != the 2901's idea of a dest code.
+
+Here's the translations.  I think this is correct.
+
+KS10 DEST		2901 DEST		NOTE
+
+0			2			RAMFILE = F, Y = A
+1			3        		RAMFILE = F, Y = F
+2			0			Q = F, Y = F
+3			1			Y = F
+4			4			Q=F*2, Y=F
+5			5			Q=F*2, RAMFILE=Q, Y=F
+6			6			Q=F/2, RAMFILE=Q, Y=F
+7			7			RAMFILE=F/2, Y=F
+
+Comments?
+
+
+
+
+
+Article 3668 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!inwap
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Kermit (Was: Barb, DSKB is not in catalog!)
+Date: 27 Feb 2001 01:17:11 GMT
+Organization: Chez Inwap
+Lines: 22
+Message-ID: <97ev6n$1e0v$1@nntp1.ba.best.com>
+References: <3A85706B.B4A96DC3@nospam.nospam> <96e538$d0h$1@newsmaster.cc.columbia.edu> <B6B15121.11E13%Mark.Garrett@wedontwantyourspam.com.au> <96gjqn$ltm$12@bob.news.rcn.net>
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 983236631 47135 206.184.139.134 (27 Feb 2001 01:17:11 GMT)
+X-Complaints-To: abuse@best.com
+NNTP-Posting-Date: 27 Feb 2001 01:17:11 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:3668
+
+In article <96gjqn$ltm$12@bob.news.rcn.net>,  <jmfbahciv@aol.com> wrote:
+>In article <B6B15121.11E13%Mark.Garrett@wedontwantyourspam.com.au>,
+>   Mark Garrett <Mark.Garrett@wedontwantyourspam.com.au> wrote:
+>>Much easier the otherway around, map the unix filesystem to TOPS-20. We
+>>already have the example on KL's mapping FE the front end 
+>>file system being mounted and access under a running 
+>>TOPS-20. 
+>
+>I think you're a tad confused.  The front-end file system was not
+>access simultaneously by RSX20-F and TOPS20 over the same port.  There
+>was a reason that a hardware port of the front end RP06 was _only_ used
+>by the PDP-11, leaving the other hardware port for access by the PDP-10.
+>Also if you did a directory from the -10 side of the RSX20-F file
+>structure, it appeared as one big file called FE.SYS to the PDP-10
+>monitor.
+
+Barb's right.  On the KS, however, the 8080 did sneak in and diddle with
+the RH11's registers behind the 2020's back.  The data stored in SMFILE.SYS
+was formatted to make life easier for the 8080.
+	-Joe
+--
+See http://www.inwap.com/ for PDP-10 and "ReBoot" pages.
+
+
+Article 4364 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!howland.erols.net!newsfeed.skycache.com!Cidera!cyclone-sjo1.usenetserver.com!news-out-sjo.usenetserver.com!news01.optonline.net!news02.optonline.net.POSTED!not-for-mail
+From: Arthur Krewat <krewat@bartek.dontspamme.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Tops10 a "baroque" operating system?
+Organization: Kilonet.net
+Lines: 52
+Message-ID: <3AD0B1FD.6DE2F34A@bartek.dontspamme.net>
+References: <z2Yz6.3296$Rj2.11602@NewsReader> <3AD082F8.B0B4A84A@bartek.dontspamme.net> <ZS0A6.8991$s02.9593@NewsReader>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 4.7 [en] (X11; I; SunOS 5.8 i86pc)
+X-Accept-Language: en
+Date: Sun, 08 Apr 2001 18:51:05 GMT
+NNTP-Posting-Host: 24.186.97.75
+X-Trace: news02.optonline.net 986755865 24.186.97.75 (Sun, 08 Apr 2001 14:51:05 EDT)
+NNTP-Posting-Date: Sun, 08 Apr 2001 14:51:05 EDT
+Xref: nntp1.ba.best.com alt.sys.pdp10:4364
+
+JD wrote:
+> 
+> > What bells and whistles are you talking about?
+> >
+> At the point I encountered Tops10 (I do not remember the version number) it
+> was very simple indeed: no IPCF, no QUASAR, ORION, PULSAR, ACTDAE, FILDAE,
+> account verification, etc.; user information all kept in ACCT.SYS; none of
+> these options around when, where, or at what priority people could log in;
+> not even, if I recall correctly, SFDs.  A lot of this stuff looks like an
+> attempt to make up for an architecture that started out less flexible than
+> it ultimately needed to be.
+
+Musta been version 5. I worked with 5.06 for a year before the KA was
+"upgraded" to five KS10's that ran 6.03 that included SFD's, but not this
+QUASAR/PULSAR/ORION stuff.
+
+> It also seems odd that there are lots of ways of doing the same thing in
+> this version, ranging from the fact that you can write /NOFOO or /FOO:NO to
+> the fact that there seem to be 3 or 4 different places (INITIA, LOGIN, SET
+> TERMINAL etc.) for setting terminal types.  And there are those wonderful
+> 6-character DEC error message codes.  And switches with nested parameters,
+> e.g. /TERMINAL:(LENGTH:20) that look like something out of OS/360.
+
+Yeah, there is a lot of that - it's a natural thing over the life of on OS
+that has gone through 7 major revisions. Different people working on it
+like something their way - so to add the "/NOFOO" switch that they want
+to use, they go hack SCAN(?) to allow "/NO...". Meanwhile, it already
+supports "/FOO:NO" ...
+
+> I'm not trying to start a holy war here, just observing that earlier
+> versions of Tops10 had a far simpler "look and feel" than this one.  
+
+No problem there... I was just getting your opinion so I could look at
+it from your perspective. On my boot disk for TOPS-10 7.03 under TS10, I
+disabled some of the daemons already :)
+
+I have a copy of a TOPS-10 6.03A SYSTEM.EXE that ran on a KS10. I plan
+on getting a 6.03A version of TOPS-10 to run under TS10. You'd be welcome
+to it if I ever get it off the ground.
+
+> My
+> impression (which may well be wrong) is that Tops20 aged more gracefully in
+> this regard, perhaps because more of these features were built in from the
+> start.  But perhaps this shift toward the baroque is what happens to all
+> operating systems as they grow up.
+
+I'm not very familiar with TOPS-20, except as a hacker ("break and enter"
+type). It struck me as being clean and straightforward, although a little
+bloated for my taste. It was a pig compared to TOPS-10 in terms of memory
+use (?).
+
+art k.
+
+
+Article 4458 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!enews.sgi.com!newshub2.rdc1.sfba.home.com!news.home.com!cyclone-sjo1.usenetserver.com!news-out-sjo.usenetserver.com!news01.optonline.net!news02.optonline.net.POSTED!not-for-mail
+From: Arthur Krewat <krewat@bartek.dontspamme.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: TS10 happiness
+Organization: Kilonet.net
+Lines: 27
+Message-ID: <3AD87BDC.426AF9A7@bartek.dontspamme.net>
+References: <3AD7ADFF.51EF7F36@bartek.dontspamme.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 4.7 [en] (X11; I; SunOS 5.8 i86pc)
+X-Accept-Language: en
+Date: Sat, 14 Apr 2001 16:36:08 GMT
+NNTP-Posting-Host: 24.186.97.75
+X-Trace: news02.optonline.net 987266168 24.186.97.75 (Sat, 14 Apr 2001 12:36:08 EDT)
+NNTP-Posting-Date: Sat, 14 Apr 2001 12:36:08 EDT
+Xref: nntp1.ba.best.com alt.sys.pdp10:4458
+
+Arthur Krewat wrote:
+> 
+> Hello all,
+> 
+>         I have successfully gen'd a TOPS-10 7.03 system
+> using TS10 under Solaris 8 x86. Using a SINGLE rp06, a
+> typical DESTROY and normal MIG install, it boots fine.
+> This was from today's CVS from source-forge.
+> 
+> Is it impossible to boot from RPA0+RPA1 (had both and destroyed them
+> resulting in a DSKB that spanned two RP06's) ??
+
+Just answered my own question, from the 703MIG:
+
+
+6.2.1 Creating a Front-end File System Directory Area
+
+If you are installing a new KS system, you must create a directory
+area on disk for the microprocessor file system. This area must be
+[6,2020], and it is recommended that you use the structure that
+resides on RPA0. Do not use a multiple-unit file structure for the
+microprocessor file system.
+
+
+
+
+aak
+
+
+Article 4626 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!feeder.qis.net!news.maxwell.syr.edu!news-peer1.tiac.net!posterchild2.tiac.net!news@tiac.net
+From: Bob Supnik <bsupnik@us.inter.net>
+Newsgroups: alt.sys.pdp10
+Subject: ITS 1-proceed flag
+Date: Sun, 22 Apr 2001 13:48:56 -0400
+Organization: www.us.inter.net
+Lines: 51
+Message-ID: <q256et4j2rkdmhd4h22hr9uu25gn617pfv@4ax.com>
+NNTP-Posting-Host: ip240.bedford3.ma.pub-ip.psi.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Newsreader: Forte Agent 1.8/32.548
+Xref: nntp1.ba.best.com alt.sys.pdp10:4626
+
+The last work item on my ITS list is the 1-proceed capability.  It is
+rather complicated, so I wanted to check out my understanding of its
+operation, as derived from the KS10 microcode.
+
+[An initial question: did ITS require it for operation?  The ITS KS10
+microcode is conditionalized for three features: PC sampling,
+1-proceed, and jump PC (JPC).  The first two are enabled, the third is
+not.]
+
+1-proceed is PC flag<8> (reuse of address inhibit).  It can only be
+set by a "traditional" style JRSTF or JEN.  (The ITS KS10 microcode
+still has the extended JRSTs but doesn't check for 1-proceed in those
+code paths.)
+
+If set, 1-proceed allows the next instruction to execute but then
+causes a trap through UPT 432/433.  The instruction being
+"1-proceeded" executes as though PC flag<8> was clear; that is, if it
+is flag-saving jump, PC flag<8> will be clear.  There are special
+cases:
+
+- If the instruction following the "1-proceeded" instruction page
+faults on fetch, the page fault is supressed and the 1-proceed trap
+occurs instead.  [Because the KS10 prefetches the next instruction,
+normally page faults normally occur before traps.]
+
+- If the instruction being "1-proceeded" faults during execution, the
+page fault PC flags will have the 1-proceed flag set, so that when
+execution is retried, the 1-proceed trap will occur.
+
+- If an interrupt occurs while the "1-proceed" instruction is
+executing, the interrupt PC flags (for JSR, not for XPCW) will have
+the 1-proceed trap flag set.
+
+The KS10 implements this feature entirely through internal state
+flags.  When a JRSTF or JEN with flags<8> set is seen, an internal
+flag, FLG.1PROC is set (flags<8> is not set in the hardware).  During
+decode, an extra check is put in to test for FLG.1PROC.  If set, then
+another internal flag, FLG.2PROC, is checked.  If FLG.2PROC is clear,
+it is set, and normal execution occurs.  If FLG.2PROC is set, the
+1-proceed trap is sprung, and both FLG.1PROC and FLG.2PROC are
+cleared.
+
+The interrupt JSR and page fault handlers check FLG.1PROC and, if it
+is set, set flags<8> in the save flags word.
+
+The fetch trap handler checks FLG.2PROC and, if it is set, takes the
+1-proceed trap instead.
+
+Comments welcome.
+
+/Bob Supnik
+
+
+Article 4643 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newshub.sdsu.edu!news-spur1.maxwell.syr.edu!news.maxwell.syr.edu!grolier!sn-xit-01!sn-post-01!supernews.com!corp.supernews.com!not-for-mail
+From: Bob Supnik <bsupnik@us.inter.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: ITS 1-proceed flag
+Date: Mon, 23 Apr 2001 10:40:27 -0400
+Organization: Posted via Supernews, http://www.supernews.com
+Message-ID: <p4f8et4kc0fcm1hg1tjn615juegkdcuili@4ax.com>
+References: <q256et4j2rkdmhd4h22hr9uu25gn617pfv@4ax.com>
+X-Newsreader: Forte Agent 1.8/32.548
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Complaints-To: newsabuse@supernews.com
+Lines: 50
+Xref: nntp1.ba.best.com alt.sys.pdp10:4643
+
+On further reflection, I think that the KS10's implementation is
+broken.
+
+On the KS10, FLG.1PROC and FLG.2PROC are supposed to work rather like
+the VAX T and TP bits.  FLG.1PROC (VAX T) is checked after interrupts
+and traps are processed; if set, it sets FLG.2PROC (VAX TP) to trigger
+the trap before the next instruction.  For the KS10 (not the VAX), the
+problem is that FLG.2PROC is checked at the same point that FLG.1PROC
+is checked - after interrupts and traps, not before.  Imagine this
+scenario:
+
+n-1/	set FLG.1PROC via JRSTF
+n/	fetch
+	check FLG.1PROC/2PROC; 1PROC set, hence set 2PROC
+	execute
+n+1/	interrupt... 1-proceed set in saved flags
+	:
+	JRSTF from interrupt
+n+1/	fetch
+	check FLG.1PROC/2PROC; 1PROC set, hence set 2PROC
+n+2/	fetch
+	check FLG.1PROC/2PROC; 2PROC set, hence trap
+
+The 1-proceed trap at the end of instruction n has been missed.  This
+is because the state of 2PROC is not saved (no equivalent to VAX TP).
+To make this work, 2PROC would need to be checked BEFORE interrupts
+and traps, not after.
+
+/Bob
+
+On Sun, 22 Apr 2001 13:48:56 -0400, Bob Supnik <bsupnik@us.inter.net>
+wrote:
+
+>The last work item on my ITS list is the 1-proceed capability.  It is
+<snip>
+>The KS10 implements this feature entirely through internal state
+>flags.  When a JRSTF or JEN with flags<8> set is seen, an internal
+>flag, FLG.1PROC is set (flags<8> is not set in the hardware).  During
+>decode, an extra check is put in to test for FLG.1PROC.  If set, then
+>another internal flag, FLG.2PROC, is checked.  If FLG.2PROC is clear,
+>it is set, and normal execution occurs.  If FLG.2PROC is set, the
+>1-proceed trap is sprung, and both FLG.1PROC and FLG.2PROC are
+>cleared.
+>
+>The interrupt JSR and page fault handlers check FLG.1PROC and, if it
+>is set, set flags<8> in the save flags word.
+>
+>The fetch trap handler checks FLG.2PROC and, if it is set, takes the
+>1-proceed trap instead.
+
+
+
+Article 4728 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!wn3feed!worldnet.att.net!24.0.0.38!newshub2.rdc1.sfba.home.com!news.home.com!news1.rdc1.sfba.home.com.POSTED!not-for-mail
+Message-ID: <3AF3C6E2.594862B4@inwap.com>
+From: Joe Smith <js-cgi@inwap.com>
+Organization: Chez Inwap
+X-Mailer: Mozilla 4.77 [en] (Win98; U)
+X-Accept-Language: en,ja
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: DZ11, TOPS-10 stuff, etc. etc.
+References: <Pine.LNX.4.21.0103121317140.18985-100000@sakura.lunar-tokyo.net>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 30
+Date: Sat, 05 May 2001 09:42:03 GMT
+NNTP-Posting-Host: 24.1.107.64
+X-Complaints-To: abuse@home.net
+X-Trace: news1.rdc1.sfba.home.com 989055723 24.1.107.64 (Sat, 05 May 2001 02:42:03 PDT)
+NNTP-Posting-Date: Sat, 05 May 2001 02:42:03 PDT
+Xref: nntp1.ba.best.com alt.sys.pdp10:4728
+
+Daniel Seagraves wrote:
+> Small nitpick with ts10 - Can you make the system serial number a settable
+> item in the config file?  In the real world, nobody had the same serial
+> number.
+
+No, no, no.  You guys are not following all the steps in the MIG.
+
+All real KS-2020's have the same serial number until SMFILE is run.
+
+Zane's "TOPS-10 v7.03 Install Proceedure" left out one important step.
+
+> DECSYSTEM 2020 DIAGNOSTICS FE-FILE PROGRAM
+> VERSION 2.5, TOPS-10, KS10, CPU#=5000
+> [FOR HELP TYPE "HELP"]
+> SMFILE>WRITE SETUP DSKB:[1,4]
+> SMFILE>WRITE RESET
+> SMFILE>READ DEC:T10KL.ULD
+
+  SMFILE>SERIAL 4267	; Enter the CPU's serial number here
+
+> SMFILE>WRITE CRAM
+> SMFILE>WRITE BOOT DEC:KSBOOT.EXE
+> SMFILE>WRITE DONE
+> SMFILE>EXIT
+
+To repeat, the customer is supposed to set the serial number immediately
+after reading in the microcode file (before writing CRAM).
+	-Joe
+-- 
+js-cgi@inwap.com    See http://www.inwap.com/ for details
+
+
+Article 5142 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!feed.textport.net!news.stealth.net!news-east.rr.com!news.rr.com!news01.optonline.net!news02.optonline.net.POSTED!not-for-mail
+From: Arthur Krewat <krewat@bartek.dontspamme.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 6.03
+Organization: Kilonet.net
+Lines: 36
+Message-ID: <3B26DEAA.3E0D226C@bartek.dontspamme.net>
+References: <3B24FA9C.492DB07C@bartek.dontspamme.net> <3B26A144.86E2EF4@bartek.dontspamme.net> <kaAV6.78901$4f7.6199502@bgtnsc06-news.ops.worldnet.att.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 4.7 [en] (X11; I; SunOS 5.8 i86pc)
+X-Accept-Language: en
+Date: Wed, 13 Jun 2001 03:36:59 GMT
+NNTP-Posting-Host: 24.186.100.134
+X-Trace: news02.optonline.net 992403419 24.186.100.134 (Tue, 12 Jun 2001 23:36:59 EDT)
+NNTP-Posting-Date: Tue, 12 Jun 2001 23:36:59 EDT
+Xref: nntp1.ba.best.com alt.sys.pdp10:5142
+
+Henry Miller wrote:
+> 
+> Arthur,
+> 
+> "Arthur Krewat" <krewat@bartek.dontspamme.net> wrote in message
+> news:3B26A144.86E2EF4@bartek.dontspamme.net...
+> >
+> > I have gotten TOPS-10 6.03 to boot and run
+> >
+> > Anyone from ADP out there ? :)
+> >
+> 
+>     Well, my mother-in-law used to work for ADP; she could
+> probably get you payroll/tax information, but no TOPS sources.
+
+Ouch... and for whom ? :)
+
+>     Just to be clear, are you looking for 6.03 or 6.03A ?
+
+For the longest time, and I was the one hacking the monitor for the
+site consisting of 5 KS10's running 6.03, I thought it was plain 6.03.
+
+I found an installation monitor for 6.03A living as SYS000.EXE
+in an old system backup, AFTER the logical end-of-tape on a 1/2"
+personal backup I had...
+
+Now, I am convinced it was 6.03A, since I have checked some other 
+backups I had made, and they plainly state 6.03A.
+
+It's been fun... again, ANYONE HAVE 6.03A for KS10? ? ? huh, please?
+
+Don't ask why, I'm just nostalgic... if I could, I'd love to run
+TOPS10 5.06 on a KA10 again ... I once got a view of it through a
+window... 
+
+aak
+
+
+Article 13070 of alt.sys.pdp10:
+Path: sea-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!newsfeed.mathworks.com!arclight.uoregon.edu!canoe.uoregon.edu!logbridge.uoregon.edu!news.u.washington.edu!140.142.17.34.MISMATCH!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: RM03 on a KS10
+Date: Mon, 12 Nov 2001 12:27:42 -0800
+Organization: Networks & Distributed Computing
+Lines: 24
+Message-ID: <Pine.NXT.4.41.0111121219590.27802-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <tuvkhjpm1krj81@corp.supernews.com>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 1005596867 13482 (None) 140.142.17.38
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: ken
+To: Michael Thompson <m_thompson@ids.net>
+In-Reply-To: <tuvkhjpm1krj81@corp.supernews.com>
+Xref: dfw-artgen.news.verio.net alt.sys.pdp10:13070
+
+Please use a real email address when asking questions.
+
+The answer to your question is that even a single RM03 is sufficient to
+build a workable KS10 system.  However, the controller on the RM03 needs
+to be wired to allow 18bit transfers.  Unlike RM05s, the controllers on
+many RM03s, even those sold for PDP-11 systems, are wired appropriately.
+It's just a couple of jumpers as I recall.
+
+You will, of course, need to format the disks using the KSFORM magtape.
+If the disk won't format, it may need the rewriting.
+
+On Mon, 12 Nov 2001, Michael Thompson wrote:
+
+> The Rhode Island Computer Museum has a KS10 (and Megan Gentry's ADP KS10). They
+> don't have three-phase power available so using the RP06 disks is a problem.
+> They just picked up an 11/70 that came with two RM03 disks. I believe that the
+> RM03 uses single-phase power. Is it possible to build a workable KS10 with only
+> two RM03 disks?
+
+-- Mark --
+
+http://staff.washington.edu/mrc
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+Article: 17585 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!newsfeed1.cidera.com!Cidera!ps01-sjc1!news.webusenet.com!sn-xit-05!sn-xit-06!sn-post-01!supernews.com!corp.supernews.com!not-for-mail
+From: m_thompson@ids.net (Michael Thompson)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Need KS10 Power Supply
+Date: Sun, 28 Jul 2002 22:40:55 -0000
+Organization: Posted via Supernews, http://www.supernews.com
+Message-ID: <uk8snnc15fmu01@corp.supernews.com>
+X-Newsreader: WinVN 0.99.9 (Released Version) (x86 32bit)
+References: <uiquuprh78s4af@corp.supernews.com> <p3ruiu4q3q0gmpbj904nbjm8kpqr03c2m8@4ax.com> <Pine.LNX.4.50.0207121704510.25381-100000@shiva0.cac.washington.edu> <3D302813.BC2BD318@softstar.it> <ujtee5d1f8f002@corp.supernews.com> <3D3EF27F.1FAC5186@trailing-edge.com>
+MIME-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Complaints-To: newsabuse@supernews.com
+Lines: 31
+Xref: dfw-artgen alt.sys.pdp10:17585
+
+The outputs are:
+
+V1	5V  @ 30A
+V2	5V  @ 60A
+V3	12V @ 10A
+V4	15V @ 3A
+V5	5V  @ 5A
+
+In article <3D3EF27F.1FAC5186@trailing-edge.com>, shoppa@trailing-edge.com 
+says...
+>
+>Michael Thompson wrote:
+>> 
+>> I put images of the outside and inside of the KS10 power supply
+>
+>I hope this doesn't sound like sacrilege... but have you considered
+>a non-Mighty-Mite power supply solution?  5V 100A supplies are
+>available both new and surplus, but in different (larger) physical
+>packages, which would necessitate at least some re-wiring and maybe
+>some new holes.
+>
+>What is the Mighty-Mite in the KS10 supposed to put out, anyway?
+>In the past I've seen 5V@100A, 5V@200A, and 2.5V@300A LH units at
+>hamfests and the like.
+>
+>Tim.
+
+-- 
+Michael Thompson
+m_thompson@NOSPAMids.net
+
+
+
+Article: 17791 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!feed2.news.rcn.net!feed1.news.rcn.net!rcn!207-172-216-131
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: DEUNA in a KS10
+Date: Fri, 13 Sep 02 13:02:34 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 37
+Message-ID: <alsruk$qa9$3@bob.news.rcn.net>
+References: <uo3lls38hqmh82@corp.supernews.com>
+X-Trace: UmFuZG9tSVYZLcV7kpES0FHKg9RK8JB4X42ruFPCTT3v5uXTA21T+g67lJ7hNhpm
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 13 Sep 2002 14:15:48 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: dfw-artgen alt.sys.pdp10:17791
+
+In article <uo3lls38hqmh82@corp.supernews.com>,
+   m_thompson@ids.net (Michael Thompson) wrote:
+>The KS10 microcode V124 documents say "7.03 is expected to include a DEUNA 
+>driver for the KS10, both to support DECnet and LAT."
+>
+>The tops10_704_monitoranf_bb-x140c-sb file has the following code:
+>IFN M.KS10,<EXTERN UNASER>	;FORCE LOADING OF DEUNA DEVICE SERVICE
+>
+>;GENERATE MONGEN'ED DEVICE TABLES FOR ETHERNET
+>IFN FTKL10,<KNIMDT::MDENET>	;NIA20 (KLNI)
+>IFN FTKS10,<UNAMDT::MDENET>	;DEUNA
+>
+>IFN M.KS10,<
+>LLMPSI::!SETZ	T2,
+>	 POPJ	P,
+>> ;END IFN M.KS10
+>
+>What does this code fragment do?
+
+I don't know; I'd have to look at listings.
+
+>Does the code for the DEUNA service exist?
+>
+
+It's the only way KSes got on the net.  I can't remember what
+Bill called the monitor files.  They should be in the monitor
+sources somewhere...LATSER?  I can't remember if we unbundled
+the monitor sources for DECnet.  If we did, they would be on
+the DECnet tape in the monitor save set.  If we didn't, they
+would be on the monitor tape, first save set.  (ANF-10 was the
+second save set.)  Also this is info about how I packaged 7.03;
+I have no idea how they botched the 7.04 ship.
+
+/BAH
+
+
+Subtract a hundred and four for e-mail.
+
+
+Article: 18401 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!news-hog.berkeley.edu!newsfeed.berkeley.edu!ucberkeley!sn-xit-05!sn-xit-06!sn-post-01!supernews.com!corp.supernews.com!not-for-mail
+From: m_thompson@ids.net (Michael Thompson)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 (a real one) Status Update
+Date: Mon, 11 Nov 2002 02:56:07 -0000
+Organization: Posted via Supernews, http://www.supernews.com
+Message-ID: <usu727hbhs4tf9@corp.supernews.com>
+X-Newsreader: WinVN 0.99.9 (Released Version) (x86 32bit)
+References: <usu61hitb5ol7d@corp.supernews.com>
+MIME-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Complaints-To: abuse@supernews.com
+Lines: 30
+Xref: dfw-artgen alt.sys.pdp10:18401
+
+The KS10 just booted from the RP06 and I logged in as the operator.
+
+Time to learn a lot more about TOPS10.
+
+In article <usu61hitb5ol7d@corp.supernews.com>, m_thompson@ids.net says...
+>
+>It's been a busy weekend. The RP06 is working just fine on 220VAC 
+Single-Phase. 
+>The machine got to the point where it would get a memory refresh error after 
+>about 3 minutes of run time. I replaced the MMC MOS Memory Controller and that 
+>problem went away. I reinstalled two of the original MMA MOS Memory Array 
+>boards and got parity errors. I installed two new MMA boards and it is running 
+>OK with 256KW.
+>
+>I booted from the TOPS 7.03 tape and initialized the disk. I had a bunch of 
+>problems restoring the CUSPS tapes until I did a "set density MTA0: 1600" 
+>command. The CUSPS 1/2 tape is restored and the CUSPS 2/2 is almost done. 
+>CREDIR is on the disk so I have everything to make the machine disk bootable.
+>
+>More to follow.
+>
+>-- 
+>Michael Thompson
+>m_thompson@NOSPAMids.net
+>
+
+-- 
+Michael Thompson
+m_thompson@NOSPAMids.net
+
+
+
+Article: 18447 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!newsfeed-west.nntpserver.com!hub1.meganetnews.com!nntpserver.com!telocity-west!TELOCITY!sn-xit-03!sn-xit-06!sn-post-02!sn-post-01!supernews.com!corp.supernews.com!not-for-mail
+From: m_thompson@ids.net (Michael Thompson)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 (a real one) Status Update
+Date: Thu, 14 Nov 2002 17:12:07 -0000
+Organization: Posted via Supernews, http://www.supernews.com
+Message-ID: <ut7mb7l2eo9a03@corp.supernews.com>
+X-Newsreader: WinVN 0.99.9 (Released Version) (x86 32bit)
+References: <usu61hitb5ol7d@corp.supernews.com> <usu727hbhs4tf9@corp.supernews.com>
+MIME-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Complaints-To: abuse@supernews.com
+Lines: 45
+Xref: dfw-artgen alt.sys.pdp10:18447
+
+The power supply in my HP 88780 1/2" tape drive died last night. It's going to 
+be difficult to make tapes for the KS10 now.
+
+The KS10 didn't like the KERMIT tape. It read the label OK but said that the 
+data wasn't in backup format.
+
+Just for yucks I entered 2002 as the year when the KS10 booted. It showed a 
+date of 102, reported parity errors, and then said that the RP06 had multiple 
+logical units on it. It rebooted just fine with a pre-Y2K date.
+
+In article <usu727hbhs4tf9@corp.supernews.com>, m_thompson@ids.net says...
+>
+>The KS10 just booted from the RP06 and I logged in as the operator.
+>
+>Time to learn a lot more about TOPS10.
+>
+>In article <usu61hitb5ol7d@corp.supernews.com>, m_thompson@ids.net says...
+>>
+>>It's been a busy weekend. The RP06 is working just fine on 220VAC 
+>Single-Phase. 
+>>The machine got to the point where it would get a memory refresh error after 
+>>about 3 minutes of run time. I replaced the MMC MOS Memory Controller and 
+that 
+>>problem went away. I reinstalled two of the original MMA MOS Memory Array 
+>>boards and got parity errors. I installed two new MMA boards and it is 
+running 
+>>OK with 256KW.
+>>
+>>I booted from the TOPS 7.03 tape and initialized the disk. I had a bunch of 
+>>problems restoring the CUSPS tapes until I did a "set density MTA0: 1600" 
+>>command. The CUSPS 1/2 tape is restored and the CUSPS 2/2 is almost done. 
+>>CREDIR is on the disk so I have everything to make the machine disk bootable.
+>>
+>>More to follow.
+>>
+>>-- 
+>>Michael Thompson
+>>m_thompson@NOSPAMids.net
+>>
+>
+>-- 
+>Michael Thompson
+>m_thompson@NOSPAMids.net
+>
+
+
+
+Article: 18451 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!news-hog.berkeley.edu!ucberkeley!news.u.washington.edu!140.142.17.34.MISMATCH!news.u.washington.edu!shiva0.cac.washington.edu!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 (a real one) Status Update
+Date: Thu, 14 Nov 2002 15:45:44 -0800
+Organization: Networks and Distributed Computing
+Lines: 15
+Message-ID: <Pine.LNX.4.50.0211141543180.23176-100000@shiva0.cac.washington.edu>
+References: <usu61hitb5ol7d@corp.supernews.com> <usu727hbhs4tf9@corp.supernews.com>
+ <ut7mb7l2eo9a03@corp.supernews.com> <3DD40559.D82FFB0C@bartek.dontspamme.net>
+ <ut83l9c522laa6@corp.supernews.com> <3DD42CDF.8A886253@bartek.dontspamme.net>
+NNTP-Posting-Host: shiva0.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 1037317546 19096 (None) 140.142.17.35
+X-Complaints-To: help@cac.washington.edu
+In-Reply-To: <3DD42CDF.8A886253@bartek.dontspamme.net>
+Content-Length: 314159 (believe this at your own risk)
+Xref: dfw-artgen alt.sys.pdp10:18451
+
+On Thu, 14 Nov 2002, Arthur Krewat wrote:
+> TOPS-10 on simh said "102" until I y2k'd it.
+> With the year firmly in 2002, the simulator runs TOPS-10 perfectly.
+> I don't think the hardware would care. BUt it might :)
+
+TOPS-20 had minimal Y2K issues; the most notable being that the DECnet
+stuff broke (big surprise).
+
+KS10 hardware neither knows, nor cares, about years.  Time is only kept as
+an uptime and an OS-interpreted boot time.
+
+-- Mark --
+
+http://staff.washington.edu/mrc
+Science does not emerge from voting, party politics, or public debate.
+
+
+Article: 18408 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!feed3.newsreader.com!newsreader.com!sn-xit-05!sn-xit-06!sn-post-02!sn-post-01!supernews.com!corp.supernews.com!not-for-mail
+From: m_thompson@ids.net (Michael Thompson)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 (a real one) Status Update
+Date: Mon, 11 Nov 2002 12:55:25 -0000
+Organization: Posted via Supernews, http://www.supernews.com
+Message-ID: <usva5tpt58g494@corp.supernews.com>
+X-Newsreader: WinVN 0.99.9 (Released Version) (x86 32bit)
+References: <usu61hitb5ol7d@corp.supernews.com> <3DCF27FA.5940EA4B@bartek.dontspamme.net>
+MIME-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Complaints-To: abuse@supernews.com
+Lines: 21
+Xref: dfw-artgen alt.sys.pdp10:18408
+
+>Very nice! I salivate as we speak! I do have 384KW of boards (six) for the KS10,
+>in unknown condition. I would love to at least have them tested, if not used :)
+
+I would be happy to test any of your KS10 boards.
+
+>Anyway, I can't WAIT to get access to that system for a little while, even
+>just to benchmark some things and see how long it really took. The simulators
+>have ripped away any recollection of relative speed.
+
+I might try stringing serial cables over from the SPARCstation-10 and the PC today.
+
+I have a KMC11. If I can find a DUP11 and a synchronous serial Q-bus board then I can 
+connect the KS10 to the VAX 3540 which has Ethernet to the SPARCstation-10 which can 
+dial to the Internet. If I load DECNET on the KS10 then you could telnet to the 
+SPARCstation, telnet to the VAX 3540, and SET HOST to the KS10.
+
+The other possibility is to install the DEUNA and get DECNET or TCP/IP working over 
+Ethernet.
+
+Relative speed? It's REEEALY SLOOOW. I can't believe how slow a file copy is.
+
+
+
+Article: 18441 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!dfw-peer!news.verio.net!crtntx1-snh1.gtei.net!cambridge1-snf1.gtei.net!news.gtei.net!bos-service1.ext.raytheon.com!cyclone.swbell.net!newsfeed1.easynews.com!easynews.com!easynews!newsfeed.news2me.com!arclight.uoregon.edu!logbridge.uoregon.edu!news.u.washington.edu!140.142.17.34.MISMATCH!news.u.washington.edu!shiva1.cac.washington.edu!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 (a real one) Status Update
+Date: Wed, 13 Nov 2002 08:59:02 -0800
+Organization: Networks and Distributed Computing
+Lines: 11
+Message-ID: <Pine.LNX.4.50.0211130858210.4418-100000@shiva1.cac.washington.edu>
+References: <usu61hitb5ol7d@corp.supernews.com> <3DCF27FA.5940EA4B@bartek.dontspamme.net>
+ <usva5tpt58g494@corp.supernews.com> <bqgtqa.mff1.ln@via.reistad.priv.no>
+NNTP-Posting-Host: shiva1.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 1037206745 24736 (None) 140.142.17.37
+X-Complaints-To: help@cac.washington.edu
+In-Reply-To: <bqgtqa.mff1.ln@via.reistad.priv.no>
+Content-Length: 314159 (believe this at your own risk)
+Xref: dfw-artgen alt.sys.pdp10:18441
+
+On Wed, 13 Nov 2002, Morten Reistad wrote:
+> It would be very nice if someone that still has access to real hardware coould
+> take out a camera and take some pictures; or even better; a video.
+
+There's a poor digital image of one of my 2020s on:
+	http://panda.com/tops-20
+
+-- Mark --
+
+http://staff.washington.edu/mrc
+Science does not emerge from voting, party politics, or public debate.
+
+
+Article: 18442 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!nntp1.roc.gblx.net!nntp.gblx.net!nntp.gblx.net!news-out.visi.com!hermes.visi.com!sn-xit-05!sn-xit-06!sn-post-02!sn-post-01!supernews.com!corp.supernews.com!not-for-mail
+From: m_thompson@ids.net (Michael Thompson)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 (a real one) Status Update
+Date: Wed, 13 Nov 2002 17:26:50 -0000
+Organization: Posted via Supernews, http://www.supernews.com
+Message-ID: <ut52qqn56vlk8a@corp.supernews.com>
+X-Newsreader: WinVN 0.99.9 (Released Version) (x86 32bit)
+References: <usu61hitb5ol7d@corp.supernews.com> <3DCF27FA.5940EA4B@bartek.dontspamme.net> <usva5tpt58g494@corp.supernews.com> <bqgtqa.mff1.ln@via.reistad.priv.no>
+MIME-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Complaints-To: abuse@supernews.com
+Lines: 44
+Xref: dfw-artgen alt.sys.pdp10:18442
+
+Picture at: http://users.ids.net/~thompson/PDP10/KS10_4224.jpg
+
+Please excuse the mess. It is a work in progress.
+
+In article <bqgtqa.mff1.ln@via.reistad.priv.no>, mrr@acer.reistad.priv.no 
+says...
+>
+>According to Michael Thompson <m_thompson@ids.net>:
+>>>Very nice! I salivate as we speak! I do have 384KW of boards (six) for the 
+KS10,
+>>>in unknown condition. I would love to at least have them tested, if not used 
+:)
+>>
+>>I would be happy to test any of your KS10 boards.
+>>
+>>>Anyway, I can't WAIT to get access to that system for a little while, even
+>>>just to benchmark some things and see how long it really took. The 
+simulators
+>>>have ripped away any recollection of relative speed.
+>
+>It would be very nice if someone that still has access to real hardware coould
+>take out a camera and take some pictures; or even better; a video.
+>
+>>I might try stringing serial cables over from the SPARCstation-10 and the PC 
+today.
+>>
+>>I have a KMC11. If I can find a DUP11 and a synchronous serial Q-bus board 
+then I can 
+>>connect the KS10 to the VAX 3540 which has Ethernet to the SPARCstation-10 
+which can 
+>>dial to the Internet. If I load DECNET on the KS10 then you could telnet to 
+the 
+>>SPARCstation, telnet to the VAX 3540, and SET HOST to the KS10.
+>>
+>>The other possibility is to install the DEUNA and get DECNET or TCP/IP 
+working over 
+>>Ethernet.
+>>
+>>Relative speed? It's REEEALY SLOOOW. I can't believe how slow a file copy is.
+>
+>-- Morten Reistad
+>
+>
+
+
+
+Article: 18444 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newsfeed.cwix.com!newsfeed1.cidera.com!Cidera!cyclone.rdc-nyc.rr.com!news-out.nyc.rr.com!twister.nyc.rr.com.POSTED!not-for-mail
+From: Mike Ross <abaddon@attglobal.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 (a real one) Status Update
+Message-ID: <dnf6tug6msae6fls8f89k7p58f074v9p9t@4ax.com>
+References: <usu61hitb5ol7d@corp.supernews.com> <3DCF27FA.5940EA4B@bartek.dontspamme.net> <usva5tpt58g494@corp.supernews.com> <bqgtqa.mff1.ln@via.reistad.priv.no>
+X-Newsreader: Forte Agent 1.91/32.564
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 13
+Date: Thu, 14 Nov 2002 06:10:01 GMT
+NNTP-Posting-Host: 66.108.211.219
+X-Complaints-To: abuse@rr.com
+X-Trace: twister.nyc.rr.com 1037254201 66.108.211.219 (Thu, 14 Nov 2002 01:10:01 EST)
+NNTP-Posting-Date: Thu, 14 Nov 2002 01:10:01 EST
+Organization: Road Runner - NYC
+Xref: dfw-artgen alt.sys.pdp10:18444
+
+On Wed, 13 Nov 2002 13:30:02 GMT, mrr@acer.reistad.priv.no (Morten
+Reistad) wrote:
+
+snip..
+>It would be very nice if someone that still has access to real hardware coould
+>take out a camera and take some pictures; or even better; a video.
+
+http://www.corestore.org/DEC2020.jpg is mine; I'll get a bunch of
+better pics next trip over - hopefully before end of year.
+
+Mike
+http://www.corestore.org
+FOR SALE - Al Qaeda rifle. Never fired. Dropped once.
+
+
+Article: 18445 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newsfeed.icl.net!newsfeed.fjserv.net!feed.news.nacamar.de!uio.no!news.tele.dk!news.tele.dk!small.news.tele.dk!opentransit.net!proxad.net!news-hub.cableinet.net!blueyonder!newspeer1-gui.server.ntli.net!ntli.net!sn-xit-05!sn-xit-06!sn-post-01!supernews.com!corp.supernews.com!not-for-mail
+From: RCS / RI <rcs@osfn.org>
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 (a real one) Status Update
+Date: Thu, 14 Nov 2002 09:10:26 -0500
+Organization: The Retro-Computing Society of RI
+Message-ID: <3DD3AED2.6BA2DCC8@osfn.org>
+X-Mailer: Mozilla 4.7 [en] (X11; I; SunOS 5.8 sun4m)
+X-Accept-Language: en
+MIME-Version: 1.0
+References: <usu61hitb5ol7d@corp.supernews.com> <3DCF27FA.5940EA4B@bartek.dontspamme.net> <usva5tpt58g494@corp.supernews.com> <bqgtqa.mff1.ln@via.reistad.priv.no>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Complaints-To: abuse@supernews.com
+Lines: 24
+Xref: dfw-artgen alt.sys.pdp10:18445
+
+Morten Reistad wrote:
+> 
+> It would be very nice if someone that still has access to real hardware coould
+> take out a camera and take some pictures; or even better; a video.
+
+There are a number of files describing the DECsystems at RCS/RI and
+images of the systems on our "works in progress" website:
+
+http://starfish.osfn.org/rcs/DECsystem/
+
+
+Also see:
+
+http://starfish.osfn.org/rcs/2020/images/
+
+But these are of poor quality.  They were taken about a year ago when we
+were checking out the hardware.
+
+-mikeu
+
+-- 
+The Retro-Computing Society of RI, Inc.                   (401) 861-1977
+25 Eagle St Bldg 5 Ste 206                      http://www.osfn.org/rcs/
+Providence RI 02908                       telnet://kronos.egr-ri.ids.net
+
+
+Article: 18582 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!sn-xit-03!sn-xit-06!sn-post-01!supernews.com!corp.supernews.com!not-for-mail
+From: m_thompson@ids.net (Michael Thompson)
+Newsgroups: alt.sys.pdp10
+Subject: KS10 (Real One) Status Update
+Date: Fri, 20 Dec 2002 18:10:44 -0000
+Organization: Posted via Supernews, http://www.supernews.com
+Message-ID: <v06n94i63n2q16@corp.supernews.com>
+X-Newsreader: WinVN 0.99.9 (Released Version) (x86 32bit)
+MIME-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Complaints-To: abuse@supernews.com
+Lines: 18
+Xref: dfw-artgen alt.sys.pdp10:18582
+
+I have been traveling a lot lately so I haven't made much progress on the KS10. 
+I started working on the master TU45. Both the power supply and the servo 
+control board have problems. I will pick up replacements on Monday.
+
+I formatted another RP06 pack and installed TOPS10 7.03 on it. I still can't 
+make a distribution tape so I haven't customized the TOPS kernel. I might try 
+installing TOPS20 or ITS on a pack next week.
+
+I now have a KMC11 and a DUP11 for the KS10 and I have a VAX that talks DECnet. 
+If I can find a synchronous serial Qbus board and a synchronous null-modem then 
+I should be able to get the KS10 to talk to the VAX.
+
+I also have an Ethernet board for the KS10. That should be an interesting 
+project...
+
+Have a merry Christmas.
+
+
+
+
+Article: 19193 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!feed2.news.rcn.net!rcn!logbridge.uoregon.edu!news.u.washington.edu!140.142.17.34.MISMATCH!news.u.washington.edu!shiva1.cac.washington.edu!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 (Real One) Questions
+Date: Sun, 9 Mar 2003 08:27:20 -0800
+Organization: Networks and Distributed Computing
+Lines: 39
+Message-ID: <Pine.LNX.4.55.0303090821120.4209@shiva1.cac.washington.edu>
+References: <v6mif0gfqcva4b@corp.supernews.com>
+NNTP-Posting-Host: shiva1.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 1047227243 17678 (None) 140.142.17.37
+X-Complaints-To: help@cac.washington.edu
+In-Reply-To: <v6mif0gfqcva4b@corp.supernews.com>
+Content-Length: 314159 (believe this at your own risk)
+Xref: dfw-artgen alt.sys.pdp10:19193
+
+On Sun, 9 Mar 2003, Michael Thompson wrote:
+> The KS10 has 4 DZ11s installed. One misbehaves a little during diagnostics,
+> but the others run just fine.
+
+Then remove it.  You don't really need 32 serial lines on a KS, do you?
+Why waste the power on something that you won't use?  I recommend that you
+remove all but one working DZ and keep the other two working DZs as
+spares.
+
+> How do I get a serial terminal to work on a DZ port? I configured the kernel
+> for 32 serial lines but there is no response on the serial ports.
+
+I forget if you are using TOPS-10 or TOPS-20.  In TOPS-20 you have to
+configure the serial port through a SETSPD file that is read at startup.
+Presumably you have to do much the same on TOPS-10.
+
+Beware of 9600 baud lines.  Neither the DZ nor the KS can keep up with a
+lot of 9600 baud activity.
+
+> Is it possible to have a PDP11 connected to the KS10 through a KMC/DUP?
+
+Yes, if the PDP-11 is talking synchronous protocol to the DUP.
+
+> Can the KS10 boot the PDP11 over this connection?
+
+No.
+
+> What front end software could run in the PDP11? TCP/IP? DECnet?
+
+DECnet is the only thing that any KS monitor supports for the KMC/DUP.
+DEC distributed Phase II DECnet with TOPS-20 4.1, but I got Phase IV
+working under contract to them (TOPS-20 4.2).  I have the files necessary
+to upgrade TOPS-20 4.1 sources to TOPS-20 4.2.  Although the result works,
+it's kind of a toy.  You have to use *really* small packets (376 bytes).
+
+-- Mark --
+
+http://staff.washington.edu/mrc
+Science does not emerge from voting, party politics, or public debate.
+
+
+Article: 19224 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!sn-xit-03!sn-xit-06!sn-xit-09!supernews.com!postnews1.google.com!not-for-mail
+From: dseagrav@lunar-tokyo.net (Daniel Seagraves)
+Newsgroups: alt.sys.pdp10
+Subject: KS10 #4469 is safe.
+Date: 11 Mar 2003 17:27:48 -0800
+Organization: http://groups.google.com/
+Lines: 13
+Message-ID: <667a2609.0303111727.6470ff0c@posting.google.com>
+NNTP-Posting-Host: 12.221.39.56
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 8bit
+X-Trace: posting.google.com 1047432468 478 127.0.0.1 (12 Mar 2003 01:27:48 GMT)
+X-Complaints-To: groups-abuse@google.com
+NNTP-Posting-Date: 12 Mar 2003 01:27:48 GMT
+Xref: dfw-artgen alt.sys.pdp10:19224
+
+KS10 #4469 has been moved from my mother's house to my current
+residence. The machine was removed intact, but we abandoned the TU45
+there as it was unrepairable and we have nowhere to put it here.
+
+It's currently in the garage - We're trying to get pulleys and so on
+to move it into the house or at least the basement, but worst-case
+scenario we plan to wrap the machine in blankets and plastic bags and
+hope the cold temperature doesn't do too much damage.
+
+Plans are to try hacking the PDP11 MSCP disk controller (Viking UDT,
+MSCP on the UNIBUS end and SCSI on the other end) into working with
+TOPS10 or TOPS20, assuming I can get the system into the basement
+where I can work on it.
+
+
+Article: 19865 of alt.sys.pdp10
+X-Abuse-Report: abuse@teranews.com
+Message-ID: <8e2795d07cd7cfac569dd6ec38d58aaf@TeraNews>
+Path: iad-read.news.verio.net!dfw-artgen!dfw-peer!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!newsfeed-east.nntpserver.com!nntpserver.com!TeraNews!not-for-mail
+Date: Tue, 20 May 2003 04:16:13 GMT
+Lines: 22
+From: Michael Ross <abaddon@attglobal.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: System serial numbers?
+References: <3EC82B9B.9040908@bellatlantic.net> <babshe$o6i$1@news3.bu.edu>
+X-Newsreader: Forte Agent 1.91/32.564
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Xref: dfw-artgen alt.sys.pdp10:19865
+
+On 20 May 2003 00:23:10 GMT, budd@csa.bu.edu (Phil Budne) wrote:
+
+>In article <3EC82B9B.9040908@bellatlantic.net>,
+>bob smith  <sfmc68@bellatlantic.net> wrote:
+>>Recently I saw a page that had a list of numbers for DecSystems....
+>>I can't seem to find it.  Can someone tell me where it is please?
+>>Anyone know the serial number of NSS?
+>
+>I have one Alan Martin and I worked on at;
+>
+>ftp://www.ultimate.com/pdp10/bucs20-anon/decapr/
+>
+>None of the files contain the string NSS.
+>
+>If you know of any not in the file, post them here, or reply to me.
+
+FWIW, I finally tracked down the serial number of my 2020: MR04553
+
+Mike
+http://www.corestore.org
+The avalanche has already started
+It is too late for the pebbles to vote...
+
+

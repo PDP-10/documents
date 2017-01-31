@@ -1,0 +1,316 @@
+Article 4482 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!news-out.cwix.com!newsfeed.cwix.com!feed2.news.rcn.net!rcn!news.mindspring.net!not-for-mail
+From: bugs@netcom.com (Mark Hittinger)
+Newsgroups: alt.sys.pdp10
+Subject: weekend fun
+Date: 16 Apr 2001 05:58:34 GMT
+Organization: MindSpring Enterprises
+Lines: 58
+Message-ID: <9be1ma$24c$1@nntp9.atl.mindspring.net>
+NNTP-Posting-Host: c7.ae.21.58
+X-Newsreader: NN version 6.5.0 CURRENT #121
+Xref: nntp1.ba.best.com alt.sys.pdp10:4482
+
+Well I appear to have gotten Decwar v2.2 to sort of run on both simh-10
+and ts10.  The exe file I have was apparently modified and corrupted or
+corrupted and modified :-)  DDT commands are coming back out of long
+unused memory.
+
+There seems to be slight differences in the floating point behaviors of the 
+two emulators.  I'll be trying to narrow down what those differences are
+over the next few weeks (time permitting).  For those familiar with Decwar
+commands the relative coordinates sometimes mess up or don't work at all -
+implying some kind of rounding issue.  Absolute coordinates always work.
+
+Anyway here is a blast from the past:
+
+Star @13-13 novas
+ 
+Star @13-13 makes 0.0 unit hit on Fed Base displaced to 11-15, +70.2%
+ 
+Romulan @19-12 +44.4% makes 448.8 unit torpedo hit on
+Fed Base @11-15, +33.9%
+
+Command: BU R -1 -1
+ 
+Demon builds planet @2-21 into a Emp Base
+ 
+Romulan @15-13 +44.4% makes 323.1 unit phaser hit on
+Fed Base @11-15, +29.3%
+ 
+Romulan @11-14 +25.8% makes 479.1 unit phaser hit on
+Fed Base @11-15, +21.9%
+ 
+Fed Base @11-15, +21.9% makes 366.0 unit phaser hit on Romulan @11-14
+Romulan DESTROYED!!
+ 
+Command: TO 3 11 15
+ 
+Demon @5-16, +100.0% makes 7.8 unit torpedo hit on
+Fed Base @11-15, +60.2%
+ 
+Demon @5-16, +100.0% has torpedo deflected by
+Fed Base @11-15, +58.9%
+ 
+Demon @5-16, +100.0% makes 651.3 unit torpedo hit on
+Fed Base @11-15, +24.2%
+ 
+Command: $
+ 
+Demon @5-16, +100.0% makes 992.2 unit torpedo hit on
+Fed Base @11-15
+Critical hit on starbase, shields down!
+Starbase attempts to re-establish shields using emergency power!
+Base FAILS to re-establish shields........BOOM!!
+Fed Base DESTROYED!!
+
+Later
+
+Mark Hittinger
+Earthlink
+bugs@netcom.com
+
+
+Article 4565 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newshub.sdsu.edu!news-spur1.maxwell.syr.edu!news.maxwell.syr.edu!newsfeed.skycache.com!Cidera!netnews.com!feed2.news.rcn.net!rcn!newsfeed1.earthlink.net!newsfeed2.earthlink.net!newsfeed.earthlink.net!news.mindspring.net!not-for-mail
+From: bugs@netcom.com (Mark Hittinger)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Where's DECWAR?
+Date: 18 Apr 2001 17:55:34 GMT
+Organization: MindSpring Enterprises
+Lines: 46
+Message-ID: <9bkkem$oq9$1@slb6.atl.mindspring.net>
+References: <Pine.LNX.4.21.0104181154340.12664-100000@sakura.lunar-tokyo.net> <tdriog2egtgd78@corp.supernews.com>
+NNTP-Posting-Host: c7.ae.21.58
+X-Newsreader: NN version 6.5.0 CURRENT #121
+Xref: nntp1.ba.best.com alt.sys.pdp10:4565
+
+>Daniel Seagraves <dseagrav@sakura.lunar-tokyo.net> wrote:
+>> Those of you playing DECWAR... Where are you guys getting that from?
+
+Timothy Stark <sword7@grace.speakeasy.net> writes:
+>Me too. I was looking for it but can't find it.
+
+If you look in http://pdp-10.trailing-edge.com/www/lib10/0536/
+
+You will find a DECWAR.EXE/HLP.  Thats the good news, see bad news below.
+
+There are several additional DECUS submissions that are not in the index
+shown on the "www/lib10" index.html page.  If you increment the octal
+number on the end you can find "/0407/" through "/0553".  There is some
+other good stuff in there (thanks team Shoppa!) like pascal compilers,
+basic compilers, teco10, forum, focal, xtec, etc.  Worth just nosing around.
+
+Now bad news:
+
+Evidently the submission came from a site that had a KA-10 box.
+
+Unfortunately this EXE has been "hand patched" by the contributor to replace 
+all the KL-10 instructions with "site defined" MUUO's.  In order to get it to
+run I had to locate all the "site defined" MUUO's, infer what the original
+KL-10 instruction was, and put things back where they should have been.  
+
+Anyway thats how I got mine to work.  I am still chasing a couple of issues.
+
+My current EXE runs mostly ok on simh -10 b6 and the ts10 update from 2 days
+ago that fixes the floating instructions.
+
+Harris may have a 2.0 image and sources (grrr).
+
+I am uneasy about all this hand patching and unpatching - but if no better
+image of the game can be found (and more importantly made available) I will
+post a .tap file with a backup saveset of what I've hacked up.
+
+Eventually I'd like to get all the decus stuff onto a virtual disk and burn
+the virtual disk onto a cd.  It would be nice to have a way of letting a ts10
+virtual disk "attach" onto simh -10 and vice versa.  Then we could just
+"attach" the cdrom file to our simulator of choice.
+
+Later
+
+Mark Hittinger
+Earthlink
+bugs@netcom.com
+
+
+Article 4636 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newshub.sdsu.edu!news-spur1.maxwell.syr.edu!news.maxwell.syr.edu!news.mindspring.net!not-for-mail
+From: bugs@netcom.com (Mark Hittinger)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Where's DECWAR?
+Date: 23 Apr 2001 01:38:09 GMT
+Organization: MindSpring Enterprises
+Lines: 70
+Message-ID: <9c0121$rsi$1@slb6.atl.mindspring.net>
+References: <Pine.LNX.4.21.0104181154340.12664-100000@sakura.lunar-tokyo.net> <tdriog2egtgd78@corp.supernews.com> <9bkkem$oq9$1@slb6.atl.mindspring.net>
+NNTP-Posting-Host: c7.ae.21.58
+X-Newsreader: NN version 6.5.0 CURRENT #121
+Xref: nntp1.ba.best.com alt.sys.pdp10:4636
+
+
+THE WAR IS OVER!!
+[DECWAR high segment removed from swapper]
+The Klingon Empire is VICTORIOUS!!
+The Empire salutes you.  Begin slave operations immediately.
+
+Here is a copy of Decwar v2.2.  Have fun.  Beware that I got a copy of this
+EXE file from the archives on Tim Shoppa's site so I had to do the following
+things to make it work:
+
+  1.  Convert DECWAR.EXE from 32 bit file format to 36 bit file format
+
+  2.  The original submitter evidently had a KA-10 system, and hand
+      patched all the non-KA-10 instructions to be site defined MUUO's.
+      I suppose they hacked their monitor to emulate the non-KA-10 
+      instructions.  I had to locate all the site defined MUUO's in
+      the image, infer what the original non-KA-10 instruction was,
+      and hand patch it back to what I think it might have been
+      originally :-)
+
+  3.  Un-hack ddt trap so we can ddt and run the game 
+
+In order to snarf this version of DECWAR please do the following (I am
+assuming you are on a Unix system!):
+
+% telnet netcom.com 3000 > decwar.tap.uu
+% uudecode decwar.tap.uu
+% gunzip decwar.tap.gz
+
+(I apologize for the rude file transfer technique - it isn't as nice as
+ftpd or httpd but I may not need to worry about globs and eggs or eggs 
+and globs these days - wink wink nudge nudge say no more!)
+
+The file decwar.tap is now a file which you can 'attach' to the tape drive
+of your favorite emulator.  It is written in backup interchange format and
+contains the following files:
+
+	DECWAR.EXE  DECWAR.HLP  DECWAR.GRP  DECWAR.NWS
+
+| .r credir
+| Create directory: GAM:
+| Create directory: ^C
+| .r setsrc
+| *cp [5,30]
+| *^C
+| .r backup
+| /tape mta0
+| /inter
+| /files
+| /prot 155
+| /restore dskb:[5,30]*.*=mta0:*.*
+| /exit
+| .
+
+I advise restoring the files into dskb:[5,30]  (GAM:).  Decwar has code
+to delete itself if it thinks it is not being run from GAM: so if you
+want to copy it someplace else keep another copy!
+
+I am very happy to have this experience back and more pleased to be able
+to share it with all those who have an interest.  If anyone finds a copy
+of the v2.3 EXE file or the DECWAR F4 source code (and more importantly is
+willing to share) please get in touch with me.
+
+Now to attack 7.04
+
+Later!
+
+Mark Hittinger
+Earthlink
+bugs@netcom.com
+
+
+Article 4656 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!howland.erols.net!newsfeed.mindspring.net.MISMATCH!news.mindspring.net!not-for-mail
+From: bugs@netcom.com (Mark Hittinger)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Where's DECWAR?
+Date: 24 Apr 2001 03:41:55 GMT
+Organization: MindSpring Enterprises
+Lines: 33
+Message-ID: <9c2sm3$qt2$1@nntp9.atl.mindspring.net>
+References: <Pine.LNX.4.21.0104181154340.12664-100000@sakura.lunar-tokyo.net> <tdriog2egtgd78@corp.supernews.com>
+     <9bkkem$oq9$1@slb6.atl.mindspring.net> <9c0121$rsi$1@slb6.atl.mindspring.net>
+NNTP-Posting-Host: c7.ae.21.58
+X-Newsreader: NN version 6.5.0 CURRENT #121
+Xref: nntp1.ba.best.com alt.sys.pdp10:4656
+
+bugs@netcom.com (Mark Hittinger) writes:
+>THE WAR IS OVER!!
+>[DECWAR high segment removed from swapper]
+>The Klingon Empire is VICTORIOUS!!
+>The Empire salutes you.  Begin slave operations immediately.
+
+An updated copy of the decwar save-set has been put up - this copy has the
+help command fixed and the exe file has been re-saved as a shared segement.
+
+>% telnet netcom.com 3000 > decwar.tap.uu
+>% uudecode decwar.tap.uu
+>% gunzip decwar.tap.gz
+
+If you've already got the exe you can filddt the fix in like so:
+
+|.r filddt
+|File: gam:decwar.exe/p
+|455044/     dmove 1,0(5)
+|455045/     dmovem 1,3524
+|^Z
+
+I had the sense of the moves wrong.  After patching the exe you may need to:
+
+|.get gam:decwar
+|.ssave gam:decwar
+
+This should do the trick.
+
+Later
+
+Mark Hittinger
+Earthlink
+bugs@netcom.com
+
+
+Article 4630 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc03.blue.aol.com!news.stealth.net!news-east.rr.com!cyclone-west.rr.com!news.rr.com!news-west.rr.com!cabal10.airnews.net!news.airnews.net!cabal2.airnews.net!news-f.iadfw.net!blkbox.com!not-for-mail
+From: Harris Newman <hsnewman@blkbox.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Where's DECWAR?
+Date: 22 Apr 2001 22:40:03 GMT
+Organization: Ye 'Ol Disorganized NNTPCache groupie
+Lines: 23
+Message-ID: <B3D3E53BDD9B365B.D24CD1764B7C186E.A40DCE4707618CB0@lp.airnews.net>
+X-Orig-Message-ID: <987979330.736252@news.blkbox.com>
+References: <Pine.LNX.4.21.0104181154340.12664-100000@sakura.lunar-tokyo.net>
+Abuse-Reports-To: abuse at blkbox.com or abuse at airnews.net to report improper postings
+NNTP-Proxy-Relay: library2.airnews.net
+NNTP-Posting-Time: Sun Apr 22 17:40:03 2001
+NNTP-Posting-Host: !c]J21k-XI<"(_2 (Encoded at Airnews!)
+X-Newsreader: TIN [UNIX 1.3 unoff BETA 970307; i86pc SunOS 5.5.1]
+Cache-Post-Path: news.blkbox.com!hsnewman@blkbox.com
+X-Cache: nntpcache 2.4.0b2 (see http://www.nntpcache.org/)
+Xref: nntp1.ba.best.com alt.sys.pdp10:4630
+
+Daniel,
+I got mine a long time ago, while at college.  My freebsd version is nearing
+completion, and should be done within weeks.  It has a Tops-20 interface (thanks
+to Columbia University's CCMD package), and will support 1024 users (I hope...).
+I am concerned about the overhead of all the computer controled devices, but
+I haven't written those guys yet, and have ideas on how to minimize them (only
+visible items will be "alive".
+The feel of my game is a little different than decwar, since it had a command 
+line input, and mine is parsed like tops-20.  I am thinking of adding a 
+compatibility mode for decwar.  
+
+BTW=> my game is to be called Decwar 2020 (guess why).
+
+More to come...
+-HN
+
+
+Daniel Seagraves <dseagrav@sakura.lunar-tokyo.net> wrote:
+
+> Those of you playing DECWAR... Where are you guys getting that from?
+
+
+
+
+

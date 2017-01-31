@@ -1,0 +1,119 @@
+Article 1503 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!feeder.via.net!newshub2.rdc1.sfba.home.com!news.home.com!news2.rdc2.tx.home.com.POSTED!not-for-mail
+Message-ID: <39E4AB75.F734DE93@home.net>
+From: cks <smithck@home.net>
+X-Mailer: Mozilla 4.7 [en] (X11; U; Linux 2.2.5-16 alpha)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: Floating-point test cases ?
+References: <PAT.00Oct9111452@smithfield.transarc.ibm.com> <8rvgb6$26rn$1@nntp1.ba.best.com> <8s1ld2$lqa$4@bob.news.rcn.net>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 36
+Date: Wed, 11 Oct 2000 18:03:33 GMT
+NNTP-Posting-Host: 24.11.22.12
+X-Complaints-To: abuse@home.net
+X-Trace: news2.rdc2.tx.home.com 971287413 24.11.22.12 (Wed, 11 Oct 2000 11:03:33 PDT)
+NNTP-Posting-Date: Wed, 11 Oct 2000 11:03:33 PDT
+Organization: @Home Network
+Xref: nntp1.ba.best.com alt.sys.pdp10:1503
+
+jmfbahciv@aol.com wrote:
+
+> What did happen to Mary's work?  Did Digital shitcan that, too?
+
+No indeed, Alpha's math library is just about the best around.  I haven't
+studied it
+in detail but it might be *the* best.  (IBM is awfully good at it too.)
+
+There was a series of articles in Transactions on Mathematical Software that
+showed
+clear signs of somebody disassembling the Vax codes and figuring out the cool
+tricks.
+I think his funding ran out before he got to the good part though.  (That being
+pow().)
+
+On the original topic, I had some tests for gfloat but they're lost.  But
+there's
+nothing surprising about PDP10 floating point semantics.  Rounds away from zero,
+and if either operand is negative take the absolute value and later attach the
+result sign.  (It need not be computed that way but that gives the right
+answer.)
+Round before checking for overflow/underflow, of course.  You can figure out
+unnormalized operands from knowing what adding 233000000000 did (Fortran AINT or
+ANINT, for FAD and FADR respectively).  Unnormalized operands to mul and div
+were
+possibly never used, and the various processors might have been different for
+all
+anybody would know.  I speculate -- very hazy -- the result was the same as 
+normalizing the operands first.  An unnormalized denominator in div was allowed
+to
+or required to fault.
+
+gfloat didn't have UFA et al -- getting those right without a real 10 would
+indeed be tough.  And 400000000000 is not a useful f.p. number, but I forget
+what
+the hardware did with it.
+
+
+Article 1538 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntp.primenet.com!nntp.gblx.net!newsfeed.direct.ca!look.ca!newshub2.rdc1.sfba.home.com!news.home.com!news2.rdc2.tx.home.com.POSTED!not-for-mail
+Message-ID: <39E88FE9.34C29B86@home.net>
+From: cks <smithck@home.net>
+X-Mailer: Mozilla 4.7 [en] (X11; U; Linux 2.2.5-16 alpha)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: Floating-point test cases ?
+References: <PAT.00Oct9111452@smithfield.transarc.ibm.com> <8rvgb6$26rn$1@nntp1.ba.best.com> <8s1ld2$lqa$4@bob.news.rcn.net> <39E4AB75.F734DE93@home.net> <8s9pad$n08$11@bob.news.rcn.net>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 37
+Date: Sat, 14 Oct 2000 16:55:06 GMT
+NNTP-Posting-Host: 24.11.22.12
+X-Complaints-To: abuse@home.net
+X-Trace: news2.rdc2.tx.home.com 971542506 24.11.22.12 (Sat, 14 Oct 2000 09:55:06 PDT)
+NNTP-Posting-Date: Sat, 14 Oct 2000 09:55:06 PDT
+Organization: @Home Network
+Xref: nntp1.ba.best.com alt.sys.pdp10:1538
+
+jmfbahciv@aol.com wrote:
+
+> Mary did an awful lot of work to make sure we knew how to
+> add :-).
+
+That she did.  The basic trick is to end with A+(B+C)
+where A is exact and B+C is much smaller.  Usually A
+and C come from a table and B is the computed approximation.
+B+C should be added with FAD, and A should be added in
+with FADR.  I think Mary may be why IEEE, and Alpha, 
+can do this -- she was irritated that Vax could not.
+
+The Vax math lib is the real Mary Payne one.  The -10
+one was written by IMSL, under the guidance of their
+consultant W. Cody.  The book Cody & Waite was the
+result of the 10 math lib rewrite.  Well, a corollary,
+I don't know which was primary, but they got a book
+out of it.
+
+Cody's work was not always up to Mary's standard --
+not many people's was -- and there were some ideas
+of hers that they wouldn't adopt.  My favorite is
+the Vax lib's pi table -- it stores 1/pi to a monstrous
+number of bits, so if you want the sine of 1.234q+1234
+it can subtract off exactly some enormous multiple of pi
+and tell you.
+
+> What's a pow?
+
+power function, y**x.  Very hard to get both correct and fast.
+
+> Are you my Chris Smith?
+
+Yep -- hi Barb -- normally I post as Myself but not to
+alt groups, my normal news setup doesn't.  Hence this
+foolish what-you-see-is-not-what-you-think newsreader
+etc.
+
+

@@ -1,0 +1,40 @@
+Article: 21546 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!sjc-peer.news.verio.net!news.verio.net!image.surnet.ru!news1.spb.su!newsfeed1.funet.fi!newsfeeds.funet.fi!uio.no!193.75.75.20.MISMATCH!news.eunet.no!fu-berlin.de!uni-berlin.de!d015156.adsl.hansenet.DE!not-for-mail
+From: Rainer Joswig <joswig@lispmachine.de>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Why don't people like lisp?
+Date: Sat, 18 Oct 2003 10:34:08 +0200
+Lines: 23
+Message-ID: <joswig-0AADAF.10340818102003@news.fu-berlin.de>
+References: <BYIFD1LVHXB1ALLZLRH3P2BZOIIFHWLSJ4B4BRP3@ziplip.com> <ofu16cme1e.fsf@situla.ted.dk.eu.ericsson.se> <voobanm4rs7p68@corp.supernews.com> <bmht2q$ohi$1@newsreader2.netcologne.de> <DLydnTdiX___iw2iRVn-tQ@comcast.com> <c366f098.0310171456.3e391e7b@posting.google.com> <85smlrc7l9.fsf@junk.nocrew.org>
+NNTP-Posting-Host: d015156.adsl.hansenet.de (80.171.15.156)
+X-Trace: news.uni-berlin.de 1066466084 27038706 80.171.15.156 (16 [118334])
+X-Orig-Path: joswig
+User-Agent: MT-NewsWatcher/3.3b1 (PPC Mac OS X)
+Xref: dfw-artgen alt.sys.pdp10:21546
+
+In article <85smlrc7l9.fsf@junk.nocrew.org>,
+ Lars Brinkhoff <lars.spam@nocrew.org> wrote:
+
+> joswig@corporate-world.lisp.de (Rainer Joswig) writes:
+> > The animations for the ground breaking TRON movie were done on Lisp
+> > machines.
+> 
+> Many sources say TRON were made using the one and only Foonly F1,
+> which was a PDP-10 clone.
+
+Right, I must have been dreaming a bit.
+
+The TRON parts that Triple-I did (like the solar sailer)
+were done in Lisp (they used the Foonly).
+**Later** some of that code moved to the Lisp machine, it seems.
+To the Symbolics S-Products.
+
+http://www.tron-sector.com/articles/article.aspx?ID=30
+http://www.tron-movie.com/production/Solar%20Sailer/
+http://www.tron-movie.com/production/MCP/index.htm
+http://www.tron-movie.com/production/Sark's%20Carrier/index.htm
+
+http://www.red3d.com/cwr/papers/1982/ASAS82.html
+
+

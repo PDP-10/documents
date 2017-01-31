@@ -1,0 +1,622 @@
+Article 2314 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!wn4feed!worldnet.att.net!198.6.0.213!uunet!ash.uu.net!dca.uu.net!news.uiowa.edu!not-for-mail
+From: jones@cs.uiowa.edu (Douglas W. Jones,201H MLH,3193350740,3193382879)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: Remember FOCAL?
+Date: 10 Dec 2000 16:06:57 GMT
+Organization: The University of Iowa
+Lines: 23
+Message-ID: <9109n1$k7a$1@flood.weeg.uiowa.edu>
+References: <90vl7m$309p$1@nntp1.ba.best.com>
+NNTP-Posting-Host: pyrite.cs.uiowa.edu
+X-Trace: flood.weeg.uiowa.edu 976464417 20714 128.255.28.3 (10 Dec 2000 16:06:57 GMT)
+X-Complaints-To: usenet@news.uiowa.edu
+NNTP-Posting-Date: 10 Dec 2000 16:06:57 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2314 alt.folklore.computers:12462
+
+From article <90vl7m$309p$1@nntp1.ba.best.com>,
+by inwap@best.com (Joe Smith):
+> 
+> One of them was to implent FOCAL on it, so that it could run the
+> small library of FOCAL-10 programs (and a much larger library of
+> FOCAL-8 programs).  Dawn Banks did a port to the Z80 processor and I
+> hacked it to run under CP/M.
+
+I have, on line, an HTML version of what appears to be DEC's original
+promotional brochure for Focal, see
+
+   http://www.cs.uiowa.edu/~jones/pdp8/focal/
+
+I also have a core image of FOCAL 1969 for the PDP-8, available in
+
+   ftp://ftp.cs.uiowa.edu/pub/jones/pdp8/coreimages.txt.Z
+
+(this is a compressed UNIX shell archive, and you'll need the PDP-8
+emulator in ftp://ftp.cs.uiowa.edu/pub/jones/pdp8/emulator.txt.Z
+to run it, plus a UNIX or Linux system with X-Windows.)
+
+				Doug Jones
+				jones@cs.uiowa.edu
+
+
+Article 2328 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news2.best.com!news-hog.berkeley.edu!ucberkeley!newsfeed.stanford.edu!paloalto-snf1.gtei.net!news.gtei.net!forum.apple.com!news.apple.com!haxrus.apple.com!user
+From: aek@spies.com (Al Kossow)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: Remember FOCAL?
+Date: Sun, 10 Dec 2000 12:23:27 -0800
+Organization: Apple Computer, Inc.
+Lines: 19
+Message-ID: <aek-1012001223270001@haxrus.apple.com>
+References: <90vl7m$309p$1@nntp1.ba.best.com> <9109n1$k7a$1@flood.weeg.uiowa.edu>
+NNTP-Posting-Host: haxrus.apple.com
+X-Trace: news.apple.com 976479807 10576 17.205.21.66 (10 Dec 2000 20:23:27 GMT)
+X-Complaints-To: usenet@news.apple.com
+NNTP-Posting-Date: 10 Dec 2000 20:23:27 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2328 alt.folklore.computers:12473
+
+In article <9109n1$k7a$1@flood.weeg.uiowa.edu>, jones@cs.uiowa.edu
+(Douglas W. Jones,201H MLH,3193350740,3193382879) wrote:
+
+> I also have a core image of FOCAL 1969 for the PDP-8, available in
+> 
+>    ftp://ftp.cs.uiowa.edu/pub/jones/pdp8/coreimages.txt.Z
+> 
+
+FOCAL for the PDP-9 / 15 can be found here:
+
+http://www.spies.com/~aek/18bit/DECbin/
+
+PDP-9 FOCAL source listing:
+
+http://www.spies.com/~aek/pdf/dec/pdp9/DEC-9U-SR3A-LA_FOCAL.pdf
+
+-- 
+The eBay Curse:
+"May you find everything you're looking for.."
+
+
+Article 2307 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!news.sgi.com!fido.engr.sgi.com!rigden.engr.sgi.com!rpw3
+From: rpw3@rigden.engr.sgi.com (Rob Warnock)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Help! TECO problems
+Date: 10 Dec 2000 11:36:35 GMT
+Organization: Silicon Graphics Inc., Mountain View, CA
+Lines: 46
+Message-ID: <90vps3$93uon$1@fido.engr.sgi.com>
+References: <YbyV5.27109$IP1.827764@news1.giganews.com> <2wBV5.28145$%j3.270300@news6.giganews.com> <rtCV5.28162$%j3.271001@news6.giganews.com> <3a32c59b.7800173@news.m.iinet.net.au>
+NNTP-Posting-Host: rigden.engr.sgi.com
+X-Trace: fido.engr.sgi.com 976448195 9566999 163.154.34.115 (10 Dec 2000 11:36:35 GMT)
+X-Complaints-To: news@fido.engr.sgi.com
+NNTP-Posting-Date: 10 Dec 2000 11:36:35 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2307
+
+Rolie Baldock <berd_kalamunda@techemail.com> wrote:
++---------------
+| I see nobody has mentioned --- DISTEC---- by AEJA at UWA in Perth West
+| Aust. You Yanks don't have a monopoly where brains are concerned.
+| And have you ever heard of FOCAL-10 by IGP?
++---------------
+
+No, but I wrote a FOCAL-10 in early 1971, a transliteration of
+Doug Wrege's FOCAL/F for the PDP-8, plus some *major* speed hacks --
+it ran ~25 *times* faster on a KA-10 than on a PDP-8/e. [It used
+what we'd call today a generalization of "ctype.h", using "bit strips"
+accessed with PDP-10 byte pointers to do the FOCAL internal "SORTC"
+and "SORTJ" primitives in two instructions[*], regardless of the
+length of the dispatch lists. (The PDP-8 code used a linear search.)]
+
+It was done while I was working at Emory U., moonlighting for
+a guy at George Washington U. (at the urging of DCA's John
+Alderman [well, it wasn't DCA yet, it was ADR/CSD/ATL]).
+My first "open source" contract!! The GWU guy paid me $1000
+*and* let me keep ownership & redistribute to others...
+
++---------------
+| Just might have a source of both.
++---------------
+
+I *might* have a listing of my FOCAL-10 buried somewhere in
+the garage, but don't hold me to it.
+
+
+-Rob
+
+[*] O.k., I won't tease: The two instructions for the SORTJ case were:
+
+	LDB	T0,some_byte_pointer_addr
+	SOJGE	T0,@dispatch_table_addr-1(T0)
+	...here if char in "C" is not in the chosen set of characters...
+
+where the byte pointer being referenced was indexed on register "C"
+[the current lexical character].
+
+-----
+Rob Warnock, 31-2-510		rpw3@sgi.com
+Network Engineering		http://reality.sgi.com/rpw3/
+Silicon Graphics, Inc.		Phone: 650-933-1673
+1600 Amphitheatre Pkwy.		PP-ASEL-IA
+Mountain View, CA  94043
+
+
+Article 3076 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!feed.textport.net!hammer.uoregon.edu!enews.sgi.com!fido.engr.sgi.com!rigden.engr.sgi.com!rpw3
+From: rpw3@rigden.engr.sgi.com (Rob Warnock)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Emulators and microcoded machines
+Date: 7 Jan 2001 05:32:17 GMT
+Organization: Silicon Graphics Inc., Mountain View, CA
+Lines: 132
+Message-ID: <938v11$m89cq$1@fido.engr.sgi.com>
+References: <92t1s0$37b$1@newsmaster.cc.columbia.edu> <92tf3l$cf9$1@newsmaster.cc.columbia.edu> <3A52A7FB.8F5CCF03@bartek.dontspamme.net> <92vkl6$jqt@watsun.cc.columbia.edu>
+NNTP-Posting-Host: rigden.engr.sgi.com
+X-Trace: fido.engr.sgi.com 978845537 23340442 163.154.34.115 (7 Jan 2001 05:32:17 GMT)
+X-Complaints-To: news@fido.engr.sgi.com
+NNTP-Posting-Date: 7 Jan 2001 05:32:17 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:3076
+
+Frank da Cruz <fdc@watsun.cc.columbia.edu> wrote:
++---------------
+| : >   ftp://kermit.columbia.edu/kermit/e/dec20.txt
+...
+| Not content to leave well enough alone, I added a few notes, plus a
+| glossary (e.g. how many younger readers would have the faintest idea
+| what a DN20 is?) and links section at the end.  Comments / corrections /
+| additions welcome.
++---------------
+
+Well, one thing popped out at me in your MACRO-10 in-line literals example:
+
+        CAIL B, FOO                     ; IF (b < foo) THEN
+         PUSHJ P, [                     ;   BEGIN
+                HRROI A, [ASCIZ/.LT./]  ;     message = ".LT.";
+                SETOM LESS              ;     less = -1;
+                AOS (P)                 ;   END (skip around ELSE-part)
+                POPJ P, ]               ; ELSE
+         PUSHJ P, [                     ;   BEGIN
+                HRROI A, [ASCIZ/.GE./]  ;     message = ".GE.";
+                SETZM LESS              ;     less = 0;
+                POPJ P, ]               ;   END;
+        PSOUT                           ; PRINT message;
+
+As I recall, within such a literal "." was still the instruction that was
+referencing the literal, so rather than use time-expensive PUSHJ/POPJ pairs
+in such simple cases, usually this would be written like so:
+
+        CAIL B, FOO                     ; IF (b < foo) THEN
+         JRST [ HRROI A, [ASCIZ/.LT./]  ;     message = ".LT.";
+                SETOM LESS              ;     less = -1;
+                JRST .+2]               ; ELSE
+         JRST [ HRROI A, [ASCIZ/.GE./]  ;     message = ".GE.";
+                SETZM LESS              ;     less = 0;
+                JRST .+1]               ; ENDIF
+        PSOUT                           ; PRINT message;
+
+or even the uglier and less-well-structured (and less-maintainable):
+
+        CAIL B, FOO
+         JRST [ HRROI A, [ASCIZ/.LT./]
+                SETOM LESS
+                JRST .+3]
+        HRROI A, [ASCIZ/.GE./]
+        SETZM LESS
+        PSOUT                           ; PRINT message;
+
+However, the power of MACRO-10's *macros* was really where the magic lay!!
+I found it relatively straightforward to write a set of simple Algol-like
+(today we'd say "C-like", I guess) block-structuring macros to provide
+IF/THEN/ELSE/FI, CASE/ESAC, WHILE/DO, BEGIN/END, etc., and LOCAL, which
+allowed stack-allocated variables (including arrays) inside a BEGIN.
+If you said:
+
+        BEGIN			; allocate a stack frame
+        LOCAL   A,B,<C,10>	; allocate variables within that frame
+        ...
+        MOVE    T0,A
+        MOVEM   T0,C<5>         ; or maybe "c+5", I forget
+        ...
+        END
+
+it defined "A", "B", and "C" as macros which were offsets indexed
+on "S" (the stack pointer), and the whole thing expanding into:
+
+        SUB     S,[XWD 14,14]
+        ...
+        MOVE    T0,0(S)
+        MOVEM   T0,7(S)
+        ...
+        ADD     S,[XWD 14,14]
+
+If pressed, I'll repeat the story of the incredibly complex byte-strip/
+character-table-building macros I wrote for my FOCAL-10 (which was a
+nearly-direct transliteration of Doug Wrege's FOCAL/F for the PDP-8)
+which let you do FOCAL's "SORTC" and "SORTJ" lexical scanner/dispatching
+functions in only *two* PDP-10 instructions. Oh, what the hell, here's
+the short version:
+
+Suppose you had a vector of routine addresses (a dispatch table) that you
+wanted to branch through based on which "equivalence class" a character
+is in. You could define the equivalence classes with the C.LST macro [once],
+then whenever you needed to branch based on the character currently in
+register "C", you did a "SORTJ":
+
+lex_classes:  c.lst  <<(,[,{,"<">, <">",},],)>, <+,-,*,/>,
+		      <<a,z>,<A,Z>,_,$,%>, <<0,9>>>
+lex_jumps:    word   left_brackets
+	      word   right_brackets
+	      word   operators
+	      word   identifiers
+	      word   numbers
+	      ...
+	      ; next char is in "c", classify & dispatch
+	      sortj lex_classes, lex_jumps
+	       [...here if C in none of the classes in "lex_classes"...]
+
+The SORTJ macro expanded into only two instructions:
+
+	      ldb    t0, lex_classes
+	      sojge  t0, @lex_jumps(t0)
+
+The SORTC macro (FOCAL's other major parsing function) also expanded into
+only two instructions, but since it was only concerned with testing eqv.
+class membership and fetching the index, it didn't need a jump table -- the
+SOJGE just jumped to ".+2" on success, leaving the (adjusted) index in T0.
+[Or it may have used an SOJL, I forget. There's something tickling my memory
+about SORTC being "backwards" in its skip behavior...]
+
+The C.LST macro expanded into only one word, a byte-pointer, but in the
+process of doing that it also defined just the right assembly-time symbols
+so that just the right bits of the right character table [there could be
+more than one, the macros automatically allocated a new one if you ran
+out of bits in the current one] had the equivalence class index [with "0"
+meaning "not in any class"] for each character in the right "byte strip".
+[A "C.TAB" macro at the end of the program planted all of the merged
+character tables at once.]
+
+Since FOCAL is basically just a character-at-a-time interpreter, using
+these techniques I was able to get a factor of *25* speedup in runtime
+performance of the FOCAL interpreter on the KA-10, compared to FOCAL-8F
+on a PDP-8/e [even though for low-level character/small-integer bashing
+they were usually fairly close to the same speed!!].
+
+
+-Rob
+
+-----
+Rob Warnock, 31-2-510		rpw3@sgi.com
+SGI Network Engineering		http://reality.sgi.com/rpw3/
+1600 Amphitheatre Pkwy.		Phone: 650-933-1673
+Mountain View, CA  94043	PP-ASEL-IA
+
+
+Article 3081 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!news-out.cwix.com!newsfeed.cwix.com!sjc-peer.news.verio.net!phl-feed.news.verio.net!news.verio.net!newsmaster.cc.columbia.edu!watsun.cc.columbia.edu!fdc
+From: fdc@watsun.cc.columbia.edu (Frank da Cruz)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Emulators and microcoded machines
+Date: 8 Jan 2001 00:34:14 GMT
+Organization: Columbia University
+Lines: 18
+Message-ID: <93b1u6$i5o$1@newsmaster.cc.columbia.edu>
+References: <92t1s0$37b$1@newsmaster.cc.columbia.edu> <92vkl6$jqt@watsun.cc.columbia.edu> <938v11$m89cq$1@fido.engr.sgi.com> <3a58f66a.6385031@news.m.iinet.net.au>
+NNTP-Posting-Host: watsun.cc.columbia.edu
+X-Trace: newsmaster.cc.columbia.edu 978914054 18616 128.59.39.2 (8 Jan 2001 00:34:14 GMT)
+X-Complaints-To: postmaster@columbia.edu
+NNTP-Posting-Date: 8 Jan 2001 00:34:14 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:3081
+
+In article <3a58f66a.6385031@news.m.iinet.net.au>,
+Rolie Baldock <berd_kalamunda@techemail.com> wrote:
+: It is a pity that My friend Ian Pugsley did not write a compiler for
+: FOCAL-10. I told him it probably would have become a much used high
+: level language had he done that. 
+: 
+My favorite story about FOCAL is based on the fact that I had no idea
+what it was at the time.  One day in the late 1970s when our first DEC-20
+had become horribly overloaded (similar to LOTS at Stanford), disk space
+was at a real premium -- every little bit counted.  So one day I went on
+a rampage deleting stuff that I thought nobody cared about.  I came across
+FOCAL.EXE (or FOCAL.SAV or whatever it was) and tried running to see what
+it was.  As I recall, I got the * prompt or somesuch, but there was no
+clue about what to do next, no online help, etc, so I deleted it.
+
+FIVE SECONDS LATER my phone started ringing...
+
+- Frank
+
+
+Article 3112 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!newspush.london1.eu.level3.net!level3eu!skynet.be!newsfeed.iinet.net.au!news.iinet.net.au!not-for-mail
+From: berd_kalamunda@techemail.com (Rolie Baldock)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Emulators and microcoded machines
+Date: Mon, 08 Jan 2001 22:24:00 GMT
+Message-ID: <3a5a3c74.4962968@news.m.iinet.net.au>
+References: <92t1s0$37b$1@newsmaster.cc.columbia.edu> <92vkl6$jqt@watsun.cc.columbia.edu> <938v11$m89cq$1@fido.engr.sgi.com> <3a58f66a.6385031@news.m.iinet.net.au> <93b1u6$i5o$1@newsmaster.cc.columbia.edu>
+X-Newsreader: Forte Free Agent 1.11/16.235
+Lines: 32
+NNTP-Posting-Host: 203.59.69.152
+X-Trace: news.iinet.net.au 978992488 14562 emut7d@203.59.69.152
+Xref: nntp1.ba.best.com alt.sys.pdp10:3112
+
+Hello Frank,
+
+I have a source listing for FOCAL-10 and a heap of programming manuals
+for FOCAL. I think I even have a listing of the FOCAL-10  DOC file.
+Hey I just discovered I have a machine readable copy of the FOCAL-10
+source code on my hard disk. How about that now. I also have a copy of
+TECO and MACROH and MACROL and a few other bits and pieces like DSKDDT
+....etc...etc.
+
+On 8 Jan 2001 00:34:14 GMT, fdc@watsun.cc.columbia.edu (Frank da Cruz)
+wrote:
+
+>In article <3a58f66a.6385031@news.m.iinet.net.au>,
+>Rolie Baldock <berd_kalamunda@techemail.com> wrote:
+>: It is a pity that My friend Ian Pugsley did not write a compiler for
+>: FOCAL-10. I told him it probably would have become a much used high
+>: level language had he done that. 
+>: 
+>My favorite story about FOCAL is based on the fact that I had no idea
+>what it was at the time.  One day in the late 1970s when our first DEC-20
+>had become horribly overloaded (similar to LOTS at Stanford), disk space
+>was at a real premium -- every little bit counted.  So one day I went on
+>a rampage deleting stuff that I thought nobody cared about.  I came across
+>FOCAL.EXE (or FOCAL.SAV or whatever it was) and tried running to see what
+>it was.  As I recall, I got the * prompt or somesuch, but there was no
+>clue about what to do next, no online help, etc, so I deleted it.
+>
+>FIVE SECONDS LATER my phone started ringing...
+>
+>- Frank
+
+--Rolie Baldock.  email:  <berd_kalamunda@techemail.com>
+
+
+Article: 20213 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!dfw-peer!news.verio.net!crtntx1-snh1.gtei.net!news.gtei.net!newsfeed1.easynews.com!easynews.com!easynews!newsfeed1.earthlink.net!newsfeed.earthlink.net!sjc70.webusenet.com!news.webusenet.com!sn-xit-02!sn-xit-06!sn-post-01!supernews.com!corp.supernews.com!not-for-mail
+From: TLH 858 <ß@Ç.ÑÜ>
+Newsgroups: alt.sys.pdp10,alt.sys.pdp8,alt.sys.pdp11
+Subject: Re: FOCAL Source Code
+Date: Sun, 01 Jun 2003 11:51:11 -0400
+Organization: Improving.
+Message-ID: <868kdvk8sg52m29bi0mfqosmcjndfj35r0@4ax.com>
+Reply-To: The only one interested, yourself.
+References: <3EDA1AAA.157D4721@ev1.net>
+X-Newsreader: Forte Agent 1.93/32.576 English (American)
+X-No-Archive: yes
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Complaints-To: abuse@supernews.com
+Lines: 16
+Xref: dfw-artgen alt.sys.pdp10:20213 alt.sys.pdp8:5969 alt.sys.pdp11:7818
+
+Charles Richmond seems to have said:
+
+>Where can I download some programs written in FOCAL???
+>I have used several search engines, and all I have
+>found is source code for some FOCAL interpreters. I
+>want some FOCAL code that I can run on an interpreter...
+>
+>TIA.
+
+p.s.  Did you find http://www.cs.uiowa.edu/~jones/pdp8/focal/ which has some
+samples plus an entire explanation of the language?
+-------------
+>Earthquakes can be generated either by a laser beam directed in a
+>fault, till it quakes, or through underground explosions, or through
+>high amounts of electricity jerked in a fault.
+Barbara Schwarz - 18/05/03
+
+
+Article: 20214 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!dfw-peer!news.verio.net!newsfeed!news.tele.dk!news.tele.dk!small.news.tele.dk!newsfeed00.sul.t-online.de!newsfeed01.sul.t-online.de!t-online.de!lnewspeer00.lnd.ops.eu.uu.net!lnewspost00.lnd.ops.eu.uu.net!emea.uu.net!not-for-mail
+From: stanb45@dial.pipex.com (Stan Barr)
+Newsgroups:  alt.sys.pdp10,alt.sys.pdp8,alt.sys.pdp11
+Subject: Re: FOCAL Source Code
+References:  <3EDA1AAA.157D4721@ev1.net>
+Organization: Metropolis Grafix
+Reply-To: stanb45@dial.pipex.com
+Message-ID: <slrnbdkf3o.r7t.stanb45@citadel.metropolis.local>
+X-Newsreader: slrn (0.9.5.2 UNIX)
+Date: 01 Jun 2003 18:03:26 GMT
+Lines: 18
+NNTP-Posting-Host: 62-241-190-52.dsl.pipex.com
+X-Trace: 1054490606 news.dial.pipex.com 963 62.241.190.52
+X-Complaints-To: abuse@uk.uu.net
+Xref: dfw-artgen alt.sys.pdp10:20214 alt.sys.pdp8:5970 alt.sys.pdp11:7819
+
+On Sun, 01 Jun 2003 13:27:13 GMT, Charles Richmond <richmond@ev1.net> wrote:
+>Where can I download some programs written in FOCAL???
+>I have used several search engines, and all I have
+>found is source code for some FOCAL interpreters. I
+>want some FOCAL code that I can run on an interpreter...
+
+There's a Towers of Hanoi program in FOCAL-8 included with
+Bernhard Baehr's PDP-8 emulator for the Mac.  (Excellent
+emulator BTW)
+
+http://home.t-online.de/~bernhard.baehr/pdp8e/pdp8e.html
+
+-- 
+Cheers,
+Stan Barr     stanb .at. dial .dot. pipex .dot. com
+(Remove any digits from the addresses when mailing me.)
+
+The future was never like this!
+
+
+Article: 20215 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!dfw-peer!news.verio.net!newsfeed!wn13feed!worldnet.att.net!207.217.77.102!newsfeed2.earthlink.net!newsfeed.earthlink.net!stamper.news.pas.earthlink.net!stamper.news.atl.earthlink.net!harp.news.atl.earthlink.net!not-for-mail
+From: djg@pdp8.net (David Gesswein)
+Newsgroups: alt.sys.pdp10,alt.sys.pdp8,alt.sys.pdp11
+Subject: Re: FOCAL Source Code
+Date: 1 Jun 2003 20:35:34 GMT
+Organization: www.pdp8.net
+Lines: 16
+Message-ID: <bbdo2m$i0u$1@slb6.atl.mindspring.net>
+References: <3EDA1AAA.157D4721@ev1.net>
+NNTP-Posting-Host: 42.95.66.5e
+X-Newsreader: trn 4.0-test76 (Apr 2, 2001)
+Originator: djg@pdp8.net (David Gesswein)
+Xref: dfw-artgen alt.sys.pdp10:20215 alt.sys.pdp8:5971 alt.sys.pdp11:7820
+
+In article <3EDA1AAA.157D4721@ev1.net>,
+Charles Richmond  <richmond@ev1.net> wrote:
+>Where can I download some programs written in FOCAL???
+>I have used several search engines, and all I have
+>found is source code for some FOCAL interpreters. I
+>want some FOCAL code that I can run on an interpreter...
+>
+ftp://ftp.pdp8.net/software/games/focal/
+
+More may be in http://www.pdp8.net/images/ but I just noticied it can't 
+decode the focal files correctly.  You can read them using my online 
+PDP-8 or a pdp-8 emulator.
+
+David Gesswein
+http://www.pdp8.net/  -- Run an old computer with blinkenlights
+                         Have any PDP-8 stuff you're willing to part with?
+
+
+Article: 20217 of alt.sys.pdp10
+From: aek@spies.com (Al Kossow)
+Newsgroups: alt.sys.pdp10,alt.sys.pdp8,alt.sys.pdp11
+Subject: Re: FOCAL Source Code
+Date: Sun, 1 Jun 2003 22:48:33 +0000 (UTC)
+Organization: Spies In the Wire
+Lines: 86
+Message-ID: <bbdvs1$k7u$1@spies.com>
+References: <3EDA1AAA.157D4721@ev1.net>
+NNTP-Posting-Host: spies.com
+X-Trace: 1 Jun 2003 15:51:50 -0700, spies.com
+Path: iad-read.news.verio.net!dfw-artgen!dfw-peer!news.verio.net!newsfeed1.easynews.com!easynews.com!easynews!news.he.net!cyclone-sf.pbi.net!64.42.15.2!HSNX.atgi.net!news.kjsl.com!news.spies.com!unknown!not-for-mail
+Xref: dfw-artgen alt.sys.pdp10:20217 alt.sys.pdp8:5973 alt.sys.pdp11:7822
+
+From article <3EDA1AAA.157D4721@ev1.net>, by Charles Richmond <richmond@ev1.net>:
+> Where can I download some programs written in FOCAL???
+> I have used several search engines, and all I have
+> found is source code for some FOCAL interpreters. I
+> want some FOCAL code that I can run on an interpreter...
+> 
+
+C FOCAL15 V6A
+01.03 T " "!!!!!!!!!!!!!!!!!!
+01.04 T "McMaster Space Centre calling lunar module. Our computers here"!
+01.05 T "indicate that your DEC processor has malfunctioned, as was"!
+01.06 T "feared.You must land on your own.You may reset fuel rate to"!
+01.07 T "any value between 8 & 200 lbs/sec. You have an estimated 16000 lbs."!
+01.08 T "of fuel.------------RADAR CHECK FOLLOWS-----------"!!;E
+01.20 T " "!!!!
+01.30 T "COMMENCE LANDING PROCEDURE"!!
+01.35 D 20
+01.40 F J=0,10; T "***   ",10-J,"   ***",#; F P=1,100; S PP=1
+01.50 S L=0;S A=120;S V=1;S M=32500;S N=16500;S G=.001;S Z=1.8
+01.55 S H=20; S KH=0; S SS=0
+01.57 GOTO 10.1
+01.60 T "TIME(SEC) =",%3,L,"      ALT.(Km) =",%7.3,A,"       FUEL(Kg) ="
+01.62 IF ((M-N)-100) 1.63,1.63,1.64
+01.63 D 21
+01.64 T M-N,!
+01.65 T "VEL.(Km/H):     VERT. =",V*3600,"       HOR. = ",H,!!!
+01.68 IF (SS) 1.7,1.7,1.72
+01.70 A "DESCENT > (Deg.) =  "TH,"    FUEL RATE = ",RF,"  TIME  ",T,!
+01.71 GOTO 1.8
+01.72 D 21; T "FUEL OUT "; D 22; F J=1,100; S X=X
+01.80 S QQ=TH*(3.14/180); S K=FSIN(1.57-QQ)*RF
+01.85 S H=FSIN(QQ)*RF*T*1.5+H
+01.87 S KK=Y(KH)
+01.90 S KH=KH+H*T*.01
+01.92 S A=A+(KK-Y(KH))
+01.95 IF (A-.0001) 5.1,5.1,2.7
+02.70 T %7.02;I (K)2.72;I (200-K)2.72;I (K-0)2.71,3.1,3.1
+02.71 I (K-0)2.72,3.1,2.72
+02.72 T "NOT POSSIBLE";F X=1,40;T "."
+02.73 A K;T "     ";A T,!;G 2.7
+03.10 I ((M-N)-.001)4.1;I (T-.001)1.57; S S=T
+03.40 I ((N+S*K)-M)3.5,3.5;S S=(M-N)/K
+03.50 D 9;I (I)7.1,7.1;I (V)3.8,3.8;I (J)8.1
+03.80 D 6;G 3.1
+04.10 D 21; T "FUEL OUT AT  ",L-SS,"    secs.";D 22
+04.40 S A=A-[V*SS+.5*G*SS^2]
+04.50 S L=L+5
+04.60 S SS=SS+5
+04.63 S V=V+G*SS
+04.65 F JJ=1,200; S Y=1
+04.70 GOTO 1.57
+05.10 T "ON THE MOON AT ",L,"  SECS"!;S W=3600*V
+05.20 T "IMPACT VELOCITY OF ",W,"  M.P.H."!,"FUEL LEFT:"
+05.30 T M-N,"  LBS."!;I (-W+1)5.5,5.5
+05.40 T "PERFECT LANDING !-(LUCKY)"!;G 5.9
+05.50 I (-W+10)5.6,5.6;T "GOOD LANDING-(COULD BE BETTER)"!;G 5.9
+05.60 I (-W+25)5.7,5.7;T "CONGRATULATIONS ON A POOR LANDING"!;G 5.9
+05.70 I (-W+60)5.8,5.8;T "CRAFT DAMAGED. GOOD LUCK"!;G 5.9
+05.80 T "SORRY,BUT THERE WERE NO SURVIVORS-YOU BLEW IT!"!"IN "
+05.81 T "FACT YOU BLASTED A NEW LUNAR CRATER ",W*.277777,"  FT. DEEP"!
+05.90 GOTO 1.2
+05.92 A "(ANS. YES OR NO)"P;I (P-0NO)5.94,5.98
+05.94 I (P-0YES)5.92,1.2,5.92
+05.98 T "CONTROL OUT";Q
+06.10 S L=L+S;S T=T-S;S M=M-S*K;S A=I;S V=J
+07.10 I (S-.005)5.1;S S=2*A/(V+FSQT(V*V+2*A*(G-Z*K/M)))
+07.30 D 9;D 6;G 7.1
+08.10 S W=(1-M*G/(Z*K))/2;S S=M*V/(Z*K*(W+FSQT(W*W+V/Z)))+.05;D 9
+08.30 I (I)7.1,7.1;D 6;I (-J)3.1,3.1;I (V)3.1,3.1,8.1
+09.10 S Q=S*K/M;S J=V+G*S+Z*(-Q-Q^2/2-Q^3/3-Q^4/4-Q^5/5)
+09.40 S I=A-G*S*S/2-V*S+Z*S*(Q/2+Q^2/6+Q^3/12+Q^4/20+Q^5/30)
+10.10 S X=FINT(2); S X=FCLS(2)
+10.15 F J=1,10,180-A; T !
+10.20 F J=1,KH; T " "
+10.30 T "X",!,""
+10.50 GOTO 1.6
+20.10 F J=1,80; S Y(J)=FABS(FSIN(J/9)*FRAN(0)*20)
+20.20 S X=FINT(3)
+20.30 F J=1,508; S X=FPLT(Y(J*80/508),4)
+20.40 S X=FCLS(0)
+20.50 RETURN
+21.10 T ""
+21.20 RETURN
+22.10 T ""
+22.20 RETURN
+
+
+
+Article: 20218 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!dfw-peer!news.verio.net!newsfeed!wn13feed!worldnet.att.net!199.45.49.37!cyclone1.gnilink.net!in.100proofnews.com!in.100proofnews.com!news.sprintnetops.net!not-for-mail
+From: "Geoffrey G. Rochat" <777geoff777@777pkworks777.777com777>
+Newsgroups: alt.sys.pdp10
+Subject: Re: FOCAL Source Code
+Date: Sun, 1 Jun 2003 20:43:41 -0400
+Organization: Sprint Advanced Network Services
+Lines: 14
+Message-ID: <bbe6a6$meb$1@news.utelfla.com>
+References: <3EDA1AAA.157D4721@ev1.net> <bbdvs1$k7u$1@spies.com>
+Reply-To: "Geoffrey G. Rochat" <777geoff777@777pkworks777.777com777>
+NNTP-Posting-Host: 208.244.111.152
+X-Trace: news.utelfla.com 1054514311 22987 208.244.111.152 (2 Jun 2003 00:38:31 GMT)
+X-Complaints-To: usenet@news.utelfla.com
+NNTP-Posting-Date: Mon, 2 Jun 2003 00:38:31 +0000 (UTC)
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Newsreader: Microsoft Outlook Express 5.00.2615.200
+X-MIMEOLE: Produced By Microsoft MimeOLE V5.00.2615.200
+Xref: dfw-artgen alt.sys.pdp10:20218
+
+
+Al Kossow <aek@spies.com> wrote in message news:bbdvs1$k7u$1@spies.com...
+> From article <3EDA1AAA.157D4721@ev1.net>, by Charles Richmond
+<richmond@ev1.net>:
+> > Where can I download some programs written in FOCAL???
+
+Glory be, Al, I hate to think of how many hours in high school I sat in
+front of a TTY-33 with that thing running on the BOCES Lyrics PDP-10
+thirty-some miles away...  (Almost as many as I spent in college in front of
+a PDP-7 playing Spacewar.)  IIRC, the trick was something like keeping the
+engine at 0 for 15 periods, then crankin' 'em up full.  Although I suppose
+Neil and Buzz had it worked out a bit more precisely than that.
+
+
+
+

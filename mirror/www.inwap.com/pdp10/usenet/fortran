@@ -1,0 +1,658 @@
+Article 6083 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!netnews.com!feed1.news.rcn.net!rcn!not-for-mail
+From: "Greg Scott" <greg@scott.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: (PDP-10 executable file types) (fortran)
+Date: Tue, 19 Oct 1999 23:02:46 -0400
+Lines: 20
+Message-ID: <7ujbco$rv6$1@autumn.news.rcn.net>
+References: <37ce7e58.491364454@news.mindspring.com> <7r8fs4$a3j@nnrp4.farm.idt.net> <7rdj6n$6g6$1@winter.news.rcn.net> <7rgb0n$4l6@nnrp4.farm.idt.net> <37ded9c2$0$218@nntp1.ba.best.com>
+X-Trace: UutERcHspEWb74EDvxPLfhSs9B0udlu4iUcobGYSxwQ=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 20 Oct 1999 03:02:48 GMT
+X-Newsreader:  Microsoft Outlook Express 5.00.2314.1300
+X-MSMail-Priority:  Normal
+X-Priority:  3
+X-MimeOLE:  Produced By Microsoft MimeOLE V5.00.2314.1300
+Xref: news3.best.com alt.sys.pdp10:6083
+
+
+Joe Smith <inwap@best.com> wrote in message
+news:37ded9c2$0$218@nntp1.ba.best.com...
+> To use FOROTS (the F10 turn-time library), the main program needed to be
+> F10 but it could call F40 subroutines.  Although I think there was a
+> kludge where an F40 main program could call F10 subroutines, but it
+> required special switches to LINK to get FOROTS enabled.
+
+I believe that if you wanted to call nontrivial F10 subs from F40 I believe
+you had to link your program with the non-sharable F10 FOROTS library in
+your low seg.
+
+Mixing F10 and F40 code was always ugly. That's why you did everything you
+could to get that F40 code into F10. The F40 pop code interpreter was very
+slow.
+
+Greg
+
+
+
+
+
+Article 5261 of alt.sys.pdp10:
+From: "Douglas H. Quebbeman" <dougq@iglou.com>
+Newsgroups: alt.sys.pdp10
+References: <da3698f8.0106151825.66e906cf@posting.google.com> <9gfg7r$60i$3@bob.news.rcn.net> <6FKW6.65114$F6.23287@typhoon.aracnet.com> <9ghvv4$3bl$2@bob.news.rcn.net>
+Subject: Re: Installing Fortran
+Date: Sun, 17 Jun 2001 20:47:57 -0400
+Lines: 556
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Newsreader: Microsoft Outlook Express 5.00.2314.1300
+X-MimeOLE: Produced By Microsoft MimeOLE V5.00.2314.1300
+NNTP-Posting-Host: lou-ts9-37.iglou.com
+X-Original-NNTP-Posting-Host: lou-ts9-37.iglou.com
+Message-ID: <3b2d4f25_2@news.iglou.com>
+X-Trace: news.iglou.com 992825125 lou-ts9-37.iglou.com (17 Jun 2001 20:45:25 -0400)
+X-Authenticated-User: dougq
+X-Original-NNTP-Posting-Host: 204.255.236.52
+Path: nntp1.ba.best.com!news2.best.com!feed2.news.rcn.net!rcn!howland.erols.net!netnews.com!newsfeed.skycache.com!Cidera!news-reader.ntrnet.net!uunet!ash.uu.net!news.iglou.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:5261
+
+<jmfbahciv@aol.com> wrote in message news:9ghvv4$3bl$2@bob.news.rcn.net...
+> OK.  Can you download the tape in an _isolated_ area that
+> doesn't have anything to do with the functions of a running
+> system?   If you can, do it.   Then take a directory of that
+> area ...letmesee... using the command:
+
+Forgive me, but it was easier to just copy the tape directory
+that's on the trailing-edge website. Here it is:
+
+10BACKUP v2.4
+
+ Restore of files '*.*' from all save sets
+
+
+ Start of Save Set: FORTRAN-DOCUMENTATION
+ Volume 1 written by System: RN335A DEC10 Development
+ Written on: MTA0   at:  8-JAN-1987 13:43 using: 1600 BPI
+
+ 10DOC     .DIR           1  7-JAN-1987 16:23
+ FORTRA    .DOC          19  7-JAN-1987 16:21
+ FORDDT    .HLP           5  7-JAN-1987 16:18
+ FORTRA    .BWR           2  7-JAN-1987 16:18
+ FORTRA    .HLP           5  7-JAN-1987 16:18
+ MANUAL    .MEM        1940  7-JAN-1987 16:19
+ MODULE    .MEM          45  6-MAY-1985 17:49
+ EXTEND    .MAC          42  7-JAN-1987 16:19
+ EXTEND    .REL           8  7-JAN-1987 16:19
+ EXTEND    .BWR           3  7-JAN-1987 16:19
+ EXTEND    .PCO          37  7-JAN-1987 16:19
+
+ End of Save Set: FORTRAN-DOCUMENTATION
+ Volume 1 written by System: RN335A DEC10 Development
+ Written on: MTA0   at:  8-JAN-1987 13:43 using: 1600 BPI
+
+
+ *** Tape Mark ***
+
+
+ Start of Save Set: FORTRAN-SYSTEM
+ Volume 1 written by System: RN335A DEC10 Development
+ Written on: MTA0   at:  8-JAN-1987 13:43 using: 1600 BPI
+
+ 10SYS     .DIR           2  7-JAN-1987 15:45
+ FORDDT    .REL          79  7-JAN-1987 11:44
+ FORLIB    .REL         689  7-JAN-1987 13:21
+ FORO11    .EXE         156  7-JAN-1987 13:22
+ FORTB     .EXE         328  7-JAN-1987 12:18
+ FORTC     .EXE         168  7-JAN-1987 12:28
+ FORTD     .EXE         292  7-JAN-1987 12:39
+ FORTE     .EXE         288  7-JAN-1987 12:54
+ FORTF     .EXE         260  7-JAN-1987 12:56
+ FORTG     .EXE         196  7-JAN-1987 13:05
+ FORTRA    .EXE         100  7-JAN-1987 11:57
+
+ End of Save Set: FORTRAN-SYSTEM
+ Volume 1 written by System: RN335A DEC10 Development
+ Written on: MTA0   at:  8-JAN-1987 13:43 using: 1600 BPI
+
+
+ *** Tape Mark ***
+
+
+ Start of Save Set: FORTRAN-TEST
+ Volume 1 written by System: RN335A DEC10 Development
+ Written on: MTA0   at:  8-JAN-1987 13:43 using: 1600 BPI
+
+ 10TST     .DIR           3  7-JAN-1987 15:45
+ ARRAYS    .FOR           3 15-MAY-1986 19:05
+ ASCII     .FOR           6 15-MAY-1986 19:05
+ BINARY    .FOR           4 15-MAY-1986 19:05
+ CHARIO    .FOR           5 15-MAY-1986 19:05
+ CHDATA    .FOR           5 15-MAY-1986 19:05
+ CHFUN     .FOR           5 15-MAY-1986 19:05
+ COMEQ     .FOR           4 15-MAY-1986 19:05
+ DO        .FOR           3 15-MAY-1986 19:05
+ DOWHIL    .FOR           4 15-MAY-1986 19:05
+ F10TST    .CTL          13 22-MAY-1986 02:44
+ FORPRM    .UNV          24  7-JAN-1987 13:12
+ GOTO      .FOR           3 15-MAY-1986 19:05
+ IF        .FOR           4 15-MAY-1986 19:05
+ IFTHEL    .FOR           3 15-MAY-1986 19:05
+ IMAGE     .FOR           3 15-MAY-1986 19:05
+ INTFIL    .FOR           6 15-MAY-1986 19:06
+ IOEXPR    .FOR           4 15-MAY-1986 19:06
+ LIB       .FOR           5 15-MAY-1986 19:06
+ LONG      .FOR           6 21-MAY-1986 14:53
+ NAMLST    .DAT           1 15-JUL-1982 14:23
+ NAMLST    .FOR           5 15-MAY-1986 19:06
+ OVL0      .FOR           3 15-MAY-1986 19:06
+ OVL1      .FOR           2 15-MAY-1986 19:06
+ OVL2      .FOR           3 15-MAY-1986 19:06
+ OVL3      .FOR           2 15-MAY-1986 19:06
+ OVL4      .FOR           2 15-MAY-1986 19:06
+ OVL5      .FOR           2 15-MAY-1986 19:06
+ OVL6      .FOR           2 15-MAY-1986 19:06
+ RANDOM    .FOR           5 15-MAY-1986 19:06
+ SUBFUN    .FOR           4 15-MAY-1986 19:06
+ SUBSTR    .FOR           3 15-MAY-1986 19:06
+ T4DDT     .FOR           2 15-MAY-1986 19:06
+ V7DO      .FOR           3 15-MAY-1986 19:06
+ V7LIB     .FOR           5 15-MAY-1986 19:06
+
+ End of Save Set: FORTRAN-TEST
+ Volume 1 written by System: RN335A DEC10 Development
+ Written on: MTA0   at:  8-JAN-1987 13:44 using: 1600 BPI
+
+
+ *** Tape Mark ***
+
+
+ Start of Save Set: FORTRAN-OTS-DEBUGGER
+ Volume 1 written by System: RN335A DEC10 Development
+ Written on: MTA0   at:  8-JAN-1987 13:44 using: 1600 BPI
+
+ 10OTD     .DIR           7  7-JAN-1987 15:45
+ B10FDT    .CTL           5 29-DEC-1986 09:18
+ B10FRS    .CTL          13 29-DEC-1986 10:41
+ F10LIB    .CCL           3 31-DEC-1986 09:43
+ F10OTS    .CCL           3 19-DEC-1986 14:42
+ F1DOTS    .CCL           3 19-DEC-1986 12:05
+ FDBM5     .CCL           2 19-DEC-1986 12:05
+ FDBM5     .CTL           3 29-DEC-1986 09:19
+ FDBM5     .FOR           2 19-DEC-1986 12:59
+ DBCS1F    .CMD           2 15-MAY-1986 20:43
+ F10REL    .MAC           2 19-DEC-1986 13:55
+ FDDT      .MAC           1  7-JAN-1987 11:44
+ FORBOT    .MAC           4 19-DEC-1986 13:55
+ FORBOT    .REL           2  7-JAN-1987 13:12
+ FORCHR    .MAC         126 19-DEC-1986 13:55
+ FORCHR    .REL          18  7-JAN-1987 13:13
+ FORCNV    .MAC          82 19-DEC-1986 13:55
+ FORCNV    .REL          14  7-JAN-1987 13:12
+ FORCOM    .MAC         460 19-DEC-1986 13:55
+ FORCOM    .REL          69  7-JAN-1987 13:12
+ FORDBM    .MAC           9 19-DEC-1986 13:56
+ FORDBM    .REL           3  7-JAN-1987 13:13
+ FORDST    .MAC           5 19-DEC-1986 13:57
+ FORDST    .REL           1  7-JAN-1987 13:13
+ FORDDT    .MAC         439 19-DEC-1986 13:56
+ FORDUM    .MAC           2 19-DEC-1986 13:57
+ FORDUM    .REL           1  7-JAN-1987 13:13
+ FORERR    .MAC         120 19-DEC-1986 13:57
+ FORERR    .REL          22  7-JAN-1987 13:13
+ FORFMT    .MAC          94 19-DEC-1986 13:57
+ FORFMT    .REL          17  7-JAN-1987 13:14
+ FORHST    .MAC         222 19-DEC-1986 13:57
+ FORHST    .REL           1  7-JAN-1987 13:14
+ FORINI    .MAC          40 19-DEC-1986 13:58
+ FORINI    .REL           6  7-JAN-1987 13:14
+ FORIO     .MAC         316 19-DEC-1986 13:58
+ FORIO     .REL          48  7-JAN-1987 13:14
+ FORMEM    .MAC         128 19-DEC-1986 13:58
+ FORMEM    .REL          15  7-JAN-1987 13:15
+ FORMSC    .MAC         223 19-DEC-1986 13:59
+ FORMSC    .REL          49  7-JAN-1987 13:15
+ FORMSG    .MAC          27 19-DEC-1986 13:59
+ FORMSG    .REL          20  7-JAN-1987 13:15
+ FORNML    .MAC         132 19-DEC-1986 13:59
+ FORNML    .REL          20  7-JAN-1987 13:15
+ FORO11    .MAP           1  7-JAN-1987 13:21
+ FOROP     .MAC          24 19-DEC-1986 13:59
+ FOROP     .REL           4  7-JAN-1987 13:16
+ FOROPN    .MAC         440 19-DEC-1986 14:00
+ FOROPN    .REL          61  7-JAN-1987 13:16
+ FOROTS    .MAC          45 19-DEC-1986 14:00
+ FOROTS    .REL           8  7-JAN-1987 13:17
+ FORPL1    .FOR           9 19-DEC-1986 12:59
+ FORPL1    .REL          17  7-JAN-1987 13:20
+ FORPL2    .MAC          56 19-DEC-1986 14:00
+ FORPL2    .REL          21  7-JAN-1987 13:17
+ FORPRM    .MAC          78 19-DEC-1986 14:01
+ FORPRM    .UNV          24  7-JAN-1987 13:12
+ FORPSE    .MAC          12 19-DEC-1986 14:01
+ FORPSE    .REL           3  7-JAN-1987 13:17
+ FORRMS    .MAC         327 22-DEC-1986 16:28
+ FORRMS    .REL           1  7-JAN-1987 13:17
+ FORRTF    .MAC          33 19-DEC-1986 14:02
+ FORRTF    .REL           9  7-JAN-1987 13:18
+ FORSRT    .MAC          48 19-DEC-1986 14:02
+ FORSRT    .REL           4  7-JAN-1987 13:18
+ FORXIT    .MAC          13 19-DEC-1986 14:02
+ FORXIT    .REL           3  7-JAN-1987 13:18
+ M10REL    .MAC           2 19-DEC-1986 14:02
+ MTHARG    .MAC           3 19-DEC-1986 14:02
+ MTHARG    .REL           1  7-JAN-1987 13:18
+ MTHCDX    .MAC          76 19-DEC-1986 14:02
+ MTHCDX    .REL          15  7-JAN-1987 13:18
+ MTHCGX    .MAC          76 19-DEC-1986 14:02
+ MTHCGX    .REL          15  7-JAN-1987 13:18
+ MTHCNV    .MAC         117 19-DEC-1986 14:02
+ MTHCNV    .REL          29  7-JAN-1987 13:18
+ MTHCPX    .MAC         186 19-DEC-1986 14:03
+ MTHCPX    .REL          33  7-JAN-1987 13:18
+ MTHDBL    .MAC         203 19-DEC-1986 14:03
+ MTHDBL    .REL          45  7-JAN-1987 13:19
+ MTHDUM    .MAC          27 19-DEC-1986 14:03
+ MTHDUM    .REL           7  7-JAN-1987 13:19
+ MTHGDB    .MAC         208 19-DEC-1986 14:03
+ MTHGDB    .REL          47  7-JAN-1987 13:19
+ MTHHST    .MAC          18 16-MAY-1986 18:58
+ MTHMSG    .MAC           5 19-DEC-1986 14:04
+ MTHMSG    .REL           6  7-JAN-1987 13:20
+ MTHPRM    .MAC          35 19-DEC-1986 14:04
+ MTHPRM    .UNV          21  7-JAN-1987 13:12
+ MTHSNG    .MAC         218 19-DEC-1986 14:04
+ MTHSNG    .REL          42  7-JAN-1987 13:20
+ MTHTRP    .MAC          49 19-DEC-1986 14:04
+ MTHTRP    .REL           7  7-JAN-1987 13:20
+
+ End of Save Set: FORTRAN-OTS-DEBUGGER
+ Volume 1 written by System: RN335A DEC10 Development
+ Written on: MTA0   at:  8-JAN-1987 13:45 using: 1600 BPI
+
+
+ *** Tape Mark ***
+
+
+ Start of Save Set: FORTRAN-COMPILER
+ Volume 1 written by System: RN335A DEC10 Development
+ Written on: MTA0   at:  8-JAN-1987 13:45 using: 1600 BPI
+
+ 10COM     .DIR          19  7-JAN-1987 15:47
+ A         .CMD           2 19-DEC-1986 14:25
+ ACT0      .BLI         128 19-DEC-1986 15:26
+ ACT0      .REL          40  7-JAN-1987 12:05
+ ACT1      .BLI         184 19-DEC-1986 15:26
+ ACT1      .REL          46  7-JAN-1987 12:06
+ ALCBLO    .BLI          59 19-DEC-1986 15:27
+ ALCBLO    .REL          12  7-JAN-1987 12:39
+ ALL       .CMD           3 19-DEC-1986 14:25
+ ARRXPN    .BLI          46 19-DEC-1986 15:27
+ ARRXPN    .REL          15  7-JAN-1987 11:58
+ ASHELP    .BLI           7 19-DEC-1986 15:27
+ B         .CMD           2 19-DEC-1986 14:25
+ B10FTN    .CTL          34 29-DEC-1986 09:15
+ BLD       .CMD           2 19-DEC-1986 14:25
+ BLIO      .BLI          51 19-DEC-1986 15:27
+ BLIO      .REL          19  7-JAN-1987 11:50
+ BUILD     .BLI          37 19-DEC-1986 15:27
+ BUILD     .EXE          64  7-JAN-1987 11:52
+ BUILD     .REL          33  7-JAN-1987 11:50
+ C         .CMD           2 19-DEC-1986 14:25
+ CANNON    .BLI          22 19-DEC-1986 15:27
+ CANNON    .REL          11  7-JAN-1987 12:22
+ CGDO      .BLI          80 19-DEC-1986 15:27
+ CGDO      .REL          24  7-JAN-1987 12:56
+ CGEXPR    .BLI         107 19-DEC-1986 15:28
+ CGEXPR    .REL          30  7-JAN-1987 12:57
+ CGSTMN    .BLI         184 19-DEC-1986 15:28
+ CGSTMN    .REL          41  7-JAN-1987 12:59
+ CMPBLO    .BLI          29 19-DEC-1986 15:28
+ CMPBLO    .REL           5  7-JAN-1987 12:40
+ CMPLEX    .BLI         173 22-DEC-1986 08:55
+ CMPLEX    .REL          46  7-JAN-1987 12:41
+ CNSTCM    .MAC          77 19-DEC-1986 14:32
+ CNSTCM    .REL          12  7-JAN-1987 11:57
+ CODETA    .BLI          35 19-DEC-1986 15:29
+ CODETA    .REL          10  7-JAN-1987 12:08
+ COMMAN    .MAC         103 19-DEC-1986 14:32
+ COMMAN    .REL          22  7-JAN-1987 11:54
+ COMSUB    .BLI         117 19-DEC-1986 15:29
+ COMSUB    .REL          42  7-JAN-1987 12:23
+ D         .CMD           2 19-DEC-1986 14:25
+ DA        .CMD           2 19-DEC-1986 14:25
+ DATAST    .BLI          90 19-DEC-1986 15:29
+ DATAST    .REL          21  7-JAN-1987 12:42
+ DB        .CMD           2 19-DEC-1986 14:25
+ DBUGIT    .REQ           1  7-JAN-1987 11:54
+ DC        .CMD           2 19-DEC-1986 14:25
+ DD        .CMD           2 19-DEC-1986 14:25
+ DE        .CMD           2 19-DEC-1986 14:25
+ DEBUG     .BLI          23 19-DEC-1986 15:29
+ DEBUG     .REL           4  7-JAN-1987 13:00
+ DEFLT     .BLI           6 19-DEC-1986 15:29
+ DEFLT     .REL           2  7-JAN-1987 11:51
+ DEFPT     .BLI          92 19-DEC-1986 15:29
+ DEFPT     .REL          28  7-JAN-1987 12:29
+ DF        .CMD           2 19-DEC-1986 14:25
+ DG        .CMD           2 19-DEC-1986 14:25
+ DGCMN     .MAC           3 19-DEC-1986 14:32
+ DGCMN     .REL           1  7-JAN-1987 12:22
+ DNPT      .MAC           2 19-DEC-1986 14:32
+ DNPT      .REL           1  7-JAN-1987 12:28
+ DOALC     .BLI          67 19-DEC-1986 15:29
+ DOALC     .REL          21  7-JAN-1987 12:43
+ DOPT      .MAC           2 19-DEC-1986 14:32
+ DOPT      .REL           1  7-JAN-1987 12:18
+ DORTB     .EXE         420  7-JAN-1987 12:18
+ DORTC     .EXE         252  7-JAN-1987 12:28
+ DORTD     .EXE         380  7-JAN-1987 12:39
+ DORTE     .EXE         380  7-JAN-1987 12:54
+ DORTF     .EXE         348  7-JAN-1987 12:55
+ DORTG     .EXE         292  7-JAN-1987 13:05
+ DORTRA    .EXE         204  7-JAN-1987 11:57
+ DOXPN     .BLI          47 19-DEC-1986 15:30
+ DOXPN     .REL          23  7-JAN-1987 12:00
+ DRIVER    .BLI          52 19-DEC-1986 15:30
+ DRIVER    .REL          12  7-JAN-1987 12:08
+ E         .CMD           2 19-DEC-1986 14:25
+ ERR3      .MAC           8 19-DEC-1986 14:32
+ ERR3      .REL           1  7-JAN-1987 11:54
+ ERROR0    .BLI          18 19-DEC-1986 15:30
+ ERROR0    .REL          11  7-JAN-1987 11:51
+ ERROUT    .BLI          60 19-DEC-1986 15:30
+ ERROUT    .REL          30  7-JAN-1987 12:00
+ ERROVA    .BLI           3 19-DEC-1986 15:30
+ ERROVA    .REL           1  7-JAN-1987 11:55
+ ERROVB    .BLI           2 19-DEC-1986 15:30
+ ERROVB    .REL           1  7-JAN-1987 12:00
+ ERROVC    .BLI           6 19-DEC-1986 15:30
+ ERROVC    .REL           2  7-JAN-1987 12:18
+ ERROVD    .BLI           7 19-DEC-1986 15:30
+ ERROVD    .REL           3  7-JAN-1987 12:30
+ ERROVG    .BLI           8 19-DEC-1986 15:30
+ ERROVG    .REL           3  7-JAN-1987 13:01
+ ERROVR    .BLI          14 19-DEC-1986 15:30
+ ERROVR    .REL           6  7-JAN-1987 12:45
+ ERRTB3    .MAC          18 19-DEC-1986 14:32
+ ERRTB3    .REL           6  7-JAN-1987 11:50
+ EXOSUP    .MAC           8 19-DEC-1986 14:32
+ EXOSUP    .REL           2  7-JAN-1987 11:54
+ EXPRES    .BLI         106 19-DEC-1986 15:30
+ EXPRES    .REL          29  7-JAN-1987 12:00
+ F         .CMD           2 19-DEC-1986 14:25
+ F72BNF    .BLI          39  7-JAN-1987 11:53
+ F72BNF    .SYN          27 19-DEC-1986 14:29
+ FAZ1      .BLI          19 19-DEC-1986 15:30
+ FAZ1      .REL          15  7-JAN-1987 12:01
+ FIRST     .BLI          93 19-DEC-1986 15:30
+ FLTGEN    .MAC          26 19-DEC-1986 14:32
+ FLTGEN    .REL           7  7-JAN-1987 11:58
+ FMTLEX    .BLI           3 19-DEC-1986 15:31
+ FORMAT    .BLI          31 19-DEC-1986 15:31
+ FORMAT    .REL          13  7-JAN-1987 12:09
+ FORTB     .MAP         110  7-JAN-1987 12:18
+ FORTC     .MAP          69  7-JAN-1987 12:28
+ FORTD     .MAP          80  7-JAN-1987 12:39
+ FORTE     .MAP          83  7-JAN-1987 12:54
+ FORTF     .MAP          82  7-JAN-1987 12:56
+ FORTG     .MAP          77  7-JAN-1987 13:05
+ FORTRA    .MAP          66  7-JAN-1987 11:57
+ FRMBNF    .BLI          11  7-JAN-1987 11:53
+ FRMBNF    .SYN           7 19-DEC-1986 14:29
+ FT1SEG    .REQ           1  7-JAN-1987 13:05
+ FTTENX    .MAC           1  7-JAN-1987 11:54
+ FTTENX    .REQ           1  7-JAN-1987 11:54
+ FTTENX    .UNV           1  7-JAN-1987 11:54
+ G         .CMD           2 19-DEC-1986 14:25
+ GCMNSB    .BLI          78 19-DEC-1986 15:31
+ GCMNSB    .REL          28  7-JAN-1987 12:30
+ GFOPDF    .MAC           3 19-DEC-1986 14:32
+ GFOPDF    .UNV           1  7-JAN-1987 11:54
+ GLOBAL    .BLI         101 19-DEC-1986 15:31
+ GLOBAL    .REL          22  7-JAN-1987 11:55
+ GNRCFN    .BLI          34 19-DEC-1986 15:31
+ GNRCFN    .REL           8  7-JAN-1987 12:02
+ GOPT2     .BLI           6 19-DEC-1986 15:31
+ GOPT2     .REL           2  7-JAN-1987 12:18
+ GOPTIM    .BLI          17 19-DEC-1986 15:31
+ GOPTIM    .REL           8  7-JAN-1987 12:25
+ GRAPH     .BLI          99 19-DEC-1986 15:31
+ GRAPH     .REL          26  7-JAN-1987 12:31
+ INOUT     .BLI          57 19-DEC-1986 15:31
+ INOUT     .REL          14  7-JAN-1987 11:56
+ INPT      .BLI           7 19-DEC-1986 15:32
+ INPT      .REL           1  7-JAN-1987 12:18
+ IOFLG     .BLI          16 19-DEC-1986 15:32
+ IOPT      .BLI         192 19-DEC-1986 15:32
+ IOPT      .REL          53  7-JAN-1987 12:32
+ JOBD      .MAC           2 19-DEC-1986 14:32
+ JOBD      .REL           1  7-JAN-1987 11:54
+ L10FTN    .CTL          13 29-DEC-1986 09:25
+ LEFT72    .BLI          20 19-DEC-1986 15:32
+ LEFT72    .CMD           2 19-DEC-1986 14:25
+ LEFT72    .EXE          60  7-JAN-1987 11:53
+ LEFT72    .REL          28  7-JAN-1987 11:52
+ LEFTFM    .BLI          17 19-DEC-1986 15:32
+ LEFTFM    .CMD           2 19-DEC-1986 14:25
+ LEFTFM    .EXE          56  7-JAN-1987 11:53
+ LEFTFM    .REL          21  7-JAN-1987 11:52
+ LEXAID    .BLI          18 19-DEC-1986 15:32
+ LEXCLA    .BLI         185 19-DEC-1986 15:32
+ LEXCLA    .REL          25  7-JAN-1987 12:15
+ LEXICA    .BLI         192 19-DEC-1986 15:33
+ LEXICA    .REL          29  7-JAN-1987 12:16
+ LEXNAM    .BLI           8 19-DEC-1986 15:33
+ LEXSUP    .BLI          53 19-DEC-1986 15:33
+ LEXSUP    .REL          19  7-JAN-1987 12:09
+ LISTNG    .BLI          84 19-DEC-1986 15:33
+ LISTNG    .REL          25  7-JAN-1987 12:10
+ LISTOU    .BLI         104 19-DEC-1986 15:33
+ LISTOU    .REL          29  7-JAN-1987 13:01
+ LOOK72    .BLI          21  7-JAN-1987 11:53
+ LOOKFM    .BLI           6  7-JAN-1987 11:53
+ MAIN      .BLI          24 22-DEC-1986 14:26
+ MAIN      .REL           5  7-JAN-1987 11:56
+ MEMCMP    .BLI          21 19-DEC-1986 15:34
+ MEMCMP    .REL           8  7-JAN-1987 12:19
+ META72    .BLI           3  7-JAN-1987 11:52
+ METAFM    .BLI           1  7-JAN-1987 11:52
+ MOVA      .BLI          19 19-DEC-1986 15:34
+ MOVA      .REL           6  7-JAN-1987 12:34
+ NUMIO1    .BLI           3 19-DEC-1986 15:34
+ NUMIO1    .REL           2  7-JAN-1987 11:51
+ ONESEG    .REL           4  7-JAN-1987 13:05
+ OPGNTA    .MAC         106 19-DEC-1986 14:32
+ OPGNTA    .REL          25  7-JAN-1987 12:56
+ OPTAB     .BLI          10 19-DEC-1986 15:34
+ OPTAB     .REL           4  7-JAN-1987 13:02
+ OPTMAC    .BLI          21 19-DEC-1986 15:34
+ OUTMOD    .BLI         220 19-DEC-1986 15:34
+ OUTMOD    .REL          50  7-JAN-1987 12:45
+ OUTZ      .BLI           3 19-DEC-1986 15:34
+ OUTZ      .REL           1  7-JAN-1987 11:51
+ OWNDM     .MAC           2 19-DEC-1986 14:33
+ OWNDM     .REL           1  7-JAN-1987 11:54
+ P2S1      .BLI         153 22-DEC-1986 08:47
+ P2S1      .REL          52  7-JAN-1987 12:20
+ P2S2      .BLI          70 19-DEC-1986 15:35
+ P2S2      .REL          28  7-JAN-1987 12:25
+ P3R       .BLI          13 19-DEC-1986 15:35
+ P3R       .REL           2  7-JAN-1987 12:54
+ PEEPOP    .BLI         125 19-DEC-1986 15:35
+ PEEPOP    .REL          38  7-JAN-1987 13:02
+ PH2S      .BLI           7 19-DEC-1986 15:35
+ PH2S      .REL           2  7-JAN-1987 12:26
+ PH3G      .BLI         158 19-DEC-1986 15:35
+ PH3G      .REL          55  7-JAN-1987 12:46
+ PHA2      .BLI          47 19-DEC-1986 15:36
+ PHA2      .REL          11  7-JAN-1987 12:34
+ PHA3      .BLI          27 19-DEC-1986 15:36
+ PHA3      .REL           7  7-JAN-1987 13:04
+ PNROPT    .BLI          95 19-DEC-1986 15:36
+ PNROPT    .REL          49  7-JAN-1987 12:35
+ QTAB1     .MAC          21 19-DEC-1986 14:33
+ QTAB1     .REL          17  7-JAN-1987 11:50
+ REGAL2    .BLI         211 19-DEC-1986 15:36
+ REGAL2    .REL          64  7-JAN-1987 12:48
+ REGUTL    .BLI          28 19-DEC-1986 15:37
+ REGUTL    .REL           4  7-JAN-1987 12:50
+ RELBUF    .BLI         127 19-DEC-1986 15:37
+ RELBUF    .REL          22  7-JAN-1987 12:50
+ REQREL    .BLI          22 19-DEC-1986 15:37
+ REVHST    .MAC         382 22-DEC-1986 08:40
+ REVHST    .REL           1  7-JAN-1987 11:54
+ SCAN0     .BLI          37 19-DEC-1986 15:37
+ SCAN0     .REL          16  7-JAN-1987 11:51
+ SCNR      .BLI           5 19-DEC-1986 15:37
+ SCNR      .REL           3  7-JAN-1987 11:51
+ SINGLE    .EXE         932  7-JAN-1987 13:06
+ SINGLE    .MAP         213  7-JAN-1987 13:06
+ SKSTMN    .BLI         104 19-DEC-1986 15:37
+ SKSTMN    .REL          28  7-JAN-1987 12:21
+ SRCA      .BLI         102 19-DEC-1986 15:37
+ SRCA      .REL          20  7-JAN-1987 12:03
+ STA0      .BLI         105 19-DEC-1986 15:38
+ STA0      .REL          32  7-JAN-1987 12:11
+ STA1      .BLI          98 19-DEC-1986 15:38
+ STA1      .REL          34  7-JAN-1987 12:12
+ STA2      .BLI          78 19-DEC-1986 15:38
+ STA2      .REL          25  7-JAN-1987 12:13
+ STA3      .BLI         111 19-DEC-1986 15:38
+ STA3      .REL          29  7-JAN-1987 12:14
+ STREGA    .BLI         221 19-DEC-1986 15:39
+ STREGA    .REL          71  7-JAN-1987 12:51
+ TABLES    .BLI         167 19-DEC-1986 15:39
+ TBL       .BLI          10 19-DEC-1986 15:39
+ TBL       .REL           4  7-JAN-1987 11:51
+ TRACE1    .BLI           2 19-DEC-1986 15:39
+ TRACE1    .REL           1  7-JAN-1987 11:51
+ TSTR      .BLI          51 19-DEC-1986 15:39
+ TSTR      .REL          16  7-JAN-1987 12:37
+ UNEND     .BLI          25 19-DEC-1986 15:40
+ UNEND     .REL          12  7-JAN-1987 11:56
+ UTIL      .BLI          74 19-DEC-1986 15:40
+ UTIL      .REL          22  7-JAN-1987 12:27
+ VER5      .BLI          34 19-DEC-1986 15:40
+ VER5      .REL          12  7-JAN-1987 12:38
+ VLTPPR    .BLI          36 19-DEC-1986 15:40
+ VLTPPR    .REL          13  7-JAN-1987 12:04
+
+ End of Save Set: FORTRAN-COMPILER
+ Volume 1 written by System: RN335A DEC10 Development
+ Written on: MTA0   at:  8-JAN-1987 13:48 using: 1600 BPI
+
+
+ *** Tape Mark ***
+
+
+ Start of Save Set: FORTRAN-TOOLS
+ Volume 1 written by System: RN335A DEC10 Development
+ Written on: MTA0   at:  8-JAN-1987 13:48 using: 1600 BPI
+
+ 10TLS     .DIR           1  7-JAN-1987 15:48
+ BLIS10    .ERR          25 16-FEB-1978 18:46
+ BLIS10    .EXE         356 16-FEB-1978 18:47
+ BLIS10    .HLP           7 16-FEB-1978 18:48
+ HELPER    .REL           3 29-JAN-1986 12:27
+ MACTEN    .UNV          30 29-JAN-1986 12:27
+ QSRMC2    .UNV          16  8-SEP-1982 10:44
+ SCAN      .REL          68 29-JAN-1986 12:28
+ SCNMAC    .UNV           6 29-JAN-1986 12:28
+ UUOSYM    .UNV          99 29-JAN-1986 12:27
+
+ End of Save Set: FORTRAN-TOOLS
+ Volume 1 written by System: RN335A DEC10 Development
+ Written on: MTA0   at:  8-JAN-1987 13:49 using: 1600 BPI
+
+
+ *** Tape Mark ***
+
+
+ Start of Save Set: LINK-DOCUMENTATION
+ Volume 1 written by System: RN335A DEC10 Development
+ Written on: MTA0   at:  8-JAN-1987 13:49 using: 1600 BPI
+
+ LINK      .HLP          32 17-JAN-1986 12:49
+ LINK      .DOC          46 17-JAN-1986 14:31
+
+ End of Save Set: LINK-DOCUMENTATION
+ Volume 1 written by System: RN335A DEC10 Development
+ Written on: MTA0   at:  8-JAN-1987 13:49 using: 1600 BPI
+
+
+ *** Tape Mark ***
+
+
+ Start of Save Set: LINK-SUBSYS
+ Volume 1 written by System: RN335A DEC10 Development
+ Written on: MTA0   at:  8-JAN-1987 13:49 using: 1600 BPI
+
+ LINK      .EXE          52  6-JAN-1987 11:18
+ LNKSCN    .EXE          88  6-JAN-1987 11:18
+ LNKLOD    .EXE         140  6-JAN-1987 11:18
+ LNKMAP    .EXE          60  6-JAN-1987 11:18
+ LNKXIT    .EXE         108  6-JAN-1987 11:18
+ LNKOV1    .EXE         156  6-JAN-1987 11:18
+ LNKOV2    .EXE         116  6-JAN-1987 11:18
+ LNKERR    .EXE         128  6-JAN-1987 11:19
+ LNK999    .EXE          48  6-JAN-1987 11:19
+ OVRLAY    .REL          32  6-JAN-1987 11:17
+
+ End of Save Set: LINK-SUBSYS
+ Volume 1 written by System: RN335A DEC10 Development
+ Written on: MTA0   at:  8-JAN-1987 13:49 using: 1600 BPI
+
+
+ *** Tape Mark ***
+
+
+ *** Tape Mark ***
+
+ Total of 432 files in 8 save sets
+
+
+
+
+
+Article: 15799 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!crtntx1-snh1.gtei.net!cpk-news-hub1.bbnplanet.com!news.gtei.net!news.maxwell.syr.edu!logbridge.uoregon.edu!pln-w!spln!dex!extra.newsguy.com!newsp.newsguy.com!drn
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: MS and DOC files
+Date: 1 Feb 2002 05:29:43 -0800
+Organization: Trailing-Edge Technologies
+Lines: 24
+Message-ID: <a3e58701vt@drn.newsguy.com>
+References: <Pine.NXT.4.50.0201261507560.6768-100000@Tomobiki-Cho.CAC.Washington.EDU> <3C5311AE.CCC0D24@trailing-edge.com> <85it9iyfzh.fsf@junk.nocrew.org> <85elk6yesx.fsf@junk.nocrew.org> <a3cr6n$rks$1@citadel.in.taronga.com> <857kpxwlhu.fsf@junk.nocrew.org>
+NNTP-Posting-Host: p-827.newsdawg.com
+X-Newsreader: Direct Read News 2.91
+Xref: dfw-artgen.news.verio.net alt.sys.pdp10:15799
+
+In article <857kpxwlhu.fsf@junk.nocrew.org>, Lars says...
+>
+>peter@taronga.com (Peter da Silva) writes:
+>> Lars Brinkhoff  <lars.spam@nocrew.org> wrote:
+>> >This is a page using various control line-printer codes to effect
+>> >underlining and bolding.  Anything I forget?
+>> Fortran carriage control files.
+>
+>What are those?
+
+"What's a spline?" :-)
+
+See
+
+  http://www.ibiblio.org/pub/languages/fortran/ch2-14.html
+
+for a very ASCII-oriented description.  (Historically, of course,
+Fortran carriage control predates the adoption of ASCII.)
+
+I don't think g77 comes with a Fortran-Carriage-Control translator,
+but a couple of common public domain ones are "fpr" and "asa".
+
+Tim.
+
+
+

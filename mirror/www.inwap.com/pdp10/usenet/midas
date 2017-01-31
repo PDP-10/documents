@@ -1,0 +1,151 @@
+Article 5474 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news-hog.berkeley.edu!ucberkeley!news.u.washington.edu!140.142.17.34.MISMATCH!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: OK, whoever wanted to run the ITS...
+Date: Sat, 30 Jun 2001 11:44:20 -0700
+Organization: Networks & Distributed Computing
+Lines: 24
+Message-ID: <Pine.NXT.4.40.0106301138400.13762-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <Pine.LNX.4.21.0106280806500.14339-100000@sakura.lunar-tokyo.net>
+ <3B3BDEF1.BEA45929@Empire.Net> <Pine.LNX.4.21.0106282237510.14339-100000@sakura.lunar-tokyo.net>
+ <wwhewyn8kf.fsf@atlas.cfht.hawaii.edu> <9hka4b$jl3$1@bob.news.rcn.net>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 993926663 51262 (None) 140.142.17.35
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: ken
+In-Reply-To: <9hka4b$jl3$1@bob.news.rcn.net>
+Xref: nntp1.ba.best.com alt.sys.pdp10:5474
+
+On Sat, 30 Jun 2001 jmfbahciv@aol.com wrote:
+> But why would it all of a sudden not have enough stack size?
+> There must be a variable or something that gets calculated
+> making the stack too small.  I am presuming, of course, that
+> the thing assembled on a real machine.
+
+The MIDAS that ran on ITS (and thus was used to compile ITS) is not the
+same as the MIDAS that ran on TOPS-10 and TOPS-20.  I don't think that
+anyone has ever compiled ITS on a TOPS-20 system before.  Don't forget
+that there are completely different system called used for I/O, different
+basic symbol table entries, etc.
+
+To increase MIDAS' stack size, change the definition of LPDL:
+
+IFNDEF LPDL,LPDL==1500.		;LENGTH OF PDL
+
+Try 2000. or 2500.  Note that the trailing period is MIDAS' way of saying
+decimal; e.g. ^D1500 in MACRO.
+
+-- Mark --
+
+http://staff.washington.edu/mrc
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+Article 5485 of alt.sys.pdp10:
+Message-ID: <3B3F319E.A76BCCCF@Empire.Net>
+Date: Sun, 01 Jul 2001 10:20:14 -0400
+From: John Sauter <J_Sauter@Empire.Net>
+Organization: System Eyes Computer Store
+X-Mailer: Mozilla 4.73 [en]C-CCK-MCD NSCPCD47  (WinNT; U)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: OK, whoever wanted to run the ITS...
+References: <Pine.LNX.4.21.0106280806500.14339-100000@sakura.lunar-tokyo.net>
+	 <3B3BDEF1.BEA45929@Empire.Net> <Pine.LNX.4.21.0106282237510.14339-100000@sakura.lunar-tokyo.net>
+	 <wwhewyn8kf.fsf@atlas.cfht.hawaii.edu> <9hka4b$jl3$1@bob.news.rcn.net> <Pine.NXT.4.40.0106301138400.13762-100000@Tomobiki-Cho.CAC.Washington.EDU> <9hmvbn$lla$2@bob.news.rcn.net>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+NNTP-Posting-Host: hydra140-162.empire.net
+X-Trace: News.Destek.net 993993624 hydra140-162.empire.net (1 Jul 2001 09:20:24 -0500)
+Lines: 25
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!newsfeed.cwix.com!News.Destek.net
+Xref: nntp1.ba.best.com alt.sys.pdp10:5485
+
+[BAH]
+Yes, yes.  But he was using MACRO to assemble it.  When
+people wrote assembler, they usually made enough stack to
+get past the assembly stage.  Or was there
+a very different assembler for ITS, too?
+
+[J_Sauter]
+As I read the original post, Daniel is attempting to
+use the MIDAS assembler on TOPS-20 to assemble NSALV.  
+He is not using the MACRO assembler at all.
+
+...
+
+[BAH]
+The reason I'm questioning this in the first place is to
+verify that an emulator bug hasn't been tripped over.
+It should be at that phase where all the obscure nits
+are going to show up.
+
+[J_Sauter]
+Possibly the version of MIDAS that runs on TOPS-20
+was not intended for something as large as NSALV.
+I imagine that the distributors of MIDAS felt that
+_real_ programming would be done using ITS.
+    John Sauter (J_Sauter@Empire.Net)
+
+
+Article 5487 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!feed.textport.net!hammer.uoregon.edu!newsfeed.direct.ca!look.ca!news.u.washington.edu!140.142.17.34.MISMATCH!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: OK, whoever wanted to run the ITS...
+Date: Sun, 1 Jul 2001 12:09:57 -0700
+Organization: Networks & Distributed Computing
+Lines: 31
+Message-ID: <Pine.NXT.4.40.0107011203330.14534-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <Pine.LNX.4.21.0106280806500.14339-100000@sakura.lunar-tokyo.net>
+ <3B3BDEF1.BEA45929@Empire.Net> <Pine.LNX.4.21.0106282237510.14339-100000@sakura.lunar-tokyo.net>
+ <wwhewyn8kf.fsf@atlas.cfht.hawaii.edu> <9hka4b$jl3$1@bob.news.rcn.net>
+ <Pine.NXT.4.40.0106301138400.13762-100000@Tomobiki-Cho.CAC.Washington.EDU>
+ <9hmvbn$lla$2@bob.news.rcn.net>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 994014601 31474 (None) 140.142.17.38
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: alan
+In-Reply-To: <9hmvbn$lla$2@bob.news.rcn.net>
+Xref: nntp1.ba.best.com alt.sys.pdp10:5487
+
+On Sun, 1 Jul 2001 jmfbahciv@aol.com wrote:
+> Yes, yes.  But he was using MACRO to assemble it.
+
+No, he was using MIDAS.  There is not a snowball's chance in hell of
+getting ITS to assemble with MACRO.
+
+>  When
+> people wrote assembler, they usually made enough stack to
+> get past the assembly stage.
+
+The stack overflow happened in the assembler and was reported by the
+assembler.  It happened because he used TOPS-20 MIDAS to assemble ITS,
+something that nobody had ever done before.  ITS was always assembled with
+ITS MIDAS, in the ITS environment.
+
+Note that ITS sources have a label "RESET" which is a perfectly valid
+label on an operating system which doesn't have a "RESET" system call.
+
+Frankly, I'm surprised that the assembly even got as far as it did.
+
+>  Or was there
+> a very different assembler for ITS, too?
+
+Yes.  ITS was built with MIDAS.  WAITS was built with FAIL.  Both of these
+were quite superior to MACRO.
+
+-- Mark --
+
+http://staff.washington.edu/mrc
+Science does not emerge from voting, party politics, or public debate.
+
+
+

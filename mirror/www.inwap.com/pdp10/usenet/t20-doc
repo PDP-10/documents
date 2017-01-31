@@ -1,0 +1,96 @@
+Article 1376 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sdd.hp.com!usc!news.cerf.net!nntp-server.caltech.edu!altair.krl.caltech.edu!shoppa
+From: shoppa@altair.krl.caltech.edu (Tim Shoppa)
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-20 Documentation Sets
+Date: 21 Nov 1995 22:56:54 GMT
+Organization: Kellogg Radiation Lab, Caltech
+Lines: 82
+Message-ID: <48tlfm$9u8@gap.cco.caltech.edu>
+References: <48jdfo$oqu@doctor.Tymnet.COM>
+NNTP-Posting-Host: altair.krl.caltech.edu
+
+In article <48jdfo$oqu@doctor.Tymnet.COM>,
+Carl A Baltrunas <carl@doctor.Tymnet.COM> wrote:
+>
+>Apparently (I'm told) that DEC no longer has any TOPS-20 materials
+>and may have destroyed whatever stock they had in their warehouses.
+>If anyone knows this to be true or untrue and can locate a set or
+>two we would appreciate it greatly.
+
+That might be true, but the part numbers for the TOPS-20AN distribution
+and media are still listed in the SPD (21.30.04) at gatekeeper.dec.com.
+Sometimes, armed with the appropriate part number, you can convince
+the folks at DECdirect to sell you something which all other branches
+of the company insist doesn't exist.  Of course, just because you
+have a part number doesn't mean it exists, either!  [There's a wonderful
+story I was told about someone ordering a replacement caster for a
+BA123 "world box"; a few months after the order was placed, it came
+back, with a standard form saying "part number <whatever> not available
+individually; order next higher subassembly: BA123"!!!]
+
+If it helps any, here are the numbers listed in that SPD:
+
+PRODUCT NAME: TOPS-20AN, Version 5.1                          SPD 21.30.04      
+              System Software Package                                           
+              for DECSYSTEM-2040/2060                                           
+[Mucho Deletia... TDS]
+Sources and/or listings options are only available after the purchase of        
+at least one supported license and after a source license agreement is in       
+effect.                                                                         
+                                                                                
+The following key (L, M, Z) represents the distribution media for the           
+product and must be specified at the end of the order number, e.g.,             
+QT029-EL = TOPS-20 front-end sources on RP06 Disk Pack.                         
+                                                                                
+L = RP06 Disk Pack                                                              
+M = 9-track 1600 BPI Magtape (PE)                                               
+Z = No hardware dependency                                                      
+                                                                                
+1090T  DECsystem-1090T, single-use license, binaries on magnetic tape,          
+       documentation, support services                                          
+                                                                                
+2040T  DECSYSTEM-2040T, single-use license, binaries on magnetic tape,          
+       documentation, support services                                          
+                                                                                
+2060T  DECSYSTEM-2060T, single-use license, binaries on magnetic tape,          
+       documentation, support services                                          
+                                                                                
+Sources/Listings Options                                                        
+                                                                                
+QT029 -E --   TOPS-20 front-end sources (media: L)                              
+                                                                                
+QT100 -E --    TOPS-20 monitor sources (media: M)                               
+                                                                                
+QT101 -E --   TOPS-20 Command Decoder Sources (media: M)                        
+                                                                                
+QT102 -E --   TOPS-20 combined sources package (media: L)                       
+                                                                                
+Update Options                                                                  
+                                                                                
+Users of TOPS-20AN whose specified Support Category warranty has expired        
+may order under license the following software update at the prevailing         
+rate for such update.  The update is distributed in binary form on the          
+appropriate medium and includes no installation or other services unless        
+specifically stated.                                                            
+                                                                                
+For 1090T, 2040T, and 2060T Systems                                             
+                                                                                
+QT031 -H --   Binaries, documentation (media: M)                                
+                                                                                
+QT031 -H --   Right to copy for single-use, no binaries, no documentation       
+              (media: Z)                                                        
+                                                                                
+Sources/Listings Update Options                                                 
+                                                                                
+QT029 -N --   TOPS-20 front-end sources update (media: L)                       
+                                                                                
+QT100 -N --   TOPS-20 monitor sources update (media: M)                         
+                                                                                
+QT101 -N --   TOPS-20 executive sources update (media: M)                       
+                                                                                
+QT102 -N --   TOPS-20 combined sources update package (media: L)                
+                                                                                
+
+
+

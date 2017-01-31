@@ -1,0 +1,252 @@
+From krewat@bartek.dontspamme.net Thu Jun 28 23:04:56 PDT 2001
+Article: 5423 of alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!newsfeed.cwix.com!newsfeed.frii.net!cyclone-sjo1.usenetserver.com!news-out-sjo.usenetserver.com!news01.optonline.net!news02.optonline.net.POSTED!not-for-mail
+From: Arthur Krewat <krewat@bartek.dontspamme.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: LOGO.MAC
+Organization: Kilonet.net
+Lines: 24
+Message-ID: <3B3B96AE.4EFC6790@bartek.dontspamme.net>
+References: <3B3B67C8.58A7E88E@bartek.dontspamme.net> <9hg1l4$3uj$1@abbenay.CS.Berkeley.EDU>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 4.7 [en] (X11; I; SunOS 5.8 i86pc)
+X-Accept-Language: en
+Date: Thu, 28 Jun 2001 20:47:02 GMT
+NNTP-Posting-Host: 24.186.100.134
+X-Trace: news02.optonline.net 993761222 24.186.100.134 (Thu, 28 Jun 2001 16:47:02 EDT)
+NNTP-Posting-Date: Thu, 28 Jun 2001 16:47:02 EDT
+Xref: nntp1.ba.best.com alt.sys.pdp10:5423
+
+Brian Harvey wrote:
+> 
+> Arthur Krewat <krewat@bartek.dontspamme.net> writes:
+> >Is this the LOGO people were talking about here a few weeks
+> >ago? I tried compiling it and found one or two errors, nothing
+> >fatal...
+> >;(C) COPYRIGHT,1970,BOLT BERANEK AND NEWMAN INC., CAMBRIDGE, MASS.
+> 
+> Wow, that does indeed look like a very old version of the Logo language,
+> which was first developed at BBN.
+
+It mentions turtles and mockturtles...
+
+I have no idea where the heck I got it from, but obviously,
+I thought it was important.
+
+I suspect I found it somewhere on one of the university computers
+I used to hack. Probably Stevens or some other place that maybe
+had a telenet connection.
+
+I put it up as 
+http://pdp10.kilonet.org/files/logo.mac
+
+aak
+
+
+From hsnewman@blkbox.com Thu Jun 28 23:05:18 PDT 2001
+Article: 5430 of alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!feeder.qis.net!sn-xit-02!supernews.com!postnews1.google.com!not-for-mail
+From: hsnewman@blkbox.com (HarrisNewman)
+Newsgroups: alt.sys.pdp10
+Subject: Re: LOGO.MAC
+Date: 28 Jun 2001 18:48:06 -0700
+Organization: http://groups.google.com/
+Lines: 12
+Message-ID: <da3698f8.0106281748.549cd162@posting.google.com>
+References: <3B3B67C8.58A7E88E@bartek.dontspamme.net> <9hg1l4$3uj$1@abbenay.CS.Berkeley.EDU> <3B3B96AE.4EFC6790@bartek.dontspamme.net> <JaN_6.133698$Mq.3871956@e420r-sjo3.usenetserver.com>
+NNTP-Posting-Host: 207.19.97.139
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 8bit
+X-Trace: posting.google.com 993779286 14515 127.0.0.1 (29 Jun 2001 01:48:06 GMT)
+X-Complaints-To: groups-support@google.com
+NNTP-Posting-Date: 29 Jun 2001 01:48:06 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:5430
+
+"Zane H. Healy" <healyzh@shell1.aracnet.com> wrote in message news:<JaN_6.133698$Mq.3871956@e420r-sjo3.usenetserver.com>...
+> Arthur Krewat <krewat@bartek.dontspamme.net> wrote:
+> > I put it up as 
+> > http://pdp10.kilonet.org/files/logo.mac
+> 
+> Stupid question.  Any good suggestions on how to suck this into simh? 
+> Somehow I don't want to cut and paste chunks of it into SED like I did
+> with the CARDIAC simulator :^)
+> 
+> 		Zane
+
+I use the utility backwr to create .tap files....
+
+
+From krewat@bartek.dontspamme.net Thu Jun 28 23:05:21 PDT 2001
+Article: 5420 of alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc03.blue.aol.com!news.maxwell.syr.edu!news.stealth.net!news-east.rr.com!news.rr.com!news01.optonline.net!news02.optonline.net.POSTED!not-for-mail
+From: Arthur Krewat <krewat@bartek.dontspamme.net>
+Newsgroups: alt.sys.pdp10
+Subject: LOGO.MAC
+Organization: Kilonet.net
+Lines: 27
+Message-ID: <3B3B67C8.58A7E88E@bartek.dontspamme.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 4.7 [en] (X11; I; SunOS 5.8 i86pc)
+X-Accept-Language: en
+Date: Thu, 28 Jun 2001 17:26:53 GMT
+NNTP-Posting-Host: 24.186.100.134
+X-Trace: news02.optonline.net 993749213 24.186.100.134 (Thu, 28 Jun 2001 13:26:53 EDT)
+NNTP-Posting-Date: Thu, 28 Jun 2001 13:26:53 EDT
+Xref: nntp1.ba.best.com alt.sys.pdp10:5420
+
+
+In my personal PPN from around 1987, I found LOGO.MAC:
+
+LOGO    MAC   294  <177>   21-Mar-84    DSKB:   [565,20]
+
+Is this the LOGO people were talking about here a few weeks
+ago? I tried compiling it and found one or two errors, nothing
+fatal...
+
+The beginning of the file looks like:
+
+.type logo.mac
+TITLE LOGO
+;         TM
+;(C) COPYRIGHT,1970,BOLT BERANEK AND NEWMAN INC., CAMBRIDGE, MASS.
+;MODIFIED AT NATIONAL RESEARCH COUNCIL (ISS/REED), OTTAWA, CANADA BY A.G.SMITH
+;AND R.A. ORCHARD
+;  NRC MODIFICATIONS INCLUDE NRCTUR AND MUSIC SYSTEM IMPLEMENTATION
+;  FOR NRCTUR EITHER THE TEKTRONIX 4010 (TEKTUR) OR THE PLASMA
+;  PANEL (PLSTUR) ARE AVAILABLE.
+
+MLON
+SALL
+TWOSEG
+
+
+aak
+
+
+From dhquebbeman@theestopinalgroup.com Sat Jul 14 23:45:27 PDT 2001
+Article: 5450 of alt.sys.pdp10
+Reply-To: "Douglas H. Quebbeman" <dhquebbeman@theestopinalgroup.com>
+From: "Douglas H. Quebbeman" <dhquebbeman@theestopinalgroup.com>
+Newsgroups: alt.sys.pdp10
+References: <3B3B67C8.58A7E88E@bartek.dontspamme.net> <9hg1l4$3uj$1@abbenay.CS.Berkeley.EDU> <3B3B96AE.4EFC6790@bartek.dontspamme.net> <JaN_6.133698$Mq.3871956@e420r-sjo3.usenetserver.com>
+Subject: Re: LOGO.MAC
+Date: Fri, 29 Jun 2001 18:07:49 -0400
+Lines: 20
+Organization: The Estopinal Group
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Newsreader: Microsoft Outlook Express 5.00.3018.1300
+X-MimeOLE: Produced By Microsoft MimeOLE V5.00.3018.1300
+NNTP-Posting-Host: 204.250.0.238
+X-Original-NNTP-Posting-Host: 204.250.0.238
+Message-ID: <3b3cfc37_2@news.iglou.com>
+X-Trace: news.iglou.com 993852471 204.250.0.238 (29 Jun 2001 18:07:51 -0400)
+X-Authenticated-User: dougq
+X-Original-NNTP-Posting-Host: 204.250.0.238
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!howland.erols.net!newsfeed.fast.net!uunet!dca.uu.net!ash.uu.net!news.iglou.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:5450
+
+"Zane H. Healy" <healyzh@shell1.aracnet.com> wrote in message
+news:JaN_6.133698$Mq.3871956@e420r-sjo3.usenetserver.com...
+> Arthur Krewat <krewat@bartek.dontspamme.net> wrote:
+> > I put it up as
+> > http://pdp10.kilonet.org/files/logo.mac
+>
+> Stupid question.  Any good suggestions on how to suck this into simh?
+> Somehow I don't want to cut and paste chunks of it into SED like I did
+> with the CARDIAC simulator :^)
+
+Use backwr.c to create a .tap file under Linux, then mount the
+Logo.tap you created, restore the source, assemble, and relive
+other people's memories!
+
+;-)
+
+-dq
+
+
+
+
+
+From healyzh@shell1.aracnet.com Sat Jul 14 23:45:44 PDT 2001
+Article: 5460 of alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc03.blue.aol.com!cyclone2.usenetserver.com!e420r-sjo4.usenetserver.com!newsfeed.usenetserver.com!e420r-sjo3.usenetserver.com.POSTED!not-for-mail
+From: "Zane H. Healy" <healyzh@shell1.aracnet.com>
+Subject: Re: LOGO.MAC
+Newsgroups: alt.sys.pdp10
+References: <3B3B67C8.58A7E88E@bartek.dontspamme.net> <9hg1l4$3uj$1@abbenay.CS.Berkeley.EDU> <3B3B96AE.4EFC6790@bartek.dontspamme.net> <JaN_6.133698$Mq.3871956@e420r-sjo3.usenetserver.com> <3b3cfc37_2@news.iglou.com> <tjq82rj6jqd5fb@corp.supernews.com>
+Organization: Aracnet
+User-Agent: tin/1.4.4-20000803 ("Vet for the Insane") (UNIX) (Linux/2.2.19 (i686))
+Lines: 6
+Message-ID: <kG9%6.154034$Mq.4614816@e420r-sjo3.usenetserver.com>
+X-Complaints-To: abuse@usenetserver.com
+X-Abuse-Info: Please be sure to forward a copy of ALL headers
+X-Abuse-Info: Otherwise we will be unable to process your complaint properly.
+NNTP-Posting-Date: Fri, 29 Jun 2001 21:10:40 EDT
+Date: Sat, 30 Jun 2001 01:10:40 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:5460
+
+Timothy Stark <sword7@grace.speakeasy.net> wrote:
+> Where is backwr.c?
+
+I found it with DejaNews.
+
+	Zane
+
+
+
+From healyzh@shell1.aracnet.com Sat Jul 14 23:45:58 PDT 2001
+Article: 5591 of alt.sys.pdp10
+Path: nntp1.ba.best.com!news2.best.com!feed2.news.rcn.net!rcn!cpk-news-hub1.bbnplanet.com!news.gtei.net!news.mindspring.net!out.nntp.be!propagator-dallas!news-in-dallas.newsfeeds.com!in.nntp.be!easynews!e420r-sjo4.usenetserver.com!newsfeed.usenetserver.com!e3500-chi1.usenetserver.com.POSTED!not-for-mail
+From: "Zane H. Healy" <healyzh@shell1.aracnet.com>
+Subject: Re: LOGO.MAC
+Newsgroups: alt.sys.pdp10
+References: <3B3B67C8.58A7E88E@bartek.dontspamme.net>
+Organization: Aracnet
+User-Agent: tin/1.4.4-20000803 ("Vet for the Insane") (UNIX) (Linux/2.2.19 (i686))
+Lines: 30
+Message-ID: <JL637.1354$k86.5578949@e3500-chi1.usenetserver.com>
+X-Complaints-To: abuse@usenetserver.com
+X-Abuse-Info: Please be sure to forward a copy of ALL headers
+X-Abuse-Info: Otherwise we will be unable to process your complaint properly.
+NNTP-Posting-Date: Wed, 11 Jul 2001 21:07:53 EDT
+Date: Thu, 12 Jul 2001 01:07:53 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:5591
+
+Arthur Krewat <krewat@bartek.dontspamme.net> wrote:
+> In my personal PPN from around 1987, I found LOGO.MAC:
+
+> LOGO    MAC   294  <177>   21-Mar-84    DSKB:   [565,20]
+
+> Is this the LOGO people were talking about here a few weeks
+> ago? I tried compiling it and found one or two errors, nothing
+> fatal...
+
+I finally got this onto my TS-10 7.03 system today.  After some difficulty
+in figuring out how to build it, I finally succeeded.  However, I'm not
+having any luck in actually doing anything with it.  Has anyone else actually 
+tried anything with this?  I had to go hunting to try and find some info on 
+valid logo syntax, but nothing seems to work.
+
+_print 3 + 4
+printNEEDS A MEANING.
+
+.dir logo.*
+
+
+LOGO    MAC   294  <057>   11-Jul-01    DSKB:   [25,117]
+LOGO    REL    82  <057>   11-Jul-01
+LOGO    EXE    60  <057>   11-Jul-01    2F(44)
+  Total of 436 blocks in 3 files on DSKB: [25,117]
+
+.
+
+
+			Zane
+
+
+

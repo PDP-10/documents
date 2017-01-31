@@ -1,0 +1,285 @@
+Article 5592 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!feed.textport.net!out.nntp.be!propagator-dallas!news-in-dallas.newsfeeds.com!newsfeed.wirehub.nl!cyclone-sjo1.usenetserver.com!news-out-sjo.usenetserver.com!e420r-sjo4.usenetserver.com!newsfeed.usenetserver.com!e3500-chi1.usenetserver.com.POSTED!not-for-mail
+From: "Zane H. Healy" <healyzh@shell1.aracnet.com>
+Subject: Re: Algol-10
+Newsgroups: alt.sys.pdp10
+References: <3B422380.58B395E7@bartek.dontspamme.net>
+Organization: Aracnet
+User-Agent: tin/1.4.4-20000803 ("Vet for the Insane") (UNIX) (Linux/2.2.19 (i686))
+Lines: 62
+Message-ID: <35837.1432$k86.5650841@e3500-chi1.usenetserver.com>
+X-Complaints-To: abuse@usenetserver.com
+X-Abuse-Info: Please be sure to forward a copy of ALL headers
+X-Abuse-Info: Otherwise we will be unable to process your complaint properly.
+NNTP-Posting-Date: Wed, 11 Jul 2001 22:38:55 EDT
+Date: Thu, 12 Jul 2001 02:38:55 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:5592
+
+Arthur Krewat <krewat@bartek.dontspamme.net> wrote:
+> Anyone have ALGOL?
+
+> aak
+
+I don't think this has been mentioned in this thread, I just ran across it.
+
+		Zane
+
+
+http://pdp-10.trailing-edge.com/www/lib10/0126/index.html
+
+10-86
+
+                                                      SAILFAIL, Version: 18,
+August 1976
+
+   Author: Dan Swinehart, Robert Sproul, et al. 
+
+   Revised by: Les Earnest, Stanford University, Stanford, CA 
+
+   Source Language: FAIL Memory Required: 50K of user core Special Hardware
+Required: 4-Series or
+   later monitor Keywords: ALGOL; SAIL; FAIL; Programniing-Language 
+
+   Abstract: SAIL is a high-level programming language for the PDP-10
+computer. It includes an extended
+   ALGOL 60 compiler and a companion set of execution-time routines. In
+addition to ALGOL, the language
+   features: 1) flexible linking to hand-coded machine language algorithms,
+2) complete access to the PDP-10
+   I/O facilities, 3) a complete system of compile-time arithmetic and logic
+as well as a flexible macro system, 4)
+   a high-level debugger, 5) records and references, 6) sets and lists, 7)
+an associative data structure, 8)
+   independent process, 9) procedure variables, 10) modifial error handling,
+I 1) backtracking, and 12) interrupt
+   facilities. 
+
+   FAIL is a fast, one-pass assembler for the PDP- 10 machine language.
+Although FAIL uses substantially
+   more main memory than MACRO-10, it assembles typical programs in less
+than one-fifth the cpu time used
+   by MACRO-10. FAIL permits an ALGOL-style block structure which provides a
+means of localizing the use
+   of some symbols to certain parts of the program, such that the same
+symbol name can be used without conflict
+   tct mean things in different blocks. 
+
+   Note: A. No commitment is made to support this or any other version of
+SAIL with bug fixes or subsequent
+   releases. Users interested in a maintained version should contact
+Tymchare, Inc. B. When putting up the
+   SAIL system the author suggests first reading the file TELLEM. C. This
+version is for TOPS-10 only,
+   TOPS-20 and Tenex sites should use 20-2. D. Documentation for FAIL is on
+the tape. 
+
+   DEC-20 Review Note: See 20-2. 
+
+   Media (Service Charge Code): Microfiche (CA), Manual (EC), 2400' Magtape
+(PA) or order 10-LIB-1 
+
+
+
+Article 5595 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!feed2.news.rcn.net!rcn!howland.erols.net!newsfeed.mathworks.com!cyclone.swbell.net!cyclone-sf.pbi.net!165.113.238.17!pln-w!spln!dex!extra.newsguy.com!newsp.newsguy.com!enews4
+From: Alan Greig <a.greig@virgin.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Algol-10
+Date: Thu, 12 Jul 2001 09:56:41 +0100
+Organization: http://extra.newsguy.com
+Lines: 36
+Message-ID: <mepqktknhiab38l87hog0sg2uff5k039ee@4ax.com>
+References: <3B422380.58B395E7@bartek.dontspamme.net> <35837.1432$k86.5650841@e3500-chi1.usenetserver.com> <3B4D2D04.3E1C8939@bartek.dontspamme.net>
+NNTP-Posting-Host: p-097.newsdawg.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Newsreader: Forte Agent 1.8/32.548
+Xref: nntp1.ba.best.com alt.sys.pdp10:5595
+
+On Thu, 12 Jul 2001 04:57:06 GMT, Arthur Krewat
+<krewat@bartek.dontspamme.net> wrote:
+
+>"Zane H. Healy" wrote:
+>> 
+>> Arthur Krewat <krewat@bartek.dontspamme.net> wrote:
+>> > Anyone have ALGOL?
+>> 
+>> > aak
+>> 
+>> I don't think this has been mentioned in this thread, I just ran across it.
+>> 
+>>                 Zane
+>> 
+>> http://pdp-10.trailing-edge.com/www/lib10/0126/index.html
+>
+>All I can say is HOLY CRAP!
+
+And SImula-67 should be available somewhere and is a superset of Algol
+60 adding Pascal like features + object programming. Can be found on
+old DECUS library tapes.
+
+>and THANK YOU!
+>
+>From what I recall, I was really looking for "Algol 60", but
+>I called it Algol-10
+>
+>HOLY CRAP!
+>
+>Now, I have to ask Tim how I can get the EXE's into TOPS-10 via .tap
+>images. :)
+>
+>aak
+
+--
+Alan
+
+
+Article 5596 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!feed2.news.rcn.net!rcn!news.maxwell.syr.edu!out.nntp.be!propagator-dallas!news-in-dallas.newsfeeds.com!cyclone-sf.pbi.net!165.113.238.17!pln-w!spln!dex!extra.newsguy.com!newsp.newsguy.com!enews2
+From: Alan Greig <a.greig@virgin.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Algol-10
+Date: Thu, 12 Jul 2001 10:03:47 +0100
+Organization: http://extra.newsguy.com
+Lines: 30
+Message-ID: <qopqkt8dmm3v7v1unnu2sakn7hmm7c5ofk@4ax.com>
+References: <3B422380.58B395E7@bartek.dontspamme.net> <35837.1432$k86.5650841@e3500-chi1.usenetserver.com> <3B4D2D04.3E1C8939@bartek.dontspamme.net>
+NNTP-Posting-Host: p-171.newsdawg.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Newsreader: Forte Agent 1.8/32.548
+Xref: nntp1.ba.best.com alt.sys.pdp10:5596
+
+On Thu, 12 Jul 2001 04:57:06 GMT, Arthur Krewat
+<krewat@bartek.dontspamme.net> wrote:
+
+
+>> 
+>> http://pdp-10.trailing-edge.com/www/lib10/0126/index.html
+>
+>All I can say is HOLY CRAP!
+
+Just did a search and Simula is there as well. Check out 
+http://pdp-10.trailing-edge.com/www/lib10/0337/index.html
+
+There were later versions than this but they had a small commercial
+charge associated and so were not submitted to DECUS. Could probably
+be obtained at no charge today
+
+>and THANK YOU!
+>
+>From what I recall, I was really looking for "Algol 60", but
+>I called it Algol-10
+>
+>HOLY CRAP!
+>
+>Now, I have to ask Tim how I can get the EXE's into TOPS-10 via .tap
+>images. :)
+>
+>aak
+
+--
+Alan
+
+
+Article 5600 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!newshub2.home.com!newshub2.rdc1.sfba.home.com!news.home.com!cyclone-sjo1.usenetserver.com!news-out-sjo.usenetserver.com!newsin.onlynews.com!easynews!feed.news.qwest.net!dfw-peer.news.verio.net!phl-feed.news.verio.net!news.verio.net!newsmaster.cc.columbia.edu!watsun.cc.columbia.edu!fdc
+From: fdc@watsun.cc.columbia.edu (Frank da Cruz)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Algol-10
+Date: 12 Jul 2001 16:33:25 GMT
+Organization: Columbia University
+Lines: 49
+Message-ID: <9ikjgl$nu2$1@newsmaster.cc.columbia.edu>
+References: <3B422380.58B395E7@bartek.dontspamme.net> <35837.1432$k86.5650841@e3500-chi1.usenetserver.com>
+NNTP-Posting-Host: watsun.cc.columbia.edu
+X-Trace: newsmaster.cc.columbia.edu 994955605 24514 128.59.39.2 (12 Jul 2001 16:33:25 GMT)
+X-Complaints-To: postmaster@columbia.edu
+NNTP-Posting-Date: 12 Jul 2001 16:33:25 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:5600
+
+In article <35837.1432$k86.5650841@e3500-chi1.usenetserver.com>,
+Zane H. Healy <healyzh@shell1.aracnet.com> wrote:
+: Arthur Krewat <krewat@bartek.dontspamme.net> wrote:
+: > Anyone have ALGOL?
+: 
+: I don't think this has been mentioned in this thread, I just ran across it.
+: 
+:   http://pdp-10.trailing-edge.com/www/lib10/0126/index.html
+:
+: August 1976                                        SAILFAIL, Version: 18,
+: 
+:    Author: Dan Swinehart, Robert Sproul, et al. 
+:    Revised by: Les Earnest, Stanford University, Stanford, CA 
+: 
+:    Source Language: FAIL Memory Required: 50K of user core Special Hardware
+: Required: 4-Series or later monitor Keywords: ALGOL; SAIL; FAIL;
+: Programniing-Language 
+: 
+:    Abstract: SAIL is a high-level programming language for the PDP-10
+: computer. It includes an extended ALGOL 60 compiler and a companion set of
+: execution-time routines. ...
+:
+SAIL was quite nice.  At Columbia we actually "standardized" on it as our
+general-purpose programming language for several years, and used it for
+everything from systems programs to accounting systems and user ID management
+to instruction and research.  For TOPS-20, we wrote a SAIL-callable COMND JSYS
+library.  We bought a truckload of SAIL manuals from Stanford and passed them
+out to everybody.  SAIL had all sorts of terrific features that are lost to
+the ages, and its platform-independent successor, MainSAIL, was even better.
+If we had something like that to work with today instead of C, the world would
+be a better and safer place.
+
+Unfortunately bugs in the SAIL runtime system tended not to get fixed and
+eventually we gave up on it for system programming and administration and
+went back to assembler (MACRO, FAIL, and/or Midas) which was almost as much
+fun as SAIL.
+
+And yes, Simula was nice too -- the birthplace of Object-Oriented Programming.
+
+Compared to these, Algol-10 was a toy.  But in fairness, Algol 60 was never
+intended to be a practical programming language -- it was only for expressing
+algorithms; it didn't even have i/o.  Still, it was one of the 2 or 3 most
+influential programming languages ever.  Probably THE most influential, having
+pioneered the concepts of block structure, scope, GOTO-less programming, and
+so on, which found their way into PL/I, Pascal, C, C++, Java, and most
+everything else you can think of except Fortran and Cobol (which predated
+Algol-60), LISP, SNOBOL, and APL.
+
+- Frank
+
+
+Article: 15286 of alt.sys.pdp10
+Path: sea-read.news.verio.net!dfw-artgen.news.verio.net!iad-peer.news.verio.net!news.verio.net!news.tele.dk!small.news.tele.dk!64.152.100.70!peer1-sjc1.usenetserver.com!usenetserver.com!e420r-atl1.usenetserver.com.POSTED!not-for-mail
+From: "Zane H. Healy" <healyzh@shell1.aracnet.com>
+Subject: PDP-10 Algol manual online
+Newsgroups: alt.sys.pdp10
+Organization: Aracnet
+User-Agent: tin/1.4.4-20000803 ("Vet for the Insane") (UNIX) (Linux/2.2.19 (i686))
+Lines: 13
+Message-ID: <IWH18.107$h31.23265@e420r-atl1.usenetserver.com>
+X-Complaints-To: abuse@usenetserver.com
+X-Abuse-Info: Please be sure to forward a copy of ALL headers
+X-Abuse-Info: Otherwise we will be unable to process your complaint properly.
+NNTP-Posting-Date: Thu, 17 Jan 2002 17:07:36 EST
+Date: Thu, 17 Jan 2002 22:07:36 GMT
+Xref: dfw-artgen.news.verio.net alt.sys.pdp10:15286
+
+Thanks to the efforts of Ronald Tatum working from a very bad copy, the
+PDP-10 ALGOL Programmer's Reference Manual from the late 60's or early 70's
+is now online at the PDP-10 Emulation Webpage.
+
+	http://www.aracnet.com/~healyzh/pdp10emu.html
+
+It is in seven parts with a errata page where Ronald Tatum did his best to
+figure out what some of the 'smudges' on his copy said.  Unfortunatly
+apparently whoever copied this back around '74 or earlier didn't consider 
+the page that would have dated the manual worth copying.
+
+			Zane
+
+
+
+

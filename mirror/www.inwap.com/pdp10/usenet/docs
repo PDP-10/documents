@@ -1,0 +1,726 @@
+Article 3950 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!uninett.no!news.algonet.se!algonet!news.tele.dk!193.251.151.101!opentransit.net!wanadoo.fr!not-for-mail
+From: Hans B Pufal <hansp@digiweb.com>
+Newsgroups: alt.sys.pdp10
+Subject: TOPS-10 7.03 MIG
+Date: Sat, 17 Mar 2001 22:46:44 +0100
+Organization: Wanadoo, l'internet avec France Telecom
+Lines: 15
+Message-ID: <3AB3DB44.E04E3118@digiweb.com>
+NNTP-Posting-Host: agrenoble-101-2-1-165.abo.wanadoo.fr
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: wanadoo.fr 984865632 16778 193.251.69.165 (17 Mar 2001 21:47:12 GMT)
+X-Complaints-To: abuse@wanadoo.fr
+NNTP-Posting-Date: 17 Mar 2001 21:47:12 GMT
+X-Mailer: Mozilla 4.75 [en] (Windows NT 5.0; U)
+X-Accept-Language: en
+Xref: nntp1.ba.best.com alt.sys.pdp10:3950
+
+Thanks to the generosity of Johnny Eriksson, I received paper copies of
+the 7.03 and 7.04 MIGs today.
+
+I have scanned about 30% (up to chapter 6) of the 7.03 MIG and put it up
+at :
+
+   <ftp://aconit.org/pub/dec-10/MIG703.TXT>
+
+It's pure ASCII text. I've done a first cut at proof reading/formatting.
+
+I'll do the rest of the 703 MIG tomorrow, the 704 later next week.
+
+Enjoy....
+
+  -- HBP
+
+
+Article 4126 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!207.172.3.44!feed2.news.rcn.net!feed1.news.rcn.net!rcn!207-172-255-252
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-10 7.03 MIG - finished!
+Date: Wed, 21 Mar 01 12:26:59 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 32
+Message-ID: <99abf5$qjl$5@bob.news.rcn.net>
+References: <3AB3DB44.E04E3118@digiweb.com> <3AB517A3.53294396@digiweb.com> <3AB728E1.519AFFB5@digiweb.com>
+X-Trace: UmFuZG9tSVarrW8F9VBSlX0xk4YFZU6da4C9bpjsDXFokzE1UYc/vNdawsPBtvJ3
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 21 Mar 2001 13:48:21 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:4126
+
+In article <3AB728E1.519AFFB5@digiweb.com>,
+   Hans B Pufal <hansp@digiweb.com> wrote:
+>I have completed the 7.03 MG, it is available at 
+>
+>   <ftp://aconit.org/pub/dec-10/MIG703.TXT>
+>
+>Tim (Shoppa) feel free to archive a copy on your site.
+>
+>
+>One thng I did not duplicate was the change bars, are these mportant
+>enough to add?
+
+The change bars indicated the portions of the manual that changed
+from the previous manual.  We tried to use that as a "head's up"
+warning to the customer.  The way a customer kept up-to-date
+with our software changes that affected documentation was to read
+the change bar text lines; that way the customer didn't have to
+completely reread the manual to figure out what we changed that
+might affect his computer usage.
+
+
+>What demand for the 7.04 MIG? which I also received.
+
+<snip>
+
+I don't know.  If there were any changes in procedures installing
+those REACT files might be useful.  I never looked at them so
+I can't tell you how important those few pages are.
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 6340 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!feeder.qis.net!feed2.onemain.com!feed1.onemain.com!uunet!dca.uu.net!ash.uu.net!spool0900.news.uu.net!reader0900.news.uu.net!not-for-mail
+Message-ID: <3BC60A52.64A2D217@trailing-edge.com>
+Date: Thu, 11 Oct 2001 21:08:34 -0400
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Organization: Trailing Edge Technology
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.2     AlphaServer 1200 5/533 4MB)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: TOPS-10 Commands Manual
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 21
+NNTP-Posting-Host: 63.73.218.130
+X-Trace: 1002848914 reader0.ash.ops.us.uu.net 8719 63.73.218.130
+Xref: nntp1.ba.best.com alt.sys.pdp10:6340
+
+Things have (obviously) been very busy here in the past month,
+but I hope to have roughly a dozen new tapes unpacked and available
+at the PDP-10 archives soon.  In the meantime, I've been stacking
+huge piles of documents through the scanner here, and among the goodies
+now available is the TOPS-10 Command Manual for TOPS-10 7.01.
+
+See
+ 
+http://mudd.trailing-edge.com/scandocs/tops10/AA0916D-TB_TOPS-10_Commands_Manual_7_01/book.pdf
+
+for all 432 pages in one giant 11.5 Meg PDF, or feel free to browse
+the individual pages by clicking on the *.png files in the
+directory
+
+http://mudd.trailing-edge.com/scandocs/tops10/AA0916D-TB_TOPS-10_Commands_Manual_7_01/
+
+Each individual page is in the 30-60 kbyte range.
+
+Enjoy!
+
+Tim.
+
+
+Article 6035 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+From: rivie@RIvie.no.domain
+Subject: Re: PDP-3 prelim spec
+References: <aek-0909011312210001@il0502a-dhcp38.apple.com>
+Reply-To: ivie@cc.usu.edu
+Message-ID: <slrn9pn45t.obs.rivie@RIvie.no.domain>
+User-Agent: slrn/0.9.7.1 (NetBSD)
+Cache-Post-Path: hoth!unknown@208.186.13.142
+X-Cache: nntpcache 2.4.0b5 (see http://www.nntpcache.org/)
+NNTP-Posting-Host: 208.186.8.4
+Date: 10 Sep 2001 10:37:19 -0500
+X-Trace: corp.newsgroups.com 1000136239 208.186.8.4 (10 Sep 2001 10:37:19 -0500)
+Lines: 20
+X-Comments: This message was posted through Newsfeeds.com
+X-Comments2: IMPORTANT: Newsfeeds.com does not condone, nor support,  spam or any illegal or copyrighted postings.
+X-Comments3: IMPORTANT: Under NO circumstances will postings containing illegal or copyrighted material through this service be tolerated!!
+X-Report: Please report illegal or inappropriate use to <abuse@newsfeeds.com>
+X-Abuse-Info: Please be sure to forward a copy of ALL headers, INCLUDING the body (DO NOT SEND ATTACHMENTS)
+Organization: Newsfeeds.com http://www.newsfeeds.com 80,000+ UNCENSORED Newsgroups.
+Path: nntp1.ba.best.com!news2.best.com!news-hog.berkeley.edu!ucberkeley!nntp-relay.ihug.net!ihug.co.nz!telocity-west!TELOCITY!local-out2.newsfeeds.com!corp.newsgroups.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:6035
+
+In article <aek-0909011312210001@il0502a-dhcp38.apple.com>, Al Kossow wrote:
+>>The PDP FAQ notes that the PDP-3 was only a "paper" design, and that
+>>DEC never built one - but that Scientific Engineering did build one
+>>from the spec.  Which implies that a spec does exist - or at least,
+>>did at one time.
+> 
+> www.spies.com/aek/pdf/dec/pdp3/PDP-3_PrelimSpec.pdf
+> 
+> It looks like a 36 bit PDP-1
+
+Acrobat craps out in the middle of the last page.
+
+-- 
+Roger Ivie
+ivie@cc.usu.edu
+
+
+-----= Posted via Newsfeeds.Com, Uncensored Usenet News =-----
+http://www.newsfeeds.com - The #1 Newsgroup Service in the World!
+-----==  Over 80,000 Newsgroups - 16 Different Servers! =-----
+
+
+Article 6053 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!feed.textport.net!out.nntp.be!propagator-SanJose!news-in!easynews!sjcppf01.usenetserver.com!e420r-sjo4.usenetserver.com!usenetserver.com!e420r-atl1.usenetserver.com.POSTED!not-for-mail
+From: "Zane H. Healy" <healyzh@shell1.aracnet.com>
+Subject: Re: Newbie TOPS-10 7.03 question
+Newsgroups: alt.sys.pdp10
+References: <9nont9$9cq@dispatch.concentric.net> <9nq6fr$k08$5@bob.news.rcn.net> <9nr21g$sf3@dispatch.concentric.net>
+Organization: Aracnet
+User-Agent: tin/1.4.4-20000803 ("Vet for the Insane") (UNIX) (Linux/2.2.19 (i686))
+Lines: 25
+Message-ID: <gB9o7.12071$yJ1.756420@e420r-atl1.usenetserver.com>
+X-Complaints-To: abuse@usenetserver.com
+X-Abuse-Info: Please be sure to forward a copy of ALL headers
+X-Abuse-Info: Otherwise we will be unable to process your complaint properly.
+NNTP-Posting-Date: Thu, 13 Sep 2001 17:31:56 EDT
+Date: Thu, 13 Sep 2001 21:31:56 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:6053
+
+Seth <sethm@bokbok.squeep.com> wrote:
+> You're right!  All I had to do was edit SYS:TTY.INI (getting a painful
+> but fun introduction to TECO at the same time), tell it about the
+> lines, and set the speed to 9600.
+
+For those not familiar with TECO, I recommend trying the SED editor that is
+available for both TOPS-10 and TOPS-20.
+
+> I now have a fully functional timesharing system running TOPS-10 7.03!
+
+Congrats!
+
+> I really want to play around with TOPS-20 next, but I haven't found
+> sufficient documentation to understand how to install it.  The TOPS-10
+> MIG was a real blessing to have handy.
+
+Take a look at the following web page.  It has pointers to all TOPS-10 and
+TOPS-20 documentation that I am aware of.  
+http://www.aracnet.com/~healyzh/pdp10emu.html
+
+Unfortuantly there isn't enough TOPS-20 documentation for it to be easy, but
+I can guarentee that it is possible to get a system running with what does
+exist even if you've never seen a TOPS-20 system in your life!
+
+		Zane
+
+
+
+Article 6058 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.voicenet.com!feed2.news.rcn.net!rcn!news.maxwell.syr.edu!pln-e!spln!dex!extra.newsguy.com!newsp.newsguy.com!enews4
+From: Alan Greig <a.greig@virgin.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Newbie TOPS-10 7.03 question
+Date: Fri, 14 Sep 2001 12:07:00 +0100
+Organization: http://extra.newsguy.com
+Lines: 44
+Message-ID: <c6n3qtss9n8ffrl6lgbark2vhn6ijhadp0@4ax.com>
+References: <9nont9$9cq@dispatch.concentric.net> <9nq6fr$k08$5@bob.news.rcn.net> <9nr21g$sf3@dispatch.concentric.net> <gB9o7.12071$yJ1.756420@e420r-atl1.usenetserver.com>
+NNTP-Posting-Host: p-036.newsdawg.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Newsreader: Forte Agent 1.8/32.548
+Xref: nntp1.ba.best.com alt.sys.pdp10:6058
+
+On Thu, 13 Sep 2001 21:31:56 GMT, "Zane H. Healy"
+<healyzh@shell1.aracnet.com> wrote:
+
+
+>Take a look at the following web page.  It has pointers to all TOPS-10 and
+>TOPS-20 documentation that I am aware of.  
+>http://www.aracnet.com/~healyzh/pdp10emu.html
+>
+>Unfortuantly there isn't enough TOPS-20 documentation for it to be easy, but
+>I can guarentee that it is possible to get a system running with what does
+>exist even if you've never seen a TOPS-20 system in your life!
+
+Yes, Bob Supnks's guide on these pages (parts 1 + 2) and the TOPS-20
+7.1 installation guide is close enough. Also I nearly fell over when I
+saw *
+
+"Introduction to using the DECSYSTEM-20, originally from the Dundee
+College of Technology (TEXT)" also on these pages.
+
+As that's the machine I used to run! Even more surprising is it was
+retyped by an ex student there who now works for me with my current
+employer on VMS. The author credits are DEO/KLB who were Duncan Ord
+and Kay Black but the version online is the 1983 edition updated by
+myself. Think I might have printed copies of the Dundee Tech guides to
+EDIT, BASIC, FORTRAN, TOPS-20 advanced etc at home if. I could only
+find them and scan them in.
+
+In these days I was:
+
+Alan%DCT@UCL-CS.ARPA
+
+or COMPD-ARG%DCT%DDXA@UCL-CS.ARPA even earlier
+
+Had a TOPS-10 PPN before that but (shame) I can't remember it now with
+any accuracy.
+
+We took part in the TOPS-20 V5 field test and had online copies of
+*all* TOPS-20 docs from that time as part of the kit. I am still
+trying to track down tapes on which these might still exist..
+
+>		Zane
+
+--
+Alan
+
+
+Article 6242 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!btnet-peer0!btnet-peer!btnet!newspeer.clara.net!news.clara.net!news5-gui.server.ntli.net!ntli.net!news6-win.server.ntlworld.com.POSTED!not-for-mail
+Message-ID: <3BB8CD80.82F2CE35@iee.org>
+From: "antonio.carlini" <arcarlini@iee.org>
+Reply-To: arcarlini@iee.org
+X-Mailer: Mozilla 4.7 [en] (Win98; I)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: Using a REAL VT100 with simh
+References: <%hLt7.34042$QJ3.1202209@sjcpnn01.usenetserver.com> <9p80it$5eg$1@newsmaster.cc.columbia.edu> <K5Pt7.39769$QJ3.1432409@sjcpnn01.usenetserver.com> <3BB885F8.7D4DB51E@bartek.dontspamme.net> <021u7.7509$ib.117762@atlpnn01.usenetserver.com> <3BB8B359.AD6F3AF9@srv.net> <TV2u7.9872$ib.139759@atlpnn01.usenetserver.com> <3BB8C10E.9D493A9B@bartek.dontspamme.net> <wu3u7.10291$ib.143218@atlpnn01.usenetserver.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 27
+Date: Mon, 01 Oct 2001 21:09:36 +0100
+NNTP-Posting-Host: 213.105.169.52
+X-Complaints-To: abuse@ntlworld.com
+X-Trace: news6-win.server.ntlworld.com 1001967310 213.105.169.52 (Mon, 01 Oct 2001 21:15:10 BST)
+NNTP-Posting-Date: Mon, 01 Oct 2001 21:15:10 BST
+Organization: ntlworld News Service
+Xref: nntp1.ba.best.com alt.sys.pdp10:6242
+
+
+
+"Zane H. Healy" wrote:
+> I'm not sure if they're the same, but the needle-nose tip indirectly solved
+> the problem.  When I got the terminal, and myself positioned so that I could
+> try the pliers I spotted two almost invisible holes.  Got a tool that would
+> fit in them and the pegs popped right up, so now I've got access to the
+> guts.
+
+You can find a scan of a poor photocopy
+of the pocket service guide at:
+   http://208.190.133.201/decimages/moremanuals.htm
+
+Look for:
+  EK-VT100-J1-004 VT100 Series Pocket Service Guide 
+
+I don't have the full service manual but
+I'm almost sure I have seen one somewhere
+on the net. A few quick searches yielded
+nothing :-(
+
+Antonio
+
+-- 
+
+---------------
+Antonio Carlini             arcarlini@iee.org
+
+
+Article 6256 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!feed.textport.net!hammer.uoregon.edu!newsfeed.direct.ca!look.ca!nntp.abs.net!pln-e!spln!dex!extra.newsguy.com!newsp.newsguy.com!drn
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: BMWSFS (Big Man With Sheet Fed Scanner) and PDP-10 doc formats
+Date: 3 Oct 2001 07:22:39 -0700
+Organization: Trailing-Edge Technologies
+Lines: 67
+Message-ID: <9pf6vf0j33@drn.newsguy.com>
+NNTP-Posting-Host: p-947.newsdawg.com
+X-Newsreader: Direct Read News 2.90
+Xref: nntp1.ba.best.com alt.sys.pdp10:6256 alt.folklore.computers:28595
+
+OK, I've now got a fancy-pants (by my standards!) HP Scanjet IIcx with
+sheet feeder, and have run a couple thousand pages of old DEC documents
+through in the past couple days.  The sheet feeder is wonderful, I can
+put in a stack of paper and then go out and paint the garage and come back
+in later to do the next bunch.  And the IIcx+ADF works incredibly well with
+Linux and SANE (see http://www.mostang.com/sane/ ).
+
+For ordinary black-text-on-white-page documents, I just use the scanner
+in automatic threshold mode and I get clear crisp scans, which I can then
+turn into G4 compressed TIFF's or PNG's or GIF's or whatever.  I can even
+take the whole collection of scans and make a big PDF out of them.  That's
+all wonderful.
+
+But some of the documents (for example, the TOPS-20 software installation
+guide) are more complicated.  They have large halftoned gray boxes (that is,
+the original doc has the gray area made up of a bunch of little black dots),
+red text, and red text in halftoned gray boxes.  So far I've been scanning
+these in as full-color (RGB) 24-bit 300 DPI images (about 25 Mbytes per page)
+and then using tools to clean up these scans.  I've developed some
+pretty good algorithms for analyzing for the presence of gray boxes (i.e.
+finding the halftoned areas) and cleaning up the scans of both black and red
+text in these gray boxes.  After the 25Mbyte raw scan has been massaged,
+the result is a PNG that is only 70 or 100 kbytes, and I'm happy with that.
+
+I would be even happier if I could make a compressed TIFF of these black and
+white and gray and red images, but G4 TIFF compression only works on bilevel
+(black and white and no gray).  If I look at the man page for 'pnmtotiff', it
+tells me that some TIFF encoders/decoders can do LZW compression but that this
+capability isn't universal.  I'm unfamiliar with tools and platforms outside
+of what's installed on my personal boxes; is LZW-capable TIFF widespread?
+(I'm asking this as a practical question, and I don't really want to get
+into the legal issues regarding Unisys's LZW patent, though obviously they
+are related and the patent has limited the capabilities of at least some
+software implementations.)
+
+I know that others here have done scans and made the results available as
+JPG's, but I'm fundamentally opposed to doing any lossy compression.
+I also feel that JPG's are just stupid when applied to line-art type images,
+but I'll only say that once to not insult too much those folks who use it :-).
+
+Mostly I'm writing this just to organize my own thoughts on the issues involved,
+and I think I can summarize by saying:
+
+1.  I like non-lossy compression.
+2.  I want to use a format which is easily viewable on a wide range of
+    platforms.
+3.  I'm really proud of my little piece of code that cleans up black/white/red/
+    gray scans.  (If I ever get around to 11M+ docs, I may have to add blue!)
+
+And I think I'm asking:
+
+1.  What format is most useful?  PDF's seem OK (though some PDF-printing
+    software seems to re-rasterize my 300 DPI scans onto their own grid and
+    the results look a little odd), and I can also make web-browsable (i.e.
+    indexed, forward, and back) HTML indices of GIF or PNG images that allow
+    individual pages to be viewed without downloading the whole document.
+
+2.  Is the format that's most useful for black-and-white also the most useful
+    for black-and-white-and-gray-and-red?  What opinions do folks have on
+    "useful" formats?  Do you violently disagree with any of my thoughts?
+
+That's it for this morning.  Tonight I'll start putting some of my scans
+up at pdp-10.trailing-edge.com for y'all to see and complain about (or maybe
+even use!)
+
+Tim.
+
+
+
+Article 6267 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.voicenet.com!newshub.northeast.verio.net!verio!nntp.abs.net!pln-e!spln!dex!extra.newsguy.com!newsp.newsguy.com!drn
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: BMWSFS (Big Man With Sheet Fed Scanner) and PDP-10 doc formats
+Date: 3 Oct 2001 19:43:26 -0700
+Organization: Trailing-Edge Technologies
+Lines: 23
+Message-ID: <9pgice0f7m@drn.newsguy.com>
+References: <9pf6vf0j33@drn.newsguy.com>
+NNTP-Posting-Host: p-046.newsdawg.com
+X-Newsreader: Direct Read News 2.90
+Xref: nntp1.ba.best.com alt.sys.pdp10:6267 alt.folklore.computers:28637
+
+OK, as promised you can see my scanned docs at
+
+  http://mudd.trailing-edge.com/scandocs/tops20/
+
+In particular, see the program "timify7.c" (the seventh in my
+series of attempts to auto-discriminate the gray and red areas)
+and its outputs in the aa-4195f-tm (TOPS-20 V3A installation guide)
+subdirectory.
+
+My apologies for the nearly complete lack of comments in timify7.c.
+
+In that subdirectory, you'll find 25-Mbyte *.pnm's which are the raw
+300 DPI 24-bit color scans, and the *.png's, which are the "digested"
+pages that are only tens of kbytes.  In some cases - especially, say,
+
+   http://mudd.trailing-edge.com/scandocs/tops20/aa-4195f-tm/out138.png
+
+the output looks wonderfully nice.  In other cases, the output has lots
+of gray lines near otherwise black horizontal lines where my discriminating
+software went a little too wild about deciding what was gray and what
+wasn't.  I have some ideas about cleaning this up, and maybe they'll
+happen tonight :-).
+
+
+
+Article 6299 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!feed.textport.net!out.nntp.be!propagator-SanJose!news-in-sanjose!cyclone.bc.net!sjcppf01.usenetserver.com!e420r-sjo4.usenetserver.com!usenetserver.com!sjcpnn01.usenetserver.com.POSTED!not-for-mail
+From: "Zane H. Healy" <healyzh@shell1.aracnet.com>
+Subject: Re: TECO Manual
+Newsgroups: alt.sys.pdp10
+References: <Jkyv7.37725$xi5.1942536@sjcpnn01.usenetserver.com> <87ofnlugqe.fsf@prep.synonet.com> <3BBF242C.49883D18@trailing-edge.com>
+Organization: Aracnet
+User-Agent: tin/1.4.4-20000803 ("Vet for the Insane") (UNIX) (Linux/2.2.19 (i686))
+Lines: 12
+Message-ID: <CCMv7.60103$xi5.2757160@sjcpnn01.usenetserver.com>
+X-Complaints-To: abuse@usenetserver.com
+X-Abuse-Info: Please be sure to forward a copy of ALL headers
+X-Abuse-Info: Otherwise we will be unable to process your complaint properly.
+NNTP-Posting-Date: Sat, 06 Oct 2001 19:39:14 EDT
+Date: Sat, 06 Oct 2001 23:39:14 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:6299
+
+Tim Shoppa <shoppa@trailing-edge.com> wrote:
+> Didn't Megan Gentry once make the scans of the TECO pocket guide
+> available as *.JPG's?
+
+I know she made the following available, I don't know if she did any others.
+
+-r--r--r--   1 root  ftp  1904195 Dec  6  1998 gt40rc.tar.gz
+-r--r--r--   1 root  ftp  2366570 Dec  6  1998 pdp15rc.tar.gz
+-r--r--r--   1 root  ftp  1417136 Dec  6  1998 pdp8rc.tar.gz
+-r--r--r--   1 root  ftp  1095335 Dec  6  1998 wcsrc.tar.gz
+
+			Zane
+
+
+
+Article 6296 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newshub.sdsu.edu!news-hog.berkeley.edu!ucberkeley!enews.sgi.com!paloalto-snf1.gtei.net!news.gtei.net!forum.apple.com!news.apple.com!il0502a-dhcp66.apple.com!user
+From: aek@spies.com (Al Kossow)
+Newsgroups: alt.sys.pdp10
+Subject: PDF of Tim's TOPS20 install scans available
+Date: Sat, 06 Oct 2001 12:13:06 -0700
+Organization: Apple Computer, Inc.
+Lines: 7
+Message-ID: <aek-0610011213060001@il0502a-dhcp66.apple.com>
+NNTP-Posting-Host: il0502a-dhcp66.apple.com
+X-Trace: news.apple.com 1002395586 13336 17.205.24.66 (6 Oct 2001 19:13:06 GMT)
+X-Complaints-To: usenet@news.apple.com
+NNTP-Posting-Date: 6 Oct 2001 19:13:06 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:6296
+
+http://www.spies.com/aek/pdf/dec/pdp10/AA-4195F-TM(TOPS20Instl).pdf
+
+I thought it came out pretty good...
+
+Tim, you might want to play with the gamma setting on scanner when
+you do the color scan before conversion. It looked like the contrast
+was a bit low.
+
+
+Article 6317 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!fu-berlin.de!pln-w!spln!dex!extra.newsguy.com!newsp.newsguy.com!enews4
+From: Alan Greig <a.greig@virgin.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-20 Question/Doc's available
+Date: Wed, 10 Oct 2001 09:03:29 +0100
+Organization: http://extra.newsguy.com
+Lines: 25
+Message-ID: <75v7sto6vlp51p9gbf682keu1depksf8q6@4ax.com>
+References: <HFJw7.148459$xi5.5968947@sjcpnn01.usenetserver.com>
+NNTP-Posting-Host: p-328.newsdawg.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Newsreader: Forte Agent 1.8/32.548
+Xref: nntp1.ba.best.com alt.sys.pdp10:6317
+
+On Tue, 09 Oct 2001 21:06:47 GMT, "Zane H. Healy"
+<healyzh@shell1.aracnet.com> wrote:
+
+>How close is TOPS-20 V7.0 to V4.1?  As in how useful are the V7 manuals if
+>you're running V4.1?
+
+Apart from extended addressing sections and huge updates to the
+available EXEC command processors there is not a great deal of
+difference. Most of the EXEC changes up to V7 could be retrofitted. In
+fact the version of EXEC that comes with 4.1 is the V5 EXEC. Should be
+possible to build a V7  PCL enhanced EXEC on V4.1 given a week or so
+worth of work.
+
+>I've got the DEC V7 manuals from TOAD:<DOCUMENATION> online as HTML (using
+>Tim Shoppa's VMS program).  I'm in the process of coverting them to Adobe
+>Acrobat, however, my method isn't as streamlined as Tim's so I've only
+>gotten 8 manuals converted so far.  I've got everything that is done so far
+>available on the PDP-10 Emulation page in the further documentation section.
+>http://www.aracnet.com/~healyzh/pdp10emu.html
+>
+>			Zane
+>
+
+--
+Alan
+
+
+Article 13492 of alt.sys.pdp10:
+Path: sea-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!crtntx1-snh1.gtei.net!chcgil2-snh1.gtei.net!news.gtei.net!wn1feed!wn3feed!worldnet.att.net!198.6.0.7!uunet!ash.uu.net!spool0901.news.uu.net!spool0900.news.uu.net!reader0902.news.uu.net!not-for-mail
+Message-ID: <3C094A4C.24ECEF3A@trailing-edge.com>
+Date: Sat, 01 Dec 2001 21:23:24 -0400
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Organization: Trailing Edge Technology
+X-Mailer: Mozilla 3.03Gold (X11; I; OpenVMS V7.2     AlphaServer 1200 5/533 4MB)
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10,alt.folklore.computers,comp.sys.dec
+Subject: Please test experimental PDP-10 site search engine
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 42
+NNTP-Posting-Host: 63.73.218.130
+X-Trace: 1007259797 reader2.ash.ops.us.uu.net 6615 63.73.218.130
+Xref: dfw-artgen.news.verio.net alt.sys.pdp10:13492 alt.folklore.computers:75607 comp.sys.dec:22603
+
+OK folks, many times over the past years I've promised that
+there are ways for me to index the thousands of megabytes of stuff
+in the PDP-10 archive collection at
+
+  http://pdp-10.trailing-edge.com/
+
+and that I would do this indexing when I had some spare time.
+
+That spare time happened between 4AM and 8AM this Saturday
+morning.  The resulting "test site" is far from complete, but
+it does contain 7000 files (totaling about 100 Mbytes) unpacked
+from the DECUS LIB10 tapes (although not their abstracts!)  See
+
+  http://new-pdp-10.trailing-edge.com/
+
+for what is available so far.  I've used the HTDIG search engine
+to generate a searchable index, and it seems pretty robust in my
+testing.  Please use and abuse the "new" site to your heart's
+content, as I'm planning on migrating all the PDP-10 material
+to it in the next few weeks, and any feedback I get early on will
+make the experience less traumatic for all of us :-).  I'm
+particularly sensitive to how the site may show up under text-based
+web browsers, though any complaints or suggestions will be
+happily received.
+
+I have discovered one problem with HTDIG so far: it refuses to
+show the timestamp for any file from before 1-Jan-1970, although
+it does seem to correctly sort-by-date before then.  I can't
+be the only site on the web with files that have preserved their
+timestamp from before 1970, can I? :-)
+
+If some more spare time materializes Sunday morning, I may add
+the DECUS LIB20 tapes and maybe the 10BACKUP format DEC distribution
+tapes to the "new-pdp-10" site.  The DECUS abstracts (I found my
+old 1983 DECUS LCG catalog again!  The wonders of cleaning the
+basement...) will probably be at least a
+week away.  Once things settle down I plan
+to release the tools I use to generate the site and indices from
+tape images so that anyone can set up their own private searchable
+PDP-10 archive, if they wish.
+
+Tim. (shoppa@trailing-edge.com)
+
+
+Article 13565 of alt.sys.pdp10:
+Path: sea-read.news.verio.net!dfw-artgen.news.verio.net!dfw-peer.news.verio.net!news.verio.net!newsfeed.mathworks.com!panix!news.panix.com!panix3.panix.com!not-for-mail
+From: klh@panix.com (Ken Harrenstien)
+Newsgroups: alt.sys.pdp10
+Subject: Re: NIA20, CI20 microcode latest versions?  sources?
+Date: 5 Dec 2001 05:29:00 -0500
+Organization: PANIX Public Access Internet and UNIX, NYC
+Lines: 20
+Sender: Ken Harrenstien <klh@panix.com>
+Message-ID: <9ukstc$ine$1@panix3.panix.com>
+References: <qhk7w2llit.fsf@ruckus.brouhaha.com>
+NNTP-Posting-Host: panix3.panix.com
+X-Trace: news.panix.com 1007548140 28203 166.84.1.3 (5 Dec 2001 10:29:00 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: 5 Dec 2001 10:29:00 GMT
+Xref: dfw-artgen.news.verio.net alt.sys.pdp10:13565
+
+In article <qhk7w2llit.fsf@ruckus.brouhaha.com>,
+Eric Smith  <eric-no-spam-for-me@brouhaha.com> wrote:
+>Anyone know what the latest versions (edits) of the NIA20 and CI20
+>microcode are?  Anyone got sources?  Even as binaries go, the only ones
+>I've found are in the KLAD20-AC-7.0 tapes in Tim's archive, files CI20.ULD
+>and NI20.ULD in:
+>   http://pdp-10.trailing-edge.com/pdp-10/K20V7B.HTML
+
+There are two listings in the TWONKY filesystem I recently put up:
+
+in DSKA: [7,3,BOOT]
+   KLPCOD  MCR  1690  <455>   30-Apr-87    1A(724)
+   KNICOD  MCR  1512  <455>    8-Nov-85    1(171)
+
+They are not sources but rather output listings.  The latter appears to
+be from something called ND167T.MCR[4,204] (version 167T, I assume) dated
+2-Feb-84.  Don't know if that was the last version, but that is what
+I worked from while doing the NIA20 emulation.
+
+--Ken
+
+
+Article: 21035 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!fu-berlin.de!in.100proofnews.com!in.100proofnews.com!pd2nf1so.cg.shawcable.net!residential.shaw.ca!sn-xit-03!sn-xit-01!sn-post-01!supernews.com!corp.supernews.com!not-for-mail
+From: Patrick Scheible <kkt@drizzle.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: TOPS-20 Newbie Searching for Documentation
+Date: 15 Jul 2003 09:53:08 -0700
+Organization: Ye 'Ol Disorganized NNTPCache groupie
+Message-ID: <tqm3ch7n34b.fsf@drizzle.com>
+References: <slrnbh7hrc.qdm.usenet@norge.freeshell.org>
+X-Newsreader: Gnus v5.7/Emacs 20.7
+Cache-Post-Path: yasure!unknown@cascadia.drizzle.com
+X-Cache: nntpcache 2.4.0b5 (see http://www.nntpcache.org/)
+X-Complaints-To: abuse@supernews.com
+Lines: 56
+Xref: dfw-artgen alt.sys.pdp10:21035
+
+Stephen VanDahm <usenet@fomps.net> writes:
+
+> I feel kind of awkward posting questions that, to you guys, must seem very 
+> simple and not very interesting.  If I've broken USENET ettiquette by 
+> posting here, please forgive me.
+
+This is a fine place to ask.
+ 
+> I have an account on twenex.org's public-access virtual PDP-10, which runs 
+> TOPS-20.  I'm trying to learn how everything works, but both TOPS-20 and 
+> the PDP-10 architecture seem very strange to someone born in 1978.  Does 
+> anyone know how I can find printed (or printable) documentation?  I found 
+> a 93-page PDF file that is a directory for the TOPS-20 notebook set, but I 
+> haven't been able to track down the notebook set itself.  Are these PDF 
+> files contraband, or am I free to use them if I can find them?  If they're 
+> legal, where can they be found?
+
+  http://www.aracnet.com/~healyzh/TOPS-20_notebooks.html
+
+has some of the notebook set.  Although not all of them are available,
+it looks like they've done some of the most important first.
+
+The processor reference manual doesn't seem to be in that set, but it
+is in the set at
+
+  http://www.36bit.org/dec/manual/
+
+If you can find Ralph Gorin's book Introduction to DECSYSTEM-20
+Assembly Language Programming, that's a good introduction to the macro
+assembler itself, the instruction set, and the most important system
+calls.  It was by ftp at toad.xkl.com for a while but I don't see it
+now.  A good university library would have it.
+
+There's also a newbie users' document at
+
+  http://www.36bit.org/dec/third_party_doc/dundee_pi16.txt
+
+As far as legality, there's a Digital license agreement at
+
+  http://www.36bit.org/dec/license.html
+
+> I'm also interested in general historical information about the PDP-10 
+> family of computers, as well as the software and culture that developed 
+> around it.  Any recommendations?
+
+There's a webring about the pdp10 at
+
+  http://n.webring.com/hub?ring=pdp10&id=1&hub
+
+with lots to read in its sites.
+
+> Thanks for your time,
+> 
+> Steve VanDahm
+
+-- Patrick
+
+

@@ -1,0 +1,46 @@
+Article 1674 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!newsxfer.eecs.umich.edu!news.bu.edu!budd
+From: budd@csa.bu.edu (Phil Budne)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Phil's backup10 - problems
+Followup-To: alt.sys.pdp10
+Date: 26 Oct 2000 06:52:26 GMT
+Organization: Boston University Computer Science Dept.
+Lines: 29
+Message-ID: <8t8kba$cjh$1@news3.bu.edu>
+References: <knNJ5.44259$YX4.1332693@news2.giganews.com>
+X-Trace: news3.bu.edu 972543146 12913 128.197.12.3 (26 Oct 2000 06:52:26 GMT)
+X-Complaints-To: news@bu.edu
+Xref: nntp1.ba.best.com alt.sys.pdp10:1674
+
+In article <knNJ5.44259$YX4.1332693@news2.giganews.com>,
+Timothy Stark  <sword7@grace.speakeasy.org> wrote:
+>Hello folks:
+>
+>I tried to unarchive my some tpc files but Phil's backup10 did nothing
+>when I did 'backup -xacvf file.tpc'. (Do not confuse with 10BACKUP
+>for VAX system)  I mean Phil's backup10 for UNIX machines.  :-(
+>Does anyone experience with that on Red Hat Linux operating system?
+>However, I am writing my own backup.
+>
+>Thank you.
+>
+>-- Tim Stark
+
+I cannot take credit for backup10, as I am not the original author.
+However I am to blame for Phil's version of backup10, in particular
+improving the output, to better resemble that of the original program
+(lots of good stuff in those header fields), adding options for the
+directory structure of the extracted files, and for attempting to add
+options to extract files as raw bits from the tape.
+
+I'm also guilty for attempting to add TPC support.  I'd be happy to
+accept changes, fixes, improvements.  I'd also enjoy it if one day
+someone sends me private e-mail before shooting off their mouths in
+public about how my (admittedly little) attempt to do something useful
+and share it IN SOURCE FORM, with EVERYBODY, is a load of crap and
+needs to be thrown out.
+
+-phil
+
+

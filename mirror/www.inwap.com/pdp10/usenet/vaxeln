@@ -1,0 +1,67 @@
+Article 1482 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10,comp.os.vms
+Path: shellx.best.com!news1.best.com!news.texas.net!news.kei.com!newsfeed.internetmci.com!in2.uu.net!world!mv!mv.mv.com!morris
+From: morris@mv.mv.com (Skipper W. Morris)
+Subject: Re: 36-bits or none at all!
+Message-ID: <DK6IxK.9AG@mv.mv.com>
+Organization: MV Communications, Inc.
+Date: Tue, 26 Dec 1995 05:51:20 GMT
+References: <DK0x7B.Gs5@SDF.LONESTAR.ORG>
+X-Nntp-Posting-Host: mv.mv.com
+Lines: 52
+Xref: shellx.best.com alt.sys.pdp10:1482 comp.os.vms:31598
+
+RE: VAXELN on a VAX front end.
+
+It was used on at least one VAX.  If my foggy memory can be relied on I
+believe it was the VAX 9000.
+
+>> I think the Pascal-only support was in part inheritted from a product known
+>> as MicroPower Pascal, a real-time development environment (I'm not sure,
+>> that may have been a name shared with a PDP-11 product).
+
+Not quite.  MPP and VAXELN were designed for similar markets (one for the VAX
+market, one for the PDP-11).  As much as I can remember the decisions to use
+Pascal were made independently for each product, but for much the same reasons.
+
+>It *was* a PDP-11 product.  I never looked at it closely, and I don't know
+>exactly how it fit in with RT-11 and RSX, both of which were aimed at the
+>real-time space.  As I recall, it was a *really* "lean and mean" OS kernel.
+>(RSX-11S was, too, but in those days the only *supported* way to write
+>programs that did real-time stuff was in assembler - none of the RSX compilers
+
+MPP never really did "fit" in the RT-11 and RSX in the same way RT-11, RSX
+and RSTS were all kin.
+
+MPP was really aimed at the small programmable controller market.  You'd have
+a large machine running VMS, RSX or RT with a large number of Kxx-nn series
+boards hanging off the Unibus/Qbus. You'd write your own realtime app that
+would be down-line-loaded onto all the controllers hanging off the bus.
+
+Before this product existed a customer would have to write KMS-11 microcode
+to do the same sort of thing.
+
+Since all the boards that MPP ran on were PDP-11 based, it was an easy thing
+for MPP to also be supported to run in standalone fashion on any PDP similar
+to VAXELN.  I also seem to remember that both VAXELN and MPP could even be
+burned in ROM on a processor.
+
+RSX-11S was nothing more then a stripped down version of RSX-11M designed
+to be memory resident and down-line-loadable.  Primarily used by the RSX
+customer base where they'd do their development on a big RSX timesharing
+machine, and they use small diskless PDP-11's for their apps.  Similar in
+many respects to the apps that MPP was aimed at, however the product line
+groups and engineering groups were so far apart in DEC they never talked to
+each other.
+
+>> The product manager for VAXeln only knew Pascal.  VAXeln may have been in
+>> part a renaming of MicroPower Pascal when C and Ada support were planned.
+>
+>Nope - separate product.
+
+Yes they were separate products, however for a time both products were
+supported by the same engineering group in the Mill.  (Until MPP was retired).
+
+/Skip Morris
+
+

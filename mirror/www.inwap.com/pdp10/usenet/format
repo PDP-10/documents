@@ -1,0 +1,144 @@
+Article 3660 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!inwap
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: 36-bit MIME types, PDP-10 FTP (was Re: File transfers  was Re: Barb,    DSKB is not in catalog!)
+Date: 26 Feb 2001 23:56:58 GMT
+Organization: Chez Inwap
+Lines: 54
+Message-ID: <97eqga$175u$1@nntp1.ba.best.com>
+References: <3A85706B.B4A96DC3@nospam.nospam> <96k6vk$a33@nnrp3.farm.idt.net> <3A8DA401.D850A6BB@unisys.com> <a5js8t0bvj7rmuo14cd65tcrj5q1dc7rpj@4ax.com>
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 983231818 40126 206.184.139.134 (26 Feb 2001 23:56:58 GMT)
+X-Complaints-To: abuse@best.com
+NNTP-Posting-Date: 26 Feb 2001 23:56:58 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:3660 alt.folklore.computers:16823
+
+In article <a5js8t0bvj7rmuo14cd65tcrj5q1dc7rpj@4ax.com>,
+Brian Inglis  <Brian.dot.Inglis@SystematicSw.ab.ca> wrote:
+>On Fri, 16 Feb 2001 16:04:49 -0600, "David W. Schroth"
+><David.Schroth@unisys.com> wrote:
+>
+>The DEC OSes used 5x7 packed ASCII on 36- and 18-bitters (a pain
+>on the latter, from personal experience in assembler). Nine bit
+>bytes seems like a cleaner approach. 
+>Does TOPS-20/TWENEX support FTP and how does the binary mapping
+>(36 bit<->octet) work there? Any references? 
+
+Yeah, I posted one back in December.  To whit:
+
+|>I knew I'd read it somewhere... Still not sure how TOPS-20 turned two
+|>words into bytes (as with binary files on wsmr-simtel20). Perhaps it
+|>stored 9 bytes in 2 words?
+
+I did some experimenting with TOPS-20 to Unix transfers.
+
+  For TEXT mode, use a 7-bit byte pointer to read or write the 36-bit file.
+The LSB on the 36-bit word is not sent, and is zero on receive.
+
+  For IMAGE mode, use a 4-bit byte pointer and read two nybbles for
+every octet sent (or write two nybbles for every octet received).
+(The least significant 4 bits of the first word would be combined with
+the most significant 4 bits of the second word.)  The end result is
+that two 36-bit words (72 bits) are encoded as nine octets (72 bits).
+
+  For TENEX mode, use 8-bit byte pointer (which will skip over the least
+significant 4 bits of every word).  Suitable for 8, 16, or 32-bit data.
+
+  For PAGE mode, there was a separate negociation between the two
+TOPS-20 systems to skip pages in sparse files.
+
+If an 8-bit program (such as a CP/M binary) was stored on a TOPS-20
+system (such as SIMTEL20) and downloaded to an 8-bit platform in
+IMAGE mode instead of TENEX mode, the resulting file would be mangled.
+But the data could be recovered.  I remember seeing TENEX.COM, a program
+for CP/M that would read a mangled input file 9 bytes at at time and write
+8 bytes at a time (after discarding the 2 unwanted nybbles).
+
+KERMIT transmits 36-bit words as four 7-bit characters plus one 8-bit
+character.  (The high-order bit of the 5th octet matching the least
+significant bit of the 36-bit word.)  A TOPS-10 .EXE file could be
+transmitted to a CP/M system and back again without losing any bits.
+
+	-Joe
+
+--
+See http://www.inwap.com/ for PDP-10 and "ReBoot" pages.
+
+
+--
+See http://www.inwap.com/ for PDP-10 and "ReBoot" pages.
+
+
+Article 3645 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news2.best.com!feed2.news.rcn.net!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Kermit (Was: Barb, DSKB is not in catalog!)
+Date: Sun, 25 Feb 2001 22:45:39 -0500
+Lines: 51
+Message-ID: <3A99D163.458F5AEE@MA.UltraNet.Com>
+References: <3A85706B.B4A96DC3@nospam.nospam> <963uq7$b9s$1@spies.com> <9643f0$ohe$1@newsmaster.cc.columbia.edu> <uitmdafwq.fsf@nonews.net> <96e538$d0h$1@newsmaster.cc.columbia.edu>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: UmFuZG9tSVaZK5WUcPRM8Pa3Bi1nSYBaCtKeO17H7ktVVZzfHdRSCBPUoj9Im3Z4
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 26 Feb 2001 03:46:23 GMT
+X-Mailer:  Mozilla 4.76 [en] (Win95; U)
+X-Accept-Language:  en,en-US,en-GB,es
+Xref: nntp1.ba.best.com alt.sys.pdp10:3645
+
+Frank da Cruz wrote:
+> 
+> In article <uitmdafwq.fsf@nonews.net>,
+> =?iso-8859-1?q?Bj=F8rn?= Hell Larsen <blarsen@nonews.net> wrote:
+( ^^^^^^^^^^^^^^^^^^^^^^^^
+  This is probably ironic).
+
+
+> : I would rather have developed a Unix utility that was able to read
+> : and write files within an emulated T10/20/etc disk drive/file system.
+> :
+> : If would be more work, of course, since Kermit already is here and
+> : working fine, and since serial line support needs to be implemented
+> : anyway, but it sure would be useful.
+> :
+> You can't just map the TOPS-20 file system to UNIX.  If you thought
+> PC-based NFS was a nightmare with its LF/CRLF confusion, imagine
+> NFS-mounting a TOPS-20 disk on UNIX.  The text files have five
+> 7-bit bytes packed in a 36-bit word with one bit left over; the
+> binary files all 36 bits.  Any such scheme would have to not simply
+> "map" the files, it would have to totally rewrite them, which is what
+> Kermit already does.  Plus any kind of automatic scheme would have to
+> be done by guessing which kind of file each one is, which would only
+> work part of the time.
+
+So you guess.  The first release of the VMS NFS server I used (UCX)
+would serve up stream-LF files to Alpha/UNIX just fine.  However, it
+didn't translate variable-length RMS files.  (Or, it wasn't configured
+to do that).  So people trafficked in tiny Unix RMS conversion filters,
+and I hooked GNU Emacs find-file to detect and convert likely buffers
+full of RMS files.
+
+One day someone changed something on the VMS system, and Emacs stopped
+prompting me to convert buffers on files that were still in RMS format.
+Obviously a heuristic was kicking in.
+
+
+VMS files have way too much file and record attribute info, but the
+TOPS-20 FDB (and eventually even the TOPS-10 RIB) have those byte
+sizes.  Were many binary files marked as 7-bit - some cusp might
+drop bits on the floor.  Some text files were marked 36-bit (BASIC-10
+files with LSNs; the DECUS tape files originally provided to Trailing
+Edge; ...).  Time for a heuristic.  At least LSNs are easy to detect;
+all you need to look for is in the first 7 characters of the file, and
+it's no more dangerous than Unix leaning on magic numbers.
+
+
+Did Cobol eventually set the byte size to 6 for DISPLAY-6 output?
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+

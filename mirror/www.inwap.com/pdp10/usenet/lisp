@@ -1,0 +1,226 @@
+Article: 113095 of alt.folklore.computers
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!newsfeed-east.nntpserver.com!nntpserver.com!chi1.webusenet.com!news.webusenet.com!cyclone1.gnilink.net!spamkiller.gnilink.net!nwrddc02.gnilink.net.POSTED!53ab2750!not-for-mail
+Sender: cstacy@BONK
+Newsgroups: alt.folklore.computers
+Subject: Re: LISP was: Eliza
+References: <ld3e4vsjjlatd1gaf7ao7jlf4hn0q87t2m@4ax.com> <b2g3qa$e58$5@bob.news.rcn.net> <v4nbeat07qjud9@corp.supernews.com> <b2ged4$3lv$7@bob.news.rcn.net> <3e4bc4d4$1@news.ucsc.edu> <3E4EC64B.6736A2DA@gazonk.del> <8E05D08E573CFC64.E9921937DDEB8011.CD841B2EEFB5B0D2@lp.airnews.net> <b2o5c9$j9u$6@bob.news.rcn.net> <ur8a78gyf.fsf@dtpq.com> <0071C11D420D5A18.46554D7FD33BD420.7C23C3D57F0D9773@lp.airnews.net>
+From: cstacy@dtpq.com (Christopher C. Stacy)
+Message-ID: <uy94970n6.fsf@dtpq.com>
+Lines: 70
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.2
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Date: Fri, 21 Feb 2003 22:02:38 GMT
+NNTP-Posting-Host: 68.160.161.205
+X-Complaints-To: abuse@verizon.net
+X-Trace: nwrddc02.gnilink.net 1045864958 68.160.161.205 (Fri, 21 Feb 2003 17:02:38 EST)
+NNTP-Posting-Date: Fri, 21 Feb 2003 17:02:38 EST
+Xref: dfw-artgen alt.folklore.computers:113095
+
+>>>>> On Fri, 21 Feb 2003 08:06:00 -0500, Bernie Cosell ("Bernie") writes:
+
+   Chris>> Would it surprise you to know that the PDP-10 was designed for Lisp?
+ Bernie>I thought it was the PDP-6, and the PDP-10 was just the next-generation
+
+You are correct, but I was addressing (so to speak) folks who I
+thought were not familiar with the PDP-6.  When I was at the AI Lab
+decades ago, I had learned from Greenblatt that the convenience of
+the PDP-10 word/halfword architecture for Lisp was no mere fortunate
+accident.  More recently, Alan Kotok, who worked with Bell designing
+the PDP-6 and PDP-10 has stated, "Facilitating a good LISP
+implementation was an important consideration."
+
+ Bernie> And in a similar vein, wasn't the terminology for LISP derived from the
+ Bernie> 7094 -- 'car' was "contents of the address register" while "cdr" was
+ Bernie> contents of the decrement register", or something like that?
+
+It was the IBM 704.  Some of the looping instructions on that machine
+worked by accessing two 15 bit register fields (in instruction words)
+called "Address" and "Decrement".  You could load and store these
+fields into the index registers.
+
+A CONS cell is just a pair of pointers, and it's convenient if you can
+load and store them together at once.   So they took advantage of the
+hardware and implemented CONS cells as a pair of 15 bit pointers.
+When he was implementing the first Lisp in 1959 at MIT, Steve Russell 
+wasn't feeling inspired to come up with a nice abstract name, and so
+the operators got named CAR for "Contents of the Address part of
+Register") and CDR for "Contents of Decrement part of Register").  
+The other 6 bits in the words were used as flags for the garbage
+collector, by the way.
+
+Here's a fun link I ran across that mentions Steve Russell, Alan Kotok,
+and Spacewar: <http://www.icwhen.com/book/the_1960s/1962.shtml>
+
+Ironically, some programmers consider CAR and CDR to be very abstract
+names, as they refer to the parts of a data structure called a CONS
+cell and mean nothing else; certainly nothing to bit fields on some
+ancient IBM computer!  Some other programmers prefer the alternate
+function names that Lisp provides that mean the same thing: FIRST 
+and REST.  (McCarthy and company actually wanted to change the names
+to FIRST and REST right away after they tried teaching Lisp, but CAR
+and CDR somehow stuck.)  Personally, I write FIRST and REST when I am
+operating on a chain of CONS cells linked together to form  a list, 
+and write CAR and CDR when talking about a CONS cell in isolation
+(usually some kind of leaf node, as in an "association list").
+
+CONS cells are the oldest data type in Lisp, along with symbols, 
+and 44 years ago Lisp was used primarily for writing programs that
+dealt with lists of symbols in an Artificial Intelliegence domain.
+Programmers of today's impovershed languages might be surprised at
+how useful lists and symbols are in all kinds of programs.  
+Especially when writing macros.  But it should be noted that modern
+Lisp (for more than 20 years) includes many additional fundamental
+data types, such as all kinds of numbers (double-floats, complex,
+infinite precision, ratios), byte fields like on the PDP-10, strings,
+characters, arrays, vectors, hash tables, streams, pathnames, and of
+course user-defined structures.  It also has first-class functions,
+closures, and all the control structure you might want.  It also has
+typing and object-oriented features that are a lot more sophisticated
+than what you find in languages like C++ or Java.  And lots more.
+Lisp has too many goodies to even list in a short message like this,
+combines them together wonderfully, it's had all this stuff for longer
+than those other languages have existed.
+
+(Not trying to start a language war, here, just advertising
+that Lisp is not at all like what most people think it is.
+It _was_ sort of like they think, up until about 1970.)
+
+Earlier you said something about your mother?
+
+
+Article: 19509 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!newsfeed1.cidera.com!Cidera!cyclone2.gnilink.net!cyclone1.gnilink.net!spamkiller.gnilink.net!nwrddc02.gnilink.net.POSTED!53ab2750!not-for-mail
+Sender: cstacy@BONK
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 Macsyma
+References: <F07C912B8269410C.4EB6414A03C5BA78.2E39A611F451E64A@lp.airnews.net> <b77acn08sa@enews1.newsguy.com> <Xns935B7889C4024johnwhimseycom@204.127.204.17> <Pine.WNT.4.55.0304131322360.4080@Shimo-Tomobiki.Panda.COM>
+From: cstacy@dtpq.com (Christopher C. Stacy)
+Message-ID: <uvfxh66m2.fsf@dtpq.com>
+Lines: 80
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.2
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Date: Mon, 14 Apr 2003 04:33:11 GMT
+NNTP-Posting-Host: 151.203.61.59
+X-Complaints-To: abuse@verizon.net
+X-Trace: nwrddc02.gnilink.net 1050294791 151.203.61.59 (Mon, 14 Apr 2003 00:33:11 EDT)
+NNTP-Posting-Date: Mon, 14 Apr 2003 00:33:11 EDT
+Xref: dfw-artgen alt.sys.pdp10:19509
+
+>>>>> On Sun, 13 Apr 2003 13:36:24 -0700, Mark Crispin ("Mark") writes:
+
+ Mark> On Sat, 12 Apr 2003, John Saeger wrote:
+ >> Does anybody know if runnable PDP-10 Macsyma is available anywhere?  And
+ >> maybe the source code?
+
+ Mark> The only known runnable PDP-10 Macsyma is the TOPS-20 port of Macsyma 304.
+ Mark> Unfortunately, it has a 1983 Symbolics copyright and trade secret notice
+ Mark> for "enhancements", meaning that it can't be distributed without the
+ Mark> permission of the current owner of the assets of Macsyma, Inc.
+
+ Mark> The ITS archive had a copy of MIT (not Symbolics) Macsyma
+ Mark> source, but I don't know if that is available or what needs to
+ Mark> be done to whip it into shape.
+
+If anyone has a copy of those archives, I would suggest being
+very careful about the legal implications of releasing them.
+
+MIT sold Symbolics the exclusive rights to that very code.
+Afterwards, the U.S. Department of Energy demanded rights to a
+derivative work of that very same code.  Various legal battles
+ensued to resolve that predicament, and the Macsyma that was
+eventually made available under license from DOE was _not_ the
+MACLISP version.  It was a subset that had been ported to NIL,
+a long dead dialect of Lisp for the VAX.  The "Maxima" program
+is yet a third derivative of that, whose rights to GPL are from
+an agreement with DOE, deriving from DOE's license with MIT.
+
+The version of Macsyma from Symbolics was eventually rewritten
+by them into Common Lisp.  This is not, however, the basis of
+the "Maxima" program, which was an independant effort operating
+on a different fork of the code.
+
+Also, the ITS version doubtless includes various works that 
+are owned by private individual contributors (rather than MIT
+or Symbolics, and certainly not DOE).  One should be careful 
+to identify the proper owner of each file (which could possibly
+conflict with what the copyright notices say).  Just because MIT
+or somebody perhaps put an incorrect copyright notice on something
+doesn't relieve any later third parties who want to copy those files.
+
+Also, be aware that the name "Macsyma" is trademarked by Symbolics 
+(whose assets have been bought by various successor companies,
+whose company names include the "Macsyma" or "Symbolics").
+I did a little work on it about 9 years ago during the period
+it was owned by "Macsyma, Inc.".
+
+To use the MACLISP version of Macsyma, one should seek to secure
+a legal agreement license from the current incarnation of Symbolics
+(which probably still owns the exclusive license to that code),
+and possibly also a second legal agreement from MIT, which has 
+entered into licensing contracts with other third parties (ie. DOE).
+
+All that being said, I think it would be really cool if the original
+MACSYMA that ran in MACLISP on ITS and TOPS-20 was available for the
+PDP-10 emulators.  Perhaps someone will sort out all the legalities.
+
+However, the GPL'd version of MACSYMA, aka MAXIMA, is better than
+the original program on the PDP-10, if only for its modern graphics.
+MAXIMA is of course written in Common Lisp, not MACLISP.
+
+If you just want a really good version of Macsyma, not having
+to do with PDP-10s, you can currently purchase a copy of "Macsyma"
+from Symbolics.  It started as the original MACLISP version, then
+was ported to Zetalisp (the Lisp Machine), then to ANSI Common Lisp.  
+Macsyma runs on Windows, and has lots more features than "Maxima", 
+and represents many years of additional commercial development.
+
+I think the most recent incarnation of Symbolics is called 
+"New Symbolics Technologies" or something.  They are based
+in Northern Virginia. I could dig up the contact information.
+
+ObHistory: The final product from Symbolics was a Lisp Machine
+called "Open Genera" that ran in software: a complete emulation
+of the Ivory processor chip that powered the workstations.
+The emulator only runs on DEC Alphas (that being the fastest
+thing around at the time, and the only 64-bit platform, anyway.)
+This product is also still available, but you don't need it to
+run Macsyma.  Their PC version of Macsyma is much better, 
+having had extensive development post-LispM era.
+
+
+Article: 20199 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!dfw-peer!news.verio.net!newsfeeds.sol.net!hammer.uoregon.edu!arclight.uoregon.edu!logbridge.uoregon.edu!news.u.washington.edu!140.142.17.34.MISMATCH!news.u.washington.edu!Ikkoku-Kan.Panda.COM!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Any online copies of INTERLISP and LISPUSERS for TOPS-20?
+Date: Fri, 30 May 2003 09:03:46 -0700
+Organization: University of Washington
+Lines: 13
+Sender: mrc@Ikkoku-Kan.Panda.COM
+Message-ID: <Pine.NXT.4.55.0305300902030.27732@Ikkoku-Kan.Panda.COM>
+References: <6b26c83b.0305300147.1bc02550@posting.google.com>
+NNTP-Posting-Host: nntp4.u.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 1054310642 23110 (None) 140.142.17.38
+X-Complaints-To: help@cac.washington.edu
+In-Reply-To: <6b26c83b.0305300147.1bc02550@posting.google.com>
+Xref: dfw-artgen alt.sys.pdp10:20199
+
+On Fri, 30 May 2003, Derek Peschel wrote:
+> Although twenex.org has the version from 31-Dec-84, some of the files
+> are missing.  I recall trying to run one of the fancy full-screen editors
+> and I recall one of the missing files being SARITH.COM but I'll have
+> to check again.
+
+What twenex.org runs is what I saved from Stanford.  I don't know of any
+other online copies.
+
+-- Mark --
+
+http://staff.washington.edu/mrc
+Science does not emerge from voting, party politics, or public debate.
+
+

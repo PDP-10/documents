@@ -1,0 +1,465 @@
+Article 1131 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!news3.net99.net!news.cais.net!news.sprintlink.net!in1.uu.net!newshost.marcam.com!usc!sol.ctr.columbia.edu!news.msfc.nasa.gov!news.larc.nasa.gov!lerc.nasa.gov!magnus.acs.ohio-state.edu!jebright
+From: jebright@magnus.acs.ohio-state.edu (James R Ebright)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Compuserve and the DECsystem-10
+Date: 24 Sep 1995 03:27:19 GMT
+Organization: The Ohio State University
+Lines: 29
+Message-ID: <442j6n$gip@charm.magnus.acs.ohio-state.edu>
+References: <43v18a$a63@cliff.swec.com>
+NNTP-Posting-Host: top.magnus.acs.ohio-state.edu
+Xref: shellx.best.com alt.folklore.computers:36107 alt.sys.pdp10:1131
+
+In article <43v18a$a63@cliff.swec.com>,
+Carl R. Friend <carl.friend@swec.com> wrote:
+>I received an interesting rumour from the mill (Rumour mill, not DEC's
+>Maynard, Mass mill) that not only is Compuserve still actively using the
+>DECsystem-10 in daily affairs, but that they had bought DEC's Jupiter
+>project (cancelled around 1983).
+
+Yes to one.  No to two.  However, I would hardly call it a DECsystem-10.
+It is 10 architecture hardware running on a custom opsys which has
+as an ancestor a very very early version of TOPS-10.
+
+>   In addition to that little tidbit, I heard that they have been scratch-
+>building their own -10s. Could it be that the Jupiter actually went
+>into (limited/private) production after all???
+
+No.  CSNI (Compu-Serv Network Incorporated, their name at the time)
+had a Tuscon facility which was building a 10-look-alike.  It was
+cancelled before it could be completed.  It was cancelled before
+the Jupiter.
+
+C$ now uses Systems Concepts' 10 look-alikes, I think.  I left a long
+time ago but that is what I think I heard from friends who now run much 
+of the company.
+
+-- 
+ A/~~\A   'moo2u from osu'   Jim Ebright   e-mail: ebright@bronze.coil.com
+((0  0))_______  "'Eternal Vigilance Is The Price of Liberty' used to mean
+  \  /    the  \  we watched the government - not the other way around."
+  (--)\   OSU  | 			- Bill Stewart
+
+
+Article 4066 of alt.sys.pdp10:
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!newshub.northeast.verio.net!cpk-news-hub1.bbnplanet.com!news.bbnplanet.com!ix.netcom.com!netcom11!alderson
+From: alderson@netcom11.netcom.com (Richard M. Alderson III)
+Subject: Re: CompuServe ditching PDP-10s?
+In-Reply-To: Frank McConnell's message of 6 Sep 1998 16:20:59 -0700
+Message-ID: <ALDERSON.98Sep6182041@netcom11.netcom.com>
+Sender: alderson@netcom11.netcom.com
+Reply-To: alderson@netcom.com
+Organization: NETCOM On-line services
+References: <Eypst8.BGH@iglou.com> <35EED339.10E6@gazonk.del>
+	<6snh70$hgv@bgtnsc02.worldnet.att.net> <35EF1A14.D4C1E30@plano.net>
+	<6sv5cr$98s$1@daemonweed.reanimators.org>
+Date: Mon, 7 Sep 1998 01:20:41 GMT
+Lines: 19
+Xref: nntp1.ba.best.com alt.folklore.computers:112291 alt.sys.pdp10:4066
+
+In article <6sv5cr$98s$1@daemonweed.reanimators.org> Frank McConnell
+<fmc@reanimators.org> writes:
+
+>And I don't think the CompuServe -10 clones were Foonly machines.  My vague
+>recollection (probably something I read on the net somewhere) is that
+>CompuServe bought a license to manufacture Systems Concepts -10 clones and
+>made their own.
+
+This is correct:  Mike Leavitt and Stewart Nelson of SC could not manufacturer
+their boxes fast enough to satisfy the demand from CIS, so they licensed the
+design for a hefty (40% of purchase price) fee for each one CIS built.
+
+However, CIS stopped using any PDP-10 architecture in December 1996, laying off
+all but one of their PDP-10 systems personnel to force a move to NT that had
+been "lagging" (from a management perspective) for a long time.
+-- 
+Rich Alderson			Last LOTS Tops-20 Systems Programmer, 1984-1991
+				Current maintainer, MIT TECO EMACS (v. 170)
+last name @ XKL dot COM		Chief systems administrator, XKL LLC, 1998-now
+
+
+Article 4068 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.maxwell.syr.edu!newsfeed.direct.ca!newsxfer3.itd.umich.edu!jobone!dailyplanet.srl.ford.com!eccws1.dearborn.ford.com!longhorn!tph
+From: tph@longhorn.uucp (Tom Harrington)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: CompuServe ditching PDP-10s?
+Followup-To: alt.folklore.computers,alt.sys.pdp10
+Date: 9 Sep 1998 17:24:13 GMT
+Organization: Mechanist Industries
+Lines: 64
+Message-ID: <6t6djt$oq01@eccws1.dearborn.ford.com>
+References: <Eypst8.BGH@iglou.com> <35EED339.10E6@gazonk.del> <6snh70$hgv@bgtnsc02.worldnet.att.net> <35EF1A14.D4C1E30@plano.net> <6sv5cr$98s$1@daemonweed.reanimators.org>
+Reply-To: tph@rmi.net
+NNTP-Posting-Host: cs0053.eld.ford.com
+X-Newsreader: TIN [version 1.2 PL2]
+Xref: nntp1.ba.best.com alt.folklore.computers:112485 alt.sys.pdp10:4068
+
+Frank McConnell (fmc@reanimators.org) wrote:
+: Charles Richmond <richmond@plano.net> wrote (in a.f.c):
+
+: > Max Froedge wrote:
+: > > Close.  I think they migrated over to PDP-10 clones called K10 and
+: > > K20.  I can't remember the name of the manufacturer.
+
+: > Does the name "Foonly Computers" ring a bell?  I believe they were a
+: > California company that built PDP-10 clones.  If I recall correctly,
+: > there was an MIT connection for the founders of Foonly.
+
+: Not MIT, Stanford.
+
+: And I don't think the CompuServe -10 clones were Foonly machines.
+: My vague recollection (probably something I read on the net 
+: somewhere) is that CompuServe bought a license to manufacture
+: Systems Concepts -10 clones and made their own.
+
+This is covered in the Jargon file, under "Mars".  Nothing there about
+CIS buying a license, though:
+
+----------------------------------------------------------------------
+:Mars: n.  A legendary tragic failure, the archetypal Hacker
+   Dream Gone Wrong.  Mars was the code name for a family of PDP-10
+   compatible computers built by Systems Concepts (now, The SC Group):
+   the multi-processor SC-30M, the small uniprocessor SC-25M, and the
+   never-built superprocessor SC-40M.  These machines were marvels of
+   engineering design; although not much slower than the unique
+   {Foonly} F-1, they were physically smaller and consumed less
+   power than the much slower DEC KS10 or Foonly F-2, F-3, or F-4
+   machines.  They were also completely compatible with the DEC KL10,
+   and ran all KL10 binaries (including the operating system) with no
+   modifications at about 2--3 times faster than a KL10.
+
+   When DEC cancelled the Jupiter project in 1983, Systems Concepts
+   should have made a bundle selling their machine into shops with a
+   lot of software investment in PDP-10s, and in fact their spring
+   1984 announcement generated a great deal of excitement in the
+   PDP-10 world.  TOPS-10 was running on the Mars by the summer of
+   1984, and TOPS-20 by early fall.  Unfortunately, the hackers
+   running Systems Concepts were much better at designing machines
+   than at mass producing or selling them; the company allowed itself
+   to be sidetracked by a bout of perfectionism into continually
+   improving the design, and lost credibility as delivery dates
+   continued to slip.  They also overpriced the product ridiculously;
+   they believed they were competing with the KL10 and VAX 8600 and
+   failed to reckon with the likes of Sun Microsystems and other
+   hungry startups building workstations with power comparable to the
+   KL10 at a fraction of the price.  By the time SC shipped the first
+   SC-30M to Stanford in late 1985, most customers had already made
+   the traumatic decision to abandon the PDP-10, usually for VMS or
+   Unix boxes.  Most of the Mars computers built ended up being
+   purchased by CompuServe.
+
+   This tale and the related saga of {Foonly} hold a lesson for
+   hackers: if you want to play in the {Real World}, you need to
+   learn Real World moves.
+----------------------------------------------------------------------
+
+--
+Tom Harrington --------- tph@rmii.com -------- http://rainbow.rmii.com/~tph
+       "Television commercials are a form of religious literature."
+                               -Neil Postman
+Cookie's Revenge: ftp://ftp.rmi.net/pub2/tph/cookie/cookies-revenge.sit.hqx
+
+
+Article 4069 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!su-news-hub1.bbnplanet.com!su-news-feed1.bbnplanet.com!news.bbnplanet.com!news-master.cisco.com!not-for-mail
+From: Bill Westfield <billw@flipper.cisco.com>
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: CompuServe ditching PDP-10s?
+Date: 09 Sep 1998 22:41:36 -0700
+Organization: Cisco Systems, Inc.
+Lines: 12
+Message-ID: <54emtkttgv.fsf@flipper.cisco.com>
+References: <Eypst8.BGH@iglou.com> <35EED339.10E6@gazonk.del>
+	<6snh70$hgv@bgtnsc02.worldnet.att.net> <35EF1A14.D4C1E30@plano.net>
+	<6sv5cr$98s$1@daemonweed.reanimators.org>
+	<6t6djt$oq01@eccws1.dearborn.ford.com>
+NNTP-Posting-Host: flipper.cisco.com
+X-Newsreader: Gnus v5.3/Emacs 19.34
+Xref: nntp1.ba.best.com alt.folklore.computers:112535 alt.sys.pdp10:4069
+
+Compuserve did a lot of PDP10 hacking, and it would not surprise me if
+they had licensed the design from SC as Rich Stated (and Rich was intimately
+involved with Stanford's SC30, so he might know!)
+
+My favorite hack was replacing the linear power supplies in the (dec) KL-10
+with modern switching power supply technology.  That changed the efficiency
+from ~30% to ~85% or so, saving enough $$$ in power and airconditioning to
+buy surplussed CPUs every couple of months...
+
+BillW
+-- 
+(remove spam food from return address)
+
+
+Article 4075 of alt.sys.pdp10:
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!su-news-hub1.bbnplanet.com!news.bbnplanet.com!newsfeed.wli.net!newshub.northeast.verio.net!ix.netcom.com!netcom!alderson
+From: alderson@netcom.netcom.com (Richard M. Alderson III)
+Subject: Re: CompuServe ditching PDP-10s?
+In-Reply-To: tph@longhorn.uucp's message of 9 Sep 1998 17:24:13 GMT
+Message-ID: <ALDERSON.98Sep10161033@netcom.netcom.com>
+Followup-To: alt.folklore.computers,alt.sys.pdp10
+Sender: alderson@netcom.netcom.com
+Reply-To: alderson@netcom.com
+Organization: NETCOM On-line services
+References: <Eypst8.BGH@iglou.com> <35EED339.10E6@gazonk.del>
+	<6snh70$hgv@bgtnsc02.worldnet.att.net> <35EF1A14.D4C1E30@plano.net>
+	<6sv5cr$98s$1@daemonweed.reanimators.org>
+	<6t6djt$oq01@eccws1.dearborn.ford.com>
+Date: Thu, 10 Sep 1998 23:10:33 GMT
+Lines: 48
+Xref: nntp1.ba.best.com alt.folklore.computers:112610 alt.sys.pdp10:4075
+
+In article <6t6djt$oq01@eccws1.dearborn.ford.com> tph@longhorn.uucp
+(Tom Harrington) writes:
+
+>This is covered in the Jargon file, under "Mars".  Nothing there about
+>CIS buying a license, though:
+
+>----------------------------------------------------------------------
+>:Mars: n.  A legendary tragic failure, the archetypal Hacker
+>   Dream Gone Wrong.  Mars was the code name for a family of PDP-10
+>   compatible computers built by Systems Concepts (now, The SC Group):
+>   the multi-processor SC-30M, the small uniprocessor SC-25M, and the
+>   never-built superprocessor SC-40M.
+
+Mostly just wanted to note that the SC-40 (not "M", which was the designation
+for a never-delivered multiprocessor configuration) was eventually delivered,
+in 1993.  Compuserve built those once they were available.
+
+The model numbers at SC were SC-30M (a 5ft x 30in x 30in cabinet with LOTS of
+empty space inside), the prototype to which was delivered to LOTS the day
+before Hallowe'en, 1985*; the SC-25, which was the SC-30M processor in a BA23
+cabinet; the SC-20 which was an SC-25 with the clock speed cut in half; and the
+SC-40, which was much faster than the SC-30M.
+
+I tried to buy an SC-20 for cisco Systems when I worked there briefly (1993);
+Mike wouldn't even send me a quote because he was afraid that the box would end
+up in Len's hands--even though Len parted ways with cisco in 1990.  We settled
+for storing a KL with Bruce Kennard.
+
+*I still have pictures, of Ralph Gorin in costume, of me next to the beast, and
+ so on.
+
+>   When DEC cancelled the Jupiter project in 1983, Systems Concepts
+>   should have made a bundle selling their machine into shops with a
+>   lot of software investment in PDP-10s, and in fact their spring
+>   1984 announcement generated a great deal of excitement in the
+>   PDP-10 world.
+
+I still have my button that reads
+
+	Mars may be smaller than Jupiter,
+		but it's a lot closer.
+				-- Fred Wright
+
+The SC Group got out of the PDP-10 business altogether early in 1996.
+-- 
+Rich Alderson			Last LOTS Tops-20 Systems Programmer, 1984-1991
+				Current maintainer, MIT TECO EMACS (v. 170)
+last name @ XKL dot COM		Chief systems administrator, XKL LLC, 1998-now
+
+
+Article 4082 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsxfer3.itd.umich.edu!jobone!dailyplanet.srl.ford.com!eccws1.dearborn.ford.com!longhorn!tph
+From: tph@longhorn.uucp (Tom Harrington)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: CompuServe ditching PDP-10s?
+Date: 11 Sep 1998 16:16:50 GMT
+Organization: Mechanist Industries
+Lines: 26
+Message-ID: <6tbidi$9gu5@eccws1.dearborn.ford.com>
+References: <Eypst8.BGH@iglou.com> <35EED339.10E6@gazonk.del> <ALDERSON.98Sep10161033@netcom.netcom.com>
+Reply-To: tph@rmi.net
+NNTP-Posting-Host: cs0053.eld.ford.com
+X-Newsreader: TIN [version 1.2 PL2]
+Xref: nntp1.ba.best.com alt.folklore.computers:112672 alt.sys.pdp10:4082
+
+Richard M. Alderson III (alderson@netcom.netcom.com) wrote:
+
+: Mostly just wanted to note that the SC-40 (not "M", which was the designation
+: for a never-delivered multiprocessor configuration) was eventually delivered,
+: in 1993.  Compuserve built those once they were available.
+<snip>
+: The SC Group got out of the PDP-10 business altogether early in 1996.
+
+Thanks, the Jargon File entry had the tone of describing a long-gone
+organization; it had not occurred to me that they might still exist.
+A bit of web searching turns up <http://www.scgroup.com/>, though.
+They're still selling the SC-40.  Maybe....  There's a description
+of the SC-40 at <http://www.scgroup.com/sc40.html>, which seems
+to be their only product, and their home page says "Our SC-40 is
+still very much alive".  They also apparently still provide TOPS-10
+updates (though you need a password to get at them), and they seem 
+to think that CIS still uses their hardware.
+
+Exploring their web pages does give the impression that Sumo wrestling
+is their primary interest these days.
+
+--
+Tom Harrington --------- tph@rmii.com -------- http://rainbow.rmii.com/~tph
+   "Necessity is the plea of every infringement of human freedom.  It is
+   the argument of tyrants; it is the creed of slaves." -- William Pitt
+Cookie's Revenge: ftp://ftp.rmi.net/pub2/tph/cookie/cookies-revenge.sit.hqx
+
+
+Article 6341 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!panix!news.panix.com!not-for-mail
+From: Rich Alderson <alderson+news@panix.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Compuserve's -10/-20 systems
+Date: 11 Oct 2001 21:28:38 -0400
+Organization: Systems Administration, XKL LLC, Redmond WA 98052
+Lines: 22
+Sender: alderson+news@panix2.panix.com
+Message-ID: <mddu1x5lk8p.fsf@panix2.panix.com>
+References: <lgreenwa-DD6C6B.17512811102001@galanthis.cts.com>
+NNTP-Posting-Host: panix2.panix.com
+X-Trace: news.panix.com 1002850118 8092 166.84.1.2 (12 Oct 2001 01:28:38 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: 12 Oct 2001 01:28:38 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.7
+Xref: nntp1.ba.best.com alt.sys.pdp10:6341
+
+Lawrence H Greenwald <lgreenwa@cts.com> writes:
+
+> Whatever happened to Compuserve's -10 and -20 systems? They probably have
+> replaced (assuming they're still in business) them with racks and racks of PC
+> based servers.
+
+Compu$erve stopped using KL-10's running their highly modified version of 4S72
+about 10 years ago, when they ported the OS to the Systems Concepts SC-25 (and
+later SC-40) clone.  They got rid of all the KL's then.  (NB:  They never ran
+Tops-20.)
+
+About 5 years ago, they decided to move their business to Windows NT servers.
+This appears to have killed them, or at least weakened them to the point that
+AOL eventually bought Compuserve Information Services.
+
+Compuserve Networking Services (a different part of the whole business) went
+instead to WorldCom.  They were trying to get off their few remaining SC boxes
+a while back...
+
+-- 
+Rich Alderson                                          alderson+news@panix.com
+  "You get what anybody gets.  You get a lifetime."  --Death, of the Endless
+
+
+Article 6337 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10,comp.os.vms
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!news.maxwell.syr.edu!newspeer.radix.net!uunet!ash.uu.net!world!weiner
+From: weiner@world.std.com (Sam Weiner)
+Subject: Re: ALGOL and 1022 database
+Message-ID: <GL29Kz.Ip0@world.std.com>
+Date: Thu, 11 Oct 2001 21:41:21 GMT
+References: <3BC3CE89.5FACE6CF@bartek.dontspamme.net> <3BC49836.BEF76E24@bartek.dontspamme.net> <id3x7.196953$xi5.7173319@sjcpnn01.usenetserver.com> <1vjastcqtciaedqoi6mu08fp95tq9o6fls@4ax.com>
+Organization: The World Public Access UNIX, Brookline, MA
+Lines: 50
+Xref: nntp1.ba.best.com alt.sys.pdp10:6337 comp.os.vms:43100
+
+In article <1vjastcqtciaedqoi6mu08fp95tq9o6fls@4ax.com>,
+Alan Greig  <a.greig@virgin.net> wrote:
+>On Wed, 10 Oct 2001 21:38:22 GMT, "Zane H. Healy"
+><healyzh@shell1.aracnet.com> wrote:
+>
+>>Arthur Krewat <krewat@bartek.dontspamme.net> wrote:
+>>> The tape is up at http://pdp10.kilonet.org/files/fakedecus.lib10.0126.tap.gz
+>>> (right click on the link and select "Save link as").
+>>
+>>Hopefully I can give it a try later today.
+>>
+>>> BTW, what IS 1022?
+>>
+>>Well, my mind is feeling a little foggy today, but IIRC, it's a database
+>>that started on the PDP-10 and was later ported to the VAX and Alpha (for
+>>OpenVMS).  I believe it's still around.  Or to put it another way it's
+>
+>Yes renamed 1032 on VMS and it is still around. One of the 1022/1032
+>engineers monitors comp.os.vms (added a crosspost) so maybe they'll
+>spot this thread.
+
+Computer Corporation of America (http://www.cca-int.com/) still
+lists 1032.  I think but am not sure Compuserve held onto 1022
+when it sold 1032 to CCA since the PDP-10 based software was
+built around 1022.  If my memory is correct, I guess that means
+AOL has the rights now.  A check with CCA might be in order.
+
+The license check was very tricky with code scattered all over
+the place.  I forget what it was even looking for other than
+date so just changing the date won't be enough.
+
+>I think I recall reading many years ago that 1022 was the serial
+>number of the KL-10 the database was originally developed on.
+>
+>I know with certainty that the 1022 TOPS-20 documentation was still on
+>the shelf at my previous employer three years ago.
+
+I may even have a manual buried in a box somewhere.  I think it
+was also included on the distribution tape which would be
+better than trying to scan it.
+
+Sam
+
+PS	That reminds me.  The folks in RI might want to see if
+	they can score a power supply for the KL from what
+	is left of Compuserve.  Much less power hungry and
+	gives off less heat.  They sold a few to other sites
+	as well but couldn't quite work out a deal with DEC.
+	Probably not enough to keep it running full time but
+	maybe more often than with the original unit.
+
+
+Article 6423 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!feed.textport.net!out.nntp.be!propagator-SanJose!in.nntp.be!yellow.newsread.com!bad-news.newsread.com!netaxs.com!newsread.com!panix!news.panix.com!not-for-mail
+From: Rich Alderson <alderson+news@panix.com>
+Newsgroups: comp.unix.bsd.freebsd.misc,alt.solaris.x86,alt.sys.pdp10
+Subject: Re: RetroComputing memerobilia (was: Which one should I choose? )
+Followup-To: alt.sys.pdp10
+Date: 22 Oct 2001 15:35:29 -0400
+Organization: Systems Administration, XKL LLC, Redmond WA 98052
+Lines: 31
+Sender: alderson+news@panix1.panix.com
+Message-ID: <mddadyjqxha.fsf@panix1.panix.com>
+References: <9acc2ac1.0110180103.6720230b@posting.google.com> <GLJ80E.AFF@wjv.com> <3BD2C593.4B7F9B6D@skynet.be> <kc7uq9.mu.ln@teabag.cbhnet> <9qv8t9$6v8$1@newsmaster.cc.columbia.edu>
+NNTP-Posting-Host: panix1.panix.com
+X-Trace: news.panix.com 1003779345 2224 166.84.1.1 (22 Oct 2001 19:35:45 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: 22 Oct 2001 19:35:45 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.7
+Xref: nntp1.ba.best.com comp.unix.bsd.freebsd.misc:34261 alt.solaris.x86:17996 alt.sys.pdp10:6423
+
+fdc@watsun.cc.columbia.edu (Frank da Cruz) writes:
+
+> In article <kc7uq9.mu.ln@teabag.cbhnet>,
+> Chris Hedley <cbh@ieya.co.REMOVE_THIS.uk> wrote:
+
+> : TOPS-20 didn't run anywhere (except in a few niche environments) for quite
+> : a while because the ancient 36 bit PDP-10 hardware hasn't been made for
+> : nigh on 20 years...
+
+> Since 1988...
+
+> : but used to be a really big-name OS; a close relation (but don't confuse
+> : the two!), TOPS-10, was pretty much responsible for getting Compuserve off
+> : the ground.
+
+> Close but not quite on.  Compuserve had their own homegrown OS for
+> PDP-10 hardware.  For more about TOPS-20, 36 bits, and so on, see:
+
+You're both right:  The Compuserve OS spun off from Tops-10 v. 4 (I think 4S72)
+and went its own way.  Most of this was done with "negative CALLI's", that is,
+system calls whose selector value had bit 18 set; the WAITS operating system at
+Stanford AI Lab did the same sort of thing to a v. 3 monitor.
+
+In addition to the OS mods, the CIS folks changed the microcode to get a larger
+address space (unrelated to KL "extended addressing").
+
+All of this gleaned from the last CIS -10 guy nearly 6 years ago.
+
+-- 
+Rich Alderson                                          alderson+news@panix.com
+  "You get what anybody gets.  You get a lifetime."  --Death, of the Endless
+
+

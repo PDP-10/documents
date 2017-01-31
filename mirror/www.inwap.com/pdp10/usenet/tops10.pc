@@ -1,0 +1,92 @@
+From jmfbah@aol.com Thu Jan  4 15:56:17 PST 1996
+Article: 1494 of alt.sys.pdp10
+Path: shellx.best.com!news1.best.com!sdd.hp.com!swrinde!newsfeed.internetmci.com!in1.uu.net!newstf01.news.aol.com!newsbf02.news.aol.com!not-for-mail
+From: jmfbah@aol.com (JMFBAH)
+Newsgroups: alt.sys.pdp10
+Subject: TOPS10 on PCs (long message)
+Date: 3 Jan 1996 09:17:15 -0500
+Organization: America Online, Inc. (1-800-827-6364)
+Lines: 93
+Sender: root@newsbf02.news.aol.com
+Message-ID: <4ce35b$p1m@newsbf02.news.aol.com>
+Reply-To: jmfbah@aol.com (JMFBAH)
+NNTP-Posting-Host: newsbf02.mail.aol.com
+
+A couple months ago I was asked, "Why did I want TOPS10 on my PC?"  I
+started to put together a paper and include it in this message.  It is not
+complete but I would like to start a dialogue about the subject.  I have
+been out of the business for a few years and would like to learn the areas
+where my knowledge has lapses.
+
+/BAH
+
+
+
+Let's get back to the subject...I was asked months ago (I've been ill and it
+took a while to prepare the reply) why I wanted TOPS10 on a PC.  Following is
+my answer:
+
+I was asked what I wanted to accomplish by putting TOPS10 on a PC 
+and if I had old code that required TOPS10 as an operating system.
+
+It has nothing to do with old user code (although old customers might be
+ticked pink if they could run their applications).  It has to do with the
+power and versatility the software architecture of TOPS10 brought to
+computing.  No other operating system (in my experience) has the complete
+functionality w.r.t. user services that TOPS10 has. 
+
+Not even JMF nor TW realized the beastie they had created when they did SMP.
+As I had to explain to a hardware engineer at a "we shipped the xxxx" party,
+SMP was the precursor to a computer concept that would allow one to do things
+to a computer system without an interruption of service.  It might cause a
+diminution of service while these things were going on, but it should never
+cause a lack of service.  The analogy I used was the delivery of electricity
+by the power companies.  One wouldn't dream of having an interruption of
+electrical service while the power grid was being serviced--whether a new
+turbine was being brought on-line (new hardware including another CPU), the
+circuitry being checked out (on-line diagnostics), or repair work being
+done.  This hardware engineer could not fathom a time when a computer system
+would be so important that it couldn't be shut down from 17:00 to 8:00.
+
+At the moment, I would like to be able to do simple things.  Printing an
+ASCII file while I read a newsgroup immediately comes to mind.  GALAXY would
+do that for me; GALAXY is an application service to the user and is far
+ahead of anything that I know of currently in the market. In the immediate
+future, I can envision doing a CPU-intensive research project while writing
+this note and posting it.  I am unwilling to have a degradation of user
+response; SMP would do this for me.
+
+In the far future, I expect that a computer will be used to monitor the
+functions of maintaining my environment.  Air quality is already an issue.
+Heating/cooling should be a combined functional control.  Water potability
+just became an issue this summer.  I can certainly envision a local computer
+system doing the monitoring, treating, warning of danger.  SMP is a solution
+because there can be failures (hardware or software) without an interruption
+of service.  Granted, the implementation in TOPS10 doesn't solve all these
+problems, but it certainly had a huge headstart on it.
+
+Now, why have this functionality in a PC?  Because they are here. They are
+cheap.  They are beginning to be designed such that upgrading isn't an issue.
+I have three of them and I think I would like to have most of them tightly
+coupled.  The exception to tightly coupled is the notebook that I could take
+on a trip which could routinely inquire if everything is OK at home.
+
+The possibilities are endless.  JMF did SMP on a number of OSs.  They each
+have their strengths and they each have their weaknesses.  It is my opinion
+that TOPS10 is currently the only available OS that has an extensive
+catalogue of user services that need not be reinvented/reimplemented.  Hence,
+I see running TOPS10 on a PC as a real solution and, by the way, quite
+profitable to whomever owns the software.
+
+I do grant you that, in today's concept of user interface, TOPS10 may be
+considered primitive.  (As one who would much rather type than click, I
+don't agree.)  But the point/click interface is only a momentary method.  A
+couple years from now the norm will be voice.  It was only a few years ago
+that data transfer from one computer to another was done with magtape;
+before that DECtape; before that papertape; and before that, punched cards
+(remember them? 026s and 029s).
+
+(To be continued....) 
+/BAH
+
+

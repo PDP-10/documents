@@ -1,0 +1,88 @@
+Article 4869 of alt.sys.pdp10:
+Path: news3.best.com!nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: 28 Apr 1999 10:53:33 -0700
+Organization: Chez Inwap
+Message-ID: <7g7hut$nnt$1@shell3.ba.best.com>
+References: <371be3e4.0@newsfeed.one.net> <7frcok$3ck@weyl.math.psu.edu> <7g1b2h$ifj$1@shell3.ba.best.com> <7g1sdl$4vs@weyl.math.psu.edu>
+Lines: 72
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 925322020 231 inwap@206.184.139.134
+Xref: news3.best.com alt.folklore.computers:129036 alt.sys.pdp10:4869
+
+In article <7g1sdl$4vs@weyl.math.psu.edu>,
+Alexander Viro <viro@weyl.math.psu.edu> wrote:
+>	<chuckle> Could the equivalent be done by allocating 12 PTYs, putting
+>TTY into the raw mode, reading from it, watching for switch characters and
+>feeding the input to appropriate PTY? (with corresponding stuff for output)
+
+The original implemenatation of PTYs had no line discipline.  It did
+absolutely nothing special with control characters such as ^C, ^Q, ^S, ^U
+or RUBOUT.  This was because the most common use of PTYs were BATCON
+(which read lines from a file) and OPSER (in which case control characters
+on the master console were acted upon before the OPSER program saw them).
+
+Later on, there were two additions that made transparent mode possible.
+1) PIM (Packed Image Mode) - put the terminal in "raw" mode where all
+   8-bit characters were passed to the program verbatim.  The default was
+   to pass each character to the program one at a time, but up to four
+   end-on-line characters could be defined for line-buffered input.
+2) Full SCNSER PTY - control characters and such were acted upon just
+   like a real terminal.
+
+>BTW, here's a serious design question - AFAICS large chunk of the
+>functionality of shell was put into the terminal driver, right?
+
+First off, there was no shell.  SCNSER was the device driver for TTYs,
+PTYSER was the device driver for PTYs, and COMCON was the command controller.
+It had the hardcoded list of commands that were valid in this Monitor.
+
+Network terminals and PTYs hooked into the device-independent part of SCNSER.
+SCNSER did all the line discipline, including translating control characters
+(such as Control-C and Control-T) into pseudo commands that COMCON would act
+on when it got a chance.  SCNSER was in the "bottom half" of the kernel; it
+ran at device-driver interrupt level.  COMCON ran at an intermediate level;
+commands that could be executed quickly were done during the 60 Hz clock-level
+interrupt (when no other interrupts were in progress) and command that took a
+long time (such as reading a core image from a disk file) were run at UUO
+level.  UUO level was in the context of a job, meaning that it had a
+address space, could be delayed if needed, and the Monitor could execute
+UUOs on behalf of the user process.
+
+>IOW, was there a separation between line discipline and terminal driver?
+
+Logically, yes.  Physically, no - the two sets of routines were in the
+same source file.
+
+>How monolitic the monitor was?
+
+The Monitor was monolithic: the entire thing was in a single file, which
+meant that the Monitor could be loaded directly into physical memory from
+magnetic tape.  (On a fresh install, the disks would have been low-level
+formatted by the disk diagnostic program.  The Monitor would be read in
+from tape, it would build a new file system, and run with or without
+having SYSTEM.EXE anywhere on disk.)  [Side comment, TOPS10 did not have
+disk partitions.  But it did support having logical disk structures composed
+of multiple disk units, slightly similar to RAID-0.)
+
+What you're really asking is "how formalized were the intefaces between
+the various modules in the Monitor?".  "Could a new device-driver module
+be added to the Monitor with a minimum of hassle?"
+
+Device drivers had dispatch tables.  A device was selected by name using
+the OPEN UUO.  When a job went to perform an operation (such as IN, OUT,
+LOOKUP, ENTER, etc) on an open device, the Monitor would jump to the routine
+pointed to by the appropriate entry in the dispatch table.  Operations
+that were not applicable (such as file name selection on non-disk devices)
+were dispatched to a dummy subroutine.
+
+	-Joe
+
+-- 
+INWAP.COM is Joe Smith, Sally Smith and our cat Murdock.
+  (The O'Hallorans and their cats moved to http://www.tyedye.org/ Nov-98.)
+See http://www.inwap.com/ for PDP-10, "ReBoot", "Shadow Raiders"/"War Planets"
+
+

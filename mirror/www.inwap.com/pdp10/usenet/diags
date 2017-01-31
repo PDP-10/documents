@@ -1,0 +1,169 @@
+Article 2331 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!news.sgi.com!su-news-hub1.bbnplanet.com!news.bbnplanet.com!cpk-news-hub1.bbnplanet.com!EU.net!usenet2.news.uk.psi.net!uknet!usenet1.news.uk.psi.net!uknet!psinntp!psinntp!pubxfer.news.psi.net!usenet
+From: "Steven M. Jones" <smj@crash.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: KS10 vs. KS-2020, and plea for KS10 and KL10 prints
+Date: Mon, 02 Dec 1996 11:44:48 -0500
+Organization: CRASH!! Computing      Manhattan, New York, USA
+Lines: 47
+Message-ID: <32A30780.3F54BC7E@crash.com>
+References: <329EB4CF.41C67EA6@crash.com> <grturnerE1ouzM.Kwy@netcom.com>
+		<pfarrellE1oy3A.15I@netcom.com> <57tmkc$8mv@shellx.best.com> <qhzpzxi6sg.fsf_-_@houhah.brouhaha.com>
+NNTP-Posting-Host: 38.226.20.10
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 3.0 (X11; U; NetBSD 1.2 i386)
+To: Eric Smith <eric@brouhaha.com>
+
+Eric Smith wrote:
+> 
+> As of a few months ago, Digital still had an SPD on their FTP server for
+> KS10 diagnostics.  I haven't verified that it is still there.
+
+The SPD for the "DECSYSTEM-2020 Diagnostic Set, Version 1.0" is still
+available online at
+http://ftp.digital.com/pub/DEC/DECinfo/SPD/22-20-02.txt.
+
+But I found something vastly amusing when I was poking around the
+Digital Assisted Services catalog:
+
+   ZH008-CM    KL10E(1091,2040/50/60 DIAGKIT      $15,000.00   Y   
+Z       B   
+   ZH008-DZ    KL10E(1091,2040/50/60 LICENSE       $1,500.00   Y   
+Z       B   
+   ZH009-CM    KL10A/B/D 1080/90 MAINT DIAG       $15,000.00   Y   
+Z       B   
+   ZH009-DZ    KL10A/B/D 1080/90 DIAG LIC          $1,500.00   Y   
+Z       B   
+   ZT001-CM    KS10 MAINT DIAG 9TR 1600 BPI       $15,000.00   Y   
+Z       B   
+   ZT001-DZ    KS10 MAINT DIAG LIC ONLY            $1,500.00   Y   
+Z       B   
+
+   ZC200-CM    VAX 11725/730 DIAG KIT MT/TU        $5,250.00   Y   
+Z       B   
+   ZK200-CH    VENUS 8600/8650 COMPLETE DIAG      $18,000.00   Y   
+Z       B   
+QX-K34AA-AA    VAX 6XXX-2XX MAINT DIAG S/U/L       $5,200.00   Y   
+Z       B   
+
+
+I include the VAX systems for reference. You can view these listings
+directly by calling up http://www.digital.com/info/DAS-Catalog/ and
+selecting "Table of Contents," then "Diagnostics for ..."  And of
+course, don't forget that you shouldn't be running the diags without
+first purchasing a Single Use License for your individual CPU.
+
+--Steve.
+
+Steve Jones                   smj@crash.com                Manhattan,
+New York
+CRASH!! Computing     http://www.crash.com/people/smj/        Cambridge,
+Mass.
+
+       "Your information doesn't sleep. Why should your programmers?"
+
+
+Article 2690 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc01.blue.aol.com!news.maxwell.syr.edu!nntp2.deja.com!nnrp1.deja.com!not-for-mail
+From: skywriter@my-deja.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: Need for KS10 diagnostics
+Date: Tue, 19 Dec 2000 18:35:47 GMT
+Organization: Deja.com
+Lines: 21
+Message-ID: <91o9q3$96a$1@nnrp1.deja.com>
+References: <3A3A338C.8DE7FFA5@bartek.net> <91fpoi$li9$1@bob.news.rcn.net> <3A3B94DE.4FE198AA@bartek.net> <91ill4$r7g$1@bob.news.rcn.net> <3A3CF00E.46D6A935@bartek.net> <91nhg4$dgb$1@autumn.news.rcn.net>
+NNTP-Posting-Host: 168.159.18.157
+X-Article-Creation-Date: Tue Dec 19 18:35:47 2000 GMT
+X-Http-User-Agent: Mozilla/4.7 [en] (X11; U; SunOS 5.6 sun4u)
+X-Http-Proxy: 1.0 x72.deja.com:80 (Squid/1.1.22) for client 168.159.18.157
+X-MyDeja-Info: XMYDJUIDskywriter
+Xref: nntp1.ba.best.com alt.sys.pdp10:2690
+
+In article <91nhg4$dgb$1@autumn.news.rcn.net>,
+  jmfbahciv@aol.com wrote:
+> No.  Dianostics were not run as timesharing jobs.  If
+> they were systems would not have had to be brought down
+> for maintenance.
+
+regarding KL10 diags:
+
+I'm pretty sure I remember running DIAMON from TOPS-20.
+You could run some of the 10-based 10 diags then.
+However, I don't quite rememebr why I was doing it at
+the time. Maybe running DFRHB or DDRPI. Obviously 11 based
+10 diags are not going to run :-).
+
+I wonder if the module callout will be anymore accurate
+in an emulator, than on the real hardware :)
+
+
+
+Sent via Deja.com
+http://www.deja.com/
+
+
+Article 2850 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!inwap
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Need for KS10 diagnostics
+Date: 27 Dec 2000 11:26:23 GMT
+Organization: Chez Inwap
+Lines: 44
+Message-ID: <92cjkv$e74$1@nntp1.ba.best.com>
+References: <3A3A338C.8DE7FFA5@bartek.net> <3A3B94DE.4FE198AA@bartek.net> <91ill4$r7g$1@bob.news.rcn.net> <3A3CF00E.46D6A935@bartek.net>
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 977916383 14564 206.184.139.134 (27 Dec 2000 11:26:23 GMT)
+X-Complaints-To: abuse@best.com
+NNTP-Posting-Date: 27 Dec 2000 11:26:23 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2850
+
+In article <3A3CF00E.46D6A935@bartek.net>,
+Arthur Krewat  <krewat@bartek.net> wrote:
+>> Which boot code?  Not the microcode.  Diags had to run on
+>> a cold machine.  Or else field service would have had
+>> to do it the hard way and use scopes.  Diags were also
+>> a maintenance tool for field service.
+>
+>Forgive me if I'm wrong, but if the diags are on a TOPS-20
+>formatted disk pack, than don't you need some portion of
+>TOPS-20 to read the diags into core?
+
+You're forgetting that SYS:MONITR.EXE is a file that is stored on
+a TOPS-20 fomatted disk pack, and absolutely no portion of TOPS-20
+is running when MONITOR.EXE is read into core.
+
+The bootstrap routines understand how to locate a file on a TOPS-20
+disk pack when TOPS-20 is not running.
+
+Standalone diagnostics diagnostics can be loaded in several ways:
+  *) Off of mag tape (one at at time, no directory).
+  *) Off of the boot sectors of a disk pack (TOPS-10, TOPS-20, it
+     makes no difference at this stage as long as the HOM block is OK).
+  *) By a diagnostic loader program, which understands TOPS-10 and/or
+     TOPS-20 directory structures.
+
+>Even if (like MS-DOS <=5.x) you have the diags in the beginning of the pack,
+>and there is the tiniest piece of code to read them into memory, isn't it
+>relying on a TOPS-20 filesystem to be there?
+
+No part of TOPS-20 is needed to load the first program, and that
+program is capable of having its own smarts to determine how the disk
+is formatted.  The individual diag routines require that DDT and some other
+routines be already loaded in to specific portions of physical memory.
+
+>Yes, you could copy those .SAV's to something and run them
+>from there, but what would you run them with? Certainly not
+>under fully-booted TOPS-10 or TOPS-20...
+
+You run them under the standalone program loader, which is neither
+TOPS-10 nor TOPS-20.  KLDCP is an operating system unto itself.
+	-Joe
+
+--
+See http://www.inwap.com/ for PDP-10 and "ReBoot" pages.
+
+

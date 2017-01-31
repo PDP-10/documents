@@ -1,0 +1,46 @@
+Article 2075 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.dacom.co.kr!newsfeed.direct.ca!look.ca!news.he.net!news-hog.berkeley.edu!ucberkeley!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Help! TECO problems
+Date: Thu, 30 Nov 2000 15:22:12 -0800
+Organization: Networks & Distributed Computing
+Lines: 25
+Message-ID: <Pine.NXT.4.31.0011301516590.5119-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <YbyV5.27109$IP1.827764@news1.giganews.com> <7mid2tcqruennobfifkp63ss7od82hmrgt@4ax.com>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 975626535 35982 (None) 140.142.17.35
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: phillip
+In-Reply-To: <7mid2tcqruennobfifkp63ss7od82hmrgt@4ax.com>
+Xref: nntp1.ba.best.com alt.sys.pdp10:2075
+
+On Thu, 30 Nov 2000, R.J.S. wrote:
+> Less you say that teco has little power, I have seen a two line teco
+> command that would compute Pi to an arbitrary number of digits.  (and
+> each line was only about 40 or 50 bytes long)
+
+Let us not forget that the original implementation of EMACS was written in
+TECO.
+
+Here's my copy of PI.TEC, which was apparently written for TOPS-10 TECO,
+but probably wouldn't be hard to hard to hack for other, more powerful,
+versions.
+
++0UN QN"E 20UN ' BUH BUV HK
+QN< J BUQ QN*10/3UI
+QI< \+2*10+(QQ*QI)UA B L K QI*2-1UJ QA/QJUQ
+QA-(QQ*QJ)-2\ 10@I// -1%I >
+QQ/10UT QH+QT+48UW QW-58"E 48UW %V ' QV"N QV^T ' QWUV QQ-(QT*10)UH >
+QV^T @^A/
+/
+
+-- Mark --
+
+http://staff.washington.edu/mrc
+Science does not emerge from voting, party politics, or public debate.
+
+
+

@@ -1,0 +1,169 @@
+Article 939 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!newshub2.rdc1.sfba.home.com!news.home.com!newsfeed.direct.ca!look.ca!nntp2.giganews.com!nntp3.giganews.com!news6.giganews.com.POSTED!not-for-mail
+From: Timothy Stark <sword7@grace.speakeasy.org>
+Subject: PDP-10 Emulator Status
+Newsgroups: alt.sys.pdp10
+User-Agent: tin/1.4.2-20000205 ("Possession") (UNIX) (Linux/2.2.16 (i686))
+Lines: 150
+Message-ID: <d6Fp5.521341$MB.7936523@news6.giganews.com>
+NNTP-Posting-Date: Fri, 25 Aug 2000 20:31:53 CDT
+Organization: Giganews.Com - Premium News Outsourcing
+X-Trace: sv2-mZeMVDCXcTeej6/9ox3RutwkUFK/WPXyRPQu+2DbQp+FPwqd7XN4i048zXfny7uqG7nnRBWo3KhBejj!GHzq6HvjutHG2AS8PdtGEDbw0WWw
+X-Complaints-To: abuse@GigaNews.Com
+X-Abuse-Info: Please be sure to forward a copy of ALL headers
+X-Abuse-Info: Otherwise we will be unable to process your complaint properly
+Date: Sat, 26 Aug 2000 01:31:53 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:939
+
+Hi Folks:
+
+Good news! Almost a dot. I finally resolved the disk acess problems.
+I had narrowed down to RPXCPY when I discovered a bug in UNISTS in
+UUOPWQ.  A bug in UNISTS cause a derail in write attempt and fall into
+UUOPW2 (that enter queue and wait for completion) instead of UUOPW1.
+Well, I found a HRRZS bug in RPXCPY (in RHXKON.MAC) and fixed it because
+a HRRZS instruction failed to clear left halfword. Yes, another typos.
+
+Now I tried to run TOPS-10 v7.04 and was amazed to notice all disk
+problems disappeared once!  Also it happened the same in TOPS-10 v7.03!
+Both version was able to get the startup option the past.  They attempted
+to print a dot but something blocked them from print a dot after 'LOGIN'
+ready message.
+
+I investiaged into that and found out the PI system went messed up.  I
+fixed it to discern between regular and vector interrupts (from I/O
+devices).  Now it functions correctly but something still messed up in
+requests and in progress (hold).  Also, I tested my input and my log
+showed that TOPS-10 accepted my input and queues them into CTY device.
+Now I am working on it to get a dot printed.
+
+My screen log here:
+
+./ks10 -f ks10.cfg
+Welcome to KS10 Emulator v0.5.2 (Alpha)
+(lengthy configuration deleted -- Tim Stark)
+KS10> boot mta0:
+Booting mta0...
+Now running...
+BOOT V4(76)
+
+BOOT>/t
+[Loading from DSKB:SYSTEM.EXE[1,4]]
+
+KS10 07-Oct-88
+Why reload: new
+Date: 25-aug-2000
+Time: 21:00
+% RPA0 first HOM block consistency error
+% RPA0 second HOM block consistency error
+Startup option: destroy
+
+% WARNING:  All structures will be refreshed.  All disk files
+will be destroyed.  All information on currently spinning packs
+will be lost.  Do not proceed unless you are positive that you
+want to do this.
+Proceed (NO,YES) [NO]: yes
+% RPA0 first BAT block consistency error
+% RPA0 second BAT block consistency error
+[BAT blocks initialized on RPA0]
+[HOME blocks initialized on all units]
+Startup option: define struct
+
+In the  following  dialogue,  all  numbers  are  decimal  unless
+otherwise  indicated.   Values  within  parenthesis are options.
+Values  within  square  brackets  are  defaults  which  will  be
+substituted if RETURN is pressed.
+
+Any question preceeded with an asterisk indicates changing  that
+parameter will require the structure to be refreshed.
+
+
+                          *** Note ***
+HOME blocks will be initialized immediately after all  units  in
+the structure have been entered.
+
+
+Structure to define: dskb
+Disk drive for logical unit 0: rpa0
+Disk drive for logical unit 1: 
+Do you want to see the bad regions (NO,YES) [NO]: yes
+[HOM blocks initialized on RPA0]
+
+Parameters for structure DSKB
+   *Blocks per cluster (3 - 131071) [10]: 
+    Private structure (NO,YES) [NO]: 
+    Owner PPN (NONE,[p,pn]) [NONE]: 
+    Disk-set (1 - 36,ALL,NONE) [ALL]: 
+   *Number of K for CRASH.EXE (0 - 4096) [512]: 
+    Blocks allowed for overdraw per user (0 - 307800) [500]: 
+    Consecutive blocks tried for on output (0 - 262143) [30]: 
+   *Bits per cluster count (1 - 18) [12]: 
+    Make this the only structure in the SSL (NO,YES) [NO]: 
+    Make this the only structure in the SDL (NO,YES) [NO]: 
+
+Parameters for unit RPA0
+    Unit ID [DSKB0]: 
+   *SAT blocks per unit (8 - 81) [8]: 
+    SAT blocks in core (1 - 8) [8]: 
+   *K for swapping (0 - 4807) [1000]: 
+   *First logical block for swapping (4420 - 299800) [149900]: 
+    Swapping class (0 - 1) [0]: 
+    Make this the only unit in the ASL (NO,YES) [NO]: 
+% Structure DSKB must be refreshed before it can be used.
+
+Structure to define: 
+[Rebuilding the system search list from the HOM blocks]
+
+% No structures in system search list
+[Rebuilding the active swapping list from the HOM blocks]
+
+% No units in active swapping list
+[Rebuilding the system dump list from the HOM blocks]
+
+Startup option: define ssl
+
+Enter names of structures to appear in the system  search  list,
+one per line.  Terminate list with a blank line.
+dskb
+
+[Rebuilding the active swapping list from the HOM blocks]
+
+% No units in active swapping list
+[Rebuilding the system dump list from the HOM blocks]
+
+Startup option: def asl
+
+Enter names of units to appear in the active swapping list,  one
+per line.  Terminate list with a blank line.
+rpa0
+
+[Rebuilding the system dump list from the HOM blocks]
+
+Startup option: refresh
+
+Needs refreshing: DSKB
+Structure to refresh: dskb
+[Updated HOM blocks on unit RPA0]
+[Structure DSKB refreshed]
+Structure to refresh: 
+[Rebuilding the system dump list from the HOM blocks]
+
+Startup option: noinit
+[Rebuilding the system dump list from the HOM blocks]
+
+To automatically log in under [1,2] type "LOGIN"
+(System froze up - no dot, PI system messed up  -- Tim Stark)
+(^E pressed to get out of system-locked up)
+KS10> quit
+Exiting PDP10 Emulator
+
+-- Tim Stark
+
+-- 
+Timothy Stark	<><	Inet: sword7@speakeasy.org, sword7@firesword7.net
+--------------------------------------------------------------------------
+"For God so loved the world, that he gave his only begotten Son, that 
+whosoever believeth in him should not perish, but have everlasting life.
+Amen." -- John 3:16 (King James Version Bible)
+
+

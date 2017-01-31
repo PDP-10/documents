@@ -1,0 +1,73 @@
+Article 4775 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!netnews.com!newspeer.monmouth.com!netnews1.nw.verio.net!netnews.nwnet.net!news.verio.net!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: How in Hell did the Great Unix to NT Migration begin??
+Date: Fri, 23 Apr 1999 20:33:00 -0700
+Organization: Networks & Distributed Computing
+Lines: 51
+Message-ID: <Pine.NXT.4.20.9904232023400.13242-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <371be3e4.0@newsfeed.one.net> <7fpjgn$v7t$4@antiochus.ultra.net> <Ci0U2.24$MF5.9024@srvr1.engin.umich.edu> <ALDERSON.99Apr23113531@netcom.netcom.com> <7frcok$3ck@weyl.math.psu.edu>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 924924784 21648 (None) 140.142.17.38
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: dak
+To: Alexander Viro <viro@weyl.math.psu.edu>
+In-Reply-To: <7frcok$3ck@weyl.math.psu.edu>
+Xref: news3.best.com alt.folklore.computers:128712 alt.sys.pdp10:4775
+
+On 23 Apr 1999, Alexander Viro wrote:
+> Wait a bit. Do you mean that there was no scheduling within the same
+> login session?
+
+login session == process.
+
+> Does it mean that big compile == sitting and waiting or going
+> to other terminal?
+
+Well, not necessarily.  A job could be detached from a terminal, and a new
+one logged in.  So, you could get somewhat of the same effect of multiple
+processes, by successively attaching and detaching your jobs.
+
+Assuming that the computer center wasn't a bunch of fascist pigs that
+didn't let you do this.
+
+> Could the process create a new one, wait for its completion
+> and resume when the child finishes (without touching the keyboard, that is)?
+
+There was no such thing as "creating a process".
+
+> From the paper on TOPS-20 I got an impression that it had background
+> processes. Was it a difference between TOPS-10 and TOPS-20?
+
+TOPS-20 was a completely different operating system.  It had entirely
+different system calls (TOPS-10 system calls were emulated via a user mode
+library) and an entirely different job/process mechanism.
+
+In a great many ways, TOPS-20 was more sophisticated than UNIX is today.
+TOPS-20 virtual memory is still far ahead of UNIX.  Damn, I miss it!!
+
+TOPS-20 processes were somewhat like a hybrid between UNIX processes and
+UNIX threads.  A TOPS-20 fork could run in its own address space or share
+portions (or all) of its address space with another process.  However, a
+lot of things (e.g. connected directory, access rights) were global to the
+entire job tree, nor could a TOPS-20 process be detached from its job
+tree.
+
+> BTW, how did ITS behave?
+
+ITS was more like UNIX in terms of its process handling.  Its virtual
+memory handling was better than UNIX, but not as good as TOPS-20.  ITS had
+no file protections or privileges on system calls; it was a "gentlemen's
+timesharing".
+
+-- Mark --
+
+* RCW 19.190 notice: This email address is located in Washington State.	*
+* Unsolicited commercial email may be billed $500 per message.		*
+Science does not emerge from voting, party politics, or public debate.
+
+
+

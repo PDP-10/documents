@@ -1,0 +1,366 @@
+Article 7029 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!newsfeed.mathworks.com!wn3feed!worldnet.att.net!207.24.196.41!nntphub.cb.lucent.com!news
+From: Dennis Ritchie <dmr@bell-labs.com>
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10,alt.folklore.computers
+Subject: Re: Shell scripts
+Date: Thu, 16 Mar 2000 03:44:34 +0000
+Organization: Bell Labs / Lucent Technologies
+Lines: 43
+Message-ID: <38D058A2.A3178676@bell-labs.com>
+References: <AtP94.8925$7S.6211@news20.bellglobal.com> <951553598.660875@shelley.paradise.net.nz> <OCTt4.1786$%A3.40425@ptah.visi.com> <951604376.786789@shelley.paradise.net.nz> <vl%t4.1880$%A3.43596@ptah.visi.com> <845.92T6T4842347ghira@mistral.co.uk> <Pine.NXT.4.30.0002271236220.29518-100000@Tomobiki-Cho.CAC.Washington.EDU> <38CF9FF1.B993781A@mail.ptd.net> <Pine.NXT.4.30.0003151758240.1147-100000@Tomobiki-Cho.CAC.Washington.EDU>
+NNTP-Posting-Host: trux.cs.bell-labs.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 4.61 [en] (WinNT; U)
+X-Accept-Language: en
+Xref: news3.best.com alt.sys.pdp8:4418 alt.sys.pdp10:7029 alt.folklore.computers:152974
+
+
+
+Mark Crispin wrote, inter alia:
+
+> Multics was also written in a high level language, and thus was
+> "portable".  So were several other operating systems, such as on the
+> Univac (written in Algol).
+
+But they weren't ported, except to similar machines in the same
+line of descent.
+> 
+> But being written in assembly language doesn't make software non-portable.
+> TOPS-20 was ported to processors built by three other manufacturers (four
+> if you stretch TOPS-20 to include Tenex).  IBM OS/360 was ported to a
+> number of different manufacturers' processors as well.  So was MS-DOS.
+
+Likewise.  Amdahl and IBM? AMD and Intel?  DEC and Foonly? Gimme a break.
+> 
+> Nor was the original AT&T UNIX all that portable.  A number of chunks were
+> written in PDP-11 assembly language, and it was quite an effort to get it
+> running on the VAX.  If you want to talk about the *first* UNIX, it was
+> written in PDP-7 assembly language, and the first PDP-11 UNIX was in
+> PDP-11 assembly language.  The PDP-11 UNIX was later rewritten into C when
+> they got a large enough PDP-11.
+
+Actually, once it started happening around 1977, ports to significantly
+different architectures were done fairly fast. "Different" means
+things like Interdata, IBM 360/370, DEC Vax, Univac 1100, Intel 8086.
+> 
+> As Barb points out, the "portability" of UNIX was more of a policy
+> decision of its original owners (AT&T) than something technical.  But the
+> original AT&T licenses weren't all that nice.  It was BSD that started the
+> explosive growth of UNIX.
+
+I wasn't aware of "policy decisions" by AT&T that caused the work, not
+counting the one that kept our paychecks coming in.  And
+the original AT&T licenses were precisely those under which the important BSD
+work in the 1980s was carried out, not to mention the growth of the
+workstation industry.  (I don't by any means discount the BSD work, which
+was enormously important, but the same important technical parts of
+it were done with that not-that-nice license, though it did ultimately chafe).
+
+	Dennis
+
+
+Article 7031 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10,alt.folklore.computers
+Subject: Re: Shell scripts
+Date: Wed, 15 Mar 2000 23:45:20 -0800
+Organization: Networks & Distributed Computing
+Lines: 57
+Message-ID: <Pine.NXT.4.30.0003152251550.3301-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <AtP94.8925$7S.6211@news20.bellglobal.com> <951553598.660875@shelley.paradise.net.nz> <OCTt4.1786$%A3.40425@ptah.visi.com> <951604376.786789@shelley.paradise.net.nz> <vl%t4.1880$%A3.43596@ptah.visi.com> <845.92T6T4842347ghira@mistral.co.uk> <Pine.NXT.4.30.0002271236220.29518-100000@Tomobiki-Cho.CAC.Washington.EDU> <38CF9FF1.B993781A@mail.ptd.net> <Pine.NXT.4.30.0003151758240.1147-100000@Tomobiki-Cho.CAC.Washington.EDU> <38D058A2.A3178676@bell-labs.com>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 953192723 14424 (None) 140.142.17.38
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: wambold
+To: Dennis Ritchie <dmr@bell-labs.com>
+In-Reply-To: <38D058A2.A3178676@bell-labs.com>
+Xref: news3.best.com alt.sys.pdp8:4420 alt.sys.pdp10:7031 alt.folklore.computers:152979
+
+On Thu, 16 Mar 2000, Dennis Ritchie wrote:
+> > As Barb points out, the "portability" of UNIX was more of a policy
+> > decision of its original owners (AT&T) than something technical.
+> I wasn't aware of "policy decisions" by AT&T that caused the work, not
+> counting the one that kept our paychecks coming in.
+
+"Good policy decision" could also mean "lack of bad policy decision."
+
+Had AT&T behaved the way that DEC or Honeywell did, there would have been
+no release of UNIX outside of AT&T until the 3B series was produced.  The
+PDP-11, Interdata, etc. versions never would have seen the outside of Bell
+Labs.  The UNIX license would have prohibited running UNIX on anything
+other than a 3B system.
+
+It isn't clear to me whether it was conscious corporate decision, accident
+of history, or guerilla action on the part of the programmers.  You can
+probably comment on this point... ;-)
+
+The point is, AT&T behaved differently.  Either AT&T made a policy
+decision not to restrict UNIX to AT&T-supplied hardware; or AT&T failed to
+make a policy decision to restrict UNIX to AT&T-supplied hardware.  Either
+way, it was possible by policy to port UNIX to other platforms.
+
+And in the end run, that's what counted.
+
+However, a policy (or lack thereof), no matter how laudable, isn't a
+technical aspect.  Technically, there were other systems that were as
+portable as UNIX; but policy blocked their portability.
+
+I contend that policy is more important that technology in deciding what
+succeeds.  VHS vs. Beta; Intel vs. Motorola;... history is littered with
+superior technology that died because of bad policy of its owners.
+
+UNIX had undeniably, overwhelmingly superior policy.  Technology is an
+entirely different matter.  The claim that UNIX is unconditionally
+superior technology to [Multics | ITS | TOPS-20 | LispM] leaves a bitter
+taste for the erstwhile partisans of the latter.  It's the same reason
+that a claim that VHS is superior technology to Beta annoys former Beta
+fans.  It's the sign of a poor winner.
+
+I know that you (DMR) have never been this way.  As I recall, you once
+made a very gracious statement about Ray Tomlinson and Dan Murphy that was
+much appreciated in the Tenex/TOPS-20 world.  I wish that I could say the
+same about certain other individuals.
+
+I mean, sheesh, not that long ago someone was insisting to me that UNIX
+invented device-independent I/O and file/memory mapping!
+
+-- Mark --
+
+* RCW 19.190 notice: This email address is located in Washington State.	*
+* Unsolicited commercial email may be billed $500 per message.		*
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+
+
+
+Article 7042 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!nntp.primenet.com!nntp.gctr.net!howland.erols.net!newsfeed.skycache.com!portc01.blue.aol.com!newsstand.cit.cornell.edu!news.graphics.cornell.edu!news
+From: westin*nospam@graphics.cornell.edu (Stephen H. Westin)
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10,alt.folklore.computers
+Subject: Unix history/policy (was: Shell scripts)
+Date: 16 Mar 2000 12:54:18 -0500
+Organization: Cornell University Program of Computer Graphics
+Lines: 40
+Sender: westin@DIESEL
+Message-ID: <uog8evm0l.fsf_-_@graphics.cornell.edu>
+References: <AtP94.8925$7S.6211@news20.bellglobal.com> <Pine.NXT.4.30.0003151758240.1147-100000@Tomobiki-Cho.CAC.Washington.EDU> <38D058A2.A3178676@bell-labs.com> <Pine.NXT.4.30.0003152251550.3301-100000@tomobiki-cho.cac.washington.edu> <8ar58l$btj$1@agate.berkeley.edu>
+NNTP-Posting-Host: diesel.graphics.cornell.edu
+X-Newsreader: Gnus v5.5/Emacs 20.3
+Xref: news3.best.com alt.sys.pdp8:4428 alt.sys.pdp10:7042 alt.folklore.computers:153018
+
+korpela@islay.ssl.berkeley.edu (Eric J. Korpela) writes:
+
+> In article <Pine.NXT.4.30.0003152251550.3301-100000@tomobiki-cho.cac.washington.edu>,
+> Mark Crispin  <mrc@CAC.Washington.EDU> wrote:
+> >On Thu, 16 Mar 2000, Dennis Ritchie wrote:
+> >> > As Barb points out, the "portability" of UNIX was more of a policy
+> >> > decision of its original owners (AT&T) than something technical.
+> >> I wasn't aware of "policy decisions" by AT&T that caused the work, not
+> >> counting the one that kept our paychecks coming in.
+> >
+> >"Good policy decision" could also mean "lack of bad policy decision."
+> >
+> >Had AT&T behaved the way that DEC or Honeywell did, there would have been
+> >no release of UNIX outside of AT&T until the 3B series was produced.  The
+> >PDP-11, Interdata, etc. versions never would have seen the outside of Bell
+> >Labs.  The UNIX license would have prohibited running UNIX on anything
+> >other than a 3B system.
+> 
+> IIRC, AT&T was prohibited at the time from selling computer hardware.
+
+That would be from the consent decree of 1956, which I believe was
+from a suit between IBM and AT&T. It basically said that IBM wouldn't
+do phones, and AT&T wouldn't do computers.
+
+> I think
+> it was only after the break up of the phone company in the 80s that AT&T was
+> allowed to enter the computer sales buisness.
+
+Well, I believe that 1976 was the end of the consent decree (though I
+don't know why I believe that); one result was the release of a new
+generation of Teletype terminals (the 40 series) to catch up with the
+rest of the world. It was too little, too late, of course; at that
+point, I think DEC dominated with DECwriters and VT100s.
+
+<snip>
+
+-- 
+-Stephen H. Westin
+Any information or opinions in this message are mine: they do not
+represent the position of Cornell University or any of its sponsors.
+
+
+Article 7046 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!su-news-hub1.bbnplanet.com!nycmny1-snh1.gtei.net!news.gtei.net!newsfeed.mathworks.com!panix!news.panix.com!not-for-mail
+From: jeffj@panix.com (Jeff Jonas)
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10,alt.folklore.computers
+Subject: Re: Unix history/policy (was: Shell scripts)
+Date: 16 Mar 2000 17:39:23 -0500
+Organization: Jeff's House of Electronic Parts
+Lines: 32
+Message-ID: <8arnqr$amj$1@panix.com>
+References: <8ar58l$btj$1@agate.berkeley.edu> <uog8evm0l.fsf_-_@graphics.cornell.edu> <8arb9r$1eci$1@news.enteract.com>
+NNTP-Posting-Host: panix.com
+X-Trace: news.panix.com 953246364 3111 166.84.0.226 (16 Mar 2000 22:39:24 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: 16 Mar 2000 22:39:24 GMT
+X-Newsposter: trn 4.0-test55 (26 Feb 97)
+Xref: news3.best.com alt.sys.pdp8:4433 alt.sys.pdp10:7046 alt.folklore.computers:153027
+
+>>> IIRC, AT&T was prohibited at the time from selling computer hardware.
+
+>> That would be from the consent decree of 1956, which I believe was
+>> from a suit between IBM and AT&T. It basically said that IBM wouldn't
+>> do phones, and AT&T wouldn't do computers.
+
+>IBM and AT&T both signed consent decrees in 1956, but unrelated to
+>one another.  Both were the result of antitrust proceedings by the
+>US government.  IBM agreed to sell equipment instead of only leasing
+>it; AT&T agreed to restrict itself to the telecommunications business.
+
+*grunt* nobody's giving authoritative references, but hey, it's only USENET :-)
+
+I think many of thought "that makes since" in light of the more recent
+tit-for-tat posturing of the early 90s where AT&T was pondering
+video on demand and challenging the cable industry,
+and the cable industry wanted to offer phone service.
+
+Here we are 10 years later and cable service still sux and is overpriced.
+The closest they've come to telephony is offering cable internet,
+which is STILL slow to deploy in most areas.
+I can't follow the telecom industry as closely as I did but I believe that
+AT&T did succeed in making video on demand technology which servers
+niche markets.  Still no picturephone, though and the video/picture
+phones were a flop.  Even videoconferencing seems to be a passing fad.
+
+"Gee, Brain, what are we going to do with all this left over bandwidth"
+"set up a porn web server, Pinky.  It'll help me ... RULE THE WORLD"
+-- 
+Jeffrey Jonas
+jeffj@panix(dot)com
+The original Dr. JCL and Mr .hide
+
+
+Article 7047 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!su-news-hub1.bbnplanet.com!news.gtei.net!newsfeed.berkeley.edu!newsfeed.enteract.com!betanews.enteract.com!not-for-mail
+From: Eric Fischer <enf@pobox.com>
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10,alt.folklore.computers
+Subject: Re: Unix history/policy (was: Shell scripts)
+Date: 16 Mar 2000 23:18:47 GMT
+Organization: EnterAct Corp Turbo-Elite News Server
+Lines: 34
+Message-ID: <8arq4n$1re5$1@news.enteract.com>
+References: <8ar58l$btj$1@agate.berkeley.edu> <uog8evm0l.fsf_-_@graphics.cornell.edu> <8arb9r$1eci$1@news.enteract.com> <8arnqr$amj$1@panix.com>
+NNTP-Posting-Host: shell-3.enteract.com
+X-Trace: news.enteract.com 953248727 60869 207.229.143.42 (16 Mar 2000 23:18:47 GMT)
+X-Complaints-To: abuse@enteract.com
+NNTP-Posting-Date: 16 Mar 2000 23:18:47 GMT
+X-Newsreader: trn 4.0-test72 (19 April 1999)
+Originator: enf@enteract.com (Eric Fischer)
+Xref: news3.best.com alt.sys.pdp8:4434 alt.sys.pdp10:7047 alt.folklore.computers:153031
+
+Jeff Jonas <jeffj@panix.com> wrote:
+
+> >IBM and AT&T both signed consent decrees in 1956, but unrelated to
+> >one another.  Both were the result of antitrust proceedings by the
+> >US government.  IBM agreed to sell equipment instead of only leasing
+> >it; AT&T agreed to restrict itself to the telecommunications business.
+>
+> *grunt* nobody's giving authoritative references, but hey, it's only
+> USENET :-)
+
+You want references?  OK, you get references.
+
+John Brooks, _Telephone: the First Hundred Years_, Harper & Row, 1976:
+
+  The agreement, or consent decree, settling the case was wrapped up
+  in Washington right after New Year's Day, 1956....  First, Western
+  Electric would not be separated from AT&T; second, Western Electric,
+  except for its government defense work, agreed to confine itself to
+  manufacturing equipment of types bought by the Bell System, rather
+  than seeking other markets; third, the Bell System agreed not to
+  engage in any business other than common-carrier telecommunications
+  and "incidental operations"; and fourth, the Bell System agreed to
+  grant nonexclusive licenses and related technical information to any
+  applicant on fair terms.  (pp. 254-255)
+
+The only history of IBM I have at hand is _THINK_ by William Rodgers,
+Stein and Day, 1969, and it doesn't give any solid details about IBM's
+consent decree.  But the text of the decree seems to be available at
+
+  http://www.essential.org/antitrust/ibm/ibm1956cd.html
+
+I can dig for more details if that's not good enough.
+
+eric
+
+
+Article 7045 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!su-news-hub1.bbnplanet.com!nycmny1-snh1.gtei.net!news.gtei.net!newsfeed.mathworks.com!panix!news.panix.com!not-for-mail
+From: jeffj@panix.com (Jeff Jonas)
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10,alt.folklore.computers
+Subject: Re: Unix history/policy (was: Shell scripts)
+Date: 16 Mar 2000 17:32:18 -0500
+Organization: Jeff's House of Electronic Parts
+Lines: 43
+Message-ID: <8arndi$9k6$1@panix.com>
+References: <Pine.NXT.4.30.0003152251550.3301-100000@tomobiki-cho.cac.washington.edu> <8ar58l$btj$1@agate.berkeley.edu> <uog8evm0l.fsf_-_@graphics.cornell.edu>
+NNTP-Posting-Host: panix.com
+X-Trace: news.panix.com 953245939 2982 166.84.0.226 (16 Mar 2000 22:32:19 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: 16 Mar 2000 22:32:19 GMT
+X-Newsposter: trn 4.0-test55 (26 Feb 97)
+Xref: news3.best.com alt.sys.pdp8:4432 alt.sys.pdp10:7045 alt.folklore.computers:153026
+
+>> IIRC, AT&T was prohibited at the time from selling computer hardware.
+
+>That would be from the consent decree of 1956, which I believe was
+>from a suit between IBM and AT&T. It basically said that IBM wouldn't
+>do phones, and AT&T wouldn't do computers.
+
+Geez, and both failed miserably when they tried
+Rolm was IBM's phone system and IBM withdrew/gave up.
+AT&T tried selling their own PCs and workstations usually
+based on the WeCo 32xxx CPU and named 3b2/5/...:
+AT&T tried selling Olivetti and Convergent PCs too.
+All of AT&T Information System was totally disolved in the 90s.
+
+>Well, I believe that 1976 was the end of the consent decree (though I
+>don't know why I believe that); one result was the release of a new
+>generation of Teletype terminals (the 40 series) to catch up with the
+>rest of the world. It was too little, too late, of course; at that
+>point, I think DEC dominated with DECwriters and VT100s.
+
+I am still sorrowed that the Teletype brand-name was not maintained
+since it probaly had more name-brand recognition than any other name!
+I think you're right that in the 70s, Teletype machines were big
+and clunky compared to the competitors, but they did some ground-breaking
+work in the 80s with the BLIT, 5620 and other high resolution
+graphic and windowing "smart" terminals.
+And I used to have a stack of Teletype Dataspeed 40 chain printers that
+were so rugged they refused to die!
+And cheap to run too: used DecWriter ribbons!
+
+There was another factor to Teletype's downfall:
+they tried desperately to break into the IBM mainframe market.
+They had IBM compatible terminal cluster controllers and terminals,
+yet few places outside of AT&T risked the ire of IBM and actually
+deployed them.  Many shops remained "true blue" using only genuine IBM
+terminals and all despite the higher cost and being older technology.
+
+The end of the consent decree allowed for me to work at AT&T:
+I mostly consulted to AT&T's Information System:
+developing the Unix OS and applications.
+-- 
+Jeffrey Jonas
+jeffj@panix(dot)com
+The original Dr. JCL and Mr .hide
+
+

@@ -1,0 +1,182 @@
+Article: 21311 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newsfeed.icl.net!newsfeed.fjserv.net!newsfeed.news2me.com!elnk-nf2-pas!newsfeed.earthlink.net!wn14feed!wn13feed!worldnet.att.net!204.127.198.203!attbi_feed3!attbi_feed4!attbi.com!sccrnsc01.POSTED!not-for-mail
+From: "Glen Herrmannsfeldt" <gah@ugcs.caltech.edu>
+Newsgroups: alt.folklore.computers,alt.sys.pdp10,alt.sys.pdp11
+References: <vk4691itm5pfd4@corp.supernews.com>
+Subject: Re: AMOS and TOPS-10, RT-11?
+Lines: 33
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Newsreader: Microsoft Outlook Express 5.00.2919.6700
+X-MimeOLE: Produced By Microsoft MimeOLE V5.00.2919.6700
+Message-ID: <gZu0b.201751$YN5.141173@sccrnsc01>
+NNTP-Posting-Host: 12.207.204.17
+X-Complaints-To: abuse@comcast.net
+X-Trace: sccrnsc01 1061321676 12.207.204.17 (Tue, 19 Aug 2003 19:34:36 GMT)
+NNTP-Posting-Date: Tue, 19 Aug 2003 19:34:36 GMT
+Organization: Comcast Online
+Date: Tue, 19 Aug 2003 19:34:36 GMT
+Xref: dfw-artgen alt.folklore.computers:134169 alt.sys.pdp10:21311 alt.sys.pdp11:8456
+
+
+"Pete Fenelon" <pete@fenelon.com> wrote in message
+news:vk4691itm5pfd4@corp.supernews.com...
+> Possibly one for BAH (or Megan Gentry perhaps)
+>
+> I've recently installed Mike Noel's Alpha Micro emulator - seems like a
+nice
+> piece of software as emulators go!
+>
+> I'm very struck by how much like TOPS-10 the user experience of its
+> operating system (AMOS) is - it feels like a 'miniature TOPS-10', with
+> the obvious difference that there's no virtual memory and a fixed number
+> of jobs run in fixed address spaces!  I've yet to "look under the hood"
+> to see what it looks like inside.
+>
+> Right from the dot prompt, the PPNs, the help system, and the options to
+> some of the commands, it all feels VERY 'TOPSy'... (or, I guess, RT-11,
+> but I've less experience of that).
+>
+> So the question is - what's the genesis of Alpha Micro? Were they ex-DEC
+> people? - I know one of their early machines was based on the WD 3-chip
+> set like the LSI-11...?
+
+I first (and last) saw the AM-100 in the Pasadena Byte shop about 1977 or
+1978.  That was also the time when TOPS-10, and also some PDP-11 OS's were
+popular.   Other popular OS were IBM's MVS, and HP/2000 TSB.
+
+The idea of running a program by typing its name seemed new to me.    For
+TOPS-10 you had to RUN or R a program.
+
+-- glen
+
+
+
+
+Article: 21327 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!newsfeed.icl.net!newsfeed.fjserv.net!newspump.monmouth.com!newspeer.monmouth.com!newsfeed.mathworks.com!panix!panix2.panix.com!not-for-mail
+From: mikroa@netcom.com (Michael Roach)
+Newsgroups: alt.folklore.computers,alt.sys.pdp10,alt.sys.pdp11,alt.sys.alpha-micro
+Subject: Re: AMOS and TOPS-10, RT-11?
+Date: 21 Aug 2003 21:11:06 -0600
+Organization: A small notepad underneath my in box
+Lines: 108
+Message-ID: <bi41ka$s1c$1@panix2.panix.com>
+References: <vk4691itm5pfd4@corp.supernews.com> <gZu0b.201751$YN5.141173@sccrnsc01>
+NNTP-Posting-Host: panix2.panix.com
+X-Trace: reader2.panix.com 1061521866 5308 166.84.1.2 (22 Aug 2003 03:11:06 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: Fri, 22 Aug 2003 03:11:06 +0000 (UTC)
+X-Clueful-responder: echo "never-reply+panix=com" | tr "-+=" "+@."
+Xref: dfw-artgen alt.folklore.computers:134409 alt.sys.pdp10:21327 alt.sys.pdp11:8461 alt.sys.alpha-micro:1844
+
+In article <gZu0b.201751$YN5.141173@sccrnsc01>,
+Glen Herrmannsfeldt <gah@ugcs.caltech.edu> wrote:
+>
+>"Pete Fenelon" <pete@fenelon.com> wrote in message
+>news:vk4691itm5pfd4@corp.supernews.com...
+>> Possibly one for BAH (or Megan Gentry perhaps)
+>>
+>> I've recently installed Mike Noel's Alpha Micro emulator - seems like a
+>nice
+>> piece of software as emulators go!
+>>
+>> I'm very struck by how much like TOPS-10 the user experience of its
+>> operating system (AMOS) is - it feels like a 'miniature TOPS-10', with
+>> the obvious difference that there's no virtual memory and a fixed number
+>> of jobs run in fixed address spaces!  I've yet to "look under the hood"
+>> to see what it looks like inside.
+>>
+>> Right from the dot prompt, the PPNs, the help system, and the options to
+>> some of the commands, it all feels VERY 'TOPSy'... (or, I guess, RT-11,
+>> but I've less experience of that).
+>>
+>> So the question is - what's the genesis of Alpha Micro? Were they ex-DEC
+>> people? - I know one of their early machines was based on the WD 3-chip
+>> set like the LSI-11...?
+
+The original developers, Dick Wilcox, Rich Notari, and John French,
+worked on the original product soon after MITS released their 8800.
+I don't remember exactly when, but they worked out of Wilcox' garage
+and French's "The Computer Mart" in Orange, CA. Wilcox did the
+OS, BASIC, and original hardware. Notari did the WD-16 microcode
+which was a recoding of the LSI-11 chip set. There was an optional
+"single-and-a-half" 48 bit floating point capability programmed into the
+third (fourth?) prom but few, if any, declined the option.
+
+Before settling on the AM-100 name, it was called the sixteen/eight [16
+bit processor on an 8 bit (S-100) buss] and before that, it was called
+the Sweet 16. I don't think any sixteen/eight or sweet 16 labeled boards
+made it into customer systems. The company name is Alpha Microsystems,
+refered to as Alpha below, hence the AM- product designator. They were
+Alpha long before there was a Dec Alpha.
+
+PPNs are in split 16-bit format, so the largest PPN is 377,377. There
+are other accomodations for the 16 bit environment shoehorned onto the
+S-100 buss. The WD-16 processor is a re-microcoded LSI-11 chipset. The
+instruction set has the feel of a PDP-11. While 16 bit, the original CPU
+was a two-card S100 board set connected at the top with a flat ribbon
+cable. Real time clock was provided by a 60Hz 12 volt line from the
+power supply. Prototype boards were usually wire wrapped, and
+(initially) production boards were hand-soldered in various facilities
+in Irvine or Santa Ana.
+
+Originally limited to 64k, bank switching in 16k chunks was added later.
+Playing around, the smallest monitor I could get was 16k which allowed
+for three banks of 48k. Attempts to add a fourth bank and user broke the
+16K monitor bank, making it 32K and allowing for six 32K users. There
+was no high seg equivalent, but sharable, reentrant programs could
+be loaded into system memory during boot. My above test case had no
+sharable programs except when I broke the monitor size.
+
+Alpha Micro then developed a proprietary 16 bit version of the S-100
+buss. Their original 2-card, 2MhZ boar set was replaced by a double
+height 3.3mHz board. None of these were sold without the floating point
+option. This board was called the AM-100/T. Still limited to 64K, it
+supported bank switching in 1K increments.
+
+Later, Alpha switched to 680x0 processors and the VME buss, though the
+initial 68000 board was compatible in form (but ran at 8mHz) with their
+proprietary S-100 extension. They used a custom assembler reminiscent of
+a PDP-11 macro assembler. They changed mnemonics, operand orders, and (I
+think) addressing mode inidicators to make easier for WD-16 programmers
+to adapt to the new system. This of course made it harder to go to a
+pure 680x0 environment but Alpha's always been proprietary.
+
+Their latest product is a 2.4gHz AMD system that emulates the 680x0
+instruction set and has some native code. Despite the emulation, it runs
+faster than their fastest 680x0 offering.
+
+>I first (and last) saw the AM-100 in the Pasadena Byte shop about 1977 or
+>1978.  That was also the time when TOPS-10, and also some PDP-11 OS's were
+>popular.   Other popular OS were IBM's MVS, and HP/2000 TSB.
+
+Alpha's original application language is based on BASIC. It included
+HP's string indexing mechanism, as well as the string manipulation
+functions of other BASIC languages. Alpha's BASIC strings can also be
+indexed with negative numbers, allowing strings to be manipulated from
+right to left (the rightmost position was [-1,-1], etc.) The second
+operand can also specify a length (and direction) instead of position
+if the operands are separated by a semicolon. No matter how strings are
+indexed, they are rendered in their original left-to-right orientation.
+
+I don't remember if HP (or any other) BASIC had these notational
+extensions, nor did I think to try these out in HP Eloquence when I
+worked for an HP shop a few years back. Like HP Eloquence, which runs on
+HP-3000 and HP-9000 machines, Alpha's BASIC programs (or at least in the
+AlphaBASIC+ incantation) can run on different Alpha architectures.
+
+Instead of AlphaBASIC, my father sUggested the name BASIC Business
+Oriented Language, or BASBOL.
+
+I've added alt.sys.alpha-micro to the newsgroup list so others with
+better memories can correct the errors I've made above.
+
+>The idea of running a program by typing its name seemed new to me.    For
+>TOPS-10 you had to RUN or R a program.
+
+The patch BAH mentioned (to remove the R) was also seen on PDP-8
+(TSS-8). Well, not the same patch, of course, but something very
+similar.
+
+

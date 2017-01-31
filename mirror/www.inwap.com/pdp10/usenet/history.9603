@@ -1,0 +1,3573 @@
+Article 1317 of alt.sys.pdp10:
+Path: shellx.best.com!usenet
+From: Vance Socci <vsocci@vip.best.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 vs pdp-8 emulator
+Date: Sun, 05 Nov 95 22:43:08 PDT
+Organization: Best Internet Communications
+Lines: 26
+Message-ID: <NEWTNews.815640388.15486.vsocci@number1>
+References: <4710s2$7ij@quest.ccsi.com> <werme.815227162@alingo.zk3.dec.com> <BILLW.95Nov2015852@puli.cisco.com>  <werme.815617533@alingo.zk3.dec.com>
+NNTP-Posting-Host: vsocci.vip.best.com
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Newsreader: NEWTNews & Chameleon -- TCP/IP for MS Windows from NetManage
+
+
+In Article<werme.815617533@alingo.zk3.dec.com>, werme@alingo.zk3.dec.com (Eric 
+Werme)
+
+> billw@puli.cisco.com (William ) writes:
+> 
+
+> >  I know
+> >the dec10 I used in college had a PDP8 controlling its terminal lines,
+> 
+> There was a PDP-8 comm box, the DS10(?) but it only handled a synchronous
+> line to remote stations (DN82(?)) and other PDP-10s.  Sorry about the (?),
+> but memory is getting fuzzy.  And I worked on them!
+> -- 
+
+Ric, how could you forget the good old 680/I, which was interfaced
+to the -10 via a DC-68 interface thru the I/O bus and could support
+100 lines? Was designed to be a lower cost to the original /RCC
+designed DC-10, which could support up to 64 hardwired or dataset lines.
+The 680/I had a PDP-8/I which ran around and assembled the bits for
+all the lines (scanned them); the DC-10 was called the data line scanner
+because that's what it did. Thus, the module SCNSER's name . . .
+
+/evs
+
+
+
+
+Article 1321 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!enews.sgi.com!decwrl!pa.dec.com!usenet
+From: "Carl J. Appellof" <cja@zso.dec.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 vs pdp-8 emulator
+Date: 6 Nov 1995 17:31:03 GMT
+Organization: Digital Equipment Corporation
+Lines: 25
+Message-ID: <47lgoo$gsv@usenet.pa.dec.com>
+References: <4710s2$7ij@quest.ccsi.com> <werme.815227162@alingo.zk3.dec.com> <BILLW.95Nov2015852@puli.cisco.com> <werme.815617533@alingo.zk3.dec.com>
+NNTP-Posting-Host: chmist.zso.dec.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 1.1 (Windows; I; 32bit)
+
+werme@alingo.zk3.dec.com (Eric Werme) wrote:
+>billw@puli.cisco.com (William ) writes:
+>
+>>A fair number of pdp-10s had PDP-8s of some sort as front ends.
+>
+>Sigh.  No.  The KL10 was frontended by a PDP-11/40, the KS10 by a Intel 8080,
+>I believe.  The KA10 and KI10 were able to stand by themselves, noble machines
+>that they were.
+>
+
+Maybe there are some crossed wires here.  The KL10 and KS10 were the only
+-10s that REQUIRED a little front-end computer to provide console services.
+But KIs often used front-end PDP-11s called DN87 to provide terminal lines
+and other remote services.  *I* call these systems "front-ends" too.
+An earlier version of the front-end, called the DN92, I think, was based on
+a PDP-8.  Earlier -10s used a hardwired device called a DC10 to provide
+the terminal connectivity.
+
+I'm not sure which ones of these could have been used by a KA10.
+-- 
+Carl Appellof
+not speaking for
+Digital Equipment Corporation
+
+
+
+
+Article 1322 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: shellx.best.com!news1.best.com!sdd.hp.com!usc!chi-news.cic.net!newsfeed.internetmci.com!in1.uu.net!mercury.near.net!noc.near.net!das-news2.harvard.edu!spdcc!om3!gwes
+From: gwes@oat.com (Geoff Steckel)
+Subject: Re: PDP-10 vs pdp-8 emulator
+Message-ID: <1995Nov6.175009.14585@oat.com>
+Organization: Omnivore Technology
+References: <werme.815227162@alingo.zk3.dec.com> <BILLW.95Nov2015852@puli.cisco.com> <werme.815617533@alingo.zk3.dec.com>
+Date: Mon, 6 Nov 1995 17:50:09 GMT
+Lines: 27
+
+In article <werme.815617533@alingo.zk3.dec.com> werme@zk3.dec.com writes:
+>billw@puli.cisco.com (William ) writes:
+>
+>>A fair number of pdp-10s had PDP-8s of some sort as front ends.
+>
+>Sigh.  No.  The KL10 was frontended by a PDP-11/40, the KS10 by a Intel 8080,
+>I believe.  The KA10 and KI10 were able to stand by themselves, noble machines
+>that they were.
+>
+>>  I know
+>>the dec10 I used in college had a PDP8 controlling its terminal lines,
+
+Much as I hate to disagree with Ric, there were PDP-8 terminal interfaces.
+They had a number of advantages over the DC-10, if you were willing to do
+some -truly- -incredibly- twisty real-time PDP-8 assembly programming.
+
+They emulated UARTs in SOFTWARE?!?!  They could auto-baud-detect and change
+line speed; they could deal with BREAK.  They were the only things around
+which -could- do that on a -10 at the time (1970).  (At least that anyone
+could afford).
+
+At ISC in Braintree, we finally retired the last one about 1978-9.
+-- 
+I own the company.  Opinions worth what you paid for them.
+Geoff Steckel					   gwes@oat.com
+Omnivore Technology
+127 Cornell St.  Newton, MA 02162  (617) 332-9252
+
+
+Article 1326 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sdd.hp.com!usc!chi-news.cic.net!newsfeed.internetmci.com!news.sprintlink.net!news.clark.net!usenet
+From: gagner@clark.net (Philip Gagner)
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 vs pdp-8 emulator
+Date: Tue, 07 Nov 1995 02:50:25 GMT
+Organization: Clark Internet Services, Inc.
+Lines: 52
+Message-ID: <47mhgt$7e5@clarknet.clark.net>
+References: <4710s2$7ij@quest.ccsi.com> <werme.815227162@alingo.zk3.dec.com> <BILLW.95Nov2015852@puli.cisco.com> <werme.815617533@alingo.zk3.dec.com>
+Reply-To: gagner@clark.net
+NNTP-Posting-Host: gagner-ppp.clark.net
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=ISO-8859-1
+Content-Transfer-Encoding: 8bit
+
+werme@alingo.zk3.dec.com (Eric Werme) wrote:
+
+>billw@puli.cisco.com (William ) writes:
+>
+>>    >Will programs (such as decwars) run on a pdp-8 emulator (if I could find 
+>>    >the tops-10 operating system which would run on a pdp-8) (assuming that 
+>>    >tops-10 will run on a pdp-8?
+>
+>>    Sigh.  No.  The PDP-8 and PDP-10 are completely different architectures.
+>>    Abnout the only thing they have in common besides the PDP monicker is that
+>>    they both run TECO.
+>
+>>A fair number of pdp-10s had PDP-8s of some sort as front ends.
+>
+>Sigh.  No.  The KL10 was frontended by a PDP-11/40, the KS10 by a Intel 8080,
+>I believe.  The KA10 and KI10 were able to stand by themselves, noble machines
+>that they were.
+>
+>>  I know
+>>the dec10 I used in college had a PDP8 controlling its terminal lines,
+>
+>There was a PDP-8 comm box, the DS10(?) but it only handled a synchronous
+>line to remote stations (DN82(?)) and other PDP-10s.  Sorry about the (?),
+>but memory is getting fuzzy.  And I worked on them!
+
+Well, as I recall it, the DC72 was a PDP-8 based "remote controller,"
+and you tied terminals off it. You could tie as many terminals as the
+PDP-8 bus could handle (within the limits of the 9.6 Kb line that
+drove the typical DC72, although some had higher speed lines, mostly
+in the military).
+
+The DC72 was a real kludge, and didn't speak DECNET, but a precursor
+protocol (sort of). Even the DN8x DECNET wasn't PDP-11 DECNET, just to
+make compatibility expensive, but what the DC72 spoke was even less
+so.
+
+The DC72 could be, but rarely was, direct connected to a -10, which
+still used the synchronous protocol manager to drive it. There was
+also a precursor to the DC72, of uncertain nomenclature, which was
+PDP-8 based.
+
+Your memory is about right on the DN8x series, roughly. I think the
+DN87 was the box that connected to the -10 through a memory channel,
+and there were DN82's, which were terminal concentrators and DN85's,
+which were terminal concentrators with line printers or some such.
+The DN8x series were all based on PDP-11 machines.
+
+There was also a DN72, which was a real dog -- DC72 hardware but with
+new drivers. I think we got one to handle 8 terminals once...
+
+
+
+
+
+Article 1327 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sdd.hp.com!usc!chi-news.cic.net!newsfeed.internetmci.com!in2.uu.net!uchinews!harris.acc.iit.edu!shrike.depaul.edu!hal.cs.depaul.edu!usenet.ucs.indiana.edu!indyvax.iupui.edu!mwood
+From: mwood@indyvax.iupui.edu (Mark H. Wood)
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 vs pdp-8 emulator
+Message-ID: <1995Nov6.122756.19868@indyvax.iupui.edu>
+Date: 6 Nov 95 12:27:56 -0500
+References: <4710s2$7ij@quest.ccsi.com> <werme.815227162@alingo.zk3.dec.com> <47bie8$rip@clarknet.clark.net>
+Lines: 18
+
+In article <47bie8$rip@clarknet.clark.net>, gagner@clark.net (Philip Gagner) writes:
+[deletia]
+> DEC distributed a number of terminal front end controllers. There were
+> PDP-8 based ones; the most popular was called the DC72. Later these
+> were superceded by the DN8x series, which contained various flavors of
+> PDP-11's.
+
+Wasn't the DC76 also based on a PDP-11?
+
+And don't forget the DN92, also a PDP-8.  (Not really a terminal FE; it was an
+RJE station, though I think maybe you could put a few terminals on it too.)
+
+I don't recall the DN8x async. FEs, but we had lots of fun here with a pair of
+DN20s running DN87S.
+-- 
+Mark H. Wood, Lead Systems Programmer    +1 317 274 0749   [@disclaimer@]
+Internet:  MWOOD@INDYVAX.IUPUI.EDU       BITNET:  MWOOD@INDYVAX
+You are in a twisty little maze of hyperlinks, all useless.
+
+
+Article 1328 of alt.sys.pdp10:
+Path: shellx.best.com!shellx.best.com!not-for-mail
+From: inwap@shellx.best.com (J.Smith and J.Snyder)
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 vs pdp-8 emulator
+Date: 7 Nov 1995 11:44:46 -0800
+Organization: Chez INWAP (people, computers, cats)
+Lines: 43
+Message-ID: <47ocve$2me@shellx.best.com>
+References: <4710s2$7ij@quest.ccsi.com> <werme.815227162@alingo.zk3.dec.com> <BILLW.95Nov2015852@puli.cisco.com> <werme.815617533@alingo.zk3.dec.com>
+NNTP-Posting-Host: shellx.best.com
+Summary: PDP8 = async terminal inteface for KA-10
+
+In article <werme.815617533@alingo.zk3.dec.com>,
+Eric Werme <werme@zk3.dec.com> wrote:
+>billw@puli.cisco.com (William ) writes:
+>>A fair number of pdp-10s had PDP-8s of some sort as front ends.
+>
+>Sigh.  No.  The KL10 was frontended by a PDP-11/40, the KS10 by a Intel 8080,
+>I believe.  The KA10 and KI10 were able to stand by themselves, noble machines
+>that they were.
+
+BillW is correct.  A fair number of KA-10 and KI-10 systems WERE front-ended
+by PDP-8s.  (In this context, "front end" means "the device that you connect
+all your async terminals to" and not "the thing that loads microcode".)
+
+SCNSER had support for <DATAI DLS,AC> to read from the DC10 Data Line Scanner
+and from PDP-8 based devices on the CCI (Computer to Computer Interface,
+I/O device 14).
+
+At the Colorado School of Mines, we had a PDP-8 serving all the ASR-33 TTY
+lines.  We had things set up such that the PDP-10 could boot from the PDP-8.
+
+Well, almost.  The usual way of booting a KA was to boot from paper tape,
+using a short program in the paper tape reader that would read a larger
+BOOTS program off the first few blocks of the RP02.  The pre-boot program
+wasn't very big, an we were able to store it in an unused section of the
+PDP-8's memory.  If you set the Read-In Mode switches to 014 (CCI) instead
+of 104 (PTR), the short boot program would be entered into the PDP-10's
+memory from the 8 instead of from paper tape.
+
+>but memory is getting fuzzy.  And I worked on them!
+>-- 
+>Eric (Ric) Werme         |  werme@zk3.dec.com
+>Digital Equipment Corp.  |  This space intentionally left blank.
+
+I'm trying to remember the name of the company that made our PDP-8 base
+async terminal front-end.  I think it was Digital Communications
+Associates of Alpharetta, Georgia.  (I think they made IRMA boards and
+stat muxes as well.)  Who else had PDP-8's driving 110 and 300 baud TTYs?
+
+	-Joe
+
+-- 
+INWAP.COM is Joe and Sally Smith, John and Chris O'Halloran (and our cats).
+See http://www.inwap.com/ for details, including info on "ReBoot" and PDP-10.
+
+
+Article 1336 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!sdd.hp.com!usc!chi-news.cic.net!newsfeed.internetmci.com!in2.uu.net!info-server.bbn.com!clements
+From: clements@bbn.com (Bob Clements)
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 vs pdp-8 emulator
+Date: 8 Nov 1995 14:18:41 GMT
+Organization: Bolt Beranek and Newman (BBN)
+Lines: 28
+Message-ID: <47qe81$eoc@info-server.bbn.com>
+References: <NEWTNews.815640388.15486.vsocci@number1> <47l3jd$rtr@newsbf02.news.aol.com>
+NNTP-Posting-Host: lion.bbn.com
+
+In article <47l3jd$rtr@newsbf02.news.aol.com> jmfbah@aol.com (JMFBAH) writes:
+>Dear Bob Clements,
+>
+>Now may be a good time to tell the story of the Irma bit (if it hasn't
+>been recounted here before).
+>
+>/BAH
+
+
+Nah.  Has nothing to do with emulators or bit-banging UARTs.
+
+But I will point out that the 680 and 680i boxes DID have some hardware
+help in assembling/disassembling characters.  They did operate
+on the characters one bit at a time, but there was a special
+line card to interface to the outside world and to hold the bit as it
+came in/went out.  And a special form of the rotate instruction
+which built up the incoming character.  Different baud rates were supported
+by having different clock interrupts to scan the lines at a particular
+rate.  Mostly 110 and 300 baud.
+
+So it was mostly, but not completely, software.  I had to do the
+driver code in TOPS-6 or TOPS-10 (Can't remember which after all these
+years) and made some changes in the PDP-8 code to make life easier
+on the 36-bit side.
+
+/Rcc
+
+Bob Clements, K1BC, clements@bbn.com,  (w) +1 617 USE K1BC
+
+
+Article 1329 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: shellx.best.com!news1.best.com!news3.net99.net!news.cais.net!news.sprintlink.net!usenet.kornet.nm.kr!news.kreonet.re.kr!news.dacom.co.kr!newsfeed.internetmci.com!howland.reston.ans.net!ix.netcom.com!netcomsv!uu3news.netcom.com!netcomsv!uu4news.netcom.com!dms!albaugh
+From: albaugh@agames.com (Mike Albaugh)
+Subject: Line Scanners (was Re: PDP-10 vs pdp-8 emulator)
+Message-ID: <1995Nov7.180518.24928@dms.agames.com>
+Sender: news@dms.agames.com (Net News Admin)
+Organization: Time-Warner Interactive
+X-Newsreader: TIN [version 1.2 PL2]
+References: <werme.815617533@alingo.zk3.dec.com> <NEWTNews.815640388.15486.vsocci@number1>
+Date: Tue, 7 Nov 1995 18:05:18 GMT
+Lines: 45
+
+	I tried to "reply" to vince, but:
+
+... while talking to blob.best.net.:
+>>> RCPT To:<vsocci@vip.best.com>
+<<< 550 <vsocci@vip.best.com>... User unknown
+550 <vsocci@vip.best.com>... User unknown
+
+	So I hope the group will indulge me for a moment. Perhaps some
+of you will be able to help even if Vance Socci is not...
+
+Vance Socci (vsocci@vip.best.com) wrote:
+
+: [...] 
+: > >the dec10 I used in college had a PDP8 controlling its terminal lines,
+: The 680/I had a PDP-8/I which ran around and assembled the bits for
+: all the lines (scanned them); the DC-10 was called the data line scanner
+: because that's what it did. Thus, the module SCNSER's name . . .
+
+	I came a _bit_ too late to the party to do much with 8's or 6's (I
+dinked with a friend's account on a '6, and with another friend's '5, but
+really started with the '11-20). Anyway, I thought I recalled that one could
+get a terminal line concentrator based on a PDP-8 and bit-boffing software. It
+looks above like you would know more about it. Anyway, I ran into a guy that
+was asking, for prior art to fight a patent on patent on software switch-
+debounce. Seems TI has a patent on the idea of reading a switch twice with
+some delay in between to debounce. It occured to me that the typical "start-
+bit confirmation" in a UART (hard or software) would qualify as prior art.
+He said it had to pre-date early 70's (TI 4-bitter calc days). I replied that
+I had done a software UART on a Univac 7900 (Solid State 90, an IBM-650 look-
+alike with _fewer_ tubes :-) in about 1970, but he said "do you still have
+it?" and I had to admit that it was unlikely. When I mentioned mostly-
+software PDP-8 line interfaces he brightend up, but I really don't recall
+when/where I saw it, and can't get to my old PDP-8 manuals at present. Do you
+remember this stuff well enough to give me a solid reference to pass on?
+
+	I can't believe I was the only Teletype (tm) hacker to get into
+programming and "invent" software UARTs, but the bitch seems to be that
+everybody thought it was obvious so nobody (else) wrote it down.
+
+					Mike
+
+| Mike Albaugh (albaugh@agames.com) Time Warner Interactive
+| (The entertainment company formerly known as Atari Games (_NOT_ Tramiel's))
+| 675 Sycamore Dr. Milpitas, CA 95035		voice: (408)434-1709
+| The opinions expressed are my own (Boy, are they ever)
+
+
+Article 1335 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sdd.hp.com!swrinde!howland.reston.ans.net!news-e1a.megaweb.com!newstf01.news.aol.com!newsbf02.news.aol.com!not-for-mail
+From: jmfbah@aol.com (JMFBAH)
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 vs pdp-8 emulator
+Date: 8 Nov 1995 09:11:30 -0500
+Organization: America Online, Inc. (1-800-827-6364)
+Lines: 15
+Sender: root@newsbf02.news.aol.com
+Message-ID: <47qdqi$adm@newsbf02.news.aol.com>
+References: <47mhgt$7e5@clarknet.clark.net>
+Reply-To: jmfbah@aol.com (JMFBAH)
+NNTP-Posting-Host: newsbf02.mail.aol.com
+
+During my KA days at WMU, we had hard-wired TTYs to the -10 and all the
+dial-ins were connected via the 680/I.
+
+Then I seem to remember that DEC started developing software for the DC72
+when we were in Marlboro; so that was just before the KL came out. Then
+came the DC76 which worked much better.
+
+The DN8x, etc.  really came out of the software developed by the DAS
+group. For instance, the DN87 was really the hardware of the DC76 running
+DAS software. It seems to me we called that protocol ANF10; and I don't
+believe it had any relationship to DECnet with the exception that we
+(TOPS10) were doing networks while DECnet was still a gleam in someone's
+eye (smiley face here).
+
+/BAH
+
+
+Article 1331 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sdd.hp.com!swrinde!gatech!newsfeed.internetmci.com!in2.uu.net!news.ultranet.com!usenet
+From: "Carl R. Friend" <carl.friend@swec.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 vs pdp-8 emulator (Booting a -10)
+Date: 8 Nov 1995 01:00:16 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 20
+Message-ID: <47ovf0$fa9@caesar.ultra.net>
+References: <4710s2$7ij@quest.ccsi.com> <werme.815227162@alingo.zk3.dec.com> <BILLW.95Nov2015852@puli.cisco.com> <werme.815617533@alingo.zk3.dec.com> <47ocve$2me@shellx.best.com>
+NNTP-Posting-Host: zephyr.ultranet.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 1.1N (X11; I; Linux 1.2.1 i586)
+X-URL: news:47ocve$2me@shellx.best.com
+
+inwap@shellx.best.com (J.Smith and J.Snyder) wrote:
+>  The usual way of booting a KA was to boot from paper tape,
+>using a short program in the paper tape reader that would read a larger
+>BOOTS program off the first few blocks of the RP02.
+
+   In the configurations of PDP-10s I worked on, we were able to boot right
+from the disk drives (RP-04s or RP-06s connected via an RH-10/DF-10 pair).
+
+   We simply set the readin address switches to 220 (I believe, it's been
+a _long_ time), zapped memory (real easy on a KI), and pegged the READIN
+button. Worked like a champ.
+
+   In fact, we got so sick of the length of time BOOTS took to BLT itself into
+high memory, one of out hotshots wrote a fast boot program known as QBOOT as
+a replacement for BOOTS; it better than quartered the delay from punching
+READIN to operational status. (The slave CPUs were even easier; start @400).
+
+							Carl
+						<carl.friend@swec.com>
+
+
+
+Article 1340 of alt.sys.pdp10:
+Path: shellx.best.com!usenet
+From: Vance Socci <vsocci@vsocci.vip.best.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Line Scanners (was Re: PDP-10 vs pdp-8 emulator)
+Date: Wed, 08 Nov 95 23:40:12 PDT
+Organization: Best Internet Communications
+Lines: 54
+Message-ID: <NEWTNews.815903157.17527.vsocci@number1>
+References: <werme.815617533@alingo.zk3.dec.com> <NEWTNews.815640388.15486.vsocci@number1>  <1995Nov7.180518.24928@dms.agames.com>
+NNTP-Posting-Host: vsocci.vip.best.com
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Newsreader: NEWTNews & Chameleon -- TCP/IP for MS Windows from NetManage
+
+
+In Article<1995Nov7.180518.24928@dms.agames.com>, albaugh@agames.com (Mike 
+Albaugh) writes:
+
+> 	I tried to "reply" to vince, but:
+                              ^^^^^
+                             its *Vance*
+> 
+> .... while talking to blob.best.net.:
+> >>> RCPT To:<vsocci@vip.best.com>
+> <<< 550 <vsocci@vip.best.com>... User unknown
+> 550 <vsocci@vip.best.com>... User unknown
+> 
+> 	So I hope the group will indulge me for a moment. Perhaps some
+> of you will be able to help even if Vance Socci is not...
+> 
+> Vance Socci (vsocci@vip.best.com) wrote:
+> 
+> : [...] 
+> : > >the dec10 I used in college had a PDP8 controlling its terminal lines,
+> : The 680/I had a PDP-8/I which ran around and assembled the bits for
+> : all the lines (scanned them); the DC-10 was called the data line scanner
+> : because that's what it did. Thus, the module SCNSER's name . . .
+> 
+..
+> I replied that
+> I had done a software UART on a Univac 7900 (Solid State 90, an IBM-650 
+look-
+> alike with _fewer_ tubes :-) in about 1970, but he said "do you still have
+> it?" and I had to admit that it was unlikely. When I mentioned mostly-
+> software PDP-8 line interfaces he brightend up, but I really don't recall
+> when/where I saw it, and can't get to my old PDP-8 manuals at present. Do 
+you
+> remember this stuff well enough to give me a solid reference to pass on?
+> 
+> 	I can't believe I was the only Teletype (tm) hacker to get into
+> programming and "invent" software UARTs, but the bitch seems to be that
+> everybody thought it was obvious so nobody (else) wrote it down.
+> 
+> 					Mike
+
+/rcc himself has given you the best reference you could ask for: from the
+actual developer himself. He might even remember the names of some of
+the engineers that also worked on the DC68-680/I.
+
+I can attest personally that in 1970, I used a 680/I at school, and I
+even read the PDP-8 code listings. /rcc reminded us of the special instruction
+they added. I seem to recall something about shifting the bits through
+the "link bit", but that's a very hazy memory.
+
+Sorry for the fizzled original of this post; I think the newsreader died
+when I edited its configuration file and didn't bother to restart it . . .
+
+
+
+
+Article 1344 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!enews.sgi.com!decwrl!pa.dec.com!depot.mro.dec.com!mrnews.mro.dec.com!cloyd.enet.dec.com!deufel
+From: deufel@cloyd.enet.dec.com (Daniel Allen Deufel)
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 vs pdp-8 emulator
+Date: 9 NOV 95 22:29:22
+Organization: Digital Equipment Corporation
+Lines: 140
+Message-ID: <47ul9l$ee8@mrnews.mro.dec.com>
+References: <4710s2$7ij@quest.ccsi.com> <werme.815227162@alingo.zk3.dec.com> <BILLW.95Nov2015852@puli.cisco.com> <werme.815617533@alingo.zk3.dec.com> <47lgoo$gsv@usenet.pa.dec.com>
+NNTP-Posting-Host: cloyd.enet.dec.com
+
+
+In article <47lgoo$gsv@usenet.pa.dec.com>, "Carl J. Appellof" <cja@zso.dec.com> writes...
+>werme@alingo.zk3.dec.com (Eric Werme) wrote:
+>>billw@puli.cisco.com (William ) writes:
+>>
+>>>A fair number of pdp-10s had PDP-8s of some sort as front ends.
+>>
+>>Sigh.  No.  The KL10 was frontended by a PDP-11/40, the KS10 by a Intel 8080,
+>>I believe.  The KA10 and KI10 were able to stand by themselves, noble machines
+>>that they were.
+>>
+> 
+>Maybe there are some crossed wires here.  The KL10 and KS10 were the only
+>-10s that REQUIRED a little front-end computer to provide console services.
+>But KIs often used front-end PDP-11s called DN87 to provide terminal lines
+>and other remote services.  *I* call these systems "front-ends" too.
+>An earlier version of the front-end, called the DN92, I think, was based on
+>a PDP-8.  Earlier -10s used a hardwired device called a DC10 to provide
+>the terminal connectivity.
+> 
+>I'm not sure which ones of these could have been used by a KA10.
+>-- 
+>Carl Appellof
+>not speaking for
+>Digital Equipment Corporation
+> 
+> 
+
+As far as front-end processors go, they can be divided into two
+classifications:
+
+1) Console Front Ends - The processor responsible for initializing, monitoring, 
+   and diagnosing the 36 bit ISP. In this category there are two.
+
+   The PDP-6, KA10, and KI10 had no CFE. They had lots of switches and lights
+   (wonderful lights!!!).
+
+   The KL10 had a PDP-11/40 running RSX20F as the CFE. In addition to the basic
+   responsibilities listed above, the CFE also supported up to 128 TTYs, CDR,
+   LPTs, the CTY, and a KLINIK line (for dial in diagnosis).
+
+   The KS10, as mentioned above, had an Intel 8080 acting as the CFE. This CFE
+   was a much simpler design and handled only the CTY and KLINIK lines.
+
+2) Communications Front Ends - Processors responsible for providing
+   communications services to the host. There were a number of different design
+   centers and protocols supported.
+
+Minicomputer Terminal Controllers:
+
+680 - A PDP-8 managing TTYs.
+
+680i - A PDP-8/I managing TTYs.
+
+DC76 - A PDP-11/40 managing up to 128 TTYs. DC76 code base. Attached via DL10.
+
+
+ANF10 Network Processors:
+
+Host attached front ends:
+
+DC75 - A PDP-11/15 managing a number of DS11 sync lines. DN8x code base.
+       Attached to host via DL10.
+
+DN87 - A PDP-11/40 managing TTYs and synch lines. DN8x code base Attached via
+       DL10.
+
+DN87s - Same as the DN87 except that it attached via DTE (KL10 only).
+
+DN20 - A PDP-11/34 managing TTYs and synch lines. DN8x code base Attached via
+       DTE (KL10 only).
+
+Network attached nodes:
+
+DC71 - PDP-8/I based remote station. 16 TTYs, CDR, LPT, and CTY. 1 synch line.
+       ANF10 End Node. (Note. There was an earlier code base that used a 
+       bisynch-ish protocol to talk to the host. Pre-ANF10.)
+
+DC72 - PDP-8/E based remote station. 16 TTYs, CDR, LPT, and CTY. 1 synch line.
+       ANF10 End Node.
+
+DN92 - PDP-8/A based remote station. Updated DC72.
+
+DN82 - PDP-11/40 based remote station. DN8x code base. 32 TTYs, CDR, LPT, CTY,
+       and synch lines. Full ANF routing node.
+
+DN200 - PDP-11/34 based remote station. Updated DN82.
+
+
+DECnet Network Processors:
+
+Host attached front ends:
+
+DN20 - A PDP-11/34 managing DECnet synch lines.
+
+Network attached nodes:
+
+DN200 - PDP-11/34 based remote station. Supported TTYs, CDR, and LPT in a
+        DECnet network.
+
+
+IBM Communications Processors:
+
+DN61 - PDP-11/40 supporting Bisynch communications for TOPS10. Supported
+       2780/3780 RJE stations or emulated 2780/3780 RJE stations. DL10 attached.
+
+DN61s - A DTE attached DN61. (KL10 Only)
+
+DN62 - Same as DN61 with HASP support.
+
+DN62s - A DTE attached DN61. (KL10 Only)
+
+DN64 - PDP-11/34 supporting Bisynch communications for TOPS20. Supported
+       2780/3780 RJE stations or emulated 2780/3780 RJE stations. DTE Attached.
+
+DN65 - Same as DN64 with HASP support.
+
+
+While I suppose that one could argue that the BBN IMP was a front end, it
+wasn't a DEC product. It had a Honeywell mini in it and connected to the 36 bit
+host via an AN10 or an AN11 (KS10).
+
+There were also some of third party front ends. The Smart8/E from Digital
+Communications Associates comes to mind.
+
+I think that this covers most of the significant front end processors in the
+36 bit family.
+
+				Cheers,
+				-Abdul-
+
+
+      +---------------------------------------------------------------+
+      | Daniel Allen Deufel            Digital Equipment Corporation  |
+      | 238 Berlin Road                Revenue Systems Engineering    |
+      | Bolton, Massachusetts 01740    129 Parker Street  PK01-1/B1   |
+      | 508/779-6593                   Maynard, Massachusetts 01754   |
+      |                                508/493-6505                   |
+      +---------------------------------------------------------------+
+
+
+
+Article 1353 of alt.sys.pdp10:
+Path: shellx.best.com!usenet
+From: Vance Socci <vsocci@vsocci.vip.best.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 vs pdp-8 emulator
+Date: Sun, 12 Nov 95 18:06:56 PDT
+Organization: Best Internet Communications
+Lines: 52
+Message-ID: <NEWTNews.816229112.11894.vsocci@number1>
+References: <NEWTNews.815640388.15486.vsocci@number1> <47l3jd$rtr@newsbf02.news.aol.com>  <1995Nov9.150756.19997@indyvax.iupui.edu>
+NNTP-Posting-Host: vsocci.vip.best.com
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Newsreader: NEWTNews & Chameleon -- TCP/IP for MS Windows from NetManage
+
+
+In Article<1995Nov9.150756.19997@indyvax.iupui.edu>, mwood@indyvax.iupui.edu 
+(Mark H. Wood) writes:
+
+> In article <47l3jd$rtr@newsbf02.news.aol.com>, jmfbah@aol.com (JMFBAH) 
+writes:
+> > Dear Bob Clements,
+> > 
+> > Now may be a good time to tell the story of the Irma bit (if it hasn't
+> > been recounted here before).
+> 
+> Yes, please, someone around here mentioned it once but didn't have time to
+> elaborate, and he's since moved on.
+> -- 
+
+Perhaps if I tell a broken version of the story, probably heard at least 
+second or third hand, /rcc will grace us with the original story.
+
+The story goes as such: a woman named Irma kept complaining to DEC that her
+terminal would hang up while she was reading in a paper tape (she was using
+either a model 33 or 35, with the paper tape reading option). 
+
+Eventually her complaints reached the monitor guys. Presumably, /rcc got 
+involved and talked to the infamous Irma himself. At first he didn't believe
+that is wasn't just something that she was doing wrong somewhere, or that
+her paper tape reader was screwy. Eventually, the legend goes, /rcc went to
+see the problem for himself, and voila: her terminal really was hanging 
+periodically! 
+
+The problem was that her terminal interface was occasionally dropping transmit
+done interrupts, and without said interrupt, there was nothing to trigger the
+output of the next character, so the line hung forever.
+
+The solution: /rcc installed the famous "IRMA CATCHER", LDB bit LPLIRM in 
+LDBPAG (I think it was somewhere else originally, but that's where it lives
+today in 7.05 SCNSER) which is set on an active line if no interrupt is seen
+within a second. The next time around, if a transmit done interrupt still 
+hasn't occurred on the line, the next character is forced out regardless.
+Thus, the once-a-second character output that some of us have seen now and 
+then.
+
+Someone ought to see if good old Irma is still around and where she is working 
+ . .
+
+/evs
+
+p.s. Again, I'll be happy to have the story from /rcc, and I'm sure my version
+has some mistakes. I heard my version originally from Don Lewine, who 
+frequents this newsgroup now and then. He probably got the story from /rcc
+or someone who worked with /rcc in DEC10 LCGE . . .
+
+
+
+
+Article 1351 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: shellx.best.com!news1.best.com!sdd.hp.com!usc!chi-news.cic.net!newsfeed.internetmci.com!in1.uu.net!pgh!powell
+From: powell@pgh.nauticom.net (Reed Powell)
+Subject: Re: PDP-10 vs pdp-8 emulator
+Message-ID: <DHwG0x.5I5@pgh.nauticom.net>
+Date: Sat, 11 Nov 1995 22:05:21 GMT
+References: <47mhgt$7e5@clarknet.clark.net> <47qdqi$adm@newsbf02.news.aol.com>
+Organization: Nauticom - Internet Access Provider
+Lines: 125
+
+Well, we certainly had networking on the -10s before DECnet, but not all 
+that far in advance.  What we really had far in advance was the idea of 
+handling terminal traffic outside of the main processor's box.  That was 
+the beginning of ANF10, the work that the old DAS group did.  That was 
+the DC7x series:  DC72 was the remote (over a sync line) concentrator, 
+which connected (initially) to the DS10 I/O Bus box on the -10; the DC76, 
+which was the local (next to the -10) terminal line concentrator, which 
+connected to the DL10 (and before that the short lived DMA10); and 
+finally the box that started getting us into the "true" WAN oriented 
+networking, the DC75.  The DC75 was designed to interface to the -10 via 
+the DL10, and take over the sync line handling functions of the DS10 
+without the I/O Bus overhead of the DS10.  Then you could put remote DC72 
+and (anyone remember these) DC68 (PDP8 based remote line concentrators) 
+boxes in the field, and terminate them in the DC75.  Actually, you could 
+daisy chain then one level deep in some configurations, so a line (which 
+were real expensive then) could run from the DC75 to a DC72, and then to 
+another DC72 or DC68.
+
+Then came the DN8x series, which brought ANF10 (using the NSP protocol) 
+and real networks.  The DC7x series really were terminal (and some unit 
+record device) oriented.  The DN8x series understood the concepts of 
+routing, load balancing over the WAN, and  the truely advanced concept of 
+buffering characters from multiple terminals (a la LAT) and sending the 
+whole sheebang to the -10 in one message.  The DC7x series sent one 
+character at a time.  The DN8x also understood errors, error handling, 
+and recovery (what, you mean those telco lines sometimes dropped a few 
+bits?!)
+
+THE DL10, by the way, has always been in my book the most interesting 
+device ever put on the -10s.  Here we have a box the size of an 
+industrial refrigerator, built mostly from off the stockroom shelf 
+boards.  One one side you have 1-4 UNIBUSs and off the other 1-2 DEC10 
+memory bus/IO Bus connections.  In the middle you have one heck of a 
+memory map.  We actually booted the PDP11s by running a prog on the -10 
+which simply loaded itself into the memory, mapped (yea, mapped, before 
+KL10 days) the DL10 -10 side addresses into it's space (after locking 
+it's memory down), shoving the -11 sides version of that base address 
+into a register the -11 could see, then hitting the doorbell for the 
+-11.  The -11 would start running, but all of it's code was in the -10's 
+memory.  For it's time, that was pretty advanced.  The best part of the 
+DL10 though was when the -11 had any problems and the local office sent 
+out an -11 tech to handle it.  First rule of -11 debugging is to follow 
+the UNIBUS, so he'd try to do so.  But the last thing in the -11 was the 
+cable going to the DL10, which of course is physically bigger than 
+anything an -11 tech has every seen in his life!  He'd follow that cable, 
+it'd go into this box, so he'd start over.  After a few times of doing 
+these, he'd open this box that was a mystery to him, and get such an odd 
+look on his face:  it was filled with boards he knew, but had never seen 
+so many in one place at one in a box with power applied to it.
+
+THen came the DTE20, and all the fun went out of life.  I peg the DTE20 
+and the RH20 as the beginning of a new generation where technology 
+started getting out of hand, and took on a life of it's own, commonly 
+referred to as "microcode!"
+
+Once DECnet came out, and looked like it might work (aka DECnet Phase 
+II), it even started to have some of the capabilities of ANF10!  Once 
+DECnet got to Phase III, it had mode of ANF10s primary capabilities.  
+Sometime in the Phase II life of DECnet, we decided that maybe it ws a 
+good idea to communicate and interoperate (this was before the word 
+"open" had been discovered), and so the DCP ( DECnet Compatible Port) was 
+born.  Kalman Reti and Wayne (WEM) Matson spent a lot of time on that.  
+It ended up doing a pretty decent job of fooling the rest of the DN87 (it 
+was code that ran in the DN87) into thinking that the DECnet network was 
+just another ANF10 node.  Itlucked out because Phase II didn't know about 
+routing, although ANF10 did, so it didn't have to do that bit of 
+trickery.  The luck only lasted a while though, because I ended up 
+spending a lot of time on a second round of work at Ft. Huachuca getting 
+it to talk to their Phase III VAX system.
+
+The DC20 series came into play, which brought us some new devices like 
+the DZ11, which were actually stupider than the old ones (DH11, which was 
+a *really* smart terminal line interface; I don't think any OS from DEC 
+ever used it's true capabilities).  It also brought a constant yearning 
+on the part of the customer base for us to make use of the 11/34s ability 
+to have a lot more memory than the 11/40 - it had memory mapping even!
+
+Best story I ever heard on ANF10s capabilites and where it stood 
+architecturaally in the industry came from Bob Harper, who I worked with 
+in Arizona, and who left DEC to go to Honeywell in Phoenix.  Some of 
+their deep thinkers decided that they needed to get into networking, and 
+so started thinking deep and hard, and came up with a good design.  They 
+got everyone together to review it, and everyone thinks it is great.  
+Capabilities like remote terminal concentration, WANs with multiple 
+paths, virtual terminals between hosts (SET HOST), remote printers, etc 
+etc. etc.  Well, Bob raises his hand and says to the effect "uh (first 
+word in all Bob Harper sentences), this looks real good, but I gotta tell 
+y'all that Digital already does that."  The response from aforementioned 
+thinkers of the deep was "impossible; it hasn't been discovered yet!"  
+"Discovered," like something under a rock!  So Bob decides to prove his 
+point.  Remember how we used to have a PPN for the field to log into 
+1026, using the "*" capability to have a PPN assigned during that session 
+only?  Well Bob decides to dial in and use it (naw, "breaking and 
+entering" refers to your house not your computer!) to show these guys.  
+Next thing they know he is SET HOSTing from  Galway to Phoenix to 
+Marlboro to got knows where, doing SYSTATs (since you didn't have to 
+LOGIN to run SYSTAT on a remote system that you didn't have an account on).
+He said that the looks on the faces of the thinkers deep was a cross 
+between mystification/dread/mortification and just in general and on SH*T 
+type of feeling.
+
+This was the same era that produced the new Digital slogan"
+
+Digital, making tomorrow yesterday today"
+
+-reed
+
+
+
+JMFBAH (jmfbah@aol.com) wrote:
+: During my KA days at WMU, we had hard-wired TTYs to the -10 and all the
+: dial-ins were connected via the 680/I.
+
+: Then I seem to remember that DEC started developing software for the DC72
+: when we were in Marlboro; so that was just before the KL came out. Then
+: came the DC76 which worked much better.
+
+: The DN8x, etc.  really came out of the software developed by the DAS
+: group. For instance, the DN87 was really the hardware of the DC76 running
+: DAS software. It seems to me we called that protocol ANF10; and I don't
+: believe it had any relationship to DECnet with the exception that we
+: (TOPS10) were doing networks while DECnet was still a gleam in someone's
+: eye (smiley face here).
+
+: /BAH
+
+
+Article 1354 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!enews.sgi.com!decwrl!pa.dec.com!usenet
+From: "Carl J. Appellof" <cja>
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 vs pdp-8 emulator
+Date: 13 Nov 1995 02:05:00 GMT
+Organization: Digital Equipment Corporation
+Lines: 37
+Message-ID: <48694c$bqa@usenet.pa.dec.com>
+References: <47mhgt$7e5@clarknet.clark.net> <47qdqi$adm@newsbf02.news.aol.com> <DHwG0x.5I5@pgh.nauticom.net>
+NNTP-Posting-Host: zso16136.zso.dec.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 1.22 (Windows; I; 32bit)
+
+powell@pgh.nauticom.net (Reed Powell) wrote:
+>The DN8x series understood the concepts of 
+>routing, load balancing over the WAN, and  the truely advanced concept of 
+>buffering characters from multiple terminals (a la LAT) and sending the 
+>whole sheebang to the -10 in one message.
+
+Plus it understood how to do local echoing (can you say
+"echo pipeline marker"?), something which LAT terminal servers
+never did.
+
+Oh, and that's "DN20", not "DC20".
+
+Another thing I remeber about ANF10 was its routing method.
+I still remeber going to a talk with Bob Houk (Mr. ANF10
+during my stint in TOPS-10 engineering).  We went to listen
+to Radia Perlman talk about a revolutionary new routing
+algorithm they were going to use in DECnet PhaseV, called
+"Link State Routing".  Supposedly a great advance over the
+limitations of Phase IV routing.  Bob heard a little of the
+talk and realized that the "new" method Radia described was
+the same one that ANF10 had been using for years.  No credit
+to the -10 group for developing it though.
+
+>
+> THE DL10, by the way, has always been in my book the most interesting 
+>device ever put on the -10s. 
+
+I once heard that the DL10 was more complicated to repair
+than the KI-10 to which it was attached.  Luckily ours
+at UW never broke!
+
+-- 
+Carl Appellof
+not speaking for
+Digital Equipment Corporation
+
+
+
+
+Article 1362 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sdd.hp.com!swrinde!newsfeed.internetmci.com!in2.uu.net!uchinews!harris.acc.iit.edu!shrike.depaul.edu!hal.cs.depaul.edu!usenet.ucs.indiana.edu!indyvax.iupui.edu!mwood
+From: mwood@indyvax.iupui.edu (Mark H. Wood)
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 vs pdp-8 emulator
+Message-ID: <1995Nov13.124607.20086@indyvax.iupui.edu>
+Date: 13 Nov 95 12:46:07 -0500
+References: <4710s2$7ij@quest.ccsi.com> <werme.815227162@alingo.zk3.dec.com> <47mhgt$7e5@clarknet.clark.net>
+Lines: 17
+
+In article <47mhgt$7e5@clarknet.clark.net>, gagner@clark.net (Philip Gagner) writes:
+[deletia]
+> Your memory is about right on the DN8x series, roughly. I think the
+> DN87 was the box that connected to the -10 through a memory channel,
+
+DN87 was the box that spoke IBM BiSync RJE protocol.  Loads of fun.  I thought
+that the hardware itself was called DN20.  (At least, when we didn't need both
+our DN87s anymore, and we did need DECnet, I was able to pour routing software
+for the DN20 into the box and make it run.)  It did indeed run across, was that
+the DTE?  I spent a lot of interesting hours trying to understand the code on
+both the PDP11 and PDP10 sides, and make it work a little more the way we liked
+it.  (*Not* the DTE protocol code -- I left that strictly alone.)
+-- 
+Mark H. Wood, Lead Systems Programmer    +1 317 274 0749   [@disclaimer@]
+Internet:  MWOOD@INDYVAX.IUPUI.EDU       BITNET:  MWOOD@INDYVAX
+You are at a complex junction, with hyperlinks running off in *all* directions.
+A hollow voice says, "PLUGH".
+
+
+Article 1363 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sdd.hp.com!swrinde!newsfeed.internetmci.com!in2.uu.net!uchinews!harris.acc.iit.edu!shrike.depaul.edu!hal.cs.depaul.edu!usenet.ucs.indiana.edu!indyvax.iupui.edu!mwood
+From: mwood@indyvax.iupui.edu (Mark H. Wood)
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 vs pdp-8 emulator
+Message-ID: <1995Nov13.125845.20087@indyvax.iupui.edu>
+Date: 13 Nov 95 12:58:45 -0500
+References: <47mhgt$7e5@clarknet.clark.net> <47qdqi$adm@newsbf02.news.aol.com>
+Lines: 22
+
+In article <47qdqi$adm@newsbf02.news.aol.com>, jmfbah@aol.com (JMFBAH) writes:
+[deletia]
+> The DN8x, etc.  really came out of the software developed by the DAS
+> group. For instance, the DN87 was really the hardware of the DC76 running
+> DAS software. It seems to me we called that protocol ANF10; and I don't
+> believe it had any relationship to DECnet with the exception that we
+> (TOPS10) were doing networks while DECnet was still a gleam in someone's
+> eye (smiley face here).
+
+Memories!  I remember a subsystem called DAS78, and I think that eventually
+that found its way into the regular product line as DN87S.  We also had a
+hacked version ("DAS79") that would talk another RJE protocol (Export/Import)
+to CDC Kronos systems.  I inherited the maintenance on all of this stuff at our
+site, some years ago.  Fun, fun, fun!  (I am only being half-sarcastic here.)
+
+I just came across a sheaf of Special Product Bulletins from ASG that encompass
+a lot of DN7x, DN8x gear.
+-- 
+Mark H. Wood, Lead Systems Programmer    +1 317 274 0749   [@disclaimer@]
+Internet:  MWOOD@INDYVAX.IUPUI.EDU       BITNET:  MWOOD@INDYVAX
+You are at a complex junction, with hyperlinks running off in *all* directions.
+A hollow voice says, "PLUGH".
+
+
+Article 1368 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!newsfeed.internetmci.com!in1.uu.net!uchinews!harris.acc.iit.edu!shrike.depaul.edu!hal.cs.depaul.edu!usenet.ucs.indiana.edu!indyvax.iupui.edu!mwood
+From: mwood@indyvax.iupui.edu (Mark H. Wood)
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 vs pdp-8 emulator
+Message-ID: <1995Nov14.124823.20130@indyvax.iupui.edu>
+Date: 14 Nov 95 12:48:23 -0500
+References: <4710s2$7ij@quest.ccsi.com> <werme.815227162@alingo.zk3.dec.com> <47ocve$2me@shellx.best.com>
+Lines: 18
+
+In article <47ocve$2me@shellx.best.com>, inwap@shellx.best.com (J.Smith and J.Snyder) writes:
+[deletia]
+> I'm trying to remember the name of the company that made our PDP-8 base
+> async terminal front-end.  I think it was Digital Communications
+> Associates of Alpharetta, Georgia.  (I think they made IRMA boards and
+> stat muxes as well.)  Who else had PDP-8's driving 110 and 300 baud TTYs?
+
+Dunno about your FE, but we still have the remains of a statewide network of
+DCA 300-series terminal switches, and some of their DPAX stat muxes.  It was
+said that DCA was started by people who had left Digital.  (The 300s boot from
+DECtape II drives, though floppy drives were also offered later.)  They later
+bought the IRMA line from someone and IMHO kinda forgot about the switch
+business.
+-- 
+Mark H. Wood, Lead Systems Programmer    +1 317 274 0749   [@disclaimer@]
+Internet:  MWOOD@INDYVAX.IUPUI.EDU       BITNET:  MWOOD@INDYVAX
+You are at a complex junction, with hyperlinks running off in *all* directions.
+A hollow voice says, "PLUGH".
+
+
+Article 1366 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sdd.hp.com!swrinde!newsfeed.internetmci.com!in2.uu.net!info-server.bbn.com!clements
+From: clements@bbn.com (Bob Clements)
+Newsgroups: alt.sys.pdp10
+Subject: Irma  (was Re: PDP-10 vs pdp-8 emulator)
+Date: 16 Nov 1995 19:36:28 GMT
+Organization: Bolt Beranek and Newman (BBN)
+Lines: 83
+Message-ID: <48g3rs$4um@info-server.bbn.com>
+References: <47l3jd$rtr@newsbf02.news.aol.com> <1995Nov9.150756.19997@indyvax.iupui.edu> <NEWTNews.816229112.11894.vsocci@number1>
+NNTP-Posting-Host: lion.bbn.com
+
+In article <NEWTNews.816229112.11894.vsocci@number1>
+ Vance Socci <vsocci@vsocci.vip.best.com> writes:
+
+>Perhaps if I tell a broken version of the story, probably heard at least 
+>second or third hand, /rcc will grace us with the original story.
+
+I dunno about "grace".  (And, please, it's spelled "/Rcc" even though
+the early TTYs and LPTs were monocase.)  Well.  These legends fade a
+bit with time, but I'll try...
+
+
+>The story goes as such: a woman named Irma kept complaining to DEC that her
+>terminal would hang up while she was reading in a paper tape (she was using
+>either a model 33 or 35, with the paper tape reading option). 
+
+True. (Although she herself was too quiet to have been the one
+complaining.)  She worked for one of the PDP-10-based time sharing
+services in the southwest.  My memory is vague here, I think it was in
+Albuquerque, but it might have been SLC or some other place.
+
+>Eventually, the legend goes, /rcc went to
+>see the problem for himself, and voila: her terminal really was hanging 
+>periodically! 
+
+True.
+
+>The problem was that her terminal interface was occasionally dropping transmit
+>done interrupts,
+
+False.  Although it sure seemed like a hardware problem, it was software.
+
+>The solution: /rcc installed the famous "IRMA CATCHER", LDB bit LPLIRM in 
+>LDBPAG [to time out transmit interrupts].
+
+Actually, that was a side effect, which I put in while chasing the
+real bug, and which I decided to leave in as a belt-and-suspenders thing.
+
+The real problem was very boring and simple, though it took me forever
+to find it.   There were interrupt-level bits and process-level
+bits in the status word for the TTY (DEVIOUS xxx DEVIOS(DEVDAT)).
+
+I hadn't wanted to add a whole extra word per terminal (small memories
+in those days, plus it would have messed up the way DDBs were
+allocated and initialized) just for a bit or two for interrupt level.
+
+I was real careful about protecting things from interrupt level in all
+my code.  Eventually I discovered to my horror that SETIOD, way over
+in the generic file system code, was setting the file-buffer-level IO
+DONE bit not by
+
+	movx T1,IODONE
+	IORM T1,DEVIOS(DEVDAT)
+
+which would have been safe, but by something like
+
+	move t1,DEVIOS(DEVDAT)
+	fiddle-dee-dee for a while
+	txo t1,IODONE
+	movem T1,DEVIOS(DEVDAT)
+
+and that of course trashed the TX_PENDING bit when an interrupt happened
+in between there.  And SETIOD was so many levels away from the code I
+was staring at that I didn't verify that it was OK, and I couldn't believe
+it would have been written that way anyhow.
+
+Why it happened so repeatably to that one user on that one machine, and
+ran just fine on the machines at the mill, I'll never know.
+
+
+>Someone ought to see if good old Irma is still around and where she is working
+
+She seemed like a nice quiet person who just stoically put up with what the
+computer kept doing to her.  Dunno if she was ever aware that her name
+was immortalized in the monitor sources.  I sure felt badly about it
+when I kept saying "Now I've got it nailed!  This time, for sure!" and
+she would sit down at her trusty TTY and have it hang again within
+five minutes.
+
+>/evs
+
+/Rcc
+
+Bob Clements, K1BC, clements@bbn.com, (w) +1 617 USE K1BC
+
+
+Article 1378 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: shellx.best.com!news1.best.com!news3.net99.net!news.cais.net!news.supernet.net!macaw.cyberport.com!news.chatlink.com!news.internetMCI.com!newsfeed.internetmci.com!swrinde!cs.utexas.edu!uunet!in1.uu.net!world!bzs
+From: bzs@world.std.com (Barry Shein)
+Subject: Re: PDP-10 vs pdp-8 emulator
+In-Reply-To: deufel@cloyd.enet.dec.com's message of 9 NOV 95 22:29:22
+Message-ID: <BZS.95Nov24012723@world.std.com>
+Sender: bzs@world.std.com (Barry Shein)
+Organization: The World
+References: <4710s2$7ij@quest.ccsi.com> <werme.815227162@alingo.zk3.dec.com>
+	<BILLW.95Nov2015852@puli.cisco.com>
+	<werme.815617533@alingo.zk3.dec.com> <47lgoo$gsv@usenet.pa.dec.com>
+	<47ul9l$ee8@mrnews.mro.dec.com>
+Date: Fri, 24 Nov 1995 06:27:23 GMT
+Lines: 17
+
+
+From: deufel@cloyd.enet.dec.com (Daniel Allen Deufel)
+>ANF10 Network Processors:
+
+We had a DEC NI20 on our KL which had an ethernet adaptor and we used
+for TCP. It was a box around the size of a BA box.
+
+Not sure how that fits into your list or if it does. I don't think too
+many were sold.
+
+
+
+-- 
+        -Barry Shein
+
+Software Tool & Die    | bzs@world.std.com          | http://www.std.com
+Purveyors to the Trade | Voice: 617-739-0202        | Login: 617-739-WRLD
+
+
+Article 1379 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!newsfeed.internetmci.com!in2.uu.net!world!weiner
+From: weiner@world.std.com (Sam Weiner)
+Subject: Re: PDP-10 vs pdp-8 emulator
+Message-ID: <DIK65A.DJ1@world.std.com>
+Organization: The World Public Access UNIX, Brookline, MA
+References: <4710s2$7ij@quest.ccsi.com> <47lgoo$gsv@usenet.pa.dec.com> <47ul9l$ee8@mrnews.mro.dec.com> <BZS.95Nov24012723@world.std.com>
+Date: Fri, 24 Nov 1995 17:34:22 GMT
+Lines: 23
+
+In article <BZS.95Nov24012723@world.std.com>,
+Barry Shein <bzs@world.std.com> wrote:
+>
+>From: deufel@cloyd.enet.dec.com (Daniel Allen Deufel)
+>>ANF10 Network Processors:
+>
+>We had a DEC NI20 on our KL which had an ethernet adaptor and we used
+>for TCP. It was a box around the size of a BA box.
+>
+>Not sure how that fits into your list or if it does. I don't think too
+>many were sold.
+>
+Well, given that the NI20 was how KLs connected to Ethernets, I'd guess
+that a lot of them were sold (relative to the number of KLs sold.)  DECnet
+and LAT also ran over the NI20.
+
+The NI20 took up two RH slots which doesn't match your mention of a BA box.
+There was the AN10/20 which connected a KL to an IMP.  Perhaps that is
+what you were thinking of?
+
+Sam
+
+
+
+
+Article 1381 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: shellx.best.com!news1.best.com!sdd.hp.com!swrinde!newsfeed.internetmci.com!howland.reston.ans.net!ix.netcom.com!netcom.com!alderson
+From: alderson@netcom.com (Richard M. Alderson III)
+Subject: Re: PDP-10 vs pdp-8 emulator
+In-Reply-To: weiner@world.std.com's message of Fri, 24 Nov 1995 17:34:22 GMT
+Message-ID: <aldersonDIo9H3.5vD@netcom.com>
+Reply-To: alderson@netcom.com
+Fcc: /u9/alderson/postings
+Organization: NETCOM On-line Communication Services (408 261-4700 guest)
+References: <4710s2$7ij@quest.ccsi.com> <47lgoo$gsv@usenet.pa.dec.com>
+	<47ul9l$ee8@mrnews.mro.dec.com> <BZS.95Nov24012723@world.std.com>
+	<DIK65A.DJ1@world.std.com>
+Date: Sun, 26 Nov 1995 22:36:39 GMT
+Lines: 30
+Sender: alderson@netcom20.netcom.com
+
+In article <DIK65A.DJ1@world.std.com> weiner@world.std.com (Sam Weiner) writes:
+
+>In article <BZS.95Nov24012723@world.std.com>,
+>Barry Shein <bzs@world.std.com> wrote:
+
+>>We had a DEC NI20 on our KL which had an ethernet adaptor and we used
+>>for TCP. It was a box around the size of a BA box.
+
+>Well, given that the NI20 was how KLs connected to Ethernets, I'd guess that a
+>lot of them were sold (relative to the number of KLs sold.)  DECnet and LAT
+>also ran over the NI20.
+
+The NI was Digital's eventual method of putting a KL on an Ethernet, but it
+only came out around 1987 or so.  Long before that, there were devices such as
+the Stanford (later cisco Systems) MEIS (MASSBUS-Ethernet Interface Subsystem),
+which made the Ethernet look logically like a tape drive.  Much nicer than the
+NI, as it could do things like talk to itself on the net (useful for testing).
+
+>The NI20 took up two RH slots which doesn't match your mention of a BA box.
+>There was the AN10/20 which connected a KL to an IMP.  Perhaps that is what
+>you were thinking of?
+
+The NI had to be placed at RH #5 (just as the CI had to be placed at #7).  The
+main hardware for the two was identical; they just had different microcode and
+network interfaces.
+-- 
+Rich Alderson   You know the sort of thing that you can find in any dictionary
+                of a strange language, and which so excites the amateur philo-
+                logists, itching to derive one tongue from another that they
+                know better: a word that is nearly the same in form and meaning
+                as the corresponding word in English, or Latin, or Hebrew, or
+                what not.
+                                                --J. R. R. Tolkien,
+alderson@netcom.com                               _The Notion Club Papers_
+
+
+Article 1382 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!cygnus.com!news!grossman
+From: grossman@andros.cygnus.com (Stu Grossman)
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 vs pdp-8 emulator
+Date: 28 Nov 1995 01:48:26 GMT
+Organization: Cygnus Support
+Lines: 46
+Message-ID: <GROSSMAN.95Nov27174827@andros.cygnus.com>
+References: <4710s2$7ij@quest.ccsi.com> <47lgoo$gsv@usenet.pa.dec.com>
+	<47ul9l$ee8@mrnews.mro.dec.com> <BZS.95Nov24012723@world.std.com>
+	<DIK65A.DJ1@world.std.com> <aldersonDIo9H3.5vD@netcom.com>
+NNTP-Posting-Host: andros.cygnus.com
+In-reply-to: alderson@netcom.com's message of Sun, 26 Nov 1995 22:36:39 GMT
+
+> The NI was Digital's eventual method of putting a KL on an Ethernet, but it
+> only came out around 1987 or so.
+
+Ahem....  The NI came out around 84 or 85.
+
+>   Long before that, there were devices such as
+> the Stanford (later cisco Systems) MEIS (MASSBUS-Ethernet Interface Subsystem),
+> which made the Ethernet look logically like a tape drive.  Much nicer than the
+> NI, as it could do things like talk to itself on the net (useful for testing).
+
+The NI supported a loopback mode, but since the hardware that calculated the
+CRC could only be connected to either the transmit or the receive side, you
+would always get a CRC error if you received any of your own transmissions.
+
+I *believe* that the MEIS also had this aspect.  Therefore if it was looping
+anything, it was either just doing it internally, or ignoring the CRC errors
+that resulted from the transmission.
+
+> >The NI20 took up two RH slots which doesn't match your mention of a BA box.
+> >There was the AN10/20 which connected a KL to an IMP.  Perhaps that is what
+> >you were thinking of?
+> 
+> The NI had to be placed at RH #5 (just as the CI had to be placed at #7).  The
+> main hardware for the two was identical; they just had different microcode and
+> network interfaces.
+
+You are both sort of right.  The NI and CI both consisted of two sets of
+boards.  One set, which was common to both lived in the MBOX, the other set,
+which was specific to the NI or the CI lived in an outboard box, usually housed
+in a BA cabinet.  The common boards were called a KLIPAs, and consisted of 2901
+based systems with 2910 controllers.  These boards (I think there were three)
+were installed in the MBOX in the same slots that were used for RH20s.  Each
+KLIPA really only occupied one RH (actually, CBUS) slot.  The reason DEC used
+two slots was because the power requirements of KLIPAs were higher than RH20s.
+
+The other set of boards were specific to the NI and CI.  The NI had a single
+board, which was basically just a big buffer and a transceiver interface.  The
+ethernet controller (so to speak) was just a bunch of PALs which left all of
+the hard stuff (like retransmissions and address filtering) to the KLIPA.  The
+CI consisted of three boards, and had considerable smarts.
+
+These boards lived in their own seperate card cage, which was housed in a BA
+box.  I think that it was also possible to put the card cage in the same box
+that housed th MF20 if room was available.
+
+			Stu Grossman
+
+
+Article 1394 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!newsfeed.internetmci.com!usenet.eel.ufl.edu!col.hp.com!csn!csus.edu!netcom.com!lougheed
+From: lougheed@netcom.com (Kirk Lougheed)
+Subject: Re: PDP-10 vs pdp-8 emulator
+Message-ID: <lougheedDIrvA7.6pH@netcom.com>
+Organization: NETCOM On-line Communication Services (408 261-4700 guest)
+References: <4710s2$7ij@quest.ccsi.com> <DIK65A.DJ1@world.std.com> <aldersonDIo9H3.5vD@netcom.com> <GROSSMAN.95Nov27174827@andros.cygnus.com>
+Date: Tue, 28 Nov 1995 21:20:31 GMT
+Lines: 35
+Sender: lougheed@netcom17.netcom.com
+
+In article <GROSSMAN.95Nov27174827@andros.cygnus.com>,
+Stu Grossman <grossman@andros.cygnus.com> wrote:
+>
+>>   Long before that, there were devices such as
+>> the Stanford (later cisco Systems) MEIS (MASSBUS-Ethernet Interface Subsystem),
+>> which made the Ethernet look logically like a tape drive.  Much nicer than the
+>> NI, as it could do things like talk to itself on the net (useful for testing).
+>
+>The NI supported a loopback mode, but since the hardware that calculated the
+>CRC could only be connected to either the transmit or the receive side, you
+>would always get a CRC error if you received any of your own transmissions.
+>
+>I *believe* that the MEIS also had this aspect.  Therefore if it was looping
+>anything, it was either just doing it internally, or ignoring the CRC errors
+>that resulted from the transmission.
+
+Hello Stu -
+
+The SEEQ ethernet chip used by the MEIS has CRC hardware for both
+the transmit and receive sides.  So, yes, the MEIS could receive
+its own full-length transmissions, including the correct CRC.
+This made debugging easier and in the field you could easily tell
+if you are really connected to the Ethernet.  We liked the idea so
+much that the MCI, MEC, and FEP Ethernet cards for high end cisco
+routers have the same design.
+
+As for looking like a tape drive, well, that's a slight
+exaggeration.  The MEIS was of course a Massbus device with its
+own RH20 driver.  There was a path in the code where the MEIS was
+busy and you didn't want any new I/O started just then.  Len
+Bosack appropriated a status bit used by rewinding tape drives to
+defer I/O.  It was rather cute: "sorry, no new I/O just now, we're
+rewinding the Ethernet".
+
+Kirk
+
+
+Article 1392 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sdd.hp.com!usc!chi-news.cic.net!newsfeed.internetmci.com!howland.reston.ans.net!news-e1a.megaweb.com!newstf01.news.aol.com!newsbf02.news.aol.com!not-for-mail
+From: jmfbah@aol.com (JMFBAH)
+Newsgroups: alt.sys.pdp10
+Subject: Re: 36-bits or none at all!
+Date: 3 Dec 1995 09:54:12 -0500
+Organization: America Online, Inc. (1-800-827-6364)
+Lines: 12
+Sender: root@newsbf02.news.aol.com
+Message-ID: <49sdmk$h4o@newsbf02.news.aol.com>
+References: <Pine.NXT.3.92.951130001016.24346A-100000@Tomobiki-Cho.CAC.Wash
+Reply-To: jmfbah@aol.com (JMFBAH)
+NNTP-Posting-Host: newsbf02.mail.aol.com
+
+On 30-Nov-95, Mark Crispin wrote:
+<I remember talking with a VMS developer at a DECUS, many years ago.  He
+<was emphatic that TOPS-20's beloved user interface features ("?" for
+help,
+<ESC and CTRL/F for command and filename completion, CTRL/T for status,
+<etc.) would *never* be in VMS because it was "inefficient".
+
+That may have been the customer story-line, but I know for a fact that it
+was purely N.I.H. (Not Invented Here) syndrome.  That is precisely the
+reason why TOPS10 features such as SMP and GALAXY were never acquired.
+
+/BAH
+
+
+Article 1397 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sdd.hp.com!spool.mu.edu!howland.reston.ans.net!newsfeed.internetmci.com!in1.uu.net!nwnews.wa.com!news1.halcyon.com!coho.halcyon.com!fbeast
+From: fbeast@coho.halcyon.com (R. Terry McCutchen)
+Newsgroups: alt.sys.pdp10,comp.os.vms
+Subject: Re: 36-bits or none at all!
+Followup-To: alt.sys.pdp10,comp.os.vms
+Date: 4 Dec 1995 22:11:26 GMT
+Organization: Northwest Nexus, Inc. - Professional Internet Services
+Lines: 28
+Distribution: world
+Message-ID: <49vrme$dm9@news1.halcyon.com>
+References: <Pine.NXT.3.92.951130001016.24346A-100000@Tomobiki-Cho.CAC.Wash <Pine.NXT.3.92.951203110725.2614A-100000@Tomobiki-Cho.CAC.Washington.EDU> <1995Dec4.123910.22686@zippy.dct.ac.uk>
+NNTP-Posting-Host: coho.halcyon.com
+X-Newsreader: TIN [version 1.2 PL2]
+Xref: shellx.best.com alt.sys.pdp10:1397 comp.os.vms:30274
+
+Alan Greig (ccdarg@zippy.dct.ac.uk) wrote:
+: >> That may have been the customer story-line, but I know for a fact that it
+: >> was purely N.I.H. (Not Invented Here) syndrome.  That is precisely the
+: >> reason why TOPS10 features such as SMP and GALAXY were never acquired.
+
+I think two points of history might be interesting here. First TOPS-20 
+itself had a NIH problem and was the prime competitor to what became VMS. 
+(TOPS-10 was never in the running for some reason and the KS-10 was one 
+result) There was a point around 1977 where a 36 bit system running an 
+evolved TOPS-20 was a very serious competitor to what became VAX and VMS.
+One of the ways that VAX/VMS won the fight was to discredit as much as possible 
+about KL-10/TOPS-20. {Interestingly enough one of the problems was the 
+ability to run in a 32K system).
+
+One of the problems the KL-10 had was a paper written at (I seem to 
+recall) MIT claiming that the tradeoffs between Hardwired logic and 
+Microcoded logic were "all wrong". The issue was around the paging 
+hardware and microcode. I recently noticed that ALPHA has made the same 
+tradeoffs that the KL-10 made in this area.
+
+On a related note (sort of) one of the high priority requirements for VMS 
+was that it be able to GUARANTEE deterministic respone times to timed 
+events and certain interupts. This had it's ancestory in a project at 
+some university to play music. Apparently under TOPS-x0 (don't recall if 
+it was -10 or -20) in a timesharing environment it was not possible to 
+make the music play properly. Does anyone out there remember more details 
+on this?
+
+
+
+Article 1399 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!pravda.aa.msen.com!nntp.coast.net!news.kei.com!news.mathworks.com!uunet!in2.uu.net!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10,comp.os.vms
+Subject: Re: 36-bits or none at all!
+Date: Mon, 4 Dec 1995 20:02:11 -0800
+Organization: Networks & Distributed Computing
+Lines: 18
+Message-ID: <Pine.NXT.3.92.951204200100.5431A-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <Pine.NXT.3.92.951130001016.24346A-100000@Tomobiki-Cho.CAC.Wash <Pine.NXT.3.92.951203110725.2614A-100000@Tomobiki-Cho.CAC.Washington.EDU> <1995Dec4.123910.22686@zippy.dct.ac.uk> <49vrme$dm9@news1.halcyon.com>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+NNTP-Posting-User: hellman
+To: "R. Terry McCutchen" <fbeast@coho.halcyon.com>
+In-Reply-To: <49vrme$dm9@news1.halcyon.com>
+Xref: shellx.best.com alt.sys.pdp10:1399 comp.os.vms:30287
+
+On 4 Dec 1995, R. Terry McCutchen wrote:
+> On a related note (sort of) one of the high priority requirements for VMS
+> was that it be able to GUARANTEE deterministic respone times to timed
+> events and certain interupts. This had it's ancestory in a project at
+> some university to play music. Apparently under TOPS-x0 (don't recall if
+> it was -10 or -20) in a timesharing environment it was not possible to
+> make the music play properly. Does anyone out there remember more details
+> on this?
+
+That's curious, because for many years the leading centers for computer
+music in the world, CCRMA (Stanford University) and IRCAM (Paris, France)
+used heavily-modified versions of TOPS-10.
+
+-- Mark --
+
+DoD #0105, R90/6 pilot, FAX: (206) 685-4045  ICBM: N 47 39'35" W 122 18'39"
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+Article 1406 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: shellx.best.com!news1.best.com!sdd.hp.com!swrinde!howland.reston.ans.net!ix.netcom.com!netcom.com!alderson
+From: alderson@netcom.com (Richard M. Alderson III)
+Subject: Re: 36-bits or none at all!
+In-Reply-To: shoppa@altair.krl.caltech.edu's message of 5 Dec 1995 17:21:01 GMT
+Message-ID: <aldersonDJ6uFx.MM1@netcom.com>
+Reply-To: alderson@netcom.com
+Fcc: /u9/alderson/postings
+Organization: NETCOM On-line Communication Services (408 261-4700 guest)
+References: <Pine.NXT.3.92.951130001016.24346A-100000@Tomobiki-Cho.CAC.Wash
+	<49sdmk$h4o@newsbf02.news.aol.com>
+	<Pine.NXT.3.92.951203110725.2614A-100000@Tomobiki-Cho.CAC.Washington.EDU>
+	<4a1v1t$5s1@gap.cco.caltech.edu>
+Date: Wed, 6 Dec 1995 23:26:21 GMT
+Lines: 15
+Sender: alderson@netcom19.netcom.com
+
+In article <4a1v1t$5s1@gap.cco.caltech.edu> shoppa@altair.krl.caltech.edu
+(Tim Shoppa) writes:
+
+>OBpdp-10: Was there ever any attempt to port, say, BSD or some other flavor of
+>Unix to the PDP-10?
+
+Yeah--by the original developers.  The reason Unix was written for the PDP-7
+was that they couldn't get funding for a -10 purchase...
+
+(Source:  Ritchie)
+-- 
+Rich Alderson   You know the sort of thing that you can find in any dictionary
+                of a strange language, and which so excites the amateur philo-
+                logists, itching to derive one tongue from another that they
+                know better: a word that is nearly the same in form and meaning
+                as the corresponding word in English, or Latin, or Hebrew, or
+                what not.
+                                                --J. R. R. Tolkien,
+alderson@netcom.com                               _The Notion Club Papers_
+
+
+Article 1412 of alt.sys.pdp10:
+Path: shellx.best.com!usenet
+From: Vance Socci <vsocci@vsocci.vip.best.com>
+Newsgroups: alt.sys.pdp10
+Subject: DEC Versions 1,2,3
+Date: Thu, 07 Dec 95 12:22:48 PDT
+Organization: Best Internet Communications
+Lines: 30
+Message-ID: <NEWTNews.818368092.10.vsocci@number1>
+NNTP-Posting-Host: vsocci.vip.best.com
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Newsreader: NEWTNews & Chameleon -- TCP/IP for MS Windows from NetManage
+
+
+Hi everyone,
+
+Just got back from trudging the Fall DECUS '95 trade show, where XKL and I
+showed off the first public exhibition of TOPS-10 running on a TOAD.
+(Yes, you could even type "MAKE LOVE" at it and it would give the appropriate
+response).
+
+Here, for your amusement, I will recount a little story I told a few newbie
+DEC employees (oh, I'm sorry, am I supposed to say "Digital"?)  . . .
+
+There are 3 major versions of DEC: DEC 1.0, DEC 2.0, and DEC 3.0.
+
+DEC V1.0 (1958-1975): Hi, were Digital Equipment corporation. Here are some 
+nifty computers to help you get some work done. Feel free to hook them up to
+anything you want, here's all the code, have fun! If you have any trouble,
+we're here to help.
+
+DEC V2.0 (1976-1992 or so): Hi, we're Digital, you're not. Here are our
+computers. Buy them or else. What, you say you're having trouble getting
+your work done on them? Too bad, change the way you work to fit how our
+computers work. What, you want to hook up non-Digital things to it? WE'LL
+SUE!! Whose computer do you think it is, anyway?
+
+DEC V3.0: (1992- ): We're sorry, we won't do it again . . .
+
+
+/evs
+
+
+
+
+Article 1491 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!news.texas.net!imci2!newsfeed.internetmci.com!in1.uu.net!news1.digital.com!decwrl!amd!netcomsv!uu4news.netcom.com!netcomsv!uu3news.netcom.com!ix.netcom.com!netnews
+From: jcgreen@ix.netcom.com(John C Green Jr )
+Newsgroups: alt.sys.pdp10
+Subject: Working for PDP-10 Engineering in '68 ... a personal account
+Date: 2 Jan 1996 20:45:29 GMT
+Organization: Netcom
+Lines: 53
+Message-ID: <4cc5h9$btj@ixnews2.ix.netcom.com>
+NNTP-Posting-Host: ix-sj23-21.ix.netcom.com
+X-NETCOM-Date: Tue Jan 02 12:45:29 PM PST 1996
+
+I graduated in JUN68 with BSEE and joined PDP-10 Engineering
+(rather than being one of 300 engineers designing the IBM
+System/360 Model 195 which was my only other computer
+offer).
+
+There were two major transitions going on then:
+* Digital was growing from small to large
+* The industry was going from discrete components to ICs
+
+I was the 11th engineer in PDP-10 Engineering--each was
+given lots of responsibility. My first assignment was as
+Project Engineer of the RP10--a PDP-10 disk controller for
+RP-02 (Digital's name for OEMed Memorex 660--IBM 2314 type)
+25 MB disks. The RP10 listed for $29K, the RP-02 for $25K.
+They ended up selling 300 RP10s and 1500 RP-02s for a list
+of $8.7M of controllers + $37.5M of disks which I felt was
+quite a bit of responsibility when June grads were making
+$6,800 to $8,600 (actual numbers from my school's placement
+office for jobs accepted in JUN68).
+
+The next Spring I saw a job posting. The PDP-11 product line
+(no product had yet been announced) was looking for a JUN69
+graduate to design a disk controller to the same RP-02. Only
+the candidate was to be a Junior Engineer understudying a
+Senior Engineer for his first project. Digital had made the
+transition from small to large. New hire June grads were in
+training for the first year.
+
+All my Senior labs were with ICs. When I started at Digital
+I asked for an approved parts list. My manager said, "We
+don't use ICs. The last time we evaluated them they didn't
+have enough noise rejection." (Of course not if you take
+every pin of every chip and bring it out to a Gardner-Denver
+wirewrap backplane 15.5 inches wide and 21.0 inches high or
+bigger!) As a result the RP-10 was 6' high, 19" wide, had
+144 lights, and almost 500 discrete component circuit cards!
+
+Anyway I'm only 49yo, but I designed a major piece of
+digital logic for a major computer vendor with discrete
+components.
+
+Back in '69 when the RP10 and RP-02 first shipped the disk
+was $25K/25MB or $1000./MB. A recent Fry's ad in the San
+Jose Mercury offers a Conner IDE hard drive at $249./1.6GB
+or $0.156/MB (over 6400 times cheaper)--but that's another
+story.
+
+36-bits or none at all! :-)
+- - -
+Internet Marketing and Business Development
+21483 Old Mine Rd             (408)353-1870
+Los Gatos CA 95030           JohnCGreen@aol.com
+
+
+
+Article 1510 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!news.texas.net!news.sprintlink.net!nntp.coast.net!howland.reston.ans.net!ix.netcom.com!netnews
+From: JohnCGreen@aol.com (John C Green Jr)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Working for PDP-10 Engineering in '68 ... a personal account
+Date: Mon, 08 Jan 1996 23:59:21 GMT
+Organization: Netcom
+Lines: 37
+Message-ID: <4csbb4$4o5@ixnews4.ix.netcom.com>
+References: <4cfi93$52o@ss2.digex.net> <4ch6u3$agc@goonsquad.spies.com> <4ck43g$r07@netnews.intertel.net>
+NNTP-Posting-Host: ix-sj18-01.ix.netcom.com
+X-NETCOM-Date: Mon Jan 08  4:02:44 PM PST 1996
+X-Newsreader: Forte Free Agent 1.0.82
+
+farmergord@maestro.intertel.net () wrote:
+
+>Al Kossow (aek@goonsquad.spies.com) wrote:
+>: From article <4cfi93$52o@ss2.digex.net>, by doug@ss2.digex.net (Doug Humphrey):
+>: > As someone who had RP02's and an RP10 in his dining room for a
+>: > while, I would like to say thanks!  Your work with Flip Chips is 
+>: > appreciated.
+
+>: In the late 70's my desk was about 10 feet from an RP02.  If you 
+>: recall, it had a mechanical cyl lock that would set when it was on
+>: cyl (tick).
+
+>: tick, tick tick, tickticktickticktickticktick     arggggggggg!
+
+>: ..thing drove me nuts
+
+>If you think _one_ was noisy...  I was the site FS rep for
+>one KA10 site that had about five of them in a row, and they were
+>in 'washing machine' mode all day every day.
+
+>Ah, the good ole days.  The sounds of Teletypes, card readers, drum
+>printers and RP02's.
+
+For those of you who don't know what we're talking about the RP-02
+used a linear motor to move the head assembly. There was a rack
+machined with teeth spaced 0.02 in. apart. There were two pawls offset
+by 0.01 in. arranged such that either one or the other of them would
+mesh with a few teeth and hold the head assembly in place. There were
+203 cylinders 0.01 in apart. A bank of RP02's up close would make
+quite a racket.
+
+I had to test a maximum configuration of 8 for weeks in the mill on
+floor 5-0, below milll pond level and untouched by sunlight. But
+that's another story.
+
+
+
+
+
+Article 1509 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!news.texas.net!news.sprintlink.net!tank.news.pipex.net!pipex!howland.reston.ans.net!ix.netcom.com!netnews
+From: JohnCGreen@aol.com (John C Green Jr)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Working for PDP-10 En
+Date: Mon, 08 Jan 1996 23:59:24 GMT
+Organization: Netcom
+Lines: 37
+Message-ID: <4csbb7$4o5@ixnews4.ix.netcom.com>
+References: <4ch6u3$agc@goonsquad.spies.com> <8B8625E.0BBD000016.uuout@compudata.com>
+NNTP-Posting-Host: ix-sj18-01.ix.netcom.com
+X-NETCOM-Date: Mon Jan 08  4:02:47 PM PST 1996
+X-Newsreader: Forte Free Agent 1.0.82
+
+david.razler@compudata.com (DAVID RAZLER) wrote:
+
+
+>AK>In the late 70's my desk was about 10 feet from an RP02.  If you 
+>AK>recall, it had a mechanical cyl lock that would set when it was on
+>AK>cyl (tick).
+
+>AK>tick, tick tick, tickticktickticktickticktick     arggggggggg!
+
+>AK>..thing drove me nuts
+
+>Worse still was the sound of yet another head crashing on the (damnit, 
+>the manual is even stuck back behind the 370 JCL book so I don't have 
+>the number) KA-10 swapping drum. I forget the manufacturer, but I think 
+>by the time we took the LIRICS drum out of service, about half of the 
+>256? heads were each making the sound of nails on a chalkboard, each at 
+>its own separate frequency.
+
+>                                    dmr
+
+Sorry your "PDP-10 Reference Handbook, Order code: ATX, $5.00 each.
+Discounts available on 5 or more copies. Copyright 1967, 1968, 1969,
+1970, 1971 by Digital Equipment Corporation" is being contaminated by
+a 370 JCL book. Mine's right here ... Oh yes, starting on page 1-197
+..
+
+"RC10 Disk/Drum System. RC10 control requires DF10 data channel. Up to
+four RD10 disks and RM10B drums in any mix ...
+
+" The RD10 disk, which is manufactured by Burroughs, can store 512,000
+36-bit words in blocks of thirty-two words each. ...
+
+"The RM10B drum, which is manufactured by Bryant, is smaller but
+faster than the disk. It can store 345,600 words in 64-word blocks."
+
+The RM10B spun at 5/6 speed on 50Hz.
+
+
+
+Article 1518 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!gatech!newsfeed.internetmci.com!in1.uu.net!news.new-york.net!news.netusa.net!not-for-mail
+From: rwarren@alpha.netusa.net (Robert John Warren)
+Newsgroups: alt.sys.pdp10
+Subject: Re: LIRICS (was Re: Working for PDP-10 En)
+Date: 11 Jan 1996 00:41:24 -0500
+Organization: Network Internet Services (516) 543-0240
+Lines: 30
+Message-ID: <4d27u4$bet@alpha.netusa.net>
+References: <4ch6u3$agc@goonsquad.spies.com> <8B8625E.0BBD000016.uuout@compudata.com> <hsiegelDKts75.4z0@netcom.com>
+NNTP-Posting-Host: alpha.netusa.net
+
+In article <hsiegelDKts75.4z0@netcom.com>,
+Howard Siegel <hsiegel@netcom.com> wrote:
+>david.razler@compudata.com writes:
+>> I forget the manufacturer, but I think 
+>> by the time we took the LIRICS drum out of service, about half of the 
+>                          ^^^^^^
+>Wow.  There's a name I haven't heard in about 20 years!  I remember getting
+>a tour of the facility back in the early/mid 70's.  First time I'd ever seen
+>a DECsystem-10, though I'd been using them for a couple of years by then,
+>but over leased lines.
+>
+>Remind this old addled brain... What was the machine complement back then
+>and when did LIRICS get broken up and begat NCODE?
+
+If memory serves, NCODE & NAG came into exsistance in the 1975-76 school 
+year.  They had setup a PDP-11/50 with RSTS-E (still can't get over BASIC 
+written in BASIC, and getting system error messages).
+
+Back then (1975 - 1983 [RIP KA-10/50 #103]) System was 64K, 4 RP-02, 
+DL10, PDP-8/I (communications).  My memory becomes a little foggy after that.
+
+In 1978-79, in came the KS-10s.  One new machine about every 8 months 
+until there was just no more room for the KA.  Thats when LIRICS donated 
+the KA to a school for special children, who had alot of fun pulling all 
+of that wire from the backplanes.  :( [weep]
+-- 
+rwarren@netusa.net	Network-USA	Internet Access Provider 516-543-0240-D
+Robert John Warren	Systems Administrator, Network-USA	 516-543-0234-V
+WWW: http://www.netusa.net/   Finger guest@netusa.net for info.  516-543-0274-F
+Dial-Up SLIP/CSLIP/PPP,  Shell/I-Net.   Telnet-In accounts.     Home of Tsunami
+
+
+Article 1520 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sdd.hp.com!gatech!newsfeed.internetmci.com!uwm.edu!msunews!netnews.upenn.edu!news.voicenet.com!fly.compudata.com!bbs!david.razler
+From: david.razler@compudata.com (DAVID RAZLER)
+Newsgroups: alt.sys.pdp10
+Subject: Re: LIRICS (was Re: Working f
+Message-ID: <8B8A04C.0BBD000021.uuout@compudata.com>
+Date: Thu, 11 Jan 96 01:16:00 -0400
+Distribution: world
+Organization: Compu-Data BBS -=- Turnersville, NJ -=- 609-232-1245
+Reply-To: david.razler@compudata.com (DAVID RAZLER)
+References: <hsiegelDKts75.4z0@netcom.com>
+X-Newsreader: PCBoard Version 15.22
+X-Mailer: PCBoard/UUOUT Version 1.20
+Lines: 55
+
+
+HS>david.razler@compudata.com writes:
+HS>> I forget the manufacturer, but I think 
+HS>> by the time we took the LIRICS drum out of service, about half of
+HS>the                            ^^^^^^
+HS>> 256? heads were each making the sound of nails on a chalkboard,
+HS>> each at  its own separate frequency.
+
+HS>Wow.  There's a name I haven't heard in about 20 years!  I remember
+HS>a getting tour of the facility back in the early/mid 70's.  First
+HS>a time I'd ever seen DECsystem-10, though I'd been using them for a
+HS>couple of years by then, but over leased lines.
+
+HS>Remind this old addled brain... What was the machine complement back
+HS>then and when did LIRICS get broken up and begat NCODE?
+
+No idea.
+
+LIRICS, named by ace secretary Karen Pepe, began as fallout from the 
+famous Huntington Project (1968-7?) and began with a PDP-8I, 16K core, 
+and a 128K swapping disk - 12 users on genuine 103 Bell Datasets.
+
+In the summer of '71, we got our KA-10, and turned the '8 into a giant 
+UART (DCA-680) and initially ran about 72 users, with 2 RP-02s, @128Kw 
+core, four TU-56 dectape drives, ptr/ptp. Status symbol was having your 
+own dectape that Karen would mount for you if she was in a good mood.
+
+By '72, we were growing, a couple of mux's to central points, some 
+schools ordering more than one Teletype ASR-33 and acoustic modem. A 256 
+Kw box, DEC's newest design, appeared.
+
+By '77 we had the swapping drum, four RP-02's 1 magtape, communications 
+equipment from hell, and a few other cabinet-size boxes filled with 
+misc. I/O bus equipment.
+
+In 1980 I stopped by after losing a bid on the `10. I had a beat-up PDP-
+9 and was desperate for B-213 modules, the ones both machines were made 
+of, and which had an annoying habit of smoking the pull-up resistors no 
+matter how many watt carbon resistors you put on the board. I just 
+wanted a handful out of the drum controller, but was refused. Suffolk 
+County BOCES, the unit that oversaw LIRICS and all county special ed 
+services gave the entire computer to a class of mildly retarded children 
+to teach them how to desolder. Yep, for real. I fought like hell, but 
+couldn't even sneak a module or two off the gutted backplanes.
+
+LIRICS had switched over to four 20XX machines, a number I hear grew 
+before someone ousted(?) long-time project operator Gerald Damm and 
+decided that Commodore Pets were the classroom computer of the future, 
+may the BOCES school board members of the time be wrapped in endless 
+lengths of wire-wrap wire.
+
+                                    dmr
+                        [david.razler@compudata.com]
+
+þCMPQwk1.429542> 
+
+
+Article 1528 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!gatech!newsfeed.internetmci.com!uwm.edu!msunews!netnews.upenn.edu!news.voicenet.com!fly.compudata.com!bbs!david.razler
+From: david.razler@compudata.com (DAVID RAZLER)
+Newsgroups: alt.sys.pdp10
+Subject: Re: LIRICS (was Re: Worki
+Message-ID: <8B8C557.0BBD00002A.uuout@compudata.com>
+Date: Sat, 13 Jan 96 22:47:00 -0400
+Distribution: world
+Organization: Compu-Data BBS -=- Turnersville, NJ -=- 609-232-1245
+Reply-To: david.razler@compudata.com (DAVID RAZLER)
+References: <4d27u4$bet@alpha.netusa.net>
+X-Newsreader: PCBoard Version 15.22
+X-Mailer: PCBoard/UUOUT Version 1.20
+Lines: 53
+
+
+
+RJ>In article <hsiegelDKts75.4z0@netcom.com>,
+RJ>Howard Siegel <hsiegel@netcom.com> wrote:
+RJ>>david.razler@compudata.com writes:
+RJ>>> I forget the manufacturer, but I think 
+RJ>>> by the time we took the LIRICS drum out of service, about half of
+RJ>the  >                          ^^^^^^
+RJ>>Wow.  There's a name I haven't heard in about 20 years!  I remember
+RJ>getting >a tour of the facility back in the early/mid 70's.  First
+RJ>>a time I'd ever seen DECsystem-10, though I'd been using them for a
+RJ>couple of years by then, >but over leased lines.
+RJ>>
+RJ>>Remind this old addled brain... What was the machine complement back
+RJ>then >and when did LIRICS get broken up and begat NCODE?
+
+RJ>If memory serves, NCODE & NAG came into exsistance in the 1975-76
+RJ>school  year.  They had setup a PDP-11/50 with RSTS-E (still can't
+RJ>get over BASIC  written in BASIC, and getting system error messages).
+
+RJ>Back then (1975 - 1983 [RIP KA-10/50 #103]) System was 64K, 4 RP-02, 
+RJ>DL10, PDP-8/I (communications).  My memory becomes a little foggy
+RJ>after that.
+
+That KA-10 had much more on it before it died, we had that bastard drum, 
+four RP-02s at least one 256Kword core box, four TU-55s, a 7-track(?) 
+magtape, etc. The PDP-8/I, son-of-Huntington Project machine was turned 
+into the giant UART for the `10, running the DCA-680 communications 
+interface.
+
+<btw> Anyone knowing the whereabouts of Bruce Maier, Gerry Damm or Karen 
+Pepe, Barry (forgotten last name) as well as any of the other LIRICS 
+regulars, please contact me.
+                                 dmr 
+
+RJ>In 1978-79, in came the KS-10s.  One new machine about every 8 months
+RJ>until there was just no more room for the KA.  Thats when LIRICS
+RJ>donated  the KA to a school for special children, who had alot of fun
+RJ>pulling all  of that wire from the backplanes.  :( [weep]
+
+Actually, the problem was that the "school for special children" and 
+LIRICS were -both- owned by the Board of Cooperative Educational 
+Services (BOCES) of Suffolk County, NY, the reason they rejected all the 
+bids offered on KA-10 #103.
+
+If the thing had to die, I wouldn't mind the -backplanes- going as much 
+as I minded the modules going - (as I said, I had a PDP-9 at the time, 
+based on the same B flipchips)
+
+(The bids ran along the lines of OK, I'll take it! as the bidders, high 
+school and college students all, were universally poor).
+
+                                    dmr
+
+
+Article 1525 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!hookup!nic.ott.hookup.net!netnews.intertel.net!maestro.intertel.net!farmergord
+From: farmergord@maestro.intertel.net ()
+Newsgroups: alt.sys.pdp10
+Subject: Re: Working for PDP-10 En
+Date: 12 Jan 1996 19:37:08 GMT
+Organization: Interactive Telecom, Inc. (613) 727-5258
+Lines: 40
+Message-ID: <4d6d95$5ke@netnews.intertel.net>
+References: <4ch6u3$agc@goonsquad.spies.com> <8B8625E.0BBD000016.uuout@compudata.com> <4csbb7$4o5@ixnews4.ix.netcom.com>
+NNTP-Posting-Host: maestro.intertel.net
+X-Newsreader: TIN [version 1.2 PL2]
+
+John C Green Jr (JohnCGreen@aol.com) wrote:
+: david.razler@compudata.com (DAVID RAZLER) wrote:
+
+
+: >AK>In the late 70's my desk was about 10 feet from an RP02.  If you 
+: >AK>recall, it had a mechanical cyl lock that would set when it was on
+: >AK>cyl (tick).
+
+: >AK>tick, tick tick, tickticktickticktickticktick     arggggggggg!
+
+: >AK>..thing drove me nuts
+
+[ snip ]
+: ..
+
+: "RC10 Disk/Drum System. RC10 control requires DF10 data channel. Up to
+: four RD10 disks and RM10B drums in any mix ...
+
+: " The RD10 disk, which is manufactured by Burroughs, can store 512,000
+: 36-bit words in blocks of thirty-two words each. ...
+
+: "The RM10B drum, which is manufactured by Bryant, is smaller but
+: faster than the disk. It can store 345,600 words in 64-word blocks."
+
+: The RM10B spun at 5/6 speed on 50Hz.
+
+The neatest thing about the RM10B was the conical shape of the rotating
+drum.  It spun on a vertical axis, and when the unit was powered down,
+the drum would 'fall' downwards after about 25 minutes, thus pulling
+the drum away from the heads before a full stop occured.  This action
+was purely mechanical, triggered by the drum's speed falling below
+a certain rate.
+
+Best part: the action was accompanied by a _loud_ THUNK.  A little
+spooky when the entire computer room is powered off for some reason
+and is totally silent.  Oh yes, the condition of the drum's
+bearings was gauged by the time it took for the drum to retract,
+17 minutes (as I recall) was the lower limit.
+
+gord  (meandering down memory lane)
+
+
+Article 1552 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!news.texas.net!imci2!newsfeed.internetmci.com!howland.reston.ans.net!nntp.coast.net!news2.acs.oakland.edu!news1.cris.com!news
+From: Dick Maliska <rmaliska@cris.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Working for PDP-10 En
+Date: 25 Jan 1996 02:33:32 GMT
+Organization: Countryside Software Services
+Lines: 19
+Message-ID: <4e6q5s$sfg@spectator.cris.com>
+References: <4e4100$svv@zk2nws.zko.dec.com>
+NNTP-Posting-Host: crc5-fddi.cris.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 1.2 (Windows; U; 16bit)
+
+The Bryant Drum was contained within a (Dec) standard 19" rack.
+
+The Burroughs Disk was contained in a blue container which (as I recall) 
+was about 4 1/2 or so feet long by about 4 feet high by about 18" thick.
+
+-- 
+
+                                                                Regards,
+  Dick Maliska (Rmaliska@cris.com)
+                                            
+    COUNTRYSIDE SOFTWARE SERVICES. (508) 692-3124
+      Hardware/Software Support, Networking and Application Development.
+ 
+"These are the days of miracles and wonder. This is the long distance 
+call."
+                                                                          
+        - Paul Simon
+
+
+
+
+Article 1553 of alt.sys.pdp10:
+Path: shellx.best.com!shellx.best.com!not-for-mail
+From: inwap@shellx.best.com (J.Smith and J.O'Halloran)
+Newsgroups: alt.sys.pdp10
+Subject: Anybody save the good SPRs?
+Date: 25 Jan 1996 00:08:10 -0800
+Organization: Chez INWAP (people, computers, cats)
+Lines: 52
+Message-ID: <4e7dpa$ofe@shellx.best.com>
+NNTP-Posting-Host: shellx.best.com
+Summary: Classics?
+
+Anyone still got copies of the TOPS-10 Software Dispatch?
+Some of the SPRs were real classics. 
+
+From: bob.christiansen@ccmail.bsis.com
+Date: Wed, 24 Jan 1996 17:53:33 -0500 (EST)
+Subject: PDP-10 Homepage
+To: js-cgi@inwap.com
+
+     Joe...Stumbled across your PDP-10 homepage last night, and shed a few 
+     tears. I worked at University of Queensland (Australia) when we got 
+     our first KA-10 (Serial#s 3 & 4 as I recall - 2 Series Monitor - no 
+     swapping - "Core is available but not for you!"). Worked as an 
+     operating system programmer maintaining and 'enhancing' 4-series then 
+     5-series monitors. I wish you could post the text of some of the SPRs 
+     from the old days...they were hilarious...some great flames before 
+     flames were so named.
+     
+     Went to the UK in '76 to work at Time Sharing Limited (PDP-10 based 
+     bureau) as Systems Engineering Manager and worked with the Systems 
+     Concepts guys on the device drivers for the SA-10. Company was bought 
+     by ADP Network Services so moved to the US and worked 'till 1983 on 
+     various PDP-10 operating system things. (We modified the KL-10 
+     microcode to emulate the Xerox Sigma-7 instruction set so that one of 
+     our clients could run programs for which they had lost the sourcecode 
+     - and the Sigma-7!)
+     
+     Got to know Wachs & Flemming well and was saddened to learn of their 
+     passing - though Jim had had a close call or two before).
+     
+     Keep up the good work! It is surely a labor of love!
+     
+     Bob Christiansen (PDP-10 '69 thru '83)
+
+
+From: js-cgi@inwap.com (Joe Smith)
+Subject: Re: PDP-10 Homepage
+To: bob.christiansen@ccmail.bsis.com
+Date: Wed, 24 Jan 1996 23:16:38 -0800 (PST)
+
+>      I wish you could post the text of some of the SPRs 
+>      from the old days...they were hilarious...some great flames before 
+>      flames were so named.
+
+I ended up throwing out all the Software Dispatches just before I left
+CSM.  I didn't even save my own SPRs.  I wish I knew what happened to
+our microfiche.  I don't know of anyone that still has the Dispatches.
+
+-- 
+Joe Smith  <jms@inwap.com> or <inwap@best.com>  work phone: (408)922-6220
+CA license plate: "POPJ P,"  36-bits forever! (4 Tymshare PDP-10s still going!)
+Humorous disclaimer: "My Amiga 3000 speaks for me." http://www.inwap.com/
+
+
+
+Article 1554 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: shellx.best.com!news1.best.com!news.texas.net!imci2!newsfeed.internetmci.com!howland.reston.ans.net!ix.netcom.com!netcom.com!bugs
+From: bugs@netcom.com (Mark Hittinger)
+Subject: Re: Anybody save the good SPRs?
+Message-ID: <bugsDLqu67.I61@netcom.com>
+Organization: NETCOM On-line Communication Services (408 261-4700 guest)
+References: <4e7dpa$ofe@shellx.best.com>
+Date: Thu, 25 Jan 1996 15:39:42 GMT
+Lines: 24
+Sender: bugs@netcom17.netcom.com
+
+inwap@shellx.best.com (J.Smith and J.O'Halloran) writes:
+>Anyone still got copies of the TOPS-10 Software Dispatch?
+>Some of the SPRs were real classics. 
+
+Amongst my personal treasures I still have a copy of the "security" SPR 
+collection from the 6.03a-7.01 time frame.  I will try to dig it up and see 
+whats funny.
+
+They never did publish the "loading your own sys:pfh.exe" doesn't set
+the meddle bit bug :-)
+
+Also sorry to hear about JMF.  Back when 7.02 came out he spent a little
+bit of time trying to help me get it to run on the KL10 model A we had.
+(KL1059).  Even though 7.02 wasn't officially supported on the model A
+he was willing to make some suggestions and listen to the problems that
+I was having.  You just don't see that kind of developer commitment these 
+days (except in the free OS'es now).  It got so bad that they eventually 
+would not allow these guys to attend the Decus symposia! :-)
+
+Regards,
+
+Mark Hittinger
+Netcom/Dallas
+bugs@freebsd.netcom.com
+
+
+Article 1569 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sdd.hp.com!usc!chi-news.cic.net!newsfeed.internetmci.com!howland.reston.ans.net!ix.netcom.com!netnews
+From: JCGreen@ix.netcom.com (John C Green Jr)
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-30?
+Date: Sat, 27 Jan 1996 17:34:12 GMT
+Organization: Netcom
+Lines: 51
+Message-ID: <4ednvn$2mm@ixnews2.ix.netcom.com>
+References: <8B9819E.0BBD00003D.uuout@compudata.com> <4ebp82$9l0@nntp4.u.washington.edu>
+NNTP-Posting-Host: ix-sj34-23.ix.netcom.com
+X-NETCOM-Date: Sat Jan 27  9:39:03 AM PST 1996
+
+davidb@ce.washington.edu (David W. Barts) wrote:
+
+>david.razler@compudata.com (DAVID RAZLER) writes:
+
+>>[Startup to design PDP-30, a PDP-10 compatible.]
+
+>You must be referring to XKL, Inc. and the TOED-1.
+<SNIP long description>
+
+More likely he's referring to the SC Group SC-40, a PDP-10
+clone.
+
+However the SC group is not a startup, it's a 30 year old
+small business. Mike Levitt started doing business in
+Cambridge MA as Systems Concepts in about '66 and Stewart
+Nelson soon joined him. They moved the then 4 man company to
+San Francisco CA in '70. They moved to Reno NV in about '91
+and renamed the company the SC Group.
+
+One claim to fame was the SA10 [PDP-10 memory and I/O bus to
+IBM Selector Channel bus converter] which was installed on at
+least 10% of all PDP-10s.
+
+From their Web page:
+    The SC-40 is a very high-performance system. Its CPU
+    can run at an average rate up to 8 times that of the
+    DEC KL10, yet a complete system -- CPU, memory, and
+    I/O channels -- fits in a standard 20-inch cabinet.
+
+The Web site has a much longer description.
+
+Contact information:
+
+Phone:    702-826-7100
+Fax:      702-826-7133
+E-mail:   info@scgroup.com
+Web:      http://www.scgroup.com/
+Address:  The SC Group
+          1575 DeLucchi Lane, Suite 224
+          Reno, NV  89502
+
+[Disclaimer: I was employee 5 of Systems Concepts, the first
+ hired after the move to San Francisco. Although I haven't
+ worked there in over 25 years I'm still friends of the
+ principals.]
+
+- - -     NOTE NEW E-MAIL ADDRESS     - - -
+Internet Marketing and Business Development
+21483 Old Mine Rd             (408)353-1870
+Los Gatos CA 95030    JCGreen@ix.netcom.com
+
+
+
+Article 1566 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sdd.hp.com!usc!chi-news.cic.net!newsfeed.internetmci.com!howland.reston.ans.net!ix.netcom.com!netnews
+From: JCGreen@ix.netcom.com (John C Green Jr)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Working for PDP-10 En
+Date: Sat, 27 Jan 1996 17:34:03 GMT
+Organization: Netcom
+Lines: 27
+Message-ID: <4ednvf$2mm@ixnews2.ix.netcom.com>
+References: <4e4100$svv@zk2nws.zko.dec.com> <4e6q5s$sfg@spectator.cris.com>
+NNTP-Posting-Host: ix-sj34-23.ix.netcom.com
+X-NETCOM-Date: Sat Jan 27  9:38:55 AM PST 1996
+
+Dick Maliska <rmaliska@cris.com> wrote:
+
+>The Bryant Drum was contained within a (Dec) standard 19" rack.
+
+>The Burroughs Disk was contained in a blue container which (as I recall) 
+>was about 4 1/2 or so feet long by about 4 feet high by about 18" thick.
+
+PDP-10 engineering was in 5-5. Building 5 has a loading dock on 5-4.
+Trucks used to bump the building pretty hard. My office was 5-5 Pole
+41A almost directly opposite the loading dock. One day I had both my
+feet up on the legs of my wheeled chair. When a truck hit the building
+moved at least an inch under me.
+
+Anyway before I joined Digital in JUN68 a memo had already been
+written saying that all Burroughs Disks should be aligned with the
+loading dock to prevent head crashes.
+
+Eventually Digital stopped using the loading dock. This eliminated the
+possibility that the 120' x 600' 1905 vintage post and lintel wood
+frame and brick construction building would be pushed into the mill
+pond.
+
+- - -     NOTE NEW E-MAIL ADDRESS     - - -
+Internet Marketing and Business Development
+21483 Old Mine Rd             (408)353-1870
+Los Gatos CA 95030    JCGreen@ix.netcom.com
+
+
+
+Article 1596 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: shellx.best.com!news1.best.com!news.supranet.com!news2.net99.net!news.cais.net!primus.ac.net!imci4!newsfeed.internetmci.com!in1.uu.net!pgh!powell
+From: powell@pgh.nauticom.net (Reed Powell)
+Subject: Re: Working for PDP-10 En
+Message-ID: <DME2CB.LBG@pgh.nauticom.net>
+Date: Wed, 7 Feb 1996 04:40:59 GMT
+References: <4e4100$svv@zk2nws.zko.dec.com> <4e6q5s$sfg@spectator.cris.com> <4edc7u$g0s@zk2nws.zko.dec.com>
+Organization: Nauticom - Internet Access Provider
+X-Newsreader: TIN [version 1.2 PL2]
+Lines: 54
+
+Timely tidbit, discovvered as I was looking for old SPRs for one of the 
+other threads here:  I have the script for Peter Hurley's History of The 
+DEC-10/20 speach which he gave at the fall '84 20th anniversary event.  
+There is a page with the following highlights:
+
+
+(SHOW THE DISK PICTURE)
+
+1) KA-10 RD10 BURROUGHS DISK
+	SINGLE PLATTER - FIXED HEAD DISK
+	TRUCKS HITTING THE BUILDING CAUSED THE HEADS TO CRASH
+	ACTUALLY MEASURED BUILDING MOVEMENT AT SEVERAL INCHES
+		(IE, HUNG PENCIL ON STRING FROM CEILING)
+
+2) GIANT BRYANT
+	A) WE CHOSE DUAL ACTUATOR MODEL
+	B) NEVER RELIABLE
+	C) DIAGNOSTIC COULD WALK IT AROUND THE ROOM
+	D) MADE NICE COFFEE TABLES - GREAT SPIRAL ETCHES
+
+
+
+another page a few slides later (this is unrelated to the topic at hand) 
+had the following bit of humor:
+
+
+EVOLUTION OF A NAME
+
+1) VIROS OR VIRUS (JOHN LENG)
+2) MANAGEMENT SAYS TO CHANGE THE NAME TO TRICK THR RUMOR MILL
+3) SNARK - FROM A POEM BY LEWIS G. CARROL
+4) KRANS - WE DECIDED TO ENCRYPT "SNARK"
+           UNFORTUNATELY, IN SWEDISH KRANS MEANS FUNERAL WREATH
+5) SNARK - SO BACK TO SNARK
+6) TOPS-20 - MARKETING DEMONSTRATES ITS IMAGINATION
+
+-reed
+
+
+
+Alan H. Martin (amartin@denton.zko.dec.com) wrote:
+: In article <4e6q5s$sfg@spectator.cris.com> Dick Maliska <rmaliska@cris.com> writes:
+: >The Bryant Drum was contained within a (Dec) standard 19" rack.
+: >
+: >The Burroughs Disk was contained in a blue container which (as I recall) 
+: >was about 4 1/2 or so feet long by about 4 feet high by about 18" thick.
+
+: Well, that settles that.  The Stevens "faha" stood alone in a corner.  By the
+: time I came on the scene it was surrounded by 4 posts holding theater
+: crowd-control ropes to keep people from bumping into it, although I don't
+: remember the tale about what prompted *that* innovation.
+: 				/AHM/THX
+: -- 
+: Alan Howard Martin				AMartin@TLE.ENet.DEC.Com
+
+
+Article 1598 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: shellx.best.com!news1.best.com!sdd.hp.com!col.hp.com!usenet.eel.ufl.edu!gatech!newsfeed.internetmci.com!btnet!news.compulink.co.uk!cix.compulink.co.uk!usenet
+From: brider@cix.compulink.co.uk ("Chris Mitchell")
+Subject: Re: Working for PDP-10 En
+Message-ID: <DMEKCs.6J5@cix.compulink.co.uk>
+Organization: Compulink Information eXchange
+References: <DME2CB.LBG@pgh.nauticom.net>
+Date: Wed, 7 Feb 1996 11:10:03 GMT
+X-News-Software: Ameol
+Lines: 30
+
+My memories of the Burroughs disk are as follows:-
+
+At Hatfield Polytechnic, in the UK, an RC10 was delivered with the 
+original KA10 and the instructions said that it should be protected and 
+mounted facing North-South, or East-West (I wish I could remember 
+which!). So, it was stood in the corner of the room, out of line with the 
+other cabinets and we guessed that it must have something to do with the 
+large, vertical magnetic disk interacting with the Earth's magnetic field 
+(!!). A strong fence was built around it. 
+Later I heard the story that the development lab in Maynard was on floor 
+5 of building 5 and, if you know the layout of the Mill, you will know 
+that building 5 was next to a cliff and there was an entrance and loading 
+bay from the top of this cliff directly into floor 5. Apparently, a truck 
+reversed up to the loading bay and hit the building, causing the wooden 
+structure to shake and all the heads on the RC10's in the lab touched the 
+disks! From then on all RC10's were oriented so that they were 
+perpendicular to the loading bay and these instructions found their way 
+to the UK where they were applied to the Hatfield system!
+
+In a similar vein, the instructions that were sent to Hatfield 
+Polytechnic for dealing with a system crash at this time (1970) was that 
+we should take a dump of memory on a Dectape and leave it on Tony Wach's 
+desk....
+
+Is it true that Jim Flemming and Tony Wachs are no longer with us? I 
+read, recently, that Peter Conklin has died, and David Stone passed away 
+a few years ago. I hope there isn't a curse on Dec-10 people....
+
+By, the way, I am Chris Mitchell and I worked on 10's and 20' in the UK 
+and Europe for DEC in the 70's and 80's.
+
+
+Article 1600 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!newsfeed.internetmci.com!mr.net!winternet.com!news.minn.net!network.com!news
+From: wex@bytex.network.com (Paul M. Wexelblat)
+Subject: Re: Working for PDP-10 En
+X-Nntp-Posting-Host: 129.191.236.14
+Message-ID: <DMJ1IM.MuJ@network.com>
+Sender: news@network.com
+Organization: NSC/BYTEX/STK
+X-Newsreader: News Xpress Version 1.0 Beta #2
+References: <DME2CB.LBG@pgh.nauticom.net> <DMEKCs.6J5@cix.compulink.co.uk>
+Date: Fri, 9 Feb 1996 21:51:46 GMT
+Lines: 57
+
+brider@cix.compulink.co.uk ("Chris Mitchell") wrote:
+>Newsgroups: alt.sys.pdp10
+>Path: network.com!msc.edu!news.sprintlink.net!tank.news.pipex.net!pipex!sunsite.doc.ic.ac.uk!lyra.csx.cam.ac.uk!peer-news.britain.eu.net!demon!btnet!news.compulink.co.uk!cix.compulink.co.uk!usenet
+>From: brider@cix.compulink.co.uk ("Chris Mitchell")
+>Subject: Re: Working for PDP-10 En
+>Message-ID: <DMEKCs.6J5@cix.compulink.co.uk>
+>Organization: Compulink Information eXchange
+>References: <DME2CB.LBG@pgh.nauticom.net>
+>Date: Wed, 7 Feb 1996 11:10:03 GMT
+>X-News-Software: Ameol
+>Lines: 30
+>
+ . .
+
+>
+>Is it true that Jim Flemming and Tony Wachs are no longer with us? I
+>read, recently, that Peter Conklin has died, and David Stone passed away
+>a few years ago. I hope there isn't a curse on Dec-10 people....
+>
+>By, the way, I am Chris Mitchell and I worked on 10's and 20' in the UK
+>and Europe for DEC in the 70's and 80's.
+
+I certainly hope there's no curse on us :->
+
+Of the other few -10 monitor group folks I know or know of...
+Ernie Socci is still around (worked in the CMU scheduler)
+Don Lewine it too
+Bob Clements too
+I worked on SCNSER and the IPCF stuff for a few years and put
+the ANF-10 software into the monitor. (I also have/had some code in Tenex
+(at BBN) and TOPS-20 at DEC)
+
+I find I have some obscure -10 stuff from Ed Services
+(A couple of 10 or 20 Monitor internals courses and
+a -10 networks course.)
+Is there a definitive location that wants to save this stuff?
+
+(I also have the Digital Song book
+Featuring such hits as:
+I'm a PDP-10 Wizard (tune: Yankee Doodle Dandy)
+Crash's song (for Donaleen)
+Build-Sell-Fix (wiffenpoof - the Support services Anthem)
+and many more :->
+
+Oh Yes, Ralph Alter is on the net too, (PDP-6 TECO)
+
+I'm Paul Wexelblat
+(the pmw at the top of those listings from 5.02 to 7.01)
+
+{More core available, but not for you)
+
+	...wex
+wex@cs.uml.edu
+
+
+--
+	...wex
+
+
+Article 1607 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!newsfeed.internetmci.com!howland.reston.ans.net!ix.netcom.com!netcom.com!alderson
+From: alderson@netcom.com (Richard M. Alderson III)
+Subject: Re: Working for PDP-10 En
+In-Reply-To: stevens_j@eisner.decus.org's message of Wed, 14 Feb 1996 21:49:32 GMT
+Message-ID: <aldersonDMsnx7.5vM@netcom.com>
+Reply-To: alderson@netcom.com
+Fcc: /u9/alderson/postings
+Organization: NETCOM On-line Communication Services (408 261-4700 guest)
+References: <DME2CB.LBG@pgh.nauticom.net> <DMEKCs.6J5@cix.compulink.co.uk>
+	<DMJ1IM.MuJ@network.com> <1996Feb14.164932.1@eisner.decus.org>
+Date: Thu, 15 Feb 1996 01:53:31 GMT
+Lines: 28
+Sender: alderson@netcom16.netcom.com
+
+In article <1996Feb14.164932.1@eisner.decus.org> stevens_j@eisner.decus.org
+(Jack H. Stevens) writes:
+
+>In article <DMJ1IM.MuJ@network.com>, wex@bytex.network.com (Paul M. Wexelblat)
+> writes:
+
+>> I find I have some obscure -10 stuff from Ed Services
+>> (A couple of 10 or 20 Monitor internals courses and
+>> a -10 networks course.)
+>> Is there a definitive location that wants to save this stuff?
+
+>How about trying The Computer Museum, in Boston? (also at http://www.tcm.org)
+
+Bad idea.  The Computer Museum has buried any interesting (read "36-bit")
+hardware.  They were given, for example, the Stanford Artificial Intelligence
+Laboratory PDP-6 in 1984, after it was shown at the Fall DECUS Symposia (for
+the 20th Anniversary of 36-Bit Computing).
+
+It has never been made available for public view; as far as anyone can tell, it
+has disappeared from the face of the earth.
+
+So even if they expressed interest, I'd be highly dubious about the chances of
+anything like this surviving very long at the Computer Museum.
+-- 
+Rich Alderson   You know the sort of thing that you can find in any dictionary
+                of a strange language, and which so excites the amateur philo-
+                logists, itching to derive one tongue from another that they
+                know better: a word that is nearly the same in form and meaning
+                as the corresponding word in English, or Latin, or Hebrew, or
+                what not.
+                                                --J. R. R. Tolkien,
+alderson@netcom.com                               _The Notion Club Papers_
+
+
+Article 1621 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!newsfeed.internetmci.com!news.wwa.com!news
+From: jeverett@wwa.com (John Everett)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Nostalgia--PDP10 Reference Handbook
+Date: 20 Feb 1996 16:36:38 GMT
+Organization: WorldWide Access (tm) - Chicagoland Internet Services (http://www.wwa.com)
+Lines: 29
+Message-ID: <4gctam$d7i@kirin.wwa.com>
+References: <4gcm7b$o0v@newsbf02.news.aol.com>
+NNTP-Posting-Host: pool1-039.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.7
+
+In article <4gcm7b$o0v@newsbf02.news.aol.com>, jmfbah@aol.com says...
+>
+>I was going through some of Jim's stuff and ran across this manual (the
+>second edition...not the phone book).  Remember the following?  LOADER,
+>SRCCOM, BINCOM, TENDMP, FUDGE2, and GLOB.
+>
+>/BAH
+
+Yup Barb, I remember all of them. Reminds me of a story. Jim and I (along 
+with Kerry Bensman) were working on a thing called the Real-Time Monitor back 
+in 1969 (I think). There was a recession on and DEC had just gone a full 
+quarter without delivering a single PDP-10. We got a contract to build a 
+special configuration for ORELA (Oak Ridge Electron Linear Accelerator?), and 
+Jim got pulled to work on that project. At that time LOADER was the only way 
+to link the monitor, but it required more total core than it took to just run 
+the system; so DEC had loaned additional boxes of core to several sites so 
+they could maintain their systems. Remember, this was before virtual memory. 
+Someone figured we could pick up some revenue by providing a way to load the 
+monitor without the additional memory. If we got around this problem we could 
+ask those sites to give back the loaner memory; the assumption being that 
+rather than give it up they would pay for it. So I got pulled from the 
+Real-Time Monitor project to make LOADER work with less core. I turned LOADER 
+into a kludge called MONLOD, which built the load image on disk instead of in 
+core. Performance sucked, but it did the trick. As I recall, generated 
+several hundred thousand dollars in incremental revenue at a time it was 
+sorely needed. The Real-Time Monitor never did get built. 
+-- 
+jeverett@wwa.com (John V. Everett)
+
+
+
+Article 1625 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sdd.hp.com!spool.mu.edu!news.sol.net!daily-planet.execpc.com!homer.alpha.net!news.jersey.net!news.win.bright.net!news.bright.net!usenet.eel.ufl.edu!newsfeed.internetmci.com!news.sprintlink.net!news1.sunbelt.net!nntp.develop.bsis.com!usenet
+From: Bob Christiansen <bob.christiansen@bsis.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Nostalgia--PDP10 Reference Handbook
+Date: Wed, 21 Feb 1996 10:48:47 -0500
+Organization: Broadway & Seymour
+Lines: 13
+Message-ID: <312B3EDF.D0E@bsis.com>
+References: <4gcm7b$o0v@newsbf02.news.aol.com>
+NNTP-Posting-Host: 204.116.23.64
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 2.0 (Win95; I)
+
+In going through my archives, I found the course materials from my 
+original PDP-10 monitor and engineering course in 1970. It includes the 
+Program Logic Manual, which is a compilation of the 'Ten Time-Sharing 
+Internal Memoranda' issued in 1969, complete with hand-drawn logic 
+flow-charts drawn with a warped template. It also has a copy of Tom 
+Hastings' MONITOR.OPR (Monitor Assembly & Load Instructions)dated 9 JAN 
+1970, still with my incredulous annotations.
+
+The purple ink from the spirit copier they were produced on is fading 
+fast. I may need to store them in nitrogen? Perhaps in the Library of 
+Congress?
+
+Bob
+
+
+Article 1624 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!enews.sgi.com!decwrl!pa.dec.com!nntpd.lkg.dec.com!lead.zk3.dec.com!zk2nws.zko.dec.com!denton.zko.dec.com!amartin
+From: amartin@denton.zko.dec.com (Alan H. Martin)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Working for PDP-10 En
+Date: 21 Feb 1996 13:12:21 GMT
+Organization: DEC
+Lines: 27
+Message-ID: <4gf5nl$kun@zk2nws.zko.dec.com>
+References: <DMJ1IM.MuJ@network.com> <1996Feb14.164932.1@eisner.decus.org> <aldersonDMsnx7.5vM@netcom.com>
+NNTP-Posting-Host: denton.zko.dec.com
+
+In article <aldersonDMsnx7.5vM@netcom.com> alderson@netcom.com writes:
+>In article <1996Feb14.164932.1@eisner.decus.org> stevens_j@eisner.decus.org
+>(Jack H. Stevens) writes:
+...
+>>How about trying The Computer Museum, in Boston? (also at http://www.tcm.org)
+>
+>Bad idea.  The Computer Museum has buried any interesting (read "36-bit")
+>hardware.  They were given, for example, the Stanford Artificial Intelligence
+>Laboratory PDP-6 in 1984, after it was shown at the Fall DECUS Symposia (for
+>the 20th Anniversary of 36-Bit Computing).
+>
+>It has never been made available for public view; as far as anyone can tell,
+>it has disappeared from the face of the earth.
+
+I'm hazy on dates, but if the 6 in question was donated before the museum's
+move from MR2 to Boston, you ain't likely to see it in one piece ever again.
+They had a garage sale of unwanted items in the MR1 cafeteria one Saturday
+before the move, and were selling a PDP-6 module-by-module.  An S6205K
+"Arithmetic Registers" module (1-bit slice of AR/MQ/MB/<light buffer>) went
+for $7, autographed by Gordon Bell.
+
+I asked him whether read-in mode was implemented as a diode array encoding
+instructions.  He said no, and kindly recommended the 6205 as a particularly
+central module to have, instead.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@TLE.ENet.DEC.Com
+
+
+Article 1629 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: shellx.best.com!news1.best.com!sgigate.sgi.com!nntp-hub2.barrnet.net!newsfeed.internetmci.com!howland.reston.ans.net!ix.netcom.com!netcom.com!alderson
+From: alderson@netcom.com (Richard M. Alderson III)
+Subject: Re: Working for PDP-10 En
+In-Reply-To: ard12@eng.cam.ac.uk's message of 22 Feb 1996 13:24:01 GMT
+Message-ID: <aldersonDn7I4L.G77@netcom.com>
+Reply-To: alderson@netcom.com
+Fcc: /u9/alderson/postings
+Organization: NETCOM On-line Communication Services (408 261-4700 guest)
+References: <DMJ1IM.MuJ@network.com> <1996Feb14.164932.1@eisner.decus.org>
+	<aldersonDMsnx7.5vM@netcom.com> <4gf5nl$kun@zk2nws.zko.dec.com>
+	<4ghqph$kk4@lyra.csx.cam.ac.uk>
+Date: Fri, 23 Feb 1996 02:12:21 GMT
+Lines: 13
+Sender: alderson@netcom15.netcom.com
+
+In article <4ghqph$kk4@lyra.csx.cam.ac.uk> ard12@eng.cam.ac.uk (A.R. Duell)
+writes:
+
+>... a machine as rare (I guess) as a PDP6.
+
+It was indeed rare:  Only 23 were ever produced before KO shut down the product
+line.  As far as I know, the Stanford AI Lab -6 was the only one still around
+in 1984...
+-- 
+Rich Alderson   You know the sort of thing that you can find in any dictionary
+                of a strange language, and which so excites the amateur philo-
+                logists, itching to derive one tongue from another that they
+                know better: a word that is nearly the same in form and meaning
+                as the corresponding word in English, or Latin, or Hebrew, or
+                what not.
+                                                --J. R. R. Tolkien,
+alderson@netcom.com                               _The Notion Club Papers_
+
+
+Article 1630 of alt.sys.pdp10:
+Path: shellx.best.com!news1.best.com!news.exodus.net!imci4!newsfeed.internetmci.com!in2.uu.net!nwnews.wa.com!news.halcyon.com!Ikkoku-Kan.Panda.COM!mrc
+From: Mark Crispin <mrc@Panda.COM>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Working for PDP-10 En
+Date: Thu, 22 Feb 1996 13:02:38 -0800
+Organization: Pandamonium Reigns
+Lines: 48
+Message-ID: <Pine.NXT.3.92.960222125042.7442A-100000@Ikkoku-Kan.Panda.COM>
+References: <DMJ1IM.MuJ@network.com> <1996Feb14.164932.1@eisner.decus.org> <aldersonDMsnx7.5vM@netcom.com> <4gf5nl$kun@zk2nws.zko.dec.com>
+NNTP-Posting-Host: panda.wa.com
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+In-Reply-To: <4gf5nl$kun@zk2nws.zko.dec.com>
+
+On 21 Feb 1996, Alan H. Martin wrote:
+> I'm hazy on dates, but if the 6 in question was donated before the museum's
+> move from MR2 to Boston, you ain't likely to see it in one piece ever again.
+> They had a garage sale of unwanted items in the MR1 cafeteria one Saturday
+> before the move, and were selling a PDP-6 module-by-module.  An S6205K
+> "Arithmetic Registers" module (1-bit slice of AR/MQ/MB/<light buffer>) went
+> for $7, autographed by Gordon Bell.
+
+ARRRRRRRRRRRRRRRRRRRRRRRRRRRGH!  They killed our 6!!!!
+
+That PDP-6 was in production use at Stanford up until 1980.  To the best
+of my knowledge it was the last functioning PDP-6 in the world.  It was
+the third CPU in a tri-processor KL/KA/PDP-6 system.  The main function of
+the PDP-6 system was to control the DACs and Samson synthesizer for the
+Music group.  It had this huge memory box for its 64K of memory.  I
+remember that its OS was called Mule.
+
+When SAIL moved from the DC Power building to Margaret Jacks Hall, the
+Music group and the PDP-6 stayed.  However, the PDP-6 was retired and they
+bought a Foonly to control the stuff.  It languished there until 1984,
+when it was donated to the Computer Museum during the DECUS 20th
+Anniversary ceremony.  I remember that one of its register bits was stuck,
+but the hackers present were able to concoct a neat light show program
+that worked around the stuck bit.
+
+It is a terrible, horrible tragedy to hear that DEC's infamous hatred of
+the PDP-6 (reportedly, when a PDP-6 was traded in for a KA, field service
+would crack the PDP-6's backplane to make sure it was never used again)
+came to the extent of destroying the final instance of one, and a museum
+piece at that.
+
+The 6205 board is a historic (hysteric?) board, and very nicely represents
+the PDP-6.  It's even more bizarre than the KA's B138 module.  Bell wrote
+that the 6205 was the reason why DEC didn't use large boards for many
+years afterwards; it was a nightmare to service.  Perhaps this is why DEC
+wanted so much to destroy all PDP-6s...  ;-(
+
+I have a 6205 from Berkeley's PDP-6, as well as a couple dozen B138s from
+SAIL's KA.  There is no way that I'll part with my 6205, but I'll be happy
+to let go of some B138s together with photocopies of the prints.  Although
+much more common than 6205s, the B138 has its own interesting history.
+Make an offer.  ;-)
+
+-- Mark --
+
+DoD #0105, R90/6 pilot  FAX: (206) 842-0758  ICBM: N 47.36'24" W 122.34'08"
+TOPS-20: A Great Improvement Over Its Successors
+
+
+
+Article 1660 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!swrinde!newsfeed.internetmci.com!chi-news.cic.net!nntp.coast.net!howland.reston.ans.net!ix.netcom.com!netnews
+From: JCGreen@ix.netcom.com (John C Green Jr)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Working for PDP-10 En
+Date: Wed, 28 Feb 1996 08:51:30 GMT
+Organization: Netcom
+Lines: 159
+Message-ID: <4h150k$gf2@ixnews5.ix.netcom.com>
+References: <DMJ1IM.MuJ@network.com> <1996Feb14.164932.1@eisner.decus.org> <aldersonDMsnx7.5vM@netcom.com> <4gf5nl$kun@zk2nws.zko.dec.com> <4ghqph$kk4@lyra.csx.cam.ac.uk> <awolf-2302960137560001@slip011.loa.com> <4gokic$qgb@caesar.ultra.net> <4gsb13$p1o@i <4gsvqj$af7@lyra.csx.cam.ac.uk>
+NNTP-Posting-Host: sjx-ca13-22.ix.netcom.com
+X-NETCOM-Date: Wed Feb 28 12:50:28 AM PST 1996
+X-Newsreader: Forte Free Agent 1.0.82
+
+ard12@eng.cam.ac.uk (A.R. Duell) wrote:
+
+>JCGreen@ix.netcom.com (John C Green Jr) writes:
+>
+>>It is impractical to keep old equipment working beyond its
+>>original design life. If we had a working museum with
+>>George Washington's
+
+>Absolutely false. And I speak from experience. Last week I
+>restored a 1965 (the same sort of vintage as the machines
+>being discussed here) Hewlett-Packard frequency counter.
+>That instrument will now be pressed into service in my
+>workshop. All the components in it, apart from things 
+>like case panels that never wear out, are available with no
+>problems. I suspect suitable spares are available for PDP6
+>parts.
+
+The problem is with skilled technicians, not parts. The PDP-6
+was a dog. It took the entire design team (logic designers
+Gordon Bell and Alan Kotok and circuit designers Joe Sutton
+and Pat Sullivan (circuit designers don't get the respect of
+logic designers, but that's another story)) a year on the
+road to make them work in the first place. After they settled
+down DEC hired superior people (such as Bob Clements, an MIT
+degreed Electrical Engineer, who later was the project
+engineer of the KA10) to maintain them. Bob once spent 8
+hours finding a marginal 6205 module in the machine at
+Brookhaven National Labs.
+
+People of that talent will not make a career of keeping a
+PDP-6 at TCM operational.
+
+In the case of your frequency counter we are talking about:
+
+* a trivial device manufactured by a company known for its
+  conservative design 
+* built in large numbers
+* well documented with a theory of operation manual
+* being restored by an experienced engineer who is not being
+  paid for his time
+
+The PDP-6 had inadequate circuit design:
+
+* transistors stacked as high as 5 deep i.e. 5 Vce drops to
+  ground for a grounded signal
+* the legendary 6205 card
+* the ludicrous connectors on the handle end of the 6205
+* AC coupling of the carry bit of the adder
+
+plus:
+
+* every wire in the machine hand soldered on both ends even
+  though wire-wrap had been in general use for several years
+  at other companies
+* DEC was a startup with under 200 people when the project
+  was started; they were naive and didn't understand the
+  difficulty of the project they were undertaking
+
+The PDP-6 was a disaster. If Digital had taken orders for
+50 they would have been driven bankrupt. TCM would be unable
+to maintain a PDP-6 even if they wanted to.
+
+Perhaps I should have said:
+    It is impractical to keep obscure, poorly designed,
+    complicated, old equipment working beyond its
+    original design life.
+
+>Think of all those wonderful old steam engines that are run
+>one weekend a month (or even more frequently). They're over
+>100 years old in a lot of cases, but they are still
+>maintained. OK, so things like bearings are not original any
+>more, but surely having the machine working is worth more 
+>than that.
+
+A steam engine is a piece of cake to keep working compared to
+a PDP-6. Most operational steam engines are kept working by rail
+fans who volunteer their time.
+
+Some are kept working by profit making companies. In an
+extreme example of profitability the Silverton--Durango line
+pulls 10 cars with perhaps 400 people paying about $30 each
+to ride about 8 hours round trip all Summer long. 400 * 30 *
+120 = $1.44 million. If I could figure out how to get that
+kind of revenue from having a PDP-6 operational I'd try hard
+to find someone to make a career of keeping it up. Most
+tourist railroads don't make money, close, and sell their
+rolling stock; most tourist railroads run mostly diesels.
+
+Out here in San Jose we have 5 beautifully restored trolleys
+that operate Summer weekends. They were some of a large
+number used as a shanty town in the depression and abandoned
+ever since. They were restored by trolley fans as a labor of
+love.
+
+>>hatchet being used daily to quarter cherry logs we'd be on
+>>our 10th head and 50th handle by now. Would it still be
+>>George Washington's hatchet?
+
+>Firstly, some computer parts do not wear out, and are not
+>going to need to be replaced. In that category are circuit
+>boards, connectors (unless they're continually being plugged
+>in and unplugged), case parts, chassis parts, probably
+>resistors, etc. So you will end up with a substantially 
+>original machine. 
+
+>The components that are removed can be kept, labeled, and
+>stored either inside the machine, or with the documentation.
+>I've done that when restoring a rare machine on many
+>occasions. Then you can go back to the 
+>original system if you want to (but it won't work).
+
+Again the problem is the lack of skilled technicians, not
+parts.
+
+>Secondly, which of these would you prefer - and remember,
+>we're talking about the last known example of a machine, and
+>it's probably been repaired over its working life so that
+>the components are not all original : 
+
+>a) The machine as delivered to the museum (i.e. as it last
+>   ran, probably with a fault that caused it to be finally
+>   switched off), probably with some non-original components
+>   put there in normal maintenance. It is never 
+>   turned on, and probably wouldn't work if it was.
+>
+>b) The machine as delivered to the museum, but with faulty
+>   components replaced by identical, but more modern ones.
+>   The people doing the restoration learn how the machine
+>   operates, and carry this knowledge onwards to the next
+>   generation. The machine is either run daily, or on 
+>   special open days. 
+>
+>c) The machine is dismantled, and the parts are sold to
+>   members of the public who want a piece of 'computer
+>   history' on their bookshelves. Most of these people
+>   wouldn't know what a PDP6 was if it lept up and bit them
+>   :-)
+
+Netcom must have missed the post making the original claim
+that TCM is selling parts from a(n almost) complete CDC-6600,
+thought to be the last surviving example. If it's true then
+I'd be amazed, saddened, and outraged. The 6600 was a
+masterpiece.
+
+>>I believe the BCM does an excellent job of preservation.
+>>It does a [poor job of showing its historical collection].
+>
+>You have a right to your opinion, but I disagree with it. 
+>
+>I will never donate any of my collection to the BCM or any
+>affiliated organisation.
+
+We agree to disagree.
+
+- - -     NOTE NEW E-MAIL ADDRESS     - - -
+Internet Marketing and Business Development
+21483 Old Mine Rd             (408)353-1870
+Los Gatos CA 95030    JCGreen@ix.netcom.com
+
+
+
+Article 1663 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!imci3!imci4!newsfeed.internetmci.com!news.wwa.com!news
+From: jeverett@wwa.com (John Everett)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Working for PDP-10 En
+Date: 28 Feb 1996 17:07:02 GMT
+Organization: WorldWide Access (tm) - Chicagoland Internet Services (http://www.wwa.com)
+Lines: 33
+Message-ID: <4h223m$8eh@kirin.wwa.com>
+References: <DMJ1IM.MuJ@network.com> <1996Feb14.164932.1@eisner.decus.org> <aldersonDMsnx7.5vM@netcom.com> <4gf5nl$kun@zk2nws.zko.dec.com> <4ghqph$kk4@lyra.csx.cam.ac.uk> <awolf-2302960137560001@slip011.loa.com> <4gokic$qgb@caesar.ultra.net> <4gsb13$p1o@i <4gsvqj$af7@lyra.csx.cam.ac.uk> <4h150k$gf2@ixnews5.ix.netcom.com>
+NNTP-Posting-Host: pool2-057.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.7
+
+In article <4h150k$gf2@ixnews5.ix.netcom.com>, JCGreen@ix.netcom.com says...
+>
+
+>The problem is with skilled technicians, not parts. The PDP-6
+>was a dog. It took the entire design team (logic designers
+>Gordon Bell and Alan Kotok and circuit designers Joe Sutton
+>and Pat Sullivan (circuit designers don't get the respect of
+>logic designers, but that's another story)) a year on the
+>road to make them work in the first place. After they settled
+>down DEC hired superior people (such as Bob Clements, an MIT
+>degreed Electrical Engineer, who later was the project
+>engineer of the KA10) to maintain them. Bob once spent 8
+>hours finding a marginal 6205 module in the machine at
+>Brookhaven National Labs.
+
+Let me back up what John says. I may be one of the very few people who 
+monitor this group who actually worked on a PDP-6, in fact on the development 
+-6 in Maynard; first floor, building 12 (I think that was the building 
+number), right across the hall from KO's office. With all the resources we 
+had at our disposal, it still was everything DEC could do to keep the damn 
+thing up. I think for a period of a couple of years it was Leo Landry's 
+career to keep the thing running. He had backup from people like Kotok and 
+Clements (Gordon was by this time at CMU), and Dave Gross, Tom Eggars, etc. 
+Still the thing crashed multiple times per day. Granted that many of the 
+outages were software related, particularly while we were developing the 
+swapper, but enough were hardware failures to give some indication of the 
+magnitude of the projected effort to keep one functional. While it might be 
+nice from a nostalgic point of view to see a real PDP-6 running, I have to 
+reluctantly agree it would be somewhat impractical.
+
+-- 
+jeverett@wwa.com (John V. Everett)
+
+
+
+Article 1646 of alt.sys.pdp10:
+Path: nntp1.best.com!shellx.best.com!news1.best.com!sgigate.sgi.com!swrinde!newsfeed.internetmci.com!chi-news.cic.net!nntp.coast.net!howland.reston.ans.net!ix.netcom.com!netnews
+From: JCGreen@ix.netcom.com (John C Green Jr)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Computer Museum
+Date: Mon, 26 Feb 1996 13:33:26 GMT
+Organization: Netcom
+Lines: 40
+Message-ID: <4gscok$9ls@cloner3.netcom.com>
+References: <D2150039.lb0j7n@udwarf.tymnet.com>
+NNTP-Posting-Host: sjx-ca30-02.ix.netcom.com
+X-NETCOM-Date: Mon Feb 26  5:32:04 AM PST 1996
+X-Newsreader: Forte Free Agent 1.0.82
+
+carl@1unique.com (Carl Baltrunas & Cherie Marinelli 1.6v2) wrote:
+
+>In article <8BB550B.0BBD000076.uuout@compudata.com> (alt.sys.pdp10),
+>david.razler@compudata.com (DAVID RAZLER) writes:
+>> AR>awolf@loa.com (Keith Pepin/AmigaWolf/VAXwolf/DECwolf) writes:
+>> 
+<SNIP>
+>> 
+
+>Well, least time I was in Boston and visited the Museum, I was rushed through
+>it, but I can certainly say that I wasn't even tempted to bother going back
+>to see what I missed.
+
+I was very disappointed the last time I was there too. I preferred it when the
+PDP-1 (with Spacewar), CDC-6600, Illicac IV, and SAGE were on display.
+
+>The San Francisco Exploritorium has more interesting COMPUTER stuff, and it
+>is a hands-on place with mostly science stuff and not computer stuff.
+
+>Maybe it would be better to cultivate the Smithsonian as a place to donate
+>a few boxes to in order to see them preserved.  Even if you don't see them
+>that often, you at least know that they won't be cut up and sold as trinkets.
+
+The BCM has an excellent historical collection. They do a lousy job of
+displaying it. As has been reported the San Jose Mercury News had a recent
+article claiming the BCM was searching for space in Silicon Valley to display
+its historical collection. I'll be in line on opening day.
+
+>Someone there should be easily convinced that this is a treasure of history.
+>At least in the computer field.  Like a Sigma 7, an SDS 930 or 940,  PDP-6,
+>KL-10, etc... ome of the original timesharing machines.
+
+The original timesharing machines were MIT (modified 7094), BB&N (PDP-1)
+and Rand Corporation (PDP-1). The first vendor supplied timesharing was
+much later--1964, Digital PDP-6.
+- - -     NOTE NEW E-MAIL ADDRESS     - - -
+Internet Marketing and Business Development
+21483 Old Mine Rd             (408)353-1870
+Los Gatos CA 95030    JCGreen@ix.netcom.com
+
+
+
+Article 1668 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!imci3!imci4!newsfeed.internetmci.com!howland.reston.ans.net!ix.netcom.com!netcom.com!pfarrell
+From: pfarrell@netcom.com (Pat Farrell)
+Subject: Re: Working for PDP-10 En
+Message-ID: <pfarrellDnJo01.22s@netcom.com>
+Organization: Netcom Online Communications Services (408-241-9760 login: guest)
+References: <4gsvqj$af7@lyra.csx.cam.ac.uk> <4h150k$gf2@ixnews5.ix.netcom.com> <4h223m$8eh@kirin.wwa.com>
+Date: Thu, 29 Feb 1996 15:50:25 GMT
+Lines: 34
+Sender: pfarrell@netcom3.netcom.com
+
+In article <4h223m$8eh@kirin.wwa.com> jeverett@wwa.com (John Everett) writes:
+>In article <4h150k$gf2@ixnews5.ix.netcom.com>, JCGreen@ix.netcom.com says...
+>>The problem is with skilled technicians, not parts. The PDP-6
+>>was a dog. 
+>                                      With all the resources we 
+>had at our disposal, it still was everything DEC could do to keep the damn 
+>thing up. 
+
+
+While I never worked on the ancient iron, I started on a KA-1040.
+
+I clearly remember being told that the KA10 was designed 
+to replace the PDP-6 as a maintenance redesign,
+not for performance. It wasn't clear that the KA-10 was any faster
+at execution, and it duplicated the 6's design with only a small number of 
+new instructions or features.
+
+My understanding was that the KA-10 was designed as a PDP-6 that was
+practical. Cheaper to build and much cheaper to run and keep up.
+
+No one who ever even looked at a KA or even KL backplane would expect all
+that wirewrap to work (1) for a long time or (2) if you _ever_ moved it.
+
+BTW, I was also told by DEC sources at the time of the KL's announcement
+that the cost of the PDP-11/40 front end was less than the cost to buy
+the switches and wire them on an KI. Since a KL would have required
+lots more than the KI, it was much cheaper to the the 11. Too bad, I still like
+blinking lights.
+
+Pat
+
+Pat Farrell      grad student        http://www.isse.gmu.edu/students/pfarrell
+Infor. Systems and Software Engineering, George Mason University, Fairfax, VA
+PGP key available via finger or request           #include standard.disclaimer
+
+
+Article 1674 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!news.exodus.net!imci4!newsfeed.internetmci.com!howland.reston.ans.net!ix.netcom.com!netnews
+From: JCGreen@ix.netcom.com (John C Green Jr)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Working for PDP-10 En
+Date: Fri, 01 Mar 1996 04:10:52 GMT
+Organization: Netcom
+Lines: 145
+Message-ID: <4h5tao$9i1@cloner4.netcom.com>
+References: <DMJ1IM.MuJ@network.com> <1996Feb14.164932.1@eisner.decus.org> <aldersonDMsnx7.5vM@netcom.com> <4gf5nl$kun@zk2nws.zko.dec.com> <4ghqph$kk4@lyra.csx.cam.ac.uk> <awolf-2302960137560001@slip011.loa.com> <4gokic$qgb@caesar.ultra.net> <4gsb13$p1o@i <4gsvqj$af7@lyra.csx.cam.ac.uk> <4h150k$gf2@ixnews5.ix.netcom.com> <4h4uef$qjr@lyra.csx.cam.ac.uk>
+NNTP-Posting-Host: sjx-ca12-23.ix.netcom.com
+X-NETCOM-Date: Thu Feb 29  8:10:00 PM PST 1996
+X-Newsreader: Forte Free Agent 1.0.82
+
+ard12@eng.cam.ac.uk (A.R. Duell) [who incorrectly attributed
+this to me JCG] writes:
+
+>Firstly, some good news that hopefully will let us get a
+>good night's sleep again.
+
+>I have been informed in private e-mail that the Boston
+>Computer Museum still has an intact PDP6 and an intact
+>CDC6600 (serial number 1, I believe!). Thus a lot of the
+>earlier comments on what the computer museum was doing are
+>quite simply incorrect. 
+>
+>[Discussions on preservation techniques and whether machines
+> can be kept running should continue, but I think we can all
+> stop flaming the BCM.]
+
+>JCGreen@ix.netcom.com (John C Green Jr) [this is where my
+>stuff really starts JCG] writes:
+
+>>engineer of the KA10) to maintain them. Bob once spent 8
+>>hours finding a marginal 6205 module in the machine at
+>>Brookhaven National Labs.
+>
+>One thing that helps is that the available test equipment has
+>improved massively since the days of the PDP-6. Digital
+>storage 'scopes are relatively common these days, and are very
+>useful for tracing timing problems in older machines. Remember
+>that the first logic analyser came out in about 1972.
+
+PDP-6 was so sensitive (putting a scope probe on a pin could
+frequently make a problem go away) that Alan Kotok seriously
+considered issuing an ECO to add a 1" twisted-pair to nowhere
+on a pin pair as a TINY capacitor to simulate a scope probe.
+
+>[Suggests volunteers could keep PDP-6 up.]
+
+Read jeverett@wwa.com (John Everett) <4h223m$8eh@kirin.wwa.com>
+post in this thread to get another opinion of this possibility.
+
+>[Some volunteers are VERY good.]
+
+>>[problems included ...]
+>>* the legendary 6205 card
+>
+>Could you enlighten me on this, please.
+
+Mechanics: The 6205 was about 10.5" x 12", a DEC System Module.
+It had 2 connectors of about 20 pins on EACH end. There were 37
+of them in adjacent slots. The handles were connected by two
+bus-bars of 20 wires. They were soft, like 1/16" by 1/8" lead
+bars and could be peeled back to remove a module. They totaled
+about 1480 connections. The life expectancy was about 10
+peelings.
+
+Logic: The PDP-5 had been successful with a pair of cards
+implementing a 1-bit slice of AC, MQ, MA, MB, adder, shifter.
+The PDP-6 team decided to go one better. The 6205 on a single
+card had 1-bit slice of AC, MQ, MA, MB, adder, and shifter. It
+was a disaster.
+
+AC carry: the carry propagation from one bit to the next was an
+AC pulse, not a DC level. Some 6205s were noisier than others.
+You gradually tuned a PDP-6 to have the noisiest modules to the
+left where their noise would have fewer bits to propagate their
+noise to. If too much noise propagated a carry would be seen
+and added when none was intended.
+
+The 6205 had a price of $1K.
+
+What to do with a flaky 6205:
+* The production technicians tended to throw them out the
+  window and into the mill pond
+* When discussing 6205 problems with me the national service
+  manager opened a locked drawer of his desk that contained
+  about 25 6205s he didn't ever want to see in the field again.
+  Knowing they had a list price of $1K he couldn't bring
+  himself to throw them in the mill pond
+* One time Bob Clements spent over 4 hours finding a noisy
+  6205. Having been the longest time he had spent finding a
+  problem to date he wrote on it "NFG RCC". Some months later
+  he spent 8 hours finding a noisy 6205 in the Brookhaven
+  machine. When he finally removed it he noticed the notation
+  "NFG RCC" on the card. A few seconds later he lost his
+  balance and the card split in two over his knee. He never
+  encountered the module in a machine again
+* There are lots of ways to skin a cat
+
+>>* every wire in the machine hand soldered on both ends even
+>>  though wire-wrap had been in general use for several years
+>>  at other companies
+>
+>Why is that a major problem? A lot of hand-soldered stuff of
+>that period is still working.
+
+It depends on the number of solder joints. The PDP-6 type 166
+processor was 4 19" bays 6' tall. The Fast Accumulators (16 36-
+bit registers) were another bay. That's a lot more solder
+joints than a Tektronix Type 547 scope.
+
+Also if you've got a flaky design it helps to know the exact
+routing of every signal wire. With Gardner-Denver wire-wrap
+robots you know they're all the same. With human assemblers you
+don't.
+
+>>Perhaps I should have said:
+>>    It is impractical to keep obscure, poorly designed,
+>>    complicated, old equipment working beyond its
+>>    original design life.
+>
+>I don't see why volunteers can't maintain the PDP-6. If you
+>are worried that enthusiasts can't do a good job, well then I
+>can assure you that you're wrong. And there are enthusiasts
+>maintaining one-of-a-kind machines already.
+
+Paid professionals couldn't keep PDP-6s working when they were
+new. Enthusiasts would have a very difficult time 30 years
+later.
+
+See: jeverett@wwa.com (John Everett) <4h223m$8eh@kirin.wwa.com>
+for a second, concurring opinion.
+
+>>Netcom must have missed the post making the original claim
+>>that TCM is selling parts from a(n almost) complete CDC-6600,
+>>thought to be the last surviving example. If it's true then
+>>I'd be amazed, saddened, and outraged. The 6600 was a
+>>masterpiece.
+>
+>I still disagree with selling off spares in a gift shop. There
+>are several issues here : 
+
+I've since confirmed:
+* Lawrence Livermore Labs donated CDC-6600 #1 to BCM
+* BCM loaned it back to LLL, it having not moved
+* It was later crated by LLL and is still on LLL premises
+
+If BCM succeeds in building a Silicon Valley facility for
+adults then I assume it will be moved there.
+
+BCM has been selling 6600 parts for a long time; I bought a
+logic module about a decade ago.
+- - -     NOTE NEW E-MAIL ADDRESS     - - -
+Internet Marketing and Business Development
+21483 Old Mine Rd             (408)353-1870
+Los Gatos CA 95030    JCGreen@ix.netcom.com
+
+
+
+Article 1745 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!swrinde!newsfeed.internetmci.com!usenet.eel.ufl.edu!news.ultranet.com!usenet
+From: "Carl R. Friend" <carl.friend@swec.com>
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: PDP-6 vs Piper Cub [take two]
+Date: 9 Mar 1996 14:46:54 GMT
+Organization: Carbon & Silicon Alliance
+Lines: 43
+Message-ID: <4hs5ku$dct@caesar.ultra.net>
+References: <4hevqa$oj7@dfw-ixnews1.ix.netcom.com> <4hqk0o$noe@zk2nws.zko.dec.com>
+NNTP-Posting-Host: zephyr.ultranet.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Mailer: Mozilla 1.1N (X11; I; Linux 1.2.1 i586)
+X-URL: news:4hqk0o$noe@zk2nws.zko.dec.com
+Xref: nntp1.best.com alt.sys.pdp10:1745 alt.folklore.computers:54792
+
+amartin@denton.zko.dec.com (Alan H. Martin) wrote:
+>In article <4hevqa$oj7@dfw-ixnews1.ix.netcom.com> JCGreen@ix.netcom.com (John C Green Jr) writes:
+>>As I've said and John Everett has confirmed, the problem of
+>>maintaining a 32 year old PDP-6 is not lack of parts, it is
+>>lack of skilled technicians.  ...
+>
+>Could someone clear something up for me?  If I recall correctly, Al
+>Blackington once told me years ago that the PDP-6 was a bitch to keep running
+>because, in marked contrast to all the -10's (and how many other PDP's?), it
+>was an *asynchronous* design.  In particular, it was quite prone to wedge in
+>the middle of instructions waiting for a dropped signal that was never going
+>to arrive.
+>
+>So, would one of the people who actually worked on the hardware like to
+>confirm, clarify or refute this for me?
+>				/AHM/THX
+
+   To quote directly from the "Programmed Data Processor-6 Handbook" (DEC pub.
+nr. F-65, dated 8/64 top of page 23 under "TIMING":
+
+    "PDP-6 processors are not synchronized by a clock. Therefore, PDP-6
+   systems run asynchronously with as high a duty factor as possible for each
+   unit."
+
+   I guess that answers that question; I'd been curious myself, so I just
+looked it up. Thankfully, I'd kept a copy of the "Handbook" I found at work!
+
+   Even synchronous processors can wedge between time-states; if a condition
+to pre-enable the next time-state is broken, said state will never be entered
+with the result of a hang. Finding these problems could be a real joy.
+
+   Microprogrammed systems are less susceptible to faults like this, but I have
+seen them vector off uncontrollably into the microstore....
+
+-- 
+ ______________________________________________________________________
+|                                                |                     |
+| Carl Richard Friend (UNIX Sysadmin)            | West Boylston       |
+| Minicomputer Collector / Enthusiast            | Massachusetts, USA  |
+| mailto:carl.friend@swec.com                    |                     |
+| http://www.ultranet.com/~engelbrt/carl/museum  | ICBM: N42:21 W71:46 |
+|________________________________________________|_____________________|
+
+
+
+Article 1770 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!news.exodus.net!uunet!in2.uu.net!news3.digex.net!digex.net!not-for-mail
+From: doug@ss1.digex.net (Doug Humphrey)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: PDP-6/10
+Date: 12 Mar 1996 14:20:27 -0500
+Organization: Express Access Online Communications USA: 800-969-9090
+Lines: 23
+Message-ID: <4i4ipr$sjq@ss1.digex.net>
+References: <4hevqa$oj7@dfw-ixnews1.ix.netcom.com> <4hqk0o$noe@zk2nws.zko.dec.com> <TK.96Mar11180150@watt.ai.mit.edu> <3145680C.61A500ED@swec.com>
+NNTP-Posting-Host: ss1.digex.net
+Xref: nntp1.best.com alt.sys.pdp10:1770 alt.folklore.computers:55148
+
+>   I'd like to take this opportunity to retract a _big_ blunder I
+>made earlier in stating that the KA-10 was a synchronous design.
+>Having checked my book (KA-10 Central Processor Handbook), it states
+>explicitly that the KA-10 is _Asynchronous_ in operation. My most
+>humble aplogies for the erroneous information.
+>
+>   I will agree with Tom, though, that the async designs were not all
+>that bad to work on. If the machine in question had a decent diagnostic
+>indicator panel (and the KA certainly did), it was remarkably easy
+>to see where the machine hung up (what instruction, what address,
+>what time-state, and in many instances what data) by examining the
+>lights.
+
+Of course, we all know that the most important feature required for
+this type of debugging was the *lamp test* button - which the KA was
+not really equiped with (well, you could make them all light, but there
+wasn't a button to do it on mine (SN 9 and 44, maybe they added it later?))
+or, later, the upgrade LED's...
+
+Yes, lights are sorely missed.  Of course, with the speed of current
+systems they would just be a blur anyway...
+
+Doug
+
+
+Article 1763 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!swrinde!tank.news.pipex.net!pipex!newsxfer2.itd.umich.edu!bloom-beacon.mit.edu!senator-bedfellow.mit.edu!usenet
+From: tk@ai.mit.edu (Tom Knight)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: PDP-6/KA documentation
+Date: 11 Mar 1996 22:57:44 GMT
+Organization: MIT Artificial Intelligence Laboratory
+Lines: 24
+Message-ID: <TK.96Mar11175744@watt.ai.mit.edu>
+References: <DnzLJx.n0G@world.std.com> <4hs35d$3re@newsbf02.news.aol.com>
+	<4ht11t$i6f@caesar.ultra.net>
+NNTP-Posting-Host: watt.ai.mit.edu
+In-reply-to: "Carl R. Friend"'s message of 9 Mar 1996 22:34:37 GMT
+Xref: nntp1.best.com alt.sys.pdp10:1763 alt.folklore.computers:55062
+
+>>> "Carl" == Carl R Friend <carl.friend@swec.com> writes:
+Carl> I'm moping for exactly the opposite reason. When I departed my
+Carl> first employment (where I was lucky enough to work on -10s) I
+Carl> "willed" my (somewhat) personalised documentation to the bloke I
+Carl> thought best to carry the torch.  Included in those archives
+Carl> were things I dearly wish I had today, and have a sightly
+Carl> greater appreciation of today (detailed KA, KI, and KL-10 timing
+Carl> readouts, for example). These are also things that, I imagine,
+Carl> are gone today.
+
+I've got complete print sets, hardware manuals, and card schematics
+for both the PDP-6 and KA-10.  Anyone who REALLY wants a set can get
+one from me.  If enough people want them, I'll scan them and put them
+on the net.
+
+On another topic, I installed the "magic/more magic" switch on the
+MIT-AI PDP-6 which was mentioned here recently.  Originally, the
+switch was labelled "magic" and implemented a now-forgotten special
+mode in the machine (I think it had to do with allowing user mode I/O
+instructions for device codes > 700, if I recall).  The feature was
+permanently removed, the switch stayed, and someone later labelled the
+other position "more magic."  At this point, it was disconnected,
+except for a wire to ground.  I think the story from there is
+apocryphal.
+
+
+Article 1781 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!sdd.hp.com!gatech!newsfeed.internetmci.com!in2.uu.net!news1.digital.com!pa.dec.com!nntpd.lkg.dec.com!racer.tay.dec.com!dave
+From: dave@racer.tay.dec.com (dave)
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-6 vs Piper Cub [take two]
+Date: 12 Mar 1996 15:19:47 GMT
+Organization: Digital Equipment Corporation
+Lines: 19
+Distribution: world
+Message-ID: <4i44mj$7ug@nntpd.lkg.dec.com>
+References: <4hevqa$oj7@dfw-ixnews1.ix.netcom.com> <4hqk0o$noe@zk2nws.zko.dec.com> <4hs5ku$dct@caesar.ultra.net>
+Reply-To: dave@racer.tay.dec.com (dave)
+NNTP-Posting-Host: racer.tay.dec.com
+X-Newsreader: mxrn 6.18-32
+
+
+Tom Knight wrote:
+>  With the
+> asynchronous design, you usually could locate the problem by looking
+> at the lights, which would show what subroutine the logic was in, and
+> thus, where the pulse had been lost.
+
+Lights were not just for the hardware folks.
+
+I remember spending quite a bit of time figuring out where software
+errors were, and what a machine was doing just by looking 
+at the lights on the CPU of the KA.  It was really nice, and quite easy,
+once one got the "feel" of the system.  Of the two KA's I did most of my 
+work on, they did seem to have their little differences, certainly
+a personality.
+
+Dave, who's last KA was #1 in the Doomsday lab,
+right before it was scrapped. (1979??)
+
+
+
+Article 1803 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!news.exodus.net!imci4!newsfeed.internetmci.com!news.compuserve.com!newsmaster
+From: 71531.1503@compuserve.com (dave avery)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: The Computer Museum (long)
+Date: 15 Mar 1996 03:14:12 GMT
+Organization: the Avia Group
+Lines: 32
+Message-ID: <4iana4$kec@dub-news-svc-2.compuserve.com>
+References: <4i4l8c$i3q@new-news.cc.brandeis.edu><4i4l8c$i3q@new-news.cc.brandeis.edu> <4i6ka9$e9s@newsbf02.news.aol.com>
+Reply-To: 71531.1503@compuserve.com
+NNTP-Posting-Host: dd54-170.compuserve.com
+X-Newsreader: NeoLogic News for OS/2 [version: 4.5 YO Beta]
+Xref: nntp1.best.com alt.sys.pdp10:1803 alt.folklore.computers:55472
+
+In message <4i6ka9$e9s@newsbf02.news.aol.com> - jmfbah@aol.com (JMFBAH)13 Mar
+1996 08:58:33 -0500 writes:
+:>
+:>One of the stories of the PDP-10 Adventure game.....
+:>It essentially stopped monitor development for a few days.   There were
+:>programmers who played this game for at least 3 days non-stop, night and
+:>day, all weekend.  The game was completed with the exception of 1 point. 
+:>Now these monitor developers don't f.... around.   To be a monitor
+:>developer, one needs that kind of curiosity that refuses to be quenched
+:>until all questions of a particular aspect  are answered.  The game wasn't
+:>complete until that last point was scored and there was nothing obvious
+:>about where the point came from. Solution?  Set address break; and that's
+:>how they found the last point.   Jim was amused for at least a week when
+:>he heard 1) how long these people played with no sleep and 2) how they
+:>finally solved the last point problem.  I don't remember who all played
+:>that weekend but maybe someone who did  can expand on the story since my
+:>info is second-hand.
+
+I was in training at the -10 plant when Adventure arrived... I remember the
+stories 
+going around that the programmers in the tops-10 group and the fortran-10
+group 
+convinced Crouther to give them a complete copy of the sources by sending him
+decompiled sections of the program and insisting that they could decompile all
+of it in a few weeks. I hand carried a Dec-tape of Adventure back to the
+Chicago
+field service office and in a week or two almost every Decsystem-10 and -20 in
+the
+area had a copy running on them ( in [6,6] if nowhere else)
+
+dave
+
+
+
+Article 1810 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!news.exodus.net!uunet!in2.uu.net!usenet.cisco.com!cronkite!billw
+From: billw@puli.cisco.com (William )
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: The Computer Museum (long)
+Date: 16 Mar 1996 00:59:04 GMT
+Organization: cisco Systems, Inc.
+Lines: 6
+Message-ID: <BILLW.96Mar15165904@puli.cisco.com>
+References: <NEWTNews.825545043.11191.ljs@helios.x.helios.xo.com>
+	<4ho1js$1l0@tricia.msn.fullfeed.com> <4hplm3$cp0@kirin.wwa.com>
+	<4i4l8c$i3q@new-news.cc.brandeis.edu> <phrDo7u52.7K@netcom.com>
+NNTP-Posting-Host: puli.cisco.com
+In-reply-to: phr@netcom.com's message of Wed, 13 Mar 1996 17:05:26 GMT
+Xref: nntp1.best.com alt.sys.pdp10:1810 alt.folklore.computers:55596
+
+    The unix version floating around is in C, but it looks like it
+    was transliterated from fortran.
+
+You HAVE seen the (Tom Digby?) story "The Programmer and the Elves?" ?
+
+BillW
+
+
+Article 1804 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!swrinde!newsfeed.internetmci.com!news-feed.iguide.com!uunet!in1.uu.net!world!world.std.com!cstacy
+From: cstacy@spacy.boston.ma.us (Christopher C Stacy)
+Subject: Re: The Computer Museum (long)
+In-Reply-To: phr@netcom.com's message of Wed, 13 Mar 1996 17:05:26 GMT
+Message-ID: <CSTACY.96Mar14231513@world.spacy.boston.ma.us>
+Sender: cstacy@world.std.com (Christopher C Stacy)
+Organization: Christopher C. Stacy
+References: <NEWTNews.825545043.11191.ljs@helios.x.helios.xo.com>
+	<4ho1js$1l0@tricia.msn.fullfeed.com> <4hplm3$cp0@kirin.wwa.com>
+	<4i4l8c$i3q@new-news.cc.brandeis.edu> <phrDo7u52.7K@netcom.com>
+Date: Fri, 15 Mar 1996 04:15:13 GMT
+Lines: 1
+Xref: nntp1.best.com alt.sys.pdp10:1804 alt.folklore.computers:55489
+
+ADVENTURE was originally written in FORTRAN on the PDP-10 at Stanford.
+
+
+Article 1790 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!swrinde!howland.reston.ans.net!ix.netcom.com!netcom.com!alderson
+From: alderson@netcom.com (Richard M. Alderson III)
+Subject: Adventure on PDP-10 (was Re: The Computer Museum (long))
+In-Reply-To: dkw@cs.brandeis.edu's message of 12 Mar 1996 20:02:20 GMT
+Message-ID: <aldersonDo8204.I2v@netcom.com>
+Reply-To: alderson@netcom.com
+Fcc: /u9/alderson/postings
+Organization: NETCOM On-line Communication Services (408 261-4700 guest)
+References: <NEWTNews.825545043.11191.ljs@helios.x.helios.xo.com>
+	<DnLFxA.FFF@world.std.com> <ERIC.96Mar2125909@goonsquad.spies.com>
+	<4ho1js$1l0@tricia.msn.fullfeed.com> <4hplm3$cp0@kirin.wwa.com>
+	<4i4l8c$i3q@new-news.cc.brandeis.edu>
+Date: Wed, 13 Mar 1996 19:55:15 GMT
+Lines: 41
+Sender: alderson@netcom18.netcom.com
+Xref: nntp1.best.com alt.sys.pdp10:1790 alt.folklore.computers:55338
+
+In article <4i4l8c$i3q@new-news.cc.brandeis.edu> dkw@cs.brandeis.edu
+(David Wittenberg) writes:
+
+>In article <4hplm3$cp0@kirin.wwa.com>, jeverett@wwa.com (John Everett) writes:
+
+>>Let my put in a vote for the original PDP-10 Adventure game, a seminal piece 
+>>of software if there ever was one. As a 350 point cavemaster, I would really 
+>>enjoy a chance to play it again, even with the clunky TTY interface. 
+
+>>"... and disappears in a cloud of greasy black smoke."
+
+>I'm not sure the PDP-10 version was the original.  In 79 or so, a friend of
+>mine had the sources to Adventure.  They were in FORTRAN, and the comments
+>made it clear that it had been ported at least a couple of times.  We tried
+>(but failed) to reverse engineer the wizard password, which allowed you to
+>play at any time during the day.
+
+The PDP-10 version was not the first, written by Will Crowther for a CDC box
+(probably the 6600, but don't hold me to that).
+
+It *was* the second version, expanded to the 350-point Classic version by Don
+Woods of the Stanford Artificial Intelligence Laboratory.  All the versions
+since are based on the SAIL port.
+
+David Long of the University of Chicago Graduate School of Business Computing
+Facility (which had two of the four DEC20s on campus in the late 70s and early
+80s) is responsible for expanding the cave in a number of ways, and pushing
+the point count up to 500, then 501 points.  I liked a lot of his additions,
+though I felt that changing the Balrog to a Wumpus was Not the Right Thing.
+
+Most of DL's work was in the data files, but he did make some changes to the
+parser as well.
+
+Still and all, I'd vote for ZORK as the greatest time-sink on the PDP-10.  On
+the other hand, it got me interested in Lisp (in the form of Muddle) and that
+changed some of my linguistics research.  For a while.
+-- 
+Rich Alderson   You know the sort of thing that you can find in any dictionary
+                of a strange language, and which so excites the amateur philo-
+                logists, itching to derive one tongue from another that they
+                know better: a word that is nearly the same in form and meaning
+                as the corresponding word in English, or Latin, or Hebrew, or
+                what not.
+                                                --J. R. R. Tolkien,
+alderson@netcom.com                               _The Notion Club Papers_
+
+
+Article 1792 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!sgigate.sgi.com!news.msfc.nasa.gov!newsfeed.internetmci.com!in2.uu.net!info-server.bbn.com!clements
+From: clements@bbn.com (Bob Clements)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: PDP-6 vs Piper Cub [take two]
+Date: 13 Mar 1996 14:29:50 GMT
+Organization: Bolt Beranek and Newman (BBN)
+Lines: 26
+Message-ID: <4i6m4u$d94@info-server.bbn.com>
+References: <4hevqa$oj7@dfw-ixnews1.ix.netcom.com> <4hqk0o$noe@zk2nws.zko.dec.com>
+NNTP-Posting-Host: lion.bbn.com
+Xref: nntp1.best.com alt.sys.pdp10:1792 alt.folklore.computers:55347
+
+In article <4hqk0o$noe@zk2nws.zko.dec.com> amartin@denton.zko.dec.com (Alan H. Martin) writes:
+
+>Could someone clear something up for me?  If I recall correctly, Al
+>Blackington once told me years ago that the PDP-6 was a bitch to keep running
+>because, in marked contrast to all the -10's (and how many other PDP's?), it
+>was an *asynchronous* design.
+
+Well, the answer is "Yes and No".  The PDP-6 was asynchronous.
+But so were the PDP-10's (except for the KL-10).  So not much marked
+contrast there.
+
+There were a number of reasons why the PDP-6 was hard to keep running,
+but that wasn't particularly one of them.  If the machine did hang in
+the middle of an instruction, it was pretty easy to tell how far it
+had gotten (all those lights were there for a reason) and thus pin
+down what small section of logic must have failed.
+
+I don't recall hangs in the middle of a processor sequence being that
+common a failure mode.  Memory cycles to the external busses, yes.
+But not very often within the processor.
+
+
+>Alan Howard Martin				AMartin@TLE.ENet.DEC.Com
+
+Bob Clements, K1BC, clements@bbn.com, (w) +1 617 USE K1BC
+[Erstwhile PDP-6 field engineer, later KA-10 project engineer]
+
+Article 1820 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!news.exodus.net!uunet!in1.uu.net!usenet.cisco.com!cronkite!billw
+From: billw@puli.cisco.com (William )
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: ADVENT.FOR on PDP-10
+Date: 18 Mar 1996 01:09:14 GMT
+Organization: cisco Systems, Inc.
+Lines: 6
+Message-ID: <BILLW.96Mar17170915@puli.cisco.com>
+References: <NEWTNews.825545043.11191.ljs@helios.x.helios.xo.com>
+	<4hplm3$cp0@kirin.wwa.com> <4i4l8c$i3q@new-news.cc.brandeis.edu>
+	<4igfoc$ker@shellx.best.com> <4ighr6$1nu@shellx.best.com>
+NNTP-Posting-Host: puli.cisco.com
+In-reply-to: inwap@shellx.best.com's message of 17 Mar 1996 00:17:42 -0800
+Xref: nntp1.best.com alt.sys.pdp10:1820 alt.folklore.computers:55745
+
+    >It originated on the PDP-10.  I believe it was at SU-SCORE.ARPA.
+
+SCORE was a dec-20 (thus "score".)  SU-AI ("SAIL") preceded it, and
+ran WAITS (more tops10-like.)
+
+BillW
+
+

@@ -1,0 +1,57 @@
+Article 5628 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!not-for-mail
+From: Sheila&bob/Herbal Gypsy and the Tinker <shsrms@erols.com>
+Newsgroups: alt.folklore.computers,alt.sys.pdp8,alt.sys.pdp11,alt.sys.pdp10
+Subject: Re: ASR 33 Typing Element
+Date: Sun, 29 Aug 1999 11:08:40 -0400
+Lines: 35
+Message-ID: <37C94CF8.3F5DC717@erols.com>
+References: <p98mccabe-2608990201150001@mepa2pp15.alltel.net> <935832140.772977@estelle.paradise.net.nz>
+	     <FH67Fn.DJH@spcuna.spc.edu> <935924429.273399@estelle.paradise.net.nz> <q9by3.2174$Sg4.56443@wbnws01.ne.mediaone.net>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: zCknCAsw4kyTkPHK9qvDfnghWj29gvxodGl9ZW/4UN8=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 29 Aug 1999 15:06:31 GMT
+X-Accept-Language:  en
+X-Mailer:  Mozilla 4.61 [en] (WinNT; U)
+Xref: news3.best.com alt.folklore.computers:138438 alt.sys.pdp8:3120 alt.sys.pdp11:5569 alt.sys.pdp10:5628
+
+
+
+Ric Werme wrote:
+> 
+> don@news.daedalus.co.nz (Don Stokes) writes:
+> 
+> >Terry Kennedy <terry@spcunb.spc.edu> writes:
+> 
+> >>  Expecting to power anything off a MAX232's -V is pretty much a forlorn
+> >>hope. While it does meet the RS-232 specs (at something like -4.2V)
+> >>there isn't enough "oomph" to do anything more than drive a RS-232
+> >>receiver.
+> 
+> I thought RS232 specs call for between 5 and 12 volts, for both
+> positive and negative signals.  (Or is it 3 to 12?)
+The RS232 Spec (note that there is no letter after the number!) to be
+able to receive voltage swings of -/+ 25 volts on hte high side and
+detect =/-3V so you had a 6 volt band to copensate for noise.  The spec
+also said put out upto +/-12V on the high side.  that was great in
+transistor and DCD driver times but with ICs, got to be a bit much and
+then we had this little problem with slew rate....as you go up in
+speed....
+The voltages changed a bit by the tiem we got to RS232C, but the receive
+spec was still the same, even tho most folks were running max out put
+based on +/-12 volt rails.
+DEC Comm 11 did a study of cable type, distance and speed.  High
+capacitance cable limited speed and distance.
+RS423 helped solve a whole raft of problems.....including incompat. with
+MIL-STD 188C...
+bob
+
+> --
+> Ric Werme                  | http://people.ne.mediaone.net/werme
+> werme@nospam.mediaone.net  | http://www.cyberportal.net/werme
+>       ^^^^^^^ delete
+
+

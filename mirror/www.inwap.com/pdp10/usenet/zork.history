@@ -1,0 +1,64 @@
+Article 1846 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Path: nntp1.best.com!news1.best.com!news.exodus.net!uunet!in2.uu.net!newsfeed.internetmci.com!howland.reston.ans.net!EU.net!sun4nl!cwi.nl!dik
+From: dik@cwi.nl (Dik T. Winter)
+Subject: Re: Adventure (Was: The Computer Museum)
+Message-ID: <Doup0z.2Mp@cwi.nl>
+Sender: news@cwi.nl (The Daily Dross)
+Nntp-Posting-Host: chrysant.cwi.nl
+Organization: CWI, Amsterdam
+References: <960319054842@fwancho.whc.net> <4iqlgf$hhk@tricia.msn.fullfeed.com> <4j3409$2o2@dns.plano.net>
+Date: Tue, 26 Mar 1996 01:19:46 GMT
+Lines: 48
+Xref: nntp1.best.com alt.sys.pdp10:1846 alt.folklore.computers:56556
+
+In article <4j3409$2o2@dns.plano.net> Charles Richmond <richmond@plano.net> writes:
+ > It is interesting that you would mention Lauren Weinstein. He posted some
+ > messages about five years ago concerning the original subject of this
+ > thread--Adventure. Evidently he had hacked some Adventure code (at Stanford?)
+UCLA
+ > back when Adventure first came out. He had some very interesting stories to
+ > relate--perhaps he can repost some of them.
+
+He had been hacking with the source a bit and extended the game slightly.
+(I think it was the C source by Jim@rank-xerox, and not the original Fortran
+source.)  This extended version accidentally got into one of the BSD Unix
+distributions (and that was the version I first played).  Later BSD
+distributions had the original again.  Actually the extended version had
+a bug:
+    "Please tell lauren@ucla-security that fatal bug 25 happened."
+which you got in some situations at the bottom of the volcano.
+(Going North was not a particular good idea, the "travels" array was not
+properly defined.)
+
+The situation with Zork/Dungeon and BSD Unix is also quite interesting.
+At one stage an RSX-11 executable was ported to V6 Unix by some hacker.
+Nearly all commands worked properly, the only things that did not work
+were saving and restoring games but some additional hacks had given
+replacements for that.  (And if I remember right the time command dumped
+core.)  This executable was hacked again into a V7 Unix executable (some
+system calls, especially the write system call, had been changed between
+V6 and V7).  [And that was the one I have hacked back once upon a time
+into a V6 executable to run on a PDP 11/34.]  This V7 version was the one
+that you had on a VAX with BSD Unix, it had a wrapper around it to put the
+machine in PDP compatibility mode.  However, in one of the BSD 4.1
+distributions (I think it was 4.1b or somesuch), it had been replaced by
+a native running version which had a slight extension (the puzzle room).
+Later BSD distributions had again the original PDP executable, so the
+puzzle room lived only a short time in BSD Unix (I think it must have
+been less than a year).  Somewhere in my archive on tape I still must have
+all those executables.
+
+In a later stage I have taken the PDP executable and decompiled it into
+something resembling Fortran.  This one I translated into a version
+of Pascal, with a compiler adapted to my purpose (in addition to the type
+CHAR it also needed to know the type ASCIICHAR with constant-denotations
+supporting that, and also interactive files of that type), and I put it up
+on a CDC Cyber.  And in a later stage I did also add the puzzle room.
+
+Sweet memories.
+-- 
+dik t. winter, cwi, kruislaan 413, 1098 sj  amsterdam, nederland, +31205924098
+home: bovenover 215, 1025 jn  amsterdam, nederland; http://www.cwi.nl/~dik/
+
+

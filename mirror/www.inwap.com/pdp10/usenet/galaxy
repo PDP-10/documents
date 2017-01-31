@@ -1,0 +1,1391 @@
+Article 4508 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!newsfeed.enteract.com!ix.netcom.com!netcom!alderson
+From: alderson@netcom.netcom.com (Richard M. Alderson III)
+Subject: Re: What was TOPS-10 "GALAXY"?
+In-Reply-To: Tim Shoppa's message of Fri, 11 Dec 1998 16:27:54 -0400
+Message-ID: <ALDERSON.98Dec11151046@netcom.netcom.com>
+Sender: alderson@netcom.netcom.com
+Reply-To: alderson@netcom.com
+Organization: NETCOM On-line services
+References: <36714809.131CAD23@trailing-edge.com>
+Date: Fri, 11 Dec 1998 23:10:46 GMT
+Lines: 36
+Xref: news3.best.com alt.sys.pdp10:4508 alt.folklore.computers:119614
+
+In article <36714809.131CAD23@trailing-edge.com> Tim Shoppa
+<shoppa@trailing-edge.com> writes:
+
+>In a big pile of empty TOPS-10 binders, I found one labeled "MPB / GALAXY".
+>Does this have something to do with multi-processor configurations?  Or any
+>relation with NEBULA?
+
+NEBULA is part of GALAXY.
+
+GALAXY is part of the operating system, but not part of the monitor.  It is the
+spooling subsystem, handling batch, printing, plotting, and card I/O.  It was
+common to Tops-10 and Tops-20 (although some pieces only existed in one or the
+other--I think PULSAR was Tops-10 tape-handling, for example), violating the
+coding standards of both.
+
+On Tops-20, Galaxy consists of QUASAR (the central message clearing house),
+ORION (the backend part of operator communications), OPR (the operator inter-
+face), MOUNTR (tape and disk handling), BATCON (the batch subsystem), and
+NEBULA (communications between systems in a CI-based cluster).  These parts,
+and the EXEC (the user command interface), use the Inter-Process Communications
+Facility to pass messages back and forth.
+
+QUASAR, ORION, MOUNTR, BATCON, and NEBULA run as subforks of Job 0, which is
+the monitor's interface to the outside world--a number of subsidiary processes
+of the monitor itself appear as subforks of Job 0.  OPR is a user-level program
+used to communicate with the others to allow operators to manipulate queues,
+mount and dismount tapes and disk, and so on; general user services such as
+queuing a print job as taken care of by EXEC commands.
+
+I'm sure that Tops-10 works very much the same way, modulo the difference in
+user interface (no EXEC--commands are interpreted by part of the monitor, so
+commands such as QUEUE are separate user programs).  Right, Barb?  Chops?
+-- 
+Rich Alderson			Last LOTS Tops-20 Systems Programmer, 1984-1991
+				Current maintainer, MIT TECO EMACS (v. 170)
+last name @ XKL dot COM		Chief systems administrator, XKL LLC, 1998-now
+
+
+Article 4517 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.voicenet.com!newspeer.monmouth.com!news.ultranet.com!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: What was TOPS-10 "GALAXY"?
+Date: Sun, 13 Dec 1998 00:00:18 -0500
+Organization: UltraNet Communications , an RCN Company http://www.ultranet.com/
+Lines: 16
+Message-ID: <367349E2.E1CD2F42@MA.UltraNet.Com>
+References: <36714809.131CAD23@trailing-edge.com> <ALDERSON.98Dec11151046@netcom.netcom.com>
+NNTP-Posting-Host: d195.dial-2.cmb.ma.ultra.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 13 Dec 1998 06:01:52 GMT
+X-Mailer: Mozilla 4.5 [en] (Win95; I)
+X-Accept-Language: en,en-US,en-GB,es
+Xref: news3.best.com alt.sys.pdp10:4517 alt.folklore.computers:119697
+
+"Richard M. Alderson III" wrote:
+> 
+> In article <36714809.131CAD23@trailing-edge.com> Tim Shoppa
+> <shoppa@trailing-edge.com> writes:
+>
+>>In a big pile of empty TOPS-10 binders, I found one labeled "MPB / GALAXY".
+>>Does this have something to do with multi-processor configurations?  Or any
+>>relation with NEBULA?
+...
+>GALAXY ... is the spooling subsystem, handling batch, printing, plotting, and >card I/O.  ...
+
+To wrap it up, MPB means "MultiProgram Batch".  It's the first-generation
+spooling system on the -10 which GALAXY replaced.
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 4519 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!nntprelay.mathworks.com!cam-news-hub1.bbnplanet.com!news.gtei.net!newsfeed.xcom.net!news.ultranet.com!d11
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: What was TOPS-10 "GALAXY"?
+Date: Sun, 13 Dec 98 12:07:45 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 74
+Message-ID: <750c32$anm$2@ligarius.ultra.net>
+References: <36714809.131CAD23@trailing-edge.com> <ALDERSON.98Dec11151046@netcom.netcom.com>
+NNTP-Posting-Host: d11.dial-15.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 13 Dec 1998 12:31:30 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: news3.best.com alt.sys.pdp10:4519 alt.folklore.computers:119701
+
+In article <ALDERSON.98Dec11151046@netcom.netcom.com>,
+   alderson@netcom.netcom.com (Richard M. Alderson III) wrote:
+>In article <36714809.131CAD23@trailing-edge.com> Tim Shoppa
+><shoppa@trailing-edge.com> writes:
+>
+>>In a big pile of empty TOPS-10 binders, I found one labeled 
+>>"MPB / GALAXY".  Does this have something to do with 
+>>multi-processor configurations?  Or any relation with NEBULA?
+>
+>NEBULA is part of GALAXY.
+
+But only on TOPS-20.  TOPS-10 didn't implement loosely coupled 
+systems; we did SMP instead.
+>
+>GALAXY is part of the operating system, but not part of the 
+>monitor.  It is the spooling subsystem, handling batch, printing, 
+>plotting, and card I/O.  It was common to Tops-10 and Tops-20 
+>(although some pieces only existed in one or the
+>other--I think PULSAR was Tops-10 tape-handling, for example), 
+>violating the coding standards of both.
+
+Coding standards or ANSI tape handling?  I suspect you  mean the
+latter.
+
+>
+>On Tops-20, Galaxy consists of QUASAR (the central message 
+>clearing house), ORION (the backend part of operator communications), 
+>OPR (the operator inter-face), MOUNTR (tape and disk handling), 
+>BATCON (the batch subsystem), and NEBULA (communications between 
+>systems in a CI-based cluster).  These parts, and the EXEC (the 
+>user command interface), use the Inter-Process Communications
+>Facility to pass messages back and forth.
+
+Right.  One of the strengths of GALAXY was the module GLXLIB
+which was a library of routines that provided the monitor
+calling interface for IPCF, memory management, etc.  CUSPs
+that we wrote after GALAXY became a product would use GLXLIB.
+That way, if written correctly, a lot of development time
+was saved because all that difficult memory management and
+IPCF didn't have to be coded again and again and again.
+
+>
+>QUASAR, ORION, MOUNTR, BATCON, and NEBULA run as subforks of 
+>Job 0, which is the monitor's interface to the outside 
+>world--a number of subsidiary processes of the monitor 
+>itself appear as subforks of Job 0.  OPR is a user-level 
+>program used to communicate with the others to allow operators to 
+>manipulate queues, mount and dismount tapes and disk, and so 
+>on; general user services such as queuing a print job as taken 
+>care of by EXEC commands.
+
+And on TOPS-10, when the system came up, all of the above described
+as forks were [1,2] jobs.  [1,2] was the privileged user access
+account.
+
+>
+>I'm sure that Tops-10 works very much the same way, modulo the 
+>difference in user interface (no EXEC--commands are interpreted 
+>by part of the monitor, so commands such as QUEUE are separate 
+>user programs).  Right, Barb?  Chops?
+
+I can't remember any commands on TOPS-10 that didn't run a user
+mode program other than flavors of SAVE.  It seems to me that 
+there was some command something like DUMP (but that doesn't 
+sound right) that would save the user address space to a disk
+file for debugging purposes but that was in the real olden
+days almost before my time :-).
+
+What's chops?
+
+/BAH
+
+
+Subtract a hundred and four for e-mail.
+
+
+Article 4525 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newsfeed.xcom.net!news.ultranet.com!not-for-mail
+From: "Larry S. Samberg" <larry-samberg@sonoma-systems.com>
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: What was TOPS-10 "GALAXY"?
+Date: Sun, 13 Dec 1998 19:19:54 -0500
+Organization: Sonoma Systems
+Lines: 110
+Sender: larry@frm-ma6-22.ix.netcom.com
+Message-ID: <751ljp$pft$1@ligarius.ultra.net>
+References: <36714809.131CAD23@trailing-edge.com>
+	 <ALDERSON.98Dec11151046@netcom.netcom.com>
+	 <750c32$anm$2@ligarius.ultra.net>
+NNTP-Posting-Host: frm-ma6-22.ix.netcom.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset="US-ASCII"
+Content-Transfer-Encoding: 7bit
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 14 Dec 1998 00:20:09 GMT
+X-Newsreader: Microsoft Outlook Express for Macintosh - 4.01 (295)
+Xref: news3.best.com alt.sys.pdp10:4525 alt.folklore.computers:119733
+
+To make a short story long....
+
+In the period from 1970 to 1973 a new batch and spooling system was
+developed for the DEC10 called MPB -- Multi-programming batch -- 
+designed primarily by Peter Conklin. It consisted of a bunch of programs
+called QUEUE, QMANGR, BATCON, LPTSPL, CDRSTK, etc. It was a major step
+forward for these types of capabilities on the -10 but it was based on
+Shared Segments and disk-based queues and was very slow.
+
+During 1973 a new memory-based interprocess communications system was
+developed in TOPS10 called IPCF and also a software interupt facility.
+So late in '73, Chuck O'Toole and I set out to rewrite the system from
+scratch based on these new facilities. The core was QUASAR, the queue
+manager and the other programs were written to talk to QUASAR -- BATCON,
+SPRINT, LPTSPL->SPROUT. Etc. It was fast and worked well -- although in
+subsequent years the software was stretched (by me and others) beyond
+where it should have been, as is often the case.
+
+TOPS20 was just starting around these period and we knew that it would
+have to work on TOPS20 also so we tried to make it OS independent right
+from the beginning. We succeeded pretty well with that and I'd say that
+probably 90% of all of the software ran unmodified on both OSes. This
+was due to a fair of amount of library usage and modularity.
+
+Hope that helps.
+
+----------------------------------------------------
+Larry Samberg       larry-samberg@sonoma-systems.com
+Phone: 508-481-2215 x342           Fax: 508-861-0261
+Sonoma Systems, Inc.           Marlborough, MA 01752
+
+
+----------
+In article <750c32$anm$2@ligarius.ultra.net>, jmfbahciv@aol.com wrote:
+
+
+>In article <ALDERSON.98Dec11151046@netcom.netcom.com>,
+>   alderson@netcom.netcom.com (Richard M. Alderson III) wrote:
+>>In article <36714809.131CAD23@trailing-edge.com> Tim Shoppa
+>><shoppa@trailing-edge.com> writes:
+>>
+>>>In a big pile of empty TOPS-10 binders, I found one labeled 
+>>>"MPB / GALAXY".  Does this have something to do with 
+>>>multi-processor configurations?  Or any relation with NEBULA?
+>>
+>>NEBULA is part of GALAXY.
+>
+>But only on TOPS-20.  TOPS-10 didn't implement loosely coupled 
+>systems; we did SMP instead.
+>>
+>>GALAXY is part of the operating system, but not part of the 
+>>monitor.  It is the spooling subsystem, handling batch, printing, 
+>>plotting, and card I/O.  It was common to Tops-10 and Tops-20 
+>>(although some pieces only existed in one or the
+>>other--I think PULSAR was Tops-10 tape-handling, for example), 
+>>violating the coding standards of both.
+>
+>Coding standards or ANSI tape handling?  I suspect you  mean the
+>latter.
+>
+>>
+>>On Tops-20, Galaxy consists of QUASAR (the central message 
+>>clearing house), ORION (the backend part of operator communications), 
+>>OPR (the operator inter-face), MOUNTR (tape and disk handling), 
+>>BATCON (the batch subsystem), and NEBULA (communications between 
+>>systems in a CI-based cluster).  These parts, and the EXEC (the 
+>>user command interface), use the Inter-Process Communications
+>>Facility to pass messages back and forth.
+>
+>Right.  One of the strengths of GALAXY was the module GLXLIB
+>which was a library of routines that provided the monitor
+>calling interface for IPCF, memory management, etc.  CUSPs
+>that we wrote after GALAXY became a product would use GLXLIB.
+>That way, if written correctly, a lot of development time
+>was saved because all that difficult memory management and
+>IPCF didn't have to be coded again and again and again.
+>
+>>
+>>QUASAR, ORION, MOUNTR, BATCON, and NEBULA run as subforks of 
+>>Job 0, which is the monitor's interface to the outside 
+>>world--a number of subsidiary processes of the monitor 
+>>itself appear as subforks of Job 0.  OPR is a user-level 
+>>program used to communicate with the others to allow operators to 
+>>manipulate queues, mount and dismount tapes and disk, and so 
+>>on; general user services such as queuing a print job as taken 
+>>care of by EXEC commands.
+>
+>And on TOPS-10, when the system came up, all of the above described
+>as forks were [1,2] jobs.  [1,2] was the privileged user access
+>account.
+>
+>>
+>>I'm sure that Tops-10 works very much the same way, modulo the 
+>>difference in user interface (no EXEC--commands are interpreted 
+>>by part of the monitor, so commands such as QUEUE are separate 
+>>user programs).  Right, Barb?  Chops?
+>
+>I can't remember any commands on TOPS-10 that didn't run a user
+>mode program other than flavors of SAVE.  It seems to me that 
+>there was some command something like DUMP (but that doesn't 
+>sound right) that would save the user address space to a disk
+>file for debugging purposes but that was in the real olden
+>days almost before my time :-).
+>
+>What's chops?
+>
+>/BAH
+>
+>
+>Subtract a hundred and four for e-mail.
+
+
+Article 4531 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!ix.netcom.com!netcom!alderson
+From: alderson@netcom.netcom.com (Richard M. Alderson III)
+Subject: Re: What was TOPS-10 "GALAXY"?
+In-Reply-To: jmfbahciv@aol.com's message of Sun, 13 Dec 98 12:07:45 GMT
+Message-ID: <ALDERSON.98Dec14125617@netcom.netcom.com>
+Sender: alderson@netcom.netcom.com
+Reply-To: alderson@netcom.com
+Organization: NETCOM On-line services
+References: <36714809.131CAD23@trailing-edge.com>
+	<ALDERSON.98Dec11151046@netcom.netcom.com>
+	<750c32$anm$2@ligarius.ultra.net>
+Date: Mon, 14 Dec 1998 20:56:17 GMT
+Lines: 53
+Xref: news3.best.com alt.sys.pdp10:4531 alt.folklore.computers:119788
+
+In article <750c32$anm$2@ligarius.ultra.net> jmfbahciv@aol.com writes:
+
+>In article <ALDERSON.98Dec11151046@netcom.netcom.com>,
+>   alderson@netcom.netcom.com (Richard M. Alderson III) wrote:
+
+>>NEBULA is part of GALAXY.
+
+>But only on TOPS-20.  TOPS-10 didn't implement loosely coupled systems; we did
+>SMP instead.
+
+Hmm.  I thought Don Mastrovito talked about... no, he talked about new stuff in
+7.04.  Jack Wong!  Jack talked about changes in Galaxy, and I got the impres-
+sion (obviously mistaken) that there was a Nebula for Tops-10 as well as for
+Tops-20.  (I chaired the DECUS session in which Tops-10 7.04 and Tops-20 7.0
+were announced to the world, having participated in the 7.0 field test.  Lemme
+see, was that Cincinnati '88?  Or Hot-lanta '89?)
+
+>>GALAXY is part of the operating system, but not part of the monitor.  It is
+>>the spooling subsystem, handling batch, printing, plotting, and card I/O.  It
+>>was common to Tops-10 and Tops-20 (although some pieces only existed in one
+>>or the other--I think PULSAR was Tops-10 tape-handling, for example),
+>>violating the coding standards of both.
+
+>Coding standards or ANSI tape handling?  I suspect you mean the latter.
+
+Sorry, the parenthetical comment about PULSAR et al. should be ignored to read
+that right:  Galaxy was common to Tops-10 and Tops-20 and violated the coding
+standards for both.
+
+An example:  In Tops-20, the standard is to call ACs 1-4 by the names T1-T4; as
+we learned here at XKL, the monitor stack pointer, called P in both OSes, is
+AC1 (AC 17 in Tops-20 and in XKL's unreleased port of Tops-10).  In the Galaxy
+sources, ACs 1-2 are S1-S2, and T1-T4 are ACs 3-6.
+
+I stand by my comment regarding coding standards...
+
+>Right.  One of the strengths of GALAXY was the module GLXLIB which was a
+>library of routines that provided the monitor calling interface for IPCF,
+>memory management, etc.  CUSPs that we wrote after GALAXY became a product
+>would use GLXLIB.  That way, if written correctly, a lot of development time
+>was saved because all that difficult memory management and IPCF didn't have to
+>be coded again and again and again.
+
+Took me a long time to understand GLXLIB internals, too.  Tops-20 doesn't *use*
+the PORTAL instruction (it's just another JRST), so there were all these (to my
+way of thinking) unnecessary jumps to jumps (branches to branches).  But it's
+OK, I understand now ;-).
+
+GLXLIB is impressive.
+-- 
+Rich Alderson			Last LOTS Tops-20 Systems Programmer, 1984-1991
+				Current maintainer, MIT TECO EMACS (v. 170)
+last name @ XKL dot COM		Chief systems administrator, XKL LLC, 1998-now
+
+
+Article 4533 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!su-news-hub1.bbnplanet.com!news.gtei.net!newsfeed.berkeley.edu!newsfeed.xcom.net!news.ultranet.com!d4
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: What was TOPS-10 "GALAXY"?
+Date: Tue, 15 Dec 98 12:14:29 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 109
+Message-ID: <755l86$74m$1@ligarius.ultra.net>
+References: <36714809.131CAD23@trailing-edge.com>
+	<ALDERSON.98Dec11151046@netcom.netcom.com>
+	<750c32$anm$2@ligarius.ultra.net> <ALDERSON.98Dec14125617@netcom.netcom.com>
+NNTP-Posting-Host: d4.dial-13.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 15 Dec 1998 12:38:30 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: news3.best.com alt.sys.pdp10:4533 alt.folklore.computers:119829
+
+In article <ALDERSON.98Dec14125617@netcom.netcom.com>,
+   alderson@netcom.netcom.com (Richard M. Alderson III) wrote:
+>In article <750c32$anm$2@ligarius.ultra.net> jmfbahciv@aol.com writes:
+>
+>>In article <ALDERSON.98Dec11151046@netcom.netcom.com>,
+>>   alderson@netcom.netcom.com (Richard M. Alderson III) wrote:
+>
+>>>NEBULA is part of GALAXY.
+>
+>>But only on TOPS-20.  TOPS-10 didn't implement loosely coupled 
+>>systems; we did SMP instead.
+>
+>Hmm.  I thought Don Mastrovito talked about... no, he talked 
+>about new stuff in 7.04.  Jack Wong!  Jack talked about 
+>changes in Galaxy, and I got the impression (obviously mistaken) 
+>that there was a Nebula for Tops-10 as well as for Tops-20. 
+
+Oh, you may not be mistaken.  That bunch could have talked about
+implementing TOPS-10 on the Alpha (that's how screwed up they 
+got).   
+
+>(I chaired the DECUS session in which Tops-10 7.04 and Tops-20 7.0
+>were announced to the world, having participated in the 7.0 
+>field test.  Lemme see, was that Cincinnati '88?  Or Hot-lanta '89?)
+>
+>>>GALAXY is part of the operating system, but not part of the 
+>>>monitor.  It is the spooling subsystem, handling batch, printing, 
+>>>plotting, and card I/O.  It was common to Tops-10 and Tops-20 
+>>>(although some pieces only existed in one
+>>>or the other--I think PULSAR was Tops-10 tape-handling, for example),
+>>>violating the coding standards of both.
+>
+>>Coding standards or ANSI tape handling?  I suspect you mean the latter.
+>
+>Sorry, the parenthetical comment about PULSAR et al. should be 
+>ignored to read that right:  Galaxy was common to Tops-10 and 
+>Tops-20 and violated the coding standards for both.
+>
+>An example:  In Tops-20, the standard is to call ACs 1-4 by 
+>the names T1-T4; as we learned here at XKL, the monitor stack 
+>pointer, called P in both OSes, is AC1 (AC 17 in Tops-20 and 
+>in XKL's unreleased port of Tops-10).  In the Galaxy
+>sources, ACs 1-2 are S1-S2, and T1-T4 are ACs 3-6.
+
+Ah, now I understand what you meant :-).
+>
+>I stand by my comment regarding coding standards...
+
+Ahem....there weren't any coding standards.  There were
+standards within product but there were none across products.
+IIR there were reasons why the ACs that GALAXY picked were
+odd like that but I don't remember specific details.  I got
+to "listen over the wall" when Chuck and Larry were designing
+(since Chuck's office was kitty-corner from mine) and they
+did spend a lot of time talking about it.
+
+There were reasons (although they may have been folklorish from
+pre-pdp10 days, that AC 17 was picked for PDL pointer in CUSPs.
+I know that I defined my ACs the way I did just because the 
+CUSP listing that I was reading did it that way.  The way
+one got trained on the -10 was a mentor would say, "Go read
+DIRECT, and then start writing your program."  There were no
+standards.  Anything that was standardized was essentially
+a side-effect of how we learned to write code.  So, when I
+wrote the ACTDAE (accounting daemon), I planned to use
+GLXLIB for my IPCF and memory management.  The only thing I
+had to standardize was my calling sequence which was to pass
+arguments to GLXLIB via two specific ACs.  The rest was 
+invisible to me.  To figure out how to do GLXLIB stuff, I 
+asked JMF and he said, "Go read FILDAE (file daemon)".  Then
+I had to something else and I was pointed at another CUSP.
+When I had to add switches or something to BACKUP, I looked
+at DIRECT to figure out how to use SCAN.  It was a bad choice
+because the use of SCAN in DIRECT was different than the 
+use of SCAN in BACKUP.  There just was no documentation on
+how to code.
+
+/BAH
+
+
+>
+>>Right.  One of the strengths of GALAXY was the module GLXLIB which was a
+>>library of routines that provided the monitor calling interface for IPCF,
+>>memory management, etc.  CUSPs that we wrote after GALAXY became 
+>>a product would use GLXLIB.  That way, if written correctly, a 
+>>lot of development time was saved because all that difficult 
+>>memory management and IPCF didn't have to
+>>be coded again and again and again.
+>
+>Took me a long time to understand GLXLIB internals, too.  Tops-20 
+>doesn't *use* the PORTAL instruction (it's just another JRST), 
+>so there were all these (to my way of thinking) unnecessary jumps 
+>to jumps (branches to branches).  But it's OK, I understand now ;-).
+
+Chuckle.  That's what you get trying to figure out what a 
+program does by $Xing through the code.
+
+>
+>GLXLIB is impressive.
+
+Oh, yea.  I was so glad that piece was around.  Memory management
+is such a bear--I was glad to leave it to those guys to maintain
+a working piece of code.  The last thing I wanted to debug was
+(yet another) memory manager shuffler.
+
+/BAH
+
+
+Subtract a hundred and four for e-mail.
+
+
+Article 4534 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!news.ultranet.com!not-for-mail
+From: "Larry S. Samberg" <larry-samberg@sonoma-systems.com>
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: What was TOPS-10 "GALAXY"?
+Date: Tue, 15 Dec 1998 08:15:15 -0500
+Organization: Sonoma Systems
+Lines: 41
+Sender: larry@163.182.152.31
+Message-ID: <755nd8$537$1@ligarius.ultra.net>
+References: <36714809.131CAD23@trailing-edge.com>
+	 <ALDERSON.98Dec11151046@netcom.netcom.com>
+	 <750c32$anm$2@ligarius.ultra.net>
+	 <ALDERSON.98Dec14125617@netcom.netcom.com>
+	 <755l86$74m$1@ligarius.ultra.net>
+NNTP-Posting-Host: 163.182.152.31
+Mime-Version: 1.0
+Content-Type: text/plain; charset="US-ASCII"
+Content-Transfer-Encoding: 7bit
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 15 Dec 1998 13:15:20 GMT
+X-Newsreader: Microsoft Outlook Express for Macintosh - 4.01 (295)
+Xref: news3.best.com alt.sys.pdp10:4534 alt.folklore.computers:119834
+
+Barbara's right on with this stuff. There were really no concrete and
+documented coding conventions -- just a bunch of loose agreements. We
+just created our own based loosely on the other stuff that was around.
+My recollection (and it was a long time ago) was that we added the S1/S2
+registers to the standard convention because we were learning at the
+time that the TOPS20 JSYS used these registers and we wanted to keep
+them free "for arguments" in general. I haven't thought about this stuff
+in 20 years and forgot all about these things but it comes back vaguely.
+
+And yes, the best way to learn was to read somebody else's code. JMF and
+TW sent me in that direction lots of times.
+----------------------------------------------------
+Larry Samberg       larry-samberg@sonoma-systems.com
+Phone: 508-481-2215 x342           Fax: 508-861-0261
+Sonoma Systems, Inc.           Marlborough, MA 01752
+
+
+----------
+In article <755l86$74m$1@ligarius.ultra.net>, jmfbahciv@aol.com wrote:
+
+
+>There were reasons (although they may have been folklorish from
+>pre-pdp10 days, that AC 17 was picked for PDL pointer in CUSPs.
+>I know that I defined my ACs the way I did just because the 
+>CUSP listing that I was reading did it that way.  The way
+>one got trained on the -10 was a mentor would say, "Go read
+>DIRECT, and then start writing your program."  There were no
+>standards.  Anything that was standardized was essentially
+>a side-effect of how we learned to write code.  So, when I
+>wrote the ACTDAE (accounting daemon), I planned to use
+>GLXLIB for my IPCF and memory management.  The only thing I
+>had to standardize was my calling sequence which was to pass
+>arguments to GLXLIB via two specific ACs.  The rest was 
+>invisible to me.  To figure out how to do GLXLIB stuff, I 
+>asked JMF and he said, "Go read FILDAE (file daemon)".  Then
+>I had to something else and I was pointed at another CUSP.
+>When I had to add switches or something to BACKUP, I looked
+>at DIRECT to figure out how to use SCAN.  It was a bad choice
+>because the use of SCAN in DIRECT was different than the 
+>use of SCAN in BACKUP.  There just was no documentation on
+>how to code.
+
+
+Article 4590 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!nntp2.dejanews.com!nnrp1.dejanews.com!not-for-mail
+From: slugger@my-dejanews.com
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: What was TOPS-10 "GALAXY"?
+Date: Sat, 19 Dec 1998 07:15:30 GMT
+Organization: Deja News - The Leader in Internet Discussion
+Lines: 200
+Message-ID: <75fjqi$fkg$1@nnrp1.dejanews.com>
+References: <36714809.131CAD23@trailing-edge.com> <ALDERSON.98Dec11151046@netcom.netcom.com> <750c32$anm$2@ligarius.ultra.net> <ALDERSON.98Dec14125617@netcom.netcom.com>
+NNTP-Posting-Host: 192.193.195.22
+X-Article-Creation-Date: Sat Dec 19 07:15:30 1998 GMT
+X-Http-User-Agent: Mozilla/3.03 (WinNT; U)
+X-Http-Proxy: 1.0 x5.dejanews.com:80 (Squid/1.1.22) for client 192.193.195.22
+Xref: news3.best.com alt.sys.pdp10:4590 alt.folklore.computers:120101
+
+Rich, Larry:
+
+Here are some Galaxy memories:
+
+For quite some time, I was Columbia University's full-time Galaxy Guy.
+From 1980 to 1988, Galaxy wouldn't print to anything but a magnetic
+tape or a REAL line printer.  If you wanted to print something on a
+vanilla DEC20 Galaxy, you had to have either a local printer hooked
+off of the front end or you had to spring for a DN20, put up DECnet
+and take your chances with a DN200 or do something DN60'ish.  All were
+expensive alternatives, except that one usually worked and others
+didn't.
+
+As the university had chaotic cash flow and a need for many systems to
+print to many different printers, I wound up doing a lot of Galaxy
+surgery.  I hacked ours to allow LPTSPL to user serial printers on
+DH11's (a trivial piece of work, *everybody* did this) and to allow
+LPTSPL to spool print requests between our six DEC20's.
+
+That was a little more work; I wrote a server program that used DECnet
+to make a DEC20 look like a DN200 workstation.  After the server (LSRV)
+on one 20 gobbled up all the output from a client 20 that thought it
+was talking to a DN200, the server went and submitted a print request
+to Quasar by crafting an IPCF page using symbolic offsets from GLXMAC.
+Pretty ugly, but it worked.
+
+Anyway, during all those years, Columbia maintained a full-time Galaxy
+Guy (me), one to two Exec people and one to two to three Monitor
+people, depending on how many staff we had floating around.
+
+I wound up with Galaxy because I had Tops-10 experience which everyone
+(myself included--silly me!) assumed would enable me to understand
+Galaxy better.  We needed all these people to maintain all our hacks
+which we had to have in order to provide reasonable service and keep
+our students from clobbering the machines.  In terms of how Galaxy
+communicated, it was nothing like MPB (thank God).  MPB...  Well,
+older Tops-10 people can rave about that better than I can...
+
+It's not surprising that PJRST confused you at first; PORTAL doesn't
+do much under Tops-20, although there was some talk of actually have
+it be functional at some point.  GLXLIB *is* impressive, but not for
+what it did under Tops-20!
+
+Under Tops-20, a great deal of GLXLIB didn't even assemble.  For
+example, the entire GLXPFH file which contains the Tops-10 page fault
+handler code for GLXLIB is unnecessary under Tops-20 (Yea!).  Then
+there's GLXSCN which handles COMND% type thingies; it compiles very
+little code under Tops-20.  But...
+
+What really makes GLXLIB impressive to me is that it did one hack of a
+job of making Tops-10 do lots of fun Tops-20'ish things.  Go look at
+all the code in GLXSCN to do automatic nice things for parsing.  Go
+look at how GLXPFH is integrated with GLXMEM to provide a very nice
+paging subsystem.  Then there was all the file handling stuff in
+GLXFIL to shield you from having to worry about Tops-10 buffers.
+Great stuff!
+
+However, this produced some pretty odd looking conditional code and
+control flow in certain modules because they had to be coded to work
+under Tops-10 and thus couldn't take advantage of some of Tops-20's
+advanced features.  One example was the use of an RPACS% loop in
+M%INIT in GLXMEM.  I wound up replacing the entire thing with a single
+XRMAP% call; but that broke compatibility with Tops-10.
+
+The bottom line was that you could be a DEC20 user and just go over
+and run a Galaxy program under Tops-10 and things acted like you
+expected them to.  That meant less retraining.  To people who really
+understood what kind of bit-banging and munching was going on under
+the hood, it was just kind of--well--pretty cool, I guess.
+
+
+Larry--speaking as somebody who cut his teeth on some of this stuff, I
+really have to tell you that Galaxy was one heck of a job!  It took me
+about three months to understand the Quasar failsoft file format.
+Once I did and got the idea of how headers were kept in memory while
+the bulk of a request were on disk, I remember having the
+following reaction: My eyes blinked, I sat back in my office chair and
+smirked for about 5 minutes.  "Wow...  Neat...  Cool..."
+
+I've been waiting since 1981 to know who to say that too...
+
+Anyway, I have a question that I've been mulling over from time to
+time for a few decades that I thought I would never get to ask!  Here
+is the background: IPCF messages flowed between Quasar, Orion
+and lots of OPR programs running around.  When IPCF messages were
+received in Orion, an interrupt would happen on a software channel 23.
+The interrupt routine would wake up and break Orion out of a sleep so
+it would go do something.
+
+Under conditions of prolonged high system load, the GLXIPC IPCF
+interrupt handler would break in a very, VERY strange way.
+
+GLXINT kept the base of the interupt handler routines in a global
+system variable called BASINT and would reference this variable to
+figure out what to do when it got an interupt.  Well, when things had
+been really busy for a long time this variable would get smashed!
+Once it got smashed, Orion would only process messages once a minute.
+Since it was responsible for sending certain responses to users, when
+it wedged, a lot of IPCF space could get used up and the system would
+crash once it ran out of IPCF free space.
+
+I searched for years and I could never find out what blasted this
+variable...  I tried really hard to get it, too.  I poured over
+GLXINT, GLXIPC, Orion and friends and and...  Well, you can see how
+well I remember this after 15+ years...
+
+Once time, I wrote a program that CFORK%ed Orion, PMAP%ed the page
+holding BASINT and then set an ADBRK% on that location for the Orion
+fork.  I figured I'd get an interrupt when the code in Orion that
+stomped BASINT ran and simply recorded every value and PC.
+
+Well, guess what?  The system ran out of IPCF free space and when I
+checked my program, it only caught the case where BASINT was loaded at
+GLXINT initialization.  It never found the code that stomped the
+value!!!  Wierd!
+
+I never found it, so I recoded Orion not to sleep so long (1 second
+instead of a minute) and to fix BASINT up if it got clobbered.  It
+always annoyed me that I never found the bug...  So...  Any ideas?  I
+still find myself wondering what it could be after all this time.  Who
+knows, maybe if we find it, we'll be able to do XKL a favor in
+advance...
+
+					--T
+
+PS: Cure: Please!
+
+
+In article <ALDERSON.98Dec14125617@netcom.netcom.com>,
+  alderson@netcom.com wrote:
+> In article <750c32$anm$2@ligarius.ultra.net> jmfbahciv@aol.com writes:
+>
+> >In article <ALDERSON.98Dec11151046@netcom.netcom.com>,
+> >   alderson@netcom.netcom.com (Richard M. Alderson III) wrote:
+>
+> >>NEBULA is part of GALAXY.
+>
+> >But only on TOPS-20.  TOPS-10 didn't implement loosely coupled systems; we
+did
+> >SMP instead.
+>
+> Hmm.  I thought Don Mastrovito talked about... no, he talked about new stuff
+in
+> 7.04.  Jack Wong!  Jack talked about changes in Galaxy, and I got the impres-
+> sion (obviously mistaken) that there was a Nebula for Tops-10 as well as for
+> Tops-20.  (I chaired the DECUS session in which Tops-10 7.04 and Tops-20 7.0
+> were announced to the world, having participated in the 7.0 field test.  Lemme
+> see, was that Cincinnati '88?  Or Hot-lanta '89?)
+>
+> >>GALAXY is part of the operating system, but not part of the monitor.  It is
+> >>the spooling subsystem, handling batch, printing, plotting, and card I/O.
+It
+> >>was common to Tops-10 and Tops-20 (although some pieces only existed in one
+> >>or the other--I think PULSAR was Tops-10 tape-handling, for example),
+> >>violating the coding standards of both.
+>
+> >Coding standards or ANSI tape handling?  I suspect you mean the latter.
+>
+> Sorry, the parenthetical comment about PULSAR et al. should be ignored to read
+> that right:  Galaxy was common to Tops-10 and Tops-20 and violated the coding
+> standards for both.
+>
+> An example:  In Tops-20, the standard is to call ACs 1-4 by the names T1-T4;
+as
+> we learned here at XKL, the monitor stack pointer, called P in both OSes, is
+> AC1 (AC 17 in Tops-20 and in XKL's unreleased port of Tops-10).  In the Galaxy
+> sources, ACs 1-2 are S1-S2, and T1-T4 are ACs 3-6.
+>
+> I stand by my comment regarding coding standards...
+>
+> >Right.  One of the strengths of GALAXY was the module GLXLIB which was a
+> >library of routines that provided the monitor calling interface for IPCF,
+> >memory management, etc.  CUSPs that we wrote after GALAXY became a product
+> >would use GLXLIB.  That way, if written correctly, a lot of development time
+> >was saved because all that difficult memory management and IPCF didn't have
+to
+> >be coded again and again and again.
+>
+> Took me a long time to understand GLXLIB internals, too.  Tops-20 doesn't
+*use*
+> the PORTAL instruction (it's just another JRST), so there were all these (to
+my
+> way of thinking) unnecessary jumps to jumps (branches to branches).  But it's
+> OK, I understand now ;-).
+>
+> GLXLIB is impressive.
+> --
+> Rich Alderson			Last LOTS Tops-20 Systems Programmer, 1984-1991
+> 				Current maintainer, MIT TECO EMACS (v. 170)
+> last name @ XKL dot COM		Chief systems administrator, XKL LLC,
+1998-now
+>
+
+
+--
+T h o m a s . D e B e l l i s @NoSpam C i t i c o r p . C o m
+Remove spaces and NoSpam for direct em
+
+-----------== Posted via Deja News, The Discussion Network ==----------
+http://www.dejanews.com/       Search, Read, Discuss, or Start Your Own    
+
+
+Article 4595 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newsfeed.cwix.com!209.244.253.199!newsfeed.xcom.net!news.ultranet.com!not-for-mail
+From: "Larry S. Samberg" <larry-samberg@sonoma-systems.com>
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: What was TOPS-10 "GALAXY"?
+Date: Sat, 19 Dec 1998 14:04:43 -0500
+Organization: Sonoma Systems
+Lines: 227
+Sender: larry@bsg-ma1-16.ix.netcom.com
+Message-ID: <75gtci$tj$1@strato.ultra.net>
+References: <36714809.131CAD23@trailing-edge.com>
+	 <ALDERSON.98Dec11151046@netcom.netcom.com>
+	 <750c32$anm$2@ligarius.ultra.net>
+	 <ALDERSON.98Dec14125617@netcom.netcom.com>
+	 <75fjqi$fkg$1@nnrp1.dejanews.com>
+NNTP-Posting-Host: bsg-ma1-16.ix.netcom.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset="US-ASCII"
+Content-Transfer-Encoding: 7bit
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 19 Dec 1998 19:04:50 GMT
+X-Newsreader: Microsoft Outlook Express for Macintosh - 4.01 (295)
+Xref: news3.best.com alt.sys.pdp10:4595 alt.folklore.computers:120122
+
+Tom, I appreciate the compliments and the "digs" but there is no way I
+can help you with your questions. We started working on QUASAR early in
+1974. Chuck went on to work on other things sometime around 76-77 and I
+moved to a new project (finally) in 1979. At that time I can assure you
+that GLXLIB assembled on both operating systems :)..... ORION had just
+been released and PULSAR was still under development.
+
+Bottom line is that it is quite likely that I had nothing to do with the
+code that was causing you problems and even if I did, it is "at least"
+20 years ago and I make it a policy to forget any bugs that I create
+after 10 years (Statute of Limitations!).
+
+Regards/lss
+----------------------------------------------------
+Larry Samberg       larry-samberg@sonoma-systems.com
+Phone: 508-481-2215 x342           Fax: 508-861-0261
+Sonoma Systems, Inc.           Marlborough, MA 01752
+
+
+----------
+In article <75fjqi$fkg$1@nnrp1.dejanews.com>, slugger@my-dejanews.com
+wrote:
+
+
+>Rich, Larry:
+>
+>Here are some Galaxy memories:
+>
+>For quite some time, I was Columbia University's full-time Galaxy Guy.
+>From 1980 to 1988, Galaxy wouldn't print to anything but a magnetic
+>tape or a REAL line printer.  If you wanted to print something on a
+>vanilla DEC20 Galaxy, you had to have either a local printer hooked
+>off of the front end or you had to spring for a DN20, put up DECnet
+>and take your chances with a DN200 or do something DN60'ish.  All were
+>expensive alternatives, except that one usually worked and others
+>didn't.
+>
+>As the university had chaotic cash flow and a need for many systems to
+>print to many different printers, I wound up doing a lot of Galaxy
+>surgery.  I hacked ours to allow LPTSPL to user serial printers on
+>DH11's (a trivial piece of work, *everybody* did this) and to allow
+>LPTSPL to spool print requests between our six DEC20's.
+>
+>That was a little more work; I wrote a server program that used DECnet
+>to make a DEC20 look like a DN200 workstation.  After the server (LSRV)
+>on one 20 gobbled up all the output from a client 20 that thought it
+>was talking to a DN200, the server went and submitted a print request
+>to Quasar by crafting an IPCF page using symbolic offsets from GLXMAC.
+>Pretty ugly, but it worked.
+>
+>Anyway, during all those years, Columbia maintained a full-time Galaxy
+>Guy (me), one to two Exec people and one to two to three Monitor
+>people, depending on how many staff we had floating around.
+>
+>I wound up with Galaxy because I had Tops-10 experience which everyone
+>(myself included--silly me!) assumed would enable me to understand
+>Galaxy better.  We needed all these people to maintain all our hacks
+>which we had to have in order to provide reasonable service and keep
+>our students from clobbering the machines.  In terms of how Galaxy
+>communicated, it was nothing like MPB (thank God).  MPB...  Well,
+>older Tops-10 people can rave about that better than I can...
+>
+>It's not surprising that PJRST confused you at first; PORTAL doesn't
+>do much under Tops-20, although there was some talk of actually have
+>it be functional at some point.  GLXLIB *is* impressive, but not for
+>what it did under Tops-20!
+>
+>Under Tops-20, a great deal of GLXLIB didn't even assemble.  For
+>example, the entire GLXPFH file which contains the Tops-10 page fault
+>handler code for GLXLIB is unnecessary under Tops-20 (Yea!).  Then
+>there's GLXSCN which handles COMND% type thingies; it compiles very
+>little code under Tops-20.  But...
+>
+>What really makes GLXLIB impressive to me is that it did one hack of a
+>job of making Tops-10 do lots of fun Tops-20'ish things.  Go look at
+>all the code in GLXSCN to do automatic nice things for parsing.  Go
+>look at how GLXPFH is integrated with GLXMEM to provide a very nice
+>paging subsystem.  Then there was all the file handling stuff in
+>GLXFIL to shield you from having to worry about Tops-10 buffers.
+>Great stuff!
+>
+>However, this produced some pretty odd looking conditional code and
+>control flow in certain modules because they had to be coded to work
+>under Tops-10 and thus couldn't take advantage of some of Tops-20's
+>advanced features.  One example was the use of an RPACS% loop in
+>M%INIT in GLXMEM.  I wound up replacing the entire thing with a single
+>XRMAP% call; but that broke compatibility with Tops-10.
+>
+>The bottom line was that you could be a DEC20 user and just go over
+>and run a Galaxy program under Tops-10 and things acted like you
+>expected them to.  That meant less retraining.  To people who really
+>understood what kind of bit-banging and munching was going on under
+>the hood, it was just kind of--well--pretty cool, I guess.
+>
+>
+>Larry--speaking as somebody who cut his teeth on some of this stuff, I
+>really have to tell you that Galaxy was one heck of a job!  It took me
+>about three months to understand the Quasar failsoft file format.
+>Once I did and got the idea of how headers were kept in memory while
+>the bulk of a request were on disk, I remember having the
+>following reaction: My eyes blinked, I sat back in my office chair and
+>smirked for about 5 minutes.  "Wow...  Neat...  Cool..."
+>
+>I've been waiting since 1981 to know who to say that too...
+>
+>Anyway, I have a question that I've been mulling over from time to
+>time for a few decades that I thought I would never get to ask!  Here
+>is the background: IPCF messages flowed between Quasar, Orion
+>and lots of OPR programs running around.  When IPCF messages were
+>received in Orion, an interrupt would happen on a software channel 23.
+>The interrupt routine would wake up and break Orion out of a sleep so
+>it would go do something.
+>
+>Under conditions of prolonged high system load, the GLXIPC IPCF
+>interrupt handler would break in a very, VERY strange way.
+>
+>GLXINT kept the base of the interupt handler routines in a global
+>system variable called BASINT and would reference this variable to
+>figure out what to do when it got an interupt.  Well, when things had
+>been really busy for a long time this variable would get smashed!
+>Once it got smashed, Orion would only process messages once a minute.
+>Since it was responsible for sending certain responses to users, when
+>it wedged, a lot of IPCF space could get used up and the system would
+>crash once it ran out of IPCF free space.
+>
+>I searched for years and I could never find out what blasted this
+>variable...  I tried really hard to get it, too.  I poured over
+>GLXINT, GLXIPC, Orion and friends and and...  Well, you can see how
+>well I remember this after 15+ years...
+>
+>Once time, I wrote a program that CFORK%ed Orion, PMAP%ed the page
+>holding BASINT and then set an ADBRK% on that location for the Orion
+>fork.  I figured I'd get an interrupt when the code in Orion that
+>stomped BASINT ran and simply recorded every value and PC.
+>
+>Well, guess what?  The system ran out of IPCF free space and when I
+>checked my program, it only caught the case where BASINT was loaded at
+>GLXINT initialization.  It never found the code that stomped the
+>value!!!  Wierd!
+>
+>I never found it, so I recoded Orion not to sleep so long (1 second
+>instead of a minute) and to fix BASINT up if it got clobbered.  It
+>always annoyed me that I never found the bug...  So...  Any ideas?  I
+>still find myself wondering what it could be after all this time.  Who
+>knows, maybe if we find it, we'll be able to do XKL a favor in
+>advance...
+>
+>     --T
+>
+>PS: Cure: Please!
+>
+>
+>In article <ALDERSON.98Dec14125617@netcom.netcom.com>,
+>  alderson@netcom.com wrote:
+>> In article <750c32$anm$2@ligarius.ultra.net> jmfbahciv@aol.com writes:
+>>
+>> >In article <ALDERSON.98Dec11151046@netcom.netcom.com>,
+>> >   alderson@netcom.netcom.com (Richard M. Alderson III) wrote:
+>>
+>> >>NEBULA is part of GALAXY.
+>>
+>> >But only on TOPS-20.  TOPS-10 didn't implement loosely coupled systems; we
+>did
+>> >SMP instead.
+>>
+>> Hmm.  I thought Don Mastrovito talked about... no, he talked about new stuff
+>in
+>> 7.04.  Jack Wong!  Jack talked about changes in Galaxy, and I got the impres-
+>> sion (obviously mistaken) that there was a Nebula for Tops-10 as well as for
+>> Tops-20.  (I chaired the DECUS session in which Tops-10 7.04 and Tops-20 7.0
+>> were announced to the world, having participated in the 7.0 field test.  
+>Lemme
+>> see, was that Cincinnati '88?  Or Hot-lanta '89?)
+>>
+>> >>GALAXY is part of the operating system, but not part of the monitor.  It is
+>> >>the spooling subsystem, handling batch, printing, plotting, and card I/O.
+>It
+>> >>was common to Tops-10 and Tops-20 (although some pieces only existed in one
+>> >>or the other--I think PULSAR was Tops-10 tape-handling, for example),
+>> >>violating the coding standards of both.
+>>
+>> >Coding standards or ANSI tape handling?  I suspect you mean the latter.
+>>
+>> Sorry, the parenthetical comment about PULSAR et al. should be ignored to 
+>read
+>> that right:  Galaxy was common to Tops-10 and Tops-20 and violated the coding
+>> standards for both.
+>>
+>> An example:  In Tops-20, the standard is to call ACs 1-4 by the names T1-T4;
+>as
+>> we learned here at XKL, the monitor stack pointer, called P in both OSes, is
+>> AC1 (AC 17 in Tops-20 and in XKL's unreleased port of Tops-10).  In the 
+>Galaxy
+>> sources, ACs 1-2 are S1-S2, and T1-T4 are ACs 3-6.
+>>
+>> I stand by my comment regarding coding standards...
+>>
+>> >Right.  One of the strengths of GALAXY was the module GLXLIB which was a
+>> >library of routines that provided the monitor calling interface for IPCF,
+>> >memory management, etc.  CUSPs that we wrote after GALAXY became a product
+>> >would use GLXLIB.  That way, if written correctly, a lot of development time
+>> >was saved because all that difficult memory management and IPCF didn't have
+>to
+>> >be coded again and again and again.
+>>
+>> Took me a long time to understand GLXLIB internals, too.  Tops-20 doesn't
+>*use*
+>> the PORTAL instruction (it's just another JRST), so there were all these (to
+>my
+>> way of thinking) unnecessary jumps to jumps (branches to branches).  But it's
+>> OK, I understand now ;-).
+>>
+>> GLXLIB is impressive.
+>> --
+>> Rich Alderson   Last LOTS Tops-20 Systems Programmer, 1984-1991
+>>     Current maintainer, MIT TECO EMACS (v. 170)
+>> last name @ XKL dot COM  Chief systems administrator, XKL LLC,
+>1998-now
+>>
+>
+>
+>--
+>T h o m a s . D e B e l l i s @NoSpam C i t i c o r p . C o m
+>Remove spaces and NoSpam for direct em
+>
+>-----------== Posted via Deja News, The Discussion Network ==----------
+>http://www.dejanews.com/       Search, Read, Discuss, or Start Your Own    
+
+
+Article 4602 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!feed1.news.rcn.net!rcn!news.ultranet.com!d13
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: What was TOPS-10 "GALAXY"?
+Date: Sun, 20 Dec 98 11:57:43 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 31
+Message-ID: <75iq68$t3n$2@ligarius.ultra.net>
+References: <36714809.131CAD23@trailing-edge.com>
+	 <ALDERSON.98Dec11151046@netcom.netcom.com>
+	 <750c32$anm$2@ligarius.ultra.net>
+	 <ALDERSON.98Dec14125617@netcom.netcom.com>
+	 <75fjqi$fkg$1@nnrp1.dejanews.com> <75gtci$tj$1@strato.ultra.net>
+NNTP-Posting-Host: d13.dial-13.mbo.ma.ultra.net
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 20 Dec 1998 12:22:32 GMT
+X-Newsreader: News Xpress Version 1.0 Beta #4
+Xref: news3.best.com alt.sys.pdp10:4602
+
+In article <75gtci$tj$1@strato.ultra.net>,
+   "Larry S. Samberg" <larry-samberg@sonoma-systems.com> wrote:
+
+>Tom, I appreciate the compliments and the "digs" but there is no way I
+>can help you with your questions. We started working on QUASAR early in
+>1974. Chuck went on to work on other things sometime around 76-77 and I
+>moved to a new project (finally) in 1979. At that time I can assure you
+>that GLXLIB assembled on both operating systems :)..... ORION had just
+>been released and PULSAR was still under development.
+
+The fact that it didn't assemble makes me think that he wasn't working
+with a field image copy (although I never packaged anything for the
+-20).  If the sources were the -10 distributon, I assure [generic]
+you that things at least assembled with the conclusion that no known
+errors were detected :-).
+
+>
+>Bottom line is that it is quite likely that I had nothing to do with the
+>code that was causing you problems and even if I did, it is "at least"
+>20 years ago and I make it a policy to forget any bugs that I create
+>after 10 years (Statute of Limitations!).
+>
+
+Chuckle.  IIRC, you weren't as bad as TW who forgot what he did
+the day before :-))).
+
+<snip>
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 4600 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!nntp2.dejanews.com!nnrp1.dejanews.com!not-for-mail
+From: edb.gene@hl.telia.no
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: What was TOPS-10 "GALAXY"?
+Date: Sun, 20 Dec 1998 12:04:00 GMT
+Organization: Deja News - The Leader in Internet Discussion
+Lines: 17
+Message-ID: <75ip3g$srj$1@nnrp1.dejanews.com>
+References: <36714809.131CAD23@trailing-edge.com> <ALDERSON.98Dec11151046@netcom.netcom.com> <750c32$anm$2@ligarius.ultra.net> <ALDERSON.98Dec14125617@netcom.netcom.com> <75fjqi$fkg$1@nnrp1.dejanews.com>
+NNTP-Posting-Host: 195.204.239.94
+X-Article-Creation-Date: Sun Dec 20 12:04:00 1998 GMT
+X-Http-User-Agent: Mozilla/3.04 (Win16; I)
+X-Http-Proxy: 1.0 x9.dejanews.com:80 (Squid/1.1.22) for client 195.204.239.94
+Xref: news3.best.com alt.sys.pdp10:4600 alt.folklore.computers:120155
+
+In article <75fjqi$fkg$1@nnrp1.dejanews.com>,
+  slugger@my-dejanews.com wrote:
+
+> ...  I hacked ours to allow LPTSPL to user serial printers on
+> DH11's (a trivial piece of work, *everybody* did this) and to allow
+> LPTSPL to spool print requests between our six DEC20's.
+
+Yes, I'm one of the 'Everybodies'. Even brought the code to DEC in USA, but it
+never made it into the mainstream.
+
+Has anybody every duplicated EXEC's functionalty?
+I did use some of Columbia University's Kermit code to implement the command
+line scanner.
+
+
+-----------== Posted via Deja News, The Discussion Network ==----------
+http://www.dejanews.com/       Search, Read, Discuss, or Start Your Own    
+
+
+Article 4609 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!nntp2.dejanews.com!nnrp1.dejanews.com!not-for-mail
+From: slugger@my-dejanews.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: What was TOPS-10 "GALAXY"?
+Date: Mon, 21 Dec 1998 19:03:46 GMT
+Organization: Deja News - The Leader in Internet Discussion
+Lines: 91
+Message-ID: <75m62h$iif$1@nnrp1.dejanews.com>
+References: <36714809.131CAD23@trailing-edge.com> <ALDERSON.98Dec11151046@netcom.netcom.com> <750c32$anm$2@ligarius.ultra.net> <ALDERSON.98Dec14125617@netcom.netcom.com> <75fjqi$fkg$1@nnrp1.dejanews.com> <75gtci$tj$1@strato.ultra.net> <75iq68$t3n$2@ligarius.ultra.net>
+NNTP-Posting-Host: 192.193.195.22
+X-Article-Creation-Date: Mon Dec 21 19:03:46 1998 GMT
+X-Http-User-Agent: Mozilla/3.03 (WinNT; U)
+X-Http-Proxy: 1.0 x15.dejanews.com:80 (Squid/1.1.22) for client 192.193.195.22
+Xref: news3.best.com alt.sys.pdp10:4609
+
+Barb, Larry,
+
+We were a Tops-20 source site and had access to some Tops-10 monitor sources.
+In fact, we alway built off of the standard DEC distribution base!  That
+meant that whenever we got a new tape, we would have to FILCOM the new
+Digital source with the old Digital source, see what the changes were and
+then merge those back into our running source.	This was quite a chore,
+particularly for the 4.2 Galaxy.  I cracked 300 CPU minutes in one week
+assembling everything multi- tudinous times making sure I hadn't broken
+anything.
+
+I should clarify what I mean by XRMAP% broke things.  I mean that there was
+no equivalent Tops-10 UUO (that I was aware of as of a 5.04 KA Monitor, the
+last time I did anything under Tops-10 besides run INITIA).  We would have
+NEVER sacrificed the ability to compile under both Tops-10 and Tops-20!  This
+is because we had this silly feeling of being able to convince DEC to take
+some of our changes and fixes.
+
+We always kept this hope in mind.  So, yes, I used XRMAP%, but I made sure
+that the Tops-10 code still compiled and still worked by using PA1050 and
+verifying that the pager code would still do the right thing.
+
+All of this was kind of silly considering Columbia didn't have a Tops-10
+system anywhere on any campus.	It may have come in handy once we DECnet'ed
+with Steven's.	I can't remember if they still had their DEC-10 by then or if
+they ever looked at any of our stuff.  The only place were our Galaxy did
+have any sort of a compatibility issue was that I changed some of the decimal
+output routines in LPTSPL and GLXTXT to use the KL-10 CVTBDO instruction. 
+That would have broken them on a KA.
+
+Of course, even when I did SPR things with a FILCOM of the differences, our
+changes STILL didn't make it into the sources.  Remind me to tell you about
+a QSRADM time bug in I$AGE that is *still* in the sources even though I SPR'ed
+it in 1983!
+
+It's not the BASINT bug that gets me after all these years, it's the fact
+that no matter *WHAT* I did, I couldn't find it.  Believe me, I used every
+trick in the book!  I tried making the page that it was on be read-only and
+catching all write references to the page.  I never caught a write refernce
+to the BASINT offset and it was still stomped...  I used ADBRK% to catch any
+write references to the field.	It *still* got stomped.  And this only
+happened when the system was really loaded for a few hours...  Grr...
+
+I'd love to know what, on Tops-20, could have blasted a field that I had so
+heavily instrumented...
+                                          --T
+
+
+
+In article <75iq68$t3n$2@ligarius.ultra.net>,
+  jmfbahciv@aol.com wrote:
+> In article <75gtci$tj$1@strato.ultra.net>,
+>    "Larry S. Samberg" <larry-samberg@sonoma-systems.com> wrote:
+>
+> >Tom, I appreciate the compliments and the "digs" but there is no way I
+> >can help you with your questions. We started working on QUASAR early in
+> >1974. Chuck went on to work on other things sometime around 76-77 and I
+> >moved to a new project (finally) in 1979. At that time I can assure you
+> >that GLXLIB assembled on both operating systems :)..... ORION had just
+> >been released and PULSAR was still under development.
+>
+> The fact that it didn't assemble makes me think that he wasn't working
+> with a field image copy (although I never packaged anything for the
+> -20).  If the sources were the -10 distributon, I assure [generic]
+> you that things at least assembled with the conclusion that no known
+> errors were detected :-).
+>
+> >
+> >Bottom line is that it is quite likely that I had nothing to do with the
+> >code that was causing you problems and even if I did, it is "at least"
+> >20 years ago and I make it a policy to forget any bugs that I create
+> >after 10 years (Statute of Limitations!).
+> >
+>
+> Chuckle.  IIRC, you weren't as bad as TW who forgot what he did
+> the day before :-))).
+>
+> <snip>
+>
+> /BAH
+>
+> Subtract a hundred and four for e-mail.
+>
+
+
+--
+T h o m a s . D e B e l l i s @NoSpam C i t i c o r p . C o m
+Remove spaces and NoSpam for direct em
+
+-----------== Posted via Deja News, The Discussion Network ==----------
+http://www.dejanews.com/       Search, Read, Discuss, or Start Your Own    
+
+
+Article 4612 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newsfeed.cwix.com!209.244.253.199!newsfeed.xcom.net!news.ultranet.com!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: What was TOPS-10 "GALAXY"?
+Date: Mon, 21 Dec 1998 19:24:52 -0500
+Organization: UltraNet Communications , an RCN Company http://www.ultranet.com/
+Lines: 21
+Message-ID: <367EE6D4.AB5E591F@MA.UltraNet.Com>
+References: <36714809.131CAD23@trailing-edge.com> <ALDERSON.98Dec11151046@netcom.netcom.com> <750c32$anm$2@ligarius.ultra.net> <ALDERSON.98Dec14125617@netcom.netcom.com> <75fjqi$fkg$1@nnrp1.dejanews.com> <75gtci$tj$1@strato.ultra.net> <75iq68$t3n$2@ligarius.ultra.net> <75m62h$iif$1@nnrp1.dejanews.com>
+NNTP-Posting-Host: d51.dial-1.cmb.ma.ultra.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Complaints-To: abuse@ultra.net
+X-Ultra-Time: 22 Dec 1998 00:24:59 GMT
+X-Mailer: Mozilla 4.5 [en] (Win95; I)
+X-Accept-Language: en,en-US,en-GB,es
+Xref: news3.best.com alt.sys.pdp10:4612
+
+slugger@my-dejanews.com wrote:
+
+> It's not the BASINT bug that gets me after all these years, it's the fact
+> that no matter *WHAT* I did, I couldn't find it.  Believe me, I used every
+> trick in the book!  I tried making the page that it was on be read-only and
+> catching all write references to the page.  I never caught a write refernce
+> to the BASINT offset and it was still stomped...  I used ADBRK% to catch any
+> write references to the field.  It *still* got stomped.  And this only
+> happened when the system was really loaded for a few hours...  Grr...
+> 
+> I'd love to know what, on Tops-20, could have blasted a field that I had so
+> heavily instrumented...
+
+Uh, are you sure that address break or page protection would necessarily fire
+if the store was from another user process with the page mapped (or the
+monitor)?  The page may not have even *intended* to be shared; if it were
+adjacent to a shared page, a fencepost error when setting up the sharing could
+do it...
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+
+Article 4608 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newshub.northeast.verio.net!news.idt.net!news-a.ais.net!ais.net!news.indiana.edu!news.iupui.edu!haystack!mhwood
+From: mhwood@Ameritech.net (Mark H. Wood)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: What was TOPS-10 "GALAXY"?
+Followup-To: alt.sys.pdp10,alt.folklore.computers
+Date: Mon, 21 Dec 1998 12:45:53 GMT
+Organization: La Petite Hackerie
+Lines: 31
+Message-ID: <F4BFGH.IoC@Ameritech.net>
+References: <36714809.131CAD23@trailing-edge.com> <ALDERSON.98Dec11151046@netcom.netcom.com> <750c32$anm$2@ligarius.ultra.net> <ALDERSON.98Dec14125617@netcom.netcom.com> <75fjqi$fkg$1@nnrp1.dejanews.com>
+NNTP-Posting-Host: mhw.ulib.iupui.edu
+X-Newsreader: TIN [UNIX 1.3 950515BETA PL0]
+Xref: news3.best.com alt.sys.pdp10:4608 alt.folklore.computers:120209
+
+slugger@my-dejanews.com wrote:
+[deletia]
+: The bottom line was that you could be a DEC20 user and just go over
+: and run a Galaxy program under Tops-10 and things acted like you
+: expected them to.  That meant less retraining.  To people who really
+: understood what kind of bit-banging and munching was going on under
+: the hood, it was just kind of--well--pretty cool, I guess.
+
+It was neat-o.  But common code backfired at least once.  I recall a
+howling bug in DN87S.  The '10-side code would start up just fine, and
+run until the first bit of data came up the wire, then -- boom!  At
+the time we were running TOPS-10 on one orange box and TOPS-20 on the
+other, and it only blew up on the TOPS-10 system.  I eventually
+tracked it down to a byte pointer form that was undefined by the
+TOPS-10 microcode.
+
+(left-handed compliment:  I dunno what my employers thought of DN87S,
+but I enjoyed it because there were just enough interesting things to
+be fixed or extended.  By the time we said goodbye to our last KL, my
+dirty boot-prints were all over the DN87 code on both the '10 and '11
+sides of the fence.  I'd done *very* little on PDP11s and *nothing* on
+communication front-ends, so I learned a lot!)
+
+I think I owe many of the very sick things I did with MACRO later on,
+to trying to figure out how GALAXY components worked and all the
+techniques I learned along the way.
+-- 
+-- 
+Mark H. Wood, radical centrist                             mhwood@ameritech.net
+Charlie, put down that Glitter Glue -- it's time to show the audience
+some content!
+
+
+Article 4654 of alt.sys.pdp10:
+Path: news3.best.com!news2.best.com!newsfeed.berkeley.edu!newsfeed.cwix.com!205.252.116.205!howland.erols.net!master.news.rcn.net!not-for-mail
+From: "David T. Smith" <dsmith@uswebcks.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: What was TOPS-10 "GALAXY"?
+Date: Thu, 07 Jan 1999 09:50:43 -0500
+Organization: US Web/CKS
+Lines: 21
+Message-ID: <772htl$t0d$1@winter.news.rcn.net>
+References: <36714809.131CAD23@trailing-edge.com>
+	 <ALDERSON.98Dec11151046@netcom.netcom.com>
+	 <750c32$anm$2@ligarius.ultra.net>
+	 <ALDERSON.98Dec14125617@netcom.netcom.com>
+	 <75fjqi$fkg$1@nnrp1.dejanews.com> <75gtci$tj$1@strato.ultra.net>
+	 <75iq68$t3n$2@ligarius.ultra.net> <75m62h$iif$1@nnrp1.dejanews.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset="ISO-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-Trace: THzULD3C6M/CYptGZ9KX15Uxei1JWwKA7KfdEoRRAdI=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 7 Jan 1999 14:55:49 GMT
+X-Newsreader:  Microsoft Outlook Express for Macintosh - 4.01 (295)
+Xref: news3.best.com alt.sys.pdp10:4654
+
+You can count me as one of the many souls who hacked LPTSPL.  I remember
+spending Christmas week in 1980 at Fordham University groking GALAXY so I
+could add a card punch spooler (yes, Fordham still _taught_ using cards) an=
+d
+emulating DECNET so the Lincoln Center campus RJE station could be
+incorporated as a separate node as far as TOPS-20 was concerned.  
+
+I have to confess that I have never found a batch system quite like GALAXY
+since them.  A glass of wine with you, Larry!
+
+
+
+D A V I D   T.  S M I T H
+Network Solutions 
+__________________________ 
+USWeb/CKS Corporation:=A0<http://www.uswebcks.com/> 
+50 Washington Street, 6th Flr 
+South Norwalk, CT 06854 
+ph:=A0+1 203 857 0080 fax:=A0+1 203 857 0082 
+mailto:dsmith@uswebcks.com
+USWeb/CKS - A Strategic Partner for the Information Age 
+
+

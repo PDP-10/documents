@@ -1,0 +1,51 @@
+Article 5546 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc01.blue.aol.com!news.maxwell.syr.edu!out.nntp.be!propagator-dallas!news-in-dallas.newsfeeds.com!in.nntp.be!newsfeed.zip.com.au!203.12.97.119.MISMATCH!nostril.pacific.net.au!gsc
+From: Sean Case <gsc@zip.com.au>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Editor
+Organization: Marginal
+References: <Bih17.144150$lq1.35507014@typhoon.austin.rr.com>
+User-Agent: MT-NewsWatcher/3.1 (PPC)
+Message-ID: <gsc-D01BF2.19123807072001@nostril.pacific.net.au>
+Lines: 32
+Date: Sat, 07 Jul 2001 19:12:39 +1000
+NNTP-Posting-Host: 210.23.147.196
+X-Complaints-To: news@pacific.net.au
+X-Trace: nostril.pacific.net.au 994497101 210.23.147.196 (Sat, 07 Jul 2001 19:11:41 EST)
+NNTP-Posting-Date: Sat, 07 Jul 2001 19:11:41 EST
+Xref: nntp1.ba.best.com alt.sys.pdp10:5546
+
+In article <Bih17.144150$lq1.35507014@typhoon.austin.rr.com>,
+ "Harris S. Newman" <hsnewman@delete-this.austin.rr.com> wrote:
+
+> For Tops-10, whats the "easiest" editor to use?
+
+You mentioned DG's SED.  I forget which of DEC's editors that corresponds
+to.  (EDT?  When I did some DG work about ten years ago I remember that
+the parallels between their software offerings and DEC's were downright
+uncanny.)
+
+Others have suggested DTECO, which is (a display-friendly version of)
+what DG's SPEED was ripped off from.
+
+Do not on any account use SOS.
+
+If you want to be a hard core PDP-10 hacker, you should learn TECO.  But
+"easiest" is not a word that comes to mind to describe it.  See the
+recent flamew^Wdiscussion on alt.folklore.computers.
+
+There is a different screen editor called SED on TOPS-10.  I liked it
+a lot when I was using the '-10 regularly.  I don't think there's a DG
+product that corresponds to it.  It's a fairly straightforward screen
+editor with a fairly powerful macro system (albeit not in TECO's
+league).  There is also extensive online help as well as a printable
+reference manual and tutorial.
+
+Sean Case
+
+-- 
+Sean Case                  gsc@zipworld.com.au
+
+Code is an illusion.  Only assertions are real.
+
+

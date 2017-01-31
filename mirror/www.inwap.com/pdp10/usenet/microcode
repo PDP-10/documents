@@ -1,0 +1,192 @@
+From wilson@dbit.com Sat Jan 29 23:06:09 PST 2000
+Article: 6310 of alt.sys.pdp10
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 Emulators
+References: <qhya9bovaz.fsf@ruckus.brouhaha.com> <20000129094039.25683.00000303@ng-cf1.aol.com>
+Organization: D Bit, Troy, NY
+From: wilson@dbit.com (John Wilson)
+NNTP-Posting-Host: dbit.dbit.com
+Message-ID: <38931fcd_2@news.wizvax.net>
+Date: 29 Jan 2000 12:13:49 -0500
+X-Trace: 29 Jan 2000 12:13:49 -0500, dbit.dbit.com
+Lines: 18
+XPident:  wilson
+XPident: Unknown
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newspeer.monmouth.com!newsfeed.wizvax.net!news.wizvax.net!dbit.com!wilson
+Xref: news3.best.com alt.sys.pdp10:6310
+
+In article <20000129094039.25683.00000303@ng-cf1.aol.com>,
+JMFBAH <jmfbah@aol.com> wrote:
+>And what version of microcode are you talking about?  240?  (I
+>think that's the correct number.)  And where did you get a copy
+>of the development pack?  Do you still have it?
+
+The KL microcode sources and assembler used to be downloadable from MIT-MC.
+I remember asking Don Lewine why DEC didn't freak out and sue MIT for leaving
+what was then a $25,000 DEC product lying around where anyone could copy it,
+and I liked his answer -- the $25,000 price tag is actually paying for the
+right to gripe to DEC about the micromachine bugs that a user would surely run
+into when trying to run something other than DEC's own microcode.  DEC didn't
+have to pay any attention to bug reports from pirates, and as piracy goes,
+stealing the microcode isn't such a big deal, since it's only useful if you
+have a KL10 anyway and $25K is small change compared to what you paid for that.
+
+John Wilson
+D Bit
+
+
+From lars.spam@nocrew.org Sat Sep  7 23:36:08 PDT 2002
+Article: 17731 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!fu-berlin.de!uni-berlin.de!junk.nocrew.ORG!not-for-mail
+From: Lars Brinkhoff <lars.spam@nocrew.org>
+Newsgroups: comp.arch,alt.folklore.computers,alt.sys.pdp10
+Subject: Re: What was the size of Microcode in various machines
+Date: 04 Sep 2002 09:17:51 +0200
+Organization: nocrew
+Lines: 54
+Sender: lars@junk.nocrew.org
+Message-ID: <853csqql40.fsf@junk.nocrew.org>
+References: <e02065c3.0208291359.797cf6fc@posting.google.com> <3D6EA8D1.1CE008B7@cisco.com> <ako6g5$v5m$1@news.ums.edu> <ako7mn$jrd$1@newsg4.svr.pol.co.uk> <akodor$1k9sbs$1@ID-143435.news.dfncis.de> <3D743E47.4A05925@jps.net> <85wuq3r4y6.fsf@junk.nocrew.org> <qhn0qyveyu.fsf@ruckus.brouhaha.com>
+NNTP-Posting-Host: junk.nocrew.org (213.242.147.30)
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Trace: fu-berlin.de 1031124016 58179901 213.242.147.30 (16 [140306])
+X-Orig-Path: junk.nocrew.org!not-for-mail
+User-Agent: Gnus/5.0808 (Gnus v5.8.8) Emacs/20.7
+Xref: dfw-artgen comp.arch:57853 alt.folklore.computers:97614 alt.sys.pdp10:17731
+
+[Now also cross-posted to alt.sys.pdp10.]
+
+Eric Smith <eric-no-spam-for-me@brouhaha.com> writes:
+> Lars Brinkhoff <lars.spam@nocrew.org> writes:
+> > I'm not sure, but these may be the microcode widths and sizes of some
+> > PDP-10 processors:
+> > 
+> > DEC KL10 model A                 96 bits x 1280 words
+> > DEC KL10 model B                 96 bits x   2K words
+> 
+> Really only about 80 bits per microword, as not all of the bits are
+> actually implemented in the hardware.  The microassembler produces
+> 96-bit words, but the extra bits get dropped on the floor when
+> loaded into the hardware.
+
+Thanks for the info.
+
+> The KL10 "model A" described in the System Reference Manual refers
+> to the KL10-PA Arithmetic Processor, and the "model B" refers to the
+> KL10-PV.
+
+Or the KL10-PW, right?
+
+> Note that these are used in various models with a single letter
+> suffix, so a KL10-B is actually a "model A" (unless field upgraded).
+> 
+> There was reportedly a cancelled KL10 model that would have expanded
+> the control store to 4K words.  This would have been nice as the
+> KL10-PV microcode was at the size limit and features were getting
+> removed to make room for bug fixes.
+> 
+> > DEC KS10                         96 bits x   2K words
+> 
+> The microsequencer has 12-bit addresses, and the branch field in the
+> microword is 12 bits wide, so in principle the KS10 microstore could
+> be expanded to 4K words.  However, DEC had a hard time squeezing
+> even the 2K words into the space available using the SRAM chips they
+> could get in 1977.  And they had a lot of problems with those SRAM
+> chips, leading to a patented technique where a control store parity
+> error would cause the front-end processor to initiate an on-the-fly
+> microcode reload.
+
+But the 96-bit width is correct, then?
+
+I restore these lines from my original message in case anyone on
+alt.sys.pdp10 has any comments:
+
+> > Xerox MAXC                       72 bits x 1K or 2K words
+> > Foonly F-1                       120 bits?
+> > Systems Concepts                 80 bits x 32K words
+
+-- 
+Lars Brinkhoff          http://lars.nocrew.org/     Linux, GCC, PDP-10,
+Brinkhoff Consulting    http://www.brinkhoff.se/    HTTP programming
+
+
+From eric-no-spam-for-me@brouhaha.com Sat Sep  7 23:36:22 PDT 2002
+Article: 17734 of alt.sys.pdp10
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: comp.arch,alt.folklore.computers,alt.sys.pdp10
+Subject: Re: What was the size of Microcode in various machines
+References: <e02065c3.0208291359.797cf6fc@posting.google.com> <3D6EA8D1.1CE008B7@cisco.com> <ako6g5$v5m$1@news.ums.edu> <ako7mn$jrd$1@newsg4.svr.pol.co.uk> <akodor$1k9sbs$1@ID-143435.news.dfncis.de> <3D743E47.4A05925@jps.net> <85wuq3r4y6.fsf@junk.nocrew.org> <qhn0qyveyu.fsf@ruckus.brouhaha.com> <853csqql40.fsf@junk.nocrew.org>
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 04 Sep 2002 11:22:03 -0700
+Message-ID: <qh7ki1wr78.fsf@ruckus.brouhaha.com>
+Lines: 19
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.2
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: 209.66.107.17
+X-Trace: 4 Sep 2002 11:46:40 -0700, 209.66.107.17
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!logbridge.uoregon.edu!arclight.uoregon.edu!enews.sgi.com!news.spies.com!209.66.107.17
+Xref: dfw-artgen comp.arch:57917 alt.folklore.computers:97663 alt.sys.pdp10:17734
+
+I wrote:
+> The KL10 "model A" described in the System Reference Manual refers
+> to the KL10-PA Arithmetic Processor, and the "model B" refers to the
+> KL10-PV.
+
+Lars Brinkhoff <lars.spam@nocrew.org> writes:
+> Or the KL10-PW, right?
+
+The KL10-PW is functionally very nearly the same as the KL10-PV, so most
+of the "model B" docs apply.  There are some details that are changed,
+though, and they aren't documented in the System Reference Manual.  :-(
+I do have a doc somewhere that describes the changes visible to the
+system programmer; I'll try to get it scanned soon.
+
+> But the 96-bit width
+[of the KS10 microcode word]
+> is correct, then?
+
+I don't have the docs handy at the moment, but that sounds right.
+
+
+From eric-no-spam-for-me@brouhaha.com Sat Sep  7 23:37:27 PDT 2002
+Article: 17743 of alt.sys.pdp10
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: What was the size of Microcode in various machines
+References: <e02065c3.0208291359.797cf6fc@posting.google.com> <3D6EA8D1.1CE008B7@cisco.com> <ako6g5$v5m$1@news.ums.edu> <ako7mn$jrd$1@newsg4.svr.pol.co.uk> <akodor$1k9sbs$1@ID-143435.news.dfncis.de> <3D743E47.4A05925@jps.net> <85wuq3r4y6.fsf@junk.nocrew.org> <qhn0qyveyu.fsf@ruckus.brouhaha.com> <853csqql40.fsf@junk.nocrew.org> <qh7ki1wr78.fsf@ruckus.brouhaha.com> <85lm6hoy72.fsf@junk.nocrew.org> <8765xkslao.fsf@prep.synonet.com>
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 05 Sep 2002 13:14:13 -0700
+Message-ID: <qhheh4jisq.fsf@ruckus.brouhaha.com>
+Lines: 16
+User-Agent: Gnus/5.09 (Gnus v5.9.0) Emacs/21.2
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: 209.66.107.17
+X-Trace: 5 Sep 2002 13:39:01 -0700, 209.66.107.17
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!logbridge.uoregon.edu!arclight.uoregon.edu!enews.sgi.com!news.spies.com!209.66.107.17
+Xref: dfw-artgen alt.sys.pdp10:17743
+
+Paul Repacholi <prep@prep.synonet.com> writes:
+[about the KL10-PW]
+> That is the CPU of the KL10-RE? If so, then it was known about during
+> the Fall 83 DECUS.
+
+The KL10-PW is the CPU of the 1095 and 2065; that is what distinguishes
+them from the 1091 and 2060.  Earlier "model B" CPUs (KL10-PV) could
+be upgraded to the KL10-PW by replacing some CPU modules (about seven of
+them, IIRC), and making a few backplane wiring changes.
+
+The KL10-PW-specific modules can be recognized by the fact that they have
+module numbers of the form M-85x (three digits), versus M-85xx (four digits)
+for all other KL10 CPU modules.  This was an interesting reversal of the
+earlier trend in the PDP-8/e and PDP-11 to replace older Mxxx modules with
+new improved designs designated Mxxxy.
+
+
+

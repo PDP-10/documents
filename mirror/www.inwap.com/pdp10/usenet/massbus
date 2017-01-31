@@ -1,0 +1,141 @@
+Article 2043 of alt.sys.pdp10:
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.sys.pdp10
+Subject: Massbus (was Re: I have a KS10 now! ^_^)
+References: <Pine.LNX.4.10.10011261648260.27698-100000@bony.umtec.com> <8vtt5l$gd1$6@bob.news.rcn.net>
+X-Disclaimer: Everything I write is false.
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 28 Nov 2000 11:31:38 -0800
+Message-ID: <qhg0kb6gh1.fsf_-_@ruckus.brouhaha.com>
+Lines: 38
+X-Newsreader: Gnus v5.7/Emacs 20.7
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 28 Nov 2000 11:32:55 -0800, ruckus.brouhaha.com
+Path: nntp1.ba.best.com!news1.best.com!nntp.primenet.com!nntp.gblx.net!enews.sgi.com!news.sgi.com!news.spies.com!ruckus.brouhaha.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:2043
+
+jmfbahciv@aol.com writes:
+> You've got -11s and no Massbus stuff?  Why do you need a Massbus
+> for a KS (or have I really got my hardware jargon brain farted all
+> over the place?).
+
+You're probably thinking of Unibus, which is the PDP-11 bus.
+
+Massbus was the host-independent disk/tape interface in common use on
+high-end DEC gear from 1973 (?) to the mid 1980s.  It was later replaced
+by other interconnects such as CI, SDI, STI, DSSI, and SCSI.
+
+Massbus has an 18-bit data path, a 16-bit control/status path, and a
+bunch of handshaking and control signals.  There are a total of 60
+differential pairs to a Massbus.  Internal Massbus cabling uses three
+40-conductor flat cables with the ubiquitous 40-bit Berg sockets.
+External Massbus cabling uses twisted pairs, with connectors consisting
+of three of the Berg sockets in parallel in a connector shell.
+
+The data path and control/status path can be used simultaneously; once a
+data transfer is set up, the the host can use the control/status path to
+monitor the drive, seek on other drives, or prepare another drive for a
+data transfer.
+
+Note that although there is no electrical problem with putting disks and
+tapes on the same Massbus, in practice none of the host software
+supports it.  So most systems have at least two Massbus channels.
+
+The KA10 and KI10 use an external RH10 Massbus channel.
+
+The KL10 can use either the RH10 or the internal RH20 Massbus channel.
+
+The KS10 uses a slightly modified form of the RH11 Massbus adapter
+as used on the PDP-11 Unibus.
+
+VAXen use the RH780 and RH750 Massbus adapters.
+
+Commonly used Massbus drives include the RP04, RP05, RP06, RP07, RM03,
+RM05, and RS04 disks, and the TE16, TU45, TU77, TU78, and TU79 tapes.
+
+
+Article 2053 of alt.sys.pdp10:
+From: wilson@dbit.com (John Wilson)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Massbus (was Re: I have a KS10 now! ^_^)
+Date: 28 Nov 2000 23:02:58 -0500
+Organization: D Bit, Troy, NY
+Lines: 24
+Message-ID: <901v5i$agv$1@dbit.dbit.com>
+References: <Pine.LNX.4.10.10011261648260.27698-100000@bony.umtec.com> <8vtt5l$gd1$6@bob.news.rcn.net> <qhg0kb6gh1.fsf_-_@ruckus.brouhaha.com> <6un1ejhb2u.fsf@chonsp.franklin.ch>
+NNTP-Posting-Host: dbit.dbit.com
+X-Original-NNTP-Posting-Host: dbit.dbit.com
+X-Trace: 28 Nov 2000 23:03:52 -0500, dbit.dbit.com
+XPident: wilson
+X-Original-NNTP-Posting-Host: 199.181.141.3
+XPident: Unknown
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!news.mv.net!newspeer.phoen-x.net!news.wizvax.net!dbit.com!not-for-mail
+Xref: nntp1.ba.best.com alt.sys.pdp10:2053
+
+In article <6un1ejhb2u.fsf@chonsp.franklin.ch>,
+Neil Franklin  <neil@franklin.ch.remove> wrote:
+>Now you write that the KS10 switched to using them. Did they do
+>something to them to make them faster? Or did the KS10 take an disk
+>throughput speed hit for this?
+
+Yes and yes.  The RH11C is jumpered as a "bus hog" with some ridiculous burst
+length, which is the only way it could keep up with the RM03 and RM80 (which
+are officially not supported on the RH11AB since there aren't enough 3341s
+to buffer a whole sector, or something like that).  The "disk" RH11C has to
+be the only thing on the "disk" Unibus to pull this off.  But it's still
+pretty weak, it would have been much cleaner if DEC had built an "RH2020"
+or whatever, i.e. an MBA which sits directly on the KS10 backplane bus,
+so it could have been faster, plus it wouldn't have had to get mired in
+the Unibus map ugliness.  But obviously DEC didn't feel it was worth the
+trouble for a low-end system.  So you get a pretty long chain for e.g. RM80
+disk I/O on a KS:
+
+backplane bus => UBA => RH11C => RM adapter => SMD personality module => R80
+
+Each step of the way probably burns another 50 watts, too ...
+
+John Wilson
+D Bit
+
+
+Article 2057 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!207.172.3.44!feed2.news.rcn.net!feed1.news.rcn.net!rcn!207-172-245-130
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: I have a KS10 now! ^_^
+Date: Wed, 29 Nov 00 11:17:17 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 21
+Message-ID: <902sck$514$3@bob.news.rcn.net>
+References: <Pine.LNX.4.10.10011261648260.27698-100000@bony.umtec.com> <8vtt5l$gd1$6@bob.news.rcn.net> <9012kq$1dd5$1@nntp1.ba.best.com>
+X-Trace: dcRoK02F9CwqAM2kIf+n5NUAtQvTCSlhMe53KYpOHaw=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 29 Nov 2000 12:21:40 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:2057
+
+In article <9012kq$1dd5$1@nntp1.ba.best.com>,
+   inwap@best.com (Joe Smith) wrote:
+>In article <8vtt5l$gd1$6@bob.news.rcn.net>,  <jmfbahciv@aol.com> wrote:
+>>In article <Pine.LNX.4.10.10011261648260.27698-100000@bony.umtec.com>,
+>>   Daniel Seagraves <root@bony.umtec.com> wrote:
+>>>
+>>>KS10 serial number 4469.  I don't know if it's alive or dead yet.
+>>>I also got a TU45, and a spare formatter for it.
+>>
+>>What's a formatter for a TU45?
+>
+>In order to connect a TU45 tape drive to a Massbus cable, you have to have
+>a thing called a formatter; TM02 or TM03.  
+<snip>
+
+Oh, _that_ thing.  I don't think I ever heard the guys refer
+to it as a formatter.  Thanks, Joe.
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+

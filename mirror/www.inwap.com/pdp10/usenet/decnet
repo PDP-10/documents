@@ -1,0 +1,485 @@
+Article 4472 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!europa.netcrusader.net!207.172.3.44!feed2.news.rcn.net!feed1.news.rcn.net!rcn!207-172-245-190
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: TS10 and LAT?
+Date: Sun, 15 Apr 01 10:40:27 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 27
+Message-ID: <9bc6c5$nms$9@bob.news.rcn.net>
+References: <1m4B6.894$Hp.41129@typhoon.aracnet.com> <Pine.LNX.4.21.0104111703130.5538-100000@sakura.lunar-tokyo.net>
+X-Trace: UmFuZG9tSVb+J6MM/D1sreTu/43IYkE8VIytkLRsp8p4B/EZ00sSCxtfAP1rCFqa
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 15 Apr 2001 13:06:13 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:4472
+
+In article 
+<Pine.LNX.4.21.0104111703130.5538-100000@sakura.lunar-tokyo.net>,
+   Daniel Seagraves <dseagrav@sakura.lunar-tokyo.net> wrote:
+>On Wed, 11 Apr 2001, Zane H. Healy wrote:
+>
+>> Any chance of TS10 supporting LAT connections?  I'm guessing this would
+>> require Ethernet support first (at least that's the only thing I know to 
+run
+>> LAT over).  This could be rather cool, both for those of us with LAT
+>> Terminal servers, and for Linux boxes as it's possible to add LAT 
+support to
+>> a Linux system.
+>
+>But, was Ethernet supported at all on KS10s?  I think they mean that for
+>KL10s.
+
+Yes.  Bill put it in and was shipped with 7.03; that was Phase IV
+DECnet.  The only thing that he didn't have time to do was to
+allow the KS10 to be an endnode.
+
+My plans were to eventually evolve TOPS-10 to end node only since
+the rumor at the time was that DECnet Phase ?? would not "talk"
+to previous phase routers.
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 6083 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news-hog.berkeley.edu!ucberkeley!news2.epix.net!newspump.monmouth.com!newspeer.monmouth.com!feeder.qis.net!sn-xit-02!sn-post-01!supernews.com!corp.supernews.com!barn.net.com
+From: R.J.S. <not@available.right.now>
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 DN200 Remote Front End?
+Date: Sun, 16 Sep 2001 14:40:04 -0400
+Organization: Very Organized
+Message-ID: <pfr9qt842dmtu6oatbn6qtp96285vm1v5c@4ax.com>
+References: <tq9aqikss8uo48@corp.supernews.com> <9o2ahd$8$2@bob.news.rcn.net> <8eg9qt4m64bo3j7m9voa3h871rruadapjs@4ax.com> <3BA4E58D.719F0EF1@osfn.org>
+X-Newsreader: Forte Agent 1.8/32.548
+X-No-Archive: yes
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Original-NNTP-Posting-Host: 192.168.1.2
+X-Original-Trace: 16 Sep 2001 14:40:04 -0400, 192.168.1.2
+X-Complaints-To: newsabuse@supernews.com
+Lines: 33
+Xref: nntp1.ba.best.com alt.sys.pdp10:6083
+
+On Sun, 16 Sep 2001 13:46:53 -0400, "Michael L. Umbricht"
+<mikeu@osfn.org> wrote:
+
+>This one was used as a remote station for an LP26.  There were two 56K
+>DMR11 lines, one going to a DN20 on CPU0 and the other going to a DN81
+>on CPU1.
+
+Your description of the DN81 leaves me a little confused.  I don't
+know of any that were directly attached to a -10.
+
+The DN80, 81, and 82, were remote devices, not connected to the -10
+directly.  CPU was an 11/40.  Sync interfaces were mostly DQ11s, which
+would crank up to 400KB even if 56KB was the supported speed. 
+
+ (Yea, Kalman Reti, Bob Houk  and I actually wired two KLs down in the
+old DAS lab via a pair of front ends and DQ11s, and 400KB was the
+fastest we could go, but we were only using the RS232 wire, not the
+V.35 wire. Shorter wire or V.35 wire would have helped.  This from a
+device that the RSX people said could never go faster than 56K.)
+
+The DN85, and 87 were attached to the -10 via the DL10, and the DN87s
+was DTE attached.  All DN20s (that I know of) were DTE attached.
+
+If you connected a DN81 to the -10 via the DL10, I would really be a
+DN85 (or 87 if it also had serial lines).  Other than that, I think
+the hardware was the same.  The DL10 took care of the bootstrap rom.
+
+IIRC, the DMR was a program (register) compatible, lower cost version
+of the DMC11.  Owning a DMC got one free membership in the "ROM of the
+month" club, as we got new roms just about every month to cure
+problems with the device. :-)
+
+
+
+
+Article 6092 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc03.blue.aol.com!newsfeed.skycache.com.MISMATCH!newsfeed1.cidera.com!Cidera!cyclone1.gnilink.net!spamfinder.gnilink.net!typhoon1.gnilink.net.POSTED!not-for-mail
+Message-ID: <3BA537FA.3881CC8D@bellatlantic.net>
+From: bad bob <sfmc68@bellatlantic.net>
+X-Mailer: Mozilla 4.75 [en]C-CCK-MCD BA45DSL  (WinNT; U)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 DN200 Remote Front End?
+References: <tq9aqikss8uo48@corp.supernews.com> <9o2ahd$8$2@bob.news.rcn.net> <8eg9qt4m64bo3j7m9voa3h871rruadapjs@4ax.com> <3BA4E58D.719F0EF1@osfn.org> <pfr9qt842dmtu6oatbn6qtp96285vm1v5c@4ax.com> <3BA50407.17FD5AA1@osfn.org>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Lines: 63
+Date: Sun, 16 Sep 2001 23:21:15 GMT
+NNTP-Posting-Host: 138.88.73.197
+X-Complaints-To: business-support@verizon.com
+X-Trace: typhoon1.gnilink.net 1000682475 138.88.73.197 (Sun, 16 Sep 2001 19:21:15 EDT)
+NNTP-Posting-Date: Sun, 16 Sep 2001 19:21:15 EDT
+Xref: nntp1.ba.best.com alt.sys.pdp10:6092
+
+"Michael L. Umbricht" wrote:
+> 
+> "R.J.S." wrote:
+> >
+> > On Sun, 16 Sep 2001 13:46:53 -0400, "Michael L. Umbricht"
+> > <mikeu@osfn.org> wrote:
+> >
+> > >This one was used as a remote station for an LP26.  There were two 56K
+> > >DMR11 lines, one going to a DN20 on CPU0 and the other going to a DN81
+> > >on CPU1.
+> >
+> > Your description of the DN81 leaves me a little confused.  I don't
+> > know of any that were directly attached to a -10.
+> 
+> Sorry, I'm (obv.) not too familiar with 10 hardware.  Most of what I am
+> describing is based on documents that arrived with the system.  Also, we
+> don't have any of the DN8x cabinets, they were retired long ago.  The
+> ones that we have are all DN2x (plus the DN200)
+> 
+> On the site wiring diagram it shows DTE1 going to something labeled
+> "DN81" and then to a DN87S.
+> 
+> See the two floorplan pages labeled "DMR11 Links" and "Unibus" at
+> 
+> http://starfish.rcsri.org/rcs/DECsystem/1090/Sikorsky.pdf
+> 
+> > The DN80, 81, and 82, were remote devices, not connected to the -10
+> > directly.  CPU was an 11/40.  Sync interfaces were mostly DQ11s, which
+> > would crank up to 400KB even if 56KB was the supported speed.
+> [...]
+> > The DN85, and 87 were attached to the -10 via the DL10, and the DN87s
+> > was DTE attached.  All DN20s (that I know of) were DTE attached.
+> >
+> > If you connected a DN81 to the -10 via the DL10, I would really be a
+> > DN85 (or 87 if it also had serial lines).  Other than that, I think
+> > the hardware was the same.  The DL10 took care of the bootstrap rom.
+> 
+> The 1978 purchase order for the 1090 has line items stating:
+> 
+> "DN87SA  Comm. Subsystem with 16 Asynchronous Lines"
+> "DN81FA  8-Line Terminators with 20ma Current Loop Interface."
+> 
+> > IIRC, the DMR was a program (register) compatible, lower cost version
+> > of the DMC11.  Owning a DMC got one free membership in the "ROM of the
+> > month" club, as we got new roms just about every month to cure
+> > problems with the device. :-)
+> 
+> The boards are labeled:
+> 
+> M8203     multidrop line unit / v.35 + integral modem
+I don't know if this one is the DMC line unit or the DMR line
+unit.  The rs232/v.35 line unit for the DMC was based on different
+cables that John McNamara and I agreed on.  The integral modem units,
+Really NRZI drivers, were point to point not multipoint. Hmmm. In 78
+I had moved back to the SSG, working on vt78, KMC/DMC were done
+76-78.
+> M8207-RA  microprocessor link - I don't know if this is the DMR
+or the KMC11B.  We did the KMC11a, as a comm iop cpu and a debug
+card for the DMC (dmc was rom, kmc was ram)
+bob
+
+> 
+> -mikeu
+
+
+Article 6101 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!feed.textport.net!sn-xit-04!sn-post-01!supernews.com!corp.supernews.com!not-for-mail
+From: "Michael L. Umbricht" <mikeu@osfn.org>
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 DN200 Remote Front End?
+Date: Mon, 17 Sep 2001 16:28:10 -0400
+Organization: The Retro-Computing Society of RI
+Message-ID: <3BA65CDA.75A4CE9D@osfn.org>
+Reply-To: mikeu@shrimp.osfn.org
+X-Mailer: Mozilla 4.7 [en] (X11; I; SunOS 5.8 sun4m)
+X-Accept-Language: en
+MIME-Version: 1.0
+References: <tq9aqikss8uo48@corp.supernews.com> <9o2ahd$8$2@bob.news.rcn.net> <8eg9qt4m64bo3j7m9voa3h871rruadapjs@4ax.com> <3BA4E58D.719F0EF1@osfn.org> <pfr9qt842dmtu6oatbn6qtp96285vm1v5c@4ax.com> <3BA50407.17FD5AA1@osfn.org> <3BA537FA.3881CC8D@bellatlantic.net>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Complaints-To: newsabuse@supernews.com
+Lines: 43
+Xref: nntp1.ba.best.com alt.sys.pdp10:6101
+
+bad bob wrote:
+> 
+> "Michael L. Umbricht" wrote:
+> >
+> > The boards are labeled:
+> >
+> > M8203     multidrop line unit / v.35 + integral modem
+> I don't know if this one is the DMC line unit or the DMR line
+
+From "field-guide.txt"
+| M8203       DMP11       U   Line unit, RS-449, integral modem
+
+> unit.  The rs232/v.35 line unit for the DMC was based on different
+> cables that John McNamara and I agreed on.  The integral modem units,
+
+The cables are triax, ie. one center conductor and two concentric
+shields.
+
+> Really NRZI drivers, were point to point not multipoint. Hmmm. In 78
+
+The cabinet kit has transmit in and out, plus receive in and out.  So, 4
+connectors in all, but then two are always terminated for each
+interface.  I do not see any indication that these were used as
+multipoint.
+
+> > M8207-RA  microprocessor link - I don't know if this is the DMR
+
+Also from "field-guide.txt"
+| M8207       DMC11       U   Microcontroller with space for ROM
+|  
+| M8207-RA    DMR11       U   Microprocessor based sync communication
+controller,
+|                             implements DDCMP protocol.
+| 
+| M8207-YA    DMP11       U   Microprocessor with DDCMP control ROM
+|                             (point-to-point or multidrop, used with
+M8203)
+
+I'll take a look at the other DN20 cabinets to see if they use the same
+cards.  There is at least one that was shown running at 1M to a
+VAX-11/785.
+
+-mikeu
+
+
+Article 6087 of alt.sys.pdp10:
+Message-ID: <3BA4ED28.3191517C@Empire.Net>
+Date: Sun, 16 Sep 2001 14:19:20 -0400
+From: John Sauter <J_Sauter@Empire.Net>
+Organization: System Eyes Computer Store
+X-Mailer: Mozilla 4.73 [en]C-CCK-MCD NSCPCD47  (WinNT; U)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 DN200 Remote Front End?
+References: <tq9aqikss8uo48@corp.supernews.com> <9o2ahd$8$2@bob.news.rcn.net> <8eg9qt4m64bo3j7m9voa3h871rruadapjs@4ax.com>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+NNTP-Posting-Host: hydra140-74.empire.net
+X-Trace: News.Destek.net 1000660724 hydra140-74.empire.net (16 Sep 2001 13:18:44 -0500)
+Lines: 13
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!news-out.nuthinbutnews.com!propagator2-austin!propagator!feed2.newsfeeds.com!newsfeeds.com!News.Destek.net
+Xref: nntp1.ba.best.com alt.sys.pdp10:6087
+
+"R.J.S." wrote (excerpted):
+"IIRC, the DN200 was a "modern" version of the DN82.
+It runs, among other things, ANF-10.  I also remember 
+some work being done to run the IBM RJE code on it.  
+Don't know if that ever shipped."
+
+There was an IBM RJE product that acted as a remote
+station, emulating an IBM 3780.  The code was essentially
+free given the PDP-11 code that communicated with
+remote stations.  I don't remember the product name,
+it was one of the DN60 series.  I don't know if this
+code ever shipped on the DN200.
+    John Sauter (J_Sauter@Empire.Net)
+
+
+Article 6105 of alt.sys.pdp10:
+Message-ID: <3BA6BA15.CE0BEDEC@Empire.Net>
+Date: Mon, 17 Sep 2001 23:05:57 -0400
+From: John Sauter <J_Sauter@Empire.Net>
+Organization: System Eyes Computer Store
+X-Mailer: Mozilla 4.73 [en]C-CCK-MCD NSCPCD47  (WinNT; U)
+X-Accept-Language: en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 DN200 Remote Front End?
+References: <tq9aqikss8uo48@corp.supernews.com> <9o2ahd$8$2@bob.news.rcn.net> <8eg9qt4m64bo3j7m9voa3h871rruadapjs@4ax.com> <3BA4ED28.3191517C@Empire.Net> <wwheu1mn4s.fsf@atlas.cfht.hawaii.edu>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+NNTP-Posting-Host: hydra141-84.empire.net
+X-Trace: News.Destek.net 1000778722 hydra141-84.empire.net (17 Sep 2001 22:05:22 -0500)
+Lines: 17
+Path: nntp1.ba.best.com!news1.best.com!feed.textport.net!news-out.nuthinbutnews.com!propagator2-austin!propagator!feed2.newsfeeds.com!newsfeeds.com!News.Destek.net
+Xref: nntp1.ba.best.com alt.sys.pdp10:6105
+
+Jim Thomas wrote:
+
+"Harumph.  I had most of that going by about 1976 at UNO :-)
+Though I admit it was in the other direction.  We had IBM 
+users who needed to use a real computer :-)"
+
+I wish I had known about your work; we could have used it
+as the basis for our product instead of re-inventing
+the wheel.  The DN60 series shipped around 1977 or 1978.
+
+Oh well, we had fun.  The kernel of the DN60 was based
+on an early version of the DN80 which I wrote while
+consulting for Digital a couple of years previously.
+The code I had written never shipped as part of the
+DN80 products; it was rewritten after I returned to
+Sanders.
+    John Sauter (J_Sauter@Empire.Net)
+
+
+Article 6107 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc03.blue.aol.com!feed1.newsreader.com!netnews.com!feed2.news.rcn.net!feed1.news.rcn.net!rcn!207-172-255-169
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 DN200 Remote Front End?
+Date: Tue, 18 Sep 01 07:39:01 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 25
+Message-ID: <9o77kv$2r4$2@bob.news.rcn.net>
+References: <tq9aqikss8uo48@corp.supernews.com> <9o2ahd$8$2@bob.news.rcn.net> <8eg9qt4m64bo3j7m9voa3h871rruadapjs@4ax.com> <3BA4ED28.3191517C@Empire.Net> <wwheu1mn4s.fsf@atlas.cfht.hawaii.edu>
+X-Trace: UmFuZG9tSVbwHx/+WQk8L8ihHkNRa/2XBhmUusLr1q8sbsLv8so1XRgSilL+Fqec
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 18 Sep 2001 10:28:47 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:6107
+
+In article <wwheu1mn4s.fsf@atlas.cfht.hawaii.edu>,
+   Jim Thomas <thomas@atlas.cfht.hawaii.edu> wrote:
+>>>>>> "John" == John Sauter <J_Sauter@Empire.Net> writes:
+>
+> John> There was an IBM RJE product that acted as a remote
+> John> station, emulating an IBM 3780.  The code was essentially
+> John> free given the PDP-11 code that communicated with
+> John> remote stations.  I don't remember the product name,
+> John> it was one of the DN60 series.  I don't know if this
+> John> code ever shipped on the DN200.
+>
+>Harumph.  I had most of that going by about 1976 at UNO :-)  Though I 
+admit
+>it was in the other direction.  We had IBM users who needed to use a real
+>computer :-)
+
+That happened at ORNL, too.  The scientists were so used to
+IBMese that it was easier to fake them out by pretended the
+jobs were run on an IBM.  Instead the job was shipped to their
+5-CPU system, processed, then shipped back to the IBM system
+in the form that the users expected.
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+
+Article 6080 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!cpk-news-hub1.bbnplanet.com!nycmny1-snh1.gtei.net!news.gtei.net!panix!newsmaster.cc.columbia.edu!watsun.cc.columbia.edu!fdc
+From: fdc@watsun.cc.columbia.edu (Frank da Cruz)
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 DN200 Remote Front End?
+Date: 16 Sep 2001 16:44:37 GMT
+Organization: Columbia University
+Lines: 53
+Message-ID: <9o2ktl$4e$1@newsmaster.cc.columbia.edu>
+References: <tq9aqikss8uo48@corp.supernews.com>
+NNTP-Posting-Host: watsun.cc.columbia.edu
+X-Trace: newsmaster.cc.columbia.edu 1000658677 142 128.59.39.2 (16 Sep 2001 16:44:37 GMT)
+X-Complaints-To: postmaster@columbia.edu
+NNTP-Posting-Date: 16 Sep 2001 16:44:37 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:6080
+
+In article <tq9aqikss8uo48@corp.supernews.com>,
+Michael Thompson <m_thompson@NOSPAMids.net> wrote:
+: Saturday the RCS crew fired up the DN200 Remote Front End that came with the
+: Sikorsky 1090. It is an 11/34a with two DMR-11 megabit serial boards and
+: serial and parallel interfaces for a printer and console. It has DECnet boot
+: ROMS and was connected to the 11/34a front ends on the 1090.
+: 
+: What did this machine run for an OS and program?
+: 
+: How is the OS image built undet TOPS?
+: 
+: Is it possible to boot this machine from a VAX?
+: 
+I can't answer your questions directly, but I can tell you that ours was
+one of the few DEC-20 sites to have a DN200.  There's some talk about it
+here:
+
+  http://www.columbia.edu/kermit/dec20.html#kermit
+
+Ours was installed about 500 meters away from the machine room, connected
+by synchronous modems (or maybe a synchronous null modem, I'm not sure),
+and communicating with TOPS-20 via DECnet.  It ran a version of RSX-11, but
+I can't remember which version, D maybe.  It did not have a hard disk, so
+it must have booted over DECnet.
+
+The purpose of the DN200 was to support remote access to the DEC-20.  In
+our case, it was in a remote terminal room.  32 terminals (DECwriters and
+CRTs) were to be connected to its serial ports, and it also had an LP20
+drum printer.  In fact, we wound up not using the serial ports since we
+already had something else (a Gandalf PACX IV) that worked better and more
+simply, but we did use the printer.
+
+We also had a number of DN20s, which were also PDP-11/34's.  Each DEC-20
+used its own DN20 as a DECnet front end, and this is how our DEC-20s were
+interconnected before the NIA20 (Ethernet) and CI came along.  We also had
+connections to our departmental VMS and TOPS-20 systems, and to 8 or 10
+other universities, including CMU, NYU, Case, etc, forming a large DECnet
+network, complete with intersite email, "telnet" sessions, and so on,
+that lasted 8 or 10 years.
+
+A separate DN20 provided an RJE (HASP) connection to our IBM mainframe.
+You could actually submit jobs in the form of virtual decks of cards (JCL
+sandwiches) from the DEC-20s to the mainframe, and get the results back as
+virtual 132-column printouts.  The HASP DN20 also ran a form of RSX-11.
+
+So that's what the DN200 and DN20 were for, at least in the TOPS-20 world.
+The ANF-10 was something entirely different.  It was the IMP interface,
+and I don't think it had anything in common with the DN20 or 200.  It also
+cost a lot more, more than $50,000.00 as I recall.  We didn't have one;
+by the time our DEC-20s joined the ARPANET, it was possible to do so 
+through Ethernet.
+
+- Frank
+
+
+Article 6085 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!feed.textport.net!sn-xit-04!sn-post-01!supernews.com!corp.supernews.com!barn.net.com
+From: R.J.S. <not@available.right.now>
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 DN200 Remote Front End?
+Date: Sun, 16 Sep 2001 15:00:25 -0400
+Organization: Very Organized
+Message-ID: <jis9qtkbd5nejisfi36nhmnk1o0lrolcvf@4ax.com>
+References: <tq9aqikss8uo48@corp.supernews.com> <9o2ktl$4e$1@newsmaster.cc.columbia.edu>
+X-Newsreader: Forte Agent 1.8/32.548
+X-No-Archive: yes
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Original-NNTP-Posting-Host: 192.168.1.2
+X-Original-Trace: 16 Sep 2001 15:00:25 -0400, 192.168.1.2
+X-Complaints-To: newsabuse@supernews.com
+Lines: 28
+Xref: nntp1.ba.best.com alt.sys.pdp10:6085
+
+On 16 Sep 2001 16:44:37 GMT, fdc@watsun.cc.columbia.edu (Frank da
+Cruz) wrote:
+
+>The ANF-10 was something entirely different.  It was the IMP interface,
+>and I don't think it had anything in common with the DN20 or 200.  It also
+>cost a lot more, more than $50,000.00 as I recall.  We didn't have one;
+>by the time our DEC-20s joined the ARPANET, it was possible to do so 
+>through Ethernet.
+
+ANF-10 was NOT the IMP interface.  That was the AN10, or the AN20
+(depending on the cab and it's colour).  ANF-10 (Software) was the
+link state routed network code that the -10 supported before there was
+DECnet.
+
+In the pre-DECnet days, DEC's data center was full of -10s, and almost
+every Manufacturing plant had a -10 for data processing.  All of them
+were wired in one large network that was about 250 nodes, based out of
+Parker Street (PK1). 
+
+The AN10 had a single 1822 interface (either local or remote) and was
+an I/O device connected directly to the -10 CPU.  There was one on
+KL1279 and KL2102 in the marlboro lab.  It was a hand built device, as
+demand was very, very low, and build by DAS manufacturing for Federal
+Systems.  
+
+Somewhere I still have my copy of the 1822 interface spec.
+
+
+
+

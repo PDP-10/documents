@@ -1,0 +1,171 @@
+Article 1605 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc01.blue.aol.com!nntp2.aus1.giganews.com!nntp3.aus1.giganews.com!news6.giganews.com.POSTED!not-for-mail
+From: Timothy Stark <sword7@grace.speakeasy.org>
+Subject: Re: hacking (was More about ?Enter error 14.)
+Newsgroups: alt.sys.pdp10
+References: <8qnj8c$ojs$5@bob.news.rcn.net> <39D2ACD4.29716C49@bartek.net> <wwhf70m85o.fsf_-_@atlas.cfht.hawaii.edu> <39D612E3.B9E14C9A@MA.UltraNet.Com> <39D62D36.98D18842@bartek.net> <39D641DC.6A871B82@MA.UltraNet.Com> <eppstein-F659B0.13284530092000@news.service.uci.edu> <39F208D1.80A35C0F@MA.UltraNet.Com> <8sucgk$3p4$1@bob.news.rcn.net> <39F2E662.578F816C@MA.UltraNet.Com>
+User-Agent: tin/1.4.2-20000205 ("Possession") (UNIX) (Linux/2.2.17 (i686))
+Lines: 20
+Message-ID: <kKJI5.36540$UP5.556818@news6.giganews.com>
+NNTP-Posting-Date: Sun, 22 Oct 2000 17:20:00 CDT
+Organization: Giganews.Com - Premium News Outsourcing
+X-Trace: sv2-Vqs4Z1hgqLq1mum6L8ANaxYuY5YZUzBl+zE6J4nH8G3Lk5XwosLNHUfSSOUdJmqQzeWoB29nCGiuJMM!QSSCmQzkOfOyokj0/5QtJZZW+hA=
+X-Complaints-To: abuse@GigaNews.Com
+X-Abuse-Info: Please be sure to forward a copy of ALL headers
+X-Abuse-Info: Otherwise we will be unable to process your complaint properly
+Date: Sun, 22 Oct 2000 22:20:00 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:1605
+
+Alan H. Martin <AMartin@ma.ultranet.com> wrote:
+>> Too bad the -20 didn't have a FILDAE.
+
+> I don't think adding FILDAE to TOPS-20 would have prevented anyone from
+> reading DDT.REL on NCODE:
+
+Hmmm. FILDAE is good security for user's files.  They can set up
+ACCESS.USR in their main directory.  When a hacker attempts to touch
+their directories and FILDAE will record who touch their files into
+ACCESS.LOG next to ACCESS.USR in the same directory.  A hacker can be
+caught by a user easily and quickly. :-)
+
+-- Tim Stark
+
+-- 
+Timothy Stark	<><	Inet: sword7@speakeasy.org
+--------------------------------------------------------------------------
+"For God so loved the world, that he gave his only begotten Son, that 
+whosoever believeth in him should not perish, but have everlasting life.
+Amen." -- John 3:16 (King James Version Bible)
+
+
+Article 1610 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news.maxwell.syr.edu!feed1.news.rcn.net!rcn!207-172-245-132
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: hacking (was More about ?Enter error 14.)
+Date: Mon, 23 Oct 00 06:52:16 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 27
+Message-ID: <8t12f7$dq3$1@bob.news.rcn.net>
+References: <8qnj8c$ojs$5@bob.news.rcn.net> <39D2ACD4.29716C49@bartek.net> <wwhf70m85o.fsf_-_@atlas.cfht.hawaii.edu> <39D612E3.B9E14C9A@MA.UltraNet.Com> <39D62D36.98D18842@bartek.net> <39D641DC.6A871B82@MA.UltraNet.Com> <eppstein-F659B0.13284530092000@news.service.uci.edu> <39F208D1.80A35C0F@MA.UltraNet.Com> <8sucgk$3p4$1@bob.news.rcn.net> <39F2E662.578F816C@MA.UltraNet.Com> <kKJI5.36540$UP5.556818@news6.giganews.com>
+X-Trace: Vw0yoXndpYAxrlSvGCgajVAnTXhSXn/r4CzS0BNMLBA=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 23 Oct 2000 10:04:23 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:1610
+
+In article <kKJI5.36540$UP5.556818@news6.giganews.com>,
+   Timothy Stark <sword7@grace.speakeasy.org> wrote:
+>Alan H. Martin <AMartin@ma.ultranet.com> wrote:
+>>> Too bad the -20 didn't have a FILDAE.
+>
+>> I don't think adding FILDAE to TOPS-20 would have prevented anyone from
+>> reading DDT.REL on NCODE:
+>
+>Hmmm. FILDAE is good security for user's files.  They can set up
+>ACCESS.USR in their main directory. 
+
+And you can also do set up a file maintenance system using
+SFDs.  That's how we finally managed to get some control of
+the CUSPs.
+
+> When a hacker attempts to touch
+>their directories and FILDAE will record who touch their files into
+>ACCESS.LOG next to ACCESS.USR in the same directory.  A hacker can be
+>caught by a user easily and quickly. :-)
+
+Yup.  I "caught" quite a few which resulted in an intense
+training session for each one.
+
+/BAH
+
+
+Subtract a hundred and four for e-mail.
+
+
+Article 1646 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!howland.erols.net!newsswitch.lcs.mit.edu!uchinews!nntp-server.caltech.edu!gah
+From: gah@ugcs.caltech.edu (glen herrmannsfeldt)
+Newsgroups: alt.sys.pdp10
+Subject: Re: hacking (was More about ?Enter error 14.)
+Date: 24 Oct 2000 22:53:59 GMT
+Organization: California Institute of Technology, Pasadena
+Lines: 18
+Message-ID: <8t53u7$i4m@gap.cco.caltech.edu>
+References: <8qnj8c$ojs$5@bob.news.rcn.net> <39D2ACD4.29716C49@bartek.net> <wwhf70m85o.fsf_-_@atlas.cfht.hawaii.edu> <39D612E3.B9E14C9A@MA.UltraNet.Com> <39D62D36.98D18842@bartek.net> <39D641DC.6A871B82@MA.UltraNet.Com> <eppstein-F659B0.13284530092000@news.service.uci.edu> <39F208D1.80A35C0F@MA.UltraNet.Com> <8sucgk$3p4$1@bob.news.rcn.net> <39F2E662.578F816C@MA.UltraNet.Com> <kKJI5.36540$UP5.556818@news6.giganews.com> <8t12f7$dq3$1@bob.news.rcn.net>
+NNTP-Posting-Host: seniti.ugcs.caltech.edu
+X-Newsreader: NN version 6.5.0 #1 (NOV)
+Xref: nntp1.ba.best.com alt.sys.pdp10:1646
+
+someone writes:
+
+>Hmmm. FILDAE is good security for user's files.  They can set up
+>ACCESS.USR in their main directory. 
+
+> When a hacker attempts to touch
+>their directories and FILDAE will record who touch their files into
+>ACCESS.LOG next to ACCESS.USR in the same directory.  A hacker can be
+>caught by a user easily and quickly. :-)
+
+I remember this one.  I knew someone who had a game program with
+the log option on.  We didn't like this, so we wrote a macro program
+with an ENTER loop.  In not long at all, the account was over quota,
+he deleted the log and turned off logging.
+
+-- glen
+
+
+
+
+Article 1649 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!207.172.3.37!feed1.news.rcn.net!rcn!207-172-245-56
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: hacking (was More about ?Enter error 14.)
+Date: Wed, 25 Oct 00 06:49:25 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 34
+Message-ID: <8t6b2g$dcl$1@bob.news.rcn.net>
+References: <8qnj8c$ojs$5@bob.news.rcn.net> <39D2ACD4.29716C49@bartek.net> <wwhf70m85o.fsf_-_@atlas.cfht.hawaii.edu> <39D612E3.B9E14C9A@MA.UltraNet.Com> <39D62D36.98D18842@bartek.net> <39D641DC.6A871B82@MA.UltraNet.Com> <eppstein-F659B0.13284530092000@news.service.uci.edu> <39F208D1.80A35C0F@MA.UltraNet.Com> <8sucgk$3p4$1@bob.news.rcn.net> <39F2E662.578F816C@MA.UltraNet.Com> <kKJI5.36540$UP5.556818@news6.giganews.com> <8t12f7$dq3$1@bob.news.rcn.net> <8t53u7$i4m@gap.cco.caltech.edu>
+X-Trace: NKu5/Cau1Z6TEzSoTLdXlJjaqGZ3vfntAB16znQ7vak=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 25 Oct 2000 10:01:52 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:1649
+
+In article <8t53u7$i4m@gap.cco.caltech.edu>,
+   gah@ugcs.caltech.edu (glen herrmannsfeldt) wrote:
+>someone writes:
+>
+>>Hmmm. FILDAE is good security for user's files.  They can set up
+>>ACCESS.USR in their main directory. 
+>
+>> When a hacker attempts to touch
+>>their directories and FILDAE will record who touch their files into
+>>ACCESS.LOG next to ACCESS.USR in the same directory.  A hacker can be
+>>caught by a user easily and quickly. :-)
+>
+>I remember this one.  I knew someone who had a game program with
+>the log option on.  We didn't like this, so we wrote a macro program
+>with an ENTER loop.  In not long at all, the account was over quota,
+>he deleted the log and turned off logging.
+
+<grin>  I guess that was another way to change behaviour.  You were
+wicked ;-).  We didn't care about reads.  We did care about
+writes.  We didn't want anybody writing any of the software that
+I had frozen for field test and we absolutely didn't want any
+body writing over the field image areas since they were our
+only source of field image; we only had one system to maintain,
+develop and run the software we shipped.  Think about trying
+to do a maintenance and a development cycle of one piece of
+software.  You can only run one monitor at a time.
+
+We also had critters that thought it was neat to fuck around
+with all of those sources who absolutely no idea and didn't
+care about who paid our bills...you customers.
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+

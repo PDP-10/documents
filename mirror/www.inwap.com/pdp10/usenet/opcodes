@@ -1,0 +1,52 @@
+Article 8799 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!newsfeed.mathworks.com!howland.erols.net!outgoing.news.rcn.net.MISMATCH!feed1.news.rcn.net!rcn!not-for-mail
+From: "Alan H. Martin" <AMartin@MA.UltraNet.Com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: death of architectures...
+Date: Mon, 22 May 2000 01:17:17 -0400
+Lines: 31
+Message-ID: <3928C2DD.B1FC7708@MA.UltraNet.Com>
+References: <547leyms3t.fsf@flipper.cisco.com> <38F5F2E9.A051A9BB@jetnet.ab.ca> <38f7cd59$0$227@nntp1.ba.best.com> <8d9hi9$b6f$5@bob.news.rcn.net> <38fa0630$0$200@nntp1.ba.best.com>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: Zw2WKut0AzgwP2H58x82tIl9GZCRjep1ymi+qUf7OlE=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 22 May 2000 05:17:56 GMT
+X-Accept-Language:  en,en-US,en-GB,es
+X-Mailer:  Mozilla 4.7 [en] (Win95; U)
+Xref: news3.best.com alt.sys.pdp10:8799
+
+Joe Smith wrote:
+> 
+> In article <8d9hi9$b6f$5@bob.news.rcn.net>,  <jmfbahciv@aol.com> wrote:
+...
+> For instance, the PDP-10 had 16 instructions that dealt with boolean
+> operations on two variables.  Some of them were downright worthless;
+> they existed to make the set of 16 orthogonal.  But compilers used
+> only 5 or 6 of the 16 possible instructions.  The design of the SPARC
+> CPU (used in Sun workstations) implemented only the 6.  No use wasting
+> transistors to implement op-codes that weren't going to make the system
+> as a whole run faster was the thinking.
+
+FORTRAN-10/20 boiled down to these 10 with various addressing and
+destination modes:
+
+AND	IOR	EQV	XOR	ANDCM	ORCM
+SETCA	SETCM	SETZ	SETO
+
+BLISS-10 used at least these 13 (plus at least some of their addressing
+and destination variations):
+
+AND	OR	EQV	XOR	ANDCM	ORCM
+ANDCA	ORCA	ANDCB	ORCB
+SETCA	SETZ	SETO
+
+
+(I'm more convinced than ever that all 16 operation families takes
+little hardware if you provide all of them...)
+				/AHM
+-- 
+Alan Howard Martin				AMartin@MA.UltraNet.Com
+
+

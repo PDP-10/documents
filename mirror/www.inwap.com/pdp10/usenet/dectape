@@ -1,0 +1,414 @@
+Article 3003 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news-spur1.maxwell.syr.edu!news.maxwell.syr.edu!howland.erols.net!infeed1.internetmci.com!newsfeed.internetmci.com!in1.uu.net!199.232.56.18!news.ultranet.com!francini
+From: francini@ultranet.com
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: Re: Why Mainframes? (moving towards...9-track tape drives)
+Date: Thu, 17 Jul 1997 02:56:29 -0400
+Organization: Appletree Systems
+Lines: 38
+Message-ID: <francini-ya02408000R1707970256290001@news.ultranet.com>
+References: <01bc8523$84da9b80$e12185c2@rashid1> <5pkj08$b2c@ss1.digex.net> <0q4ta6r06p.fsf@rorschach.hks.net> <slrn5s45gq.1a.mvw@mvw.wave.co.nz> <5ptcv3$6tf@bonkers.taronga.com> <x5oh8dtr98.fsf@world.std.com> <33C89D2A.3884@mp.usbr.gov> <x567uff0w4.fsf@world.std.com> <5qd5t2$m3b@top.mitre.org> <33CCEC07.246@arkres.com> <x5u3huuc5q.fsf_-_@world.std.com>
+NNTP-Posting-Host: d15.dial-1.nsh.nh.ultra.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 8bit
+X-Newsreader: Yet Another NewsWatcher 2.4.0
+Xref: nntp1.ba.best.com alt.folklore.computers:89540 alt.sys.pdp10:3003
+
+In article <x5u3huuc5q.fsf_-_@world.std.com>, bzs@world.std.com (Barry
+Shein) wrote:
+>I guess what I've always wondered is why the 9-track technology just
+>keeled over and died. It would've seemed that all that magnetic
+>real-estate just needed to have the kind of density technology that
+>was being used on 8mm and DAT applied and it should have been very
+>competitive, expensive, but tens and then hundreds of gigabytes per
+>reel (again, just judging by the number of square inches of magnetic
+>material in a typical "round" tape.)
+>
+>But to my knowledge no one really ever showed a 9-track beyond
+>6250bpi, which was about 150MB on a standard 2400ft reel.
+>
+
+Yes -- wouldn't it be fun to have the current high-end DLT tape technology
+(70Gb on a CompacTape IV, which is not all that long, comparatively with
+9-tracks), writing on a 2400' full-size magtape reel?  The mind boggles
+with the thought of how many hundreds of gigs could be put there.  I would
+also hope that with modern servo technology, designers could do away with
+the extremely long tape paths (with vacuum columns and the like) that cause
+much of the aerodynamic pain of moving the tape quickly. Since DLT format
+writes fixed-sized, addressable blocks on the tape using a folded
+multitrack scheme, an open-reel drive using that format would really be a
+great-great-great-grandkid of DECtape!
+
+
+The mind truly boggles...
+
+John
+
+-- 
+----
++------------------------------------------------------------------------------+
+| "I have come to the conclusion that one useless man is called a disgrace;    |
+|  that two or more are called a law firm; and that three or more become       |
+|  a Congress.  And by God I have had _this_ Congress!"                        |
+|                                                        -- John Adams         |
++------------------------------------------------------------------------------+
+
+
+Article 2951 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!nntp.primenet.com!nntp.gblx.net!enews.sgi.com!fido.engr.sgi.com!rigden.engr.sgi.com!rpw3
+From: rpw3@rigden.engr.sgi.com (Rob Warnock)
+Newsgroups: alt.sys.pdp10
+Subject: Re: For Tim, 166 emulator please
+Date: 30 Dec 2000 08:19:09 GMT
+Organization: Silicon Graphics Inc., Mountain View, CA
+Lines: 34
+Message-ID: <92k5pt$jafhc$1@fido.engr.sgi.com>
+References: <3a340e0b.2075835@news.m.iinet.net.au> <9113i8$nsd$1@spies.com> <3a393b43.2118127@news.m.iinet.net.au> <91n5id$tbq$1@nntp1.ba.best.com>
+NNTP-Posting-Host: rigden.engr.sgi.com
+X-Trace: fido.engr.sgi.com 978164349 20266540 163.154.34.115 (30 Dec 2000 08:19:09 GMT)
+X-Complaints-To: news@fido.engr.sgi.com
+NNTP-Posting-Date: 30 Dec 2000 08:19:09 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2951
+
+Joe Smith <inwap@best.com> wrote:
++---------------
+| If I recall correctly, DECtapes used 6 tracks to redundantly store 3 bits.
+| It took 12 tape frames to make up a single 36-bit word.
++---------------
+
+Actually, 10 tracks were used to store 5 bits, of which one was clock,
+one was a "mark" (framing) bit, and 3 were data. The clock and mark
+tracks were written once only, during formatting of the DECtape. The
+mark track is what divided up the tape into blocks, and blocks into
+headers & data, and both of those into 36-bit words. The data tracks
+were used in the "header" portion to store block numbers & other stuff,
+but in the "data" portion they were pure user (or directory) data.
+
++---------------
+| Once you've gotten the 36 bits, you'd have to know what format was
+| being used: SIXBIT had six characters of 6 bits each, ASCII is stored
+| as five characters of 7 bits each (with one bit left over).
++---------------
+
+That was handled exactly the same as on disk. In fact, for all intents
+and purposes, a DECtape *was* "just a disk". (Well, the directory format
+was different, more tightly-encoded to save space.) The 128-word blocks
+could be re-written in-place, and in fact could be read or *written*
+either forwards or backwards!! [Try *that* with a 7- or 9-track magtape!]
+
+
+-Rob
+
+-----
+Rob Warnock, 31-2-510		rpw3@sgi.com
+SGI Network Engineering		http://reality.sgi.com/rpw3/
+1600 Amphitheatre Pkwy.		Phone: 650-933-1673
+Mountain View, CA  94043	PP-ASEL-IA
+
+
+Article 3186 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!newsxfer.eecs.umich.edu!newsxfer3.itd.umich.edu!forum.apple.com!news.apple.com!haxrus.apple.com!user
+From: aek@spies.com (Al Kossow)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Reading DECTAPES
+Date: Fri, 12 Jan 2001 15:47:02 -0800
+Organization: Apple Computer, Inc.
+Lines: 26
+Message-ID: <aek-1201011547020001@haxrus.apple.com>
+References: <3a5cdfcf.4388946@news.m.iinet.net.au> <93iqc9$o6q$1@spies.com> <3a5f8ea6.6962347@news.m.iinet.net.au>
+NNTP-Posting-Host: haxrus.apple.com
+X-Trace: news.apple.com 979343221 26048 17.205.21.66 (12 Jan 2001 23:47:01 GMT)
+X-Complaints-To: usenet@news.apple.com
+NNTP-Posting-Date: 12 Jan 2001 23:47:01 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:3186
+
+In article <3a5f8ea6.6962347@news.m.iinet.net.au>,
+berd_kalamunda@techemail.com (Rolie Baldock) wrote:
+
+> Hello Al,
+> 
+> I'm not a betting man particularly as I am not a close personal friend
+> of yours and don't know your background. If you reckon you can do this
+> how about a tutorial on how you would tackle the job.
+
+Well, this was actually just a way to try to coerce you to READ the
+tape :-)
+
+DECtape is written with a pair of dedicated clock tracks, and mark
+tracks to indicate what the data tracks contain. It is also block as
+opposed to record structured. First step is to extract the block
+number, and the block data by watching the mark tracks. Knowing what
+format the tape was written would be helpful for the next step,
+identifing the directory info, if not, you guess at where the text
+files start by looking at the blocks. If you're lucky, the file blocks
+will be sequential (the files were written to a blank DECtape) if not,
+you have to piece them together, or figure out what the directory
+format is.
+
+-- 
+The eBay Curse:
+"May you find everything you're looking for.."
+
+
+Article 3260 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!inwap
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Reading DECTAPES
+Date: 23 Jan 2001 22:25:26 GMT
+Organization: Chez Inwap
+Lines: 30
+Message-ID: <94l0cm$bpq$1@nntp1.ba.best.com>
+References: <3a5cdfcf.4388946@news.m.iinet.net.au> <aek-1201011547020001@haxrus.apple.com> <qhpuhse17r.fsf@ruckus.brouhaha.com> <3a682df0.5228805@news.m.iinet.net.au>
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 980288726 12090 206.184.139.134 (23 Jan 2001 22:25:26 GMT)
+X-Complaints-To: abuse@best.com
+NNTP-Posting-Date: 23 Jan 2001 22:25:26 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:3260
+
+In article <3a682df0.5228805@news.m.iinet.net.au>,
+Rolie Baldock <berd_kalamunda@techemail.com> wrote:
+>I am aware the data is not written in sequential blocks in new format
+>DECTAPE so as to keep the tape from "back tracking" [a real pain on
+>the PDP-6]. As I recall I saw recently where there ia a pointer in the
+>first word in the left half which points at ther next block number of
+>the file. Moreover I think it said that dump files were written with a
+>gap of two blocks and all other files were written with gaps of 4
+>blocks. Can you confirm this?
+
+It is true, but somewhat irrelevant.  Consecutive data blocks for a
+single file may be spaced more than 4 blocks apart depending on how
+fragmented the DECtape was at the time of writing.  Programs reading
+DECtape must always follow the pointers and make no assumptions about
+the blocking factor.
+
+File data block: Word 0 is a link pointer.  Words 1-127 hold data.
+
+Link pointer format:
+  Bits  0-7	Unused
+  Bits  8-17	Block number of the next block in file (1 to 577 decimal)
+  Bits 18-27	Block number of the first block in file (1 to 577 decimal)
+  Bits 28-35	Number of data words in this block (1 to 127 decimal)
+
+The most efficent way to process a DECtape was to ignore block 0,
+read all 74K words (332352 bytes) into memory, and do pointer chasing
+on the in-core image of the tape.
+	-Joe
+--
+See http://www.inwap.com/ for PDP-10 and "ReBoot" pages.
+
+
+Article 3283 of alt.sys.pdp10:
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Monitor internals book. Interest?
+References: <87lms0k9yy.fsf@prep.synonet.com> <94nd9h$uc7$1@spies.com> <87u26nvn2z.fsf@prep.synonet.com> <3a70adb0.6066960@news.m.iinet.net.au>
+X-Disclaimer: Everything I write is false.
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 25 Jan 2001 15:41:00 -0800
+Message-ID: <qhpuhbtd2r.fsf@ruckus.brouhaha.com>
+Lines: 57
+User-Agent: Gnus/5.0807 (Gnus v5.8.7) Emacs/20.7
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 25 Jan 2001 15:42:49 -0800, ruckus.brouhaha.com
+Path: nntp1.ba.best.com!news1.best.com!feed.textport.net!logbridge.uoregon.edu!HSNX.atgi.net!news.kjsl.com!news.spies.com!ruckus.brouhaha.com
+Xref: nntp1.ba.best.com alt.sys.pdp10:3283
+
+berd_kalamunda@techemail.com (Rolie Baldock) writes:
+> Did you find the PDP-8 DECTAPE details, as Tony says he cannot put his
+> finger on it in the barn.
+
+*ALL* of the details on how DECtape works are in the TC11 manual that Al
+referenced before.  It's in appendix A, starting on page 49 of the PDF
+file.  If you think some details are missing, look again.
+
+It's pretty dense, so *understanding* it takes a bit of study.  The
+Rosetta Stone of DECtape is figure A-8 on 54 of the PDF file.
+
+The US patent is even harder to read, and some details changed between
+the patent and the real implementation.
+
+The manual, prints, and patent can be found at:
+        http://www.brouhaha.com/~eric/retrocomputing/dec/dectape/
+
+The only differences between the use of DECtape on 12-bit, 16-bit,
+18-bit, and 36-bit systems are in the data block lengths and how the
+data bits are packed into 18-bit tape frames.  The mark track structure
+is identical other than the block lengths.
+
+The TC11 manual describes 16-bit and 18-bit format, which are identical
+except that in 16-bit mode the most significant two bits are written as
+zeros and ignored on read.  There are 256 18-bit frames in a block.
+
+36-bit mode uses the same structure as 18-bit, but with two consecutive
+18-bit frames used to store a 36-bit word.
+
+12-bit mode is just slightly different.  They pack three 12-bit words
+into two 18-bit frames.  They use a block size of 86 18-bit frames, which
+works out to 129 12-bit words.
+
+Note that LINCtape uses the same drive hardware, but not the same
+controller.  It runs the tape in the opposite direction, and uses
+12-bit frames with different mark track coding.  The PDP-12's LINCtape
+controller supported an option to allow use of DECtape, but it did not
+offer the fancy control features of a normal DECtape control.
+
+And then there's the TD8-E "Simple DECtape Control" used on Omnibus
+machines.  The hardware is simple because the software has to do all
+the work.
+
+Last night I wrote several DECtape-related programs on my Linux machine.
+One tested all legal combinations of consecutive mark track codes to
+verify that the eight-bit mark track decoder will never be fooled by a
+valid mark track.  It works, which is not too surprising; I'm sure Tom
+Stockebrand spent some time picking the codes carefully.  I wonder
+whether different choices of six-bit mark track codes would have allowed
+for a 7-bit or even 6-bit mark track decoder; maybe I'll write a program
+to search for such a code set.
+
+Another program will decode a DECtape image stored as 4-bit samples
+(mark bit and three data bits).  Now I just need to get a raw DECtape
+image into my computer to test it.  Maybe this weekend I can extract
+one.
+
+
+
+Article 3340 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc03.blue.aol.com!news.maxwell.syr.edu!news.mel.connect.com.au!news.per.connect.com.au!newsfeed.iinet.net.au!news.iinet.net.au!not-for-mail
+From: berd_kalamunda@techemail.com (Rolie Baldock)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Reading DECTAPES
+Date: Mon, 29 Jan 2001 22:54:57 GMT
+Message-ID: <3a75f46f.6854310@news.m.iinet.net.au>
+References: <3a5cdfcf.4388946@news.m.iinet.net.au> <aek-1201011547020001@haxrus.apple.com> <qhpuhse17r.fsf@ruckus.brouhaha.com> <3a682df0.5228805@news.m.iinet.net.au> <94l0cm$bpq$1@nntp1.ba.best.com>
+X-Newsreader: Forte Free Agent 1.11/16.235
+Lines: 42
+NNTP-Posting-Host: 203.59.67.67
+X-Trace: news.iinet.net.au 980808697 26429 emut7d@203.59.67.67
+Xref: nntp1.ba.best.com alt.sys.pdp10:3340
+
+Hello Joe,
+
+Thanks for your contribution . It is very much appreciated. I will
+save it to HDD for the time when I need that info for my unbundling
+operations.
+
+Regards,
+
+On 23 Jan 2001 22:25:26 GMT, inwap@best.com (Joe Smith) wrote:
+
+>In article <3a682df0.5228805@news.m.iinet.net.au>,
+>Rolie Baldock <berd_kalamunda@techemail.com> wrote:
+>>I am aware the data is not written in sequential blocks in new format
+>>DECTAPE so as to keep the tape from "back tracking" [a real pain on
+>>the PDP-6]. As I recall I saw recently where there ia a pointer in the
+>>first word in the left half which points at ther next block number of
+>>the file. Moreover I think it said that dump files were written with a
+>>gap of two blocks and all other files were written with gaps of 4
+>>blocks. Can you confirm this?
+>
+>It is true, but somewhat irrelevant.  Consecutive data blocks for a
+>single file may be spaced more than 4 blocks apart depending on how
+>fragmented the DECtape was at the time of writing.  Programs reading
+>DECtape must always follow the pointers and make no assumptions about
+>the blocking factor.
+>
+>File data block: Word 0 is a link pointer.  Words 1-127 hold data.
+>
+>Link pointer format:
+>  Bits  0-7	Unused
+>  Bits  8-17	Block number of the next block in file (1 to 577 decimal)
+>  Bits 18-27	Block number of the first block in file (1 to 577 decimal)
+>  Bits 28-35	Number of data words in this block (1 to 127 decimal)
+>
+>The most efficent way to process a DECtape was to ignore block 0,
+>read all 74K words (332352 bytes) into memory, and do pointer chasing
+>on the in-core image of the tape.
+>	-Joe
+>--
+>See http://www.inwap.com/ for PDP-10 and "ReBoot" pages.
+
+--Rolie Baldock.  email:  <berd_kalamunda@techemail.com>
+
+
+Article 3733 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!inwap
+From: inwap@best.com (Joe Smith)
+Newsgroups: alt.sys.pdp10
+Subject: Re: O/S for PDP-10 plus PDP-10 FPGA box prototype
+Date: 5 Mar 2001 22:19:40 GMT
+Organization: Chez Inwap
+Lines: 23
+Message-ID: <9813ds$e0p$1@nntp1.ba.best.com>
+References: <3aa0266f.4659287@news.m.iinet.net.au> <3AA0844E.A2E68512@mail.bcpl.net> <3aa17069.4085815@news.m.iinet.net.au> <6uk8658w3r.fsf@chonsp.franklin.ch>
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: nntp1.ba.best.com 983830780 14361 206.184.139.134 (5 Mar 2001 22:19:40 GMT)
+X-Complaints-To: abuse@best.com
+NNTP-Posting-Date: 5 Mar 2001 22:19:40 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:3733
+
+In article <6uk8658w3r.fsf@chonsp.franklin.ch>,
+Neil Franklin  <neil@franklin.ch.remove> wrote:
+>berd_kalamunda@techemail.com (Rolie Baldock) writes:
+>
+>> We have enough info from Tom Stockebrand and others in this NG to put
+>> DECTAPEs on a KI/KA ten.
+>
+>Neat. Usually they only were on KL-10s. I like DECTAPEs since I first
+>saw this elegantly simple device running on an PDP-8/A.
+
+No, not usually on KL-10s.  User-accessable DECtapes were ubiquitous on
+KA and KI but somewhat rare on KL.  (The DECtapes that were attached to
+the console front-end were NOT assessable via the MOUNT command.)
+
+The Colorado School of Mines had a couple hundred student-owned DECtapes
+in the library when we upgrade from a KA to a KL + KS.  Because we were
+keeping a lot of the KA peripherals, we ordered a KL-1091 with I/O-Bus
+adapter, and two TU55 transports.  We ran into a couple of problems
+getting DTB defined (no problem with just a single DECtape controller; DTA).
+I ended up disassembling the DECtape formatter program, adding mnemonics
+to the re-created source, and defining a feature-test for DTA vs DTB.
+--
+See http://www.inwap.com/ for PDP-10 and "ReBoot" pages.
+
+
+Article: 17566 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!news-out.nuthinbutnews.com!propagator-sterling!news-in.nuthinbutnews.com!feed.textport.net!sn-xit-02!sn-xit-06!sn-post-02!sn-post-01!supernews.com!corp.supernews.com!not-for-mail
+From: Bob Supnik <bsupnik@nauticusnet.com>
+Newsgroups: alt.sys.pdp10,alt.sys.pdp11,alt.sys.pdp8
+Subject: Microtapes
+Date: Thu, 25 Jul 2002 16:21:43 -0400
+Organization: Posted via Supernews, http://www.supernews.com
+Message-ID: <ikm0kugmgh2rsl4in5d9afn14csr741u0h@4ax.com>
+X-Newsreader: Forte Agent 1.91/32.564
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Complaints-To: newsabuse@supernews.com
+Lines: 17
+Xref: dfw-artgen alt.sys.pdp10:17566 alt.sys.pdp11:6488 alt.sys.pdp8:5444
+
+This relates to systems that don't have groups (eg, the 18b PDP's).
+
+While going through the old DEC archive today, I found a box
+containing manuals and design drawings for the original "Microtape"
+(eg, DECtape).  This included the Type 555 transport, as well as the
+Type 550 controller for the 18b systems, the Type 551 controller for
+the PDP6, and the Type 552 controller for the PDP8.
+
+The main new finding is that "Microtape" was available not only for
+the PDP-6/7/8, but also for the PDP-1 and PDP-4.  I had seen a PDP-1
+with DECtape at Harvard in 1969 but up until now, no literature had
+surfaced documenting the interface.
+
+The PDP-1 uses the same controller, but different IOT assignments, as
+the PDP-4 and PDP-7.
+
+/Bob Supnik
+
+

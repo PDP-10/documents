@@ -1,0 +1,148 @@
+Article 4917 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!feed.textport.net!hammer.uoregon.edu!newsfeed.direct.ca!look.ca!news.u.washington.edu!140.142.17.34.MISMATCH!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Link 6 Manual?
+Date: Wed, 23 May 2001 20:35:59 -0700
+Organization: Networks & Distributed Computing
+Lines: 34
+Message-ID: <Pine.NXT.4.40.0105232023390.26103-100000@Tomobiki-Cho.CAC.Washington.EDU>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 990675362 38944 (None) 140.142.17.39
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: cher
+To: Timothy Stark <sword7@grace.speakeasy.net>
+In-Reply-To: <tgotv8kos5sc26@corp.supernews.com>
+Xref: nntp1.ba.best.com alt.sys.pdp10:4917
+
+On Thu, 24 May 2001, Timothy Stark wrote:
+> What is RADIX-50?  I do not know what is it for.
+
+RADIX-50, also called SQUOZE, is an encoding of small strings (up to 6
+characters) used for symbols.
+
+Consider SIXBIT.  In SIXBIT, only the ASCII characters in range 040
+through 0137 are used (hence no CTL characters or lowercase).  These
+characters are then shifted down to the range 00 through 077.  You can fit
+6 SIXBIT characters in a 36-bit word.
+
+RADIX-50 or SQUOZE is a further compression.  It can store 6 SQUOZE
+characters in 32 bits, leaving the remaining 4 bits for flags.  A SQUOZE
+character is from 00 through 050 (hence the name RADIX-50, note that that
+is 50 octal, 40 decimal), in " 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ.$%".
+
+Here's a PDP-10 routine to output a SQUOZE value in AC1 as ASCII, with
+AC17 as a stack pointer and AC2 scratch.
+
+SQZTYO:	IDIVI 1,50
+	PUSH 17,2
+	SKIPE 1
+	 PUSHJ 17,SQZTYO
+	POP 17,1
+	ADJBP 1,[POINT 7,[ASCII/ 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ.$%/],6]
+	LDB 1,1
+	PBOUT			;; OUTCHR 1 on TOPS-10
+	POPJ 17,
+
+-- Mark --
+
+http://staff.washington.edu/mrc
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+Article 4919 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news2.best.com!news.maxwell.syr.edu!feed2.news.rcn.net!feed1.news.rcn.net!rcn!207-172-245-29
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: Link 6 Manual?
+Date: Thu, 24 May 01 09:51:50 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 75
+Message-ID: <9eiug3$90m$1@bob.news.rcn.net>
+References: <Pine.NXT.4.40.0105232023390.26103-100000@Tomobiki-Cho.CAC.Washington.EDU>
+X-Trace: UmFuZG9tSVbjkmLZIbDVZYgdwfgtjac4/2dQPL1OWB4DGbuEz9HoQLV9CDsPiXeB
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 24 May 2001 12:23:31 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:4919
+
+In article 
+<Pine.NXT.4.40.0105232023390.26103-100000@Tomobiki-Cho.CAC.Washington.EDU>,
+   Mark Crispin <mrc@CAC.Washington.EDU> wrote:
+>On Thu, 24 May 2001, Timothy Stark wrote:
+>> What is RADIX-50?  I do not know what is it for.
+>
+>RADIX-50, also called SQUOZE, is an encoding of small strings (up to 6
+>characters) used for symbols.
+>
+>Consider SIXBIT.  In SIXBIT, only the ASCII characters in range 040
+>through 0137 are used (hence no CTL characters or lowercase).  These
+>characters are then shifted down to the range 00 through 077.  You can fit
+>6 SIXBIT characters in a 36-bit word.
+>
+>RADIX-50 or SQUOZE is a further compression.  It can store 6 SQUOZE
+>characters in 32 bits, leaving the remaining 4 bits for flags.  A SQUOZE
+>character is from 00 through 050 (hence the name RADIX-50, note that that
+>is 50 octal, 40 decimal), in " 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ.$%".
+>
+>Here's a PDP-10 routine to output a SQUOZE value in AC1 as ASCII, with
+>AC17 as a stack pointer and AC2 scratch.
+>
+>SQZTYO:	IDIVI 1,50
+>	PUSH 17,2
+>	SKIPE 1
+>	 PUSHJ 17,SQZTYO
+>	POP 17,1
+>	ADJBP 1,[POINT 7,[ASCII/ 
+0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ.$%/],6]
+>	LDB 1,1
+>	PBOUT			;; OUTCHR 1 on TOPS-10
+>	POPJ 17,
+>
+>-- Mark --
+
+Here's the blurb from my cheat sheet, called "decsystem10 System
+Reference Card (Including the DECsystem-1070)"
+
+Begin blurb:
+
+Radix 50 Representation
+
+Radix 50 representation condenses 6-character symbols into 32 bits.
+The symbol characters are subscripted in the following manner
+
+    S_6S_5S_4S_3S_2S_1
+
+Determine the octal code (O_n) for each character and use the 
+following formula to generate the 50_8 representation.
+
+(((((O_6 * 50) + O_5)* 50 + O_4) * 50 + O_3) * 50 + O_2)*50 + O_1
+
+
+				OCTAL CODES
+
+                     
+                             Second Octal Digit
+
+                0       1    2    3    4    5    6    7
+
+
+	0	NULL    0    1    2    3    4    5    6
+First   1       7       8    9    A    B    C    D    E
+Octal   2       F       G    H    I    J    K    L    M
+Digit   3       N       O    P    Q    R    S    T    U
+        4       V       W    X    Y    Z    *    $    %
+
+End of blurb.
+
+I am not going to try to draw the little boxes for the grid.
+Whew!   Do I miss RUNOFF ;-).
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+

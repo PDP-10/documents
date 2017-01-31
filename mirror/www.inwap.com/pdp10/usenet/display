@@ -1,0 +1,82 @@
+Article 4201 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!su-news-hub1.bbnplanet.com!news.bbnplanet.com!newsfeed.berkeley.edu!Supernews73!supernews.com!Supernews69!10.0.0.1!10.0.0.1
+From: racerdave@net1plus.com (Dave Lyons)
+Newsgroups: alt.sys.pdp10
+Subject: Re: VB10C ?
+Date: Thu, 08 Oct 1998 11:35:01 GMT
+Organization: http://www.supernews.com, The World's Usenet: Discussions Start Here
+Lines: 35
+Message-ID: <361c9ce0.1297377843@10.0.0.1>
+References: <lgreenwa-0710981710280001@psc21221230.cts.com>
+NNTP-Posting-Host: 208.200.157.49
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: 907846206 P0XQBQRYN9D31D0C8C usenet54.supernews.com
+X-Complaints-To: newsabuse@supernews.com
+X-Newsreader: Forte Agent 1.5/32.452
+X-No-Archive: yes
+Xref: news3.best.com alt.sys.pdp10:4201
+
+On Wed, 07 Oct 1998 17:10:28 -0700, lgreenwa@cts.com (Lawrence H
+Greenwald) wrote:
+
+>The KA-10 that is/was at Syracuse University had attached this big
+>graphics console box  (I believe called a VB10C) that could run vector
+>graphics of some sort. Did anyone else have one? What did you use it for?
+>
+>--LG
+
+We had 4 of them in one room, running off of a KL with tops-20.  They
+were used by the engineers to produce all the drawings for all the
+hardware.  On the back side, it was SUDS.  Every print was signed by
+"S. Foonley" in the box for the person who drew it.  Wish I still had
+my KL print set.  :-(
+
+The device is basically at PDP-11 based GT40 (GT42) connected via a
+DL10 such that the graphics commands would be fetched out of the
+-10/20 memory.
+
+I do remember getting asked about the the conditionals in the monitor
+used to enable supports for this hack.  There was some very cryptic
+comments about the "Heliwell system"  (I never sould spell Dick's name
+right.)  Customers who had source were wondering what that system was.
+The shipped code had the hooks for the support, but didn't have the
+drivers, as this was a special one-off system that we didn't expect
+anyone else to run. In reality, there were 3 or 4 of these systems
+spread arround DEC, and almost every system or board designed in the
+late 70's, early 80's had the prints produced on them.  IIRC, Dick's
+folks made sure the drivers and such worked, and built their own
+systems from source. BTW, that system may also have been one of the
+first "1091" systems, as it was the big blue boxes, but ran Tops-20,
+also, IIRC, the cpu was serial number "P3", The third prototype KL
+ever built.  It was later replaced with a real production unit, but I
+forget the serial number.  For those who remember the LAB layout in
+MR, it was in the NW corner of the room.
+
+
+Article 4255 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: news3.best.com!news1.best.com!nntprelay.mathworks.com!newshub.northeast.verio.net!ix.netcom.com!netcom!alderson
+From: alderson@netcom.netcom.com (Richard M. Alderson III)
+Subject: Re: VB10C ?
+In-Reply-To: racerdave@net1plus.com's message of Thu, 08 Oct 1998 11:35:01 GMT
+Message-ID: <ALDERSON.98Oct12175632@netcom.netcom.com>
+Sender: alderson@netcom.netcom.com
+Reply-To: alderson@netcom.com
+Organization: NETCOM On-line services
+References: <lgreenwa-0710981710280001@psc21221230.cts.com> <361c9ce0.1297377843@10.0.0.1>
+Date: Tue, 13 Oct 1998 00:56:32 GMT
+Lines: 8
+Xref: news3.best.com alt.sys.pdp10:4255
+
+Close:  Dick *Helliwell* (4 l's total).
+
+Dick ported the GNU utilities, GNU Emacs, Perl 4.xxx, and X11R5 to Tops-20
+while working at XKL.
+-- 
+Rich Alderson			Last LOTS Tops-20 Systems Programmer, 1984-1991
+				Current maintainer, MIT TECO EMACS (v. 170)
+last name @ XKL dot COM		Chief systems administrator, XKL LLC, 1998-now
+
+

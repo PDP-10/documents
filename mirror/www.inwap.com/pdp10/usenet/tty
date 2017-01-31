@@ -1,0 +1,278 @@
+Article 4182 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!nntprelay.mathworks.com!europa.clark.net!206.55.3.15!news.clark.net!not-for-mail
+From: gagner@clark.net (Philip Gagner)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: Wed, 07 Oct 1998 17:31:00 GMT
+Organization: TWLG
+Lines: 32
+Message-ID: <361ba313.5952698@news.clark.net>
+References: <Pine.LNX.3.96.980928112124.10870D-100000@bony.umtec.com> <qhu31sc8nn.fsf@ruckus.brouhaha.com> <3613e9a8.18494117@news.clark.net> <6uvli1$o2j$1@strato.ultra.net> <3615172c.19558816@news.clark.net> <36149B71.237C@s054.aone.net.au> <361b6174.71109341@news.clark.net> <Pine.LNX.3.96.981007102940.17468A-100000@bony.umtec.com>
+Reply-To: gagner@clark.net
+NNTP-Posting-Host: gagner-ppp.clark.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Newsreader: Forte Agent 1.5/32.451
+Xref: news3.best.com alt.sys.pdp10:4182
+
+Daniel Seagraves <root@bony.umtec.com> wrote:
+
+<snip>
+>> One might, I suppose, want to implement console TTY, but it would be
+>> easier to emulate a DC-10 and remap the console functions.
+>
+>What's a DC-10?  I have DATAO TTY working...
+>
+The DC-10 was the old, ancient, and best of all simple, terminal
+controller for PDP-10s. It came out around the same time as the KA-10.
+It supported multiple serial terminals. You're probably right that the
+I/O instruction was conventionally DATAO TTY, but I vaguely remember
+it as conventionally DATAO CON, for DATAO Console. 'course it's all in
+the assignments, and was a matter of taste.
+>
+>I'm not going to limit it to ITS - I'm going to try to emulate enough to
+>make TOPS-20 work.  Speaking of which, does anyone have a diskimage?
+This means you're really going to implement all the page-fault stuff
+right? Wow! As I recall, TOPS-20 was a little sensitive to page fault
+timings. I'm probably wrong about this, but as I recall ITS ran on the
+modified page controller that MIT used--would it ever run on a vanilla
+KL? I vaguely remember an effort to make it do that, but I never heard
+whether anyone got it working.
+
+>
+>Daniel Seagraves | I'm an International Clandestine Arms Dealer!
+>#!/bin/perl -sp0777i<X+d*lMLa^*lN%0]dsXx++lMlN/dsM0<j]dsj
+>$/=unpack('H*',$_);$_=`echo 16dio\U$k"SK$/SM$n\EsN0p[lN*1
+>lK[d2%Sa2/d0$^Ixp"|dc`;s/\W//g;$_=pack('H*',/((..)*)$/)
+>What is this?  See http://www.dcs.ex.ac.uk/~aba/rsa | 36 BITS 4EVER!
+>
+
+
+
+Article 4185 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!nntprelay.mathworks.com!news.idt.net!nntp.farm.idt.net!news
+From: "Chris Ward" <ccw@idt.net>
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: Wed, 7 Oct 1998 15:40:05 -0400
+Organization: IDT (Best News In The World)
+Lines: 19
+Message-ID: <6vgg60$1gu@nnrp3.farm.idt.net>
+References: <Pine.LNX.3.96.980928112124.10870D-100000@bony.umtec.com> <qhu31sc8nn.fsf@ruckus.brouhaha.com> <3613e9a8.18494117@news.clark.net> <6uvli1$o2j$1@strato.ultra.net> <3615172c.19558816@news.clark.net> <36149B71.237C@s054.aone.net.au> <361b6174.71109341@news.clark.net> <Pine.LNX.3.96.981007102940.17468A-100000@bony.umtec.com> <361ba313.5952698@news.clark.net> <Pine.LNX.3.96.981007134213.18731B-100000@bony.umtec.com>
+NNTP-Posting-Host: ppp-29.ts-5-bay.hck.idt.net
+X-Newsreader: Microsoft Outlook Express 4.72.3115.0
+X-MimeOLE: Produced By Microsoft MimeOLE V4.72.3110.3
+Xref: news3.best.com alt.sys.pdp10:4185
+
+
+Daniel Seagraves wrote in message ...
+>On Wed, 7 Oct 1998, Philip Gagner wrote:
+>
+>> The DC-10 was the old, ancient, and best of all simple, terminal
+>> controller for PDP-10s. It came out around the same time as the KA-10.
+>> It supported multiple serial terminals. You're probably right that the
+>> I/O instruction was conventionally DATAO TTY, but I vaguely remember
+>> it as conventionally DATAO CON, for DATAO Console. 'course it's all in
+>> the assignments, and was a matter of taste.
+
+The terminal controller for the PDP-10 that I remember was actually a
+PDP-8/I (I think) with 32K of 12 bit words, and it was described to me as
+the predecessor of the UART, that is, it read each bit and assembled a seven
+(or eight or whatever) bit byte by sensing the start bit, the data bits, the
+parity, the stop and the rest.  It handled 30 or more 10CPS terminals (110
+baud, 2 stop bits) and 5 or so 300 bps (High Speed) terminals.
+
+
+
+
+Article 4186 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!nntprelay.mathworks.com!howland.erols.net!newshub2.home.com!newshub1.home.com!news.home.com!newshub1-work.home.com!void.agames.com!albaugh
+From: albaugh@agames.com (Mike Albaugh)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: 7 Oct 1998 20:27:40 GMT
+Organization: Atari Games Corporation
+Lines: 29
+Message-ID: <6vgirs$3hr$1@void.agames.com>
+References: <Pine.LNX.3.96.981007102940.17468A-100000@bony.umtec.com> <361ba313.5952698@news.clark.net> <Pine.LNX.3.96.981007134213.18731B-100000@bony.umtec.com> <6vgg60$1gu@nnrp3.farm.idt.net>
+NNTP-Posting-Host: java.agames.com
+X-Newsreader: TIN [version 1.2 PL2]
+Xref: news3.best.com alt.sys.pdp10:4186
+
+Chris Ward (ccw@idt.net) wrote:
+
+: The terminal controller for the PDP-10 that I remember was actually a
+: PDP-8/I (I think) with 32K of 12 bit words, and it was described to me as
+: the predecessor of the UART,
+
+	Kinda doubtful, IMHO, that last bit. Although I well remember
+the 8/I used as a "terminal concentrator" via bit-boffing software,
+I also well remember UARTs made out of three "System Modules" (tm)
+each, programmed very much like (sane) UARTS of today. I would be
+_very_ surprised to hear that a bit-boffing 8/I (made of TTL ?)
+preceded these system-modules, the basic building blocks of the
+PDP-1, -4, -5, and -6.
+
+: that is, it read each bit and assembled a seven
+: (or eight or whatever) bit byte by sensing the start bit, the data bits, the
+: parity, the stop and the rest.  It handled 30 or more 10CPS terminals (110
+: baud, 2 stop bits) and 5 or so 300 bps (High Speed) terminals.
+
+	Software UARTS are fun. My first was on a machine with vacuum
+tubes and drum main-memory, but that post-dated my use of mechanical
+"UARTS" (with both "pulling" and "holding" magnets, for all you other
+grey-beards :-)
+
+	Apologies for the distinctly thin veneer of -10 content.
+Mine was a -6 :-)
+
+						Mike
+| albaugh@agames.com, speaking only for myself
+
+
+Article 4190 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!nntprelay.mathworks.com!europa.clark.net!206.55.3.15!news.clark.net!not-for-mail
+From: gagner@clark.net (Philip Gagner)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: Wed, 07 Oct 1998 21:48:11 GMT
+Organization: TWLG
+Lines: 37
+Message-ID: <361be09f.4444373@news.clark.net>
+References: <Pine.LNX.3.96.980928112124.10870D-100000@bony.umtec.com> <qhu31sc8nn.fsf@ruckus.brouhaha.com> <3613e9a8.18494117@news.clark.net> <6uvli1$o2j$1@strato.ultra.net> <3615172c.19558816@news.clark.net> <36149B71.237C@s054.aone.net.au> <361b6174.71109341@news.clark.net> <Pine.LNX.3.96.981007102940.17468A-100000@bony.umtec.com> <361ba313.5952698@news.clark.net> <Pine.LNX.3.96.981007134213.18731B-100000@bony.umtec.com> <6vgg60$1gu@nnrp3.farm.idt.net>
+Reply-To: gagner@clark.net
+NNTP-Posting-Host: gagner-ppp.clark.net
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Newsreader: Forte Agent 1.5/32.451
+Xref: news3.best.com alt.sys.pdp10:4190
+
+"Chris Ward" <ccw@idt.net> wrote:
+
+>
+>Daniel Seagraves wrote in message ...
+>>On Wed, 7 Oct 1998, Philip Gagner wrote:
+>>
+>>> The DC-10 was the old, ancient, and best of all simple, terminal
+>>> controller for PDP-10s. It came out around the same time as the KA-10.
+>>> It supported multiple serial terminals. You're probably right that the
+>>> I/O instruction was conventionally DATAO TTY, but I vaguely remember
+>>> it as conventionally DATAO CON, for DATAO Console. 'course it's all in
+>>> the assignments, and was a matter of taste.
+>
+>The terminal controller for the PDP-10 that I remember was actually a
+>PDP-8/I (I think) with 32K of 12 bit words, and it was described to me as
+>the predecessor of the UART, that is, it read each bit and assembled a seven
+>(or eight or whatever) bit byte by sensing the start bit, the data bits, the
+>parity, the stop and the rest.  It handled 30 or more 10CPS terminals (110
+>baud, 2 stop bits) and 5 or so 300 bps (High Speed) terminals.
+>
+This was a device variously named, but generally called a DC72. It was
+a remote terminal controller (although it could be connected over a
+local interface--indeed at least one local controller HAD to be on an
+interface. I'm probably wrong, but I think the hardware box that
+connected the local FE to the -10 was called a something like a DL10
+(or maybe the DL10 was only used for -11 FE's--in which case I don't
+recall waht the box was).
+
+The PDP8/I was MUCH later, and it was a general purpose computer (a
+PDP-8 in fact) which sat at the end of a network (see above). You
+could hook several terminals (I think 8 was pretty much the max) to
+it, as well as a remote lineprinter and a remote card reader. Also, it
+could handle speeds much higher than 30 CPS.
+
+It was designed by DAS (Digital Advanced Systems) and programmed by
+several people, notably Eric Peabody. Eventually it got superceded by
+the DNx series of PDP-11 based front ends.
+
+
+Article 4202 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!news.maxwell.syr.edu!newsfeed.cwix.com!207.241.0.194!news.wwa.com!not-for-mail
+From: jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: 8 Oct 1998 13:20:19 GMT
+Organization: Everett Associates
+Lines: 23
+Message-ID: <6vie6j$jk4$1@hirame.wwa.com>
+References: <Pine.LNX.3.96.980928112124.10870D-100000@bony.umtec.com> <qhu31sc8nn.fsf@ruckus.brouhaha.com> <3613e9a8.18494117@news.clark.net> <6uvli1$o2j$1@strato.ultra.net> <3615172c.19558816@news.clark.net> <36149B71.237C@s054.aone.net.au> <361b6174.71109341@news.clark.net> <Pine.LNX.3.96.981007102940.17468A-100000@bony.umtec.com> <361ba313.5952698@news.clark.net> <Pine.LNX.3.96.981007134213.18731B-100000@bony.umtec.com> <6vgg60$1gu@nnrp3.farm.idt.net>
+NNTP-Posting-Host: poolf7-033.wwa.com
+Mime-Version: 1.0
+Content-Type: Text/Plain; charset=US-ASCII
+X-Newsreader: WinVN 0.99.8 (x86 32bit)
+Xref: news3.best.com alt.sys.pdp10:4202
+
+In article <6vgg60$1gu@nnrp3.farm.idt.net>, ccw@idt.net says...
+>
+>The terminal controller for the PDP-10 that I remember was actually a
+>PDP-8/I (I think) with 32K of 12 bit words, and it was described to me as
+>the predecessor of the UART, that is, it read each bit and assembled a seven
+>(or eight or whatever) bit byte by sensing the start bit, the data bits, the
+>parity, the stop and the rest.  It handled 30 or more 10CPS terminals (110
+>baud, 2 stop bits) and 5 or so 300 bps (High Speed) terminals.
+
+The bit-banger being described above was called the 680, at least on the 
+PDP-8. Back before I joined the PDP-10 Monitor Group I co-wrote (with Don 
+Witcraft) a little OS called TSS-8. I was responsible for (among other things) 
+the TTY support and had to get intimately familiar with the little beast. I 
+seem to recall on the 8/I there was a 680I which differed from the 680 in bit 
+sampling rate. I think the 680 sampled 8 times per bit, while the 680I only 
+sampled 5 times. But then again that was a long time ago.
+
+-- 
+jeverett@wwa.DEFEAT.UCE.BOTS.com (John Everett) http://www.wwa.com/~jeverett
+             ^^^^^^^^^^^^^^^
+Things have gotten so bad I feel the need to disguise my email address.
+And I don't like this explanation because I just hate long signatures.
+
+
+
+Article 2863 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newshub.sdsu.edu!128.230.129.112!news-spur1.maxwell.syr.edu!news.maxwell.syr.edu!newsfeed.frii.net!easynews!uunet!dfw.uu.net!ffx.uu.net!spool0.news.uu.net!reader1.news.uu.net!not-for-mail
+From: X@Y.Z.net (Jynx)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: restoring tape readers (Was: New Tape Container format)
+References: <4ub43tskou7ev3slch65fvp65mju167q2c@4ax.com> <90u806$9iu$1@spies.com> <aek-0912001352130001@haxrus.apple.com> <3A46481E.7515106F@shrimp.osfn.org> <9rhi4t4lj4e87lcqdsud79t862diuterqm@4ax.com>
+Reply-To: If You Reply <use_the_adr_in_my_sig@the.bottom>
+Message-ID: <slrn94kamd.shm.X@animas.frontier.net>
+User-Agent: slrn/0.9.6.2 (Linux)
+Date: 27 Dec 2000 17:45:49 GMT
+Lines: 30
+NNTP-Posting-Host: 63.105.232.12
+X-Trace: reader1.news.uu.net 977939149 23818 63.105.232.12
+Xref: nntp1.ba.best.com alt.sys.pdp10:2863 alt.folklore.computers:13547
+
+On Wed, 27 Dec 2000 12:45:18 +1100, Lionel scribbled:
+>Word has it that on Sun, 24 Dec 2000 14:01:50 -0500, in this august
+>forum, Michael Umbricht <mikeu@shrimp.osfn.org> said:
+>
+>>Are there any sources for spare parts, or ways to repair them?
+>
+>For commercial repair jobs, many roller manufacturers can recondition or
+>make replacements for old & obscure rollers. Try looking under 'rollers'
+>or 'rubber' in your local yellow pages phone book. If you can't find a
+>suitable shop, or they're too expensive, you could try sanding down the
+>surface of the roller, then coating it lightly with silicon rubber
+>compound, then planing it down until smoooth, after it's cured.
+>('Silastic' is a popular brand name over here, I have no idea if that
+>brand name is used in the States.)
+
+In a parallel universe I once ran a small office equipment repair
+business.  I used a product called "Fedron" from the Federal
+Mining and Manufacturing Company., 288 12th Ave., Roselle, N.J. 07203.
+I used it to treat Very Olde Typewrite platens.
+Bear in mind -- the rubber/neoprene/what-ever of the roller/capstan/
+what-ever is irreversibly changed.  This treatment can make it
+*somewhat* better.  But, it'll never be as good as it was on Day One.
+
+HTH,
+Jonesy
+
+-- 
+Marvin L Jones         |  jonz             |  W3DHJ     |  OS/2
+ Gunnison, Colorado    |   @               |  Jonesy    |  linux    __
+  7,703' -- 2,345m     |    frontier.net   |  DM68mn                SK
+
+

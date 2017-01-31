@@ -1,0 +1,221 @@
+Article 3533 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!feed2.news.rcn.net!rcn!howland.erols.net!panix!news.panix.com!not-for-mail
+From: Rich Alderson <alderson+news@panix.com>
+Newsgroups: alt.sys.pdp10
+Subject: Re: Logical names, was Re: File transfers, was...
+Date: 15 Feb 2001 21:41:23 -0500
+Organization: Systems Administration, XKL LLC, Redmond WA 98052
+Lines: 201
+Sender: alderson+news@panix6.panix.com
+Message-ID: <mdd4rxvfiy4.fsf@panix6.panix.com>
+References: <3A85706B.B4A96DC3@nospam.nospam> <3A8AE84B.99DF2D93@digiweb.com> <96er8c$8n$1@newsmaster.cc.columbia.edu> <3A8AF46A.D17AEC7C@bartek.dontspamme.net> <96f153$5k9$1@newsmaster.cc.columbia.edu> <mddae7nof5v.fsf@panix2.panix.com> <85pugjprgn.fsf_-_@junk.nocrew.org>
+NNTP-Posting-Host: panix6.panix.com
+X-Trace: news.panix.com 982291283 23165 166.84.0.231 (16 Feb 2001 02:41:23 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: 16 Feb 2001 02:41:23 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.7
+Xref: nntp1.ba.best.com alt.sys.pdp10:3533
+
+Lars Brinkhoff <lars.spam@nocrew.org> writes:
+
+> Ok, I can't stand it any more.  How do TOPS-20 logical names work?
+
+Here is the relevant section from the _Tops-20 User's Guide_:
+
+   4.6  USING LOGICAL NAMES
+
+   A logical name is a descriptive word used to establish a search  route
+   for locating files in other directories or on other structures.   When
+   you define a  logical name, you  tell the system  where, and in  which
+   order, to search for a file.
+
+   A logical name comprises up  to 39 alphanumeric characters,  including
+   -, $, and _. followed by a colon.  However, you can use an abbreviated
+   word for the logical name when you define the search list.
+
+   For example, you are a  member of a team  working on a project.   Your
+   team has a  directory called <TEAM>  on the structure  PS:  where  the
+   members store all the  completed programs for  the project.  When  you
+   are looking for a project file and  you are not sure where it is,  you
+   must look  through your  own directory,  and then  through the  team's
+   directory to  find  it.   Instead of  giving  two  separate  DIRECTORY
+   commands for each directory, you can give one DIRECTORY command  using
+   a logical name that will automatically search through both directories
+   until it finds  the file.   The example below  illustrates defining  a
+   logical name to search your directory, (here your user name is KONEN),
+   and then the team's  directory.  Include the  structure name with  the
+   directory names.
+
+        @DEFINE (LOGICAL NAME) ALL: (AS) PS:<KONEN>,PS:<TEAM>
+
+   You now  have  the  logical  name  ALL:   defined  as  PS:<KONEN>  and
+   PS:<TEAM>.  If you  want to  search for  the file  TEST.FOR in  either
+   directory, give the following command:
+
+        @DIRECTORY (OF FILES) ALL:TEST.FOR
+
+           PS:<TEAM>
+         TEST.FOR.5
+
+   The system searches first in the directory <KONEN> where it  does  not
+   find the file, and then in the directory <TEAM> where it does find the
+   file.  If the file TEST.FOR exists  in  <KONEN>  and  in  <TEAM>,  the
+   system  searches  only  until  it finds the first file.  In this case,
+   finding the file in <KONEN>, it does not continue the  search  in  the
+   directory  <TEAM>.   When  you  give the DIRECTORY command, the system
+   always prints the name of the directory and the structure in which  it
+   finds the file.
+
+   The logical name you define applies only  to  your  current  job.   It
+   remains  in  effect  until  you  either  remove it, or end your job by
+   logging out.  If you want the same defined logical name every time you
+   log  in, you can put the definition in your LOGIN.CMD file.  (Refer to
+   Section 1.7 for information on LOGIN.CMD files.)
+
+   To find out what  logical  name  you  are  using,  you  can  give  the
+   INFORMATION LOGICAL-NAMES JOB command.
+
+        @INFORMATION (ABOUT) LOGICAL-NAMES (OF) JOB
+        ALL: => PS:<KONEN>,PS:<TEAM>
+
+   There are also systemwide  logical  names  that  all  users  can  give
+   without  having  to  define  them  for each job.  A systemwide logical
+   name, like SYS:, is usually defined by each installation and  includes
+   the  directories  that  contain  standard system software.  To print a
+   list of systemwide logical names, give the  INFORMATION  LOGICAL-NAMES
+   SYSTEM command.
+
+        @INFORMATION (ABOUT) LOGICAL-NAMES (OF) SYSTEM
+        ACCOUNT: => GIDNEY:<ACCOUNTS>
+        DEFAULT-EXEC: => SYSTEM:EXEC.EXE
+            .
+            .
+            .
+        SYS: => PS:<SUBSYS>,PS:<NEW>
+        TOOLS: => SNARK:<TOOLS>
+
+   When you define a logical name, you can include an existing systemwide
+   logical name in your definition.  Each directory name, device name, or
+   other logical name you use  in  defining  the  logical  name  must  be
+   separated  by  a comma.  For example, you can set up a search route to
+   look for a file in the system directories, SYS:, then  in  <TEAM>  and
+   <KONEN>.
+
+        @DEFINE (LOGICAL-NAME) TEST: SYS:,PS:<TEAM>,PS:<KONEN>
+
+   By defining the logical name TEST:, the system searches  SYS:   first,
+   because that was the first area you specified, and if it does not find
+   the file there, continues its search through <TEAM> next, and  finally
+   through <KONEN>.
+
+   If you copy a file to a logical name, the system places  the  file  in
+   the  first area defined in the logical name.  For example, if you copy
+   the file CHECK.TST to the logical name ALL:,  the  system  places  the
+   file  in  the  directory <KONEN>, because that directory was the first
+   area defined in ALL:.
+
+        @COPY (FILE) CHECK.TST.1 (TO) ALL:CHECK.TST.1 !New file!
+         CHECK.TST.1 => <KONEN>CHECK.TST.1 [OK]
+
+   If you are defining a logical name for a program listed in Table  4-2,
+   you  cannot include the characters - $ or _ in the logical name.  Also
+   the logical name cannot exceed six characters, excluding the colon.
+
+   To remove a logical name you have defined, give  the  DEFINE  command,
+   but  do  not type any definition.  After the DEFINE command, type only
+   the logical name.  The following  example  shows  how  to  remove  the
+   logical name TEST::
+
+        @DEFINE (LOGICAL-NAME) TEST:
+
+   You can also use the logical name as an abbreviation for all  or  part
+   of  a  file  specification.   Using a logical name saves you typing if
+   your file specification is lengthy.
+
+   The following example shows defining a logical name  for  a  directory
+   name, and then giving the DIRECTORY command using the logical name:
+
+        @DEFINE (LOGICAL NAME) TS: (AS) PS:<TEST-SPECS>
+        @DIRECTORY (OF FILES) TS:
+
+   The following example shows defining a logical name  for  a  filename,
+   and  then  giving the EDIT command followed by the logical name to get
+   the file.
+
+        @DEFINE (LOGICAL NAME) PP:(AS) R4-PROJECT-PLAN.RNO
+        @EDIT PP:
+
+   Logical names can be  used  to  define  physical  device  names.   For
+   example,  suppose you have a program that uses one tape drive to input
+   data and another to receive output.   These  tape  drives,  physically
+   named  MTA0:  and MTA1:, can be given the logical names IN:  and OUT:.
+   By placing logical names for devices in  your  programs  and  defining
+   them  at  runtime, you can eliminate the need to modify the program to
+   refer to the devices that are currently available.
+
+
+
+   4.6.1  The Device DSK:
+
+   The system defines DSK:  to be your connected structure and  connected
+   directory.   Any time a command or program wants to use a file in your
+   connected directory, it follows the definition  of  the  logical  name
+   DSK:   to  locate  the  file.  Thus, if you want to alter the way each
+   system command and program searches for files, change  the  definition
+   of the logical name DSK:.  The following type of definition:
+
+        @DEFINE (LOGICAL NAME) DSK: (AS) DSK:,ADMIN:<TESTER>
+
+   is most common and tells  the  system  to  search  in  your  connected
+   directory first; then, if the file is not found, look in the alternate
+   directory <TESTER> on your connected structure.
+
+                                    NOTE
+
+           Make sure you  do  not  inadvertently  leave  out  the
+           comma.   If  you do, DSK:  is defined as DSK:<TESTER>,
+           and programs and  commands  will  look  only  in  this
+           directory on the connected structure.
+
+   Another example is:
+
+        @DEFINE (LOGICAL NAME) DSK: (AS) DSK:,ADMIN:<RECORD>, -
+        ADMIN:<GENLED>
+
+   The system searches your  connected  structure  and  directory  first.
+   Then,  if  the  file  is  not  found, it looks on structure ADMIN:  in
+   directories <RECORD> and <GENLED>.
+
+   When you create files, they are stored in your connected directory  or
+   in the first item in your definition of the logical name DSK:.
+
+
+
+   4.6.2  The Device POBOX:
+
+   Every user has his own personal message file, called a mail file.  All
+   your  incoming  messages  go  into your mail file.  This file is named
+   MAIL.TXT.  The system defines the logical name POBOX:  which defines a
+   search  list  that  points to structures where your mail files reside.
+   When another user sends you mail or when you use  a  mail  program  to
+   read  your mail, the mail program follows the definition of POBOX:  to
+   locate MAIL.TXT.  To learn the name of  the  structure  that  contains
+   your  directory  with your MAIL.TXT file, give the command INFORMATION
+   LOGICAL-NAMES POBOX:.
+
+        @INFORMATION (ABOUT) LOGICAL-NAMES (OF) POBOX:
+        System-wide:
+
+        POBOX: => RANDOM:
+
+   The directory name of your directory on the POBOX: structure  is  your
+   user name, for example RANDOM:<DOE>.
+
+Further details of programming with logical names can be found in the _Tops-20
+Monitor Calls Reference Manual_, if desired.
+
+-- 
+Rich Alderson                                          alderson+news@panix.com
+  "You get what anybody gets.  You get a lifetime."  --Death, of the Endless
+
+

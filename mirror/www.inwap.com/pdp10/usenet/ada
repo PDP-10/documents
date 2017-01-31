@@ -1,0 +1,82 @@
+Article 2269 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!news.brainstorm.net!www.nntp.primenet.com!nntp.primenet.com!EU.net!cpk-news-hub1.bbnplanet.com!news.bbnplanet.com!cam-news-hub1.bbnplanet.com!cam-news-feed2.bbnplanet.com!ray.com!news.ray.com!news.res.ray.com!swlnews.msd.ray.com!not-for-mail
+From: jcn@swl.msd.ray.com (John Norcross {83602})
+Newsgroups: alt.sys.pdp10,comp.os.linux.advocacy
+Subject: Re: Linux - the new TOPS-10? Was: Bill's PDP-10
+Date: 24 Nov 1996 18:35:44 -0500
+Lines: 69
+Message-ID: <57am4g$cln@slpabd.msd.ray.com>
+References: <328BB6A0.1E87@zso.dec.com> <572u55$ifn@transfer.stratus.com> <phrE19499.H3J@netcom.com> <575atp$kfv@transfer.stratus.com> <575p3u$j2t@bonkers.taronga.com>
+Xref: nntp1.best.com alt.sys.pdp10:2269 comp.os.linux.advocacy:81609
+
+peter@taronga.com (Peter da Silva) writes:
+
+>In article <575atp$kfv@transfer.stratus.com>,
+>Tom Moser <moser@sw.stratus.com> wrote:
+>>PASCAL. Always has been better than C. BLISS would have also been a possible
+>>choice but I would have chosen PASCAL.
+
+>Standard Pascal is missing too much to be useful as a systems programming
+>language. An enhanced Pascal? Well, it's all the non-compatible enhanced
+>Pascals that have made Pascal a non-starter. Modula, alas, has much of the
+>same problem (I kinda like Modula, but the two compilers I got for my Amiga
+>were wildly incompatible).
+
+>BLISS? BLISS is ignorance?
+
+>PL/M?
+
+>Maybe if you came up with a REALLY good Lisp/Scheme dialect...
+>-- 
+></peter>
+
+Safe, Compatible, Internationally Standardized (ISO), full tasking
+(Real Time) support built in, fully OO, portable, proven track record,
+
+---> Ada 95
+
+What is Ada 95 ?
+----------------
+ 
+Ada 95 is the latest  Ada standard. It is also  the first ISO and ANSI
+standard   programming  language   to   fully  support object-oriented
+programming. Ada 95  is fully upward compatible with  Ada 83  (ISO 87)
+and has the  same robust  foundation in  Software Engineering. At  the
+same time, it provides up-to-date features for today's megaprogramming
+tasks, including:
+ 
+   - object-oriented programming, inheritance, polymorphism and dynamic
+     dispatching, within the strong-typing discipline of Ada 83.
+ 
+   - Hierarchical program libraries, for composition of subsystems and
+     support of multiple implementations.
+
+   - Well-defined support for interfacing to other languages such as C,
+     Fortran and COBOL.
+ 
+   - Support for specialized application areas such as:
+     System Programming, Real-Time Systems, Distributed Systems,
+     Information Systems, and Scientific Programming.
+ 
+
+Check out: http://www.adahome.com
+
+It amazes me to see folks wishing they had a language like Ada only to
+never realize that it already exits! 
+
+A *free*, GNU based compiler (GNAT) is available for just about every 
+platform/OS out there:  
+
+Intel(DOS, Win95/NT, OS/2, Linux, Solaris, Nextstep, NETBSD)
+M68K (Nextstep, Mac)
+Mips (Dec Ultrix, SGI Irix)
+RS6000 (IBM AIX)
+Alpha (Dec OSF, Linux)
+Sparc (Sun OS, Solaris)
+
+Don't take my word for it, check it out!
+
+--John Norcross
+
+
+

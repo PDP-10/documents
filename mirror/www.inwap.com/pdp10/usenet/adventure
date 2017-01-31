@@ -1,0 +1,58 @@
+Article: 18462 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!dfw-peer!news.verio.net!newsfeed.mathworks.com!wn13feed!wn11feed!wn12feed!worldnet.att.net!24.30.200.11!news-east.rr.com!news01.optonline.net!rcache2.srv.hcvlny.cv.net.POSTED!not-for-mail
+Message-ID: <3DD5C367.1040503@bartek.dontspamme.net>
+From: Arthur Krewat <krewat@bartek.dontspamme.net>
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.0; en-US; rv:1.0.1) Gecko/20020823 Netscape/7.0
+X-Accept-Language: en-us, en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp10
+Subject: Re: Seeking PDP-10 Adventure from DECUS
+References: <3DD47BED.7CB3867A@ev1.net>
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
+Lines: 37
+Date: Fri, 15 Nov 2002 23:02:47 -0500
+NNTP-Posting-Host: 24.186.100.134
+X-Trace: rcache2.srv.hcvlny.cv.net 1037419637 24.186.100.134 (Fri, 15 Nov 2002 23:07:17 EST)
+NNTP-Posting-Date: Fri, 15 Nov 2002 23:07:17 EST
+Xref: dfw-artgen alt.sys.pdp10:18462
+
+Charles Richmond wrote:
+> Is there any way on Tim Shoppa's site <http://www.trailingedge.com>,
+> to do a search for the Adventure package distributed by DECUS???
+> I went to the site, but it seems unless I know which distro it
+> was part of, I may be out of luck... I want to get the original
+> FORTRAN sources and installation instructions for the PDP-10
+> that were distributed by DECUS.
+> 
+
+I have a fortran version for TOPS-10, from my days at BOCES III/
+DIX HILLS. Let me know where to email it if you want it.
+
+WELCOME TO ADVENTURE!!  WOULD YOU LIKE INSTRUCTIONS?
+
+y
+
+SOMEWHERE NEARBY IS COLOSSAL CAVE, WHERE OTHERS HAVE FOUND FORTUNES IN
+TREASURE AND GOLD, THOUGH IT IS RUMORED THAT SOME WHO ENTER ARE NEVER
+SEEN AGAIN.  MAGIC IS SAID TO WORK IN THE CAVE.  I WILL BE YOUR EYES
+AND HANDS.  DIRECT ME WITH COMMANDS OF 1 OR 2 WORDS.  I SHOULD WARN
+YOU THAT I LOOK AT ONLY THE FIRST FIVE LETTERS OF EACH WORD, SO YOU'LL
+HAVE TO ENTER "NORTHEAST" AS "NE" TO DISTINGUISH IT FROM "NORTH".
+(SHOULD YOU GET STUCK, TYPE "HELP" FOR SOME GENERAL HINTS.  FOR INFOR-
+MATION ON HOW TO END YOUR ADVENTURE, ETC., TYPE "INFO".)
+- - -
+THIS PROGRAM WAS ORIGINALLY DEVELOPED BY WILLIE CROWTHER.  MOST OF THE
+FEATURES OF THE CURRENT PROGRAM WERE ADDED BY DON WOODS (DON @ SU-AI).
+CONTACT DON IF YOU HAVE ANY QUESTIONS, COMMENTS, ETC.
+
+YOU ARE STANDING AT THE END OF A ROAD BEFORE A SMALL BRICK BUILDING.
+AROUND YOU IS A FOREST.  A SMALL STREAM FLOWS OUT OF THE BUILDING AND
+DOWN A GULLY.
+
+
+
+aak
+
+
+

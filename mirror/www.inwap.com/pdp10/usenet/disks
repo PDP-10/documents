@@ -1,0 +1,499 @@
+Article 1995 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!news.aimnet.com!netserv.com!news.clark.net!world1.bawave.com!newsfeed.internetmci.com!in1.uu.net!world!news.bu.edu!csa!budd
+From: budd@csa.bu.edu (Phil Budne)
+Newsgroups: alt.sys.pdp10
+Subject: Re: How big were they?
+Followup-To: alt.sys.pdp10
+Date: 26 Jun 1996 05:18:55 GMT
+Organization: Computer Science Department, Boston University, Boston, MA, USA
+Lines: 333
+Message-ID: <4qqh7v$kb5@news.bu.edu>
+References: <4q9edb$dn3@ninja.zso.dec.com> <4qkn68$ae9@dns.plano.net> <31ce2ba6.161924404@netnews.worldnet.att.net> <DLM.96Jun25162927@firebird.osf.org>
+NNTP-Posting-Host: csa.bu.edu
+
+In article <DLM.96Jun25162927@firebird.osf.org>,
+Dan Murphy  <dlm@firebird.osf.org> wrote:
+>In article <31ce2ba6.161924404@netnews.worldnet.att.net>
+>	david.razler@postoffice.worldnet.att.net (David M. Razler) writes:
+>
+>
+>>    1971 KA-10, 256K core, 2x RP-02 2MWord disk packs <Memorex>,
+>>		8X TU-55, HS
+>
+>    Was an RP02 really only 2 Mwords??
+>
+>    I realized recently that I couldn't actually remember the
+>    capacities of the various RP disk packs.  Who recalls the size of
+>    RP04 and RP06 packs?
+>    
+>    Whatever it was, it seemed big at the time...
+>    
+>    
+>    dlm
+
+An RP02 was about 20MB, and '03 40MB (about one 9-track 1600 tape);
+An RP04 was about 80MB and the RP06 was about 160MB (about one 6250 tape).
+
+Here is my collection of info on DEC disks;
+================================================================
+DEC disk history
+Started 1/94 -pb
+
+$Id: dec.disks,v 1.5 1996/01/12 22:55:48 phil Exp phil $
+
+The focus is on disks sold for use on DEC systems (whether
+manufactured by DEC or not) not general market peripherals
+(ie; the DSP SCSI line) manufactured by DEC.
+
+Capacity is approx, (1K=1024 1M=1024K) some formatted, some unformatted
+Geometry is (usually) physical (counts alternate sec & cyl)
+	~ on cylinder counts means average (zone bit recorded disk)
+
+Transfer rates are (usually) avg sustainted rates to/from media.
+	1K=1000, 1M=1000K, b=bits, B=8-bit bytes.
+
+All hard disks 3600 rpm unless noted
+
+Wanted:
+	corrections & additions!!
+	seek times (avg/min/max)
+	rotational latency
+	transfer rate
+	origal mfgr & designation for non-dec disks
+	interface type (ie; Massbus, MSCP) or controller type
+	year of introduction (dec or orig mfgr)
+	encoding?? bpi??
+
+Old interfaces (removable unless noted)
+=======================================
+
+disk	cap.	sec/trk	trk/cyl	cyl	notes
+			(surf)
+
+================ VAX730 IDC
+
+R80	121M	31	14	559	dec built; winchester (RA80 HDA)
+
+================ via PDP-11 RK-11, PDP-8 RK8
+
+RK02	1.2M	?	?	?	Diablo model 30 low density
+RK03	2.5M	?	?	?	Diablo model 30 high density
+RK05(J)	2.5M	12	2	203	1500rpm; RK03 cartridge;
+					RK8 max xfer 1.44Mb/s (8.32us/wd)
+					seek: 50ms/10ms/85ms
+RK05F	5M	12	2	203	1500rpm; fixed rk05; 2xRK05 to s/w
+
+================
+
+RK06	13M	22	3	411	2400rpm; dec built
+RK07	27M	22	3	815	2400rpm; dec built; seek: 36.5ms avg
+
+================
+
+RL01	5.2M	40	2	256	2400rpm; 256B/sect; dec built; pack
+					xfer 4.1Mb/s; lat=12.5ms
+					seek (ms) 55avg/15min/100max
+RL02	10M	40	2	512	2400rpm; 512B/sect; dec built; pack
+
+================ via PDP-10 RA10
+
+RB10	20-100M	11	varied		"Giant Bryant" disk
+					(aka "MD10" Moby Disk???)
+					1200rpm? av seek 110ms?
+
+================ via PDP-10 RC10;
+
+RD10	2.5M	20	2	100	Burroughs disk
+					1800(1735)rpm; 32*36b/sect
+					fixed head; lat=17.6ms; xfer=2.7Mb/s
+					total of 512,000 36-bit words
+					(4000 128-word blocks)
+
+RM10B	2.07M	30	1	90	Bryant drum; 64*36b/sect; xfer 7.9Mb/s
+					@60Hz: 3450rpm, lat8.8ms
+					@50Hz: 2870rpm, lat10.6ms
+					total of 345,600 36-bit words
+					(2700 128-word blocks)
+					Drum surface was conical, and mounted
+					vertically.
+
+================ fixed head
+
+RF/RS11	512K	--	1	128	1800rpm; fixed head
+
+RS08	256KW	--	1	128	PDP-8 fixed head disk (RF08 ctrlr)
+					word addressable; 2KW tracks
+					@60Hz: xfer 16us/wd
+						access 16.9ms/250us/33.6ms
+					@50Hz: xfer 19.2us/wd
+						access 20.3ms/320us/40.3ms
+					max density 1100BPI, NRZI recording
+
+DF32	32KW	--	1	16	PDP-8 fixed head disk
+					word addressable; 2KW tracks
+					@60Hz: xfer 32us/wd, avg access 16.67ms
+					@50Hz: xfer 39us/wd, avg access 20ms
+					max density 1100BPI, NRZI recording
+					10" rack 10.5" high
+
+================ via PDP-10 RP10; PDP-11 RP-11
+
+RP01	5M	5	10	203	2400rpm; Memorex; pack [never released]
+					seek (ms) 50avg/20min/80max; lat13.7ms
+					xfer=837Kb/s
+RP02	20M	10	20	203	2400rpm; Memorex 660; pack
+					seek (ms) 50avg/20min/80max; lat13.1ms
+					xfer=1.8Mb/s. $25k c. 1969
+RP03	40M	10	20	400	2400rpm; Memorex; pack
+
+Massbus
+=======
+disk	cap.	sec/trk	trk/cyl	cyl	notes
+
+RP04	83M	20	19	411	pack; Sperry
+					3500rpm? av seek 27ms?
+
+RP05	83M	20	19	411	pack; Memorex; field upgradable to RP06
+
+RP06	176M	20	19	815	pack; ISS/Memorex
+					seek 30ms (avg); xfer=825KB/s
+					3500rpm?
+  RP04/RP06 has 22*512-byte blocks (16-bit) or 20*576-byte blocks (18-bit)
+
+RP07	504M	50(30?)	32	630	ISS/Sperry; winchester
+					seek 23ms (avg); xfer=2.3MB/s
+
+RP20	929M	24(25?)	30	1119(750?) two fixed spindles (on DX20?)
+					seek 25ms (avg); xfer=1.3MB/s
+					3500 rpm? (840000 128*36b blocks)
+
+RS03	512K	64	1	64	fixed head; 128B/sector
+RS04/5	1M	64(32?)	1	64	fixed head; 256B/sector
+					6ms access; spiral read
+					32 blks/trk 2048 blks/cyl?
+					3500rpm?
+
+RM02	65M	32	5	823	pack; CDC 9762; 2400 rpm [phys 80M?]
+RM03	65M	32	5	823	pack; CDC 9762		 [phys 80M?]
+RM05	256M	32	19	823	pack; CDC 9766
+RM06	?
+
+RM80	124M	32	14	559	winchester (RA80 HDA)
+
+ML11A	varies	-	-	-	solid-state (ram) disk; 2MB/s xfer
+					1-31 arrays of 512 or 2048 blocks ea
+
+MSCP
+====
+disk	cap.	sec/trk	trk/cyl	cyl	notes
+
+RA60	205M	42	4	2382	pack; seek 42 ms (avg); xfer=2.1MB/s
+					3500 rpm?
+
+=== 5.25" FH?
+
+RA70	280M	33	11	1507	
+RA71	684M	51	14	1915
+RA72	1G	51	20	1915
+RA73	2G	70	21	2667
+
+=== 19"
+
+RA80	124M	31	14	546 	dec; winchester; 3500 rpm?
+RA81	446M	51	14	1248	dec; winchester; 3500 rpm?
+					seek 28 ms (avg); xfer=2.3MB/s
+RA82	608M	57	15	1423	dec; winchester
+
+RA90	1.2G	69	13	2649
+RA92	1.5G	69	13	3279
+
+RC25	25M*2	42	4	302	MSCP?? "LESI" interface??
+					1 fixed, 1 removable; CDC9457???
+
+Floppy
+================================================================
+disk	cap.	sec/trk	trk/cyl	cyl	notes
+
+RX01	256K	26	1	77	8" SSSD (IBM soft-sectored)
+					128B/sect; 360rpm
+					xfer 250Kb/s;  lat 83ms
+					seek (ms) 405avg/30min/790max
+RX02	512K	26	1	77	8" SSDD (non-standard)
+					256B/sect; 360rpm
+RX03	1M	26	2	77	8" DSDD (non-standard) -- not released
+
+RX22
+
+RX23					3.5" SCSI
+ high	1.4M	18	2	80
+ double	720K	9	2	80
+ single	360K	9	2	40
+
+RX26					3.5" SCSI
+ extra	2.8M	36	2	80
+ high	1.4M	18	2	80
+ double	720K	9	2	80	
+ single	360K	9	2	40
+
+
+RX33					5.25" Teac FD55-GFR-17U
+ extra	1.2M	15	2	80
+ high	720K	9	2	80	DSDD
+ double	400K	10	1	80	SSDD (RX50 compat?)
+ single	360K	9	2	40	DSSD
+
+RX50	400K	10	1	80	5.25" single sided, FM encoding
+
+MFM "ST506/412 interface" (on RQDX{1,2,3})
+==========================================
+disk	cap.	sec/trk	trk/cyl	cyl	notes
+
+=== 5.25" FH
+RD50	5M	17	4	153	Seagate ST506 seek 85/3?/??
+RD51	10M	17	4	306	Seagate ST412 seek 85/16.6?/??
+RD52	31M	18	7	480	Quantum 540 / ATASI 3046 (also Evotek?)
+RD53	71M	18	8	1024?	Microp 1325 (or 1335) w/ jumper at J7
+RD54	156M	17	15	1225	Maxtor XT-2190D
+
+=== 5.25" HH
+RD31	20M	17	4	615	ST225 seek (ms) 65/20/150
+RD32	40M	17	6	820	ST251(-1*) seek 40(28*)/8/70
+					ST277R(-1*) [MFM format] 40(28*)/8/70
+RD33	71M				Microscience HH-1090 [Never released]
+
+SMD disks popular on VAXen (Winchesters unless noted)
+=====================================================
+disk	cap.	sec/trk	trk/cyl	cyl	notes
+
+A9300	248M	32	19	815	Ampex 9300; removable
+A330	262M	32	16	1024	Ampex Capricorn 330
+
+CDC9720	275M	48	10	1147
+CDC9730	268M	32	10	823	removable
+CDC9762	65M	32	5	823	removable; (also RM03) [phys 80M?]
+CDC9766	256M	32	19	823	removable; (also RM05)
+CDC9775	839M	32	40	843
+
+M160	132M	32	10	823	Fujitsu 160
+M2351	337M	46	20	842	Fujitsu Eagle 19"
+M2351A	337M	48	20	842	Fujitsu Eagle 19"
+M2361	549M	64	20	842	Fujitsu Super Eagle 19"
+M2361A	549M	68	20	842	Fujitsu Super Eagle 19"
+
+NEC800	800M	66	23	850
+NEC2363	1G	64	27	1024
+
+SCSI disks (Winchesters unless noted)
+=====================================
+disk	cap.	sec/trk	trk/cyl	cyl	notes
+
+=== 5.25" FH
+
+RZ55	325M				Micropolis 1578-15
+					or maxtor xt-4380sb2?
+RZ55L
+RZ56	650M	54	15	1632	Micropolis 1588-15
+RZ56L
+RZ57	1.01G	71	15	1925	Micropolis 1598-15
+RZ57I
+RZ57L
+RZ58	1.3G	85~	15	2117	5400rpm? Micropolis 1908?
+RZ59	8.9G	193	18	5111
+
+=== 5.25" FH?
+
+RZ72
+RZ73	2.0G	71	21	2621
+RZ74	3.57G	67~	25	4165
+
+=== 3.5" HH?
+
+RZ22	51M	33	4	776	Conner CP350
+RZ23	102M	33	8	776	Conner CP3100-1
+RZ23L	118M	39~	4	1524
+RZ24	205M	38	8	1348	Conner CP3200; 3500rpm?
+RZ24L	240M	66~	8	1818	Quantum LPS-240S?
+RZ25	416M	62	9	1492
+RZ25L	523M	79~	8	1891
+RZ26	1.05G	57	14	2570	5400rpm?
+RZ27	1.6G	143~	16	1366
+RZ28	2.1G	99~	16	2595	DEC manufactured
+RZ28B	2.1G	82~	19	2626	Seagate ST12400N; 5411 rpm; seek 10/2/22
+RZ29	4.2G	113~	20	3720	Quantum?
+
+================ 5" HH?
+
+RZ31
+RZ33	??
+RZ35	832M	57	14	2086
+
+================ CD-ROM
+
+RRD40					LMS CM 210
+RRD42					Sony CDU-541
+
+
+================ ????
+
+RWZ01
+
+Solid-state disks (SCSI?)
+=========================
+
+"disk"	cap.	sec/trk	trk/cyl	cyl	notes
+
+EZ51	104M	33	9	776
+EZ54	418M	62	10	1492
+EZ58	835M	20	10	8353
+
+
+Article 6382 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!panix!news.panix.com!not-for-mail
+From: Rich Alderson <alderson+news@panix.com>
+Newsgroups: alt.sys.pdp10,alt.sys.pdp11,comp.sys.dec
+Subject: Re: RRD40/45/50 Drive Gemetries, etc..
+Date: 16 Oct 2001 22:21:18 -0400
+Organization: Systems Administration, XKL LLC, Redmond WA 98052
+Lines: 15
+Sender: alderson+news@panix1.panix.com
+Message-ID: <mdd8zeb6m75.fsf@panix1.panix.com>
+References: <tsmgukqm4n72a7@corp.supernews.com> <3BCB5FBC.28694F08@ins-msi.com> <9qh7uu02hll@drn.newsguy.com>
+NNTP-Posting-Host: panix1.panix.com
+X-Trace: news.panix.com 1003285282 11928 166.84.1.1 (17 Oct 2001 02:21:22 GMT)
+X-Complaints-To: abuse@panix.com
+NNTP-Posting-Date: 17 Oct 2001 02:21:22 GMT
+X-Newsreader: Gnus v5.7/Emacs 20.7
+Xref: nntp1.ba.best.com alt.sys.pdp10:6382 alt.sys.pdp11:2640 comp.sys.dec:6949
+
+Tim Shoppa <shoppa@trailing-edge.com> writes:
+
+> For anyone doing MSCP-type emulation for PDP-10's (what, you could hook up
+> RA80's and RA60's to the PDP-10 equivalent of an HSC?  I've only seen
+> pictures of these in mid-80's Systems and Options catalog) you may have to
+> set the 576-byte-sector bits in the controller and unit word flags.  I don't
+> even know if the -10 can "see" these bits or if they're all hidden on the
+> other side of the CI.
+
+RA60 and RA81 only, on HSC-50 only.  18-bit HDAs could be field-formatted to
+16-bit, but not the reverse (which is to say, 576-bit vs. 512-bit sectors).
+
+-- 
+Rich Alderson                                          alderson+news@panix.com
+  "You get what anybody gets.  You get a lifetime."  --Death, of the Endless
+
+
+Article 6375 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!nycmny1-snh1.gtei.net!cpk-news-hub1.bbnplanet.com!news.gtei.net!news.maxwell.syr.edu!logbridge.uoregon.edu!pln-w!spln!dex!extra.newsguy.com!newsp.newsguy.com!drn
+From: Tim Shoppa <shoppa@trailing-edge.com>
+Newsgroups: alt.sys.pdp10,alt.sys.pdp11,comp.sys.dec
+Subject: Re: RRD40/45/50 Drive Gemetries, etc..
+Date: 16 Oct 2001 08:07:20 -0700
+Organization: Trailing-Edge Technologies
+Lines: 99
+Message-ID: <9qhif80bld@drn.newsguy.com>
+References: <tsmgukqm4n72a7@corp.supernews.com> <3BCB5FBC.28694F08@ins-msi.com> <tso9gjfcb5rtef@corp.supernews.com>
+NNTP-Posting-Host: p-504.newsdawg.com
+X-Newsreader: Direct Read News 2.90
+Xref: nntp1.ba.best.com alt.sys.pdp10:6375 alt.sys.pdp11:2637 comp.sys.dec:6939
+
+In article <tso9gjfcb5rtef@corp.supernews.com>, sword7@speakeasy.org says...
+>cylinders.  All are computed by multiply into total LBNs.  User total LBNs 
+>are difference from total physical LBNs.  Why difference between physical
+>total LBNs and user-accessible total LBNs??
+
+The difference are the LBN's used for bad-block replacement and the replacement
+table.
+
+>Check information on
+>page C-1 (RXQD3 user's manual).  Does groups mean heads?  If not, can you
+>explain me that?
+
+"Group size" means "tracks per cylinder" in my interpretation.
+
+>Why 10 units that VMB scanned but RXQD3 allows only 4 units each 
+>controller?
+
+The RQDX3 isn't the only (T)MSCP controller out there.  There are non-DEC
+controllers that support up to 16 units per controller.  As far as
+"known" DEC controllers go, there are also (from various listings and
+sources, and consolidated in the DUSTAT sources):
+
+MSCTBL: TBLENT  1.      ,<HSC50>
+        TBLENT  2.      ,<UDA50>
+        TBLENT  3.      ,<RC25>
+        TBLENT  4.      ,<VMS (Software)>
+        TBLENT  5.      ,<TU81>
+        TBLENT  6.      ,<UDA50-A>
+        TBLENT  7.      ,<RQDX1/RQDX2>
+        TBLENT  8.      ,<TOPS 10/20 (Software)>
+        TBLENT  9.      ,<TQK50>;Actually, ancient TUK50's use this too.
+        TBLENT  10.     ,<RUX50>
+;11. is unassigned
+        TBLENT  12.     ,<KFBTA>
+        TBLENT  13.     ,<KDA50>
+        TBLENT  14.     ,<TQK70>
+        TBLENT  15.     ,<RV20/RV60>
+        TBLENT  16.     ,<KRQ50>
+;17. is unassigned
+        TBLENT  18.     ,<KBD50>
+        TBLENT  19.     ,<RQDX3>
+        TBLENT  20.     ,<RQDX4 (CSS, Reading)>
+; KFQSAs are an unusual beast.  While the "disk" controller will report 21.
+; at the end of step 4, it might report 96., 97., or some other ID later on
+; since the controller ID actually depends on what type of disk it is.  This
+; also goes for the tape connections.  So, this is why KFQSA devices appear
+; to be listed twice; once under KFQSA, and once under the disk type itself.
+; I've never seen a RT-11 system with a KFQSA, but I think it should work! TDS
+        TBLENT  21.     ,<KFQSA-disk>
+        TBLENT  22.     ,<KFQSA-tape>
+        TBLENT  23.     ,<KFQSA-both>
+        TBLENT  24.     ,<KFQSA-other>
+        TBLENT  25.     ,<TUK50>
+;26. is unassigned
+        TBLENT  27.     ,<KDM70>
+;28. is reserved
+        TBLENT  29.     ,<TM32>
+        TBLENT  30.     ,<RQZX1>
+        TBLENT  31.     ,<KCM44 (Polecat)>
+        TBLENT  32.     ,<HSC70>
+        TBLENT  33.     ,<HSC40>
+        TBLENT  34.     ,<HSC60>
+        TBLENT  35.     ,<HSC90>
+;36. - 38. are unassigned
+        TBLENT  39.     ,<HSJ30>
+        TBLENT  40.     ,<HSJ40>
+        TBLENT  41.     ,<HSC65>
+        TBLENT  42.     ,<HSC95>
+;43. - 44. are unassigned
+        TBLENT  45.     ,<HSJ50>
+;46. - 64. are unassigned
+        TBLENT  65.,    <TK50-DEBNT>
+        TBLENT  66.,    <TBK70>
+;67. - 95. are unassigned
+        TBLENT  96.     ,<RF30>
+        TBLENT  97.     ,<RF71>
+        TBLENT  98.     ,<TF85>
+        TBLENT  99.     ,<TF70>
+        TBLENT  100.    ,<RF31>
+        TBLENT  101.    ,<RF72>
+        TBLENT  102.    ,<RF73>
+        TBLENT  103.    ,<TF837> ;RSTS/E sources say this is a TF70L
+        TBLENT  104.    ,<RF35>
+        TBLENT  105.    ,<EF51>
+        TBLENT  106.    ,<HSD30>
+;107.is unannounced
+        TBLENT  108.    ,<RF36>
+        TBLENT  109.    ,<RF74>
+        TBLENT  110.    ,<TF86>
+;111. is unannounced
+        TBLENT  112.    ,<RF75>
+;113. is unassigned
+        TBLENT  114.    ,<RF37>
+;115. - 116. are unassigned
+        TBLENT  117.    ,<HSD10>
+        TBLENT  118.    ,<HSD50>
+
+Tim.
+
+
+

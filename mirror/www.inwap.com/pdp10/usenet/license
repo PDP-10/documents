@@ -1,0 +1,612 @@
+Article 2282 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!newspump.sol.net!howland.erols.net!news.bbnplanet.com!cam-news-hub1.bbnplanet.com!news.idt.net!enews.sgi.com!news.sgi.com!news.spies.com!usenet
+From: eric@brouhaha.com (Eric Smith)
+Newsgroups: comp.sys.dec,alt.sys.pdp10
+Subject: starting up an FTP archive (was Re: Hobbyist license for 36b software)
+Date: 26 Nov 1996 05:35:36 -0500
+Organization: Brouhaha Computer Mercenary Services
+Lines: 42
+Sender: eric@houhah.brouhaha.com
+Message-ID: <qhohglqh3b.fsf_-_@houhah.brouhaha.com>
+References: <57dglh$51r@news-central.tiac.net>
+	<57dipv$3ts@dfw-ixnews1.ix.netcom.com>
+NNTP-Posting-Host: houhah.brouhaha.com
+In-reply-to: bugs@freebsd.netcom.com's message of 25 Nov 1996 19:57:19 -0600
+X-Newsreader: Gnus v5.1
+Xref: nntp1.best.com comp.sys.dec:19211 alt.sys.pdp10:2282
+
+shy@nowhere.net wrote:
+> If you are a home collector of Digital's 36b systems, you can now have
+> a free, personal use, non-commercial license for your existing system
+> software (TOPS-10, TOPS-20, and related layered products and
+> utilities).
+
+Mark Hittinger <bugs@freebsd.netcom.com> replied:
+> Amazing - the unknown implementor comes through!  or a joke.  We'll
+> find out :-)
+
+It's real.  Rob Supnik is a VP of Digital.  He arranged this license at the
+request of John Wilson and I (and probably others).
+
+I'm volunteering to run an FTP site for PDP-10 software that people
+are willing to share with other licensees:
+
+	ftp.brouhaha.com:/pub/pdp-10/
+
+There's nothing there yet except an incoming directory in which people can
+place contributions.  If you upload something, please also upload a
+something.README so I have a clue what it is.
+
+I don't yet know whether Digital minds if I make their PDP-10 software
+available for anonymous FTP.  Until I find out, I will create FTP-only
+accounts for those who send a signed copy of the completed license agreement
+by postal mail to:
+
+	Eric Smith
+	142 N. Milpitas Blvd. #379
+	Milpitas, CA  95035
+	USA
+
+I'm requesting donations of images of DEC software distribution tapes of
+TOPS-10, TOPS-20, layered software, diagnostics, and anything else
+related, in source and/or object form.  If it necessary for a donor to have
+proof of licensing, I'll mail out a copy of my completed license agreement.
+
+Eric
+-- 
+-----------------------------------------------------------------------------
+Don't blame me, I voted Libertarian.     http://www.lp.org/    (800) 682-1776
+-----------------------------------------------------------------------------
+
+
+Article 2289 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!newshub.sdsu.edu!news.sgi.com!news.sprintlink.net!news-peer.sprintlink.net!news.kolumbus.fi!pinta.kolumbus.fi!setala
+From: setala@pinta.kolumbus.fi (Saku Setala)
+Newsgroups: comp.sys.dec,alt.sys.pdp10
+Subject: Re: starting up an FTP archive (was Re: Hobbyist license for 36b software)
+Date: 27 Nov 1996 00:26:32 GMT
+Organization: Kolumbus Information Network, Finnet Group
+Lines: 28
+Message-ID: <SETALA.96Nov27022632@pinta.kolumbus.fi>
+References: <57dglh$51r@news-central.tiac.net>
+	<57dipv$3ts@dfw-ixnews1.ix.netcom.com>
+	<qhohglqh3b.fsf_-_@houhah.brouhaha.com>
+NNTP-Posting-Host: pinta.kolumbus.fi
+In-reply-to: eric@brouhaha.com's message of 26 Nov 1996 05:35:36 -0500
+Xref: nntp1.best.com comp.sys.dec:19248 alt.sys.pdp10:2289
+
+In article <qhohglqh3b.fsf_-_@houhah.brouhaha.com> eric@brouhaha.com (Eric Smith) writes:
+
+
+   There's nothing there yet except an incoming directory in which people can
+   place contributions.  If you upload something, please also upload a
+   something.README so I have a clue what it is.
+
+   I'm requesting donations of images of DEC software distribution tapes of
+   TOPS-10, TOPS-20, layered software, diagnostics, and anything else
+   related, in source and/or object form.  If it necessary for a donor to have
+   proof of licensing, I'll mail out a copy of my completed license agreement.
+
+
+Hi,
+
+I also suggest collecting the old DECUS tapes and similar TOPS-10/20
+software. At least DECUS does not keep them online anymore.
+
+I am ready to offer a mirror site in Finland :)
+
+--Saku
+
+Saku Setala
+setala@kolumbus.fi
+
+-- 
+Saku Setälä
+HPY Tietoverkot
+
+
+Article 2274 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!hunter.premier.net!feed1.news.erols.com!phase2.worldnet.att.net!uunet!in1.uu.net!news-in.tiac.net!posterchild!news@tiac.net
+From: shy@nowhere.net
+Newsgroups: comp.sys.dec,alt.sys.pdp10
+Subject: Hobbyist license for 36b software
+Date: Tue, 26 Nov 1996 01:25:12 GMT
+Organization: The Internet Access Company, Inc.
+Lines: 149
+Message-ID: <57dglh$51r@news-central.tiac.net>
+Reply-To: shy@nowhere.net
+NNTP-Posting-Host: p6.ts1.metro.ma.tiac.com
+X-Newsreader: Forte Free Agent 1.0.82
+Xref: nntp1.best.com comp.sys.dec:19192 alt.sys.pdp10:2274
+
+If you are a home collector of Digital's 36b systems, you can now have
+a free, personal use, non-commercial license for your existing system
+software (TOPS-10, TOPS-20, and related layered products and
+utilities).  Simply fill in the attached license form and return it to
+Dick Greeley in Digital's Corporate Licensing Office
+(rgreeley@powdml.enet.dec.com).  This license grants you a 
+free, as is, non-commercial license for using 36b software on a home
+system.  You must already have, or have access to, the software
+itself; the license does NOT include any distribution medium,
+documentation, or support.
+
+/Bob Supnik
+/Digital Equipment Corporation
+
+--------------------------------------------------------------------
+LICENSE AGREEMENT
+
+This Agreement, dated ________________, is entered into by Digital 
+Equipment Corporation, a Massachusetts corporation with principal 
+offices at 111 Powdermill Road, Maynard, MA 01752 (DIGITAL), and 
+_____________________________________________ having a residence at
+___________________________________________________________________ 
+("CUSTOMER").
+
+Whereas, DIGITAL has developed TOPS-10 and TOPS-20 Operating System 
+software technology and is prepared to grant a non-exclusive license 
+to use such software technology for personal, non-commercial purposes;
+
+Whereas, CUSTOMER desires to enter into a License Agreement which will
+
+allow CUSTOMER to use such software technology at his or her residence
+
+for personal, non-commercial purposes;
+
+DIGITAL and CUSTOMER agree as follows:
+
+1  DEFINITIONS
+
+SOFTWARE TECHNOLOGY shall mean the sources and binaries to the TOPS-10
+
+and TOPS-20 (operating systems), and associated utilities and layered
+products that run on PDP-10 computers.
+
+DIGITAL'S INTELLECTUAL PROPERTY RIGHTS shall mean DIGITAL's patent, 
+copyright and trade secret rights in its SOFTWARE TECHNOLOGY.
+
+
+2  LICENSE GRANT
+
+DIGITAL grants to CUSTOMER a worldwide, non-exclusive, royalty-free
+license under DIGITAL's INTELLECTUAL PROPERTY RIGHTS to use and modify
+
+the SOFTWARE TECHNOLOGY solely for personal, non-commercial uses.
+
+
+3  TECHNOLOGY TRANSFER AND ACCEPTANCE
+
+3.1	CUSTOMER is responsible for obtaining copies of SOFTWARE 
+TECHNOLOGY and accepts the SOFTWARE TECHNOLOGY "AS IS".
+
+3.2 	DIGITAL is under no obligation to supply SOFTWARE TECHNOLOGY, 
+documentation, error corrections or updates to the SOFTWARE TECHNOLOGY
+
+if or when they become available, or to provide training, support or 
+consulting for the SOFTWARE TECHNOLOGY.
+
+
+4   WARRANTY DISCLAIMER/LIMITATION OF LIABILITY
+
+DIGITAL DISCLAIMS ALL WARRANTIES WITH REGARD TO ANY SOFTWARE 
+TECHNOLOGY  LICENSED TO CUSTOMER HEREUNDER, INCLUDING ALL IMPLIED 
+WARRANTIES OF MERCHANTABILITY AND FITNESS.  IN NO EVENT SHALL  DIGITAL
+
+BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL  DAMAGES OR ANY 
+DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE OR DATA, WHETHER IN AN 
+ACTION OF CONTRACT, NEGLIGENCE, INTELLECTUAL PROPERTY INFRINGEMENT  OR
+
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH  THE USE 
+OR PERFORMANCE OF ANY SOFTWARE TECHNOLOGY LICENSED HEREUNDER.
+
+
+5  INDEMNITY
+
+CUSTOMER will hold DIGITAL harmless against all liabilities, demands, 
+damages, expenses, or losses arising out of use by CUSTOMER of 
+SOFTWARE TECHNOLOGY or information furnished under this Agreement.
+
+
+6  TERM AND TERMINATION
+
+6.1 	This Agreement shall be effective until otherwise terminated. 
+Either party may terminate this Agreement at any time upon 30 days 
+written notice.
+
+6.2	If CUSTOMER shall fail to perform or observe any of the terms 
+and conditions to be performed or observed by it under this Agreement,
+
+DIGITAL may in its sole discretion thereafter elect to terminate this 
+Agreement, and this Agreement and all the obligations owed and rights 
+granted herein to CUSTOMER shall immediately terminate.
+
+6.3	The parties agree that the termination of this Agreement shall
+
+not release either party from any other liability which shall have 
+accrued to the other party at the time such termination becomes 
+effective, nor affect in any manner the survival of any right, duty or
+
+obligation of either party.
+
+6.4	In the event of any termination of this Agreement for any 
+reason, CUSTOMER shall delete all original and all whole or partial 
+copies and derivatives of the SOFTWARE TECHNOLOGY from his or her 
+computer system. CUSTOMER further shall cease to use and distribute 
+the SOFTWARE TECHNOLOGY in all forms immediately upon the date of 
+termination.
+
+
+7  GENERAL TERMS
+
+7.1	This Agreement shall be governed by the laws of the 
+Commonwealth of Massachusetts.
+
+7.2	This Agreement imposes personal obligations on CUSTOMER. 
+CUSTOMER shall not assign any rights under this Agreement not 
+specifically transferable by its terms without the written consent of 
+DIGITAL.
+
+7.3	The SOFTWARE TECHNOLOGY obtained under this Agreement may be 
+subject to US and other government export control regulations. 
+
+CUSTOMER assures that it will comply with these regulations whenever 
+it exports or re-exports a controlled product or technical data 
+obtained from DIGITAL or any product produced directly from the 
+SOFTWARE TECHNOLOGY.
+
+7.4	The waiver of a breach hereunder may be effected only by a 
+writing signed by the waiving party and shall not constitute a waiver 
+of any other breach.
+
+7.5	CUSTOMER acknowledges that he has read this Agreement, 
+understands it and agrees to be bound by its terms and further agrees 
+that it is the complete and exclusive statement of the  Agreement 
+between the parties which supersedes all communications and
+understanding between the parties relating to the subject matter of 
+this Agreement.
+
+
+
+
+
+
+Article 2290 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!ddsw1!news.mcs.net!hammer.uoregon.edu!news-peer.gsl.net!news.gsl.net!news.mathworks.com!uunet!in1.uu.net!news-in.tiac.net!posterchild!news@tiac.net
+From: bob.supnik@ljo.dec.com (Bob Supnik)
+Newsgroups: comp.sys.dec,alt.sys.pdp10
+Subject: Re: Hobbyist license for 36b software
+Date: Wed, 27 Nov 1996 03:07:37 GMT
+Organization: The Internet Access Company, Inc.
+Lines: 31
+Message-ID: <57gb1b$l3n@news-central.tiac.net>
+References: <57dglh$51r@news-central.tiac.net> <57dipv$3ts@dfw-ixnews1.ix.netcom.com>
+Reply-To: bob.supnik@ljo.dec.com
+NNTP-Posting-Host: p16.ts14.bedfo.ma.tiac.com
+X-Newsreader: Forte Free Agent 1.0.82
+Xref: nntp1.best.com comp.sys.dec:19252 alt.sys.pdp10:2290
+
+bugs@freebsd.netcom.com (Mark Hittinger) wrote:
+
+>shy@nowhere.net writes:
+>>If you are a home collector of Digital's 36b systems, you can now have
+>>a free, personal use, non-commercial license for your existing system
+>>software... <<text deleted>>
+
+>Amazing - the unknown implementor comes through!  or a joke.  We'll
+>find out :-)
+
+>Later
+
+>Mark Hittinger (KL-1059 pre '84)
+>Netcom/Dallas
+>bugs@freebsd.netcom.com
+
+My apologies for the email address; I borrowed a friend's account on
+an ISP to post this note, because my own news server was down (and
+still is).  This is a real note; Digital issued a similar license for
+OS/8 about two months ago.  If you have collected a Digital 36b system
+for personal use, this license allows you to use the system software
+without fee on an as-is, no support basis.
+
+Again, I'm sorry about the email address.
+
+/Bob Supnik
+/Digital Equipment Corporation
+/bob.supnik@ljo.dec.com
+
+
+
+
+
+Article 2294 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!www.nntp.primenet.com!nntp.primenet.com!dciteleport.com!feed1.news.erols.com!howland.erols.net!news.mathworks.com!enews.sgi.com!news.sgi.com!news.msfc.nasa.gov!in1.nntp.cais.net!nntp.uio.no!sn.no!usenet
+From: blarsen@sn.no (Bjorn Hell Larsen)
+Newsgroups: comp.sys.dec,alt.sys.pdp10
+Subject: Re: Hobbyist license for 36b software
+Date: Wed, 27 Nov 1996 07:06:11 GMT
+Organization: Home, sweet home
+Lines: 19
+Message-ID: <329be79d.419780@news.sn.no>
+References: <57dglh$51r@news-central.tiac.net> <57dipv$3ts@dfw-ixnews1.ix.netcom.com> <57gb1b$l3n@news-central.tiac.net>
+NNTP-Posting-Host: stavanger4-14.ppp.sn.no
+Mime-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-1
+Content-Transfer-Encoding: 8bit
+X-Newsreader: Forte Agent .99f/32.299
+Xref: nntp1.best.com comp.sys.dec:19270 alt.sys.pdp10:2294
+
+In <57gb1b$l3n@news-central.tiac.net>, bob.supnik@ljo.dec.com (Bob Supnik)
+wrote:
+
+> If you have collected a Digital 36b system
+> for personal use, this license allows you to use the system software
+> without fee on an as-is, no support basis.
+
+Do you really have to have a physical 36b system in your possession in order
+to gain access to the source code?
+
+I'd really like to be able to read through the 7.03 SCNSER and GALAXY sources
+once more, although I have given up hope ever to log on to a T10 system again.
+
+
+Bjørn
+-- 
+Bjorn Hell Larsen                      As always, I speak for me, and me alone
+http://home.sn.no/home/blarsen/
+                                                                        Dr. No
+
+
+Article 2913 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!news.sgi.com!news.spies.com!not-for-mail
+From: eric@brouhaha.com (Eric Smith)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Wanted: TOPS-20 distribution on any media
+Date: 03 Jul 1997 04:04:56 -0400
+Organization: Brouhaha Computer Mercenary Services
+Lines: 48
+Message-ID: <qhk9j8ims7.fsf@houhah.brouhaha.com>
+References: <PAT.97Jun27122302@smithfield.transarc.com>
+	<ALDERSON.97Jun30114447@netcom10.netcom.com>
+NNTP-Posting-Host: houhah.brouhaha.com
+In-reply-to: alderson@netcom10.netcom.com's message of Mon, 30 Jun 1997
+	18:44:47 GMT
+To: alderson@netcom.com
+X-Newsreader: Gnus v5.1
+Xref: nntp1.ba.best.com alt.sys.pdp10:2913
+
+In article <ALDERSON.97Jun30114447@netcom10.netcom.com> alderson@netcom10.netcom.com (Richard M. Alderson III) writes:
+> My reading of the home hobbyist license is that if you got a -20 (or -10)
+> from somewhere, you didn't have to go pay DEC (pardon me, "Digital") for the
+> right to use it as a hobby machine.
+
+If I purchase a -20 (or -10) somewhere, I don't *need* permission from DEC to
+use it as a hobby machine.  What I do need permission for, however, is to
+use/copy the *software*.  Without a license, the previous owner can't legally
+transfer a copy of the software to me, unless that owner somehow magically
+had posession of media without having signed a license (which should never
+happen).
+
+When John and I asked Rob Supnik if he could arrange for -10 and -20 software
+licenses, we specifically wanted licenses that would both allow us to
+legally run any -10 and -20 software we had access to, *and* to allow us to
+legally acquire the software from other licensees (commercial or otherwise).
+As far as I know the hobbyist license which Rob Supnik arranged to be made
+available to the entire community fills both of those requirements; I can't
+find any language in it to the contrary.  Of course, I'm not a lawyer so
+YMMV.
+
+> Since they weren't covered by the standard commercial license, they
+> wouldn't be covered by the hobbyist license either.
+
+I asked Rob Supnik about the diagnostics, the microcode, and the front-end
+software (which could perhaps be considered to be -11 software rather than
+-10/-20 software), and he confirmed that the all of this software *is*
+covered by the hobbyist license.
+
+> The customer didn't own, or even rent, the diags--they belonged to
+> Field Circus.  At most sites, the KLAD pack was
+> kept in a locked cabinet to which the FE had a key.
+
+The customer could purchase a diagnostic license and media, but was not
+required to do so.  Field Circus would use their own if the customer didn't
+have one (and perhaps even if they did).  But I could easily see why the
+Field Circus copy would be locked up; that would make sense even if the
+customer *did* have a license.
+
+The last time I checked (less than a year ago), the KL10 and KS10
+diagnostics were still on the DEC price list!
+
+Cheers,
+Eric
+-- 
+-----------------------------------------------------------------------------
+Don't blame me, I voted Libertarian.     http://www.lp.org/    (800) 682-1776
+-----------------------------------------------------------------------------
+
+
+Article 2914 of alt.sys.pdp10:
+Newsgroups: alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.dacom.co.kr!xfer.kren.nm.kr!su-news-hub1.bbnplanet.com!cpk-news-hub1.bbnplanet.com!news.bbnplanet.com!ix.netcom.com!netcom16!alderson
+From: alderson@netcom16.netcom.com (Richard M. Alderson III)
+Subject: Re: Wanted: TOPS-20 distribution on any media
+In-Reply-To: eric@brouhaha.com's message of 03 Jul 1997 04:04:56 -0400
+Message-ID: <ALDERSON.97Jul3094914@netcom16.netcom.com>
+Sender: alderson@netcom16.netcom.com
+Reply-To: alderson@netcom.com
+Organization: NETCOM On-line services
+References: <PAT.97Jun27122302@smithfield.transarc.com>
+	<ALDERSON.97Jun30114447@netcom10.netcom.com>
+	<qhk9j8ims7.fsf@houhah.brouhaha.com>
+Date: Thu, 3 Jul 1997 16:49:14 GMT
+Lines: 37
+Xref: nntp1.ba.best.com alt.sys.pdp10:2914
+
+In article <qhk9j8ims7.fsf@houhah.brouhaha.com> eric@brouhaha.com (Eric Smith)
+writes:
+
+>In article <ALDERSON.97Jun30114447@netcom10.netcom.com>
+>alderson@netcom10.netcom.com (Richard M. Alderson III) writes:
+
+>>My reading of the home hobbyist license is that if you got a -20 (or -10)
+>>from somewhere, you didn't have to go pay DEC (pardon me, "Digital") for the
+>>right to use it as a hobby machine.
+
+>If I purchase a -20 (or -10) somewhere, I don't *need* permission from DEC to
+>use it as a hobby machine.  What I do need permission for, however, is to
+>use/copy the *software*.  Without a license, the previous owner can't legally
+>transfer a copy of the software to me, unless that owner somehow magically
+>had posession of media without having signed a license (which should never
+>happen).
+
+Sorry, the "it" in the sentence you quote was "TOPS-20", not the PDP-10.  It
+was obvious to me, at least, that that was what I meant!  ;-)
+
+>When John and I asked Rob Supnik if he could arrange for -10 and -20 software
+>licenses, we specifically wanted licenses that would both allow us to legally
+>run any -10 and -20 software we had access to, *and* to allow us to legally
+>acquire the software from other licensees (commercial or otherwise).  As far
+>as I know the hobbyist license which Rob Supnik arranged to be made available
+>to the entire community fills both of those requirements; I can't find any
+>language in it to the contrary.  Of course, I'm not a lawyer so YMMV.
+
+And the remainder of Eric's message demonstrates that I should have read both
+the hobbyist license, and the licenses at Stanford, a lot more closely.
+
+Sorry for raining on anyone's parade!
+-- 
+Rich Alderson   You know the sort of thing that you can find in any dictionary
+                of a strange language, and which so excites the amateur philo-
+                logists, itching to derive one tongue from another that they
+                know better: a word that is nearly the same in form and meaning
+                as the corresponding word in English, or Latin, or Hebrew, or
+                what not.
+                                                --J. R. R. Tolkien,
+alderson@netcom.com                               _The Notion Club Papers_
+
+
+Article 5551 of alt.sys.pdp10:
+Sender: eric@ruckus.brouhaha.com
+From: Eric Smith <eric-no-spam-for-me@brouhaha.com>
+Newsgroups: alt.folklore.computers,alt.sys.pdp10
+Subject: PDP-10 software availability
+References: <379FE9FA.7D08@bell-labs.com> <slrn7q1ciu.2v9.kaz@ashi.FootPrints.net> 	<37A11263.8A903F56@null.net> <slrn7q2dtn.jej.kaz@ashi.FootPrints.net> 	<37A2002B.504C8ADA@softstar.it> 	<ALDERSON.99Jul30150436@netcom16.netcom.com> 	<qhr9lofhnw.fsf@ruckus.brouhaha.com> <ALDERSON.99Aug6164359@netcom16.netcom.com>
+X-Disclaimer: Everything I write is false.
+Organization: Eric Conspiracy Secret Labs
+X-Eric-Conspiracy: There is no conspiracy.
+Date: 07 Aug 1999 21:25:15 -0700
+Message-ID: <qhd7wydhlg.fsf_-_@ruckus.brouhaha.com>
+Lines: 11
+X-Newsreader: Gnus v5.5/Emacs 20.3
+NNTP-Posting-Host: ruckus.brouhaha.com
+X-Trace: 7 Aug 1999 21:42:31 -0800, ruckus.brouhaha.com
+Path: news3.best.com!news2.best.com!news.maxwell.syr.edu!newsfeed.mathworks.com!news.sgi.com!news.spies.com!ruckus.brouhaha.com
+Xref: news3.best.com alt.folklore.computers:135982 alt.sys.pdp10:5551
+
+alderson@netcom16.netcom.com (Richard M. Alderson III) writes:
+> The problem is that we don't have DEC distribution tapes, we only have
+> licensed source.  (Distribution tapes are just so much clutter if you aren't
+> going to use them.)  I wish I *could* provide such a service.
+
+Licensed source *is* covered by the hobbyist license.  It is stated in
+THE VERY FIRST SECTION of the license agreement that:
+
+    SOFTWARE TECHNOLOGY shall mean the sources and binaries to the TOPS-10 and
+    TOPS-20 (operating systems), and associated utilities and layered products
+    that run on PDP-10 computers.
+
+
+Article 8450 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!newsfeed.mathworks.com!portc03.blue.aol.com!europa.netcrusader.net!199.60.229.5!newsfeed.direct.ca!news.u.washington.edu!Tomobiki-Cho.CAC.Washington.EDU!mrc
+From: Mark Crispin <mrc@CAC.Washington.EDU>
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP-10 Emulator
+Date: Fri, 5 May 2000 12:55:22 -0700
+Organization: Networks & Distributed Computing
+Lines: 32
+Message-ID: <Pine.NXT.4.30.0005051247001.2119-100000@Tomobiki-Cho.CAC.Washington.EDU>
+References: <8erlne$eaa$1@bob.news.rcn.net> <8esa4h01gkc@enews1.newsguy.com> <4ls3hsgok9pjjfhm3ngsgvqc59sqj9oh71@4ax.com> <8eu8ij$iej$1@bob.news.rcn.net> <39127997.558035EA@trailing-edge.com>
+NNTP-Posting-Host: tomobiki-cho.cac.washington.edu
+Mime-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+X-Trace: nntp1.u.washington.edu 957556524 34118 (None) 140.142.17.35
+X-Complaints-To: help@cac.washington.edu
+NNTP-Posting-User: nightowl
+In-Reply-To: <39127997.558035EA@trailing-edge.com>
+Xref: news3.best.com alt.sys.pdp10:8450
+
+On Fri, 5 May 2000, Tim Shoppa wrote:
+> The GPL isn't entirely a bed of roses, y'know.
+
+That's for sure.  I don't like the way it legislates morality.
+
+Personally, I'm a fan of the MIT/X/Athena licence.
+
+>    DIGITAL grants to CUSTOMER a worldwide, non-exclusive,
+>    royalty-free license under DIGITAL's INTELLECTUAL PROPERTY
+>    RIGHTS to use and modify the SOFTWARE TECHNOLOGY solely for
+>    personal, non-commercial uses.
+
+Note that it says nothing whatsoever about "distribute".
+
+That's one problem.  The other problem is whether or not the PDP-10
+architecture is part of "DIGITAL's INTELLECTUAL PROPERTY RIGHTS" --
+remember that the byte instructions were patented.
+
+Last but not least, every ex-DEC employee and contractor (I am among the
+latter) had other signed contracts.  The hobbyist license clearly
+guarantees my right to continue possession of software that I acquired
+under those contracts, and renders moot any destruction requirements;
+however, there is nothing in the hobbyist license that releases me from
+the other terms of those contracts.
+
+-- Mark --
+
+* RCW 19.190 notice: This email address is located in Washington State.	*
+* Unsolicited commercial email may be billed $500 per message.		*
+Science does not emerge from voting, party politics, or public debate.
+
+
+
+
+Article: 17773 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!news.maxwell.syr.edu!news.stealth.net!news.stealth.net!194.168.4.91.MISMATCH!newspeer1-gui.server.ntli.net!ntli.net!newsfep3-gui.server.ntli.net.POSTED!53ab2750!not-for-mail
+Message-ID: <3D7B564B.4000208@iee.org>
+From: Antonio Carlini <arcarlini@iee.org>
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.0.1) Gecko/20020823 Netscape/7.0
+X-Accept-Language: en-gb, en
+MIME-Version: 1.0
+Newsgroups: alt.sys.pdp8,alt.sys.pdp10
+Subject: Re: DEC 18-bit hdwr sold - now MANUALS FREE*
+References: <d6chnu07h3v5nkh4comfguphtimksa5c90@4ax.com> <alasip$qlu$0@205.153.154.199> <874rd0rir8.fsf@prep.synonet.com>
+Content-Type: text/plain; charset=us-ascii; format=flowed
+Content-Transfer-Encoding: 7bit
+X-Inktomi-Trace: pc1-oxfd1-5-cust216.oxf.cable.ntl.com 1031493199 17963 62.254.134.216 (8 Sep 2002 13:53:19 GMT)
+Lines: 18
+Date: Sun, 08 Sep 2002 14:53:15 +0100
+NNTP-Posting-Host: 80.3.128.4
+X-Complaints-To: abuse@ntlworld.com
+X-Trace: newsfep3-gui.server.ntli.net 1031493200 80.3.128.4 (Sun, 08 Sep 2002 14:53:20 BST)
+NNTP-Posting-Date: Sun, 08 Sep 2002 14:53:20 BST
+Organization: ntl News Service
+Xref: dfw-artgen alt.sys.pdp8:5530 alt.sys.pdp10:17773
+
+
+
+Paul Repacholi wrote:
+
+> DEC gave a waiver on Hardware Manuals that they no longer stocked WAY
+> back in 82 or 83. That has never been revoked as far as I know.
+
+I've seen references to the one granted in 1985 on *software*
+manuals (see http://www.decdocs.org for one reference to it).
+If there is a similar dispensation for other manuals that
+would be something I've not seen before. Do you have a reference
+to this?
+
+Antonio
+
+---------------
+Antonio Carlini             arcarlini@iee.org
+
+
+

@@ -1,0 +1,67 @@
+Article 2474 of alt.sys.pdp10:
+Path: nntp1.best.com!news1.best.com!newshub.sdsu.edu!newshub.csu.net!www.nntp.primenet.com!nntp.primenet.com!newspump.sol.net!mindspring!uunet!in2.uu.net!199.0.65.182!news-in.tiac.net!posterchild!news@tiac.net
+From: bob.supnik@ljo.dec.com (Bob Supnik)
+Newsgroups: alt.folklore.computers,comp.sys.dec,comp.emulators.misc,alt.sys.pdp10
+Subject: Information on the PDP-1
+Date: Mon, 16 Dec 1996 04:04:17 GMT
+Organization: Digital Equipment Corporation
+Lines: 52
+Message-ID: <592hck$k42@news-central.tiac.net>
+NNTP-Posting-Host: p11.ts17.bedfo.ma.tiac.com
+X-Newsreader: Forte Free Agent 1.0.82
+Xref: nntp1.best.com alt.folklore.computers:77434 comp.sys.dec:19826 comp.emulators.misc:16103 alt.sys.pdp10:2474
+
+Due to underwhelming demand for the 18b PDP's, and the fortuitous
+discovery of a listing to PDP-1 LISP, I'd like to add the PDP-1 to the
+Computer History simulators project.  Unfortunately, information on
+the PDP-1 is scarce and contradictory.  I've worked from a 1963 DEC
+handbook, and an online transcription of the 1964 handbook, but there
+are still many questions not answered.  Help from people with prints,
+documentation, and or long memories is appreciated.
+
+In particular,
+
+1. How was the "IO wait" feature implemented?  Was there one restart
+pulse used by all I/O devices?  Or did each I/O device have its own
+restart pulse?
+
+2. IOT bits 5 and 6 were wait/signal completion.  Were they
+independent?  Ie, 00 = totally asynchronous (test flag), 01 =
+asynchronous wait (issue WAIT for IO later), 10 = synchronous wait
+(wait for completion).  What did 11 do?  Wait and also signal
+completion?
+
+3. How was the "sequence break" (I/O interrupt) system implemented?
+
+- The interrupt flags are, apparently, the bits in the I/O status
+register as read by the check status instruction.  Was there a way to
+clear an individual flag, or all the flags, other than issuing a new
+I/O instruction?
+
+- How was sequence break re-enabled prior to program return?  Was the
+normal "enable sequence break" instruction deferred until the next JMP
+indirect?  If not, what delayed the occurence of new interrupts after
+re-enabling but before completion of the LAC, LIO, JMP I?
+
+- What conditioned the JMP I to restore the OVerflow flags and Extend
+mode flags at the conclusion of an interrupt sequence.  The handbook
+describes a sequence much like the PDP-7's EMIR instruction, but no
+instruction to set this up is described?
+
+4. In the 1964 handbook, the shifts are described as arithmetic
+shifts: preserving the sign on left shifts (and filling the sign from
+the right), sign extending on right shifts.  Is this correct?  The
+1963 handbook is silent.
+
+5. In skips, bit<5> "inverts the sense of any skip instruction".  If
+multiple skip conditions are specified, is the inversion applied to
+the logical OR of the skip tests (as on the PDP-7 and PDP-8) or to
+each individual skip prior to the OR?  Logic economization points to
+the former, but the ISP program says the latter.
+
+Please reply by email, as I don't check these newsgroups regularly.
+
+Thanks /Bob Supnik
+
+
+

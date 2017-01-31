@@ -1,0 +1,58 @@
+Article 2822 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!portc01.blue.aol.com!nntp2.aus1.giganews.com!nntp3.aus1.giganews.com!news1.giganews.com.POSTED!barn.net1plus.com
+From: R.J.S. <not@available.right.now>
+Newsgroups: alt.sys.pdp10
+Subject: Re: RH-10, DF-10, many disks?
+Organization: Very Organized
+Message-ID: <ev774tg4deeikh0smrd8ig5aa2ukcdld3o@4ax.com>
+References: <Pine.LNX.4.10.10011261648260.27698-100000@bony.umtec.com> <tnt62t80gl8usc01iilph012vk6ffqh8os@4ax.com> <qhd7ff6g4m.fsf@ruckus.brouhaha.com> <3A3EBBFA.697CC1D5@prescienttech.com> <91sriv$1mce$1@nntp1.ba.best.com>
+X-Newsreader: Forte Agent 1.8/32.548
+X-No-Archive: yes
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Original-NNTP-Posting-Host: 192.168.1.12
+X-Original-Trace: 22 Dec 2000 13:37:00 -0500, 192.168.1.12
+Lines: 32
+NNTP-Posting-Date: Fri, 22 Dec 2000 12:52:47 CST
+X-Trace: sv2-z3LV+C8VuKrlDZ3W4rrXPevhIDYI7Jw0PA+/XQZwbs9yyE2nhLkd3hNcdVDwuJJca+UEDG1+6U2clml!2/d7xh1tfgPHwSFFpRC8tU71YwA=
+X-Complaints-To: abuse@GigaNews.Com
+X-Abuse-Info: Please be sure to forward a copy of ALL headers
+X-Abuse-Info: Otherwise we will be unable to process your complaint properly
+Date: Fri, 22 Dec 2000 18:52:47 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2822
+
+On 21 Dec 2000 12:03:43 GMT, inwap@best.com (Joe Smith) wrote:
+
+>I know that the macros in COMMON imply that it is possible, but I've
+>not seen any system using more than one RH-10.  Sites that needed
+>more than 8 disk drives tended to use IBM disks on an SA-10.
+>
+>Tymshare had two KLs with four strings of eight 3350 disks.
+>Our DSKB had consisted of 27 units, with 300 MB per unit.
+>The restriction on the maximum size of DSKB was that three bit tables
+>had to be less than 256 KW.
+>        -Joe
+
+We used to go over to F.A & T. to help with problems and from time to
+time they would build a "special system" for us out of 2 or 3 customer
+systems that were about to ship.  
+
+One such request was a 2 CPU system that had huge amounts of disks.
+(So we could actually test the stuff for supporting lots of disks.) 
+
+ IIRC, it had 2 RH10s, and 4 RH20's per CPU, all the disks were dual
+ported in various (e.g. all possible) configurations, and each string
+had 8 disks. (all RP06's)  A total of 40 drives.
+
+We went off and built a monitor for the sucker, and it worked!!!
+Well, I remember we did find one bug, but it was an easy fix.
+
+I think RDH and Gilbert actually did the testing.
+
+Also, I think that 1026 had 2 RH10's on it as well.  One was for all
+the RS04's (Three cabs worth of swap space), and the other ran some of
+the system and user disks.
+
+
+

@@ -1,0 +1,500 @@
+From sword7@grace.speakeasy.org Wed Sep  6 12:43:43 PDT 2000
+Article: 1053 of alt.sys.pdp10
+Path: nntp1.ba.best.com!news2.best.com!newshub2.rdc1.sfba.home.com!news.home.com!newsfeed.direct.ca!look.ca!nntp2.giganews.com!nntp3.giganews.com!news5.giganews.com.POSTED!not-for-mail
+From: Timothy Stark <sword7@grace.speakeasy.org>
+Subject: PDP10 Emulator status
+Newsgroups: alt.sys.pdp10
+User-Agent: tin/1.4.2-20000205 ("Possession") (UNIX) (Linux/2.2.16 (i686))
+Lines: 243
+Message-ID: <YuYr5.44860$g53.758482@news5.giganews.com>
+NNTP-Posting-Date: Fri, 01 Sep 2000 20:13:28 CDT
+Organization: Giganews.Com - Premium News Outsourcing
+X-Trace: sv2-dOywgA8OrAdvXtiQaHoQBhEfADBFJzoJq60+TEIF6gF6eH+So61N4E8mbXOpy7EhsWPDOUSYDkiLFPV!qZVQHVhxHh6InWzvcU0D6TyTyuSB
+X-Complaints-To: abuse@GigaNews.Com
+X-Abuse-Info: Please be sure to forward a copy of ALL headers
+X-Abuse-Info: Otherwise we will be unable to process your complaint properly
+Date: Sat, 02 Sep 2000 01:13:28 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:1053
+
+Hello folks:
+
+My KS10 developement seems successfully.  However, I have a problem with
+REWIND command that my MIG manual asked me to do rewind a tape before I 
+can get backup.exe into KS10's core memory and start it.  When it was
+executed, I can install CUSP files into DSKB disk drive.
+
+When I attempted to run REWIND TAPE: and system locked up.  I looked into
+my log file and found out that an infinite loop was caught up because
+TOPS-10 is looking for COMPIL.EXE on DSKB disk drive forever.  It looked
+into UFD block but can't find anything then read HOM block again and again
+forever.
+
+Yes, I found another bug in my emulator because UUO instruction did not
+performed properly.  I looked into my emulated UUO routine and found out
+that they uses virtual memory instead of direct memory. I changed all
+routines to access physical memory.  Now UUO instruction functions
+correctly.  My log show that OPEN and LOOKUP instruction worked so well.
+
+I figured out why TOPS-10 wants COMPIL.EXE for REWIND command.  I looked
+into COMPIL.MAC and found REWIND command inside it.  Ah.  How do I rewind
+a tape because I tried to install CUSP software into my DSKB disk drive?
+My MIG told me to do REWIND command.
+
+I tried some builtin commands on TOPS-10 and they worked so well.
+
+-- Tim Stark
+
+Well. my screen log here:
+
+Welcome to KS10 Emulator v0.7 (Alpha)
+[lengthy configuration information deleted]
+KS10> boot mta0:
+Booting mta0...
+Now running...
+BOOT V4(76)
+
+BOOT>/t
+[Loading from DSKB:SYSTEM.EXE[1,4]]
+
+KS10 07-Oct-88
+Why reload: new
+Date: 1-sep-2000
+Time: 8:28
+% RPA0 first HOM block consistency error
+% RPA0 second HOM block consistency error
+Startup option: destroy
+
+% WARNING:  All structures will be refreshed.  All disk files
+will be destroyed.  All information on currently spinning packs
+will be lost.  Do not proceed unless you are positive that you
+want to do this.
+Proceed (NO,YES) [NO]: yes
+% RPA0 first BAT block consistency error
+% RPA0 second BAT block consistency error
+[BAT blocks initialized on RPA0]
+[HOME blocks initialized on all units]
+Startup option: define struct
+
+In the  following  dialogue,  all  numbers  are  decimal  unless
+otherwise  indicated.   Values  within  parenthesis are options.
+Values  within  square  brackets  are  defaults  which  will  be
+substituted if RETURN is pressed.
+
+Any question preceeded with an asterisk indicates changing  that
+parameter will require the structure to be refreshed.
+
+
+                          *** Note ***
+HOME blocks will be initialized immediately after all  units  in
+the structure have been entered.
+
+
+Structure to define: dskb
+Disk drive for logical unit 0: rpa0
+Disk drive for logical unit 1: 
+Do you want to see the bad regions (NO,YES) [NO]: 
+[HOM blocks initialized on RPA0]
+
+Parameters for structure DSKB
+   *Blocks per cluster (3 - 131071) [10]: 
+    Private structure (NO,YES) [NO]: 
+    Owner PPN (NONE,[p,pn]) [NONE]: 
+    Disk-set (1 - 36,ALL,NONE) [ALL]: 
+   *Number of K for CRASH.EXE (0 - 4096) [512]: 
+    Blocks allowed for overdraw per user (0 - 307800) [500]: 
+    Consecutive blocks tried for on output (0 - 262143) [30]: 
+   *Bits per cluster count (1 - 18) [12]: 
+    Make this the only structure in the SSL (NO,YES) [NO]: yes
+    Make this the only structure in the SDL (NO,YES) [NO]: yes
+
+Parameters for unit RPA0
+    Unit ID [DSKB0]: 
+   *SAT blocks per unit (8 - 81) [8]: 
+    SAT blocks in core (1 - 8) [8]: 
+   *K for swapping (0 - 4807) [1000]: 
+   *First logical block for swapping (4420 - 299800) [149900]: 
+    Swapping class (0 - 1) [0]: 
+    Make this the only unit in the ASL (NO,YES) [NO]: yes
+% Structure DSKB must be refreshed before it can be used.
+
+Structure to define: 
+[Rebuilding the system search list from the HOM blocks]
+
+[Rebuilding the active swapping list from the HOM blocks]
+
+[Rebuilding the system dump list from the HOM blocks]
+
+Startup option: refresh
+
+Needs refreshing: DSKB
+Structure to refresh: dskb
+[Updated HOM blocks on unit RPA0]
+[Structure DSKB refreshed]
+Structure to refresh: 
+[Rebuilding the system search list from the HOM blocks]
+
+[Rebuilding the active swapping list from the HOM blocks]
+
+[Rebuilding the system dump list from the HOM blocks]
+
+Startup option: noinit
+[Rebuilding the system search list from the HOM blocks]
+
+[Rebuilding the active swapping list from the HOM blocks]
+
+[Rebuilding the system dump list from the HOM blocks]
+
+To automatically log in under [1,2] type "LOGIN"
+
+KS10 Friday 1-Sep-100 8:29:01
+
+.LOGIN
+
+.USESTAT
+Day: 4.28 Run: 0.00 Rd:0 Wr:0  1+0P Ctx:1  ^C  PC:000000
+.RESOURCES
+DSKB,LPT0,MTA0,1,MTB0,1,CPU0
+
+.VERSIN
+?VERSIN?
+
+.VERSION
+?No core assigned
+
+
+.DDT
+?No core assigned
+
+
+.DAYTIME
+Friday 1-Sep-100 8:30:03
+
+.TIME
+0.00
+0.00
+kilo-core-sec=0
+
+.DSK
+Rd,Wt=0,0
+Rd,Wt=0,0
+
+.REWIND TAPE:
+// System was locked up. My log showed that TOPS-10 is looking
+// for COMPIL.EXE on DSKB forever. An infinite loop was caught
+// because it is reading HOM block again and again for required
+// information.  I had to press ^E to get out of locked-up system.
+// Look Job's UPT block below that show COMPIL.EXE need to being
+// loaded and run.  However, no bugs in emulator or TOPS-10 was found yet.
+KS10> dump 01001000 01002000
+1001000 000000000000 ('      ' '     ')
+1001001 000000000000 ('      ' '     ')
+1001002 304000375151 ('8@ ?II' '1  z4')
+1001003 304000375452 ('8@ ?LJ' '1  { ')
+1001004 304000531725 ('8@ K/5' '1  3j')
+1001005 635062000000 ('SHR   ' 'g#   ')
+1001006 304000532126 ('8@ K16' '1  4+')
+1001007 000000535557 ('   KMO' '   ;7')
+1001010 000000000000 ('      ' '     ')
+1001011 000000000000 ('      ' '     ')
+1001012 000000000000 ('      ' '     ')
+1001013 000000000000 ('      ' '     ')
+1001014 004000344460 (' @ <DP' '   I ')
+1001015 004000563372 (' @ N;Z' '   f}')
+1001016 000000000000 ('      ' '     ')
+1001017 000000000000 ('      ' '     ')
+1001020 000000000000 ('      ' '     ')
+1001021 000000000000 ('      ' '     ')
+1001022 004000344460 (' @ <DP' '   I ')
+1001023 777777000000 ('___   ' '  x  ')
+1001024 004000445513 (' @ DM+' '   K%')
+1001025 441100023160 ('D) "9P' 'H$ &8')
+1001026 004000420314 (' @ B#,' '    f')
+1001027 000000000000 ('      ' '     ')
+1001030 000000000000 ('      ' '     ')
+1001031 435755605154 ('COMPIL' 'G>n 6')
+1001032 000000457045 ('   EXE' '   ^ ')
+1001033 004000344460 (' @ <DP' '   I ')
+1001034 000000000000 ('      ' '     ')
+1001035 000001000004 ('  !  $' '     ')
+1001036 000000025133 ('   "I;' '   *-')
+1001037 304000420756 ('8@ B'N' '1  !w')
+1001040 304000430606 ('8@ C&&' '1  1C')
+1001041 001002000016 (' ("  .' '     ')
+1001042 000000341442 ('   <,B' '   C ')
+1001043 000000341442 ('   <,B' '   C ')
+1001044 304000431030 ('8@ C(8' '1  2 ')
+1001045 000000025133 ('   "I;' '   *-')
+1001046 304000436617 ('8@ CV/' '1  =G')
+1001047 441100023160 ('D) "9P' 'H$ &8')
+1001050 304000344425 ('8@ <D5' '1  I ')
+1001051 304000435630 ('8@ CN8' '1  ;L')
+1001052 000000024657 ('   "FO' '   )W')
+1001053 304000344425 ('8@ <D5' '1  I ')
+1001054 304000502125 ('8@ H15' '1   *')
+1001055 000000000000 ('      ' '     ')
+1001056 000000000000 ('      ' '     ')
+[several lines deleted for meaningless values]
+1001357 000000000000 ('      ' '     ')
+1001360 000000000000 ('      ' '     ')
+1001361 435755605154 ('COMPIL' 'G>n 6')
+1001362 000000000000 ('      ' '     ')
+[several lines deleted for meaningless values]
+1001766 000000000000 ('      ' '     ')
+1001767 000000000000 ('      ' '     ')
+1001770 000000000000 ('      ' '     ')
+1001771 160600001002 ('.&  ("' '     ')
+1001772 160600001001 ('.&  (!' '     ')
+1001773 164600001000 ('.F  ( ' '     ')
+1001774 000000000000 ('      ' '     ')
+1001775 000000000000 ('      ' '     ')
+1001776 000000000000 ('      ' '     ')
+1001777 164600001001 ('.F  (!' '     ')
+KS10> quit
+Exiting PDP10 Emulator
+[sword7@sword7-0 pdp10]$ 
+
+-- 
+Timothy Stark	<><	Inet: sword7@speakeasy.org, sword7@firesword7.net
+--------------------------------------------------------------------------
+"For God so loved the world, that he gave his only begotten Son, that 
+whosoever believeth in him should not perish, but have everlasting life.
+Amen." -- John 3:16 (King James Version Bible)
+
+
+From jmfbahciv@aol.com Wed Sep  6 12:44:38 PDT 2000
+Article: 1061 of alt.sys.pdp10
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!207.172.3.37!feed1.news.rcn.net!rcn!207-172-97-245
+From: jmfbahciv@aol.com
+Newsgroups: alt.sys.pdp10
+Subject: Re: PDP10 Emulator status
+Date: Sat, 02 Sep 00 09:17:27 GMT
+Organization: UltraNet Communications, Inc.
+Lines: 218
+Message-ID: <8oqrcr$7qk$1@bob.news.rcn.net>
+References: <YuYr5.44860$g53.758482@news5.giganews.com>
+X-Trace: cwE8xuY0xQIvD0jNz4yCn7DqiH6trzFgiKJD+RbLazw=
+X-Complaints-To: abuse@rcn.com
+NNTP-Posting-Date: 2 Sep 2000 12:21:47 GMT
+X-Newsreader:  News Xpress Version 1.0 Beta #4
+Xref: nntp1.ba.best.com alt.sys.pdp10:1061
+
+In article <YuYr5.44860$g53.758482@news5.giganews.com>,
+   Timothy Stark <sword7@grace.speakeasy.org> wrote:
+>Hello folks:
+>
+>My KS10 developement seems successfully.  However, I have a problem with
+>REWIND command that my MIG manual asked me to do rewind a tape before I 
+>can get backup.exe into KS10's core memory and start it.
+
+That's not right (the manual).
+
+>  When it was
+>executed, I can install CUSP files into DSKB disk drive.
+>
+>When I attempted to run REWIND TAPE: and system locked up.  I looked into
+>my log file and found out that an infinite loop was caught up because
+>TOPS-10 is looking for COMPIL.EXE on DSKB disk drive forever.  It looked
+>into UFD block but can't find anything then read HOM block again and again
+>forever.
+
+The looking forever part is a bug.  There should at least be some
+sort of timeout.
+
+>
+>Yes, I found another bug in my emulator because UUO instruction did not
+>performed properly.  I looked into my emulated UUO routine and found out
+>that they uses virtual memory instead of direct memory. I changed all
+>routines to access physical memory.  Now UUO instruction functions
+>correctly.  My log show that OPEN and LOOKUP instruction worked so well.
+>
+>I figured out why TOPS-10 wants COMPIL.EXE for REWIND command. 
+
+Yup.
+
+> I looked
+>into COMPIL.MAC and found REWIND command inside it.  Ah.  How do I rewind
+>a tape because I tried to install CUSP software into my DSKB disk drive?
+>My MIG told me to do REWIND command.
+
+Well, I never did a KS installation as a token dummy so I can't
+tell you about that.  I have done a KL installation and I simply
+don't remember the MIG telling people to do a rewind command
+as the very first command.  IIRC, there are two GET BACKUP.EXE
+commands, then a START, and then a REWIND command which is 
+a BACKUP command.  
+
+Now, the reason there are two GETs is to ensure that there's
+at least on good copy of BACKUP.EXE that is GETtable. The
+second GET command should position the magtape at the 
+beginning of the first save set.  At the moment, I can't
+remember what I put into that save set.  There is also 
+a teensy little tickle in the back of my brain that's
+telling me that the KS bootable tape was slightly different
+in content than a KL bootable tape (I think the difference
+was the KS also contained a GETtable copy of SMFILE.EXE)
+but I'm not sure about that.  I'd have to take a look
+at my build procedures to verify exactly what I put
+on those tapes.  That's probably another piece of very
+useful information that's been destroyed.
+
+>
+>I tried some builtin commands on TOPS-10 and they worked so well.
+>
+>-- Tim Stark
+>
+>Well. my screen log here:
+>
+>Welcome to KS10 Emulator v0.7 (Alpha)
+>[lengthy configuration information deleted]
+>KS10> boot mta0:
+>Booting mta0...
+>Now running...
+>BOOT V4(76)
+>
+>BOOT>/t
+>[Loading from DSKB:SYSTEM.EXE[1,4]]
+>
+>KS10 07-Oct-88
+>Why reload: new
+>Date: 1-sep-2000
+>Time: 8:28
+>% RPA0 first HOM block consistency error
+>% RPA0 second HOM block consistency error
+>Startup option: destroy
+>
+>% WARNING:  All structures will be refreshed.  All disk files
+>will be destroyed.  All information on currently spinning packs
+>will be lost.  Do not proceed unless you are positive that you
+>want to do this.
+>Proceed (NO,YES) [NO]: yes
+>% RPA0 first BAT block consistency error
+>% RPA0 second BAT block consistency error
+>[BAT blocks initialized on RPA0]
+>[HOME blocks initialized on all units]
+>Startup option: define struct
+>
+>In the  following  dialogue,  all  numbers  are  decimal  unless
+>otherwise  indicated.   Values  within  parenthesis are options.
+>Values  within  square  brackets  are  defaults  which  will  be
+>substituted if RETURN is pressed.
+>
+>Any question preceeded with an asterisk indicates changing  that
+>parameter will require the structure to be refreshed.
+>
+>
+>                          *** Note ***
+>HOME blocks will be initialized immediately after all  units  in
+>the structure have been entered.
+>
+>
+>Structure to define: dskb
+>Disk drive for logical unit 0: rpa0
+>Disk drive for logical unit 1: 
+>Do you want to see the bad regions (NO,YES) [NO]: 
+>[HOM blocks initialized on RPA0]
+>
+>Parameters for structure DSKB
+>   *Blocks per cluster (3 - 131071) [10]: 
+>    Private structure (NO,YES) [NO]: 
+>    Owner PPN (NONE,[p,pn]) [NONE]: 
+>    Disk-set (1 - 36,ALL,NONE) [ALL]: 
+>   *Number of K for CRASH.EXE (0 - 4096) [512]: 
+
+
+I have no idea why 512 is the default here.  You should really
+be using 4096 if you want to be able to capture crashes.
+Actually that does bring up a point.  How much memory is
+available in an emulator so that complete dumps of crashes
+(STOPCDs) can be captured.
+
+>    Blocks allowed for overdraw per user (0 - 307800) [500]: 
+>    Consecutive blocks tried for on output (0 - 262143) [30]: 
+>   *Bits per cluster count (1 - 18) [12]: 
+>    Make this the only structure in the SSL (NO,YES) [NO]: yes
+>    Make this the only structure in the SDL (NO,YES) [NO]: yes
+>
+>Parameters for unit RPA0
+>    Unit ID [DSKB0]: 
+>   *SAT blocks per unit (8 - 81) [8]: 
+>    SAT blocks in core (1 - 8) [8]: 
+>   *K for swapping (0 - 4807) [1000]: 
+>   *First logical block for swapping (4420 - 299800) [149900]: 
+>    Swapping class (0 - 1) [0]: 
+>    Make this the only unit in the ASL (NO,YES) [NO]: yes
+
+I wonder if a discussion of these defaults would make any sense
+at the moment.  
+
+>% Structure DSKB must be refreshed before it can be used.
+>
+>Structure to define: 
+>[Rebuilding the system search list from the HOM blocks]
+>
+>[Rebuilding the active swapping list from the HOM blocks]
+>
+>[Rebuilding the system dump list from the HOM blocks]
+>
+>Startup option: refresh
+>
+>Needs refreshing: DSKB
+>Structure to refresh: dskb
+>[Updated HOM blocks on unit RPA0]
+>[Structure DSKB refreshed]
+>Structure to refresh: 
+>[Rebuilding the system search list from the HOM blocks]
+>
+>[Rebuilding the active swapping list from the HOM blocks]
+>
+>[Rebuilding the system dump list from the HOM blocks]
+>
+>Startup option: noinit
+>[Rebuilding the system search list from the HOM blocks]
+>
+>[Rebuilding the active swapping list from the HOM blocks]
+>
+>[Rebuilding the system dump list from the HOM blocks]
+>
+>To automatically log in under [1,2] type "LOGIN"
+>
+>KS10 Friday 1-Sep-100 8:29:01
+>
+>..LOGIN
+>
+>..USESTAT
+>Day: 4.28 Run: 0.00 Rd:0 Wr:0  1+0P Ctx:1  ^C  PC:000000
+>..RESOURCES
+>DSKB,LPT0,MTA0,1,MTB0,1,CPU0
+>
+>..VERSIN
+>?VERSIN?
+>
+>..VERSION
+>?No core assigned
+>
+>
+>..DDT
+>?No core assigned
+>
+>
+>..DAYTIME
+>Friday 1-Sep-100 8:30:03
+>
+>..TIME
+>0.00
+>0.00
+>kilo-core-sec=0
+>
+>..DSK
+>Rd,Wt=0,0
+>Rd,Wt=0,0
+>
+>..REWIND TAPE:
+
+Nope.  It has to be a GET command here.
+<snip more info>
+
+/BAH
+
+Subtract a hundred and four for e-mail.
+
+

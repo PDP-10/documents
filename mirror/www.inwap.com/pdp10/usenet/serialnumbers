@@ -1,0 +1,106 @@
+Article: 21060 of alt.sys.pdp10
+Path: iad-read.news.verio.net!dfw-artgen!iad-peer.news.verio.net!news.verio.net!bloom-beacon.mit.edu!news.bu.edu!budd
+From: budd@csa.bu.edu (Phil Budne)
+Newsgroups: alt.sys.pdp10
+Subject: Re: DECtape on -10's
+Followup-To: alt.sys.pdp10
+Date: 19 Jul 2003 15:33:28 GMT
+Organization: Boston University Computer Science Dept.
+Lines: 89
+Message-ID: <bfboc8$d3j$1@news3.bu.edu>
+References: <mddznjenxf2.fsf@panix5.panix.com> <bf8hv5$4me$3@bob.news.rcn.net> <bfafpg$k5k$1@news3.bu.edu> <bfb61j$avf$1@bob.news.rcn.net>
+X-Trace: news3.bu.edu 1058628808 13427 128.197.12.3 (19 Jul 2003 15:33:28 GMT)
+X-Complaints-To: news@bu.edu
+Xref: dfw-artgen alt.sys.pdp10:21060
+
+In article <bfb61j$avf$1@bob.news.rcn.net>,  <jmfbahciv@aol.com> wrote:
+>In article <bfafpg$k5k$1@news3.bu.edu>, budd@csa.bu.edu (Phil Budne) wrote:
+>>home% grep ^102 ~ftp/pub/pdp10/bucs20-anon/decapr/decapr.txt.4
+>>1025    TOPS-20 DEC H/W Eng             DEC, Marlboro           KL10
+>>1026    TOPS-10 Development             DEC, Marlboro           KL1099  
+
+>Nitpick.  #1042 was the second highboy in that SMP system.
+
+My search above only displayed serials 102x.  The list I have contains
+over 30 KL systems with serials below 1100.
+
+>When we ran 3 CPUs, we added a KL1091 which was serial number 2nnn
+>[whoosh] those last three numbers just fell on my bit floor..2471?
+
+2476
+
+I thought it was also the ARPAnet TOPS-20 development system as well,
+but recently someone here with a knowledge of where the various cards
+and options were installed said they doubted that a 1091 could have
+BOTH an external memory controller (DMA20) *AND* a KI10 I/O bus
+adaptor (DIA20) which would have been required to talk to the IMP
+interface...
+
+>>1029    TOPS-20 DEC H/W Eng             DEC, Marlboro           KL10
+>>
+>>I do remember hearing one had DECtapes.
+>
+>Both should have.  Diagnostics were developed on them, too.
+
+Do you mean PDP-10 I/O bus (TD10) connected DECtapes?
+Of _course_ they had them on their front ends!
+
+	Anything with a serial number below 2100 (or so) was
+	manufactured as a 1090 (or 1080), in bright blue "high boy"
+	(rack height) cabinets, with "external" core memory that had
+	multiple ports, and could be used for SMP.
+
+	The higher range were either 2040/2050/2060's (orange) or
+	1091's (a paler blue), in "corporate" (VAX height) cabinets,
+	with "internal" semiconductor (MOS DRAM) memory.
+
+	2065's (and 1095) were manufactured in the FCC RFI safe boxes
+	(designed for Jupiter) were any of the FCC cabinets blue??
+
+Here is a complete list of all the 10's at DEC Marlboro in the 80's;
+
+ 514	TOPS-10 Development		DEC, Marlboro		KI10
+ 546	TOPS-10 Development		DEC, Marlboro		KI10
+1025	TOPS-20 DEC H/W Eng		DEC, Marlboro		KL10
+1026	TOPS-10 Development		DEC, Marlboro		KL1099	SMP
+1029	TOPS-20 DEC H/W Eng		DEC, Marlboro		KL10
+1030	TOPS-20 Hard Dev		DEC, Marlboro		KL10
+1031	TOPS-20 Hard Dev		DEC, Marlboro		KL10
+1042	TOPS-10 Development		DEC, Marlboro		KL10	SMP
+2102	TOPS-20 Soft Dev		DEC, Marlboro		KL20
+2116	TOPS-20 Soft Dev		DEC, Marlboro		KL20
+2136	TOPS-20 Soft Dev		DEC, Marlboro		KL20
+2137	TOPS-20 Soft Dev		DEC, Marlboro		KL20
+2244	TOPS-20 Marketing		DEC, Marlboro		KL20
+2263	TOPS-20 Diag. Eng.		DEC, Marlboro		KL20?
+2476	TOPS-10 Digital Eq. Corporation Marlboro, MA		KL10
+2530	TOPS-20 DEC H/W Eng		Marlboro, Ma		KL10
+2791	TOPS-20 Digital "EMILY"		Marlborough, Ma		2060
+2798	TOPS-20 Digital "ETHER"		Marlborough, Ma		2060
+2844	TOPS-20 Digital "ESTA"		Marlborough, Ma		2060
+2866	TOPS-20 Digital "CLOYD"		Marlborough, Ma		2060
+2871	TOPS-20 Digital "GIDNEY"	Marlborough, Ma		2060
+2906	TOPS-20 Digital "IBOX"		Marlborough, Ma		2060
+2933	TOPS-20 Digital "SAGE"		Marlborough, Ma		2060
+2942	10/20	Digital "CHIP"		Marlborough, Ma		1091
+2943	10/20	Digital "DALE"		Marlborough, Ma		2060
+2996	TOPS-20 Digital "RONCO"		Marlborough, Ma		2060
+3026	TOPS-20 Digital "SNAP"		Marlborough, Ma		2060
+3500	TOPS-10 Development/SIRUS	DEC, Marlboro		KL1095
+4097	TOPS-20 Development		DEC, Marlboro		KS2020
+4101	TOPS-10 Development		DEC, Marlboro		KS2020
+4145	TOPS-10 DEC CSSE		DEC Marlboro		KS10
+
+I remember the Venus (8600) project had some 2060's they used for
+development (wrote code to handle net lists in extended addressing
+FORTRAN), but they don't seem to appear on the list (it's possible
+they were absorbed by 36-bit engineering, and DO appear). The Jupiter
+microcode people had a system "IO - One of Jupiters Moons" -- I
+suppose that could have been #2530...
+
+On the topic of low serial number KL's, here are two other famous systems:
+
+1038	ITS	Macsyma Consort		MIT, Cambridge		KL10
+1075	SAIL	SAIL			Stanford, CA		KL10
+
+

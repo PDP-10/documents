@@ -1,0 +1,93 @@
+Article 4235 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!nntprelay.mathworks.com!newsfeed.enteract.com!chicago-news-feed1.bbnplanet.com!news.bbnplanet.com!web.onecall.net!news.iupui.edu!haystack!mhwood
+From: mhwood@Ameritech.net (Mark H. Wood)
+Newsgroups: alt.sys.pdp10
+Subject: Re: KL Console Commands
+Date: Sun, 11 Oct 1998 18:51:40 GMT
+Organization: La Petite Hackerie
+Lines: 11
+Message-ID: <F0oF24.9q7@Ameritech.net>
+References: <Pine.LNX.3.96.981007134213.18731B-100000@bony.umtec.com> <6vgg60$1gu@nnrp3.farm.idt.net> <361be09f.4444373@news.clark.net> <6vjahh$puq@zk2nws.zko.dec.com>
+NNTP-Posting-Host: mhw.ulib.iupui.edu
+X-Newsreader: TIN [UNIX 1.3 950515BETA PL0]
+Xref: news3.best.com alt.sys.pdp10:4235
+
+Since we're discussing PDP8-based peripheral controllers, did anybody
+here ever use a DN92?  I came across the glossy for it one day while
+cleaning out old papers bequeathed by a former boss.  It was an RJE
+station and (I think) could also handle a few terminal lines.
+
+(Before you ask:  I don't know what became of that glossy, but I don't
+throw away interesting stuff so it may turn up again.)
+-- 
+-- 
+Mark H. Wood, radical centrist                             mhwood@ameritech.net
+Having seen what's at the edges of the road, I much prefer the dead armadillos.
+
+
+Article 4236 of alt.sys.pdp10:
+Path: news3.best.com!news1.best.com!nntprelay.mathworks.com!newsfeed.berkeley.edu!Supernews73!supernews.com!Supernews69!10.0.0.1!10.0.0.1
+From: racerdave@net1plus.com (Dave Lyons)
+Newsgroups: alt.sys.pdp10
+Subject: Re: Re: KL Console Commands
+Date: Sun, 11 Oct 1998 22:17:38 GMT
+Organization: http://www.supernews.com, The World's Usenet: Discussions Start Here
+Lines: 15
+Message-ID: <36212c6e.1596271906@10.0.0.1>
+References: <Pine.LNX.3.96.981007134213.18731B-100000@bony.umtec.com> <6vgg60$1gu@nnrp3.farm.idt.net> <361be09f.4444373@news.clark.net> <6vjahh$puq@zk2nws.zko.dec.com> <F0oF24.9q7@Ameritech.net>
+NNTP-Posting-Host: 208.200.157.92
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+X-Trace: 908144354 P0XQBQRYN9D5CD0C8C usenet87.supernews.com
+X-Complaints-To: newsabuse@supernews.com
+X-Newsreader: Forte Agent 1.5/32.452
+X-No-Archive: yes
+Xref: news3.best.com alt.sys.pdp10:4236
+
+On Sun, 11 Oct 1998 18:51:40 GMT, mhwood@Ameritech.net (Mark H. Wood)
+wrote:
+
+>Since we're discussing PDP8-based peripheral controllers, did anybody
+>here ever use a DN92?  I came across the glossy for it one day while
+>cleaning out old papers bequeathed by a former boss.  It was an RJE
+>station and (I think) could also handle a few terminal lines.
+>
+>(Before you ask:  I don't know what became of that glossy, but I don't
+>throw away interesting stuff so it may turn up again.)
+>-- 
+
+Yes, you could say I have heard of it, as I worked on the code that
+ran in the beast.  There used to be on sitting in the **MIDDLE** of
+the machine room, between 1026 and 514.
+
+
+Article 4237 of alt.sys.pdp10:
+Subject: Re: Re: KL Console Commands
+From: aek@spies.com (Al Kossow)
+Newsgroups: alt.sys.pdp10
+References: <36212c6e.1596271906@10.0.0.1>
+Originator: aek@spies.com
+NNTP-Posting-Host: goonsquad.spies.com
+Message-ID: <3621359e.0@news.spies.com>
+Date: 11 Oct 1998 15:47:58 -0800
+X-Trace: 11 Oct 1998 15:47:58 -0800, goonsquad.spies.com
+Lines: 13
+Path: news3.best.com!news1.best.com!nntprelay.mathworks.com!news.sgi.com!news.spies.com!spies.com!aek
+Xref: news3.best.com alt.sys.pdp10:4237
+
+>>Since we're discussing PDP8-based peripheral controllers, did anybody
+>>here ever use a DN92?  I came across the glossy for it one day while
+>>cleaning out old papers bequeathed by a former boss.  It was an RJE
+>>station and (I think) could also handle a few terminal lines.
+>>
+>>(Before you ask:  I don't know what became of that glossy, but I don't
+>>throw away interesting stuff so it may turn up again.)
+
+The unit I used in 1980 was an RJE to a dual KI at the Air Force Avionics
+Lab in Dayton. It was 8E based, had a line printer, card reader, and
+several serial lines. If memory serves me right, you booted it from
+the card reader; I don't remember any other periperals on it that you
+could boot from.
+
+

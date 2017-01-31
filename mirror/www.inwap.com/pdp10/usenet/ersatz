@@ -1,0 +1,33 @@
+Article 3932 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!not-for-mail
+From: inwap@best.com (Smith and O'Halloran)
+Newsgroups: alt.sys.pdp10
+Subject: Re: List of file extensions used on TOPS-10 and TOPS-20
+Date: 24 May 1998 02:33:52 -0700
+Organization: Chez INWAP (people, computers, cats)
+Lines: 17
+Message-ID: <6k8pi0$pso$1@shell3.ba.best.com>
+References: <6k3dgj$hr9$1@shell3.ba.best.com> <6k3n99$tee$2@ligarius.ultra.net> <356725DF.1073@dvorak.amd.removethis.com>
+NNTP-Posting-Host: shell3.ba.best.com
+X-Trace: 896002434 14997 inwap  206.184.139.132
+Xref: nntp1.ba.best.com alt.sys.pdp10:3932
+
+In article <356725DF.1073@dvorak.amd.removethis.com>,
+Clive Dawson  <clive1@dvorak.amd.removethis.com> wrote:
+>BAH wrote:
+>> TOPS10 had most of them documented in UUOSYM since we tended to 
+>> use the same character representation for logical names, file
+>> extensions, and pseudo-names  (that term doesn't sound right--it
+>> was pseudo-something) for directories.
+>
+>You might be thinking of "pseudo devices", ...
+
+The ersatz devices included several short names for specific directories
+(UFD=[1,1], FFA=[1,2], OLD=[1,3], SYS=[1,4], NEW=[1,5], HLP=[2,5], QUE=[3,3],
+REL, DOC, etc) and one non-directory logical name: OPR = a specific TTY.
+	-Joe
+-- 
+INWAP.COM is Joe and Sally Smith, John and Chris O'Halloran and our cats
+See http://www.inwap.com/ for "ReBoot", PDP-10, and Clan MacLeod.
+
+

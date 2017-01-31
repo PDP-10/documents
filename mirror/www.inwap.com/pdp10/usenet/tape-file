@@ -1,0 +1,266 @@
+Article 2748 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news2.best.com!news-hog.berkeley.edu!ucberkeley!newsfeed.stanford.edu!paloalto-snf1.gtei.net!news.gtei.net!forum.apple.com!news.apple.com!haxrus.apple.com!user
+From: aek@spies.com (Al Kossow)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: New Tape Container format
+Date: Wed, 20 Dec 2000 14:27:40 -0800
+Organization: Apple Computer, Inc.
+Lines: 74
+Message-ID: <aek-2012001427400001@haxrus.apple.com>
+References: <4ub43tskou7ev3slch65fvp65mju167q2c@4ax.com> <90u806$9iu$1@spies.com> <aek-0912001352130001@haxrus.apple.com> <81638778B12FE05A.630746B8B0E36C7A.7F492EA256DD3A6B@lp.airnews.net>
+NNTP-Posting-Host: haxrus.apple.com
+X-Trace: news.apple.com 977351260 24248 17.205.21.66 (20 Dec 2000 22:27:40 GMT)
+X-Complaints-To: usenet@news.apple.com
+NNTP-Posting-Date: 20 Dec 2000 22:27:40 GMT
+Xref: nntp1.ba.best.com alt.sys.pdp10:2748 alt.folklore.computers:13190
+
+In article
+<81638778B12FE05A.630746B8B0E36C7A.7F492EA256DD3A6B@lp.airnews.net>,
+jmaynard@conmicro.cx wrote:
+
+> On Sat, 09 Dec 2000 13:52:13 -0800, Al Kossow <aek@spies.com> wrote:
+> >Are there already existing formats for 'tapes in disc files'
+> >(although it would be useful for disc containers with bad
+> > blocks too) that save detected bad block information?
+> 
+> One format that you might want to look at is the AWSTAPE format used by the
+> IBM P/390 small mainframes and the Hercules emulator. It doesn't have a bad
+> block flag (though there's room for it), I wrote up a description of the
+> format in afc a while back, and can find it agian if needed.
+
+Subject: Re: Archives of OS/360-ish public                                     
+         domain software?                                                     
+Author:  Jay Maynard
+         <jmaynard@thebrain.conmicro.cx>                                       
+
+On Thu, 29 Jun 2000 10:52:26 -0400, Tim Shoppa <shoppa@trailing-edge.com> wrote:
+                                           
+ >Well, the raw format of a tape (possibly variable-length tape blocks       
+ >separated by tape marks) is pretty simple to begin with, and I firmly
+ >believe that any archive format shouldn't complicate things               
+ >unnecessarily :-).  Is there a description of the AWSTAPE format          
+ >online somewhere?  I'd gladly volunteer to write a conversion
+ >utility to/from DECUS "TPC" format and the closely-related John           
+ >Wilson's "E11" format used by his emulator and Bob Supnik's               
+ simulators.
+
+ I don't know if it's documented anywhere, but it's very simple: An
+ AWSTAPE file consists of blocks of data, preceded by a block header of
+ 6 bytes. Each block corresponds to a block on the tape. The block
+ header is defined as:
+
+ /*-------------------------------------------------------------------*/
+ /* Structure definition for AWSTAPE block header                    */
+ /*-------------------------------------------------------------------*/
+ typedef struct _AWSTAPE_BLKHDR {
+         HWORD  curblkl;                /* Length of this block      */
+         HWORD  prvblkl;                /* Length of previous block  */
+         BYTE    flags1;                /* Flags byte 1              */
+         BYTE    flags2;                /* Flags byte 2              */
+ } AWSTAPE_BLKHDR;
+                                                                          
+ /* Definitions for AWSTAPE_BLKHDR flags byte 1 */
+ #define AWSTAPE_FLAG1_NEWREC    0x80    /* Start of new record      */
+ #define AWSTAPE_FLAG1_TAPEMARK  0x40    /* Tape mark                */
+ #define AWSTAPE_FLAG1_ENDREC    0x20    /* End of record            */
+
+ The two HWORD values are 16-bit little-endian integers. curblkl is the
+ length of the block described by this block header; prvblkl is the
+ length of the immediately preceding block, and is set to zero for the
+ first block on the tape. Data records are a maximum of 65535 bytes
+ long; longer records on tape are segmented, with the NEWREC and ENDREC
+ flags denoting the first and last segments. A record of less than 65535
+ bytes has both the NEWREC and ENDREC flags set. A tapemark is denoted
+ by a current length of zero and the TAPEMARK flag set (but not the
+ NEWREC or ENDREC flags).
+
+ Does that cover the bases? I'm guessing at the function of the NEWREC
+ and ENDREC flags; since an IBM tape can only have 65535 bytes in a
+ record, I've never seen the case where segmentation is needed (and the
+ Hercules tapecopy program, used to create AWSTAPE files from real
+ tapes, is hardcoded to set both flags on data records because of this).
+
+ For further details, look at the tapecopy, tapemap, and tapesplit
+ utilities in the Hercules package. I whipped up tapemap and tapesplit
+ in a couple of hours after looking at tapecopy for a bit, so it can't
+ be that hard.
+
+-- 
+The eBay Curse:
+"May you find everything you're looking for.."
+
+
+Article 2804 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!nycmny1-snh1.gtei.net!news.gtei.net!bloom-beacon.mit.edu!news.umd.edu!news.wam.umd.edu!bruce
+From: Bruce Crabill <bruce@umd.edu>
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: New Tape Container format
+Date: Thu, 21 Dec 2000 19:09:35 -0500
+Organization: Univ. of Maryland
+Lines: 114
+Message-ID: <bruce-328FA1.19093521122000@news.wam.umd.edu>
+References: <4ub43tskou7ev3slch65fvp65mju167q2c@4ax.com> <90u806$9iu$1@spies.com> <aek-0912001352130001@haxrus.apple.com> <81638778B12FE05A.630746B8B0E36C7A.7F492EA256DD3A6B@lp.airnews.net> <aek-2012001427400001@haxrus.apple.com>
+NNTP-Posting-Host: bruce-mac.umd.edu
+X-Trace: dailyplanet.wam.umd.edu 977443841 10729 129.2.8.90 (22 Dec 2000 00:10:41 GMT)
+X-Complaints-To: abuse@wam.umd.edu
+NNTP-Posting-Date: 22 Dec 2000 00:10:41 GMT
+User-Agent: MT-NewsWatcher/3.0 (PPC)
+Xref: nntp1.ba.best.com alt.sys.pdp10:2804 alt.folklore.computers:13261
+
+In article <aek-2012001427400001@haxrus.apple.com>, aek@spies.com (Al 
+Kossow) wrote:
+
+>  Does that cover the bases? I'm guessing at the function of the NEWREC
+>  and ENDREC flags; since an IBM tape can only have 65535 bytes in a
+>  record, I've never seen the case where segmentation is needed (and the
+>  Hercules tapecopy program, used to create AWSTAPE files from real
+>  tapes, is hardcoded to set both flags on data records because of this).
+
+Actually, I believe you could write tape records longer than 64K by using
+the Chain Data flag in the CCWs.  3420s probably didn't care how much
+data they were asked to write, but there might have been problems on the
+buffered Control Units like the 3480.  Back in 1994, I wrote a program 
+that would create an AWSTAPE file under VM.  The following is a portion
+of the code that delt with writing tape records.  It is written in IBM's
+Pascal/VS compiler.
+
+Const
+   Min_Tape_RSize = 4005;
+   Max_Tape_RSize = 65535;
+   Def_Tape_RSize = 4005;
+   Min_Tape_DSize = 1;
+   Max_Tape_DSize = 4096;
+   Def_Tape_DSize = 4096;
+   Min_Tape_BSize = 1;
+   Max_Tape_BSize = 65535;
+   Def_Tape_BSize = 4096;
+   VMFPLC2_Tag_Size = 5;
+   VMFPLC2_Header_Tag = '02'XC||'PLCH';
+   VMFPLC2_Data_Tag = '02'XC||'PLCD';
+   VMFPLC2_Blk_Size = 800;
+   VMFPLC2_Max_Blks = 5;
+   FST_Ext_Size = '18'X;
+   Old_FST_Size = L_FST_Rec - FST_Ext_Size;
+
+Type
+   Tape_Header_Rec = Record
+      THR_Size: Half_Word;
+      THR_PSize: Half_Word;
+      THR_Flags: Half_Word;
+      End;
+
+Const
+
+{ ======================
+   THR_Flags constants.
+  ====================== }
+
+   THRF_NewRec = '8000'X;
+   THRF_EOF    = '4000'X;
+   THRF_EndRec = '2000'X;
+
+Type
+   P_VMFPLC2_Tag = -> VMFPLC2_Tag;
+   VMFPLC2_Tag = Packed array [1..VMFPLC2_Tag_Size] of Char;
+   P_VMFPLC2_Data = -> VMFPLC2_Data;
+   VMFPLC2_Data = Packed array [0..(VMFPLC2_Blk_Size-1)] of Byte;
+   P_VMFPLC2_Header_Rec = -> VMFPLC2_Header_Rec;
+   VMFPLC2_Header_Rec = Packed record
+      VHR_Tag: VMFPLC2_Tag;
+      VHR_Old_FST: Packed array [0..(Old_FST_Size-1)] of Byte;
+      VHR_LastBlks: Word_Int;
+      VHR_FullRecs: Word_Int;
+      VHR_FST_Ext: Packed array [0..(FST_Ext_Size-1)] of Byte;
+      End;
+   P_VMFPLC2_Data_Rec = -> VMFPLC2_Data_Rec;
+   VMFPLC2_Data_Rec = Packed record
+      VDR_Tag: VMFPLC2_Tag;
+      VDR_Data: Array [1..VMFPLC2_Max_Blks] of VMFPLC2_Data;
+      End;
+
+Procedure Tape_Write(
+   BAddr: Word;
+   BLen: Integer);
+
+Var
+   Header: Tape_Header_Rec;
+   Cur: Integer;
+   First_Blk: Boolean;
+   Last_Blk: Boolean;
+
+Begin
+   If (BLen < 1) or (BLen > Tape_RSize)
+   then
+      Message(MSG250,ModId,MT_Term,Format(
+         'Internal error: BLen=%d, Tape_RSize=%d.',
+         Args2(
+            BLen,
+            Tape_RSize)));
+   First_Blk := True;
+   Last_Blk := False;
+   While BLen > 0 do
+      Begin
+      Cur := Min(BLen,Tape_DSize);
+      If Cur = BLen
+      then
+         Last_Blk := True;
+      Header.THR_Size := Byte_Swap(Cur);
+      Header.THR_PSize := Byte_Swap(Tape_PSize);
+      Header.THR_Flags := 0;
+      If First_Blk
+      then
+         Set_Bits(Header.THR_Flags,THRF_NewRec);
+      If Last_Blk
+      then
+         Set_Bits(Header.THR_Flags,THRF_EndRec);
+      Tape_Put(Addr(Header),Sizeof(Header));
+      Tape_Put(BAddr,Cur);
+      Tape_PSize := Cur;
+      Inc_By(BAddr,Cur);
+      Dec_By(BLen,Cur);
+      First_Blk := False;
+      End;
+   End;
+
+
+Article 2806 of alt.sys.pdp10:
+Path: nntp1.ba.best.com!news1.best.com!newsfeed.mathworks.com!europa.netcrusader.net!205.252.116.205!howland.erols.net!news-out.nntp.airnews.net.MISMATCH!cabal10.airnews.net!news.airnews.net!cabal14.airnews.net!news.airnews.net!cabal1.airnews.net!news-f.iadfw.net!jmaynard
+From: jmaynard@thebrain.conmicro.cx (Jay Maynard)
+Newsgroups: alt.sys.pdp10,alt.folklore.computers
+Subject: Re: New Tape Container format
+Date: 22 Dec 2000 00:58:36 GMT
+Organization: Neosoft (using Airnews.net!)
+Lines: 20
+Message-ID: <473F6ABF55EFA7A0.DD2627AF7A323FB6.614375FE146EB49E@lp.airnews.net>
+X-Orig-Message-ID: <slrn9459r5.87k.jmaynard@thebrain.conmicro.cx>
+References: <4ub43tskou7ev3slch65fvp65mju167q2c@4ax.com> <90u806$9iu$1@spies.com> <aek-0912001352130001@haxrus.apple.com> <81638778B12FE05A.630746B8B0E36C7A.7F492EA256DD3A6B@lp.airnews.net> <aek-2012001427400001@haxrus.apple.com> <bruce-328FA1.19093521122000@news.wam.umd.edu>
+Reply-To: jmaynard@conmicro.cx
+Abuse-Reports-To: abuse at airmail.net to report improper postings
+NNTP-Proxy-Relay: library2.airnews.net
+NNTP-Posting-Time: Thu Dec 21 18:58:36 2000
+NNTP-Posting-Host: !^Eh51k-W1>8$.D (Encoded at Airnews!)
+User-Agent: slrn/0.9.5.4 (UNIX)
+Xref: nntp1.ba.best.com alt.sys.pdp10:2806 alt.folklore.computers:13263
+
+On Thu, 21 Dec 2000 19:09:35 -0500, Bruce Crabill <bruce@umd.edu> wrote:
+>In article <aek-2012001427400001@haxrus.apple.com>, aek@spies.com (Al 
+>Kossow) wrote:
+[actually quoting a previous post of mine]
+>>  Does that cover the bases? I'm guessing at the function of the NEWREC
+>>  and ENDREC flags; since an IBM tape can only have 65535 bytes in a
+>>  record, I've never seen the case where segmentation is needed (and the
+>>  Hercules tapecopy program, used to create AWSTAPE files from real
+>>  tapes, is hardcoded to set both flags on data records because of this).
+>Actually, I believe you could write tape records longer than 64K by using
+>the Chain Data flag in the CCWs.  3420s probably didn't care how much
+>data they were asked to write, but there might have been problems on the
+>buffered Control Units like the 3480.
+
+Good question. I got called on that one not long after posting that; it
+seems that I'd been thinking in terms of BSAM and QSAM, both of which have a
+32K limit, and totally forgot things like geophysical tapes which can have
+records in the hundreds of megabytes. At some point, I might update tapecopy
+to handle segmenting records, but it'd be nice to see an example of a file
+with long records before doing that.
+
+
