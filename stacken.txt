@@ -1,0 +1,172 @@
+                             Stacken Computer Club
+
+                            by Jan Michael Rynning
+
+Back in 1978 Nils Soderman invited a group of micro computer enthusiasts to a
+meeting at his home. He wanted to set up a computer club, and it was agreed
+that the Royal Institute of Technology was the best place to recruit members to
+the club.
+
+One day, on my way home from the institute, one of my course-mates told me he
+had seen posters announcing that a computer club would hold its first meeting
+that evening. He knew I was interested in computers. I turned back and just got
+there in time for the meeting. As usual I couldn't keep my big mouth shut, and
+was elected vice-chairman of the club, which was named the Stacken
+Microcomputer Club. ``Stacken'' is the Swedish for ``the stack''.
+
+During the first year the major activity of the club was to give lectures on
+how a microcomputer worked, and how to build one. A microcomputer kit was
+constructed. A number of members got together, and bought components for the
+kit and UCSD PASCAL systems at a club discount. Discussions arose on whether it
+was really neccessary to buy 64 Kbyte of memory and two floppy drives. The UCSD
+system would run in 48 Kwords, with only one floppy, though that was not
+recommended. Most settled for 64 K and two drives.
+
+In 1972 QZ, the Stockholm University Computer Center, had purchased its first
+DECsystem-10, with a KI10 CPU, and 96 Kwords of core memory. Originally it
+was only intended to be used for research, but in 1977 the Royal Institute
+of Technology started using off-hour time for education. Two years later,
+in 1979, the Department of Numerical Analysis and Computing Science bought
+a DEC-2020, running TOPS-10, to be used for research and education, instead
+of renting time from the computer center. Members of the computer club
+persuaded head of department Yngve Sundblad to adopt the policy of letting
+the students use up all unused computer time. The club was given a PPN, which
+was used by all its members.
+
+With the arrival of practically unlimited access to a large computer, the club
+attracted many new members, whose main interest was programming, not building
+their own hardware. The main direction of the club thus turned from hardware to
+software, and the ``Micro'' was dropped from the name, to reflect that the club
+was no longer confined to small machines.
+
+A lot of software projects were carried out throughout the following years, the
+most notable being the AMIS project, supervised by later chairman Lars-Henrik
+Eriksson. AMIS, which doesn't stand for anything and has a dozen
+interpratations, is a screen editor modeled after Richard M. Stallman's EMACS.
+It's written in PASCAL, except for the low level I/O routines, which are
+written in MACRO-10. Byte shuffling and the low level search routine are also
+written in assembler, for efficiency. As soon as the first version was up and
+running on TOPS-10, club members managing the PDP-11/45 educational computer,
+running RSTS/E, at the School of Electrical Engeneering asked for a copy, to
+port it. The interface to the system dependent routines proved to be well
+chosen, but the PASCAL code required a number of changes, due to compiler
+differences and PDP-11 integers being only 16 bits. After that we set up a
+standard for how the PASCAL code should be written to be portable. The text
+buffer handling had to be rewritten from scratch. On the PDP-10 we had used the
+large address space to house the entire file being edited, but on the PDP-11
+there was no room for that. In fact, AMIS had to be heavily overlaid to fit
+into the small address space of the PDP-11, using a specially written overlay
+handler, and a LISP program to optimize the overlay structure. AMIS was later
+ported to VAX/VMS, PRIME and Norsk Data machines.
+
+In 1982 DEC salesman Hans Petzelius asked Stacken if we wanted an old
+DECsystem-10, which was going to be scrapped, unless we accepted it. Of course
+we wanted a mainframe of our own! It was a KA10 based system, immediately
+dubbed KATIA, ``TIA'' being the Swedish for ``TEN'' (and KATIA being a girl's
+name). The institute promised us a computer room, but the decision of which
+room to give us got stuck in the bureaucracy, and the machine was parked in a
+garage.
+
+It wasn't until the end of 1983, when Peter Lothberg came to the club, that
+things really started to happen. Peter is the most persistent person I've ever
+met, and by the end of 1984 the bureaucrats finally signed the paper giving us
+a 900 sq. ft. room in a basement at the far end of the institute.
+
+In the meantime Peter had managed to lay hands upon QZ's old KI10 (by that time
+QZ had replaced it with a dual-processor KL10 system), rented a computer room,
+and installed it, assisted by other members of the club. That machine was named
+KICKI (also being a girl's name, though it should have been spelled KIKI,
+reflecting the ambition to upgrade it to a dual-processor system). After
+negotiations with QZ Peter was allowed to connect it to the ANF-10 network, so
+it could be reached from the terminals at the institute.
+
+The machine was dismounted and moved to Peter's computer room on Thursday and
+Friday. Monday morning a DEC serviceman said to another ``He'll never get that
+machine up and running'' (when QZ soldit to the Swedish Pulp and Paper Research
+Institute in 1977, it took DEC over a month to get it running steadily) and got
+the answer ``I logged in on it an hour ago''. After that noone questioned
+Peter's hardware competence.
+
+KATIA and its periherals were taken to Peter's computer room, to use KICKI for
+debugging it. The KA10 CPU cables were found to be missing.  Fortunately, the
+Medical Computer Center at the University of Gothenburg had had a KA10 (it now
+has two KI10's), which had been scrapped some years earlier, and for some
+reason they had kept the cables. After about a week's work we had both the KA10
+and 1 1/2 MF10's in a working condition, and started running the CPU tests. As
+soon as the machine entered user mode, it got a illegal memory reference. The
+relocation and protection power supply circuit boards were also missing. The
+fast registers and the relocation and protection are the only parts of the KA10
+CPU built out of TTL, and the ground level of their power supplies is adjusted
+to convert the 0 and +5 V TTL lebels to the ordinary -3 and 0 V, used by the
+rest of the CPU logic. I suggested that we use the fast register power supply
+as a replacement, as the machine can use core instead of fast registers, but
+Peter promptly installed a laboratory power supply, and adjusted it to the
+right levels. After that it ran. Not using fast registers would have degraded
+performance by some 30-40%. Later, the Medical Computer Center dug out the
+missing circuit boards, and admitted they probably had a complete KA10 save
+cabinets stowed away.
+
+Running TOPS-10 6.03A on the KA10 wasn't much of an attraction, as we already
+had a KI10 running 7.02. We knew of ITS, the Incompatible Timesharing System
+developed at the MIT AI Lab, and of their home built paging boxes that extended
+the limited KA10 physical address space of 256 Kwords, so we wrote them a
+letter asking them if we could have ITS and a copy of the prints for the paging
+box. In return, we received a box of 7 channel magnetic tapes. We only had 9
+channel drives, and noone we inquired knew of anyone who had a 7 channel drive,
+except for the MIT AI Lab. Again, the Medical Computer Center came to our
+assistance. When the Max Plack Institute in Berlin discontinued its three KI10
+systems, the Medical Computer Center drove down with two trucks, and picked up
+as much as they could. Among that was a 7 channel drive, which they took by
+mistake. As they had no use for it, we could have it.
+
+A few months later, Peter and another member of the club drove down to
+Gothenburg to pick up equipment for which they had no room. There were a KI10,
+to make KICKI a dual-processor system, 22-bit channels (we only had 18-bit
+channels), two TU40's, more memory, and some other goodies. On the way back the
+other guy fell asleep at the steering-wheel, the truck went off the road, and
+landed on its side on a field. The cargo was spread out all over the place. The
+driver of the wrecking truck that came to their rescue wanted to use his crane
+to remove the cargo to lift the truck, but Peter finally convinced him the
+cargo was more valuable than the truck. Give-away KI10's don't grow on trees.
+As time went by most things were put back into a working condition. The CPU bay
+1 and bay 2 cabinets were askew, so two straight cabinets from MF10's with
+damaged backplanes were sacrificed, and the CPU back planes, cabling, and power
+suplies were moved to those cabinets.
+
+In the fall of 1985, one year after we got KICKI up and running, at last we got
+the electricity installed in the computer room at the institute, six months
+after schedule, and moved KATIA there. It took us a few days after we moved it
+to get it back running. The problem that was the hardest to find was a cold
+soldered short circuit that had been there all the time, but never before
+caused any trouble.
+
+KATIA was then inagurated by Gunnar Brodin, then president of the institute,
+now university chancellor, who was a great support the the club in its struggle
+with the bureaucracy. As DEC couldn't give the machine away, I, then president
+of the club, presented one Swedish crown (ca. 15 cents), the agreed upon price
+of the machine.
+
+Right after that Peter set off for the University of California Irvine, to pick
+up a KI10 system, which Mike Iglesias had saved from being sold to a junk
+dealer. Mike couldn't accept that the machine he had cared for for a decade
+were to be sold to a junk man, so he sent out a message on the ARPAnet, asking
+if someone wanted to buy it. We didn't want to see it scrapped, and we had use
+for it, so we offered to pay the scrap value.
+
+The people who helped us and all the bits and pieces of hardware and software
+we received, built and wrote over the next years are too numerous to mention.
+DEC has been very helpful with otherwise-to-be-scrapped hardware and software.
+We also owe many thanks to the Royal Institute of Technology, especially to the
+Department of Numerical Analysis and Computing Science.
+
+As of this writing, KATIA has a BBN paging box and runs TENEX 1.35. KICKI is a
+tri-SMP KI10 running TOPS-10 7.02 with TCP/IP and DECnet phase IV over DDP
+devices, and IBM disks and tapes on a System Concepts SA10. The D/A converter
+is used for playing music and for the acoustic part of the cuckoo-clock built
+from a discarded disk drive. The Cuckoo-clock real-time program is started
+automatically once an hour by the BIGBEN routine. The PDP-8 and PDP-15 were put
+in moth-balls to leave room for a PDP-11/70 running RSTS/E. Another PDP-11/70
+running RSX is used as a DECnet junction for the other machines. We also have
+two KS10's, alternately running ITS, TOPS-20, and test versions of TOPS-10.
+We've been promised a 2000 sq. ft. house on the campus, for our KL10's, in
+addition to the old computer room and our club room.
