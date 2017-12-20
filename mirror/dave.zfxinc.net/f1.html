@@ -1,0 +1,209 @@
+<title>The Foonly F1</title>
+<BODY background="/Pics/ScanBG2.jpg" bgcolor=#000f1f text=#00dfdf link=#df7f00 vlink=#007fdf alink=#7f00df>
+<center>
+<img src="Pics/FOONLEY1.JPG">
+<h1>The Foonly F1 Computer</h1>
+<hr>
+<h3>The F1 Cranking out Flight of the Navigator</h3>
+</center>
+<hr>
+<font size=+1><i>Update: 10/17/00</i></font>
+<a href="mailto:lars@nocrew.org">Lars Brinkhoff</a> contacted me regarding the Foonly.
+His page of PDP-10 processors and clones is <a href="http://pdp10.nocrew.org/cpu/processors.html">here.</a>
+At his request I have updated this page and will attempt to find some more pictures.
+<hr>
+<font size=+1><i>Update: 12/25/96</i></font>
+<a href="ddyer.html">Dave Dyer</a> stumbled across this Foonly page and sent in his recollections.
+His info is <a href="ddyer.html">here</a>.
+<hr>
+<font size=3>
+I first encountered the Foonly F1 when I went to work for Omnibus Computer Graphics in 1984.
+Omnibus had just purchased the system from Triple-I (Information International Inc.) in
+Culver City, CA.  Omnibus had big plans to make movies with computers, and the F1 had
+been used in making TRON and numerous other high resolution film projects.  Omnibus was
+a Canadian company, based in Toronto, and had recently done gone public.  They had big
+plans to open offices in Hollywood and New York City and be the first big digital animation
+company in the film business.  Omnibus president, John Pennie saw the F1 as a machine 
+with a proven track record.  When I first had a look at it, I saw it as a disaster!  It was a fascinating R&D project, but was never really designed to have the support, spares, and expertise needed to keep it up and running in a serious production environment.
+<p>
+The F1 was originally built by Triple-I in hopes of getting a large contract
+with the Government for an Optical Character Recognition system.
+Its design was done by some graduate students (Stanford?) named Poole, Pettit, Holloway, and Dyer (?).
+As I understand it, their design became the DEC KL-10, but I could have that wrong.
+The CPU was built on five wire-wrap pages, that were machine wrapped.
+<p>
+The design was done using one of the first CAD systems I had seen, (SUDS?) which I believe ran
+on a PDP-15 clone that Triple-I used in its PFR-80, which was originally intended to be a film recorder.
+The PFR had a vector-tube graphics display, and the user could graphically connect various
+logic elements from libraries and have wire-wrap lists generated for machine wrapping.
+The PFR, incidentally, was the reason the F1 became a film-maker. 
+Triple-I had figured out how to get a smaller, better controlled spot out of a CRT than
+anybody else at the time, and used that technology to print film for newspaper pages.
+<p>
+<i>Author's Note: I have several of the high-rez CRTs used in the III film printers, if anybody is interested in them, please contact me, (dave (at) zfx.com).</i>
+<p>
+The F1 had a bizzarre bus interface to the PFR that allowed it to dump high resolution
+imagery to the PFR and have it print to a standard 35mm camera.  The images were
+send in Red, Blue, and Green records and exposed through Wratten filters onto Kodak 5247 color negative film.
+Another PFR note, someone at Triple-I had programmed a simple graphics game to run on
+the PDP-15 and the vector tube.  You used front-panel dials and buttons to control
+acceleration and rotation vectors for spaceships that could shoot particles at each
+other.  I'm not sure of the exact origin of this program, but I believe it was
+the first interactive vector graphics game, which ultimately gave rise to a group of
+vector-displayed videogames in the mid-eighties.
+<p>
+The F1 had enough in common with "standard" DEC-10 peripherals that it could use
+a disk channel controller( RH-10?).  This was attached to  three RP-04 (~50MB) disk drives,
+one for the system, and two striped together to hold a total of two high-res images.
+One would be computed and saved as separate RGB files, while the previous one was
+being printed on the PFR.  The F1 had a huge Ampex core memory unit that I believe
+held 256K 36-bit words.  That turned out to be barely enough to do high-resolution
+computer graphics, so Triple-I had built the MMM, Movie Machine Memory, which
+was built out of 4K static RAM chips.  The memory was organized so that it could
+be displayed as an RGB image at 1024 x 1024 on a raster high-resolution monitor.
+In that mode, the MMM held 6 bits per color, 18-bits per pixel.  It could also
+be used as a bulk 512K word memory for the TRANEW graphics rendering program, which 
+used it to store hash tables.  It was fascinating to "watch" the program execute
+on the MMM monitor.
+<p>
+<i>I actually have one of the MMM memory boards.... somewhere in my junk pile.</i>
+<p>
+The F1 required a DEC KA-10 as a "console processor".
+Since it was a development machine, the console was used to load and run the
+microcode.  It was also an important debugging tool when (not if!) the system
+did something screwy.  There was a modem attached to the KA-10, and in an
+emergency, Dave Poole could usually be persuaded to dial into it and run diagnostics.
+Of course, the console machine had its own disk controllers, disks, tape drives,
+even a line printer, and it ended up holding user accounts and acting as general
+non-job user disk storage.  The KA-10 itself booted from punched paper tape, so
+a cold-start for the entire system was quite a journey up from ground zero!
+<p>
+When the F1 was up, it probably ran at something like 6 MIPS.  That seems really
+slow by today's standard, but the code had been highly optimized.  The original
+Fortran program, TRANEW had been written by Gary Demos  with help from Jim Blinn,
+the JPL guy that did the pioneering computer-generated fly-by animations for NASA.
+They had optimized inner loops in assembly code, and had removed every last bit
+of "extraneous" code from the operating system, TOPS-10.  It was really more like
+Swiss Cheese than an OS.
+<p>
+A second PFR unit acted as an "encoding station", and was attached to a huge Calcomp
+digitizing tablet.  External vector displays had been added, as had another puck,
+so that the operator could digitize from engineering-type drawings to build a
+3D database for the objects used in the animations.  There were some fairly
+sophisticated programs for extruding solids, sweeping shapes through 3D paths,
+and other wonders, all executing on a PDP-15!
+<p>
+So when I arrived and saw this system in operation, my initial awe for the amount
+of pioneering work that had gone into making the system do all the things it had
+done quickly turned into a sense of dread given the tasks I had before me, which
+were to: (1) re-assemble enough of the original team-members that had used the
+system to be able to do feature film production, (2) learn how the system functioned
+so that it could be maintained and kept working on a grueling production schedule,
+(3) attempt to find areas where its performance or reliability could be improved,
+(4) MOVE the system to new facilities that were being built at Paramount Studios,
+and (5) stay sane!
+<p>
+Jim Rapley, who was one of the maintenance guys who knew the Foonly, and had
+worked with many of the people as it was developed at Triple-I came onboard first,
+followed soon by Art Durinski, a designer who had worked on TRON, Adam the Juggler, and
+many other Foonly projects.  Rich Schroeppel, a consultant for Triple-I had done
+the TOPS-10 hacks and occasionally consulted, as did Jim Dungan, who knew TRANEW
+and a lot of the code that ran in the PFR.
+<p>
+Of course, Gary Demos and John Whitney, having gotten Triple-I started in the movie
+business, saw all the shortcomings of the Foonly.  They had pushed for Triple-I
+to build the DFP, the first (that I know of) high-resolution digital film printer
+for motion pictures.  This was the next generation PFR, using an 8" CRT which had
+fast-decaying phosphors so that it could be used for scanning in film (using photomultiplier
+tubes built into a special camera) as well as printing.  The imagery was amazing.
+When they left Triple-I, they put together a deal where they got Control Data Corp.
+to buy a Cray supercomputer, rent the DFP from Triple-I, attache Ramtek displays
+and IMI and Evans & Sutherland vector tubes for encoding and motion.  That was
+Digital Productions, which Omnibus eventually bought from CDC, but I'm getting
+ahead of myself.  
+<p>
+The point is that Triple-I just wanted to unload the Foonly and all its peripherals
+and software as one big package, and Omnibus and John Pennie were the perfect sucker.
+So Jim Rapley knew a guy named Serge Polevitzki, who was at the Naval Ocean (?NOSC) down
+in San Diego.  NOSC apparently had a bunch of stuff that needed to run on a TOPS-10
+system and since DEC no longer made them, Dave Poole and Foonly, Inc. obliged them
+by coming up with the F4, a single rack-unit 36-bit computer that ran TOPS-10.
+I flew up to Berkeley to see Poole and discuss upgrades to the F1.
+<p>
+Poole was a character.  He had long hair and a long beard and glasses.  I met him
+at Foonly, Inc. which was a small warehouse that had been the assembly line for
+some thirty F4's.  He wore ragged clothing and bluejeans, and had a pet parrot
+that rode on his shoulder most of the time.  When the parrot wasn't on his
+shoulder, it was perched in one of the "unfinished" F4's.  There was a precision
+shaped piece of cardboard duct-taped into this particular machine in such a
+way that the bird's droppings were deflected away from the internals of the
+machine.  Poole's recommendation was that we have him build us an SMD disk
+controller so that we could use bigger, faster disks, like the Fujitsu Eagles
+that were popular SMD drives at the time.  Unfortunately, his schedule to do this
+was going to take months, and our production schedule was already overfull.
+He did what he could on the microcode side, but the upgrade never happened.
+<p>
+Probably the worst moment of my life with the Foonly came after we had managed
+to get it moved to Paramount Studios and were cranking through the film for
+a long sequence for Flight of the Navigator, a Disney film.  In those days,
+the idea that you could have a camera make a seemingly infinite move, untethered,
+fascinated film directors, so they all wanted long camera moves over an infinte
+plane, probably the hardest thing for rendering algorithms to manage, what with all that 
+depth sorting.  Since the Foonly only had enough disk storage to hold the frame
+being computed and the frame being printed, the numbers worked out like this:
+30 seconds of film at 24 frames per second works out to 720 images each computed
+and printed at 6000 x 4000 pixels.  At twenty minutes rendering time each frame,
+that meant it took ten days to do "the run".  As we were five days into our
+final "run" for Navigator, unknown to us, a Paramount electrician was outside
+hot-wiring a new circuit in a power panel, when he dropped a wrench and shorted
+two of the three phase power busses together.  Supplies in the KA and the F1
+died, as did disk drives, interfaces, you name it!  When we finally got the
+systems to power up, the KA system drive had crashed, and we had to get new heads
+in and then rebuild that drive.  Remember with 1600 bpi tape drives, restoring
+a big system could take all day!  Then the KA wouldn't load the Foonly microcode.
+I remember about a three day period when I would drive home and try to sleep
+for a few hours only to drive back and try to get running again.  The really
+awful thing was that I kept seeing big billboard signs on the way in advertising
+Flight of the Navigator, saying "coming next week!".  "We hope!" I would mutter
+to myself.
+<p>
+As Omnibus grew, we also were developing our own 3D software that ran on Unix
+and Silicon Graphics systems.  Ultimately, the hope was to move in that direction
+and let the Foonly die a peaceful death.  But it lived on because it worked
+(mostly) and cranked out better high-res film than anything else except the DFP.
+When Omnibus was contacted by CDC about buying Digital Productions, we ended up
+with the Cray/DFP combination, which was impressive as hell, but every bit as
+kludged together and one-of-a-kind as the Foonly.
+<p>
+Last I heard, (1999?) Dave Poole had sailed into some bay up near Anchorage, AK, never to
+be heard from again.  He was reportedly lost at sea.  He had a 100' Swede sailboat that was legendary.  I can just
+about envision him sailing it, parrot on his shoulder, off into oblivion.
+<br clear=left>
+<p>
+<hr>
+<img src="Pics/FOO2.JPG" align=left>
+Here is a closeup view of the "Guts" of the F1. 
+There were four "Pages", each machine wire-wrapped ECL on Augat standard
+PC forms.  
+Since it was all ECL, the signals all ran twisted pair,
+and there was a theory that the machine failed frequently because of
+"cut through" from the many wires going around sharp corners.
+To the right you can see all the signal and power cables.
+Note the prominent air-conditioning outlet immediately beneath the pages!
+<p>
+The only remaining F1 project engineer who would fool with the F1 was Dave Poole, who lived up
+near Berkeley, and would occasionally dial in to help us with problems.
+He had instituted an upgrade program that was underway when Omnibus bought
+Digital Productions.
+Needless to say, that purchase brought all further work on the F1 to a halt.
+I heard that Jim Rapley and Intergon had hauled the F1 away and made movies
+with it for a while, but I have not been able to reach Jim to find out
+if this is so.  Jim worked with me at Omnibus, and had worked with
+the F1 at Triple-I, as well as the Cray at Digital Productions.
+<hr>
+<i>All images Copyright &copy Dave Sieg</i>
+<p>Last Updated 9/23/2011
+<font size=4>
+<a href="hist.html">Back to Dave's History Page</a><br>
+Please email me for more info: <a href="mailto:dave@zfx.com">dave@zfx.com</a>
+</body>
